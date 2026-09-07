@@ -6,7 +6,7 @@ import {Input} from '@/components/ui/input';
 import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
 import {Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from '@/components/ui/table';
 type Data={title:string;columns:string[];rows:(string|number|null)[][];total:number;revision:number;asOf:string;page:number;hasMore:boolean;error?:string};
-const datasets={workforce:'员工名册',attendance:'出勤核验',learning:'学习任务',performance:'正式绩效'};
+const datasets={talentReview:'最新人才盘点',workforce:'员工名册',attendance:'出勤核验',learning:'学习任务',performance:'正式绩效'};
 export default function Reports(){
  const [query,setQuery]=useState({dataset:'workforce',search:'',from:'',to:''}),[applied,setApplied]=useState(query),[page,setPage]=useState(1),[data,setData]=useState<Data|null>(null),[error,setError]=useState(''),[notice,setNotice]=useState(''),[busy,setBusy]=useState(false);
  const params=(q:typeof query)=>({dataset:q.dataset,search:q.search,...(q.dataset==='attendance'&&q.from?{from:q.from}:{}),...(q.dataset==='attendance'&&q.to?{to:q.to}:{})});

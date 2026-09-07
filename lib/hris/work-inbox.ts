@@ -2,7 +2,7 @@ import {payrollWriter,payrollReviewer,payrollRecordAccess} from './payroll-acces
 import {authorizeCommand,type Member} from './authorization';
 import type {State} from './model';
 import {visibleRecord,type DevelopmentRecord as R} from './development';
-export const inboxKinds=['payBatch','paySlip','payAdjustment','payQuery','performancePlan','performanceCycle','performance','performanceAppeal','requisition','candidate','interview','leave','correction','shift','plan','enrollment','instructorCertification','onboardingPlan','trainingAttendance','trainingSession','training','course'] as const;
+export const inboxKinds=['review','reviewCalibration','payBatch','paySlip','payAdjustment','payQuery','performancePlan','performanceCycle','performance','performanceAppeal','requisition','candidate','interview','leave','correction','shift','plan','enrollment','instructorCertification','onboardingPlan','trainingAttendance','trainingSession','training','course'] as const;
 export type InboxItem={id:string;recordId:string;domain:string;title:string;employeeName:string;action:string;href:string;updatedAt:string;due:string|null};
 export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
  const rows:InboxItem[]=[],hr=['admin','hr'].includes(m.role),manager=hr||m.role==='manager';
@@ -15,6 +15,10 @@ export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
   if(!visibleRecord(r,records,state,m))continue;
   const self=r.employeeId===m.employeeId,e=employee(r.employeeId);
   const add=(domain:string,action:string,href:string,suffix='',title=r.payload.title??action)=>rows.push({id:r.kind+':'+r.id+suffix,recordId:r.id,domain,title,employeeName:e?.name??'—',action,href,updatedAt:r.updatedAt,due:r.payload.due??null});
+  if(r.kind==='reviewCalibration'&&!self&&manager&&!records.some(x=>x.kind==='review'&&x.payload.supersedes===r.referenceId)){
+   if(r.status==='submitted'&&r.createdBy!==m.userId)add('development','盘点校准复核','/development','',`${r.payload.period} 盘点校准`);
+   if(r.status==='approved'&&hr&&r.payload.verifiedBy!==m.userId)add('development','盘点校准发布','/development','',`${r.payload.period} 盘点校准`);
+  }
   if(r.kind==='payBatch'&&payrollRecordAccess(r,records,state,m)){
    const slips=records.filter(x=>x.kind==='paySlip'&&x.referenceId===r.id&&x.status!=='cancelled'),beneficiary=slips.some(x=>x.employeeId===m.employeeId);
    if(r.status==='submitted'&&payrollReviewer(m)&&r.createdBy!==m.userId&&r.payload.submittedBy!==m.userId&&!beneficiary&&!slips.some(x=>x.payload.contributors?.includes(m.userId)))add('payroll','工资批次复核','/payroll','',`${r.payload.period} 工资批次`);
