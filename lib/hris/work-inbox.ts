@@ -1,7 +1,8 @@
+import {payrollWriter,payrollReviewer,payrollRecordAccess} from './payroll-access';
 import {authorizeCommand,type Member} from './authorization';
 import type {State} from './model';
 import {visibleRecord,type DevelopmentRecord as R} from './development';
-export const inboxKinds=['leave','correction','shift','plan','enrollment','instructorCertification','onboardingPlan','trainingAttendance','trainingSession','training','course'] as const;
+export const inboxKinds=['payBatch','paySlip','payAdjustment','payQuery','performancePlan','performanceCycle','performance','performanceAppeal','requisition','candidate','interview','leave','correction','shift','plan','enrollment','instructorCertification','onboardingPlan','trainingAttendance','trainingSession','training','course'] as const;
 export type InboxItem={id:string;recordId:string;domain:string;title:string;employeeName:string;action:string;href:string;updatedAt:string;due:string|null};
 export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
  const rows:InboxItem[]=[],hr=['admin','hr'].includes(m.role),manager=hr||m.role==='manager';
@@ -14,6 +15,30 @@ export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
   if(!visibleRecord(r,records,state,m))continue;
   const self=r.employeeId===m.employeeId,e=employee(r.employeeId);
   const add=(domain:string,action:string,href:string,suffix='',title=r.payload.title??action)=>rows.push({id:r.kind+':'+r.id+suffix,recordId:r.id,domain,title,employeeName:e?.name??'—',action,href,updatedAt:r.updatedAt,due:r.payload.due??null});
+  if(r.kind==='payBatch'&&payrollRecordAccess(r,records,state,m)){
+   const slips=records.filter(x=>x.kind==='paySlip'&&x.referenceId===r.id&&x.status!=='cancelled'),beneficiary=slips.some(x=>x.employeeId===m.employeeId);
+   if(r.status==='submitted'&&payrollReviewer(m)&&r.createdBy!==m.userId&&r.payload.submittedBy!==m.userId&&!beneficiary&&!slips.some(x=>x.payload.contributors?.includes(m.userId)))add('payroll','工资批次复核','/payroll','',`${r.payload.period} 工资批次`);
+   if(r.status==='approved'&&payrollWriter(m)&&!beneficiary)add('payroll','工资批次发布','/payroll','',`${r.payload.period} 工资批次`);
+  }
+  if(['payAdjustment','payQuery'].includes(r.kind)&&payrollRecordAccess(r,records,state,m)&&!self){
+   const slip=records.find(x=>x.kind==='paySlip'&&x.id===r.referenceId),published=slip?.status!=='cancelled'&&records.some(x=>x.kind==='payBatch'&&x.id===slip?.referenceId&&x.status==='published');
+   if(r.kind==='payQuery'&&r.status==='submitted'&&payrollWriter(m)&&r.createdBy!==m.userId)add('payroll','工资异议答复','/payroll-adjustments','',`${r.payload.period} 工资异议`);
+   if(r.kind==='payAdjustment'&&published){if(r.status==='submitted'&&payrollReviewer(m)&&r.createdBy!==m.userId)add('payroll','工资补差复核','/payroll-adjustments','',`${r.payload.period} 工资补差`);if(r.status==='approved'&&payrollWriter(m))add('payroll','工资补差发布','/payroll-adjustments','',`${r.payload.period} 工资补差`);}
+  }
+  if(r.kind==='performancePlan'&&manager&&!self&&records.some(x=>x.kind==='performanceCycle'&&x.id===r.referenceId&&x.status==='active')&&!records.some(x=>x.kind==='performance'&&x.payload.sourcePlanId===r.id)){
+   if(r.status==='draft')add('performance','绩效目标确认','/performance','',`${r.payload.period} 绩效目标`);
+   if(r.status==='submitted')add('performance','绩效评价','/performance','',`${r.payload.period} 绩效评价`);
+   if(r.status==='evaluated'&&hr&&!records.some(x=>x.kind==='performance'&&x.employeeId===r.employeeId&&x.payload.period===r.payload.period&&x.payload.sourcePlanId))add('performance','绩效结果发布','/performance','',`${r.payload.period} 绩效结果`);
+  }
+  if(r.kind==='performanceAppeal'&&hr&&!self){const old=records.find(x=>x.kind==='performance'&&x.id===r.referenceId),plan=old?.payload.performanceSnapshot?.plan as {evaluatedBy?:string}|undefined;if(old?.payload.sourcePlanId&&old.status==='published'&&plan&&!records.some(x=>x.kind==='performance'&&x.payload.supersedes===old.id)){
+   if(r.status==='submitted'&&r.createdBy!==m.userId&&old.createdBy!==m.userId&&plan.evaluatedBy!==m.userId)add('performance','绩效申诉复核','/performance','',`${r.payload.period} 绩效申诉`);
+   if(r.status==='approved'&&r.payload.verifiedBy!==m.userId&&!records.some(x=>x.kind==='performance'&&x.payload.appealId===r.id))add('performance','绩效更正发布','/performance','',`${r.payload.period} 绩效更正`);
+  }}
+  if(r.kind==='requisition'&&r.status==='draft'&&['admin','manager'].includes(m.role)&&r.createdBy!==m.userId&&state.positions?.some(p=>p.id===r.positionId&&p.status==='启用'))add('recruitment','招聘需求审批','/recruitment');
+  if(r.kind==='candidate'&&records.some(x=>x.kind==='requisition'&&x.id===r.referenceId&&x.status==='active')){
+   if(r.status==='offered'&&['admin','manager'].includes(m.role)&&(r.payload.offeredBy??r.createdBy)!==m.userId)add('recruitment','录用审批','/recruitment','',r.payload.name??'候选人');
+   if(r.status==='approved'&&hr)add('recruitment','录用接受确认','/recruitment','',r.payload.name??'候选人');
+  }
   if(['leave','correction'].includes(r.kind)&&manager&&!self&&r.createdBy!==m.userId&&r.status==='pending'&&records.some(x=>x.id===r.referenceId&&x.kind==='shift'&&x.status==='active'))add('attendance',r.kind==='leave'?'请假审批':'补卡审批','/attendance');
   if(['plan','enrollment'].includes(r.kind)&&manager&&!self&&r.payload.submittedBy!==m.userId&&r.status==='submitted'&&e&&e.status!=='离职')add('development',r.kind==='plan'?'发展行动核验':'学习成果核验',r.kind==='plan'?'/development':'/learning');
   if(r.kind==='instructorCertification'&&hr&&!self&&r.createdBy!==m.userId&&r.status==='submitted')add('learning','讲师认证复核','/instructors');
