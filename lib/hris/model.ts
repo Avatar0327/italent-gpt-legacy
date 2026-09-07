@@ -1,8 +1,8 @@
 import { z } from 'zod';
 export type Org = {id:string;name:string;parentId:string;city:string;leader:string;status:string};
 export type Employee = {id:string;code:string;name:string;orgId:string;job:string;level:string;joined:string;status:string;email:string};
-export type Approval = {id:string;employeeId:string;kind:'transfer'|'regularize'|'exit';orgId:string;reason:string;status:'pending'|'approved'|'rejected';created:string;decided?:string};
-export type Audit = {id:string;action:string;subject:string;at:string};
+export type Approval = {id:string;employeeId:string;kind:'transfer'|'regularize'|'exit';orgId:string;reason:string;status:'pending'|'approved'|'rejected';created:string;createdBy?:string;decidedBy?:string;decided?:string};
+export type Audit = {id:string;action:string;subject:string;at:string;actorId?:string};
 export type State = {orgs:Org[];employees:Employee[];approvals:Approval[];audit:Audit[]};
 const text=z.string().trim().min(1).max(100);
 const isoDate=z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine(v=>!Number.isNaN(Date.parse(v))&&new Date(v).toISOString().startsWith(v),'日期无效');
@@ -17,7 +17,7 @@ export function initialState():State {
  const names=['林知夏','周启明','沈远舟','许清禾','陈予安','苏以宁','陆景行','江念初','顾星河','温书言','程见微','叶明川'];
  return {orgs,employees:names.map((name,i)=>({id:'e'+(i+1),code:'HX'+String(1001+i),name,orgId:'o'+(2+i%4),job:['人才发展经理','产品经理','区域运营经理','财务分析师'][i%4],level:['P6','P7','P6','P5'][i%4],joined:`2026-0${1+i%8}-01`,status:i>8?'试用':'正式',email:`demo${i+1}@example.com`})),approvals:[{id:'a1',employeeId:'e10',kind:'regularize',orgId:'o3',reason:'试用期目标完成，申请转正。',status:'pending',created:'2026-09-07T08:30:00.000Z'},{id:'a2',employeeId:'e7',kind:'transfer',orgId:'o2',reason:'参与集团人才发展项目，申请内部调动。',status:'pending',created:'2026-09-06T10:00:00.000Z'}],audit:[]};
 }
-export function applyCommand(previous:State, input:unknown, now=new Date().toISOString()):State {
+export function applyCommand(previous:State, input:unknown, now=new Date().toISOString(), actorId?:string):State {
  const c=commandSchema.parse(input);const s=structuredClone(previous);const id=()=>crypto.randomUUID();let subject='';
  const activeOrg=(key:string)=>{const o=s.orgs.find(x=>x.id===key&&x.status==='启用');if(!o)throw Error('请选择有效的启用组织');return o;};
  if(c.action==='employee'){
@@ -35,10 +35,10 @@ export function applyCommand(previous:State, input:unknown, now=new Date().toISO
  }else if(c.action==='request'){
  const e=s.employees.find(e=>e.id===c.employeeId);if(!e||e.status==='离职')throw Error('员工不存在或已离职');if(s.approvals.some(a=>a.employeeId===e.id&&a.status==='pending'))throw Error('该员工已有待处理的人事申请');
  if(c.kind==='regularize'&&e.status!=='试用')throw Error('仅试用员工可申请转正');if(c.kind==='transfer'){activeOrg(c.orgId);if(c.orgId===e.orgId)throw Error('目标组织与当前组织相同');}
- s.approvals.unshift({id:id(),employeeId:e.id,kind:c.kind,orgId:c.kind==='transfer'?c.orgId:e.orgId,reason:c.reason,status:'pending',created:now});subject=e.name;
+ s.approvals.unshift({id:id(),employeeId:e.id,kind:c.kind,orgId:c.kind==='transfer'?c.orgId:e.orgId,reason:c.reason,status:'pending',created:now,createdBy:actorId});subject=e.name;
  }else{
- const a=s.approvals.find(a=>a.id===c.id);if(!a||a.status!=='pending')throw Error('审批不存在或已处理，请刷新');const e=s.employees.find(e=>e.id===a.employeeId);if(!e||e.status==='离职')throw Error('关联员工状态已变化');
- if(c.decision==='approved'){if(a.kind==='transfer'){activeOrg(a.orgId);e.orgId=a.orgId;}if(a.kind==='regularize'){if(e.status!=='试用')throw Error('员工已非试用状态');e.status='正式';}if(a.kind==='exit')e.status='离职';}a.status=c.decision;a.decided=now;subject=e.name;
+ const a=s.approvals.find(a=>a.id===c.id);if(!a||a.status!=='pending')throw Error('审批不存在或已处理，请刷新');if(actorId&&(!a.createdBy||a.createdBy===actorId))throw Error('不能审批本人申请或缺少申请人记录的历史申请');const e=s.employees.find(e=>e.id===a.employeeId);if(!e||e.status==='离职')throw Error('关联员工状态已变化');
+ if(c.decision==='approved'){if(a.kind==='transfer'){activeOrg(a.orgId);e.orgId=a.orgId;}if(a.kind==='regularize'){if(e.status!=='试用')throw Error('员工已非试用状态');e.status='正式';}if(a.kind==='exit')e.status='离职';}a.status=c.decision;a.decided=now;a.decidedBy=actorId;subject=e.name;
  }
- s.audit.unshift({id:id(),action:{employee:'保存员工档案',org:'保存组织',request:'发起人事申请',decide:'处理人事审批'}[c.action],subject,at:now});return s;
+ s.audit.unshift({id:id(),action:{employee:'保存员工档案',org:'保存组织',request:'发起人事申请',decide:'处理人事审批'}[c.action],subject,at:now,actorId});return s;
 }
