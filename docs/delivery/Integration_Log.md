@@ -10,3 +10,6 @@
 - 回归结果：本轮109/109通过，0失败/跳过，约16.25秒；P2 21项、P3 88项。命令：node --test tests/hris.test.mjs tests/authorization.test.mjs tests/workflows.test.mjs tests/p2-api.test.mjs tests/p3-api.test.mjs。没有新增测试或改业务代码。
 - 文档提交SHA通过git log查看本条所在提交；推送结果在总控最终交付中报告，避免自引用SHA。
 - 下一执行任务：foundation的F-G0-01→04；干部/学习交接包已备好，未实际领取。
+
+## H001 基础写入交接
+已核对用户转交的只读报告与本地c34c557干净主线一致；本提交明确分配基础及必要共享测试路径。保存并推送后总控释放代码写入职责给01基础。无业务代码变更，不重复测试或部署。交还时核对delivery/foundation提交及允许路径，再由总控统一验证/集成。
