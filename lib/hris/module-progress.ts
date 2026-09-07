@@ -2,7 +2,7 @@ export type ModuleProgress={done:string;remaining:string;links:{label:string;hre
 const link=(label:string,href:string)=>({label,href});
 export const moduleProgress:Record<string,ModuleProgress>={
  '组织员工':{done:'组织人员、岗位职级、入转调离、编制、合同、自定义字段',remaining:'字段分组与条件必填、兼岗、复杂再入职及法人变更',links:[link('组织员工','/employees'),link('编制合同','/workforce'),link('档案字段','/employee-fields')]},
- '审批中心':{done:'人事顺序审批、独立复核、撤回及历史',remaining:'管理员委托、复杂条件分支及统一跨模块待办',links:[link('人事审批','/approvals')]},
+ '审批中心':{done:'人事顺序审批、独立复核、撤回及历史',remaining:'管理员委托、复杂条件分支及其他模块待办汇集',links:[link('人事审批','/approvals'),link('跨模块待办','/work-inbox')]},
  '干部管理2.0':{done:'提名审议、已批准调动的任用核对、考察述职',remaining:'完整干部档案、评委会和原站详细规则核实',links:[link('干部提名与考察','/cadres')]},
  '任职资格':{done:'标准版本、能力证据、独立认证、到期与撤销',remaining:'任职类别层级及复杂认证委员会',links:[link('任职资格','/qualifications')]},
  '薪酬社保':{done:'核定工资录入、独立复核、工资条、异议及补差',remaining:'自动核算、税社保、薪资档案、支付及企业规则验证',links:[link('工资批次','/payroll'),link('工资异议与补差','/payroll-adjustments')]},
