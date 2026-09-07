@@ -13,3 +13,5 @@
 G0 是基础门槛，G1 首轮为限定业务闭环；G2/G3 是后续业务验收；G4 才是选定发布范围生产验收。完整菜单复刻不因分批而缩减。已有 E1 约15%（10%–20%）保持，文档不增加功能完成率。
 
 下一验收入口：[G1人工业务验收清单](G1_Business_Acceptance.md)。G1自动化证据齐备不等于界面或人工业务通过。
+
+本轮交付：[综合报告](G1_PreAcceptance_Report.md)、[用户验收指南](G1_User_Acceptance_Guide.md)、[绩效包](modules/performance.md)、[招聘包](modules/recruitment.md)。后两包仅准备，未分配写入职责。
