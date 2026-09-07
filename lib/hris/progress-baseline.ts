@@ -1,7 +1,7 @@
 /** Progress is evidence-based; historical percentages used different denominators. */
 export const progressBaseline={
  updated:'2026-09-07',
- note:'按需求核实、功能开发、测试和生产验收分别记录。原先 P1 30%、P2 100% 与整体约35%的粗估不作为验收进度；尚未建立全量需求权重，不发布新的总完成率。',
+ note:'按需求核实、功能开发、测试和生产验收分别记录。原先 P1 30%、P2 100% 与整体约35%的粗估不作为验收进度；已建立E1一级范围工程估算：约15%（10%–20%），仅用于排期参考，不代表需求覆盖率或生产验收率。全量逐条需求与权重仍需细化。',
  phases:[
   {phase:'P1 原站盘点',requirements:'48个菜单分组已观察；部分核心页面已核对，详细规则持续核实',development:'菜单及差异清单已建立',testing:'逐需求验收映射未覆盖全量范围',production:'不适用：本阶段交付为需求证据'},
   {phase:'P2 设计与基础',requirements:'首批组织、人员、权限和审批需求已形成基线；全量生产要求待补齐',development:'首批基础能力阶段目标完成，随业务扩展继续完善',testing:'已有21项基础自动化场景通过记录',production:'未完成：多账号业务验收、容量、安全及恢复验证待开展'},
