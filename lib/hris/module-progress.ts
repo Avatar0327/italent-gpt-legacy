@@ -6,7 +6,7 @@ export const moduleProgress:Record<string,ModuleProgress>={
  '干部管理2.0':{done:'跨模块人才档案、提名审议、调动任用核对、考察述职',remaining:'档案扩展与评委会和原站详细规则核实',links:[link('干部人才档案','/cadre-profiles'),link('干部提名与考察','/cadres')]},
  '任职资格':{done:'标准版本、能力证据、独立认证、到期与撤销',remaining:'任职类别层级及复杂认证委员会',links:[link('任职资格','/qualifications')]},
  '薪酬社保':{done:'核定工资录入、独立复核、工资条、异议及补差',remaining:'自动核算、税社保、薪资档案、支付及企业规则验证',links:[link('工资批次','/payroll'),link('工资异议与补差','/payroll-adjustments')]},
- '假勤管理':{done:'固定班次、打卡、补卡、请假、人工余额及覆盖报表',remaining:'弹性轮班、设备、加班、跨班请假、自动结转与封账',links:[link('假勤管理','/attendance')]},
+ '假勤管理':{done:'固定班次、打卡、补卡版本核验及撤回、请假、人工余额及覆盖报表',remaining:'弹性轮班、设备、加班、跨班请假、自动结转与封账',links:[link('假勤管理','/attendance')]},
  '招聘管理系统':{done:'需求修订审批和运营报表、候选人、面试序号、录用退回与版本确认和原子入职',remaining:'渠道门户、简历解析、面试日历、电子签和AI能力',links:[link('招聘与入职','/recruitment'),link('需求进度','/reports?dataset=recruitmentOperations')]},
  '绩效管理':{done:'目标权重与独立调整、执行跟进、自评、独立评价、结果发布、申诉与更正',remaining:'完整OKR、组织绩效、多级校准审批和企业申诉时限',links:[link('绩效管理','/performance'),link('目标调整','/performance-changes'),link('执行跟进','/performance-checkins'),link('办理报表','/reports?dataset=performanceOperations')]},
  '继任与发展':{done:'盘点、人才池、后备提名、继任覆盖报表、发展计划与学习衔接',remaining:'复杂梯队、健康度模型和带教管理',links:[link('人才与发展','/development')]},
