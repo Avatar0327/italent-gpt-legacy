@@ -6,15 +6,19 @@ import {visibleRecord,projectRecord,type DevelopmentRecord} from './development'
 export async function developmentContext(kinds?:readonly DevelopmentRecord['kind'][]){
  const ctx=await memberContext();if(!ctx.row||ctx.row.storageVersion!==1)throw new HttpError(409,'请先完成企业数据迁移');
  const selection=kinds===undefined?null:[...new Set(kinds)];
+ const payrollHistory=selection===null||selection.some(kind=>kind==='payBatch'||kind==='paySlip');
  const kindWhere=selection===null?'':selection.length?' AND kind IN ('+selection.map(()=>'?').join(',')+')':' AND 1=0';
  const result=await ctx.db.batch([
   ctx.db.prepare('SELECT id,kind,employee_id AS employeeId,position_id AS positionId,reference_id AS referenceId,status,payload,created_by AS createdBy,created_at AS createdAt,updated_at AS updatedAt FROM hris_development_records WHERE tenant_id=?'+kindWhere+' ORDER BY created_at,id').bind(ctx.member.tenantId,...(selection??[])),
   ctx.db.prepare('SELECT revision FROM hris_workspaces WHERE owner=?').bind(ctx.member.tenantId),
+  ...(payrollHistory?[ctx.db.prepare("SELECT DISTINCT e.record_id AS recordId,e.actor_id AS actorId FROM hris_development_events e JOIN hris_development_records r ON r.tenant_id=e.tenant_id AND r.id=e.record_id WHERE e.tenant_id=? AND r.kind IN ('payBatch','paySlip') AND e.action IN ('薪酬：batch','薪酬：slip','薪酬：removeSlip','薪酬：submit')").bind(ctx.member.tenantId)]:[]),
  ]);
  // Core scope and extension documents must describe the same revision. A concurrent
  // personnel move or role change invalidates the complete read, including downloads.
  if((result[1].results[0] as {revision:number})?.revision!==ctx.row.revision)throw new HttpError(409,'数据或权限已变化，请刷新');
  const records=(result[0].results as (Omit<DevelopmentRecord,'payload'>&{payload:string})[]).map(v=>({...v,payload:JSON.parse(v.payload)})) as DevelopmentRecord[];
+ // Include historical authors from immutable events, even when old payloads did not retain them.
+ if(payrollHistory){const authors=new Map<string,Set<string>>();for(const e of result[2].results as {recordId:string;actorId:string}[]){if(!authors.has(e.recordId))authors.set(e.recordId,new Set());authors.get(e.recordId)!.add(e.actorId);}for(const r of records){const actors=authors.get(r.id);if(actors)r.payload.contributors=[...new Set([...(r.payload.contributors??[]),...actors])];}}
  return {...ctx,state:JSON.parse(ctx.row.data) as State,records};
 }
 export type DevelopmentContext=Awaited<ReturnType<typeof developmentContext>>;

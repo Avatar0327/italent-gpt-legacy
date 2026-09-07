@@ -1,3 +1,4 @@
+import {payrollBatchIndependent} from './payroll-review';
 import {certificateSourceValid} from './certificates';
 import {businessDate} from './workforce';
 import {payrollWriter,payrollReviewer,payrollRecordAccess} from './payroll-access';
@@ -39,7 +40,7 @@ export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
   }
   if(r.kind==='payBatch'&&payrollRecordAccess(r,records,state,m)){
    const slips=records.filter(x=>x.kind==='paySlip'&&x.referenceId===r.id&&x.status!=='cancelled'),beneficiary=slips.some(x=>x.employeeId===m.employeeId);
-   if(r.status==='submitted'&&payrollReviewer(m)&&r.createdBy!==m.userId&&r.payload.submittedBy!==m.userId&&!beneficiary&&!slips.some(x=>x.payload.contributors?.includes(m.userId)))add('payroll','工资批次复核','/payroll','',`${r.payload.period} 工资批次`);
+   if(r.status==='submitted'&&payrollReviewer(m)&&payrollBatchIndependent(r,records,m))add('payroll','工资批次复核','/payroll','',`${r.payload.period} 工资批次`);
    if(r.status==='approved'&&payrollWriter(m)&&!beneficiary)add('payroll','工资批次发布','/payroll','',`${r.payload.period} 工资批次`);
   }
   if(['payAdjustment','payQuery'].includes(r.kind)&&payrollRecordAccess(r,records,state,m)&&!self){
