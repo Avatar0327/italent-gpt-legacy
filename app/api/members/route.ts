@@ -1,8 +1,8 @@
-import { memberContext } from '@/lib/hris/context';
+import { memberContext, readConsistent } from '@/lib/hris/context';
 import { json, failure, readBody, HttpError } from '@/lib/hris/http';
 import { grantSchema, validateGrant } from '@/lib/hris/member-rules';
 export const dynamic='force-dynamic';
-export async function GET(){try{const c=await memberContext(true);const rows=await c.db.prepare('SELECT email,name,role,employee_id AS employeeId,active,org_scope AS orgScope,view_email AS viewEmail,view_level AS viewLevel,claimed_by AS userId FROM hris_access_grants WHERE tenant_id=? ORDER BY name,email').bind(c.member.tenantId).all();return json({members:rows.results.map((m:any)=>({...m,orgScope:JSON.parse(m.orgScope)})),orgs:JSON.parse(c.row.data).orgs,storageVersion:c.row.storageVersion,revision:c.row.revision,employees:JSON.parse(c.row.data).employees.map((e:{id:string;name:string;status:string})=>({id:e.id,name:e.name,status:e.status}))});}catch(e){return failure(e);}}
+export async function GET(){try{const c=await memberContext(true);const [rows]=await readConsistent(c,[c.db.prepare('SELECT email,name,role,employee_id AS employeeId,active,org_scope AS orgScope,view_email AS viewEmail,view_level AS viewLevel,claimed_by AS userId FROM hris_access_grants WHERE tenant_id=? ORDER BY name,email').bind(c.member.tenantId)]);return json({members:rows.results.map((m:any)=>({...m,orgScope:JSON.parse(m.orgScope)})),orgs:JSON.parse(c.row.data).orgs,storageVersion:c.row.storageVersion,revision:c.row.revision,employees:JSON.parse(c.row.data).employees.map((e:{id:string;name:string;status:string})=>({id:e.id,name:e.name,status:e.status}))});}catch(e){return failure(e);}}
 export async function POST(request:Request){try{
  const input=grantSchema.parse(await readBody(request));const c=await memberContext(true);
  if(input.revision!==c.row.revision)throw new HttpError(409,'数据已更新，请刷新后重试');

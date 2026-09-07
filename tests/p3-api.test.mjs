@@ -588,3 +588,7 @@ test('P2/P3 附件读取撤权一致性：列表同批校验，文件读取后�
  act('owner');await grant('attachmentScoped','hr',null,[org.id]);act('attachmentScoped');let revoked=false;globalThis.p2env.DB={...db,batch:async statements=>{if(!revoked&&statements.some(s=>s.sql.includes('FROM hris_attachments'))){revoked=true;sqlite.exec("UPDATE hris_memberships SET org_scope='[]' WHERE user_id='attachmentScoped'; UPDATE hris_workspaces SET revision=revision+1");}return db.batch(statements);}};
  await expect(await files.GET(request('/api/attachments?employeeId='+e.id)),409);globalThis.p2env.DB=db;await expect(await files.GET(request('/api/attachments?employeeId='+e.id)),403);await expect(await files.GET(request('/api/attachments?id='+file.id)),403);sqlite.close();
 });
+
+test('P2/P3 成员目录撤权一致性：读取授权名单期间管理员降权不返回旧权限下的名单',async()=>{
+ const {db,sqlite}=await setup();await grant('memberReader','admin',null);act('memberReader');assert.ok((await expect(await members.GET())).members.length>0);let once=true;globalThis.p2env.DB={...db,batch:async statements=>{if(once&&statements.some(s=>s.sql.startsWith('SELECT email,name,role'))){once=false;sqlite.exec("UPDATE hris_memberships SET role='hr' WHERE user_id='memberReader'; UPDATE hris_workspaces SET revision=revision+1");}return db.batch(statements);}};await expect(await members.GET(),409);globalThis.p2env.DB=db;await expect(await members.GET(),403);act('owner');assert.ok((await expect(await members.GET())).members.length>0);sqlite.close();
+});
