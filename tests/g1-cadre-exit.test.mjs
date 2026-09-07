@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {setup,send,get,core,grant,expect,hris,dev,members,act,request,anchors,due} from './support/foundation-scenario.mjs';
 import {readProfile,checkProfile,checkOutside} from './support/cadre-checks.mjs';
 
-test('H002 G1-02：离职后的未完成计划和学习保留历史、拒绝新业务，记录离职账号停用阻断并验证HR停用撤权',async t=>{
+test('H002 G1-02：离职后的未完成计划和学习保留历史、拒绝新业务，离职账号可保留关联停用并立即撤权',async t=>{
  const {sqlite,e,org,otherOrg}=await setup();t.after(()=>sqlite.close());
  const standard=await send({action:'standard',code:'H002-EXIT',name:'合成离职场景能力',anchors});
  const planInput={action:'plan',employeeId:e.id,standardId:standard.id,target:3,title:'合成未完成发展行动',actionPlan:'合成案例实践及独立核验',due};
@@ -32,12 +32,20 @@ test('H002 G1-02：离职后的未完成计划和学习保留历史、拒绝新�
   const error=await send({action,id,evidence:'合成离职人员尝试提交旧任务'},400);assert.match(error.error,/离职/);
  }
  act('hr');assert.match((await send(planInput,400)).error,/离职/);assert.equal((await get()).revision,revision);
- // C-DEF-01 characterization: preserve the failing operation evidence; this is not acceptance of the defect.
+ // C-DEF-01 regression: explicit disable preserves historical link and revokes access.
  act('owner');const disable={revision:(await expect(await members.GET())).revision,email:'employee@example.com',name:'employee',role:'employee',employeeId:e.id,orgScope:[],viewEmail:false,viewLevel:false,active:false};
- const blocked=await expect(await members.POST(request('/api/members',disable)),400);assert.match(blocked.error,/在职员工/);
- assert.equal((await expect(await members.GET())).revision,disable.revision);
- assert.equal((await expect(await members.GET())).members.find(m=>m.email==='employee@example.com').active,1);
- act('employee');for(const id of [plan.id,enrollment.id])assert.equal((await expect(await dev.GET(request('/api/development?id='+id)))).items.length,1);
+ await expect(await members.POST(request('/api/members',disable)));
+ const after=await expect(await members.GET()),saved=after.members.find(m=>m.email==='employee@example.com');
+ assert.equal(after.revision,disable.revision+1);assert.equal(saved.active,0);assert.equal(saved.employeeId,e.id);
+ assert.equal(sqlite.prepare("SELECT active FROM hris_memberships WHERE user_id='employee'").get().active,0);
+ assert.ok(sqlite.prepare('SELECT subject FROM hris_audit_events WHERE revision=?').all(after.revision).some(x=>JSON.parse(x.subject).active===false));
+ await expect(await members.POST(request('/api/members',disable)),409);
+ for(const command of [{...disable,active:true},{...disable,employeeId:'missing'},{...disable,email:'owner@example.com',role:'admin',employeeId:null}]){
+  await expect(await members.POST(request('/api/members',{...command,revision:after.revision})),400);
+  assert.equal((await expect(await members.GET())).revision,after.revision);
+ }
+ act('employee');await expect(await hris.GET(),403);await expect(await dev.GET(),403);await readProfile(e.id,403);
+ for(const id of [plan.id,enrollment.id])await expect(await dev.GET(request('/api/development?id='+id)),403);
  // A scoped HR without an employee link can be disabled normally; all three read surfaces then reject it.
  act('owner');await expect(await members.POST(request('/api/members',{revision:(await expect(await members.GET())).revision,email:'hr@example.com',name:'hr',role:'hr',employeeId:null,orgScope:[org.id],viewEmail:false,viewLevel:false,active:false})));
  act('hr');await expect(await dev.GET(),403);await readProfile(e.id,403);
