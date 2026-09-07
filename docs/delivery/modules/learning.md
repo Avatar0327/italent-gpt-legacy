@@ -1,6 +1,6 @@
 # 03 学习发展交接包
 
-状态：只读接入通过，H003已明确分配写入职责。修复基线cb939378959a0f4d9a872890708e5b3b724b7234；实际接手以最新主线和Execution_Checkpoint为准。项目ID appgprj_6a9e2c705cfc819180e0e5251bb025cc，仓库/workspace/sites/italent-hris；路径可访问性必须在新聊天核实。
+状态：H003模块测试与设计交付已完成，03明确交还写入职责，待总控接回。修复基线cb939378959a0f4d9a872890708e5b3b724b7234；实际接手以最新主线和Execution_Checkpoint为准。项目ID appgprj_6a9e2c705cfc819180e0e5251bb025cc，仓库/workspace/sites/italent-hris；路径可访问性必须在新聊天核实。
 
 入口顺序：README→Ownership→Environment_Isolation→Shared_Contracts→Scope_Register→acceptance/G1.md。
 
@@ -33,3 +33,9 @@ H003已指定03为唯一代码写入者；读取最新Ownership后直接执行�
 
 ## H003增量重点
 复用已有版本/人员异常与正常链测试，补同场景两个阶段、强制出勤、学分及取消恢复组合。先读C_DEF_01_Resolution.md，保留停用成功后的撤权回归。完整范围与文件归属以H003为准，G1整体仍待人工业务确认。
+
+## H003交付（2026-09-07，覆盖此前待执行状态）
+
+基线99dccf1d499ff2ec950a0f70eb1421e86e3de7b2；测试提交dd1044e3afba0c3ba249fc92a75b33a5812da3f8。新增同员工planId/trainingId两阶段组合；联跑g0-contracts、g1-foundation、g1-cadre-exit、g1-learning及p3-api共95/95通过，0失败/跳过。C-DEF-01停用成功后的撤权断言保留且通过。此次95项是所选测试集，不是完整115项基线重跑。
+
+L-G1-01引用并复跑既有异常证据，02/03组合通过，04设计见G1_Learning_L04_Design.md，未实现转认。详见G1_Learning_Handoff.md、G1_Learning_Test_Result.json与G1_Learning_Test_Output.tap。应用源码未修改。03明确交还H003写入职责；归属与检查点由总控更新。G1整体/人工业务/生产均未签署通过。
