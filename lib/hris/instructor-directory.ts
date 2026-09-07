@@ -1,3 +1,4 @@
+import {latestInstructorTrial} from './instructor-trials';
 import {z} from 'zod';
 import {HttpError} from './http';
 import {scopedOrgs,type Member} from './authorization';
@@ -23,13 +24,14 @@ export function applyInstructorDirectory(records:R[],state:State,member:Member,i
   return {id:crypto.randomUUID(),kind:'instructorProfile',employeeId:e.id,positionId:null,referenceId:null,status:'submitted',createdBy:member.userId,createdAt:at,updatedAt:at,payload:{name:e.name,title:c.title,description:c.description,evidence:c.evidence,version:(latest?.payload.version??0)+1,...(latest?{supersedes:latest.id}:{})}};
  }
  const r=records.find(r=>r.kind==='instructorProfile'&&r.id===c.id);if(!r||!visibleRecord(r,records,state,member))deny('讲师记录不存在或没有访问权限');const record=r!,e=employee(record.employeeId!);
+ const trial=latestInstructorTrial(records,record.id);if((c.action==='review'||c.action==='withdraw')&&trial?.status==='active')fail('先完成或取消进行中的试讲，再办理提名');
  const change=(status:string,payload:R['payload']):R=>({...record,status,updatedAt:at,payload:{...record.payload,...payload}});
  if(c.action==='withdraw'){if(record.createdBy!==member.userId)deny('仅提名人可撤回');if(record.status!=='submitted')fail('仅待复核提名可撤回');return change('withdrawn',{closedReason:c.evidence});}
  if(e.id===member.employeeId)deny('不能复核或停用本人的讲师身份');
  if(c.action==='review'){
   if(record.createdBy===member.userId)deny('须由其他HR独立复核提名');if(record.status!=='submitted')fail('提名已经处理');
-  if(c.accepted){if(e.status==='离职')fail('员工已离职，不能通过讲师提名');if(records.some(x=>x.kind==='instructorProfile'&&x.id!==record.id&&x.employeeId===e.id&&x.status==='active'))fail('员工已有在用的讲师记录');}
-  return change(c.accepted?'active':'rejected',{verification:c.evidence,verifiedBy:member.userId,verifiedAt:at});
+  if(c.accepted){if(trial&&(trial.status!=='published'||!trial.payload.passed))fail('安排过试讲的提名须有最新冻结且通过的试讲结果');if(e.status==='离职')fail('员工已离职，不能通过讲师提名');if(records.some(x=>x.kind==='instructorProfile'&&x.id!==record.id&&x.employeeId===e.id&&x.status==='active'))fail('员工已有在用的讲师记录');}
+  return change(c.accepted?'active':'rejected',{verification:c.evidence,verifiedBy:member.userId,verifiedAt:at,...(c.accepted&&trial?{trialId:trial.id,score:trial.payload.score}:{})});
  }
  if(record.status!=='active')fail('仅在用的讲师记录可以停用');return change('suspended',{closedReason:c.evidence,revokedBy:member.userId,revokedAt:at});
 }
