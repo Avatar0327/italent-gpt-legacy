@@ -1,6 +1,8 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {setup,send,get,core,grant,expect,hris,dev,act,request,anchors,due} from './support/foundation-scenario.mjs';
+import {checkProfile,checkOutside} from './support/cadre-checks.mjs';
+const experiences=await import('../app/api/employee-experiences/route.ts');
 const profiles=await import('../app/api/cadre-profiles/route.ts');
 
 test('G1 X01：同一人员从组织岗位到盘点计划、考试学习核验与档案回流，调动后撤销旧组织访问',async t=>{
@@ -17,6 +19,21 @@ test('G1 X01：同一人员从组织岗位到盘点计划、考试学习核验�
  await send({action:'exam',courseId:course.id,questions:[{prompt:'怎样处理合成案例中的问题？',options:['记录证据并核实','忽略证据直接猜测'],correct:0}],passingScore:100,maxAttempts:2});
  await send({action:'publishCourse',id:course.id});
  const enrollment=await send({action:'enroll',employeeId:e.id,planId:plan.id,courseId:course.id,due});
+ // H002 extends the existing normal chain; original assertions remain below.
+ await grant('hrOutside','hr',null,[otherOrg.id]);act('hr');
+ const experience=await expect(await experiences.POST(request('/api/employee-experiences',{revision:(await get()).revision,command:{action:'save',employeeId:e.id,category:'employment',institution:'合成干部经历机构',title:'H002_HR_ONLY_EXPERIENCE',startMonth:'2020-01',endMonth:'2021-01',ongoing:false,description:'H002_DESCRIPTION_NOT_IN_SUMMARY',evidence:'H002_EVIDENCE_NOT_IN_SUMMARY'}})));
+ const records=(await get()).records;
+ const planRecord=records.find(r=>r.id===plan.id),enrollmentRecord=records.find(r=>r.id===enrollment.id),courseRecord=records.find(r=>r.id===course.id);
+ assert.equal(planRecord.employeeId,e.id);assert.equal(planRecord.referenceId,standard.id);
+ assert.equal(enrollmentRecord.employeeId,e.id);assert.equal(enrollmentRecord.referenceId,course.id);
+ assert.equal(enrollmentRecord.payload.planId,plan.id);assert.equal(courseRecord.referenceId,standard.id);
+ t.diagnostic('H002_SC1_INSTANCE '+JSON.stringify({employeeId:e.id,reviewId:review.id,standardId:standard.id,planId:plan.id,planReferenceId:planRecord.referenceId,courseId:course.id,courseReferenceId:courseRecord.referenceId,enrollmentId:enrollment.id,enrollmentReferenceId:enrollmentRecord.referenceId,enrollmentPlanId:enrollmentRecord.payload.planId}));
+ let hp=await checkProfile(e.id,plan.id,enrollment.id,'进行中',experience.id);
+ for(const secret of ['H002_DESCRIPTION_NOT_IN_SUMMARY','H002_EVIDENCE_NOT_IN_SUMMARY'])assert.ok(!JSON.stringify(hp).includes(secret));
+ await checkOutside('hrOutside',e.id,[plan.id,enrollment.id,experience.id]);
+ act('manager');hp=await checkProfile(e.id,plan.id,enrollment.id,'进行中');
+ assert.ok(!hp.sections.some(s=>s.key==='experiences'));assert.ok(!JSON.stringify(hp).includes('H002_HR_ONLY_EXPERIENCE'));
+ assert.ok(!(await get()).records.some(r=>r.id===experience.id));await expect(await dev.GET(request('/api/development?id='+experience.id)),403);
  async function readProfile(status=200){return expect(await profiles.GET(request('/api/cadre-profiles?employeeId='+e.id)),status);}
  act('manager');let p=await readProfile();assert.ok(p.sections.find(x=>x.key==='reviews').items.some(x=>x.id===review.id));
  assert.equal(p.sections.find(x=>x.key==='learning').items.find(x=>x.id===enrollment.id).status,'进行中');
@@ -31,6 +48,10 @@ test('G1 X01：同一人员从组织岗位到盘点计划、考试学习核验�
  await send({action:'verifyPlan',id:plan.id,accepted:true,evidence:'核实关联课程和发展实践均已完成'});
  p=await readProfile();for(const [key,id] of [['plans',plan.id],['learning',enrollment.id]])assert.equal(p.sections.find(x=>x.key===key).items.find(x=>x.id===id).status,'已完成');
  assert.deepEqual(p.sections.find(x=>x.key==='qualifications').items,[]);
+ act('hr');await checkProfile(e.id,plan.id,enrollment.id,'已完成',experience.id);
+ for(const id of [plan.id,enrollment.id]){const h=await expect(await dev.GET(request('/api/development?id='+id)));assert.ok(h.items.some(x=>x.snapshot.status==='completed'));assert.ok(h.items.some(x=>x.snapshot.status==='active'));}
+ await checkOutside('hrOutside',e.id,[plan.id,enrollment.id,experience.id]);
+ act('manager');assert.ok(!(await readProfile()).sections.some(s=>s.key==='experiences'));await expect(await dev.GET(request('/api/development?id='+experience.id)),403);
  act('owner');assert.deepEqual((await expect(await hris.GET())).state.employees.find(x=>x.id===e.id),before);
  // Approved transfer changes the live organization scope; old history grants no access.
  await grant('reviewerAll','approver',null,[org.id,otherOrg.id]);
@@ -44,4 +65,16 @@ test('G1 X01：同一人员从组织岗位到盘点计划、考试学习核验�
  await expect(await dev.GET(request('/api/development?id='+enrollment.id)),403);
  await grant('managerB','manager',null,[otherOrg.id]);act('managerB');p=await readProfile();assert.equal(p.employee.org,otherOrg.name);
  assert.equal(p.sections.find(x=>x.key==='learning').items.find(x=>x.id===enrollment.id).status,'已完成');
+ // H002: exit after completion and transfer preserves current scoped history under existing code.
+ act('owner');await core({action:'workflow',kind:'exit',steps:[{userId:'reviewerAll',name:'合成独立离职审批人'}]});
+ await core({action:'request',employeeId:e.id,kind:'exit',orgId:otherOrg.id,reason:'合成已完成学习员工离职权限核查'});
+ const exit=(await expect(await hris.GET())).state.approvals.find(x=>x.employeeId===e.id&&x.kind==='exit'&&x.status==='pending');
+ act('reviewerAll');await core({action:'decide',id:exit.id,decision:'approved'});
+ act('hrOutside');hp=await checkProfile(e.id,plan.id,enrollment.id,'已完成',experience.id);assert.equal(hp.employee.status,'离职');
+ for(const id of [plan.id,enrollment.id,experience.id])assert.ok((await expect(await dev.GET(request('/api/development?id='+id)))).items.length>0);
+ act('managerB');hp=await checkProfile(e.id,plan.id,enrollment.id,'已完成');assert.ok(!hp.sections.some(s=>s.key==='experiences'));
+ await expect(await dev.GET(request('/api/development?id='+experience.id)),403);
+ for(const id of [plan.id,enrollment.id])assert.ok((await expect(await dev.GET(request('/api/development?id='+id)))).items.some(x=>x.snapshot.status==='completed'));
+ await checkOutside('hr',e.id,[plan.id,enrollment.id,experience.id]);await checkOutside('manager',e.id,[plan.id,enrollment.id,experience.id]);
+
 });
