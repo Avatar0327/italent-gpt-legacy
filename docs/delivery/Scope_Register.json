@@ -545,5 +545,15 @@
       "modules/recruitment.md"
     ],
     "nextPackagesWriteAssigned": false
+  },
+  "controllerEvidence": {
+    "mode": "single-controller",
+    "performanceHandoff": "ca5f82af7fee4a29789ba969ea070a5cd3544307",
+    "tested": 122,
+    "passed": 122,
+    "sourceVerification": "cadre/learning navigation only; content loading blocked",
+    "gapRegister": "Cadre_Learning_Source_Gaps.md",
+    "businessAccepted": false,
+    "productionAccepted": false
   }
 }
