@@ -1,9 +1,10 @@
+import {certificateSourceValid} from './certificates';
 import {businessDate} from './workforce';
 import {payrollWriter,payrollReviewer,payrollRecordAccess} from './payroll-access';
 import {authorizeCommand,type Member} from './authorization';
 import type {State} from './model';
 import {visibleRecord,type DevelopmentRecord as R} from './development';
-export const inboxKinds=['mentorProfile','mentorship','mentoringLog','instructorCampaign','instructorApplication','instructorTrial','instructorProfile','trainingRequest','cadreNomination','cadreObservation','employeeFieldDefinition','employeeFieldValue','review','reviewCalibration','payBatch','paySlip','payAdjustment','payQuery','performancePlan','performanceCycle','performance','performanceAppeal','requisition','candidate','interview','leave','correction','shift','plan','enrollment','instructorCertification','onboardingPlan','trainingAttendance','trainingSession','training','course'] as const;
+export const inboxKinds=['certificateTemplate','certificateAward','mentorProfile','mentorship','mentoringLog','instructorCampaign','instructorApplication','instructorTrial','instructorProfile','trainingRequest','cadreNomination','cadreObservation','employeeFieldDefinition','employeeFieldValue','review','reviewCalibration','payBatch','paySlip','payAdjustment','payQuery','performancePlan','performanceCycle','performance','performanceAppeal','requisition','candidate','interview','leave','correction','shift','plan','enrollment','instructorCertification','onboardingPlan','trainingAttendance','trainingSession','training','course'] as const;
 export type InboxItem={id:string;recordId:string;domain:string;title:string;employeeName:string;action:string;href:string;updatedAt:string;due:string|null};
 export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
  const rows:InboxItem[]=[],hr=['admin','hr'].includes(m.role),manager=hr||m.role==='manager';
@@ -16,6 +17,7 @@ export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
   if(!visibleRecord(r,records,state,m))continue;
   const self=r.employeeId===m.employeeId,e=employee(r.employeeId);
   const add=(domain:string,action:string,href:string,suffix='',title=r.payload.title??action)=>rows.push({id:r.kind+':'+r.id+suffix,recordId:r.id,domain,title,employeeName:e?.name??'—',action,href,updatedAt:r.updatedAt,due:r.payload.due??null});
+  if(r.kind==='certificateAward'&&hr&&!self&&r.createdBy!==m.userId){if(r.status==='submitted')add('learning','内部证书发放复核','/certificates');if(r.status==='issued'&&!certificateSourceValid(records.find(s=>s.id===r.payload.sourceRecordId)))add('learning','证书依据状态复核','/certificates');}
   if(r.kind==='mentoringLog'&&records.some(p=>p.kind==='mentorship'&&p.id===r.referenceId&&p.status==='active')){if(self&&r.status==='submitted'&&e?.status!=='离职')add('learning','本人确认辅导','/mentoring');if(m.employeeId===r.payload.mentorEmployeeId&&r.status==='returned'&&e?.status!=='离职'&&state.employees.some(e=>e.id===m.employeeId&&e.status!=='离职')&&records.some(p=>p.id===r.referenceId&&p.payload.start!<=businessDate(new Date().toISOString())&&p.payload.end!>=businessDate(new Date().toISOString())))add('learning','补充辅导记录','/mentoring');}
   if(r.kind==='mentorship'&&r.status==='submitted'&&hr&&!self&&m.employeeId!==r.payload.mentorEmployeeId&&r.createdBy!==m.userId)add('learning','独立核对出师','/mentoring');
   if(r.kind==='instructorApplication'&&hr&&!self&&r.createdBy!==m.userId&&!records.some(p=>p.kind==='instructorProfile'&&p.payload.instructorApplicationId===r.id)){if(r.status==='submitted')add('learning','认证报名资格复核','/instructor-campaigns');if(r.status==='approved'&&e?.status!=='离职')add('learning','认证报名提名核对','/instructor-campaigns');}
