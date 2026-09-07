@@ -12,7 +12,7 @@ export function cadreProfile(ctx:DevelopmentContext,employeeId:string,at=new Dat
  const m=ctx.member,e=ctx.state.employees.find(e=>e.id===employeeId);
  if(!['admin','hr','manager'].includes(m.role)||!e||!scopedOrgs(ctx.state,m).has(e.orgId))throw new HttpError(403,'没有此员工的人才档案管理权限');
  const records=visibleDevelopment(ctx).filter(r=>r.employeeId===e.id),latest=latestPublishedReviews(records),perf=records.filter(r=>r.kind==='performance'&&(r.status==='published'||!r.payload.sourcePlanId&&r.status==='active')&&!records.some(x=>x.kind==='performance'&&x.payload.supersedes===r.id));
- const item=(r:R,title:string,detail:string,href:string,status=states[r.status]??r.status):ProfileItem=>({id:r.id,title,status,detail,date:r.payload.due??r.payload.validUntil??r.updatedAt.slice(0,10),href});
+ const item=(r:R,title:string,detail:string,href:string,status=states[r.status]??r.status):ProfileItem=>({id:r.id,title,status,detail,date:r.payload.due??r.payload.validUntil??businessDate(r.updatedAt),href});
  const section=(key:string,title:string,items:ProfileItem[])=>({key,title,items:items.sort((a,b)=>b.date.localeCompare(a.date)||a.id.localeCompare(b.id))});
  return {employee:{id:e.id,code:e.code,name:e.name,org:ctx.state.orgs.find(o=>o.id===e.orgId)?.name??'',job:e.job,status:e.status},revision:ctx.row.revision,asOf:at,sections:[
   section('nominations','选拔与任用',records.filter(r=>r.kind==='cadreNomination').map(r=>item(r,r.payload.targetPositionName??'目标岗位',r.status==='appointed'?'已核对正式调动记录':'提名记录不等同于正式任职','/cadres'))),

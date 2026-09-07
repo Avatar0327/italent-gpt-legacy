@@ -1,4 +1,6 @@
 import {z} from 'zod';
+import {businessDate} from './business-time';
+export {businessDate} from './business-time';
 import {HttpError} from './http';
 import {scopedOrgs,type Member} from './authorization';
 import {visibleRecord,type DevelopmentRecord as R} from './development';
@@ -12,7 +14,6 @@ export const workforceCommand=z.discriminatedUnion('action',[
  z.object({action:z.literal('cancelContract'),id,evidence}),
  z.object({action:z.literal('endContract'),id,endedOn:date,evidence}),
 ]);
-export const businessDate=(at=new Date().toISOString())=>new Date(new Date(at).getTime()+8*3600_000).toISOString().slice(0,10);
 export function staffingUsage(records:R[],state:State,asOf=businessDate()){
  return records.filter(r=>r.kind==='staffingPlan').map(r=>{const occupied=state.employees.filter(e=>e.status!=='离职'&&e.positionId===r.positionId).length;return {id:r.id,positionId:r.positionId,approved:r.payload.headcount??0,occupied,vacancy:Math.max(0,(r.payload.headcount??0)-occupied),excess:Math.max(0,occupied-(r.payload.headcount??0)),effective:r.status==='approved'&&!records.some(x=>x.kind==='staffingPlan'&&x.status==='approved'&&x.payload.supersedes===r.id)&&r.payload.start!<=asOf&&r.payload.end!>=asOf};});
 }
