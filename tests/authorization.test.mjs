@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {initialState,applyCommand} from '../lib/hris/model.ts';
 import {requireMember,visibleState,authorizeCommand} from '../lib/hris/authorization.ts';
-const member=(role,extra={})=>({userId:'user-a',tenantId:'tenant-a',role,employeeId:'e2',active:true,...extra});
+const member=(role,extra={})=>({userId:'user-a',tenantId:'tenant-a',role,employeeId:'e2',active:true,orgScope:['o1'],viewEmail:true,viewLevel:true,...extra});
 test('未配置、停用与未知角色均拒绝访问',()=>{for(const m of [null,member('employee',{active:false}),member('root')])assert.throws(()=>requireMember(m));});
 test('员工响应不泄漏同事或审计记录',()=>{const s=visibleState(initialState(),member('employee'));assert.deepEqual(s.employees.map(e=>e.id),['e2']);assert.deepEqual(s.orgs.map(o=>o.id),['o3']);assert.equal(s.approvals.length,0);assert.equal(s.audit.length,0);});
 test('员工不能提交其他人员申请或维护组织',()=>{const s=initialState();assert.throws(()=>authorizeCommand(s,{action:'request',employeeId:'e3',kind:'exit',orgId:'',reason:'个人原因'},member('employee')));assert.throws(()=>authorizeCommand(s,{action:'org',...s.orgs[0]},member('employee')));});

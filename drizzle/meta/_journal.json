@@ -29,6 +29,13 @@
       "when": 1788752475884,
       "tag": "0003_demonic_gauntlet",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1788752936365,
+      "tag": "0004_chubby_quasar",
+      "breakpoints": true
     }
   ]
 }

@@ -9,7 +9,7 @@ export type State = {orgs:Org[];employees:Employee[];approvals:Approval[];audit:
 const text=z.string().trim().min(1).max(100);
 const isoDate=z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine(v=>!Number.isNaN(Date.parse(v))&&new Date(v).toISOString().startsWith(v),'日期无效');
 export const commandSchema=z.discriminatedUnion('action',[
- z.object({action:z.literal('employee'),id:z.string().optional(),code:text,name:text,orgId:text,job:text,level:text,joined:isoDate,email:z.union([z.literal(''),z.string().email()])}),
+ z.object({action:z.literal('employee'),id:z.string().optional(),code:text,name:text,orgId:text,job:text,level:z.string().trim().max(100),joined:isoDate,email:z.union([z.literal(''),z.string().email()])}),
  z.object({action:z.literal('org'),id:z.string().optional(),name:text,parentId:z.string(),city:text,leader:z.string().max(100),status:z.enum(['启用','停用'])}),
  z.object({action:z.literal('request'),employeeId:text,kind:z.enum(['transfer','regularize','exit']),orgId:z.string(),reason:z.string().trim().min(2).max(500)}),
  z.object({action:z.literal('workflow'),kind:z.enum(['transfer','regularize','exit']),steps:z.array(z.object({userId:text,name:text})).min(1).max(5).refine(v=>new Set(v.map(s=>s.userId)).size===v.length,'审批人不能重复')}),
