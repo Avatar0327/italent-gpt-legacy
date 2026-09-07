@@ -1,3 +1,4 @@
+import {trainingStageCompleted} from './training-stages';
 import {z} from 'zod';
 import {applyDevelopment,visibleRecord,orgWithin,type DevelopmentRecord as R} from './development';
 import {HttpError} from './http';
@@ -16,8 +17,7 @@ export function dispatchTrainingStage(records:R[],state:State,member:Member,inpu
   if(!employee||!scope.has(employee.orgId))throw new HttpError(403,'所选人员包含无权管理的员工');
   if(!orgWithin(state,employee.orgId,training.payload.orgId!))throw new HttpError(400,'所选人员不在项目组织范围内');
   if(employee.status==='离职')throw new HttpError(400,'所选人员包含已离职员工');
-  const completed=new Set(records.filter(r=>r.kind==='enrollment'&&r.employeeId===employeeId&&r.payload.trainingId===training.id&&r.status==='completed').map(r=>r.referenceId));
-  const current=training.payload.trainingStages.find(s=>s.courseIds.some(id=>!completed.has(id)));
+  const current=training.payload.trainingStages.find(s=>!trainingStageCompleted(training,s,records,employeeId));
   for(const courseId of current?.courseIds??[]){
    if(records.some(r=>r.kind==='enrollment'&&r.employeeId===employeeId&&r.payload.trainingId===training.id&&r.referenceId===courseId&&r.status!=='cancelled'))continue;
    created.push(applyDevelopment([...records,...created],state,member,{action:'enroll',employeeId,trainingId:training.id,courseId,due:c.due},at));

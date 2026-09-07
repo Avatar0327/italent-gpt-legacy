@@ -1,3 +1,4 @@
+import {trainingStageCompleted} from './training-stages';
 import {performancePlanLive} from './performance-availability';
 import type {Member} from './authorization';
 import {payrollReport} from './payroll-reports';
@@ -48,7 +49,7 @@ export function makeReport(ctx:DevelopmentContext,input:unknown){
   for(const training of records.filter(r=>r.kind==='training'&&r.payload.trainingStages?.length)){
    const assignments=records.filter(r=>r.kind==='enrollment'&&r.payload.trainingId===training.id&&r.status!=='cancelled');
    for(const employeeId of new Set(assignments.map(r=>r.employeeId))){
-    const mine=assignments.filter(r=>r.employeeId===employeeId),completed=new Set(mine.filter(r=>r.status==='completed').map(r=>r.referenceId)),stages=training.payload.trainingStages!,required=stages.flatMap(s=>s.courseIds),current=stages.find(s=>s.courseIds.some(id=>!completed.has(id))),pending=current?.courseIds.filter(id=>!completed.has(id))??[];
+    const mine=assignments.filter(r=>r.employeeId===employeeId),completed=new Set(mine.filter(r=>r.status==='completed').map(r=>r.referenceId)),stages=training.payload.trainingStages!,required=stages.flatMap(s=>s.courseIds),current=stages.find(s=>!trainingStageCompleted(training,s,records,employeeId!)),pending=current?.courseIds.filter(id=>!completed.has(id))??[];
     rows.push([training.payload.name??'',status[training.status]??training.status,code(employeeId),name(employeeId),employee(employeeId)?.status??'',stages.length,required.length,required.filter(id=>completed.has(id)).length,current?.title??null,pending.filter(id=>mine.some(r=>r.referenceId===id)).length,pending.filter(id=>!mine.some(r=>r.referenceId===id)).length,current?'否':'是']);
    }
   }
