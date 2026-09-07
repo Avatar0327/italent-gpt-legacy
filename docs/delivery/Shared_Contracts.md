@@ -21,7 +21,7 @@
 1. 发展计划 kind=plan，employeeId 关联员工，referenceId 关联能力标准版本。
 2. enroll 命令使用 employeeId/courseId/due，可选planId/trainingId。planId必须属于同一员工、状态active或returned；课程referenceId必须等于计划referenceId。课程必须published。
 3. enrollment.referenceId是课程版本ID；payload.planId是计划ID，payload.trainingId是培训项目ID；不能互换，也不能用模糊名称关联。
-4. 已有同员工/课程版本记录时拒绝再次enroll；取消使用restoreEnrollment并保留原任务和考试次数。历史跨项目复用尚未实现，不能视为接口能力。
+4. 已有同员工/课程版本记录时拒绝再次enroll；取消后恢复使用restoreEnrollment并保留原任务和考试次数。历史跨项目复用尚未实现，不能视为接口能力。
 5. submitLearning要求通过关联考试；verifyLearning须独立核验，接受前检查强制出勤；完成状态completed。verifyPlan接受前检查关联未完成且未取消的学习任务。
 6. cadreProfile通过当前可见records聚合plans和learning。回流是读取现有权威记录，不另复制完成标记；不自动升级资格或职级。
 7. 学分使用既有learning-credits接口，不把档案展示触发当成授予事件；来源与去重规则继续以领域代码为准。
@@ -29,3 +29,14 @@
 共享热点：development.ts、app/api/development/route.ts、development-repository.ts被人才和学习共同使用，只能由当前总控/被明确交接的基础负责人单写。没有消息总线、跨服务事件系统或新自动派课协议，不为本批增建。
 
 下一步：基础F-G0-02把以上契约逐项映射现有测试；模块只补确切缺口。任何新字段先记录请求/响应示例、旧数据处理、权限和消费者，再由总控合入。
+
+
+## H001证据澄清（不改变SC-1业务语义）
+
+逐项代码/测试映射见[G0_Evidence_Map.md](G0_Evidence_Map.md)，合成场景见[G1_Foundation_Plan.md](G1_Foundation_Plan.md)。本轮新增5项测试，连同既有109项共114/114通过。
+
+- 历史page从1开始，每页20项，以第21项判断hasMore；原事件快照经过当前权限投影才返回。
+- 未授权人员读取草稿课程或其他不可见记录可能先收到403；可见记录的状态/关联错误为400。业务校验发生在保存CAS之前，不将409描述为所有错误请求的固定优先结果。
+- 计划允许active/returned状态派课；submitted/completed/cancelled不允许。课程同code不代表同版本，必须比较referenceId内部ID。
+- 盘点与计划目前共享employeeId，计划referenceId指向能力标准；没有已实现的reviewId外键或自动计划生成协议。
+- 本轮仅澄清现状并补证据，未改变公共请求/响应、领域规则或旧数据，不要求消费者迁移。

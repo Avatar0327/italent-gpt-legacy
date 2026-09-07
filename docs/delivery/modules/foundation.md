@@ -1,6 +1,6 @@
 # 01 基础与组织员工交接包
 
-状态：只读接入通过，H001已明确交接写入职责；按Ownership.md的H001直接执行，无需重复确认。当前基线ad29248b74789e9c0d2418cae2655a25f40e5411；实际接手以最新主线和Execution_Checkpoint为准。项目ID appgprj_6a9e2c705cfc819180e0e5251bb025cc，仓库/workspace/sites/italent-hris；路径可访问性必须在新聊天核实。
+状态：H001的F-G0-01至04已完成并交付，G0限定技术门槛通过；01基础在最终交付后交还写入职责给总控。以下启动提示词保留作历史，不构成再次领取。实际接手基线`ea2ab88ad8ccd51b05fa5bf3543a1848508821a6`，测试提交`ad197fff5fefa3d6361a464a213efbe1a9d5f78a`。项目ID appgprj_6a9e2c705cfc819180e0e5251bb025cc，仓库/workspace/sites/italent-hris，分支delivery/foundation。
 
 入口顺序：README→Ownership→Environment_Isolation→Shared_Contracts→Scope_Register→acceptance/G0.md。
 
@@ -30,3 +30,19 @@ H001已交接，本聊天为当前唯一代码写入者；读取最新Ownership.
 ## 持续授权与交付
 原系统只读，复用已授权会话；不修改业务、提交审批、发送消息或批量导出真实人员。仅合成数据测试。代码/文档/必要测试/修复/提交已授权；仅总控私有发布。真实数据迁移、访问扩大、正式切换另行确认。平台强制许可不能绕过。
 模块交付必须记录完整提交SHA、基线、变更路径、测试结果、待核实规则、阻塞与下一具体动作。完成小功能后继续具备条件项；硬限制保存检查点。不得声称后台持续。
+
+
+## H001完成与写入职责交还（2026-09-07）
+
+- F-G0-01：完成[G0精确证据映射](../G0_Evidence_Map.md)，F01–F04及SC-1全部条目区分测试断言与代码核查。
+- F-G0-02：新增4项契约异常测试；人员/版本/计划状态错配、分页快照、请求/租户边界和原子批次限制通过。未发现需改业务源码的确切缺陷。
+- F-G0-03：提供`tests/support/foundation-scenario.mjs`，复用既有P3准备逻辑，两个组织/合成员工及不同角色可在内存数据库重建。
+- F-G0-04：新增`tests/g1-foundation.test.mjs`和[G1贯通方案](../G1_Foundation_Plan.md)，同员工正常链及调动后旧组织撤权通过；列明后续组合与界面缺口。
+- 本轮执行：114/114通过，0失败/跳过/取消；[JSON证据](../G0_Test_Result.json)与[TAP原文](../G0_Test_Run.tap)。原有109项测试未改动。
+- 变更路径：新增上述3个测试/辅助文件；新增G0_Evidence_Map.md、G0_Test_Result.json、G0_Test_Run.tap、G1_Foundation_Plan.md；更新本包、acceptance/G0.md、G1.md、Shared_Contracts.md。均在H001允许范围。
+- 应用源码、主线、其他模块、依赖、构建/托管配置及范围/归属/发布文件未修改；未发布，未新建真实账号，未使用真实人员数据。
+- 规则来源：SC-1和当前领域实现的独立设计；原系统企业规则未核实部分继续留空，不代签人工业务或生产验收。
+- 遗留：G1离职组合、培训阶段/出勤/学分同场景及界面人工验收；L04等全量后续范围维持。保留文件的具体更新建议见G1方案。
+- **写入职责交还：01基础至此结束H001写入，交回总控。**总控接回后记录最终交付SHA、核验路径并更新Ownership/Execution_Checkpoint/Integration_Log，再派发干部及学习串行工作。本聊天不继续写入，除非新的明确交接。
+
+测试代码提交完整SHA如上；最终文档提交不自引用自身SHA，可通过`git log -1 --format=%H -- docs/delivery/modules/foundation.md`核对，最终回复一并交付完整SHA。
