@@ -15,6 +15,20 @@
       "when": 1788751763873,
       "tag": "0001_oval_sunset_bain",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1788752304036,
+      "tag": "0002_petite_speedball",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1788752475884,
+      "tag": "0003_demonic_gauntlet",
+      "breakpoints": true
     }
   ]
 }

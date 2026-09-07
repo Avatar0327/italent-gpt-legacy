@@ -13,7 +13,7 @@ async function context(){
  const row=await db.prepare('SELECT data,revision FROM hris_workspaces WHERE owner = ?').bind(member.tenantId).first<{data:string;revision:number}>();
  if(!row)throw Error('Tenant unavailable');return {db,member,row};
 }
-export async function GET(){try{const c=await context();if(!c)return json({error:'请先登录'},401);return json({state:visibleState(JSON.parse(c.row.data),c.member),revision:c.row.revision,role:c.member.role});}catch(e){if(e instanceof AccessError)return json({error:e.message},403);return json({error:'数据暂时无法读取，请稍后重试'},503);}}
+export async function GET(){try{const c=await context();if(!c)return json({error:'请先登录'},401);return json({state:visibleState(JSON.parse(c.row.data),c.member),revision:c.row.revision,role:c.member.role,userId:c.member.userId});}catch(e){if(e instanceof AccessError)return json({error:e.message},403);return json({error:'数据暂时无法读取，请稍后重试'},503);}}
 export async function POST(request:Request){
  const origin=request.headers.get('origin');if(!origin||new URL(request.url).origin!==origin)return json({error:'请求来源无效'},403);
  if(!request.headers.get('content-type')?.toLowerCase().startsWith('application/json'))return json({error:'请求格式无效'},415);
@@ -26,14 +26,16 @@ export async function POST(request:Request){
  let body;try{body=JSON.parse(new TextDecoder().decode(bytes));}catch{return json({error:'请求格式无效'},400);}
  if(!body||!Number.isSafeInteger(body.revision)||body.revision<0)return json({error:'版本号无效'},400);
  if(body.revision!==c.row.revision)return json({error:'数据已更新，请刷新后重试'},409);
- let next:State;try{const state=JSON.parse(c.row.data);const command=authorizeCommand(state,body.command,c.member);next=applyCommand(state,command,new Date().toISOString(),c.member.userId);}catch(e){if(e instanceof AccessError)throw e;return json({error:e instanceof Error?e.message:'参数无效'},400);}
+ let next:State;try{const state=JSON.parse(c.row.data);const command=authorizeCommand(state,body.command,c.member);
+ if(command.action==='workflow'||command.action==='request'){const steps=command.action==='workflow'?command.steps:state.workflows?.[command.kind]?.steps;for(const step of steps??[]){const reviewer=await c.db.prepare("SELECT m.user_id,m.employee_id,g.name FROM hris_memberships m JOIN hris_access_grants g ON g.claimed_by=m.user_id AND g.tenant_id=m.tenant_id WHERE m.user_id=? AND m.tenant_id=? AND m.active=1 AND m.role IN ('admin','approver')").bind(step.userId,c.member.tenantId).first<{user_id:string;employee_id:string|null;name:string}>();if(!reviewer)throw Error('流程审批人必须是已激活的有效管理员或审批人');if(command.action==='workflow')step.name=reviewer.name;if(command.action==='request'&&reviewer.employee_id===command.employeeId)throw Error('流程审批人不能审批本人异动');}}
+ next=applyCommand(state,command,new Date().toISOString(),c.member.userId);}catch(e){if(e instanceof AccessError)throw e;return json({error:e instanceof Error?e.message:'参数无效'},400);}
  const event=next.audit[0];
  // D1 batch is transactional. The mutation token prevents an audit entry on a failed CAS.
  const results=await c.db.batch([
- c.db.prepare('UPDATE hris_workspaces SET data = ?,revision = revision + 1,last_mutation = ? WHERE owner = ? AND revision = ?').bind(JSON.stringify(next),event.id,c.member.tenantId,c.row.revision),
+ c.db.prepare('UPDATE hris_workspaces SET data = ?,revision = revision + 1,last_mutation = ? WHERE owner = ? AND revision = ? AND EXISTS (SELECT 1 FROM hris_memberships WHERE user_id = ? AND tenant_id = ? AND active = 1 AND role = ?)').bind(JSON.stringify(next),event.id,c.member.tenantId,c.row.revision,c.member.userId,c.member.tenantId,c.member.role),
  c.db.prepare('INSERT INTO hris_audit_events (tenant_id,id,actor_id,action,subject,at,revision) SELECT owner,?,?,?,?,?,revision FROM hris_workspaces WHERE owner = ? AND last_mutation = ?').bind(event.id,c.member.userId,event.action,event.subject,event.at,c.member.tenantId,event.id),
  ]);
  if(!results[0].meta.changes)return json({error:'数据已被其他会话更新，请刷新'},409);
- return json({state:visibleState(next,c.member),revision:c.row.revision+1,role:c.member.role});
+ return json({state:visibleState(next,c.member),revision:c.row.revision+1,role:c.member.role,userId:c.member.userId});
  }catch(e){if(e instanceof AccessError)return json({error:e.message},403);return json({error:'保存失败，请重试'},503);}
 }
