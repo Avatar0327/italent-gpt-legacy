@@ -573,3 +573,11 @@ test('P3 在职合同登记覆盖：无记录人员、当日边界、草稿与�
  await grant('coverageOther','hr',null,[otherOrg.id]);act('coverageOther');data=await expect(await query());assert.equal(data.total,1);assert.equal(data.rows[0][1],other.code);assert.equal(data.rows[0][7],0);
  act('employee');await expect(await query(),403);await expect(await reports.POST(request('/api/reports',{revision:data.revision,query:{dataset:'contractCoverage'}})),403);sqlite.close();
 });
+
+test('P3 合同协议类别与期限独立：保留旧数据未知状态，不由期限推断协议类别',async()=>{
+ const {sqlite,e}=await setup();const input={action:'contract',employeeId:e.id,employerName:'合成分类主体',contractType:'fixed',start:'2026-01-01',end:'2026-12-31',evidence:'合成资料明确区分协议类别与期限类型'};
+ const old=await work({...input,number:'LEGACY-CATEGORY'});assert.equal((await get()).records.find(r=>r.id===old.id).payload.agreementCategory,undefined);
+ const labor=await work({...input,number:'LABOR-CATEGORY',agreementCategory:'labor'});assert.equal((await get()).records.find(r=>r.id===labor.id).payload.agreementCategory,'labor');
+ await work({...input,number:'SERVICE-CATEGORY',agreementCategory:'service'});await work({...input,number:'INTERN-CATEGORY',agreementCategory:'internship'});await work({...input,number:'INVALID-CATEGORY',agreementCategory:'fixed'},400);
+ const report=await expect(await reports.GET(request('/api/reports?dataset=contractOperations')));assert.equal(report.columns[6],'期限类型');assert.equal(report.columns[15],'协议类别');assert.deepEqual(report.rows.map(r=>r[15]),['待登记','劳动合同','劳务合同','实习协议']);assert.ok(report.rows.every(r=>r[6]==='固定期限'));await work({action:'classifyContract',id:old.id,agreementCategory:'labor',evidence:'核对原始凭证后补充草稿类别'});await work({action:'signContract',id:old.id,signedOn:'2026-01-01',evidence:'核对实际签署资料完成登记'});await work({action:'classifyContract',id:old.id,agreementCategory:'service',evidence:'已签署记录不能直接改类别'},400);const history=await expect(await dev.GET(request('/api/development?id='+old.id)));assert.ok(history.items.some(x=>x.snapshot.payload.categoryEvidence==='核对原始凭证后补充草稿类别'));sqlite.close();
+});
