@@ -1,0 +1,25 @@
+import type {DevelopmentContext} from './development-repository';
+import {payrollRecordAccess,payrollStaff} from './payroll-access';
+import {payrollTotals} from './payroll';
+import {HttpError} from './http';
+import type {Cell} from './reports';
+
+export function payrollReport(ctx:DevelopmentContext,dataset:'payrollOperations'|'payrollReconciliation'){
+ if(!payrollStaff(ctx.member))throw new HttpError(403,'仅薪酬岗位可查看薪酬管理报表');
+ // Use managed records only: an employee's own masked slip is not a management grant.
+ const records=ctx.records.filter(r=>payrollRecordAccess(r,ctx.records,ctx.state,ctx.member));
+ const batches=records.filter(r=>r.kind==='payBatch'),slips=records.filter(r=>r.kind==='paySlip'&&r.status!=='cancelled');
+ const statuses:Record<string,string>={draft:'草稿',submitted:'待复核',approved:'已批准待发布',published:'已发布',cancelled:'已取消'};
+ const keys=['grossCents','deductionCents','netCents','employerCents'] as const;
+ const sum=(values:ReturnType<typeof payrollTotals>[])=>keys.map(k=>values.reduce((n,v)=>{const total=n+v[k];if(!Number.isSafeInteger(total))throw new HttpError(400,'汇总金额超出安全整数范围，请缩小业务范围');return total;},0));
+ if(dataset==='payrollOperations'){
+  const rows:Cell[][]=batches.map(b=>{const active=slips.filter(s=>s.referenceId===b.id);return [b.id,b.payload.name??'',b.payload.period??'',ctx.state.orgs.find(o=>o.id===b.payload.orgId)?.name??'',statuses[b.status]??b.status,active.length,...sum(active.map(s=>payrollTotals(s.payload.payItems??[])))];});
+  return {title:'可见范围薪酬批次办理',columns:['批次编号','批次名称','期间','批次组织','状态','有效明细数','明细应发（分）','明细扣款（分）','明细净额（分）','单位承担（分）'],rows};
+ }
+ const rows:Cell[][]=slips.filter(s=>batches.some(b=>b.id===s.referenceId&&b.status==='published')).map(s=>{
+  const b=batches.find(b=>b.id===s.referenceId)!,adjustments=records.filter(a=>a.kind==='payAdjustment'&&a.referenceId===s.id&&a.status==='published');
+  const original=payrollTotals(s.payload.payItems??[]),delta=sum(adjustments.map(a=>payrollTotals(a.payload.payItems??[]))),total=sum([original,...adjustments.map(a=>payrollTotals(a.payload.payItems??[]))]),snapshot=s.payload.employeeSnapshot;
+  return [b.id,s.id,b.payload.period??'',snapshot?.code??'',snapshot?.name??'',snapshot?.orgName??'',...keys.map(k=>original[k]),adjustments.length,...delta,...total];
+ });
+ return {title:'可见范围已发布工资对账',columns:['批次编号','工资条编号','期间','工号快照','姓名快照','组织快照','原应发（分）','原扣款（分）','原净额（分）','原单位承担（分）','已发布补差数','补差应发（分）','补差扣款（分）','补差净额（分）','补差单位承担（分）','对账应发（分）','对账扣款（分）','对账净额（分）','对账单位承担（分）'],rows};
+}
