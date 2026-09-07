@@ -8,3 +8,5 @@
 
 本轮完整命令：node --test tests/hris.test.mjs tests/authorization.test.mjs tests/workflows.test.mjs tests/p2-api.test.mjs tests/p3-api.test.mjs tests/g0-contracts.test.mjs tests/g1-foundation.test.mjs tests/g1-cadre-exit.test.mjs
 结果：115/115通过，0失败/跳过，18595.846187ms。本地合成SQLite/身份/R2，不代表真实多账号或生产验收。原干部交付与测试记录保留历史，以本修复记录覆盖C-DEF-01未修复状态。G1仍需学习组合与人工验收。
+
+类型检查及构建通过，修复已于v67私有发布成功，应用SHA cb939378959a0f4d9a872890708e5b3b724b7234。发布不代表企业生产验收完成。

@@ -1,6 +1,6 @@
 # 文件归属与写入交接
 
-当前模式：串行代码交接。H002已交还，总控已接回唯一代码写入/合并/发布职责；03待H003明确交接。下方H002为历史。
+当前模式：H002已关闭；本次修复发布后按H003将唯一代码写入职责交给03学习发展，总控保留合并/发布。最新H003覆盖下方历史状态。
 
 ## 历史交接：H001（已关闭）（2026-09-07）
 
@@ -72,3 +72,23 @@ lib/hris/development.ts、app/api/development/route.ts、公共权限/持久化�
 
 ## H002-R 总控接回
 02交付420edae82648bb0a103e169843be2d66dc737f7b，已明确交还，main快进合并。总控修复C-DEF-01并跑115项回归通过，详见C_DEF_01_Resolution.md。干部侧核查交付接受，但G1整体仍未验收。
+
+## H003 当前生效：03学习发展串行交接
+
+03已提供只读接入报告，旧报告基线859ef30；现需读取包含本记录的新主线，已有账号/目标/模块顺序授权无需重问。干部H002已明确交还并合入，总控完成C-DEF-01修复。总控在本交接提交保存推送后释放代码写入职责给03，保留合并和发布；01/02不继续写入。
+
+03从包含H003的主线创建delivery/learning，存在则核对基线，禁止强制覆盖。仍是共享目录串行交接，不宣布并行隔离通过。只提交模块代码及证据，不推送main、不发布、不新建站点。
+
+允许路径：lib/hris/training-stages.ts、training-dispatch.ts、training-sessions.ts、training-requests.ts、learning-credits.ts；app/learning/、training-sessions/、training-requests/、learning-credits/及相应专属API目录。仅确切的首批缺口修复，不重做现有实现。
+
+允许测试：新增tests/g1-learning*.test.mjs、tests/support/learning-*.mjs；允许兼容扩展tests/support/foundation-scenario.mjs，但保留基础/干部测试断言。已有g0/g1/p3测试可执行，tests/p3-api.test.mjs和runtime.mjs不改，使用新增模块测试承载新证据。
+
+允许记录：docs/delivery/modules/learning.md、acceptance/G1.md、新增G1_Learning_*文档/测试结果；Shared_Contracts.md只追加实例和证据。Ownership、检查点、范围由总控更新。
+
+保留路径：development.ts及app/api/development/route.ts、公共权限/持久化、cadre-profiles、migrations、身份、依赖、构建/托管、UI壳。确切缺陷提交复现与补丁建议给总控，不绕过校验，不为让测试通过放宽预期；期间推进其他项。
+
+任务：L-G1-01直接引用已通过人员/版本/计划异常证据，不重复编写；L-G1-02/03重点用同一合成员工场景关联planId和trainingId、两个课程阶段、考试、强制出勤、独立核验、取消恢复和学分去重/撤销，检查人才档案状态。使用独立验证者及当前组织权限。L04先完成历史课程复用设计，保留后续，不冒称已实现。
+
+C-DEF-01新基线已修复，旧干部6/6报告仅是历史现状，不能恢复400缺陷断言。115项回归为当前修复基线；不将测试数当作全量完成率。仅合成数据，无原站写入/真实迁移/扩大访问。
+
+完成模块交付时给出完整SHA、测试命令和证据、G1对应项状态、未知规则与遗留缺陷，并明确交还写入职责。G1人工业务及生产验收不得代签。完成小功能继续工作，无需重复请求继续。
