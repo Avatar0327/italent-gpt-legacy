@@ -1,7 +1,7 @@
 import {z} from 'zod';
 import {HttpError} from './http';
 import {scopedOrgs,type Member} from './authorization';
-import {visibleRecord,isTalentManager,type DevelopmentRecord as R} from './development';
+import {visibleRecord,isTalentManager,orgWithin,type DevelopmentRecord as R} from './development';
 import type {State} from './model';
 const id=z.string().min(1).max(100),evidence=z.string().trim().min(5).max(4000);
 const command=z.discriminatedUnion('action',[
@@ -13,7 +13,7 @@ const command=z.discriminatedUnion('action',[
 export function applyPerformanceCheckin(records:R[],state:State,member:Member,input:unknown,at=new Date().toISOString()):R{
  const c=command.parse(input),deny=(s:string):never=>{throw new HttpError(403,s);},fail=(s:string):never=>{throw new HttpError(400,s);};
  const get=(id:string,kind:R['kind'])=>{const r=records.find(r=>r.id===id&&r.kind===kind);if(!r||!visibleRecord(r,records,state,member))deny('记录不存在或没有访问权限');return r!;};
- const live=(p:R)=>{const e=state.employees.find(e=>e.id===p.employeeId),cy=get(p.referenceId!,'performanceCycle');if(!e||e.status==='离职'||cy.status!=='active'||p.status!=='confirmed'||records.some(r=>r.kind==='performance'&&r.payload.sourcePlanId===p.id))fail('仅在职员工、活动周期内的已确认待自评计划可继续跟进');};
+ const live=(p:R)=>{const e=state.employees.find(e=>e.id===p.employeeId),cy=get(p.referenceId!,'performanceCycle');if(!e||e.status==='离职'||cy.status!=='active'||!orgWithin(state,e.orgId,cy.payload.orgId!)||p.status!=='confirmed'||records.some(r=>r.kind==='performance'&&r.payload.sourcePlanId===p.id))fail('仅当前周期组织范围内的在职员工、活动周期内的已确认待自评计划可继续跟进');};
  if(c.action==='submit'){
   const p=get(c.planId,'performancePlan');if(p.employeeId!==member.employeeId)deny('仅员工本人可提交目标执行记录');live(p);if(records.some(r=>r.kind==='performanceGoalChange'&&r.referenceId===p.id&&r.status==='submitted'))fail('请先处理或撤回待审目标调整');const g=p.payload.goals?.[c.goalIndex];if(!g)fail('目标序号无效');const old=c.id?get(c.id,'performanceCheckin'):undefined;
   if(old&&(old.createdBy!==member.userId||old.employeeId!==member.employeeId||old.referenceId!==p.id))deny('只能补充本人原计划的跟进记录');if(old&&(old.status!=='returned'||old.payload.basePlanVersion!==(p.payload.version??1)||JSON.stringify(old.payload.checkinGoal)!==JSON.stringify(g)||old.payload.goalIndex!==c.goalIndex))fail('仅同一目标版本的退回记录可以补充；目标已调整时请新建跟进');

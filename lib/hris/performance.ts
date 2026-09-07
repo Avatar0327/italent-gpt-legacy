@@ -28,7 +28,7 @@ export function applyPerformance(records:DevelopmentRecord[],state:State,member:
  const employee=(id:string)=>{const e=state.employees.find(e=>e.id===id);if(!e||!(isTalentManager(member)?scope.has(e.orgId):e.id===member.employeeId))deny('没有此员工的数据权限');return e!;};
  const get=(id:string,kind:DevelopmentRecord['kind'])=>{const r=records.find(r=>r.id===id&&r.kind===kind);if(!r||!visibleRecord(r,records,state,member))deny('记录不存在或没有访问权限');return r!;};
  const independent=(r:DevelopmentRecord)=>{manager();employee(r.employeeId!);if(r.employeeId===member.employeeId)deny('不能确认、评价或发布本人的绩效');};
- const cycle=(r:DevelopmentRecord)=>{const p=get(r.referenceId!,'performanceCycle');if(p.status!=='active')invalid('绩效周期未启动或已结束');return p;};
+ const cycle=(r:DevelopmentRecord)=>{const p=get(r.referenceId!,'performanceCycle');if(p.status!=='active')invalid('绩效周期未启动或已结束');const e=employee(r.employeeId!);if(e.status==='离职'||!orgWithin(state,e.orgId,p.payload.orgId!))invalid('员工已离职或已调出本绩效周期的组织范围，不能继续推进计划');return p;};
  const published=(r:DevelopmentRecord)=>records.some(x=>x.kind==='performance'&&x.payload.sourcePlanId===r.id);
  const make=(kind:DevelopmentRecord['kind'],payload:DevelopmentRecord['payload'],extra:Partial<DevelopmentRecord>={})=>({id:crypto.randomUUID(),kind,payload,employeeId:null,positionId:null,referenceId:null,status:'draft',createdBy:member.userId,createdAt:at,updatedAt:at,...extra} as DevelopmentRecord);
  const change=(r:DevelopmentRecord,status:string,payload:DevelopmentRecord['payload']={})=>({...r,status,payload:{...r.payload,...payload},updatedAt:at});
