@@ -1,3 +1,4 @@
+import {performancePlanLive} from './performance-availability';
 import {payrollBatchIndependent} from './payroll-review';
 import {certificateSourceValid} from './certificates';
 import {businessDate} from './workforce';
@@ -19,7 +20,7 @@ export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
   const self=r.employeeId===m.employeeId,e=employee(r.employeeId);
   const add=(domain:string,action:string,href:string,suffix='',title=r.payload.title??action)=>rows.push({id:r.kind+':'+r.id+suffix,recordId:r.id,domain,title,employeeName:e?.name??'—',action,href,updatedAt:r.updatedAt,due:r.payload.due??null});
   if(r.kind==='performanceCheckin'&&e?.status!=='离职'){
-   const p=records.find(p=>p.id===r.referenceId&&p.kind==='performancePlan'),live=p?.status==='confirmed'&&records.some(c=>c.id===p.referenceId&&c.kind==='performanceCycle'&&c.status==='active')&&!records.some(c=>c.kind==='performance'&&c.payload.sourcePlanId===p.id);
+   const p=records.find(p=>p.id===r.referenceId&&p.kind==='performancePlan'),live=performancePlanLive(state,records,p)&&p?.status==='confirmed'&&records.some(c=>c.id===p.referenceId&&c.kind==='performanceCycle'&&c.status==='active')&&!records.some(c=>c.kind==='performance'&&c.payload.sourcePlanId===p.id);
    if(live&&r.status==='submitted'&&manager&&!self&&r.createdBy!==m.userId)add('performance','目标执行反馈','/performance-checkins');
    if(live&&r.status==='returned'&&self&&r.createdBy===m.userId&&(p.payload.version??1)===r.payload.basePlanVersion&&!records.some(c=>c.kind==='performanceGoalChange'&&c.referenceId===p.id&&c.status==='submitted'))add('performance','补充目标跟进','/performance-checkins');
   }
@@ -48,7 +49,7 @@ export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
    if(r.kind==='payQuery'&&r.status==='submitted'&&payrollWriter(m)&&r.createdBy!==m.userId)add('payroll','工资异议答复','/payroll-adjustments','',`${r.payload.period} 工资异议`);
    if(r.kind==='payAdjustment'&&published){if(r.status==='submitted'&&payrollReviewer(m)&&r.createdBy!==m.userId)add('payroll','工资补差复核','/payroll-adjustments','',`${r.payload.period} 工资补差`);if(r.status==='approved'&&payrollWriter(m))add('payroll','工资补差发布','/payroll-adjustments','',`${r.payload.period} 工资补差`);}
   }
-  if(r.kind==='performancePlan'&&manager&&!self&&records.some(x=>x.kind==='performanceCycle'&&x.id===r.referenceId&&x.status==='active')&&!records.some(x=>x.kind==='performance'&&x.payload.sourcePlanId===r.id)){
+  if(r.kind==='performancePlan'&&performancePlanLive(state,records,r)&&manager&&!self&&records.some(x=>x.kind==='performanceCycle'&&x.id===r.referenceId&&x.status==='active')&&!records.some(x=>x.kind==='performance'&&x.payload.sourcePlanId===r.id)){
    if(r.status==='draft')add('performance','绩效目标确认','/performance','',`${r.payload.period} 绩效目标`);
    if(r.status==='submitted')add('performance','绩效评价','/performance','',`${r.payload.period} 绩效评价`);
    if(r.status==='evaluated'&&hr&&!records.some(x=>x.kind==='performance'&&x.employeeId===r.employeeId&&x.payload.period===r.payload.period&&x.payload.sourcePlanId))add('performance','绩效结果发布','/performance','',`${r.payload.period} 绩效结果`);

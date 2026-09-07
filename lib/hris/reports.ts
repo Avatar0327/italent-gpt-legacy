@@ -1,3 +1,4 @@
+import {performancePlanLive} from './performance-availability';
 import type {Member} from './authorization';
 import {payrollReport} from './payroll-reports';
 import {latestInstructorTrial} from './instructor-trials';
@@ -67,7 +68,7 @@ export function makeReport(ctx:DevelopmentContext,input:unknown){
   title='可见范围绩效办理';columns=['工号','姓名','当前组织','期间','计划阶段','目标版本','待审目标调整','待反馈记录（所有版本）','其中本账号可反馈','其中旧目标版本记录','已反馈记录','最近提交跟进（北京时间）'];
   const statuses:Record<string,string>={draft:'待目标确认',confirmed:'待本人自评',submitted:'待管理者评价',evaluated:'待结果发布',cancelled:'已取消'};
   rows=records.filter(r=>r.kind==='performancePlan').map(p=>{
-   const published=records.some(r=>r.kind==='performance'&&r.status==='published'&&r.payload.sourcePlanId===p.id),logs=records.filter(r=>r.kind==='performanceCheckin'&&r.referenceId===p.id),pending=logs.filter(r=>r.status==='submitted'),live=p.status==='confirmed'&&!!employee(p.employeeId)&&employee(p.employeeId)?.status!=='离职'&&records.some(c=>c.kind==='performanceCycle'&&c.id===p.referenceId&&c.status==='active')&&!published,last=logs.map(r=>r.payload.submittedAt??r.createdAt).sort().at(-1);
+   const published=records.some(r=>r.kind==='performance'&&r.status==='published'&&r.payload.sourcePlanId===p.id),logs=records.filter(r=>r.kind==='performanceCheckin'&&r.referenceId===p.id),pending=logs.filter(r=>r.status==='submitted'),live=performancePlanLive(ctx.state,records,p)&&p.status==='confirmed'&&!!employee(p.employeeId)&&employee(p.employeeId)?.status!=='离职'&&records.some(c=>c.kind==='performanceCycle'&&c.id===p.referenceId&&c.status==='active')&&!published,last=logs.map(r=>r.payload.submittedAt??r.createdAt).sort().at(-1);
    return [code(p.employeeId),name(p.employeeId),org(employee(p.employeeId)?.orgId??''),p.payload.period??'',published?'结果已发布':statuses[p.status]??p.status,p.payload.version??1,records.filter(r=>r.kind==='performanceGoalChange'&&r.referenceId===p.id&&r.status==='submitted').length,pending.length,live&&p.employeeId!==ctx.member.employeeId?pending.filter(r=>r.createdBy!==ctx.member.userId).length:0,pending.filter(r=>r.payload.basePlanVersion!==(p.payload.version??1)).length,logs.filter(r=>r.status==='acknowledged').length,last?new Date(last).toLocaleString('sv-SE',{timeZone:'Asia/Shanghai',hour12:false}):null];
   });
  }

@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import {setup,act,get,expect,dev,members,request,grant} from './support/foundation-scenario.mjs';
 import {perf,change,checkin,performance,changes,checkins,planFor,moveEmployee,revisedGoals} from './support/performance-scenario.mjs';
 
+const inbox=await import('../app/api/work-inbox/route.ts');
+const selfService=await import('../app/api/self-service/route.ts');
 for(const kind of ['exit','transfer'])test(`H004 P-DEF-01: ${kind} blocks active plan progression, keeps history and cancellation`,async t=>{
  const f=await setup();t.after(()=>f.sqlite.close());
  const draft=await planFor(f,'draft','DRAFT'),confirmed=await planFor(f,'confirmed','CONFIRMED');
@@ -11,6 +13,12 @@ for(const kind of ['exit','transfer'])test(`H004 P-DEF-01: ${kind} blocks active
  const submitted=await planFor(f,'submitted','SUBMITTED'),evaluated=await planFor(f,'evaluated','EVALUATED');
  await moveEmployee(f,kind);
  const revision=(await get()).revision;
+ for(const api of [performance,changes,checkins]){
+  const view=await expect(await api.GET());assert.ok(!view.livePlanIds.includes(draft.p.id));assert.ok(!view.livePlanIds.includes(logPlan.p.id));
+ }
+ const queue=await expect(await inbox.GET(request('/api/work-inbox?domain=performance')));
+ assert.ok(!queue.items.some(r=>[draft.p.id,submitted.p.id,evaluated.p.id,log.id].includes(r.recordId)));
+ act('employee');const self=await expect(await selfService.GET());assert.ok(!self.tasks.some(r=>r.id===logPlan.p.id));act('owner');
  // Admin sees both organizations: access alone must not bypass the cycle's employee bounds.
  for(const c of [
   {action:'confirmGoals',id:draft.p.id},
