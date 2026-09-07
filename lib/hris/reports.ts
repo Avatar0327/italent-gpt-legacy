@@ -18,7 +18,7 @@ export function makeReport(ctx:DevelopmentContext,input:unknown){
  if(q.dataset==='payrollOperations'||q.dataset==='payrollReconciliation'){({title,columns,rows}=payrollReport(ctx,q.dataset));}
  if(q.dataset==='trainingStageProgress'){
   if(!['admin','hr','manager'].includes(ctx.member.role))throw new HttpError(403,'仅有组织管理权限的人员可查看阶段计划进度');
-  title='可见范围课程阶段进度';columns=['培训项目','项目状态','工号','姓名','人员状态','阶段总数','课程总数','已核验课程数','最早未完成阶段','该阶段已派发未完成','该阶段尚未派发','已完成全部阶段'];
+  title='可见范围课程阶段进度';columns=['培训项目','项目状态','工号','姓名','人员状态','阶段总数','课程总数','已核验课程数','最早未完成阶段','该阶段已派发未完成','该阶段无有效项目任务','已完成全部阶段'];
   const status:Record<string,string>={draft:'草稿',active:'进行中',closed:'已结束'};
   for(const training of records.filter(r=>r.kind==='training'&&r.payload.trainingStages?.length)){
    const assignments=records.filter(r=>r.kind==='enrollment'&&r.payload.trainingId===training.id&&r.status!=='cancelled');
