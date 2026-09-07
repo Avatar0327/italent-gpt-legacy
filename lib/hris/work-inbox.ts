@@ -2,7 +2,7 @@ import {payrollWriter,payrollReviewer,payrollRecordAccess} from './payroll-acces
 import {authorizeCommand,type Member} from './authorization';
 import type {State} from './model';
 import {visibleRecord,type DevelopmentRecord as R} from './development';
-export const inboxKinds=['review','reviewCalibration','payBatch','paySlip','payAdjustment','payQuery','performancePlan','performanceCycle','performance','performanceAppeal','requisition','candidate','interview','leave','correction','shift','plan','enrollment','instructorCertification','onboardingPlan','trainingAttendance','trainingSession','training','course'] as const;
+export const inboxKinds=['cadreNomination','cadreObservation','employeeFieldDefinition','employeeFieldValue','review','reviewCalibration','payBatch','paySlip','payAdjustment','payQuery','performancePlan','performanceCycle','performance','performanceAppeal','requisition','candidate','interview','leave','correction','shift','plan','enrollment','instructorCertification','onboardingPlan','trainingAttendance','trainingSession','training','course'] as const;
 export type InboxItem={id:string;recordId:string;domain:string;title:string;employeeName:string;action:string;href:string;updatedAt:string;due:string|null};
 export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
  const rows:InboxItem[]=[],hr=['admin','hr'].includes(m.role),manager=hr||m.role==='manager';
@@ -15,6 +15,9 @@ export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
   if(!visibleRecord(r,records,state,m))continue;
   const self=r.employeeId===m.employeeId,e=employee(r.employeeId);
   const add=(domain:string,action:string,href:string,suffix='',title=r.payload.title??action)=>rows.push({id:r.kind+':'+r.id+suffix,recordId:r.id,domain,title,employeeName:e?.name??'—',action,href,updatedAt:r.updatedAt,due:r.payload.due??null});
+  if(r.kind==='cadreNomination'&&r.status==='submitted'&&!self&&['admin','manager'].includes(m.role)&&r.createdBy!==m.userId)add('cadres','干部提名审议','/cadres','',r.payload.targetPositionName??'干部提名');
+  if(r.kind==='cadreObservation'&&r.status==='submitted'&&!self&&manager&&r.createdBy!==m.userId)add('cadres','考察述职核验','/cadres','',r.payload.targetPositionName??'任职考察');
+  if(r.kind==='employeeFieldValue'&&r.status==='pending'&&hr&&!self&&r.payload.submittedBy!==m.userId)add('personnel','档案字段变更复核','/employee-fields?'+new URLSearchParams({employeeId:r.employeeId!,recordId:r.id}),'',r.payload.name??'档案字段变更');
   if(r.kind==='reviewCalibration'&&!self&&manager&&!records.some(x=>x.kind==='review'&&x.payload.supersedes===r.referenceId)){
    if(r.status==='submitted'&&r.createdBy!==m.userId)add('development','盘点校准复核','/development','',`${r.payload.period} 盘点校准`);
    if(r.status==='approved'&&hr&&r.payload.verifiedBy!==m.userId)add('development','盘点校准发布','/development','',`${r.payload.period} 盘点校准`);
