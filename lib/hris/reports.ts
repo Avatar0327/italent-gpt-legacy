@@ -1,11 +1,13 @@
+import {businessDate} from './workforce';
 import {HttpError} from './http';
 import {latestPublishedReviews} from './review-versions';
 import {z} from 'zod';
 import {visibleState} from './authorization';
 import {visibleDevelopment,type DevelopmentContext} from './development-repository';
 import {attendanceReport} from './attendance';
-export const reportQuery=z.object({dataset:z.enum(['workforce','attendance','learning','performance','talentReview','successionCoverage']).default('workforce'),from:z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),to:z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),search:z.string().max(100).default('')}).refine(q=>!q.from||!q.to||q.from<=q.to,'开始日期不能晚于结束日期');
-export const reportKinds={successionCoverage:['succession'],talentReview:['review'],workforce:[],attendance:['shift','clock','correction','leaveType','leaveCredit','leave'],learning:['enrollment'],performance:['performance','performancePlan','performanceCycle']} as const;
+const validDate=z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine(v=>{const d=new Date(v+'T00:00:00Z');return !Number.isNaN(d.getTime())&&d.toISOString().slice(0,10)===v;},'日期无效');
+export const reportQuery=z.object({dataset:z.enum(['workforce','attendance','learning','performance','talentReview','successionCoverage','instructorSchedule','trainingProgress','trainingRoster']).default('workforce'),from:validDate.optional(),to:validDate.optional(),search:z.string().max(100).default('')}).refine(q=>!q.from||!q.to||q.from<=q.to,'开始日期不能晚于结束日期');
+export const reportKinds={trainingRoster:['training','trainingSession','trainingAttendance','enrollment'],instructorSchedule:['training','trainingSession','enrollment'],trainingProgress:['training','enrollment'],successionCoverage:['succession'],talentReview:['review'],workforce:[],attendance:['shift','clock','correction','leaveType','leaveCredit','leave'],learning:['enrollment'],performance:['performance','performancePlan','performanceCycle']} as const;
 export type Cell=string|number|null;
 export function makeReport(ctx:DevelopmentContext,input:unknown){
  const q=reportQuery.parse(input),state=visibleState(ctx.state,ctx.member),records=visibleDevelopment(ctx),employee=(id:string|null)=>state.employees.find(e=>e.id===id),name=(id:string|null)=>employee(id)?.name??'',code=(id:string|null)=>employee(id)?.code??'',org=(id:string)=>state.orgs.find(o=>o.id===id)?.name??'';
@@ -22,6 +24,30 @@ export function makeReport(ctx:DevelopmentContext,input:unknown){
    const candidates=new Map(records.filter(r=>r.kind==='succession'&&r.positionId===p.id&&r.status==='active'&&employee(r.employeeId)?.status!=='离职'&&!!employee(r.employeeId)).map(r=>[r.employeeId,r]));
    const ready=Array.from(candidates.values());return [p.code,p.name,org(p.orgId),state.employees.filter(e=>e.status!=='离职'&&e.positionId===p.id).length,ready.length,...['ready','one_year','two_years'].map(v=>ready.filter(r=>r.payload.readiness===v).length)];
   });
+ }
+ if(q.dataset==='instructorSchedule'||q.dataset==='trainingProgress'||q.dataset==='trainingRoster'){
+  if(!['admin','hr','manager'].includes(ctx.member.role))throw new HttpError(403,'仅有组织管理权限的人员可查看培训管理报表');
+  const trainings=records.filter(r=>r.kind==='training');
+  const statuses:Record<string,string>={draft:'未发布',active:'进行中',closed:'已结束',cancelled:'已取消'};
+  if(q.dataset==='instructorSchedule'){
+   title='可见范围授课安排';columns=['培训项目','场次','讲师（排期快照）','身份关联','开始时间（北京时间）','结束时间（北京时间）','原排期分钟','有效计划分钟','场次状态'];
+   const stamp=(s:string)=>new Date(s).toLocaleString('sv-SE',{timeZone:'Asia/Shanghai',hour12:false});
+   rows=records.filter(r=>r.kind==='trainingSession'&&(!q.from||businessDate(r.payload.startAt!)>=q.from)&&(!q.to||businessDate(r.payload.startAt!)<=q.to)).map(r=>{
+    const minutes=(Date.parse(r.payload.endAt!)-Date.parse(r.payload.startAt!))/60000;
+    return [trainings.find(t=>t.id===r.referenceId)?.payload.name??'',r.payload.title??'',r.payload.instructor??'',r.payload.instructorEmployeeId?'已关联内部员工及认证快照':'未关联内部员工',stamp(r.payload.startAt!),stamp(r.payload.endAt!),minutes,r.status==='cancelled'?0:minutes,statuses[r.status]??r.status];
+   });
+  }else if(q.dataset==='trainingRoster'){
+   title='可见范围班级学员名册';columns=['培训项目','课程','工号','姓名','人员状态','学习任务状态','必修场次数','已核验出席','已核验未出席','待核验或未登记','学习截止日'];
+   const taskStatus:Record<string,string>={active:'进行中',submitted:'待成果核验',returned:'待补充成果',completed:'已完成'};
+   rows=records.filter(r=>r.kind==='enrollment'&&r.status!=='cancelled'&&trainings.some(t=>t.id===r.payload.trainingId)).map(r=>{
+    const required=records.filter(s=>s.kind==='trainingSession'&&s.referenceId===r.payload.trainingId&&s.payload.sessionCourseId===r.referenceId&&s.payload.mandatory&&s.status!=='cancelled');
+    let present=0,absent=0;for(const session of required){const attendance=records.find(a=>a.kind==='trainingAttendance'&&a.referenceId===session.id&&a.employeeId===r.employeeId&&a.status==='verified');if(attendance?.payload.present===true)present++;if(attendance?.payload.present===false)absent++;}
+    return [trainings.find(t=>t.id===r.payload.trainingId)?.payload.name??'',r.payload.title??'',code(r.employeeId),name(r.employeeId),employee(r.employeeId)?.status??'',taskStatus[r.status]??r.status,required.length,present,absent,required.length-present-absent,r.payload.due??''];
+   });
+  }else{
+   title='可见范围培训项目进度';columns=['培训项目','所属组织','项目状态','可见报名人数','有效学习任务数','已完成任务','待核验任务','已取消任务','任务完成率（%）'];
+   rows=trainings.map(t=>{const all=records.filter(r=>r.kind==='enrollment'&&r.payload.trainingId===t.id),valid=all.filter(r=>r.status!=='cancelled'),completed=valid.filter(r=>r.status==='completed').length;return [t.payload.name??'',org(t.payload.orgId!),statuses[t.status]??t.status,new Set(valid.map(r=>r.employeeId)).size,valid.length,completed,valid.filter(r=>r.status==='submitted').length,all.length-valid.length,valid.length?Math.round(completed/valid.length*10000)/100:null];});
+  }
  }
  if(q.search)rows=rows.filter(r=>r.some(c=>String(c??'').toLocaleLowerCase().includes(q.search.toLocaleLowerCase())));
  return {title,columns,rows,dataset:q.dataset,asOf:new Date().toISOString(),revision:ctx.row.revision};
