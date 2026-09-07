@@ -561,3 +561,15 @@ test('P3 学习任务恢复：保留考试次数和历史，重新提交，范�
  await send({action:'cancelEnrollment',id:second.id,reason:'项目调整取消并结束项目'});await send({action:'closeTraining',id:training.id});await send({action:'restoreEnrollment',id:second.id,due,evidence:'已结束项目不允许恢复任务'},400);
  assert.ok((await expect(await dev.GET(request('/api/development?id='+second.id)))).items.some(x=>x.snapshot.payload.evidence==='取消之前提交的成果证据'));sqlite.close();
 });
+
+test('P3 在职合同登记覆盖：无记录人员、当日边界、草稿与未来登记不充当覆盖',async()=>{
+ const {sqlite,e,other,otherOrg}=await setup();const today=new Date().toLocaleDateString('sv-SE',{timeZone:'Asia/Shanghai'});
+ const query=()=>reports.GET(request('/api/reports?dataset=contractCoverage'));
+ let data=await expect(await query());assert.equal(data.total,2);assert.ok(data.rows.every(r=>r[7]===0));
+ async function contract(number,start,end,sign=true){const c=await work({action:'contract',employeeId:e.id,number,employerName:'合成主体'+number,contractType:end?'fixed':'open',start,...(end?{end}:{}),evidence:'PRIVATE_COVERAGE_EVIDENCE 合成登记凭证'});if(sign)await work({action:'signContract',id:c.id,signedOn:'2020-01-01',evidence:'PRIVATE_COVERAGE_EVIDENCE 合成签署事实'});return c;}
+ await contract('BOUNDARY',today,today);await contract('FUTURE','2099-01-01','2099-12-31');await contract('EXPIRED','2020-01-01','2020-12-31');await contract('DRAFT','2020-01-01',undefined,false);const cancelled=await contract('CANCELLED','2020-01-01',undefined,false);await work({action:'cancelContract',id:cancelled.id,evidence:'取消合成草稿以验证不计数'});
+ data=await expect(await query());const row=data.rows.find(r=>r[1]===e.code);assert.equal(row[0],today);assert.deepEqual(row.slice(7),[1,'BOUNDARY',1,1,0,1]);assert.equal(data.rows.find(r=>r[1]===other.code)[7],0);assert.ok(!JSON.stringify(data).includes('PRIVATE_COVERAGE_EVIDENCE'));
+ const open=await contract('OPEN','2020-01-01');assert.equal((await expect(await query())).rows.find(r=>r[1]===e.code)[7],2);act('hr');await work({action:'endContract',id:open.id,endedOn:today,evidence:'独立核实合成合同终止事实'});data=await expect(await query());assert.equal(data.total,1);assert.equal(data.rows[0][7],1);assert.equal(data.rows[0][11],1);
+ await grant('coverageOther','hr',null,[otherOrg.id]);act('coverageOther');data=await expect(await query());assert.equal(data.total,1);assert.equal(data.rows[0][1],other.code);assert.equal(data.rows[0][7],0);
+ act('employee');await expect(await query(),403);await expect(await reports.POST(request('/api/reports',{revision:data.revision,query:{dataset:'contractCoverage'}})),403);sqlite.close();
+});
