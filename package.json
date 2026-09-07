@@ -13,7 +13,8 @@
     "test": "npm run build && node --test tests/*.test.mjs",
     "lint": "bash scripts/sites-env.sh -- eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "bash scripts/sites-env.sh -- drizzle-kit generate",
-    "test:p2": "node --test tests/hris.test.mjs tests/authorization.test.mjs tests/workflows.test.mjs tests/p2-api.test.mjs"
+    "test:p2": "node --test tests/hris.test.mjs tests/authorization.test.mjs tests/workflows.test.mjs tests/p2-api.test.mjs",
+    "test:p3": "node --test tests/p3-api.test.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

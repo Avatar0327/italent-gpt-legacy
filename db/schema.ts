@@ -57,3 +57,15 @@ export const employeePositions=sqliteTable('hris_employee_positions',{
 export const assignmentRequests=sqliteTable('hris_assignment_requests',{
  tenantId:text('tenant_id').notNull(),approvalId:text('approval_id').notNull(),positionId:text('position_id'),gradeId:text('grade_id'),
 },t=>[primaryKey({columns:[t.tenantId,t.approvalId]}),foreignKey({columns:[t.tenantId,t.approvalId],foreignColumns:[approvals.tenantId,approvals.id]}),foreignKey({columns:[t.tenantId,t.positionId],foreignColumns:[positions.tenantId,positions.id]}),foreignKey({columns:[t.tenantId,t.gradeId],foreignColumns:[grades.tenantId,grades.id]})]);
+
+// Versioned business documents: stable entity references are foreign keys; bounded
+// structured rubric/evidence payloads preserve the exact version used in decisions.
+export const developmentRecords=sqliteTable('hris_development_records',{
+ tenantId:text('tenant_id').notNull().references(()=>workspaces.owner),id:text('id').notNull(),kind:text('kind').notNull(),employeeId:text('employee_id'),positionId:text('position_id'),referenceId:text('reference_id'),status:text('status').notNull(),payload:text('payload').notNull(),createdBy:text('created_by').notNull(),createdAt:text('created_at').notNull(),updatedAt:text('updated_at').notNull(),
+},t=>[primaryKey({columns:[t.tenantId,t.id]}),foreignKey({columns:[t.tenantId,t.employeeId],foreignColumns:[employees.tenantId,employees.id]}),foreignKey({columns:[t.tenantId,t.positionId],foreignColumns:[positions.tenantId,positions.id]}),foreignKey({columns:[t.tenantId,t.referenceId],foreignColumns:[t.tenantId,t.id]}),index('idx_development_kind').on(t.tenantId,t.kind,t.status),index('idx_development_employee').on(t.tenantId,t.employeeId,t.kind)]);
+export const attachments=sqliteTable('hris_attachments',{
+ tenantId:text('tenant_id').notNull().references(()=>workspaces.owner),id:text('id').notNull(),employeeId:text('employee_id'),recordId:text('record_id'),objectKey:text('object_key').notNull(),visibility:text('visibility').notNull().default('hr'),name:text('name').notNull(),mime:text('mime').notNull(),size:integer('size').notNull(),createdBy:text('created_by').notNull(),createdAt:text('created_at').notNull(),deletedAt:text('deleted_at'),
+},t=>[primaryKey({columns:[t.tenantId,t.id]}),foreignKey({columns:[t.tenantId,t.employeeId],foreignColumns:[employees.tenantId,employees.id]}),foreignKey({columns:[t.tenantId,t.recordId],foreignColumns:[developmentRecords.tenantId,developmentRecords.id]}),uniqueIndex('uq_attachment_key').on(t.objectKey),index('idx_attachment_employee').on(t.tenantId,t.employeeId)]);
+export const developmentEvents=sqliteTable('hris_development_events',{
+ tenantId:text('tenant_id').notNull(),id:text('id').notNull(),recordId:text('record_id').notNull(),revision:integer('revision').notNull(),action:text('action').notNull(),actorId:text('actor_id').notNull(),at:text('at').notNull(),snapshot:text('snapshot').notNull(),
+},t=>[primaryKey({columns:[t.tenantId,t.id]}),foreignKey({columns:[t.tenantId,t.recordId],foreignColumns:[developmentRecords.tenantId,developmentRecords.id]}),index('idx_development_events').on(t.tenantId,t.recordId,t.revision)]);
