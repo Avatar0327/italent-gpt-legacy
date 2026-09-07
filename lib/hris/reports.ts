@@ -13,9 +13,11 @@ export const reportQuery=z.object({dataset:z.enum(['trainingStageProgress','payr
 export const reportKinds={trainingStageProgress:['training','enrollment','course'],payrollOperations:['payBatch','paySlip','payAdjustment'],payrollReconciliation:['payBatch','paySlip','payAdjustment'],recruitmentOperations:['requisition','candidate'],performanceOperations:['performancePlan','performanceCycle','performance','performanceGoalChange','performanceCheckin'],instructorCampaignProgress:['instructorCampaign','instructorApplication','instructorProfile','instructorTrial','instructorDevelopment','enrollment'],trainingRoster:['training','trainingSession','trainingAttendance','enrollment'],instructorSchedule:['training','trainingSession','enrollment'],trainingProgress:['training','enrollment'],successionCoverage:['succession'],talentReview:['review'],workforce:[],attendance:['shift','clock','correction','leaveType','leaveCredit','leave'],learning:['enrollment'],performance:['performance','performancePlan','performanceCycle']} as const;
 export type Cell=string|number|null;
 export function makeReport(ctx:DevelopmentContext,input:unknown){
- const q=reportQuery.parse(input),state=visibleState(ctx.state,ctx.member),records=visibleDevelopment(ctx),employee=(id:string|null)=>state.employees.find(e=>e.id===id),name=(id:string|null)=>employee(id)?.name??'',code=(id:string|null)=>employee(id)?.code??'',org=(id:string)=>state.orgs.find(o=>o.id===id)?.name??'';
+ const q=reportQuery.parse(input);
+ const finish=(report:{title:string;columns:string[];rows:Cell[][]})=>({...report,rows:q.search?report.rows.filter(r=>r.some(c=>String(c??'').toLocaleLowerCase().includes(q.search.toLocaleLowerCase()))):report.rows,dataset:q.dataset,asOf:new Date().toISOString(),revision:ctx.row.revision});
+ if(q.dataset==='payrollOperations'||q.dataset==='payrollReconciliation')return finish(payrollReport(ctx,q.dataset));
+ const state=visibleState(ctx.state,ctx.member),records=visibleDevelopment(ctx),employee=(id:string|null)=>state.employees.find(e=>e.id===id),name=(id:string|null)=>employee(id)?.name??'',code=(id:string|null)=>employee(id)?.code??'',org=(id:string)=>state.orgs.find(o=>o.id===id)?.name??'';
  let columns:string[]=[],rows:Cell[][]=[],title='';
- if(q.dataset==='payrollOperations'||q.dataset==='payrollReconciliation'){({title,columns,rows}=payrollReport(ctx,q.dataset));}
  if(q.dataset==='trainingStageProgress'){
   if(!['admin','hr','manager'].includes(ctx.member.role))throw new HttpError(403,'仅有组织管理权限的人员可查看阶段计划进度');
   title='可见范围课程阶段进度';columns=['培训项目','项目状态','工号','姓名','人员状态','阶段总数','课程总数','已核验课程数','最早未完成阶段','该阶段已派发未完成','该阶段无有效项目任务','已完成全部阶段'];
@@ -86,7 +88,6 @@ export function makeReport(ctx:DevelopmentContext,input:unknown){
    rows=trainings.map(t=>{const all=records.filter(r=>r.kind==='enrollment'&&r.payload.trainingId===t.id),valid=all.filter(r=>r.status!=='cancelled'),completed=valid.filter(r=>r.status==='completed').length;return [t.payload.name??'',org(t.payload.orgId!),statuses[t.status]??t.status,new Set(valid.map(r=>r.employeeId)).size,valid.length,completed,valid.filter(r=>r.status==='submitted').length,all.length-valid.length,valid.length?Math.round(completed/valid.length*10000)/100:null];});
   }
  }
- if(q.search)rows=rows.filter(r=>r.some(c=>String(c??'').toLocaleLowerCase().includes(q.search.toLocaleLowerCase())));
- return {title,columns,rows,dataset:q.dataset,asOf:new Date().toISOString(),revision:ctx.row.revision};
+ return finish({title,columns,rows});
 }
 export function reportCsv(columns:string[],rows:Cell[][]){const cell=(v:Cell)=>{let s=String(v??'');if(typeof v==='string'&&/^[\s\uFEFF]*[=+@-]/u.test(s))s="'"+s;return '"'+s.replaceAll('"','""')+'"';};return '\uFEFF'+[columns,...rows].map(r=>r.map(cell).join(',')).join('\r\n');}

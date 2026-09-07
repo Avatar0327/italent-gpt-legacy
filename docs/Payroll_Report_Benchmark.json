@@ -1,0 +1,101 @@
+{
+  "date": "2026-09-07",
+  "method": "One warmup and median of three computations per dataset/size; local Node only, excludes D1/network/CSV serialization; all synthetic data",
+  "before": {
+    "node": "v24.19.0",
+    "kind": "synthetic-local-computation-only",
+    "samples": [
+      {
+        "size": 2000,
+        "dataset": "payrollOperations",
+        "rows": 16,
+        "ms": 89.89,
+        "digest": "26843a50ff14f7d9dd467a406e67116fa6813feb7f0a78b36d0c119fbea343f1"
+      },
+      {
+        "size": 2000,
+        "dataset": "payrollReconciliation",
+        "rows": 1372,
+        "ms": 183.2,
+        "digest": "95acfad20a4c0b6143838df758cb79fa00040fdcb9105f2490f1fd8370334a42"
+      },
+      {
+        "size": 4000,
+        "dataset": "payrollOperations",
+        "rows": 16,
+        "ms": 247.15,
+        "digest": "1e8e79e929d72676f532692ce8b0f51d735db080f8f337beb14985649d067565"
+      },
+      {
+        "size": 4000,
+        "dataset": "payrollReconciliation",
+        "rows": 2743,
+        "ms": 651.76,
+        "digest": "fc7d841a5bf33c13e29a7eb85453e3d9eaefb11e065acbea011e532a1399c515"
+      },
+      {
+        "size": 8000,
+        "dataset": "payrollOperations",
+        "rows": 16,
+        "ms": 1277.43,
+        "digest": "5b647174ca72683322a817f4854cc32003309a0dd0e9877eae82902fdda13f47"
+      },
+      {
+        "size": 8000,
+        "dataset": "payrollReconciliation",
+        "rows": 5486,
+        "ms": 2993.22,
+        "digest": "ea68a640b4241340a88ecf215280adb0f824c679db189c5d1a158d7fb971cff1"
+      }
+    ]
+  },
+  "after": {
+    "node": "v24.19.0",
+    "kind": "synthetic-local-computation-only",
+    "samples": [
+      {
+        "size": 2000,
+        "dataset": "payrollOperations",
+        "rows": 16,
+        "ms": 2.53,
+        "digest": "26843a50ff14f7d9dd467a406e67116fa6813feb7f0a78b36d0c119fbea343f1"
+      },
+      {
+        "size": 2000,
+        "dataset": "payrollReconciliation",
+        "rows": 1372,
+        "ms": 34.7,
+        "digest": "95acfad20a4c0b6143838df758cb79fa00040fdcb9105f2490f1fd8370334a42"
+      },
+      {
+        "size": 4000,
+        "dataset": "payrollOperations",
+        "rows": 16,
+        "ms": 12.54,
+        "digest": "1e8e79e929d72676f532692ce8b0f51d735db080f8f337beb14985649d067565"
+      },
+      {
+        "size": 4000,
+        "dataset": "payrollReconciliation",
+        "rows": 2743,
+        "ms": 13.64,
+        "digest": "fc7d841a5bf33c13e29a7eb85453e3d9eaefb11e065acbea011e532a1399c515"
+      },
+      {
+        "size": 8000,
+        "dataset": "payrollOperations",
+        "rows": 16,
+        "ms": 9.65,
+        "digest": "5b647174ca72683322a817f4854cc32003309a0dd0e9877eae82902fdda13f47"
+      },
+      {
+        "size": 8000,
+        "dataset": "payrollReconciliation",
+        "rows": 5486,
+        "ms": 90.8,
+        "digest": "ea68a640b4241340a88ecf215280adb0f824c679db189c5d1a158d7fb971cff1"
+      }
+    ]
+  },
+  "identicalDigests": true
+}
