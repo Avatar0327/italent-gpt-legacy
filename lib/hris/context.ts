@@ -15,3 +15,11 @@ export async function memberContext(admin=false){
  requireMember(current);if(current.tenantId!==member.tenantId||(admin&&current.role!=='admin'))throw new HttpError(403,'成员权限已变化，请刷新');
  return {user,db,member:current,row};
 }
+
+/** Keep supplementary history reads on the same authorization/data revision. */
+export async function readConsistent(ctx:Awaited<ReturnType<typeof memberContext>>,statements:D1PreparedStatement[]){
+ const result=await ctx.db.batch([...statements,ctx.db.prepare('SELECT revision FROM hris_workspaces WHERE owner=?').bind(ctx.member.tenantId)]);
+ const latest=result.at(-1)?.results[0] as {revision:number}|undefined;
+ if(!latest||latest.revision!==ctx.row.revision)throw new HttpError(409,'数据或权限已变化，请刷新');
+ return result.slice(0,-1);
+}
