@@ -1,3 +1,4 @@
+import {instructorDevelopmentProof} from './instructor-development';
 import {latestInstructorTrial} from './instructor-trials';
 import {z} from 'zod';
 import {HttpError} from './http';
@@ -31,8 +32,8 @@ export function applyInstructorDirectory(records:R[],state:State,member:Member,i
  if(e.id===member.employeeId)deny('不能复核或停用本人的讲师身份');
  if(c.action==='review'){
   if(record.createdBy===member.userId)deny('须由其他HR独立复核提名');if(record.status!=='submitted')fail('提名已经处理');
-  if(c.accepted){if(record.payload.requiresTrial&&!trial)fail('活动报名产生的提名须先完成指定评委试讲');if(trial&&(trial.status!=='published'||!trial.payload.passed))fail('安排过试讲的提名须有最新冻结且通过的试讲结果');if(e.status==='离职')fail('员工已离职，不能通过讲师提名');if(records.some(x=>x.kind==='instructorProfile'&&x.id!==record.id&&x.employeeId===e.id&&x.status==='active'))fail('员工已有在用的讲师记录');}
-  return change(c.accepted?'active':'rejected',{verification:c.evidence,verifiedBy:member.userId,verifiedAt:at,...(c.accepted&&trial?{trialId:trial.id,score:trial.payload.score}:{})});
+  if(c.accepted){if(instructorDevelopmentProof(records,record.id).some(p=>p.mandatory&&p.status!=='completed'))fail('必修培养任务须完成独立成果核验后才能入册');if(record.payload.requiresTrial&&!trial)fail('活动报名产生的提名须先完成指定评委试讲');if(trial&&(trial.status!=='published'||!trial.payload.passed))fail('安排过试讲的提名须有最新冻结且通过的试讲结果');if(e.status==='离职')fail('员工已离职，不能通过讲师提名');if(records.some(x=>x.kind==='instructorProfile'&&x.id!==record.id&&x.employeeId===e.id&&x.status==='active'))fail('员工已有在用的讲师记录');}
+  return change(c.accepted?'active':'rejected',{verification:c.evidence,verifiedBy:member.userId,verifiedAt:at,...(c.accepted?{developmentProof:instructorDevelopmentProof(records,record.id)}:{}),...(c.accepted&&trial?{trialId:trial.id,score:trial.payload.score}:{})});
  }
  if(record.status!=='active')fail('仅在用的讲师记录可以停用');return change('suspended',{closedReason:c.evidence,revokedBy:member.userId,revokedAt:at});
 }

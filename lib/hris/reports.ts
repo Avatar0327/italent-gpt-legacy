@@ -1,3 +1,5 @@
+import {latestInstructorTrial} from './instructor-trials';
+import {instructorDevelopmentProof} from './instructor-development';
 import {businessDate} from './workforce';
 import {HttpError} from './http';
 import {latestPublishedReviews} from './review-versions';
@@ -6,8 +8,8 @@ import {visibleState} from './authorization';
 import {visibleDevelopment,type DevelopmentContext} from './development-repository';
 import {attendanceReport} from './attendance';
 const validDate=z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine(v=>{const d=new Date(v+'T00:00:00Z');return !Number.isNaN(d.getTime())&&d.toISOString().slice(0,10)===v;},'日期无效');
-export const reportQuery=z.object({dataset:z.enum(['workforce','attendance','learning','performance','talentReview','successionCoverage','instructorSchedule','trainingProgress','trainingRoster']).default('workforce'),from:validDate.optional(),to:validDate.optional(),search:z.string().max(100).default('')}).refine(q=>!q.from||!q.to||q.from<=q.to,'开始日期不能晚于结束日期');
-export const reportKinds={trainingRoster:['training','trainingSession','trainingAttendance','enrollment'],instructorSchedule:['training','trainingSession','enrollment'],trainingProgress:['training','enrollment'],successionCoverage:['succession'],talentReview:['review'],workforce:[],attendance:['shift','clock','correction','leaveType','leaveCredit','leave'],learning:['enrollment'],performance:['performance','performancePlan','performanceCycle']} as const;
+export const reportQuery=z.object({dataset:z.enum(['instructorCampaignProgress','workforce','attendance','learning','performance','talentReview','successionCoverage','instructorSchedule','trainingProgress','trainingRoster']).default('workforce'),from:validDate.optional(),to:validDate.optional(),search:z.string().max(100).default('')}).refine(q=>!q.from||!q.to||q.from<=q.to,'开始日期不能晚于结束日期');
+export const reportKinds={instructorCampaignProgress:['instructorCampaign','instructorApplication','instructorProfile','instructorTrial','instructorDevelopment','enrollment'],trainingRoster:['training','trainingSession','trainingAttendance','enrollment'],instructorSchedule:['training','trainingSession','enrollment'],trainingProgress:['training','enrollment'],successionCoverage:['succession'],talentReview:['review'],workforce:[],attendance:['shift','clock','correction','leaveType','leaveCredit','leave'],learning:['enrollment'],performance:['performance','performancePlan','performanceCycle']} as const;
 export type Cell=string|number|null;
 export function makeReport(ctx:DevelopmentContext,input:unknown){
  const q=reportQuery.parse(input),state=visibleState(ctx.state,ctx.member),records=visibleDevelopment(ctx),employee=(id:string|null)=>state.employees.find(e=>e.id===id),name=(id:string|null)=>employee(id)?.name??'',code=(id:string|null)=>employee(id)?.code??'',org=(id:string)=>state.orgs.find(o=>o.id===id)?.name??'';
@@ -24,6 +26,12 @@ export function makeReport(ctx:DevelopmentContext,input:unknown){
    const candidates=new Map(records.filter(r=>r.kind==='succession'&&r.positionId===p.id&&r.status==='active'&&employee(r.employeeId)?.status!=='离职'&&!!employee(r.employeeId)).map(r=>[r.employeeId,r]));
    const ready=Array.from(candidates.values());return [p.code,p.name,org(p.orgId),state.employees.filter(e=>e.status!=='离职'&&e.positionId===p.id).length,ready.length,...['ready','one_year','two_years'].map(v=>ready.filter(r=>r.payload.readiness===v).length)];
   });
+ }
+ if(q.dataset==='instructorCampaignProgress'){
+  if(!['admin','hr'].includes(ctx.member.role))throw new HttpError(403,'仅有权限HR可查看认证活动进度');
+  title='可见范围认证活动进度';columns=['认证活动','活动组织','报名状态','报名记录数','待资格复核','资格通过','资格未通过','已撤回','已关联提名','在职在用讲师','最新试讲通过的提名','待完成必修培养关联'];
+  const states:Record<string,string>={draft:'草稿',published:'已发布',closed:'已停止报名',cancelled:'已取消'};
+  rows=records.filter(r=>r.kind==='instructorCampaign').map(c=>{const applications=records.filter(a=>a.kind==='instructorApplication'&&a.referenceId===c.id),profiles=records.filter(p=>p.kind==='instructorProfile'&&applications.some(a=>a.id===p.payload.instructorApplicationId));return [c.payload.title??'',org(c.payload.orgId!),states[c.status]??c.status,applications.length,...['submitted','approved','rejected','withdrawn'].map(s=>applications.filter(a=>a.status===s).length),profiles.length,profiles.filter(p=>p.status==='active'&&employee(p.employeeId)?.status!=='离职'&&!!employee(p.employeeId)).length,profiles.filter(p=>{const t=latestInstructorTrial(records,p.id);return t?.status==='published'&&t.payload.passed;}).length,profiles.filter(p=>p.status==='submitted').flatMap(p=>instructorDevelopmentProof(records,p.id)).filter(p=>p.mandatory&&p.status!=='completed').length];});
  }
  if(q.dataset==='instructorSchedule'||q.dataset==='trainingProgress'||q.dataset==='trainingRoster'){
   if(!['admin','hr','manager'].includes(ctx.member.role))throw new HttpError(403,'仅有组织管理权限的人员可查看培训管理报表');
