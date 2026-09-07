@@ -44,3 +44,16 @@ export const workflowSteps=sqliteTable('hris_workflow_steps',{
 export const employmentHistory=sqliteTable('hris_employment_history',{
  tenantId:text('tenant_id').notNull(),id:text('id').notNull(),employeeId:text('employee_id').notNull(),eventId:text('event_id').notNull(),at:text('at').notNull(),actorId:text('actor_id').notNull(),fromOrgId:text('from_org_id'),toOrgId:text('to_org_id').notNull(),fromStatus:text('from_status'),toStatus:text('to_status').notNull(),job:text('job').notNull(),level:text('level').notNull(),
 },t=>[primaryKey({columns:[t.tenantId,t.id]}),foreignKey({columns:[t.tenantId,t.employeeId],foreignColumns:[employees.tenantId,employees.id]}),index('idx_history_employee').on(t.tenantId,t.employeeId,t.at)]);
+
+export const grades=sqliteTable('hris_grades',{
+ tenantId:text('tenant_id').notNull().references(()=>workspaces.owner),id:text('id').notNull(),code:text('code').notNull(),name:text('name').notNull(),sequence:integer('sequence').notNull(),status:text('status').notNull(),
+},t=>[primaryKey({columns:[t.tenantId,t.id]}),uniqueIndex('uq_grade_code').on(t.tenantId,t.code)]);
+export const positions=sqliteTable('hris_positions',{
+ tenantId:text('tenant_id').notNull().references(()=>workspaces.owner),id:text('id').notNull(),code:text('code').notNull(),name:text('name').notNull(),orgId:text('org_id').notNull(),family:text('family').notNull(),responsibilities:text('responsibilities').notNull(),status:text('status').notNull(),
+},t=>[primaryKey({columns:[t.tenantId,t.id]}),uniqueIndex('uq_position_code').on(t.tenantId,t.code),foreignKey({columns:[t.tenantId,t.orgId],foreignColumns:[orgs.tenantId,orgs.id]})]);
+export const employeePositions=sqliteTable('hris_employee_positions',{
+ tenantId:text('tenant_id').notNull(),employeeId:text('employee_id').notNull(),positionId:text('position_id'),gradeId:text('grade_id'),
+},t=>[primaryKey({columns:[t.tenantId,t.employeeId]}),foreignKey({columns:[t.tenantId,t.employeeId],foreignColumns:[employees.tenantId,employees.id]}),foreignKey({columns:[t.tenantId,t.positionId],foreignColumns:[positions.tenantId,positions.id]}),foreignKey({columns:[t.tenantId,t.gradeId],foreignColumns:[grades.tenantId,grades.id]})]);
+export const assignmentRequests=sqliteTable('hris_assignment_requests',{
+ tenantId:text('tenant_id').notNull(),approvalId:text('approval_id').notNull(),positionId:text('position_id'),gradeId:text('grade_id'),
+},t=>[primaryKey({columns:[t.tenantId,t.approvalId]}),foreignKey({columns:[t.tenantId,t.approvalId],foreignColumns:[approvals.tenantId,approvals.id]}),foreignKey({columns:[t.tenantId,t.positionId],foreignColumns:[positions.tenantId,positions.id]}),foreignKey({columns:[t.tenantId,t.gradeId],foreignColumns:[grades.tenantId,grades.id]})]);

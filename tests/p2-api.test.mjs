@@ -52,3 +52,19 @@ test('P2 权限竞争：数据快照之前撤销组织范围不沿用旧权限',
  globalThis.p2env.DB={...db,batch:async statements=>{if(once&&statements[0].sql.startsWith('SELECT data,revision')){once=false;sqlite.prepare("UPDATE hris_memberships SET org_scope='[]' WHERE user_id='hr'").run();sqlite.prepare("UPDATE hris_workspaces SET revision=revision+1 WHERE owner='race'").run();}return db.batch(statements);}};
  act('hr');const result=await state();assert.equal(result.revision,1);assert.equal(result.state.employees.length,0);assert.equal(result.state.orgs.length,0);sqlite.close();
 });
+test('P3 岗位与职级：目录关联、任职变更审批、在用保护及历史留存',async()=>{
+ const {sqlite}=fresh();act('owner');await expect(await access.POST(request('/api/access',{action:'setup',name:'岗位测试企业'})));
+ await command({action:'org',name:'研发中心',parentId:'',city:'上海',leader:'',status:'启用'});const org=(await state()).state.orgs[0];
+ await command({action:'grade',code:'P6',name:'高级工程师',sequence:6,status:'启用'});await command({action:'grade',code:'P7',name:'专家',sequence:7,status:'启用'});
+ await command({action:'position',code:'RD01',name:'软件工程师',orgId:org.id,family:'研发',responsibilities:'系统开发与维护',status:'启用'});
+ let s=(await state()).state;const position=s.positions[0],g6=s.grades.find(g=>g.code==='P6'),g7=s.grades.find(g=>g.code==='P7');
+ await command({action:'employee',code:'E1',name:'合成任职人',orgId:org.id,positionId:position.id,gradeId:g6.id,job:'错误客户端名称',level:'错误客户端职级',joined:'2026-09-01',email:''});s=(await state()).state;const e=s.employees[0];assert.equal(e.job,position.name);assert.equal(e.level,g6.name);assert.equal(e.positionId,position.id);
+ let d=await state();await expect(await hris.POST(request('/api/hris',{revision:d.revision,command:{action:'employee',...e,gradeId:g7.id}})),400);
+ await expect(await hris.POST(request('/api/hris',{revision:d.revision,command:{action:'position',...position,status:'停用'}})),400);
+ await grant({email:'reviewer@example.com',role:'approver',employeeId:null,active:true,orgScope:[org.id],viewLevel:false,viewEmail:false});await activate('reviewer');act('owner');await command({action:'workflow',kind:'transfer',steps:[{userId:'reviewer',name:'复核'}]});
+ await command({action:'request',employeeId:e.id,kind:'transfer',orgId:org.id,positionId:position.id,gradeId:g7.id,reason:'通过岗位能力评定，申请晋级'});d=await state();const approval=d.state.approvals[0];assert.equal(d.state.employees[0].level,g6.name);
+ await expect(await hris.POST(request('/api/hris',{revision:d.revision,command:{action:'grade',...g7,status:'停用'}})),400);
+ act('reviewer');d=await state();assert.equal(d.state.grades.length,0);assert.equal(d.state.employees[0].gradeId,null);assert.equal(d.state.approvals[0].gradeId,null);await command({action:'decide',id:approval.id,decision:'approved'});
+ act('owner');s=(await state()).state;assert.equal(s.employees[0].gradeId,g7.id);assert.equal(s.employees[0].level,g7.name);const hist=await expect(await history.GET(request('/api/history?employeeId='+e.id)));assert.equal(hist.total,2);assert.equal(hist.items[0].level,g7.name);
+ assert.equal(sqlite.prepare('SELECT count(*) AS n FROM hris_employee_positions').get().n,1);assert.equal(sqlite.prepare('SELECT count(*) AS n FROM hris_assignment_requests').get().n,1);sqlite.close();
+});

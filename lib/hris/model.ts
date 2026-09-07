@@ -1,17 +1,21 @@
 import { z } from 'zod';
 export type Org = {id:string;name:string;parentId:string;city:string;leader:string;status:string};
-export type Employee = {id:string;code:string;name:string;orgId:string;job:string;level:string;joined:string;status:string;email:string};
+export type Grade={id:string;code:string;name:string;sequence:number;status:string};
+export type Position={id:string;code:string;name:string;orgId:string;family:string;responsibilities:string;status:string};
+export type Employee = {positionId?:string|null;gradeId?:string|null;id:string;code:string;name:string;orgId:string;job:string;level:string;joined:string;status:string;email:string};
 export type ApprovalStep={userId:string;name:string;decision?:'approved'|'rejected';at?:string};
 export type Workflow={version:number;steps:{userId:string;name:string}[]};
-export type Approval = {id:string;employeeId:string;kind:'transfer'|'regularize'|'exit';orgId:string;reason:string;status:'pending'|'approved'|'rejected'|'withdrawn';steps?:ApprovalStep[];currentStep?:number;workflowVersion?:number;created:string;createdBy?:string;decidedBy?:string;decided?:string};
+export type Approval = {positionId?:string|null;gradeId?:string|null;id:string;employeeId:string;kind:'transfer'|'regularize'|'exit';orgId:string;reason:string;status:'pending'|'approved'|'rejected'|'withdrawn';steps?:ApprovalStep[];currentStep?:number;workflowVersion?:number;created:string;createdBy?:string;decidedBy?:string;decided?:string};
 export type Audit = {id:string;action:string;subject:string;at:string;actorId?:string};
-export type State = {orgs:Org[];employees:Employee[];approvals:Approval[];audit:Audit[];workflows?:Partial<Record<Approval['kind'],Workflow>>};
+export type State = {orgs:Org[];employees:Employee[];approvals:Approval[];audit:Audit[];positions?:Position[];grades?:Grade[];workflows?:Partial<Record<Approval['kind'],Workflow>>};
 const text=z.string().trim().min(1).max(100);
 const isoDate=z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine(v=>!Number.isNaN(Date.parse(v))&&new Date(v).toISOString().startsWith(v),'日期无效');
 export const commandSchema=z.discriminatedUnion('action',[
- z.object({action:z.literal('employee'),id:z.string().optional(),code:text,name:text,orgId:text,job:text,level:z.string().trim().max(100),joined:isoDate,email:z.union([z.literal(''),z.string().email()])}),
+ z.object({action:z.literal('position'),id:z.string().optional(),code:text,name:text,orgId:text,family:text,responsibilities:z.string().max(4000),status:z.enum(['启用','停用'])}),
+ z.object({action:z.literal('grade'),id:z.string().optional(),code:text,name:text,sequence:z.number().int().min(0).max(999),status:z.enum(['启用','停用'])}),
+ z.object({action:z.literal('employee'),positionId:z.string().min(1).nullish(),gradeId:z.string().min(1).nullish(),id:z.string().optional(),code:text,name:text,orgId:text,job:text,level:z.string().trim().max(100),joined:isoDate,email:z.union([z.literal(''),z.string().email()])}),
  z.object({action:z.literal('org'),id:z.string().optional(),name:text,parentId:z.string(),city:text,leader:z.string().max(100),status:z.enum(['启用','停用'])}),
- z.object({action:z.literal('request'),employeeId:text,kind:z.enum(['transfer','regularize','exit']),orgId:z.string(),reason:z.string().trim().min(2).max(500)}),
+ z.object({action:z.literal('request'),positionId:z.string().min(1).nullish(),gradeId:z.string().min(1).nullish(),employeeId:text,kind:z.enum(['transfer','regularize','exit']),orgId:z.string(),reason:z.string().trim().min(2).max(500)}),
  z.object({action:z.literal('workflow'),kind:z.enum(['transfer','regularize','exit']),steps:z.array(z.object({userId:text,name:text})).min(1).max(5).refine(v=>new Set(v.map(s=>s.userId)).size===v.length,'审批人不能重复')}),
  z.object({action:z.literal('withdraw'),id:text}),
  z.object({action:z.literal('decide'),id:text,decision:z.enum(['approved','rejected'])}),
@@ -24,7 +28,13 @@ export function initialState():State {
 export function applyCommand(previous:State, input:unknown, now=new Date().toISOString(), actorId?:string):State {
  const c=commandSchema.parse(input);const s=structuredClone(previous);const id=()=>crypto.randomUUID();let subject='';
  const activeOrg=(key:string)=>{const o=s.orgs.find(x=>x.id===key&&x.status==='启用');if(!o)throw Error('请选择有效的启用组织');return o;};
- if(c.action==='workflow'){
+ const assignment=(orgId:string,positionId:string|null|undefined,gradeId:string|null|undefined)=>{const position=positionId?s.positions?.find(p=>p.id===positionId&&p.status==='启用'):null;const grade=gradeId?s.grades?.find(g=>g.id===gradeId&&g.status==='启用'):null;if(positionId&&(!position||position.orgId!==orgId))throw Error('岗位必须属于目标组织且处于启用状态');if(gradeId&&!grade)throw Error('职级不存在或已停用');return {position,grade};};
+ if(c.action==='position'||c.action==='grade'){
+ const isPosition=c.action==='position';const list=isPosition?(s.positions??=[]):(s.grades??=[]);const old=list.find(x=>x.id===c.id);if(c.id&&!old)throw Error('记录不存在');if(list.some(x=>x.code===c.code&&x.id!==c.id))throw Error('编码已存在');
+ const inUse=s.employees.some(e=>e.status!=='离职'&&(isPosition?e.positionId:e.gradeId)===c.id)||s.approvals.some(a=>a.status==='pending'&&(isPosition?a.positionId:a.gradeId)===c.id);
+ if(c.id&&inUse&&(c.status==='停用'||c.name!==old?.name||c.code!==old?.code||(isPosition&&c.orgId!==(old as Position).orgId)))throw Error('存在在职关联或待审批申请，不能停用或改变标识和归属');
+ if(isPosition)activeOrg(c.orgId);const {action,...data}=c;const value={...data,id:old?.id??id()};if(isPosition)s.positions=old?s.positions!.map(x=>x.id===old.id?value as Position:x):[...s.positions!,value as Position];else s.grades=old?s.grades!.map(x=>x.id===old.id?value as Grade:x):[...s.grades!,value as Grade];subject=c.name;
+ }else if(c.action==='workflow'){
  s.workflows??={};s.workflows[c.kind]={version:(s.workflows[c.kind]?.version??0)+1,steps:c.steps};subject=c.kind;
  }else if(c.action==='withdraw'){
  const a=s.approvals.find(a=>a.id===c.id);if(!a||a.status!=='pending'||!actorId||a.createdBy!==actorId)throw Error('仅申请人可以撤回待审批申请');a.status='withdrawn';a.decided=now;a.decidedBy=actorId;subject=a.employeeId;
@@ -33,22 +43,26 @@ export function applyCommand(previous:State, input:unknown, now=new Date().toISO
  const old=c.id?s.employees.find(e=>e.id===c.id):null;if(c.id&&!old)throw Error('员工不存在');
  if(old&&old.orgId!==c.orgId)throw Error('在职人员组织变更请提交调动审批');
  if(old?.status==='离职')throw Error('离职人员不可直接编辑');
- const {action,...data}=c;const e={...data,id:old?.id??id(),status:old?.status??'试用'};s.employees=old?s.employees.map(x=>x.id===old.id?e:x):[e,...s.employees];subject=c.name;
+ const positionId=c.positionId===undefined?old?.positionId:c.positionId,gradeId=c.gradeId===undefined?old?.gradeId:c.gradeId;
+ const {position,grade}=assignment(c.orgId,positionId,gradeId);const job=position?.name??c.job,level=grade?.name??c.level;
+ if(old&&((!old.positionId&&positionId&&old.job!==job)||(!old.gradeId&&gradeId&&old.level&&old.level!==level)))throw Error('首次关联与原任职名称不一致，请提交调动审批');
+ if(old&&((old.positionId&&old.positionId!==positionId)||(old.gradeId&&old.gradeId!==gradeId)||(!positionId&&old.job!==job)||(!gradeId&&old.level!==level)))throw Error('岗位或职级变更请提交调动审批');
+ const {action,...data}=c;const e={...data,positionId:positionId??null,gradeId:gradeId??null,job,level,id:old?.id??id(),status:old?.status??'试用'};s.employees=old?s.employees.map(x=>x.id===old.id?e:x):[e,...s.employees];subject=c.name;
  }else if(c.action==='org'){
  const old=s.orgs.find(o=>o.id===c.id);if(c.id&&!old)throw Error('组织不存在');if(c.parentId)activeOrg(c.parentId);
  const seen=new Set([c.id]);let parent=c.parentId;while(parent){if(seen.has(parent))throw Error('上级组织不能形成循环');seen.add(parent);parent=s.orgs.find(o=>o.id===parent)?.parentId??'';}
  if(s.orgs.some(o=>o.name===c.name&&o.parentId===c.parentId&&o.id!==c.id))throw Error('同级组织名称已存在');
- if(c.status==='停用'&&(s.employees.some(e=>e.orgId===c.id&&e.status!=='离职')||s.orgs.some(o=>o.parentId===c.id&&o.status==='启用')||s.approvals.some(a=>a.orgId===c.id&&a.status==='pending')))throw Error('组织存在在职员工、启用下级或待审批调动，不能停用');
+ if(c.status==='停用'&&(s.employees.some(e=>e.orgId===c.id&&e.status!=='离职')||s.orgs.some(o=>o.parentId===c.id&&o.status==='启用')||s.approvals.some(a=>a.orgId===c.id&&a.status==='pending')||s.positions?.some(p=>p.orgId===c.id&&p.status==='启用')))throw Error('组织存在在职员工、启用下级、启用岗位或待审批调动，不能停用');
  const {action,...data}=c;const o={...data,id:old?.id??id()};s.orgs=old?s.orgs.map(x=>x.id===old.id?o:x):[...s.orgs,o];subject=c.name;
  }else if(c.action==='request'){
  const e=s.employees.find(e=>e.id===c.employeeId);if(!e||e.status==='离职')throw Error('员工不存在或已离职');if(s.approvals.some(a=>a.employeeId===e.id&&a.status==='pending'))throw Error('该员工已有待处理的人事申请');
- if(c.kind==='regularize'&&e.status!=='试用')throw Error('仅试用员工可申请转正');if(c.kind==='transfer'){activeOrg(c.orgId);if(c.orgId===e.orgId)throw Error('目标组织与当前组织相同');}
+ if(c.kind==='regularize'&&e.status!=='试用')throw Error('仅试用员工可申请转正');if(c.kind==='transfer'){activeOrg(c.orgId);if(c.orgId===e.orgId&&(c.positionId??e.positionId??null)===(e.positionId??null)&&(c.gradeId??e.gradeId??null)===(e.gradeId??null))throw Error('组织、岗位和职级均未变化');if(e.positionId&&c.orgId!==e.orgId&&!c.positionId)throw Error('跨组织调动请选择目标岗位');assignment(c.orgId,c.positionId??(c.orgId===e.orgId?e.positionId:null),c.gradeId??e.gradeId);}
  const workflow=s.workflows?.[c.kind];if(actorId&&!workflow)throw Error('请先由管理员配置该类型审批流程');if(workflow?.steps.some(step=>step.userId===actorId))throw Error('申请人不能同时是本流程审批人');
- s.approvals.unshift({steps:workflow?structuredClone(workflow.steps):undefined,currentStep:workflow?0:undefined,workflowVersion:workflow?.version,id:id(),employeeId:e.id,kind:c.kind,orgId:c.kind==='transfer'?c.orgId:e.orgId,reason:c.reason,status:'pending',created:now,createdBy:actorId});subject=e.name;
+ s.approvals.unshift({positionId:c.kind==='transfer'?(c.positionId??(c.orgId===e.orgId?e.positionId:null)??null):(e.positionId??null),gradeId:c.kind==='transfer'?(c.gradeId??e.gradeId??null):(e.gradeId??null),steps:workflow?structuredClone(workflow.steps):undefined,currentStep:workflow?0:undefined,workflowVersion:workflow?.version,id:id(),employeeId:e.id,kind:c.kind,orgId:c.kind==='transfer'?c.orgId:e.orgId,reason:c.reason,status:'pending',created:now,createdBy:actorId});subject=e.name;
  }else{
  const a=s.approvals.find(a=>a.id===c.id);if(!a||a.status!=='pending')throw Error('审批不存在或已处理，请刷新');if(actorId&&(!a.createdBy||a.createdBy===actorId))throw Error('不能审批本人申请或缺少申请人记录的历史申请');const e=s.employees.find(e=>e.id===a.employeeId);if(!e||e.status==='离职')throw Error('关联员工状态已变化');
  let finished=true;if(a.steps?.length){const step=a.steps[a.currentStep??0];if(!actorId||step.userId!==actorId)throw Error('尚未轮到当前审批人');step.decision=c.decision;step.at=now;if(c.decision==='approved'&&(a.currentStep??0)<a.steps.length-1){a.currentStep=(a.currentStep??0)+1;finished=false;}}
- if(finished&&c.decision==='approved'){if(a.kind==='transfer'){activeOrg(a.orgId);e.orgId=a.orgId;}if(a.kind==='regularize'){if(e.status!=='试用')throw Error('员工已非试用状态');e.status='正式';}if(a.kind==='exit')e.status='离职';}if(finished){a.status=c.decision;a.decided=now;a.decidedBy=actorId;}subject=e.name;
+ if(finished&&c.decision==='approved'){if(a.kind==='transfer'){activeOrg(a.orgId);const {position,grade}=assignment(a.orgId,a.positionId,a.gradeId);e.orgId=a.orgId;e.positionId=a.positionId??null;e.gradeId=a.gradeId??null;if(position)e.job=position.name;if(grade)e.level=grade.name;}if(a.kind==='regularize'){if(e.status!=='试用')throw Error('员工已非试用状态');e.status='正式';}if(a.kind==='exit')e.status='离职';}if(finished){a.status=c.decision;a.decided=now;a.decidedBy=actorId;}subject=e.name;
  }
- s.audit.unshift({id:id(),action:{workflow:'配置审批流程',withdraw:'撤回人事申请',employee:'保存员工档案',org:'保存组织',request:'发起人事申请',decide:'处理人事审批'}[c.action],subject,at:now,actorId});return s;
+ s.audit.unshift({id:id(),action:{position:'保存岗位',grade:'保存职级',workflow:'配置审批流程',withdraw:'撤回人事申请',employee:'保存员工档案',org:'保存组织',request:'发起人事申请',decide:'处理人事审批'}[c.action],subject,at:now,actorId});return s;
 }

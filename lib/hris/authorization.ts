@@ -19,15 +19,17 @@ export function permittedEmployeeIds(state:State,member:Member){
 export function visibleState(state:State,member:Member):State {
  requireMember(member);if(member.role==='admin')return state;
  const ids=permittedEmployeeIds(state,member),scope=scopedOrgs(state,member);
- const employees=state.employees.filter(e=>ids.has(e.id)).map(e=>({...e,email:member.viewEmail?e.email:'',level:member.viewLevel?e.level:''}));
- const approvals=state.approvals.filter(a=>ids.has(a.employeeId)&&(member.role!=='approver'||a.steps?.some(s=>s.userId===member.userId)));
+ const employees=state.employees.filter(e=>ids.has(e.id)).map(e=>({...e,email:member.viewEmail?e.email:'',level:member.viewLevel?e.level:'',gradeId:member.viewLevel?e.gradeId:null}));
+ const approvals=state.approvals.filter(a=>ids.has(a.employeeId)&&(member.role!=='approver'||a.steps?.some(s=>s.userId===member.userId))).map(a=>({...a,gradeId:member.viewLevel?a.gradeId:null}));
  const allowedOrgs=new Set(member.role==='employee'?employees.map(e=>e.orgId):[...scope]);
- return {employees,orgs:state.orgs.filter(o=>allowedOrgs.has(o.id)).map(o=>({...o,parentId:allowedOrgs.has(o.parentId)?o.parentId:'',leader:member.role==='employee'?'':o.leader})),approvals,audit:[],workflows:undefined};
+ return {positions:(state.positions??[]).filter(p=>member.role==='employee'?employees.some(e=>e.positionId===p.id):scope.has(p.orgId)),grades:member.viewLevel?(state.grades??[]):[],employees,orgs:state.orgs.filter(o=>allowedOrgs.has(o.id)).map(o=>({...o,parentId:allowedOrgs.has(o.parentId)?o.parentId:'',leader:member.role==='employee'?'':o.leader})),approvals,audit:[],workflows:undefined};
 }
 export function authorizeCommand(state:State,input:unknown,member:Member){
  requireMember(member);const c=commandSchema.parse(input);const scope=scopedOrgs(state,member);
  const allowedEmployee=(id:string)=>{const e=state.employees.find(e=>e.id===id);return !!e&&(member.role==='admin'||(member.role==='employee'?e.id===member.employeeId:scope.has(e.orgId)));};
- if(c.action==='workflow'){if(member.role!=='admin')throw new AccessError('仅管理员可配置流程');
+ if(c.action==='grade'){if(member.role!=='admin')throw new AccessError('仅管理员可维护职级体系');
+ }else if(c.action==='position'){const old=state.positions?.find(p=>p.id===c.id);if(!['admin','hr'].includes(member.role)||!scope.has(c.orgId)||(old&&!scope.has(old.orgId)))throw new AccessError('没有此组织的岗位维护权限');
+ }else if(c.action==='workflow'){if(member.role!=='admin')throw new AccessError('仅管理员可配置流程');
  }else if(c.action==='withdraw'){
  const a=state.approvals.find(a=>a.id===c.id);if(!a||a.createdBy!==member.userId||!allowedEmployee(a.employeeId))throw new AccessError('仅具有数据权限的申请人可撤回');
  }else if(c.action==='decide'){
@@ -38,10 +40,12 @@ export function authorizeCommand(state:State,input:unknown,member:Member){
  if(!a.createdBy||a.createdBy===member.userId||a.employeeId===member.employeeId)throw new AccessError('不能审批本人申请、本人异动或缺少申请人记录的历史申请');
  }else if(c.action==='request'){
  if(member.role==='approver'||!allowedEmployee(c.employeeId))throw new AccessError('没有此员工的申请权限');
+ if(c.kind==='transfer'&&member.role!=='admin'&&!member.viewLevel&&c.gradeId&&c.gradeId!==state.employees.find(e=>e.id===c.employeeId)?.gradeId)throw new AccessError('没有职级修改权限');
  if(c.kind==='transfer'&&member.role!=='admin'&&!scope.has(c.orgId))throw new AccessError('没有调入组织的数据权限');
  }else if(c.action==='employee'){
  if(!['admin','hr'].includes(member.role)||!scope.has(c.orgId)||(c.id&&!allowedEmployee(c.id)))throw new AccessError('没有此员工或组织的维护权限');
  const old=state.employees.find(e=>e.id===c.id);
+ if(member.role!=='admin'&&!member.viewLevel){if(c.gradeId&&c.gradeId!==old?.gradeId)throw new AccessError('没有职级修改权限');c.gradeId=old?.gradeId??null;}
  for(const field of ['email','level'] as const){const allowed=member.role==='admin'||(field==='email'?member.viewEmail:member.viewLevel);if(!allowed){if(c[field]&&c[field]!==old?.[field])throw new AccessError('没有该字段的修改权限');c[field]=old?.[field]??'';}}
  }else{
  const old=state.orgs.find(o=>o.id===c.id);
