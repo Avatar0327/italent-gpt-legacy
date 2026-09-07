@@ -1,16 +1,16 @@
 {
-  "version": 1,
-  "activeWriter": "04 绩效管理",
-  "mode": "serial-shared-checkout",
+  "version": 2,
+  "activeWriter": "总控（当前聊天）",
+  "mode": "single-controller",
   "branchCreationBase": "commit introducing this queue; exact SHA in git history",
   "items": [
     {
       "handoff": "H004",
       "module": "04 绩效管理",
       "branch": "delivery/performance",
-      "status": "active",
-      "writer": "04 绩效管理",
-      "assignedOwner": "04 绩效管理",
+      "status": "returned",
+      "writer": null,
+      "assignedOwner": "总控（当前聊天）",
       "allowedPaths": [
         "lib/hris/performance.ts",
         "lib/hris/performance-changes.ts",
@@ -33,9 +33,9 @@
       "handoff": "H005",
       "module": "05 招聘管理",
       "branch": "delivery/recruitment",
-      "status": "queued",
+      "status": "controller-backlog",
       "writer": null,
-      "assignedOwner": "05 招聘管理",
+      "assignedOwner": "总控（当前聊天）",
       "allowedPaths": [
         "lib/hris/recruitment.ts",
         "app/recruitment/",
@@ -52,9 +52,9 @@
       "handoff": "H006",
       "module": "06 假勤管理",
       "branch": "delivery/attendance",
-      "status": "queued",
+      "status": "controller-backlog",
       "writer": null,
-      "assignedOwner": "06 假勤管理",
+      "assignedOwner": "总控（当前聊天）",
       "allowedPaths": [
         "lib/hris/attendance.ts",
         "app/attendance/",
@@ -71,9 +71,9 @@
       "handoff": "H007",
       "module": "07 薪酬管理",
       "branch": "delivery/payroll",
-      "status": "queued",
+      "status": "controller-backlog",
       "writer": null,
-      "assignedOwner": "07 薪酬管理",
+      "assignedOwner": "总控（当前聊天）",
       "allowedPaths": [
         "lib/hris/payroll.ts",
         "lib/hris/payroll-access.ts",
@@ -96,9 +96,9 @@
       "handoff": "H008",
       "module": "08 自助报表与集成",
       "branch": "delivery/integration",
-      "status": "queued",
+      "status": "controller-backlog",
       "writer": null,
-      "assignedOwner": "08 自助报表与集成",
+      "assignedOwner": "总控（当前聊天）",
       "allowedPaths": [
         "lib/hris/work-inbox.ts",
         "lib/hris/reports.ts",
@@ -116,5 +116,10 @@
       "predecessor": "H007",
       "gate": "G3/G4准备"
     }
-  ]
+  ],
+  "handoffReturn": {
+    "sha": "ca5f82af7fee4a29789ba969ea070a5cd3544307",
+    "merged": true,
+    "businessAccepted": false
+  }
 }
