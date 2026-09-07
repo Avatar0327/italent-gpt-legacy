@@ -8,7 +8,7 @@ export const moduleProgress:Record<string,ModuleProgress>={
  '薪酬社保':{done:'核定工资录入、独立复核、工资条、异议及补差',remaining:'自动核算、税社保、薪资档案、支付及企业规则验证',links:[link('工资批次','/payroll'),link('工资异议与补差','/payroll-adjustments')]},
  '假勤管理':{done:'固定班次、打卡、补卡、请假、人工余额及覆盖报表',remaining:'弹性轮班、设备、加班、跨班请假、自动结转与封账',links:[link('假勤管理','/attendance')]},
  '招聘管理系统':{done:'需求审批、候选人、面试评价、录用确认和原子入职',remaining:'渠道门户、简历解析、面试日历、电子签和AI能力',links:[link('招聘与入职','/recruitment')]},
- '绩效管理':{done:'目标权重与独立调整、执行跟进、自评、独立评价、结果发布、申诉与更正',remaining:'完整OKR、组织绩效、多级校准审批和企业申诉时限',links:[link('绩效管理','/performance'),link('目标调整','/performance-changes'),link('执行跟进','/performance-checkins')]},
+ '绩效管理':{done:'目标权重与独立调整、执行跟进、自评、独立评价、结果发布、申诉与更正',remaining:'完整OKR、组织绩效、多级校准审批和企业申诉时限',links:[link('绩效管理','/performance'),link('目标调整','/performance-changes'),link('执行跟进','/performance-checkins'),link('办理报表','/reports?dataset=performanceOperations')]},
  '继任与发展':{done:'盘点、人才池、后备提名、继任覆盖报表、发展计划与学习衔接',remaining:'复杂梯队、健康度模型和带教管理',links:[link('人才与发展','/development')]},
  '在线盘点':{done:'标准、盘点项目、潜力校准、九宫格快照、人才池及继任记录',remaining:'校准会议及委员会、报告模板和多维模型',links:[link('人才与发展','/development')]},
  '360度评估':{done:'指定评估人、量表答卷、分组阈值与冻结报告',remaining:'多种题型、提醒催办与完整活动运营',links:[link('360度评估','/feedback')]},
