@@ -22,6 +22,7 @@ export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
    if(live&&r.status==='submitted'&&manager&&!self&&r.createdBy!==m.userId)add('performance','目标执行反馈','/performance-checkins');
    if(live&&r.status==='returned'&&self&&r.createdBy===m.userId&&(p.payload.version??1)===r.payload.basePlanVersion&&!records.some(c=>c.kind==='performanceGoalChange'&&c.referenceId===p.id&&c.status==='submitted'))add('performance','补充目标跟进','/performance-checkins');
   }
+  if(r.kind==='requisition'&&r.status==='returned'&&hr)add('recruitment','招聘需求修订','/recruitment');
   if(r.kind==='candidate'&&r.status==='screening'&&r.payload.offerReturnReason&&hr&&records.some(q=>q.kind==='requisition'&&q.id===r.referenceId&&q.status==='active'))add('recruitment','录用退回补充','/recruitment','',r.payload.name??'候选人');
   if(r.kind==='performanceGoalChange'&&r.status==='submitted'&&manager&&!self&&r.createdBy!==m.userId)add('performance','绩效目标调整复核','/performance-changes','',`${r.payload.period} 目标调整`);
   if(r.kind==='certificateAward'&&hr&&!self&&r.createdBy!==m.userId){if(r.status==='submitted')add('learning','内部证书发放复核','/certificates');if(r.status==='issued'&&!certificateSourceValid(records.find(s=>s.id===r.payload.sourceRecordId)))add('learning','证书依据状态复核','/certificates');}
@@ -55,7 +56,7 @@ export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
    if(r.status==='submitted'&&r.createdBy!==m.userId&&old.createdBy!==m.userId&&plan.evaluatedBy!==m.userId)add('performance','绩效申诉复核','/performance','',`${r.payload.period} 绩效申诉`);
    if(r.status==='approved'&&r.payload.verifiedBy!==m.userId&&!records.some(x=>x.kind==='performance'&&x.payload.appealId===r.id))add('performance','绩效更正发布','/performance','',`${r.payload.period} 绩效更正`);
   }}
-  if(r.kind==='requisition'&&r.status==='draft'&&['admin','manager'].includes(m.role)&&r.createdBy!==m.userId&&state.positions?.some(p=>p.id===r.positionId&&p.status==='启用'))add('recruitment','招聘需求审批','/recruitment');
+  if(r.kind==='requisition'&&r.status==='draft'&&!r.payload.contributors?.includes(m.userId)&&['admin','manager'].includes(m.role)&&r.createdBy!==m.userId&&state.positions?.some(p=>p.id===r.positionId&&p.status==='启用'))add('recruitment','招聘需求审批','/recruitment');
   if(r.kind==='candidate'&&records.some(x=>x.kind==='requisition'&&x.id===r.referenceId&&x.status==='active')){
    if(r.status==='offered'&&['admin','manager'].includes(m.role)&&(r.payload.offeredBy??r.createdBy)!==m.userId)add('recruitment','录用审批','/recruitment','',r.payload.name??'候选人');
    if(r.status==='approved'&&hr)add('recruitment','录用接受确认','/recruitment','',r.payload.name??'候选人');
