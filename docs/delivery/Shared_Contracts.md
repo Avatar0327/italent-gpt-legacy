@@ -40,3 +40,9 @@
 - 计划允许active/returned状态派课；submitted/completed/cancelled不允许。课程同code不代表同版本，必须比较referenceId内部ID。
 - 盘点与计划目前共享employeeId，计划referenceId指向能力标准；没有已实现的reviewId外键或自动计划生成协议。
 - 本轮仅澄清现状并补证据，未改变公共请求/响应、领域规则或旧数据，不要求消费者迁移。
+
+## H002 干部实例与待决议项（不改变SC-1）
+
+执行提交`5bf8b9385fb4cb326880df7e3d1d2fc4bc183eb6`。planId/employeeId/标准版本与学习关联的实际合成ID、引用断言见[G1_Cadre_Delivery.md](G1_Cadre_Delivery.md)及测试输出H002_SC1_INSTANCE。盘点到计划仍为同员工显式办理，无reviewId外键；完成仅聚合权威记录。
+
+离职后当前组织HR/经理及未停用本人保留既有计划/学习历史读取，属于现有实现，企业保留策略未核实。C-DEF-01：保留离职员工关联的active=false请求被member-rules在职校验阻断，400且账号仍active；具体证据和最小兼容修复建议见交付记录。总控修复前不作完整撤权或G1通过结论。
