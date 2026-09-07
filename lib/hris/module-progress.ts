@@ -17,5 +17,5 @@ export const moduleProgress:Record<string,ModuleProgress>={
  '问卷调查':{done:'实名量表和单选、模板版本、填报撤回与结项',remaining:'复杂题型、分类、条件跳转及匿名模式',links:[link('实名问卷','/surveys')]},
  '报表':{done:'当前权限范围报表、分页查询和审计导出',remaining:'自助设计器、完整领域覆盖、大规模查询与历史快照',links:[link('人事报表','/reports')]},
  '人才标准':{done:'能力标准版本、行为锚点及岗位要求',remaining:'复杂指标组合、多维模型和标准审批机制',links:[link('能力标准','/development')]},
- '员工自助':{done:'本人档案、假勤、学习、问卷、工资和申请进度',remaining:'日程、日报、融入计划、完整OKR与统一消息',links:[link('员工自助','/self-service')]},
+ '员工自助':{done:'本人档案、融入计划、假勤、学习、问卷、工资和申请进度',remaining:'日程、日报、完整OKR与统一消息',links:[link('员工自助','/self-service'),link('融入计划','/onboarding')]},
 };
