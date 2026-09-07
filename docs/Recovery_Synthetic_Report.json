@@ -1,0 +1,161 @@
+{
+  "at": "2026-09-07T12:54:05.690Z",
+  "mode": "isolated synthetic SQLite and memory object store",
+  "passed": true,
+  "migrations": [
+    {
+      "file": "0000_windy_paper_doll.sql",
+      "sha256": "622f4c3c69bc95c7ae1e19e617efd4174fda5d18a525de4832213af9f1a2cfc3"
+    },
+    {
+      "file": "0001_oval_sunset_bain.sql",
+      "sha256": "d9aa90ec1919fa0cfa098846a61b54ed1166b8b8f510149dc8adfec2e6e8fa80"
+    },
+    {
+      "file": "0002_petite_speedball.sql",
+      "sha256": "c6d338240fe36feb02dd6602054bada6651d6c7bd908ce6f8ca0289c8e3d9d66"
+    },
+    {
+      "file": "0003_demonic_gauntlet.sql",
+      "sha256": "b8374f6203b995e32b80b0c0b912d0cb6fd3028b06dd74c36977411849bb49bb"
+    },
+    {
+      "file": "0004_chubby_quasar.sql",
+      "sha256": "bd2087718327a64274f028e33fcfcdf52c146c30612c20ad3462eff876f5dec4"
+    },
+    {
+      "file": "0005_nice_redwing.sql",
+      "sha256": "05262cba56a21c8e8a6160de90cf1e5d7e7c07e0c0fa7e13e02a11174ee09328"
+    },
+    {
+      "file": "0006_curious_zaladane.sql",
+      "sha256": "4c77b8cc9ea8fbd4cdb44c5955df51a7cdabd145b07f475980c69e7d96ca3937"
+    },
+    {
+      "file": "0007_low_mojo.sql",
+      "sha256": "1bd09b8c3bafd6cdf7600406a4ce39c5d45326fd24342aa1808b4c24b191c4cb"
+    },
+    {
+      "file": "0008_legal_trauma.sql",
+      "sha256": "ac3581d749f9e6e3d59e995e3133ce3b6740f42e69e3803b2ecc9ceb6b430542"
+    }
+  ],
+  "restoredRevision": 6,
+  "tables": [
+    {
+      "table": "hris_access_grants",
+      "rows": 1,
+      "sha256": "056ed43d6b1f3ddd92d7d692fd6be97117fc68ad43333ba4bfd8f1c12b7b96d4"
+    },
+    {
+      "table": "hris_approval_steps",
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "hris_approvals",
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "hris_assignment_requests",
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "hris_attachments",
+      "rows": 1,
+      "sha256": "fde6ed790198efb7c6ceef359f7ff215f04e67852824095d33934e35f839caf7"
+    },
+    {
+      "table": "hris_audit_events",
+      "rows": 7,
+      "sha256": "2eb0502661d6306ab9f4fc8ded6fa3d0c3d01d5ce45e6ad0dd4890c522b1c28e"
+    },
+    {
+      "table": "hris_development_events",
+      "rows": 3,
+      "sha256": "6f1316217aedbc89eeacb597f14abf709d37ecb1ce1436284e864e1b291dec58"
+    },
+    {
+      "table": "hris_development_records",
+      "rows": 2,
+      "sha256": "b90afc0b40361a70e0c8fbd1d99f82bd9c5ac92339cf1318e903850168dd4c90"
+    },
+    {
+      "table": "hris_employee_positions",
+      "rows": 1,
+      "sha256": "d665ae99f317f5f767a243f60a4188fd68d45f425bd5eb2a68208e076ec6fdb2"
+    },
+    {
+      "table": "hris_employees",
+      "rows": 1,
+      "sha256": "d35aee927422de71b8ac00818242aefabe5584a99d870571062fafbcc7ce53c4"
+    },
+    {
+      "table": "hris_employment_history",
+      "rows": 1,
+      "sha256": "8fb5f6aa0e1ecee2a8eb7c8b7a3dcdfa46527e1ef7cbcca3dd50b0fd25afb581"
+    },
+    {
+      "table": "hris_grades",
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "hris_installation",
+      "rows": 1,
+      "sha256": "43b6bb9a15980983b7a8adc7344845559fb52453379b6da0e5186ee23cb03728"
+    },
+    {
+      "table": "hris_memberships",
+      "rows": 1,
+      "sha256": "d2472e96811ee7aaed7c76088da3e5ad605e7610b829fdafa157e3a8193c0be3"
+    },
+    {
+      "table": "hris_orgs",
+      "rows": 1,
+      "sha256": "d46201e8113bef23d329e71062ac5c1e7bda5726292c8b313f69e7037343b662"
+    },
+    {
+      "table": "hris_positions",
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "hris_workflow_steps",
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "hris_workflows",
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "hris_workspaces",
+      "rows": 1,
+      "sha256": "67dac0f8f6b6211adfad09ed0ec19d12ddde33f97f9a665940603afd17fa97c6"
+    }
+  ],
+  "attachmentCount": 1,
+  "checks": [
+    "table hashes equal",
+    "SQLite integrity",
+    "foreign keys",
+    "application records and revision equal",
+    "attachment download and checksum",
+    "missing object detected",
+    "corrupt object detected",
+    "uninvited user denied",
+    "post-restore audited mutation"
+  ],
+  "localRestoreAndValidationMs": 18.36,
+  "limitations": [
+    "No deployed D1 or R2 accessed",
+    "Quiescent synthetic snapshot only",
+    "No cloud backup scheduling, encryption, retention or region failover verified",
+    "No real enterprise RPO/RTO acceptance",
+    "Not all business tables contain fixture rows"
+  ]
+}

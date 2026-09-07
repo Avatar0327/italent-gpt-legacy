@@ -1,7 +1,7 @@
 export type ModuleProgress={done:string;remaining:string;links:{label:string;href:string}[]};
 const link=(label:string,href:string)=>({label,href});
 export const moduleProgress:Record<string,ModuleProgress>={
- '组织员工':{done:'组织人员、岗位职级、入转调离、编制、合同及续签报表、自定义字段分组及状态必填检查',remaining:'复杂跨字段联动、兼岗、复杂再入职及法人变更',links:[link('组织员工','/employees'),link('编制合同','/workforce'),link('档案字段','/employee-fields')]},
+ '组织员工':{done:'组织人员、岗位职级、入转调离、编制、协议类别、合同覆盖及续签报表、自定义字段分组及状态必填检查',remaining:'复杂跨字段联动、兼岗、复杂再入职及法人变更',links:[link('组织员工','/employees'),link('编制合同','/workforce'),link('档案字段','/employee-fields')]},
  '审批中心':{done:'人事顺序审批、独立复核、撤回及历史',remaining:'管理员委托、复杂条件分支及其他模块待办汇集',links:[link('人事审批','/approvals'),link('跨模块待办','/work-inbox')]},
  '干部管理2.0':{done:'跨模块人才档案、提名审议、调动任用核对、考察述职',remaining:'档案扩展与评委会和原站详细规则核实',links:[link('干部人才档案','/cadre-profiles'),link('干部提名与考察','/cadres')]},
  '任职资格':{done:'标准版本、能力证据、独立认证、到期与撤销',remaining:'任职类别层级及复杂认证委员会',links:[link('任职资格','/qualifications')]},
@@ -12,7 +12,7 @@ export const moduleProgress:Record<string,ModuleProgress>={
  '继任与发展':{done:'盘点、人才池、后备提名、继任覆盖报表、发展计划与学习衔接',remaining:'复杂梯队、健康度模型和带教管理',links:[link('人才与发展','/development')]},
  '在线盘点':{done:'标准、盘点项目、潜力校准、九宫格快照、人才池及继任记录',remaining:'校准会议及委员会、报告模板和多维模型',links:[link('人才与发展','/development')]},
  '360度评估':{done:'指定评估人、量表答卷、分组阈值与冻结报告',remaining:'多种题型、提醒催办与完整活动运营',links:[link('360度评估','/feedback')]},
- '学习管理':{done:'课程考试、培训申请与任务核对、课程阶段与进度报表、项目、出勤、学分、课程认证、活动报名、内部名册、试讲、培养派课与关联、培训带教、证书及报表',remaining:'完整培养编排与批量自动派课、证书样式与自动发证、导师认证及组织关系同步、外聘讲师、完整班级运营、学分到期折抵',links:[link('内部证书','/certificates'),link('培训带教','/mentoring'),link('认证培养','/instructor-development'),link('认证报名','/instructor-campaigns'),link('试讲评审','/instructor-trials'),link('内部讲师名册','/instructor-directory'),link('学习中心','/learning'),link('培训申请','/training-requests'),link('培训场次','/training-sessions'),link('学分','/learning-credits'),link('讲师认证','/instructors')]},
+ '学习管理':{done:'课程考试、培训申请与任务核对、课程阶段、显式批量派课、取消恢复与进度报表、项目、出勤、学分、课程认证、活动报名、内部名册、试讲、培养派课与关联、培训带教、证书及报表',remaining:'完整培养编排与批量自动派课、证书样式与自动发证、导师认证及组织关系同步、外聘讲师、完整班级运营、学分到期折抵',links:[link('内部证书','/certificates'),link('培训带教','/mentoring'),link('认证培养','/instructor-development'),link('认证报名','/instructor-campaigns'),link('试讲评审','/instructor-trials'),link('内部讲师名册','/instructor-directory'),link('学习中心','/learning'),link('培训申请','/training-requests'),link('培训场次','/training-sessions'),link('学分','/learning-credits'),link('讲师认证','/instructors')]},
  '员工调查':{done:'实名问卷模板、发布名单、答卷及统计',remaining:'匿名模式、完整调查报告与行动计划',links:[link('实名问卷','/surveys')]},
  '问卷调查':{done:'实名量表和单选、模板版本、填报撤回与结项',remaining:'复杂题型、分类、条件跳转及匿名模式',links:[link('实名问卷','/surveys')]},
  '报表':{done:'当前权限范围报表、分页查询和审计导出',remaining:'自助设计器、完整领域覆盖、大规模查询与历史快照',links:[link('人事报表','/reports')]},

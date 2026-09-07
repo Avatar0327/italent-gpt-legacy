@@ -18,8 +18,8 @@ registerHooks({
  },
  load(url,context,next){if(url.startsWith('file:')&&url.endsWith('.ts')&&!url.includes('/node_modules/'))return {format:'module',source:ts.transpileModule(readFileSync(fileURLToPath(url),'utf8'),{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText,shortCircuit:true};return next(url,context);}
 });
-export function database(){
- const sqlite=new DatabaseSync(':memory:');sqlite.exec('PRAGMA foreign_keys=ON');
+export function database(path=':memory:'){
+ const sqlite=new DatabaseSync(path);sqlite.exec('PRAGMA foreign_keys=ON');
  class Statement{
   constructor(sql){this.sql=sql;this.args=[];}
   bind(...args){this.args=args;return this;}
