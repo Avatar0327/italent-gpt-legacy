@@ -1,7 +1,7 @@
 export type ModuleProgress={done:string;remaining:string;links:{label:string;href:string}[]};
 const link=(label:string,href:string)=>({label,href});
 export const moduleProgress:Record<string,ModuleProgress>={
- '组织员工':{done:'组织人员、岗位职级、入转调离、编制、合同、自定义字段分组及状态必填检查',remaining:'复杂跨字段联动、兼岗、复杂再入职及法人变更',links:[link('组织员工','/employees'),link('编制合同','/workforce'),link('档案字段','/employee-fields')]},
+ '组织员工':{done:'组织人员、岗位职级、入转调离、编制、合同及续签报表、自定义字段分组及状态必填检查',remaining:'复杂跨字段联动、兼岗、复杂再入职及法人变更',links:[link('组织员工','/employees'),link('编制合同','/workforce'),link('档案字段','/employee-fields')]},
  '审批中心':{done:'人事顺序审批、独立复核、撤回及历史',remaining:'管理员委托、复杂条件分支及其他模块待办汇集',links:[link('人事审批','/approvals'),link('跨模块待办','/work-inbox')]},
  '干部管理2.0':{done:'跨模块人才档案、提名审议、调动任用核对、考察述职',remaining:'档案扩展与评委会和原站详细规则核实',links:[link('干部人才档案','/cadre-profiles'),link('干部提名与考察','/cadres')]},
  '任职资格':{done:'标准版本、能力证据、独立认证、到期与撤销',remaining:'任职类别层级及复杂认证委员会',links:[link('任职资格','/qualifications')]},
