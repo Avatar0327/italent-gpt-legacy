@@ -5,7 +5,7 @@ export const progressBaseline={
  phases:[
   {phase:'P1 原站盘点',requirements:'48个菜单分组已观察；部分核心页面已核对，详细规则持续核实',development:'菜单及差异清单已建立',testing:'逐需求验收映射未覆盖全量范围',production:'不适用：本阶段交付为需求证据'},
   {phase:'P2 设计与基础',requirements:'首批组织、人员、权限和审批需求已形成基线；全量生产要求待补齐',development:'首批基础能力阶段目标完成，随业务扩展继续完善',testing:'已有21项基础自动化场景通过记录',production:'未完成：多账号业务验收、容量、安全及恢复验证待开展'},
-  {phase:'P3 业务模块',requirements:'部分页面已核对；独立实现的规则仍需对照原站及企业制度',development:'17个菜单分组部分实现，31个尚未标记独立实现',testing:'42项P3自动化场景通过；不等同于全流程或人工验收',production:'未完成：仍处于分模块开发与部分联调'},
+  {phase:'P3 业务模块',requirements:'部分页面已核对；独立实现的规则仍需对照原站及企业制度',development:'17个菜单分组部分实现，31个尚未标记独立实现',testing:'44项P3自动化场景通过；不等同于全流程或人工验收',production:'未完成：仍处于分模块开发与部分联调'},
  ],
 };
 export const moduleRequirementEvidence:Record<string,string>={
@@ -13,7 +13,7 @@ export const moduleRequirementEvidence:Record<string,string>={
  '在线盘点':'标准、项目、校准会、继任列表及人才池看板已观察；详细提交规则待核实',
  '人才标准':'标准列表列名及名称/状态/分类筛选已核实；内部维度与算法待核实',
  '继任与发展':'职位继任列表、筛选和地图入口已核实；期间和准备度细则待核实',
- '学习管理':'培训申请、项目、讲师管理及授课记录已核对；师资认证详细规则待核实',
+ '学习管理':'培训申请、项目、讲师管理及授课记录已核对；师资认证活动列表已核对；试讲评分及入库规则待核实',
 };
 export const moduleTestEvidence:Record<string,string>={
  '组织员工':'基础人事、编制合同、自定义字段接口场景', '审批中心':'顺序审批、独立复核、并发与待办场景',

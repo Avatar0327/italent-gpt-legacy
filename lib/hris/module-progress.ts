@@ -12,7 +12,7 @@ export const moduleProgress:Record<string,ModuleProgress>={
  '继任与发展':{done:'盘点、人才池、后备提名、继任覆盖报表、发展计划与学习衔接',remaining:'复杂梯队、健康度模型和带教管理',links:[link('人才与发展','/development')]},
  '在线盘点':{done:'标准、盘点项目、潜力校准、九宫格快照、人才池及继任记录',remaining:'校准会议及委员会、报告模板和多维模型',links:[link('人才与发展','/development')]},
  '360度评估':{done:'指定评估人、量表答卷、分组阈值与冻结报告',remaining:'多种题型、提醒催办与完整活动运营',links:[link('360度评估','/feedback')]},
- '学习管理':{done:'课程考试、培训申请与任务核对、项目、出勤、学分、讲师认证及培训管理报表',remaining:'完整师资档案、外聘讲师、班级运营、学分到期折抵',links:[link('学习中心','/learning'),link('培训申请','/training-requests'),link('培训场次','/training-sessions'),link('学分','/learning-credits'),link('讲师认证','/instructors')]},
+ '学习管理':{done:'课程考试、培训申请与任务核对、项目、出勤、学分、讲师认证、内部名册及培训管理报表',remaining:'认证活动与试讲评分、外聘讲师、完整班级运营、学分到期折抵',links:[link('内部讲师名册','/instructor-directory'),link('学习中心','/learning'),link('培训申请','/training-requests'),link('培训场次','/training-sessions'),link('学分','/learning-credits'),link('讲师认证','/instructors')]},
  '员工调查':{done:'实名问卷模板、发布名单、答卷及统计',remaining:'匿名模式、完整调查报告与行动计划',links:[link('实名问卷','/surveys')]},
  '问卷调查':{done:'实名量表和单选、模板版本、填报撤回与结项',remaining:'复杂题型、分类、条件跳转及匿名模式',links:[link('实名问卷','/surveys')]},
  '报表':{done:'当前权限范围报表、分页查询和审计导出',remaining:'自助设计器、完整领域覆盖、大规模查询与历史快照',links:[link('人事报表','/reports')]},
