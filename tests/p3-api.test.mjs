@@ -534,3 +534,30 @@ test('P3 合同运营报表：终止与原结束日、续签草稿、作废排�
 test('P2/P3 管理报表入口：无岗位权限时不查询领域明细，导出同样拒绝',async()=>{
  const {db,sqlite}=await setup();const revision=(await get()).revision;let detailReads=0;globalThis.p2env.DB={...db,batch:async statements=>{if(statements.some(s=>s.sql.includes('FROM hris_development_records')))detailReads++;return db.batch(statements);}};act('employee');for(const dataset of ['payrollOperations','payrollReconciliation','contractOperations','trainingStageProgress','instructorCampaignProgress']){await expect(await reports.GET(request('/api/reports?dataset='+dataset)),403);await expect(await reports.POST(request('/api/reports',{revision,query:{dataset}})),403);}assert.equal(detailReads,0);act('hr');await expect(await reports.GET(request('/api/reports?dataset=payrollOperations')),403);assert.equal(detailReads,0);await expect(await reports.GET(request('/api/reports?dataset=contractOperations')));assert.equal(detailReads,1);act('employee');const own=await expect(await reports.GET(request('/api/reports?dataset=workforce')));assert.equal(own.total,1);globalThis.p2env.DB=db;sqlite.close();
 });
+
+test('P3 学习任务恢复：保留考试次数和历史，重新提交，范围与项目状态重新检查',async()=>{
+ const {sqlite,e}=await setup();
+ const course=await send({action:'course',code:'RECOVER',title:'恢复课程',description:'合成数据恢复流程测试',content:'合成课程内容用于验证取消后的恢复不会重置考试次数和历史记录。'});
+ await send({action:'exam',courseId:course.id,questions:[{prompt:'请选择正确的合成测试答案',options:['正确','错误'],correct:0}],passingScore:100,maxAttempts:1});
+ await send({action:'publishCourse',id:course.id});
+ const task=await send({action:'enroll',employeeId:e.id,courseId:course.id,due});
+ act('employee');await send({action:'attemptExam',enrollmentId:task.id,answers:[1]});
+ act('manager');await send({action:'cancelEnrollment',id:task.id,reason:'员工排期调整暂时取消任务'});
+ const revision=(await get()).revision;
+ act('employee');await send({action:'restoreEnrollment',id:task.id,due,evidence:'本人尝试未经管理者恢复任务'},403);
+ act('manager');await send({action:'restoreEnrollment',id:task.id,due:'2020-01-01',evidence:'恢复日期不能早于当前日期'},400);
+ await send({action:'restoreEnrollment',id:task.id,due,evidence:'排期已经恢复继续原任务学习'});
+ await send({action:'restoreEnrollment',id:task.id,due,evidence:'重复恢复不能覆盖当前记录'},400);
+ assert.equal((await get()).records.find(r=>r.id===task.id).status,'active');
+ act('employee');await send({action:'attemptExam',enrollmentId:task.id,answers:[0]},400);await send({action:'submitLearning',id:task.id,evidence:'恢复不应该绕过原有考试门槛'},400);
+ act('owner');const history=await expect(await dev.GET(request('/api/development?id='+task.id)));assert.ok(history.items.some(x=>x.snapshot.status==='cancelled'));assert.ok(history.items.some(x=>x.snapshot.payload.restoredBy==='manager'));assert.equal((await get()).revision,revision+1);
+ const org=(await expect(await hris.GET())).state.orgs.find(o=>o.name==='研发');
+ const simple=await send({action:'course',code:'RECOVER2',title:'成果恢复课程',description:'恢复后必须重新提交成果',content:'合成课程内容用于验证旧成果保留历史而不直接进入已核验完成状态。'});await send({action:'publishCourse',id:simple.id});
+ const training=await send({action:'training',name:'恢复项目',orgId:org.id,period:'恢复测试',start:'2026-01-01',end:due,instructor:'合成讲师',courseIds:[simple.id]});await send({action:'publishTraining',id:training.id});
+ const second=await send({action:'enroll',trainingId:training.id,employeeId:e.id,courseId:simple.id,due});
+ act('employee');await send({action:'submitLearning',id:second.id,evidence:'取消之前提交的成果证据'});
+ act('manager');await send({action:'cancelEnrollment',id:second.id,reason:'材料需要重新补充后再学习'});await send({action:'restoreEnrollment',id:second.id,due,evidence:'材料已备齐恢复原有学习任务'});
+ assert.equal((await get()).records.find(r=>r.id===second.id).payload.submittedBy,undefined);await send({action:'verifyLearning',id:second.id,accepted:true,evidence:'尚未重新提交不能直接核验'},400);
+ await send({action:'cancelEnrollment',id:second.id,reason:'项目调整取消并结束项目'});await send({action:'closeTraining',id:training.id});await send({action:'restoreEnrollment',id:second.id,due,evidence:'已结束项目不允许恢复任务'},400);
+ assert.ok((await expect(await dev.GET(request('/api/development?id='+second.id)))).items.some(x=>x.snapshot.payload.evidence==='取消之前提交的成果证据'));sqlite.close();
+});

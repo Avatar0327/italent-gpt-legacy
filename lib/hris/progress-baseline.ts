@@ -5,7 +5,7 @@ export const progressBaseline={
  phases:[
   {phase:'P1 原站盘点',requirements:'48个菜单分组已观察；部分核心页面已核对，详细规则持续核实',development:'菜单及差异清单已建立',testing:'逐需求验收映射未覆盖全量范围',production:'不适用：本阶段交付为需求证据'},
   {phase:'P2 设计与基础',requirements:'首批组织、人员、权限和审批需求已形成基线；全量生产要求待补齐',development:'首批基础能力阶段目标完成，随业务扩展继续完善',testing:'已有21项基础自动化场景通过记录',production:'未完成：多账号业务验收、容量、安全及恢复验证待开展'},
-  {phase:'P3 业务模块',requirements:'部分页面已核对；独立实现的规则仍需对照原站及企业制度',development:'17个菜单分组部分实现，31个尚未标记独立实现',testing:'80项P3自动化场景通过；不等同于全流程或人工验收',production:'未完成：仍处于分模块开发与部分联调'},
+  {phase:'P3 业务模块',requirements:'部分页面已核对；独立实现的规则仍需对照原站及企业制度',development:'17个菜单分组部分实现，31个尚未标记独立实现',testing:'81项P3自动化场景通过；不等同于全流程或人工验收',production:'未完成：仍处于分模块开发与部分联调'},
  ],
 };
 export const moduleRequirementEvidence:Record<string,string>={
