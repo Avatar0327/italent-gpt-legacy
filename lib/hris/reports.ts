@@ -3,6 +3,7 @@ import {visibleState} from './authorization';
 import {visibleDevelopment,type DevelopmentContext} from './development-repository';
 import {attendanceReport} from './attendance';
 export const reportQuery=z.object({dataset:z.enum(['workforce','attendance','learning','performance']).default('workforce'),from:z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),to:z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),search:z.string().max(100).default('')}).refine(q=>!q.from||!q.to||q.from<=q.to,'开始日期不能晚于结束日期');
+export const reportKinds={workforce:[],attendance:['shift','clock','correction','leaveType','leaveCredit','leave'],learning:['enrollment'],performance:['performance','performancePlan','performanceCycle']} as const;
 export type Cell=string|number|null;
 export function makeReport(ctx:DevelopmentContext,input:unknown){
  const q=reportQuery.parse(input),state=visibleState(ctx.state,ctx.member),records=visibleDevelopment(ctx),employee=(id:string|null)=>state.employees.find(e=>e.id===id),name=(id:string|null)=>employee(id)?.name??'',code=(id:string|null)=>employee(id)?.code??'',org=(id:string)=>state.orgs.find(o=>o.id===id)?.name??'';

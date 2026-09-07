@@ -14,13 +14,13 @@ function authorize(ctx:DevelopmentContext,employeeId:string|null,recordId:string
 }
 function visibleFile(ctx:DevelopmentContext,f:FileRow){return !!f.recordId||['admin','hr'].includes(ctx.member.role)||(f.visibility==='employee'&&f.employeeId===ctx.member.employeeId);}
 export async function GET(request:Request){try{
- const ctx=await developmentContext(),url=new URL(request.url),id=url.searchParams.get('id');
+ const ctx=await developmentContext(['course']),url=new URL(request.url),id=url.searchParams.get('id');
  if(id){const file=await ctx.db.prepare(select+' AND id=?').bind(ctx.member.tenantId,id).first<FileRow>();if(!file)throw new HttpError(404,'附件不存在');authorize(ctx,file.employeeId,file.recordId);if(!visibleFile(ctx,file))throw new HttpError(403,'附件未向当前成员开放');const object=await bucket().get(file.objectKey);if(!object)throw new HttpError(404,'附件文件不存在');return new Response(object.body,{headers:{'Content-Type':file.mime,'Content-Length':String(file.size),'Content-Disposition':`attachment; filename="download"; filename*=UTF-8''${encodeURIComponent(file.name)}`,'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Content-Security-Policy':"default-src 'none'; sandbox"}});}
  const employeeId=url.searchParams.get('employeeId'),recordId=url.searchParams.get('recordId');authorize(ctx,employeeId,recordId);const audience=employeeId&&!['admin','hr'].includes(ctx.member.role)?" AND visibility='employee' AND employee_id=?":'';const rows=await ctx.db.prepare(select+` AND ${employeeId?'employee_id':'record_id'}=?`+audience+' ORDER BY created_at DESC LIMIT 201').bind(ctx.member.tenantId,employeeId??recordId,...(audience?[ctx.member.employeeId??'']:[])).all<FileRow>();return json({items:rows.results.slice(0,200).map(({objectKey,...r})=>r),hasMore:rows.results.length>200,revision:ctx.row.revision});
  }catch(e){return failure(e);}}
 export async function POST(request:Request){let uploaded:string|undefined;let committed=false;try{
  if(request.headers.get('origin')!==new URL(request.url).origin)throw new HttpError(403,'请求来源无效');
- const ctx=await developmentContext(),url=new URL(request.url),employeeId=url.searchParams.get('employeeId'),recordId=url.searchParams.get('recordId');authorize(ctx,employeeId,recordId,true);
+ const ctx=await developmentContext(['course']),url=new URL(request.url),employeeId=url.searchParams.get('employeeId'),recordId=url.searchParams.get('recordId');authorize(ctx,employeeId,recordId,true);
  const revision=z.coerce.number().int().nonnegative().parse(url.searchParams.get('revision'));if(revision!==ctx.row.revision)throw new HttpError(409,'数据已变化，请刷新');
  const visibility=z.enum(['hr','employee']).parse(url.searchParams.get('visibility')??'hr');
  const name=z.string().trim().min(1).max(160).parse(url.searchParams.get('name'));if(/[\x00-\x1f\x7f/\\]/.test(name))throw new HttpError(400,'文件名无效');
@@ -31,7 +31,7 @@ export async function POST(request:Request){let uploaded:string|undefined;let co
  await commitExtension(ctx,revision,'上传附件',name,token=>[ctx.db.prepare('INSERT INTO hris_attachments(tenant_id,id,employee_id,record_id,object_key,visibility,name,mime,size,created_by,created_at) SELECT owner,?,?,?,?,?,?,?,?,?,? FROM hris_workspaces WHERE owner=? AND last_mutation=?').bind(id,employeeId,recordId,key,visibility,name,mime,size,ctx.member.userId,at,ctx.member.tenantId,token)]);committed=true;return json({id,revision:revision+1});
  }catch(e){if(uploaded&&!committed){try{await bucket().delete(uploaded);}catch{/* inaccessible orphan can be reconciled by storage maintenance */}}return failure(e);}}
 export async function DELETE(request:Request){try{
- const body=z.object({id:z.string().min(1),revision:z.number().int().nonnegative()}).parse(await readBody(request)),ctx=await developmentContext();const file=await ctx.db.prepare(select+' AND id=?').bind(ctx.member.tenantId,body.id).first<FileRow>();if(!file)throw new HttpError(404,'附件不存在');authorize(ctx,file.employeeId,file.recordId,true);
+ const body=z.object({id:z.string().min(1),revision:z.number().int().nonnegative()}).parse(await readBody(request)),ctx=await developmentContext(['course']);const file=await ctx.db.prepare(select+' AND id=?').bind(ctx.member.tenantId,body.id).first<FileRow>();if(!file)throw new HttpError(404,'附件不存在');authorize(ctx,file.employeeId,file.recordId,true);
  await commitExtension(ctx,body.revision,'删除附件',file.name,token=>[ctx.db.prepare('UPDATE hris_attachments SET deleted_at=? WHERE tenant_id=? AND id=? AND EXISTS (SELECT 1 FROM hris_workspaces WHERE owner=? AND last_mutation=?)').bind(new Date().toISOString(),ctx.member.tenantId,file.id,ctx.member.tenantId,token)]);
  // Keep a tombstone even if physical removal fails; authorization never returns it.
  try{await bucket().delete(file.objectKey);}catch{return json({deleted:true,cleanupPending:true});}return json({deleted:true});

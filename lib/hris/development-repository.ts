@@ -2,10 +2,12 @@ import {memberContext} from './context';
 import {HttpError} from './http';
 import type {State} from './model';
 import {visibleRecord,projectRecord,type DevelopmentRecord} from './development';
-export async function developmentContext(){
+export async function developmentContext(kinds?:readonly DevelopmentRecord['kind'][]){
  const ctx=await memberContext();if(!ctx.row||ctx.row.storageVersion!==1)throw new HttpError(409,'请先完成企业数据迁移');
+ const selection=kinds===undefined?null:[...new Set(kinds)];
+ const kindWhere=selection===null?'':selection.length?' AND kind IN ('+selection.map(()=>'?').join(',')+')':' AND 1=0';
  const result=await ctx.db.batch([
-  ctx.db.prepare('SELECT id,kind,employee_id AS employeeId,position_id AS positionId,reference_id AS referenceId,status,payload,created_by AS createdBy,created_at AS createdAt,updated_at AS updatedAt FROM hris_development_records WHERE tenant_id=? ORDER BY created_at,id').bind(ctx.member.tenantId),
+  ctx.db.prepare('SELECT id,kind,employee_id AS employeeId,position_id AS positionId,reference_id AS referenceId,status,payload,created_by AS createdBy,created_at AS createdAt,updated_at AS updatedAt FROM hris_development_records WHERE tenant_id=?'+kindWhere+' ORDER BY created_at,id').bind(ctx.member.tenantId,...(selection??[])),
   ctx.db.prepare('SELECT revision FROM hris_workspaces WHERE owner=?').bind(ctx.member.tenantId),
  ]);
  // Core scope and extension documents must describe the same revision. A concurrent
