@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "activeWriter": "04 绩效管理",
+  "mode": "serial-shared-checkout",
+  "branchCreationBase": "commit introducing this queue; exact SHA in git history",
+  "items": [
+    {
+      "handoff": "H004",
+      "module": "04 绩效管理",
+      "branch": "delivery/performance",
+      "status": "active",
+      "writer": "04 绩效管理",
+      "assignedOwner": "04 绩效管理",
+      "allowedPaths": [
+        "lib/hris/performance.ts",
+        "lib/hris/performance-changes.ts",
+        "lib/hris/performance-checkins.ts",
+        "app/performance/",
+        "app/performance-changes/",
+        "app/performance-checkins/",
+        "app/api/performance/",
+        "app/api/performance-changes/",
+        "app/api/performance-checkins/",
+        "tests/g2-performance*.test.mjs",
+        "tests/support/performance-*.mjs",
+        "docs/delivery/modules/performance.md",
+        "docs/delivery/G2_performance_*"
+      ],
+      "predecessor": null,
+      "gate": "G2"
+    },
+    {
+      "handoff": "H005",
+      "module": "05 招聘管理",
+      "branch": "delivery/recruitment",
+      "status": "queued",
+      "writer": null,
+      "assignedOwner": "05 招聘管理",
+      "allowedPaths": [
+        "lib/hris/recruitment.ts",
+        "app/recruitment/",
+        "app/api/recruitment/",
+        "tests/g2-recruitment*.test.mjs",
+        "tests/support/recruitment-*.mjs",
+        "docs/delivery/modules/recruitment.md",
+        "docs/delivery/G2_recruitment_*"
+      ],
+      "predecessor": "H004",
+      "gate": "G2"
+    },
+    {
+      "handoff": "H006",
+      "module": "06 假勤管理",
+      "branch": "delivery/attendance",
+      "status": "queued",
+      "writer": null,
+      "assignedOwner": "06 假勤管理",
+      "allowedPaths": [
+        "lib/hris/attendance.ts",
+        "app/attendance/",
+        "app/api/attendance/",
+        "tests/g3-attendance*.test.mjs",
+        "tests/support/attendance-*.mjs",
+        "docs/delivery/modules/attendance.md",
+        "docs/delivery/G3_attendance_*"
+      ],
+      "predecessor": "H005",
+      "gate": "G3"
+    },
+    {
+      "handoff": "H007",
+      "module": "07 薪酬管理",
+      "branch": "delivery/payroll",
+      "status": "queued",
+      "writer": null,
+      "assignedOwner": "07 薪酬管理",
+      "allowedPaths": [
+        "lib/hris/payroll.ts",
+        "lib/hris/payroll-access.ts",
+        "lib/hris/payroll-review.ts",
+        "lib/hris/payroll-adjustments.ts",
+        "lib/hris/payroll-reports.ts",
+        "app/payroll/",
+        "app/payroll-adjustments/",
+        "app/api/payroll/",
+        "app/api/payroll-adjustments/",
+        "tests/g3-payroll*.test.mjs",
+        "tests/support/payroll-*.mjs",
+        "docs/delivery/modules/payroll.md",
+        "docs/delivery/G3_payroll_*"
+      ],
+      "predecessor": "H006",
+      "gate": "G3"
+    },
+    {
+      "handoff": "H008",
+      "module": "08 自助报表与集成",
+      "branch": "delivery/integration",
+      "status": "queued",
+      "writer": null,
+      "assignedOwner": "08 自助报表与集成",
+      "allowedPaths": [
+        "lib/hris/work-inbox.ts",
+        "lib/hris/reports.ts",
+        "app/work-inbox/",
+        "app/reports/",
+        "app/self-service/",
+        "app/api/work-inbox/",
+        "app/api/reports/",
+        "app/api/self-service/",
+        "tests/g3-integration*.test.mjs",
+        "tests/support/integration-*.mjs",
+        "docs/delivery/modules/integration.md",
+        "docs/delivery/G3_integration_*"
+      ],
+      "predecessor": "H007",
+      "gate": "G3/G4准备"
+    }
+  ]
+}

@@ -15,3 +15,6 @@ G0 是基础门槛，G1 首轮为限定业务闭环；G2/G3 是后续业务验�
 下一验收入口：[G1人工业务验收清单](G1_Business_Acceptance.md)。G1自动化证据齐备不等于界面或人工业务通过。
 
 本轮交付：[综合报告](G1_PreAcceptance_Report.md)、[用户验收指南](G1_User_Acceptance_Guide.md)、[绩效包](modules/performance.md)、[招聘包](modules/recruitment.md)。后两包仅准备，未分配写入职责。
+
+## 最新后续模块入口
+[后续规划](Next_Batches_Plan.md)、[分支与职责队列](Module_Queue.md)：04绩效active；05招聘、06假勤、07薪酬、08自助报表集成queued。各模块分支提前建立，总控统一发布。本节覆盖此前04/05尚未分配的状态。

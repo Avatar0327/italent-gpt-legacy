@@ -1,21 +1,55 @@
-# 04 绩效管理：G2首批交接包
+# 04 绩效管理交接包
 
-状态：已准备，未领取；当前唯一写入者为总控。不得自行切换共享目录分支或修改源码。参考基线为包含G1集成报告的最新main，接入时核对完整SHA与项目ID appgprj_6a9e2c705cfc819180e0e5251bb025cc。不是新项目，不重复搭建。
+交接编号：H004；批次：G2；状态：active。本交接推送且分支建立后生效；无需再次领取批准。
 
-必读：README、Ownership、Shared_Contracts、Scope_Register、G1_PreAcceptance_Report、acceptance/G2、上级Execution_Checkpoint。复用现有tests/p3-api.test.mjs及foundation-scenario；C-DEF-01撤权修复不得回退。
+预建分支：`delivery/performance`。分支实际存在与远端推送结果由总控交付确认；当前参考主线469fc702e445c84c2eac334ebf13f8245cea90c5，实际以本规划提交及后续总控指定激活基线为准。不得从附件旧SHA开始覆盖新成果。
 
-首批范围：绩效周期→目标确认/调整→执行反馈→自评→独立评价→发布→申诉更正及本人/档案读取。当前已有部分实现，先按module-progress核对缺口。组织绩效/复杂校准、招聘外部渠道/电子签/AI等全量未纳入子功能仍保留后续，不宣布整组完成。
+## 本批目标与复用
+目标与结果版本闭环，含调整、独立评价、发布、申诉更正。
 
-候选专属路径：lib/hris/performance.ts、performance-changes.ts、performance-checkins.ts；app/performance/、performance-changes/、performance-checkins/及对应API。新增测试建议tests/g2-performance*.test.mjs；新增证据docs/delivery/G2_performance_*。以上不是当前写入授权，实际以总控下一交接记录为准。
+已有周期、目标权重、独立调整、跟进、自评/评价、发布及申诉更正。
 
-任务：核对目标权重、周期日期与组织范围；复用正式结果与历史核定区分；将同员工目标调整/版本冲突/评价独立/发布/申诉更正串成场景；验证调动/离职/停用后当前权限及旧版本不冒充最新结果。
+## 任务与退出
+1. P01核对现有周期/目标/调整/结果接口和企业规则缺口，不重写已有实现。
+2. P02补同员工完整场景：目标确认→调整申请/复核→执行反馈→自评→独立评价→发布→申诉→更正。
+3. P03验证100%权重、周期边界、旧修订、重复发布、自审、组织调动/离职/账号停用，以及旧结果不能冒充最新版。
+4. P04修复专属路径内确切缺陷，准备用户操作步骤和G2证据；报表/档案消费者改动交总控。
 
-共享保留：development.ts、公共context/授权/持久化、migrations、主数据model、报表/壳与托管、tests/p3-api.test.mjs、runtime；变更先提交兼容方案，由总控统一处理。尤其招聘hire涉及核心员工原子写入，不能另写平行员工存储。接口继续revision和当前组织范围；无新迁移计划，确切需求出现后总控编号。
+退出：以上限定闭环的成功/拒绝路径有证据，专属缺陷已修复或列出具体阻塞；G2整体签署由总控处理。未自动通过业务/生产验收。
 
-输出：需求/开发/测试/生产四维状态，规则来源与未知项，具体缺陷及修复证据，模块提交SHA与交还说明。自动化通过不代签G2业务验收。G1界面阻塞不影响本包只读盘点、方案与测试设计；编码需明确交接。单写模式未解除，不自动开代理。
+后续范围：组织绩效、完整OKR、多级校准、企业申诉时限等继续保留后续；本批独立设计不得冒充原站制度。
 
-启动提示词：
+## 明确写入路径
+- `lib/hris/performance.ts`
+- `lib/hris/performance-changes.ts`
+- `lib/hris/performance-checkins.ts`
+- `app/performance/`
+- `app/performance-changes/`
+- `app/performance-checkins/`
+- `app/api/performance/`
+- `app/api/performance-changes/`
+- `app/api/performance-checkins/`
+- `tests/g2-performance*.test.mjs`
+- `tests/support/performance-*.mjs`
+- `docs/delivery/modules/performance.md`
+- `docs/delivery/G2_performance_*`
+
+路径清单中的不存在文件仅允许按本包所需新增，不意味着现有能力已经存在。验收总表、范围、归属、检查点由总控维护，模块将更新建议写入自己的交付记录。
+
+## 共同规则
+
+原系统仅只读，复用授权会话；不修改业务、审批、消息或批量导出真实人员。仅合成开发/测试；既有代码文档、必要测试、修复、提交已授权。只有总控合并和私有发布；真实迁移、访问扩大、生产切换另行确认。平台强制权限不可绕过。
+
+不修改development.ts、context/成员授权/公共持久化、model.ts、migrations、身份、依赖/构建/托管、UI壳、tests/p3-api.test.mjs、tests/support/runtime.mjs及公共fixture。专属路径之外发现确切缺陷，交付失败复现、具体补丁建议和影响给总控；推进其他不受影响项。不得削弱断言或绕过权限让测试通过。
+
+可读取全部代码，使用tests/support/foundation-scenario.mjs；专属测试可新建helper，不能复制整套系统。没有明确共享变更需求就不新建迁移。文档中的菜单/接口依据现有代码，未核实原站细则标为独立设计/待核实。
+
+交付：完整SHA、变更路径、需求/开发/测试/生产四维状态、测试命令/结果及哈希、失败项和已知限制、用户操作步骤、明确交还写入职责。必须交付实际开发/修复或经过核查的“已有实现无需重复开发”证据，不为制造进度堆测试。完成小功能继续具备条件任务；硬限制保存检查点，不声称后台运行。
+
+## 可直接复制的提示词
 
 ```text
-请读取本G2工作包和最新总控文件，先只读核对当前代码、接口与已实现范围，整理首批剩余需求和组合验收场景，不重新搭建。当前尚未交接写入职责，不修改共享工作区。总控明确交接后直接按允许路径持续完成开发/必要测试，保留现有权限与C-DEF-01回归。原系统只读、仅合成测试数据；提交后交付完整SHA、证据和遗留项，统一由总控合并/发布。
+请接手“04 绩效管理”，读取本包及最新Ownership、Module_Queue、Shared_Contracts、Scope_Register和Execution_Checkpoint。项目ID appgprj_6a9e2c705cfc819180e0e5251bb025cc；复用现有仓库，不新建项目。
+先核对Module_Queue中的H004状态。若active且工作区干净、分支基线包含指定主线，直接切换已创建的delivery/performance并执行，无需再提交一次只读报告等待批准。若queued，只读完成本包需求/接口/测试方案，结果输出在聊天中，不写共享目录、不切换分支、不运行生成文件的任务；无需重复申请授权。
+按任务顺序补真实缺口，遵守允许路径和共享保留边界；保留C-DEF-01及现有权限回归。持续推进，不以完成一个小功能结束。模块完成后交付完整SHA、证据和遗留项，并明确交还写入职责；不自行推送main、合并他人分支或发布。
 ```
