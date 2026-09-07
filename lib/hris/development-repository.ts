@@ -1,3 +1,4 @@
+import {payrollRecordAccess} from './payroll-access';
 import {memberContext} from './context';
 import {HttpError} from './http';
 import type {State} from './model';
@@ -17,7 +18,7 @@ export async function developmentContext(kinds?:readonly DevelopmentRecord['kind
  return {...ctx,state:JSON.parse(ctx.row.data) as State,records};
 }
 export type DevelopmentContext=Awaited<ReturnType<typeof developmentContext>>;
-export function visibleDevelopment(ctx:DevelopmentContext){return ctx.records.filter(r=>visibleRecord(r,ctx.records,ctx.state,ctx.member)).map(r=>projectRecord(r,ctx.member));}
+export function visibleDevelopment(ctx:DevelopmentContext){return ctx.records.filter(r=>visibleRecord(r,ctx.records,ctx.state,ctx.member)).map(r=>projectRecord(r,ctx.member,payrollRecordAccess(r,ctx.records,ctx.state,ctx.member)));}
 // Every state mutation and audit event share one revision-guarded D1 transaction.
 // Callbacks receive a fresh, unique token; zero CAS changes make all later writes no-ops.
 export async function commitExtension(ctx:DevelopmentContext,revision:number,action:string,subject:string,statements:(token:string)=>D1PreparedStatement[]){

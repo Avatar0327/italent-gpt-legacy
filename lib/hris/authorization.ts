@@ -1,8 +1,9 @@
 import { commandSchema, type State } from './model.ts';
-export type Member = {userId:string;tenantId:string;role:'admin'|'hr'|'manager'|'approver'|'employee';employeeId:string|null;active:boolean|number;orgScope?:string|string[];viewEmail?:boolean|number;viewLevel?:boolean|number};
+export type Member = {userId:string;tenantId:string;role:'admin'|'hr'|'manager'|'approver'|'employee'|'payroll_editor'|'payroll_reviewer';employeeId:string|null;active:boolean|number;orgScope?:string|string[];viewEmail?:boolean|number;viewLevel?:boolean|number};
+export const selfOnlyRole=(m:Member)=>['employee','payroll_editor','payroll_reviewer'].includes(m.role);
 export class AccessError extends Error {}
 export function requireMember(member:Member|null|undefined):asserts member is Member {
- if(!member?.active||!['admin','hr','manager','approver','employee'].includes(member.role))throw new AccessError('尚未配置有效的企业成员权限，请联系系统管理员');
+ if(!member?.active||!['admin','hr','manager','approver','employee','payroll_editor','payroll_reviewer'].includes(member.role))throw new AccessError('尚未配置有效的企业成员权限，请联系系统管理员');
 }
 export function scopedOrgs(state:State,member:Member){
  if(member.role==='admin')return new Set(state.orgs.map(o=>o.id));
@@ -14,19 +15,19 @@ export function scopedOrgs(state:State,member:Member){
 export function permittedEmployeeIds(state:State,member:Member){
  const scope=scopedOrgs(state,member);
  const assigned=new Set(state.approvals.filter(a=>a.steps?.some(s=>s.userId===member.userId)).map(a=>a.employeeId));
- return new Set(state.employees.filter(e=>member.role==='admin'||(member.role==='employee'?e.id===member.employeeId:scope.has(e.orgId)&&(member.role!=='approver'||assigned.has(e.id)))).map(e=>e.id));
+ return new Set(state.employees.filter(e=>member.role==='admin'||(selfOnlyRole(member)?e.id===member.employeeId:scope.has(e.orgId)&&(member.role!=='approver'||assigned.has(e.id)))).map(e=>e.id));
 }
 export function visibleState(state:State,member:Member):State {
  requireMember(member);if(member.role==='admin')return state;
  const ids=permittedEmployeeIds(state,member),scope=scopedOrgs(state,member);
  const employees=state.employees.filter(e=>ids.has(e.id)).map(e=>({...e,email:member.viewEmail?e.email:'',level:member.viewLevel?e.level:'',gradeId:member.viewLevel?e.gradeId:null}));
  const approvals=state.approvals.filter(a=>ids.has(a.employeeId)&&(member.role!=='approver'||a.steps?.some(s=>s.userId===member.userId))).map(a=>({...a,gradeId:member.viewLevel?a.gradeId:null}));
- const allowedOrgs=new Set(member.role==='employee'?employees.map(e=>e.orgId):[...scope]);
- return {positions:(state.positions??[]).filter(p=>member.role==='employee'?employees.some(e=>e.positionId===p.id):scope.has(p.orgId)),grades:member.viewLevel?(state.grades??[]):[],employees,orgs:state.orgs.filter(o=>allowedOrgs.has(o.id)).map(o=>({...o,parentId:allowedOrgs.has(o.parentId)?o.parentId:'',leader:member.role==='employee'?'':o.leader})),approvals,audit:[],workflows:undefined};
+ const allowedOrgs=new Set(selfOnlyRole(member)?employees.map(e=>e.orgId):[...scope]);
+ return {positions:(state.positions??[]).filter(p=>selfOnlyRole(member)?employees.some(e=>e.positionId===p.id):scope.has(p.orgId)),grades:member.viewLevel?(state.grades??[]):[],employees,orgs:state.orgs.filter(o=>allowedOrgs.has(o.id)).map(o=>({...o,parentId:allowedOrgs.has(o.parentId)?o.parentId:'',leader:selfOnlyRole(member)?'':o.leader})),approvals,audit:[],workflows:undefined};
 }
 export function authorizeCommand(state:State,input:unknown,member:Member){
  requireMember(member);const c=commandSchema.parse(input);const scope=scopedOrgs(state,member);
- const allowedEmployee=(id:string)=>{const e=state.employees.find(e=>e.id===id);return !!e&&(member.role==='admin'||(member.role==='employee'?e.id===member.employeeId:scope.has(e.orgId)));};
+ const allowedEmployee=(id:string)=>{const e=state.employees.find(e=>e.id===id);return !!e&&(member.role==='admin'||(selfOnlyRole(member)?e.id===member.employeeId:scope.has(e.orgId)));};
  if(c.action==='grade'){if(member.role!=='admin')throw new AccessError('仅管理员可维护职级体系');
  }else if(c.action==='position'){const old=state.positions?.find(p=>p.id===c.id);if(!['admin','hr'].includes(member.role)||!scope.has(c.orgId)||(old&&!scope.has(old.orgId)))throw new AccessError('没有此组织的岗位维护权限');
  }else if(c.action==='workflow'){if(member.role!=='admin')throw new AccessError('仅管理员可配置流程');

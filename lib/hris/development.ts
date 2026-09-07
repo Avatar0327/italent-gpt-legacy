@@ -1,6 +1,7 @@
+import {payrollRecordAccess} from './payroll-access';
 import {z} from 'zod';
 import type {State} from './model';
-import {scopedOrgs,type Member} from './authorization';
+import {scopedOrgs,selfOnlyRole,type Member} from './authorization';
 import {HttpError} from './http';
 const text=z.string().trim().min(1).max(200),evidence=z.string().trim().min(5).max(4000),id=z.string().min(1).max(100);
 const date=z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine(v=>{const d=new Date(v+'T00:00:00Z');return !isNaN(d.getTime())&&d.toISOString().slice(0,10)===v;});
@@ -62,7 +63,7 @@ export function canReadRecord(r:DevelopmentRecord,s:State,m:Member){
  if(r.kind==='exam')return false; // Authorize through its course in visibleRecord below.
  if(r.kind==='course')return r.status!=='draft'||m.role==='hr';
  const scope=scopedOrgs(s,m);
- if(r.kind==='requirement')return !!s.positions?.some(p=>p.id===r.positionId&&(scope.has(p.orgId)||s.employees.some(e=>e.id===m.employeeId&&e.positionId===p.id)));
+ if(r.kind==='requirement')return !!s.positions?.some(p=>p.id===r.positionId&&(!selfOnlyRole(m)&&scope.has(p.orgId)||s.employees.some(e=>e.id===m.employeeId&&e.positionId===p.id)));
  if(r.employeeId){const e=s.employees.find(e=>e.id===r.employeeId);if(!e)return false;
   if(isTalentManager(m)&&scope.has(e.orgId)){if(r.positionId&&!s.positions?.some(p=>p.id===r.positionId&&scope.has(p.orgId)))return false;return true;}
   return e.id===m.employeeId&&(['trainingAttendance','cadreObservation','qualificationApplication','plan','enrollment','assessment','attempt','performancePlan','shift','clock','correction','leaveCredit','leave'].includes(r.kind)||(r.kind==='performance'&&!!r.payload.sourcePlanId&&r.status==='published'));
@@ -120,6 +121,7 @@ export function competencyGaps(records:DevelopmentRecord[],state:State,member:Me
 }
 
 export function visibleRecord(r:DevelopmentRecord,records:DevelopmentRecord[],state:State,member:Member):boolean{
+ if(['payBatch','paySlip','payQuery','payAdjustment'].includes(r.kind)&&payrollRecordAccess(r,records,state,member))return true;
  if(['employeeFieldDefinition','employeeFieldValue'].includes(r.kind)){const def=r.kind==='employeeFieldDefinition'?r:records.find(x=>x.id===r.referenceId&&x.kind==='employeeFieldDefinition');if(!def)return false;if(r.kind==='employeeFieldDefinition')return ['admin','hr'].includes(member.role)||!!def.payload.employeeRead&&!!member.employeeId||member.role==='manager'&&!!def.payload.managerRead;const e=state.employees.find(e=>e.id===r.employeeId);if(!e)return false;return member.role==='admin'||member.role==='hr'&&scopedOrgs(state,member).has(e.orgId)||e.id===member.employeeId&&!!def.payload.employeeRead||member.role==='manager'&&scopedOrgs(state,member).has(e.orgId)&&!!def.payload.managerRead&&e.id!==member.employeeId;}
  if(['feedbackProject','feedbackInvite','feedbackReply','feedbackReport'].includes(r.kind)){const invite=r.kind==='feedbackReply'?records.find(x=>x.id===r.referenceId&&x.kind==='feedbackInvite'):null;const project=r.kind==='feedbackProject'?r:records.find(x=>x.id===(invite?.referenceId??r.referenceId)&&x.kind==='feedbackProject');if(!project)return false;if(member.role==='admin'||member.role==='hr'&&scopedOrgs(state,member).has(project.payload.orgId!))return true;if(!member.employeeId||project.status==='draft')return false;if(r.kind==='feedbackProject')return records.some(x=>x.kind==='feedbackInvite'&&x.status==='assigned'&&x.referenceId===r.id&&x.employeeId===member.employeeId)||records.some(x=>x.kind==='feedbackReport'&&x.referenceId===r.id&&x.employeeId===member.employeeId);if(r.kind==='feedbackInvite'&&r.status!=='assigned')return false;return r.employeeId===member.employeeId;}
  if(r.kind==='trainingSession'){const t=records.find(x=>x.id===r.referenceId&&x.kind==='training');return !!t&&canReadRecord(t,state,member)&&(isTalentManager(member)||records.some(x=>x.kind==='enrollment'&&x.employeeId===member.employeeId&&x.payload.trainingId===t.id&&x.referenceId===r.payload.sessionCourseId&&x.status!=='cancelled'));}
@@ -131,12 +133,12 @@ export function visibleRecord(r:DevelopmentRecord,records:DevelopmentRecord[],st
  if(r.kind!=='exam')return canReadRecord(r,state,member);
  const course=records.find(c=>c.id===r.referenceId&&c.kind==='course');return !!course&&canReadRecord(course,state,member);
 }
-export function projectRecord(r:DevelopmentRecord,member:Member){
+export function projectRecord(r:DevelopmentRecord,member:Member,payrollAuthorized=member.role==='admin'){
  if(r.kind==='employeeFieldValue'&&!['admin','hr'].includes(member.role)&&r.employeeId!==member.employeeId)return {...r,status:"active",createdBy:"",payload:{name:r.payload.name,fieldValue:r.payload.fieldValue}};
  if(r.kind==='surveyRound'&&!['admin','hr'].includes(member.role))return {...r,payload:{...r.payload,participantIds:undefined}};
  if(r.kind==='employmentContract'&&!['admin','hr'].includes(member.role))return {...r,createdBy:'',payload:{contractNumber:r.payload.contractNumber,employerName:r.payload.employerName,contractType:r.payload.contractType,start:r.payload.start,end:r.payload.end,signedOn:r.payload.signedOn,endedOn:r.payload.endedOn}};
- if(r.kind==='payAdjustment'&&member.role!=='admin')return {...r,createdBy:'',payload:{employeeSnapshot:r.payload.employeeSnapshot,period:r.payload.period,currency:r.payload.currency,name:r.payload.name,reason:r.payload.reason,grossCents:r.payload.grossCents,deductionCents:r.payload.deductionCents,netCents:r.payload.netCents,publishedAt:r.payload.publishedAt,payItems:r.payload.payItems?.filter(i=>i.category!=='employer').map(i=>({...i,source:''}))}};
- if(r.kind==='paySlip'&&member.role!=='admin')return {...r,createdBy:'',payload:{employeeSnapshot:r.payload.employeeSnapshot,period:r.payload.period,currency:r.payload.currency,grossCents:r.payload.grossCents,deductionCents:r.payload.deductionCents,netCents:r.payload.netCents,payItems:r.payload.payItems?.filter(i=>i.category!=='employer').map(i=>({...i,source:''}))}};
+ if(r.kind==='payAdjustment'&&!payrollAuthorized)return {...r,createdBy:'',payload:{employeeSnapshot:r.payload.employeeSnapshot,period:r.payload.period,currency:r.payload.currency,name:r.payload.name,reason:r.payload.reason,grossCents:r.payload.grossCents,deductionCents:r.payload.deductionCents,netCents:r.payload.netCents,publishedAt:r.payload.publishedAt,payItems:r.payload.payItems?.filter(i=>i.category!=='employer').map(i=>({...i,source:''}))}};
+ if(r.kind==='paySlip'&&!payrollAuthorized)return {...r,createdBy:'',payload:{employeeSnapshot:r.payload.employeeSnapshot,period:r.payload.period,currency:r.payload.currency,grossCents:r.payload.grossCents,deductionCents:r.payload.deductionCents,netCents:r.payload.netCents,payItems:r.payload.payItems?.filter(i=>i.category!=='employer').map(i=>({...i,source:''}))}};
  if(r.kind==='candidate'&&member.role!=='admin')return {...r,payload:{...r.payload,email:member.viewEmail?r.payload.email:undefined,gradeId:member.viewLevel?r.payload.gradeId:undefined}};
  if(r.kind==='performancePlan'&&r.employeeId===member.employeeId)return {...r,payload:{...r.payload,scores:undefined,score:undefined,evaluation:undefined,evaluatedBy:undefined,evaluatedAt:undefined}};
  if(r.kind!=='exam'||['admin','hr'].includes(member.role))return r;
