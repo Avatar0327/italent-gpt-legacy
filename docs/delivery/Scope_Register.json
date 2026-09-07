@@ -532,5 +532,18 @@
       "tested": "既有集成测试子集；未逐需求完备映射",
       "productionAccepted": "未验收"
     }
-  ]
+  ],
+  "integrationEvidence": {
+    "stage": "G1",
+    "technicalPreAcceptance": "passed: 116/116 synthetic API tests",
+    "ui": "blocked by browser environment; not verified",
+    "businessAccepted": false,
+    "productionAccepted": false,
+    "report": "G1_PreAcceptance_Report.md",
+    "nextPackages": [
+      "modules/performance.md",
+      "modules/recruitment.md"
+    ],
+    "nextPackagesWriteAssigned": false
+  }
 }
