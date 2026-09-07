@@ -37,3 +37,12 @@ export async function saveDevelopment(ctx:DevelopmentContext,revision:number,r:D
  ctx.db.prepare('INSERT INTO hris_development_events(tenant_id,id,record_id,revision,action,actor_id,at,snapshot) SELECT owner,?,?,revision,?,?,?,? FROM hris_workspaces WHERE owner=? AND last_mutation=?').bind(token,r.id,action,ctx.member.userId,r.updatedAt,JSON.stringify(r),ctx.member.tenantId,token),
  ]);
 }
+
+/** Commit a bounded aggregate and each immutable record snapshot under one CAS revision. */
+export async function saveDevelopmentMany(ctx:DevelopmentContext,revision:number,records:DevelopmentRecord[],action:string){
+ if(!records.length||records.length>20||new Set(records.map(r=>r.id)).size!==records.length)throw new HttpError(400,'多记录提交数量或标识无效');
+ await commitExtension(ctx,revision,action,records.map(r=>`${r.kind} · ${r.id}`).join(' / '),token=>records.flatMap((r,i)=>[
+  ctx.db.prepare('INSERT INTO hris_development_records(tenant_id,id,kind,employee_id,position_id,reference_id,status,payload,created_by,created_at,updated_at) SELECT owner,?,?,?,?,?,?,?,?,?,? FROM hris_workspaces WHERE owner=? AND last_mutation=? ON CONFLICT(tenant_id,id) DO UPDATE SET status=excluded.status,reference_id=excluded.reference_id,payload=excluded.payload,updated_at=excluded.updated_at').bind(r.id,r.kind,r.employeeId,r.positionId,r.referenceId,r.status,JSON.stringify(r.payload),r.createdBy,r.createdAt,r.updatedAt,ctx.member.tenantId,token),
+  ctx.db.prepare('INSERT INTO hris_development_events(tenant_id,id,record_id,revision,action,actor_id,at,snapshot) SELECT owner,?,?,revision,?,?,?,? FROM hris_workspaces WHERE owner=? AND last_mutation=?').bind(token+':'+i,r.id,action,ctx.member.userId,r.updatedAt,JSON.stringify(r),ctx.member.tenantId,token),
+ ]));
+}
