@@ -27,8 +27,9 @@ export async function commitExtension(ctx:DevelopmentContext,revision:number,act
   db.prepare('INSERT INTO hris_audit_events(tenant_id,id,actor_id,action,subject,at,revision) SELECT owner,?,?,?,?,?,revision FROM hris_workspaces WHERE owner=? AND last_mutation=?').bind(token,m.userId,action,subject,at,m.tenantId,token),
  ]);if(!result[0].meta.changes)throw new HttpError(409,'数据或权限已变化，请刷新');
 }
-export async function saveDevelopment(ctx:DevelopmentContext,revision:number,r:DevelopmentRecord,action:string){
+export async function saveDevelopment(ctx:DevelopmentContext,revision:number,r:DevelopmentRecord,action:string,extraStatements?:(token:string)=>D1PreparedStatement[]){
  await commitExtension(ctx,revision,action,`${r.kind} · ${r.id}`,token=>[
+ ...(extraStatements?.(token)??[]),
  ctx.db.prepare('INSERT INTO hris_development_records(tenant_id,id,kind,employee_id,position_id,reference_id,status,payload,created_by,created_at,updated_at) SELECT owner,?,?,?,?,?,?,?,?,?,? FROM hris_workspaces WHERE owner=? AND last_mutation=? ON CONFLICT(tenant_id,id) DO UPDATE SET status=excluded.status,reference_id=excluded.reference_id,payload=excluded.payload,updated_at=excluded.updated_at').bind(r.id,r.kind,r.employeeId,r.positionId,r.referenceId,r.status,JSON.stringify(r.payload),r.createdBy,r.createdAt,r.updatedAt,ctx.member.tenantId,token),
  ctx.db.prepare('INSERT INTO hris_development_events(tenant_id,id,record_id,revision,action,actor_id,at,snapshot) SELECT owner,?,?,revision,?,?,?,? FROM hris_workspaces WHERE owner=? AND last_mutation=?').bind(token,r.id,action,ctx.member.userId,r.updatedAt,JSON.stringify(r),ctx.member.tenantId,token),
  ]);
