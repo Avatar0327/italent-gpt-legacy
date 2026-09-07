@@ -1,10 +1,11 @@
+import type {Member} from './authorization';
 import {payrollRecordAccess} from './payroll-access';
 import {memberContext} from './context';
 import {HttpError} from './http';
 import type {State} from './model';
 import {visibleRecord,projectRecord,type DevelopmentRecord} from './development';
-export async function developmentContext(kinds?:readonly DevelopmentRecord['kind'][]){
- const ctx=await memberContext();if(!ctx.row||ctx.row.storageVersion!==1)throw new HttpError(409,'请先完成企业数据迁移');
+export async function developmentContext(kinds?:readonly DevelopmentRecord['kind'][],allowedRoles?:readonly Member['role'][]){
+ const ctx=await memberContext();if(allowedRoles&&!allowedRoles.includes(ctx.member.role))throw new HttpError(403,'当前岗位无权访问此管理报表');if(!ctx.row||ctx.row.storageVersion!==1)throw new HttpError(409,'请先完成企业数据迁移');
  const selection=kinds===undefined?null:[...new Set(kinds)];
  const payrollHistory=selection===null||selection.some(kind=>kind==='payBatch'||kind==='paySlip');
  const kindWhere=selection===null?'':selection.length?' AND kind IN ('+selection.map(()=>'?').join(',')+')':' AND 1=0';

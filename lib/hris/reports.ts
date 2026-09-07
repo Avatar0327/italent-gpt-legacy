@@ -1,3 +1,4 @@
+import type {Member} from './authorization';
 import {payrollReport} from './payroll-reports';
 import {latestInstructorTrial} from './instructor-trials';
 import {instructorDevelopmentProof} from './instructor-development';
@@ -11,6 +12,10 @@ import {attendanceReport} from './attendance';
 const validDate=z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine(v=>{const d=new Date(v+'T00:00:00Z');return !Number.isNaN(d.getTime())&&d.toISOString().slice(0,10)===v;},'日期无效');
 export const reportQuery=z.object({dataset:z.enum(['contractOperations','trainingStageProgress','payrollOperations','payrollReconciliation','recruitmentOperations','performanceOperations','instructorCampaignProgress','workforce','attendance','learning','performance','talentReview','successionCoverage','instructorSchedule','trainingProgress','trainingRoster']).default('workforce'),from:validDate.optional(),to:validDate.optional(),search:z.string().max(100).default('')}).refine(q=>!q.from||!q.to||q.from<=q.to,'开始日期不能晚于结束日期');
 export const reportKinds={contractOperations:['employmentContract'],trainingStageProgress:['training','enrollment','course'],payrollOperations:['payBatch','paySlip','payAdjustment'],payrollReconciliation:['payBatch','paySlip','payAdjustment'],recruitmentOperations:['requisition','candidate'],performanceOperations:['performancePlan','performanceCycle','performance','performanceGoalChange','performanceCheckin'],instructorCampaignProgress:['instructorCampaign','instructorApplication','instructorProfile','instructorTrial','instructorDevelopment','enrollment'],trainingRoster:['training','trainingSession','trainingAttendance','enrollment'],instructorSchedule:['training','trainingSession','enrollment'],trainingProgress:['training','enrollment'],successionCoverage:['succession'],talentReview:['review'],workforce:[],attendance:['shift','clock','correction','leaveType','leaveCredit','leave'],learning:['enrollment'],performance:['performance','performancePlan','performanceCycle']} as const;
+export const reportRoles:Partial<Record<z.infer<typeof reportQuery>['dataset'],readonly Member['role'][]>>={
+ payrollOperations:['admin','payroll_editor','payroll_reviewer'],payrollReconciliation:['admin','payroll_editor','payroll_reviewer'],contractOperations:['admin','hr'],instructorCampaignProgress:['admin','hr'],
+ trainingStageProgress:['admin','hr','manager'],trainingRoster:['admin','hr','manager'],instructorSchedule:['admin','hr','manager'],trainingProgress:['admin','hr','manager'],successionCoverage:['admin','hr','manager'],performanceOperations:['admin','hr','manager'],recruitmentOperations:['admin','hr','manager'],
+};
 export type Cell=string|number|null;
 export function makeReport(ctx:DevelopmentContext,input:unknown){
  const q=reportQuery.parse(input);
