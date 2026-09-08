@@ -1,6 +1,6 @@
 # 已有实现与产品需求对应
 
-生成来源：`Scope_Register.json → p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-08T17:53:33.392201+00:00。
+生成来源：`Scope_Register.json → p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-08T17:59:58.024657+00:00。
 
 对应当前源码静态核对；可复用是技术候选，不是当前测试或业务验收通过。历史测试只在原Verification标注的testedSourceCommit及适用范围有效，本轮未复跑。产品源码未修改。
 
@@ -185,7 +185,10 @@
 | BP-I/BP-I-REQ-09 | 调查项目、通知模板与行动计划；[P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 部分静态实现/原站配置输入与逐组受限要求，未签署 | [surveys.ts](../../lib/hris/surveys.ts)；[P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md) | 三个问卷应用保留原48组各自证据，缺少共同ID/模板互通契约；现有同code版本及重交覆盖为本项目实现候选，不等于全部原站问卷规则。 |
 | BP-I/BP-I-REQ-10 | 会议室、预约、多时区与违约管理；[P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 原站局部设置/资源证据及受限需求，未签署 | [P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md)；[interview-schedule.ts](../../lib/hris/interview-schedule.ts)；[training-sessions.ts](../../lib/hris/training-sessions.ts) | M39会议应用无独立实现。招聘/培训地点字符串不是会议资源ID，跨包资源共享与外部会议系统需接口契约，不能声明无冲突。 |
 | BP-I/BP-I-REQ-11 | 报表订阅、快照、转交与屏蔽；[P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 原站局部表头/操作证据与本项目差异候选，未签署 | [P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md)；[reports.ts](../../lib/hris/reports.ts)；[route.ts](../../app/api/reports/route.ts) | M32订阅/设计器无独立实现；现有按当前范围查询可复用，真实发送调度与接收方数据授权需补齐。 |
-| BP-I/BP-I-REQ-12 | 企业标签库与人才标签应用；[P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 原站局部配置证据及受限需求，未签署 | [P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md)；[Scope_Register.json](../../docs/delivery/Scope_Register.json) | M05独立目录未实现；M41人才标签应用关系待完整规则，已有review.band不能替代可配置标签体系。 |
+| BP-I/BP-I-REQ-12 | 企业标签库与人才标签应用；[P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 原站局部配置证据及受限需求，未签署 | [P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md)；[Scope_Register.json](../../docs/delivery/Scope_Register.json) | M05独立目录未实现；M41人才标签应用关系待完整规则，已有review.band不能替代可配置标签体系。；截断碰撞和空值、规则改版异步生效需边界场景，不能拿displayName作全局唯一键；M41管幅ETL夜间时点与HR任职事件分离。 |
+| BP-I/BP-I-REQ-13 | 文化活动、员工圈、勋章与奖励；[P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 原站局部字段/展示配置与受限需求，未签署 | [P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md)；[Scope_Register.json](../../docs/delivery/Scope_Register.json) | M21无独立实现；与M33福利账户/M05标签目录的共享关系未确认，不能以员工自助入口替代业务闭环。 |
+| BP-I/BP-I-REQ-14 | 填报活动、方案、工单与审批；[P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 原站局部结构事实和受限需求，未签署 | [P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md)；[Scope_Register.json](../../docs/delivery/Scope_Register.json) | M08无独立实现；与M07薪资填报/M19审批关系待源契约，不能把任一动态表单当通用业务提交引擎。 |
+| BP-I/BP-I-REQ-15 | 翻译资源、语言列与版本记录；[P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 原站局部结构证据和受限需求，未签署 | [P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md)；[Scope_Register.json](../../docs/delivery/Scope_Register.json) | M47按资源本地化事实归BP-I，非待定业务归属；独立工作台未实现，未以现有中文界面/locale日期格式代替多语言资源管理。 |
 
 ## 历史验证适用版本索引
 

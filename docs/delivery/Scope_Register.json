@@ -771,9 +771,24 @@
         "pageRefs": [
           "BC-P1C-M05",
           "BC-I05",
-          "BC-P1C-M05-02"
+          "BC-P1C-M05-02",
+          "BC-I17",
+          "BC-I18"
         ],
-        "fieldRefs": [],
+        "fieldRefs": [
+          "BC-I17-F001",
+          "BC-I17-F002",
+          "BC-I17-F003",
+          "BC-I17-F004",
+          "BC-I17-F005",
+          "BC-I17-F006",
+          "BC-I18-F001",
+          "BC-I18-F002",
+          "BC-I18-F003",
+          "BC-I18-F004",
+          "BC-I18-F005",
+          "BC-I18-F006"
+        ],
         "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M05",
         "sourceGap": "已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
@@ -793,11 +808,13 @@
           "facts": [
             "BC-P1C-M05",
             "BC-I05",
-            "BC-P1C-M05-02"
+            "BC-P1C-M05-02",
+            "BC-I17",
+            "BC-I18"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "企业标签库、北森标签库、应用设置；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页；实际开关值、授权继承、标签传播及筛选权限未核实，不从配置标题推断自动同步；请求入口与当前正文未建立完整字段对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标规则",
+          "unexplored": "企业标签库、北森标签库、应用设置；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页；实际开关值、授权继承、标签传播及筛选权限未核实，不从配置标题推断自动同步；请求入口与当前正文未建立完整字段对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标规则；自动生成条件/定时、分类删除/转移历史、状态枚举和名称唯一性待核实；空表不证明已掌握完整标签模块；帮助规则未在当前租户实际触发；字符计数/Unicode截断、同显示值碰撞、算法数据版本、缺字段/删除字段/失效规则的存量处置、夜间时区/队列重试未知；不把学校或算法标签当业务录用规则",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；角色投影、指标分母、同步/重试及外部契约",
           "accepted": false
         }
@@ -2358,14 +2375,17 @@
         "navigationEvidence": "BC-NAV-20260908",
         "pageRefs": [
           "BC-P1C-M21",
-          "BC-P1C-M21-02"
+          "BC-P1C-M21-02",
+          "BC-I19"
         ],
         "fieldRefs": [
           "BC-P1C-M21-02-F001",
           "BC-P1C-M21-02-F002",
           "BC-P1C-M21-02-F003",
           "BC-P1C-M21-02-F004",
-          "BC-P1C-M21-02-F005"
+          "BC-P1C-M21-02-F005",
+          "BC-I19-F001",
+          "BC-I19-F002"
         ],
         "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M21",
@@ -2385,11 +2405,12 @@
         "coverage": {
           "facts": [
             "BC-P1C-M21",
-            "BC-P1C-M21-02"
+            "BC-P1C-M21-02",
+            "BC-I19"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "活动、企业文化、榜样、商城、勋章、动态；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+          "unexplored": "活动、企业文化、榜样、商城、勋章、动态；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证；圈成员/内容可见性、勋章/奖励/商城积分、评论审核/删除、通知和数据统计规则仍未验证；UI入口重命名不改变M21范围或生产名称",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；角色投影、指标分母、同步/重试及外部契约",
           "accepted": false
         }
@@ -3925,7 +3946,8 @@
         "navigationEvidence": "BC-NAV-20260908",
         "pageRefs": [
           "BC-P1C-M41",
-          "BC-P1C-M41-02"
+          "BC-P1C-M41-02",
+          "BC-C17"
         ],
         "fieldRefs": [
           "BC-P1C-M41-02-F001",
@@ -3934,7 +3956,11 @@
           "BC-P1C-M41-02-F004",
           "BC-P1C-M41-02-F005",
           "BC-P1C-M41-02-F006",
-          "BC-P1C-M41-02-F007"
+          "BC-P1C-M41-02-F007",
+          "BC-C17-F001",
+          "BC-C17-F002",
+          "BC-C17-F003",
+          "BC-C17-F004"
         ],
         "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M41",
@@ -3954,11 +3980,12 @@
         "coverage": {
           "facts": [
             "BC-P1C-M41",
-            "BC-P1C-M41-02"
+            "BC-P1C-M41-02",
+            "BC-C17"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "搜索、AI选人、对比、标签；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+          "unexplored": "搜索、AI选人、对比、标签；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证；此说明支持M41数字人才归BP-C而标签目录M05归BP-I的跨包关系，不合并范围。接口地址/鉴权/回调、字段权限/人工与自动冲突/撤回标签历史未验证；ETL对象不是本项目数据库或可调用API",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；北森iTalent、数字人才、翻译工作台典型入口职责未明；不依据名称决定最终归属",
           "accepted": false
         }
@@ -4333,14 +4360,25 @@
         "navigationEvidence": "BC-NAV-20260908",
         "pageRefs": [
           "BC-P1C-M47",
-          "BC-P1C-M47-02"
+          "BC-P1C-M47-02",
+          "BC-I20"
         ],
         "fieldRefs": [
           "BC-P1C-M47-02-F001",
           "BC-P1C-M47-02-F002",
           "BC-P1C-M47-02-F003",
           "BC-P1C-M47-02-F004",
-          "BC-P1C-M47-02-F005"
+          "BC-P1C-M47-02-F005",
+          "BC-I20-F001",
+          "BC-I20-F002",
+          "BC-I20-F003",
+          "BC-I20-F004",
+          "BC-I20-F005",
+          "BC-I20-F006",
+          "BC-I20-F007",
+          "BC-I20-F008",
+          "BC-I20-F009",
+          "BC-I20-F010"
         ],
         "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M47",
@@ -4360,11 +4398,12 @@
         "coverage": {
           "facts": [
             "BC-P1C-M47",
-            "BC-P1C-M47-02"
+            "BC-P1C-M47-02",
+            "BC-I20"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "翻译、导入导出、日志；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；实际应用与请求应用不符，未采纳旧页字段；请求入口与当前正文未建立完整字段对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标规则；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+          "unexplored": "翻译、导入导出、日志；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；实际应用与请求应用不符，未采纳旧页字段；请求入口与当前正文未建立完整字段对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标规则；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证；资源Key唯一范围、过期触发及发布/回退语义未验证，不能把过期状态等同业务记录失效；未读取资源值或修改人；中断读取不算无权限",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；北森iTalent、数字人才、翻译工作台典型入口职责未明；不依据名称决定最终归属",
           "accepted": false
         }
@@ -5690,7 +5729,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-08T17:53:33.392201+00:00",
+    "updatedAt": "2026-09-08T17:59:58.024657+00:00",
     "authority": "本轮用户指令；Scope_Register.json是唯一范围与验收事实源；P1附属条目不增加48组或59项分母",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -29091,6 +29130,433 @@
         "unknown": "多时区开启是当前租户提示，不等于项目默认；不受使用时间限制不等于可重叠预约或无会议室权限。未读取具体次数/分值/规则选择，取消宽限、自动释放、重叠优先和违约解除未知",
         "operations": "只读设置说明，不预约/取消会议或修改违约分",
         "flowRef": []
+      },
+      {
+        "id": "BC-I17",
+        "moduleId": "M05",
+        "path": "标签库 > 企业标签库 > 新建空表",
+        "evidenceRef": "BC-I17",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:54:22.502548+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-I17-F001",
+            "label": "标签名称",
+            "context": "新增空表",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": "原生maxlength未声明；业务上限未验证",
+            "evidenceRef": "BC-I17",
+            "uiRequired": true,
+            "controlType": "text输入"
+          },
+          {
+            "id": "BC-I17-F002",
+            "label": "描述",
+            "context": "新增空表",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": "原生maxlength未声明；业务上限未验证",
+            "evidenceRef": "BC-I17",
+            "uiRequired": false,
+            "controlType": "textarea"
+          },
+          {
+            "id": "BC-I17-F003",
+            "label": "所属分类",
+            "context": "新增空表",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": "原生maxlength未声明；业务上限未验证",
+            "evidenceRef": "BC-I17",
+            "uiRequired": true,
+            "controlType": "只读text选择器"
+          },
+          {
+            "id": "BC-I17-F004",
+            "label": "自动打标签",
+            "context": "新增空表",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I17",
+            "uiRequired": false,
+            "controlType": null
+          },
+          {
+            "id": "BC-I17-F005",
+            "label": "状态",
+            "context": "新增空表",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I17",
+            "uiRequired": true,
+            "controlType": null
+          },
+          {
+            "id": "BC-I17-F006",
+            "label": "备注",
+            "context": "新增空表",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": "原生maxlength未声明；业务上限未验证",
+            "evidenceRef": "BC-I17",
+            "uiRequired": false,
+            "controlType": "textarea"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "名称/所属分类/状态有界面必填标记；自动打标签与手动目录属性分开，含标签规则配置注意事项帮助",
+        "unknown": "自动生成条件/定时、分类删除/转移历史、状态枚举和名称唯一性待核实；空表不证明已掌握完整标签模块",
+        "operations": "新建、标签规则配置注意事项帮助；不赋标签/保存；帮助另开只读tab8后空表已取消",
+        "flowRef": []
+      },
+      {
+        "id": "BC-I18",
+        "moduleId": "M05",
+        "path": "标签库 > 新建标签帮助 > 用户社区《打标签》",
+        "evidenceRef": "BC-I18",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:55:48.558000+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-I18-F001",
+            "label": "条件公式",
+            "context": "帮助声明规则",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I18"
+          },
+          {
+            "id": "BC-I18-F002",
+            "label": "高级公式",
+            "context": "帮助声明规则",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I18"
+          },
+          {
+            "id": "BC-I18-F003",
+            "label": "智能算法",
+            "context": "帮助声明规则",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I18"
+          },
+          {
+            "id": "BC-I18-F004",
+            "label": "动态标签",
+            "context": "帮助声明规则",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I18"
+          },
+          {
+            "id": "BC-I18-F005",
+            "label": "标签显示值",
+            "context": "帮助声明规则",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I18"
+          },
+          {
+            "id": "BC-I18-F006",
+            "label": "过滤条件",
+            "context": "帮助声明规则",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I18"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "帮助说明自动标签满足条件授予、不满足实时取消；新建/修改规则对存量数据夜间处理次日可见，新业务数据更新实时判断。支持简单条件/表达式、高级聚合公式、预制算法和动态标签；预制规则企业可改。动态规则最多10个，条件及显示值最多涉及2对象；显示插入最多同一对象2字段，不跨对象拼接；可插入启用的单行文本/单选/整数/树选择字段，任一插入字段空则不生成。自填文字≤50字不含插入长度，生成值超过50截断；动态标签不支持手工授予/导入，默认按名称排序",
+        "unknown": "帮助规则未在当前租户实际触发；字符计数/Unicode截断、同显示值碰撞、算法数据版本、缺字段/删除字段/失效规则的存量处置、夜间时区/队列重试未知；不把学校或算法标签当业务录用规则",
+        "operations": "原站直达帮助只读；未编辑规则/创建标签",
+        "flowRef": [],
+        "sourceLocation": "https://users.italent.cn/；文章《打标签》，原站新建标签帮助直达，不保留链接查询参数"
+      },
+      {
+        "id": "BC-C17",
+        "moduleId": "M41",
+        "path": "数字人才关联说明 > 用户社区《打标签》",
+        "evidenceRef": "BC-C17",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:55:48.558000+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-C17-F001",
+            "label": "已有标签",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C17"
+          },
+          {
+            "id": "BC-C17-F002",
+            "label": "打标签",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C17"
+          },
+          {
+            "id": "BC-C17-F003",
+            "label": "直线管幅",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C17"
+          },
+          {
+            "id": "BC-C17-F004",
+            "label": "全部下属人数",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C17"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "帮助明确数字人才支持自动/手动标签；手工可在盘点节点或人才档案授予，也可导入。员工自评→直线经理审核→BP校准只是文中示例，不强定所有流程。管幅数据晚间从组织员工ETL对象Etl_TenantBase_SpanOfControlByUser同步，次日验证；外部标签可通过标签接口接入，尚未打开接口链接",
+        "unknown": "此说明支持M41数字人才归BP-C而标签目录M05归BP-I的跨包关系，不合并范围。接口地址/鉴权/回调、字段权限/人工与自动冲突/撤回标签历史未验证；ETL对象不是本项目数据库或可调用API",
+        "operations": "原站标签配置帮助中的数字人才应用说明",
+        "flowRef": [],
+        "sourceLocation": "https://users.italent.cn/；《打标签》数字人才应用及常见问题章节"
+      },
+      {
+        "id": "BC-I19",
+        "moduleId": "M21",
+        "path": "文化激励 > 员工圈设置",
+        "evidenceRef": "BC-I19",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:56:34.059754+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-I19-F001",
+            "label": "员工圈名称",
+            "context": "展示配置",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I19"
+          },
+          {
+            "id": "BC-I19-F002",
+            "label": "移动端顶部背景图",
+            "context": "展示配置",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I19"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "员工圈名称影响文化激励首页入口名称与员工圈主页导航栏名称；另可设置移动端背景图。仅展示配置，未取得内容发布或匿名权限规则",
+        "unknown": "圈成员/内容可见性、勋章/奖励/商城积分、评论审核/删除、通知和数据统计规则仍未验证；UI入口重命名不改变M21范围或生产名称",
+        "operations": "查看效果入口；未改名称/上传背景图/发布内容",
+        "flowRef": []
+      },
+      {
+        "id": "BC-I20",
+        "moduleId": "M47",
+        "path": "翻译工作台 > 翻译 > 筛选维度",
+        "evidenceRef": "BC-I20",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:59:13.152512+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-I20-F001",
+            "label": "显示语言",
+            "context": "筛选标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I20"
+          },
+          {
+            "id": "BC-I20-F002",
+            "label": "搜索方式",
+            "context": "筛选标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I20"
+          },
+          {
+            "id": "BC-I20-F003",
+            "label": "分类",
+            "context": "筛选标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I20"
+          },
+          {
+            "id": "BC-I20-F004",
+            "label": "数据类型",
+            "context": "筛选标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I20"
+          },
+          {
+            "id": "BC-I20-F005",
+            "label": "翻译项名称/Key",
+            "context": "筛选标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I20"
+          },
+          {
+            "id": "BC-I20-F006",
+            "label": "最近修改人",
+            "context": "筛选标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I20"
+          },
+          {
+            "id": "BC-I20-F007",
+            "label": "最近修改时间",
+            "context": "筛选标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I20"
+          },
+          {
+            "id": "BC-I20-F008",
+            "label": "翻译来源",
+            "context": "筛选标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I20"
+          },
+          {
+            "id": "BC-I20-F009",
+            "label": "过期状态",
+            "context": "筛选标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I20"
+          },
+          {
+            "id": "BC-I20-F010",
+            "label": "翻译状态",
+            "context": "筛选标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I20"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "翻译资源明确可按Key及翻译来源/过期状态/翻译状态筛选，过期和翻译状态独立；主表英语/繁体/法语与此前一致",
+        "unknown": "资源Key唯一范围、过期触发及发布/回退语义未验证，不能把过期状态等同业务记录失效；未读取资源值或修改人；中断读取不算无权限",
+        "operations": "已读筛选标签；展开状态枚举的读取中断，未确认枚举结果",
+        "flowRef": []
       }
     ],
     "humanAcceptancePrerequisite": false,
@@ -29498,7 +29964,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-08T17:53:33.392201+00:00",
+    "updatedAt": "2026-09-08T17:59:58.024657+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -29779,7 +30245,8 @@
         "specStatus": "部分契约已具体化；未探索部分明确受限；非完整需求验收",
         "readinessConditions": [
           "已具体化任职/提名、资格、360等候选；需确认原标准/模型与版本映射及敏感数据矩阵",
-          "测评/数字人才/人才标准各独立对象、委员会、旧干部与2.0转序和组织健康指标仍缺；不能用360摘要替代全部人才权限"
+          "测评/数字人才/人才标准各独立对象、委员会、旧干部与2.0转序和组织健康指标仍缺；不能用360摘要替代全部人才权限",
+          "BC-C17帮助补数字人才自动/手动标签及管幅ETL夜间同步，M41主责归BP-C、M05目录归BP-I已具依据；规则/个人关系/权限/接口仍未完整。"
         ]
       },
       {
@@ -30895,17 +31362,65 @@
           {
             "id": "BP-I-REQ-12",
             "object": "企业标签库与人才标签应用",
-            "fields": "M05企业/北森标签目录，人才盘点应用开关、标签范围含下级；M41员工人才标签归BP-C；标签ID/层级/版本/来源和关系实例需分开，不用名称合并。",
+            "fields": "M05企业/北森标签目录，人才盘点应用开关、标签范围含下级；M41员工人才标签归BP-C；标签ID/层级/版本/来源和关系实例需分开，不用名称合并。；BC-I18帮助补动态标签最多10规则/2对象/同对象2插入字段/生成值50截断，缺任一插入值不生成；预制算法可改，仍非物理存储类型。",
             "roles": "目录维护、标签赋予/撤回、标签筛选、被标记员工可见性分别定义；范围包含下级是标签目录还是组织范围须保留原页语境，不能放大人员权限。",
-            "lifecycle": "目录启停/应用开关/个人标签关系/自动打标与历史快照不同，关闭是否回收存量未核实。",
+            "lifecycle": "BC-I18帮助：自动条件满足授予、不满足实时取消；配置新改对存量夜间处理次日可见，新业务实时判断；动态新值生成与手动标签不同，不可手工授予/导入。关闭功能是否清除存量及规则失败仍未知。",
             "actions": "企业标签库/北森标签库/标签应用设置仅读，不赋标签或改变应用开关。",
             "codeRefs": [
               "docs/P1_Source_Observations_20260907.md",
               "docs/delivery/Scope_Register.json"
             ],
             "acceptance": "取得来源与撤回策略后覆盖同名不同ID、父标签启停、子标签范围、重复打标、跨应用撤权与人才盘点历史快照；不将导航映射归属当数据同步证据。",
-            "gap": "M05独立目录未实现；M41人才标签应用关系待完整规则，已有review.band不能替代可配置标签体系。",
+            "gap": "M05独立目录未实现；M41人才标签应用关系待完整规则，已有review.band不能替代可配置标签体系。；截断碰撞和空值、规则改版异步生效需边界场景，不能拿displayName作全局唯一键；M41管幅ETL夜间时点与HR任职事件分离。",
             "classification": "原站局部配置证据及受限需求，未签署",
+            "accepted": false
+          },
+          {
+            "id": "BP-I-REQ-13",
+            "object": "文化活动、员工圈、勋章与奖励",
+            "fields": "企业活动/多部门活动圈、员工圈展示名/移动背景、勋章、企业标签/榜样/祝福/打赏/商城等各原入口；目录身份和业务对象分别保留。",
+            "roles": "内容运营、参与员工、奖励审核、商城/账户管理及可见圈范围尚未完整观察；不授予全员公开或管理员代发权限。",
+            "lifecycle": "活动草稿/发布/报名/结束、勋章授予撤销、打赏/商城结算/退回尚未知；展示设置不代表发布事件。",
+            "actions": "当前只读活动/勋章表头与员工圈配置；不发帖、祝福、勋章、打赏或消息。",
+            "codeRefs": [
+              "docs/P1_Source_Observations_20260907.md",
+              "docs/delivery/Scope_Register.json"
+            ],
+            "acceptance": "取得文化内容/奖励策略后覆盖多部门范围、退出/离职、重复授予、撤回/退款、消息重试和历史公开边界；不得把福利积分、标签或学分自动共用账本。",
+            "gap": "M21无独立实现；与M33福利账户/M05标签目录的共享关系未确认，不能以员工自助入口替代业务闭环。",
+            "classification": "原站局部字段/展示配置与受限需求，未签署",
+            "accepted": false
+          },
+          {
+            "id": "BP-I-REQ-14",
+            "object": "填报活动、方案、工单与审批",
+            "fields": "活动名称、填报方案、状态、审批状态、当前审批人、工单信息/号、班组；列表列名不证明工单字段通用必填。方案对象与活动实例分别保留，版本/目标对象/字段权限待补。",
+            "roles": "发起人、填报者、审核者、班组权限分离；我发起的列表不等于只能本人数据或管理员可代填。",
+            "lifecycle": "活动状态与审批状态分列；草稿/退回补充/审核后写回原对象、变更生效与异常恢复待核实。",
+            "actions": "我发起的填报只读列表；未发起活动/填写工单或提交。",
+            "codeRefs": [
+              "docs/P1_Source_Observations_20260907.md",
+              "docs/delivery/Scope_Register.json"
+            ],
+            "acceptance": "目标对象/方案字段明确后定义版本冻结、超期/退回、同工单重复提交、字段遮蔽和跨模块写回失败恢复；不以薪资填报或实名问卷已实现替代通用填报。",
+            "gap": "M08无独立实现；与M07薪资填报/M19审批关系待源契约，不能把任一动态表单当通用业务提交引擎。",
+            "classification": "原站局部结构事实和受限需求，未签署",
+            "accepted": false
+          },
+          {
+            "id": "BP-I-REQ-15",
+            "object": "翻译资源、语言列与版本记录",
+            "fields": "翻译项名称、类型及英语/中文繁体/法语列已观察；资源ID/源语言/目标语言/所属应用/版本及生效范围未完整。",
+            "roles": "资源维护、审核/发布、导入导出和日志读取需单独定义；页面翻译不赋予被翻译业务数据的读取权限。",
+            "lifecycle": "源文变更/翻译草稿/审核发布/回退/缓存刷新/缺词回退尚未观察，不能推定保存即生产生效。",
+            "actions": "翻译/导出/导入/日志菜单；只读表头，不导出/导入或修改资源。",
+            "codeRefs": [
+              "docs/P1_Source_Observations_20260907.md",
+              "docs/delivery/Scope_Register.json"
+            ],
+            "acceptance": "明确资源键/语言/发布策略后定义同名不同资源、变量/占位符保留、缺译回退、长度布局、批量冲突/部分失败、权限与回滚；当前三语言列不定义所有支持语言。",
+            "gap": "M47按资源本地化事实归BP-I，非待定业务归属；独立工作台未实现，未以现有中文界面/locale日期格式代替多语言资源管理。",
+            "classification": "原站局部结构证据和受限需求，未签署",
             "accepted": false
           }
         ],
