@@ -72,8 +72,8 @@ export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
    }
   }
   if(r.kind==='performanceAppeal'&&hr&&!self){const old=records.find(x=>x.kind==='performance'&&x.id===r.referenceId),plan=old?.payload.performanceSnapshot?.plan as {evaluatedBy?:string}|undefined;if(old?.payload.sourcePlanId&&old.status==='published'&&plan&&!records.some(x=>x.kind==='performance'&&x.payload.supersedes===old.id)){
-   if(r.status==='submitted'&&r.createdBy!==m.userId&&old.createdBy!==m.userId&&plan.evaluatedBy!==m.userId)add('performance','绩效申诉复核','/performance','',`${r.payload.period} 绩效申诉`);
-   if(r.status==='approved'&&r.payload.verifiedBy!==m.userId&&!records.some(x=>x.kind==='performance'&&x.payload.appealId===r.id))add('performance','绩效更正发布','/performance','',`${r.payload.period} 绩效更正`);
+   if(r.status==='submitted'&&r.createdBy!==m.userId&&old.createdBy!==m.userId&&plan.evaluatedBy!==m.userId)add('performance','绩效申诉复核','/performance?'+new URLSearchParams({recordId:r.id}),'',`${r.payload.period} 绩效申诉`);
+   if(r.status==='approved'&&r.payload.verifiedBy!==m.userId&&!records.some(x=>x.kind==='performance'&&x.payload.appealId===r.id))add('performance','绩效更正发布','/performance?'+new URLSearchParams({recordId:r.id}),'',`${r.payload.period} 绩效更正`);
   }}
   if(r.kind==='requisition'&&r.status==='draft'&&r.payload.requisitionSubmissionRequired&&hr&&state.positions?.some(p=>p.id===r.positionId&&p.status==='启用'))add('recruitment','招聘需求提交','/recruitment');
   if(requisitionAwaitingApproval(r)&&!r.payload.contributors?.includes(m.userId)&&['admin','manager'].includes(m.role)&&r.createdBy!==m.userId&&state.positions?.some(p=>p.id===r.positionId&&p.status==='启用'))add('recruitment','招聘需求审批','/recruitment');
