@@ -135,16 +135,16 @@
     },
     {
       "id": "L-BIND",
-      "status": "validated-awaiting-private-release",
-      "next": "141项综合、类型及构建通过；统一保存和私有发布，后续继续阶段窗口"
+      "status": "technical-delivered-v80",
+      "next": "保留回归；推进阶段窗口，业务/生产未验收"
     },
     {
       "id": "L-GRADE",
-      "status": "validated-awaiting-private-release",
+      "status": "technical-delivered-v80",
       "dependencies": [
         "L-BIND"
       ],
-      "next": "141项综合、类型及构建通过；统一保存和私有发布，后续继续阶段窗口"
+      "next": "保留回归；推进阶段窗口，业务/生产未验收"
     },
     {
       "id": "G1-UAT",
