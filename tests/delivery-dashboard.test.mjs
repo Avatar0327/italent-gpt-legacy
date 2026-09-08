@@ -29,3 +29,9 @@ test('queue changes immediately affect aggregation without dashboard status edit
  q.controllerQueue.find(t=>t.id===id).status='blocked-test';assert.equal(aggregate(scope,q).tasks.find(t=>t.queueRef===id).status,'阻塞');
  q.controllerQueue.find(t=>t.id===id).status='in-progress';assert.equal(aggregate(scope,q).tasks.find(t=>t.queueRef===id).status,'进行中');
 });
+
+test('missing execution evidence does not imply technical completion or awaiting verification',()=>{
+ const s=structuredClone(scope);const t=s.acceptanceTasks[0];delete t.queueRef;
+ assert.equal(aggregate(s,queue).tasks[0].status,'未开始');
+ const l04=aggregate(scope,queue).tasks.find(t=>t.id==='L04');assert.equal(l04.status,'阻塞');assert.equal(l04.accepted,false);
+});

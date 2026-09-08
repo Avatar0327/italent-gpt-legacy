@@ -1,15 +1,15 @@
 {
-  "checkedAt": "2026-09-08T11:10:46.374833+00:00",
+  "checkedAt": "2026-09-08T11:16:57.603366+00:00",
   "environment": "Sites production / 仅所有者私有访问",
-  "latestSavedVersion": 106,
-  "latestSavedCommit": "af365d71ca5b22cc7596f337a3fc6cae191e0fb8",
+  "latestSavedVersion": 107,
+  "latestSavedCommit": "a21845721aa1327abfa6bd4619547727e1b6f641",
   "latestDeploymentVerified": true,
-  "note": "v106招聘停用目标保护及恢复撤权证据已私有发布核验成功；回执在下次构建进入页面。",
+  "note": "v107 P1范围与四维展示、自助离职入口已私有发布核验成功；回执随下次构建进入页面。",
   "verified": {
-    "version": 106,
-    "deploymentId": "appgdep_6a9fec0787948191950ada2b414ebcdd",
-    "commit": "af365d71ca5b22cc7596f337a3fc6cae191e0fb8",
-    "time": "2026-09-08T11:06:37.095750+00:00",
+    "version": 107,
+    "deploymentId": "appgdep_6a9fedfaada0819189671f41ac10ec50",
+    "commit": "a21845721aa1327abfa6bd4619547727e1b6f641",
+    "time": "2026-09-08T11:14:49.844124+00:00",
     "status": "succeeded",
     "envRevision": 1
   },

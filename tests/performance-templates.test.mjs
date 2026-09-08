@@ -23,3 +23,19 @@ test('frozen goal limits apply to creation and changes; revisions cannot alter o
  const p=await perf({action:'goals',employeeId:f.e.id,cycleId:cy.id,goals});act('manager');await perf({action:'confirmGoals',id:p.id});act('owner');const newer=await template({action:'revise',id:d.id});await template({action:'edit',id:newer.id,...fields(f),goalRules:{minCount:1,maxCount:1,minWeight:100,maxWeight:100}});await template({action:'seal',id:newer.id});await template({action:'archive',id:d.id,reason:'合成版本归档，原周期仍守旧范围'});
  act('employee');await change({action:'request',planId:p.id,goals:[{...goals[0],weight:100}],evidence:'不能采用新模板覆盖旧周期约束'},400);const pending=await change({action:'request',planId:p.id,goals:revisedGoals,evidence:'权重恰为边界的合成目标调整'});act('manager');await change({action:'review',id:pending.id,accepted:true,evidence:'合成独立复核范围和权重通过'});assert.deepEqual((await get()).records.find(r=>r.id===cy.id).payload.performanceTemplate.goalRules,rules);
 });
+
+for(const mode of ['count','weight','both'])test(`advisory ${mode} limits retain universal constraints and immutable cycle rules`,async t=>{
+ const f=await setup();t.after(()=>f.sqlite.close());act('owner');
+ const rules={minCount:3,maxCount:3,minWeight:40,maxWeight:60,enforceCount:mode==='weight',enforceWeight:mode==='count'};
+ const d=await template({action:'create',...fields(f),prompts:[],goalRules:rules});await template({action:'seal',id:d.id});
+ const cy=await perf({...cycleInput(f.org.id),templateId:d.id});await perf({action:'startCycle',id:cy.id});
+ const weights=mode==='count'?[50,50]:mode==='weight'?[34,33,33]:[100];
+ const acceptedGoals=weights.map((weight,i)=>({title:'合成目标'+i,metric:'合成范围提示与强制限制验证',weight}));
+ const {goalRangeFeedback}=await import('../lib/hris/performance-goal-feedback.ts');const messages=goalRangeFeedback(rules,acceptedGoals);assert.ok(messages.length);assert.ok(messages.every(x=>!x.blocking));
+ act('employee');await perf({action:'goals',employeeId:f.e.id,cycleId:cy.id,goals:[{...acceptedGoals[0],weight:99}]},400);
+ if(mode!=='both')await perf({action:'goals',employeeId:f.e.id,cycleId:cy.id,goals:[{...acceptedGoals[0],weight:100}]},400);
+ const p=await perf({action:'goals',employeeId:f.e.id,cycleId:cy.id,goals:acceptedGoals});act('manager');await perf({action:'confirmGoals',id:p.id});
+ act('owner');const v2=await template({action:'revise',id:d.id});await template({action:'edit',id:v2.id,...fields(f),prompts:[],goalRules:{minCount:1,maxCount:1,minWeight:100,maxWeight:100}});await template({action:'seal',id:v2.id});
+ act('employee');const pending=await change({action:'request',planId:p.id,goals:acceptedGoals.map(g=>({...g,title:g.title+'调整'})),evidence:'提示模式仍允许提交符合通用约束的目标'});act('manager');await change({action:'review',id:pending.id,accepted:true,evidence:'独立复核沿用原周期提示规则'});
+ assert.deepEqual((await get()).records.find(r=>r.id===cy.id).payload.performanceTemplate.goalRules,rules);
+});

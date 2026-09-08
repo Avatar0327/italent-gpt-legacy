@@ -577,7 +577,8 @@
           "accepted": false
         }
       ],
-      "source": "Scope_Register.md#首批原子验收项"
+      "source": "docs/delivery/acceptance/G0.md",
+      "queueRef": "F01"
     },
     {
       "id": "F02",
@@ -591,7 +592,8 @@
           "accepted": false
         }
       ],
-      "source": "Scope_Register.md#首批原子验收项"
+      "source": "docs/delivery/acceptance/G0.md",
+      "queueRef": "F02"
     },
     {
       "id": "F03",
@@ -605,7 +607,8 @@
           "accepted": false
         }
       ],
-      "source": "Scope_Register.md#首批原子验收项"
+      "source": "docs/delivery/acceptance/G0.md",
+      "queueRef": "F03"
     },
     {
       "id": "F04",
@@ -619,7 +622,8 @@
           "accepted": false
         }
       ],
-      "source": "Scope_Register.md#首批原子验收项"
+      "source": "docs/delivery/acceptance/G0.md",
+      "queueRef": "F04"
     },
     {
       "id": "C01",
@@ -633,7 +637,8 @@
           "accepted": false
         }
       ],
-      "source": "Scope_Register.md#首批原子验收项"
+      "source": "docs/delivery/G1_PreAcceptance_Report.md",
+      "queueRef": "C01"
     },
     {
       "id": "C02",
@@ -647,7 +652,8 @@
           "accepted": false
         }
       ],
-      "source": "Scope_Register.md#首批原子验收项"
+      "source": "docs/delivery/G1_PreAcceptance_Report.md",
+      "queueRef": "C02"
     },
     {
       "id": "L01",
@@ -661,7 +667,8 @@
           "accepted": false
         }
       ],
-      "source": "Scope_Register.md#首批原子验收项"
+      "source": "docs/delivery/G1_PreAcceptance_Report.md",
+      "queueRef": "L01"
     },
     {
       "id": "L02",
@@ -675,7 +682,8 @@
           "accepted": false
         }
       ],
-      "source": "Scope_Register.md#首批原子验收项"
+      "source": "docs/delivery/G1_PreAcceptance_Report.md",
+      "queueRef": "L02"
     },
     {
       "id": "L03",
@@ -689,7 +697,8 @@
           "accepted": false
         }
       ],
-      "source": "Scope_Register.md#首批原子验收项"
+      "source": "docs/delivery/G1_PreAcceptance_Report.md",
+      "queueRef": "L03"
     },
     {
       "id": "L04",
@@ -703,7 +712,14 @@
           "accepted": false
         }
       ],
-      "source": "Scope_Register.md#首批原子验收项"
+      "source": "docs/delivery/G1_Learning_L04_Design.md",
+      "queueRef": "L04",
+      "dimensions": {
+        "requirements": "独立例外转认提案，待企业规则确认；BC-L01进度同步为另一流程",
+        "development": "尚未实现显式申请和独立审核；已有progressSync不替代此项",
+        "testing": "无此独立流程的实现测试；历史同步测试不能移记",
+        "production": "未验收"
+      }
     },
     {
       "id": "X01",
@@ -1488,6 +1504,27 @@
         "requirements": "复用已有服务端在职填报限制；原站完整自助规则待核实",
         "development": "自助待办、问卷可填报标记、360入口已修复",
         "testing": "本轮复现失败后6项关联测试通过",
+        "production": "未验收"
+      }
+    },
+    {
+      "id": "P-GOAL-ADVISORY",
+      "phase": "P3",
+      "moduleId": "M16",
+      "title": "目标范围可选提示模式",
+      "queueRef": "P-GOAL-ADVISORY",
+      "criteria": [
+        {
+          "id": "P-GOAL-ADVISORY-AC1",
+          "text": "数量/单项权重独立配置提示与强制，旧快照及基础总和约束保持，创建和调整对照展示范围",
+          "accepted": false
+        }
+      ],
+      "source": "docs/delivery/Performance_Source_Gaps.md#BC-P05",
+      "dimensions": {
+        "requirements": "BC-P05两处禁止提交选项已观察；提示文案与交互为独立设计，原站实际提交语义未核实",
+        "development": "单维模板、快照及界面提示已开发",
+        "testing": "本轮25项绩效关联回归与类型通过",
         "production": "未验收"
       }
     }

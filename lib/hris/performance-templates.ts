@@ -6,7 +6,7 @@ import {HttpError} from './http';
 const id=z.string().min(1).max(100),title=z.string().trim().min(1).max(100);
 export const performancePrompt=z.object({id:z.string().regex(/^[A-Za-z][A-Za-z0-9_-]{0,49}$/),title,stage:z.enum(['selfReview','evaluation']),required:z.boolean()}).strict();
 const prompts=z.array(performancePrompt).max(10).refine(v=>new Set(v.map(p=>p.id)).size===v.length,'文本项ID不能重复');
-export const performanceGoalRules=z.object({minCount:z.number().int().min(1).max(20),maxCount:z.number().int().min(1).max(20),minWeight:z.number().int().min(1).max(100),maxWeight:z.number().int().min(1).max(100)}).strict().refine(r=>r.minCount<=r.maxCount&&r.minWeight<=r.maxWeight,'目标数量或权重范围无效').refine(r=>Array.from({length:20},(_,i)=>i+1).some(n=>n>=r.minCount&&n<=r.maxCount&&n*r.minWeight<=100&&n*r.maxWeight>=100),'此数量和权重组合无法达到总权重100%');
+export const performanceGoalRules=z.object({minCount:z.number().int().min(1).max(20),maxCount:z.number().int().min(1).max(20),minWeight:z.number().int().min(1).max(100),maxWeight:z.number().int().min(1).max(100),enforceCount:z.boolean().optional(),enforceWeight:z.boolean().optional()}).strict().refine(r=>r.minCount<=r.maxCount&&r.minWeight<=r.maxWeight,'目标数量或权重范围无效').refine(r=>Array.from({length:20},(_,i)=>i+1).some(n=>(r.enforceCount===false||n>=r.minCount&&n<=r.maxCount)&&(r.enforceWeight===false||n*r.minWeight<=100&&n*r.maxWeight>=100)),'此数量和权重组合无法达到总权重100%');
 export const performanceTemplateSnapshot=z.object({id,rootId:id,version:z.number().int().positive(),title,description:z.string().max(200),orgId:id,workflow:z.literal('single-weighted-goals-v1'),prompts,goalRules:performanceGoalRules.optional()}).strict();
 export type PerformanceTemplateSnapshot=z.infer<typeof performanceTemplateSnapshot>;
 const fields={title,orgId:id,description:z.string().trim().max(200),prompts,goalRules:performanceGoalRules.optional()};
@@ -23,5 +23,5 @@ export function validatePerformanceResponses(template:PerformanceTemplateSnapsho
 }
 
 export function validatePerformanceGoalRules(template:PerformanceTemplateSnapshot|undefined,goals:{weight:number}[]){
- const r=template?.goalRules;if(!r)return;if(goals.length<r.minCount||goals.length>r.maxCount)throw new HttpError(400,`本周期要求目标数量在${r.minCount}至${r.maxCount}项之间`);if(goals.some(g=>g.weight<r.minWeight||g.weight>r.maxWeight))throw new HttpError(400,`本周期要求每项目标权重在${r.minWeight}%至${r.maxWeight}%之间`);
+ const r=template?.goalRules;if(!r)return;if(r.enforceCount!==false&&(goals.length<r.minCount||goals.length>r.maxCount))throw new HttpError(400,`本周期要求目标数量在${r.minCount}至${r.maxCount}项之间`);if(r.enforceWeight!==false&&goals.some(g=>g.weight<r.minWeight||g.weight>r.maxWeight))throw new HttpError(400,`本周期要求每项目标权重在${r.minWeight}%至${r.maxWeight}%之间`);
 }

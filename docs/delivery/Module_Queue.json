@@ -580,12 +580,103 @@
     },
     {
       "id": "E-EXIT-TASKS",
-      "status": "tested-awaiting-private-publish",
+      "status": "private-published-v107",
       "dependencies": [
         "A-PAY-EXIT-SETTLEMENT"
       ],
       "acceptance": "离职员工问卷与360不能填报时，自助和业务页均不再显示可办理入口；历史仍可按授权查看，撤权立即拒绝",
-      "next": "已复现入口与POST限制不一致并修复；6项关联测试通过，待集中构建发布后继续报表当前范围检查"
+      "next": "94项关联验证与正式构建通过，v107已发布；人工业务及生产未验收"
+    },
+    {
+      "id": "P-GOAL-ADVISORY",
+      "status": "tested-awaiting-private-publish",
+      "dependencies": [
+        "P-GOAL-RANGE"
+      ],
+      "acceptance": "数量和权重分别可配置提示/强制，旧快照默认强制，基础权重总和等约束仍生效；模板修订不能改写既有周期",
+      "next": "25项绩效关联回归和类型检查通过；集中构建发布，后续多维/小数/下发范围继续保留"
+    },
+    {
+      "id": "F01",
+      "status": "technical-reviewed-tested",
+      "dependencies": [],
+      "acceptance": "组织/员工/岗位标识及入转调离；按业务场景独立验收并记录确认人、时间与证据",
+      "next": "限定技术证据见docs/delivery/acceptance/G0.md；保留历史及当前关联回归，不代签人工业务或生产验收",
+      "recoveryCondition": "完成人工业务核对与签署"
+    },
+    {
+      "id": "F02",
+      "status": "technical-reviewed-tested",
+      "dependencies": [],
+      "acceptance": "角色、组织和字段权限及撤权；按业务场景独立验收并记录确认人、时间与证据",
+      "next": "限定技术证据见docs/delivery/acceptance/G0.md；保留历史及当前关联回归，不代签人工业务或生产验收",
+      "recoveryCondition": "完成人工业务核对与签署"
+    },
+    {
+      "id": "F03",
+      "status": "technical-reviewed-tested",
+      "dependencies": [],
+      "acceptance": "修订冲突、事务、审批快照、审计；按业务场景独立验收并记录确认人、时间与证据",
+      "next": "限定技术证据见docs/delivery/acceptance/G0.md；保留历史及当前关联回归，不代签人工业务或生产验收",
+      "recoveryCondition": "完成人工业务核对与签署"
+    },
+    {
+      "id": "F04",
+      "status": "technical-reviewed-tested",
+      "dependencies": [],
+      "acceptance": "本人附件和历史权限；按业务场景独立验收并记录确认人、时间与证据",
+      "next": "限定技术证据见docs/delivery/acceptance/G0.md；保留历史及当前关联回归，不代签人工业务或生产验收",
+      "recoveryCondition": "完成人工业务核对与签署"
+    },
+    {
+      "id": "C01",
+      "status": "technical-reviewed-tested",
+      "dependencies": [],
+      "acceptance": "标准版本→盘点→发展计划；按业务场景独立验收并记录确认人、时间与证据",
+      "next": "限定技术证据见docs/delivery/G1_PreAcceptance_Report.md；保留历史及当前关联回归，不代签人工业务或生产验收",
+      "recoveryCondition": "完成人工业务核对与签署"
+    },
+    {
+      "id": "C02",
+      "status": "technical-reviewed-tested",
+      "dependencies": [],
+      "acceptance": "人才档案展示授权的计划与学习状态；按业务场景独立验收并记录确认人、时间与证据",
+      "next": "限定技术证据见docs/delivery/G1_PreAcceptance_Report.md；保留历史及当前关联回归，不代签人工业务或生产验收",
+      "recoveryCondition": "完成人工业务核对与签署"
+    },
+    {
+      "id": "L01",
+      "status": "technical-reviewed-tested",
+      "dependencies": [],
+      "acceptance": "同标准版本的 planId 派课；按业务场景独立验收并记录确认人、时间与证据",
+      "next": "限定技术证据见docs/delivery/G1_PreAcceptance_Report.md；保留历史及当前关联回归，不代签人工业务或生产验收",
+      "recoveryCondition": "完成人工业务核对与签署"
+    },
+    {
+      "id": "L02",
+      "status": "technical-reviewed-tested",
+      "dependencies": [],
+      "acceptance": "考试/出勤→提交→独立核验；按业务场景独立验收并记录确认人、时间与证据",
+      "next": "限定技术证据见docs/delivery/G1_PreAcceptance_Report.md；保留历史及当前关联回归，不代签人工业务或生产验收",
+      "recoveryCondition": "完成人工业务核对与签署"
+    },
+    {
+      "id": "L03",
+      "status": "technical-reviewed-tested",
+      "dependencies": [],
+      "acceptance": "阶段门槛、取消恢复、学分去重/有效期；按业务场景独立验收并记录确认人、时间与证据",
+      "next": "限定技术证据见docs/delivery/G1_PreAcceptance_Report.md；保留历史及当前关联回归，不代签人工业务或生产验收",
+      "recoveryCondition": "完成人工业务核对与签署"
+    },
+    {
+      "id": "L04",
+      "status": "blocked-rule-confirmation",
+      "dependencies": [
+        "业务转认例外规则确认"
+      ],
+      "acceptance": "显式申请与独立审核历史课程复用；按业务场景独立验收并记录确认人、时间与证据",
+      "next": "显式例外转认提案仍未实现；不得用progressSync同步功能冒充。确认适用课程/有效期/目标出勤豁免/已结项撤销策略后，再实现独立申请审核和消费者一致性",
+      "recoveryCondition": "业务负责人确认显式例外转认适用范围、有效期与撤销策略；继续独立已核实项"
     }
   ]
 }
