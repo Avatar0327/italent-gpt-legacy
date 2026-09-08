@@ -3,7 +3,7 @@ const link=(label:string,href:string)=>({label,href});
 export const moduleProgress:Record<string,ModuleProgress>={
  '组织员工':{done:'组织人员、教育/工作/项目经历、岗位职级、入转调离、编制、协议类别、合同覆盖及续签报表、自定义字段分组及状态必填检查',remaining:'复杂跨字段联动、兼岗、复杂再入职及法人变更',links:[link('组织员工','/employees'),link('人员经历','/employee-experiences'),link('编制合同','/workforce'),link('档案字段','/employee-fields')]},
  '审批中心':{done:'人事顺序审批、独立复核、撤回及历史',remaining:'管理员委托、复杂条件分支及其他模块待办汇集',links:[link('人事审批','/approvals'),link('跨模块待办','/work-inbox')]},
- '干部管理2.0':{done:"跨模块人才档案、提名审议、调动任用核对、考察述职；独立主职任期登记、更正/结束/作废、历史与档案衔接",remaining:"干部四状态名册、任用类型扩展与期限自动计算、档案子集、委员会及原站详细提交规则",links:[link('干部人才档案','/cadre-profiles'),link('干部提名与考察','/cadres')]},
+ '干部管理2.0':{done:"跨模块人才档案、提名审议、调动任用核对、考察述职；独立主职任期登记、更正/结束/作废、历史与档案衔接",remaining:"干部四状态名册、任用类型扩展与期限自动计算、档案子集、委员会及原站详细提交规则",links:[link('干部访谈记录（HR）','/cadre-interviews'),link('干部人才档案','/cadre-profiles'),link('干部提名与考察','/cadres')]},
  '任职资格':{done:'标准版本、能力证据、独立认证、到期与撤销',remaining:'任职类别层级及复杂认证委员会',links:[link('任职资格','/qualifications')]},
  '薪酬社保':{done:'核定工资录入、独立复核、工资条、异议及补差、批次办理与已发布对账、冻结考勤引用/来源变化阻断及核对待办报表',remaining:'自动核算、税社保、薪资档案、支付及企业规则验证',links:[link('工资批次','/payroll'),link('工资异议与补差','/payroll-adjustments'),link('工资对账','/reports?dataset=payrollReconciliation'),link('考勤引用核对','/reports?dataset=payrollAttendanceReferences')]},
  '假勤管理':{done:'固定班次、打卡、补卡版本核验及撤回、请假、人工余额及覆盖报表；单人期间预览/冻结/重新开放/版本快照和写保护、固定班次版本与原子派班、组织假种/时长边界/制度和历史余额快照',remaining:'弹性轮班、设备、加班、跨班请假、自动结转、完整期间发布/确认/封存',links:[link('假勤管理','/attendance'),link('固定班次与派班','/shift-definitions'),link('期间汇总与冻结','/attendance-periods')]},

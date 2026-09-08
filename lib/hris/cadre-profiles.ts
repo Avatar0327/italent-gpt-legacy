@@ -5,7 +5,7 @@ import {visibleDevelopment,type DevelopmentContext} from './development-reposito
 import {latestPublishedReviews} from './review-versions';
 import {businessDate} from './workforce';
 import type {DevelopmentRecord as R} from './development';
-export const cadreProfileKinds=['homeworkSubmission','homeworkTask','learningAssignment','learningExamAttempt','learningExamTask','cadreTerm','employeeExperience','cadreNomination','cadreObservation','qualificationApplication','succession','review','performance','plan','enrollment'] as const;
+export const cadreProfileKinds=['cadreInterview','homeworkSubmission','homeworkTask','learningAssignment','learningExamAttempt','learningExamTask','cadreTerm','employeeExperience','cadreNomination','cadreObservation','qualificationApplication','succession','review','performance','plan','enrollment'] as const;
 export type ProfileItem={id:string;title:string;status:string;detail:string;date:string;href:string};
 export type CadreProfile={employee:{id:string;code:string;name:string;org:string;job:string;status:string};sections:{key:string;title:string;items:ProfileItem[]}[];revision:number;asOf:string};
 const states:Record<string,string>={submitted:'待审议 / 核验',approved:'已批准',rejected:'未通过',withdrawn:'已撤回',appointed:'任用已核对',active:'进行中',returned:'待补充',completed:'已完成',development_needed:'需继续发展',closed:'已关闭',cancelled:'已取消',certified:'已认证',revoked:'已撤销',published:'已发布'};
@@ -17,6 +17,7 @@ export function cadreProfile(ctx:DevelopmentContext,employeeId:string,at=new Dat
  const section=(key:string,title:string,items:ProfileItem[])=>({key,title,items:items.sort((a,b)=>b.date.localeCompare(a.date)||a.id.localeCompare(b.id))});
  return {employee:{id:e.id,code:e.code,name:e.name,org:ctx.state.orgs.find(o=>o.id===e.orgId)?.name??'',job:e.job,status:e.status},revision:ctx.row.revision,asOf:at,sections:[
   ...(['admin','hr'].includes(m.role)?[section('experiences','已登记人员经历',records.filter(r=>r.kind==='employeeExperience'&&r.status==='active').map(r=>item(r,r.payload.title??'人员经历',`${({education:'教育',employment:'工作',project:'项目'})[r.payload.experienceCategory!]??'经历'} · ${r.payload.institution??''} · ${r.payload.startMonth??''} 至 ${r.payload.ongoing?'今':r.payload.endMonth??''}`,'/employee-experiences','资料登记，未代表外部核验')))]:[]),
+  ...(['admin','hr'].includes(m.role)?[section('interviews','干部访谈记录',records.filter(r=>r.kind==='cadreInterview'&&r.status==='active').map(r=>item(r,r.payload.cadreInterview?.type??'访谈',`${r.payload.cadreInterview?.date} · ${r.payload.cadreInterview?.role} · ${r.payload.cadreInterview?.interviewerName}`,'/cadre-interviews?recordId='+encodeURIComponent(r.id),'已登记，非审批结论')))]:[]),
   section('terms','干部任期登记',records.filter(r=>r.kind==='cadreTerm'&&r.status!=='voided').map(r=>item(r,r.payload.targetPositionName??'任用岗位',`${r.payload.cadreTerm?.start??''} 至 ${r.payload.cadreTerm?.actualEnd??r.payload.cadreTerm?.expectedEnd??'未登记结束日期'}`,'/cadre-terms',r.status==='ended'?'已结束':'已登记'))),
   section('nominations','选拔与任用',records.filter(r=>r.kind==='cadreNomination').map(r=>item(r,r.payload.targetPositionName??'目标岗位',r.status==='appointed'?'已核对正式调动记录':'提名记录不等同于正式任职','/cadres'))),
   section('observations','任职考察',records.filter(r=>r.kind==='cadreObservation').map(r=>item(r,r.payload.targetPositionName??'任职考察',r.payload.objectives??'未登记考察目标','/cadres'))),
