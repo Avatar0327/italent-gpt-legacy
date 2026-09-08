@@ -1,15 +1,15 @@
 {
-  "checkedAt": "2026-09-08T11:23:30.490204+00:00",
+  "checkedAt": "2026-09-08T11:48:21.258481+00:00",
   "environment": "Sites production / 仅所有者私有访问",
-  "latestSavedVersion": 108,
-  "latestSavedCommit": "f54f6a405af17c46da596a9ee4410d82e6612640",
+  "latestSavedVersion": 109,
+  "latestSavedCommit": "df3f5e019aa0efe78632a5ee9af7724f03db8b45",
   "latestDeploymentVerified": true,
-  "note": "v108绩效范围提示模式和早期验收项执行关联已私有发布核验成功；回执随下次构建进入页面。",
+  "note": "v109干部访谈记录及源站恢复证据已私有发布核验成功；回执随下次构建进入页面。",
   "verified": {
-    "version": 108,
-    "deploymentId": "appgdep_6a9fefc029ec819199964035bde214af",
-    "commit": "f54f6a405af17c46da596a9ee4410d82e6612640",
-    "time": "2026-09-08T11:21:54.724342+00:00",
+    "version": 109,
+    "deploymentId": "appgdep_6a9ff4e141fc8191af6540dcea386c21",
+    "commit": "df3f5e019aa0efe78632a5ee9af7724f03db8b45",
+    "time": "2026-09-08T11:44:00.732145+00:00",
     "status": "succeeded",
     "envRevision": 1
   },

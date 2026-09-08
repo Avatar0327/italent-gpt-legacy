@@ -500,7 +500,7 @@
     },
     {
       "id": "P1-F-RULES",
-      "status": "planned-source-verification",
+      "status": "in-progress",
       "dependencies": [],
       "acceptance": "将已观察结构、未核实规则与独立设计逐条映射；业务负责人确认范围和规则，记录确认人、时间及证据，不以代码或测试代签",
       "recoveryCondition": "当前原站会话已恢复；继续逐项只读核实，完整业务规则需负责人确认",
@@ -664,12 +664,21 @@
     },
     {
       "id": "C-INTERVIEW-REGISTER",
-      "status": "tested-awaiting-private-publish",
+      "status": "private-published-v109",
       "dependencies": [
         "BC-C02空表字段证据已取得"
       ],
       "acceptance": "BC-C02访谈字段、类型/角色/200字上限有原站空表证据；HR范围内登记、更正、作废和不可变历史，通用接口与档案不向经理或本人泄露内容",
-      "next": "本轮集中247/247、类型通过（显式排除Worker旧渲染限制）；正式构建私有发布后继续干部档案剩余栏目只读核实"
+      "next": "本轮247/247、类型与正式构建通过，v109已私有发布；人工业务及生产未验收"
+    },
+    {
+      "id": "F-CONTRACT-FIELDS",
+      "status": "tested-awaiting-private-publish",
+      "dependencies": [
+        "BC-F02字段继承说明及信息集已只读核实"
+      ],
+      "acceptance": "合同文本字段独立版本与合同快照；续签按当前字段版本选择继承或不继承，手工覆盖/清空有明确来源，旧合同不被配置变化改写；HR权限与事务保持",
+      "next": "98/98关联回归、类型通过；集中构建私有发布后继续学习剩余已核实范围；任职继承/合同变更/其他字段类型保留"
     }
   ]
 }

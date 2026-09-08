@@ -1,7 +1,7 @@
 export type ModuleProgress={done:string;remaining:string;links:{label:string;href:string}[]};
 const link=(label:string,href:string)=>({label,href});
 export const moduleProgress:Record<string,ModuleProgress>={
- '组织员工':{done:'组织人员、教育/工作/项目经历、岗位职级、入转调离、编制、协议类别、合同覆盖及续签报表、自定义字段分组及状态必填检查',remaining:'复杂跨字段联动、兼岗、复杂再入职及法人变更',links:[link('组织员工','/employees'),link('人员经历','/employee-experiences'),link('编制合同','/workforce'),link('档案字段','/employee-fields')]},
+ '组织员工':{done:'组织人员、教育/工作/项目经历、岗位职级、入转调离、编制、协议类别、合同覆盖及续签报表、自定义字段分组及状态必填检查',remaining:'复杂跨字段联动、兼岗、复杂再入职及法人变更',links:[link('组织员工','/employees'),link('人员经历','/employee-experiences'),link('编制合同','/workforce'),link('合同字段与继承','/contract-fields'),link('档案字段','/employee-fields')]},
  '审批中心':{done:'人事顺序审批、独立复核、撤回及历史',remaining:'管理员委托、复杂条件分支及其他模块待办汇集',links:[link('人事审批','/approvals'),link('跨模块待办','/work-inbox')]},
  '干部管理2.0':{done:"跨模块人才档案、提名审议、调动任用核对、考察述职；独立主职任期登记、更正/结束/作废、历史与档案衔接",remaining:"干部四状态名册、任用类型扩展与期限自动计算、档案子集、委员会及原站详细提交规则",links:[link('干部访谈记录（HR）','/cadre-interviews'),link('干部人才档案','/cadre-profiles'),link('干部提名与考察','/cadres')]},
  '任职资格':{done:'标准版本、能力证据、独立认证、到期与撤销',remaining:'任职类别层级及复杂认证委员会',links:[link('任职资格','/qualifications')]},

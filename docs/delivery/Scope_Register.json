@@ -10,7 +10,7 @@
       "scope": "组织、职务体系、编制、人员、任职、合同",
       "batch": "G0/G1",
       "requirements": "部分页面核实；完整规则待核实",
-      "developed": "组织人员、教育/工作/项目经历、岗位职级、入转调离、编制、协议类别、合同覆盖及续签报表、自定义字段分组及状态必填检查",
+      "developed": "组织人员、教育/工作/项目经历、岗位职级、入转调离、编制、协议类别、合同覆盖及续签报表、自定义字段分组及状态必填检查；合同自定义文本字段版本与续签继承快照",
       "remaining": "复杂跨字段联动、兼岗、复杂再入职及法人变更",
       "tested": "既有集成测试子集；未逐需求完备映射",
       "productionAccepted": "未验收"
@@ -1546,6 +1546,27 @@
         "requirements": "本轮原站空表字段、类型/角色和200字上限已核实；权限及实际提交规则待核实",
         "development": "登记、更正、作废、HR档案摘要及分页检索已开发",
         "testing": "本轮247/247集中回归与类型通过，明确排除Worker旧渲染限制",
+        "production": "未验收"
+      }
+    },
+    {
+      "id": "F-CONTRACT-FIELDS",
+      "phase": "P3",
+      "moduleId": "M01",
+      "title": "合同文本字段与续签继承",
+      "queueRef": "F-CONTRACT-FIELDS",
+      "criteria": [
+        {
+          "id": "F-CONTRACT-FIELDS-AC1",
+          "text": "合同字段按定版快照保存，续签区分继承、不继承与手工清空；版本变动和归档不改写旧合同，权限与审计原子性保持",
+          "accepted": false
+        }
+      ],
+      "source": "docs/P1_Source_Observations_20260907.md#BC-F02",
+      "dimensions": {
+        "requirements": "BC-F02继承说明及任职/合同信息集已本轮只读核实；字段类型/权限/复杂联动仍待核实",
+        "development": "合同可选文本字段版本、新合同/续签值快照与来源已开发；任职字段及合同变更仍待开发",
+        "testing": "本轮98/98关联回归与类型通过；非全量复测",
         "production": "未验收"
       }
     }
