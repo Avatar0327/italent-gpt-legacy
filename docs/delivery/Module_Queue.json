@@ -380,12 +380,12 @@
     },
     {
       "id": "I-EXTERNAL-CONTRACT",
-      "status": "design-and-synthetic-validation",
+      "status": "contract-and-synthetic-tested",
       "dependencies": [
         "G0"
       ],
       "acceptance": "定义字段归属/映射、事件幂等/重试/对账/失败处理；仅合成桩或只读预验，不执行真实迁移或外部写入",
-      "next": "BC-I01/02只读已确认映射入口，建立无网络无持久化的事件预验契约和合成测试"
+      "next": "协议/真实字段责任未核实，不启动外部写入；契约4项测试和类型通过，继续独立业务缺口"
     }
   ]
 }
