@@ -1,6 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {setup,send,get,core,grant,expect,hris,dev,members,act,request,anchors,due} from './support/foundation-scenario.mjs';
+const selfService=await import('../app/api/self-service/route.ts');
 import {readProfile,checkProfile,checkOutside} from './support/cadre-checks.mjs';
 
 test('H002 G1-02：离职后的未完成计划和学习保留历史、拒绝新业务，离职账号可保留关联停用并立即撤权',async t=>{
@@ -27,6 +28,7 @@ test('H002 G1-02：离职后的未完成计划和学习保留历史、拒绝新�
  act('employee');await readProfile(e.id,403);
  // Employee membership is still active: exit alone does not revoke historical self access.
  for(const id of [plan.id,enrollment.id]){assert.ok((await get()).records.some(r=>r.id===id));assert.equal((await expect(await dev.GET(request('/api/development?id='+id)))).items.length,1);}
+ const portal=await expect(await selfService.GET());assert.ok(!portal.tasks.some(task=>[plan.id,enrollment.id].includes(task.id)));
  const revision=(await get()).revision;
  for(const [action,id] of [['submitPlan',plan.id],['submitLearning',enrollment.id]]){
   const error=await send({action,id,evidence:'合成离职人员尝试提交旧任务'},400);assert.match(error.error,/离职/);
