@@ -12,7 +12,7 @@
 | 多记录 | saveDevelopmentMany | 最多20条、唯一ID、一修订原子提交；不拆成部分成功 |
 | 历史 | GET /api/development?id=ID&page=N | 当前权限再校验；分页；保留原始事件快照；历史不增加当前权限 |
 | 错误 | http.ts | {error:string}；401未登录、403拒绝、400格式、409冲突、413大小、415类型、503未分类失败 |
-| 请求 | readBody | 同源Origin、application/json、最大32768字节；不绕过统一处理 |
+| 请求 | readBody | 同源Origin、application/json、默认最大32768字节；招聘职位入口显式98304字节以容纳两段万字中文；不绕过统一处理 |
 | 时间 | business-time.ts及领域现有函数 | 保持北京时间业务日期；事件UTC时间；不混用浏览器本地时区 |
 | 附件 | /api/attachments | 服务端读取R2、元数据权限和下载后修订检查；不分享原始存储地址 |
 
@@ -126,3 +126,17 @@ POST /api/learning-content-update: {revision, action:"preview"|"apply", command:
 learningDefinition/learningAssignment.trainingStages[].deadline?={days:1..36500,allowOverdue:boolean,policy:"scheduled-inclusive"}。旧记录缺失则无独立阶段截止。阶段最早开放业务日期+days-1，前置未完成不重置期限。learningStageSubmissionOpen只约束新提交；learningStageOpen继续负责生命周期/退出/顺序，独立核验不增加提交期限阻断。整计划期限继续独立生效。
 
 配置版本冻结并通过既有内容更新迁移。派发及内容更新拒绝已截止且未完成、又禁止超期的阶段；原子拒绝不落部分任务。精确计日、迟解锁不顺延和超期核验是当前显式实现策略，非原站已实测规则，生产前须结合企业规则验收。
+
+## 绩效与招聘兼容增量（2026-09-08）
+
+绩效等级定义由 /api/performance-ratings 管理草稿、定版、归档及后续版本。活动冻结 ratingScheme；发布结果和申诉更正沿用该快照，不读取最新主定义替换历史。旧三档百分制数据保持。每档 talentBand 明确映射既有人才消费者；自定义区间须无重叠，落在空档的成绩拒绝发布。活动的 performanceMetadata 是分类信息，不授予权限或替代截止日；仅无计划的草稿可编辑，省略等级引用保留旧快照，null 明确选择旧三档规则。
+
+招聘新增需求默认草稿，submitRequisition 后待审；旧无 requisitionSubmissionRequired 标记的 draft 保持原待审语义。创建/修订可显式 submit:true 在同一事务保存并提交，所有贡献者不得审批。仅招聘需求、候选人、面试三种创建支持可选 Idempotency-Key；同租户同账号相同规范化请求重放返回原ID且不再次写入，不同内容409。重放仍检查当前权限；creationRequest 不出现在读取投影。旧无键客户端兼容，此机制不承诺其他入口幂等。
+
+### 内部招聘职位版本（BC-R05 的限定实现）
+
+GET/POST /api/recruitment-jobs 沿用 revision/command 和审计原子事务；命令 create/edit/activate/revise/archive。POST 通过统一 readBody 校验，显式上限98304字节，其他入口默认32768不变。HR/admin 按当前组织写，经理按范围读，员工不得进入。create 关联已批准开放需求和启用岗位；edit 仅草稿，activate 后内容冻结。revise 从最新仍启用版本产生下一草稿，归档草稿不阻断修订且版本号按全族历史最大值递增，definitionRootId 保持同族，referenceId 始终是需求ID；归档保留记录与审计。
+
+jobDetails 含类别、用工方式、地点、地址、学历、经验、职责/资格（各最多10000字符）以及月薪面议或人民币整数分范围。类别与用工方式的原站枚举尚未核实，首批为企业显式文本；启用、不可变版本及原需求共享容量是本系统限定策略，不冒充原站全部流程。
+
+/api/recruitment 的 candidate 命令新增可选 jobId。提供时必须是同需求的当前可见启用职位，服务端冻结 {id,rootId,version,title,details,workflow} 到候选记录。旧不提供 jobId 的候选保持原路径；后续职位修订/归档不覆盖候选来源。全部版本仍按同一 requisitionId 汇总录用人数，不能分版本突破需求名额。workflow 固定 legacy-interview-offer-v1，不代表可配置招聘流程、广告发布或对外通信。无数据库迁移。

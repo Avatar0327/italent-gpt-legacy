@@ -267,13 +267,13 @@
     },
     {
       "id": "R-JOB",
-      "status": "in-progress",
+      "status": "verified-pending-private-release",
       "dependencies": [
         "R-SOURCE",
         "R-SUBMISSION"
       ],
       "acceptance": "内部招聘职位独立版本、候选冻结来源、需求容量与权限不扩大；旧候选兼容，外发广告不冒充实现",
-      "next": "BC-R05字段与规则说明已核实，先建领域/契约与关联回归，再接页面"
+      "next": "最终构建与私有发布；继续原站面试排期和候选多职位差异"
     }
   ]
 }
