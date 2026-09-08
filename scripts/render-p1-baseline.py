@@ -152,7 +152,7 @@ if 'p1B' in s:
   t+=table(['原任务','验收条件（原样保留）','当前规则/验证状态'],[(a['id']+' '+a['title'],'；'.join(c['text'] for c in a['criteria']),'原accepted保持；本稿不代签，历史测试按原版本') for a in s['acceptanceTasks'] if a['moduleId'] in pack['moduleIds']])+'\n'
   t+='## 就绪、待决策与下一步\n\n'+pack['pending']+'。'+pack['next']+'。\n\n需求就绪需要：受影响对象字段和行为无未决歧义；角色/字段范围、状态与恢复、跨包契约及验收预期经过评审；如有例外，记录授权、范围和影响。当前缺少上述完整评审，不满足转入新开发包条件。人工多角色UAT暂缓不阻止本稿继续细化。\n'
   if pack.get('readinessConditions'):t+='\n'+table(['具体就绪条件'],[(v,) for v in pack['readinessConditions']])+'\n'
-  (R/pack['spec']).write_text(t)
+  (R/pack['spec']).write_text(t.rstrip()+'\n')
  prd=D/'P1B_PRD.md';t=prd.read_text().replace('其他包Source_Gaps仅是规格输入，不能算已完成的PRD。','各包已有同源生成的规格评审稿；其中仅导航部分明确列出受限原因，不计为完整需求就绪。原Source_Gaps继续作为证据输入。')
  t+='\n## 业务包规格入口\n\n'+table(['包','规格','状态'],[(p['id'],link_source(p['spec']),p['readiness']) for p in pb['packages']])
  if pb.get('globalContracts'):

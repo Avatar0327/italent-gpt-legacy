@@ -545,7 +545,11 @@
           "BC-C02",
           "BC-C03",
           "BC-C08",
-          "BC-C09"
+          "BC-C09",
+          "BC-C10",
+          "BC-C11",
+          "BC-C12",
+          "BC-C13"
         ],
         "fieldRefs": [
           "US-C01-02-F001",
@@ -613,7 +617,34 @@
           "BC-C09-F005",
           "BC-C09-F006",
           "BC-C09-F007",
-          "BC-C09-F008"
+          "BC-C09-F008",
+          "BC-C10-F001",
+          "BC-C10-F002",
+          "BC-C10-F003",
+          "BC-C10-F004",
+          "BC-C10-F005",
+          "BC-C11-F001",
+          "BC-C11-F002",
+          "BC-C11-F003",
+          "BC-C11-F004",
+          "BC-C11-F005",
+          "BC-C11-F006",
+          "BC-C11-F007",
+          "BC-C11-F008",
+          "BC-C11-F009",
+          "BC-C11-F010",
+          "BC-C11-F011",
+          "BC-C11-F012",
+          "BC-C12-F001",
+          "BC-C12-F002",
+          "BC-C12-F003",
+          "BC-C12-F004",
+          "BC-C12-F005",
+          "BC-C13-F001",
+          "BC-C13-F002",
+          "BC-C13-F003",
+          "BC-C13-F004",
+          "BC-C13-F005"
         ],
         "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M03",
@@ -637,11 +668,15 @@
             "BC-C02",
             "BC-C03",
             "BC-C08",
-            "BC-C09"
+            "BC-C09",
+            "BC-C10",
+            "BC-C11",
+            "BC-C12",
+            "BC-C13"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "干部四状态名册、任用类型扩展与期限自动计算、档案子集、委员会及原站详细提交规则；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；提名方式枚举、委员会成员/表决、流程节点和权限未验证；未读候选人行；负责人解析、提名人数分母、发布/关闭规则未验证；未打开已有活动数据或提交",
+          "unexplored": "干部四状态名册、任用类型扩展与期限自动计算、档案子集、委员会及原站详细提交规则；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；提名方式枚举、委员会成员/表决、流程节点和权限未验证；未读候选人行；负责人解析、提名人数分母、发布/关闭规则未验证；未打开已有活动数据或提交；评分项类型、权重/汇总、模板版本影响在途活动、权限和第三方日程同步未验证；未读取任何评价结果或创建人值；仅模板空表配置，不是投票结果；比例分母、弃权/缺席、分值尺度和权重、评价标准具体内容、各角色/版本与在途影响未核实；当前初始选择不是全平台默认或本项目已批准规则。没有选择真实人员/组织/指标；数值上下限/小数精度、权重合计、指标缺分/弃权/多人聚合、审批与评价表版本未知；未提交验证，不推定固定100分或权重100%；模式切换仅未保存空表，不改变已有模板；帮助为规则文字，未执行；得分严格“高于”与表单“分即为通过”提示边界不够一致，等于阈值待核实，不选择默认比较符。缺席/弃权/未答评委、分母0、无有效指标/权重和为0、精度/舍入、加总时单指标满分与界面校验仍未验证；不得以固定量表替代这些模式",
           "next": "补字段属性、权限线索和流程说明；任用期限、委员会、模型与标准版本、敏感档案权限",
           "accepted": false
         }
@@ -2483,7 +2518,10 @@
         "navigationEvidence": "BC-NAV-20260908",
         "pageRefs": [
           "BC-P1C-M26",
-          "BC-P1C-M26-02"
+          "BC-P1C-M26-02",
+          "BC-C14",
+          "BC-C15",
+          "BC-C16"
         ],
         "fieldRefs": [
           "BC-P1C-M26-02-F001",
@@ -2494,7 +2532,25 @@
           "BC-P1C-M26-02-F006",
           "BC-P1C-M26-02-F007",
           "BC-P1C-M26-02-F008",
-          "BC-P1C-M26-02-F009"
+          "BC-P1C-M26-02-F009",
+          "BC-C14-F001",
+          "BC-C14-F002",
+          "BC-C14-F003",
+          "BC-C14-F004",
+          "BC-C14-F005",
+          "BC-C14-F006",
+          "BC-C14-F007",
+          "BC-C14-F008",
+          "BC-C14-F009",
+          "BC-C15-F001",
+          "BC-C15-F002",
+          "BC-C15-F003",
+          "BC-C15-F004",
+          "BC-C15-F005",
+          "BC-C15-F006",
+          "BC-C15-F007",
+          "BC-C16-F001",
+          "BC-C16-F002"
         ],
         "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M26",
@@ -2514,11 +2570,14 @@
         "coverage": {
           "facts": [
             "BC-P1C-M26",
-            "BC-P1C-M26-02"
+            "BC-P1C-M26-02",
+            "BC-C14",
+            "BC-C15",
+            "BC-C16"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "多种题型、提醒催办与完整活动运营；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+          "unexplored": "多种题型、提醒催办与完整活动运营；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证；通知类型枚举、模板变量/脱敏、发送渠道、接收人授权与失败恢复未知；未读模板正文或人员值；不将本项目邀请记录当实际消息已发送；配置提示未提交验证；名称大小写/空白标准化、既有角色改名/停用、范围与匿名性未知；当前项目固定self/supervisor/peer/report四类不能代表可配置角色/套卷选择；顺序整数/范围/重复排序规则与名称规范化未提交验证；输入值未读，未保存",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；任用期限、委员会、模型与标准版本、敏感档案权限",
           "accepted": false
         }
@@ -5353,7 +5412,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-08T16:50:04.743585+00:00",
+    "updatedAt": "2026-09-08T17:00:00.948255+00:00",
     "authority": "本轮用户指令；Scope_Register.json是唯一范围与验收事实源；P1附属条目不增加48组或59项分母",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -24939,6 +24998,681 @@
             "uiRequired": false
           }
         ]
+      },
+      {
+        "id": "BC-C10",
+        "moduleId": "M03",
+        "path": "干部管理2.0 > 设置 > 选拔评价表（实际标题：评价表）",
+        "evidenceRef": "BC-C10",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:51:46.265732+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-C10-F001",
+            "label": "名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C10"
+          },
+          {
+            "id": "BC-C10-F002",
+            "label": "所属组织",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C10"
+          },
+          {
+            "id": "BC-C10-F003",
+            "label": "状态",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C10"
+          },
+          {
+            "id": "BC-C10-F004",
+            "label": "创建人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C10"
+          },
+          {
+            "id": "BC-C10-F005",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C10"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "选拔和述职配置入口分开；评价表有组织归属与状态，不能直接以本项目提名审议accepted布尔替代整张评价表",
+        "unknown": "评分项类型、权重/汇总、模板版本影响在途活动、权限和第三方日程同步未验证；未读取任何评价结果或创建人值",
+        "operations": "设置目录分别选拔/述职周期、评价表、第三方日程、通用评分项；本页仅读列表结构",
+        "flowRef": []
+      },
+      {
+        "id": "BC-C11",
+        "moduleId": "M03",
+        "path": "干部管理2.0 > 设置 > 选拔评价表 > 新建空表",
+        "evidenceRef": "BC-C11",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:53:04.208983+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "空白评价表通用配置/说明",
+        "fields": [
+          {
+            "id": "BC-C11-F001",
+            "label": "名称",
+            "context": "评价表配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C11",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-C11-F002",
+            "label": "所属组织",
+            "context": "评价表配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C11",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-C11-F003",
+            "label": "基本信息",
+            "context": "评价表配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C11",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-C11-F004",
+            "label": "全景档案页面",
+            "context": "评价表配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C11",
+            "uiRequired": null
+          },
+          {
+            "id": "BC-C11-F005",
+            "label": "显示名称",
+            "context": "评价表配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C11",
+            "uiRequired": null
+          },
+          {
+            "id": "BC-C11-F006",
+            "label": "评价区标题信息",
+            "context": "评价表配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C11",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-C11-F007",
+            "label": "投票规则",
+            "context": "评价表配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": [
+              "投票",
+              "总分",
+              "指标打分"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-C11",
+            "uiRequired": true,
+            "controlType": "自定义单选"
+          },
+          {
+            "id": "BC-C11-F008",
+            "label": "通过票数比例(%)",
+            "context": "评价表配置项",
+            "storageType": null,
+            "required": null,
+            "default": "本次空白表初始显示80；非系统政策或本项目要求",
+            "options": null,
+            "limit": "DOM maxlength=15；min/max/step未声明，不能据此认定范围0–100或15位数字都有效",
+            "evidenceRef": "BC-C11",
+            "uiRequired": true,
+            "controlType": "数值外观输入、百分比后缀"
+          },
+          {
+            "id": "BC-C11-F009",
+            "label": "配置列信息",
+            "context": "评价表配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C11",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-C11-F010",
+            "label": "配置评价结果",
+            "context": "评价表配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C11",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-C11-F011",
+            "label": "评价标准",
+            "context": "评价表配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C11",
+            "uiRequired": null,
+            "controlType": "textarea多行文本"
+          },
+          {
+            "id": "BC-C11-F012",
+            "label": "评分项",
+            "context": "评价表配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C11",
+            "uiRequired": true
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "投票规则当前显示投票，说明达到通过票数比例及以上即通过，并可同时启用指标评分作为参考。基本信息初始列姓名/性别；列信息为指标/指标类型；评价结果显示评分/人员评审结果。评分项区分任职资格标准与通用评分项、不显示的指标。带*标签：名称/所属组织/基本信息/评价区标题/投票规则/通过比例/列信息/评价结果/评分项；本次通过票数比例初始80，输入maxlength=15，范围/精度未验证。",
+        "unknown": "仅模板空表配置，不是投票结果；比例分母、弃权/缺席、分值尺度和权重、评价标准具体内容、各角色/版本与在途影响未核实；当前初始选择不是全平台默认或本项目已批准规则。没有选择真实人员/组织/指标",
+        "operations": "新建未保存空表，展开投票规则；只在空表切换通用模式查看条件字段，最终取消；未写业务数据",
+        "flowRef": []
+      },
+      {
+        "id": "BC-C12",
+        "moduleId": "M03",
+        "path": "干部管理2.0 > 选拔评价表 > 未保存空表模式切换",
+        "evidenceRef": "BC-C12",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:54:44.943193+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "未保存空表条件字段",
+        "fields": [
+          {
+            "id": "BC-C12-F001",
+            "label": "打分规则",
+            "context": "条件配置字段",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C12",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-C12-F002",
+            "label": "满分",
+            "context": "条件配置字段",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C12",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-C12-F003",
+            "label": "通过分数",
+            "context": "条件配置字段",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C12",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-C12-F004",
+            "label": "评分项",
+            "context": "条件配置字段",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C12",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-C12-F005",
+            "label": "权重",
+            "context": "条件配置字段",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C12",
+            "uiRequired": true
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "规则枚举投票/总分/指标打分。总分模式改显示打分规则、满分、通过分数，两个数值框初始空；说明“满分…分制，…分即为通过”。指标打分模式另出现权重项；不能将投票初始80直接当得分通过线 指标打分另出现“评委总分计算方式”“查看帮助”，未在此步读取算法；权重区当前显示0%。",
+        "unknown": "数值上下限/小数精度、权重合计、指标缺分/弃权/多人聚合、审批与评价表版本未知；未提交验证，不推定固定100分或权重100%；模式切换仅未保存空表，不改变已有模板 下一只读动作优先查看总分计算帮助，不需业务选择。",
+        "operations": "空表选择总分、再选择指标打分以只读条件字段；未填写分值/人员/名称，不保存，最后取消",
+        "flowRef": []
+      },
+      {
+        "id": "BC-C13",
+        "moduleId": "M03",
+        "path": "干部管理2.0 > 选拔评价表 > 指标打分 > 查看帮助《干部管理打分规则》",
+        "evidenceRef": "BC-C13",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:56:40.617325+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "原站帮助规则摘要和计算关系；非实际评价结果",
+        "fields": [
+          {
+            "id": "BC-C13-F001",
+            "label": "满分制",
+            "context": "帮助说明术语",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C13"
+          },
+          {
+            "id": "BC-C13-F002",
+            "label": "通过分数",
+            "context": "帮助说明术语",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C13"
+          },
+          {
+            "id": "BC-C13-F003",
+            "label": "评委总分计算方式",
+            "context": "帮助说明术语",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": [
+              "平均分",
+              "加权平均分",
+              "加总"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-C13"
+          },
+          {
+            "id": "BC-C13-F004",
+            "label": "通过票数比例",
+            "context": "帮助说明术语",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C13"
+          },
+          {
+            "id": "BC-C13-F005",
+            "label": "指标明细权重",
+            "context": "帮助说明术语",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C13"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "帮助区分：单个评委总分可按指标算术均值、加权平均或加总；跨评委最终分为评委总分算术均值（文档称固定）。得分通过条件文字为高于通过分数，投票为通过票/总评委数达到比例。平均模式只纳入可显示且能力标准非空的资格指标及通用项；权重按参与项均分。加权/加总模式先按表内评分项权重分配资格组/通用项；资格组内全部权重空则均分，部分有值则按有值权重归一化，空值按0",
+        "unknown": "帮助为规则文字，未执行；得分严格“高于”与表单“分即为通过”提示边界不够一致，等于阈值待核实，不选择默认比较符。缺席/弃权/未答评委、分母0、无有效指标/权重和为0、精度/舍入、加总时单指标满分与界面校验仍未验证；不得以固定量表替代这些模式",
+        "operations": "原站链接打开用户社区帮助tab5；返回后取消未保存模板",
+        "flowRef": [],
+        "sourceLocation": "原站查看帮助直达用户社区《干部管理打分规则》，https://users.italent.cn/（不记录登录参数）"
+      },
+      {
+        "id": "BC-C14",
+        "moduleId": "M26",
+        "path": "360度评估 > 设置 > 通知模板设置",
+        "evidenceRef": "BC-C14",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:58:07.308680+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-C14-F001",
+            "label": "模板名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C14"
+          },
+          {
+            "id": "BC-C14-F002",
+            "label": "模板类型",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C14"
+          },
+          {
+            "id": "BC-C14-F003",
+            "label": "状态",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C14"
+          },
+          {
+            "id": "BC-C14-F004",
+            "label": "默认模板",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C14"
+          },
+          {
+            "id": "BC-C14-F005",
+            "label": "创建人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C14"
+          },
+          {
+            "id": "BC-C14-F006",
+            "label": "创建时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C14"
+          },
+          {
+            "id": "BC-C14-F007",
+            "label": "最近修改人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C14"
+          },
+          {
+            "id": "BC-C14-F008",
+            "label": "最近修改时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C14"
+          },
+          {
+            "id": "BC-C14-F009",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C14"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "通知模板具有状态和默认模板列；通知/报告模板与评价角色/应用场景分别配置",
+        "unknown": "通知类型枚举、模板变量/脱敏、发送渠道、接收人授权与失败恢复未知；未读模板正文或人员值；不将本项目邀请记录当实际消息已发送",
+        "operations": "设置子菜单通知模板、通信记录、报告模板、评价角色、应用场景；未发送通知或读取通信明细",
+        "flowRef": []
+      },
+      {
+        "id": "BC-C15",
+        "moduleId": "M26",
+        "path": "360度评估 > 设置 > 评价角色设置",
+        "evidenceRef": "BC-C15",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:58:38.567623+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-C15-F001",
+            "label": "评价角色名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": "页面提示唯一且不超过18字，规范化和服务端实现未验证",
+            "evidenceRef": "BC-C15"
+          },
+          {
+            "id": "BC-C15-F002",
+            "label": "顺序",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C15"
+          },
+          {
+            "id": "BC-C15-F003",
+            "label": "创建人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C15"
+          },
+          {
+            "id": "BC-C15-F004",
+            "label": "创建时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C15"
+          },
+          {
+            "id": "BC-C15-F005",
+            "label": "最新修改人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C15"
+          },
+          {
+            "id": "BC-C15-F006",
+            "label": "最新修改时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C15"
+          },
+          {
+            "id": "BC-C15-F007",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C15"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "可见提示：评价角色新增后不支持删除；名称不重复且最多18字；全局最多90角色、每套卷启用最多15；按套卷模板创建时角色勾选状态继承模板；超过15角色时新套卷须先选择启用角色",
+        "unknown": "配置提示未提交验证；名称大小写/空白标准化、既有角色改名/停用、范围与匿名性未知；当前项目固定self/supervisor/peer/report四类不能代表可配置角色/套卷选择",
+        "operations": "新增评价角色、默认显示设置、设置套卷评价角色帮助（仅查看入口）",
+        "flowRef": []
+      },
+      {
+        "id": "BC-C16",
+        "moduleId": "M26",
+        "path": "360度评估 > 评价角色设置 > 新增评价角色空表",
+        "evidenceRef": "BC-C16",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:59:23.461108+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "空表DOM标签/属性后取消",
+        "fields": [
+          {
+            "id": "BC-C16-F001",
+            "label": "角色名称",
+            "context": "新增角色表单",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": "原生maxlength未声明；角色名称18字见BC-C15页面说明",
+            "evidenceRef": "BC-C16",
+            "uiRequired": true,
+            "controlType": "text输入"
+          },
+          {
+            "id": "BC-C16-F002",
+            "label": "顺序",
+            "context": "新增角色表单",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": "原生maxlength未声明；角色名称18字见BC-C15页面说明",
+            "evidenceRef": "BC-C16",
+            "uiRequired": true,
+            "controlType": "顺序输入（type未声明）"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "两个标签均有*；角色名称原生text，顺序输入type未声明；原生maxlength未设置，即使页面另有18字说明也不矛盾，不能推断无限长",
+        "unknown": "顺序整数/范围/重复排序规则与名称规范化未提交验证；输入值未读，未保存",
+        "operations": "新增空表仅读属性后取消；未创建角色",
+        "flowRef": []
       }
     ],
     "humanAcceptancePrerequisite": false,
@@ -25320,7 +26054,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-08T16:50:04.743585+00:00",
+    "updatedAt": "2026-09-08T17:00:00.948255+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -25488,14 +26222,14 @@
             "object": "干部任期/提名/任用",
             "fields": "任期主职literal；有效起止日；evidence5–3000；重叠非作废任期拒绝；提名employeeId/positionId，资格和继任引用可选",
             "roles": "HR/管理员有当前员工及岗位组织范围；禁止登记本人；提名审议独立管理者",
-            "lifecycle": "任期registered/ended/voided；提名submitted/approved；任用核对要求批准的后续调动且已生效",
+            "lifecycle": "任期registered/ended/voided；提名submitted/approved；任用核对要求批准的后续调动且已生效；当前代码对有details.transfer的新调动要求applied；无该结构的历史单保留approved+后续时间+当前岗位匹配校验，不能声称旧数据已自动迁移为新执行状态。",
             "actions": "登记/更正/结束/作废、提名/审议、任用核对、考察述职",
             "codeRefs": [
               "lib/hris/cadre-terms.ts",
               "lib/hris/cadres.ts"
             ],
-            "acceptance": "已有生效任期重叠时登记拒绝；已批准未生效调动不能核对任用；岗位不匹配拒绝；员工离职前不能登记离职原因结束任期",
-            "gap": "原站四状态干部身份不可用registered/ended一对一替代；委员会/任期算法/复杂任用类型未就绪",
+            "acceptance": "已有生效任期重叠时登记拒绝；已批准未生效调动不能核对任用；岗位不匹配拒绝；员工离职前不能登记离职原因结束任期；新调动与无transfer结构历史单分开验证，记录适用版本，不用历史单绕过新D1执行。",
+            "gap": "原站四状态干部身份不可用registered/ended一对一替代；委员会/任期算法/复杂任用类型未就绪；BC-C10原站选拔/述职评价表及评分项是独立配置，当前提名布尔审议与考察证据不覆盖评价表/多评委汇总。",
             "classification": "本项目既有实现静态事实；转为产品要求待评审",
             "accepted": false,
             "id": "BP-C-REQ-01"
@@ -25517,16 +26251,16 @@
           },
           {
             "object": "360项目/关系/答卷/报告",
-            "fields": "纯量表模板；1–20题、1–5整数；minRespondents3–10；关系self/supervisor/peer/report；项目日期合法",
+            "fields": "纯量表模板；1–20题、1–5整数；minRespondents3–10；关系self/supervisor/peer/report；项目日期合法；现有分组均值按已提交有效答卷人数计算，保留1位小数；不同于干部投票的总评委数口径。",
             "roles": "HR管理员配置；仅名单中的在职评估人本人填报；范围控制不能等同匿名承诺；development.visibleRecord允许项目范围HR/管理员读取原始答卷，分组阈值只控制汇总显示，不承诺管理员也看不到个人答卷",
-            "lifecycle": "draft→open→closed；报告closed后按被评人一次发布冻结",
+            "lifecycle": "draft→open→closed；报告closed后按被评人一次发布冻结；开放期间同邀请可再次提交并覆盖同ID答卷；关闭后拒绝；当前HR可关项目，无等待全部答卷条件。",
             "actions": "配置关系、开放/关闭、作答、发布分组汇总",
             "codeRefs": [
               "lib/hris/feedback.ts",
               "lib/hris/development.ts"
             ],
             "acceptance": "草稿后不能改名单；重复评估人+被评人拒绝；本人关系不匹配拒绝；同事/下属低于阈值返回suppressed与null均值，自评/上级阈值1；不把无响应记0",
-            "gap": "阈值/匿名性是独立策略待确认；提醒、题型、完整活动运营未覆盖",
+            "gap": "阈值/匿名性是独立策略待确认；提醒、题型、完整活动运营未覆盖；修订答卷的完整历史与是否允许管理员读原答卷须产品评审，不能以均值抑制宣称匿名。；BC-C15原站全局最多90角色、套卷最多15且模板勾选继承，当前固定四类无角色配置/套卷版本，不得一对一映射。",
             "classification": "本项目既有实现静态事实；转为产品要求待评审",
             "accepted": false,
             "id": "BP-C-REQ-03"
@@ -25578,6 +26312,22 @@
             "acceptance": "先确认模板阶段开启规则、执行人解析、退回与变动恢复，才能定义步骤完成和阶段切换预期；现有简单发展行动不可冒充整套模板流程",
             "gap": "指导角色、跨阶段审批、模板变化及状态恢复未核实/未独立覆盖",
             "classification": "原站局部结构事实；产品工作流需求受限，未批准默认规则",
+            "accepted": false
+          },
+          {
+            "id": "BP-C-REQ-06",
+            "object": "选拔/述职评价表、投票与评分",
+            "fields": "BC-C10–12：名称/所属组织/基本信息/评价标题、投票规则或打分规则、通过比例或满分/通过分数、评价结果、评分项与指标权重；界面必填标记只作源线索。 BC-C13帮助已补三种单评委算法、跨评委算术均值、有效指标排除与层级权重归一化；模板/指标明细/评委最终分各自对象不能混为一个score。",
+            "roles": "评价模板管理与投票/打分/结果可读权限必须分开；所属组织不证明所有组织人员可见；现有管理员提名审议不替代多评委规则。",
+            "lifecycle": "已观察模板状态列及未保存条件字段；发布/使用中修订/评价锁定、重新投票和回退未核实，不画默认流程。",
+            "actions": "配置投票/总分/指标打分、引用任职资格标准或通用评分项；只读空表后取消。",
+            "acceptance": "候选用例：在满分100且指标得分合法的合成场景，两个指标20/40：算术均值30；权重60%/40%加权28；加总60（加总模式分别以60/40为指标满分）。两评委最终60/80得到70；平均模式排除隐藏或能力标准为空项。权重一项为空一项有值时空项权重0，全部为空则在资格组内均分。投票4/5在80%条件达到；得分等于阈值的预期待解决表单/帮助边界后填写。无指标、权重和0、弃权/缺评须明确异常，不填虚构0分。以上为对帮助的推导验收候选，未执行或批准。",
+            "gap": "已用帮助缩小算法未知；得分阈值相等、缺评/弃权分母、0除/舍入及评分版本仍待核实/业务评审；当前干部实现不覆盖评价模板/评分汇总。",
+            "classification": "原站空表/配置事实及已有实现差异；需求未就绪",
+            "codeRefs": [
+              "docs/P1_Source_Observations_20260907.md",
+              "lib/hris/cadres.ts"
+            ],
             "accepted": false
           }
         ],
@@ -27010,7 +27760,9 @@
         "薪酬专岗不等于HR角色",
         "原站接口映射不等于本项目DRY_RUN_ONLY预检",
         "面试官工作台当前无任务，原角色详情不能用M12管理员界面替代；三页签仅导航状态",
-        "M36/M47已按报告配置与资源翻译归BP-I，M41按员工人才标签归BP-C；48组唯一映射，剩余跨包关系仍保留"
+        "M36/M47已按报告配置与资源翻译归BP-I，M41按员工人才标签归BP-C；48组唯一映射，剩余跨包关系仍保留",
+        "干部评分的单评委指标算法与跨评委均值分层，得分阈值相等边界待核实；360分组均值按已提交答卷，不混用投票总评委分母",
+        "360角色目录/套卷角色选择不是固定四关系；现有答卷开放期间覆盖同ID、报告关闭后冻结，原答卷匿名权限仍未确认"
       ],
       "remaining": "继续经理看板指标/组织健康正文有限替代，其他空表控件属性及帮助；原站配置不等于默认/产品批准；完成全部规格引用与异常图的一致性审查"
     },
