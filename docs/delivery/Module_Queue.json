@@ -314,12 +314,22 @@
     },
     {
       "id": "A-PERIOD",
-      "status": "verified-pending-private-release",
+      "status": "technical-delivered-v95",
       "dependencies": [
         "A-SOURCE"
       ],
       "acceptance": "单人期间预览、来源快照和版本、冻结假勤写保护、重新开放/更正、范围/并发/审计回滚；无完整月报发布封存声称",
-      "next": "192项综合、类型和构建通过；提交私有发布后继续班次定义只读对照"
+      "next": "继续固定班次定义及批量派班，原站其他月报功能保留"
+    },
+    {
+      "id": "A-SHIFT-DEFINITION",
+      "status": "source-discovery",
+      "dependencies": [
+        "A-SOURCE",
+        "A-PERIOD"
+      ],
+      "acceptance": "版本化固定班次与派班原子性、既有时间/范围/冻结锁复用、历史班次不被新定义覆盖",
+      "next": "读取原站班次空表并取消，明确首批支持边界，再实现定义与派班"
     }
   ]
 }
