@@ -210,3 +210,11 @@ work-inbox读取attendancePeriod和interviewAppointment来判断可执行性。�
 performanceTemplate草稿可携带goalRules{minCount,maxCount,minWeight,maxWeight}，四项整数，分别处于1–20/1–100，并满足上下界和总和100%的可行组合。未配置保持旧规则。定版版本不可修改；周期performanceTemplate快照保留原规则，模板修订/归档不改变旧活动。
 
 目标保存、调整申请和接受调整统一检查快照规则；拒绝无副作用，调整通过与计划更新继续原子保存。调整通过后清空当前自评/管理文本，原文本仅在原历史快照保留并按现有角色投影。没有新增外部接口、数据库迁移或访问范围。
+
+## SC-P-INDICATOR（定性指标版本与目标引用）
+
+新增performanceIndicator记录及/api/performance-indicators：HR/admin同组织维护草稿、定版、修订和归档；普通员工只读本人当前组织已定版指标，经理只读管辖组织已定版指标。组织、编号固定；同组织编号不区分大小写唯一。分类首批是名称，不是完整共享分类树。最多60位ASCII编号为本系统校验边界，非原站长度推断。
+
+目标输入保留title/metric/weight，新增可选indicatorId。来源快照由服务端读取同组织已定版指标生成，客户端提供indicatorSource不会被采信。计划编辑或调整可保留已有旧来源；新选项须重新检查，归档不能被新计划使用。归档/修订不隐式刷新计划、待审调整、已发布结果或盘点来源。权重和评价角色仍由原流程控制，不由指标元数据覆盖。
+
+前端只提交目标字段及indicatorId，不回传来源快照；绩效/目标调整请求上限327680字节，以容纳已允许的20项4000字中文目标，保持有限上限。所有写入复用workspace revision和审计事务；状态变化并发依然通过CAS拒绝旧请求。无数据库迁移、外部同步或新访问范围。

@@ -409,12 +409,21 @@
     },
     {
       "id": "P-GOAL-RANGE",
-      "status": "tested-awaiting-private-publish",
+      "status": "private-published-v102",
       "dependencies": [
         "P-TEXT-TEMPLATE"
       ],
       "acceptance": "BC-P05范围随周期冻结、目标保存与变更强制检查、非法范围无副作用、目标变更清空旧回答保留历史",
-      "next": "216/216综合、类型和构建通过，提交打包私有发布；软提示及跨模块权重仍保留"
+      "next": "216/216综合、类型和构建通过并已私有发布；继续指标库和来源快照，软提示及跨模块权重仍保留"
+    },
+    {
+      "id": "P-INDICATOR-CATALOG",
+      "status": "tested-awaiting-private-publish",
+      "dependencies": [
+        "P-GOAL-RANGE"
+      ],
+      "acceptance": "BC-P06同组织定性指标版本、目标来源服务端快照、归档前后新旧引用、目标调整原子性与无指标兼容",
+      "next": "220/220综合、类型及构建通过，提交打包私有发布；继续引用情况与追溯，定量、共享分类和自动下发仍保留"
     }
   ]
 }
