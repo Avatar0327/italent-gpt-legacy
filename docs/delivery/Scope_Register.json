@@ -554,6 +554,13 @@
     "sourceVerification": "Live cadre create fields; learning mode conditional fields, content update behavior and stage completion thresholds verified read-only",
     "gapRegister": "Cadre_Learning_Source_Gaps.md",
     "businessAccepted": false,
-    "productionAccepted": false
+    "productionAccepted": false,
+    "latestSelectedRegression": {
+      "count": 4,
+      "passed": 4,
+      "scope": "historical reuse reports/profile, transfer/exit, legacy task restoration",
+      "businessAccepted": false,
+      "productionAccepted": false
+    }
   }
 }

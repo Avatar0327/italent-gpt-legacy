@@ -24,6 +24,6 @@ export function cadreProfile(ctx:DevelopmentContext,employeeId:string,at=new Dat
   section('reviews','最新人才盘点',latest.map(r=>item(r,r.payload.period??'盘点期间',`潜力：${r.payload.potential===1?'低':r.payload.potential===2?'中':r.payload.potential===3?'高':'未评定'} · 版本 ${r.payload.version??1}`,'/development'))),
   section('performance','最新核定绩效',perf.map(r=>item(r,r.payload.period??'绩效期间',`${r.payload.originalRating??'未评级'} · ${r.payload.sourcePlanId?'正式考核结果':'历史核定录入'}`,r.payload.sourcePlanId?'/performance':'/development'))),
   section('plans','发展行动',records.filter(r=>r.kind==='plan').map(r=>item(r,r.payload.title??'发展计划',`目标等级：${r.payload.target??'未评定'}`,'/development'))),
-  section('learning','学习任务',records.filter(r=>r.kind==='enrollment').map(r=>item(r,r.payload.title??'学习任务',r.status==='completed'?'成果已通过核验':'以学习模块当前办理状态为准','/learning'))),
+  section('learning','学习任务',records.filter(r=>r.kind==='enrollment').map(r=>item(r,r.payload.title??'学习任务',r.status==='completed'?(r.payload.sourceEnrollmentId?'引用历史核验完成 · 原核验 '+r.payload.sourceVerifiedAt:'成果已通过核验'):'以学习模块当前办理状态为准','/learning'))),
  ]};
 }

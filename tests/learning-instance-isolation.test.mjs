@@ -1,6 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {setup,send,get,act,expect,request,due} from './support/foundation-scenario.mjs';
+const reports=await import('../app/api/reports/route.ts'),profiles=await import('../app/api/cadre-profiles/route.ts');
 const definitions=await import('../app/api/learning-plans/route.ts'),assignments=await import('../app/api/learning-assignments/route.ts'),credits=await import('../app/api/learning-credits/route.ts');
 async function cmd(route,command,status=200){const d=await expect(await route.GET());return expect(await route.POST(request('/api/test',{revision:d.revision,command})),status);}
 test('same course across plans isolates exams and preserves legacy constraints, rewards and cancellation history',async t=>{
@@ -25,6 +26,9 @@ test('same course across plans isolates exams and preserves legacy constraints, 
  const reused=await assign('合成历史同步计划',true);assert.equal(reused.status,'completed');assert.ok([legacy.id,first.id,second.id].includes(reused.payload.sourceEnrollmentId));assert.ok(reused.payload.sourceVerifiedBy);assert.ok(reused.payload.sourceExamAttemptId);
  assert.equal((await get()).records.filter(r=>r.kind==='attempt').length,4);await cmd(credits,{action:'award',enrollmentId:reused.id,evidence:'历史复用不能再次领取课程学分'},400);await cmd(assignments,{action:'closeAssignment',id:reused.payload.learningAssignmentId});
  const nextCourse=await send({action:'course',code:'ISOLATED',title:'合成新版课程',description:'版本不同不可自动等效',content:'本版案例与旧版不同，需要完成新的学习，不自动认定旧版成绩有效。'});await send({action:'publishCourse',id:nextCourse.id});const def=await cmd(definitions,{action:'create',title:'合成新版同步',orgId:f.org.id,config:{mode:'relative',durationDays:30,allowOverdue:true,orderedStages:true,progressSync:true},courseIds:[nextCourse.id]});await cmd(definitions,{action:'seal',id:def.id});const next=await cmd(assignments,{action:'assign',definitionId:def.id,employeeId:f.e.id});const fresh=(await get()).records.find(r=>r.kind==='enrollment'&&next.ids.includes(r.id));assert.equal(fresh.status,'active');assert.equal(fresh.payload.sourceEnrollmentId,undefined);
+ const report=await expect(await reports.GET(request('/api/reports?dataset=learning')));const reuseRow=report.rows.find(row=>row[6]===reused.payload.learningAssignmentId);assert.equal(reuseRow[8],'历史复用');assert.equal(reuseRow[9],reused.payload.sourceEnrollmentId);
+ const profile=await expect(await profiles.GET(request('/api/cadre-profiles?employeeId='+f.e.id)));assert.match(profile.sections.find(s=>s.key==='learning').items.find(r=>r.id===reused.id).detail,/引用历史核验完成/);
+ const future=await cmd(definitions,{action:'create',title:'合成未来同步计划',orgId:f.org.id,config:{mode:'fixed',start:'2099-01-01',end:due,orderedStages:true,progressSync:true},courseIds:[c.id]});await cmd(definitions,{action:'seal',id:future.id});const later=await cmd(assignments,{action:'assign',definitionId:future.id,employeeId:f.e.id});const laterInstance=(await get()).records.find(r=>r.kind==='learningAssignment'&&later.ids.includes(r.id));await cmd(assignments,{action:'closeAssignment',id:laterInstance.id},400);
  const ledger=(await expect(await credits.GET())).records;assert.equal(ledger.filter(r=>r.kind==='learningCredit').length,1);assert.equal(ledger.filter(r=>r.kind==='creditReversal').length,1);
 });
 
