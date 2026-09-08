@@ -305,12 +305,21 @@
     },
     {
       "id": "A-SOURCE",
-      "status": "in-progress",
+      "status": "partial-evidence-BC-A01-04",
       "dependencies": [
         "R-SCHEDULE"
       ],
       "acceptance": "原站班次/假种/期间结算可见规则与既有实现对照，未验证规则单列；不修改原业务",
-      "next": "通过考勤文员工作台唯一菜单进入，核对实际导航，再打开空规则表只读查看"
+      "next": "后续核实班次/休假/完整月报流程，原站仅只读"
+    },
+    {
+      "id": "A-PERIOD",
+      "status": "verified-pending-private-release",
+      "dependencies": [
+        "A-SOURCE"
+      ],
+      "acceptance": "单人期间预览、来源快照和版本、冻结假勤写保护、重新开放/更正、范围/并发/审计回滚；无完整月报发布封存声称",
+      "next": "192项综合、类型和构建通过；提交私有发布后继续班次定义只读对照"
     }
   ]
 }

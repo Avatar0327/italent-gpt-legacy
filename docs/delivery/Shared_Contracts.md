@@ -164,3 +164,13 @@ jobDetails 含类别、用工方式、地点、地址、学历、经验、职责
 structuredInterview新增可选appointmentId，与candidateId和definitionId核对；仅结束后、当前范围有管理评价权限且employeeId等于指定人员、候选/需求/岗位/人员均有效时允许。取排期冻结表而非当前主定义；评价与排期completed/interviewResultId两记录在一revision与审计事务提交，失败共同回滚。取消、调动、离职、撤权后拒绝。含未完成排期的候选禁止直接offer，旧无排期路径仍兼容。请求键重放恢复原评价，不再次完成排期。
 
 首批为内部登记及指定人员评价，未验证原站全部冲突和日期算法，未实现多面试官、多表、多时区、通知/会议或自助约面。无数据库迁移或真实数据迁移。
+
+## 手动考勤期间汇总/冻结（BC-A01–04 限定实现）
+
+/api/attendance-periods GET为HR/admin/manager范围读，POST为HR/admin。preview严格接收employeeId/start/end，校验当前revision与人员权限，返回逐班结果、汇总和blockers，不写入、不返回原始来源对象。freeze/refreeze重新计算且不信任客户端预览；期间1–31个已结束业务日，至少一个有效班次，所有班次结束且无待审批、缺卡/冲突/未覆盖。最多1000来源，未核验冲突的汇总不是零。
+
+attendancePeriod保存employeeId、显式日期、冻结次数、记录时员工/组织、attendanceSnapshot(policy/sourceRevision/capturedAt/rows/sources/totals)、核验人/依据。冻结按固定班次起始业务日归属；不是年度余额、工资或历史组织重建。所有已有假勤命令先执行身份/业务验证，再经统一锁校验阻止冻结区间班次/clock/correction/leave变更；创建新班次也受日期锁保护。/api/attendance上下文包含锁，员工只收到本人可见班次的frozenShiftIds，不收到管理冻结快照或其历史。
+
+reopen保存原因并保留旧快照，refreeze重新核验增加版本；void仅开放状态可办，保留原证据且释放错误区间重建。同员工非作废期间不重叠。当前员工范围控制管理读取与重新开放，调动不绕过冻结；修改人员不会自动删除历史。所有写入与审计共用CAS，无表迁移。
+
+手动冻结/开放为明确内部限定规则，不能据原站自动冻结/发布/封存提示推断完整流程。自动任务、多组织共享、员工确认/申诉/发布/封存及法律企业规则保留。

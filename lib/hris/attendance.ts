@@ -1,3 +1,4 @@
+import {assertAttendanceUnlocked} from './attendance-locks';
 import {z} from 'zod';
 import type {State} from './model';
 import {scopedOrgs,type Member} from './authorization';
@@ -29,7 +30,7 @@ export function correctionResolution(records:R[],shiftId:string){
  const conflict=!!latest&&approved.some(r=>r.id!==latest.id&&(r.payload.version??0)===(latest.payload.version??0)&&r.updatedAt===latest.updatedAt&&(time(r.payload.inAt!)!==time(latest.payload.inAt!)||time(r.payload.outAt!)!==time(latest.payload.outAt!)));
  return {record:conflict?undefined:latest,conflict};
 }
-export function applyAttendance(records:R[],state:State,member:Member,input:unknown,at=new Date().toISOString()){
+function applyAttendanceCommand(records:R[],state:State,member:Member,input:unknown,at=new Date().toISOString()){
  const c=attendanceCommand.parse(input),scope=scopedOrgs(state,member);
  const invalid=(message:string):never=>{throw new HttpError(400,message);},deny=(message:string):never=>{throw new HttpError(403,message);};
  const manager=()=>{if(!['admin','hr','manager'].includes(member.role))deny('没有假勤管理权限');};const hr=()=>{if(!['admin','hr'].includes(member.role))deny('仅管理员或HR可维护假期余额');};
@@ -55,6 +56,7 @@ export function applyAttendance(records:R[],state:State,member:Member,input:unkn
  case 'withdrawLeave':{const r=get(c.id,'leave');employee(r.employeeId!,false);if(r.createdBy!==member.userId&&!['admin','hr'].includes(member.role))deny('仅申请人或HR可撤回');if(r.status!=='pending')invalid('仅待审批请假可以撤回');return change(r,'withdrawn',{closedReason:c.reason});}
  }
 }
+export function applyAttendance(records:R[],state:State,member:Member,input:unknown,at=new Date().toISOString()){const record=applyAttendanceCommand(records,state,member,input,at);assertAttendanceUnlocked(records,record);return record;}
 export function attendanceReport(records:R[],at=new Date().toISOString()){
  return records.filter(r=>r.kind==='shift'&&r.status==='active').map(s=>{
  const resolution=correctionResolution(records,s.id),correction=resolution.record;const rawIn=records.find(r=>r.kind==='clock'&&r.referenceId===s.id&&r.payload.punchKind==='in')?.payload.punchAt,rawOut=records.find(r=>r.kind==='clock'&&r.referenceId===s.id&&r.payload.punchKind==='out')?.payload.punchAt;const inAt=resolution.conflict?undefined:correction?.payload.inAt??rawIn,outAt=resolution.conflict?undefined:correction?.payload.outAt??rawOut;const start=time(s.payload.startAt!),end=time(s.payload.endAt!);const rest=s.payload.breakStart&&s.payload.breakEnd?[[time(s.payload.breakStart),time(s.payload.breakEnd)]]:[];
