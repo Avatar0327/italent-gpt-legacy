@@ -58,3 +58,6 @@
 
 ## B1/B2 学习实例契约增量
 learningAssignment引用不可变learningDefinition版本；enrollment的learningAssignmentId/learningDefinitionId和窗口/组织快照由服务器生成，原enroll命令不接受客户端自造关联。首轮派发、结项、整体取消/恢复在/api/learning-assignments下执行，统一revision+command包。saveDevelopmentMany默认20条不变；本入口显式21条（实例+最多20任务）。整体取消用assignmentCancelled及assignmentPreviousStatus保留原任务状态，实例恢复不重置考试、已完成课程或学分。普通员工不访问管理接口，通过既有学习页读取本人任务。课程原唯一性保持；重复课程、循环轮次及历史同步尚未开放。
+
+## C1/C2 接口变更
+enroll新增可选assignmentId，须匹配有效learningAssignment的员工、课程和冻结截止日，不能与trainingId/planId混用；仅此路径实例内唯一。assign支持relative/fixed的progressSync：记录sourceEnrollmentId/sourceVerifiedBy/sourceVerifiedAt/sourceExamAttemptId。GET学习实例增加attempt依赖用于核实来源考试，投影继续遵守原权限。courseCreditAlreadyGranted统一前后端课程版本去重。旧任务恢复保留原ID，关联实例的恢复继续校验原实例与冻结期限。

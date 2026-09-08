@@ -55,3 +55,6 @@ A1不是实例派课，sealed不是生产发布；后续内容变更需按BC-L03
 
 ## B1 首轮实例实现
 仅relative/fixed且progressSync=false，生成learningAssignment及全部enrollment，20课程+1实例原子保存。assignmentKey使用版本/员工/首轮；旧课程唯一性保持。enrollment保存learningAssignmentId、learningDefinitionId、assignmentOrgId、assignmentStart/Due/AllowOverdue及round。当前配置为单一必修阶段，实例结项依全部任务独立核验。C/D同步、循环、多阶段与来源投影仍后续。
+
+## C1/C2 当前实现覆盖旧限制
+跨计划独立实例允许同课程，实例内仍唯一；普通报名入口保持旧唯一性。progressSync仅关联同员工同版本已完成的原始核验证据，未完成/跨版本不复用，来源字段保留，不创建考试或复制学分。学分当前为同员工课程版本一次授予，非原站完整奖励规则结论。循环、复杂阶段/出勤及内容迁移仍待完成。详见Learning_Reuse_Delivery.md。

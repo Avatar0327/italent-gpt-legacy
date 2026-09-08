@@ -34,7 +34,7 @@ export function applyLearningAssignment(records:R[],state:State,m:Member,input:u
    for(const task of tasks.filter(t=>t.payload.assignmentCancelled&&t.payload.assignmentPreviousStatus!=='cancelled'))if(!records.some(course=>course.kind==='course'&&course.id===task.referenceId&&course.status==='published'))fail('恢复任务的课程版本须仍已发布');
    return [{...r!,status:'active',updatedAt:at,payload:{...r!.payload,evidence:c.evidence}},...tasks.filter(t=>t.payload.assignmentCancelled).map(t=>({...t,status:t.payload.assignmentPreviousStatus==='cancelled'?'cancelled':'active',updatedAt:at,payload:{...t.payload,assignmentCancelled:false,restorationEvidence:c.evidence}}))];
   }
-  if(r!.status!=='active')fail('仅进行中的实例可结项');
+  if(r!.status!=='active')fail('仅进行中的实例可结项');if(businessDate(at)<r!.payload.start!)fail('计划尚未开始，不能提前结项');
   if(tasks.length!==r!.payload.courseIds!.length||r!.payload.courseIds!.some(course=>!tasks.some(t=>t.referenceId===course&&t.status==='completed'&&t.payload.verifiedBy)))fail('须完成全部课程的独立核验后结项，取消任务不视为完成');
   return [{...r!,status:'completed',updatedAt:at}];
  }
@@ -43,7 +43,7 @@ export function applyLearningAssignment(records:R[],state:State,m:Member,input:u
  if(employee!.status==='离职')fail('离职员工不能分派新学习');
  if(definition!.status!=='sealed'||!state.orgs.some(o=>o.id===definition!.payload.orgId&&o.status==='启用'))fail('计划须已定版且组织启用');
  const config=definition!.payload.learningMode!;
- if(config.progressSync||config.mode==='recurring')fail('历史进度同步与循环轮次尚未接入派发，请使用独立学习的周期或起止时间配置');
+ if(config.mode==='recurring')fail('循环轮次尚未接入派发，请使用周期或起止时间配置');
  const key=learningAssignmentKey(definition!.id,c.employeeId,1);
  if(records.some(r=>r.kind==='learningAssignment'&&r.payload.assignmentKey===key))fail('此员工已获得该计划版本的首轮实例');
  const window=learningWindow(config,businessDate(at));
@@ -51,8 +51,10 @@ export function applyLearningAssignment(records:R[],state:State,m:Member,input:u
  const assignment:R={id:crypto.randomUUID(),kind:'learningAssignment',employeeId:c.employeeId,positionId:null,referenceId:definition!.id,status:'active',createdBy:m.userId,createdAt:at,updatedAt:at,payload:{title:definition!.payload.title,orgId:definition!.payload.orgId,courseIds:[...definition!.payload.courseIds!],learningMode:config,version:definition!.payload.version,definitionRootId:definition!.payload.definitionRootId,assignmentKey:key,round:1,start:window.start,due:window.due}};
  const result:R[]=[assignment];
  for(const courseId of assignment.payload.courseIds!){
-  const task=applyDevelopment([...records,...result],state,m,{action:'enroll',employeeId:c.employeeId,courseId,due:window.due},at);
-  result.push({...task,payload:{...task.payload,learningAssignmentId:assignment.id,learningDefinitionId:definition!.id,assignmentOrgId:definition!.payload.orgId,assignmentStart:window.start,assignmentDue:window.due,assignmentAllowOverdue:window.allowOverdue,round:1}});
+  const task=applyDevelopment([...records,...result],state,m,{action:'enroll',assignmentId:assignment.id,employeeId:c.employeeId,courseId,due:window.due},at);
+  const source=config.progressSync?records.filter(r=>r.kind==='enrollment'&&r.employeeId===c.employeeId&&r.referenceId===courseId&&r.status==='completed'&&r.payload.verifiedBy&&r.payload.verifiedAt&&!r.payload.sourceEnrollmentId&&visibleRecord(r,records,state,m)&&(!r.payload.examId||records.some(a=>a.kind==='attempt'&&a.referenceId===r.id&&a.payload.passed))).sort((a,b)=>(b.payload.verifiedAt??'').localeCompare(a.payload.verifiedAt??'')||a.id.localeCompare(b.id))[0]:undefined;
+  const sourceExam=source?.payload.examId?records.find(a=>a.kind==='attempt'&&a.referenceId===source.id&&a.payload.passed):undefined;
+  result.push(source?{...task,status:'completed',payload:{...task.payload,sourceEnrollmentId:source.id,sourceVerifiedBy:source.payload.verifiedBy,sourceVerifiedAt:source.payload.verifiedAt,sourceExamAttemptId:sourceExam?.id,verifiedBy:source.payload.verifiedBy,verifiedAt:source.payload.verifiedAt,verification:'引用同员工同课程版本已独立核验的完成记录；未创建本次考试记录'}}:task);
  }
  return result;
 }

@@ -6,7 +6,7 @@ const {applyDevelopment}=await import('../lib/hris/development.ts');
 const definitions=await import('../app/api/learning-plans/route.ts'),api=await import('../app/api/learning-assignments/route.ts'),self=await import('../app/api/self-service/route.ts');
 async function cmd(route,command,status=200,revision){const d=await expect(await route.GET());return expect(await route.POST(request('/api/learning-assignments',{revision:revision??d.revision,command})),status);}
 async function definition(f,courses,config={mode:'relative',durationDays:30,allowOverdue:true,progressSync:false,orderedStages:true}){const r=await cmd(definitions,{action:'create',title:'合成首轮学习',orgId:f.org.id,config,courseIds:courses});await cmd(definitions,{action:'seal',id:r.id});return r.id;}
-test('first learning instance atomically creates 20 tasks, blocks duplicate/reused courses, closes only after independent evidence',async t=>{
+test('first learning instance atomically creates 20 tasks, blocks duplicate instances and permits separate plan versions, closes only after independent evidence',async t=>{
  const f=await setup();t.after(()=>f.sqlite.close());const courses=[];
  for(let i=0;i<20;i++){const c=await send({action:'course',code:'INSTANCE'+i,title:'合成实例课程'+i,description:'首轮学习与事务容量验证',content:'阅读合成案例，完成实践并提交完整证明材料，由独立人员核验学习成果。'});await send({action:'publishCourse',id:c.id});courses.push(c.id);}
  const def=await definition(f,courses),assign={action:'assign',definitionId:def,employeeId:f.e.id};
@@ -25,7 +25,7 @@ test('first learning instance atomically creates 20 tasks, blocks duplicate/reus
  await send({action:'restoreEnrollment',id:tasks[0].id,due:tasks[0].payload.due,evidence:'合成独立恢复原先单项取消的课程'});
  const count=()=>f.sqlite.prepare('SELECT count(*) AS n FROM hris_development_records').get().n;
  const n=count();await cmd(api,assign,400);assert.equal(count(),n);await cmd(api,{action:'closeAssignment',id:instance.id},400);
- const revised=await cmd(definitions,{action:'revise',id:def});await cmd(definitions,{action:'seal',id:revised.id});await cmd(api,{...assign,definitionId:revised.id},400);assert.equal(count(),n+1);
+ const revised=await cmd(definitions,{action:'revise',id:def});await cmd(definitions,{action:'seal',id:revised.id});const second=await cmd(api,{...assign,definitionId:revised.id});assert.equal(second.ids.length,21);assert.equal(count(),n+22);
  for(const task of tasks){act('employee');await send({action:'submitLearning',id:task.id,evidence:'合成课程实践完成并提交独立核验'});act('hr');await send({action:'verifyLearning',id:task.id,accepted:true,evidence:'独立确认合成课程成果完整符合要求'});}
  await cmd(api,{action:'closeAssignment',id:instance.id});assert.equal((await expect(await api.GET())).records.find(r=>r.id===instance.id).status,'completed');await cmd(api,{action:'closeAssignment',id:instance.id},400);
  act('employee');await expect(await api.GET(),403);assert.ok(!(await expect(await self.GET())).tasks.some(t=>tasks.some(task=>task.id===t.id)));
@@ -33,7 +33,7 @@ test('first learning instance atomically creates 20 tasks, blocks duplicate/reus
 test('first instance refuses unsupported modes, outside scope, expired dates and stale revision without partial records',async t=>{
  const f=await setup();t.after(()=>f.sqlite.close());const c=await send({action:'course',code:'I-GUARD',title:'合成边界课程',description:'实例权限与日期校验',content:'合成案例只用于验证权限日期，不含真实人员或企业业务信息。'});await send({action:'publishCourse',id:c.id});
  const base={mode:'relative',durationDays:30,allowOverdue:true,progressSync:false,orderedStages:true};
- for(const config of [{...base,progressSync:true},{...base,mode:'recurring',repeatCredit:false,repeatPoints:false},{mode:'fixed',start:'2020-01-01',end:'2020-01-02',progressSync:false,orderedStages:true}]){const id=await definition(f,[c.id],config);await cmd(api,{action:'assign',definitionId:id,employeeId:f.e.id},400);}
+ for(const config of [{...base,mode:'recurring',repeatCredit:false,repeatPoints:false},{mode:'fixed',start:'2020-01-01',end:'2020-01-02',progressSync:false,orderedStages:true}]){const id=await definition(f,[c.id],config);await cmd(api,{action:'assign',definitionId:id,employeeId:f.e.id},400);}
  const id=await definition(f,[c.id]);act('hr');await cmd(api,{action:'assign',definitionId:id,employeeId:f.other.id},403);
  const revision=(await get()).revision;await definition(f,[c.id]);await cmd(api,{action:'assign',definitionId:id,employeeId:f.e.id},409,revision);
  assert.ok(!(await get()).records.some(r=>r.kind==='learningAssignment'||r.kind==='enrollment'));
