@@ -1,6 +1,6 @@
 # 已有实现与产品需求对应
 
-生成来源：`Scope_Register.json → p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-08T17:59:58.024657+00:00。
+生成来源：`Scope_Register.json → p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-08T18:10:01.772078+00:00。
 
 对应当前源码静态核对；可复用是技术候选，不是当前测试或业务验收通过。历史测试只在原Verification标注的testedSourceCommit及适用范围有效，本轮未复跑。产品源码未修改。
 
@@ -189,6 +189,7 @@
 | BP-I/BP-I-REQ-13 | 文化活动、员工圈、勋章与奖励；[P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 原站局部字段/展示配置与受限需求，未签署 | [P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md)；[Scope_Register.json](../../docs/delivery/Scope_Register.json) | M21无独立实现；与M33福利账户/M05标签目录的共享关系未确认，不能以员工自助入口替代业务闭环。 |
 | BP-I/BP-I-REQ-14 | 填报活动、方案、工单与审批；[P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 原站局部结构事实和受限需求，未签署 | [P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md)；[Scope_Register.json](../../docs/delivery/Scope_Register.json) | M08无独立实现；与M07薪资填报/M19审批关系待源契约，不能把任一动态表单当通用业务提交引擎。 |
 | BP-I/BP-I-REQ-15 | 翻译资源、语言列与版本记录；[P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 原站局部结构证据和受限需求，未签署 | [P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md)；[Scope_Register.json](../../docs/delivery/Scope_Register.json) | M47按资源本地化事实归BP-I，非待定业务归属；独立工作台未实现，未以现有中文界面/locale日期格式代替多语言资源管理。 |
+| BP-I/BP-I-REQ-16 | HRBP聚合工作台与经理团队指标；[P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 原站局部结构证据和受限需求，未签署 | [P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md)；[work-inbox.ts](../../lib/hris/work-inbox.ts)；[reports.ts](../../lib/hris/reports.ts)；[route.ts](../../app/api/self-service/route.ts) | M04/M40独立工作台未实现，现有work-inbox/self-service/reports可复用局部授权查询；M40当前已局部P级，历史N级限制不再适用，HRBP安全取证改精确标签检测，不读正文容器。；员工审批生效、员工未离职、部门启用三个维度不能统一为active；具体看板还需字段及指标筛选。 |
 
 ## 历史验证适用版本索引
 
