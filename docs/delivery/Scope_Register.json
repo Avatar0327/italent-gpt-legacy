@@ -2223,7 +2223,8 @@
         ],
         "navigationEvidence": "BC-NAV-20260908",
         "pageRefs": [
-          "BC-P1C-M19"
+          "BC-P1C-M19",
+          "BC-I10"
         ],
         "fieldRefs": [
           "BC-P1C-M19-F001",
@@ -2255,11 +2256,12 @@
         },
         "coverage": {
           "facts": [
-            "BC-P1C-M19"
+            "BC-P1C-M19",
+            "BC-I10"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "管理员委托、复杂条件分支及其他模块待办汇集；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+          "unexplored": "管理员委托、复杂条件分支及其他模块待办汇集；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证；一键审批只见按钮未验证；干预/撤销对业务对象回滚、生效后补偿、委托权限/审计完整性未知。D7固定两级不包含这些能力，原站管理员说明不自动变为本项目授权",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；角色投影、指标分母、同步/重试及外部契约",
           "accepted": false
         }
@@ -2416,7 +2418,8 @@
         ],
         "navigationEvidence": "BC-NAV-20260908",
         "pageRefs": [
-          "BC-P1C-M22"
+          "BC-P1C-M22",
+          "BC-I11"
         ],
         "fieldRefs": [
           "BC-P1C-M22-F001",
@@ -2425,7 +2428,11 @@
           "BC-P1C-M22-F004",
           "BC-P1C-M22-F005",
           "BC-P1C-M22-F006",
-          "BC-P1C-M22-F007"
+          "BC-P1C-M22-F007",
+          "BC-I11-F001",
+          "BC-I11-F002",
+          "BC-I11-F003",
+          "BC-I11-F004"
         ],
         "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M22",
@@ -2444,11 +2451,12 @@
         },
         "coverage": {
           "facts": [
-            "BC-P1C-M22"
+            "BC-P1C-M22",
+            "BC-I11"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "认证、签署、印章、场景设置；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+          "unexplored": "认证、签署、印章、场景设置；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证；未读实际个人信息/映射当前选中字段/下载或认证。字段映射不证明认证成功、签署主体权限、印章授权、证书验证或法律效力；回执/撤销/拒签/到期重试未核实",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；角色投影、指标分母、同步/重试及外部契约",
           "accepted": false
         }
@@ -3137,12 +3145,26 @@
         ],
         "navigationEvidence": "BC-NAV-20260908",
         "pageRefs": [
-          "BC-P1C-M29"
+          "BC-P1C-M29",
+          "BC-I14",
+          "BC-I15"
         ],
         "fieldRefs": [
           "BC-P1C-M29-F001",
           "BC-P1C-M29-F002",
-          "BC-P1C-M29-F003"
+          "BC-P1C-M29-F003",
+          "BC-I14-F001",
+          "BC-I14-F002",
+          "BC-I14-F003",
+          "BC-I14-F004",
+          "BC-I14-F005",
+          "BC-I14-F006",
+          "BC-I14-F007",
+          "BC-I14-F008",
+          "BC-I14-F009",
+          "BC-I15-F001",
+          "BC-I15-F002",
+          "BC-I15-F003"
         ],
         "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M29",
@@ -3161,11 +3183,13 @@
         },
         "coverage": {
           "facts": [
-            "BC-P1C-M29"
+            "BC-P1C-M29",
+            "BC-I14",
+            "BC-I15"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "匿名模式、完整调查报告与行动计划；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+          "unexplored": "匿名模式、完整调查报告与行动计划；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证；通信记录新旧目录保留，不能混用；通知渠道/可见性、匿名策略、问卷配置及行动计划闭环未核实；题型/匿名/必答/跳题/逻辑校验与报告联动未从表头推定，未读取答卷或个人结果",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；角色投影、指标分母、同步/重试及外部契约",
           "accepted": false
         }
@@ -3518,7 +3542,9 @@
         "pageRefs": [
           "BC-I01",
           "BC-I02",
-          "BC-P1C-M35"
+          "BC-P1C-M35",
+          "BC-I12",
+          "BC-I13"
         ],
         "fieldRefs": [
           "BC-I01-F001",
@@ -3535,7 +3561,18 @@
           "BC-P1C-M35-F008",
           "BC-P1C-M35-F009",
           "BC-P1C-M35-F010",
-          "BC-P1C-M35-F011"
+          "BC-P1C-M35-F011",
+          "BC-I12-F001",
+          "BC-I12-F002",
+          "BC-I12-F003",
+          "BC-I12-F004",
+          "BC-I12-F005",
+          "BC-I12-F006",
+          "BC-I13-F001",
+          "BC-I13-F002",
+          "BC-I13-F003",
+          "BC-I13-F004",
+          "BC-I13-F005"
         ],
         "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M35",
@@ -3556,11 +3593,13 @@
           "facts": [
             "BC-I01",
             "BC-I02",
-            "BC-P1C-M35"
+            "BC-P1C-M35",
+            "BC-I12",
+            "BC-I13"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "任务、配置、规则、映射、开放应用、接口；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+          "unexplored": "任务、配置、规则、映射、开放应用、接口；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证；未打开连接器账户配置或测试连接；推送顺序/失败重放/停用删除结果、反向同步权威来源、映射版本/重聘身份冲突未知；原站任务存在不证明项目DRY_RUN_ONLY可执行；未验证名称/编码唯一性、范围枚举/默认、高级配置条件字段或外部删除语义；界面标记不等于服务端验证",
           "next": "补字段属性、权限线索和流程说明；角色投影、指标分母、同步/重试及外部契约",
           "accepted": false
         }
@@ -3771,14 +3810,19 @@
         "navigationEvidence": "BC-NAV-20260908",
         "pageRefs": [
           "BC-P1C-M39",
-          "BC-P1C-M39-02"
+          "BC-P1C-M39-02",
+          "BC-I16"
         ],
         "fieldRefs": [
           "BC-P1C-M39-02-F001",
           "BC-P1C-M39-02-F002",
           "BC-P1C-M39-02-F003",
           "BC-P1C-M39-02-F004",
-          "BC-P1C-M39-02-F005"
+          "BC-P1C-M39-02-F005",
+          "BC-I16-F001",
+          "BC-I16-F002",
+          "BC-I16-F003",
+          "BC-I16-F004"
         ],
         "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M39",
@@ -3798,11 +3842,12 @@
         "coverage": {
           "facts": [
             "BC-P1C-M39",
-            "BC-P1C-M39-02"
+            "BC-P1C-M39-02",
+            "BC-I16"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "预定、会议、会议室、日志；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前正文未建立完整字段对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标规则；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+          "unexplored": "预定、会议、会议室、日志；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前正文未建立完整字段对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标规则；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证；多时区开启是当前租户提示，不等于项目默认；不受使用时间限制不等于可重叠预约或无会议室权限。未读取具体次数/分值/规则选择，取消宽限、自动释放、重叠优先和违约解除未知",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；角色投影、指标分母、同步/重试及外部契约",
           "accepted": false
         }
@@ -5645,7 +5690,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-08T17:44:36.829263+00:00",
+    "updatedAt": "2026-09-08T17:53:33.392201+00:00",
     "authority": "本轮用户指令；Scope_Register.json是唯一范围与验收事实源；P1附属条目不增加48组或59项分母",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -20504,7 +20549,7 @@
         "visibleStates": "",
         "sourceStatement": "实际标题：订阅管理；表头已取得；筛选/字段标签：所属应用、订阅类型；当前已授权账号仅提取标签，不读取行值",
         "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
-        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行；2026-09-08后续复核：转交订阅、屏蔽订阅仅见按钮，不执行",
         "flowRef": [],
         "observedAt": "2026-09-08T16:05:39.873Z",
         "observedApplication": "报表",
@@ -20777,7 +20822,8 @@
         "flowRef": [],
         "observedAt": "2026-09-08T16:06:35.971Z",
         "observedApplication": "会议管理",
-        "navigationLimit": null
+        "navigationLimit": null,
+        "limitationResolution": "BC-I16于2026-09-08后续补到配置说明；保留早期到达记录，不视为当前仍不可读"
       },
       {
         "id": "BC-P1C-M40",
@@ -28545,6 +28591,506 @@
         "unknown": "未读取企业账户/人员/余额或执行回收；离职同步时点、积分有效期/冻结余额、异常定义、退回条件/负数及重复处理未知，不能当作现金或薪资扣款规则",
         "operations": "仅账户规则标签，不更改开关或选择账户",
         "flowRef": []
+      },
+      {
+        "id": "BC-I10",
+        "moduleId": "M19",
+        "path": "审批中心 > 流程管理 > 页面帮助说明",
+        "evidenceRef": "BC-I10",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:45:46.995222+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [],
+        "visibleStates": "",
+        "sourceStatement": "页面说明催办发送消息给当前审批人；转交调整当前节点审批人；撤销取消已发流程及审批人待办，已完成审批不能撤销；流程干预可转其他节点并指定执行人。原列表表头与BC-P1C-M19一致不重复采集",
+        "unknown": "一键审批只见按钮未验证；干预/撤销对业务对象回滚、生效后补偿、委托权限/审计完整性未知。D7固定两级不包含这些能力，原站管理员说明不自动变为本项目授权",
+        "operations": "催办、转交、撤销、一键审批、流程干预说明、导出仅见入口；未执行",
+        "flowRef": []
+      },
+      {
+        "id": "BC-I11",
+        "moduleId": "M22",
+        "path": "电子签 > 设置 > 更多设置",
+        "evidenceRef": "BC-I11",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:47:45.697512+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-I11-F001",
+            "label": "姓名",
+            "context": "认证字段映射/下载配置",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I11"
+          },
+          {
+            "id": "BC-I11-F002",
+            "label": "手机号",
+            "context": "认证字段映射/下载配置",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I11"
+          },
+          {
+            "id": "BC-I11-F003",
+            "label": "证件号",
+            "context": "认证字段映射/下载配置",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I11"
+          },
+          {
+            "id": "BC-I11-F004",
+            "label": "下载文件设置",
+            "context": "认证字段映射/下载配置",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": [
+              "下载文件中包含签约存证页",
+              "下载文件中只包含签署文件，不包含签约存证页"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-I11"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "员工认证姓名/手机号/证件号三要素支持映射组织员工的员工信息对象字段；下载设置决定签署人文件是否含签约存证页（电子协议附页）。首次切入空白无授权提示，经首页一次恢复成功读到配置；下载单选明确含存证页或仅签署文件不含存证页。",
+        "unknown": "未读实际个人信息/映射当前选中字段/下载或认证。字段映射不证明认证成功、签署主体权限、印章授权、证书验证或法律效力；回执/撤销/拒签/到期重试未核实",
+        "operations": "员工认证字段映射、下载设置仅查看，不进行认证/下载/签署",
+        "flowRef": []
+      },
+      {
+        "id": "BC-I12",
+        "moduleId": "M35",
+        "path": "主数据同步 > 规则设置 > 同步规则",
+        "evidenceRef": "BC-I12",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:48:13.042119+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-I12-F001",
+            "label": "规则名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I12"
+          },
+          {
+            "id": "BC-I12-F002",
+            "label": "规则编码",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I12"
+          },
+          {
+            "id": "BC-I12-F003",
+            "label": "同步范围",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I12"
+          },
+          {
+            "id": "BC-I12-F004",
+            "label": "部门",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I12"
+          },
+          {
+            "id": "BC-I12-F005",
+            "label": "是否删除停用部门",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I12"
+          },
+          {
+            "id": "BC-I12-F006",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I12"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "同步规则显式包括是否删除停用部门；外围配置区分连接器、反向同步、自研基本参数/接口元数据、注册系统/推送规则/推送记录。仅读表头和导航，不读取连接参数/密钥/个人映射值",
+        "unknown": "未打开连接器账户配置或测试连接；推送顺序/失败重放/停用删除结果、反向同步权威来源、映射版本/重聘身份冲突未知；原站任务存在不证明项目DRY_RUN_ONLY可执行",
+        "operations": "同步规则及字段/码表/组织信息/组织相关/员工映射导航；未执行同步",
+        "flowRef": []
+      },
+      {
+        "id": "BC-I13",
+        "moduleId": "M35",
+        "path": "主数据同步 > 同步规则 > 新建空表",
+        "evidenceRef": "BC-I13",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:48:56.859663+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-I13-F001",
+            "label": "规则名称",
+            "context": "新增空表",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I13",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-I13-F002",
+            "label": "规则编码",
+            "context": "新增空表",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I13",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-I13-F003",
+            "label": "同步范围",
+            "context": "新增空表",
+            "storageType": null,
+            "required": null,
+            "default": "新建空表初始显示“同步全部”（不是已保存规则或项目默认）",
+            "options": [
+              "同步全部",
+              "同步选中的部门",
+              "不同步选中的部门"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-I13",
+            "uiRequired": true,
+            "controlType": "只读文本式下拉选择器"
+          },
+          {
+            "id": "BC-I13-F004",
+            "label": "是否开启高级配置",
+            "context": "新增空表",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I13",
+            "uiRequired": false
+          },
+          {
+            "id": "BC-I13-F005",
+            "label": "是否删除停用部门",
+            "context": "新增空表",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I13",
+            "uiRequired": false
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "前三项有界面必填图标，名称/编码/范围可见text控件，原生maxlength未声明；高级配置与删除停用部门单独字段；同步范围空表初显同步全部，下拉三个选项：同步全部、同步选中的部门、不同步选中的部门；未选择部门，已取消空表。",
+        "unknown": "未验证名称/编码唯一性、高级范围子项、高级配置条件字段或外部删除语义；界面标记不等于服务端验证",
+        "operations": "空表仅读；未保存/同步",
+        "flowRef": []
+      },
+      {
+        "id": "BC-I14",
+        "moduleId": "M29",
+        "path": "员工调查 > 设置 > 通知模板",
+        "evidenceRef": "BC-I14",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:50:34.118380+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-I14-F001",
+            "label": "模板名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I14"
+          },
+          {
+            "id": "BC-I14-F002",
+            "label": "模板类型",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I14"
+          },
+          {
+            "id": "BC-I14-F003",
+            "label": "状态",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I14"
+          },
+          {
+            "id": "BC-I14-F004",
+            "label": "默认模板",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I14"
+          },
+          {
+            "id": "BC-I14-F005",
+            "label": "创建人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I14"
+          },
+          {
+            "id": "BC-I14-F006",
+            "label": "创建时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I14"
+          },
+          {
+            "id": "BC-I14-F007",
+            "label": "最近修改人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I14"
+          },
+          {
+            "id": "BC-I14-F008",
+            "label": "最近修改时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I14"
+          },
+          {
+            "id": "BC-I14-F009",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I14"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "通知模板默认标记和状态分列；进度/数据/对比/部门分析是独立入口；未读取模板收件人或通信正文",
+        "unknown": "通信记录新旧目录保留，不能混用；通知渠道/可见性、匿名策略、问卷配置及行动计划闭环未核实",
+        "operations": "通知模板、通信记录/旧通信记录、问卷模板、选项导航；不发送通知",
+        "flowRef": []
+      },
+      {
+        "id": "BC-I15",
+        "moduleId": "M29",
+        "path": "员工调查 > 设置 > 问卷模板",
+        "evidenceRef": "BC-I15",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:50:58.253624+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-I15-F001",
+            "label": "问卷模板名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I15"
+          },
+          {
+            "id": "BC-I15-F002",
+            "label": "创建人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I15"
+          },
+          {
+            "id": "BC-I15-F003",
+            "label": "创建时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I15"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "模板有独立列表及创建信息，与通知模板不同；当前只取得表头",
+        "unknown": "题型/匿名/必答/跳题/逻辑校验与报告联动未从表头推定，未读取答卷或个人结果",
+        "operations": "只读列表未打开问卷正文",
+        "flowRef": []
+      },
+      {
+        "id": "BC-I16",
+        "moduleId": "M39",
+        "path": "会议管理 > 会议设置 > 基本/高级设置",
+        "evidenceRef": "BC-I16",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:51:24.566897+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-I16-F001",
+            "label": "会议室使用时间",
+            "context": "配置标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I16"
+          },
+          {
+            "id": "BC-I16-F002",
+            "label": "会议信誉积分",
+            "context": "配置标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I16"
+          },
+          {
+            "id": "BC-I16-F003",
+            "label": "违约周期",
+            "context": "配置标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I16"
+          },
+          {
+            "id": "BC-I16-F004",
+            "label": "允许违约",
+            "context": "配置标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I16"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "页面提示当前企业已开启多时区，会议室使用时间不受限制；另有信誉积分和违约规则的周期/次数配置。原BC-P1C-M39仅到达，现已读设置标签",
+        "unknown": "多时区开启是当前租户提示，不等于项目默认；不受使用时间限制不等于可重叠预约或无会议室权限。未读取具体次数/分值/规则选择，取消宽限、自动释放、重叠优先和违约解除未知",
+        "operations": "只读设置说明，不预约/取消会议或修改违约分",
+        "flowRef": []
       }
     ],
     "humanAcceptancePrerequisite": false,
@@ -28952,7 +29498,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-08T17:24:14.173222+00:00",
+    "updatedAt": "2026-09-08T17:53:33.392201+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -30169,7 +30715,7 @@
         "contracts": [
           {
             "object": "员工自助/统一待办",
-            "fields": "self-service按当前employeeId投影；任务引用具体原记录；payslipCount仅已发布批次；返回revision",
+            "fields": "self-service按当前employeeId投影；任务引用具体原记录；payslipCount仅已发布批次；返回revision；自助任务列表含受当前权限约束的作业批阅任务，不仅本人待办；请求进度是本人关联的变更/假勤/培训/异议投影，payslipCount按条非金额。",
             "roles": "先visibleState/visibleDevelopment，再按本人筛选；审批入口可见不能扩大记录办理权限",
             "lifecycle": "原模块取消/退出/离职/撤权/旧版本会改变是否可办；待办不是独立业务状态机",
             "actions": "本人档案、任务入口、申请进度、原模块办理",
@@ -30178,14 +30724,14 @@
               "lib/hris/work-inbox.ts"
             ],
             "acceptance": "已取消任务不继续展示可办理；待审目标调整阻断自评入口；本人申诉已批准待发布应显示awaiting_publish；原模块撤权即拒绝直接URL办理",
-            "gap": "日程/日报/完整OKR/消息发送未实现；独立M43任务不等于当前聚合待办",
+            "gap": "日程/日报/完整OKR/消息发送未实现；独立M43任务不等于当前聚合待办；直接办理接口仍需再验版本/角色，页面任务消失不等于原业务被自动取消；不同分支对日期/离职检查不完全同构，不能以聚合页作唯一业务判定。",
             "classification": "本项目既有实现静态事实；转为产品要求待评审",
             "accepted": false,
             "id": "BP-I-REQ-01"
           },
           {
             "object": "报表与指标分母",
-            "fields": "reportQuery dataset枚举、日期合法from≤to、search≤100；workforce列按viewEmail/viewLevel；返回asOf/revision；GET每页50、page1–10000；POST导出≤10000行且审计同事务，当前没有大规模流式引擎",
+            "fields": "reportQuery dataset枚举、日期合法from≤to、search≤100；workforce列按viewEmail/viewLevel；返回asOf/revision；GET每页50、page1–10000；POST导出≤10000行且审计同事务，当前没有大规模流式引擎；from/to仅在contractOperations按endedOn优先于end、attendance按班次日期、instructorSchedule按场次开始北京业务日生效，其他数据集当前未应用日期筛选，不能宣称通用时间过滤。",
             "roles": "每个dataset有角色及当前组织范围；薪酬报表仅专岗；导出与页面读取不是同一权限承诺",
             "lifecycle": "正式绩效仅最新已发布版本；学习实例进度/成绩分别投影；人才九宫格取发布快照",
             "actions": "查询、分页、原有审计导出（本轮不执行导出）",
@@ -30194,37 +30740,37 @@
               "app/api/reports/route.ts"
             ],
             "acceptance": "无字段权时表头/单元格不出现该字段；学习缺分保持null；绩效旧版本不重复计为当前；合同覆盖登记不能证明电子签法律有效或实际在岗；旧revision导出拒绝，审计失败不得返回CSV（本轮未执行导出）",
-            "gap": "设计器/大规模查询/历史组织快照未就绪；每数据集必须独立定义分母，不能统一套人员数",
+            "gap": "设计器/大规模查询/历史组织快照未就绪；每数据集必须独立定义分母，不能统一套人员数；通用日期控件与各数据集实际过滤口径需对齐；GET先生成全量可见结果再切50行，不是数据库分页或历史时点查询；asOf是生成时刻不是任意历史查询参数。",
             "classification": "本项目既有实现静态事实；转为产品要求待评审",
             "accepted": false,
             "id": "BP-I-REQ-02"
           },
           {
             "object": "实名调查/问卷与360共用模板边界",
-            "fields": "问卷1–20题；量表1–5，单选2–8项不重复；开放名单快照、完整回答；当前答案非匿名",
+            "fields": "问卷1–20题；量表1–5，单选2–8项不重复；开放名单快照、完整回答；当前答案非匿名；同模板code新建递增version，不是模板代码不可重复；调查轮次冻结题目/版本，名单在open时按当前范围在职员工冻结；量表均值保留两位，choice选项索引0起，rating取1–5。",
             "roles": "HR/管理员发布，名单内本人在窗口填报；当前角色可见性单独核对",
-            "lifecycle": "模板发布版本→round draft/open/closed；submitted/withdrawn答卷；统计仅有效提交",
+            "lifecycle": "模板发布版本→round draft/open/closed；submitted/withdrawn答卷；统计仅有效提交；开放期重交复用同答卷ID覆盖答案，撤回后再提交也复用；不承诺保留每次答卷历史。管理员可在开始日前open但员工须在日期内填；close可提前手动关闭。",
             "actions": "发布名单、答卷/撤回、关闭、查看统计",
             "codeRefs": [
               "lib/hris/surveys.ts",
               "lib/hris/feedback.ts"
             ],
             "acceptance": "单选越界/缺题拒绝；撤回不计有效回应；未开放/超日期不能提交；实名不能在文案宣传匿名；360分组压制另按阈值",
-            "gap": "员工调查/北森问卷/问卷调查三组不合并，匿名、复杂题型、报告行动计划未完成",
+            "gap": "员工调查/北森问卷/问卷调查三组不合并，匿名、复杂题型、报告行动计划未完成；HR可看实名原答卷，未实现小样本压制或匿名身份隔离；模板归档不自动终止已创建轮次，新增/离职/调动后名单和答卷统计影响需分别评审。",
             "classification": "本项目既有实现静态事实；转为产品要求待评审",
             "accepted": false,
             "id": "BP-I-REQ-03"
           },
           {
             "object": "主数据同步契约预检",
-            "fields": "eventId/sourceId/externalEmployeeId 1–100；sequence正安全整数；occurredAt带时区；mappingVersion正整数；profile严格对象；映射命名空间tenant+source",
+            "fields": "eventId/sourceId/externalEmployeeId 1–100；sequence正安全整数；occurredAt带时区；mappingVersion正整数；profile严格对象；映射命名空间tenant+source；profile code/name1–100、job≤200、email空或合法≤254；occurredAt归一UTC再递归按键排序计算SHA-256。",
             "roles": "现有纯函数不访问网络、持久化或授予账号；实际同步权限尚未有接口",
-            "lifecycle": "ready/duplicate/conflict/gap/stale/mapping_required/rejected；ready仍DRY_RUN_ONLY",
+            "lifecycle": "ready/duplicate/conflict/gap/stale/mapping_required/rejected；ready仍DRY_RUN_ONLY；同命名空间重复回执/非法游标视conflict；无回执旧sequence为stale；映射版本在回执判断前校验。",
             "actions": "纯输入预检；实际原站任务/连接测试/一键配置不执行",
             "codeRefs": [
               "lib/hris/integration-preflight.ts"
             ],
-            "acceptance": "相同eventId同内容为duplicate；内容不同conflict；缺前序gap；映射缺失/多义不生成可提交结论；ready不得宣称已更新员工",
+            "acceptance": "相同eventId同内容为duplicate；内容不同conflict；缺前序gap；映射缺失/多义不生成可提交结论；ready不得宣称已更新员工；不同mappingVersion先返回mapping_required而非直接重放旧回执；attempt仅1–6，408/429/5xx或无HTTP状态建议重试，其余诊断；延迟max(有效Retry-After上限3600,指数上限300)，仍不执行调度。",
             "gap": "鉴权、密钥托管、真实endpoint、调度、事务回执和队列均未实现；重试函数不是后台重试服务",
             "classification": "本项目既有实现静态事实；转为产品要求待评审",
             "accepted": false,
@@ -30259,6 +30805,107 @@
             "acceptance": "待补任务规则后检验负责人和参与人可见/可写区别、历史进展是否追加保留、截止/优先级与完成定义；当前不编造通过预期",
             "gap": "M43独立任务未实现，现有work-inbox只是其他模块办理入口汇总，不替代该对象",
             "classification": "原站局部字段事实及受限产品需求；无独立实现",
+            "accepted": false
+          },
+          {
+            "id": "BP-I-REQ-07",
+            "object": "审批中心流程干预与待办同步",
+            "fields": "流程标题/类型/发起人/当前审批人/状态/催办状态；转交目标、干预节点、理由和操作记录待补完整字段/校验。",
+            "roles": "流程管理员、节点审批人、委托人/代理人分开；发起人/本人/审批贡献者隔离不能因转交绕过；当前D1–D7固定两级继续。",
+            "lifecycle": "BC-I10撤销在未完成审批时取消流程及待办；转交调当前节点审批人，干预可换节点及人；业务撤销与审批完成/生效是不同事件，补偿未核实。",
+            "actions": "查看流程，催办/转交/撤销/干预/一键审批仅原站入口；本轮无操作。现有inbox仅读可办原记录，无通用流程引擎。",
+            "codeRefs": [
+              "docs/P1_Source_Observations_20260907.md",
+              "lib/hris/work-inbox.ts",
+              "lib/hris/authorization.ts",
+              "lib/hris/model.ts"
+            ],
+            "acceptance": "待权限/状态明确后覆盖旧审批人直接URL拒绝、待办失效、撤销已完成拒绝、已生效业务不被流程撤销静默改写、独立审批约束在委托/转交下保持；消息发送非本轮范围。",
+            "gap": "M19完整通用流程尚无独立实现；不得把原站干预当成D7新增规则已批准，通用委托和会签分支保留原范围待设计。",
+            "classification": "原站帮助证据和本项目差异候选；未签署",
+            "accepted": false
+          },
+          {
+            "id": "BP-I-REQ-08",
+            "object": "电子签身份映射、场景与签署证据",
+            "fields": "员工认证姓名/手机/证件字段引用组织员工；签署场景、企业认证、印章、签署记录、存证附页是独立对象/设置，模板版本/签约主体/回执ID待补证。",
+            "roles": "企业认证管理、印章授权、员工本人认证、发起/签署/文件下载分别定义；当前独立合同登记无权替用户签署或认证。",
+            "lifecycle": "认证、签署发起/进行/拒绝/撤销/到期/完成及存证状态尚未完整取得；不能从字段映射或合同signed登记推导真实签署完成。",
+            "actions": "只读更多设置及既有签署场景表头；不认证/发签/盖章/下载。",
+            "codeRefs": [
+              "docs/P1_Source_Observations_20260907.md",
+              "lib/hris/workforce.ts",
+              "docs/delivery/Integration_Source_Gaps.md"
+            ],
+            "acceptance": "取得供应商回执/模板/身份契约后覆盖三要素缺失、撤权、重复/乱序回执、拒签/失效、档案状态与实际签署证据一致；人工签署依据登记明确区别外部已验证回执。",
+            "gap": "M22真实电子签接口未实现；附页是否包含只是下载选项，不等于法律有效证明；需业务/接口验证，不本轮联网调用服务。",
+            "classification": "原站局部配置证据及现有合同登记差异，未签署",
+            "accepted": false
+          },
+          {
+            "id": "BP-I-REQ-09",
+            "object": "调查项目、通知模板与行动计划",
+            "fields": "M29项目、问卷、报告、行动计划；模板名称/类型/状态/默认标记；M30/M31另有独立问卷管理/分类，不合并实例ID和状态。",
+            "roles": "调查管理、被调查人、报告接收和行动负责人分别定义；目前代码实名HR可读答卷，原站匿名能力待配置证据，不能宣传匿名。",
+            "lifecycle": "调查发放/回收/统计/报告/行动跟踪各自状态待补；通知模板和通信记录新旧目录不是调查完成证据。",
+            "actions": "通知/问卷模板只读；现有surveys可复用基本实名量表与单选，复杂题型/分析/行动无实现覆盖。",
+            "codeRefs": [
+              "lib/hris/surveys.ts",
+              "docs/P1_Source_Observations_20260907.md"
+            ],
+            "acceptance": "明确匿名/阈值与权限后检验小样本部门分析、撤回答卷、模板改版、重复通知/失败恢复和行动关闭依据；原站未观察的匿名实现不由代码推断。",
+            "gap": "三个问卷应用保留原48组各自证据，缺少共同ID/模板互通契约；现有同code版本及重交覆盖为本项目实现候选，不等于全部原站问卷规则。",
+            "classification": "部分静态实现/原站配置输入与逐组受限要求，未签署",
+            "accepted": false
+          },
+          {
+            "id": "BP-I-REQ-10",
+            "object": "会议室、预约、多时区与违约管理",
+            "fields": "地区/会议室资源、预约起止/时区、使用时间、信誉积分、违约周期/允许次数；资源字段及必填仍以原表头为限。",
+            "roles": "资源管理员、预约者、参与者、违约处理者分别核实；与招聘面试排期/培训场地冲突不默认共享数据库。",
+            "lifecycle": "预约/修改/取消/完成、签到或自动释放、违约累计/解除未验证；BC-I16当前租户多时区使使用时间限制不适用，不能外推所有租户。",
+            "actions": "会议预定/我的会议/会议设置/违约用户/地区会议室；只读设置，不预约或发送邀请。",
+            "codeRefs": [
+              "docs/P1_Source_Observations_20260907.md",
+              "lib/hris/interview-schedule.ts",
+              "lib/hris/training-sessions.ts"
+            ],
+            "acceptance": "先定义资源、时区及冲突算法后覆盖跨时区/夏令时/相邻时段/取消与自动释放、重复预定、违约阈值边界及管理员例外；现有内部排期不能代替会议室实际预订。",
+            "gap": "M39会议应用无独立实现。招聘/培训地点字符串不是会议资源ID，跨包资源共享与外部会议系统需接口契约，不能声明无冲突。",
+            "classification": "原站局部设置/资源证据及受限需求，未签署",
+            "accepted": false
+          },
+          {
+            "id": "BP-I-REQ-11",
+            "object": "报表订阅、快照、转交与屏蔽",
+            "fields": "订阅内容/所属应用/类型/订阅人/方式/快照数据/频率/发送时刻/开始结束/状态/权限类型/来源；BC-P1C-M32原表头当前复核一致，新增操作标签转交订阅/屏蔽订阅可见。",
+            "roles": "订阅创建者、接收者、转交管理员、数据集角色/字段范围需分别定义；现有CSV导出审计不等于订阅发送权限。",
+            "lifecycle": "订阅有效期/状态与发送历史分开；快照/实时数据、转交是否保留历史/撤原接收者、屏蔽和过期处理未知。",
+            "actions": "订阅管理、发现中心、转交/屏蔽仅入口；本轮不订阅、不发送、不导出。",
+            "codeRefs": [
+              "docs/P1_Source_Observations_20260907.md",
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "acceptance": "先明确快照与发送时权限复核后，覆盖原接收人撤权、跨角色转交、敏感字段隐藏、已过期/屏蔽停止、发送失败重试去重、时区与历史附件撤权边界；目前不声称自动发送已实现。",
+            "gap": "M32订阅/设计器无独立实现；现有按当前范围查询可复用，真实发送调度与接收方数据授权需补齐。",
+            "classification": "原站局部表头/操作证据与本项目差异候选，未签署",
+            "accepted": false
+          },
+          {
+            "id": "BP-I-REQ-12",
+            "object": "企业标签库与人才标签应用",
+            "fields": "M05企业/北森标签目录，人才盘点应用开关、标签范围含下级；M41员工人才标签归BP-C；标签ID/层级/版本/来源和关系实例需分开，不用名称合并。",
+            "roles": "目录维护、标签赋予/撤回、标签筛选、被标记员工可见性分别定义；范围包含下级是标签目录还是组织范围须保留原页语境，不能放大人员权限。",
+            "lifecycle": "目录启停/应用开关/个人标签关系/自动打标与历史快照不同，关闭是否回收存量未核实。",
+            "actions": "企业标签库/北森标签库/标签应用设置仅读，不赋标签或改变应用开关。",
+            "codeRefs": [
+              "docs/P1_Source_Observations_20260907.md",
+              "docs/delivery/Scope_Register.json"
+            ],
+            "acceptance": "取得来源与撤回策略后覆盖同名不同ID、父标签启停、子标签范围、重复打标、跨应用撤权与人才盘点历史快照；不将导航映射归属当数据同步证据。",
+            "gap": "M05独立目录未实现；M41人才标签应用关系待完整规则，已有review.band不能替代可配置标签体系。",
+            "classification": "原站局部配置证据及受限需求，未签署",
             "accepted": false
           }
         ],
@@ -31054,6 +31701,12 @@
         "dependency": "BP-S预算预估→BP-R Offer/BP-F待入职",
         "contract": "BC-S11按部门月份金额强弱校验，与组织人数编制/招聘headcount分母不同；保存/提交时机、重复人员去重、占用释放/并发须明确，不能由现有人数控制宣称已实现预算。",
         "evidence": "BC-S11；lib/hris/recruitment.ts、model.ts"
+      },
+      {
+        "term": "停用、删除与反向同步的权威来源",
+        "dependency": "BP-F组织/员工→BP-I外部同步→其他消费者",
+        "contract": "BC-I12原站同步规则含是否删除停用部门，停用不等于硬删除；反向同步与出站推送应明确权威字段、冲突/回环/重复事件处理。当前预检只映射既有内部ID，不创建账号、组织或执行删除。",
+        "evidence": "BC-I12；lib/hris/integration-preflight.ts"
       }
     ],
     "consistencyReview": {
@@ -31088,7 +31741,11 @@
         "假勤历史任职/支援范围不同于当前组织scope；期间重新冻结替换自身当前快照，工资保存引用时快照，不能承诺全部旧期间独立回放",
         "薪资档案事件联动不是D1批准扩展；团队薪酬动态授权与专岗批次组织权限分离",
         "人力成本金额预算/Offer占用与组织编制/招聘人数分母不同",
-        "佣金规则/业务/过程/结果四类，原站逻辑类型与物理存储分列；福利积分不借用学分/工资金额规则"
+        "佣金规则/业务/过程/结果四类，原站逻辑类型与物理存储分列；福利积分不借用学分/工资金额规则",
+        "审批转交/撤销/干预为原站能力，不扩D7固定两级；待办失效不等于业务数据回滚",
+        "电子签认证字段映射/存证附页不等于认证或签署成功，人工合同signed与回执验证分开",
+        "日期参数只在部分报表有实际过滤，asOf仅生成时刻；订阅转交需独立字段/接收权限",
+        "会议多时区使用时间例外不是无限预约；内部排期地点字符串不等于会议资源"
       ],
       "remaining": "继续经理看板指标/组织健康正文有限替代，其他空表控件属性及帮助；原站配置不等于默认/产品批准；完成全部规格引用与异常图的一致性审查"
     },
