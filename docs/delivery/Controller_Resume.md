@@ -15,7 +15,7 @@
 实际源码、测试、部署、未提交变更与运行状态统一以[当前检查点](../Execution_Checkpoint.md)为准，不再重复维护多个“当前”段落。
 
 - 优先级：组织员工→干部人才→学习→绩效→招聘→假勤→薪酬→自助/报表/集成；保留全量48组。
-- 当前批次：从组织员工继续，F-FIELD-EXIT → C-LIFECYCLE-REVIEW → L-LIFECYCLE-REVIEW；精确状态及下一步以Module_Queue.json为准。v104看板已私有发布，发布不作为停止点。
+- 当前批次：生命周期至恢复撤权闭环已交付v106；正在补齐P1范围登记与子任务四维展示。精确状态及下一步以Module_Queue.json及Execution_Checkpoint.md为准，发布不作为停止点。
 - 依赖、验收条件、下一操作：[Module_Queue.json](Module_Queue.json)。范围四维：[Scope_Register.json](Scope_Register.json)。
 - 原站证据：Cadre_Learning_Source_Gaps.md、Performance_Source_Gaps.md、Recruitment_Source_Gaps.md、Attendance_Source_Gaps.md、Payroll_Source_Gaps.md、Integration_Source_Gaps.md。
 - 绩效完整模板后续：Performance_Template_Design.md。各业务预验收指南保留，不把自动化或发布当人工签署。

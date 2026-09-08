@@ -10,7 +10,10 @@ test('scope retains all 48 modules and every task has a unique link and existing
 });
 test('publication and technical delivery never count as acceptance',()=>{
  const m=aggregate(scope,queue);assert.equal(m.accepted,0);assert.equal(Object.values(m.counts).reduce((a,b)=>a+b,0),m.total);
- assert.equal(m.phases.reduce((a,b)=>a+b.total,0),m.total);assert.equal(m.phases.find(p=>p.id==='P1').percent,null);
+ assert.equal(m.phases.reduce((a,b)=>a+b.total,0),m.total);assert.equal(m.phases.find(p=>p.id==='P1').percent,0);
+ assert.equal(m.phases.find(p=>p.id==='P1').total,8);
+ const empty=structuredClone(scope);empty.acceptanceTasks=empty.acceptanceTasks.filter(t=>t.phase!=='P1');
+ assert.equal(aggregate(empty,queue).phases.find(p=>p.id==='P1').percent,null);
  assert.ok(m.tasks.filter(t=>t.execution?.status.includes('published')).every(t=>t.status==='待验证'));
 });
 test('only all criteria with signed evidence count; adding scope changes denominator',()=>{

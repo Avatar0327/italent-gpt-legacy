@@ -1280,6 +1280,216 @@
         "testing": "本轮合成回归通过，排除Worker旧渲染测试限制",
         "production": "未验收"
       }
+    },
+    {
+      "id": "P1-F-RULES",
+      "phase": "P1",
+      "moduleId": "M01",
+      "title": "组织员工字段与任职规则",
+      "queueRef": "P1-F-RULES",
+      "criteria": [
+        {
+          "id": "P1-F-RULES-AC1",
+          "text": "P1-FIELD-01仅确认入口；复杂跨字段联动、兼岗、再入职和法人变更规则待核实；需补范围与规则确认记录。",
+          "accepted": false
+        }
+      ],
+      "source": "docs/P1_Source_Observations_20260907.md",
+      "dimensions": {
+        "requirements": "历史部分结构已观察；规则核实未完成",
+        "development": "原站盘点任务，不代替业务功能开发",
+        "testing": "文档可追溯，不是功能测试或人工业务验收",
+        "production": "未验收"
+      }
+    },
+    {
+      "id": "P1-C-RULES",
+      "phase": "P1",
+      "moduleId": "M03",
+      "title": "干部人才任用与状态规则",
+      "queueRef": "P1-C-RULES",
+      "criteria": [
+        {
+          "id": "P1-C-RULES-AC1",
+          "text": "既有干部名册及空表已观察；任用类型、期限计算、状态流转及委员会规则待核实；需补范围与规则确认记录。",
+          "accepted": false
+        }
+      ],
+      "source": "docs/delivery/Cadre_Learning_Source_Gaps.md",
+      "dimensions": {
+        "requirements": "历史部分结构已观察；规则核实未完成",
+        "development": "原站盘点任务，不代替业务功能开发",
+        "testing": "文档可追溯，不是功能测试或人工业务验收",
+        "production": "未验收"
+      }
+    },
+    {
+      "id": "P1-L-RULES",
+      "phase": "P1",
+      "moduleId": "M27",
+      "title": "学习完整运营与成绩规则",
+      "queueRef": "P1-L-RULES",
+      "criteria": [
+        {
+          "id": "P1-L-RULES-AC1",
+          "text": "已观察计划和认证结构；复杂循环、共享、多期、费用与成绩规则仍须逐项核实；需补范围与规则确认记录。",
+          "accepted": false
+        }
+      ],
+      "source": "docs/delivery/Cadre_Learning_Source_Gaps.md",
+      "dimensions": {
+        "requirements": "历史部分结构已观察；规则核实未完成",
+        "development": "原站盘点任务，不代替业务功能开发",
+        "testing": "文档可追溯，不是功能测试或人工业务验收",
+        "production": "未验收"
+      }
+    },
+    {
+      "id": "P1-P-RULES",
+      "phase": "P1",
+      "moduleId": "M16",
+      "title": "绩效完整活动与评级规则",
+      "queueRef": "P1-P-RULES",
+      "criteria": [
+        {
+          "id": "P1-P-RULES-AC1",
+          "text": "活动及指标列已观察；完整手工评级、系数、在途更新与组织绩效规则待核实；需补范围与规则确认记录。",
+          "accepted": false
+        }
+      ],
+      "source": "docs/delivery/Performance_Source_Gaps.md",
+      "dimensions": {
+        "requirements": "历史部分结构已观察；规则核实未完成",
+        "development": "原站盘点任务，不代替业务功能开发",
+        "testing": "文档可追溯，不是功能测试或人工业务验收",
+        "production": "未验收"
+      }
+    },
+    {
+      "id": "P1-R-RULES",
+      "phase": "P1",
+      "moduleId": "M12",
+      "title": "招聘完整流转与渠道规则",
+      "queueRef": "P1-R-RULES",
+      "criteria": [
+        {
+          "id": "P1-R-RULES-AC1",
+          "text": "需求、评价及排期空表已观察；渠道、电子签和完整录用提交规则待核实；需补范围与规则确认记录。",
+          "accepted": false
+        }
+      ],
+      "source": "docs/delivery/Recruitment_Source_Gaps.md",
+      "dimensions": {
+        "requirements": "历史部分结构已观察；规则核实未完成",
+        "development": "原站盘点任务，不代替业务功能开发",
+        "testing": "文档可追溯，不是功能测试或人工业务验收",
+        "production": "未验收"
+      }
+    },
+    {
+      "id": "P1-A-RULES",
+      "phase": "P1",
+      "moduleId": "M11",
+      "title": "假勤政策与自动执行规则",
+      "queueRef": "P1-A-RULES",
+      "criteria": [
+        {
+          "id": "P1-A-RULES-AC1",
+          "text": "期间和月报状态结构已观察；跨班、调休、自动结转及企业参数待核实；需补范围与规则确认记录。",
+          "accepted": false
+        }
+      ],
+      "source": "docs/delivery/Attendance_Source_Gaps.md",
+      "dimensions": {
+        "requirements": "历史部分结构已观察；规则核实未完成",
+        "development": "原站盘点任务，不代替业务功能开发",
+        "testing": "文档可追溯，不是功能测试或人工业务验收",
+        "production": "未验收"
+      }
+    },
+    {
+      "id": "P1-S-RULES",
+      "phase": "P1",
+      "moduleId": "M07",
+      "title": "薪资方案与核算边界",
+      "queueRef": "P1-S-RULES",
+      "criteria": [
+        {
+          "id": "P1-S-RULES-AC1",
+          "text": "BC-S01至04结构已观察；薪资组、企业调动核算选择和完整依赖字段待核实；需补范围与规则确认记录。",
+          "accepted": false
+        }
+      ],
+      "source": "docs/delivery/Payroll_Source_Gaps.md",
+      "dimensions": {
+        "requirements": "历史部分结构已观察；规则核实未完成",
+        "development": "原站盘点任务，不代替业务功能开发",
+        "testing": "文档可追溯，不是功能测试或人工业务验收",
+        "production": "未验收"
+      }
+    },
+    {
+      "id": "P1-I-RULES",
+      "phase": "P1",
+      "moduleId": "M35",
+      "title": "集成映射与任务契约",
+      "queueRef": "P1-I-RULES",
+      "criteria": [
+        {
+          "id": "P1-I-RULES-AC1",
+          "text": "BC-I01/02菜单及映射结构已观察；第三方字段、方向、调度与失败重试契约待核实；需补范围与规则确认记录。",
+          "accepted": false
+        }
+      ],
+      "source": "docs/delivery/Integration_Source_Gaps.md",
+      "dimensions": {
+        "requirements": "历史部分结构已观察；规则核实未完成",
+        "development": "原站盘点任务，不代替业务功能开发",
+        "testing": "文档可追溯，不是功能测试或人工业务验收",
+        "production": "未验收"
+      }
+    },
+    {
+      "id": "I-RESTORE-REVOCATIONS",
+      "phase": "P3",
+      "moduleId": "M35",
+      "title": "恢复前备份后撤权对账",
+      "queueRef": "I-RESTORE-REVOCATIONS",
+      "criteria": [
+        {
+          "id": "I-RESTORE-REVOCATIONS-AC1",
+          "text": "隔离恢复对账后原已撤权账户仍拒绝访问；生产可信来源和恢复开放闸门需独立验收",
+          "accepted": false
+        }
+      ],
+      "source": "docs/Recovery_Synthetic_Report.json",
+      "dimensions": {
+        "requirements": "既有Recovery_Rehearsal恢复约束；生产操作流程待确认",
+        "development": "合成单账户对账演练已实现；生产可信撤权源及持久重放未实现",
+        "testing": "本轮14项恢复检查通过，非全业务/云端恢复验收",
+        "production": "未验收"
+      }
+    },
+    {
+      "id": "E-EXIT-TASKS",
+      "phase": "P3",
+      "moduleId": "M48",
+      "title": "离职后问卷和360入口一致性",
+      "queueRef": "E-EXIT-TASKS",
+      "criteria": [
+        {
+          "id": "E-EXIT-TASKS-AC1",
+          "text": "已不具备填报条件的离职员工不显示问卷和360待办，历史授权不因此删除",
+          "accepted": false
+        }
+      ],
+      "source": "tests/self-service-exit-tasks.test.mjs",
+      "dimensions": {
+        "requirements": "复用已有服务端在职填报限制；原站完整自助规则待核实",
+        "development": "自助待办、问卷可填报标记、360入口已修复",
+        "testing": "本轮复现失败后6项关联测试通过",
+        "production": "未验收"
+      }
     }
   ],
   "acceptancePolicy": {
