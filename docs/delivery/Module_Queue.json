@@ -351,12 +351,22 @@
     },
     {
       "id": "PAY-SOURCE",
-      "status": "source-discovery",
+      "status": "partial-evidence-BC-S01-03",
       "dependencies": [
         "A-SOURCE"
       ],
       "acceptance": "薪酬原站可见模块/字段/流程与既有独立编制复核发布对照，税/银行/公式未知规则不臆造",
-      "next": "复用原站登录会话定位薪酬入口，只读盘点，核实下一可实现缺口"
+      "next": "活动空表已读，需关闭验证并记录；原站自动核算、税/支付仍只读后续"
+    },
+    {
+      "id": "PAY-ATTENDANCE",
+      "status": "tested-awaiting-private-publish",
+      "dependencies": [
+        "A-PERIOD",
+        "PAY-SOURCE"
+      ],
+      "acceptance": "冻结期间聚合快照、权限/同月/同人/去重、来源变化阻止提交复核发布，既有金额和已发布历史不重写",
+      "next": "提交204项综合证据并私有发布；继续薪酬期间/方案差异和完整报表来源"
     }
   ]
 }
