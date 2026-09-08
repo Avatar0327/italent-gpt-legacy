@@ -1,4 +1,4 @@
-import {courseRequirements} from './learning-requirements';
+import {resourceRequirements} from './learning-requirements';
 import {z} from 'zod';
 import {learningModeSchema} from './learning-plan-model';
 import {scopedOrgs,type Member} from './authorization';
@@ -6,7 +6,7 @@ import {visibleRecord,type DevelopmentRecord as R} from './development';
 import type {State} from './model';
 import {HttpError} from './http';
 const id=z.string().min(1).max(100),title=z.string().trim().min(1).max(200);
-const fields={title,orgId:id,config:learningModeSchema,courseIds:z.array(id).min(1).max(20)};
+const fields={title,orgId:id,config:learningModeSchema,courseIds:z.array(id).max(20),examIds:z.array(id).max(20).default([])};
 const schema=z.discriminatedUnion('action',[
  z.object({action:z.literal('create'),...fields}).strict(),
  z.object({action:z.literal('edit'),id,...fields}).strict(),
@@ -39,18 +39,20 @@ export function applyLearningDefinition(records:R[],state:State,member:Member,in
  }
  if(old&&old.status!=='draft')fail('已定版或归档配置不能修改，请创建后续版本');
  if(c.action==='stages'){
-  const ids=c.stages.flatMap(stage=>stage.courseIds);
-  if(ids.length!==old!.payload.courseIds!.length||new Set(ids).size!==ids.length||ids.some(id=>!old!.payload.courseIds!.includes(id)))fail('阶段须恰好覆盖当前全部课程，每门课程只能属于一个阶段');
+  const ids=c.stages.flatMap(stage=>stage.courseIds),resources=[...old!.payload.courseIds!,...(old!.payload.examIds??[])];
+  if(ids.length!==resources.length||new Set(ids).size!==ids.length||ids.some(id=>!resources.includes(id)))fail('阶段须恰好覆盖当前全部课程与独立考试，每项只能属于一个阶段');
   if(new Set(c.stages.map(s=>s.title)).size!==c.stages.length)fail('阶段名称不得重复');
   for(const stage of c.stages){const optional=stage.optionalCourseIds??[],required=stage.courseIds.length-optional.length,rm=stage.requiredMinimum??required,om=stage.optionalMinimum??optional.length;if(new Set(optional).size!==optional.length||optional.some(id=>!stage.courseIds.includes(id))||rm>required||om>optional.length||rm+om<1)fail('选必修范围或完成数量门槛无效');}
   return {...old!,updatedAt:at,payload:{...old!.payload,trainingStages:c.stages}};
  }
- const courseIds=c.action==='seal'?old!.payload.courseIds!:c.courseIds;
+ const courseIds=c.action==='seal'?old!.payload.courseIds!:c.courseIds,examIds=c.action==='seal'?(old!.payload.examIds??[]):c.examIds;
+ if(courseIds.length+examIds.length<1||courseIds.length+examIds.length>20||new Set([...courseIds,...examIds]).size!==courseIds.length+examIds.length)fail('学习内容须为1至20项且不得重复');
+ for(const examId of examIds){const exam=records.find(r=>r.id===examId&&r.kind==='learningExamDefinition');if(!exam||!visibleRecord(exam,records,state,member))deny();if(exam!.status!=='sealed'||exam!.payload.orgId!==orgId)fail('独立考试须选同组织已定版试卷');}
  if(new Set(courseIds).size!==courseIds.length)fail('课程不得重复');
  for(const courseId of courseIds){const course=records.find(r=>r.id===courseId&&r.kind==='course');if(!course||!visibleRecord(course,records,state,member))deny();if(course!.status!=='published')fail('仅可选用已发布课程版本');}
- if(c.action==='seal')return {...old!,status:'sealed',updatedAt:at,payload:{...old!.payload,learningRequirements:courseRequirements(courseIds,old!.payload.learningRequirements)}};
+ if(c.action==='seal')return {...old!,status:'sealed',updatedAt:at,payload:{...old!.payload,learningRequirements:resourceRequirements(courseIds,examIds,old!.payload.learningRequirements)}};
  if(old&&old.payload.orgId!==c.orgId)fail('版本所属组织不可更换，请独立新建计划');
  if(old?.referenceId){const previous=records.find(r=>r.id===old.referenceId&&r.kind==='learningDefinition');if(!previous||previous.payload.learningMode?.progressSync!==c.config.progressSync)fail('已定版计划的进度同步设置不可更改');}
  const key=old?.id??crypto.randomUUID();
- return {id:key,kind:'learningDefinition',employeeId:null,positionId:null,referenceId:old?.referenceId??null,status:'draft',createdBy:old?.createdBy??member.userId,createdAt:old?.createdAt??at,updatedAt:at,payload:{title:c.title,orgId:c.orgId,learningMode:c.config,courseIds:c.courseIds,learningRequirements:courseRequirements(c.courseIds,old?.payload.learningRequirements),trainingStages:old?.payload.trainingStages&&old.payload.courseIds?.length===c.courseIds.length&&c.courseIds.every(id=>old.payload.courseIds!.includes(id))?old.payload.trainingStages:undefined,definitionRootId:old?.payload.definitionRootId??key,version:old?.payload.version??1}};
+ return {id:key,kind:'learningDefinition',employeeId:null,positionId:null,referenceId:old?.referenceId??null,status:'draft',createdBy:old?.createdBy??member.userId,createdAt:old?.createdAt??at,updatedAt:at,payload:{title:c.title,orgId:c.orgId,learningMode:c.config,courseIds:c.courseIds,examIds,learningRequirements:resourceRequirements(c.courseIds,examIds,old?.payload.learningRequirements),trainingStages:old?.payload.trainingStages&&(old.payload.examIds??[]).length===examIds.length&&examIds.every(id=>old.payload.examIds?.includes(id))&&old.payload.courseIds?.length===c.courseIds.length&&c.courseIds.every(id=>old.payload.courseIds!.includes(id))?old.payload.trainingStages:undefined,definitionRootId:old?.payload.definitionRootId??key,version:old?.payload.version??1}};
 }

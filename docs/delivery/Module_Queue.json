@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "activeWriter": "总控（当前聊天）",
   "mode": "single-controller",
   "branchCreationBase": "commit introducing this queue; exact SHA in git history",
@@ -121,5 +121,35 @@
     "sha": "ca5f82af7fee4a29789ba969ea070a5cd3544307",
     "merged": true,
     "businessAccepted": false
-  }
+  },
+  "controllerQueue": [
+    {
+      "id": "L-REQ",
+      "status": "technical-delivered-v78",
+      "next": "保持兼容及回归"
+    },
+    {
+      "id": "L-EXAM",
+      "status": "technical-delivered-v79",
+      "next": "保留多题型待办"
+    },
+    {
+      "id": "L-BIND",
+      "status": "in-progress",
+      "next": "课程与独立考试混合计划、报表及档案回流综合验证与私有发布"
+    },
+    {
+      "id": "L-GRADE",
+      "status": "pending",
+      "dependencies": [
+        "L-BIND"
+      ],
+      "next": "核实成绩算法不确定项，独立实现成绩规则版本，未作答不静默计零"
+    },
+    {
+      "id": "G1-UAT",
+      "status": "blocked-ui-environment",
+      "next": "预览服务正常但浏览器ERR_BLOCKED_BY_CLIENT；不阻断其他开发，不冒称通过"
+    }
+  ]
 }

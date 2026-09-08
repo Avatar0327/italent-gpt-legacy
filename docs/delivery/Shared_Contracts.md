@@ -61,3 +61,12 @@ learningAssignment引用不可变learningDefinition版本；enrollment的learnin
 
 ## C1/C2 接口变更
 enroll新增可选assignmentId，须匹配有效learningAssignment的员工、课程和冻结截止日，不能与trainingId/planId混用；仅此路径实例内唯一。assign支持relative/fixed的progressSync：记录sourceEnrollmentId/sourceVerifiedBy/sourceVerifiedAt/sourceExamAttemptId。GET学习实例增加attempt依赖用于核实来源考试，投影继续遵守原权限。courseCreditAlreadyGranted统一前后端课程版本去重。旧任务恢复保留原ID，关联实例的恢复继续校验原实例与冻结期限。
+
+## SC-2 学习活动兼容增量（2026-09-08）
+
+- 保留旧courseIds与enrollment，新增examIds/learningExamDefinition/learningExamTask/learningExamAttempt；courseIds与examIds合计最多20。
+- learningRequirements: {id,kind:course|exam,resourceId}[]，要求ID在相同资源版本下跨配置版本稳定，实例冻结独立快照。旧实例只读映射，无批量迁移。
+- /api/learning-plans新增stages命令与可选examIds；/api/learning-exams管理试卷版本；/api/learning-exam-tasks管理独立或计划内任务。全局revision与审计事务沿用SC-1。
+- 必須按任务ID隔离尝试、按原始核验来源追溯课程。完成投影使用learningRequirementProgress，开放使用learningStageOpen及当前人员/日期判断，不能将所有completed状态直接相加。
+- 试卷管理限admin/hr当前组织；学员仅接收有权任务的去答案paper。独立考试台账限admin/hr；人才档案仍沿用其角色范围。
+- 单选等权百分制取整、通过停止重考为当前独立规则；未核实为原站完整算法。计划总成绩暂未生成。

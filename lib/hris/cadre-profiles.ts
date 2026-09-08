@@ -4,7 +4,7 @@ import {visibleDevelopment,type DevelopmentContext} from './development-reposito
 import {latestPublishedReviews} from './review-versions';
 import {businessDate} from './workforce';
 import type {DevelopmentRecord as R} from './development';
-export const cadreProfileKinds=['cadreTerm','employeeExperience','cadreNomination','cadreObservation','qualificationApplication','succession','review','performance','plan','enrollment'] as const;
+export const cadreProfileKinds=['learningExamTask','cadreTerm','employeeExperience','cadreNomination','cadreObservation','qualificationApplication','succession','review','performance','plan','enrollment'] as const;
 export type ProfileItem={id:string;title:string;status:string;detail:string;date:string;href:string};
 export type CadreProfile={employee:{id:string;code:string;name:string;org:string;job:string;status:string};sections:{key:string;title:string;items:ProfileItem[]}[];revision:number;asOf:string};
 const states:Record<string,string>={submitted:'待审议 / 核验',approved:'已批准',rejected:'未通过',withdrawn:'已撤回',appointed:'任用已核对',active:'进行中',returned:'待补充',completed:'已完成',development_needed:'需继续发展',closed:'已关闭',cancelled:'已取消',certified:'已认证',revoked:'已撤销',published:'已发布'};
@@ -24,6 +24,7 @@ export function cadreProfile(ctx:DevelopmentContext,employeeId:string,at=new Dat
   section('reviews','最新人才盘点',latest.map(r=>item(r,r.payload.period??'盘点期间',`潜力：${r.payload.potential===1?'低':r.payload.potential===2?'中':r.payload.potential===3?'高':'未评定'} · 版本 ${r.payload.version??1}`,'/development'))),
   section('performance','最新核定绩效',perf.map(r=>item(r,r.payload.period??'绩效期间',`${r.payload.originalRating??'未评级'} · ${r.payload.sourcePlanId?'正式考核结果':'历史核定录入'}`,r.payload.sourcePlanId?'/performance':'/development'))),
   section('plans','发展行动',records.filter(r=>r.kind==='plan').map(r=>item(r,r.payload.title??'发展计划',`目标等级：${r.payload.target??'未评定'}`,'/development'))),
+  section('learningExams','独立考试记录',records.filter(r=>r.kind==='learningExamTask').map(r=>item(r,r.payload.title??'独立考试',`试卷 v${r.payload.version??1} · ${r.payload.score===undefined?'尚未作答':r.payload.score+'分'} · ${r.payload.passed?'已通过':'未通过或未完成'}；不等于课程核验或人才评价`,'/learning-exam-tasks',r.status==='failed'?'次数用尽未通过':states[r.status]??r.status))),
   section('learning','学习任务',records.filter(r=>r.kind==='enrollment').map(r=>item(r,r.payload.title??'学习任务',r.status==='completed'?(r.payload.sourceEnrollmentId?'引用历史核验完成 · 原核验 '+r.payload.sourceVerifiedAt:'成果已通过核验'):'以学习模块当前办理状态为准','/learning'))),
  ]};
 }

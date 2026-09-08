@@ -1,3 +1,4 @@
+import {applyLearningExamTask} from './learning-exam-tasks';
 import {learningRequirements,learningRequirementProgress,learningAssignmentCurrent,learningStageStartsOn} from './learning-requirements';
 import {z} from 'zod';
 import {applyDevelopment,visibleRecord,type DevelopmentRecord as R} from './development';
@@ -21,7 +22,7 @@ export function applyLearningAssignment(records:R[],state:State,m:Member,input:u
  if(c.action!=='assign'){
   const r=records.find(r=>r.kind==='learningAssignment'&&r.id===c.id);
   if(!r||!visibleRecord(r,records,state,m)||!scope.has(r.payload.orgId!))deny();
-  const tasks=records.filter(t=>t.kind==='enrollment'&&t.payload.learningAssignmentId===r!.id);
+  const tasks=records.filter(t=>['enrollment','learningExamTask'].includes(t.kind)&&t.payload.learningAssignmentId===r!.id);
   if(c.action==='cancelAssignment'){
    if(r!.status!=='active')fail('仅进行中的实例可以取消');
    return [{...r!,status:'cancelled',updatedAt:at,payload:{...r!.payload,evidence:c.evidence}},...tasks.filter(t=>t.status!=='completed').map(t=>({...t,status:'cancelled',updatedAt:at,payload:{...t.payload,closedReason:c.evidence,assignmentCancelled:true,assignmentPreviousStatus:t.status}}))];
@@ -32,8 +33,8 @@ export function applyLearningAssignment(records:R[],state:State,m:Member,input:u
    if(!employee||employee.status==='离职'||employee.orgId!==r!.payload.orgId||!state.orgs.some(o=>o.id===employee.orgId&&o.status==='启用'))fail('恢复须为原组织在职员工');
    const config=r!.payload.learningMode!;
    if((config.mode==='fixed'||!config.allowOverdue)&&businessDate(at)>r!.payload.due!)fail('实例已超过允许学习期限，不能恢复');
-   for(const task of tasks.filter(t=>t.payload.assignmentCancelled&&t.payload.assignmentPreviousStatus!=='cancelled'))if(!records.some(course=>course.kind==='course'&&course.id===task.referenceId&&course.status==='published'))fail('恢复任务的课程版本须仍已发布');
-   return [{...r!,status:'active',updatedAt:at,payload:{...r!.payload,evidence:c.evidence}},...tasks.filter(t=>t.payload.assignmentCancelled).map(t=>({...t,status:t.payload.assignmentPreviousStatus==='cancelled'?'cancelled':'active',updatedAt:at,payload:{...t.payload,assignmentCancelled:false,restorationEvidence:c.evidence}}))];
+   for(const task of tasks.filter(t=>t.payload.assignmentCancelled&&t.payload.assignmentPreviousStatus!=='cancelled'))if(!records.some(resource=>resource.id===task.referenceId&&(task.kind==='enrollment'?resource.kind==='course'&&resource.status==='published':resource.kind==='learningExamDefinition'&&['sealed','archived'].includes(resource.status))))fail('恢复任务的内容版本须仍可用');
+   return [{...r!,status:'active',updatedAt:at,payload:{...r!.payload,evidence:c.evidence}},...tasks.filter(t=>t.payload.assignmentCancelled).map(t=>({...t,status:t.payload.assignmentPreviousStatus==='cancelled'?'cancelled':t.payload.assignmentPreviousStatus==='failed'?'failed':'active',updatedAt:at,payload:{...t.payload,assignmentCancelled:false,restorationEvidence:c.evidence}}))];
   }
   if(!learningAssignmentCurrent(r!,state))fail('仅原启用组织的在职员工可推进实例结项，历史记录保留');
   if(r!.status!=='active')fail('仅进行中的实例可结项');if(businessDate(at)<r!.payload.start!)fail('计划尚未开始，不能提前结项');
@@ -51,7 +52,7 @@ export function applyLearningAssignment(records:R[],state:State,m:Member,input:u
  if(records.some(r=>r.kind==='learningAssignment'&&r.payload.assignmentKey===key))fail('此员工已获得该计划版本的首轮实例');
  const window=learningWindow(config,businessDate(at));
  if(window.due<businessDate(at))fail('计划已经结束，不能分派');
- const assignment:R={id:crypto.randomUUID(),kind:'learningAssignment',employeeId:c.employeeId,positionId:null,referenceId:definition!.id,status:'active',createdBy:m.userId,createdAt:at,updatedAt:at,payload:{title:definition!.payload.title,orgId:definition!.payload.orgId,courseIds:[...definition!.payload.courseIds!],learningRequirements:learningRequirements(definition!).map(r=>({...r})),trainingStages:definition!.payload.trainingStages?structuredClone(definition!.payload.trainingStages):undefined,learningMode:config,version:definition!.payload.version,definitionRootId:definition!.payload.definitionRootId,assignmentKey:key,round:1,start:window.start,due:window.due}};
+ const assignment:R={id:crypto.randomUUID(),kind:'learningAssignment',employeeId:c.employeeId,positionId:null,referenceId:definition!.id,status:'active',createdBy:m.userId,createdAt:at,updatedAt:at,payload:{title:definition!.payload.title,orgId:definition!.payload.orgId,courseIds:[...definition!.payload.courseIds!],examIds:[...(definition!.payload.examIds??[])],learningRequirements:learningRequirements(definition!).map(r=>({...r})),trainingStages:definition!.payload.trainingStages?structuredClone(definition!.payload.trainingStages):undefined,learningMode:config,version:definition!.payload.version,definitionRootId:definition!.payload.definitionRootId,assignmentKey:key,round:1,start:window.start,due:window.due}};
  if(!window.allowOverdue&&assignment.payload.trainingStages?.some(stage=>learningStageStartsOn(assignment,stage)>window.due))fail('阶段开放日期晚于计划截止日，请调整草稿的新版本后再派发');
  const result:R[]=[assignment];
  for(const courseId of assignment.payload.courseIds!){
@@ -60,5 +61,6 @@ export function applyLearningAssignment(records:R[],state:State,m:Member,input:u
   const sourceExam=source?.payload.examId?records.find(a=>a.kind==='attempt'&&a.referenceId===source.id&&a.payload.passed):undefined;
   result.push(source?{...task,status:'completed',payload:{...task.payload,sourceEnrollmentId:source.id,sourceVerifiedBy:source.payload.verifiedBy,sourceVerifiedAt:source.payload.verifiedAt,sourceExamAttemptId:sourceExam?.id,verifiedBy:source.payload.verifiedBy,verifiedAt:source.payload.verifiedAt,verification:'引用同员工同课程版本已独立核验的完成记录；未创建本次考试记录'}}:task);
  }
+ for(const examId of assignment.payload.examIds??[])result.push(...applyLearningExamTask([...records,...result],state,m,{action:'assign',assignmentId:assignment.id,examId,employeeId:c.employeeId,start:window.start,due:window.due},at));
  return result;
 }
