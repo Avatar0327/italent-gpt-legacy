@@ -10,7 +10,7 @@ def esc(v):
 def table(headers,rows):return '| '+' | '.join(headers)+' |\n|'+ '|'.join(['---']*len(headers))+'|\n'+'\n'.join('| '+' | '.join(esc(c) for c in row)+' |' for row in rows)+'\n'
 def link_source(path):return '['+Path(path).name+']('+str(Path('../../')/path)+')'
 def page_link(p):return '[详见证据]('+str(Path('../../')/p['source'])+')：'+p['evidenceRef']
-def intro(title):return f'# {title}\n\n生成来源：`Scope_Register.json → p1Baseline / modules[].p1`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：{b["updatedAt"]}。\n\n'
+def intro(title):return f'# {title}\n\n生成来源：`Scope_Register.json → p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：{b["updatedAt"]}。\n\n'
 # Keep the whole historical register and prepend the current, source-derived view.
 f=D/'Scope_Register.md';old=f.read_text();marker='<!-- P1_CURRENT_END -->'
 if marker in old:old=old.split(marker,1)[1].lstrip()

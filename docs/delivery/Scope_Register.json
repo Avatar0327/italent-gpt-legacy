@@ -537,9 +537,22 @@
           "数据分析"
         ],
         "navigationEvidence": "BC-NAV-20260908",
-        "pageRefs": [],
-        "fieldRefs": [],
-        "sourceDepth": "N；典型页尚待补证",
+        "pageRefs": [
+          "BC-P1C-M04"
+        ],
+        "fieldRefs": [
+          "BC-P1C-M04-F001",
+          "BC-P1C-M04-F002",
+          "BC-P1C-M04-F003",
+          "BC-P1C-M04-F004",
+          "BC-P1C-M04-F005",
+          "BC-P1C-M04-F006",
+          "BC-P1C-M04-F007",
+          "BC-P1C-M04-F008",
+          "BC-P1C-M04-F009",
+          "BC-P1C-M04-F010"
+        ],
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M04",
         "sourceGap": "已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -556,11 +569,11 @@
         },
         "coverage": {
           "facts": [
-            "BC-NAV-20260908"
+            "BC-P1C-M04"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "员工、录用入职、任职、绩效、分析；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
+          "unexplored": "员工、录用入职、任职、绩效、分析；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；角色投影、指标分母、同步/重试及外部契约",
           "accepted": false
         }
@@ -584,7 +597,9 @@
           "标签应用设置"
         ],
         "navigationEvidence": "BC-NAV-20260908",
-        "pageRefs": [],
+        "pageRefs": [
+          "BC-P1C-M05"
+        ],
         "fieldRefs": [],
         "sourceDepth": "N；典型页尚待补证",
         "gapRef": "M05",
@@ -603,11 +618,11 @@
         },
         "coverage": {
           "facts": [
-            "BC-NAV-20260908"
+            "BC-P1C-M05"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "企业标签库、北森标签库、应用设置；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
+          "unexplored": "企业标签库、北森标签库、应用设置；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；角色投影、指标分母、同步/重试及外部契约",
           "accepted": false
         }
@@ -704,7 +719,8 @@
           "BC-S01-02",
           "BC-S03",
           "BC-S04",
-          "BC-S05"
+          "BC-S05",
+          "BC-P1C-M07"
         ],
         "fieldRefs": [
           "BC-S01-02-F001",
@@ -737,9 +753,19 @@
           "BC-S05-F002",
           "BC-S05-F003",
           "BC-S05-F004",
-          "BC-S05-F005"
+          "BC-S05-F005",
+          "BC-P1C-M07-F001",
+          "BC-P1C-M07-F002",
+          "BC-P1C-M07-F003",
+          "BC-P1C-M07-F004",
+          "BC-P1C-M07-F005",
+          "BC-P1C-M07-F006",
+          "BC-P1C-M07-F007",
+          "BC-P1C-M07-F008",
+          "BC-P1C-M07-F009",
+          "BC-P1C-M07-F010"
         ],
-        "sourceDepth": "P（局部）",
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M07",
         "sourceGap": "局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -759,11 +785,12 @@
             "BC-S01-02",
             "BC-S03",
             "BC-S04",
-            "BC-S05"
+            "BC-S05",
+            "BC-P1C-M07"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "自动核算、税社保、薪资档案、支付及企业规则验证；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实",
+          "unexplored": "自动核算、税社保、薪资档案、支付及企业规则验证；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
           "next": "补字段属性、权限线索和流程说明；薪资组、核算/税社保、支付、成本及凭证接口",
           "accepted": false
         }
@@ -833,9 +860,18 @@
           "设置"
         ],
         "navigationEvidence": "BC-NAV-20260908",
-        "pageRefs": [],
-        "fieldRefs": [],
-        "sourceDepth": "N；典型页尚待补证",
+        "pageRefs": [
+          "BC-P1C-M09"
+        ],
+        "fieldRefs": [
+          "BC-P1C-M09-F001",
+          "BC-P1C-M09-F002",
+          "BC-P1C-M09-F003",
+          "BC-P1C-M09-F004",
+          "BC-P1C-M09-F005",
+          "BC-P1C-M09-F006"
+        ],
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M09",
         "sourceGap": "已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -852,11 +888,11 @@
         },
         "coverage": {
           "facts": [
-            "BC-NAV-20260908"
+            "BC-P1C-M09"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "预算、成本、统计分析；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
+          "unexplored": "预算、成本、统计分析；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；薪资组、核算/税社保、支付、成本及凭证接口",
           "accepted": false
         }
@@ -879,9 +915,22 @@
           "设置"
         ],
         "navigationEvidence": "BC-NAV-20260908",
-        "pageRefs": [],
-        "fieldRefs": [],
-        "sourceDepth": "N；典型页尚待补证",
+        "pageRefs": [
+          "BC-P1C-M10"
+        ],
+        "fieldRefs": [
+          "BC-P1C-M10-F001",
+          "BC-P1C-M10-F002",
+          "BC-P1C-M10-F003",
+          "BC-P1C-M10-F004",
+          "BC-P1C-M10-F005",
+          "BC-P1C-M10-F006",
+          "BC-P1C-M10-F007",
+          "BC-P1C-M10-F008",
+          "BC-P1C-M10-F009",
+          "BC-P1C-M10-F010"
+        ],
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M10",
         "sourceGap": "已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -898,11 +947,11 @@
         },
         "coverage": {
           "facts": [
-            "BC-NAV-20260908"
+            "BC-P1C-M10"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "任务管理、设置；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
+          "unexplored": "任务管理、设置；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；薪资组、核算/税社保、支付、成本及凭证接口",
           "accepted": false
         }
@@ -940,7 +989,8 @@
           "BC-A05-06",
           "BC-A07",
           "BC-A08",
-          "BC-A09"
+          "BC-A09",
+          "BC-P1C-M11"
         ],
         "fieldRefs": [
           "BC-A02-03-F001",
@@ -1031,9 +1081,18 @@
           "BC-A09-F005",
           "BC-A09-F006",
           "BC-A09-F007",
-          "BC-A09-F008"
+          "BC-A09-F008",
+          "BC-P1C-M11-F001",
+          "BC-P1C-M11-F002",
+          "BC-P1C-M11-F003",
+          "BC-P1C-M11-F004",
+          "BC-P1C-M11-F005",
+          "BC-P1C-M11-F006",
+          "BC-P1C-M11-F007",
+          "BC-P1C-M11-F008",
+          "BC-P1C-M11-F009"
         ],
-        "sourceDepth": "P（局部）",
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M11",
         "sourceGap": "局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -1055,11 +1114,12 @@
             "BC-A05-06",
             "BC-A07",
             "BC-A08",
-            "BC-A09"
+            "BC-A09",
+            "BC-P1C-M11"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "弹性轮班、设备接入、加班/调休、跨班请假、自动结转、年度多组织期间、自动执行、员工确认/申诉及完整发布/封存；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实",
+          "unexplored": "弹性轮班、设备接入、加班/调休、跨班请假、自动结转、年度多组织期间、自动执行、员工确认/申诉及完整发布/封存；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
           "next": "补字段属性、权限线索和流程说明；班次、额度、结转与冻结记录契约",
           "accepted": false
         }
@@ -1098,7 +1158,8 @@
           "BC-R04-06",
           "BC-R05",
           "BC-R07",
-          "BC-R08"
+          "BC-R08",
+          "BC-P1C-M12"
         ],
         "fieldRefs": [
           "BC-R01-F001",
@@ -1203,9 +1264,28 @@
           "BC-R08-F014",
           "BC-R08-F015",
           "BC-R08-F016",
-          "BC-R08-F017"
+          "BC-R08-F017",
+          "BC-P1C-M12-F001",
+          "BC-P1C-M12-F002",
+          "BC-P1C-M12-F003",
+          "BC-P1C-M12-F004",
+          "BC-P1C-M12-F005",
+          "BC-P1C-M12-F006",
+          "BC-P1C-M12-F007",
+          "BC-P1C-M12-F008",
+          "BC-P1C-M12-F009",
+          "BC-P1C-M12-F010",
+          "BC-P1C-M12-F011",
+          "BC-P1C-M12-F012",
+          "BC-P1C-M12-F013",
+          "BC-P1C-M12-F014",
+          "BC-P1C-M12-F015",
+          "BC-P1C-M12-F016",
+          "BC-P1C-M12-F017",
+          "BC-P1C-M12-F018",
+          "BC-P1C-M12-F019"
         ],
-        "sourceDepth": "P（局部）",
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M12",
         "sourceGap": "局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -1228,11 +1308,12 @@
             "BC-R04-06",
             "BC-R05",
             "BC-R07",
-            "BC-R08"
+            "BC-R08",
+            "BC-P1C-M12"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "渠道门户、简历解析、面试日历、电子签和AI能力；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实",
+          "unexplored": "渠道门户、简历解析、面试日历、电子签和AI能力；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
           "next": "补字段属性、权限线索和流程说明；渠道、测评/面试、录用、电子签及入职衔接",
           "accepted": false
         }
@@ -1260,7 +1341,8 @@
         ],
         "navigationEvidence": "BC-NAV-20260908",
         "pageRefs": [
-          "BC-R09"
+          "BC-R09",
+          "BC-P1C-M13"
         ],
         "fieldRefs": [],
         "sourceDepth": "N；典型页尚待补证",
@@ -1280,11 +1362,12 @@
         },
         "coverage": {
           "facts": [
-            "BC-R09"
+            "BC-R09",
+            "BC-P1C-M13"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "筛选简历、面试、Offer审批、题库；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实",
+          "unexplored": "筛选简历、面试、Offer审批、题库；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；渠道、测评/面试、录用、电子签及入职衔接",
           "accepted": false
         }
@@ -1308,7 +1391,9 @@
           "多维分析"
         ],
         "navigationEvidence": "BC-NAV-20260908",
-        "pageRefs": [],
+        "pageRefs": [
+          "BC-P1C-M14"
+        ],
         "fieldRefs": [],
         "sourceDepth": "N；典型页尚待补证",
         "gapRef": "M14",
@@ -1327,11 +1412,11 @@
         },
         "coverage": {
           "facts": [
-            "BC-NAV-20260908"
+            "BC-P1C-M14"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "人才地图、智能分类、多维分析；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
+          "unexplored": "人才地图、智能分类、多维分析；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；渠道、测评/面试、录用、电子签及入职衔接",
           "accepted": false
         }
@@ -1361,10 +1446,18 @@
         ],
         "navigationEvidence": "BC-NAV-20260908",
         "pageRefs": [
-          "BC-P1C-M15"
+          "BC-P1C-M15",
+          "BC-P1C-M15-02"
         ],
-        "fieldRefs": [],
-        "sourceDepth": "N；典型页尚待补证",
+        "fieldRefs": [
+          "BC-P1C-M15-02-F001",
+          "BC-P1C-M15-02-F002",
+          "BC-P1C-M15-02-F003",
+          "BC-P1C-M15-02-F004",
+          "BC-P1C-M15-02-F005",
+          "BC-P1C-M15-02-F006"
+        ],
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M15",
         "sourceGap": "已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -1381,11 +1474,12 @@
         },
         "coverage": {
           "facts": [
-            "BC-P1C-M15"
+            "BC-P1C-M15",
+            "BC-P1C-M15-02"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "项目、人才、方案、活动、考试；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
+          "unexplored": "项目、人才、方案、活动、考试；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；任用期限、委员会、模型与标准版本、敏感档案权限",
           "accepted": false
         }
@@ -1425,7 +1519,8 @@
           "BC-P04",
           "BC-P05",
           "BC-P06",
-          "BC-P07"
+          "BC-P07",
+          "BC-P1C-M16"
         ],
         "fieldRefs": [
           "P1-GOAL-F001",
@@ -1545,9 +1640,13 @@
           "BC-P07-F005",
           "BC-P07-F006",
           "BC-P07-F007",
-          "BC-P07-F008"
+          "BC-P07-F008",
+          "BC-P1C-M16-F001",
+          "BC-P1C-M16-F002",
+          "BC-P1C-M16-F003",
+          "BC-P1C-M16-F004"
         ],
-        "sourceDepth": "P（局部）",
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M16",
         "sourceGap": "局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -1571,11 +1670,12 @@
             "BC-P04",
             "BC-P05",
             "BC-P06",
-            "BC-P07"
+            "BC-P07",
+            "BC-P1C-M16"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "完整OKR、组织绩效、多级校准审批和企业申诉时限；手工等级、绩效系数、不参与考核、活动在途规则更新、组织公开与考核关系锁定；完整模板模块、多维/小数权重、附件与动态权限、指标自动下发；定量指标公式、完成值来源、共享分类树、指定评价人；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实",
+          "unexplored": "完整OKR、组织绩效、多级校准审批和企业申诉时限；手工等级、绩效系数、不参与考核、活动在途规则更新、组织公开与考核关系锁定；完整模板模块、多维/小数权重、附件与动态权限、指标自动下发；定量指标公式、完成值来源、共享分类树、指定评价人；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
           "next": "补字段属性、权限线索和流程说明；组织绩效、评级系数、在途变更与发布口径",
           "accepted": false
         }
@@ -1967,9 +2067,23 @@
           "设置"
         ],
         "navigationEvidence": "BC-NAV-20260908",
-        "pageRefs": [],
-        "fieldRefs": [],
-        "sourceDepth": "N；典型页尚待补证",
+        "pageRefs": [
+          "BC-P1C-M23"
+        ],
+        "fieldRefs": [
+          "BC-P1C-M23-F001",
+          "BC-P1C-M23-F002",
+          "BC-P1C-M23-F003",
+          "BC-P1C-M23-F004",
+          "BC-P1C-M23-F005",
+          "BC-P1C-M23-F006",
+          "BC-P1C-M23-F007",
+          "BC-P1C-M23-F008",
+          "BC-P1C-M23-F009",
+          "BC-P1C-M23-F010",
+          "BC-P1C-M23-F011"
+        ],
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M23",
         "sourceGap": "已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -1986,11 +2100,11 @@
         },
         "coverage": {
           "facts": [
-            "BC-NAV-20260908"
+            "BC-P1C-M23"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "奖金、积分、推荐记录；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
+          "unexplored": "奖金、积分、推荐记录；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；渠道、测评/面试、录用、电子签及入职衔接",
           "accepted": false
         }
@@ -2018,9 +2132,21 @@
           "设置"
         ],
         "navigationEvidence": "BC-NAV-20260908",
-        "pageRefs": [],
-        "fieldRefs": [],
-        "sourceDepth": "N；典型页尚待补证",
+        "pageRefs": [
+          "BC-P1C-M24",
+          "BC-P1C-M24-02"
+        ],
+        "fieldRefs": [
+          "BC-P1C-M24-02-F001",
+          "BC-P1C-M24-02-F002",
+          "BC-P1C-M24-02-F003",
+          "BC-P1C-M24-02-F004",
+          "BC-P1C-M24-02-F005",
+          "BC-P1C-M24-02-F006",
+          "BC-P1C-M24-02-F007",
+          "BC-P1C-M24-02-F008"
+        ],
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M24",
         "sourceGap": "已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -2037,11 +2163,12 @@
         },
         "coverage": {
           "facts": [
-            "BC-NAV-20260908"
+            "BC-P1C-M24",
+            "BC-P1C-M24-02"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "人员、推荐、奖金、积分、规则；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
+          "unexplored": "人员、推荐、奖金、积分、规则；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；渠道、测评/面试、录用、电子签及入职衔接",
           "accepted": false
         }
@@ -2068,9 +2195,20 @@
           "设置"
         ],
         "navigationEvidence": "BC-NAV-20260908",
-        "pageRefs": [],
-        "fieldRefs": [],
-        "sourceDepth": "N；典型页尚待补证",
+        "pageRefs": [
+          "BC-P1C-M25"
+        ],
+        "fieldRefs": [
+          "BC-P1C-M25-F001",
+          "BC-P1C-M25-F002",
+          "BC-P1C-M25-F003",
+          "BC-P1C-M25-F004",
+          "BC-P1C-M25-F005",
+          "BC-P1C-M25-F006",
+          "BC-P1C-M25-F007",
+          "BC-P1C-M25-F008"
+        ],
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M25",
         "sourceGap": "已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -2087,11 +2225,11 @@
         },
         "coverage": {
           "facts": [
-            "BC-NAV-20260908"
+            "BC-P1C-M25"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "人员、推荐、奖金、积分、规则；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
+          "unexplored": "人员、推荐、奖金、积分、规则；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；渠道、测评/面试、录用、电子签及入职衔接",
           "accepted": false
         }
@@ -2119,10 +2257,21 @@
         ],
         "navigationEvidence": "BC-NAV-20260908",
         "pageRefs": [
-          "BC-P1C-M26"
+          "BC-P1C-M26",
+          "BC-P1C-M26-02"
         ],
-        "fieldRefs": [],
-        "sourceDepth": "N；典型页尚待补证",
+        "fieldRefs": [
+          "BC-P1C-M26-02-F001",
+          "BC-P1C-M26-02-F002",
+          "BC-P1C-M26-02-F003",
+          "BC-P1C-M26-02-F004",
+          "BC-P1C-M26-02-F005",
+          "BC-P1C-M26-02-F006",
+          "BC-P1C-M26-02-F007",
+          "BC-P1C-M26-02-F008",
+          "BC-P1C-M26-02-F009"
+        ],
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M26",
         "sourceGap": "已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -2139,11 +2288,12 @@
         },
         "coverage": {
           "facts": [
-            "BC-P1C-M26"
+            "BC-P1C-M26",
+            "BC-P1C-M26-02"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "多种题型、提醒催办与完整活动运营；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
+          "unexplored": "多种题型、提醒催办与完整活动运营；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；任用期限、委员会、模型与标准版本、敏感档案权限",
           "accepted": false
         }
@@ -2193,7 +2343,8 @@
           "P1-MENTOR",
           "P1-CERTIFICATE",
           "P1-CREDIT",
-          "BC-L12"
+          "BC-L12",
+          "BC-P1C-M27"
         ],
         "fieldRefs": [
           "P1-LEARN-02-F001",
@@ -2405,11 +2556,12 @@
             "P1-MENTOR",
             "P1-CERTIFICATE",
             "P1-CREDIT",
-            "BC-L12"
+            "BC-L12",
+            "BC-P1C-M27"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "人工题/排序及题库随机抽题、其他活动成绩来源及小数权重、阶段期限精确规则对照与其他活动顺序例外、自动循环调度/积分奖励及循环同步细则、已退出内容重新加入、完成重开、循环更新与批量异步运营；完整培养编排与批量自动派课、证书样式与自动发证、导师认证及组织关系同步、外聘讲师、完整班级运营、学分折抵及企业到期规则对照；作业多级批阅、附件、AI及优秀作业/奖励；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实",
+          "unexplored": "人工题/排序及题库随机抽题、其他活动成绩来源及小数权重、阶段期限精确规则对照与其他活动顺序例外、自动循环调度/积分奖励及循环同步细则、已退出内容重新加入、完成重开、循环更新与批量异步运营；完整培养编排与批量自动派课、证书样式与自动发证、导师认证及组织关系同步、外聘讲师、完整班级运营、学分折抵及企业到期规则对照；作业多级批阅、附件、AI及优秀作业/奖励；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
           "next": "补字段属性、权限线索和流程说明；循环、共享、费用、成绩及例外转认",
           "accepted": false
         }
@@ -2440,9 +2592,21 @@
           "设置"
         ],
         "navigationEvidence": "BC-NAV-20260908",
-        "pageRefs": [],
-        "fieldRefs": [],
-        "sourceDepth": "N；典型页尚待补证",
+        "pageRefs": [
+          "BC-P1C-M28"
+        ],
+        "fieldRefs": [
+          "BC-P1C-M28-F001",
+          "BC-P1C-M28-F002",
+          "BC-P1C-M28-F003",
+          "BC-P1C-M28-F004",
+          "BC-P1C-M28-F005",
+          "BC-P1C-M28-F006",
+          "BC-P1C-M28-F007",
+          "BC-P1C-M28-F008",
+          "BC-P1C-M28-F009"
+        ],
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M28",
         "sourceGap": "已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -2459,11 +2623,11 @@
         },
         "coverage": {
           "facts": [
-            "BC-NAV-20260908"
+            "BC-P1C-M28"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "计划、剧本、话术库、质检、评分、角色库；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
+          "unexplored": "计划、剧本、话术库、质检、评分、角色库；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；循环、共享、费用、成绩及例外转认",
           "accepted": false
         }
@@ -2688,7 +2852,9 @@
           "设置中心"
         ],
         "navigationEvidence": "BC-NAV-20260908",
-        "pageRefs": [],
+        "pageRefs": [
+          "BC-P1C-M33"
+        ],
         "fieldRefs": [],
         "sourceDepth": "N；典型页尚待补证",
         "gapRef": "M33",
@@ -2707,11 +2873,11 @@
         },
         "coverage": {
           "facts": [
-            "BC-NAV-20260908"
+            "BC-P1C-M33"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "账户、福利、财务、合规、设置；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
+          "unexplored": "账户、福利、财务、合规、设置；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；薪资组、核算/税社保、支付、成本及凭证接口",
           "accepted": false
         }
@@ -2737,9 +2903,19 @@
           "设置"
         ],
         "navigationEvidence": "BC-NAV-20260908",
-        "pageRefs": [],
-        "fieldRefs": [],
-        "sourceDepth": "N；典型页尚待补证",
+        "pageRefs": [
+          "BC-P1C-M34"
+        ],
+        "fieldRefs": [
+          "BC-P1C-M34-F001",
+          "BC-P1C-M34-F002",
+          "BC-P1C-M34-F003",
+          "BC-P1C-M34-F004",
+          "BC-P1C-M34-F005",
+          "BC-P1C-M34-F006",
+          "BC-P1C-M34-F007"
+        ],
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M34",
         "sourceGap": "已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -2756,11 +2932,11 @@
         },
         "coverage": {
           "facts": [
-            "BC-NAV-20260908"
+            "BC-P1C-M34"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "面试、企业题库、答疑知识库、看板；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
+          "unexplored": "面试、企业题库、答疑知识库、看板；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；渠道、测评/面试、录用、电子签及入职衔接",
           "accepted": false
         }
@@ -2884,7 +3060,16 @@
           "accepted": false
         }
       },
-      "businessPackage": "BP-UNASSIGNED"
+      "businessPackage": "BP-UNASSIGNED",
+      "assignmentReview": {
+        "candidates": [
+          "BP-I"
+        ],
+        "basis": "BC-I03实际人力报告设置，报告类型/身份/发布日期/消息模板；待本轮复核职责",
+        "impact": "如归入BP-I，仍保留M36独立ID，不归并M32，消息/报表依赖单列",
+        "status": "待本轮典型页核实",
+        "accepted": false
+      }
     },
     {
       "id": "M37",
@@ -2958,9 +3143,15 @@
           "角度码"
         ],
         "navigationEvidence": "BC-NAV-20260908",
-        "pageRefs": [],
-        "fieldRefs": [],
-        "sourceDepth": "N；典型页尚待补证",
+        "pageRefs": [
+          "BC-P1C-M38"
+        ],
+        "fieldRefs": [
+          "BC-P1C-M38-F001",
+          "BC-P1C-M38-F002",
+          "BC-P1C-M38-F003"
+        ],
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M38",
         "sourceGap": "已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -2977,11 +3168,11 @@
         },
         "coverage": {
           "facts": [
-            "BC-NAV-20260908"
+            "BC-P1C-M38"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "人才模型、角度码；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
+          "unexplored": "人才模型、角度码；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；任用期限、委员会、模型与标准版本、敏感档案权限",
           "accepted": false
         }
@@ -3105,7 +3296,9 @@
           "设置"
         ],
         "navigationEvidence": "BC-NAV-20260908",
-        "pageRefs": [],
+        "pageRefs": [
+          "BC-P1C-M41"
+        ],
         "fieldRefs": [],
         "sourceDepth": "N；典型页尚待补证",
         "gapRef": "M41",
@@ -3124,16 +3317,26 @@
         },
         "coverage": {
           "facts": [
-            "BC-NAV-20260908"
+            "BC-P1C-M41"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "搜索、AI选人、对比、标签；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
+          "unexplored": "搜索、AI选人、对比、标签；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；北森iTalent、数字人才、翻译工作台典型入口职责未明；不依据名称决定最终归属",
           "accepted": false
         }
       },
-      "businessPackage": "BP-UNASSIGNED"
+      "businessPackage": "BP-UNASSIGNED",
+      "assignmentReview": {
+        "candidates": [
+          "BP-C",
+          "BP-R"
+        ],
+        "basis": "实际已到人才搜索，另有AI选人/对比/标签导航；尚无证据确认人才来源为在职或候选",
+        "impact": "主责影响人才对象、权限和去重；可先写搜索/对比受限规格，不能强行只归干部",
+        "status": "待本轮典型页核实",
+        "accepted": false
+      }
     },
     {
       "id": "M42",
@@ -3154,9 +3357,17 @@
           "提成提点规则设置"
         ],
         "navigationEvidence": "BC-NAV-20260908",
-        "pageRefs": [],
-        "fieldRefs": [],
-        "sourceDepth": "N；典型页尚待补证",
+        "pageRefs": [
+          "BC-P1C-M42"
+        ],
+        "fieldRefs": [
+          "BC-P1C-M42-F001",
+          "BC-P1C-M42-F002",
+          "BC-P1C-M42-F003",
+          "BC-P1C-M42-F004",
+          "BC-P1C-M42-F005"
+        ],
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M42",
         "sourceGap": "已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -3173,11 +3384,11 @@
         },
         "coverage": {
           "facts": [
-            "BC-NAV-20260908"
+            "BC-P1C-M42"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "方案、计算、结果、提成提点规则；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
+          "unexplored": "方案、计算、结果、提成提点规则；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；薪资组、核算/税社保、支付、成本及凭证接口",
           "accepted": false
         }
@@ -3249,7 +3460,9 @@
           "设置"
         ],
         "navigationEvidence": "BC-NAV-20260908",
-        "pageRefs": [],
+        "pageRefs": [
+          "BC-P1C-M44"
+        ],
         "fieldRefs": [],
         "sourceDepth": "N；典型页尚待补证",
         "gapRef": "M44",
@@ -3268,11 +3481,11 @@
         },
         "coverage": {
           "facts": [
-            "BC-NAV-20260908"
+            "BC-P1C-M44"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "个人/企业RPA、历史记录；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
+          "unexplored": "个人/企业RPA、历史记录；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；渠道、测评/面试、录用、电子签及入职衔接",
           "accepted": false
         }
@@ -3297,10 +3510,20 @@
         ],
         "navigationEvidence": "BC-NAV-20260908",
         "pageRefs": [
-          "BC-C07"
+          "BC-C07",
+          "BC-P1C-M45"
         ],
-        "fieldRefs": [],
-        "sourceDepth": "N；典型页尚待补证",
+        "fieldRefs": [
+          "BC-P1C-M45-F001",
+          "BC-P1C-M45-F002",
+          "BC-P1C-M45-F003",
+          "BC-P1C-M45-F004",
+          "BC-P1C-M45-F005",
+          "BC-P1C-M45-F006",
+          "BC-P1C-M45-F007",
+          "BC-P1C-M45-F008"
+        ],
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M45",
         "sourceGap": "局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -3317,11 +3540,12 @@
         },
         "coverage": {
           "facts": [
-            "BC-C07"
+            "BC-C07",
+            "BC-P1C-M45"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "任前管理、任职管理；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实",
+          "unexplored": "任前管理、任职管理；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；任用期限、委员会、模型与标准版本、敏感档案权限",
           "accepted": false
         }
@@ -3343,9 +3567,32 @@
           "职称管理"
         ],
         "navigationEvidence": "BC-NAV-20260908",
-        "pageRefs": [],
-        "fieldRefs": [],
-        "sourceDepth": "N；典型页尚待补证",
+        "pageRefs": [
+          "BC-P1C-M46"
+        ],
+        "fieldRefs": [
+          "BC-P1C-M46-F001",
+          "BC-P1C-M46-F002",
+          "BC-P1C-M46-F003",
+          "BC-P1C-M46-F004",
+          "BC-P1C-M46-F005",
+          "BC-P1C-M46-F006",
+          "BC-P1C-M46-F007",
+          "BC-P1C-M46-F008",
+          "BC-P1C-M46-F009",
+          "BC-P1C-M46-F010",
+          "BC-P1C-M46-F011",
+          "BC-P1C-M46-F012",
+          "BC-P1C-M46-F013",
+          "BC-P1C-M46-F014",
+          "BC-P1C-M46-F015",
+          "BC-P1C-M46-F016",
+          "BC-P1C-M46-F017",
+          "BC-P1C-M46-F018",
+          "BC-P1C-M46-F019",
+          "BC-P1C-M46-F020"
+        ],
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M46",
         "sourceGap": "已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -3362,11 +3609,11 @@
         },
         "coverage": {
           "facts": [
-            "BC-NAV-20260908"
+            "BC-P1C-M46"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "职称管理；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
+          "unexplored": "职称管理；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；任用期限、委员会、模型与标准版本、敏感档案权限",
           "accepted": false
         }
@@ -3419,7 +3666,16 @@
           "accepted": false
         }
       },
-      "businessPackage": "BP-UNASSIGNED"
+      "businessPackage": "BP-UNASSIGNED",
+      "assignmentReview": {
+        "candidates": [
+          "BP-I"
+        ],
+        "basis": "导航翻译/导出/导入/日志，尚需实际页面确认资源对象",
+        "impact": "若为多语言资源管理可归BP-I；若涉及人才内容翻译仍需相关消费包依赖",
+        "status": "待本轮典型页核实",
+        "accepted": false
+      }
     },
     {
       "id": "M48",
@@ -4572,7 +4828,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-08T15:47:04.280992+00:00",
+    "updatedAt": "2026-09-08T16:02:40.548294+00:00",
     "authority": "本轮用户指令；Scope_Register.json是唯一范围与验收事实源；P1附属条目不增加48组或59项分母",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -16187,6 +16443,2388 @@
         "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
         "flowRef": [],
         "observedAt": "2026-09-08T15:46:33.333Z"
+      },
+      {
+        "id": "BC-P1C-M38",
+        "moduleId": "M38",
+        "path": "人才模型 > 人才模型",
+        "evidenceRef": "BC-P1C-M38",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:52:15.264581+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P1C-M38-F001",
+            "label": "人才模型",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M38"
+          },
+          {
+            "id": "BC-P1C-M38-F002",
+            "label": "创建人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M38"
+          },
+          {
+            "id": "BC-P1C-M38-F003",
+            "label": "创建时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M38"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：人才模型；表头已取得；筛选/字段标签：未取得；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:47:21.778Z"
+      },
+      {
+        "id": "BC-P1C-M45",
+        "moduleId": "M45",
+        "path": "干部管理 > 干部任职管理（请求路径；实际页面：干部任前管理）",
+        "evidenceRef": "BC-P1C-M45",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:52:15.264581+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P1C-M45-F001",
+            "label": "员工",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M45"
+          },
+          {
+            "id": "BC-P1C-M45-F002",
+            "label": "管理机构",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M45"
+          },
+          {
+            "id": "BC-P1C-M45-F003",
+            "label": "现任职务",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M45"
+          },
+          {
+            "id": "BC-P1C-M45-F004",
+            "label": "拟任职务",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M45"
+          },
+          {
+            "id": "BC-P1C-M45-F005",
+            "label": "拟免职务",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M45"
+          },
+          {
+            "id": "BC-P1C-M45-F006",
+            "label": "拟任职级",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M45"
+          },
+          {
+            "id": "BC-P1C-M45-F007",
+            "label": "拟聘任开始日期",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M45"
+          },
+          {
+            "id": "BC-P1C-M45-F008",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M45"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：干部任前管理；表头已取得；筛选/字段标签：管理机构；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:47:46.841Z"
+      },
+      {
+        "id": "BC-P1C-M46",
+        "moduleId": "M46",
+        "path": "职称管理 > 职称管理",
+        "evidenceRef": "BC-P1C-M46",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:52:15.264581+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P1C-M46-F001",
+            "label": "员工",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M46"
+          },
+          {
+            "id": "BC-P1C-M46-F002",
+            "label": "工号",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M46"
+          },
+          {
+            "id": "BC-P1C-M46-F003",
+            "label": "部门",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M46"
+          },
+          {
+            "id": "BC-P1C-M46-F004",
+            "label": "申报年度",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M46"
+          },
+          {
+            "id": "BC-P1C-M46-F005",
+            "label": "申报类型",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M46"
+          },
+          {
+            "id": "BC-P1C-M46-F006",
+            "label": "申报职称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M46"
+          },
+          {
+            "id": "BC-P1C-M46-F007",
+            "label": "申报级别",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M46"
+          },
+          {
+            "id": "BC-P1C-M46-F008",
+            "label": "申报专业",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M46"
+          },
+          {
+            "id": "BC-P1C-M46-F009",
+            "label": "申请时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M46"
+          },
+          {
+            "id": "BC-P1C-M46-F010",
+            "label": "审批状态",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M46"
+          },
+          {
+            "id": "BC-P1C-M46-F011",
+            "label": "职称申报表",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M46"
+          },
+          {
+            "id": "BC-P1C-M46-F012",
+            "label": "个人证件",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M46"
+          },
+          {
+            "id": "BC-P1C-M46-F013",
+            "label": "学历证书",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M46"
+          },
+          {
+            "id": "BC-P1C-M46-F014",
+            "label": "现专业技术职务资格附件",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M46"
+          },
+          {
+            "id": "BC-P1C-M46-F015",
+            "label": "继续教育",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M46"
+          },
+          {
+            "id": "BC-P1C-M46-F016",
+            "label": "论文论著",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M46"
+          },
+          {
+            "id": "BC-P1C-M46-F017",
+            "label": "专利证书",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M46"
+          },
+          {
+            "id": "BC-P1C-M46-F018",
+            "label": "获奖证书",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M46"
+          },
+          {
+            "id": "BC-P1C-M46-F019",
+            "label": "其它资料",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M46"
+          },
+          {
+            "id": "BC-P1C-M46-F020",
+            "label": "全部材料附件",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M46"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：职称管理；表头已取得；筛选/字段标签：部门、申报类型、申报级别；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:48:20.053Z"
+      },
+      {
+        "id": "BC-P1C-M41",
+        "moduleId": "M41",
+        "path": "数字人才 > 人才搜索",
+        "evidenceRef": "BC-P1C-M41",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:52:15.264581+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "N",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：人才搜索；尚未取得目标业务字段；仅到达应用载体；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:48:45.041Z"
+      },
+      {
+        "id": "BC-P1C-M15-02",
+        "moduleId": "M15",
+        "path": "测评中心 > 应用内项目",
+        "evidenceRef": "BC-P1C-M15-02",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:52:15.264581+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P1C-M15-02-F001",
+            "label": "名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M15-02"
+          },
+          {
+            "id": "BC-P1C-M15-02-F002",
+            "label": "测评活动数量",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M15-02"
+          },
+          {
+            "id": "BC-P1C-M15-02-F003",
+            "label": "状态",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M15-02"
+          },
+          {
+            "id": "BC-P1C-M15-02-F004",
+            "label": "类型",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M15-02"
+          },
+          {
+            "id": "BC-P1C-M15-02-F005",
+            "label": "创建人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M15-02"
+          },
+          {
+            "id": "BC-P1C-M15-02-F006",
+            "label": "创建时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M15-02"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：项目；表头已取得；筛选/字段标签：状态、测评方案、类型、项目管理单元状态；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:49:29.092Z"
+      },
+      {
+        "id": "BC-P1C-M26-02",
+        "moduleId": "M26",
+        "path": "360度评估 > 应用内评估活动（请求路径；实际页面：全部）",
+        "evidenceRef": "BC-P1C-M26-02",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:52:15.264581+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P1C-M26-02-F001",
+            "label": "关注",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M26-02"
+          },
+          {
+            "id": "BC-P1C-M26-02-F002",
+            "label": "活动名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M26-02"
+          },
+          {
+            "id": "BC-P1C-M26-02-F003",
+            "label": "评价对象人数",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M26-02"
+          },
+          {
+            "id": "BC-P1C-M26-02-F004",
+            "label": "评价者人数",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M26-02"
+          },
+          {
+            "id": "BC-P1C-M26-02-F005",
+            "label": "应用场景",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M26-02"
+          },
+          {
+            "id": "BC-P1C-M26-02-F006",
+            "label": "创建人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M26-02"
+          },
+          {
+            "id": "BC-P1C-M26-02-F007",
+            "label": "创建时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M26-02"
+          },
+          {
+            "id": "BC-P1C-M26-02-F008",
+            "label": "作答进度",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M26-02"
+          },
+          {
+            "id": "BC-P1C-M26-02-F009",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M26-02"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：全部；表头已取得；筛选/字段标签：未取得；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:50:02.184Z"
+      },
+      {
+        "id": "BC-P1C-M27",
+        "moduleId": "M27",
+        "path": "学习管理 > 培训计划（请求路径；实际页面：工作台）",
+        "evidenceRef": "BC-P1C-M27",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:52:15.264581+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "N",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：工作台；尚未取得目标业务字段；仅到达应用载体；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:50:30.548Z"
+      },
+      {
+        "id": "BC-P1C-M28",
+        "moduleId": "M28",
+        "path": "AI陪练 > 陪练计划（请求路径；实际页面：指派计划）",
+        "evidenceRef": "BC-P1C-M28",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:52:15.264581+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P1C-M28-F001",
+            "label": "计划名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M28"
+          },
+          {
+            "id": "BC-P1C-M28-F002",
+            "label": "所属部门",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M28"
+          },
+          {
+            "id": "BC-P1C-M28-F003",
+            "label": "发布状态",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M28"
+          },
+          {
+            "id": "BC-P1C-M28-F004",
+            "label": "剧本数量",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M28"
+          },
+          {
+            "id": "BC-P1C-M28-F005",
+            "label": "安排人数",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M28"
+          },
+          {
+            "id": "BC-P1C-M28-F006",
+            "label": "完成人数",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M28"
+          },
+          {
+            "id": "BC-P1C-M28-F007",
+            "label": "计划模式",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M28"
+          },
+          {
+            "id": "BC-P1C-M28-F008",
+            "label": "计划有效天数",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M28"
+          },
+          {
+            "id": "BC-P1C-M28-F009",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M28"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：指派计划；表头已取得；筛选/字段标签：未取得；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:50:56.863Z"
+      },
+      {
+        "id": "BC-P1C-M16",
+        "moduleId": "M16",
+        "path": "绩效管理 > 员工绩效 > 异常执行人处理",
+        "evidenceRef": "BC-P1C-M16",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:58:39.382258+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P1C-M16-F001",
+            "label": "被考核人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M16"
+          },
+          {
+            "id": "BC-P1C-M16-F002",
+            "label": "部门",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M16"
+          },
+          {
+            "id": "BC-P1C-M16-F003",
+            "label": "当前步骤",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M16"
+          },
+          {
+            "id": "BC-P1C-M16-F004",
+            "label": "执行人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M16"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：异常执行人处理；表头已取得；筛选/字段标签：未取得；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:55:03.066Z",
+        "observedApplication": null,
+        "navigationLimit": null
+      },
+      {
+        "id": "BC-P1C-M12",
+        "moduleId": "M12",
+        "path": "招聘管理系统 > 招聘需求",
+        "evidenceRef": "BC-P1C-M12",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:58:39.382258+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P1C-M12-F001",
+            "label": "需求名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M12"
+          },
+          {
+            "id": "BC-P1C-M12-F002",
+            "label": "需求部门",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M12"
+          },
+          {
+            "id": "BC-P1C-M12-F003",
+            "label": "需求类型",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M12"
+          },
+          {
+            "id": "BC-P1C-M12-F004",
+            "label": "需求人数",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M12"
+          },
+          {
+            "id": "BC-P1C-M12-F005",
+            "label": "已到岗人数",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M12"
+          },
+          {
+            "id": "BC-P1C-M12-F006",
+            "label": "剩余可关联Offer数",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M12"
+          },
+          {
+            "id": "BC-P1C-M12-F007",
+            "label": "流程中Offer数",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M12"
+          },
+          {
+            "id": "BC-P1C-M12-F008",
+            "label": "已发Offer数",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M12"
+          },
+          {
+            "id": "BC-P1C-M12-F009",
+            "label": "待入职人数",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M12"
+          },
+          {
+            "id": "BC-P1C-M12-F010",
+            "label": "剩余可入职人数",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M12"
+          },
+          {
+            "id": "BC-P1C-M12-F011",
+            "label": "需求状态",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M12"
+          },
+          {
+            "id": "BC-P1C-M12-F012",
+            "label": "需求提出时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M12"
+          },
+          {
+            "id": "BC-P1C-M12-F013",
+            "label": "期望到岗时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M12"
+          },
+          {
+            "id": "BC-P1C-M12-F014",
+            "label": "需求负责人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M12"
+          },
+          {
+            "id": "BC-P1C-M12-F015",
+            "label": "创建时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M12"
+          },
+          {
+            "id": "BC-P1C-M12-F016",
+            "label": "关闭时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M12"
+          },
+          {
+            "id": "BC-P1C-M12-F017",
+            "label": "完成时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M12"
+          },
+          {
+            "id": "BC-P1C-M12-F018",
+            "label": "需求编号",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M12"
+          },
+          {
+            "id": "BC-P1C-M12-F019",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M12"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：招聘需求；表头已取得；筛选/字段标签：需求类型、需求状态；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:55:17.659Z",
+        "observedApplication": null,
+        "navigationLimit": null
+      },
+      {
+        "id": "BC-P1C-M13",
+        "moduleId": "M13",
+        "path": "面试官工作台 > Offer审批",
+        "evidenceRef": "BC-P1C-M13",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:58:39.382258+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "N",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：Offer审批；尚未取得目标业务字段；仅到达应用载体；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:55:31.866Z",
+        "observedApplication": null,
+        "navigationLimit": null
+      },
+      {
+        "id": "BC-P1C-M14",
+        "moduleId": "M14",
+        "path": "AI人才库 > 人才地图",
+        "evidenceRef": "BC-P1C-M14",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:58:39.382258+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "N",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：人才地图；尚未取得目标业务字段；仅到达应用载体；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:55:58.675Z",
+        "observedApplication": null,
+        "navigationLimit": null
+      },
+      {
+        "id": "BC-P1C-M23",
+        "moduleId": "M23",
+        "path": "推荐运营中心 > 奖金管理（请求路径；实际页面：奖金总额）",
+        "evidenceRef": "BC-P1C-M23",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:58:39.382258+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P1C-M23-F001",
+            "label": "推荐人姓名",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M23"
+          },
+          {
+            "id": "BC-P1C-M23-F002",
+            "label": "推荐人手机号",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M23"
+          },
+          {
+            "id": "BC-P1C-M23-F003",
+            "label": "推荐人邮箱",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M23"
+          },
+          {
+            "id": "BC-P1C-M23-F004",
+            "label": "员工号",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M23"
+          },
+          {
+            "id": "BC-P1C-M23-F005",
+            "label": "部门",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M23"
+          },
+          {
+            "id": "BC-P1C-M23-F006",
+            "label": "认证状态",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M23"
+          },
+          {
+            "id": "BC-P1C-M23-F007",
+            "label": "推荐人类型",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M23"
+          },
+          {
+            "id": "BC-P1C-M23-F008",
+            "label": "奖金总额",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M23"
+          },
+          {
+            "id": "BC-P1C-M23-F009",
+            "label": "待发放奖金",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M23"
+          },
+          {
+            "id": "BC-P1C-M23-F010",
+            "label": "已发放奖金",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M23"
+          },
+          {
+            "id": "BC-P1C-M23-F011",
+            "label": "认证时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M23"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：奖金总额；表头已取得；筛选/字段标签：认证状态；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:56:18.679Z",
+        "observedApplication": null,
+        "navigationLimit": null
+      },
+      {
+        "id": "BC-P1C-M24",
+        "moduleId": "M24",
+        "path": "校园大使管理 > 校园大使工作台",
+        "evidenceRef": "BC-P1C-M24",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:58:39.382258+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "N",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：校园大使工作台；尚未取得目标业务字段；仅到达应用载体；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:56:43.681Z",
+        "observedApplication": "校园大使管理",
+        "navigationLimit": null
+      },
+      {
+        "id": "BC-P1C-M25",
+        "moduleId": "M25",
+        "path": "外部推荐管理 > 奖励规则（请求路径；实际页面：推荐悬赏规则）",
+        "evidenceRef": "BC-P1C-M25",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:58:39.382258+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P1C-M25-F001",
+            "label": "规则名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M25"
+          },
+          {
+            "id": "BC-P1C-M25-F002",
+            "label": "类型",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M25"
+          },
+          {
+            "id": "BC-P1C-M25-F003",
+            "label": "描述",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M25"
+          },
+          {
+            "id": "BC-P1C-M25-F004",
+            "label": "创建人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M25"
+          },
+          {
+            "id": "BC-P1C-M25-F005",
+            "label": "创建时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M25"
+          },
+          {
+            "id": "BC-P1C-M25-F006",
+            "label": "共享部门",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M25"
+          },
+          {
+            "id": "BC-P1C-M25-F007",
+            "label": "共享人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M25"
+          },
+          {
+            "id": "BC-P1C-M25-F008",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M25"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：推荐悬赏规则；表头已取得；筛选/字段标签：未取得；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:57:03.028Z",
+        "observedApplication": "外部推荐管理",
+        "navigationLimit": null
+      },
+      {
+        "id": "BC-P1C-M24-02",
+        "moduleId": "M24",
+        "path": "校园大使管理 > 奖励规则管理",
+        "evidenceRef": "BC-P1C-M24-02",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:58:39.382258+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P1C-M24-02-F001",
+            "label": "规则名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M24-02"
+          },
+          {
+            "id": "BC-P1C-M24-02-F002",
+            "label": "类型",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M24-02"
+          },
+          {
+            "id": "BC-P1C-M24-02-F003",
+            "label": "描述",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M24-02"
+          },
+          {
+            "id": "BC-P1C-M24-02-F004",
+            "label": "创建人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M24-02"
+          },
+          {
+            "id": "BC-P1C-M24-02-F005",
+            "label": "创建时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M24-02"
+          },
+          {
+            "id": "BC-P1C-M24-02-F006",
+            "label": "共享部门",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M24-02"
+          },
+          {
+            "id": "BC-P1C-M24-02-F007",
+            "label": "共享人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M24-02"
+          },
+          {
+            "id": "BC-P1C-M24-02-F008",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M24-02"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：奖励规则管理；表头已取得；筛选/字段标签：未取得；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:57:26.545Z",
+        "observedApplication": "校园大使管理",
+        "navigationLimit": null
+      },
+      {
+        "id": "BC-P1C-M34",
+        "moduleId": "M34",
+        "path": "AI面试官 > 企业题库管理（请求路径；实际页面：启用的题目）",
+        "evidenceRef": "BC-P1C-M34",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:58:39.382258+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P1C-M34-F001",
+            "label": "题目",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M34"
+          },
+          {
+            "id": "BC-P1C-M34-F002",
+            "label": "题目类别",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M34"
+          },
+          {
+            "id": "BC-P1C-M34-F003",
+            "label": "考察能力",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M34"
+          },
+          {
+            "id": "BC-P1C-M34-F004",
+            "label": "题型",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M34"
+          },
+          {
+            "id": "BC-P1C-M34-F005",
+            "label": "作答形式",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M34"
+          },
+          {
+            "id": "BC-P1C-M34-F006",
+            "label": "已关联面试数量",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M34"
+          },
+          {
+            "id": "BC-P1C-M34-F007",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M34"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：启用的题目；表头已取得；筛选/字段标签：未取得；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:57:49.021Z",
+        "observedApplication": "AI面试官",
+        "navigationLimit": null
+      },
+      {
+        "id": "BC-P1C-M44",
+        "moduleId": "M44",
+        "path": "RPA招聘助手 > 历史记录（请求路径；实际页面：启用的题目）",
+        "evidenceRef": "BC-P1C-M44",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:58:39.382258+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "N",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：启用的题目；尚未取得目标业务字段；仅到达应用载体；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:58:00.976Z",
+        "observedApplication": "关闭菜单",
+        "navigationLimit": "实际应用与请求应用不符，未采纳旧页字段"
+      },
+      {
+        "id": "BC-P1C-M11",
+        "moduleId": "M11",
+        "path": "假勤管理 > 假期管理 > 调休假管理",
+        "evidenceRef": "BC-P1C-M11",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:01:38.830342+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P1C-M11-F001",
+            "label": "员工",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M11"
+          },
+          {
+            "id": "BC-P1C-M11-F002",
+            "label": "考勤组织",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M11"
+          },
+          {
+            "id": "BC-P1C-M11-F003",
+            "label": "调整值",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M11"
+          },
+          {
+            "id": "BC-P1C-M11-F004",
+            "label": "指定有效期",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M11"
+          },
+          {
+            "id": "BC-P1C-M11-F005",
+            "label": "备注",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M11"
+          },
+          {
+            "id": "BC-P1C-M11-F006",
+            "label": "状态",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M11"
+          },
+          {
+            "id": "BC-P1C-M11-F007",
+            "label": "错误信息",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M11"
+          },
+          {
+            "id": "BC-P1C-M11-F008",
+            "label": "创建人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M11"
+          },
+          {
+            "id": "BC-P1C-M11-F009",
+            "label": "创建时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M11"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：调休假管理；表头已取得；筛选/字段标签：考勤组织、状态；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:59:18.212Z",
+        "observedApplication": "假勤管理",
+        "navigationLimit": null
+      },
+      {
+        "id": "BC-P1C-M07",
+        "moduleId": "M07",
+        "path": "薪酬社保 > 薪资档案",
+        "evidenceRef": "BC-P1C-M07",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:01:38.830342+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P1C-M07-F001",
+            "label": "员工",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M07"
+          },
+          {
+            "id": "BC-P1C-M07-F002",
+            "label": "姓名",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M07"
+          },
+          {
+            "id": "BC-P1C-M07-F003",
+            "label": "部门",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M07"
+          },
+          {
+            "id": "BC-P1C-M07-F004",
+            "label": "业务组织",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M07"
+          },
+          {
+            "id": "BC-P1C-M07-F005",
+            "label": "薪资组",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M07"
+          },
+          {
+            "id": "BC-P1C-M07-F006",
+            "label": "生效日期",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M07"
+          },
+          {
+            "id": "BC-P1C-M07-F007",
+            "label": "审批完成时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M07"
+          },
+          {
+            "id": "BC-P1C-M07-F008",
+            "label": "变动原因",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M07"
+          },
+          {
+            "id": "BC-P1C-M07-F009",
+            "label": "入职日期",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M07"
+          },
+          {
+            "id": "BC-P1C-M07-F010",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M07"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：薪资档案；表头已取得；筛选/字段标签：部门、薪资组、薪资包；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T16:00:12.413Z",
+        "observedApplication": "薪酬社保",
+        "navigationLimit": null
+      },
+      {
+        "id": "BC-P1C-M09",
+        "moduleId": "M09",
+        "path": "预算成本 > 预算管理（请求路径；实际页面：预算方案）",
+        "evidenceRef": "BC-P1C-M09",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:01:38.830342+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P1C-M09-F001",
+            "label": "预算方案",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M09"
+          },
+          {
+            "id": "BC-P1C-M09-F002",
+            "label": "预算年度",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M09"
+          },
+          {
+            "id": "BC-P1C-M09-F003",
+            "label": "预算进度",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M09"
+          },
+          {
+            "id": "BC-P1C-M09-F004",
+            "label": "当前执行月份",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M09"
+          },
+          {
+            "id": "BC-P1C-M09-F005",
+            "label": "预算权限控制薪资组",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M09"
+          },
+          {
+            "id": "BC-P1C-M09-F006",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M09"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：预算方案；表头已取得；筛选/字段标签：未取得；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T16:00:31.137Z",
+        "observedApplication": "预算成本",
+        "navigationLimit": null
+      },
+      {
+        "id": "BC-P1C-M10",
+        "moduleId": "M10",
+        "path": "财务凭证 > 任务管理",
+        "evidenceRef": "BC-P1C-M10",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:01:38.830342+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P1C-M10-F001",
+            "label": "名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M10"
+          },
+          {
+            "id": "BC-P1C-M10-F002",
+            "label": "凭证类型",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M10"
+          },
+          {
+            "id": "BC-P1C-M10-F003",
+            "label": "发薪年月",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M10"
+          },
+          {
+            "id": "BC-P1C-M10-F004",
+            "label": "发薪活动",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M10"
+          },
+          {
+            "id": "BC-P1C-M10-F005",
+            "label": "分摊方案名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M10"
+          },
+          {
+            "id": "BC-P1C-M10-F006",
+            "label": "分摊维度",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M10"
+          },
+          {
+            "id": "BC-P1C-M10-F007",
+            "label": "任务状态",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M10"
+          },
+          {
+            "id": "BC-P1C-M10-F008",
+            "label": "生成凭证信息",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M10"
+          },
+          {
+            "id": "BC-P1C-M10-F009",
+            "label": "修改人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M10"
+          },
+          {
+            "id": "BC-P1C-M10-F010",
+            "label": "修改时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M10"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：任务管理；表头已取得；筛选/字段标签：未取得；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T16:00:56.004Z",
+        "observedApplication": "财务凭证",
+        "navigationLimit": null
+      },
+      {
+        "id": "BC-P1C-M33",
+        "moduleId": "M33",
+        "path": "森福利 > 设置中心",
+        "evidenceRef": "BC-P1C-M33",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:01:38.830342+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "N",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：设置中心；尚未取得目标业务字段；仅到达应用载体；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T16:01:16.029Z",
+        "observedApplication": "森福利",
+        "navigationLimit": null
+      },
+      {
+        "id": "BC-P1C-M42",
+        "moduleId": "M42",
+        "path": "佣金管理 > 计算方案",
+        "evidenceRef": "BC-P1C-M42",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:01:38.830342+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P1C-M42-F001",
+            "label": "方案名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M42"
+          },
+          {
+            "id": "BC-P1C-M42-F002",
+            "label": "权限部门",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M42"
+          },
+          {
+            "id": "BC-P1C-M42-F003",
+            "label": "是否包含下级",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M42"
+          },
+          {
+            "id": "BC-P1C-M42-F004",
+            "label": "状态",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M42"
+          },
+          {
+            "id": "BC-P1C-M42-F005",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M42"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：计算方案；表头已取得；筛选/字段标签：未取得；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T16:01:29.879Z",
+        "observedApplication": "佣金管理",
+        "navigationLimit": null
+      },
+      {
+        "id": "BC-P1C-M04",
+        "moduleId": "M04",
+        "path": "HRBP工作台 > 员工（请求路径；实际页面：在职）",
+        "evidenceRef": "BC-P1C-M04",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:02:40.548294+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P1C-M04-F001",
+            "label": "姓名",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M04"
+          },
+          {
+            "id": "BC-P1C-M04-F002",
+            "label": "部门",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M04"
+          },
+          {
+            "id": "BC-P1C-M04-F003",
+            "label": "职位",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M04"
+          },
+          {
+            "id": "BC-P1C-M04-F004",
+            "label": "职级",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M04"
+          },
+          {
+            "id": "BC-P1C-M04-F005",
+            "label": "工作地点",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M04"
+          },
+          {
+            "id": "BC-P1C-M04-F006",
+            "label": "证件号码",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M04"
+          },
+          {
+            "id": "BC-P1C-M04-F007",
+            "label": "入职日期",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M04"
+          },
+          {
+            "id": "BC-P1C-M04-F008",
+            "label": "雇佣关系",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M04"
+          },
+          {
+            "id": "BC-P1C-M04-F009",
+            "label": "人员状态",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M04"
+          },
+          {
+            "id": "BC-P1C-M04-F010",
+            "label": "直线经理",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M04"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：在职；表头已取得；筛选/字段标签：部门、职级；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T16:02:15.570Z",
+        "observedApplication": "HRBP工作台",
+        "navigationLimit": null
+      },
+      {
+        "id": "BC-P1C-M05",
+        "moduleId": "M05",
+        "path": "标签库 > 企业标签库",
+        "evidenceRef": "BC-P1C-M05",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:02:40.548294+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "N",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：企业标签库；尚未取得目标业务字段；仅到达应用载体；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T16:02:32.410Z",
+        "observedApplication": "标签库",
+        "navigationLimit": null
       }
     ],
     "humanAcceptancePrerequisite": false,
@@ -16544,7 +19182,7 @@
       "BP-I"
     ],
     "nextTasks": [
-      "保存组织空表、选拔/资格等新增证据及首包差异；逐包继续原站只读盘点",
+      "干部人才至薪酬本轮典型页与内部接口契约已补；当前继续自助/报表/集成，HRBP后进入标签库",
       "干部人才→学习→绩效→招聘→假勤→薪酬→自助/报表/集成，未探索页保持待补证",
       "核实M36/M41/M47职责与候选归属，原48组不变",
       "完成包级字段/角色/状态/外部接口与跨包一致性；候选规则集中待评审",
@@ -16554,7 +19192,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-08T15:44:10.122788+00:00",
+    "updatedAt": "2026-09-08T16:02:20.773673+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -16621,7 +19259,7 @@
             ],
             "acceptance": "待取得项目与工时表单后才能定义工时重叠、合计、审批、薪资影响场景；当前不设虚构通过预期",
             "gap": "M20未独立实现；项目归属BP-F不等于可按任职调动替代",
-            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "classification": "原站局部证据及原范围/差异输入；具体产品规则待补证，不声称已实现",
             "accepted": false,
             "id": "BP-F-REQ-03"
           }
@@ -16696,11 +19334,12 @@
           {
             "object": "360项目/关系/答卷/报告",
             "fields": "纯量表模板；1–20题、1–5整数；minRespondents3–10；关系self/supervisor/peer/report；项目日期合法",
-            "roles": "HR管理员配置；仅名单中的在职评估人本人填报；范围控制不能等同匿名承诺",
+            "roles": "HR管理员配置；仅名单中的在职评估人本人填报；范围控制不能等同匿名承诺；development.visibleRecord允许项目范围HR/管理员读取原始答卷，分组阈值只控制汇总显示，不承诺管理员也看不到个人答卷",
             "lifecycle": "draft→open→closed；报告closed后按被评人一次发布冻结",
             "actions": "配置关系、开放/关闭、作答、发布分组汇总",
             "codeRefs": [
-              "lib/hris/feedback.ts"
+              "lib/hris/feedback.ts",
+              "lib/hris/development.ts"
             ],
             "acceptance": "草稿后不能改名单；重复评估人+被评人拒绝；本人关系不匹配拒绝；同事/下属低于阈值返回suppressed与null均值，自评/上级阈值1；不把无响应记0",
             "gap": "阈值/匿名性是独立策略待确认；提醒、题型、完整活动运营未覆盖",
@@ -16720,9 +19359,26 @@
             ],
             "acceptance": "后续评审必须证明正式绩效快照来源/版本；撤销或新版本不能静默覆盖旧九宫格；无绩效不自动补最低档",
             "gap": "当前仅重用已有范围描述；多维模型/健康度/测評题库及评分未可验收",
-            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "classification": "原站局部证据及原范围/差异输入；具体产品规则待补证，不声称已实现",
             "accepted": false,
             "id": "BP-C-REQ-04"
+          },
+          {
+            "id": "BP-C-API-01",
+            "object": "内部读取/命令接口",
+            "fields": "GET返回当前可见记录、revision及角色/本人标识；POST JSON含revision非负整数与command，具体command遵守本包对象schema。不能从通用envelope推断未列出的命令已实现",
+            "roles": "服务端取当前租户/成员和可见记录，命令再校验角色、对象与字段范围；当前访问者未新增",
+            "lifecycle": "先校验再事务提交；成功返回记录ID及下一revision；旧revision冲突，不宣称通用命令全具幂等恢复",
+            "actions": "本项目/api/qualifications, /api/cadres；仅静态阅读，未调用业务API",
+            "codeRefs": [
+              "app/api/qualifications/route.ts",
+              "app/api/cadres/route.ts",
+              "lib/hris/http.ts"
+            ],
+            "acceptance": "非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503",
+            "gap": "这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定",
+            "classification": "本项目接口静态事实；候选验收契约待评审",
+            "accepted": false
           }
         ],
         "goal": "在保留原范围内形成干部人才的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
@@ -16825,9 +19481,41 @@
             ],
             "acceptance": "先明确评分输入和可复现版本，再制定正常/无音频/低置信度/人工复核场景；暂不能给出评分通过阈值",
             "gap": "没有独立实现，不以现有学习考试代替",
-            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "classification": "原站局部证据及原范围/差异输入；具体产品规则待补证，不声称已实现",
             "accepted": false,
             "id": "BP-L-REQ-05"
+          },
+          {
+            "id": "BP-L-REQ-06",
+            "object": "独立考试与作业批阅",
+            "fields": "试卷1–20题；passingScore1–100、maxAttempts1–10；当前客观单选/多选/判断，原单选版本保留。作业content20–12000、maxSubmissions1–20、review可选score整数0–100；当前提交submissionId必须匹配",
+            "roles": "HR配置/派发；学员本人提交；同一启用组织的在职独立指定批阅人（可为employee角色），当前非本人且非提交账号。转交后旧批阅者无权",
+            "lifecycle": "配置draft/sealed/archived；作业active/submitted/returned/completed/cancelled，取消记录前态，恢复须人员/窗口/阶段仍有效；已退出计划要求不能恢复办理",
+            "actions": "版本配置、派发、作答/提交、指定批阅、转交、取消/恢复",
+            "codeRefs": [
+              "lib/hris/learning-homework.ts",
+              "lib/hris/learning-exam-definitions.ts"
+            ],
+            "acceptance": "两种试卷题目结构必须且只能提供一种；已定版不可编辑；作业批阅旧submissionId拒绝，评分为空不补0；批阅后返回可重交且次数受限；人员异动/撤权后不能沿用旧任务授权",
+            "gap": "填空/简答/排序、随机抽题、多级批阅、附件/AI批阅及外部通知尚未实现；原站可选题型不证明当前已支持",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false
+          },
+          {
+            "id": "BP-L-API-01",
+            "object": "内部读取/命令接口",
+            "fields": "作业GET另返回每任务stageDeadline/canSubmit/canReview；POST严格revision+command，成功返回ids数组与下一revision；原子保存本次相关记录",
+            "roles": "服务端取当前租户/成员和可见记录，命令再校验角色、对象与字段范围；当前访问者未新增",
+            "lifecycle": "先校验再事务提交；成功返回记录ID及下一revision；旧revision冲突，不宣称通用命令全具幂等恢复",
+            "actions": "本项目/api/learning-homework；仅静态阅读，未调用业务API",
+            "codeRefs": [
+              "app/api/learning-homework/route.ts",
+              "lib/hris/http.ts"
+            ],
+            "acceptance": "非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503",
+            "gap": "这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定",
+            "classification": "本项目接口静态事实；候选验收契约待评审",
+            "accepted": false
           }
         ],
         "goal": "在保留原范围内形成学习的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
@@ -16901,6 +19589,22 @@
             "classification": "本项目既有实现静态事实；转为产品要求待评审",
             "accepted": false,
             "id": "BP-P-REQ-03"
+          },
+          {
+            "id": "BP-P-API-01",
+            "object": "内部读取/命令接口",
+            "fields": "GET返回当前可见记录、revision及角色/本人标识；POST JSON含revision非负整数与command，具体command遵守本包对象schema。不能从通用envelope推断未列出的命令已实现",
+            "roles": "服务端取当前租户/成员和可见记录，命令再校验角色、对象与字段范围；当前访问者未新增",
+            "lifecycle": "先校验再事务提交；成功返回记录ID及下一revision；旧revision冲突，不宣称通用命令全具幂等恢复",
+            "actions": "本项目/api/performance；仅静态阅读，未调用业务API",
+            "codeRefs": [
+              "app/api/performance/route.ts",
+              "lib/hris/http.ts"
+            ],
+            "acceptance": "非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503",
+            "gap": "这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定",
+            "classification": "本项目接口静态事实；候选验收契约待评审",
+            "accepted": false
           }
         ],
         "goal": "在保留原范围内形成绩效的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
@@ -16936,7 +19640,7 @@
         "contracts": [
           {
             "object": "需求/招聘职位/候选人",
-            "fields": "需求草稿/显式提交；candidate必填active requisitionId；姓名1–200；email合法或空；职位冻结版本；CNY月薪整数分或面议",
+            "fields": "需求草稿/显式提交；candidate必填active requisitionId；姓名1–200；email合法或空；职位冻结版本；CNY月薪整数分或面议；headcount整数1–10000；类型new/replacement/reserve与urgency high/medium/low可选；requestedOn/expectedOn各自合法日期，职责/资格各≤2000；当前schema未定义两日期先后比较，不能写成既有约束",
             "roles": "当前组织HR录入；所有贡献者不能审批自己的需求/录用；指定面试人按排期权限",
             "lifecycle": "需求draft/submitted/active/closed；候选screening/interviewed/offered/approved/accepted/hired/rejected",
             "actions": "保存/保存并提交、独立批准、职位启用/修订、候选登记、退回、关闭",
@@ -16952,7 +19656,7 @@
           },
           {
             "object": "面试/评价/录用入职",
-            "fields": "排期、面试评价模板版本与显式结论；有效评价后录用；入职date、code唯一及名额校验",
+            "fields": "排期、面试评价模板版本与显式结论；有效评价后录用；入职date、code唯一及名额校验；四档评价1–20指标、最多10维、每项四个标签；scores整数1–4，comments每维≤1500；通过必须全项评分，拒绝可仅结论；aggregation=not-configured不计算综合分",
             "roles": "指定面试人评价；录用独立审批；HR登记候选接受，不冒充候选本人确认",
             "lifecycle": "排期未结束不可完成评价；推荐推进→录用批准→HR登记接受→到期原子入职",
             "actions": "内部排期/冲突核对、评价、审批、接受登记、入职",
@@ -16978,9 +19682,41 @@
             ],
             "acceptance": "待定义归因/去重/结算依据后制定重复推荐、撤回录用、跨来源冲突及重试场景；AI评分阈值不可编造",
             "gap": "周边7组未独立实现，不能用核心招聘自动验收覆盖",
-            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "classification": "原站局部证据及原范围/差异输入；具体产品规则待补证，不声称已实现",
             "accepted": false,
             "id": "BP-R-REQ-03"
+          },
+          {
+            "id": "BP-R-REQ-04",
+            "object": "招聘创建请求恢复与内部接口",
+            "fields": "POST revision非负整数、command；Idempotency-Key可选且8–100位字母数字下划线横线，仅新增需求/候选/普通或结构化面试；请求body≤65536字节",
+            "roles": "当前角色和原记录当前可见性重新核验；请求键按当前actor匹配，不跨账号复用",
+            "lifecycle": "同键同命令内容返回原记录id、originalRevision与replayed；同键变内容409；新创建与相关员工/排期完成数据同事务",
+            "actions": "GET授权记录与目标有效性；POST创建/恢复；非法来源403、格式415、过大413，业务错误按类型处理",
+            "codeRefs": [
+              "app/api/recruitment/route.ts",
+              "lib/hris/http.ts"
+            ],
+            "acceptance": "网络结果未知后同键重试只返回原记录，不重复创建；修改命令仍用同键拒绝；撤权后原键也不能恢复越权记录；其他动作传创建键拒绝",
+            "gap": "不是原站API说明，不提供外部渠道幂等契约；通用版本冲突不等于所有命令自动幂等",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false
+          },
+          {
+            "id": "BP-R-API-01",
+            "object": "内部读取/命令接口",
+            "fields": "GET返回当前可见记录、revision及角色/本人标识；POST JSON含revision非负整数与command，具体command遵守本包对象schema。不能从通用envelope推断未列出的命令已实现",
+            "roles": "服务端取当前租户/成员和可见记录，命令再校验角色、对象与字段范围；当前访问者未新增",
+            "lifecycle": "先校验再事务提交；成功返回记录ID及下一revision；旧revision冲突，不宣称通用命令全具幂等恢复",
+            "actions": "本项目/api/recruitment；仅静态阅读，未调用业务API",
+            "codeRefs": [
+              "app/api/recruitment/route.ts",
+              "lib/hris/http.ts"
+            ],
+            "acceptance": "非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503",
+            "gap": "这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定",
+            "classification": "本项目接口静态事实；候选验收契约待评审",
+            "accepted": false
           }
         ],
         "goal": "在保留原范围内形成招聘的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
@@ -17049,9 +19785,25 @@
             ],
             "acceptance": "必须先取得授予、折算单位、过期和跨年规则，再给出边界日与结转预期；现阶段不虚构额度公式",
             "gap": "企业参数、自动结转和申诉待决策/补证",
-            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "classification": "原站局部证据及原范围/差异输入；具体产品规则待补证，不声称已实现",
             "accepted": false,
             "id": "BP-A-REQ-03"
+          },
+          {
+            "id": "BP-A-API-01",
+            "object": "内部读取/命令接口",
+            "fields": "GET返回当前可见记录、revision及角色/本人标识；POST JSON含revision非负整数与command，具体command遵守本包对象schema。不能从通用envelope推断未列出的命令已实现；GET另含冻结班次ID、冻结期间、覆盖report与credited/used/reserved等余额",
+            "roles": "服务端取当前租户/成员和可见记录，命令再校验角色、对象与字段范围；当前访问者未新增",
+            "lifecycle": "先校验再事务提交；成功返回记录ID及下一revision；旧revision冲突，不宣称通用命令全具幂等恢复",
+            "actions": "本项目/api/attendance；仅静态阅读，未调用业务API",
+            "codeRefs": [
+              "app/api/attendance/route.ts",
+              "lib/hris/http.ts"
+            ],
+            "acceptance": "非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503",
+            "gap": "这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定",
+            "classification": "本项目接口静态事实；候选验收契约待评审",
+            "accepted": false
           }
         ],
         "goal": "在保留原范围内形成假勤的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
@@ -17101,7 +19853,7 @@
           },
           {
             "object": "冻结考勤引用/来源变化",
-            "fields": "同员工、计薪月内完整期间、不重叠、已冻结、uncoveredMinutes0；记录id/version/updatedAt/sourceRevision",
+            "fields": "同员工、计薪月内完整期间、不重叠、已冻结、uncoveredMinutes0；记录id/version/updatedAt/sourceRevision；引用可以不覆盖整个月，不因已关联部分期间宣称考勤完整",
             "roles": "薪酬专岗只能取当前范围聚合；不默认开放打卡个人明细",
             "lifecycle": "提交/复核/发布前重新核对；已发布结果保留并提示异常",
             "actions": "选择来源、核对、退回重编、发布后异常查询",
@@ -17126,9 +19878,25 @@
             ],
             "acceptance": "先明确各子模块来源、期间和对账基准，才能定义重算/冲销/重复任务/缺失科目等可执行预期",
             "gap": "M09/M10/M33/M42无独立实现；原48组不删减",
-            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "classification": "原站局部证据及原范围/差异输入；具体产品规则待补证，不声称已实现",
             "accepted": false,
             "id": "BP-S-REQ-03"
+          },
+          {
+            "id": "BP-S-API-01",
+            "object": "内部读取/命令接口",
+            "fields": "GET返回当前可见记录、revision及角色/本人标识；POST JSON含revision非负整数与command，具体command遵守本包对象schema。不能从通用envelope推断未列出的命令已实现；GET只按当前权限返回attendanceSources、attendanceIssues、roster、managedIds、publishedSlipIds",
+            "roles": "服务端取当前租户/成员和可见记录，命令再校验角色、对象与字段范围；当前访问者未新增",
+            "lifecycle": "先校验再事务提交；成功返回记录ID及下一revision；旧revision冲突，不宣称通用命令全具幂等恢复",
+            "actions": "本项目/api/payroll；仅静态阅读，未调用业务API",
+            "codeRefs": [
+              "app/api/payroll/route.ts",
+              "lib/hris/http.ts"
+            ],
+            "acceptance": "非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503",
+            "gap": "这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定",
+            "classification": "本项目接口静态事实；候选验收契约待评审",
+            "accepted": false
           }
         ],
         "goal": "在保留原范围内形成薪酬的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
@@ -17193,7 +19961,7 @@
           },
           {
             "object": "报表与指标分母",
-            "fields": "reportQuery dataset枚举、日期合法from≤to、search≤100；workforce列按viewEmail/viewLevel；返回asOf/revision",
+            "fields": "reportQuery dataset枚举、日期合法from≤to、search≤100；workforce列按viewEmail/viewLevel；返回asOf/revision；GET每页50、page1–10000；POST导出≤10000行且审计同事务，当前没有大规模流式引擎",
             "roles": "每个dataset有角色及当前组织范围；薪酬报表仅专岗；导出与页面读取不是同一权限承诺",
             "lifecycle": "正式绩效仅最新已发布版本；学习实例进度/成绩分别投影；人才九宫格取发布快照",
             "actions": "查询、分页、原有审计导出（本轮不执行导出）",
@@ -17201,7 +19969,7 @@
               "lib/hris/reports.ts",
               "app/api/reports/route.ts"
             ],
-            "acceptance": "无字段权时表头/单元格不出现该字段；学习缺分保持null；绩效旧版本不重复计为当前；合同覆盖登记不能证明电子签法律有效或实际在岗",
+            "acceptance": "无字段权时表头/单元格不出现该字段；学习缺分保持null；绩效旧版本不重复计为当前；合同覆盖登记不能证明电子签法律有效或实际在岗；旧revision导出拒绝，审计失败不得返回CSV（本轮未执行导出）",
             "gap": "设计器/大规模查询/历史组织快照未就绪；每数据集必须独立定义分母，不能统一套人员数",
             "classification": "本项目既有实现静态事实；转为产品要求待评审",
             "accepted": false,
@@ -17250,7 +20018,7 @@
             ],
             "acceptance": "取得配置证据后再定义冲突、重复回执、撤销、时间窗口和访问边界；任何未探索动作不标成可用",
             "gap": "周边多组只有入口；保留候选接口与证据不足，不能泛化当前自助实现",
-            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "classification": "原站局部证据及原范围/差异输入；具体产品规则待补证，不声称已实现",
             "accepted": false,
             "id": "BP-I-REQ-05"
           }
@@ -17436,7 +20204,8 @@
         "capability": "360项目/关系/答卷/报告",
         "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
         "evidence": [
-          "lib/hris/feedback.ts"
+          "lib/hris/feedback.ts",
+          "lib/hris/development.ts"
         ],
         "gap": "阈值/匿名性是独立策略待确认；提醒、题型、完整活动运营未覆盖",
         "acceptance": "草稿后不能改名单；重复评估人+被评人拒绝；本人关系不匹配拒绝；同事/下属低于阈值返回suppressed与null均值，自评/上级阈值1；不把无响应记0"
@@ -17653,7 +20422,7 @@
           "app/api/reports/route.ts"
         ],
         "gap": "设计器/大规模查询/历史组织快照未就绪；每数据集必须独立定义分母，不能统一套人员数",
-        "acceptance": "无字段权时表头/单元格不出现该字段；学习缺分保持null；绩效旧版本不重复计为当前；合同覆盖登记不能证明电子签法律有效或实际在岗"
+        "acceptance": "无字段权时表头/单元格不出现该字段；学习缺分保持null；绩效旧版本不重复计为当前；合同覆盖登记不能证明电子签法律有效或实际在岗；旧revision导出拒绝，审计失败不得返回CSV（本轮未执行导出）"
       },
       {
         "requirement": "BP-I-REQ-03",
@@ -17686,6 +20455,89 @@
         ],
         "gap": "周边多组只有入口；保留候选接口与证据不足，不能泛化当前自助实现",
         "acceptance": "取得配置证据后再定义冲突、重复回执、撤销、时间窗口和访问边界；任何未探索动作不标成可用"
+      },
+      {
+        "requirement": "BP-L-REQ-06",
+        "capability": "独立考试与作业批阅",
+        "disposition": "可复用候选/需补齐；未业务签署",
+        "evidence": [
+          "lib/hris/learning-homework.ts",
+          "lib/hris/learning-exam-definitions.ts"
+        ],
+        "gap": "填空/简答/排序、随机抽题、多级批阅、附件/AI批阅及外部通知尚未实现；原站可选题型不证明当前已支持",
+        "acceptance": "两种试卷题目结构必须且只能提供一种；已定版不可编辑；作业批阅旧submissionId拒绝，评分为空不补0；批阅后返回可重交且次数受限；人员异动/撤权后不能沿用旧任务授权"
+      },
+      {
+        "requirement": "BP-R-REQ-04",
+        "capability": "招聘创建请求恢复与内部接口",
+        "disposition": "可复用候选/接口契约待评审",
+        "evidence": [
+          "app/api/recruitment/route.ts",
+          "lib/hris/http.ts"
+        ],
+        "gap": "不是原站API说明，不提供外部渠道幂等契约；通用版本冲突不等于所有命令自动幂等",
+        "acceptance": "网络结果未知后同键重试只返回原记录，不重复创建；修改命令仍用同键拒绝；撤权后原键也不能恢复越权记录；其他动作传创建键拒绝"
+      },
+      {
+        "requirement": "BP-C-API-01",
+        "capability": "内部读取/命令接口",
+        "disposition": "可复用候选/外部接口另待补齐",
+        "evidence": [
+          "app/api/qualifications/route.ts",
+          "app/api/cadres/route.ts"
+        ],
+        "gap": "这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定",
+        "acceptance": "非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503"
+      },
+      {
+        "requirement": "BP-L-API-01",
+        "capability": "内部读取/命令接口",
+        "disposition": "可复用候选/外部接口另待补齐",
+        "evidence": [
+          "app/api/learning-homework/route.ts"
+        ],
+        "gap": "这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定",
+        "acceptance": "非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503"
+      },
+      {
+        "requirement": "BP-P-API-01",
+        "capability": "内部读取/命令接口",
+        "disposition": "可复用候选/外部接口另待补齐",
+        "evidence": [
+          "app/api/performance/route.ts"
+        ],
+        "gap": "这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定",
+        "acceptance": "非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503"
+      },
+      {
+        "requirement": "BP-R-API-01",
+        "capability": "内部读取/命令接口",
+        "disposition": "可复用候选/外部接口另待补齐",
+        "evidence": [
+          "app/api/recruitment/route.ts"
+        ],
+        "gap": "这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定",
+        "acceptance": "非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503"
+      },
+      {
+        "requirement": "BP-A-API-01",
+        "capability": "内部读取/命令接口",
+        "disposition": "可复用候选/外部接口另待补齐",
+        "evidence": [
+          "app/api/attendance/route.ts"
+        ],
+        "gap": "这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定",
+        "acceptance": "非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503"
+      },
+      {
+        "requirement": "BP-S-API-01",
+        "capability": "内部读取/命令接口",
+        "disposition": "可复用候选/外部接口另待补齐",
+        "evidence": [
+          "app/api/payroll/route.ts"
+        ],
+        "gap": "这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定",
+        "acceptance": "非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503"
       }
     ],
     "reviewIssues": [
@@ -17740,6 +20592,19 @@
           "tests/f01-f04-transfer-roles.test.mjs",
           "docs/delivery/F01_F04_Requirements_Baseline.md"
         ],
+        "decisionRequired": true
+      },
+      {
+        "id": "R-SPEC-01",
+        "topic": "候选人主对象与招聘需求/人才库关系",
+        "status": "待补证及产品范围评审，不阻断独立需求编写",
+        "basis": "BC-R03原站空表职位或人才库至少一项；recruitment.ts当前候选必须绑定active需求；原48组M14独立AI人才库未实现",
+        "proposal": "推荐保留当前招聘需求内候选链路作为首批可复用对象，另明确全局人员与多职位/人才库关系需求；尚未批准分期边界",
+        "alternatives": [
+          "将现有candidate改为全局人才主档＋多应聘关系：影响去重/权限/录用/历史迁移",
+          "继续要求每位候选都绑定需求：不能覆盖原全量人才库范围，若暂缓须明确例外"
+        ],
+        "impact": "阻塞完整M12/M14对象模型及去重权限就绪；不阻塞已确认需求内录用/入职契约",
         "decisionRequired": true
       }
     ],
@@ -17802,7 +20667,33 @@
         "dependency": "P1A/P1B→P2→P3/P4→P5",
         "contract": "包级规格可评审不等于需求就绪；历史测试仅对应testedSourceCommit；E1只页面打开，P2仅受限技术验收；私有部署不是生产签署。",
         "evidence": "本轮用户指令、原验收记录和Verification JSON"
+      },
+      {
+        "term": "预算/薪资组/凭证分摊",
+        "dependency": "BP-F组织/法人→BP-S薪资组/预算/核算/凭证→BP-I报表/接口",
+        "contract": "原站预算方案存在“预算权限控制薪资组”；凭证任务同时引用发薪年月/活动与分摊方案/维度。不能将薪资组视为组织一对一，不用人工工资批次替代预算或凭证任务。科目/维度版本、冲销和对账规则尚待补证。",
+        "evidence": "本轮M09预算方案和M10任务管理只读表头；只是引用结构，不证明实际核算或授权算法"
       }
-    ]
+    ],
+    "consistencyReview": {
+      "state": "进行中；已记录跨包契约与具体差异，未业务签署",
+      "reviewedSourceCommit": "447b02f72a2d2051986aba98e769daa7c2b846a3",
+      "issues": [
+        "F-SPEC-01岗位/职级名称",
+        "F-SPEC-02事务故障留痕",
+        "F-SPEC-03历史关联",
+        "R-SPEC-01全局人才关系"
+      ],
+      "findings": [
+        "组织同级唯一已排除首包歧义",
+        "360压制均值不代表HR不可见原答卷",
+        "学习放行/完成/成绩/学分分开",
+        "需求人数不等于Offer可关联/可入职不同分母",
+        "薪酬专岗不等于HR角色",
+        "原站接口映射不等于本项目DRY_RUN_ONLY预检",
+        "M36/M41/M47仍保留候选归属核实"
+      ],
+      "remaining": "完成其余原站页面与归属核实后更新；不得把本条状态当全项目审查通过"
+    }
   }
 }
