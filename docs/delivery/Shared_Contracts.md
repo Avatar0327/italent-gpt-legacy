@@ -106,3 +106,10 @@ contentWeighted显式配置items(requirementId,source,weight)，支持examHighes
 考试按本实例的有效作答取分；作业只取当前提交已批阅的评分，重新提交未批阅时保持待定。attempts=all/passed明确控制是否计入未通过记录，decimals明确舍入0–2位；这些缺失/纳入/精度政策为内部显式选择，不声称源站默认。无有效分或缺少任何加权项不重归一化、不静默计零。保留missingRequirementIds和evidenceIds供追溯；attemptIds仍仅考试尝试，兼容旧消费者。
 
 计划成绩按各活动已记录的百分制计算，原始分另外保留；课程成绩、带教/线下考核等其他来源和小数权重未支持。批阅独立性同时检查员工身份与提交账号，重新绑定员工不能让同账号审批自己的提交。
+
+
+## 内容更新增量契约（BC-L03部分实现）
+
+POST /api/learning-content-update: {revision, action:"preview"|"apply", command:{assignmentId,definitionId,homeworkReviewers?}, evidence?}。preview不写入，返回差异、阻止原因、更新前后完成与成绩投影；apply重新检查全部权限/版本/人员及资源，不信任客户端预览。全局revision CAS、实例与新增任务及审计原子保存，最多21条；审计失败不得部分更新。
+
+首批仅同族后续定版、模式/日期/同步不变、未过期且非循环的active实例；已有要求必须全部保留，追加课程仅在progressSync=false时支持，追加考试/作业复用独立派发校验。原任务不改写；目标定义、旧定义链、更新人/时间/依据保存在实例与不可变事件中。contentDefinitionHistoryIds防止已迁移版本再次本轮派发。不得用这组字段替代真实数据迁移审批；这里只操作授权的本系统合成学习实例。

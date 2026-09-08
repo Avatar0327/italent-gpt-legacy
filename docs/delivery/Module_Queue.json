@@ -199,14 +199,14 @@
     },
     {
       "id": "L-CONTENT-UPDATE",
-      "status": "in-progress",
+      "status": "partially-validated",
       "dependencies": [
         "L-BIND",
         "L-HOMEWORK",
         "L-WEIGHTED-GRADE"
       ],
       "acceptance": "BC-L03未完成实例内容更新，完成历史默认保留；影响可预览，权限/并发/成绩与学分来源不被静默改写",
-      "next": "先实现只读影响预览和阻止条件，再接有审计的显式更新"
+      "next": "156项综合和类型检查通过；统一构建发布追加更新；其后补历史退出/同步，不删除剩余范围"
     }
   ]
 }

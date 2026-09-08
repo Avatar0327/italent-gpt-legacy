@@ -59,7 +59,7 @@ export function applyLearningAssignment(records:R[],state:State,m:Member,input:u
  const config=definition!.payload.learningMode!;
  if(previous&&config.mode!=='recurring')fail('后续轮次须保持循环模式');
  const key=learningAssignmentKey(definition!.id,employeeId,round);
- if(records.some(r=>r.kind==='learningAssignment'&&r.payload.assignmentKey===key))fail('此员工已获得该计划版本的本轮实例');
+ if(records.some(r=>r.kind==='learningAssignment'&&(r.payload.assignmentKey===key||r.employeeId===employeeId&&(r.payload.round??1)===round&&r.payload.contentDefinitionHistoryIds?.includes(definition!.id))))fail('此员工已获得该计划版本的本轮实例');
  const window=learningWindow(config,c.action==='nextRound'?c.start:businessDate(at));
  if(window.due<businessDate(at))fail('计划已经结束，不能分派');
  const assignment:R={id:crypto.randomUUID(),kind:'learningAssignment',employeeId,positionId:null,referenceId:definition!.id,status:'active',createdBy:m.userId,createdAt:at,updatedAt:at,payload:{title:definition!.payload.title,orgId:definition!.payload.orgId,courseIds:[...definition!.payload.courseIds!],examIds:[...(definition!.payload.examIds??[])],homeworkIds:[...(definition!.payload.homeworkIds??[])],learningRequirements:learningRequirements(definition!).map(r=>({...r})),trainingStages:definition!.payload.trainingStages?structuredClone(definition!.payload.trainingStages):undefined,gradeRule:definition!.payload.gradeRule?structuredClone(definition!.payload.gradeRule):undefined,learningMode:config,version:definition!.payload.version,definitionRootId:definition!.payload.definitionRootId,assignmentKey:key,round,previousAssignmentId:previous?.id,start:window.start,due:window.due}};
