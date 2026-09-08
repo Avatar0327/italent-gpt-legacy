@@ -210,12 +210,22 @@
     },
     {
       "id": "P-SOURCE",
-      "status": "in-progress",
+      "status": "partial-evidence-verified",
       "dependencies": [
         "H004"
       ],
       "acceptance": "核对原站员工绩效字段与流程；分清页面证据、独立实现与企业待确认规则",
-      "next": "员工绩效搜索结果可见但正文未切换；核对应用导航，继续现有流程差异"
+      "next": "BC-P01/P02已核对；后续核对考核关系与组织绩效，不把新增字段等同提交规则"
+    },
+    {
+      "id": "P-RATINGS",
+      "status": "technical-verified-pending-publish",
+      "dependencies": [
+        "H004",
+        "P-SOURCE"
+      ],
+      "acceptance": "同组织定版等级、冻结历史、明确区间、三档映射、独立申诉与旧百分制兼容",
+      "next": "综合验证后统一私有发布；手工等级/系数/不参与考核与在途更新保留"
     }
   ]
 }
