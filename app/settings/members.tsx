@@ -1,6 +1,7 @@
 'use client';
 import {useEffect,useState,type FormEvent} from 'react';
 import Link from 'next/link';
+import PersonnelNavigation from '../personnel-navigation';
 import Workflows from './workflows';
 import {Button} from '@/components/ui/button';
 import {Input} from '@/components/ui/input';
@@ -23,7 +24,7 @@ export default function Members(){
  useEffect(()=>{load();},[]);
  const post=async(path:string,body:unknown)=>{setBusy(true);setError('');setNotice('');try{const r=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});const d=await r.json() as {error?:string};if(!r.ok){if(r.status===409)await load();throw Error(d.error);}setForm(null);await load();setNotice('已保存');}catch(e){setError((e as Error).message);}finally{setBusy(false);}};
  const submit=(e:FormEvent)=>{e.preventDefault();if(form&&data)post('/api/members',{...form,active:!!form.active,viewEmail:!!form.viewEmail,viewLevel:!!form.viewLevel,revision:data.revision});};
- return <main className="main-content mx-auto max-w-6xl"><div className="page-head"><div><Link className="text-link" href="/">返回导航台</Link><h1>企业与成员管理</h1></div><Button variant="outline" onClick={load} disabled={busy}>刷新</Button></div>
+ return <main className="main-content mx-auto max-w-6xl"><div className="page-head"><div><Link className="text-link" href="/">返回导航台</Link><h1>企业与成员管理</h1></div><Button variant="outline" onClick={load} disabled={busy}>刷新</Button></div><PersonnelNavigation current="/settings" admin={access?.role==='admin'}/>
  {error&&<div className="panel error" role="alert">{error}</div>}{notice&&<p role="status" className="my-4 text-green-700">{notice}</p>}
  {!access&&!error&&<Skeleton className="h-64"/>}
  {access?.canSetup&&<section className="panel p-6 max-w-xl"><h2 className="text-xl font-semibold mb-4">开通企业空间</h2><p className="mb-4 text-slate-600">创建空白企业后，您将成为系统管理员。组织和员工可在导航台中新增。</p><form onSubmit={e=>{e.preventDefault();post('/api/access',{action:'setup',name});}}><label className="field"><span>企业名称</span><Input value={name} onChange={e=>setName(e.target.value)} required minLength={2} maxLength={100}/></label><Button className="mt-4" disabled={busy}>创建企业</Button></form></section>}
