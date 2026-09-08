@@ -389,12 +389,23 @@
     },
     {
       "id": "P-TEXT-TEMPLATE",
-      "status": "tested-awaiting-private-publish",
+      "status": "private-published-v100",
       "dependencies": [
-        "G0"
+        "P-RATINGS",
+        "P-ACTIVITY",
+        "P-SOURCE"
       ],
       "acceptance": "同组织模板版本和活动快照、阶段必填及未知字段拒绝、未发布管理文本在接口/历史隔离、旧无模板流程兼容",
-      "next": "提交213项综合证据并私有发布；完整多维/角色/附件仍保留，继续已核实的模板与任务入口缺口"
+      "next": "完整多维/角色/附件仍保留，继续已核实的模板与任务入口缺口；213项为v100历史证据"
+    },
+    {
+      "id": "P-INBOX-LINK",
+      "status": "targeted-tested",
+      "dependencies": [
+        "P-TEXT-TEMPLATE"
+      ],
+      "acceptance": "自评/退回重提、调整待审暂缓、评价与发布任务指向权限范围内具体记录；调动离职不产生可推进任务",
+      "next": "局部6/6通过；完成类型检查，纳入下一批综合及发布，人工界面仍待验证"
     }
   ]
 }
