@@ -1,3 +1,4 @@
+import {requisitionStatusLabel,recruitmentTypes,recruitmentUrgencies} from './recruitment-status';
 import {learningGrade} from './learning-grades';
 import {learningRequirementProgress} from './learning-requirements';
 import {trainingStageCompleted} from './training-stages';
@@ -77,9 +78,8 @@ export function makeReport(ctx:DevelopmentContext,input:unknown){
  if(q.dataset==='performance'){title='正式绩效结果';columns=['工号','姓名','期间','正式评级','分数','来源'];rows=records.filter(r=>r.kind==='performance'&&r.status==='published'&&r.payload.sourcePlanId&&!records.some(x=>x.payload.supersedes===r.id)).map(r=>[code(r.employeeId),name(r.employeeId),r.payload.period??'',r.payload.originalRating??'',r.payload.score??null,r.payload.source??'']);}
  if(q.dataset==='recruitmentOperations'){
   if(!['admin','hr','manager'].includes(ctx.member.role))throw new HttpError(403,'仅有组织管理权限的人员可查看招聘需求进度');
-  title='可见范围招聘需求进度';columns=['招聘需求','岗位','所属组织','需求状态','需求版本','需求人数','累计已入职','剩余可入职','待审录用','已批准待登记接受','已接受待入职','筛选面试中','已结束候选流程'];
-  const statuses:Record<string,string>={draft:'待审批',returned:'待修订',active:'招聘中',closed:'已关闭'};
-  rows=records.filter(r=>r.kind==='requisition').map(q=>{const p=state.positions?.find(p=>p.id===q.positionId),candidates=records.filter(r=>r.kind==='candidate'&&r.referenceId===q.id),count=(status:string)=>candidates.filter(r=>r.status===status).length,hired=count('hired');return [q.payload.title??'',p?.name??'',org(p?.orgId??''),statuses[q.status]??q.status,q.payload.version??1,q.payload.headcount??null,hired,q.status==='active'?Math.max(0,(q.payload.headcount??0)-hired):null,count('offered'),count('approved'),count('accepted'),count('screening')+count('interviewed'),count('rejected')];});
+  title='可见范围招聘需求进度';columns=['招聘需求','岗位','所属组织','需求状态','需求版本','需求人数','累计已入职','剩余可入职','待审录用','已批准待登记接受','已接受待入职','筛选面试中','已结束候选流程','需求类型','紧急程度','需求提出日期','期望到岗日期','工作职责','任职资格'];
+  rows=records.filter(r=>r.kind==='requisition').map(q=>{const p=state.positions?.find(p=>p.id===q.positionId),candidates=records.filter(r=>r.kind==='candidate'&&r.referenceId===q.id),count=(status:string)=>candidates.filter(r=>r.status===status).length,hired=count('hired');return [q.payload.title??'',p?.name??'',org(p?.orgId??''),requisitionStatusLabel(q),q.payload.version??1,q.payload.headcount??null,hired,q.status==='active'?Math.max(0,(q.payload.headcount??0)-hired):null,count('offered'),count('approved'),count('accepted'),count('screening')+count('interviewed'),count('rejected'),recruitmentTypes[q.payload.recruitmentDetails?.type??'']??'',recruitmentUrgencies[q.payload.recruitmentDetails?.urgency??'']??'',q.payload.recruitmentDetails?.requestedOn??'',q.payload.recruitmentDetails?.expectedOn??'',q.payload.recruitmentDetails?.duties??'',q.payload.recruitmentDetails?.qualifications??''];});
  }
  if(q.dataset==='performanceOperations'){
   if(!['admin','hr','manager'].includes(ctx.member.role))throw new HttpError(403,'仅有组织管理权限的人员可查看绩效办理报表');

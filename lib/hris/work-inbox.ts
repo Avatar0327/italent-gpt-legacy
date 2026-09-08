@@ -1,3 +1,4 @@
+import {requisitionAwaitingApproval} from './recruitment-status';
 import {canReviewHomework} from './learning-homework';
 import {learningStageOpen} from './learning-requirements';
 import {learningTaskCurrent} from './learning-plan-model';
@@ -62,7 +63,8 @@ export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
    if(r.status==='submitted'&&r.createdBy!==m.userId&&old.createdBy!==m.userId&&plan.evaluatedBy!==m.userId)add('performance','绩效申诉复核','/performance','',`${r.payload.period} 绩效申诉`);
    if(r.status==='approved'&&r.payload.verifiedBy!==m.userId&&!records.some(x=>x.kind==='performance'&&x.payload.appealId===r.id))add('performance','绩效更正发布','/performance','',`${r.payload.period} 绩效更正`);
   }}
-  if(r.kind==='requisition'&&r.status==='draft'&&!r.payload.contributors?.includes(m.userId)&&['admin','manager'].includes(m.role)&&r.createdBy!==m.userId&&state.positions?.some(p=>p.id===r.positionId&&p.status==='启用'))add('recruitment','招聘需求审批','/recruitment');
+  if(r.kind==='requisition'&&r.status==='draft'&&r.payload.requisitionSubmissionRequired&&hr&&state.positions?.some(p=>p.id===r.positionId&&p.status==='启用'))add('recruitment','招聘需求提交','/recruitment');
+  if(requisitionAwaitingApproval(r)&&!r.payload.contributors?.includes(m.userId)&&['admin','manager'].includes(m.role)&&r.createdBy!==m.userId&&state.positions?.some(p=>p.id===r.positionId&&p.status==='启用'))add('recruitment','招聘需求审批','/recruitment');
   if(r.kind==='candidate'&&records.some(x=>x.kind==='requisition'&&x.id===r.referenceId&&x.status==='active')){
    if(r.status==='offered'&&['admin','manager'].includes(m.role)&&(r.payload.offeredBy??r.createdBy)!==m.userId)add('recruitment','录用审批','/recruitment','',r.payload.name??'候选人');
    if(r.status==='approved'&&hr)add('recruitment','录用接受确认','/recruitment','',r.payload.name??'候选人');
