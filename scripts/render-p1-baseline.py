@@ -41,7 +41,7 @@ for m in mods:
  t+=f'## {m["id"]} {m["name"]}\n\n'
  for p in pp:
   t+=f'### {p["id"]} — {p["path"]}\n\n来源：{page_link(p)}。日期：{p["observedDate"]}；等级：{p["level"]}。\n\n'
-  t+=table(['字段观察ID','标签','用途','界面控件类型','存储类型','必填','默认观察','选项/限制'],[(f['id'],f['label'],f['context'],f.get('controlType'),f['storageType'],'是' if f['required'] is True else '否' if f['required'] is False else '界面必填标记；服务端未核实' if f.get('uiRequired') is True else '未核实',f['default'],('；'.join(f['options']) if f['options'] else '')+('；'+f['limit'] if f['limit'] else '') or '未核实') for f in p['fields']])+'\n'
+  t+=table(['字段观察ID','标签','用途','界面控件类型','原站声明类型/来源','存储类型','必填','默认观察','选项/限制'],[(f['id'],f['label'],f['context'],f.get('controlType'),('；'.join(v for v in [f.get('sourceType'),f.get('dataSource')] if v) or None),f['storageType'],'是' if f['required'] is True else '否' if f['required'] is False else '界面必填标记；服务端未核实' if f.get('uiRequired') is True else '未核实',f['default'],('；'.join(f['options']) if f['options'] else '')+('；'+f['limit'] if f['limit'] else '') or '未核实') for f in p['fields']])+'\n'
 t+='## 尚无可追溯字段字典的模块\n\n'+table(['模块','已有证据','保留缺口'],[(m['id']+' '+m['name'],'BC-NAV-20260908；'+m['p1']['sourceDepth'],m['p1']['sourceGap']) for m in mods if not m['p1']['fieldRefs']])
 (D/'P1_Field_Dictionary.md').write_text(t)
 # Flows: do not invent edges where the source does not establish them.
