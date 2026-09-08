@@ -41,7 +41,7 @@ for m in mods:
  t+=f'## {m["id"]} {m["name"]}\n\n'
  for p in pp:
   t+=f'### {p["id"]} — {p["path"]}\n\n来源：{page_link(p)}。日期：{p["observedDate"]}；等级：{p["level"]}。\n\n'
-  t+=table(['字段观察ID','标签','用途','界面控件类型','存储类型','必填','默认观察','选项/限制'],[(f['id'],f['label'],f['context'],f.get('controlType'),f['storageType'],'是' if f['required'] is True else '否' if f['required'] is False else '未核实',f['default'],('；'.join(f['options']) if f['options'] else '')+('；'+f['limit'] if f['limit'] else '') or '未核实') for f in p['fields']])+'\n'
+  t+=table(['字段观察ID','标签','用途','界面控件类型','存储类型','必填','默认观察','选项/限制'],[(f['id'],f['label'],f['context'],f.get('controlType'),f['storageType'],'是' if f['required'] is True else '否' if f['required'] is False else '界面必填标记；服务端未核实' if f.get('uiRequired') is True else '未核实',f['default'],('；'.join(f['options']) if f['options'] else '')+('；'+f['limit'] if f['limit'] else '') or '未核实') for f in p['fields']])+'\n'
 t+='## 尚无可追溯字段字典的模块\n\n'+table(['模块','已有证据','保留缺口'],[(m['id']+' '+m['name'],'BC-NAV-20260908；'+m['p1']['sourceDepth'],m['p1']['sourceGap']) for m in mods if not m['p1']['fieldRefs']])
 (D/'P1_Field_Dictionary.md').write_text(t)
 # Flows: do not invent edges where the source does not establish them.
@@ -65,11 +65,11 @@ t+='## 本轮目标、已有成果与缺口\n\n'+table(['交付物','接手时�
 t+='\n## 历史接手与部署记录（下列本轮措辞属于上轮快照，非本次复验）\n\n'
 t+='- 实际仓库：`/workspace/sites/italent-hris`；接手分支`main`；完整HEAD `72bcf4031fb4fc62d70be8a6c1ae1c491ff90714`；接手时工作区干净，仅一个检出工作树。\n- 未发现Git写锁或可读取的项目cwd运行进程；普通ps工具失败，有界/proc检查17项不可读，运行状态结论有此边界。无本轮新开发、测试、构建或发布任务。\n- 未完学习简介保留在`checkpoint/learning-description-20260908`，`f5f5b1bd9014d4b6eeb6d32da0f03e34da3bced2`；不合并、不重置。其他既有分支全部保留。\n- v112指定部署本轮只读复核`succeeded`；源码`fdc423fcba607bd5814a0672836b55536c71ecb1`；部署ID `appgdep_6aa010f1e1e481919f2a4331af5b0184`。本轮文档提交不改变在线版本。\n- F01–F04保留历史116项API、3项组件及后续5项入口渲染证据；重叠测试不相加为覆盖数，本轮未复跑。用户仅确认成员/员工可打开；按钮缺失反馈和修复后待复验继续保留。E2不增人，多角色UAT暂缓，均非继续P1前置。\n\n'
 t+='## 原站证据与独立设计分类\n\n'+table(['类别','判定','例子'],[('原站事实','N导航或P页面字段/说明，并标明来源日期','BC-F04兼职表头；BC-L11审批开关说明'),('已确认独立设计','有用户明确决定，保留实现与测试','D1–D7；不能写成北森原站制度'),('其他独立实现','仓库代码/测试仅证明本项目技术行为','学分有效期、内部排期、冻结考勤引用等；不是自动获得企业签署'),('待核实','还未取得该页/规则证据，不能当故障或已通过','再入职、薪资组依赖、仅N级模块'),('受限项','存在具体访问/提取/只读边界证据','绩效流程页无内容或无权、历史占位、禁止业务提交')])
-t+='\n## 按既定顺序的领域缺口\n\n'+table(['顺序','证据与本轮增量','剩余规则'],[
-('组织员工','BC-F02/03＋BC-F04兼职、F05法人、F06入职、F07员工','兼岗生效/终止、法人变更、再入职/司龄、复杂字段联动'),('干部人才','US-C/BC-C既有名册访谈；本轮标准/评定/健康度/旧干部入口','身份转换、委员会、期限、敏感栏目和模型'),('学习','BC-L01–11及师资/证书/导师；学分本轮复核另见最新记录','循环/共享、多期费用、计分精度、学分授予折抵及自动调度'),('绩效','BC-P01–06、指标/模板来源；本轮组织绩效补证','手工评级、系数、多维/组织绩效、在途更新及流程权限'),('招聘','BC-R01–08','录用、Offer扣占、电子签、渠道、外部通知'),('假勤','BC-A01–08','跨班、调休/结转、企业参数、完整月报流转'),('薪酬','BC-S01–04','薪资组依赖、法人调动核算、算薪/税社保及支付'),('自助/报表/集成','BC-I01/02、自助复盘及全量导航','角色入口、指标分母、第三方字段/方向/调度/重试')])
+t+='\n## 按既定顺序的领域缺口\n\n'+table(['业务包','证据与当前规格','未就绪条件与下一步'],[(p['name'], '、'.join(ref for m in mods if m['id'] in p['moduleIds'] for ref in m['p1']['pageRefs'])+'；'+link_source(p['spec']),p['readiness']+'；'+p['pending']+'；'+p['next']) for p in s['p1B']['packages'] if p['moduleIds']])
+
 t+='\n## 48组差异清单（同一范围台账视图）\n\n'+table(['原范围ID/模块','原站事实边界','本项目已有独立实现','待核实/未覆盖','受限与处理'],[(m['id']+' '+m['name'],m['p1']['sourceDepth']+'；'+('、'.join(m['p1']['pageRefs']) or 'BC-NAV-20260908'),m['developed'],m['remaining']+'；'+m['p1']['sourceGap'],'详见对应页面及P1-X例外；保留范围，不在本轮开发') for m in mods])
 t+='\n## 例外、建议和影响\n\n'+table(['例外','性质/范围','证据','影响','建议'],[(x['id'],x['type']+'；'+x['scope'],x['evidence'],x['impact'],x['recommendation']) for x in b['exceptions']])
-t+='\n## 集中评审范围\n\n此次可评审的是：48组保留范围及证据分级、页面/字段观察的对应关系、来源不混淆、待核实及例外清单。**不请求重新决定D1–D7、不请求新增访问者、不请求在原站执行业务、不请求生产签署。**\n\n建议以此作为有例外的P1盘点基线。仅N级模块的典型页与完整规则仍在同一台账待补；如要求“全量典型页均已核实”才结束P1，则本稿不满足该更高门槛，不得自动将这些项勾选通过。用户尚未批准任何新增豁免。\n\n'
+t+='\n## 集中评审范围\n\n此次可评审的是：48组保留范围及证据分级、页面/字段观察的对应关系、来源不混淆、待核实及例外清单。**不请求重新决定D1–D7、不请求新增访问者、不请求在原站执行业务、不请求生产签署。**\n\n建议以此作为有例外的P1盘点基线。仅N级模块的典型页与完整规则仍在同一台账待补；当前仍不满足全项目P1A/P1B退出条件；未探索、受限、待决策与待签署均须逐项保留，不得自动勾选通过。用户尚未批准任何新增豁免。\n\n'
 t+='后续仍按原顺序补证，优先处理M01组织视图/字段规则、再入职说明与兼岗生效，再到干部人才、学习、绩效、招聘、假勤、薪酬、自助报表集成；需要业务决定时集中给出具体原站证据、建议和影响。可通过只读帮助/已授权配置说明解决的项由唯一总控继续处理，不以F01–F04人工UAT阻断。\n\n'
 t+='## 文件关系与检查\n\n`Scope_Register.json`为唯一事实源；本报告、页面目录、字段字典、流程文档及Scope_Register.md顶部均由`scripts/render-p1-baseline.py`生成。原站观察和各域Source_Gaps仍为原始来源，原验收任务及accepted标志未改。本轮仅做文档结构与引用一致性检查，不把它写成业务回归测试通过。\n'
 (D/'P1_Review.md').write_text(t)
@@ -93,7 +93,7 @@ if 'roadmap' in s:
  t+='业务包是本轮规划组织方式；共享能力仅归一个主包，消费者通过依赖引用，不重复增加范围。M20项目人力纳入组织员工、M15测评中心纳入干部人才；其招聘/学习用途仍保留跨包依赖。原三组的归属依据与限制单列；空占位只保留历史，不增加业务包或验收分母。**当前无包被登记为需求已验收。**\n\n'
  t+=table(['顺序/业务包','全部范围ID','需求规格或输入','已确认规则','待决策/待补证','验收标准','依赖','就绪及下一步'],[(p['order'],p['id']+' '+p['name']+'：'+ '、'.join(i+' '+names[i] for i in p['moduleIds']),p['spec']+'；'+p['specKind'],p['confirmedRules'],p['pending'],p['acceptance'],p['dependencies'],p['readiness']+'；'+p['next']) for p in pb['packages']])
  t+='\n## 当前首包距离就绪的条件\n\n1. 审阅当前首包规格的对象/字段、角色、审批与执行分离、错误恢复和跨包契约；D1–D7不重问。\n2. 闭合名称唯一性等实质差异；已确认规则与其他既有独立实现不得混写。\n3. 确认本包暂缓边界及验收预期，记录评审人、日期、适用版本和例外；全M01扩展范围继续保留。\n4. 多角色UAT、按钮实际复验及云端附件验证属于P3/P4未完成事项，不是P1B编写前置。\n\n'
- t+=table(['问题','依据','建议','影响/状态'],[(x['id']+' '+x['topic'],x['basis'],x['proposal'],x['impact']+'；'+x['status']) for x in pb['reviewIssues']])
+ t+='待决策事项统一见下方最小必要决策记录；推荐不作为批准要求。\n\n'
  (D/'P1B_Readiness.md').write_text(t)
  t=intro('已有实现与产品需求对应')
  t+='对应当前源码静态核对；可复用是技术候选，不是当前测试或业务验收通过。历史测试只在原Verification标注的testedSourceCommit及适用范围有效，本轮未复跑。产品源码未修改。\n\n'
@@ -151,6 +151,7 @@ if 'p1B' in s:
   if api_paths:t+='已读内部接口：'+ '；'.join(link_source(v) for v in api_paths)+'。\n\n'
   t+=table(['原任务','验收条件（原样保留）','当前规则/验证状态'],[(a['id']+' '+a['title'],'；'.join(c['text'] for c in a['criteria']),'原accepted保持；本稿不代签，历史测试按原版本') for a in s['acceptanceTasks'] if a['moduleId'] in pack['moduleIds']])+'\n'
   t+='## 就绪、待决策与下一步\n\n'+pack['pending']+'。'+pack['next']+'。\n\n需求就绪需要：受影响对象字段和行为无未决歧义；角色/字段范围、状态与恢复、跨包契约及验收预期经过评审；如有例外，记录授权、范围和影响。当前缺少上述完整评审，不满足转入新开发包条件。人工多角色UAT暂缓不阻止本稿继续细化。\n'
+  if pack.get('readinessConditions'):t+='\n'+table(['具体就绪条件'],[(v,) for v in pack['readinessConditions']])+'\n'
   (R/pack['spec']).write_text(t)
  prd=D/'P1B_PRD.md';t=prd.read_text().replace('其他包Source_Gaps仅是规格输入，不能算已完成的PRD。','各包已有同源生成的规格评审稿；其中仅导航部分明确列出受限原因，不计为完整需求就绪。原Source_Gaps继续作为证据输入。')
  t+='\n## 业务包规格入口\n\n'+table(['包','规格','状态'],[(p['id'],link_source(p['spec']),p['readiness']) for p in pb['packages']])
@@ -159,6 +160,7 @@ if 'p1B' in s:
  prd.write_text(t)
  read=D/'P1B_Readiness.md';t=read.read_text();t+='\n## 最小必要决策记录（同源，不新建台账）\n\n'
  t+=table(['ID/事项','现状及证据','推荐（未批准）','备选','阻塞范围/状态'],[(x['id']+' '+x['topic'],x['basis'],x['proposal'],x.get('alternatives',[]),x['impact']+'；'+x['status']) for x in pb['reviewIssues']])
+ t+='\n## 各包具体就绪缺口\n\n'+table(['业务包','仍需满足的条件'],[(p['id']+' '+p['name'],p.get('readinessConditions',[])) for p in pb['packages'] if p['moduleIds']])
  read.write_text(t)
 
  if pb.get('validationEvidence'):

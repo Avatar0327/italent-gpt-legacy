@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "activeWriter": "当前聊天唯一总控",
   "mode": "sole-controller-p1-readonly",
   "branchCreationBase": "commit introducing this queue; exact SHA in git history",
@@ -804,6 +804,6 @@
       "完成全局术语/依赖/状态/接口审查和必要文档检查，按单元提交推送；不恢复功能开发"
     ],
     "state": "P1未整体验收；P2保留受限历史技术验收；F01–F04业务验收未完成；E1仅页面可打开；E2唯一访问者；D1–D7独立设计；所有历史测试不等于当前复验",
-    "currentWork": "组织配置规则/重聘帮助/兼岗法人差异补证；同步首包与跨包规格，之后其他安全表单"
+    "currentWork": "干部人才配置/安全空表→学习→绩效→招聘→假勤→薪酬→共享集成；同步各包就绪缺口"
   }
 }
