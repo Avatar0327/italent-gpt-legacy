@@ -248,13 +248,22 @@
     },
     {
       "id": "R-SUBMISSION",
-      "status": "technical-verified-pending-build",
+      "status": "technical-delivered-v90",
       "dependencies": [
         "R-SOURCE",
         "H005"
       ],
       "acceptance": "保存/提交/审批分离，旧draft兼容，贡献者隔离、CAS及审计回滚和录用入职回归",
       "next": "构建后统一私有发布，继续职位/应聘者与面试原站差异"
+    },
+    {
+      "id": "R-RETRY",
+      "status": "technical-verified-pending-build",
+      "dependencies": [
+        "R-SUBMISSION"
+      ],
+      "acceptance": "保存并提交一修订原子性、丢失响应创建重放不再写入、请求键冲突、作用域角色及内部信息隔离",
+      "next": "类型/构建后统一私有发布；继续独立待办，不将本局部机制说成全API幂等"
     }
   ]
 }
