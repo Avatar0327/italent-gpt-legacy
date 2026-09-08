@@ -1,7 +1,12 @@
 {
-  "generatedAt": "2026-09-08T10:13:19.343Z",
-  "head": "e1ec61797a5844cf33fee81f12a0d8d8628f3c54",
+  "generatedAt": "2026-09-08T10:13:48.325Z",
+  "head": "ae67cb2eef42e6505619aa9d716847654a571a8d",
   "commits": [
+    {
+      "sha": "ae67cb2eef42e6505619aa9d716847654a571a8d",
+      "time": "2026-09-08T03:13:33-07:00",
+      "title": "feat(delivery): aggregate scope acceptance and execution evidence in dashboard"
+    },
     {
       "sha": "e1ec61797a5844cf33fee81f12a0d8d8628f3c54",
       "time": "2026-09-08T02:32:34-06:00",
@@ -36,11 +41,6 @@
       "sha": "9403c95c4d0a6411077254b44a5a64a4795d2f20",
       "time": "2026-09-08T01:37:41-06:00",
       "title": "feat(integration): define pure adapter preflight and reconciliation contract"
-    },
-    {
-      "sha": "1e9507fb0a0a3bf8673f4ba1f5519dfe61814561",
-      "time": "2026-09-08T01:33:30-06:00",
-      "title": "docs: record private v99 and external adapter contract queue"
     }
   ],
   "sources": [
