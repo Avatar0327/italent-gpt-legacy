@@ -10,7 +10,7 @@ const fields={title,orgId:id,config:learningModeSchema,courseIds:z.array(id).min
 const schema=z.discriminatedUnion('action',[
  z.object({action:z.literal('create'),...fields}).strict(),
  z.object({action:z.literal('edit'),id,...fields}).strict(),
- z.object({action:z.literal('stages'),id,stages:z.array(z.object({title,courseIds:z.array(id).min(1).max(20),optionalCourseIds:z.array(id).max(20).optional(),requiredMinimum:z.number().int().min(0).max(20).optional(),optionalMinimum:z.number().int().min(0).max(20).optional()}).strict()).min(1).max(10)}).strict(),
+ z.object({action:z.literal('stages'),id,stages:z.array(z.object({title,startAfterDays:z.number().int().min(0).max(36500).optional(),courseIds:z.array(id).min(1).max(20),optionalCourseIds:z.array(id).max(20).optional(),requiredMinimum:z.number().int().min(0).max(20).optional(),optionalMinimum:z.number().int().min(0).max(20).optional()}).strict()).min(1).max(10)}).strict(),
  z.object({action:z.literal('seal'),id}).strict(),
  z.object({action:z.literal('revise'),id}).strict(),
  z.object({action:z.literal('archive'),id}).strict(),

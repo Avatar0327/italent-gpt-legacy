@@ -1,4 +1,4 @@
-import {learningRequirements,learningRequirementProgress,learningAssignmentCurrent} from './learning-requirements';
+import {learningRequirements,learningRequirementProgress,learningAssignmentCurrent,learningStageStartsOn} from './learning-requirements';
 import {z} from 'zod';
 import {applyDevelopment,visibleRecord,type DevelopmentRecord as R} from './development';
 import {learningWindow,learningAssignmentKey} from './learning-plan-model';
@@ -37,6 +37,7 @@ export function applyLearningAssignment(records:R[],state:State,m:Member,input:u
   }
   if(!learningAssignmentCurrent(r!,state))fail('仅原启用组织的在职员工可推进实例结项，历史记录保留');
   if(r!.status!=='active')fail('仅进行中的实例可结项');if(businessDate(at)<r!.payload.start!)fail('计划尚未开始，不能提前结项');
+  if(r!.payload.trainingStages?.some(stage=>businessDate(at)<learningStageStartsOn(r!,stage)))fail('尚有未到开放日期的阶段，不能提前结项');
   if(!learningRequirementProgress(r!,records).complete)fail('须达到所有阶段的独立核验门槛后结项，取消任务不视为完成');
   return [{...r!,status:'completed',updatedAt:at},...tasks.filter(t=>t.status!=='completed'&&t.status!=='cancelled').map(t=>({...t,status:'cancelled',updatedAt:at,payload:{...t.payload,closedReason:'实例已达到各阶段完成门槛并结项，未完成任务关闭；不授予完成记录或学分'}}))];
  }
@@ -51,6 +52,7 @@ export function applyLearningAssignment(records:R[],state:State,m:Member,input:u
  const window=learningWindow(config,businessDate(at));
  if(window.due<businessDate(at))fail('计划已经结束，不能分派');
  const assignment:R={id:crypto.randomUUID(),kind:'learningAssignment',employeeId:c.employeeId,positionId:null,referenceId:definition!.id,status:'active',createdBy:m.userId,createdAt:at,updatedAt:at,payload:{title:definition!.payload.title,orgId:definition!.payload.orgId,courseIds:[...definition!.payload.courseIds!],learningRequirements:learningRequirements(definition!).map(r=>({...r})),trainingStages:definition!.payload.trainingStages?structuredClone(definition!.payload.trainingStages):undefined,learningMode:config,version:definition!.payload.version,definitionRootId:definition!.payload.definitionRootId,assignmentKey:key,round:1,start:window.start,due:window.due}};
+ if(!window.allowOverdue&&assignment.payload.trainingStages?.some(stage=>learningStageStartsOn(assignment,stage)>window.due))fail('阶段开放日期晚于计划截止日，请调整草稿的新版本后再派发');
  const result:R[]=[assignment];
  for(const courseId of assignment.payload.courseIds!){
   const task=applyDevelopment([...records,...result],state,m,{action:'enroll',assignmentId:assignment.id,employeeId:c.employeeId,courseId,due:window.due},at);

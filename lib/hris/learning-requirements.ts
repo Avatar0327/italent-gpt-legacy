@@ -1,5 +1,6 @@
 import type {DevelopmentRecord as R} from './development';
 import type {State} from './model';
+import {businessDate} from './business-time';
 
 // v1 deliberately supports course requirements only. Course-embedded exams
 // remain evidence of the course, not independent plan activities.
@@ -33,11 +34,21 @@ export function learningRequirementProgress(assignment:R,records:R[]){
  });
  return {items,stages,total:requirements.length,completed:items.filter(i=>i.complete).length,complete:valid&&tasks.length===requirements.length&&(stages.length?stages.every(s=>s.complete):items.every(i=>i.complete))};
 }
-export function learningStageOpen(task:R,records:R[]){
+export function learningStageStartsOn(assignment:R,stage:NonNullable<R['payload']['trainingStages']>[number]){
+ const joined=businessDate(assignment.createdAt),date=new Date(joined+'T00:00:00Z');
+ date.setUTCDate(date.getUTCDate()+(stage.startAfterDays??0));
+ const scheduled=date.toISOString().slice(0,10);
+ return assignment.payload.start&&assignment.payload.start>scheduled?assignment.payload.start:scheduled;
+}
+export function learningStageOpen(task:R,records:R[],at=new Date().toISOString(),state?:State){
  if(!task.payload.learningAssignmentId)return true;
  const assignment=records.find(r=>r.kind==='learningAssignment'&&r.id===task.payload.learningAssignmentId);
  if(!assignment||assignment.status!=='active')return false;
- if(!assignment.payload.trainingStages?.length||!assignment.payload.learningMode?.orderedStages)return true;
+ if(state&&!learningAssignmentCurrent(assignment,state))return false;
+ if(!assignment.payload.trainingStages?.length)return true;
+ const stage=assignment.payload.trainingStages.find(s=>s.courseIds.includes(task.referenceId!));
+ if(!stage||businessDate(at)<learningStageStartsOn(assignment,stage))return false;
+ if(!assignment.payload.learningMode?.orderedStages)return true;
  const stages=learningRequirementProgress(assignment,records).stages;
  const index=stages.findIndex(stage=>stage.courseIds.includes(task.referenceId!));
  return index>=0&&stages.slice(0,index).every(stage=>stage.complete);

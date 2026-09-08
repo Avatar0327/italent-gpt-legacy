@@ -1,7 +1,7 @@
 import './support/runtime.mjs';
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-const {courseRequirements,learningRequirementProgress,learningAssignmentCurrent}=await import('../lib/hris/learning-requirements.ts');
+const {courseRequirements,learningRequirementProgress,learningAssignmentCurrent,learningStageOpen,learningStageStartsOn}=await import('../lib/hris/learning-requirements.ts');
 test('requirement completion rejects borrowed identities, duplicates and missing evidence while preserving legacy assignments',()=>{
  const assignment={id:'plan',employeeId:'learner',payload:{courseIds:['course']}};
  const task={id:'task',kind:'enrollment',employeeId:'learner',referenceId:'course',status:'completed',payload:{learningAssignmentId:'plan',verifiedBy:'reviewer',verifiedAt:'2026-09-08T00:00:00Z'}};
@@ -20,4 +20,14 @@ test('assignment progression retains history but stops for exit, transfer or dis
  assert.equal(learningAssignmentCurrent(assignment,state),true);
  for(const employee of [null,{id:'learner',orgId:'org',status:'离职'},{id:'learner',orgId:'other',status:'正式'}])assert.equal(learningAssignmentCurrent(assignment,{...state,employees:employee?[employee]:[]}),false);
  assert.equal(learningAssignmentCurrent(assignment,{...state,orgs:[{id:'org',status:'停用'}]}),false);
+});
+
+test('stage opening uses joined business date and fixed plan start without bypassing prerequisites',()=>{
+ const assignment={id:'a',kind:'learningAssignment',status:'active',employeeId:'e',createdAt:'2026-09-08T16:30:00Z',payload:{start:'2026-09-09',courseIds:['c'],learningMode:{orderedStages:false},trainingStages:[{title:'延迟阶段',courseIds:['c'],startAfterDays:2}]}};
+ const task={id:'t',kind:'enrollment',referenceId:'c',employeeId:'e',payload:{learningAssignmentId:'a'}};
+ assert.equal(learningStageStartsOn(assignment,assignment.payload.trainingStages[0]),'2026-09-11');
+ assert.equal(learningStageOpen(task,[assignment,task],'2026-09-10T15:59:59Z'),false);
+ assert.equal(learningStageOpen(task,[assignment,task],'2026-09-10T16:00:00Z'),true);
+ assert.equal(learningStageStartsOn({...assignment,payload:{...assignment.payload,start:'2026-09-20'}},assignment.payload.trainingStages[0]),'2026-09-20');
+ assert.equal(learningStageOpen(task,[{...assignment,status:'completed'},task],'2026-09-21T00:00:00Z'),false);
 });

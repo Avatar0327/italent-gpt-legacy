@@ -27,4 +27,19 @@ test('versioned instance stages gate tasks and close at independent required/opt
  act('employee');assert.ok(!(await expect(await self.GET())).tasks.some(t=>tasks.some(x=>x.id===t.id)));
  act('owner');const next=await cmd(definitions,{action:'revise',id:definition.id});await cmd(definitions,{action:'stages',id:next.id,stages:[{title:'后续版本',courseIds:courses}]});
  assert.deepEqual((await expect(await assignments.GET())).records.find(r=>r.id===instance.id).payload.trainingStages,stages);
+ const delayed=await cmd(definitions,{action:'create',title:'延迟开放历史复用',orgId:f.org.id,config:{mode:'relative',durationDays:30,allowOverdue:false,orderedStages:false,progressSync:true},courseIds:[courses[0]]});
+ await cmd(definitions,{action:'stages',id:delayed.id,stages:[{title:'加入两天后开放',courseIds:[courses[0]],startAfterDays:2}]});await cmd(definitions,{action:'seal',id:delayed.id});
+ await cmd(assignments,{action:'assign',definitionId:delayed.id,employeeId:f.e.id});
+ const delayedInstance=(await expect(await assignments.GET())).records.find(r=>r.kind==='learningAssignment'&&r.referenceId===delayed.id);
+ await cmd(assignments,{action:'closeAssignment',id:delayedInstance.id},400);
+ const independent=await cmd(definitions,{action:'create',title:'延迟开放新学',orgId:f.org.id,config:{mode:'relative',durationDays:30,allowOverdue:false,orderedStages:false,progressSync:false},courseIds:[courses[0]]});
+ await cmd(definitions,{action:'stages',id:independent.id,stages:[{title:'加入两天后开放',courseIds:[courses[0]],startAfterDays:2}]});await cmd(definitions,{action:'seal',id:independent.id});
+ await cmd(assignments,{action:'assign',definitionId:independent.id,employeeId:f.e.id});
+ const independentRows=(await expect(await assignments.GET())).records,independentInstance=independentRows.find(r=>r.kind==='learningAssignment'&&r.referenceId===independent.id),independentTask=independentRows.find(r=>r.kind==='enrollment'&&r.payload.learningAssignmentId===independentInstance.id);
+ act('employee');assert.ok(!(await expect(await self.GET())).tasks.some(t=>t.id===independentTask.id));await send({action:'submitLearning',id:independentTask.id,evidence:'阶段尚未开放不应提前提交成果'},400);
+ act('owner');const impossible=await cmd(definitions,{action:'create',title:'不可达阶段拒绝派发',orgId:f.org.id,config:{mode:'relative',durationDays:1,allowOverdue:false,orderedStages:false,progressSync:false},courseIds:[courses[0]]});
+ await cmd(definitions,{action:'stages',id:impossible.id,stages:[{title:'已过截止才开放',courseIds:[courses[0]],startAfterDays:2}]});await cmd(definitions,{action:'seal',id:impossible.id});
+ const before=(await get()).records.length;await cmd(assignments,{action:'assign',definitionId:impossible.id,employeeId:f.e.id},400);assert.equal((await get()).records.length,before);
+
+
 });
