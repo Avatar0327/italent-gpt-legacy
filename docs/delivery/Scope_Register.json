@@ -1720,7 +1720,16 @@
           "BC-P05",
           "BC-P06",
           "BC-P07",
-          "BC-P1C-M16"
+          "BC-P1C-M16",
+          "BC-P08",
+          "BC-P09",
+          "BC-P10",
+          "BC-P11",
+          "BC-P12",
+          "BC-P13",
+          "BC-P14",
+          "BC-P15",
+          "BC-P16"
         ],
         "fieldRefs": [
           "P1-GOAL-F001",
@@ -1844,7 +1853,45 @@
           "BC-P1C-M16-F001",
           "BC-P1C-M16-F002",
           "BC-P1C-M16-F003",
-          "BC-P1C-M16-F004"
+          "BC-P1C-M16-F004",
+          "BC-P09-F001",
+          "BC-P10-F001",
+          "BC-P10-F002",
+          "BC-P10-F003",
+          "BC-P10-F004",
+          "BC-P10-F005",
+          "BC-P10-F006",
+          "BC-P10-F007",
+          "BC-P11-F001",
+          "BC-P12-F001",
+          "BC-P12-F002",
+          "BC-P12-F003",
+          "BC-P12-F004",
+          "BC-P12-F005",
+          "BC-P12-F006",
+          "BC-P12-F007",
+          "BC-P13-F001",
+          "BC-P13-F002",
+          "BC-P13-F003",
+          "BC-P13-F004",
+          "BC-P13-F005",
+          "BC-P13-F006",
+          "BC-P14-F001",
+          "BC-P14-F002",
+          "BC-P14-F003",
+          "BC-P14-F004",
+          "BC-P14-F005",
+          "BC-P14-F006",
+          "BC-P14-F007",
+          "BC-P14-F008",
+          "BC-P14-F009",
+          "BC-P15-F001",
+          "BC-P15-F002",
+          "BC-P15-F003",
+          "BC-P16-F001",
+          "BC-P16-F002",
+          "BC-P16-F003",
+          "BC-P16-F004"
         ],
         "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M16",
@@ -1871,11 +1918,20 @@
             "BC-P05",
             "BC-P06",
             "BC-P07",
-            "BC-P1C-M16"
+            "BC-P1C-M16",
+            "BC-P08",
+            "BC-P09",
+            "BC-P10",
+            "BC-P11",
+            "BC-P12",
+            "BC-P13",
+            "BC-P14",
+            "BC-P15",
+            "BC-P16"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "完整OKR、组织绩效、多级校准审批和企业申诉时限；手工等级、绩效系数、不参与考核、活动在途规则更新、组织公开与考核关系锁定；完整模板模块、多维/小数权重、附件与动态权限、指标自动下发；定量指标公式、完成值来源、共享分类树、指定评价人；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+          "unexplored": "完整OKR、组织绩效、多级校准审批和企业申诉时限；手工等级、绩效系数、不参与考核、活动在途规则更新、组织公开与考核关系锁定；完整模板模块、多维/小数权重、附件与动态权限、指标自动下发；定量指标公式、完成值来源、共享分类树、指定评价人；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证；仅目录不证明机制完整；多指标算法、比例分布、接口执行和多角色规则需逐页补证，不等同现有员工目标模型；当前开关、兼职在途/结束时点、同人同周期多任职结果归并和权重、主兼职权限冲突未验证；不以本项目employee.orgId/currentPosition单一主职模型覆盖；角色范围表仅按文字理解，未进行跨角色实操；主职/兼职上下级层级规则需保留差别，不把已结束记录继续鉴权写成用户批准。历史活动开启后不自动生效；帮助提到2026年6月计划的人员搜索能力，当前上线情况未核实，不当已交付。同人多次任职、权限变动、结果合并及删除恢复尚未完整验证。未存帮助示例人名；当前开关/终止原因/部分结果缺失/重复或更正同步时点、子集字段及权限未知；不能把档案存在结果直接解读为绩效流程正常完成，也不能将本项目cancelled等同原站终止；当前未采用此规则模式不代表项目没有绩效系数；其他模式、系数数值/范围/公式/精度及薪资消费未核实；列表状态启用不能证明规则实际生效；未选现有绩效等级，依赖后的具体系数条目/上下限/重叠/公式/输入约束未验证；当前初值不作为本项目默认；当前选中值未读取；维度启用和默认说明不证明实际模板使用；缺评均摊算法、分母0、维度合成/系数回算/与活动快照绑定未知；不能从显示形式推断强分约束是否强制通过；图示不是原站实测结果；未评分、无法评价、权限不可见要区分；全部未评/不可见造成分母0、负权重/权重总和非100、数值精度与舍入、维度汇总仍未验证。没有用不可见指标补0来推定分数；只证明配置绑定关系，不确认公式语法、优先级、精度、系数限幅/上下界、活动在途变更或工资消费。活动引用与模板绑定不同，不合并为一份默认映射",
           "next": "补字段属性、权限线索和流程说明；组织绩效、评级系数、在途变更与发布口径",
           "accepted": false
         }
@@ -5463,7 +5519,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-08T17:14:21.289590+00:00",
+    "updatedAt": "2026-09-08T17:24:14.173222+00:00",
     "authority": "本轮用户指令；Scope_Register.json是唯一范围与验收事实源；P1附属条目不增加48组或59项分母",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -26301,6 +26357,636 @@
         "unknown": "BC-L14框架断连已由首页恢复路径解决，不能继续称正文不可读；当前开关未读取或改变。共享管理能力与学员可见/可学权限具体差异、历史访问重算和跨租户边界仍未核实；开关关闭不自动撤销是原站说明，非本项目批准策略",
         "operations": "只读两组开关说明，未变更共享/可见权限；返回",
         "flowRef": []
+      },
+      {
+        "id": "BC-P08",
+        "moduleId": "M16",
+        "path": "绩效管理 > 绩效设置（配置目录补证）",
+        "evidenceRef": "BC-P08",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:15:19.096142+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "N",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [],
+        "visibleStates": "",
+        "sourceStatement": "员工与组织绩效分别有流程/角色/待办/结果/排行榜；兼职考核和外部同步、电子签独立入口",
+        "unknown": "仅目录不证明机制完整；多指标算法、比例分布、接口执行和多角色规则需逐页补证，不等同现有员工目标模型",
+        "operations": "员工/组织流程、角色、待办与评价人；指标/计算规则/计量单位/一票否决/引入权限；评价/等级/强分/分布/排名/系数/九宫格；结果同步、电子签、兼职考核",
+        "flowRef": []
+      },
+      {
+        "id": "BC-P09",
+        "moduleId": "M16",
+        "path": "绩效管理 > 绩效设置 > 兼职考核",
+        "evidenceRef": "BC-P09",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:16:05.389134+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "兼职考核开关说明",
+        "fields": [
+          {
+            "id": "BC-P09-F001",
+            "label": "兼职考核",
+            "context": "配置开关",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P09",
+            "controlType": "switch"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "开启后评价角色、逐级审批评价人、职务职级分析和定量指标规则基于兼职记录推断；可引入兼职部门指标；绩效标签与集成规则也基于兼职记录更新",
+        "unknown": "当前开关、兼职在途/结束时点、同人同周期多任职结果归并和权重、主兼职权限冲突未验证；不以本项目employee.orgId/currentPosition单一主职模型覆盖",
+        "operations": "开关、了解更多（只读帮助，不切换）",
+        "flowRef": []
+      },
+      {
+        "id": "BC-P10",
+        "moduleId": "M16",
+        "path": "绩效管理 > 兼职考核 > 了解更多（用户社区帮助）",
+        "evidenceRef": "BC-P10",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:17:24.342138+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "原站直达帮助摘要",
+        "fields": [
+          {
+            "id": "BC-P10-F001",
+            "label": "对应任职",
+            "context": "帮助提及字段/配置，非当前输入表单",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P10"
+          },
+          {
+            "id": "BC-P10-F002",
+            "label": "评价人（直线上级）",
+            "context": "帮助提及字段/配置，非当前输入表单",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P10"
+          },
+          {
+            "id": "BC-P10-F003",
+            "label": "任职类型",
+            "context": "帮助提及字段/配置，非当前输入表单",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P10"
+          },
+          {
+            "id": "BC-P10-F004",
+            "label": "任职ID",
+            "context": "帮助提及字段/配置，非当前输入表单",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P10"
+          },
+          {
+            "id": "BC-P10-F005",
+            "label": "绩效组织编码",
+            "context": "帮助提及字段/配置，非当前输入表单",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P10"
+          },
+          {
+            "id": "BC-P10-F006",
+            "label": "业务时间",
+            "context": "帮助提及字段/配置，非当前输入表单",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P10"
+          },
+          {
+            "id": "BC-P10-F007",
+            "label": "员工兼职结束处理",
+            "context": "帮助提及字段/配置，非当前输入表单",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": [
+              "终止绩效",
+              "从绩效活动中移除"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-P10"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "帮助分别说明兼职目标与兼职绩效：目标可选在任期且生效主/兼职，空值按最新生效主职；已选兼职结束后目标仍按所选记录鉴权。评价人依赖对应任职自动生成且员工不可改；整体目标书特权角色与单条目标特权角色分别存在。绩效可按业务时间取历史兼职；无业务时间取最新生效记录，同部门多记录需唯一性校验；任职类型空按主职。进行中目标/活动已使用兼职时阻止关闭开关。兼职结束自动处理可终止绩效或从活动移除。复制时可能过滤已结束兼职/关闭开关情形，重启已有兼职仍沿用其记录。适用仅员工绩效，不含PIP、试用期、组织绩效；重点人群卡片未按兼职找上次结果；电子签单模板不支持区分主兼职",
+        "unknown": "角色范围表仅按文字理解，未进行跨角色实操；主职/兼职上下级层级规则需保留差别，不把已结束记录继续鉴权写成用户批准。历史活动开启后不自动生效；帮助提到2026年6月计划的人员搜索能力，当前上线情况未核实，不当已交付。同人多次任职、权限变动、结果合并及删除恢复尚未完整验证。未存帮助示例人名",
+        "operations": "原站帮助只读；未选择人员、导入、开关变更或运行自动规则",
+        "flowRef": [],
+        "sourceLocation": "用户社区《兼职考核》，原站了解更多直达，https://users.italent.cn/（不保留登录参数）"
+      },
+      {
+        "id": "BC-P11",
+        "moduleId": "M16",
+        "path": "绩效管理 > 绩效设置 > 绩效结果同步",
+        "evidenceRef": "BC-P11",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:18:43.343493+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P11-F001",
+            "label": "终止绩效同步绩效子集",
+            "context": "结果同步开关",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P11",
+            "controlType": "switch"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "说明开启后，操作终止绩效时员工绩效结果会自动同步到员工档案考核结果子集",
+        "unknown": "当前开关/终止原因/部分结果缺失/重复或更正同步时点、子集字段及权限未知；不能把档案存在结果直接解读为绩效流程正常完成，也不能将本项目cancelled等同原站终止",
+        "operations": "开关、返回（未切换）",
+        "flowRef": []
+      },
+      {
+        "id": "BC-P12",
+        "moduleId": "M16",
+        "path": "绩效管理 > 绩效设置 > 系数规则",
+        "evidenceRef": "BC-P12",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:19:23.996217+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P12-F001",
+            "label": "名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P12"
+          },
+          {
+            "id": "BC-P12-F002",
+            "label": "所属组织",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P12"
+          },
+          {
+            "id": "BC-P12-F003",
+            "label": "向下公开",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P12"
+          },
+          {
+            "id": "BC-P12-F004",
+            "label": "状态",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P12"
+          },
+          {
+            "id": "BC-P12-F005",
+            "label": "生成方式",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P12"
+          },
+          {
+            "id": "BC-P12-F006",
+            "label": "绩效等级",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P12"
+          },
+          {
+            "id": "BC-P12-F007",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P12"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "当前页面提示此处配置的系数规则均无效；须把系数生成方式改为基于系数规则设置生成才使用。本次不改变该设置。规则归属组织、向下公开、状态和绩效等级分别列出",
+        "unknown": "当前未采用此规则模式不代表项目没有绩效系数；其他模式、系数数值/范围/公式/精度及薪资消费未核实；列表状态启用不能证明规则实际生效",
+        "operations": "新增、启用、停用、去设置（只打开空表，不启停）",
+        "flowRef": []
+      },
+      {
+        "id": "BC-P13",
+        "moduleId": "M16",
+        "path": "绩效管理 > 系数规则 > 新增空表",
+        "evidenceRef": "BC-P13",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:20:12.740949+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "系数规则空表",
+        "fields": [
+          {
+            "id": "BC-P13-F001",
+            "label": "名称",
+            "context": "配置字段",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P13",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-P13-F002",
+            "label": "所属组织",
+            "context": "配置字段",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P13",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-P13-F003",
+            "label": "向下公开",
+            "context": "配置字段",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P13",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-P13-F004",
+            "label": "生成方式",
+            "context": "配置字段",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": [
+              "按绩效等级项生成",
+              "按公式规则生成"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-P13",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-P13-F005",
+            "label": "绩效等级",
+            "context": "配置字段",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P13",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-P13-F006",
+            "label": "系数区间",
+            "context": "配置字段",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": [
+              "启用",
+              "不启用"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-P13",
+            "uiRequired": true
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "各标签均有*；生成方式初始显示按绩效等级项生成，绩效等级为选择引用；系数区间单独启用/不启用。组织归属与向下公开为独立项",
+        "unknown": "未选现有绩效等级，依赖后的具体系数条目/上下限/重叠/公式/输入约束未验证；当前初值不作为本项目默认",
+        "operations": "仅读空表字段/生成枚举后取消，未保存或启用",
+        "flowRef": []
+      },
+      {
+        "id": "BC-P14",
+        "moduleId": "M16",
+        "path": "绩效管理 > 系数规则 > 去设置 > 员工绩效结果（新标签页7）",
+        "evidenceRef": "BC-P14",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:21:54.133261+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "员工绩效结果配置说明与通用枚举",
+        "fields": [
+          {
+            "id": "BC-P14-F001",
+            "label": "系数生成方式",
+            "context": "绩效结果全局配置",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": [
+              "基于等级系数设置生成",
+              "基于系数规则设置生成"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-P14"
+          },
+          {
+            "id": "BC-P14-F002",
+            "label": "维度一",
+            "context": "绩效结果全局配置",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P14"
+          },
+          {
+            "id": "BC-P14-F003",
+            "label": "维度二",
+            "context": "绩效结果全局配置",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P14"
+          },
+          {
+            "id": "BC-P14-F004",
+            "label": "维度三",
+            "context": "绩效结果全局配置",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P14"
+          },
+          {
+            "id": "BC-P14-F005",
+            "label": "维度名称",
+            "context": "绩效结果全局配置",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P14"
+          },
+          {
+            "id": "BC-P14-F006",
+            "label": "等级名称",
+            "context": "绩效结果全局配置",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P14"
+          },
+          {
+            "id": "BC-P14-F007",
+            "label": "总分总评上下限",
+            "context": "绩效结果全局配置",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P14"
+          },
+          {
+            "id": "BC-P14-F008",
+            "label": "未评价指标的算分规则",
+            "context": "绩效结果全局配置",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": [
+              "按0分计算",
+              "按权重均摊计算"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-P14"
+          },
+          {
+            "id": "BC-P14-F009",
+            "label": "默认展示的分布图形式",
+            "context": "绩效结果全局配置",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P14"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "系数来源二选一：等级系数设置/系数规则设置。说明维度一默认总分总等级并可强分，维度二默认价值观，维度三默认能力，各有名称/等级/上下限。仅加权求和适用的未评价指标策略可选按0分或按权重均摊。结果审核同时配置排名/强分时展示形式可选强制分布图或排名表格+Tips",
+        "unknown": "当前选中值未读取；维度启用和默认说明不证明实际模板使用；缺评均摊算法、分母0、维度合成/系数回算/与活动快照绑定未知；不能从显示形式推断强分约束是否强制通过",
+        "operations": "只读总设置与查看示例；未切换或保存",
+        "flowRef": []
+      },
+      {
+        "id": "BC-P15",
+        "moduleId": "M16",
+        "path": "员工绩效结果 > 未评价指标算分规则 > 查看示例（浮层图）",
+        "evidenceRef": "BC-P15",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:23:04.251365+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "仅算法示例浮层截图观察，未保留图像；不含人员数据",
+        "fields": [
+          {
+            "id": "BC-P15-F001",
+            "label": "指标权重",
+            "context": "示例计算术语，非当前业务值",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P15"
+          },
+          {
+            "id": "BC-P15-F002",
+            "label": "评分",
+            "context": "示例计算术语，非当前业务值",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P15"
+          },
+          {
+            "id": "BC-P15-F003",
+            "label": "模块得分",
+            "context": "示例计算术语，非当前业务值",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P15"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "示例三项权重20%/50%/30%，首项未评分、其余5/3。按0方式保留原权重，得到3.4；均摊方式以已评分权重和80%归一化，得到4.25（数值为按图公式推导）。脚注说明角色对指标不可见或评分为无法评价时，按权重均摊计算模块得分",
+        "unknown": "图示不是原站实测结果；未评分、无法评价、权限不可见要区分；全部未评/不可见造成分母0、负权重/权重总和非100、数值精度与舍入、维度汇总仍未验证。没有用不可见指标补0来推定分数",
+        "operations": "只读算法示例浮层截图，未保存截图/个人信息或改变设置",
+        "flowRef": []
+      },
+      {
+        "id": "BC-P16",
+        "moduleId": "M16",
+        "path": "员工绩效结果 > 系数生成方式 > 查看示例（浮层图）",
+        "evidenceRef": "BC-P16",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:23:48.867446+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "原站示例路径图观察，未保留截图",
+        "fields": [
+          {
+            "id": "BC-P16-F001",
+            "label": "绩效等级内系数规则",
+            "context": "示例配置节点",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P16"
+          },
+          {
+            "id": "BC-P16-F002",
+            "label": "活动引用绩效等级",
+            "context": "示例配置节点",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P16"
+          },
+          {
+            "id": "BC-P16-F003",
+            "label": "系数规则",
+            "context": "示例配置节点",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P16"
+          },
+          {
+            "id": "BC-P16-F004",
+            "label": "绩效模板总览模块",
+            "context": "示例配置节点",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P16"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "等级系数路径：在绩效等级内设置规则，创建活动引用等级，考核中按等级产生系数。系数规则路径：在系数规则内设置，再由绩效模板总览模块绑定，考核中按公式产生系数；说明可按等级或复杂公式（如总分/人群条件）生成",
+        "unknown": "只证明配置绑定关系，不确认公式语法、优先级、精度、系数限幅/上下界、活动在途变更或工资消费。活动引用与模板绑定不同，不合并为一份默认映射",
+        "operations": "仅读两条配置绑定路径图；不切换、保存或计算",
+        "flowRef": []
       }
     ],
     "humanAcceptancePrerequisite": false,
@@ -26479,6 +27165,19 @@
         "limitation": "只读帮助；冲突/撤销/不可手动入口清单未知；不覆盖本项目已批准策略",
         "mermaid": "flowchart TD\n  A[\"输入匹配标识\"] --> B[\"提示重聘\"]\n  B --> C{\"按配置选择，HR确认\"}\n  C -->|合并| D[\"原人员新增任职，档案连续\"]\n  C -->|新人员| E[\"生成新人员，原记录不连续\"]\n  C -->|手动| F[\"可选入口由HR选；其他按默认\"]",
         "notes": "帮助明确方式确认后不能更改；图中不画未观察的审批、生效与纠错分支。身份匹配不等于恢复访问。"
+      },
+      {
+        "id": "P1-P-COEFFICIENT-SOURCE",
+        "moduleIds": [
+          "M16"
+        ],
+        "classification": "原站示例说明（未执行验证）",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "evidence": "BC-P12–16",
+        "title": "绩效系数配置与引用路径",
+        "mermaid": "",
+        "notes": "等级模式：等级内设规则→创建活动引用等级→考核生成系数。规则模式：系数规则内配置→绩效模板总览模块绑定→考核按公式生成。总生成方式决定采用哪条路径；规则列表启用状态本身不足以证明使用。",
+        "limitation": "公式/时点/版本变更和薪资消费者未验证；不是本项目已批准系数实现。"
       }
     ],
     "exceptions": [
@@ -26682,7 +27381,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-08T17:14:21.289590+00:00",
+    "updatedAt": "2026-09-08T17:24:14.173222+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -27212,8 +27911,8 @@
         "contracts": [
           {
             "object": "绩效周期/计划/结果",
-            "fields": "活动组织、有效起止日；目标1–20、整数权重总和100；模板/等级方案冻结；文本阶段必填与当前权限",
-            "roles": "HR配置/发布；员工自评；独立经理评价；申诉审核与原评价/发布者分离",
+            "fields": "活动组织、合法起止日期（当前推进校验active状态，未按当天自动封锁）；目标1–20、整数权重总和100；模板/等级方案冻结；文本阶段必填与当前权限",
+            "roles": "HR配置/发布；员工自评；有权限人才管理者可确认/评价但不能本人，当前未强制评价者与发布者分离；申诉审核与原评价/发布者分离，详见REQ-06",
             "lifecycle": "周期draft/active/closed；计划draft/confirmed/submitted/evaluated/cancelled；正式结果单独published版本",
             "actions": "目标确认、调整审核、跟进、自评、评价、发布、申诉更正",
             "codeRefs": [
@@ -27236,7 +27935,7 @@
               "lib/hris/performance-ratings.ts"
             ],
             "acceptance": "边界只可匹配一个等级；区间缺口不自动发布；新方案不替换旧活动；总分非百分制按活动范围校验",
-            "gap": "原站连续区间说明与现实现允许空隙但发布拒绝存在差异；纯手工等级/系数及在途更新未实现",
+            "gap": "原站连续区间说明与现实现允许空隙但发布拒绝存在差异；纯手工等级/系数及在途更新未实现；BC-P14/15原站未评分可按0或均摊，权限不可见/无法评价脚注要求均摊；当前完整scores数组强制逐项有数，尚无这些状态表达。",
             "classification": "本项目既有实现静态事实；转为产品要求待评审",
             "accepted": false,
             "id": "BP-P-REQ-02"
@@ -27271,6 +27970,73 @@
             "acceptance": "非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503",
             "gap": "这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定",
             "classification": "本项目接口静态事实；候选验收契约待评审",
+            "accepted": false
+          },
+          {
+            "id": "BP-P-REQ-04",
+            "object": "兼职目标与兼职绩效上下文",
+            "fields": "BC-P09/10帮助中的对应任职、任职类型/ID、业务时间和组织编码需分别保存；未选择默认主职与历史兼职解析不同；本项目尚无完整兼职任职对象。",
+            "roles": "原站目标书特权/单目标特权、主兼职经理链及同部门可见分开；本项目角色边界需独立确认，不自动引入原站特权绕过。",
+            "lifecycle": "目标所选兼职结束后仍按该记录鉴权；考核兼职结束可配置终止或移除，复制/重启与开关关闭行为不同。以上仅帮助说明，不是本项目规则。",
+            "actions": "目标/指标引入、评价人推断、任职时点选择、兼职绩效、申诉、结果及集成消费；不执行导入或关闭开关。",
+            "acceptance": "先确认任职身份/范围策略后，覆盖同部门多条兼职、空任职、按历史业务日期、结束后目标读取、关闭使用中开关、复制/重启及兼职申诉执行人等合成用例。尚不能填默认通过/拒绝结果；现有同人同cycle单计划用例不能代签兼职。",
+            "gap": "M01兼职对象与BP-P任职上下文双向依赖；源文档限制PIP/试用期/组织绩效及电子签/旧团队，不擅自扩范围；数据搜索计划日期非已交付证据。",
+            "classification": "原站帮助事实与本项目未覆盖差异，业务需求待确认",
+            "codeRefs": [
+              "docs/P1_Source_Observations_20260907.md",
+              "lib/hris/performance.ts",
+              "lib/hris/performance-availability.ts"
+            ],
+            "accepted": false
+          },
+          {
+            "id": "BP-P-REQ-05",
+            "object": "目标调整与员工进展反馈",
+            "fields": "目标调整1–20项，权重总和100，依据5–4000；保留originalGoals/basePlanVersion/basePlanUpdatedAt。跟进goalIndex0–19、progress整数0–100、依据/行动计划5–4000，保存目标快照与版本。",
+            "roles": "本人或有范围人才管理者申请调整，非本人/申请人的独立管理者复核；仅员工本人写跟进，其他有范围管理者反馈。",
+            "lifecycle": "调整仅active周期、confirmed计划、员工当前范围且未产生正式结果；submitted→approved/rejected/withdrawn，批准递增计划版本并清空旧评分/自评；跟进submitted→acknowledged/returned/withdrawn，补充仅同版本同目标returned记录。",
+            "actions": "调整申请/审批/撤回；进展提交/反馈/退回补充；进展不是分数或完成门槛。",
+            "codeRefs": [
+              "lib/hris/performance-changes.ts",
+              "lib/hris/performance-checkins.ts",
+              "lib/hris/performance-availability.ts"
+            ],
+            "acceptance": "未变化目标、权重不100、重复待审调整拒绝；审核发现原目标/version/updatedAt已变拒绝；有待审调整不新跟进；已调整目标不能复用旧returned记录补充，应新建；非本人进展/自反馈拒绝。",
+            "gap": "“活动周期内”在当前函数中是active状态及范围校验，未比较当天与start/end，不能宣称日期自动封锁；目标调整后旧submitted跟进的反馈未另校验basePlanVersion，须明确按旧快照反馈还是关闭重建，不自动认定当前目标进展。",
+            "classification": "本项目当前静态实现候选；未复测、未业务签署，不作为原站规则",
+            "accepted": false
+          },
+          {
+            "id": "BP-P-REQ-06",
+            "object": "正式绩效结果、申诉与更正版本",
+            "fields": "只对具备完整cycle/plan评分快照的最新published正式结果申诉；依据5–4000，获准更正须为原目标逐项重新评分并按旧规则计算。",
+            "roles": "员工本人申诉/撤回；HR审核但不能为原评价者、原发布者、申诉人或结果本人；更正发布由另一HR且非申诉审核者、非员工本人。",
+            "lifecycle": "每结果版本除withdrawn外只一份申诉；submitted→upheld/approved/withdrawn；approved后另发布新performance结果，supersedes连接旧结果，禁止重复更正。不把原结果覆盖。",
+            "actions": "申诉、维持原结果、重评分、更正发布；原评价/发布/更正三个角色约束分开。",
+            "codeRefs": [
+              "lib/hris/performance.ts",
+              "lib/hris/performance-ratings.ts"
+            ],
+            "acceptance": "无完整快照的旧导入记录、已被更正的结果不可申诉；维持原结果不能带新分；分项和总分都未变化拒绝伪更正；原评价/发布人不能审申诉；审核者不能自行发布更正；新结果保留旧模板和目标依据。",
+            "gap": "原站申诉角色/时限与多维系数未完整观察；当前更正发布者只排除审核人和员工本人，不自动排除原评价/发布者，是否需更严隔离待需求评审；跨人才盘点、奖金/报表旧快照如何传播需明确。",
+            "classification": "本项目当前静态实现候选；未复测、未业务签署，不作为原站规则",
+            "accepted": false
+          },
+          {
+            "id": "BP-P-REQ-07",
+            "object": "多维结果、缺评算分与系数绑定",
+            "fields": "BC-P14维度一/二/三、名称/等级/上下限分别设置；原站等级系数与公式系数有两条绑定路径；当前本项目单组目标和talentBand不等价。",
+            "roles": "未评分、无法评价、因权限不可见须不同状态，不能为看不到的指标补数值；模板配置/活动引用/结果查看/薪资消费权限分开。",
+            "lifecycle": "源说明活动引用等级或模板总览绑定规则；启用列表规则不保证被采用。已评结果更正/模板修订时系数/历史快照处理未完整观察。",
+            "actions": "配置维度与算分、等级/系数规则、活动绑定；仅读未计算或保存。",
+            "acceptance": "按源示例推导：未评分20%及已评5×50%、3×30%，按零得3.4、均摊得4.25；权限不可见/无法评价按图示均摊。全未评、权重和0、边界和舍入待确认后才能给预期。活动只绑定有效选择路径，不能因另一规则启用就应用。",
+            "gap": "现有scores逐项必填，未表达未评/无法评价；多维、强分、系数及公式未可复用覆盖。源配置不是本项目批准，异常/精度与金额消费者待评审。",
+            "classification": "原站配置/示例事实及产品缺口；推导用例未执行/签署",
+            "codeRefs": [
+              "docs/P1_Source_Observations_20260907.md",
+              "lib/hris/performance-ratings.ts",
+              "lib/hris/performance.ts"
+            ],
             "accepted": false
           }
         ],
@@ -28393,7 +29159,7 @@
       {
         "term": "缺失、零、取消、排除、过期",
         "dependency": "学习/绩效/调查/考勤→报表",
-        "contract": "缺分null不是0；取消任务不是完成；不参与绩效不是最低档；360低于阈值不显示均值；学分撤销与过期分开；各指标使用本数据集分母和核对时点。",
+        "contract": "缺分null不是0；取消任务不是完成；不参与绩效不是最低档；360低于阈值不显示均值；学分撤销与过期分开；各指标使用本数据集分母和核对时点。 原站绩效BC-P14另有未评价按0或权重均摊配置；不得把学习null规则跨域推广，绩效须明确所采用策略和版本。",
         "evidence": "learning-grades/feedback/learning-credits/reports；独立候选算法不冒充原站通则"
       },
       {
@@ -28473,6 +29239,24 @@
         "dependency": "BP-L共享管理/全公司可见→BP-I访问与审计",
         "contract": "BC-L22原站说明关闭能力开关不会收回存量对象全公司共享/可见，也不改变原表单默认。配置可选能力、对象授权、学员可学和平台访问是四层；本项目撤权需求不能只验开关关闭，需明确是否更新对象与重新计算当前权限，建议待评审。E2仅所有者平台访问不变化。",
         "evidence": "BC-L22只读说明；本项目当前权限重核与原站配置行为分别记录，未修改任何权限"
+      },
+      {
+        "term": "主职/兼职任职上下文与绩效",
+        "dependency": "BP-F兼职记录→BP-P评价角色/审批/指标/结果→BP-I标签集成",
+        "contract": "BC-P09原站绩效使用兼职任职上下文推断评价人、职务职级、定量指标及标签；同一自然人的不同任职不能仅用主职orgId关联。本项目每employee+cycle单计划且period结果替代约束，只是当前主职候选设计；兼职生效/结束版本与结果聚合须独立需求。",
+        "evidence": "BC-P09配置说明；performance.ts/performance-availability.ts静态事实，主兼岗规则仍未批准"
+      },
+      {
+        "term": "绩效终止、正式发布与员工档案结果",
+        "dependency": "BP-P绩效→BP-F员工考核子集→BP-C盘点/BP-S薪酬/BP-I报表",
+        "contract": "BC-P11原站可配置终止绩效时同步考核结果子集；档案有记录不必然表示流程正常完成。当前项目正式结果独立published，cancelled计划不自动产生发布结果；状态映射、缺失分值与同步版本/纠错须单列，不以同名结果替代业务完成。",
+        "evidence": "BC-P11只读开关说明、performance.ts及reports.ts静态对应"
+      },
+      {
+        "term": "绩效分数、等级、系数与工资项目",
+        "dependency": "BP-P评价/等级/系数→BP-S奖金薪资→BP-I报表",
+        "contract": "BC-P12/13系数规则有总生成模式与单规则状态、等级引用/公式模式、系数区间；单规则启用不等于已被采用。现有band供人才盘点、originalRating显示等级、score原始分数，均不能直接作为薪酬乘数；系数版本、引用时点及更正补差需独立规格。",
+        "evidence": "BC-P12提示当前规则无效、BC-P13空表；performance-ratings.ts与payroll.ts当前独立实现"
       }
     ],
     "consistencyReview": {
@@ -28498,7 +29282,10 @@
         "360角色目录/套卷角色选择不是固定四关系；现有答卷开放期间覆盖同ID、报告关闭后冻结，原答卷匿名权限仍未确认",
         "原站学习共享/全公司可见开关关闭不回收存量，当前角色撤权契约需单列，E2平台访问不变",
         "考试档案只收勾选后新数据；历史缺记录不代表未考试；学习/干部/绩效各成绩规则不能混用",
-        "培训活动费用分预算/实际及同步状态，课酬四模式；场次出勤、授课资格、讲师名册、出师和证书彼此独立"
+        "培训活动费用分预算/实际及同步状态，课酬四模式；场次出勤、授课资格、讲师名册、出师和证书彼此独立",
+        "兼职目标/绩效、历史任职解析和结束/重启不同；原站权限特权不自动转为项目授权",
+        "绩效未评分与无法评价/权限不可见分开；按零/均摊为配置策略，和学习null不同",
+        "绩效系数实际采用取决于总模式与活动/模板绑定，规则启用不等于生效；正式结果与档案子集终止同步不同"
       ],
       "remaining": "继续经理看板指标/组织健康正文有限替代，其他空表控件属性及帮助；原站配置不等于默认/产品批准；完成全部规格引用与异常图的一致性审查"
     },
