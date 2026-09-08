@@ -1,0 +1,22 @@
+{
+  "startedAt": "2026-09-08T10:11:22.076642+00:00",
+  "completedAt": "2026-09-08T10:11:36.120150+00:00",
+  "command": "node --test --test-reporter=tap tests/*.test.mjs",
+  "exitCode": 1,
+  "report": "docs/delivery/Dashboard_Comprehensive.tap",
+  "scope": "合成数据综合回归，含看板聚合；不代替人工业务验收",
+  "tests": 229,
+  "passed": 228,
+  "failed": 1,
+  "typecheck": "passed",
+  "limitation": "旧rendered-html.test.mjs在普通Node无法加载cloudflare:workers；其余228项通过；未执行浏览器人工验收",
+  "build": {
+    "status": "passed",
+    "command": "Sites build-site.mjs → npm run build",
+    "completedAt": "2026-09-08T10:13:19.282317+00:00",
+    "routes": [
+      "/scope",
+      "/api/delivery-evidence"
+    ]
+  }
+}

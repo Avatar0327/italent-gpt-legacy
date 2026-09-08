@@ -1,0 +1,107 @@
+{
+  "generatedAt": "2026-09-08T10:13:19.343Z",
+  "head": "e1ec61797a5844cf33fee81f12a0d8d8628f3c54",
+  "commits": [
+    {
+      "sha": "e1ec61797a5844cf33fee81f12a0d8d8628f3c54",
+      "time": "2026-09-08T02:32:34-06:00",
+      "title": "feat(performance): add scoped qualitative indicators and frozen goal sources"
+    },
+    {
+      "sha": "f97a40f52c409aea7d7c1d256195bc19c4b76df5",
+      "time": "2026-09-08T02:15:08-06:00",
+      "title": "feat(performance): freeze optional goal limits and reset changed goal answers"
+    },
+    {
+      "sha": "ed16ae363574b0dd2c68070702fac069f1d52e31",
+      "time": "2026-09-08T02:05:59-06:00",
+      "title": "test(recovery): verify immutable templates and revoked member isolation"
+    },
+    {
+      "sha": "b367eecd7dba91748b28551519caddbc3593b03f",
+      "time": "2026-09-08T01:59:58-06:00",
+      "title": "fix(performance): align self service and appeal task navigation"
+    },
+    {
+      "sha": "415d28a189b049c2842433ff2320535bfe44142e",
+      "time": "2026-09-08T01:55:17-06:00",
+      "title": "fix(performance): restore self review inbox and scoped record links"
+    },
+    {
+      "sha": "01e407c48130aabe5d8fb3b776aebd08c933f4fd",
+      "time": "2026-09-08T01:47:02-06:00",
+      "title": "feat(performance): freeze versioned text templates into review cycles"
+    },
+    {
+      "sha": "9403c95c4d0a6411077254b44a5a64a4795d2f20",
+      "time": "2026-09-08T01:37:41-06:00",
+      "title": "feat(integration): define pure adapter preflight and reconciliation contract"
+    },
+    {
+      "sha": "1e9507fb0a0a3bf8673f4ba1f5519dfe61814561",
+      "time": "2026-09-08T01:33:30-06:00",
+      "title": "docs: record private v99 and external adapter contract queue"
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/delivery/Scope_Register.json",
+      "sha256": "3d2bfbfb465e7f401d3000de7807daa732985de71803255ead92e4a92a48dbd9"
+    },
+    {
+      "path": "docs/delivery/Module_Queue.json",
+      "sha256": "12769b9d43fb6d9dcb758f211f15f110a9a50eec64bb036447c45a90b4ffe162"
+    },
+    {
+      "path": "docs/Execution_Checkpoint.md",
+      "sha256": "e83189e472f67a5479b65a5efcec813ea911be7701397ae921beb8ec1f0c3f35"
+    }
+  ],
+  "checkpoint": "# 当前执行检查点\n\n## 唯一写入与边界\n当前聊天总控唯一写入者，main。云端 /workspace/sites/italent-hris；原站只读、仅合成测试数据；不新建项目/代理，不迁移真实数据或扩大访问。Controller_Resume.md 的连续执行授权继续有效。\n\n## 本轮有界只读核对\n2026-09-08：HEAD e1ec61797a5844cf33fee81f12a0d8d8628f3c54，main干净，无以项目目录为cwd的运行中进程。未发现Git写锁或测试/构建/部署进程；没有Mac变更需要合并。历史“未提交指标库增量”描述已过时。\n历史综合 Performance_Indicators_Comprehensive.tap：220/220，0失败，42.580秒；旧检查点记录类型/构建通过，非本轮新测试证据。\nSites最新保存v103对应上述HEAD；无可用v103部署ID，当前在线commit不能确认。指定ID重新核验v102部署succeeded，2026-09-08T08:17:16.639988+00:00，源f97a40f52c409aea7d7c1d256195bc19c4b76df5，环境revision1，所有者私有。详见delivery/Deployment_Evidence.json；不存在已知运行中写入，历史部署证据缺口不伪造补齐。\n\n## 当前看板增量\n已有建设/交付的总览与建设清单；Scope_Register.json作为统一台账；P3三级树、验收进度和五类数量、范围跳转、Git增量、部署/测试证据、阻塞及来源快照。所有48组范围保留；已登记子任务分母不代表全量需求已穷尽。技术交付不自动业务验收。\n聚合规则4/4、类型检查通过；综合228/229通过，唯一失败为旧Worker渲染测试的Node/cloudflare加载环境限制，保留失败证据。正式构建已通过（含/scope对应页面与刷新接口），当前提交并沿用既有所有者私有发布授权。最终运行证据记delivery/Dashboard_Verification.json。\n\n## blocker、恢复条件和下一步\n- G1人工界面核验历史ERR_BLOCKED_BY_CLIENT；恢复条件：内部预览可访问后重新核验。人工与生产未签署，不阻断当前看板开发。\n- v103部署缺少原始ID；恢复条件：取得原部署回执或后续新版本得到独立终态证据。看板保留未知，不把保存当发布。\n- 全量原子验收范围未穷尽；按组织员工→干部→学习→绩效→招聘→假勤→薪酬→自助/报表/集成继续拆解台账，已核实和待核实分列。\n- 当前交付顺序：聚合测试/类型/构建→记录完整SHA及证据→私有发布并核验终态→保存恢复检查点。\n\n## 历史\n[完整既有检查点](history/Execution_Checkpoint_2026-09-08.md)保留历史；工程E1约15%仍是低置信度估算，不能代替验收比例。G1/G2人工及G4生产未验收。\n",
+  "tests": {
+    "path": "docs/delivery/Dashboard_Comprehensive.tap",
+    "tests": 229,
+    "passed": 228,
+    "failed": 1,
+    "note": "综合合成测试；Worker渲染项在普通Node环境受cloudflare协议限制，详见验证记录；不代替人工验收"
+  },
+  "verification": {
+    "startedAt": "2026-09-08T10:11:22.076642+00:00",
+    "completedAt": "2026-09-08T10:11:36.120150+00:00",
+    "command": "node --test --test-reporter=tap tests/*.test.mjs",
+    "exitCode": 1,
+    "report": "docs/delivery/Dashboard_Comprehensive.tap",
+    "scope": "合成数据综合回归，含看板聚合；不代替人工业务验收",
+    "tests": 229,
+    "passed": 228,
+    "failed": 1,
+    "typecheck": "passed",
+    "limitation": "旧rendered-html.test.mjs在普通Node无法加载cloudflare:workers；其余228项通过；未执行浏览器人工验收",
+    "build": {
+      "status": "passed",
+      "command": "Sites build-site.mjs → npm run build",
+      "completedAt": "2026-09-08T10:13:19.282317+00:00",
+      "routes": [
+        "/scope",
+        "/api/delivery-evidence"
+      ]
+    }
+  },
+  "deployment": {
+    "checkedAt": "2026-09-08T10:09:53.524637+00:00",
+    "environment": "Sites production / 仅所有者私有访问",
+    "latestSavedVersion": 103,
+    "latestSavedCommit": "e1ec61797a5844cf33fee81f12a0d8d8628f3c54",
+    "latestDeploymentVerified": false,
+    "note": "版本103已保存，但当前可用证据缺少其部署ID，不能把保存时间当作发布时间或判定当前在线commit。下列为最近可独立核验的成功部署。",
+    "verified": {
+      "version": 102,
+      "deploymentId": "appgdep_6a9fc46a7cbc8191af39c7c7b7a0b8d0",
+      "commit": "f97a40f52c409aea7d7c1d256195bc19c4b76df5",
+      "time": "2026-09-08T08:17:16.639988+00:00",
+      "status": "succeeded",
+      "envRevision": 1
+    },
+    "source": "Sites get_site + list_site_versions + get_deployment_status（部署ID指定核验）"
+  }
+}

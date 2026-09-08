@@ -563,5 +563,601 @@
       "productionAccepted": false
     }
   },
-  "latestEvidence": "2026-09-08: 学习要求及实例阶段；当前提交见git，不用历史baseline代替HEAD"
+  "latestEvidence": "2026-09-08: 学习要求及实例阶段；当前提交见git，不用历史baseline代替HEAD",
+  "acceptanceTasks": [
+    {
+      "id": "F01",
+      "phase": "P2",
+      "moduleId": "M01",
+      "title": "组织/员工/岗位标识及入转调离",
+      "criteria": [
+        {
+          "id": "F01-AC1",
+          "text": "组织/员工/岗位标识及入转调离；按业务场景独立验收并记录确认人、时间与证据",
+          "accepted": false
+        }
+      ],
+      "source": "Scope_Register.md#首批原子验收项"
+    },
+    {
+      "id": "F02",
+      "phase": "P2",
+      "moduleId": "M01",
+      "title": "角色、组织和字段权限及撤权",
+      "criteria": [
+        {
+          "id": "F02-AC1",
+          "text": "角色、组织和字段权限及撤权；按业务场景独立验收并记录确认人、时间与证据",
+          "accepted": false
+        }
+      ],
+      "source": "Scope_Register.md#首批原子验收项"
+    },
+    {
+      "id": "F03",
+      "phase": "P2",
+      "moduleId": "M01",
+      "title": "修订冲突、事务、审批快照、审计",
+      "criteria": [
+        {
+          "id": "F03-AC1",
+          "text": "修订冲突、事务、审批快照、审计；按业务场景独立验收并记录确认人、时间与证据",
+          "accepted": false
+        }
+      ],
+      "source": "Scope_Register.md#首批原子验收项"
+    },
+    {
+      "id": "F04",
+      "phase": "P2",
+      "moduleId": "M01",
+      "title": "本人附件和历史权限",
+      "criteria": [
+        {
+          "id": "F04-AC1",
+          "text": "本人附件和历史权限；按业务场景独立验收并记录确认人、时间与证据",
+          "accepted": false
+        }
+      ],
+      "source": "Scope_Register.md#首批原子验收项"
+    },
+    {
+      "id": "C01",
+      "phase": "P3",
+      "moduleId": "M03",
+      "title": "标准版本→盘点→发展计划",
+      "criteria": [
+        {
+          "id": "C01-AC1",
+          "text": "标准版本→盘点→发展计划；按业务场景独立验收并记录确认人、时间与证据",
+          "accepted": false
+        }
+      ],
+      "source": "Scope_Register.md#首批原子验收项"
+    },
+    {
+      "id": "C02",
+      "phase": "P3",
+      "moduleId": "M03",
+      "title": "人才档案展示授权的计划与学习状态",
+      "criteria": [
+        {
+          "id": "C02-AC1",
+          "text": "人才档案展示授权的计划与学习状态；按业务场景独立验收并记录确认人、时间与证据",
+          "accepted": false
+        }
+      ],
+      "source": "Scope_Register.md#首批原子验收项"
+    },
+    {
+      "id": "L01",
+      "phase": "P3",
+      "moduleId": "M27",
+      "title": "同标准版本的 planId 派课",
+      "criteria": [
+        {
+          "id": "L01-AC1",
+          "text": "同标准版本的 planId 派课；按业务场景独立验收并记录确认人、时间与证据",
+          "accepted": false
+        }
+      ],
+      "source": "Scope_Register.md#首批原子验收项"
+    },
+    {
+      "id": "L02",
+      "phase": "P3",
+      "moduleId": "M27",
+      "title": "考试/出勤→提交→独立核验",
+      "criteria": [
+        {
+          "id": "L02-AC1",
+          "text": "考试/出勤→提交→独立核验；按业务场景独立验收并记录确认人、时间与证据",
+          "accepted": false
+        }
+      ],
+      "source": "Scope_Register.md#首批原子验收项"
+    },
+    {
+      "id": "L03",
+      "phase": "P3",
+      "moduleId": "M27",
+      "title": "阶段门槛、取消恢复、学分去重/有效期",
+      "criteria": [
+        {
+          "id": "L03-AC1",
+          "text": "阶段门槛、取消恢复、学分去重/有效期；按业务场景独立验收并记录确认人、时间与证据",
+          "accepted": false
+        }
+      ],
+      "source": "Scope_Register.md#首批原子验收项"
+    },
+    {
+      "id": "L04",
+      "phase": "P3",
+      "moduleId": "M27",
+      "title": "显式申请与独立审核历史课程复用",
+      "criteria": [
+        {
+          "id": "L04-AC1",
+          "text": "显式申请与独立审核历史课程复用；按业务场景独立验收并记录确认人、时间与证据",
+          "accepted": false
+        }
+      ],
+      "source": "Scope_Register.md#首批原子验收项"
+    },
+    {
+      "id": "X01",
+      "phase": "P3",
+      "moduleId": "M27",
+      "title": "F01→C01→L01→L02→C02同场景贯通",
+      "criteria": [
+        {
+          "id": "X01-AC1",
+          "text": "F01→C01→L01→L02→C02同场景贯通；按业务场景独立验收并记录确认人、时间与证据",
+          "accepted": false
+        }
+      ],
+      "source": "Scope_Register.md#首批原子验收项",
+      "queueRef": "G1-UAT"
+    },
+    {
+      "id": "L-STAGE-WINDOW",
+      "phase": "P3",
+      "moduleId": "M27",
+      "title": "阶段截止与逾期规则明确标记原站证据/独立策略",
+      "queueRef": "L-STAGE-WINDOW",
+      "criteria": [
+        {
+          "id": "L-STAGE-WINDOW-AC1",
+          "text": "阶段截止与逾期规则明确标记原站证据/独立策略；服务端、待办和历史一致，兼容旧版本",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#L-STAGE-WINDOW"
+    },
+    {
+      "id": "L-RECURRENCE",
+      "phase": "P3",
+      "moduleId": "M27",
+      "title": "新轮实例与任务原子隔离、重复请求/撤销不重复奖励、不得冒称自动调度",
+      "queueRef": "L-RECURRENCE",
+      "criteria": [
+        {
+          "id": "L-RECURRENCE-AC1",
+          "text": "新轮实例与任务原子隔离、重复请求/撤销不重复奖励、不得冒称自动调度",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#L-RECURRENCE"
+    },
+    {
+      "id": "L-EXAM-TYPES",
+      "phase": "P3",
+      "moduleId": "M27",
+      "title": "客观题版本、计分和答案投影",
+      "queueRef": "L-EXAM-TYPES",
+      "criteria": [
+        {
+          "id": "L-EXAM-TYPES-AC1",
+          "text": "客观题版本、计分和答案投影，旧单选兼容；人工题/题库另列",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#L-EXAM-TYPES"
+    },
+    {
+      "id": "L-HOMEWORK",
+      "phase": "P3",
+      "moduleId": "M27",
+      "title": "独立提交/批阅版本、转交撤权、阶段/循环及单项整单取消隔离",
+      "queueRef": "L-HOMEWORK",
+      "criteria": [
+        {
+          "id": "L-HOMEWORK-AC1",
+          "text": "独立提交/批阅版本、转交撤权、阶段/循环及单项整单取消隔离",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#L-HOMEWORK"
+    },
+    {
+      "id": "L-WEIGHTED-GRADE",
+      "phase": "P3",
+      "moduleId": "M27",
+      "title": "BC-L10来源映射",
+      "queueRef": "L-WEIGHTED-GRADE",
+      "criteria": [
+        {
+          "id": "L-WEIGHTED-GRADE-AC1",
+          "text": "BC-L10来源映射，缺失不归零、不同实例不可借用、权重版本冻结",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#L-WEIGHTED-GRADE"
+    },
+    {
+      "id": "L-CONTENT-UPDATE",
+      "phase": "P3",
+      "moduleId": "M27",
+      "title": "BC-L03未完成实例内容更新",
+      "queueRef": "L-CONTENT-UPDATE",
+      "criteria": [
+        {
+          "id": "L-CONTENT-UPDATE-AC1",
+          "text": "BC-L03未完成实例内容更新，完成历史默认保留；影响可预览，权限/并发/成绩与学分来源不被静默改写",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#L-CONTENT-UPDATE"
+    },
+    {
+      "id": "P-SOURCE",
+      "phase": "P3",
+      "moduleId": "M16",
+      "title": "核对原站员工绩效字段与流程",
+      "queueRef": "P-SOURCE",
+      "criteria": [
+        {
+          "id": "P-SOURCE-AC1",
+          "text": "核对原站员工绩效字段与流程；分清页面证据、独立实现与企业待确认规则",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#P-SOURCE"
+    },
+    {
+      "id": "P-RATINGS",
+      "phase": "P3",
+      "moduleId": "M16",
+      "title": "同组织定版等级、冻结历史、明确区间、三档映射、独立申诉与旧百分制兼容",
+      "queueRef": "P-RATINGS",
+      "criteria": [
+        {
+          "id": "P-RATINGS-AC1",
+          "text": "同组织定版等级、冻结历史、明确区间、三档映射、独立申诉与旧百分制兼容",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#P-RATINGS"
+    },
+    {
+      "id": "P-ACTIVITY",
+      "phase": "P3",
+      "moduleId": "M16",
+      "title": "分类可筛选/报表追溯、草稿明确编辑与启动后冻结、旧版本兼容",
+      "queueRef": "P-ACTIVITY",
+      "criteria": [
+        {
+          "id": "P-ACTIVITY-AC1",
+          "text": "分类可筛选/报表追溯、草稿明确编辑与启动后冻结、旧版本兼容",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#P-ACTIVITY"
+    },
+    {
+      "id": "R-SOURCE",
+      "phase": "P3",
+      "moduleId": "M12",
+      "title": "只读核对招聘需求/候选/面试/录用流程字段",
+      "queueRef": "R-SOURCE",
+      "criteria": [
+        {
+          "id": "R-SOURCE-AC1",
+          "text": "只读核对招聘需求/候选/面试/录用流程字段，未知规则明确保留",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#R-SOURCE"
+    },
+    {
+      "id": "R-SUBMISSION",
+      "phase": "P3",
+      "moduleId": "M12",
+      "title": "保存/提交/审批分离",
+      "queueRef": "R-SUBMISSION",
+      "criteria": [
+        {
+          "id": "R-SUBMISSION-AC1",
+          "text": "保存/提交/审批分离，旧draft兼容，贡献者隔离、CAS及审计回滚和录用入职回归",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#R-SUBMISSION"
+    },
+    {
+      "id": "R-RETRY",
+      "phase": "P3",
+      "moduleId": "M12",
+      "title": "保存并提交一修订原子性、丢失响应创建重放不再写入、请求键冲突、作用域角色及内部信息隔离",
+      "queueRef": "R-RETRY",
+      "criteria": [
+        {
+          "id": "R-RETRY-AC1",
+          "text": "保存并提交一修订原子性、丢失响应创建重放不再写入、请求键冲突、作用域角色及内部信息隔离",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#R-RETRY"
+    },
+    {
+      "id": "R-JOB",
+      "phase": "P3",
+      "moduleId": "M12",
+      "title": "内部招聘职位独立版本、候选冻结来源、需求容量与权限不扩大",
+      "queueRef": "R-JOB",
+      "criteria": [
+        {
+          "id": "R-JOB-AC1",
+          "text": "内部招聘职位独立版本、候选冻结来源、需求容量与权限不扩大；旧候选兼容，外发广告不冒充实现",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#R-JOB"
+    },
+    {
+      "id": "R-INTERVIEW-SOURCE",
+      "phase": "P3",
+      "moduleId": "M12",
+      "title": "核实只读排期字段、角色和生命周期",
+      "queueRef": "R-INTERVIEW-SOURCE",
+      "criteria": [
+        {
+          "id": "R-INTERVIEW-SOURCE-AC1",
+          "text": "核实只读排期字段、角色和生命周期；明确未核实的通知/评价规则，不操作原业务",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#R-INTERVIEW-SOURCE"
+    },
+    {
+      "id": "R-EVALUATION",
+      "phase": "P3",
+      "moduleId": "M12",
+      "title": "四档多指标模板冻结",
+      "queueRef": "R-EVALUATION",
+      "criteria": [
+        {
+          "id": "R-EVALUATION-AC1",
+          "text": "四档多指标模板冻结，显式结论，旧面试兼容，当前账号与组织权限，最近评价录用门槛和历史追溯",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#R-EVALUATION"
+    },
+    {
+      "id": "R-SCHEDULE",
+      "phase": "P3",
+      "moduleId": "M12",
+      "title": "内部单人排期、冲突和角色约束、冻结评价表、取消/调动/离职阻断、评价与完成原子保存",
+      "queueRef": "R-SCHEDULE",
+      "criteria": [
+        {
+          "id": "R-SCHEDULE-AC1",
+          "text": "内部单人排期、冲突和角色约束、冻结评价表、取消/调动/离职阻断、评价与完成原子保存，通知不外发",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#R-SCHEDULE"
+    },
+    {
+      "id": "A-SOURCE",
+      "phase": "P3",
+      "moduleId": "M11",
+      "title": "原站班次/假种/期间结算可见规则与既有实现对照",
+      "queueRef": "A-SOURCE",
+      "criteria": [
+        {
+          "id": "A-SOURCE-AC1",
+          "text": "原站班次/假种/期间结算可见规则与既有实现对照，未验证规则单列；不修改原业务",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#A-SOURCE"
+    },
+    {
+      "id": "A-PERIOD",
+      "phase": "P3",
+      "moduleId": "M11",
+      "title": "单人期间预览、来源快照和版本、冻结假勤写保护、重新开放/更正、范围/并发/审计回滚",
+      "queueRef": "A-PERIOD",
+      "criteria": [
+        {
+          "id": "A-PERIOD-AC1",
+          "text": "单人期间预览、来源快照和版本、冻结假勤写保护、重新开放/更正、范围/并发/审计回滚；无完整月报发布封存声称",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#A-PERIOD"
+    },
+    {
+      "id": "A-SHIFT-DEFINITION",
+      "phase": "P3",
+      "moduleId": "M11",
+      "title": "版本化固定班次与派班原子性、既有时间/范围/冻结锁复用、历史班次不被新定义覆盖",
+      "queueRef": "A-SHIFT-DEFINITION",
+      "criteria": [
+        {
+          "id": "A-SHIFT-DEFINITION-AC1",
+          "text": "版本化固定班次与派班原子性、既有时间/范围/冻结锁复用、历史班次不被新定义覆盖",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#A-SHIFT-DEFINITION"
+    },
+    {
+      "id": "A-LEAVE-SOURCE",
+      "phase": "P3",
+      "moduleId": "M11",
+      "title": "只读核对休假/假种配置、计量及余额边界",
+      "queueRef": "A-LEAVE-SOURCE",
+      "criteria": [
+        {
+          "id": "A-LEAVE-SOURCE-AC1",
+          "text": "只读核对休假/假种配置、计量及余额边界，区分已证实字段与未核实自动规则",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#A-LEAVE-SOURCE"
+    },
+    {
+      "id": "A-LEAVE-RULES",
+      "phase": "P3",
+      "moduleId": "M11",
+      "title": "组织、工作分钟上下限、制度与快照、退休停止新增但不毁损历史、调动余额保留及独立审批回归",
+      "queueRef": "A-LEAVE-RULES",
+      "criteria": [
+        {
+          "id": "A-LEAVE-RULES-AC1",
+          "text": "组织、工作分钟上下限、制度与快照、退休停止新增但不毁损历史、调动余额保留及独立审批回归",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#A-LEAVE-RULES"
+    },
+    {
+      "id": "PAY-SOURCE",
+      "phase": "P3",
+      "moduleId": "M07",
+      "title": "薪酬原站可见模块/字段/流程与既有独立编制复核发布对照",
+      "queueRef": "PAY-SOURCE",
+      "criteria": [
+        {
+          "id": "PAY-SOURCE-AC1",
+          "text": "薪酬原站可见模块/字段/流程与既有独立编制复核发布对照，税/银行/公式未知规则不臆造",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#PAY-SOURCE"
+    },
+    {
+      "id": "PAY-ATTENDANCE",
+      "phase": "P3",
+      "moduleId": "M07",
+      "title": "冻结期间聚合快照、权限/同月/同人/去重、来源变化阻止提交复核发布",
+      "queueRef": "PAY-ATTENDANCE",
+      "criteria": [
+        {
+          "id": "PAY-ATTENDANCE-AC1",
+          "text": "冻结期间聚合快照、权限/同月/同人/去重、来源变化阻止提交复核发布，既有金额和已发布历史不重写",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#PAY-ATTENDANCE"
+    },
+    {
+      "id": "I-INBOX-SOURCES",
+      "phase": "P3",
+      "moduleId": "M32",
+      "title": "指定面试待办与当前角色一致",
+      "queueRef": "I-INBOX-SOURCES",
+      "criteria": [
+        {
+          "id": "I-INBOX-SOURCES-AC1",
+          "text": "指定面试待办与当前角色一致；薪酬来源变化转纠正待办而非推进；引用报表权限与冻结快照一致",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#I-INBOX-SOURCES"
+    },
+    {
+      "id": "I-EXTERNAL-CONTRACT",
+      "phase": "P3",
+      "moduleId": "M32",
+      "title": "定义字段归属/映射、事件幂等/重试/对账/失败处理",
+      "queueRef": "I-EXTERNAL-CONTRACT",
+      "criteria": [
+        {
+          "id": "I-EXTERNAL-CONTRACT-AC1",
+          "text": "定义字段归属/映射、事件幂等/重试/对账/失败处理；仅合成桩或只读预验，不执行真实迁移或外部写入",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#I-EXTERNAL-CONTRACT"
+    },
+    {
+      "id": "P-TEXT-TEMPLATE",
+      "phase": "P3",
+      "moduleId": "M16",
+      "title": "同组织模板版本和活动快照、阶段必填及未知字段拒绝、未发布管理文本在接口/历史隔离、旧无模板流程兼容",
+      "queueRef": "P-TEXT-TEMPLATE",
+      "criteria": [
+        {
+          "id": "P-TEXT-TEMPLATE-AC1",
+          "text": "同组织模板版本和活动快照、阶段必填及未知字段拒绝、未发布管理文本在接口/历史隔离、旧无模板流程兼容",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#P-TEXT-TEMPLATE"
+    },
+    {
+      "id": "P-INBOX-LINK",
+      "phase": "P3",
+      "moduleId": "M16",
+      "title": "自评/退回重提、调整待审暂缓、评价与发布任务指向权限范围内具体记录",
+      "queueRef": "P-INBOX-LINK",
+      "criteria": [
+        {
+          "id": "P-INBOX-LINK-AC1",
+          "text": "自评/退回重提、调整待审暂缓、评价与发布任务指向权限范围内具体记录；调动离职不产生可推进任务",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#P-INBOX-LINK"
+    },
+    {
+      "id": "P-GOAL-RANGE",
+      "phase": "P3",
+      "moduleId": "M16",
+      "title": "BC-P05范围随周期冻结、目标保存与变更强制检查、非法范围无副作用、目标变更清空旧回答保留历史",
+      "queueRef": "P-GOAL-RANGE",
+      "criteria": [
+        {
+          "id": "P-GOAL-RANGE-AC1",
+          "text": "BC-P05范围随周期冻结、目标保存与变更强制检查、非法范围无副作用、目标变更清空旧回答保留历史",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#P-GOAL-RANGE"
+    },
+    {
+      "id": "P-INDICATOR-CATALOG",
+      "phase": "P3",
+      "moduleId": "M16",
+      "title": "BC-P06同组织定性指标版本、目标来源服务端快照、归档前后新旧引用、目标调整原子性与无指标兼容",
+      "queueRef": "P-INDICATOR-CATALOG",
+      "criteria": [
+        {
+          "id": "P-INDICATOR-CATALOG-AC1",
+          "text": "BC-P06同组织定性指标版本、目标来源服务端快照、归档前后新旧引用、目标调整原子性与无指标兼容",
+          "accepted": false
+        }
+      ],
+      "source": "Module_Queue.json#P-INDICATOR-CATALOG"
+    }
+  ],
+  "acceptancePolicy": {
+    "denominatorComplete": false,
+    "note": "仅统计已登记的可验收子任务；48组全量范围保留，未拆解范围另列，不能把此比例当作全量需求覆盖率或工程工作量。子任务全部验收项有确认人、时间、证据才计已验收；技术交付和发布不自动验收。"
+  }
 }

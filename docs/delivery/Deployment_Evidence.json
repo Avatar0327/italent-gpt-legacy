@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-09-08T10:09:53.524637+00:00",
+  "environment": "Sites production / 仅所有者私有访问",
+  "latestSavedVersion": 103,
+  "latestSavedCommit": "e1ec61797a5844cf33fee81f12a0d8d8628f3c54",
+  "latestDeploymentVerified": false,
+  "note": "版本103已保存，但当前可用证据缺少其部署ID，不能把保存时间当作发布时间或判定当前在线commit。下列为最近可独立核验的成功部署。",
+  "verified": {
+    "version": 102,
+    "deploymentId": "appgdep_6a9fc46a7cbc8191af39c7c7b7a0b8d0",
+    "commit": "f97a40f52c409aea7d7c1d256195bc19c4b76df5",
+    "time": "2026-09-08T08:17:16.639988+00:00",
+    "status": "succeeded",
+    "envRevision": 1
+  },
+  "source": "Sites get_site + list_site_versions + get_deployment_status（部署ID指定核验）"
+}
