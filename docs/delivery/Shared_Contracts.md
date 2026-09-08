@@ -203,3 +203,10 @@ work-inbox读取attendancePeriod和interviewAppointment来判断可执行性。�
 `/api/performance-templates` HR/admin同组织草稿/编辑/定版/修订/归档，使用既有修订和审计。新kind performanceTemplate，最多10个稳定ID文本项，stage=selfReview/evaluation、required；描述200字。未配置通用流程或动态权限。
 周期command可选templateId（null显式清除，旧编辑省略保留），只接受同组织定版；payload.performanceTemplate为不可变快照。selfReview/evaluate增加responses，服务端拒绝未知/跨阶段字段和缺失必填，单项1000字。员工未发布计划投影及历史隐藏evaluationResponses；正式结果已有完整快照保留。申诉不更改模板答案，原答案与更正依据分开。
 绩效body上限98,304字节，其余API保持既有限制；不改变评分及目标权重、独立审批或数据库结构。
+
+
+## SC-P-GOAL-RANGE（单维可选强制范围）
+
+performanceTemplate草稿可携带goalRules{minCount,maxCount,minWeight,maxWeight}，四项整数，分别处于1–20/1–100，并满足上下界和总和100%的可行组合。未配置保持旧规则。定版版本不可修改；周期performanceTemplate快照保留原规则，模板修订/归档不改变旧活动。
+
+目标保存、调整申请和接受调整统一检查快照规则；拒绝无副作用，调整通过与计划更新继续原子保存。调整通过后清空当前自评/管理文本，原文本仅在原历史快照保留并按现有角色投影。没有新增外部接口、数据库迁移或访问范围。
