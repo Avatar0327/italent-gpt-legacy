@@ -323,13 +323,13 @@
     },
     {
       "id": "A-SHIFT-DEFINITION",
-      "status": "tested-awaiting-private-publish",
+      "status": "technical-delivered-v96",
       "dependencies": [
         "A-SOURCE",
         "A-PERIOD"
       ],
       "acceptance": "版本化固定班次与派班原子性、既有时间/范围/冻结锁复用、历史班次不被新定义覆盖",
-      "next": "保存当前196项综合证据及私有发布，继续假期规则差异"
+      "next": "人工预验收独立记录；复杂班次保持范围，继续A-LEAVE-SOURCE"
     },
     {
       "id": "A-LEAVE-SOURCE",
