@@ -226,6 +226,25 @@
       ],
       "acceptance": "同组织定版等级、冻结历史、明确区间、三档映射、独立申诉与旧百分制兼容",
       "next": "保持原版兼容与申诉回归；手工等级、系数、排除考核与在途更新继续保留"
+    },
+    {
+      "id": "P-ACTIVITY",
+      "status": "technical-verified-pending-publish",
+      "dependencies": [
+        "P-SOURCE",
+        "P-RATINGS"
+      ],
+      "acceptance": "分类可筛选/报表追溯、草稿明确编辑与启动后冻结、旧版本兼容",
+      "next": "最终类型/构建收集后私有发布；完整模板按Performance_Template_Design.md继续"
+    },
+    {
+      "id": "R-SOURCE",
+      "status": "in-progress",
+      "dependencies": [
+        "H005"
+      ],
+      "acceptance": "只读核对招聘需求/候选/面试/录用流程字段，未知规则明确保留",
+      "next": "同会话已进入需求列表，核对新增表单及现有招聘实现差异"
     }
   ]
 }
