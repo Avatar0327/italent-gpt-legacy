@@ -1,7 +1,12 @@
 {
-  "generatedAt": "2026-09-08T10:50:42.376Z",
-  "head": "ed2d46e8a5a48f09756c745407e93c5a246390d0",
+  "generatedAt": "2026-09-08T10:51:26.270Z",
+  "head": "a476a6954758cf63484c60ddeafb1b6be19e5a6e",
   "commits": [
+    {
+      "sha": "a476a6954758cf63484c60ddeafb1b6be19e5a6e",
+      "time": "2026-09-08T03:51:11-07:00",
+      "title": "feat(performance): trace scoped indicator version usage across goals and results"
+    },
     {
       "sha": "ed2d46e8a5a48f09756c745407e93c5a246390d0",
       "time": "2026-09-08T03:45:47-07:00",
@@ -36,11 +41,6 @@
       "sha": "ed16ae363574b0dd2c68070702fac069f1d52e31",
       "time": "2026-09-08T02:05:59-06:00",
       "title": "test(recovery): verify immutable templates and revoked member isolation"
-    },
-    {
-      "sha": "b367eecd7dba91748b28551519caddbc3593b03f",
-      "time": "2026-09-08T01:59:58-06:00",
-      "title": "fix(performance): align self service and appeal task navigation"
     }
   ],
   "sources": [
@@ -54,10 +54,10 @@
     },
     {
       "path": "docs/Execution_Checkpoint.md",
-      "sha256": "fa6e21f32e08ddb9ef85dc14f449d0cc5988d04922cb5a0d91af783cf1dc9ffe"
+      "sha256": "87fdb0ad66489c7d8c46bd45f133e9e10720323971ca7ef460e4c9d73cbba223"
     }
   ],
-  "checkpoint": "# 当前执行检查点\n\n## 唯一写入与边界\n当前聊天总控唯一写入者，main。云端 /workspace/sites/italent-hris；原站只读、仅合成测试数据；不新建项目/代理，不迁移真实数据或扩大访问。Controller_Resume.md 的连续执行授权继续有效。\n\n## 本轮有界只读核对\n2026-09-08：HEAD e1ec61797a5844cf33fee81f12a0d8d8628f3c54，main干净，无以项目目录为cwd的运行中进程。未发现Git写锁或测试/构建/部署进程；没有Mac变更需要合并。历史“未提交指标库增量”描述已过时。\n历史综合 Performance_Indicators_Comprehensive.tap：220/220，0失败，42.580秒；旧检查点记录类型/构建通过，非本轮新测试证据。\nSites最新保存v103对应上述HEAD；无可用v103部署ID，当前在线commit不能确认。指定ID重新核验v102部署succeeded，2026-09-08T08:17:16.639988+00:00，源f97a40f52c409aea7d7c1d256195bc19c4b76df5，环境revision1，所有者私有。详见delivery/Deployment_Evidence.json；不存在已知运行中写入，历史部署证据缺口不伪造补齐。\n\n## 当前看板增量\n已有建设/交付的总览与建设清单；Scope_Register.json作为统一台账；P3三级树、验收进度和五类数量、范围跳转、Git增量、部署/测试证据、阻塞及来源快照。所有48组范围保留；已登记子任务分母不代表全量需求已穷尽。技术交付不自动业务验收。\n聚合规则4/4、类型检查通过；综合228/229通过，唯一失败为旧Worker渲染测试的Node/cloudflare加载环境限制，保留失败证据。正式构建已通过（含/scope对应页面与刷新接口），当前提交并沿用既有所有者私有发布授权。最终运行证据记delivery/Dashboard_Verification.json。\n\n## blocker、恢复条件和下一步\n- G1人工界面核验历史ERR_BLOCKED_BY_CLIENT；恢复条件：内部预览可访问后重新核验。人工与生产未签署，不阻断当前看板开发。\n- v103部署缺少原始ID；恢复条件：取得原部署回执或后续新版本得到独立终态证据。看板保留未知，不把保存当发布。\n- 全量原子验收范围未穷尽；按组织员工→干部→学习→绩效→招聘→假勤→薪酬→自助/报表/集成继续拆解台账，已核实和待核实分列。\n- 当前交付顺序：聚合测试/类型/构建→记录完整SHA及证据→私有发布并核验终态→保存恢复检查点。\n\n## 历史\n[完整既有检查点](history/Execution_Checkpoint_2026-09-08.md)保留历史；工程E1约15%仍是低置信度估算，不能代替验收比例。G1/G2人工及G4生产未验收。\n\n## 看板交付结果（最新，覆盖上方执行中描述）\n\n- 实现提交 ae67cb2eef42e6505619aa9d716847654a571a8d；构建快照及已推送发布源 523fa165ff34c69d7c417ee5a8bb78a234ed378f。\n- v104：appgprj_6a9e2c705cfc819180e0e5251bb025cc~appgver_b116c2af13848191b50702e24538921a；部署 appgdep_6a9fe02d31bc8191bc8756ddcd04b7cc；2026-09-08T10:15:23.996533+00:00 succeeded；Sites production，环境revision1，仅所有者私有访问。\n- 聚合规则4/4，类型检查及正式构建通过；综合228/229，旧Node Worker渲染测试cloudflare加载限制保留，未冒称全绿。无人工或生产业务签署。\n- 登记40个验收子任务（P2 4、P3 36），已完成0、进行中6、待验证33、阻塞1、未开始0。此为已登记分母，全部48组保留，未拆解范围不计成已完成。\n- 当前无运行中的构建/测试/部署。后续文档回执提交不改变已发布源码；实际HEAD以Git为准。网页快照截至构建时间，本次新回执会随下一次构建进入页面，每60秒检测新发布。\n- 下一步：继续细化P1和48组保留范围的原子验收条目，优先对齐原有F/C/L验收证据；人工确认不得以自动化代签。\n\n## 新一轮总控恢复（2026-09-08）\n\n恢复基线main / 3d6347c158b47e3b872019be9934856c0b77c07a，工作区干净，无项目cwd进程；v104指定部署再次核验succeeded。228/229为上轮历史结果，本轮尚未复测。当前执行规则完整沿用Controller_Resume.md并落实：连续队列、原站只读与四维证据、30分钟估算、同路径两次无新证据换方案、节点检查点、既有私有发布授权及严格停止门槛。\n当前工作队列：F-FIELD-EXIT（进行中）→C-LIFECYCLE-REVIEW→L-LIFECYCLE-REVIEW。先复现档案字段申请批准时离职状态漏检，再必要修复和相关测试，随后立即进入干部检查。原站规则未新增推断，沿用既有独立状态保护要求；仍仅合成数据。\n\n### 生命周期修复节点\nF-FIELD-EXIT和C-LIFECYCLE-REVIEW已复现并修复（原200应拒绝），相关待办改为失效/退回处理；学习复用已有保护。本轮Controller_Lifecycle_Run.tap 98/98，无失败/跳过，7.460秒。类型检查通过。当前修改待集中构建/发布。G4-WORKER-SMOKE尝试被环境网络审批取消，未有持续进程；不重复同路径，继续原站只读与独立业务。完整源哈希见Controller_Lifecycle_Verification.json。\n",
+  "checkpoint": "# 当前执行检查点\n\n## 唯一写入与边界\n当前聊天总控唯一写入者，main。云端 /workspace/sites/italent-hris；原站只读、仅合成测试数据；不新建项目/代理，不迁移真实数据或扩大访问。Controller_Resume.md 的连续执行授权继续有效。\n\n## 本轮有界只读核对\n2026-09-08：HEAD e1ec61797a5844cf33fee81f12a0d8d8628f3c54，main干净，无以项目目录为cwd的运行中进程。未发现Git写锁或测试/构建/部署进程；没有Mac变更需要合并。历史“未提交指标库增量”描述已过时。\n历史综合 Performance_Indicators_Comprehensive.tap：220/220，0失败，42.580秒；旧检查点记录类型/构建通过，非本轮新测试证据。\nSites最新保存v103对应上述HEAD；无可用v103部署ID，当前在线commit不能确认。指定ID重新核验v102部署succeeded，2026-09-08T08:17:16.639988+00:00，源f97a40f52c409aea7d7c1d256195bc19c4b76df5，环境revision1，所有者私有。详见delivery/Deployment_Evidence.json；不存在已知运行中写入，历史部署证据缺口不伪造补齐。\n\n## 当前看板增量\n已有建设/交付的总览与建设清单；Scope_Register.json作为统一台账；P3三级树、验收进度和五类数量、范围跳转、Git增量、部署/测试证据、阻塞及来源快照。所有48组范围保留；已登记子任务分母不代表全量需求已穷尽。技术交付不自动业务验收。\n聚合规则4/4、类型检查通过；综合228/229通过，唯一失败为旧Worker渲染测试的Node/cloudflare加载环境限制，保留失败证据。正式构建已通过（含/scope对应页面与刷新接口），当前提交并沿用既有所有者私有发布授权。最终运行证据记delivery/Dashboard_Verification.json。\n\n## blocker、恢复条件和下一步\n- G1人工界面核验历史ERR_BLOCKED_BY_CLIENT；恢复条件：内部预览可访问后重新核验。人工与生产未签署，不阻断当前看板开发。\n- v103部署缺少原始ID；恢复条件：取得原部署回执或后续新版本得到独立终态证据。看板保留未知，不把保存当发布。\n- 全量原子验收范围未穷尽；按组织员工→干部→学习→绩效→招聘→假勤→薪酬→自助/报表/集成继续拆解台账，已核实和待核实分列。\n- 当前交付顺序：聚合测试/类型/构建→记录完整SHA及证据→私有发布并核验终态→保存恢复检查点。\n\n## 历史\n[完整既有检查点](history/Execution_Checkpoint_2026-09-08.md)保留历史；工程E1约15%仍是低置信度估算，不能代替验收比例。G1/G2人工及G4生产未验收。\n\n## 看板交付结果（最新，覆盖上方执行中描述）\n\n- 实现提交 ae67cb2eef42e6505619aa9d716847654a571a8d；构建快照及已推送发布源 523fa165ff34c69d7c417ee5a8bb78a234ed378f。\n- v104：appgprj_6a9e2c705cfc819180e0e5251bb025cc~appgver_b116c2af13848191b50702e24538921a；部署 appgdep_6a9fe02d31bc8191bc8756ddcd04b7cc；2026-09-08T10:15:23.996533+00:00 succeeded；Sites production，环境revision1，仅所有者私有访问。\n- 聚合规则4/4，类型检查及正式构建通过；综合228/229，旧Node Worker渲染测试cloudflare加载限制保留，未冒称全绿。无人工或生产业务签署。\n- 登记40个验收子任务（P2 4、P3 36），已完成0、进行中6、待验证33、阻塞1、未开始0。此为已登记分母，全部48组保留，未拆解范围不计成已完成。\n- 当前无运行中的构建/测试/部署。后续文档回执提交不改变已发布源码；实际HEAD以Git为准。网页快照截至构建时间，本次新回执会随下一次构建进入页面，每60秒检测新发布。\n- 下一步：继续细化P1和48组保留范围的原子验收条目，优先对齐原有F/C/L验收证据；人工确认不得以自动化代签。\n\n## 新一轮总控恢复（2026-09-08）\n\n恢复基线main / 3d6347c158b47e3b872019be9934856c0b77c07a，工作区干净，无项目cwd进程；v104指定部署再次核验succeeded。228/229为上轮历史结果，本轮尚未复测。当前执行规则完整沿用Controller_Resume.md并落实：连续队列、原站只读与四维证据、30分钟估算、同路径两次无新证据换方案、节点检查点、既有私有发布授权及严格停止门槛。\n当前工作队列：F-FIELD-EXIT（进行中）→C-LIFECYCLE-REVIEW→L-LIFECYCLE-REVIEW。先复现档案字段申请批准时离职状态漏检，再必要修复和相关测试，随后立即进入干部检查。原站规则未新增推断，沿用既有独立状态保护要求；仍仅合成数据。\n\n### 生命周期修复节点\nF-FIELD-EXIT和C-LIFECYCLE-REVIEW已复现并修复（原200应拒绝），相关待办改为失效/退回处理；学习复用已有保护。本轮Controller_Lifecycle_Run.tap 98/98，无失败/跳过，7.460秒。类型检查通过。当前修改待集中构建/发布。G4-WORKER-SMOKE尝试被环境网络审批取消，未有持续进程；不重复同路径，继续原站只读与独立业务。完整源哈希见Controller_Lifecycle_Verification.json。\n\n### 绩效引用追溯节点\nBC-P06已观察到引用情况列，本轮补同版本目标/待审/已发布明细，当前HR范围与分页、去重均有合成测试；5/5通过，类型通过。原站当前浏览器仅about:blank，无可复用会话，本轮无新增原站证据。已有证据范围之外不臆造原站制度。看板改为读取各批Verification证据，显示最近一批及历史结果，不把5项当全量回归。下一动作：集中构建/私有发布当前生命周期修复和引用追溯，然后进入招聘既有剩余队列；未启动其他代理。\n",
   "tests": {
     "path": "docs/delivery/Indicator_Usage_Verification.json",
     "tests": 5,
