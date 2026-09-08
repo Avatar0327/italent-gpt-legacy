@@ -1,15 +1,15 @@
 {
-  "checkedAt": "2026-09-08T10:16:14.646393+00:00",
+  "checkedAt": "2026-09-08T10:53:35.423803+00:00",
   "environment": "Sites production / 仅所有者私有访问",
-  "latestSavedVersion": 104,
-  "latestSavedCommit": "523fa165ff34c69d7c417ee5a8bb78a234ed378f",
+  "latestSavedVersion": 105,
+  "latestSavedCommit": "46ac27edc0f0f8bc392d29973ec3aed8ef0d63d3",
   "latestDeploymentVerified": true,
-  "note": "最新版本104所有者私有部署已得到succeeded终态。网页内证据为构建时快照，本回执在后续构建进入页面，不伪造构建后才产生的自身发布时间。",
+  "note": "v105生命周期保护与指标引用追溯已私有发布并核验成功。构建后生成的发布回执在下次构建进入页面。",
   "verified": {
-    "version": 104,
-    "deploymentId": "appgdep_6a9fe02d31bc8191bc8756ddcd04b7cc",
-    "commit": "523fa165ff34c69d7c417ee5a8bb78a234ed378f",
-    "time": "2026-09-08T10:15:23.996533+00:00",
+    "version": 105,
+    "deploymentId": "appgdep_6a9fe902b02c8191be1ae00e2eb2cf32",
+    "commit": "46ac27edc0f0f8bc392d29973ec3aed8ef0d63d3",
+    "time": "2026-09-08T10:53:04.070955+00:00",
     "status": "succeeded",
     "envRevision": 1
   },

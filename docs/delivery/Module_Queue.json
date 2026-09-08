@@ -427,22 +427,22 @@
     },
     {
       "id": "F-FIELD-EXIT",
-      "status": "tested-awaiting-private-publish",
+      "status": "private-published-v105",
       "dependencies": [
         "F01",
         "F02"
       ],
       "acceptance": "离职前提出的档案字段申请不能在离职后批准生效；独立HR可退回，正式值、修订与历史保持一致；仅合成数据",
-      "next": "保留独立退回及历史回归，集中类型/构建后私有发布；人工业务验收另记"
+      "next": "保留回归，人工业务验收未签署；继续既定模块队列"
     },
     {
       "id": "C-LIFECYCLE-REVIEW",
-      "status": "tested-awaiting-private-publish",
+      "status": "private-published-v105",
       "dependencies": [
         "F-FIELD-EXIT"
       ],
       "acceptance": "核查干部任期/考察待办在员工离职或调动后的读写与历史边界；仅修复有既有规则依据的确切缺陷",
-      "next": "保留独立退回及历史回归，集中类型/构建后私有发布；人工业务验收另记"
+      "next": "保留回归，人工业务验收未签署；继续既定模块队列"
     },
     {
       "id": "L-LIFECYCLE-REVIEW",
@@ -464,12 +464,39 @@
     },
     {
       "id": "P-INDICATOR-USAGE",
-      "status": "tested-awaiting-private-publish",
+      "status": "private-published-v105",
       "dependencies": [
         "P-INDICATOR-CATALOG"
       ],
       "acceptance": "BC-P06引用情况以实际指标版本快照追溯目标/待审/已发布；HR当前权限、分页与同记录去重，不显示未授权人员或评分",
-      "next": "已通过5项关联测试；完成集中类型和构建后与生命周期修复一并私有发布，再进入招聘队列"
+      "next": "保留回归，人工业务验收未签署；继续既定模块队列"
+    },
+    {
+      "id": "R-LIFECYCLE-GATES",
+      "status": "tested-awaiting-private-publish",
+      "dependencies": [
+        "P-INDICATOR-USAGE"
+      ],
+      "acceptance": "已有招聘要求R03的岗位/职级停用后不允许推进面试或录用；退回和拒绝可清理在途，保持历史与事务",
+      "next": "五条停用路径及页面可办理标记修复，集中回归238/238（排除既有Worker渲染限制），待合并本批回执构建发布"
+    },
+    {
+      "id": "A-PAY-EXIT-SETTLEMENT",
+      "status": "technical-reviewed-tested",
+      "dependencies": [
+        "R-LIFECYCLE-GATES"
+      ],
+      "acceptance": "离职后禁止新增班次，历史待审假勤独立核实后可冻结并引用末期工资；发布后来源变化不改金额",
+      "next": "复用现有实现，10项关联测试通过，人工业务及生产验收仍待签署"
+    },
+    {
+      "id": "I-RESTORE-REVOCATIONS",
+      "status": "in-progress",
+      "dependencies": [
+        "A-PAY-EXIT-SETTLEMENT"
+      ],
+      "acceptance": "隔离合成恢复演练覆盖备份后撤权：旧快照恢复前后识别陈旧授权，经独立可信撤权清单对账后保持拒绝；不访问云端真实数据",
+      "next": "扩展既有rehearse-local-recovery脚本，复用成员撤权API，明确未完成云端自动对账及恢复门槛"
     }
   ]
 }

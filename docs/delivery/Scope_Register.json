@@ -1238,6 +1238,48 @@
         "testing": "本轮5项关联测试通过",
         "production": "未验收"
       }
+    },
+    {
+      "id": "R-LIFECYCLE-GATES",
+      "phase": "P3",
+      "moduleId": "M12",
+      "title": "停用招聘目标阻止推进",
+      "queueRef": "R-LIFECYCLE-GATES",
+      "criteria": [
+        {
+          "id": "R-LIFECYCLE-GATES-AC1",
+          "text": "已有招聘要求R03的岗位/职级停用后不允许推进面试或录用；退回和拒绝可清理在途，保持历史与事务",
+          "accepted": false
+        }
+      ],
+      "source": "Controller_Regression_Verification.json",
+      "dimensions": {
+        "requirements": "原有R03停用保护/末期工资独立业务规则；原站完整流程待核实",
+        "development": "已修复",
+        "testing": "本轮合成回归通过，排除Worker旧渲染测试限制",
+        "production": "未验收"
+      }
+    },
+    {
+      "id": "A-PAY-EXIT-SETTLEMENT",
+      "phase": "P3",
+      "moduleId": "M11",
+      "title": "离职历史假勤与末期工资闭环",
+      "queueRef": "A-PAY-EXIT-SETTLEMENT",
+      "criteria": [
+        {
+          "id": "A-PAY-EXIT-SETTLEMENT-AC1",
+          "text": "离职后禁止新增班次，历史待审假勤独立核实后可冻结并引用末期工资；发布后来源变化不改金额",
+          "accepted": false
+        }
+      ],
+      "source": "Controller_Regression_Verification.json",
+      "dimensions": {
+        "requirements": "原有R03停用保护/末期工资独立业务规则；原站完整流程待核实",
+        "development": "已有实现复用",
+        "testing": "本轮合成回归通过，排除Worker旧渲染测试限制",
+        "production": "未验收"
+      }
     }
   ],
   "acceptancePolicy": {

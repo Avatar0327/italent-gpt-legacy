@@ -1,7 +1,7 @@
 import {payrollAttendanceIssues} from './payroll-attendance';
 import {canEvaluateAppointment} from './interview-schedule';
 import {attendanceShiftFrozen} from './attendance-locks';
-import {requisitionAwaitingApproval} from './recruitment-status';
+import {requisitionAwaitingApproval,recruitmentTargetCurrent} from './recruitment-status';
 import {canReviewHomework} from './learning-homework';
 import {learningStageOpen} from './learning-requirements';
 import {learningTaskCurrent} from './learning-plan-model';
@@ -78,8 +78,8 @@ export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
   if(r.kind==='requisition'&&r.status==='draft'&&r.payload.requisitionSubmissionRequired&&hr&&state.positions?.some(p=>p.id===r.positionId&&p.status==='启用'))add('recruitment','招聘需求提交','/recruitment');
   if(requisitionAwaitingApproval(r)&&!r.payload.contributors?.includes(m.userId)&&['admin','manager'].includes(m.role)&&r.createdBy!==m.userId&&state.positions?.some(p=>p.id===r.positionId&&p.status==='启用'))add('recruitment','招聘需求审批','/recruitment');
   if(r.kind==='candidate'&&records.some(x=>x.kind==='requisition'&&x.id===r.referenceId&&x.status==='active')){
-   if(r.status==='offered'&&['admin','manager'].includes(m.role)&&(r.payload.offeredBy??r.createdBy)!==m.userId)add('recruitment','录用审批','/recruitment','',r.payload.name??'候选人');
-   if(r.status==='approved'&&hr)add('recruitment','录用接受确认','/recruitment','',r.payload.name??'候选人');
+   if(r.status==='offered'&&['admin','manager'].includes(m.role)&&(r.payload.offeredBy??r.createdBy)!==m.userId)add('recruitment',recruitmentTargetCurrent(state,r)?'录用审批':'录用目标失效（退回核对）','/recruitment','',r.payload.name??'候选人');
+   if(r.status==='approved'&&hr)add('recruitment',recruitmentTargetCurrent(state,r)?'录用接受确认':'录用目标失效（结束或核对）','/recruitment','',r.payload.name??'候选人');
   }
   if(['leave','correction'].includes(r.kind)&&manager&&!self&&r.createdBy!==m.userId&&r.status==='pending'&&records.some(x=>x.id===r.referenceId&&x.kind==='shift'&&x.status==='active'&&!attendanceShiftFrozen(records,x)))add('attendance',r.kind==='leave'?'请假审批':'补卡审批','/attendance');
   if(['plan','enrollment'].includes(r.kind)&&manager&&!self&&r.payload.submittedBy!==m.userId&&r.status==='submitted'&&e&&e.status!=='离职'&&learningTaskCurrent(r,e)&&learningStageOpen(r,records,undefined,state))add('development',r.kind==='plan'?'发展行动核验':'学习成果核验',r.kind==='plan'?'/development':'/learning');
