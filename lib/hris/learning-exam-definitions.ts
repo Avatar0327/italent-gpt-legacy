@@ -1,3 +1,4 @@
+import {objectiveQuestionSchema} from './learning-objective-exams';
 import {z} from 'zod';
 import {scopedOrgs,type Member} from './authorization';
 import {visibleRecord,type DevelopmentRecord as R} from './development';
@@ -5,7 +6,7 @@ import type {State} from './model';
 import {HttpError} from './http';
 const id=z.string().min(1).max(100),text=z.string().trim().min(1).max(200);
 const question=z.object({prompt:z.string().trim().min(5).max(4000),options:z.array(text).min(2).max(6),correct:z.number().int().min(0).max(5)}).strict().refine(q=>q.correct<q.options.length&&new Set(q.options).size===q.options.length,'答案索引或选项重复');
-const fields={title:text,orgId:id,questions:z.array(question).min(1).max(20),passingScore:z.number().int().min(1).max(100),maxAttempts:z.number().int().min(1).max(10)};
+const fields={title:text,orgId:id,questions:z.array(question).min(1).max(20).optional(),objectiveQuestions:z.array(objectiveQuestionSchema).min(1).max(20).optional(),passingScore:z.number().int().min(1).max(100),maxAttempts:z.number().int().min(1).max(10)};
 const schema=z.discriminatedUnion('action',[
  z.object({action:z.literal('create'),...fields}).strict(),
  z.object({action:z.literal('edit'),id,...fields}).strict(),
@@ -13,7 +14,7 @@ const schema=z.discriminatedUnion('action',[
  z.object({action:z.literal('revise'),id}).strict(),
  z.object({action:z.literal('archive'),id}).strict(),
 ]);
-// Single-choice first slice. No tasks, attempts or rewards are created here.
+// Immutable objective exams; legacy single-choice versions retain their grading.
 export function applyLearningExamDefinition(records:R[],state:State,m:Member,input:unknown,at=new Date().toISOString()):R{
  const c=schema.parse(input),scope=scopedOrgs(state,m);
  const deny=():never=>{throw new HttpError(403,'没有此独立试卷的管理权限');};
@@ -33,7 +34,9 @@ export function applyLearningExamDefinition(records:R[],state:State,m:Member,inp
  }
  if(old&&old.status!=='draft')fail('定版试卷不可修改，请创建后续版本');
  if(c.action==='seal')return {...old!,status:'sealed',updatedAt:at};
+ if((!!c.questions)===(!!c.objectiveQuestions))fail('须明确提供一种试卷题目结构');
+ if(old?.payload.objectiveQuestions&&c.questions)fail('此试卷含多题型，请使用新版编辑器，不能退回旧单选结构');
  if(old&&old.payload.orgId!==orgId)fail('后续版本不能更换所属组织');
  const key=old?.id??crypto.randomUUID();
- return {id:key,kind:'learningExamDefinition',employeeId:null,positionId:null,referenceId:old?.referenceId??null,status:'draft',createdBy:old?.createdBy??m.userId,createdAt:old?.createdAt??at,updatedAt:at,payload:{title:c.title,orgId,questions:c.questions,passingScore:c.passingScore,maxAttempts:c.maxAttempts,version:old?.payload.version??1,definitionRootId:old?.payload.definitionRootId??key}};
+ return {id:key,kind:'learningExamDefinition',employeeId:null,positionId:null,referenceId:old?.referenceId??null,status:'draft',createdBy:old?.createdBy??m.userId,createdAt:old?.createdAt??at,updatedAt:at,payload:{title:c.title,orgId,questions:c.questions,objectiveQuestions:c.objectiveQuestions,passingScore:c.passingScore,maxAttempts:c.maxAttempts,version:old?.payload.version??1,definitionRootId:old?.payload.definitionRootId??key}};
 }

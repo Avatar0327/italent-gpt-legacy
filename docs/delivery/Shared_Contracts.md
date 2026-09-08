@@ -78,3 +78,11 @@ SC-2成绩增量：gradeRule随定义版本和实例冻结；learningGrade输出
 固定日期模式的 startAfterDays 以 learningMode.start 为起点；relative 以实例加入业务日为起点，0表示当天。原有 relative 数据不变；修正已有 fixed 实例投影，不重写历史完成记录。
 
 阶段增加可选 orderedTasks / examSubmissionUnlock，默认 false。顺序按冻结的 trainingStages[].courseIds（混合资源ID）排列，全部前置要求完成后放行；显式启用考试例外时，可用同实例、同员工、同要求绑定任务的有效作答放行，允许该次作答未及格。例外不改变 requirement 完成状态、实例结项门槛或学分。阶段例外不能在 orderedTasks=false 时设为 true。当前选修任务也遵循前置顺序；原站跳过选修的具体语义待核实。未支持的作业、面授、辅导、线下考核放行例外保留后续，不能映射为课程完成。
+
+### SC-1 独立客观题结构补充
+
+独立试卷可使用 objectiveQuestions（single/multiple/trueFalse，prompt/options/correct[]/points/partialPoints），与旧 questions 二选一。旧单选版本保留每题1分的解释，旧客户端不能把含objectiveQuestions的草稿降级覆盖。定版版本和已有作答不变。新答案使用数组集合，拒绝重复/越界及不完整作答；单选判断只能一项。多选全对满分、未选错但未选全按显式partialPoints、含错误项零分；本批仅整数题目分值，未声称原站全部计分一致。
+
+作答快照保留 objectiveAnswers、earnedPoints、maxPoints 和 score（取整百分制）。通过与否使用原始分比例交叉相乘，不能因显示舍入达到及格线而误通过；计划成绩仍使用其明确的百分制聚合契约。对学员试卷投影去掉correct，答案只留在有权限的定义端，历史尝试沿用本人/范围隔离。独立考试报表追加原始得分和总分，不改旧列位置。
+
+未实现：填空/简答/排序、人工阅卷、题库/随机抽题/导入、完整补考及原站评分尺度。上述全部仍在范围中。

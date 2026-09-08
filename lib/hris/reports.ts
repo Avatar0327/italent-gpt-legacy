@@ -34,8 +34,8 @@ export function makeReport(ctx:DevelopmentContext,input:unknown){
  }
  if(q.dataset==='learningExams'){
   if(!['admin','hr'].includes(ctx.member.role))throw new HttpError(403,'独立考试台账仅限有范围权限的HR');
-  title='独立考试任务台账';columns=['工号','姓名','试卷','试卷版本','学习实例','开放日期','截止日期','状态','作答次数','最后得分','是否通过'];
-  rows=records.filter(r=>r.kind==='learningExamTask').map(r=>[code(r.employeeId),name(r.employeeId),r.payload.title??'',r.payload.version??1,r.payload.learningAssignmentId??'独立派发',r.payload.start??'',r.payload.due??'',({active:'进行中',completed:'已通过',failed:'次数用尽未通过',cancelled:'已取消'} as Record<string,string>)[r.status]??r.status,records.filter(a=>a.kind==='learningExamAttempt'&&a.referenceId===r.id).length,r.payload.score??null,r.payload.passed===undefined?'未作答':r.payload.passed?'通过':'未通过']);
+  title='独立考试任务台账';columns=['工号','姓名','试卷','试卷版本','学习实例','开放日期','截止日期','状态','作答次数','最后得分（百分制取整）','是否通过','原始得分','原始总分'];
+  rows=records.filter(r=>r.kind==='learningExamTask').map(r=>[code(r.employeeId),name(r.employeeId),r.payload.title??'',r.payload.version??1,r.payload.learningAssignmentId??'独立派发',r.payload.start??'',r.payload.due??'',({active:'进行中',completed:'已通过',failed:'次数用尽未通过',cancelled:'已取消'} as Record<string,string>)[r.status]??r.status,records.filter(a=>a.kind==='learningExamAttempt'&&a.referenceId===r.id).length,r.payload.score??null,r.payload.passed===undefined?'未作答':r.payload.passed?'通过':'未通过',r.payload.earnedPoints??null,r.payload.maxPoints??null]);
  }
  if(q.dataset==='contractCoverage'){
   if(!['admin','hr'].includes(ctx.member.role))throw new HttpError(403,'仅有权限HR可查看合同登记覆盖核对');

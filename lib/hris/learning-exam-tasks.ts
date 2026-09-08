@@ -1,3 +1,4 @@
+import {scoreObjectiveExam} from './learning-objective-exams';
 import {z} from 'zod';
 import {scopedOrgs,type Member} from './authorization';
 import type {DevelopmentRecord as R} from './development';
@@ -8,7 +9,7 @@ import {HttpError} from './http';
 const id=z.string().min(1).max(100),date=z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine(s=>{const d=new Date(s+'T00:00:00Z');return Number.isFinite(d.getTime())&&d.toISOString().slice(0,10)===s;});
 const schema=z.discriminatedUnion('action',[
  z.object({action:z.literal('assign'),assignmentId:id.optional(),examId:id,employeeId:id,start:date,due:date}).strict(),
- z.object({action:z.literal('submit'),id,answers:z.array(z.number().int().min(0).max(5)).min(1).max(20)}).strict(),
+ z.object({action:z.literal('submit'),id,answers:z.array(z.union([z.number().int().min(0).max(5),z.array(z.number().int().min(0).max(5)).min(1).max(6)])).min(1).max(20)}).strict(),
  z.object({action:z.literal('cancel'),id,evidence:z.string().trim().min(5).max(3000)}).strict(),
 ]);
 export function examTaskOpen(task:R,state:State,at=new Date().toISOString()){
@@ -41,10 +42,7 @@ export function applyLearningExamTask(records:R[],state:State,m:Member,input:unk
  if(!exam||!['sealed','archived'].includes(exam.status))fail('试卷版本不可用');
  const attempts=records.filter(r=>r.kind==='learningExamAttempt'&&r.referenceId===task!.id);
  if(attempts.some(r=>r.payload.passed)||attempts.length>=task!.payload.maxAttempts!)fail('已通过或达到作答次数上限');
- const questions=exam!.payload.questions!;
- if(c.answers.length!==questions.length||c.answers.some((answer,i)=>answer>=questions[i].options.length))fail('请完整回答每道题目');
- // Explicit first-slice policy: equal weights, integer percentage, as course exams.
- const score=Math.round(100*c.answers.filter((answer,i)=>answer===questions[i].correct).length/questions.length),passed=score>=task!.payload.passingScore!;
- const attempt:R={id:crypto.randomUUID(),kind:'learningExamAttempt',employeeId:task!.employeeId,positionId:null,referenceId:task!.id,status:passed?'passed':'failed',createdBy:m.userId,createdAt:at,updatedAt:at,payload:{answers:c.answers,score,passed,examId:exam!.id,orgId:task!.payload.orgId}};
- return [attempt,{...task!,status:passed?'completed':attempts.length+1>=task!.payload.maxAttempts!?'failed':'active',updatedAt:at,payload:{...task!.payload,score,passed}}];
+ const result=scoreObjectiveExam(exam!,c.answers),score=result.score,passed=result.earnedPoints*100>=task!.payload.passingScore!*result.maxPoints;
+ const attempt:R={id:crypto.randomUUID(),kind:'learningExamAttempt',employeeId:task!.employeeId,positionId:null,referenceId:task!.id,status:passed?'passed':'failed',createdBy:m.userId,createdAt:at,updatedAt:at,payload:{answers:c.answers.every(a=>typeof a==='number')?c.answers as number[]:undefined,objectiveAnswers:result.answers,earnedPoints:result.earnedPoints,maxPoints:result.maxPoints,score,passed,examId:exam!.id,orgId:task!.payload.orgId}};
+ return [attempt,{...task!,status:passed?'completed':attempts.length+1>=task!.payload.maxAttempts!?'failed':'active',updatedAt:at,payload:{...task!.payload,earnedPoints:result.earnedPoints,maxPoints:result.maxPoints,score,passed}}];
 }
