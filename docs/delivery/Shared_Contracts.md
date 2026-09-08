@@ -174,3 +174,9 @@ attendancePeriod保存employeeId、显式日期、冻结次数、记录时员工
 reopen保存原因并保留旧快照，refreeze重新核验增加版本；void仅开放状态可办，保留原证据且释放错误区间重建。同员工非作废期间不重叠。当前员工范围控制管理读取与重新开放，调动不绕过冻结；修改人员不会自动删除历史。所有写入与审计共用CAS，无表迁移。
 
 手动冻结/开放为明确内部限定规则，不能据原站自动冻结/发布/封存提示推断完整流程。自动任务、多组织共享、员工确认/申诉/发布/封存及法律企业规则保留。
+
+## SC-A-SHIFT 固定班次与原子派班
+
+`GET/POST /api/shift-definitions`，沿用 `{revision,command}`。定义新建/草稿编辑/定版/修订/归档只允许HR/admin，组织范围服务端检查；经理可只读和派班。`assign` 为 `{action:'assign',id,assignments:[{employeeId,date}]}`，1–20条，整批同一CAS/事务/逐记录事件；返回 `{ids,revision}`。无新数据库迁移。
+`shiftDefinition` 保存固定分钟偏移及版本族；单次可跨日但不超过24小时，只允许一次非全程休息。派班复用applyAttendance及期间锁；不接受客户端快照。`shift.payload.shiftDefinition` 保存定义ID/根/版本/名称/组织/时区/时段。定义后续修订或归档不覆盖实例。
+规则范围及原站差异见Attendance_Source_Gaps BC-A05/A06。禁止将内部归档解释为原站班次档案停用。
