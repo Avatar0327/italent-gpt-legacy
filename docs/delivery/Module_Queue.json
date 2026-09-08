@@ -283,6 +283,15 @@
       ],
       "acceptance": "核实只读排期字段、角色和生命周期；明确未核实的通知/评价规则，不操作原业务",
       "next": "候选导航恢复后只读查看面试安排表单，取消退出，建立限定实现与未实现差异"
+    },
+    {
+      "id": "R-EVALUATION",
+      "status": "verified-pending-private-release",
+      "dependencies": [
+        "R-INTERVIEW-SOURCE"
+      ],
+      "acceptance": "四档多指标模板冻结，显式结论，旧面试兼容，当前账号与组织权限，最近评价录用门槛和历史追溯",
+      "next": "184项综合、类型和构建通过；提交并私有发布后继续排期/配置规则的只读核实"
     }
   ]
 }

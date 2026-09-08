@@ -140,3 +140,17 @@ GET/POST /api/recruitment-jobs 沿用 revision/command 和审计原子事务；�
 jobDetails 含类别、用工方式、地点、地址、学历、经验、职责/资格（各最多10000字符）以及月薪面议或人民币整数分范围。类别与用工方式的原站枚举尚未核实，首批为企业显式文本；启用、不可变版本及原需求共享容量是本系统限定策略，不冒充原站全部流程。
 
 /api/recruitment 的 candidate 命令新增可选 jobId。提供时必须是同需求的当前可见启用职位，服务端冻结 {id,rootId,version,title,details,workflow} 到候选记录。旧不提供 jobId 的候选保持原路径；后续职位修订/归档不覆盖候选来源。全部版本仍按同一 requisitionId 汇总录用人数，不能分版本突破需求名额。workflow 固定 legacy-interview-offer-v1，不代表可配置招聘流程、广告发布或对外通信。无数据库迁移。
+
+## 配置归档后的修订恢复
+
+绩效等级、学习计划、独立试卷、作业与内部职位使用一致边界：当前仍定版/启用的最新版本可修订，已有草稿或更新的仍定版/启用版本阻止分叉；归档后续草稿或定版不永久锁住旧版本。新版本号取同族所有历史版本最大值加1，不复用已归档号码。原引用、实例冻结内容、答案及历史证据不改写。无迁移；页面可操作提示与服务端一致，权限/CAS仍独立检查。
+
+## 结构化面试评价（BC-R07 限定实现）
+
+/api/interview-definitions 使用 create/edit/seal/revise/archive，评价表按组织授权、定版不可覆盖，归档修订恢复遵循前述统一版本规则。criteria 每项 id/dimension/title/description/四档 labels，最多20指标、10维度。仅本入口请求最大196608字节，容纳最多中文说明/标签；/api/recruitment 显式65536字节以容纳十个1500字维度评语，其余入口保持已有独立限制。
+
+招聘新增 structuredInterview 命令：candidateId/definitionId/scores/comments/recommendation/evidence。须同组织定版模板、当前可见且开放需求下的筛选候选；以当前HR/admin/manager账号评价，不接受代签身份。通过须全指标，不通过可仅结论；已填评分必须1–4整数，拒绝未知指标/维度，空缺不补零。服务端冻结 interviewEvaluation={definitionId,rootId,version,title,criteria,scores,comments,scale:"four-level",aggregation:"not-configured"}，不伪造总分/旧rating。原 interview 命令保持1–5级，录用按两类共用顺序版本取最近明确建议。
+
+新 structuredInterview 同样支持招聘创建 Idempotency-Key；当前支持需求、候选、旧面试和结构化面试四种创建，覆盖前述三种限制。不支持状态操作/模板创建。相同键仍受当前角色和组织、规范化请求内容校验，审计故障原子回滚，内部键摘要不出现在读取或历史投影。
+
+源站可见模板与本企业提交规则尚未完全验证；无新增迁移，未启用外部消息或通知。

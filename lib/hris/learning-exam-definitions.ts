@@ -29,8 +29,8 @@ export function applyLearningExamDefinition(records:R[],state:State,m:Member,inp
  if(c.action==='revise'){
   if(old!.status!=='sealed')fail('请从最新定版创建后续版本');
   const family=records.filter(r=>r.kind==='learningExamDefinition'&&r.payload.definitionRootId===old!.payload.definitionRootId);
-  if(family.some(r=>r.status==='draft'||(r.payload.version??0)>(old!.payload.version??0)))fail('已有草稿或较新版本');
-  return {...old!,id:crypto.randomUUID(),status:'draft',referenceId:old!.id,createdBy:m.userId,createdAt:at,updatedAt:at,payload:structuredClone({...old!.payload,version:(old!.payload.version??1)+1})};
+  if(family.some(r=>r.status==='draft'||(r.status==='sealed'&&(r.payload.version??0)>(old!.payload.version??0))))fail('已有草稿或较新版本');
+  return {...old!,id:crypto.randomUUID(),status:'draft',referenceId:old!.id,createdBy:m.userId,createdAt:at,updatedAt:at,payload:structuredClone({...old!.payload,version:Math.max(...family.map(r=>r.payload.version??1))+1})};
  }
  if(old&&old.status!=='draft')fail('定版试卷不可修改，请创建后续版本');
  if(c.action==='seal')return {...old!,status:'sealed',updatedAt:at};

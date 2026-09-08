@@ -36,8 +36,8 @@ export function applyLearningDefinition(records:R[],state:State,member:Member,in
   const root=old!.payload.definitionRootId!;
   const family=records.filter(r=>r.kind==='learningDefinition'&&r.payload.definitionRootId===root);
   if(family.some(r=>r.status==='draft'))fail('此计划已有草稿版本，请先处理');
-  if(family.some(r=>(r.payload.version??0)>(old!.payload.version??0)))fail('请从最新版本创建后续版本');
-  return {...old!,id:crypto.randomUUID(),status:'draft',referenceId:old!.id,createdBy:member.userId,createdAt:at,updatedAt:at,payload:{...old!.payload,version:(old!.payload.version??1)+1}};
+  if(family.some(r=>r.status==='sealed'&&(r.payload.version??0)>(old!.payload.version??0)))fail('请从最新版本创建后续版本');
+  return {...old!,id:crypto.randomUUID(),status:'draft',referenceId:old!.id,createdBy:member.userId,createdAt:at,updatedAt:at,payload:{...old!.payload,version:Math.max(...family.map(r=>r.payload.version??1))+1}};
  }
  if(old&&old.status!=='draft')fail('已定版或归档配置不能修改，请创建后续版本');
  if(c.action==='grading'){if(c.rule.mode==='contentWeighted'){const requirements=learningRequirements(old!);if(c.rule.items.some(i=>!requirements.some(r=>r.id===i.requirementId&&r.kind===(i.source==='homeworkLatest'?'homework':'exam'))))fail('权重须引用本计划有计分依据的考试或作业要求');}else if(c.rule.mode!=='none'&&(!(old!.payload.examIds?.length)||c.rule.mode==='specifiedExamHighest'&&!old!.payload.examIds.includes(c.rule.examId)))fail('成绩规则须引用本计划的独立考试');return {...old!,updatedAt:at,payload:{...old!.payload,gradeRule:c.rule}};}
