@@ -342,16 +342,16 @@
     },
     {
       "id": "A-LEAVE-RULES",
-      "status": "tested-awaiting-private-publish",
+      "status": "technical-delivered-v97",
       "dependencies": [
         "A-LEAVE-SOURCE"
       ],
       "acceptance": "组织、工作分钟上下限、制度与快照、退休停止新增但不毁损历史、调动余额保留及独立审批回归",
-      "next": "提交200项综合证据并私有发布，继续薪酬原站与既有实现对照"
+      "next": "人工预验收独立记录；继续PAY-SOURCE，完整假期模式不删减"
     },
     {
       "id": "PAY-SOURCE",
-      "status": "ready",
+      "status": "source-discovery",
       "dependencies": [
         "A-SOURCE"
       ],
