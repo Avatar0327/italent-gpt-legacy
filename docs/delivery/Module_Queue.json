@@ -333,12 +333,30 @@
     },
     {
       "id": "A-LEAVE-SOURCE",
-      "status": "source-discovery",
+      "status": "partial-evidence-BC-A07",
       "dependencies": [
         "A-SOURCE"
       ],
       "acceptance": "只读核对休假/假种配置、计量及余额边界，区分已证实字段与未核实自动规则",
-      "next": "从设置目录定位休假/假期配置空表，比较现有分钟余额，不操作原站业务"
+      "next": "空表已取消；继续余额配置，未验证的公式/自动发假不实现为既定规则"
+    },
+    {
+      "id": "A-LEAVE-RULES",
+      "status": "tested-awaiting-private-publish",
+      "dependencies": [
+        "A-LEAVE-SOURCE"
+      ],
+      "acceptance": "组织、工作分钟上下限、制度与快照、退休停止新增但不毁损历史、调动余额保留及独立审批回归",
+      "next": "提交200项综合证据并私有发布，继续薪酬原站与既有实现对照"
+    },
+    {
+      "id": "PAY-SOURCE",
+      "status": "ready",
+      "dependencies": [
+        "A-SOURCE"
+      ],
+      "acceptance": "薪酬原站可见模块/字段/流程与既有独立编制复核发布对照，税/银行/公式未知规则不臆造",
+      "next": "复用原站登录会话定位薪酬入口，只读盘点，核实下一可实现缺口"
     }
   ]
 }

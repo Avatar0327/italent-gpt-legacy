@@ -180,3 +180,9 @@ reopen保存原因并保留旧快照，refreeze重新核验增加版本；void�
 `GET/POST /api/shift-definitions`，沿用 `{revision,command}`。定义新建/草稿编辑/定版/修订/归档只允许HR/admin，组织范围服务端检查；经理可只读和派班。`assign` 为 `{action:'assign',id,assignments:[{employeeId,date}]}`，1–20条，整批同一CAS/事务/逐记录事件；返回 `{ids,revision}`。无新数据库迁移。
 `shiftDefinition` 保存固定分钟偏移及版本族；单次可跨日但不超过24小时，只允许一次非全程休息。派班复用applyAttendance及期间锁；不接受客户端快照。`shift.payload.shiftDefinition` 保存定义ID/根/版本/名称/组织/时区/时段。定义后续修订或归档不覆盖实例。
 规则范围及原站差异见Attendance_Source_Gaps BC-A05/A06。禁止将内部归档解释为原站班次档案停用。
+
+## SC-A-LEAVE 假种边界与历史规则
+
+现有 `/api/attendance` 的leaveType增加可选orgId/minMinutes/maxMinutes/policyText。上下限1–1440整数工作分钟（扣除休息），min≤max；不使用原站默认8小时换算。HR新建必须有组织且处于作用域，全企业新建仅admin。旧无组织定义兼容。
+新增retireLeaveType `{id,reason}`：HR限本组织、admin可维护全企业。停止仅阻止新申请及新额度登记；旧待审批/更正/冻结保护不变。定义不可编辑覆盖。
+leave/leaveCredit保留leaveTypeSnapshot。组织调动后当前定义可见性收窄，历史本人余额根据流水快照仍展示，不错误消失或自动迁移。新增申请服务端再次校验组织/状态/分钟上下限；历史决定沿用原规则和既有独立审批。无新迁移/无外发。
