@@ -400,12 +400,12 @@
     },
     {
       "id": "P-INBOX-LINK",
-      "status": "tested-awaiting-private-publish",
+      "status": "private-published-v101",
       "dependencies": [
         "P-TEXT-TEMPLATE"
       ],
       "acceptance": "自评/退回重提、调整待审暂缓、评价与发布任务指向权限范围内具体记录；调动离职不产生可推进任务",
-      "next": "214/214综合、类型与构建通过；提交打包私有发布；人工界面仍待验证"
+      "next": "214/214综合、类型与构建通过并已私有发布；人工界面仍待验证。继续模板范围与恢复验证"
     }
   ]
 }
