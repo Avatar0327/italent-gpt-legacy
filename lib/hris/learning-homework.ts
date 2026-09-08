@@ -19,7 +19,7 @@ const schema=z.discriminatedUnion('action',[
 ]);
 export function homeworkTaskCurrent(task:R,state:State){
  const learner=state.employees.find(e=>e.id===task.employeeId),reviewer=state.employees.find(e=>e.id===task.payload.reviewerEmployeeId);
- return !!learner&&!!reviewer&&learner.id!==reviewer.id&&learner.status!=='离职'&&reviewer.status!=='离职'&&learner.orgId===task.payload.orgId&&reviewer.orgId===task.payload.orgId&&state.orgs.some(o=>o.id===task.payload.orgId&&o.status==='启用');
+ return !task.payload.requirementRetiredAt&&!!learner&&!!reviewer&&learner.id!==reviewer.id&&learner.status!=='离职'&&reviewer.status!=='离职'&&learner.orgId===task.payload.orgId&&reviewer.orgId===task.payload.orgId&&state.orgs.some(o=>o.id===task.payload.orgId&&o.status==='启用');
 }
 export function homeworkTaskOpen(task:R,state:State,at=new Date().toISOString(),records:R[]=[]){
  return learningStageOpen(task,records,at,state)&&['active','returned'].includes(task.status)&&homeworkTaskCurrent(task,state)&&businessDate(at)>=task.payload.start!&&(!!task.payload.assignmentAllowOverdue||businessDate(at)<=task.payload.due!)&&(task.payload.submissionVersion??0)<task.payload.maxSubmissions!;
@@ -52,6 +52,7 @@ export function applyHomework(records:R[],state:State,m:Member,input:unknown,at=
   return [make('homeworkTask','active',{...(assignment?{learningAssignmentId:assignment.id,learningRequirementId:assignment.payload.learningRequirements?.find(r=>r.kind==='homework'&&r.resourceId===d!.id)?.id,assignmentAllowOverdue:assignment.payload.learningMode?.mode!=='fixed'&&assignment.payload.learningMode?.allowOverdue}:{}),title:d!.payload.title,content:d!.payload.content,maxSubmissions:d!.payload.maxSubmissions,version:d!.payload.version,orgId:e!.orgId,reviewerEmployeeId:reviewer!.id,reviewerName:reviewer!.name,employeeSnapshot:{name:e!.name,code:e!.code,orgName:state.orgs.find(o=>o.id===e!.orgId)!.name},start:c.start,due:c.due,submissionVersion:0},e!.id,d!.id)];
  }
  const taskId='id' in c?c.id:deny();const task=records.find(r=>r.id===taskId&&r.kind==='homeworkTask');if(!task||!visibleRecord(task,records,state,m))deny();
+ if(task!.payload.requirementRetiredAt)fail('此作业已退出计划要求，保留历史且不能继续办理');
  const changed=(status:string,payload:R['payload']={})=>({...task!,status,updatedAt:at,payload:{...task!.payload,...payload}});
  if(c.action==='reassignReviewer'){
   const reviewer=state.employees.find(e=>e.id===c.reviewerEmployeeId),learner=state.employees.find(e=>e.id===task!.employeeId);

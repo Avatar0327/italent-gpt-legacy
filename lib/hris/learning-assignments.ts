@@ -1,3 +1,4 @@
+import {reuseCompletedCourse} from './learning-course-reuse';
 import {applyHomework} from './learning-homework';
 import {applyLearningExamTask} from './learning-exam-tasks';
 import {learningRequirements,learningRequirementProgress,learningAssignmentCurrent,learningStageStartsOn} from './learning-requirements';
@@ -24,7 +25,7 @@ export function applyLearningAssignment(records:R[],state:State,m:Member,input:u
  if(c.action!=='assign'&&c.action!=='nextRound'){
   const r=records.find(r=>r.kind==='learningAssignment'&&r.id===c.id);
   if(!r||!visibleRecord(r,records,state,m)||!scope.has(r.payload.orgId!))deny();
-  const tasks=records.filter(t=>['enrollment','learningExamTask','homeworkTask'].includes(t.kind)&&t.payload.learningAssignmentId===r!.id);
+  const tasks=records.filter(t=>['enrollment','learningExamTask','homeworkTask'].includes(t.kind)&&t.payload.learningAssignmentId===r!.id&&!t.payload.requirementRetiredAt);
   if(c.action==='cancelAssignment'){
    if(r!.status!=='active')fail('仅进行中的实例可以取消');
    return [{...r!,status:'cancelled',updatedAt:at,payload:{...r!.payload,evidence:c.evidence}},...tasks.filter(t=>t.status!=='completed').map(t=>({...t,status:'cancelled',updatedAt:at,payload:{...t.payload,closedReason:c.evidence,assignmentCancelled:true,assignmentPreviousStatus:t.status}}))];
@@ -70,9 +71,7 @@ export function applyLearningAssignment(records:R[],state:State,m:Member,input:u
  const result:R[]=[assignment];
  for(const courseId of assignment.payload.courseIds!){
   const task=applyDevelopment([...records,...result],state,m,{action:'enroll',assignmentId:assignment.id,employeeId,courseId,due:window.due},at);
-  const source=config.progressSync&&!previous?records.filter(r=>r.kind==='enrollment'&&r.employeeId===employeeId&&r.referenceId===courseId&&r.status==='completed'&&r.payload.verifiedBy&&r.payload.verifiedAt&&!r.payload.sourceEnrollmentId&&visibleRecord(r,records,state,m)&&(!r.payload.examId||records.some(a=>a.kind==='attempt'&&a.referenceId===r.id&&a.payload.passed))).sort((a,b)=>(b.payload.verifiedAt??'').localeCompare(a.payload.verifiedAt??'')||a.id.localeCompare(b.id))[0]:undefined;
-  const sourceExam=source?.payload.examId?records.find(a=>a.kind==='attempt'&&a.referenceId===source.id&&a.payload.passed):undefined;
-  result.push(source?{...task,status:'completed',payload:{...task.payload,sourceEnrollmentId:source.id,sourceVerifiedBy:source.payload.verifiedBy,sourceVerifiedAt:source.payload.verifiedAt,sourceExamAttemptId:sourceExam?.id,verifiedBy:source.payload.verifiedBy,verifiedAt:source.payload.verifiedAt,verification:'引用同员工同课程版本已独立核验的完成记录；未创建本次考试记录'}}:task);
+  result.push(reuseCompletedCourse(task,records,state,m,config.progressSync&&!previous));
  }
  for(const examId of assignment.payload.examIds??[])result.push(...applyLearningExamTask([...records,...result],state,m,{action:'assign',assignmentId:assignment.id,examId,employeeId,start:window.start,due:window.due},at));
  for(const homeworkId of homeworkIds)result.push(...applyHomework([...records,...result],state,m,{action:'assign',assignmentId:assignment.id,definitionId:homeworkId,employeeId,reviewerEmployeeId:homeworkReviewers[homeworkId],start:window.start,due:window.due},at));

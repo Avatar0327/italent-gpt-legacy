@@ -13,7 +13,7 @@ const schema=z.discriminatedUnion('action',[
  z.object({action:z.literal('cancel'),id,evidence:z.string().trim().min(5).max(3000)}).strict(),
 ]);
 export function examTaskOpen(task:R,state:State,at=new Date().toISOString()){
- return task.status==='active'&&learningAssignmentCurrent(task,state)&&businessDate(at)>=task.payload.start!&&(!!task.payload.assignmentAllowOverdue||businessDate(at)<=task.payload.due!);
+ return !task.payload.requirementRetiredAt&&task.status==='active'&&learningAssignmentCurrent(task,state)&&businessDate(at)>=task.payload.start!&&(!!task.payload.assignmentAllowOverdue||businessDate(at)<=task.payload.due!);
 }
 export function applyLearningExamTask(records:R[],state:State,m:Member,input:unknown,at=new Date().toISOString()):R[]{
  const c=schema.parse(input),scope=scopedOrgs(state,m),manage=['admin','hr'].includes(m.role);
@@ -33,6 +33,7 @@ export function applyLearningExamTask(records:R[],state:State,m:Member,input:unk
  if(!task||!employee)deny();
  if(c.action==='cancel'){
   if(!manage||!scope.has(task!.payload.orgId!)||!scope.has(employee!.orgId))deny();
+  if(task!.payload.requirementRetiredAt)fail('此任务已退出计划要求，保留历史且不能继续办理');
   if(task!.status!=='active')fail('仅进行中的考试可取消');
   return [{...task!,status:'cancelled',updatedAt:at,payload:{...task!.payload,closedReason:c.evidence}}];
  }

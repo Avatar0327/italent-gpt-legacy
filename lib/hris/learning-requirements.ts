@@ -19,7 +19,7 @@ export function learningAssignmentCurrent(assignment:R,state:State){
 export function learningRequirementProgress(assignment:R,records:R[]){
  const requirements=learningRequirements(assignment),courseIds=[...(assignment.payload.courseIds??[]),...(assignment.payload.examIds??[]),...(assignment.payload.homeworkIds??[])];
  const valid=requirements.length>0&&requirements.length===courseIds.length&&new Set(requirements.map(r=>r.id)).size===requirements.length&&new Set(requirements.map(r=>r.resourceId)).size===requirements.length&&requirements.every(r=>(r.kind==='course'?assignment.payload.courseIds:r.kind==='exam'?assignment.payload.examIds:r.kind==='homework'?assignment.payload.homeworkIds:[])?.includes(r.resourceId));
- const tasks=records.filter(r=>['enrollment','learningExamTask','homeworkTask'].includes(r.kind)&&r.payload.learningAssignmentId===assignment.id);
+ const tasks=records.filter(r=>['enrollment','learningExamTask','homeworkTask'].includes(r.kind)&&r.payload.learningAssignmentId===assignment.id&&!r.payload.requirementRetiredAt);
  const items=requirements.map(requirement=>{
   const matches=tasks.filter(t=>t.referenceId===requirement.resourceId&&t.kind===(requirement.kind==='course'?'enrollment':requirement.kind==='exam'?'learningExamTask':'homeworkTask'));
   const task=matches.length===1?matches[0]:undefined;
@@ -44,9 +44,10 @@ export function learningStageStartsOn(assignment:R,stage:NonNullable<R['payload'
  return assignment.payload.start&&assignment.payload.start>scheduled?assignment.payload.start:scheduled;
 }
 export function learningStageOpen(task:R,records:R[],at=new Date().toISOString(),state?:State){
+ if(task.payload.requirementRetiredAt)return false;
  if(!task.payload.learningAssignmentId)return true;
  const assignment=records.find(r=>r.kind==='learningAssignment'&&r.id===task.payload.learningAssignmentId);
- if(!assignment||assignment.status!=='active')return false;
+ if(!assignment||assignment.status!=='active'||!learningRequirements(assignment).some(r=>r.resourceId===task.referenceId&&(!task.payload.learningRequirementId||r.id===task.payload.learningRequirementId)))return false;
  if(state&&!learningAssignmentCurrent(assignment,state))return false;
  if(!assignment.payload.trainingStages?.length)return true;
  const stage=assignment.payload.trainingStages.find(s=>s.courseIds.includes(task.referenceId!));

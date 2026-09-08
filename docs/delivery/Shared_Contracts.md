@@ -113,3 +113,9 @@ contentWeighted显式配置items(requirementId,source,weight)，支持examHighes
 POST /api/learning-content-update: {revision, action:"preview"|"apply", command:{assignmentId,definitionId,homeworkReviewers?}, evidence?}。preview不写入，返回差异、阻止原因、更新前后完成与成绩投影；apply重新检查全部权限/版本/人员及资源，不信任客户端预览。全局revision CAS、实例与新增任务及审计原子保存，最多21条；审计失败不得部分更新。
 
 首批仅同族后续定版、模式/日期/同步不变、未过期且非循环的active实例；已有要求必须全部保留，追加课程仅在progressSync=false时支持，追加考试/作业复用独立派发校验。原任务不改写；目标定义、旧定义链、更新人/时间/依据保存在实例与不可变事件中。contentDefinitionHistoryIds防止已迁移版本再次本轮派发。不得用这组字段替代真实数据迁移审批；这里只操作授权的本系统合成学习实例。
+
+
+内容退出扩展（覆盖前述“仅追加”限制）：同一命令可移除/替换要求，新增+退出任务最多20条。任务的requirementRetiredAt/By/DefinitionId/Reason记录退出，不改其原状态/答案/核验；当前进度排除退出项，学习/考试/批阅入口及单项/整单恢复拒绝重激活。退出标记不撤销历史学分，不创建额外奖励。重新加入同一退出资源版本阻止办理，待独立恢复语义。保留最初派发版本标识与每次实例内容版本的不可变审计快照。无数据库迁移。
+
+
+同步扩展：新增课程复用同一个reuseCompletedCourse函数，与原首轮派发来源选择保持一致；非循环实例按冻结progressSync开关执行。preview返回reusedCourses及与实际派发一致的完成投影，apply在CAS提交前重算，不信任预览缓存。没有新来源则待学习；不复制attempt/learningCredit。此扩展覆盖“追加课程仅progressSync=false”的首批限制。
