@@ -1,6 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {learningModeSchema,learningWindow,learningAssignmentKey} from '../lib/hris/learning-plan-model.ts';
+import './support/runtime.mjs';
+const {learningModeSchema,learningWindow,learningAssignmentKey,learningTaskCurrent,learningTaskOpen}=await import('../lib/hris/learning-plan-model.ts');
 const base={progressSync:false,orderedStages:true};
 test('learning instance contract rejects mixed modes, invalid dates and missing reward decisions',()=>{
  const fixed={...base,mode:'fixed',start:'2028-02-29',end:'2028-03-01'};
@@ -20,4 +21,13 @@ test('learning windows preserve fixed dates and inclusive leap/year boundaries; 
  assert.notEqual(learningAssignmentKey('p','e',1),learningAssignmentKey('p','e',2));
  assert.notEqual(learningAssignmentKey('p:e','x',1),learningAssignmentKey('p','e:x',1));
  assert.throws(()=>learningAssignmentKey('p','e',0));
+});
+
+test('instance availability keeps historical records while rejecting transferred, former and out-of-window learners',()=>{
+ const r={payload:{learningAssignmentId:'a',assignmentOrgId:'o',assignmentStart:'2026-09-08',assignmentDue:'2026-09-09',assignmentAllowOverdue:false}},employee={orgId:'o',status:'正式'};
+ assert.equal(learningTaskOpen(r,employee,'2026-09-08T00:00:00Z'),true);
+ assert.equal(learningTaskOpen(r,employee,'2026-09-10T00:00:00Z'),false);
+ assert.equal(learningTaskCurrent(r,{...employee,orgId:'other'}),false);
+ assert.equal(learningTaskCurrent(r,{...employee,status:'离职'}),false);
+ assert.equal(learningTaskOpen({...r,payload:{...r.payload,assignmentAllowOverdue:true}},employee,'2026-09-10T00:00:00Z'),true);
 });

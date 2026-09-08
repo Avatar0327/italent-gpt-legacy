@@ -296,9 +296,9 @@
       "scope": "资源、问卷、计划、实施、考试、师资、报表",
       "batch": "G1",
       "requirements": "BC-L01–03：列表、新建模式条件、重复积分/学分开关、内容更新及阶段完成条件已只读核实；实际提交及调度细则未核实",
-      "developed": "课程考试、培训申请与任务核对、课程阶段、显式批量派课、取消恢复与进度报表、项目、出勤、学分有效期、课程认证、活动报名、内部名册、试讲、培养派课与关联、培训带教、证书及报表、必修/选修数量门槛与派课/结项/报表统一判断、三模式学习配置草稿/定版/版本历史（不派课）",
+      "developed": "课程考试、培训申请与任务核对、课程阶段、显式批量派课、取消恢复与进度报表、项目、出勤、学分有效期、课程认证、活动报名、内部名册、试讲、培养派课与关联、培训带教、证书及报表、必修/选修数量门槛与派课/结项/报表统一判断、三模式学习配置草稿/定版/版本历史（不派课）、首轮独立学习实例/原子派发/结项与窗口控制（不含历史同步或循环）",
       "remaining": "完整培养编排与批量自动派课、证书样式与自动发证、导师认证及组织关系同步、外聘讲师、完整班级运营、学分折抵及企业到期规则对照",
-      "tested": "127项综合通过，含配置版本与权限组合；非完整模块验收",
+      "tested": "130项综合通过，含20课程事务容量、审计失败回滚与实例约束；非完整业务或生产验收",
       "productionAccepted": "未验收"
     },
     {
@@ -549,8 +549,8 @@
   "controllerEvidence": {
     "mode": "single-controller",
     "performanceHandoff": "ca5f82af7fee4a29789ba969ea070a5cd3544307",
-    "tested": 127,
-    "passed": 127,
+    "tested": 130,
+    "passed": 130,
     "sourceVerification": "Live cadre create fields; learning mode conditional fields, content update behavior and stage completion thresholds verified read-only",
     "gapRegister": "Cadre_Learning_Source_Gaps.md",
     "businessAccepted": false,

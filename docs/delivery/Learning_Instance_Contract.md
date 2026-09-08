@@ -52,3 +52,6 @@ learning-plan-model.ts 已实现严格三模式配置校验、学习窗口计算
 ## A1 配置版本持久化
 新增learningDefinition记录，definitionRootId标识计划族，version顺序递增，referenceId指向前版；草稿→sealed（仅配置定版）/archived。定版版本内容不可变，后续版本仍保留冻结的progressSync；每族至多一个草稿，从最新定版继续。组织不可跨版本变更，避免更换组织引起旧历史泄漏。存储与事件复用现有事务。配置管理限admin/hr且当前组织范围，不扩展普通员工读取。
 A1不是实例派课，sealed不是生产发布；后续内容变更需按BC-L03实现实例迁移，不能只改配置就声称学员进度已经更新。
+
+## B1 首轮实例实现
+仅relative/fixed且progressSync=false，生成learningAssignment及全部enrollment，20课程+1实例原子保存。assignmentKey使用版本/员工/首轮；旧课程唯一性保持。enrollment保存learningAssignmentId、learningDefinitionId、assignmentOrgId、assignmentStart/Due/AllowOverdue及round。当前配置为单一必修阶段，实例结项依全部任务独立核验。C/D同步、循环、多阶段与来源投影仍后续。
