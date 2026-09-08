@@ -2628,7 +2628,17 @@
           "P1-CERTIFICATE",
           "P1-CREDIT",
           "BC-L12",
-          "BC-P1C-M27"
+          "BC-P1C-M27",
+          "BC-L13",
+          "BC-L14",
+          "BC-L15",
+          "BC-L16",
+          "BC-L17",
+          "BC-L18",
+          "BC-L19",
+          "BC-L20",
+          "BC-L21",
+          "BC-L22"
         ],
         "fieldRefs": [
           "P1-LEARN-02-F001",
@@ -2803,7 +2813,38 @@
           "BC-L12-F004",
           "BC-L12-F005",
           "BC-L12-F006",
-          "BC-L12-F007"
+          "BC-L12-F007",
+          "BC-L15-F001",
+          "BC-L15-F002",
+          "BC-L15-F003",
+          "BC-L15-F004",
+          "BC-L15-F005",
+          "BC-L15-F006",
+          "BC-L15-F007",
+          "BC-L16-F001",
+          "BC-L16-F002",
+          "BC-L17-F001",
+          "BC-L17-F002",
+          "BC-L17-F003",
+          "BC-L17-F004",
+          "BC-L17-F005",
+          "BC-L18-F001",
+          "BC-L18-F002",
+          "BC-L19-F001",
+          "BC-L19-F002",
+          "BC-L19-F003",
+          "BC-L19-F004",
+          "BC-L19-F005",
+          "BC-L19-F006",
+          "BC-L20-F001",
+          "BC-L20-F002",
+          "BC-L20-F003",
+          "BC-L20-F004",
+          "BC-L21-F001",
+          "BC-L21-F002",
+          "BC-L21-F003",
+          "BC-L22-F001",
+          "BC-L22-F002"
         ],
         "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M27",
@@ -2841,12 +2882,22 @@
             "P1-CERTIFICATE",
             "P1-CREDIT",
             "BC-L12",
-            "BC-P1C-M27"
+            "BC-P1C-M27",
+            "BC-L13",
+            "BC-L14",
+            "BC-L15",
+            "BC-L16",
+            "BC-L17",
+            "BC-L18",
+            "BC-L19",
+            "BC-L20",
+            "BC-L21",
+            "BC-L22"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "人工题/排序及题库随机抽题、其他活动成绩来源及小数权重、阶段期限精确规则对照与其他活动顺序例外、自动循环调度/积分奖励及循环同步细则、已退出内容重新加入、完成重开、循环更新与批量异步运营；完整培养编排与批量自动派课、证书样式与自动发证、导师认证及组织关系同步、外聘讲师、完整班级运营、学分折抵及企业到期规则对照；作业多级批阅、附件、AI及优秀作业/奖励；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
-          "next": "补字段属性、权限线索和流程说明；循环、共享、费用、成绩及例外转认",
+          "unexplored": "人工题/排序及题库随机抽题、其他活动成绩来源及小数权重、阶段期限精确规则对照与其他活动顺序例外、自动循环调度/积分奖励及循环同步细则、已退出内容重新加入、完成重开、循环更新与批量异步运营；完整培养编排与批量自动派课、证书样式与自动发证、导师认证及组织关系同步、外聘讲师、完整班级运营、学分折抵及企业到期规则对照；作业多级批阅、附件、AI及优秀作业/奖励；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页；逐项配置正文与角色边界仍需观察；AI选项不代表模型、训练数据、准确率或外部已接通；不点击生成、同步或消息发送；尚未取得正文，不能归因为权限拒绝或推定共享规则；有限复核框架/替代路径后转其他配置，不能无限重试；没有读取或修改当前勾选；默认身份来自页面说明，不等于本项目manager已覆盖这些身份，也不证明移动端已验证；学习成绩/答卷/敏感字段及历史调动后范围未核实；当前选中值、同步方向/频率、金额单位币种、覆盖/增量、取消结训费用回滚、外派审批/重复处理未验证；不把费用同步解读为工资支付或员工培训经历同步；类型/计价单位、币种、课时/人数/讲师等级因子、舍入、审批发放与冲销规则未核实；不把标准课酬列推定为按小时单价；公式编辑、时长精度、场次计数、讲师等级/课程标准优先级、超时/缺勤、金额上下限及跨薪酬支付未知；无当前金额或人员值；当前选中值未读；产生时点指创建/提交/公布哪个事件、关开重复/撤回/重考处理、跨来源去重与字段权限未知。当前GET查询既有learningExamTask/Attempt不是该前向同步开关，不宣称覆盖全部六来源；完整区间边界/连续性、等级必填和排序、对历史考试影响未验证；未读考试记录或个人成绩；原站成绩可接受精度、端点是否包含、区间重叠/空档检测、排序与旧成绩重算未验证；不能从59.9推断仅一位小数；无标记不判定可选；BC-L14框架断连已由首页恢复路径解决，不能继续称正文不可读；当前开关未读取或改变。共享管理能力与学员可见/可学权限具体差异、历史访问重算和跨租户边界仍未核实；开关关闭不自动撤销是原站说明，非本项目批准策略；当前校正：BC-L14资源共享正文历史断连已恢复（BC-L22），仍缺具体授权/实例规则，不再以断连阻塞。",
+          "next": "共享/团队/费用/课酬/考试档案来源和成绩等级已取局部说明；继续学习规则、AI陪练和其余安全表单，当前按序衔接绩效配置",
           "accepted": false
         }
       },
@@ -5412,7 +5463,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-08T17:00:00.948255+00:00",
+    "updatedAt": "2026-09-08T17:14:21.289590+00:00",
     "authority": "本轮用户指令；Scope_Register.json是唯一范围与验收事实源；P1附属条目不增加48组或59项分母",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -25673,6 +25724,583 @@
         "unknown": "顺序整数/范围/重复排序规则与名称规范化未提交验证；输入值未读，未保存",
         "operations": "新增空表仅读属性后取消；未创建角色",
         "flowRef": []
+      },
+      {
+        "id": "BC-L13",
+        "moduleId": "M27",
+        "path": "学习管理 > 设置（本輪目录补证）",
+        "evidenceRef": "BC-L13",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:00:49.401418+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "N",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [],
+        "visibleStates": "",
+        "sourceStatement": "实际目录提供权限、费用、课酬、成绩数据来源及AI配置独立入口；仅目录，不推定功能启用或算法",
+        "unknown": "逐项配置正文与角色边界仍需观察；AI选项不代表模型、训练数据、准确率或外部已接通；不点击生成、同步或消息发送",
+        "operations": "培训计划审批/提醒/执行率；培训项目审批/日程/考勤；学习规则/课程审批员工上传；考试成绩等级/题目分数/题审；讲师/课酬/师徒；团队权限/考试档案来源/计划审批/资源共享可见范围/费用同步/身份/技能矩阵等",
+        "flowRef": []
+      },
+      {
+        "id": "BC-L14",
+        "moduleId": "M27",
+        "path": "学习管理 > 设置 > 资源共享与可见范围设置（正文提取受限）",
+        "evidenceRef": "BC-L14",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:01:41.343905+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "N",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [],
+        "visibleStates": "",
+        "sourceStatement": "外层标题已切为资源共享与可见范围设置，目标iTalentFrame可见；受控frameLocator提取返回Frame is not connected",
+        "unknown": "尚未取得正文，不能归因为权限拒绝或推定共享规则；有限复核框架/替代路径后转其他配置，不能无限重试",
+        "operations": "设置目录进入目标页；两次受控frame提取失败，未提交/变更",
+        "flowRef": [],
+        "limitationResolution": "后续BC-L22经首页恢复后已取得两开关说明；保留本条历史失败，不作为当前不可访问结论。"
+      },
+      {
+        "id": "BC-L15",
+        "moduleId": "M27",
+        "path": "学习管理 > 设置 > 团队学习权限",
+        "evidenceRef": "BC-L15",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:05:37.664343+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只读通用角色与范围说明",
+        "fields": [
+          {
+            "id": "BC-L15-F001",
+            "label": "直线经理",
+            "context": "角色/团队范围设置标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L15"
+          },
+          {
+            "id": "BC-L15-F002",
+            "label": "直线下级",
+            "context": "角色/团队范围设置标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L15"
+          },
+          {
+            "id": "BC-L15-F003",
+            "label": "间接下级",
+            "context": "角色/团队范围设置标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L15"
+          },
+          {
+            "id": "BC-L15-F004",
+            "label": "部门负责人",
+            "context": "角色/团队范围设置标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L15"
+          },
+          {
+            "id": "BC-L15-F005",
+            "label": "部门下所有成员",
+            "context": "角色/团队范围设置标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L15"
+          },
+          {
+            "id": "BC-L15-F006",
+            "label": "虚线经理",
+            "context": "角色/团队范围设置标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L15"
+          },
+          {
+            "id": "BC-L15-F007",
+            "label": "虚线下级",
+            "context": "角色/团队范围设置标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L15"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "说明默认支持直线经理、虚线经理、部门负责人；PC可在人员授权调整身份，APP经页面配置调整。范围选项区分直线/间接下级、部门全员和虚线下级",
+        "unknown": "没有读取或修改当前勾选；默认身份来自页面说明，不等于本项目manager已覆盖这些身份，也不证明移动端已验证；学习成绩/答卷/敏感字段及历史调动后范围未核实",
+        "operations": "只读身份/范围配置，返回；不调整授权",
+        "flowRef": []
+      },
+      {
+        "id": "BC-L16",
+        "moduleId": "M27",
+        "path": "学习管理 > 设置 > 培训费用同步",
+        "evidenceRef": "BC-L16",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:06:43.034026+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "学习费用配置标题与枚举",
+        "fields": [
+          {
+            "id": "BC-L16-F001",
+            "label": "同步费用类型",
+            "context": "费用同步配置选项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": [
+              "实际费用",
+              "实际费用和预算费用"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-L16"
+          },
+          {
+            "id": "BC-L16-F002",
+            "label": "同步培训项目状态",
+            "context": "费用同步配置选项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": [
+              "已结训",
+              "未开始、进行中、待结训、结训审批中、已结训、结训已取消（组合选项）"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-L16"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "标题限定已关联培训计划的培训活动费用；活动含培训项目、外派培训。费用类型选项为实际费用、实际费用和预算费用；状态选项为仅已结训，或未开始/进行中/待结训/结训审批中/已结训/结训已取消这一组",
+        "unknown": "当前选中值、同步方向/频率、金额单位币种、覆盖/增量、取消结训费用回滚、外派审批/重复处理未验证；不把费用同步解读为工资支付或员工培训经历同步",
+        "operations": "只读同步配置，不改变选项或执行同步",
+        "flowRef": []
+      },
+      {
+        "id": "BC-L17",
+        "moduleId": "M27",
+        "path": "学习管理 > 设置 > 课酬计算",
+        "evidenceRef": "BC-L17",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:07:52.814243+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-L17-F001",
+            "label": "序号",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L17"
+          },
+          {
+            "id": "BC-L17-F002",
+            "label": "类型",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L17"
+          },
+          {
+            "id": "BC-L17-F003",
+            "label": "课酬计算方式",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L17"
+          },
+          {
+            "id": "BC-L17-F004",
+            "label": "标准课酬",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L17"
+          },
+          {
+            "id": "BC-L17-F005",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L17"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "课酬计算是按类型维护计算方式与标准课酬的独立配置列表；未读取标准金额",
+        "unknown": "类型/计价单位、币种、课时/人数/讲师等级因子、舍入、审批发放与冲销规则未核实；不把标准课酬列推定为按小时单价",
+        "operations": "编辑配置入口（只读打开），未运行计算或保存",
+        "flowRef": []
+      },
+      {
+        "id": "BC-L18",
+        "moduleId": "M27",
+        "path": "学习管理 > 设置 > 课酬计算 > 编辑配置（仅标签/属性）",
+        "evidenceRef": "BC-L18",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:09:00.589413+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "现有课酬配置仅标签/单位/属性，未读值",
+        "fields": [
+          {
+            "id": "BC-L18-F001",
+            "label": "课酬计算方式",
+            "context": "课酬配置",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": [
+              "不计算",
+              "按授课场次计算课酬",
+              "按授课时长计算课酬",
+              "按公式计算课酬"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-L18",
+            "controlType": "单选模式"
+          },
+          {
+            "id": "BC-L18-F002",
+            "label": "面授课程标准课酬",
+            "context": "课酬配置",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": "原生maxlength未声明；金额/精度未验证",
+            "evidenceRef": "BC-L18",
+            "controlType": "text输入，显示单位元/时"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "方式单选包括不计算、按授课场次、按授课时长、按公式；本次面授标准课酬旁单位元/时，原生text输入，maxlength未声明。该单位只对应当前可见配置，不推广所有方式",
+        "unknown": "公式编辑、时长精度、场次计数、讲师等级/课程标准优先级、超时/缺勤、金额上下限及跨薪酬支付未知；无当前金额或人员值",
+        "operations": "编辑配置只读后取消；未切换现有模式、读金额、填写或保存",
+        "flowRef": []
+      },
+      {
+        "id": "BC-L19",
+        "moduleId": "M27",
+        "path": "学习管理 > 设置 > 考试档案数据来源",
+        "evidenceRef": "BC-L19",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:10:28.875359+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "考试来源多选与增量同步说明",
+        "fields": [
+          {
+            "id": "BC-L19-F001",
+            "label": "独立考试",
+            "context": "档案来源复选项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L19",
+            "controlType": "checkbox"
+          },
+          {
+            "id": "BC-L19-F002",
+            "label": "课程中的考试",
+            "context": "档案来源复选项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L19",
+            "controlType": "checkbox"
+          },
+          {
+            "id": "BC-L19-F003",
+            "label": "学习计划中的考试",
+            "context": "档案来源复选项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L19",
+            "controlType": "checkbox"
+          },
+          {
+            "id": "BC-L19-F004",
+            "label": "培训项目中的考试",
+            "context": "档案来源复选项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L19",
+            "controlType": "checkbox"
+          },
+          {
+            "id": "BC-L19-F005",
+            "label": "岗位学习中的考试",
+            "context": "档案来源复选项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L19",
+            "controlType": "checkbox"
+          },
+          {
+            "id": "BC-L19-F006",
+            "label": "导师安排的考试",
+            "context": "档案来源复选项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L19",
+            "controlType": "checkbox"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "页面说明选中来源将同步进考试档案，且只同步勾选后产生的数据，不支持同步历史数据",
+        "unknown": "当前选中值未读；产生时点指创建/提交/公布哪个事件、关开重复/撤回/重考处理、跨来源去重与字段权限未知。当前GET查询既有learningExamTask/Attempt不是该前向同步开关，不宣称覆盖全部六来源",
+        "operations": "全选/按来源复选、返回（未改变）",
+        "flowRef": []
+      },
+      {
+        "id": "BC-L20",
+        "moduleId": "M27",
+        "path": "学习管理 > 设置 > 成绩等级",
+        "evidenceRef": "BC-L20",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:11:12.805797+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-L20-F001",
+            "label": "序号",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L20"
+          },
+          {
+            "id": "BC-L20-F002",
+            "label": "等级名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L20"
+          },
+          {
+            "id": "BC-L20-F003",
+            "label": "成绩区间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L20"
+          },
+          {
+            "id": "BC-L20-F004",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L20"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "学习考试成绩等级独立维护名称与区间；不与绩效评级定义或人才标准评分混用",
+        "unknown": "完整区间边界/连续性、等级必填和排序、对历史考试影响未验证；未读考试记录或个人成绩",
+        "operations": "编辑、删除（未删除）；仅读配置",
+        "flowRef": []
+      },
+      {
+        "id": "BC-L21",
+        "moduleId": "M27",
+        "path": "学习管理 > 设置 > 成绩等级 > 编辑配置",
+        "evidenceRef": "BC-L21",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:11:59.495554+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "配置字段与区间示例，非个人成绩",
+        "fields": [
+          {
+            "id": "BC-L21-F001",
+            "label": "等级名称",
+            "context": "等级配置字段",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": "原生maxlength未声明；边界和精度未核实",
+            "evidenceRef": "BC-L21",
+            "controlType": "text输入",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-L21-F002",
+            "label": "最低成绩",
+            "context": "等级配置字段",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": "原生maxlength未声明；边界和精度未核实",
+            "evidenceRef": "BC-L21",
+            "controlType": "text输入",
+            "uiRequired": null
+          },
+          {
+            "id": "BC-L21-F003",
+            "label": "最高成绩",
+            "context": "等级配置字段",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": "原生maxlength未声明；边界和精度未核实",
+            "evidenceRef": "BC-L21",
+            "controlType": "text输入",
+            "uiRequired": null
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "等级名称有界面必填标记；三项原生text输入且maxlength未声明。当前一条配置显示不及格、最低0、最高59.9；这是既有配置示例，不是初始默认或个人成绩",
+        "unknown": "原站成绩可接受精度、端点是否包含、区间重叠/空档检测、排序与旧成绩重算未验证；不能从59.9推断仅一位小数；无标记不判定可选",
+        "operations": "只读既有配置标签/非人员区间示例，取消；未改或保存",
+        "flowRef": []
+      },
+      {
+        "id": "BC-L22",
+        "moduleId": "M27",
+        "path": "学习管理 > 设置 > 资源共享与可见范围设置（首页恢复后复核）",
+        "evidenceRef": "BC-L22",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:13:50.420975+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "学习共享/可见配置说明",
+        "fields": [
+          {
+            "id": "BC-L22-F001",
+            "label": "资源和活动支持设置全公司可见",
+            "context": "独立权限能力配置",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L22",
+            "controlType": "switch"
+          },
+          {
+            "id": "BC-L22-F002",
+            "label": "资源和活动支持设置共享给全公司",
+            "context": "独立权限能力配置",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-L22",
+            "controlType": "switch"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "两开关独立：开启允许资源/活动设置为全公司可见或共享；关闭后已有全公司可见/共享的对象仍保持原设置，需手动调整对象范围；表单原默认值也需另改。可见适用课程/学习计划/圈/资讯等，共享适用课程/课件/面授/培训计划项目/考试题库等",
+        "unknown": "BC-L14框架断连已由首页恢复路径解决，不能继续称正文不可读；当前开关未读取或改变。共享管理能力与学员可见/可学权限具体差异、历史访问重算和跨租户边界仍未核实；开关关闭不自动撤销是原站说明，非本项目批准策略",
+        "operations": "只读两组开关说明，未变更共享/可见权限；返回",
+        "flowRef": []
       }
     ],
     "humanAcceptancePrerequisite": false,
@@ -26054,7 +26682,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-08T17:00:00.948255+00:00",
+    "updatedAt": "2026-09-08T17:14:21.289590+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -26372,7 +27000,7 @@
               "lib/hris/learning-plan-model.ts"
             ],
             "acceptance": "已定版配置直接改动拒绝；跨组织试卷/作业引用拒绝；新版本不自动改旧实例；取消/退出要求不伪造完成；固定模式起点按计划日期，非加入日",
-            "gap": "自动循环不是已实现；共享管理员与可学范围、完成实例重开、跨轮更新待明确；当前main学习配置未含原站简介字段；既有learning-description隔离分支f5f5b1bd9014d4b6eeb6d32da0f03e34da3bced2保留未合并，不计main已实现",
+            "gap": "自动循环不是已实现；共享管理员与可学范围、完成实例重开、跨轮更新待明确；当前main学习配置未含原站简介字段；既有learning-description隔离分支f5f5b1bd9014d4b6eeb6d32da0f03e34da3bced2保留未合并，不计main已实现；BC-L14历史框架断连已由BC-L22恢复；原站关闭全公司共享/可见开关不撤销存量对象权限及表单默认值；当前课程依可读published版本选择，考试/作业须同组织sealed，不声称共享权限统一。",
             "classification": "本项目既有实现静态事实；转为产品要求待评审",
             "accepted": false,
             "id": "BP-L-REQ-01"
@@ -26404,7 +27032,7 @@
               "lib/hris/learning-grade-evidence.ts"
             ],
             "acceptance": "缺少有效成绩时pending与null，不能补0/100；按每次考试平均与每场最高平均给出不同期望；无成绩课程不能获得虚构权重成绩",
-            "gap": "缺失分母、精度、通过过滤及多审批人聚合为候选政策，原站选项存在不能证明算法完整一致",
+            "gap": "缺失分母、精度、通过过滤及多审批人聚合为候选政策，原站选项存在不能证明算法完整一致；BC-L19考试档案有六来源且仅勾选后新数据，不回补历史；当前报表直接读可见考试任务和尝试，不是同一归档机制。；BC-L20/21学习成绩等级另有名称/最低/最高配置，59.9仅既有示例，不与绩效区间或计划成绩精度自动共用。",
             "classification": "本项目既有实现静态事实；转为产品要求待评审",
             "accepted": false,
             "id": "BP-L-REQ-03"
@@ -26470,13 +27098,94 @@
             "gap": "这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定",
             "classification": "本项目接口静态事实；候选验收契约待评审",
             "accepted": false
+          },
+          {
+            "id": "BP-L-REQ-07",
+            "object": "培训场次、讲师排期与出勤核验",
+            "fields": "场次关联active培训及其课程；标题/地点/讲师文本1–200；带偏移量起止时点，结束须晚于开始并在项目期间；mandatory布尔。讲师认证引用可选，选后须覆盖课程版本/全场次且讲师在职。",
+            "roles": "HR排场；学员本人声明出席或HR登记present布尔；有范围的其他管理者核验，禁本人/提交者自审。",
+            "lifecycle": "场次active→closed/cancelled；出勤submitted→verified/returned，同人同场次重提复用ID；已完成课程报名不能重写。关闭须已结束且无待处理出勤；有核验出席不可取消。",
+            "actions": "排场/结束/取消、出勤声明/代登记/独立核验；不发送日程、不自动算课酬。",
+            "codeRefs": [
+              "lib/hris/training-sessions.ts",
+              "lib/hris/instructor-assignment.ts"
+            ],
+            "acceptance": "同一地点或讲师重叠拒绝（相邻端点不算重叠）；已完课后不得追加该课必修场次；未结束不收出勤；无有效培训报名拒绝；自核验拒绝；有submitted/returned不关场，有verified+present不取消。",
+            "gap": "自由文本讲师/地点身份去重与稳定ID不同；学员时间冲突、课时/费用/课酬、重复核验历史及离职传播未完整定义；与BP-A员工考勤分开。",
+            "classification": "本项目当前实现静态事实；产品要求及验收预期待评审，非原站规则",
+            "accepted": false
+          },
+          {
+            "id": "BP-L-REQ-08",
+            "object": "内部讲师名册与课程授课认证",
+            "fields": "名册title1–100、description5–1000、依据5–2000；同员工在用或待审不可重复。授课认证绑定员工/已发布课程版本及有效起止日，期间不可重叠。",
+            "roles": "名册HR提名、其他HR独立审核，禁本人复核/停用；课程认证本人或HR申请，其他有范围HR审核/撤销。",
+            "lifecycle": "名册submitted→active/rejected/withdrawn，active→suspended；后续名册版本递增。活动报名来源须已批且适用范围匹配，并要求试讲；通过需必修培养成果完结、最新安排过试讲冻结且通过。授课认证submitted→approved/rejected/withdrawn，approved→revoked。",
+            "actions": "名册入册/停用、课程资格申请/审核/撤销；名册active不等于任意课程有授课资格。",
+            "codeRefs": [
+              "lib/hris/instructor-directory.ts",
+              "lib/hris/instructors.ts",
+              "lib/hris/instructor-development.ts",
+              "lib/hris/instructor-trials.ts"
+            ],
+            "acceptance": "停用/离职员工不新认证；同课程版本有效期重叠拒绝；已有进行中试讲不审核提名；要求试讲但未有结果拒绝；已安排而未通过/未冻结拒绝；停用名册保留历史，不能以名册状态覆盖课程认证。",
+            "gap": "原站讲师等级/晋升/课酬标准、停用对已排课程处理未知；按字面称为认证不表示外部资格认证。",
+            "classification": "本项目当前实现静态事实；产品要求及验收预期待评审，非原站规则",
+            "accepted": false
+          },
+          {
+            "id": "BP-L-REQ-09",
+            "object": "培训导师、师徒关系、辅导记录与出师",
+            "fields": "导师/学员稳定ID且不同，在职/导师在用；期间合法，结束不得已过；同一师徒active/submitted期间不重叠；标题1–200、依据/行动计划5–2000。",
+            "roles": "非双方当事人且有双方范围HR安排/终止；导师本人写辅导、学员本人确认；出师由非安排人且非双方的另一HR核验。",
+            "lifecycle": "导师active→suspended，进行中关系阻止停用；关系active→submitted→closed或退回active，取消另为cancelled；辅导submitted→confirmed/returned；导师可改本人未确认记录。",
+            "actions": "导师登记/停用、配对、辅导/学员确认、出师申请/独立核验；不是经理关系或系统审批授权。",
+            "codeRefs": [
+              "lib/hris/mentoring.ts"
+            ],
+            "acceptance": "本人带本人、重叠配对拒绝；非导师写记录/非学员确认拒绝；带教期外不新辅导；至少一条且全部confirmed才申请出师；安排HR不能核验；关系在途不能停导师。",
+            "gap": "当前出师申请未要求等待结束日，最少辅导频次/成果标准及出师提前条件为候选政策待确认；离职不自动完成或删除关系，跨包恢复待定义。",
+            "classification": "本项目当前实现静态事实；产品要求及验收预期待评审，非原站规则",
+            "accepted": false
+          },
+          {
+            "id": "BP-L-REQ-10",
+            "object": "内部学习证书模板、依据与发放",
+            "fields": "模板code2–30字母数字下划线短横并转大写；title1–200、description5–2000；validityDays必传可null或整数1–3650。证书号3–80允许字母数字及._/-，转大写，已使用不重用。依据为同员工completed报名/active讲师名册/正式出师关系。",
+            "roles": "非本人有范围HR申请；另一HR独立审核/撤销；需当前模板组织及员工范围。",
+            "lifecycle": "模板draft→published→archived，同code版本递增且不可跨组织；发放submitted→issued/rejected/withdrawn，issued→revoked。批准时再核当前最新模板/来源；issuedOn起含首日计算validUntil，null无到期日。",
+            "actions": "模板发布/停用、发放申请/审核/撤销，冻结模板及来源快照；不声称外部签章或国家职业资格。",
+            "codeRefs": [
+              "lib/hris/certificates.ts"
+            ],
+            "acceptance": "旧模板被新版本替代后不得发新证；来源未完成、不同员工或失效拒绝；重复证书号拒绝含已撤销；重复同系列同来源待审/已发拒绝；有效天数1则到期日等于发放日；撤销保留历史和依据。",
+            "gap": "来源在发放后变化的失效传播、证书下载签章/外部验证接口、补发和历史到期续期未完整定义；内部证书与学分/讲师授课资格不等价。",
+            "classification": "本项目当前实现静态事实；产品要求及验收预期待评审，非原站规则",
+            "accepted": false
+          },
+          {
+            "id": "BP-L-REQ-11",
+            "object": "培训活动费用同步与课酬模式",
+            "fields": "BC-L16活动关联计划、实际/预算费用与状态范围分别设置；BC-L17/18课酬按类型配置，不计算/场次/时长/公式四方式，本次面授时长标准单位元/时。",
+            "roles": "费用/课酬配置、授课记录核验与发放审批权限需分开；原站当前管理员可见不能代表讲师或财务可见。",
+            "lifecycle": "培训未开始/进行中/待结训/审批中/已结训/取消为同步可选范围，取消和审批不等于金额自动冲销；课酬核算/核准/支付状态尚待定义。",
+            "actions": "只读配置；未运行同步/计算/审批/发放。",
+            "acceptance": "先确定金额单位/精度、同步方向及覆盖、课时/场次来源、公式版本/异常、审批/支付责任，再用同一场次重复同步、取消结训、授课时长更正、撤权等样本定义预期；不把当前工资手工录入当自动课酬。",
+            "gap": "费用同步和四种课酬计算未在已读培训/授课模型形成完整可复用合同；预算/实际不能混写，跨包消费者和错误恢复未就绪。",
+            "classification": "原站配置事实与需求缺口；不得从模式名编造算法",
+            "codeRefs": [
+              "docs/P1_Source_Observations_20260907.md",
+              "lib/hris/training-sessions.ts",
+              "lib/hris/payroll.ts"
+            ],
+            "accepted": false
           }
         ],
         "goal": "在保留原范围内形成学习的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
         "specStatus": "部分契约已具体化；未探索部分明确受限；非完整需求验收",
         "readinessConditions": [
-          "已具体化学习方案/资源/作业/考试/成绩/学分；需确认循环周期、分数精度与缺失、放行/完成、学分授予撤销语义",
-          "多期培训费用、AI陪练计分/反馈接口、共享权限及例外转认缺证据；学习简介隔离分支未合并，需作为差异保留"
+          "已具体化学习方案/资源/作业/考试/成绩/学分，以及场次出勤、讲师名册/授课资格、带教/证书；需确认各候选约束、角色与例外，不以原代码自动签署",
+          "原站团队经理关系、考试档案仅前向同步、成绩等级、预算/实际费用及课酬模式已有说明；资源共享/可见开关关闭不回收存量的说明已补；仍缺具体授权语义、费用/课酬公式与接口、AI陪练计分及例外转认；隔离学习简介分支未合并"
         ]
       },
       {
@@ -27740,6 +28449,30 @@
         "dependency": "BP-F法人/合同→BP-S核算/预算→BP-I电子签/报表",
         "contract": "法人ID、employerName显示文本、agreementCategory和contractType是不同维度。BC-F24只定义原站过期未续签列表口径，不替代本项目显式renewalOf或电子签事实；主体改名/多主体计数待确定。",
         "evidence": "BC-F10/F23/F24及workforce.ts/contract-fields.ts静态核对"
+      },
+      {
+        "term": "组织经理、直线/虚线与团队学习范围",
+        "dependency": "BP-F任职经理关系→BP-L团队学习→BP-I经理报表",
+        "contract": "BC-L15原站团队学习区分直线经理、部门负责人、虚线经理和间接下级；本项目manager+orgScope不能自动等价。身份授予、成员解析、成绩/答卷字段可见性须分别评审；调动后当前授权重核，不凭曾为经理保留读取。",
+        "evidence": "BC-L15页面说明与authorization.ts当前角色模型；PC/APP调整入口提示不是已执行授权"
+      },
+      {
+        "term": "培训计划、活动预算/实际费用与课酬",
+        "dependency": "BP-L培训计划/项目/外派→BP-S预算成本/工资→BP-I报表",
+        "contract": "BC-L16费用同步对象是已关联计划的培训项目/外派活动，实际费用与预算费用不同；同步可包含未开始到结训取消等状态，不能只按completed计费。币种单位、同步方向/覆盖与撤销、课酬审批/薪资消费者仍待核实；场次出勤不等于费用已入账或已支付。",
+        "evidence": "BC-L16原站配置枚举；已读training-sessions/requests/dispatch未建立完整费用合同，不声称全仓库不存在其他费用记录"
+      },
+      {
+        "term": "考试发生、成绩计算与档案同步时点",
+        "dependency": "BP-L课程/独立/计划/培训/岗位/导师考试→BP-C档案与BP-I报表",
+        "contract": "BC-L19勾选后新数据才进入原站考试档案，历史不回补；不能把档案无记录判定为未考试。当前独立考试报表直接查询可见任务/尝试，计划成绩另聚合依据；需以来源类型+业务ID+配置版本和采集时点区分，重考/撤销/关开去重待定义。",
+        "evidence": "BC-L19原站说明；reports.ts learningExams/learningPlanProgress与learning-grades静态事实，身份/时间契约为候选"
+      },
+      {
+        "term": "权限配置开关与存量对象授权",
+        "dependency": "BP-L共享管理/全公司可见→BP-I访问与审计",
+        "contract": "BC-L22原站说明关闭能力开关不会收回存量对象全公司共享/可见，也不改变原表单默认。配置可选能力、对象授权、学员可学和平台访问是四层；本项目撤权需求不能只验开关关闭，需明确是否更新对象与重新计算当前权限，建议待评审。E2仅所有者平台访问不变化。",
+        "evidence": "BC-L22只读说明；本项目当前权限重核与原站配置行为分别记录，未修改任何权限"
       }
     ],
     "consistencyReview": {
@@ -27762,7 +28495,10 @@
         "面试官工作台当前无任务，原角色详情不能用M12管理员界面替代；三页签仅导航状态",
         "M36/M47已按报告配置与资源翻译归BP-I，M41按员工人才标签归BP-C；48组唯一映射，剩余跨包关系仍保留",
         "干部评分的单评委指标算法与跨评委均值分层，得分阈值相等边界待核实；360分组均值按已提交答卷，不混用投票总评委分母",
-        "360角色目录/套卷角色选择不是固定四关系；现有答卷开放期间覆盖同ID、报告关闭后冻结，原答卷匿名权限仍未确认"
+        "360角色目录/套卷角色选择不是固定四关系；现有答卷开放期间覆盖同ID、报告关闭后冻结，原答卷匿名权限仍未确认",
+        "原站学习共享/全公司可见开关关闭不回收存量，当前角色撤权契约需单列，E2平台访问不变",
+        "考试档案只收勾选后新数据；历史缺记录不代表未考试；学习/干部/绩效各成绩规则不能混用",
+        "培训活动费用分预算/实际及同步状态，课酬四模式；场次出勤、授课资格、讲师名册、出师和证书彼此独立"
       ],
       "remaining": "继续经理看板指标/组织健康正文有限替代，其他空表控件属性及帮助；原站配置不等于默认/产品批准；完成全部规格引用与异常图的一致性审查"
     },

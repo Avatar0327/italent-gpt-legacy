@@ -163,6 +163,10 @@ if 'p1B' in s:
  t+='\n## 各包具体就绪缺口\n\n'+table(['业务包','仍需满足的条件'],[(p['id']+' '+p['name'],p.get('readinessConditions',[])) for p in pb['packages'] if p['moduleIds']])
  read.write_text(t)
 
+ f=D/'P1B_Implementation_Map.md';t=f.read_text()+'\n## 分包契约与实现证据索引\n\n此索引由同一Scope的contracts生成。源码链接只证明静态对应；原站说明或范围文件不能证明已有实现。具体复用/补齐/修改边界按对应规格的差异列评审。\n\n'
+ t+=table(['业务包/需求ID','对象与规格','证据性质','代码或来源','具体差异/待核验'],[(p['id']+'/'+c['id'],c['object']+'；'+link_source(p['spec']),c['classification'],'；'.join(link_source(x) for x in c['codeRefs']),c['gap']) for p in pb['packages'] for c in p.get('contracts',[])])
+ f.write_text(t)
+
  if pb.get('validationEvidence'):
   f=D/'P1B_Implementation_Map.md';t=f.read_text()+'\n## 历史验证适用版本索引\n\n当前仅读原验证记录，不复跑、不汇总通过数量。baseCommit只作测试前上下文，不能冒充测试代码快照。部分文件哈希不能证明完整环境/依赖相同。\n\n'
   t+=table(['原记录/时间','版本定位','原适用范围','本轮状态'],[(link_source(v['path'])+'；'+str(v['observedRecordDate']),v['version'],v['scope'],'未复跑；未代签业务；'+v['hashReference']) for v in pb['validationEvidence']]);f.write_text(t)
