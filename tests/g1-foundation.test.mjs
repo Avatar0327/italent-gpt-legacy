@@ -1,3 +1,4 @@
+import {businessDate} from '../lib/hris/business-time.ts';
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {setup,send,get,core,grant,expect,hris,dev,act,request,anchors,due} from './support/foundation-scenario.mjs';
@@ -57,10 +58,10 @@ test('G1 X01：同一人员从组织岗位到盘点计划、考试学习核验�
  await grant('reviewerAll','approver',null,[org.id,otherOrg.id]);
  await core({action:'position',code:'G1-TARGET',name:'合成目标岗位',orgId:otherOrg.id,family:'合成验证',responsibilities:'合成调动目标岗位',status:'启用'});
  const target=(await expect(await hris.GET())).state.positions.find(x=>x.code==='G1-TARGET');
- await core({action:'workflow',kind:'transfer',steps:[{userId:'reviewerAll',name:'合成独立审批人'}]});
- await core({action:'request',employeeId:e.id,kind:'transfer',orgId:otherOrg.id,positionId:target.id,reason:'合成调动用于核实旧组织访问撤销'});
+ await core({action:'workflow',kind:'transfer',steps:[{userId:'manager',name:'调出方'},{userId:'reviewerAll',name:'调入方'}]});
+ await core({action:'request',employeeId:e.id,kind:'transfer',effectiveOn:businessDate(),orgId:otherOrg.id,positionId:target.id,reason:'合成调动用于核实旧组织访问撤销'});
  const pending=(await expect(await hris.GET())).state.approvals.find(x=>x.employeeId===e.id&&x.status==='pending');
- act('reviewerAll');await core({action:'decide',id:pending.id,decision:'approved'});
+ act('manager');await core({action:'decide',id:pending.id,decision:'approved'});act('reviewerAll');await core({action:'decide',id:pending.id,decision:'approved'});act('owner');await core({action:'executeTransfer',id:pending.id});
  act('manager');await readProfile(403);assert.ok(!(await get()).records.some(r=>r.id===plan.id||r.id===enrollment.id));
  await expect(await dev.GET(request('/api/development?id='+enrollment.id)),403);
  await grant('managerB','manager',null,[otherOrg.id]);act('managerB');p=await readProfile();assert.equal(p.employee.org,otherOrg.name);

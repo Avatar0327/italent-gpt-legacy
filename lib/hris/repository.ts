@@ -7,7 +7,7 @@ export async function readWorkspace(db:D1Database,tenant:string):Promise<Workspa
  db.prepare('SELECT data,revision,storage_version AS storageVersion FROM hris_workspaces WHERE owner=?').bind(tenant),
  db.prepare("SELECT id,name,coalesce(parent_id,'') AS parentId,city,leader,status FROM hris_orgs WHERE tenant_id=? ORDER BY name,id").bind(tenant),
  db.prepare('SELECT id,code,name,org_id AS orgId,job,level,joined,status,email FROM hris_employees WHERE tenant_id=? ORDER BY code,id').bind(tenant),
- db.prepare('SELECT id,employee_id AS employeeId,kind,org_id AS orgId,reason,status,created,created_by AS createdBy,decided,decided_by AS decidedBy,current_step AS currentStep,workflow_version AS workflowVersion FROM hris_approvals WHERE tenant_id=? ORDER BY created DESC,id').bind(tenant),
+ db.prepare('SELECT id,employee_id AS employeeId,kind,org_id AS orgId,reason,status,created,created_by AS createdBy,decided,decided_by AS decidedBy,current_step AS currentStep,workflow_version AS workflowVersion,details FROM hris_approvals WHERE tenant_id=? ORDER BY created DESC,id').bind(tenant),
  db.prepare('SELECT approval_id AS approvalId,position,user_id AS userId,name,decision,at FROM hris_approval_steps WHERE tenant_id=? ORDER BY approval_id,position').bind(tenant),
  db.prepare('SELECT kind,version FROM hris_workflows WHERE tenant_id=? AND version=(SELECT max(w.version) FROM hris_workflows w WHERE w.tenant_id=hris_workflows.tenant_id AND w.kind=hris_workflows.kind)').bind(tenant),
  db.prepare('SELECT kind,version,position,user_id AS userId,name FROM hris_workflow_steps WHERE tenant_id=? ORDER BY kind,version,position').bind(tenant),
@@ -19,7 +19,7 @@ export async function readWorkspace(db:D1Database,tenant:string):Promise<Workspa
  ]);
  const row=rows<WorkspaceRow>(result[0])[0];if(!row)throw Error('企业不存在');if(row.storageVersion===0)return row;
  const approvals=rows<Approval>(result[3]);const steps=rows<ApprovalStep&{approvalId:string}>(result[4]);
- for(const a of approvals){a.steps=steps.filter(s=>s.approvalId===a.id).map(({userId,name,decision,at})=>({userId,name,...(decision?{decision,at}: {})}));}
+ for(const a of approvals){if(typeof a.details==='string')a.details=JSON.parse(a.details);if(a.details===null)delete a.details;a.steps=steps.filter(s=>s.approvalId===a.id).map(({userId,name,decision,at})=>({userId,name,...(decision?{decision,at}: {})}));}
  const workflows:State['workflows']={};
  const ws=rows<{kind:Approval['kind'];version:number;userId:string;name:string}>(result[6]);
  for(const w of rows<{kind:Approval['kind'];version:number}>(result[5]))workflows[w.kind]={version:w.version,steps:ws.filter(s=>s.kind===w.kind&&s.version===w.version).map(({userId,name})=>({userId,name}))};
@@ -51,7 +51,7 @@ export function stateStatements(db:D1Database,tenant:string,token:string,before:
  w.steps.forEach((step,i)=>put('hris_workflow_steps',['kind','version','position','user_id','name'],[kind,w.version,i,step.userId,step.name],['kind','version','position'],true));
  }
  for(const a of after.approvals){const old=before.approvals.find(x=>x.id===a.id);if(equal(a,old))continue;
- put('hris_approvals',['id','employee_id','kind','org_id','reason','status','created','created_by','decided','decided_by','current_step','workflow_version'],[a.id,a.employeeId,a.kind,a.orgId,a.reason,a.status,a.created,a.createdBy,a.decided,a.decidedBy,a.currentStep,a.workflowVersion],['id']);
+ put('hris_approvals',['id','employee_id','kind','org_id','reason','status','created','created_by','decided','decided_by','current_step','workflow_version','details'],[a.id,a.employeeId,a.kind,a.orgId,a.reason,a.status,a.created,a.createdBy,a.decided,a.decidedBy,a.currentStep,a.workflowVersion,a.details?JSON.stringify(a.details):null],['id']);
  put('hris_assignment_requests',['approval_id','position_id','grade_id'],[a.id,a.positionId,a.gradeId],['approval_id']);
  a.steps?.forEach((step,i)=>put('hris_approval_steps',['approval_id','position','user_id','name','decision','at'],[a.id,i,step.userId,step.name,step.decision,step.at],['approval_id','position']));
  }

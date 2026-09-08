@@ -582,37 +582,37 @@
     },
     {
       "id": "F01",
-      "status": "technical-reviewed-tested",
+      "status": "technical-validation-human-uat-pending",
       "dependencies": [],
       "acceptance": "组织/员工/岗位标识及入转调离；按业务场景独立验收并记录确认人、时间与证据",
-      "next": "E1用户已确认两个入口正常；E2暂不新增人类访问者。只准备/记录所有者单账号可执行UAT，待D1–D7业务决定；多角色实操暂缓，不再索取账号名单",
+      "next": "仅推进本包：按D1–D7当前需求基线完成技术核验与所有者可执行UAT；E2不新增真人身份，多角色步骤明确暂缓；不扩展其他模块",
       "recoveryCondition": "多角色人工验收需用户未来主动恢复具名测试访问；本轮保持单账号，不改业务规则或自审保护",
       "acceptancePackage": "F01-F04"
     },
     {
       "id": "F02",
-      "status": "technical-reviewed-tested",
+      "status": "technical-validation-human-uat-pending",
       "dependencies": [],
       "acceptance": "角色、组织和字段权限及撤权；按业务场景独立验收并记录确认人、时间与证据",
-      "next": "E1用户已确认两个入口正常；E2暂不新增人类访问者。只准备/记录所有者单账号可执行UAT，待D1–D7业务决定；多角色实操暂缓，不再索取账号名单",
+      "next": "仅推进本包：按D1–D7当前需求基线完成技术核验与所有者可执行UAT；E2不新增真人身份，多角色步骤明确暂缓；不扩展其他模块",
       "recoveryCondition": "多角色人工验收需用户未来主动恢复具名测试访问；本轮保持单账号，不改业务规则或自审保护",
       "acceptancePackage": "F01-F04"
     },
     {
       "id": "F03",
-      "status": "technical-reviewed-tested",
+      "status": "technical-validation-human-uat-pending",
       "dependencies": [],
       "acceptance": "修订冲突、事务、审批快照、审计；按业务场景独立验收并记录确认人、时间与证据",
-      "next": "E1用户已确认两个入口正常；E2暂不新增人类访问者。只准备/记录所有者单账号可执行UAT，待D1–D7业务决定；多角色实操暂缓，不再索取账号名单",
+      "next": "仅推进本包：按D1–D7当前需求基线完成技术核验与所有者可执行UAT；E2不新增真人身份，多角色步骤明确暂缓；不扩展其他模块",
       "recoveryCondition": "多角色人工验收需用户未来主动恢复具名测试访问；本轮保持单账号，不改业务规则或自审保护",
       "acceptancePackage": "F01-F04"
     },
     {
       "id": "F04",
-      "status": "technical-reviewed-tested",
+      "status": "technical-validation-human-uat-pending",
       "dependencies": [],
       "acceptance": "本人附件和历史权限；按业务场景独立验收并记录确认人、时间与证据",
-      "next": "E1用户已确认两个入口正常；E2暂不新增人类访问者。只准备/记录所有者单账号可执行UAT，待D1–D7业务决定；多角色实操暂缓，不再索取账号名单",
+      "next": "仅推进本包：按D1–D7当前需求基线完成技术核验与所有者可执行UAT；E2不新增真人身份，多角色步骤明确暂缓；不扩展其他模块",
       "recoveryCondition": "多角色人工验收需用户未来主动恢复具名测试访问；本轮保持单账号，不改业务规则或自审保护",
       "acceptancePackage": "F01-F04"
     },

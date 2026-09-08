@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {initialState,applyCommand} from '../lib/hris/model.ts';
 test('审批通过调动更新任职，且旧状态保持不变',()=>{const s=initialState();const n=applyCommand(s,{action:'decide',id:'a2',decision:'approved'});assert.equal(n.employees.find(e=>e.id==='e7').orgId,'o2');assert.equal(s.employees.find(e=>e.id==='e7').orgId,'o4');assert.equal(n.audit.length,1);assert.throws(()=>applyCommand(n,{action:'decide',id:'a2',decision:'approved'}),/已处理/);});
-test('驳回不变更员工组织',()=>{const n=applyCommand(initialState(),{action:'decide',id:'a2',decision:'rejected'});assert.equal(n.employees.find(e=>e.id==='e7').orgId,'o4');});
+test('驳回不变更员工组织',()=>{const n=applyCommand(initialState(),{action:'decide',id:'a2',decision:'rejected',decisionReason:'合成驳回原因'});assert.equal(n.employees.find(e=>e.id==='e7').orgId,'o4');});
 test('组织循环以及有在职员工的停用被阻止',()=>{const s=initialState();assert.throws(()=>applyCommand(s,{action:'org',...s.orgs[0],parentId:'o2'}),/循环/);assert.throws(()=>applyCommand(s,{action:'org',...s.orgs[1],status:'停用'}),/不能停用/);});
 test('重复工号与无效入职日期被拒绝',()=>{const s=initialState();const e=s.employees[0];assert.throws(()=>applyCommand(s,{action:'employee',...e,id:undefined}),/编号已存在/);assert.throws(()=>applyCommand(s,{action:'employee',...e,joined:'2026-02-30'}));});
 test('同一员工不能重复发起待审批请求',()=>{assert.throws(()=>applyCommand(initialState(),{action:'request',employeeId:'e10',kind:'exit',orgId:'o3',reason:'申请离职'}),/已有待处理/);});

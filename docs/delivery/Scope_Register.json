@@ -582,9 +582,9 @@
       "requirementBaseline": "docs/delivery/F01_F04_Requirements_Baseline.md",
       "businessAcceptanceGuide": "docs/delivery/F01_F04_Business_Acceptance.md",
       "dimensions": {
-        "requirements": "集中决策D1–D7待回答；跨组织源/目标权限已按现实现核清，不冒称原站完整规则",
-        "development": "P2/G0限定功能已开发；本轮仅验收收口，不扩展其他模块",
-        "testing": "历史角色关联15/15、核心25/25及附件5/5保留；本轮用户确认成员/员工页面可打开，非功能实操；多角色人工验收按用户决定暂缓",
+        "requirements": "用户D1–D7明确；首包独立业务基线已落实；原站完整规则仍未核实，不重复询问已决项",
+        "development": "首包定日调动、双方顺序确认、失败恢复、职级防盲审、驳回关联重审；其他模块暂停",
+        "testing": "本轮实际测试见F01_F04_Decisions_Verification.json；E1页面可打开，E2保持唯一访问者；真人多角色UAT暂缓",
         "production": "未验收；人工业务未签署"
       }
     },
@@ -605,9 +605,9 @@
       "requirementBaseline": "docs/delivery/F01_F04_Requirements_Baseline.md",
       "businessAcceptanceGuide": "docs/delivery/F01_F04_Business_Acceptance.md",
       "dimensions": {
-        "requirements": "集中决策D1–D7待回答；跨组织源/目标权限已按现实现核清，不冒称原站完整规则",
-        "development": "P2/G0限定功能已开发；本轮仅验收收口，不扩展其他模块",
-        "testing": "历史角色关联15/15、核心25/25及附件5/5保留；本轮用户确认成员/员工页面可打开，非功能实操；多角色人工验收按用户决定暂缓",
+        "requirements": "用户D1–D7明确；首包独立业务基线已落实；原站完整规则仍未核实，不重复询问已决项",
+        "development": "首包定日调动、双方顺序确认、失败恢复、职级防盲审、驳回关联重审；其他模块暂停",
+        "testing": "本轮实际测试见F01_F04_Decisions_Verification.json；E1页面可打开，E2保持唯一访问者；真人多角色UAT暂缓",
         "production": "未验收；人工业务未签署"
       }
     },
@@ -628,9 +628,9 @@
       "requirementBaseline": "docs/delivery/F01_F04_Requirements_Baseline.md",
       "businessAcceptanceGuide": "docs/delivery/F01_F04_Business_Acceptance.md",
       "dimensions": {
-        "requirements": "集中决策D1–D7待回答；跨组织源/目标权限已按现实现核清，不冒称原站完整规则",
-        "development": "P2/G0限定功能已开发；本轮仅验收收口，不扩展其他模块",
-        "testing": "历史角色关联15/15、核心25/25及附件5/5保留；本轮用户确认成员/员工页面可打开，非功能实操；多角色人工验收按用户决定暂缓",
+        "requirements": "用户D1–D7明确；首包独立业务基线已落实；原站完整规则仍未核实，不重复询问已决项",
+        "development": "首包定日调动、双方顺序确认、失败恢复、职级防盲审、驳回关联重审；其他模块暂停",
+        "testing": "本轮实际测试见F01_F04_Decisions_Verification.json；E1页面可打开，E2保持唯一访问者；真人多角色UAT暂缓",
         "production": "未验收；人工业务未签署"
       }
     },
@@ -651,9 +651,9 @@
       "requirementBaseline": "docs/delivery/F01_F04_Requirements_Baseline.md",
       "businessAcceptanceGuide": "docs/delivery/F01_F04_Business_Acceptance.md",
       "dimensions": {
-        "requirements": "集中决策D1–D7待回答；跨组织源/目标权限已按现实现核清，不冒称原站完整规则",
-        "development": "P2/G0限定功能已开发；本轮仅验收收口，不扩展其他模块",
-        "testing": "历史角色关联15/15、核心25/25及附件5/5保留；本轮用户确认成员/员工页面可打开，非功能实操；多角色人工验收按用户决定暂缓",
+        "requirements": "用户D1–D7明确；首包独立业务基线已落实；原站完整规则仍未核实，不重复询问已决项",
+        "development": "首包定日调动、双方顺序确认、失败恢复、职级防盲审、驳回关联重审；其他模块暂停",
+        "testing": "本轮实际测试见F01_F04_Decisions_Verification.json；E1页面可打开，E2保持唯一访问者；真人多角色UAT暂缓",
         "production": "未验收；人工业务未签署"
       }
     },
