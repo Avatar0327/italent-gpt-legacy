@@ -1,5 +1,5 @@
 {
-  "version": 12,
+  "version": 13,
   "activeWriter": "当前聊天唯一总控",
   "mode": "sole-controller-p1-readonly",
   "branchCreationBase": "commit introducing this queue; exact SHA in git history",
@@ -699,7 +699,7 @@
   "currentP1": {
     "revision": "2026-09-08-P1AB",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-08T15:07:33.692739+00:00",
+    "updatedAt": "2026-09-08T17:31:30.153085+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -804,6 +804,6 @@
       "完成全局术语/依赖/状态/接口审查和必要文档检查，按单元提交推送；不恢复功能开发"
     ],
     "state": "P1未整体验收；P2保留受限历史技术验收；F01–F04业务验收未完成；E1仅页面可打开；E2唯一访问者；D1–D7独立设计；所有历史测试不等于当前复验",
-    "currentWork": "招聘配置/只读说明→假勤→薪酬→共享集成；绩效强分/组织流程等剩余缺口保留"
+    "currentWork": "假勤配置/规则→薪酬→共享集成；招聘剩余Offer/渠道/AI/自动化与完整权限继续保留"
   }
 }

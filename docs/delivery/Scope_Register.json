@@ -1347,7 +1347,12 @@
           "BC-R05",
           "BC-R07",
           "BC-R08",
-          "BC-P1C-M12"
+          "BC-P1C-M12",
+          "BC-R12",
+          "BC-R13",
+          "BC-R14",
+          "BC-R15",
+          "BC-R16"
         ],
         "fieldRefs": [
           "BC-R01-F001",
@@ -1471,7 +1476,19 @@
           "BC-P1C-M12-F016",
           "BC-P1C-M12-F017",
           "BC-P1C-M12-F018",
-          "BC-P1C-M12-F019"
+          "BC-P1C-M12-F019",
+          "BC-R13-F001",
+          "BC-R13-F002",
+          "BC-R14-F001",
+          "BC-R14-F002",
+          "BC-R14-F003",
+          "BC-R14-F004",
+          "BC-R15-F001",
+          "BC-R15-F002",
+          "BC-R16-F001",
+          "BC-R16-F002",
+          "BC-R16-F003",
+          "BC-R16-F004"
         ],
         "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M12",
@@ -1497,11 +1514,16 @@
             "BC-R05",
             "BC-R07",
             "BC-R08",
-            "BC-P1C-M12"
+            "BC-P1C-M12",
+            "BC-R12",
+            "BC-R13",
+            "BC-R14",
+            "BC-R15",
+            "BC-R16"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "渠道门户、简历解析、面试日历、电子签和AI能力；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+          "unexplored": "渠道门户、简历解析、面试日历、电子签和AI能力；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证；生态对接列考试、视频面试、会议室、背调、IM、外呼，仅服务类别，无endpoint、认证或回调契约；具体配置逐项续查；未读取当前开关值或操作导入，完整性格式、渠道覆盖、默认及与查重的先后未核实；这是当前展示规则，不证明租户普遍默认；空值、邮箱大小写、证件类型、电话区号归一、学校专业标准化、跨职位/库可见性及重复后的阻断/合并未验证；没有读取简历或改变规则；筛选候选项扩大不等于可读职位/候选正文或可操作；更新记录是否保留旧储备历史、跨来源冲突与默认值未知；此为M12招聘人才库设置，不能替代独立M14 AI人才库证据；授权模式具体身份和当前选择未读取；关闭后“正常”不等于公开/无其他权限。身份匹配、再入职重新管控、离职同步延迟/失败与字段遮蔽未验证；未更改配置",
           "next": "补字段属性、权限线索和流程说明；渠道、测评/面试、录用、电子签及入职衔接",
           "accepted": false
         }
@@ -5519,7 +5541,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-08T17:24:14.173222+00:00",
+    "updatedAt": "2026-09-08T17:31:30.153085+00:00",
     "authority": "本轮用户指令；Scope_Register.json是唯一范围与验收事实源；P1附属条目不增加48组或59项分母",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -26987,6 +27009,254 @@
         "unknown": "只证明配置绑定关系，不确认公式语法、优先级、精度、系数限幅/上下界、活动在途变更或工资消费。活动引用与模板绑定不同，不合并为一份默认映射",
         "operations": "仅读两条配置绑定路径图；不切换、保存或计算",
         "flowRef": []
+      },
+      {
+        "id": "BC-R12",
+        "moduleId": "M12",
+        "path": "招聘管理系统 > 设置（目录）",
+        "evidenceRef": "BC-R12",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:28:39.735625+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [],
+        "visibleStates": "",
+        "sourceStatement": "目录独立列出招聘需求/职位广告/简历收取/招聘流程/简历模板/应聘者/黑名单/业务筛选/测评考试/面试/通知/原因/渠道/猎头RPO/人才库/门店/自动化/生态对接/系统监控/安全合规；仅入口证据，未批量进入或读取候选记录",
+        "unknown": "生态对接列考试、视频面试、会议室、背调、IM、外呼，仅服务类别，无endpoint、认证或回调契约；具体配置逐项续查",
+        "operations": "新建应聘者设置、查重规则设置、简历更新设置、锁定设置、志愿规则设置、入职应聘者管控设置、自动出入库规则、流程/阶段/状态、面试评价表、Offer相关设置、生态对接",
+        "flowRef": []
+      },
+      {
+        "id": "BC-R13",
+        "moduleId": "M12",
+        "path": "招聘管理系统 > 设置 > 新建应聘者设置",
+        "evidenceRef": "BC-R13",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:28:39.735625+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-R13-F001",
+            "label": "导入应聘者时手机号必填",
+            "context": "配置标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-R13",
+            "controlType": "开关"
+          },
+          {
+            "id": "BC-R13-F002",
+            "label": "导入应聘者时邮箱必填",
+            "context": "配置标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-R13",
+            "controlType": "开关"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "页面说明：开启相应开关后，导入应聘者时手机号/邮箱必须完整才能成功新建；两个条件分别设置，不能扩展为手工新建和所有渠道默认必填",
+        "unknown": "未读取当前开关值或操作导入，完整性格式、渠道覆盖、默认及与查重的先后未核实",
+        "operations": "两个开关仅查看，不切换",
+        "flowRef": []
+      },
+      {
+        "id": "BC-R14",
+        "moduleId": "M12",
+        "path": "招聘管理系统 > 设置 > 查重规则设置",
+        "evidenceRef": "BC-R14",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:29:27.677600+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-R14-F001",
+            "label": "证件号码",
+            "context": "查重条件",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-R14",
+            "controlType": "只读规则"
+          },
+          {
+            "id": "BC-R14-F002",
+            "label": "邮箱",
+            "context": "查重条件",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-R14",
+            "controlType": "只读规则"
+          },
+          {
+            "id": "BC-R14-F003",
+            "label": "手机号码",
+            "context": "查重条件",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-R14",
+            "controlType": "只读规则"
+          },
+          {
+            "id": "BC-R14-F004",
+            "label": "姓名+出生日期+毕业学校+专业名称",
+            "context": "查重条件",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-R14",
+            "controlType": "只读规则"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "页面说明依次按条件查重直至查到所有重复应聘者；所见条件为证件号码相同、邮箱相同、手机号码相同、精确姓名/出生日期/毕业学校/专业名称均同。变更须联系顾问，变更后重算系统内所有简历重复关系",
+        "unknown": "这是当前展示规则，不证明租户普遍默认；空值、邮箱大小写、证件类型、电话区号归一、学校专业标准化、跨职位/库可见性及重复后的阻断/合并未验证；没有读取简历或改变规则",
+        "operations": "更多功能介绍及常见问题；无修改",
+        "flowRef": []
+      },
+      {
+        "id": "BC-R15",
+        "moduleId": "M12",
+        "path": "招聘管理系统 > 设置 > 人才库其他设置",
+        "evidenceRef": "BC-R15",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:30:07.673452+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-R15-F001",
+            "label": "应聘职位筛选范围不过职位权限",
+            "context": "配置标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-R15",
+            "controlType": "开关"
+          },
+          {
+            "id": "BC-R15-F002",
+            "label": "重复储备应聘者",
+            "context": "配置标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-R15",
+            "controlType": "开关"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "开启前者后，人才库最近应聘职位/应聘职位字段筛选可选全公司职位；开启后者允许应聘者重复储备到同一人才库，更新储备记录",
+        "unknown": "筛选候选项扩大不等于可读职位/候选正文或可操作；更新记录是否保留旧储备历史、跨来源冲突与默认值未知；此为M12招聘人才库设置，不能替代独立M14 AI人才库证据",
+        "operations": "查看开关说明，不变更",
+        "flowRef": []
+      },
+      {
+        "id": "BC-R16",
+        "moduleId": "M12",
+        "path": "招聘管理系统 > 设置 > 入职应聘者管控设置",
+        "evidenceRef": "BC-R16",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T17:31:00.140321+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-R16-F001",
+            "label": "已入职应聘者权限管控",
+            "context": "配置标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-R16"
+          },
+          {
+            "id": "BC-R16-F002",
+            "label": "授权模式",
+            "context": "配置标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": [
+              "所有对入职职位有权限的用户可见",
+              "仅入职职位的招聘负责人可见",
+              "仅入职职位的招聘负责人、部门负责人可见"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-R16"
+          },
+          {
+            "id": "BC-R16-F003",
+            "label": "已入职实习生不管控",
+            "context": "配置标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-R16"
+          },
+          {
+            "id": "BC-R16-F004",
+            "label": "离职后解除管控",
+            "context": "配置标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-R16"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "功能说明依赖组织员工应用。开启管控后，招聘应聘者/项目各流程中的已入职申请数据，以及人才库/高级搜索的人才数据均标记受限查看并限制操作，仅所选授权模式用户正常查看；关闭则上述数据可正常查看操作。实习生例外开关开启时仅管控雇佣关系为内部人员者；离职解除开关开启时解除曾入职现已离职者的查看管控；授权模式选项：所有对入职职位有权限的用户可见、仅入职职位的招聘负责人可见、仅入职职位的招聘负责人、部门负责人可见",
+        "unknown": "已读三种授权模式标签，未读取当前选择或实际跨角色效果；关闭后“正常”不等于公开/无其他权限。身份匹配、再入职重新管控、离职同步延迟/失败与字段遮蔽未验证；未更改配置",
+        "operations": "开关和授权模式仅查看；帮助入口",
+        "flowRef": []
       }
     ],
     "humanAcceptancePrerequisite": false,
@@ -28077,7 +28347,7 @@
         "contracts": [
           {
             "object": "需求/招聘职位/候选人",
-            "fields": "需求草稿/显式提交；candidate必填active requisitionId；姓名1–200；email合法或空；职位冻结版本；CNY月薪整数分或面议；headcount整数1–10000；类型new/replacement/reserve与urgency high/medium/low可选；requestedOn/expectedOn各自合法日期，职责/资格各≤2000；当前schema未定义两日期先后比较，不能写成既有约束",
+            "fields": "需求草稿/显式提交；candidate必填active requisitionId；姓名1–200；email合法或空；职位冻结版本；CNY月薪整数分或面议；headcount整数1–10000；类型new/replacement/reserve与urgency high/medium/low可选；requestedOn/expectedOn各自合法日期，职责/资格各≤2000；当前schema未定义两日期先后比较，不能写成既有约束；当前候选邮箱仅同需求非rejected记录不区分大小写去重，不按姓名/电话全局合并；旧需求draft且未标requisitionSubmissionRequired仍按待审批兼容，不能将所有draft视为同一种待提交。",
             "roles": "当前组织HR录入；所有贡献者不能审批自己的需求/录用；指定面试人按排期权限",
             "lifecycle": "需求draft/submitted/returned/active/closed；候选screening/interviewed/offered/approved/accepted/hired/rejected",
             "actions": "保存/保存并提交、独立批准、职位启用/修订、候选登记、退回、关闭",
@@ -28086,7 +28356,7 @@
               "lib/hris/recruitment-jobs.ts"
             ],
             "acceptance": "不同需求的职位版本不能关联；有候选引用的职位改版不能覆盖旧版；需求关闭不能遗留活动候选；邮件权限撤销后不能写邮箱",
-            "gap": "原站允许职位或人才库入口，当前必须有需求，无法覆盖独立人才库；外部来源/门户未实现",
+            "gap": "原站允许职位或人才库入口，当前必须有需求，无法覆盖独立人才库；外部来源/门户未实现；BC-R14原站系统级查重条件与当前同需求邮箱去重不同，原站重复关系≠自动合并，R-SPEC-01需同时定义自然人/申请/库关系及去重处理。",
             "classification": "本项目既有实现静态事实；转为产品要求待评审",
             "accepted": false,
             "id": "BP-R-REQ-01"
@@ -28102,7 +28372,7 @@
               "lib/hris/recruitment-evaluations.ts"
             ],
             "acceptance": "待进行排期阻断录用；未推荐推进不允许录用；未接受或尚未到入职日拒绝入职；重复入职不重复建员工或计数",
-            "gap": "面试日历/通知、电子签回执、Offer占编与跨法人/再入职接口未就绪",
+            "gap": "面试日历/通知、电子签回执、Offer占编与跨法人/再入职接口未就绪；无排期的普通/结构化评价仍有独立路径，不能把指定面试人/结束时间限制泛化为所有评价。",
             "classification": "本项目既有实现静态事实；转为产品要求待评审",
             "accepted": false,
             "id": "BP-R-REQ-02"
@@ -28153,6 +28423,40 @@
             "acceptance": "非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503",
             "gap": "这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定",
             "classification": "本项目接口静态事实；候选验收契约待评审",
+            "accepted": false
+          },
+          {
+            "id": "BP-R-REQ-05",
+            "object": "面试排期与冻结评价表",
+            "fields": "标题1–200；onsite/video/phone；带时区时间转UTC存储，展示时区固定Asia/Shanghai；地点/链接1–1000；指定员工及已定版同组织评价表；结束晚于开始且单次≤24小时。",
+            "roles": "HR建立/改期/取消；同岗位组织、在职且有有效管理评价账号的指定人员才可在排期结束后评价，评价时重验当前范围及任职；排期本身不新增账号或发送邀请。",
+            "lifecycle": "scheduled→completed/cancelled；只scheduled可改期；同评价表ID改期沿用原冻结快照，换表重验并冻结；改期保留排期ID，当前函数不产生独立排期修订历史。",
+            "actions": "创建、改期、明确取消、结束后关联结构化评价；候选转为录用或拒绝后原排期不可评价，但仍需处理残留scheduled。",
+            "codeRefs": [
+              "lib/hris/interview-schedule.ts",
+              "lib/hris/recruitment-status.ts",
+              "lib/hris/recruitment.ts"
+            ],
+            "acceptance": "同候选或面试官已排scheduled发生严格时间交叠拒绝，相邻结束/开始允许；超过24小时拒绝；离职/转组织/撤评价权限后不得评价；改期不可覆盖completed/cancelled；原表修订不覆盖排期冻结标准。",
+            "gap": "代码未拒绝创建已过去时间的排期；冲突扫描所有scheduled而非仅appointmentLive，失效候选排期未取消仍可能占时段。是否允许补录/过期自动释放需评审；未实现外部日历、通知、会议室预订和可核验视频接口。",
+            "classification": "本项目当前静态实现候选；未复测、未业务签署，不作为原站规则",
+            "accepted": false
+          },
+          {
+            "id": "BP-R-REQ-06",
+            "object": "入职后候选信息权限与员工身份同步",
+            "fields": "原站申请数据/人才数据独立管控范围，授权模式、实习生例外、离职解除；候选与员工身份关联ID及生效版本待补证。",
+            "roles": "招聘HR、人才库访问者、入职后授权模式用户需分别评审；用户E2维持唯一人类访问，不以管理员可见推断其他身份。",
+            "lifecycle": "招聘入职→标记受限→符合模式用户访问；离职是否解除取决设置；再入职/撤销入职的重新计算及异常补偿未知。",
+            "actions": "配置只读说明；本项目hire仅原子创建员工和更新候选状态，未实现上述入职后特殊查看管控。",
+            "codeRefs": [
+              "lib/hris/recruitment.ts",
+              "lib/hris/development.ts",
+              "docs/P1_Source_Observations_20260907.md"
+            ],
+            "acceptance": "待授权模式明确后，以合成数据覆盖入职前后/实习例外/离职/再入职、申请与人才两条查询及字段遮蔽；同步失败不可静默扩权；当前未执行或批准模式。",
+            "gap": "BC-R16只证明原站配置语义，不授权本项目新增角色或对离职者扩大数据访问；与F-SPEC-04身份连续性共同受限，不阻断内部招聘需求链路规格。",
+            "classification": "原站局部配置证据及现有实现差异；具体权限策略待补证和业务评审",
             "accepted": false
           }
         ],
@@ -29092,7 +29396,7 @@
         "id": "R-SPEC-01",
         "topic": "候选人主对象与招聘需求/人才库关系",
         "status": "待补证及产品范围评审，不阻断独立需求编写",
-        "basis": "BC-R03原站空表职位或人才库至少一项；recruitment.ts当前候选必须绑定active需求；原48组M14独立AI人才库未实现",
+        "basis": "BC-R03原站空表职位或人才库至少一项；recruitment.ts当前候选必须绑定active需求；原48组M14独立AI人才库未实现；BC-R14系统级证件/邮箱/手机号/四字段组合查重及规则变更全量重算，尚未验证重复后合并行为。",
         "proposal": "推荐保留当前招聘需求内候选链路作为首批可复用对象，另明确全局人员与多职位/人才库关系需求；尚未批准分期边界",
         "alternatives": [
           "将现有candidate改为全局人才主档＋多应聘关系：影响去重/权限/录用/历史迁移",
@@ -29257,6 +29561,12 @@
         "dependency": "BP-P评价/等级/系数→BP-S奖金薪资→BP-I报表",
         "contract": "BC-P12/13系数规则有总生成模式与单规则状态、等级引用/公式模式、系数区间；单规则启用不等于已被采用。现有band供人才盘点、originalRating显示等级、score原始分数，均不能直接作为薪酬乘数；系数版本、引用时点及更正补差需独立规格。",
         "evidence": "BC-P12提示当前规则无效、BC-P13空表；performance-ratings.ts与payroll.ts当前独立实现"
+      },
+      {
+        "term": "招聘人才主对象、储备关系与筛选权限",
+        "dependency": "BP-R招聘职位/人才库→BP-F入职身份→BP-I共享权限",
+        "contract": "BC-R14查重是重复关系，BC-R15同库重复储备可更新关系；候选主档、应聘申请、储备关系应分开评审，不能用现有每需求candidate或筛选全公司职位推出全局个人数据可见。推荐模型仍为R-SPEC-01待批。",
+        "evidence": "BC-R03/14/15；lib/hris/recruitment.ts"
       }
     ],
     "consistencyReview": {
