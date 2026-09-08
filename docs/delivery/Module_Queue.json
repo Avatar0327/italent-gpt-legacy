@@ -219,13 +219,13 @@
     },
     {
       "id": "P-RATINGS",
-      "status": "technical-verified-pending-publish",
+      "status": "technical-delivered-v88-partial",
       "dependencies": [
         "H004",
         "P-SOURCE"
       ],
       "acceptance": "同组织定版等级、冻结历史、明确区间、三档映射、独立申诉与旧百分制兼容",
-      "next": "综合验证后统一私有发布；手工等级/系数/不参与考核与在途更新保留"
+      "next": "保持原版兼容与申诉回归；手工等级、系数、排除考核与在途更新继续保留"
     }
   ]
 }
