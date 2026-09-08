@@ -162,21 +162,40 @@
     },
     {
       "id": "L-RECURRENCE",
-      "status": "validated-awaiting-private-release",
+      "status": "technical-delivered-v81",
       "dependencies": [
         "L-BIND"
       ],
       "acceptance": "新轮实例与任务原子隔离、重复请求/撤销不重复奖励、不得冒称自动调度",
-      "next": "146项综合通过；统一发布后保留自动调度/积分待办"
+      "next": "作业新轮已验证，自动调度与积分仍待开发"
     },
     {
       "id": "L-EXAM-TYPES",
-      "status": "ready",
+      "status": "technical-delivered-v82",
       "dependencies": [
         "L-EXAM"
       ],
       "acceptance": "客观题版本、计分和答案投影，旧单选兼容；人工题/题库另列",
-      "next": "依据BC-L08抽题与分值证据，增加显式客观题类型和分值，保留百分制与原始分区别"
+      "next": "保留人工题/题库待办"
+    },
+    {
+      "id": "L-HOMEWORK",
+      "status": "validated-awaiting-private-release",
+      "dependencies": [
+        "L-BIND"
+      ],
+      "acceptance": "独立提交/批阅版本、转交撤权、阶段/循环及单项整单取消隔离",
+      "next": "152项综合及类型/构建通过；统一私有发布"
+    },
+    {
+      "id": "L-WEIGHTED-GRADE",
+      "status": "ready",
+      "dependencies": [
+        "L-HOMEWORK",
+        "L-GRADE"
+      ],
+      "acceptance": "BC-L10来源映射，缺失不归零、不同实例不可借用、权重版本冻结",
+      "next": "实现考试最高/平均与作业当前批阅分的显式权重规则，未知政策标记"
     }
   ]
 }

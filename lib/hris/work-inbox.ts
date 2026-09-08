@@ -1,3 +1,4 @@
+import {canReviewHomework} from './learning-homework';
 import {learningStageOpen} from './learning-requirements';
 import {learningTaskCurrent} from './learning-plan-model';
 import {performancePlanLive} from './performance-availability';
@@ -8,7 +9,7 @@ import {payrollWriter,payrollReviewer,payrollRecordAccess} from './payroll-acces
 import {authorizeCommand,type Member} from './authorization';
 import type {State} from './model';
 import {visibleRecord,type DevelopmentRecord as R} from './development';
-export const inboxKinds=['learningExamTask','learningExamAttempt','learningAssignment','performanceCheckin','performanceGoalChange','certificateTemplate','certificateAward','mentorProfile','mentorship','mentoringLog','instructorCampaign','instructorApplication','instructorTrial','instructorProfile','trainingRequest','cadreNomination','cadreObservation','employeeFieldDefinition','employeeFieldValue','review','reviewCalibration','payBatch','paySlip','payAdjustment','payQuery','performancePlan','performanceCycle','performance','performanceAppeal','requisition','candidate','interview','leave','correction','shift','plan','enrollment','instructorCertification','onboardingPlan','trainingAttendance','trainingSession','training','course'] as const;
+export const inboxKinds=['homeworkSubmission','homeworkTask','learningExamTask','learningExamAttempt','learningAssignment','performanceCheckin','performanceGoalChange','certificateTemplate','certificateAward','mentorProfile','mentorship','mentoringLog','instructorCampaign','instructorApplication','instructorTrial','instructorProfile','trainingRequest','cadreNomination','cadreObservation','employeeFieldDefinition','employeeFieldValue','review','reviewCalibration','payBatch','paySlip','payAdjustment','payQuery','performancePlan','performanceCycle','performance','performanceAppeal','requisition','candidate','interview','leave','correction','shift','plan','enrollment','instructorCertification','onboardingPlan','trainingAttendance','trainingSession','training','course'] as const;
 export type InboxItem={id:string;recordId:string;domain:string;title:string;employeeName:string;action:string;href:string;updatedAt:string;due:string|null};
 export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
  const rows:InboxItem[]=[],hr=['admin','hr'].includes(m.role),manager=hr||m.role==='manager';
@@ -21,6 +22,7 @@ export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
   if(!visibleRecord(r,records,state,m))continue;
   const self=r.employeeId===m.employeeId,e=employee(r.employeeId);
   const add=(domain:string,action:string,href:string,suffix='',title=r.payload.title??action)=>rows.push({id:r.kind+':'+r.id+suffix,recordId:r.id,domain,title,employeeName:e?.name??'—',action,href,updatedAt:r.updatedAt,due:r.payload.due??null});
+  if(r.kind==='homeworkTask'&&canReviewHomework(r,state,m,records))add('learning','独立作业批阅','/learning-homework');
   if(r.kind==='performanceCheckin'&&e?.status!=='离职'){
    const p=records.find(p=>p.id===r.referenceId&&p.kind==='performancePlan'),live=performancePlanLive(state,records,p)&&p?.status==='confirmed'&&records.some(c=>c.id===p.referenceId&&c.kind==='performanceCycle'&&c.status==='active')&&!records.some(c=>c.kind==='performance'&&c.payload.sourcePlanId===p.id);
    if(live&&r.status==='submitted'&&manager&&!self&&r.createdBy!==m.userId)add('performance','目标执行反馈','/performance-checkins');

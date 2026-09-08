@@ -4,28 +4,29 @@ import {businessDate} from './business-time';
 
 // Resource versions remain distinct: embedded exams are course evidence;
 // standalone exams have their own task and immutable attempt evidence.
-export type LearningRequirement={id:string;kind:'course'|'exam';resourceId:string};
+export type LearningRequirement={id:string;kind:'course'|'exam'|'homework';resourceId:string};
 export function courseRequirements(courseIds:string[],previous:LearningRequirement[]=[]):LearningRequirement[]{
  return courseIds.map(resourceId=>({id:previous.find(r=>r.kind==='course'&&r.resourceId===resourceId)?.id??`course:${resourceId}`,kind:'course',resourceId}));
 }
-export function resourceRequirements(courseIds:string[],examIds:string[],previous:LearningRequirement[]=[]):LearningRequirement[]{return [...courseRequirements(courseIds,previous),...examIds.map(resourceId=>({id:previous.find(r=>r.kind==='exam'&&r.resourceId===resourceId)?.id??`exam:${resourceId}`,kind:'exam' as const,resourceId}))];}
+export function resourceRequirements(courseIds:string[],examIds:string[],previous:LearningRequirement[]=[],homeworkIds:string[]=[]):LearningRequirement[]{return [...courseRequirements(courseIds,previous),...examIds.map(resourceId=>({id:previous.find(r=>r.kind==='exam'&&r.resourceId===resourceId)?.id??`exam:${resourceId}`,kind:'exam' as const,resourceId})),...homeworkIds.map(resourceId=>({id:previous.find(r=>r.kind==='homework'&&r.resourceId===resourceId)?.id??`homework:${resourceId}`,kind:'homework' as const,resourceId}))];}
 export function learningRequirements(record:R):LearningRequirement[]{
- return record.payload.learningRequirements??resourceRequirements(record.payload.courseIds??[],record.payload.examIds??[]);
+ return record.payload.learningRequirements??resourceRequirements(record.payload.courseIds??[],record.payload.examIds??[],[],record.payload.homeworkIds??[]);
 }
 export function learningAssignmentCurrent(assignment:R,state:State){
  const employee=state.employees.find(e=>e.id===assignment.employeeId);
  return !!employee&&employee.status!=='离职'&&employee.orgId===assignment.payload.orgId&&state.orgs.some(o=>o.id===employee.orgId&&o.status==='启用');
 }
 export function learningRequirementProgress(assignment:R,records:R[]){
- const requirements=learningRequirements(assignment),courseIds=[...(assignment.payload.courseIds??[]),...(assignment.payload.examIds??[])];
- const valid=requirements.length>0&&requirements.length===courseIds.length&&new Set(requirements.map(r=>r.id)).size===requirements.length&&new Set(requirements.map(r=>r.resourceId)).size===requirements.length&&requirements.every(r=>(r.kind==='course'?assignment.payload.courseIds:r.kind==='exam'?assignment.payload.examIds:[])?.includes(r.resourceId));
- const tasks=records.filter(r=>['enrollment','learningExamTask'].includes(r.kind)&&r.payload.learningAssignmentId===assignment.id);
+ const requirements=learningRequirements(assignment),courseIds=[...(assignment.payload.courseIds??[]),...(assignment.payload.examIds??[]),...(assignment.payload.homeworkIds??[])];
+ const valid=requirements.length>0&&requirements.length===courseIds.length&&new Set(requirements.map(r=>r.id)).size===requirements.length&&new Set(requirements.map(r=>r.resourceId)).size===requirements.length&&requirements.every(r=>(r.kind==='course'?assignment.payload.courseIds:r.kind==='exam'?assignment.payload.examIds:r.kind==='homework'?assignment.payload.homeworkIds:[])?.includes(r.resourceId));
+ const tasks=records.filter(r=>['enrollment','learningExamTask','homeworkTask'].includes(r.kind)&&r.payload.learningAssignmentId===assignment.id);
  const items=requirements.map(requirement=>{
-  const matches=tasks.filter(t=>t.referenceId===requirement.resourceId&&t.kind===(requirement.kind==='course'?'enrollment':'learningExamTask'));
+  const matches=tasks.filter(t=>t.referenceId===requirement.resourceId&&t.kind===(requirement.kind==='course'?'enrollment':requirement.kind==='exam'?'learningExamTask':'homeworkTask'));
   const task=matches.length===1?matches[0]:undefined;
   const bound=!!task&&task.employeeId===assignment.employeeId&&(!task.payload.learningRequirementId||task.payload.learningRequirementId===requirement.id);
   const attempt=bound&&requirement.kind==='exam'?records.find(a=>a.kind==='learningExamAttempt'&&a.referenceId===task.id&&a.employeeId===assignment.employeeId&&a.payload.examId===requirement.resourceId&&a.payload.passed&&Number.isFinite(a.payload.score)&&a.payload.score!>=task.payload.passingScore!):undefined;
-  const complete=bound&&task.status==='completed'&&(requirement.kind==='exam'?!!attempt:!!task.payload.verifiedBy&&!!task.payload.verifiedAt);
+  const submission=bound&&requirement.kind==='homework'?records.find(a=>a.kind==='homeworkSubmission'&&a.id===task.payload.submissionId&&a.referenceId===task.id&&a.employeeId===assignment.employeeId&&a.status==='passed'&&a.payload.passed===true&&a.payload.verifiedBy===task.payload.verifiedBy&&a.payload.verifiedAt===task.payload.verifiedAt):undefined;
+  const complete=bound&&task.status==='completed'&&(requirement.kind==='exam'?!!attempt:requirement.kind==='homework'?!!submission&&!!task.payload.verifiedBy&&!!task.payload.verifiedAt:!!task.payload.verifiedBy&&!!task.payload.verifiedAt);
   return {kind:requirement.kind,attemptId:attempt?.id??null,requirementId:requirement.id,resourceId:requirement.resourceId,taskId:bound?task.id:null,complete,verifiedBy:complete?task.payload.verifiedBy:null,verifiedAt:complete?task.payload.verifiedAt:null,sourceEnrollmentId:complete?task.payload.sourceEnrollmentId??null:null};
  });
  const stages=(assignment.payload.trainingStages??[]).map(stage=>{
@@ -60,6 +61,7 @@ export function learningStageOpen(task:R,records:R[],at=new Date().toISOString()
  return index>=0&&stage.courseIds.slice(0,index).every(resourceId=>{
   const item=progress.items.find(i=>i.resourceId===resourceId);
   if(item?.complete)return true;
+  if(item?.kind==='homework'&&stage.homeworkSubmissionUnlock&&item.taskId){const predecessor=records.find(r=>r.id===item.taskId);return !!predecessor&&['active','submitted','returned','completed'].includes(predecessor.status)&&records.some(s=>s.kind==='homeworkSubmission'&&s.referenceId===item.taskId&&s.employeeId===assignment.employeeId&&!!s.payload.submissionVersion);}
   if(!stage.examSubmissionUnlock||item?.kind!=='exam'||!item.taskId)return false;
   const predecessor=records.find(r=>r.id===item.taskId);
   if(!predecessor||!['active','failed','completed'].includes(predecessor.status))return false;
