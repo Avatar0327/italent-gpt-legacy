@@ -70,3 +70,5 @@ enroll新增可选assignmentId，须匹配有效learningAssignment的员工、�
 - 必須按任务ID隔离尝试、按原始核验来源追溯课程。完成投影使用learningRequirementProgress，开放使用learningStageOpen及当前人员/日期判断，不能将所有completed状态直接相加。
 - 试卷管理限admin/hr当前组织；学员仅接收有权任务的去答案paper。独立考试台账限admin/hr；人才档案仍沿用其角色范围。
 - 单选等权百分制取整、通过停止重考为当前独立规则；未核实为原站完整算法。计划总成绩暂未生成。
+
+SC-2成绩增量：gradeRule随定义版本和实例冻结；learningGrade输出state/score/missingExamIds/attemptIds，not_configured与pending的score均为null，provisional和final保留真实0分。只使用本实例requirementId绑定的考试任务与尝试。final仅代表实例已结项；不表示生产或业务已验收。规则保存端点沿用/api/learning-plans的grading命令。

@@ -135,21 +135,30 @@
     },
     {
       "id": "L-BIND",
-      "status": "in-progress",
-      "next": "课程与独立考试混合计划、报表及档案回流综合验证与私有发布"
+      "status": "validated-awaiting-private-release",
+      "next": "141项综合、类型及构建通过；统一保存和私有发布，后续继续阶段窗口"
     },
     {
       "id": "L-GRADE",
-      "status": "pending",
+      "status": "validated-awaiting-private-release",
       "dependencies": [
         "L-BIND"
       ],
-      "next": "核实成绩算法不确定项，独立实现成绩规则版本，未作答不静默计零"
+      "next": "141项综合、类型及构建通过；统一保存和私有发布，后续继续阶段窗口"
     },
     {
       "id": "G1-UAT",
       "status": "blocked-ui-environment",
       "next": "预览服务正常但浏览器ERR_BLOCKED_BY_CLIENT；不阻断其他开发，不冒称通过"
+    },
+    {
+      "id": "L-STAGE-WINDOW",
+      "status": "researching",
+      "dependencies": [
+        "L-REQ"
+      ],
+      "acceptance": "阶段截止与逾期规则明确标记原站证据/独立策略；服务端、待办和历史一致，兼容旧版本",
+      "next": "只读核对阶段截止文案与现有计划配置，补齐日期边界和阶段内顺序"
     }
   ]
 }
