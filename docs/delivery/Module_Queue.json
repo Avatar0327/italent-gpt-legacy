@@ -229,7 +229,7 @@
     },
     {
       "id": "P-ACTIVITY",
-      "status": "technical-verified-pending-publish",
+      "status": "technical-delivered-v89-partial",
       "dependencies": [
         "P-SOURCE",
         "P-RATINGS"
