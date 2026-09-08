@@ -1154,6 +1154,69 @@
         }
       ],
       "source": "Module_Queue.json#P-INDICATOR-CATALOG"
+    },
+    {
+      "id": "F-FIELD-EXIT",
+      "phase": "P3",
+      "moduleId": "M01",
+      "title": "离职后档案申请复核保护",
+      "queueRef": "F-FIELD-EXIT",
+      "criteria": [
+        {
+          "id": "F-FIELD-EXIT-AC1",
+          "text": "离职前提出的档案字段申请不能在离职后批准生效；独立HR可退回，正式值、修订与历史保持一致；仅合成数据",
+          "accepted": false
+        }
+      ],
+      "source": "Controller_Lifecycle_Review.md",
+      "dimensions": {
+        "requirements": "既有独立规则；原站详细规则待核实",
+        "development": "已修复",
+        "testing": "本轮合成相关测试通过，精确报告见Controller_Lifecycle_Verification.json",
+        "production": "未验收"
+      }
+    },
+    {
+      "id": "C-LIFECYCLE-REVIEW",
+      "phase": "P3",
+      "moduleId": "M03",
+      "title": "提名审批时员工及岗位状态重检",
+      "queueRef": "C-LIFECYCLE-REVIEW",
+      "criteria": [
+        {
+          "id": "C-LIFECYCLE-REVIEW-AC1",
+          "text": "核查干部任期/考察待办在员工离职或调动后的读写与历史边界；仅修复有既有规则依据的确切缺陷",
+          "accepted": false
+        }
+      ],
+      "source": "Controller_Lifecycle_Review.md",
+      "dimensions": {
+        "requirements": "既有独立规则；原站详细规则待核实",
+        "development": "已修复",
+        "testing": "本轮合成相关测试通过，精确报告见Controller_Lifecycle_Verification.json",
+        "production": "未验收"
+      }
+    },
+    {
+      "id": "L-LIFECYCLE-REVIEW",
+      "phase": "P3",
+      "moduleId": "M27",
+      "title": "学习任务生命周期组合复核",
+      "queueRef": "L-LIFECYCLE-REVIEW",
+      "criteria": [
+        {
+          "id": "L-LIFECYCLE-REVIEW-AC1",
+          "text": "核查学习未完成任务与员工状态变化组合，保留已核验成果和历史，不自动授予资格",
+          "accepted": false
+        }
+      ],
+      "source": "Controller_Lifecycle_Review.md",
+      "dimensions": {
+        "requirements": "既有独立规则；原站详细规则待核实",
+        "development": "复用已有实现，无新应用改动",
+        "testing": "本轮合成相关测试通过，精确报告见Controller_Lifecycle_Verification.json",
+        "production": "未验收"
+      }
     }
   ],
   "acceptancePolicy": {

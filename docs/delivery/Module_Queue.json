@@ -424,6 +424,43 @@
       ],
       "acceptance": "BC-P06同组织定性指标版本、目标来源服务端快照、归档前后新旧引用、目标调整原子性与无指标兼容",
       "next": "220/220综合、类型及构建通过，提交打包私有发布；继续引用情况与追溯，定量、共享分类和自动下发仍保留"
+    },
+    {
+      "id": "F-FIELD-EXIT",
+      "status": "tested-awaiting-private-publish",
+      "dependencies": [
+        "F01",
+        "F02"
+      ],
+      "acceptance": "离职前提出的档案字段申请不能在离职后批准生效；独立HR可退回，正式值、修订与历史保持一致；仅合成数据",
+      "next": "保留独立退回及历史回归，集中类型/构建后私有发布；人工业务验收另记"
+    },
+    {
+      "id": "C-LIFECYCLE-REVIEW",
+      "status": "tested-awaiting-private-publish",
+      "dependencies": [
+        "F-FIELD-EXIT"
+      ],
+      "acceptance": "核查干部任期/考察待办在员工离职或调动后的读写与历史边界；仅修复有既有规则依据的确切缺陷",
+      "next": "保留独立退回及历史回归，集中类型/构建后私有发布；人工业务验收另记"
+    },
+    {
+      "id": "L-LIFECYCLE-REVIEW",
+      "status": "technical-reviewed-tested",
+      "dependencies": [
+        "C-LIFECYCLE-REVIEW"
+      ],
+      "acceptance": "核查学习未完成任务与员工状态变化组合，保留已核验成果和历史，不自动授予资格",
+      "next": "本轮学习组合5项通过，未发现须新增改动的生命周期缺陷；继续既有阶段/循环完整范围"
+    },
+    {
+      "id": "G4-WORKER-SMOKE",
+      "status": "blocked-runtime-network-approval",
+      "dependencies": [
+        "G0"
+      ],
+      "acceptance": "以实际Worker兼容运行时验证构建产物启动和匿名访问边界，消除普通Node误加载cloudflare协议的测试工具问题；不代替线上或人工验收",
+      "next": "Miniflare启动尝试被环境网络审批取消，未建立运行中进程；取得可运行的Worker测试环境后验证，不用普通Node伪替代。继续原站只读核实和独立业务开发"
     }
   ]
 }
