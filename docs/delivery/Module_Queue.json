@@ -516,11 +516,11 @@
     },
     {
       "id": "P1-L-RULES",
-      "status": "planned-source-verification",
+      "status": "paused-by-user",
       "dependencies": [],
       "acceptance": "将已观察结构、未核实规则与独立设计逐条映射；业务负责人确认范围和规则，记录确认人、时间及证据，不以代码或测试代签",
       "recoveryCondition": "当前原站会话已恢复；继续逐项只读核实，完整业务规则需负责人确认",
-      "next": "已观察计划和认证结构；复杂循环、共享、多期、费用与成绩规则仍须逐项核实。会话已恢复，继续只读核实入口与空表，不执行提交、审批、消息或导出；按既定模块顺序核对"
+      "next": "用户已暂停扩展；学习发布审批只读证据待后续核实节点，禁止继续实现"
     },
     {
       "id": "P1-P-RULES",
@@ -585,32 +585,36 @@
       "status": "technical-reviewed-tested",
       "dependencies": [],
       "acceptance": "组织/员工/岗位标识及入转调离；按业务场景独立验收并记录确认人、时间与证据",
-      "next": "限定技术证据见docs/delivery/acceptance/G0.md；保留历史及当前关联回归，不代签人工业务或生产验收",
-      "recoveryCondition": "完成人工业务核对与签署"
+      "next": "评审F01_F04_Requirements_Baseline.md的B02/B03规则，恢复界面访问/明确合成环境后执行UAT；等待确认期间不扩展范围",
+      "recoveryCondition": "B01预览浏览器访问恢复；B02/B03业务规则集中确认；B04实际测试身份与现有访问条件；B05合成云端附件操作环境",
+      "acceptancePackage": "F01-F04"
     },
     {
       "id": "F02",
       "status": "technical-reviewed-tested",
       "dependencies": [],
       "acceptance": "角色、组织和字段权限及撤权；按业务场景独立验收并记录确认人、时间与证据",
-      "next": "限定技术证据见docs/delivery/acceptance/G0.md；保留历史及当前关联回归，不代签人工业务或生产验收",
-      "recoveryCondition": "完成人工业务核对与签署"
+      "next": "评审F01_F04_Requirements_Baseline.md的B02/B03规则，恢复界面访问/明确合成环境后执行UAT；等待确认期间不扩展范围",
+      "recoveryCondition": "B01预览浏览器访问恢复；B02/B03业务规则集中确认；B04实际测试身份与现有访问条件；B05合成云端附件操作环境",
+      "acceptancePackage": "F01-F04"
     },
     {
       "id": "F03",
       "status": "technical-reviewed-tested",
       "dependencies": [],
       "acceptance": "修订冲突、事务、审批快照、审计；按业务场景独立验收并记录确认人、时间与证据",
-      "next": "限定技术证据见docs/delivery/acceptance/G0.md；保留历史及当前关联回归，不代签人工业务或生产验收",
-      "recoveryCondition": "完成人工业务核对与签署"
+      "next": "评审F01_F04_Requirements_Baseline.md的B02/B03规则，恢复界面访问/明确合成环境后执行UAT；等待确认期间不扩展范围",
+      "recoveryCondition": "B01预览浏览器访问恢复；B02/B03业务规则集中确认；B04实际测试身份与现有访问条件；B05合成云端附件操作环境",
+      "acceptancePackage": "F01-F04"
     },
     {
       "id": "F04",
       "status": "technical-reviewed-tested",
       "dependencies": [],
       "acceptance": "本人附件和历史权限；按业务场景独立验收并记录确认人、时间与证据",
-      "next": "限定技术证据见docs/delivery/acceptance/G0.md；保留历史及当前关联回归，不代签人工业务或生产验收",
-      "recoveryCondition": "完成人工业务核对与签署"
+      "next": "评审F01_F04_Requirements_Baseline.md的B02/B03规则，恢复界面访问/明确合成环境后执行UAT；等待确认期间不扩展范围",
+      "recoveryCondition": "B01预览浏览器访问恢复；B02/B03业务规则集中确认；B04实际测试身份与现有访问条件；B05合成云端附件操作环境",
+      "acceptancePackage": "F01-F04"
     },
     {
       "id": "C01",
@@ -673,12 +677,15 @@
     },
     {
       "id": "F-CONTRACT-FIELDS",
-      "status": "tested-awaiting-private-publish",
+      "status": "private-published-awaiting-business-acceptance",
       "dependencies": [
         "BC-F02字段继承说明及信息集已只读核实"
       ],
       "acceptance": "合同文本字段独立版本与合同快照；续签按当前字段版本选择继承或不继承，手工覆盖/清空有明确来源，旧合同不被配置变化改写；HR权限与事务保持",
-      "next": "98/98关联回归、类型通过；集中构建私有发布后继续学习剩余已核实范围；任职继承/合同变更/其他字段类型保留"
+      "next": "v110已发布；任职继承/合同变更/其他字段类型保留，人工业务验收待签署"
     }
-  ]
+  ],
+  "executionMode": "acceptance-closure",
+  "activeAcceptancePackage": "F01-F04",
+  "expansionPaused": true
 }

@@ -12,7 +12,7 @@
       "requirements": "部分页面核实；完整规则待核实",
       "developed": "组织人员、教育/工作/项目经历、岗位职级、入转调离、编制、协议类别、合同覆盖及续签报表、自定义字段分组及状态必填检查；合同自定义文本字段版本与续签继承快照",
       "remaining": "复杂跨字段联动、兼岗、复杂再入职及法人变更",
-      "tested": "既有集成测试子集；未逐需求完备映射",
+      "tested": "本轮F01–F04核心25/25、附件撤权5/5；其余既有证据保留，人工界面及生产未验收",
       "productionAccepted": "未验收"
     },
     {
@@ -578,7 +578,15 @@
         }
       ],
       "source": "docs/delivery/acceptance/G0.md",
-      "queueRef": "F01"
+      "queueRef": "F01",
+      "requirementBaseline": "docs/delivery/F01_F04_Requirements_Baseline.md",
+      "businessAcceptanceGuide": "docs/delivery/F01_F04_Business_Acceptance.md",
+      "dimensions": {
+        "requirements": "部分原站页面核实；BC-F03调动日期/交接等差异保留，角色与生效规则待集中评审",
+        "development": "P2/G0限定功能已开发；本轮仅验收收口，不扩展其他模块",
+        "testing": "本轮核心25/25及附件/撤权5/5；界面ERR_BLOCKED_BY_CLIENT，多角色/云端材料尚未验证",
+        "production": "未验收；人工业务未签署"
+      }
     },
     {
       "id": "F02",
@@ -593,7 +601,15 @@
         }
       ],
       "source": "docs/delivery/acceptance/G0.md",
-      "queueRef": "F02"
+      "queueRef": "F02",
+      "requirementBaseline": "docs/delivery/F01_F04_Requirements_Baseline.md",
+      "businessAcceptanceGuide": "docs/delivery/F01_F04_Business_Acceptance.md",
+      "dimensions": {
+        "requirements": "部分原站页面核实；BC-F03调动日期/交接等差异保留，角色与生效规则待集中评审",
+        "development": "P2/G0限定功能已开发；本轮仅验收收口，不扩展其他模块",
+        "testing": "本轮核心25/25及附件/撤权5/5；界面ERR_BLOCKED_BY_CLIENT，多角色/云端材料尚未验证",
+        "production": "未验收；人工业务未签署"
+      }
     },
     {
       "id": "F03",
@@ -608,7 +624,15 @@
         }
       ],
       "source": "docs/delivery/acceptance/G0.md",
-      "queueRef": "F03"
+      "queueRef": "F03",
+      "requirementBaseline": "docs/delivery/F01_F04_Requirements_Baseline.md",
+      "businessAcceptanceGuide": "docs/delivery/F01_F04_Business_Acceptance.md",
+      "dimensions": {
+        "requirements": "部分原站页面核实；BC-F03调动日期/交接等差异保留，角色与生效规则待集中评审",
+        "development": "P2/G0限定功能已开发；本轮仅验收收口，不扩展其他模块",
+        "testing": "本轮核心25/25及附件/撤权5/5；界面ERR_BLOCKED_BY_CLIENT，多角色/云端材料尚未验证",
+        "production": "未验收；人工业务未签署"
+      }
     },
     {
       "id": "F04",
@@ -623,7 +647,15 @@
         }
       ],
       "source": "docs/delivery/acceptance/G0.md",
-      "queueRef": "F04"
+      "queueRef": "F04",
+      "requirementBaseline": "docs/delivery/F01_F04_Requirements_Baseline.md",
+      "businessAcceptanceGuide": "docs/delivery/F01_F04_Business_Acceptance.md",
+      "dimensions": {
+        "requirements": "部分原站页面核实；BC-F03调动日期/交接等差异保留，角色与生效规则待集中评审",
+        "development": "P2/G0限定功能已开发；本轮仅验收收口，不扩展其他模块",
+        "testing": "本轮核心25/25及附件/撤权5/5；界面ERR_BLOCKED_BY_CLIENT，多角色/云端材料尚未验证",
+        "production": "未验收；人工业务未签署"
+      }
     },
     {
       "id": "C01",

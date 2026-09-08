@@ -1,15 +1,15 @@
 {
-  "checkedAt": "2026-09-08T11:48:21.258481+00:00",
+  "checkedAt": "2026-09-08T12:02:30.023487+00:00",
   "environment": "Sites production / 仅所有者私有访问",
-  "latestSavedVersion": 109,
-  "latestSavedCommit": "df3f5e019aa0efe78632a5ee9af7724f03db8b45",
+  "latestSavedVersion": 110,
+  "latestSavedCommit": "a54381363e52c513fb79bc1a227368dad8bedab9",
   "latestDeploymentVerified": true,
-  "note": "v109干部访谈记录及源站恢复证据已私有发布核验成功；回执随下次构建进入页面。",
+  "note": "v110合同字段版本快照与续签继承已私有发布核验成功；回执随下次构建进入页面。",
   "verified": {
-    "version": 109,
-    "deploymentId": "appgdep_6a9ff4e141fc8191af6540dcea386c21",
-    "commit": "df3f5e019aa0efe78632a5ee9af7724f03db8b45",
-    "time": "2026-09-08T11:44:00.732145+00:00",
+    "version": 110,
+    "deploymentId": "appgdep_6a9ff90022d88191b161d2d398905e51",
+    "commit": "a54381363e52c513fb79bc1a227368dad8bedab9",
+    "time": "2026-09-08T12:01:17.221333+00:00",
     "status": "succeeded",
     "envRevision": 1
   },
