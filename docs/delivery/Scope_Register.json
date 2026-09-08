@@ -12,7 +12,7 @@
       "requirements": "部分页面核实；完整规则待核实",
       "developed": "组织人员、教育/工作/项目经历、岗位职级、入转调离、编制、协议类别、合同覆盖及续签报表、自定义字段分组及状态必填检查；合同自定义文本字段版本与续签继承快照",
       "remaining": "复杂跨字段联动、兼岗、复杂再入职及法人变更",
-      "tested": "本轮F01–F04核心25/25、附件撤权5/5；其余既有证据保留，人工界面及生产未验收",
+      "tested": "首包角色安排本轮15/15；既有25/25、5/5等技术证据保留；真人UAT未签署",
       "productionAccepted": "未验收"
     },
     {
@@ -582,9 +582,9 @@
       "requirementBaseline": "docs/delivery/F01_F04_Requirements_Baseline.md",
       "businessAcceptanceGuide": "docs/delivery/F01_F04_Business_Acceptance.md",
       "dimensions": {
-        "requirements": "部分原站页面核实；BC-F03调动日期/交接等差异保留，角色与生效规则待集中评审",
+        "requirements": "集中决策D1–D7待回答；跨组织源/目标权限已按现实现核清，不冒称原站完整规则",
         "development": "P2/G0限定功能已开发；本轮仅验收收口，不扩展其他模块",
-        "testing": "本轮核心25/25及附件/撤权5/5；界面ERR_BLOCKED_BY_CLIENT，多角色/云端材料尚未验证",
+        "testing": "本轮跨组织角色安排及关联回归15/15；上一批25/25与5/5为历史；真实多角色与界面仍待实操",
         "production": "未验收；人工业务未签署"
       }
     },
@@ -605,9 +605,9 @@
       "requirementBaseline": "docs/delivery/F01_F04_Requirements_Baseline.md",
       "businessAcceptanceGuide": "docs/delivery/F01_F04_Business_Acceptance.md",
       "dimensions": {
-        "requirements": "部分原站页面核实；BC-F03调动日期/交接等差异保留，角色与生效规则待集中评审",
+        "requirements": "集中决策D1–D7待回答；跨组织源/目标权限已按现实现核清，不冒称原站完整规则",
         "development": "P2/G0限定功能已开发；本轮仅验收收口，不扩展其他模块",
-        "testing": "本轮核心25/25及附件/撤权5/5；界面ERR_BLOCKED_BY_CLIENT，多角色/云端材料尚未验证",
+        "testing": "本轮跨组织角色安排及关联回归15/15；上一批25/25与5/5为历史；真实多角色与界面仍待实操",
         "production": "未验收；人工业务未签署"
       }
     },
@@ -628,9 +628,9 @@
       "requirementBaseline": "docs/delivery/F01_F04_Requirements_Baseline.md",
       "businessAcceptanceGuide": "docs/delivery/F01_F04_Business_Acceptance.md",
       "dimensions": {
-        "requirements": "部分原站页面核实；BC-F03调动日期/交接等差异保留，角色与生效规则待集中评审",
+        "requirements": "集中决策D1–D7待回答；跨组织源/目标权限已按现实现核清，不冒称原站完整规则",
         "development": "P2/G0限定功能已开发；本轮仅验收收口，不扩展其他模块",
-        "testing": "本轮核心25/25及附件/撤权5/5；界面ERR_BLOCKED_BY_CLIENT，多角色/云端材料尚未验证",
+        "testing": "本轮跨组织角色安排及关联回归15/15；上一批25/25与5/5为历史；真实多角色与界面仍待实操",
         "production": "未验收；人工业务未签署"
       }
     },
@@ -651,9 +651,9 @@
       "requirementBaseline": "docs/delivery/F01_F04_Requirements_Baseline.md",
       "businessAcceptanceGuide": "docs/delivery/F01_F04_Business_Acceptance.md",
       "dimensions": {
-        "requirements": "部分原站页面核实；BC-F03调动日期/交接等差异保留，角色与生效规则待集中评审",
+        "requirements": "集中决策D1–D7待回答；跨组织源/目标权限已按现实现核清，不冒称原站完整规则",
         "development": "P2/G0限定功能已开发；本轮仅验收收口，不扩展其他模块",
-        "testing": "本轮核心25/25及附件/撤权5/5；界面ERR_BLOCKED_BY_CLIENT，多角色/云端材料尚未验证",
+        "testing": "本轮跨组织角色安排及关联回归15/15；上一批25/25与5/5为历史；真实多角色与界面仍待实操",
         "production": "未验收；人工业务未签署"
       }
     },

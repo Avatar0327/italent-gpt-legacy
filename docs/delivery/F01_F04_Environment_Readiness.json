@@ -1,0 +1,89 @@
+{
+  "checkedAt": "2026-09-08T12:36:34.759Z",
+  "projectId": "appgprj_6a9e2c705cfc819180e0e5251bb025cc",
+  "source": "Sites get_site / read_database_overview / read_database_table_rows；只读、有界、无原站人员数据",
+  "identity": {
+    "authClientConfigured": true,
+    "externalVisitors": 0,
+    "groups": 0,
+    "installationExists": true,
+    "installationOwnerHasActiveAdmin": true,
+    "ownerMatchesApplicationGrant": true,
+    "siteStatus": "active",
+    "siteViewers": 1,
+    "version": 110,
+    "workspaceRevision": 0,
+    "workspaceStorageVersion": 1
+  },
+  "company": "华耀有为",
+  "tablesChecked": [
+    {
+      "hasMore": false,
+      "returnedRows": 0,
+      "table": "hris_orgs",
+      "truncated": false
+    },
+    {
+      "hasMore": false,
+      "returnedRows": 0,
+      "table": "hris_employees",
+      "truncated": false
+    },
+    {
+      "hasMore": false,
+      "returnedRows": 0,
+      "table": "hris_positions",
+      "truncated": false
+    },
+    {
+      "hasMore": false,
+      "returnedRows": 0,
+      "table": "hris_grades",
+      "truncated": false
+    },
+    {
+      "hasMore": false,
+      "returnedRows": 0,
+      "table": "hris_workflows",
+      "truncated": false
+    },
+    {
+      "hasMore": false,
+      "returnedRows": 0,
+      "table": "hris_approvals",
+      "truncated": false
+    },
+    {
+      "hasMore": false,
+      "returnedRows": 0,
+      "table": "hris_attachments",
+      "truncated": false
+    },
+    {
+      "hasMore": false,
+      "returnedRows": 0,
+      "table": "hris_development_records",
+      "truncated": false
+    }
+  ],
+  "identityReadBound": {
+    "tables": [
+      "hris_installation",
+      "hris_memberships",
+      "hris_access_grants",
+      "hris_workspaces"
+    ],
+    "limitPerTable": 3,
+    "eachRows": 1,
+    "hasMore": false
+  },
+  "browser": {
+    "historical": "受管预览running；浏览器ERR_BLOCKED_BY_CLIENT",
+    "currentPreviewStatus": "stopped",
+    "newNavigationAttempts": 0,
+    "reason": "没有恢复证据，不重复原路径；Sites环境不允许代理浏览器访问线上Sites",
+    "ownerCurrentSession": "未端到端核验，需所有者正常客户端只读打开"
+  },
+  "writes": "无云端数据/权限/发布写入",
+  "conclusion": "现有空业务表与唯一所有者admin已核实；多角色及所有者当前会话尚待准备；非业务或生产验收"
+}
