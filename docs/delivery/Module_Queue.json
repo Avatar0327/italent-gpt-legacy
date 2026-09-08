@@ -491,12 +491,12 @@
     },
     {
       "id": "I-RESTORE-REVOCATIONS",
-      "status": "in-progress",
+      "status": "technical-reviewed-tested",
       "dependencies": [
         "A-PAY-EXIT-SETTLEMENT"
       ],
       "acceptance": "隔离合成恢复演练覆盖备份后撤权：旧快照恢复前后识别陈旧授权，经独立可信撤权清单对账后保持拒绝；不访问云端真实数据",
-      "next": "扩展既有rehearse-local-recovery脚本，复用成员撤权API，明确未完成云端自动对账及恢复门槛"
+      "next": "本轮隔离恢复14项检查通过；云端可信撤权来源、持久重放和开放闸门待实现及生产验收。下一步登记既有未拆分范围与明确验收缺口"
     }
   ]
 }

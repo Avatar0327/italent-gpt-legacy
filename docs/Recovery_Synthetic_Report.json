@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-08T08:04:43.226Z",
+  "at": "2026-09-08T11:00:45.552Z",
   "mode": "isolated synthetic SQLite and memory object store",
   "passed": true,
   "migrations": [
@@ -40,12 +40,12 @@
       "sha256": "ac3581d749f9e6e3d59e995e3133ce3b6740f42e69e3803b2ecc9ceb6b430542"
     }
   ],
-  "restoredRevision": 14,
+  "restoredRevision": 15,
   "tables": [
     {
       "table": "hris_access_grants",
-      "rows": 2,
-      "sha256": "36ed7811496fbeec01aaa16e8cadc336123e2035c2af5f04faeb921b33f441da"
+      "rows": 3,
+      "sha256": "5861a64f512f47d4d56b77226e2ceba4e9d1d975a6aed37f461ea8c7b7eb299b"
     },
     {
       "table": "hris_approval_steps",
@@ -65,37 +65,37 @@
     {
       "table": "hris_attachments",
       "rows": 1,
-      "sha256": "076aea039ed79994af39c6c2f268cc189b42aceb95ba6c90424365fc6d220d0b"
+      "sha256": "d66878a65850f4037a16fc8a253cc9ae0262d5f070a833497785b6e948d26716"
     },
     {
       "table": "hris_audit_events",
-      "rows": 16,
-      "sha256": "dbef6c567e19ab904197c185ac7e9ee73b4f705de6da21e84aeac3d668d3cba8"
+      "rows": 18,
+      "sha256": "842b998d926d5ccfb51c35d27c74ec6cfe503472cef9ec91655e85f49f25ca97"
     },
     {
       "table": "hris_development_events",
       "rows": 9,
-      "sha256": "5277000e185cc442224bd0a7ca2a975f9241414e3186dade1a8494709076f05c"
+      "sha256": "1c3effebe8a0586bfadc11208d2c42a56ef37991ddf1fe79a20562b7586c70b4"
     },
     {
       "table": "hris_development_records",
       "rows": 5,
-      "sha256": "0b89567d29c35932a8dac2594fea3d8770b5ec008064352864e936d665b924b1"
+      "sha256": "f8131303e04f26bd0bfdb72508cef2887f131871ff03600f6f8ba6dac492e75f"
     },
     {
       "table": "hris_employee_positions",
       "rows": 1,
-      "sha256": "7ed4911e5579a3202313dbeffac55b35d5089cc3a8e591d6e8e4c07a792bba4a"
+      "sha256": "dfa6173965518207a8d5cf7633085c801151840e7585ecf22ef25090a29e1d65"
     },
     {
       "table": "hris_employees",
       "rows": 1,
-      "sha256": "1f22bdd2641f3b0a96d8c77601aea07e46233fa25bdabb23f11e6bdfc5762f50"
+      "sha256": "748435b48366efbe8debb0669fab4d2cea25ffcc487e4bc46c5ee75fee78c694"
     },
     {
       "table": "hris_employment_history",
       "rows": 1,
-      "sha256": "4c61155a65f63e655dd3915c93324511a6c7298edc1373707ce82f2cd9fb4de7"
+      "sha256": "59f0bc3284d1b8bb566145b56b36f8aa0a437064a5c01fece9d75c26084a9f61"
     },
     {
       "table": "hris_grades",
@@ -105,17 +105,17 @@
     {
       "table": "hris_installation",
       "rows": 1,
-      "sha256": "cb982804357b26ba88c5a5c893d2dd8f9bb9ffa6b2a67c37d854aebd6d45d9ce"
+      "sha256": "311959e23d6d669498ceaae2099350d5e0a2363c4cdc107309cd6aab1a5f1c73"
     },
     {
       "table": "hris_memberships",
-      "rows": 2,
-      "sha256": "c501e7682b3780f3b088f4bcbe96e842353461ecbf63fcde85c423dba9d03c6d"
+      "rows": 3,
+      "sha256": "2c6773c9e1deec5463cf2339401d719c3d6324ce52626a86841bdcb76c54b579"
     },
     {
       "table": "hris_orgs",
       "rows": 1,
-      "sha256": "1d15a690a1f28275a0c90374988853e1e4eaf0753b3b510b008007124682b283"
+      "sha256": "5d298a6b04da13bf5c4bd20feb5de93494ab7c3b6c70df62263ab1bb588bf030"
     },
     {
       "table": "hris_positions",
@@ -135,7 +135,7 @@
     {
       "table": "hris_workspaces",
       "rows": 1,
-      "sha256": "842a34690d181b0ef868ee760bdb9ec9230bce6ba580f80f4babefd3e211f4cb"
+      "sha256": "124fdbfadbb77ee87f390fcdf7ac4b9d623f1e00ac8c6e052a876227f291eb05"
     }
   ],
   "attachmentCount": 1,
@@ -151,15 +151,17 @@
     "frozen performance template and cycle snapshot equal",
     "revoked claimed account remains denied for performance and attachments",
     "restored sealed template rejects edit",
+    "backup-cut-later revocation is stale in isolated restore",
+    "trusted synthetic revocation reconciled before reopening: application and attachment access denied",
     "post-restore audited mutation"
   ],
-  "localRestoreAndValidationMs": 23.92,
+  "localRestoreAndValidationMs": 12.26,
   "limitations": [
     "No deployed D1 or R2 accessed",
     "Quiescent synthetic snapshot only",
     "No cloud backup scheduling, encryption, retention or region failover verified",
     "No real enterprise RPO/RTO acceptance",
-    "Revocations after the backup cut require an independent trusted reconciliation before reopening access; not exercised here",
+    "Only one synthetic trusted post-cut revocation is reconciled using existing member APIs; production trusted revocation feed, durable replay and cloud reopening gate are not implemented",
     "Not all business tables contain fixture rows"
   ]
 }
