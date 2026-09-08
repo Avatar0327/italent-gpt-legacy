@@ -39,7 +39,13 @@
           "BC-F05",
           "BC-F06",
           "BC-F07",
-          "P1-ORG-RECHECK"
+          "P1-ORG-RECHECK",
+          "BC-F08",
+          "BC-F09",
+          "BC-F10",
+          "BC-F11",
+          "BC-F12",
+          "BC-F13"
         ],
         "fieldRefs": [
           "BC-F03-F001",
@@ -129,9 +135,145 @@
           "BC-F07-F004",
           "BC-F07-F005",
           "BC-F07-F006",
-          "BC-F07-F007"
+          "BC-F07-F007",
+          "BC-F08-F001",
+          "BC-F08-F002",
+          "BC-F08-F003",
+          "BC-F08-F004",
+          "BC-F08-F005",
+          "BC-F08-F006",
+          "BC-F08-F007",
+          "BC-F08-F008",
+          "BC-F08-F009",
+          "BC-F08-F010",
+          "BC-F08-F011",
+          "BC-F08-F012",
+          "BC-F08-F013",
+          "BC-F08-F014",
+          "BC-F08-F015",
+          "BC-F08-F016",
+          "BC-F08-F017",
+          "BC-F08-F018",
+          "BC-F08-F019",
+          "BC-F08-F020",
+          "BC-F08-F021",
+          "BC-F08-F022",
+          "BC-F08-F023",
+          "BC-F08-F024",
+          "BC-F08-F025",
+          "BC-F08-F026",
+          "BC-F08-F027",
+          "BC-F08-F028",
+          "BC-F08-F029",
+          "BC-F08-F030",
+          "BC-F08-F031",
+          "BC-F08-F032",
+          "BC-F08-F033",
+          "BC-F08-F034",
+          "BC-F08-F035",
+          "BC-F08-F036",
+          "BC-F08-F037",
+          "BC-F08-F038",
+          "BC-F08-F039",
+          "BC-F08-F040",
+          "BC-F08-F041",
+          "BC-F08-F042",
+          "BC-F08-F043",
+          "BC-F08-F044",
+          "BC-F09-F001",
+          "BC-F09-F002",
+          "BC-F09-F003",
+          "BC-F09-F004",
+          "BC-F09-F005",
+          "BC-F09-F006",
+          "BC-F09-F007",
+          "BC-F09-F008",
+          "BC-F09-F009",
+          "BC-F09-F010",
+          "BC-F09-F011",
+          "BC-F09-F012",
+          "BC-F09-F013",
+          "BC-F09-F014",
+          "BC-F10-F001",
+          "BC-F10-F002",
+          "BC-F10-F003",
+          "BC-F10-F004",
+          "BC-F10-F005",
+          "BC-F10-F006",
+          "BC-F10-F007",
+          "BC-F11-F001",
+          "BC-F11-F002",
+          "BC-F11-F003",
+          "BC-F11-F004",
+          "BC-F11-F005",
+          "BC-F11-F006",
+          "BC-F11-F007",
+          "BC-F11-F008",
+          "BC-F12-F001",
+          "BC-F12-F002",
+          "BC-F12-F003",
+          "BC-F12-F004",
+          "BC-F12-F005",
+          "BC-F12-F006",
+          "BC-F12-F007",
+          "BC-F12-F008",
+          "BC-F12-F009",
+          "BC-F12-F010",
+          "BC-F12-F011",
+          "BC-F12-F012",
+          "BC-F12-F013",
+          "BC-F12-F014",
+          "BC-F12-F015",
+          "BC-F12-F016",
+          "BC-F12-F017",
+          "BC-F12-F018",
+          "BC-F12-F019",
+          "BC-F12-F020",
+          "BC-F12-F021",
+          "BC-F12-F022",
+          "BC-F12-F023",
+          "BC-F12-F024",
+          "BC-F12-F025",
+          "BC-F12-F026",
+          "BC-F12-F027",
+          "BC-F12-F028",
+          "BC-F12-F029",
+          "BC-F12-F030",
+          "BC-F12-F031",
+          "BC-F12-F032",
+          "BC-F12-F033",
+          "BC-F12-F034",
+          "BC-F12-F035",
+          "BC-F12-F036",
+          "BC-F12-F037",
+          "BC-F12-F038",
+          "BC-F12-F039",
+          "BC-F12-F040",
+          "BC-F12-F041",
+          "BC-F12-F042",
+          "BC-F12-F043",
+          "BC-F12-F044",
+          "BC-F12-F045",
+          "BC-F12-F046",
+          "BC-F12-F047",
+          "BC-F12-F048",
+          "BC-F12-F049",
+          "BC-F12-F050",
+          "BC-F12-F051",
+          "BC-F12-F052",
+          "BC-F12-F053",
+          "BC-F12-F054",
+          "BC-F12-F055",
+          "BC-F12-F056",
+          "BC-F12-F057",
+          "BC-F12-F058",
+          "BC-F12-F059",
+          "BC-F12-F060",
+          "BC-F12-F061",
+          "BC-F12-F062",
+          "BC-F12-F063"
         ],
-        "sourceDepth": "P（局部）",
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M01",
         "sourceGap": "局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -156,11 +298,17 @@
             "BC-F05",
             "BC-F06",
             "BC-F07",
-            "P1-ORG-RECHECK"
+            "P1-ORG-RECHECK",
+            "BC-F08",
+            "BC-F09",
+            "BC-F10",
+            "BC-F11",
+            "BC-F12",
+            "BC-F13"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "复杂跨字段联动、兼岗、复杂再入职及法人变更；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实",
+          "unexplored": "复杂跨字段联动、兼岗、复杂再入职及法人变更；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；初次入口停留旧页面/加载，有限重载无效后从首页组织员工入口恢复；未打开人员记录；目录同名与跨组织层级生效规则未验证；申请入口点击后未验证空表呈现，不算已读申请字段；生效/终止审批、主兼岗与额度工时联动未知；未点击结束/删除/导入/导出；编辑将涉及已有记录，未读取法人记录值；法人名称唯一性、适用范围层级、历史合同/薪资影响及变更生效未验证；未取得重聘身份复用、工号、司龄、合同继承或审批规则；列集变化原因/默认视图未验证；跨源空表通过受控frameLocator仅取标签；未读取输入值；required选择器未匹配不等于选填；原生select为0不等于没有下拉；未取得类型/枚举/默认/校验。新建待入职不能代替重聘专属规则；只读框架提取未获得配置内容；没有权限拒绝证据，不归因为无权；组织配置说明与字段规则仍待补证",
           "next": "补字段属性、权限线索和流程说明；组织层级、主兼岗、法人、再入职及主数据变更影响",
           "accepted": false
         }
@@ -187,7 +335,8 @@
         ],
         "navigationEvidence": "BC-NAV-20260908",
         "pageRefs": [
-          "BC-C05"
+          "BC-C05",
+          "BC-P1C-M02"
         ],
         "fieldRefs": [
           "BC-C05-F001",
@@ -195,9 +344,17 @@
           "BC-C05-F003",
           "BC-C05-F004",
           "BC-C05-F005",
-          "BC-C05-F006"
+          "BC-C05-F006",
+          "BC-P1C-M02-F001",
+          "BC-P1C-M02-F002",
+          "BC-P1C-M02-F003",
+          "BC-P1C-M02-F004",
+          "BC-P1C-M02-F005",
+          "BC-P1C-M02-F006",
+          "BC-P1C-M02-F007",
+          "BC-P1C-M02-F008"
         ],
-        "sourceDepth": "P（局部）",
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M02",
         "sourceGap": "局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -214,11 +371,12 @@
         },
         "coverage": {
           "facts": [
-            "BC-C05"
+            "BC-C05",
+            "BC-P1C-M02"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "评定过程、记录、活动设置、统计分析；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实",
+          "unexplored": "评定过程、记录、活动设置、统计分析；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
           "next": "补字段属性、权限线索和流程说明；任用期限、委员会、模型与标准版本、敏感档案权限",
           "accepted": false
         }
@@ -249,7 +407,9 @@
           "US-C01-02",
           "BC-C01",
           "BC-C02",
-          "BC-C03"
+          "BC-C03",
+          "BC-C08",
+          "BC-C09"
         ],
         "fieldRefs": [
           "US-C01-02-F001",
@@ -302,9 +462,24 @@
           "BC-C03-F007",
           "BC-C03-F008",
           "BC-C03-F009",
-          "BC-C03-F010"
+          "BC-C03-F010",
+          "BC-C08-F001",
+          "BC-C08-F002",
+          "BC-C08-F003",
+          "BC-C08-F004",
+          "BC-C08-F005",
+          "BC-C08-F006",
+          "BC-C08-F007",
+          "BC-C09-F001",
+          "BC-C09-F002",
+          "BC-C09-F003",
+          "BC-C09-F004",
+          "BC-C09-F005",
+          "BC-C09-F006",
+          "BC-C09-F007",
+          "BC-C09-F008"
         ],
-        "sourceDepth": "P（局部）",
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M03",
         "sourceGap": "局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -324,11 +499,13 @@
             "US-C01-02",
             "BC-C01",
             "BC-C02",
-            "BC-C03"
+            "BC-C03",
+            "BC-C08",
+            "BC-C09"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "干部四状态名册、任用类型扩展与期限自动计算、档案子集、委员会及原站详细提交规则；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实",
+          "unexplored": "干部四状态名册、任用类型扩展与期限自动计算、档案子集、委员会及原站详细提交规则；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；提名方式枚举、委员会成员/表决、流程节点和权限未验证；未读候选人行；负责人解析、提名人数分母、发布/关闭规则未验证；未打开已有活动数据或提交",
           "next": "补字段属性、权限线索和流程说明；任用期限、委员会、模型与标准版本、敏感档案权限",
           "accepted": false
         }
@@ -457,15 +634,21 @@
         ],
         "navigationEvidence": "BC-NAV-20260908",
         "pageRefs": [
-          "BC-C04"
+          "BC-C04",
+          "BC-P1C-M06"
         ],
         "fieldRefs": [
           "BC-C04-F001",
           "BC-C04-F002",
           "BC-C04-F003",
-          "BC-C04-F004"
+          "BC-C04-F004",
+          "BC-P1C-M06-F001",
+          "BC-P1C-M06-F002",
+          "BC-P1C-M06-F003",
+          "BC-P1C-M06-F004",
+          "BC-P1C-M06-F005"
         ],
-        "sourceDepth": "P（局部）",
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M06",
         "sourceGap": "局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -482,11 +665,12 @@
         },
         "coverage": {
           "facts": [
-            "BC-C04"
+            "BC-C04",
+            "BC-P1C-M06"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "任职类别层级及复杂认证委员会；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实",
+          "unexplored": "任职类别层级及复杂认证委员会；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
           "next": "补字段属性、权限线索和流程说明；任用期限、委员会、模型与标准版本、敏感档案权限",
           "accepted": false
         }
@@ -1176,7 +1360,9 @@
           "设置"
         ],
         "navigationEvidence": "BC-NAV-20260908",
-        "pageRefs": [],
+        "pageRefs": [
+          "BC-P1C-M15"
+        ],
         "fieldRefs": [],
         "sourceDepth": "N；典型页尚待补证",
         "gapRef": "M15",
@@ -1195,11 +1381,11 @@
         },
         "coverage": {
           "facts": [
-            "BC-NAV-20260908"
+            "BC-P1C-M15"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "项目、人才、方案、活动、考试；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
+          "unexplored": "项目、人才、方案、活动、考试；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；任用期限、委员会、模型与标准版本、敏感档案权限",
           "accepted": false
         }
@@ -1932,7 +2118,9 @@
           "设置"
         ],
         "navigationEvidence": "BC-NAV-20260908",
-        "pageRefs": [],
+        "pageRefs": [
+          "BC-P1C-M26"
+        ],
         "fieldRefs": [],
         "sourceDepth": "N；典型页尚待补证",
         "gapRef": "M26",
@@ -1951,11 +2139,11 @@
         },
         "coverage": {
           "facts": [
-            "BC-NAV-20260908"
+            "BC-P1C-M26"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "多种题型、提醒催办与完整活动运营；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
+          "unexplored": "多种题型、提醒催办与完整活动运营；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；任用期限、委员会、模型与标准版本、敏感档案权限",
           "accepted": false
         }
@@ -2715,9 +2903,18 @@
           "设置"
         ],
         "navigationEvidence": "BC-NAV-20260908",
-        "pageRefs": [],
-        "fieldRefs": [],
-        "sourceDepth": "N；典型页尚待补证",
+        "pageRefs": [
+          "BC-P1C-M37"
+        ],
+        "fieldRefs": [
+          "BC-P1C-M37-F001",
+          "BC-P1C-M37-F002",
+          "BC-P1C-M37-F003",
+          "BC-P1C-M37-F004",
+          "BC-P1C-M37-F005",
+          "BC-P1C-M37-F006"
+        ],
+        "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M37",
         "sourceGap": "已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -2734,11 +2931,11 @@
         },
         "coverage": {
           "facts": [
-            "BC-NAV-20260908"
+            "BC-P1C-M37"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "复杂指标组合、多维模型和标准审批机制；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成",
+          "unexplored": "复杂指标组合、多维模型和标准审批机制；已核实导航；典型列表/详情/字段/流程未取得可追溯证据，不能标为不可访问或已完成；完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
           "next": "优先典型页/帮助说明，只提取标签，不读取真实人员行；任用期限、委员会、模型与标准版本、敏感档案权限",
           "accepted": false
         }
@@ -4375,7 +4572,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-08T15:07:33.692739+00:00",
+    "updatedAt": "2026-09-08T15:47:04.280992+00:00",
     "authority": "本轮用户指令；Scope_Register.json是唯一范围与验收事实源；P1附属条目不增加48组或59项分母",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -13845,6 +14042,2151 @@
         "flowRef": [
           "P1-I-SOURCE"
         ]
+      },
+      {
+        "id": "BC-F08",
+        "moduleId": "M01",
+        "path": "组织员工 > 组织管理 > 组织",
+        "evidenceRef": "BC-F08",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:36:31.099893+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-F08-F001",
+            "label": "机构ID",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F002",
+            "label": "机构名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F003",
+            "label": "机构全称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F004",
+            "label": "所在城市",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F005",
+            "label": "机构类型",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F006",
+            "label": "职能体系",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F007",
+            "label": "建立日期",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F008",
+            "label": "启用日期",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F009",
+            "label": "禁用日期",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F010",
+            "label": "调整期起始日期",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F011",
+            "label": "市场分类",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F012",
+            "label": "机构级别",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F013",
+            "label": "晋降级类别",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F014",
+            "label": "管理提成类别",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F015",
+            "label": "显示顺序",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F016",
+            "label": "商务机构",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F017",
+            "label": "商务分类",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F018",
+            "label": "商务标签",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F019",
+            "label": "商务组分类",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F020",
+            "label": "是否大客",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F021",
+            "label": "是否总部一级部门",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F022",
+            "label": "社保标准",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F023",
+            "label": "社保缴纳机构",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F024",
+            "label": "首发规则",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F025",
+            "label": "个税标准",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F026",
+            "label": "发薪账户",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F027",
+            "label": "餐补标准",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F028",
+            "label": "打卡企微",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F029",
+            "label": "备注说明",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F030",
+            "label": "部门负责人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F031",
+            "label": "一级部门负责人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F032",
+            "label": "HRBP",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F033",
+            "label": "财务BP",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F034",
+            "label": "SSC",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F035",
+            "label": "分公司人力",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F036",
+            "label": "分公司总监",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F037",
+            "label": "区域人力",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F038",
+            "label": "区域总监",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F039",
+            "label": "在岗人数",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F040",
+            "label": "成本中心",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F041",
+            "label": "经营号码",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F042",
+            "label": "店长",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F043",
+            "label": "名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          },
+          {
+            "id": "BC-F08-F044",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F08"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "筛选类型、根节点、上级组织；建立/启用/禁用/调整期日期分别列出，成本中心及人力财务职能列独立",
+        "unknown": "初次入口停留旧页面/加载，有限重载无效后从首页组织员工入口恢复；未打开人员记录；目录同名与跨组织层级生效规则未验证",
+        "operations": "组织架构调整、组织架构用导出（原标签）、更多操作；新建下级、编辑、设置编制、新建职位、停用、查看操作日志",
+        "flowRef": []
+      },
+      {
+        "id": "BC-F09",
+        "moduleId": "M01",
+        "path": "组织员工 > 任职管理 > 兼职管理",
+        "evidenceRef": "BC-F09",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:36:31.099893+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-F09-F001",
+            "label": "姓名",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F09"
+          },
+          {
+            "id": "BC-F09-F002",
+            "label": "工号",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F09"
+          },
+          {
+            "id": "BC-F09-F003",
+            "label": "兼职类型",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F09"
+          },
+          {
+            "id": "BC-F09-F004",
+            "label": "兼职开始日期",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F09"
+          },
+          {
+            "id": "BC-F09-F005",
+            "label": "兼职机构",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F09"
+          },
+          {
+            "id": "BC-F09-F006",
+            "label": "兼职部门",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F09"
+          },
+          {
+            "id": "BC-F09-F007",
+            "label": "兼职直线经理",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F09"
+          },
+          {
+            "id": "BC-F09-F008",
+            "label": "兼职职务",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F09"
+          },
+          {
+            "id": "BC-F09-F009",
+            "label": "兼职结束日期",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F09"
+          },
+          {
+            "id": "BC-F09-F010",
+            "label": "任职状态",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F09"
+          },
+          {
+            "id": "BC-F09-F011",
+            "label": "审批状态",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F09"
+          },
+          {
+            "id": "BC-F09-F012",
+            "label": "职位",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F09"
+          },
+          {
+            "id": "BC-F09-F013",
+            "label": "职级",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F09"
+          },
+          {
+            "id": "BC-F09-F014",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F09"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "筛选兼职部门；任职状态与审批状态分列；仅点击兼职申请以查看空表，未获得可确认的申请表",
+        "unknown": "申请入口点击后未验证空表呈现，不算已读申请字段；生效/终止审批、主兼岗与额度工时联动未知；未点击结束/删除/导入/导出",
+        "operations": "更多操作可见兼职申请、结束兼职申请、导入兼职记录、下载模板、导入及导出；行操作编辑、结束兼职申请、结束、删除（均未操作）",
+        "flowRef": []
+      },
+      {
+        "id": "BC-F10",
+        "moduleId": "M01",
+        "path": "组织员工 > 组织管理 > 法人公司",
+        "evidenceRef": "BC-F10",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:36:31.099893+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-F10-F001",
+            "label": "编码",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F10"
+          },
+          {
+            "id": "BC-F10-F002",
+            "label": "名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F10"
+          },
+          {
+            "id": "BC-F10-F003",
+            "label": "简称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F10"
+          },
+          {
+            "id": "BC-F10-F004",
+            "label": "顺序号",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F10"
+          },
+          {
+            "id": "BC-F10-F005",
+            "label": "生效日期",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F10"
+          },
+          {
+            "id": "BC-F10-F006",
+            "label": "适用范围",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F10"
+          },
+          {
+            "id": "BC-F10-F007",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F10"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "本轮表头重核与BC-F05一致；未找到独立新建/说明按钮",
+        "unknown": "编辑将涉及已有记录，未读取法人记录值；法人名称唯一性、适用范围层级、历史合同/薪资影响及变更生效未验证",
+        "operations": "导出、批量导入、编辑、停用、删除（仅见标签）",
+        "flowRef": []
+      },
+      {
+        "id": "BC-F11",
+        "moduleId": "M01",
+        "path": "组织员工 > 任职管理 > 入职管理（当前视图）",
+        "evidenceRef": "BC-F11",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:36:31.099893+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-F11-F001",
+            "label": "人员",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F11"
+          },
+          {
+            "id": "BC-F11-F002",
+            "label": "重聘",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F11"
+          },
+          {
+            "id": "BC-F11-F003",
+            "label": "性别",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F11"
+          },
+          {
+            "id": "BC-F11-F004",
+            "label": "计划入职日期",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F11"
+          },
+          {
+            "id": "BC-F11-F005",
+            "label": "入职类型",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F11"
+          },
+          {
+            "id": "BC-F11-F006",
+            "label": "计划入职地点",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F11"
+          },
+          {
+            "id": "BC-F11-F007",
+            "label": "待入职部门",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F11"
+          },
+          {
+            "id": "BC-F11-F008",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F11"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "当前列表有独立“重聘”列，不能据此认定再入职规则；与BC-F06不同列集保留为不同观察视图",
+        "unknown": "未取得重聘身份复用、工号、司龄、合同继承或审批规则；列集变化原因/默认视图未验证",
+        "operations": "生成二维码、更多操作（未生成或提交）",
+        "flowRef": []
+      },
+      {
+        "id": "BC-F12",
+        "moduleId": "M01",
+        "path": "组织员工 > 任职管理 > 入职管理 > 添加待入职（空表）",
+        "evidenceRef": "BC-F12",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:39:03.187601+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-F12-F001",
+            "label": "姓名",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F002",
+            "label": "个人邮箱",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F003",
+            "label": "预置编制维度1",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F004",
+            "label": "导师",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F005",
+            "label": "推荐人",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F006",
+            "label": "参加工作日期",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F007",
+            "label": "证件类型",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F008",
+            "label": "证件号码",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F009",
+            "label": "出生日期",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F010",
+            "label": "星座",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F011",
+            "label": "性别",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F012",
+            "label": "国籍(地区)",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F013",
+            "label": "民族",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F014",
+            "label": "婚姻状况",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F015",
+            "label": "政治面貌",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F016",
+            "label": "户口类别",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F017",
+            "label": "户籍所在地",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F018",
+            "label": "籍贯",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F019",
+            "label": "最高学历",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F020",
+            "label": "办公电话",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F021",
+            "label": "手机",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F022",
+            "label": "QQ",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F023",
+            "label": "微信",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F024",
+            "label": "联系地址",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F025",
+            "label": "紧急联系人",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F026",
+            "label": "与本人关系",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F027",
+            "label": "紧急联系电话",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F028",
+            "label": "照片",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F029",
+            "label": "职务",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F030",
+            "label": "职级",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F031",
+            "label": "岗位说明书",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F032",
+            "label": "招聘需求",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F033",
+            "label": "成本中心",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F034",
+            "label": "是否薪酬保护期",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F035",
+            "label": "工号",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F036",
+            "label": "待入职部门",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F037",
+            "label": "职位",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F038",
+            "label": "关联组织大类",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F039",
+            "label": "计划入职日期",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F040",
+            "label": "用工形式",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F041",
+            "label": "雇佣关系",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F042",
+            "label": "工作地点",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F043",
+            "label": "是否有试用期",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F044",
+            "label": "利润中心",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F045",
+            "label": "组织全称",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F046",
+            "label": "社保基数",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F047",
+            "label": "公积金基数",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F048",
+            "label": "社保缴交方案",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F049",
+            "label": "公积金缴交方案",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F050",
+            "label": "社保缴交公司",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F051",
+            "label": "公积金缴交公司",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F052",
+            "label": "试用期(月)",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F053",
+            "label": "预计试用结束日期",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F054",
+            "label": "直线经理",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F055",
+            "label": "虚线经理",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F056",
+            "label": "银行",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F057",
+            "label": "银行账号",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F058",
+            "label": "薪资包",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F059",
+            "label": "薪级",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F060",
+            "label": "薪等",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F061",
+            "label": "基本工资",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F062",
+            "label": "岗位工资",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          },
+          {
+            "id": "BC-F12-F063",
+            "label": "绩效工资",
+            "context": "空表标签；控件类型与必填未核实",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F12"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "确实取得空表标签，存在招聘需求/组织/成本利润中心/薪酬社保等跨模块引用字段；导师与工作地点标签在不同区段重现，去重仅用于当前证据展示，关联用途未统一",
+        "unknown": "跨源空表通过受控frameLocator仅取标签；未读取输入值；required选择器未匹配不等于选填；原生select为0不等于没有下拉；未取得类型/枚举/默认/校验。新建待入职不能代替重聘专属规则",
+        "operations": "添加待入职打开弹窗iframe；取消、保存；仅取消退出",
+        "flowRef": []
+      },
+      {
+        "id": "BC-F13",
+        "moduleId": "M01",
+        "path": "组织员工 > 设置",
+        "evidenceRef": "BC-F13",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:39:03.187601+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "N",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [],
+        "visibleStates": "",
+        "sourceStatement": "页面标题设置，存在iTalentFrame；两次定向提取未获标题、标签或链接",
+        "unknown": "只读框架提取未获得配置内容；没有权限拒绝证据，不归因为无权；组织配置说明与字段规则仍待补证",
+        "operations": "设置入口",
+        "flowRef": []
+      },
+      {
+        "id": "BC-C08",
+        "moduleId": "M03",
+        "path": "干部管理2.0 > 选拔任用 > 选拔过程",
+        "evidenceRef": "BC-C08",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:40:40.998197+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-C08-F001",
+            "label": "职位名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C08"
+          },
+          {
+            "id": "BC-C08-F002",
+            "label": "编码",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C08"
+          },
+          {
+            "id": "BC-C08-F003",
+            "label": "关联部门",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C08"
+          },
+          {
+            "id": "BC-C08-F004",
+            "label": "关联职级",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C08"
+          },
+          {
+            "id": "BC-C08-F005",
+            "label": "提名人数",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C08"
+          },
+          {
+            "id": "BC-C08-F006",
+            "label": "提名方式",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C08"
+          },
+          {
+            "id": "BC-C08-F007",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C08"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "iframe列表列出职位/部门/职级与提名人数、方式",
+        "unknown": "提名方式枚举、委员会成员/表决、流程节点和权限未验证；未读候选人行",
+        "operations": "选拔过程、选拔记录、活动设置导航",
+        "flowRef": []
+      },
+      {
+        "id": "BC-C09",
+        "moduleId": "M03",
+        "path": "干部管理2.0 > 选拔任用 > 活动设置",
+        "evidenceRef": "BC-C09",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:40:40.998197+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-C09-F001",
+            "label": "名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C09"
+          },
+          {
+            "id": "BC-C09-F002",
+            "label": "年度",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C09"
+          },
+          {
+            "id": "BC-C09-F003",
+            "label": "周期",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C09"
+          },
+          {
+            "id": "BC-C09-F004",
+            "label": "活动状态",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C09"
+          },
+          {
+            "id": "BC-C09-F005",
+            "label": "所属组织",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C09"
+          },
+          {
+            "id": "BC-C09-F006",
+            "label": "提名人数",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C09"
+          },
+          {
+            "id": "BC-C09-F007",
+            "label": "负责人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C09"
+          },
+          {
+            "id": "BC-C09-F008",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C09"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "活动配置具有年度/周期/组织与状态维度",
+        "unknown": "负责人解析、提名人数分母、发布/关闭规则未验证；未打开已有活动数据或提交",
+        "operations": "活动设置入口",
+        "flowRef": []
+      },
+      {
+        "id": "BC-P1C-M02",
+        "moduleId": "M02",
+        "path": "人才评定 > 评定过程",
+        "evidenceRef": "BC-P1C-M02",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:47:04.280992+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P1C-M02-F001",
+            "label": "人员",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M02"
+          },
+          {
+            "id": "BC-P1C-M02-F002",
+            "label": "部门",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M02"
+          },
+          {
+            "id": "BC-P1C-M02-F003",
+            "label": "原类别",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M02"
+          },
+          {
+            "id": "BC-P1C-M02-F004",
+            "label": "申请类别",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M02"
+          },
+          {
+            "id": "BC-P1C-M02-F005",
+            "label": "原级别",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M02"
+          },
+          {
+            "id": "BC-P1C-M02-F006",
+            "label": "申请级别",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M02"
+          },
+          {
+            "id": "BC-P1C-M02-F007",
+            "label": "状态",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M02"
+          },
+          {
+            "id": "BC-P1C-M02-F008",
+            "label": "最终结果",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M02"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：评定过程；表头已取得；筛选/字段标签：未取得；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:41:04.683Z"
+      },
+      {
+        "id": "BC-P1C-M06",
+        "moduleId": "M06",
+        "path": "任职资格 > 任职类别",
+        "evidenceRef": "BC-P1C-M06",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:47:04.280992+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P1C-M06-F001",
+            "label": "名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M06"
+          },
+          {
+            "id": "BC-P1C-M06-F002",
+            "label": "编码",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M06"
+          },
+          {
+            "id": "BC-P1C-M06-F003",
+            "label": "所属分类",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M06"
+          },
+          {
+            "id": "BC-P1C-M06-F004",
+            "label": "关联岗职务类型",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M06"
+          },
+          {
+            "id": "BC-P1C-M06-F005",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M06"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：任职类别；表头已取得；筛选/字段标签：未取得；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:44:04.497Z"
+      },
+      {
+        "id": "BC-P1C-M15",
+        "moduleId": "M15",
+        "path": "测评中心 > 项目（入口尝试，实际停留：首页）",
+        "evidenceRef": "BC-P1C-M15",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:47:04.280992+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "N",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：首页；尚未取得目标业务字段；仅到达应用载体；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:44:23.664Z"
+      },
+      {
+        "id": "BC-P1C-M26",
+        "moduleId": "M26",
+        "path": "360度评估 > 评估活动（入口尝试，实际停留：首页）",
+        "evidenceRef": "BC-P1C-M26",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:47:04.280992+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "N",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：首页；尚未取得目标业务字段；仅到达应用载体；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "请求入口与当前标题/正文未建立完整对应；需要应用内有限替代路径，不声称无权限；不能按入口记为已读目标页",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:45:58.658Z"
+      },
+      {
+        "id": "BC-P1C-M37",
+        "moduleId": "M37",
+        "path": "人才标准 > 人才标准",
+        "evidenceRef": "BC-P1C-M37",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T15:47:04.280992+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [
+          {
+            "id": "BC-P1C-M37-F001",
+            "label": "名称",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M37"
+          },
+          {
+            "id": "BC-P1C-M37-F002",
+            "label": "分类",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M37"
+          },
+          {
+            "id": "BC-P1C-M37-F003",
+            "label": "状态",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M37"
+          },
+          {
+            "id": "BC-P1C-M37-F004",
+            "label": "创建人",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M37"
+          },
+          {
+            "id": "BC-P1C-M37-F005",
+            "label": "创建时间",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M37"
+          },
+          {
+            "id": "BC-P1C-M37-F006",
+            "label": "操作",
+            "context": "列表列",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-P1C-M37"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "实际标题：人才标准；表头已取得；筛选/字段标签：状态、分类；当前已授权账号仅提取标签，不读取行值",
+        "unknown": "完整必填/默认/枚举/校验、角色权限、状态变化与接口行为未验证",
+        "operations": "按已观察的顶层应用及子菜单导航；未点击提交/发布/任务执行",
+        "flowRef": [],
+        "observedAt": "2026-09-08T15:46:33.333Z"
       }
     ],
     "humanAcceptancePrerequisite": false,
@@ -14088,6 +16430,17 @@
       "newDeployments": 0,
       "newBusinessTests": 0,
       "processCheckLimitation": "有界/proc检查未见可读取项目cwd进程；17项不可读"
+    },
+    "currentRun": {
+      "startHead": "447b02f72a2d2051986aba98e769daa7c2b846a3",
+      "branch": "main",
+      "startWorkingTree": "clean",
+      "mode": "单执行总控、连续P1A/P1B，局部阻塞转序继续",
+      "sourceReadOnly": true,
+      "newProductCodeChanges": false,
+      "newDeployments": 0,
+      "newHumanVisitors": 0,
+      "businessTestsRerun": false
     }
   },
   "roadmap": {
@@ -14176,7 +16529,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "BP-F / F01–F04 P1B",
+    "activeWorkPackage": "P1A/P1B持续盘点；首要需求包BP-F/F01–F04，已衔接各业务包规格",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -14191,17 +16544,17 @@
       "BP-I"
     ],
     "nextTasks": [
-      "核对首包字段/状态/权限与实现差异并完善P1B",
-      "原站组织、兼岗、再入职、法人规则只读补证",
-      "按顺序补干部人才至集成的典型页与业务包规格",
-      "集中评审实质规则/范围/权限决策，非阻塞项继续",
-      "就绪包P2复核；本轮不启动新功能实现"
+      "保存组织空表、选拔/资格等新增证据及首包差异；逐包继续原站只读盘点",
+      "干部人才→学习→绩效→招聘→假勤→薪酬→自助/报表/集成，未探索页保持待补证",
+      "核实M36/M41/M47职责与候选归属，原48组不变",
+      "完成包级字段/角色/状态/外部接口与跨包一致性；候选规则集中待评审",
+      "文档检查、按完整工作单元提交推送；不恢复P2/P3，不代签业务评审"
     ],
     "state": "P1未整体验收；P2保留受限历史技术验收；F01–F04业务验收未完成；E1仅页面可打开；E2唯一访问者；D1–D7独立设计；所有历史测试不等于当前复验"
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-08T15:07:33.692739+00:00",
+    "updatedAt": "2026-09-08T15:44:10.122788+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -14213,15 +16566,70 @@
           "M20"
         ],
         "assignment": "本轮规划分组（按现有范围/导航；不代表原站产品分类）",
-        "spec": "docs/delivery/F01_F04_Requirements_Baseline.md",
-        "specKind": "需求规格评审稿",
+        "spec": "docs/delivery/P1B_BP_F_Specification.md",
+        "specKind": "业务包规格评审稿：已观察证据、既有契约与逐组受限需求分列",
         "confirmedRules": "D1–D7，见首包基线；其余规则按来源分别评审",
         "pending": "组织层级、主兼岗、法人、再入职及主数据变更影响",
-        "acceptance": "F01–F04：UAT-01–12及基线补充契约；均未签署",
+        "acceptance": "原acceptanceTasks按moduleId关联；本规格Given/When/Then为细化场景，未执行/未签署，不增加原验收分母",
         "dependencies": [],
-        "readiness": "未就绪：规格与差异评审待完成",
+        "readiness": "未就绪：规格可评审，证据缺口/候选规则与需求签署未关闭",
         "accepted": false,
-        "next": "继续首包字段/异常契约、差异闭合及原站结构补证"
+        "next": "闭合F-SPEC-01–03；组织/兼岗/再入职/法人新证据纳入差异，M20独立保留",
+        "inputEvidence": "docs/delivery/F01_F04_Requirements_Baseline.md",
+        "contracts": [
+          {
+            "object": "组织/岗位/职级/员工",
+            "fields": "组织同级名称唯一且不成环；岗位/职级code唯一；员工code唯一；具体字段类型见F01–F04基线",
+            "roles": "目录管理员；员工和异动按当前角色/组织/字段权限；E2不新增人",
+            "lifecycle": "组织启用/停用，员工试用/正式/离职与审批状态分开；离职人员不允许普通编辑",
+            "actions": "组织维护、目录关联、档案、调动审批与执行、历史回读",
+            "codeRefs": [
+              "lib/hris/model.ts",
+              "lib/hris/authorization.ts",
+              "app/api/hris/route.ts"
+            ],
+            "acceptance": "已有关联在职员工/启用子组织或岗位的组织，申请停用应拒绝且原数据不变；相同组织名在同父节点拒绝；不同父节点按当前规则核对，不推广成全局唯一",
+            "gap": "F-SPEC-01仅岗位/职级名称；兼岗/再入职/法人不是普通员工编辑",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-F-REQ-01"
+          },
+          {
+            "object": "F03调动原单和执行记录",
+            "fields": "effectiveOn合法日期；previousApprovalId同员工同类型终态原单；attempts、lastAttemptAt、appliedAt分别留存",
+            "roles": "D3双方范围发起；D4两级独立；D5当前职级可见；生效执行再次校验范围",
+            "lifecycle": "pending→approved与waiting→applied/failed/cancelled正交；驳回/撤回终态，改日新单重审",
+            "actions": "发起/逐级审批/撤回/取消生效/执行/失败恢复",
+            "codeRefs": [
+              "lib/hris/model.ts",
+              "tests/f01-f04-transfer-roles.test.mjs"
+            ],
+            "acceptance": "批准后档案不变；北京时间生效日00:00前拒绝执行；业务校验失败保留原因及计划日；恢复后记实际时间。审计故障整个事务回滚并刷新核对；旧revision拒绝",
+            "gap": "D1–D7已确认；F-SPEC-02/03仅异常边界和关联宽度待审",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-F-REQ-02"
+          },
+          {
+            "object": "项目人力（M20）",
+            "fields": "仅项目、项目人员、工时管理、统计、设置导航；字段/主键/工时单位未核实",
+            "roles": "项目经理、参与人、HR的具体权限待核实，不套用组织经理",
+            "lifecycle": "项目状态、人员加入退出、工时提交审批/回退/锁期尚未探索",
+            "actions": "已见导航；不执行工时填报",
+            "codeRefs": [
+              "docs/delivery/Scope_Register.json"
+            ],
+            "acceptance": "待取得项目与工时表单后才能定义工时重叠、合计、审批、薪资影响场景；当前不设虚构通过预期",
+            "gap": "M20未独立实现；项目归属BP-F不等于可按任职调动替代",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-F-REQ-03"
+          }
+        ],
+        "goal": "在保留原范围内形成组织员工的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
+        "specStatus": "部分契约已具体化；未探索部分明确受限；非完整需求验收",
+        "primarySubpackage": "F01–F04",
+        "authoritativeDetail": "docs/delivery/F01_F04_Requirements_Baseline.md"
       },
       {
         "id": "BP-C",
@@ -14241,17 +16649,84 @@
           "M46"
         ],
         "assignment": "本轮规划分组（按现有范围/导航；不代表原站产品分类）",
-        "spec": "docs/delivery/Cadre_Learning_Source_Gaps.md",
-        "specKind": "证据/差异输入，尚非完整需求规格",
+        "spec": "docs/delivery/P1B_BP_C_Specification.md",
+        "specKind": "业务包规格评审稿：已观察证据、既有契约与逐组受限需求分列",
         "confirmedRules": "仅复用适用的已确认公共依赖，不把现有独立实现视为本包规则已确认",
         "pending": "任用期限、委员会、模型与标准版本、敏感档案权限",
-        "acceptance": "沿用原任务criteria；待按对象/角色/异常补成可执行分包场景，未签署",
+        "acceptance": "原acceptanceTasks按moduleId关联；本规格Given/When/Then为细化场景，未执行/未签署，不增加原验收分母",
         "dependencies": [
           "BP-F"
         ],
-        "readiness": "未就绪：需补证及完整规格",
+        "readiness": "未就绪：规格可评审，证据缺口/候选规则与需求签署未关闭",
         "accepted": false,
-        "next": "按原ID补典型入口证据并编写任用期限、委员会、模型与标准版本、敏感档案权限规格"
+        "next": "补本包逐组证据缺口，评审已具体化契约和局部待决策项；不因本包受限阻断其他包P1",
+        "inputEvidence": "docs/delivery/Cadre_Learning_Source_Gaps.md",
+        "contracts": [
+          {
+            "object": "干部任期/提名/任用",
+            "fields": "任期主职literal；有效起止日；evidence5–3000；重叠非作废任期拒绝；提名employeeId/positionId，资格和继任引用可选",
+            "roles": "HR/管理员有当前员工及岗位组织范围；禁止登记本人；提名审议独立管理者",
+            "lifecycle": "任期registered/ended/voided；提名submitted/approved；任用核对要求批准的后续调动且已生效",
+            "actions": "登记/更正/结束/作废、提名/审议、任用核对、考察述职",
+            "codeRefs": [
+              "lib/hris/cadre-terms.ts",
+              "lib/hris/cadres.ts"
+            ],
+            "acceptance": "已有生效任期重叠时登记拒绝；已批准未生效调动不能核对任用；岗位不匹配拒绝；员工离职前不能登记离职原因结束任期",
+            "gap": "原站四状态干部身份不可用registered/ended一对一替代；委员会/任期算法/复杂任用类型未就绪",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-C-REQ-01"
+          },
+          {
+            "object": "任职资格标准及认证",
+            "fields": "标准code/name1–200，criteria5–3000；要求1–20且标准版本不重复，target1–5整数；validUntil合法且不得过去",
+            "roles": "HR/本人可申请；审核者admin/hr/manager在范围内且非创建者/本人",
+            "lifecycle": "标准draft→published→archived；认证submitted/withdrawn/certified/rejected/revoked",
+            "actions": "标准发布、申请、独立审核、撤销及到期读取",
+            "codeRefs": [
+              "lib/hris/qualification.ts"
+            ],
+            "acceptance": "新标准版本不得覆盖旧认证依据；相同版本已有有效认证/待审申请时拒绝重复；不达目标或证据版本错误不能认证",
+            "gap": "认证委员会、类别层级及有效期政策需原站与企业基线；现有整数尺度非原站标准",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-C-REQ-02"
+          },
+          {
+            "object": "360项目/关系/答卷/报告",
+            "fields": "纯量表模板；1–20题、1–5整数；minRespondents3–10；关系self/supervisor/peer/report；项目日期合法",
+            "roles": "HR管理员配置；仅名单中的在职评估人本人填报；范围控制不能等同匿名承诺",
+            "lifecycle": "draft→open→closed；报告closed后按被评人一次发布冻结",
+            "actions": "配置关系、开放/关闭、作答、发布分组汇总",
+            "codeRefs": [
+              "lib/hris/feedback.ts"
+            ],
+            "acceptance": "草稿后不能改名单；重复评估人+被评人拒绝；本人关系不匹配拒绝；同事/下属低于阈值返回suppressed与null均值，自评/上级阈值1；不把无响应记0",
+            "gap": "阈值/匿名性是独立策略待确认；提醒、题型、完整活动运营未覆盖",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-C-REQ-03"
+          },
+          {
+            "object": "盘点/继任/标准模型",
+            "fields": "沿用既有版本化标准、盘点/九宫格快照与继任引用；模型及角度码仅导航，不推造字段",
+            "roles": "人才敏感档案当前范围与具体记录权限；监察、跨组织池、委员会权限未核实",
+            "lifecycle": "盘点、人才池、资格、发展计划是不同记录，不能相同status混用",
+            "actions": "盘点、校准、提名、发展计划衔接；M02/M15/M38/M45/M46保留独立缺口",
+            "codeRefs": [
+              "docs/delivery/Cadre_Learning_Source_Gaps.md",
+              "docs/delivery/Scope_Register.json"
+            ],
+            "acceptance": "后续评审必须证明正式绩效快照来源/版本；撤销或新版本不能静默覆盖旧九宫格；无绩效不自动补最低档",
+            "gap": "当前仅重用已有范围描述；多维模型/健康度/测評题库及评分未可验收",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-C-REQ-04"
+          }
+        ],
+        "goal": "在保留原范围内形成干部人才的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
+        "specStatus": "部分契约已具体化；未探索部分明确受限；非完整需求验收"
       },
       {
         "id": "BP-L",
@@ -14262,18 +16737,101 @@
           "M28"
         ],
         "assignment": "本轮规划分组（按现有范围/导航；不代表原站产品分类）",
-        "spec": "docs/delivery/Cadre_Learning_Source_Gaps.md",
-        "specKind": "证据/差异输入，尚非完整需求规格",
+        "spec": "docs/delivery/P1B_BP_L_Specification.md",
+        "specKind": "业务包规格评审稿：已观察证据、既有契约与逐组受限需求分列",
         "confirmedRules": "仅复用适用的已确认公共依赖，不把现有独立实现视为本包规则已确认",
         "pending": "循环、共享、费用、成绩及例外转认",
-        "acceptance": "沿用原任务criteria；待按对象/角色/异常补成可执行分包场景，未签署",
+        "acceptance": "原acceptanceTasks按moduleId关联；本规格Given/When/Then为细化场景，未执行/未签署，不增加原验收分母",
         "dependencies": [
           "BP-F",
           "BP-C"
         ],
-        "readiness": "未就绪：需补证及完整规格",
+        "readiness": "未就绪：规格可评审，证据缺口/候选规则与需求签署未关闭",
         "accepted": false,
-        "next": "按原ID补典型入口证据并编写循环、共享、费用、成绩及例外转认规格"
+        "next": "补本包逐组证据缺口，评审已具体化契约和局部待决策项；不因本包受限阻断其他包P1",
+        "inputEvidence": "docs/delivery/Cadre_Learning_Source_Gaps.md",
+        "contracts": [
+          {
+            "object": "学习配置与实例",
+            "fields": "title1–200；课程/独立考试/作业合计1–20且不重复；相对/固定/循环mode；期限1–36500；实例关联配置版本、employeeId、round",
+            "roles": "HR/管理员当前组织配置，学员仅本人有效实例；批阅依指定角色当前权限",
+            "lifecycle": "配置draft/sealed/archived；实例active/completed/cancelled；课程核验与实例结项分离",
+            "actions": "草稿、定版、修订、显式派发、新轮、结项、内容更新预览",
+            "codeRefs": [
+              "lib/hris/learning-plan-definitions.ts",
+              "lib/hris/learning-plan-model.ts"
+            ],
+            "acceptance": "已定版配置直接改动拒绝；跨组织试卷/作业引用拒绝；新版本不自动改旧实例；取消/退出要求不伪造完成；固定模式起点按计划日期，非加入日",
+            "gap": "自动循环不是已实现；共享管理员与可学范围、完成实例重开、跨轮更新待明确",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-L-REQ-01"
+          },
+          {
+            "object": "阶段窗口与任务放行",
+            "fields": "阶段1–10且名称不重复、资源恰好覆盖；startAfterDays0–36500；scheduled-inclusive截止days1–36500；requiredMinimum/optionalMinimum不得超内容数",
+            "roles": "当前学员、有效实例和阶段可操作；独立核验与学员提交窗口分开",
+            "lifecycle": "开放/顺序放行/任务完成/阶段达标/计划结项为不同概念",
+            "actions": "阶段配置、提交、独立核验、取消、内容更新",
+            "codeRefs": [
+              "lib/hris/learning-plan-definitions.ts",
+              "lib/hris/learning-requirements.ts"
+            ],
+            "acceptance": "有序阶段的考试/作业提交放行不等于通过；未完成必修不满足结项；晚核验不得伪造按期提交；无法完成的数量门槛配置拒绝",
+            "gap": "自然日含首日和顺序晚开启的原站精确算法尚未核实，当前策略需评审",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-L-REQ-02"
+          },
+          {
+            "object": "计划成绩",
+            "fields": "none/contentWeighted/allHighest/allAttemptsAverage/eachExamHighestAverage/specifiedExamHighest；整数权重总和100，decimals0–2；attempts all/passed",
+            "roles": "成绩来源只取当前可见关联任务，发布与查看权限独立",
+            "lifecycle": "not_configured/pending/provisional/final；完成与分数独立",
+            "actions": "配置取分、成绩依据回读、结项投影",
+            "codeRefs": [
+              "lib/hris/learning-grades.ts",
+              "lib/hris/learning-grade-evidence.ts"
+            ],
+            "acceptance": "缺少有效成绩时pending与null，不能补0/100；按每次考试平均与每场最高平均给出不同期望；无成绩课程不能获得虚构权重成绩",
+            "gap": "缺失分母、精度、通过过滤及多审批人聚合为候选政策，原站选项存在不能证明算法完整一致",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-L-REQ-03"
+          },
+          {
+            "object": "学分、撤销、到期",
+            "fields": "creditUnits整数1–1000000，未将units解释为学分小数换算；validityDays可选1–36500；策略绑定课程版本；日期从授予日含首日",
+            "roles": "HR/管理员范围内、非本人授予；撤销需另一有权限HR",
+            "lifecycle": "授予与反向撤销记录保留；validUntil早于核对日为过期；循环重复要求显式开启且新轮结项",
+            "actions": "策略登记、基于独立核验授予、反向撤销、台账读取",
+            "codeRefs": [
+              "lib/hris/learning-credits.ts"
+            ],
+            "acceptance": "同课程版本重复授予拒绝；允许循环重复的完整新轮且非旧成果复用才可新授；撤销不删除原记录；到期日当天仍有效",
+            "gap": "折抵、企业到期算法、积分和自动发证尚未确认；不得将本项目整数单位当原站字段类型",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-L-REQ-04"
+          },
+          {
+            "object": "AI陪练（M28）",
+            "fields": "已见计划/剧本/话术/质检/评分指标与模板/学员/AI角色；具体输入、评分尺度与模型输出证据未得",
+            "roles": "话术内容、学员音视频及评分可见性待核实",
+            "lifecycle": "陪练发布、练习、质检、成绩申诉/重评待探索",
+            "actions": "仅只读页面/无录音上传、发起陪练或调用AI",
+            "codeRefs": [
+              "docs/delivery/Scope_Register.json"
+            ],
+            "acceptance": "先明确评分输入和可复现版本，再制定正常/无音频/低置信度/人工复核场景；暂不能给出评分通过阈值",
+            "gap": "没有独立实现，不以现有学习考试代替",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-L-REQ-05"
+          }
+        ],
+        "goal": "在保留原范围内形成学习的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
+        "specStatus": "部分契约已具体化；未探索部分明确受限；非完整需求验收"
       },
       {
         "id": "BP-P",
@@ -14283,18 +16841,70 @@
           "M16"
         ],
         "assignment": "本轮规划分组（按现有范围/导航；不代表原站产品分类）",
-        "spec": "docs/delivery/Performance_Source_Gaps.md",
-        "specKind": "证据/差异输入，尚非完整需求规格",
+        "spec": "docs/delivery/P1B_BP_P_Specification.md",
+        "specKind": "业务包规格评审稿：已观察证据、既有契约与逐组受限需求分列",
         "confirmedRules": "仅复用适用的已确认公共依赖，不把现有独立实现视为本包规则已确认",
         "pending": "组织绩效、评级系数、在途变更与发布口径",
-        "acceptance": "沿用原任务criteria；待按对象/角色/异常补成可执行分包场景，未签署",
+        "acceptance": "原acceptanceTasks按moduleId关联；本规格Given/When/Then为细化场景，未执行/未签署，不增加原验收分母",
         "dependencies": [
           "BP-F",
           "BP-C"
         ],
-        "readiness": "未就绪：需补证及完整规格",
+        "readiness": "未就绪：规格可评审，证据缺口/候选规则与需求签署未关闭",
         "accepted": false,
-        "next": "按原ID补典型入口证据并编写组织绩效、评级系数、在途变更与发布口径规格"
+        "next": "补本包逐组证据缺口，评审已具体化契约和局部待决策项；不因本包受限阻断其他包P1",
+        "inputEvidence": "docs/delivery/Performance_Source_Gaps.md",
+        "contracts": [
+          {
+            "object": "绩效周期/计划/结果",
+            "fields": "活动组织、有效起止日；目标1–20、整数权重总和100；模板/等级方案冻结；文本阶段必填与当前权限",
+            "roles": "HR配置/发布；员工自评；独立经理评价；申诉审核与原评价/发布者分离",
+            "lifecycle": "周期draft/active/closed；计划draft/confirmed/submitted/evaluated/cancelled；正式结果单独published版本",
+            "actions": "目标确认、调整审核、跟进、自评、评价、发布、申诉更正",
+            "codeRefs": [
+              "lib/hris/performance.ts",
+              "lib/hris/performance-availability.ts"
+            ],
+            "acceptance": "活动有效且员工在当前范围才能继续；待审调整阻断自评；发布不覆盖原结果；未经审核的更正不能成为正式结果",
+            "gap": "组织绩效、关系锁定、强制分布、申诉时间窗及多维流程未就绪",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-P-REQ-01"
+          },
+          {
+            "object": "绩效等级与尺度",
+            "fields": "分值±1000000、0.01步长；2–20等级，标签唯一；min<max，降序无重叠；talentBand显式1/2/3",
+            "roles": "同组织HR/管理员管理；原有活动保留评级方案快照",
+            "lifecycle": "draft→sealed，修订新版本；归档不覆盖快照",
+            "actions": "配置、定版、修订、归档、按活动尺度校验分值",
+            "codeRefs": [
+              "lib/hris/performance-ratings.ts"
+            ],
+            "acceptance": "边界只可匹配一个等级；区间缺口不自动发布；新方案不替换旧活动；总分非百分制按活动范围校验",
+            "gap": "原站连续区间说明与现实现允许空隙但发布拒绝存在差异；纯手工等级/系数及在途更新未实现",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-P-REQ-02"
+          },
+          {
+            "object": "目标数量/权重检查与指标引用",
+            "fields": "数量、单项整数权重分别强制/仅提示；总体1–20、1–100及总和100仍是实现硬限；定性指标版本引用",
+            "roles": "模板管理与评价录入分离；字段权限随步骤核对，不等同菜单权限",
+            "lifecycle": "配置版本→活动快照→目标/调整/正式结果的引用链",
+            "actions": "配置提示、目标提交/调整、查看指标引用",
+            "codeRefs": [
+              "docs/delivery/Performance_Source_Gaps.md",
+              "lib/hris/performance.ts"
+            ],
+            "acceptance": "仅提示超出建议值不阻断通用合法目标；强制违反拒绝；指标改版不改旧目标快照；同一记录多次引用不能冒计多人",
+            "gap": "小数权重/算术求和/完整模块权重与定量自动下发未覆盖",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-P-REQ-03"
+          }
+        ],
+        "goal": "在保留原范围内形成绩效的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
+        "specStatus": "部分契约已具体化；未探索部分明确受限；非完整需求验收"
       },
       {
         "id": "BP-R",
@@ -14311,17 +16921,70 @@
           "M44"
         ],
         "assignment": "本轮规划分组（按现有范围/导航；不代表原站产品分类）",
-        "spec": "docs/delivery/Recruitment_Source_Gaps.md",
-        "specKind": "证据/差异输入，尚非完整需求规格",
+        "spec": "docs/delivery/P1B_BP_R_Specification.md",
+        "specKind": "业务包规格评审稿：已观察证据、既有契约与逐组受限需求分列",
         "confirmedRules": "仅复用适用的已确认公共依赖，不把现有独立实现视为本包规则已确认",
         "pending": "渠道、测评/面试、录用、电子签及入职衔接",
-        "acceptance": "沿用原任务criteria；待按对象/角色/异常补成可执行分包场景，未签署",
+        "acceptance": "原acceptanceTasks按moduleId关联；本规格Given/When/Then为细化场景，未执行/未签署，不增加原验收分母",
         "dependencies": [
           "BP-F"
         ],
-        "readiness": "未就绪：需补证及完整规格",
+        "readiness": "未就绪：规格可评审，证据缺口/候选规则与需求签署未关闭",
         "accepted": false,
-        "next": "按原ID补典型入口证据并编写渠道、测评/面试、录用、电子签及入职衔接规格"
+        "next": "补本包逐组证据缺口，评审已具体化契约和局部待决策项；不因本包受限阻断其他包P1",
+        "inputEvidence": "docs/delivery/Recruitment_Source_Gaps.md",
+        "contracts": [
+          {
+            "object": "需求/招聘职位/候选人",
+            "fields": "需求草稿/显式提交；candidate必填active requisitionId；姓名1–200；email合法或空；职位冻结版本；CNY月薪整数分或面议",
+            "roles": "当前组织HR录入；所有贡献者不能审批自己的需求/录用；指定面试人按排期权限",
+            "lifecycle": "需求draft/submitted/active/closed；候选screening/interviewed/offered/approved/accepted/hired/rejected",
+            "actions": "保存/保存并提交、独立批准、职位启用/修订、候选登记、退回、关闭",
+            "codeRefs": [
+              "lib/hris/recruitment.ts",
+              "lib/hris/recruitment-jobs.ts"
+            ],
+            "acceptance": "不同需求的职位版本不能关联；有候选引用的职位改版不能覆盖旧版；需求关闭不能遗留活动候选；邮件权限撤销后不能写邮箱",
+            "gap": "原站允许职位或人才库入口，当前必须有需求，无法覆盖独立人才库；外部来源/门户未实现",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-R-REQ-01"
+          },
+          {
+            "object": "面试/评价/录用入职",
+            "fields": "排期、面试评价模板版本与显式结论；有效评价后录用；入职date、code唯一及名额校验",
+            "roles": "指定面试人评价；录用独立审批；HR登记候选接受，不冒充候选本人确认",
+            "lifecycle": "排期未结束不可完成评价；推荐推进→录用批准→HR登记接受→到期原子入职",
+            "actions": "内部排期/冲突核对、评价、审批、接受登记、入职",
+            "codeRefs": [
+              "lib/hris/recruitment.ts",
+              "lib/hris/recruitment-evaluations.ts"
+            ],
+            "acceptance": "待进行排期阻断录用；未推荐推进不允许录用；未接受或尚未到入职日拒绝入职；重复入职不重复建员工或计数",
+            "gap": "面试日历/通知、电子签回执、Offer占编与跨法人/再入职接口未就绪",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-R-REQ-02"
+          },
+          {
+            "object": "推荐/校园/外推/AI/RPA周边",
+            "fields": "原ID各自保留奖金/积分/规则/人员/推荐记录、AI题库/答疑及RPA个人企业入口；字段类型尚待源页面",
+            "roles": "推荐人、外部人员、面试官、AI管理员范围未证实，不扩站点访问",
+            "lifecycle": "奖励结算、推荐归因、候选合并、AI结果人工复核、RPA失败重试待核实",
+            "actions": "只读配置，不发送邀请、不运行自动化、不读取简历正文",
+            "codeRefs": [
+              "docs/delivery/Recruitment_Source_Gaps.md",
+              "docs/delivery/Scope_Register.json"
+            ],
+            "acceptance": "待定义归因/去重/结算依据后制定重复推荐、撤回录用、跨来源冲突及重试场景；AI评分阈值不可编造",
+            "gap": "周边7组未独立实现，不能用核心招聘自动验收覆盖",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-R-REQ-03"
+          }
+        ],
+        "goal": "在保留原范围内形成招聘的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
+        "specStatus": "部分契约已具体化；未探索部分明确受限；非完整需求验收"
       },
       {
         "id": "BP-A",
@@ -14331,17 +16994,68 @@
           "M11"
         ],
         "assignment": "本轮规划分组（按现有范围/导航；不代表原站产品分类）",
-        "spec": "docs/delivery/Attendance_Source_Gaps.md",
-        "specKind": "证据/差异输入，尚非完整需求规格",
+        "spec": "docs/delivery/P1B_BP_A_Specification.md",
+        "specKind": "业务包规格评审稿：已观察证据、既有契约与逐组受限需求分列",
         "confirmedRules": "仅复用适用的已确认公共依赖，不把现有独立实现视为本包规则已确认",
         "pending": "班次、额度、结转与冻结记录契约",
-        "acceptance": "沿用原任务criteria；待按对象/角色/异常补成可执行分包场景，未签署",
+        "acceptance": "原acceptanceTasks按moduleId关联；本规格Given/When/Then为细化场景，未执行/未签署，不增加原验收分母",
         "dependencies": [
           "BP-F"
         ],
-        "readiness": "未就绪：需补证及完整规格",
+        "readiness": "未就绪：规格可评审，证据缺口/候选规则与需求签署未关闭",
         "accepted": false,
-        "next": "按原ID补典型入口证据并编写班次、额度、结转与冻结记录契约规格"
+        "next": "补本包逐组证据缺口，评审已具体化契约和局部待决策项；不因本包受限阻断其他包P1",
+        "inputEvidence": "docs/delivery/Attendance_Source_Gaps.md",
+        "contracts": [
+          {
+            "object": "班次/打卡/补卡/请假",
+            "fields": "固定班次起止分钟对齐、时长>0且≤24h；同日不重复/不重叠；请假分钟整数、在单班内并扣休息；假种可选1–1440分钟边界",
+            "roles": "员工本人打卡/申请；独立审核非本人，当前组织范围；撤权后不可继续",
+            "lifecycle": "补卡/请假申请及批准与实际打卡/覆盖分别留存",
+            "actions": "派班、打卡、补卡申请/审核/撤回、请假、人工额度、覆盖查询",
+            "codeRefs": [
+              "lib/hris/attendance.ts"
+            ],
+            "acceptance": "跨班请假当前拒绝；已批准用量与待审批预留分开，超余额不能再申请；重复/反序打卡拒绝；修改后旧版本审批拒绝",
+            "gap": "弹性/轮班/设备/加班调休未实现；分钟规则是本项目候选",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-A-REQ-01"
+          },
+          {
+            "object": "结算期间与冻结版本",
+            "fields": "单人期间1–31业务日、已结束；来源≤1000；无未覆盖/缺卡/冲突/待审批；保存sourceRevision与来源快照",
+            "roles": "范围HR/管理员手动；非原站全自动月结；员工确认尚缺",
+            "lifecycle": "frozen→open→refreeze新version，或void；工资引用旧版本须识别变化",
+            "actions": "预览、手动冻结、重新开放、重新冻结、作废",
+            "codeRefs": [
+              "lib/hris/attendance-periods.ts",
+              "lib/hris/attendance-locks.ts"
+            ],
+            "acceptance": "有待审批/未覆盖时不能冻结；冻结阻止来源写；重新开放后工资待发布引用失效；重冻不覆盖旧快照",
+            "gap": "原站冻结/发布/确认/封存为独立列，不能用当前两个状态冒充完整原站月报",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-A-REQ-02"
+          },
+          {
+            "object": "假期/调休结算",
+            "fields": "原站可结算调休假、本月结算调休假、结算期间、审批状态分列；8小时观察值不能当租户规则",
+            "roles": "额度维护、审批、结算、员工查看职责与字段范围待核实",
+            "lifecycle": "授予/占用/审批/结转/失效/调休结算完整状态待核实",
+            "actions": "只读配置与结算记录；不运行结算",
+            "codeRefs": [
+              "docs/delivery/Attendance_Source_Gaps.md"
+            ],
+            "acceptance": "必须先取得授予、折算单位、过期和跨年规则，再给出边界日与结转预期；现阶段不虚构额度公式",
+            "gap": "企业参数、自动结转和申诉待决策/补证",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-A-REQ-03"
+          }
+        ],
+        "goal": "在保留原范围内形成假勤的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
+        "specStatus": "部分契约已具体化；未探索部分明确受限；非完整需求验收"
       },
       {
         "id": "BP-S",
@@ -14355,18 +17069,70 @@
           "M42"
         ],
         "assignment": "本轮规划分组（按现有范围/导航；不代表原站产品分类）",
-        "spec": "docs/delivery/Payroll_Source_Gaps.md",
-        "specKind": "证据/差异输入，尚非完整需求规格",
+        "spec": "docs/delivery/P1B_BP_S_Specification.md",
+        "specKind": "业务包规格评审稿：已观察证据、既有契约与逐组受限需求分列",
         "confirmedRules": "仅复用适用的已确认公共依赖，不把现有独立实现视为本包规则已确认",
         "pending": "薪资组、核算/税社保、支付、成本及凭证接口",
-        "acceptance": "沿用原任务criteria；待按对象/角色/异常补成可执行分包场景，未签署",
+        "acceptance": "原acceptanceTasks按moduleId关联；本规格Given/When/Then为细化场景，未执行/未签署，不增加原验收分母",
         "dependencies": [
           "BP-F",
           "BP-A"
         ],
-        "readiness": "未就绪：需补证及完整规格",
+        "readiness": "未就绪：规格可评审，证据缺口/候选规则与需求签署未关闭",
         "accepted": false,
-        "next": "按原ID补典型入口证据并编写薪资组、核算/税社保、支付、成本及凭证接口规格"
+        "next": "补本包逐组证据缺口，评审已具体化契约和局部待决策项；不因本包受限阻断其他包P1",
+        "inputEvidence": "docs/delivery/Payroll_Source_Gaps.md",
+        "contracts": [
+          {
+            "object": "人工核定工资批次与工资条",
+            "fields": "组织+YYYY-MM非取消批次唯一；币种CNY；policyref5–2000；1–40项，项名唯一；earning/deduction/employer整数分0–1e9，净额非负",
+            "roles": "admin/payroll_editor编制，admin/payroll_reviewer复核；全部贡献者不得复核；本人不能编制/发布本人条目；普通HR无薪酬专岗权限",
+            "lifecycle": "draft→submitted→approved→published；退回draft，cancel仅draft",
+            "actions": "人工录入核定值、提交、复核、发布、异议/补差查询",
+            "codeRefs": [
+              "lib/hris/payroll.ts",
+              "lib/hris/payroll-access.ts"
+            ],
+            "acceptance": "同员工同月非取消条目重复拒绝；贡献者即使移除所改条目仍不可复核；净额负数拒绝；发布前不能在本人自助看到工资条",
+            "gap": "仅人工核定值，自动算薪/税社保/支付均未实现，不能以发布工资条冒称发薪",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-S-REQ-01"
+          },
+          {
+            "object": "冻结考勤引用/来源变化",
+            "fields": "同员工、计薪月内完整期间、不重叠、已冻结、uncoveredMinutes0；记录id/version/updatedAt/sourceRevision",
+            "roles": "薪酬专岗只能取当前范围聚合；不默认开放打卡个人明细",
+            "lifecycle": "提交/复核/发布前重新核对；已发布结果保留并提示异常",
+            "actions": "选择来源、核对、退回重编、发布后异常查询",
+            "codeRefs": [
+              "lib/hris/payroll-attendance.ts"
+            ],
+            "acceptance": "来源开放/版本或时间变化后提交复核发布返回冲突；不能沿用旧复核；已发布后来源变化不静默改工资结果",
+            "gap": "没有自动由考勤计算工资公式；补差与重核策略需业务评审",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-S-REQ-02"
+          },
+          {
+            "object": "薪资组/预算成本/凭证/福利/佣金",
+            "fields": "薪资组原站有上级薪资组/对应部门；周边范围按原ID分别列规则、方案和结果；具体货币/精度/税期未核实",
+            "roles": "薪资组层级不直接等于组织权限；预算审批、凭证复核、福利账户及佣金审批边界未核实",
+            "lifecycle": "预算版本、佣金计算/结果、凭证生成/冲销、支付回执及失败恢复待探索",
+            "actions": "只读配置；不运行核算、凭证生成、支付或结算",
+            "codeRefs": [
+              "docs/delivery/Payroll_Source_Gaps.md",
+              "docs/delivery/Scope_Register.json"
+            ],
+            "acceptance": "先明确各子模块来源、期间和对账基准，才能定义重算/冲销/重复任务/缺失科目等可执行预期",
+            "gap": "M09/M10/M33/M42无独立实现；原48组不删减",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-S-REQ-03"
+          }
+        ],
+        "goal": "在保留原范围内形成薪酬的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
+        "specStatus": "部分契约已具体化；未探索部分明确受限；非完整需求验收"
       },
       {
         "id": "BP-I",
@@ -14390,11 +17156,11 @@
           "M48"
         ],
         "assignment": "本轮规划分组（按现有范围/导航；不代表原站产品分类）",
-        "spec": "docs/delivery/Integration_Source_Gaps.md",
-        "specKind": "证据/差异输入，尚非完整需求规格",
+        "spec": "docs/delivery/P1B_BP_I_Specification.md",
+        "specKind": "业务包规格评审稿：已观察证据、既有契约与逐组受限需求分列",
         "confirmedRules": "仅复用适用的已确认公共依赖，不把现有独立实现视为本包规则已确认",
         "pending": "角色投影、指标分母、同步/重试及外部契约",
-        "acceptance": "沿用原任务criteria；待按对象/角色/异常补成可执行分包场景，未签署",
+        "acceptance": "原acceptanceTasks按moduleId关联；本规格Given/When/Then为细化场景，未执行/未签署，不增加原验收分母",
         "dependencies": [
           "BP-F",
           "BP-C",
@@ -14404,9 +17170,93 @@
           "BP-A",
           "BP-S"
         ],
-        "readiness": "未就绪：需补证及完整规格",
+        "readiness": "未就绪：规格可评审，证据缺口/候选规则与需求签署未关闭",
         "accepted": false,
-        "next": "按原ID补典型入口证据并编写角色投影、指标分母、同步/重试及外部契约规格"
+        "next": "补本包逐组证据缺口，评审已具体化契约和局部待决策项；不因本包受限阻断其他包P1",
+        "inputEvidence": "docs/delivery/Integration_Source_Gaps.md",
+        "contracts": [
+          {
+            "object": "员工自助/统一待办",
+            "fields": "self-service按当前employeeId投影；任务引用具体原记录；payslipCount仅已发布批次；返回revision",
+            "roles": "先visibleState/visibleDevelopment，再按本人筛选；审批入口可见不能扩大记录办理权限",
+            "lifecycle": "原模块取消/退出/离职/撤权/旧版本会改变是否可办；待办不是独立业务状态机",
+            "actions": "本人档案、任务入口、申请进度、原模块办理",
+            "codeRefs": [
+              "app/api/self-service/route.ts",
+              "lib/hris/work-inbox.ts"
+            ],
+            "acceptance": "已取消任务不继续展示可办理；待审目标调整阻断自评入口；本人申诉已批准待发布应显示awaiting_publish；原模块撤权即拒绝直接URL办理",
+            "gap": "日程/日报/完整OKR/消息发送未实现；独立M43任务不等于当前聚合待办",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-I-REQ-01"
+          },
+          {
+            "object": "报表与指标分母",
+            "fields": "reportQuery dataset枚举、日期合法from≤to、search≤100；workforce列按viewEmail/viewLevel；返回asOf/revision",
+            "roles": "每个dataset有角色及当前组织范围；薪酬报表仅专岗；导出与页面读取不是同一权限承诺",
+            "lifecycle": "正式绩效仅最新已发布版本；学习实例进度/成绩分别投影；人才九宫格取发布快照",
+            "actions": "查询、分页、原有审计导出（本轮不执行导出）",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "acceptance": "无字段权时表头/单元格不出现该字段；学习缺分保持null；绩效旧版本不重复计为当前；合同覆盖登记不能证明电子签法律有效或实际在岗",
+            "gap": "设计器/大规模查询/历史组织快照未就绪；每数据集必须独立定义分母，不能统一套人员数",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-I-REQ-02"
+          },
+          {
+            "object": "实名调查/问卷与360共用模板边界",
+            "fields": "问卷1–20题；量表1–5，单选2–8项不重复；开放名单快照、完整回答；当前答案非匿名",
+            "roles": "HR/管理员发布，名单内本人在窗口填报；当前角色可见性单独核对",
+            "lifecycle": "模板发布版本→round draft/open/closed；submitted/withdrawn答卷；统计仅有效提交",
+            "actions": "发布名单、答卷/撤回、关闭、查看统计",
+            "codeRefs": [
+              "lib/hris/surveys.ts",
+              "lib/hris/feedback.ts"
+            ],
+            "acceptance": "单选越界/缺题拒绝；撤回不计有效回应；未开放/超日期不能提交；实名不能在文案宣传匿名；360分组压制另按阈值",
+            "gap": "员工调查/北森问卷/问卷调查三组不合并，匿名、复杂题型、报告行动计划未完成",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-I-REQ-03"
+          },
+          {
+            "object": "主数据同步契约预检",
+            "fields": "eventId/sourceId/externalEmployeeId 1–100；sequence正安全整数；occurredAt带时区；mappingVersion正整数；profile严格对象；映射命名空间tenant+source",
+            "roles": "现有纯函数不访问网络、持久化或授予账号；实际同步权限尚未有接口",
+            "lifecycle": "ready/duplicate/conflict/gap/stale/mapping_required/rejected；ready仍DRY_RUN_ONLY",
+            "actions": "纯输入预检；实际原站任务/连接测试/一键配置不执行",
+            "codeRefs": [
+              "lib/hris/integration-preflight.ts"
+            ],
+            "acceptance": "相同eventId同内容为duplicate；内容不同conflict；缺前序gap；映射缺失/多义不生成可提交结论；ready不得宣称已更新员工",
+            "gap": "鉴权、密钥托管、真实endpoint、调度、事务回执和队列均未实现；重试函数不是后台重试服务",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-I-REQ-04"
+          },
+          {
+            "object": "工作台/电子签/会议/文化/翻译等周边",
+            "fields": "各原ID保留导航与缺口；认证/印章/签署、会议预定、标签/填报/文化运营、人力报告为不同对象",
+            "roles": "E2保持仅本人；独立人类角色、签署身份、外部访客均未新增",
+            "lifecycle": "电子签认证/签署回执不可用合同登记代替；会议/福利/文化消息有独立状态",
+            "actions": "只读入口；不发送消息、签署、预约、奖励或导出",
+            "codeRefs": [
+              "docs/delivery/Integration_Source_Gaps.md",
+              "docs/delivery/Scope_Register.json"
+            ],
+            "acceptance": "取得配置证据后再定义冲突、重复回执、撤销、时间窗口和访问边界；任何未探索动作不标成可用",
+            "gap": "周边多组只有入口；保留候选接口与证据不足，不能泛化当前自助实现",
+            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "accepted": false,
+            "id": "BP-I-REQ-05"
+          }
+        ],
+        "goal": "在保留原范围内形成自助/报表/集成的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
+        "specStatus": "部分契约已具体化；未探索部分明确受限；非完整需求验收"
       },
       {
         "id": "BP-UNASSIGNED",
@@ -14418,15 +17268,19 @@
           "M47"
         ],
         "assignment": "待核实",
-        "spec": "docs/delivery/P1_Review.md",
-        "specKind": "证据/差异输入，尚非完整需求规格",
+        "spec": "docs/delivery/P1B_BP_UNASSIGNED_Specification.md",
+        "specKind": "归属候选及受限需求说明",
         "confirmedRules": "仅复用适用的已确认公共依赖，不把现有独立实现视为本包规则已确认",
         "pending": "北森iTalent、数字人才、翻译工作台典型入口职责未明；不依据名称决定最终归属",
-        "acceptance": "沿用原任务criteria；待按对象/角色/异常补成可执行分包场景，未签署",
+        "acceptance": "原acceptanceTasks按moduleId关联；本规格Given/When/Then为细化场景，未执行/未签署，不增加原验收分母",
         "dependencies": [],
-        "readiness": "未就绪：需补证及完整规格",
+        "readiness": "未就绪：规格可评审，证据缺口/候选规则与需求签署未关闭",
         "accepted": false,
-        "next": "按原ID补典型入口证据并编写北森iTalent、数字人才、翻译工作台典型入口职责未明；不依据名称决定最终归属规格"
+        "next": "核实M36/M41/M47典型入口职责后更新同一映射",
+        "inputEvidence": "docs/delivery/P1_Review.md",
+        "contracts": [],
+        "goal": "在保留原范围内形成归属待核实的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
+        "specStatus": "部分契约已具体化；未探索部分明确受限；非完整需求验收"
       }
     ],
     "ruleSources": {
@@ -14522,32 +17376,432 @@
         "evidence": "app/api/attachments/route.ts",
         "gap": "列表最多200条且无翻页游标；物理删除失败仅cleanupPending标记。先明确需求，不把当前限制当完整能力或本轮开发任务",
         "acceptance": "F04/UAT-11：超限、撤权、墓碑及清理状态；全量分页待规格"
+      },
+      {
+        "requirement": "BP-F-REQ-01",
+        "capability": "组织/岗位/职级/员工",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "lib/hris/model.ts",
+          "lib/hris/authorization.ts",
+          "app/api/hris/route.ts"
+        ],
+        "gap": "F-SPEC-01仅岗位/职级名称；兼岗/再入职/法人不是普通员工编辑",
+        "acceptance": "已有关联在职员工/启用子组织或岗位的组织，申请停用应拒绝且原数据不变；相同组织名在同父节点拒绝；不同父节点按当前规则核对，不推广成全局唯一"
+      },
+      {
+        "requirement": "BP-F-REQ-02",
+        "capability": "F03调动原单和执行记录",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "lib/hris/model.ts",
+          "tests/f01-f04-transfer-roles.test.mjs"
+        ],
+        "gap": "D1–D7已确认；F-SPEC-02/03仅异常边界和关联宽度待审",
+        "acceptance": "批准后档案不变；北京时间生效日00:00前拒绝执行；业务校验失败保留原因及计划日；恢复后记实际时间。审计故障整个事务回滚并刷新核对；旧revision拒绝"
+      },
+      {
+        "requirement": "BP-F-REQ-03",
+        "capability": "项目人力（M20）",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "docs/delivery/Scope_Register.json"
+        ],
+        "gap": "M20未独立实现；项目归属BP-F不等于可按任职调动替代",
+        "acceptance": "待取得项目与工时表单后才能定义工时重叠、合计、审批、薪资影响场景；当前不设虚构通过预期"
+      },
+      {
+        "requirement": "BP-C-REQ-01",
+        "capability": "干部任期/提名/任用",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "lib/hris/cadre-terms.ts",
+          "lib/hris/cadres.ts"
+        ],
+        "gap": "原站四状态干部身份不可用registered/ended一对一替代；委员会/任期算法/复杂任用类型未就绪",
+        "acceptance": "已有生效任期重叠时登记拒绝；已批准未生效调动不能核对任用；岗位不匹配拒绝；员工离职前不能登记离职原因结束任期"
+      },
+      {
+        "requirement": "BP-C-REQ-02",
+        "capability": "任职资格标准及认证",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "lib/hris/qualification.ts"
+        ],
+        "gap": "认证委员会、类别层级及有效期政策需原站与企业基线；现有整数尺度非原站标准",
+        "acceptance": "新标准版本不得覆盖旧认证依据；相同版本已有有效认证/待审申请时拒绝重复；不达目标或证据版本错误不能认证"
+      },
+      {
+        "requirement": "BP-C-REQ-03",
+        "capability": "360项目/关系/答卷/报告",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "lib/hris/feedback.ts"
+        ],
+        "gap": "阈值/匿名性是独立策略待确认；提醒、题型、完整活动运营未覆盖",
+        "acceptance": "草稿后不能改名单；重复评估人+被评人拒绝；本人关系不匹配拒绝；同事/下属低于阈值返回suppressed与null均值，自评/上级阈值1；不把无响应记0"
+      },
+      {
+        "requirement": "BP-C-REQ-04",
+        "capability": "盘点/继任/标准模型",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "docs/delivery/Cadre_Learning_Source_Gaps.md",
+          "docs/delivery/Scope_Register.json"
+        ],
+        "gap": "当前仅重用已有范围描述；多维模型/健康度/测評题库及评分未可验收",
+        "acceptance": "后续评审必须证明正式绩效快照来源/版本；撤销或新版本不能静默覆盖旧九宫格；无绩效不自动补最低档"
+      },
+      {
+        "requirement": "BP-L-REQ-01",
+        "capability": "学习配置与实例",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "lib/hris/learning-plan-definitions.ts",
+          "lib/hris/learning-plan-model.ts"
+        ],
+        "gap": "自动循环不是已实现；共享管理员与可学范围、完成实例重开、跨轮更新待明确",
+        "acceptance": "已定版配置直接改动拒绝；跨组织试卷/作业引用拒绝；新版本不自动改旧实例；取消/退出要求不伪造完成；固定模式起点按计划日期，非加入日"
+      },
+      {
+        "requirement": "BP-L-REQ-02",
+        "capability": "阶段窗口与任务放行",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "lib/hris/learning-plan-definitions.ts",
+          "lib/hris/learning-requirements.ts"
+        ],
+        "gap": "自然日含首日和顺序晚开启的原站精确算法尚未核实，当前策略需评审",
+        "acceptance": "有序阶段的考试/作业提交放行不等于通过；未完成必修不满足结项；晚核验不得伪造按期提交；无法完成的数量门槛配置拒绝"
+      },
+      {
+        "requirement": "BP-L-REQ-03",
+        "capability": "计划成绩",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "lib/hris/learning-grades.ts",
+          "lib/hris/learning-grade-evidence.ts"
+        ],
+        "gap": "缺失分母、精度、通过过滤及多审批人聚合为候选政策，原站选项存在不能证明算法完整一致",
+        "acceptance": "缺少有效成绩时pending与null，不能补0/100；按每次考试平均与每场最高平均给出不同期望；无成绩课程不能获得虚构权重成绩"
+      },
+      {
+        "requirement": "BP-L-REQ-04",
+        "capability": "学分、撤销、到期",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "lib/hris/learning-credits.ts"
+        ],
+        "gap": "折抵、企业到期算法、积分和自动发证尚未确认；不得将本项目整数单位当原站字段类型",
+        "acceptance": "同课程版本重复授予拒绝；允许循环重复的完整新轮且非旧成果复用才可新授；撤销不删除原记录；到期日当天仍有效"
+      },
+      {
+        "requirement": "BP-L-REQ-05",
+        "capability": "AI陪练（M28）",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "docs/delivery/Scope_Register.json"
+        ],
+        "gap": "没有独立实现，不以现有学习考试代替",
+        "acceptance": "先明确评分输入和可复现版本，再制定正常/无音频/低置信度/人工复核场景；暂不能给出评分通过阈值"
+      },
+      {
+        "requirement": "BP-P-REQ-01",
+        "capability": "绩效周期/计划/结果",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "lib/hris/performance.ts",
+          "lib/hris/performance-availability.ts"
+        ],
+        "gap": "组织绩效、关系锁定、强制分布、申诉时间窗及多维流程未就绪",
+        "acceptance": "活动有效且员工在当前范围才能继续；待审调整阻断自评；发布不覆盖原结果；未经审核的更正不能成为正式结果"
+      },
+      {
+        "requirement": "BP-P-REQ-02",
+        "capability": "绩效等级与尺度",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "lib/hris/performance-ratings.ts"
+        ],
+        "gap": "原站连续区间说明与现实现允许空隙但发布拒绝存在差异；纯手工等级/系数及在途更新未实现",
+        "acceptance": "边界只可匹配一个等级；区间缺口不自动发布；新方案不替换旧活动；总分非百分制按活动范围校验"
+      },
+      {
+        "requirement": "BP-P-REQ-03",
+        "capability": "目标数量/权重检查与指标引用",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "docs/delivery/Performance_Source_Gaps.md",
+          "lib/hris/performance.ts"
+        ],
+        "gap": "小数权重/算术求和/完整模块权重与定量自动下发未覆盖",
+        "acceptance": "仅提示超出建议值不阻断通用合法目标；强制违反拒绝；指标改版不改旧目标快照；同一记录多次引用不能冒计多人"
+      },
+      {
+        "requirement": "BP-R-REQ-01",
+        "capability": "需求/招聘职位/候选人",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "lib/hris/recruitment.ts",
+          "lib/hris/recruitment-jobs.ts"
+        ],
+        "gap": "原站允许职位或人才库入口，当前必须有需求，无法覆盖独立人才库；外部来源/门户未实现",
+        "acceptance": "不同需求的职位版本不能关联；有候选引用的职位改版不能覆盖旧版；需求关闭不能遗留活动候选；邮件权限撤销后不能写邮箱"
+      },
+      {
+        "requirement": "BP-R-REQ-02",
+        "capability": "面试/评价/录用入职",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "lib/hris/recruitment.ts",
+          "lib/hris/recruitment-evaluations.ts"
+        ],
+        "gap": "面试日历/通知、电子签回执、Offer占编与跨法人/再入职接口未就绪",
+        "acceptance": "待进行排期阻断录用；未推荐推进不允许录用；未接受或尚未到入职日拒绝入职；重复入职不重复建员工或计数"
+      },
+      {
+        "requirement": "BP-R-REQ-03",
+        "capability": "推荐/校园/外推/AI/RPA周边",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "docs/delivery/Recruitment_Source_Gaps.md",
+          "docs/delivery/Scope_Register.json"
+        ],
+        "gap": "周边7组未独立实现，不能用核心招聘自动验收覆盖",
+        "acceptance": "待定义归因/去重/结算依据后制定重复推荐、撤回录用、跨来源冲突及重试场景；AI评分阈值不可编造"
+      },
+      {
+        "requirement": "BP-A-REQ-01",
+        "capability": "班次/打卡/补卡/请假",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "lib/hris/attendance.ts"
+        ],
+        "gap": "弹性/轮班/设备/加班调休未实现；分钟规则是本项目候选",
+        "acceptance": "跨班请假当前拒绝；已批准用量与待审批预留分开，超余额不能再申请；重复/反序打卡拒绝；修改后旧版本审批拒绝"
+      },
+      {
+        "requirement": "BP-A-REQ-02",
+        "capability": "结算期间与冻结版本",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "lib/hris/attendance-periods.ts",
+          "lib/hris/attendance-locks.ts"
+        ],
+        "gap": "原站冻结/发布/确认/封存为独立列，不能用当前两个状态冒充完整原站月报",
+        "acceptance": "有待审批/未覆盖时不能冻结；冻结阻止来源写；重新开放后工资待发布引用失效；重冻不覆盖旧快照"
+      },
+      {
+        "requirement": "BP-A-REQ-03",
+        "capability": "假期/调休结算",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "docs/delivery/Attendance_Source_Gaps.md"
+        ],
+        "gap": "企业参数、自动结转和申诉待决策/补证",
+        "acceptance": "必须先取得授予、折算单位、过期和跨年规则，再给出边界日与结转预期；现阶段不虚构额度公式"
+      },
+      {
+        "requirement": "BP-S-REQ-01",
+        "capability": "人工核定工资批次与工资条",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "lib/hris/payroll.ts",
+          "lib/hris/payroll-access.ts"
+        ],
+        "gap": "仅人工核定值，自动算薪/税社保/支付均未实现，不能以发布工资条冒称发薪",
+        "acceptance": "同员工同月非取消条目重复拒绝；贡献者即使移除所改条目仍不可复核；净额负数拒绝；发布前不能在本人自助看到工资条"
+      },
+      {
+        "requirement": "BP-S-REQ-02",
+        "capability": "冻结考勤引用/来源变化",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "lib/hris/payroll-attendance.ts"
+        ],
+        "gap": "没有自动由考勤计算工资公式；补差与重核策略需业务评审",
+        "acceptance": "来源开放/版本或时间变化后提交复核发布返回冲突；不能沿用旧复核；已发布后来源变化不静默改工资结果"
+      },
+      {
+        "requirement": "BP-S-REQ-03",
+        "capability": "薪资组/预算成本/凭证/福利/佣金",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "docs/delivery/Payroll_Source_Gaps.md",
+          "docs/delivery/Scope_Register.json"
+        ],
+        "gap": "M09/M10/M33/M42无独立实现；原48组不删减",
+        "acceptance": "先明确各子模块来源、期间和对账基准，才能定义重算/冲销/重复任务/缺失科目等可执行预期"
+      },
+      {
+        "requirement": "BP-I-REQ-01",
+        "capability": "员工自助/统一待办",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "app/api/self-service/route.ts",
+          "lib/hris/work-inbox.ts"
+        ],
+        "gap": "日程/日报/完整OKR/消息发送未实现；独立M43任务不等于当前聚合待办",
+        "acceptance": "已取消任务不继续展示可办理；待审目标调整阻断自评入口；本人申诉已批准待发布应显示awaiting_publish；原模块撤权即拒绝直接URL办理"
+      },
+      {
+        "requirement": "BP-I-REQ-02",
+        "capability": "报表与指标分母",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "lib/hris/reports.ts",
+          "app/api/reports/route.ts"
+        ],
+        "gap": "设计器/大规模查询/历史组织快照未就绪；每数据集必须独立定义分母，不能统一套人员数",
+        "acceptance": "无字段权时表头/单元格不出现该字段；学习缺分保持null；绩效旧版本不重复计为当前；合同覆盖登记不能证明电子签法律有效或实际在岗"
+      },
+      {
+        "requirement": "BP-I-REQ-03",
+        "capability": "实名调查/问卷与360共用模板边界",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "lib/hris/surveys.ts",
+          "lib/hris/feedback.ts"
+        ],
+        "gap": "员工调查/北森问卷/问卷调查三组不合并，匿名、复杂题型、报告行动计划未完成",
+        "acceptance": "单选越界/缺题拒绝；撤回不计有效回应；未开放/超日期不能提交；实名不能在文案宣传匿名；360分组压制另按阈值"
+      },
+      {
+        "requirement": "BP-I-REQ-04",
+        "capability": "主数据同步契约预检",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "lib/hris/integration-preflight.ts"
+        ],
+        "gap": "鉴权、密钥托管、真实endpoint、调度、事务回执和队列均未实现；重试函数不是后台重试服务",
+        "acceptance": "相同eventId同内容为duplicate；内容不同conflict；缺前序gap；映射缺失/多义不生成可提交结论；ready不得宣称已更新员工"
+      },
+      {
+        "requirement": "BP-I-REQ-05",
+        "capability": "工作台/电子签/会议/文化/翻译等周边",
+        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "evidence": [
+          "docs/delivery/Integration_Source_Gaps.md",
+          "docs/delivery/Scope_Register.json"
+        ],
+        "gap": "周边多组只有入口；保留候选接口与证据不足，不能泛化当前自助实现",
+        "acceptance": "取得配置证据后再定义冲突、重复回执、撤销、时间窗口和访问边界；任何未探索动作不标成可用"
       }
     ],
     "reviewIssues": [
       {
         "id": "F-SPEC-01",
-        "topic": "目录名称唯一性",
+        "topic": "岗位/职级目录名称唯一性（组织已排除）",
         "status": "待规格评审，非当前停工条件",
-        "basis": "旧需求写名称唯一；当前源码仅编码唯一；原站未证实",
-        "proposal": "先保留现有行为为候选，不新增名称约束",
-        "impact": "选择名称唯一将改变校验、存量重名兼容和UAT-03；本轮先补证"
+        "basis": "lib/hris/model.ts org分支明确同级组织名称唯一；position/grade共用分支仅编码唯一。旧F01.2写编码/名称唯一，BC-F08/F10未验证原站重名提交。组织约束无差异，不再提交用户决定。",
+        "proposal": "推荐以稳定ID关联、编码唯一、名称允许重复作为岗位/职级候选要求；界面需能通过编码/组织区分同名项。尚未批准。",
+        "impact": "仅阻塞F01.2候选目录名称校验及相应用例签署；组织层级、D1–D7和其他包规格继续",
+        "alternatives": [
+          "岗位名在所属组织内唯一、职级名全局唯一：增加校验并需存量冲突处理",
+          "岗位和职级名称全局唯一：约束更强，需说明跨组织共名迁移"
+        ],
+        "evidence": [
+          "lib/hris/model.ts",
+          "docs/delivery/F01_F04_Requirements_Baseline.md",
+          "tests/p2-api.test.mjs"
+        ],
+        "decisionRequired": true
       },
       {
         "id": "F-SPEC-02",
         "topic": "D1失败留痕的事务边界",
         "status": "异常契约已细化，待需求评审",
-        "basis": "D1要求失败可恢复；现实现数据库故障全部回滚，不能同时写入失败日志",
-        "proposal": "区分业务失败记录与事务失败刷新核对；不改变原批准/计划日期",
-        "impact": "如要求任何数据库故障都须持久记录失败次数，需要另定义独立可靠日志，不在本轮实现"
+        "basis": "D1已确认失败可恢复；model.executeTransfer先增加attempts，业务执行校验失败可返回failed。tests/f01-f04-transfer-roles.test.mjs中目标岗位/编制失败保留批准与计划日、重试次数；审计故障触发503并断言数据全回滚。历史测试结果只适用3d690cbbd6336c6de8b76a06fa4459700b1e3a88，本轮仅读测试。",
+        "proposal": "推荐写清：可提交的业务失败保留原因/次数；数据库或审计事务故障不承诺同事务留痕，刷新核对再重试，实际生效时间不倒写。属于异常边界候选解释，未代签。",
+        "impact": "仅阻塞F03极端故障留痕契约签署；D1人工重试/实际时间既定规则不变",
+        "alternatives": [
+          "要求任意数据库故障都持久记录尝试：须独立可靠日志、关联键、脱敏、重复消解与恢复验收；不在本轮实现"
+        ],
+        "evidence": [
+          "lib/hris/model.ts",
+          "tests/f01-f04-transfer-roles.test.mjs",
+          "docs/delivery/F01_F04_Decisions_Verification.json"
+        ],
+        "decisionRequired": true
       },
       {
         "id": "F-SPEC-03",
         "topic": "原单关联规则的适用宽度",
         "status": "待需求评审，先继续补证",
-        "basis": "当前实现对同员工任意历史已终止调动均要求关联；D2/D6明确改日/更正关联",
-        "proposal": "评审区分同事项更正与后续独立调动，不在本轮自行收窄/扩大",
-        "impact": "影响后续无关调动是否必须关联旧单及追溯语义"
+        "basis": "model.request：同员工存在任意rejected/withdrawn/cancelled调动且无previousApprovalId即拒绝，未限定时间或同一事项。历史测试证明改日/驳回关联链，未证明无关后续调动业务意图；D2/D6已确认更正关联，不自动授权永久全历史关联限制。",
+        "proposal": "推荐区分“更正/改日重审”强制关联与“后续独立调动”可新建，必须有明确事项判定和审计原因；当前代码不改，方案未批准。",
+        "impact": "仅阻塞F03后续独立调动的原单关联要求签署；原单不复活、全程重审仍已确认",
+        "alternatives": [
+          "保留当前任意终止历史均强制关联：实现可复用，但关联将混含无关事项",
+          "按最近终止单或时间窗推定：增加隐式归因，未有原站或用户依据，不推荐"
+        ],
+        "evidence": [
+          "lib/hris/model.ts",
+          "tests/f01-f04-transfer-roles.test.mjs",
+          "docs/delivery/F01_F04_Requirements_Baseline.md"
+        ],
+        "decisionRequired": true
+      }
+    ],
+    "codeReview": {
+      "sourceCommit": "447b02f72a2d2051986aba98e769daa7c2b846a3",
+      "method": "本轮静态阅读源码/schema及相关测试；没有运行业务测试",
+      "businessAccepted": false
+    },
+    "globalContracts": [
+      {
+        "term": "稳定ID、显示名称和外部标识",
+        "dependency": "BP-F→全部包；BP-I外部映射→BP-F",
+        "contract": "组织/员工/岗位/职级用稳定内部ID关联；名称非身份。外部ID须在tenant+source命名空间显式映射；不按同名自动合并。岗位/职级名称唯一仍F-SPEC-01待决。",
+        "evidence": "model.ts/authorization.ts/integration-preflight.ts静态事实；原站仅标签，未确认数据库结构"
+      },
+      {
+        "term": "访问身份、业务角色、字段权限",
+        "dependency": "E2访问边界→所有包",
+        "contract": "平台允许访问≠业务管理员；管理员操作≠独立审批。HR不自动具备薪酬专岗；共享管理员、学员可学范围、活动公开是不同权限。各次动作重核当前范围，不能因历史快照继续授权。",
+        "evidence": "E2已确认；D3–D5首包已确认；其他包角色细化为候选，人工多角色未验收"
+      },
+      {
+        "term": "审批状态、执行状态、对象状态",
+        "dependency": "BP-F→BP-C/BP-A/BP-S/BP-I",
+        "contract": "批准不代表调动生效；waiting/failed/applied独立于approved。干部免职不代表员工离职。学习放行不代表完成，完成不等于满分；工资条发布不代表支付。各包同名status不得统一枚举。",
+        "evidence": "D1–D7；US-C01、BC-L08、BC-A及payroll.ts，原站未知流转不连线"
+      },
+      {
+        "term": "业务日期、时点和版本",
+        "dependency": "BP-F/BP-L/BP-P/BP-A/BP-S→报表及自助",
+        "contract": "首包生效按北京时间日期00:00与实际成功时刻分开。其他包有效日/截止/授予含首日为现有候选，不能套原站。旧模板/方案/结果保持版本快照，当前访问权另算。",
+        "evidence": "D1/D2已确认；learning-plan-model/credits/performance-ratings/attendance-periods为代码事实，政策待审"
+      },
+      {
+        "term": "当前任职与历史快照",
+        "dependency": "BP-F→BP-C/BP-R/BP-S/BP-I",
+        "contract": "干部任用消费实际生效且当前岗位匹配的调动；招聘原子入职不承担复杂再入职。薪酬/考勤回算不得因人员调动自动推断。离职历史保留，后续可办入口按当前对象与角色判定。",
+        "evidence": "cadres/recruitment/model及BC-F11/F12；兼岗、重聘、法人影响仍缺证据"
+      },
+      {
+        "term": "缺失、零、取消、排除、过期",
+        "dependency": "学习/绩效/调查/考勤→报表",
+        "contract": "缺分null不是0；取消任务不是完成；不参与绩效不是最低档；360低于阈值不显示均值；学分撤销与过期分开；各指标使用本数据集分母和核对时点。",
+        "evidence": "learning-grades/feedback/learning-credits/reports；独立候选算法不冒充原站通则"
+      },
+      {
+        "term": "冻结来源与发布后变化",
+        "dependency": "BP-A→BP-S→BP-I",
+        "contract": "工资引用同人、同月内、无重叠已冻结期间的版本/时间快照。发布前来源变更阻断，发布后保留结果并核对异常；是否补差由独立流程，不直接回写历史。",
+        "evidence": "payroll-attendance.ts静态核对，非自动核算或企业制度验收"
+      },
+      {
+        "term": "外部接口与内部预检",
+        "dependency": "BP-I↔各业务包",
+        "contract": "DRY_RUN_ONLY不是接通或已提交；原站字段映射同名入口按所属应用分别取证。外部endpoint/身份/签署回执/调度/重复/错误恢复须独立规格。",
+        "evidence": "BC-I01–04/integration-preflight.ts；未保存或读取密钥、未执行网络预检"
+      },
+      {
+        "term": "需求就绪、测试、业务验收、生产",
+        "dependency": "P1A/P1B→P2→P3/P4→P5",
+        "contract": "包级规格可评审不等于需求就绪；历史测试仅对应testedSourceCommit；E1只页面打开，P2仅受限技术验收；私有部署不是生产签署。",
+        "evidence": "本轮用户指令、原验收记录和Verification JSON"
       }
     ]
   }

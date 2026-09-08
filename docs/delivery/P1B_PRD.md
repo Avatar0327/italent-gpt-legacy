@@ -1,12 +1,12 @@
 # 本项目总体PRD（P1B评审稿）
 
-生成来源：`Scope_Register.json → p1Baseline / modules[].p1`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-08T15:07:33.692739+00:00。
+生成来源：`Scope_Register.json → p1Baseline / modules[].p1`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-08T15:47:04.280992+00:00。
 
 **目标：** 在获授权可见的参考范围内，独立建设可承载真实人事业务的系统；当前仍为私有验证成果，未具备生产验收结论。该PRD不是对北森隐藏规则的还原声明。
 
 ## 范围、角色与来源
 
-全部48组以Scope_Register.modules为准，分包见[P1B就绪表](P1B_Readiness.md)，原站证据见[P1A覆盖表](P1A_Coverage.md)。首包规格沿用[F01–F04需求基线](F01_F04_Requirements_Baseline.md)。其他包Source_Gaps仅是规格输入，不能算已完成的PRD。
+全部48组以Scope_Register.modules为准，分包见[P1B就绪表](P1B_Readiness.md)，原站证据见[P1A覆盖表](P1A_Coverage.md)。首包规格沿用[F01–F04需求基线](F01_F04_Requirements_Baseline.md)。各包已有同源生成的规格评审稿；其中仅导航部分明确列出受限原因，不计为完整需求就绪。原Source_Gaps继续作为证据输入。
 
 平台身份、企业成员、管理员/HR/经理/审批者/员工为既有独立实现；薪酬专岗属后续包现有成果。角色不是站点访问授权；E2仅所有者可访问不代表所有角色已验收。D3–D5明确首包调动边界，其他角色完整矩阵逐包确认。
 
@@ -30,3 +30,31 @@
 当前暂停功能扩展；原站无业务提交、真实数据导出；不新增访问者。自动调度、复杂审批、兼岗/再入职/法人、外部真实接口及生产切换只作为未完成范围保留，不被首包排除出全项目。P1A/P1B退出与后续阶段见[原项目规划](../HRIS_Project_Plan.md)。
 
 本PRD及分包规格均待需求评审，尚无新签署。首包规则确认、首包需求就绪、首包业务验收、全项目P1完成与生产验收各自独立，不从数量推算整体进度。
+
+## 业务包规格入口
+
+| 包 | 规格 | 状态 |
+|---|---|---|
+| BP-F | [P1B_BP_F_Specification.md](../../docs/delivery/P1B_BP_F_Specification.md) | 未就绪：规格可评审，证据缺口/候选规则与需求签署未关闭 |
+| BP-C | [P1B_BP_C_Specification.md](../../docs/delivery/P1B_BP_C_Specification.md) | 未就绪：规格可评审，证据缺口/候选规则与需求签署未关闭 |
+| BP-L | [P1B_BP_L_Specification.md](../../docs/delivery/P1B_BP_L_Specification.md) | 未就绪：规格可评审，证据缺口/候选规则与需求签署未关闭 |
+| BP-P | [P1B_BP_P_Specification.md](../../docs/delivery/P1B_BP_P_Specification.md) | 未就绪：规格可评审，证据缺口/候选规则与需求签署未关闭 |
+| BP-R | [P1B_BP_R_Specification.md](../../docs/delivery/P1B_BP_R_Specification.md) | 未就绪：规格可评审，证据缺口/候选规则与需求签署未关闭 |
+| BP-A | [P1B_BP_A_Specification.md](../../docs/delivery/P1B_BP_A_Specification.md) | 未就绪：规格可评审，证据缺口/候选规则与需求签署未关闭 |
+| BP-S | [P1B_BP_S_Specification.md](../../docs/delivery/P1B_BP_S_Specification.md) | 未就绪：规格可评审，证据缺口/候选规则与需求签署未关闭 |
+| BP-I | [P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 未就绪：规格可评审，证据缺口/候选规则与需求签署未关闭 |
+| BP-UNASSIGNED | [P1B_BP_UNASSIGNED_Specification.md](../../docs/delivery/P1B_BP_UNASSIGNED_Specification.md) | 未就绪：规格可评审，证据缺口/候选规则与需求签署未关闭 |
+
+## 全局术语与跨包一致性契约（评审稿）
+
+| 对象/术语 | 生产者→消费者 | 统一语义/候选约束 | 证据与限制 |
+|---|---|---|---|
+| 稳定ID、显示名称和外部标识 | BP-F→全部包；BP-I外部映射→BP-F | 组织/员工/岗位/职级用稳定内部ID关联；名称非身份。外部ID须在tenant+source命名空间显式映射；不按同名自动合并。岗位/职级名称唯一仍F-SPEC-01待决。 | model.ts/authorization.ts/integration-preflight.ts静态事实；原站仅标签，未确认数据库结构 |
+| 访问身份、业务角色、字段权限 | E2访问边界→所有包 | 平台允许访问≠业务管理员；管理员操作≠独立审批。HR不自动具备薪酬专岗；共享管理员、学员可学范围、活动公开是不同权限。各次动作重核当前范围，不能因历史快照继续授权。 | E2已确认；D3–D5首包已确认；其他包角色细化为候选，人工多角色未验收 |
+| 审批状态、执行状态、对象状态 | BP-F→BP-C/BP-A/BP-S/BP-I | 批准不代表调动生效；waiting/failed/applied独立于approved。干部免职不代表员工离职。学习放行不代表完成，完成不等于满分；工资条发布不代表支付。各包同名status不得统一枚举。 | D1–D7；US-C01、BC-L08、BC-A及payroll.ts，原站未知流转不连线 |
+| 业务日期、时点和版本 | BP-F/BP-L/BP-P/BP-A/BP-S→报表及自助 | 首包生效按北京时间日期00:00与实际成功时刻分开。其他包有效日/截止/授予含首日为现有候选，不能套原站。旧模板/方案/结果保持版本快照，当前访问权另算。 | D1/D2已确认；learning-plan-model/credits/performance-ratings/attendance-periods为代码事实，政策待审 |
+| 当前任职与历史快照 | BP-F→BP-C/BP-R/BP-S/BP-I | 干部任用消费实际生效且当前岗位匹配的调动；招聘原子入职不承担复杂再入职。薪酬/考勤回算不得因人员调动自动推断。离职历史保留，后续可办入口按当前对象与角色判定。 | cadres/recruitment/model及BC-F11/F12；兼岗、重聘、法人影响仍缺证据 |
+| 缺失、零、取消、排除、过期 | 学习/绩效/调查/考勤→报表 | 缺分null不是0；取消任务不是完成；不参与绩效不是最低档；360低于阈值不显示均值；学分撤销与过期分开；各指标使用本数据集分母和核对时点。 | learning-grades/feedback/learning-credits/reports；独立候选算法不冒充原站通则 |
+| 冻结来源与发布后变化 | BP-A→BP-S→BP-I | 工资引用同人、同月内、无重叠已冻结期间的版本/时间快照。发布前来源变更阻断，发布后保留结果并核对异常；是否补差由独立流程，不直接回写历史。 | payroll-attendance.ts静态核对，非自动核算或企业制度验收 |
+| 外部接口与内部预检 | BP-I↔各业务包 | DRY_RUN_ONLY不是接通或已提交；原站字段映射同名入口按所属应用分别取证。外部endpoint/身份/签署回执/调度/重复/错误恢复须独立规格。 | BC-I01–04/integration-preflight.ts；未保存或读取密钥、未执行网络预检 |
+| 需求就绪、测试、业务验收、生产 | P1A/P1B→P2→P3/P4→P5 | 包级规格可评审不等于需求就绪；历史测试仅对应testedSourceCommit；E1只页面打开，P2仅受限技术验收；私有部署不是生产签署。 | 本轮用户指令、原验收记录和Verification JSON |

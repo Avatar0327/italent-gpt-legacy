@@ -62,7 +62,7 @@ t+='**结论：五类评审材料已形成统一可追溯视图，保留全部48
 t+=f'材料包含{len(pages)}个页面/空表证据单元、{fields}条按页面和用途区分的字段观察、{navcount}个应用子导航标签；有P级局部证据的模块{len(pmods)}组，其余{48-len(pmods)}组当前以导航或到达证据为主。证据单元可能含多个页签，字段可能重名，这些数量均不是完成率或全站唯一对象数。原站F级执行证据为0。\n\n'
 t+='## 本轮目标、已有成果与缺口\n\n'+table(['交付物','接手时已有成果','本轮成果','边界与缺口'],[
 ('模块清单','Scope_Register已有48组，Markdown部分描述滞后','按原ID补导航、页面/字段/流程引用；更新同源视图','仅N级模块不视为典型页面盘点完成'),('页面目录','各域记录分散于观察和Source_Gaps','[页面目录](P1_Page_Catalog.md)','导航容器、同名应用、真实页面证据分层；未取正文明确保留'),('字段字典','列名、空表、部分必填/选项散落','[字段字典](P1_Field_Dictionary.md)','数据库类型、未知默认/必填/权限不推断'),('流程图','页面步骤及独立实现混有历史说明','[流程图与边界](P1_Flows.md)','D1–D7独立状态机；原站说明与F级执行分开；无依据不连线'),('差异清单','各域Source_Gaps及remaining已有','本报告下方48组差异视图＋现有各域文件','已确认设计/待核实/受限分列；原实现与历史测试保留')])
-t+='\n## 核对基线与成果保护\n\n'
+t+='\n## 历史接手与部署记录（下列本轮措辞属于上轮快照，非本次复验）\n\n'
 t+='- 实际仓库：`/workspace/sites/italent-hris`；接手分支`main`；完整HEAD `72bcf4031fb4fc62d70be8a6c1ae1c491ff90714`；接手时工作区干净，仅一个检出工作树。\n- 未发现Git写锁或可读取的项目cwd运行进程；普通ps工具失败，有界/proc检查17项不可读，运行状态结论有此边界。无本轮新开发、测试、构建或发布任务。\n- 未完学习简介保留在`checkpoint/learning-description-20260908`，`f5f5b1bd9014d4b6eeb6d32da0f03e34da3bced2`；不合并、不重置。其他既有分支全部保留。\n- v112指定部署本轮只读复核`succeeded`；源码`fdc423fcba607bd5814a0672836b55536c71ecb1`；部署ID `appgdep_6aa010f1e1e481919f2a4331af5b0184`。本轮文档提交不改变在线版本。\n- F01–F04保留历史116项API、3项组件及后续5项入口渲染证据；重叠测试不相加为覆盖数，本轮未复跑。用户仅确认成员/员工可打开；按钮缺失反馈和修复后待复验继续保留。E2不增人，多角色UAT暂缓，均非继续P1前置。\n\n'
 t+='## 原站证据与独立设计分类\n\n'+table(['类别','判定','例子'],[('原站事实','N导航或P页面字段/说明，并标明来源日期','BC-F04兼职表头；BC-L11审批开关说明'),('已确认独立设计','有用户明确决定，保留实现与测试','D1–D7；不能写成北森原站制度'),('其他独立实现','仓库代码/测试仅证明本项目技术行为','学分有效期、内部排期、冻结考勤引用等；不是自动获得企业签署'),('待核实','还未取得该页/规则证据，不能当故障或已通过','再入职、薪资组依赖、仅N级模块'),('受限项','存在具体访问/提取/只读边界证据','绩效流程页无内容或无权、历史占位、禁止业务提交')])
 t+='\n## 按既定顺序的领域缺口\n\n'+table(['顺序','证据与本轮增量','剩余规则'],[
@@ -120,3 +120,45 @@ if 'roadmap' in s:
  qp.write_text(head+old)
  review=D/'P1_Review.md';old=review.read_text();old=old.replace('建议以此作为有例外的P1盘点基线。','本稿为P1A评审输入，例外尚未获批准。').replace('如要求“全量典型页均已核实”才结束P1，则本稿不满足该更高门槛','按本轮明确的P1A退出条件，本稿仍需补证和例外评审')
  review.write_text('# 当前评审状态：P1A/P1B均未验收\n\nP1A/P1B为本轮新增规划细分。当前材料覆盖范围不是完成声明。\n\n- [48组P1A覆盖与缺口](P1A_Coverage.md)\n- [总体PRD](P1B_PRD.md)\n- [分包就绪及映射](P1B_Readiness.md)\n- [已有实现与需求对应](P1B_Implementation_Map.md)\n- [当前路标及阶段退出](../HRIS_Project_Plan.md)\n\n'+old)
+
+# Detailed pack specifications remain views of the same authoritative register.
+if 'p1B' in s:
+ pb=s['p1B']; by_id={m['id']:m for m in mods}
+ for pack in pb['packages']:
+  if 'contracts' not in pack:continue
+  t=intro(pack['id']+' '+pack['name']+'｜产品需求规格评审稿')
+  t+='**状态：'+pack['specStatus']+'。'+pack['readiness']+'。** 不以文档生成代替需求签署；本项目既有实现事实与原站事实分别列出。\n\n'
+  t+='## 目标、范围和暂缓\n\n'+pack['goal']+'\n\n'
+  t+=table(['原范围ID','模块','保留范围','原验收归属'],[(i,by_id[i]['name'],by_id[i]['scope'],'、'.join(a['id'] for a in s['acceptanceTasks'] if a['moduleId']==i) or '沿用原范围登记；未新造验收任务') for i in pack['moduleIds']])
+  t+='\n本轮暂停实现、部署、业务写入和新增测试访问者。下列待补齐项仍属全项目范围，不因当前子包暂缓而删除。输入：'+link_source(pack['inputEvidence'])+'。\n\n'
+  if pack.get('authoritativeDetail'):t+='首要子包详细需求：'+link_source(pack['authoritativeDetail'])+'；D1–D7保持已确认，不以本文件重开决策。\n\n'
+  t+='## 已具体化的对象与行为契约\n\n下列“验收预期”是对已确认规则或既有实现候选行为的可执行描述，**未表示已执行或已获企业批准**。仅D1–D7保持既有签署；其他候选约束不得直接用作新开发授权。\n\n'
+  if not pack['contracts']:t+='本组职责和对象字段尚不足以形成行为契约，先保留逐模块证据和候选归属；不以空模板冒充需求完成。\n\n'
+  for ct in pack['contracts']:
+   t+='### '+ct['id']+' '+ct['object']+'\n\n性质：'+ct['classification']+'。\n\n'
+   t+=table(['维度','规格及当前边界'],[('对象/字段/校验',ct['fields']),('角色/数据范围/字段权限',ct['roles']),('状态/审批/生效',ct['lifecycle']),('页面主要操作',ct['actions']),('验收预期（给定条件→操作→结果）',ct['acceptance']),('例外、恢复与仍缺内容',ct['gap']),('静态实现/输入依据','；'.join(link_source(x) for x in ct['codeRefs']))])+'\n'
+  t+='## 全包逐模块原站证据与受限需求\n\n每个模块均保留页面、字段、角色/状态、依赖/接口四类证据边界。未探索不是无权限；没有提交验证也不能推断规则通过。\n\n'
+  for mid in pack['moduleIds']:
+   m=by_id[mid]; pp=[p for p in pages if p['moduleId']==mid]
+   t+='### '+mid+' '+m['name']+'\n\n'
+   t+='页面与主要入口：'+ '、'.join(m['p1']['navigation'])+'。当前探索深度：'+m['p1']['sourceDepth']+'。\n\n'
+   if pp:t+=table(['证据/观察时间','实际页面与操作','字段属性边界','角色/状态/跨模块线索与限制'],[(p['id']+'；'+p.get('observedAt',p['observedDate']),p['path']+'；'+p['operations'],('、'.join(f['label'] for f in p['fields']) or '未取得字段')+'；完整类型/必填/默认/枚举/校验/可见性逐字段见P1_Field_Dictionary',p['sourceStatement']+'；'+p['unknown']+'；'+page_link(p)) for p in pp])+'\n'
+   else:t+='仅导航证据`'+m['p1']['navigationEvidence']+'`；尚未取得该模块字段/空表/说明，不能借相似应用补证。\n\n'
+   t+=table(['维度','具体需求缺口及处置'],[('字段类型/必填/默认/枚举/校验/关联',m['p1']['sourceGap']+'；按实际页逐属性补证，不把字段名解释为数据库类型'),('角色、状态、审批、生效与异常',m['remaining']+'；未核实部分不设置默认批准/自动恢复'),('跨模块及外部接口','见下方包依赖；具体endpoint/认证/请求响应/错误与重试没有证据则待核实，不从导航“接口”推断已接通'),('既有实现可复用候选',m['developed']),('限制与下一步',m['p1']['coverage']['restricted']+'；'+m['p1']['coverage']['next'])])+'\n'
+  t+='## 依赖、接口及验收归属\n\n业务包依赖：'+('、'.join(pack['dependencies']) or '尚未确认跨包输入，仍核对全局契约')+'。公共身份、稳定ID、当前权限、版本/时间、字段缺失与状态分离见[总体PRD](P1B_PRD.md)。上游未就绪只阻塞对应消费契约，其他需求继续。内部源码路径证明已存在的适配行为，不作为原站外部接口证据。\n\n'
+  api_paths=sorted({v for ct in pack['contracts'] for v in ct['codeRefs'] if v.startswith('app/api/')})
+  if api_paths:t+='已读内部接口：'+ '；'.join(link_source(v) for v in api_paths)+'。\n\n'
+  t+=table(['原任务','验收条件（原样保留）','当前规则/验证状态'],[(a['id']+' '+a['title'],'；'.join(c['text'] for c in a['criteria']),'原accepted保持；本稿不代签，历史测试按原版本') for a in s['acceptanceTasks'] if a['moduleId'] in pack['moduleIds']])+'\n'
+  t+='## 就绪、待决策与下一步\n\n'+pack['pending']+'。'+pack['next']+'。\n\n需求就绪需要：受影响对象字段和行为无未决歧义；角色/字段范围、状态与恢复、跨包契约及验收预期经过评审；如有例外，记录授权、范围和影响。当前缺少上述完整评审，不满足转入新开发包条件。人工多角色UAT暂缓不阻止本稿继续细化。\n'
+  (R/pack['spec']).write_text(t)
+ prd=D/'P1B_PRD.md';t=prd.read_text().replace('其他包Source_Gaps仅是规格输入，不能算已完成的PRD。','各包已有同源生成的规格评审稿；其中仅导航部分明确列出受限原因，不计为完整需求就绪。原Source_Gaps继续作为证据输入。')
+ t+='\n## 业务包规格入口\n\n'+table(['包','规格','状态'],[(p['id'],link_source(p['spec']),p['readiness']) for p in pb['packages']])
+ if pb.get('globalContracts'):
+  t+='\n## 全局术语与跨包一致性契约（评审稿）\n\n'+table(['对象/术语','生产者→消费者','统一语义/候选约束','证据与限制'],[(x['term'],x['dependency'],x['contract'],x['evidence']) for x in pb['globalContracts']])
+ prd.write_text(t)
+ read=D/'P1B_Readiness.md';t=read.read_text();t+='\n## 最小必要决策记录（同源，不新建台账）\n\n'
+ t+=table(['ID/事项','现状及证据','推荐（未批准）','备选','阻塞范围/状态'],[(x['id']+' '+x['topic'],x['basis'],x['proposal'],x.get('alternatives',[]),x['impact']+'；'+x['status']) for x in pb['reviewIssues']])
+ read.write_text(t)
+
+if b.get('currentRun'):
+ f=D/'P1_Review.md';t=f.read_text();current=b['currentRun'];t=t.replace('P1A/P1B为本轮新增规划细分。当前材料覆盖范围不是完成声明。','P1A/P1B为用户新增规划细分。当前材料覆盖范围不是完成声明。\n\n当前接续分支：'+current['branch']+'；开始HEAD：'+current['startHead']+'。本次新增原站只读证据及业务包规格；未修改产品代码、部署、数据库或访问者。下方历史接手/部署段保留原适用时间，不算本轮复验。');f.write_text(t)
