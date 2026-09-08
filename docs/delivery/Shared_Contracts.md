@@ -197,3 +197,9 @@ leave/leaveCredit保留leaveTypeSnapshot。组织调动后当前定义可见性�
 
 work-inbox读取attendancePeriod和interviewAppointment来判断可执行性。指定评价待办直接使用既有canEvaluateAppointment；薪酬过期引用不生成批准/发布待办，改为当前角色可处理的核验/退回事项。工资待办batchId深链只选择当前可见批次。
 新增report dataset `payrollAttendanceReferences`：仅admin/payroll_editor/payroll_reviewer并按批次组织范围过滤，行单位为每个工资引用期间，列出旧冻结聚合和当前版本一致性，无原始打卡。旧报表列顺序不变。报表导出继续现有修订/审计和公式转义机制，不扩大访问或自动外发。
+
+## SC-P-TEXT 单维绩效文本模板
+
+`/api/performance-templates` HR/admin同组织草稿/编辑/定版/修订/归档，使用既有修订和审计。新kind performanceTemplate，最多10个稳定ID文本项，stage=selfReview/evaluation、required；描述200字。未配置通用流程或动态权限。
+周期command可选templateId（null显式清除，旧编辑省略保留），只接受同组织定版；payload.performanceTemplate为不可变快照。selfReview/evaluate增加responses，服务端拒绝未知/跨阶段字段和缺失必填，单项1000字。员工未发布计划投影及历史隐藏evaluationResponses；正式结果已有完整快照保留。申诉不更改模板答案，原答案与更正依据分开。
+绩效body上限98,304字节，其余API保持既有限制；不改变评分及目标权重、独立审批或数据库结构。
