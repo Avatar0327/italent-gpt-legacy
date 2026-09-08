@@ -370,22 +370,22 @@
     },
     {
       "id": "I-INBOX-SOURCES",
-      "status": "tested-awaiting-private-publish",
+      "status": "technical-delivered-v99",
       "dependencies": [
         "PAY-ATTENDANCE",
         "R-SCHEDULE"
       ],
       "acceptance": "指定面试待办与当前角色一致；薪酬来源变化转纠正待办而非推进；引用报表权限与冻结快照一致",
-      "next": "提交206项综合证据并私有发布；继续I04外部集成契约和原站主数据同步只读盘点"
+      "next": "人工预验收独立记录，继续I04外部集成契约"
     },
     {
       "id": "I-EXTERNAL-CONTRACT",
-      "status": "ready",
+      "status": "design-and-synthetic-validation",
       "dependencies": [
         "G0"
       ],
       "acceptance": "定义字段归属/映射、事件幂等/重试/对账/失败处理；仅合成桩或只读预验，不执行真实迁移或外部写入",
-      "next": "核对原站同步菜单可见配置，复用现有人员ID与并发契约，先形成适配器契约"
+      "next": "BC-I01/02只读已确认映射入口，建立无网络无持久化的事件预验契约和合成测试"
     }
   ]
 }
