@@ -15,7 +15,7 @@
 实际源码、测试、部署、未提交变更与运行状态统一以[当前检查点](../Execution_Checkpoint.md)为准，不再重复维护多个“当前”段落。
 
 - 优先级：组织员工→干部人才→学习→绩效→招聘→假勤→薪酬→自助/报表/集成；保留全量48组。
-- 当前批次：内部排期与指定人员评价关联；内部职位、结构化评价与配置修订恢复已发布。继续源站招聘缺口及必要可靠性工作。
+- 当前批次：假勤原站规则对照及期间汇总/冻结；内部职位、结构化评价、内部排期与指定评价已发布。招聘未完成全量范围保持后续队列。
 - 依赖、验收条件、下一操作：[Module_Queue.json](Module_Queue.json)。范围四维：[Scope_Register.json](Scope_Register.json)。
 - 原站证据：Cadre_Learning_Source_Gaps.md、Performance_Source_Gaps.md、Recruitment_Source_Gaps.md。
 - 绩效完整模板后续：Performance_Template_Design.md。各业务预验收指南保留，不把自动化或发布当人工签署。

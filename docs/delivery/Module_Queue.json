@@ -295,13 +295,22 @@
     },
     {
       "id": "R-SCHEDULE",
-      "status": "in-progress",
+      "status": "technical-delivered-v94",
       "dependencies": [
         "R-EVALUATION",
         "R-INTERVIEW-SOURCE"
       ],
       "acceptance": "内部单人排期、冲突和角色约束、冻结评价表、取消/调动/离职阻断、评价与完成原子保存，通知不外发",
-      "next": "复用现有候选/评价和审计CAS，先实现领域与组合测试再接排期表；不代签或猜测外发通知规则"
+      "next": "人工预验收独立记录；多人员/外发/多时区等保留；按优先级继续假勤"
+    },
+    {
+      "id": "A-SOURCE",
+      "status": "in-progress",
+      "dependencies": [
+        "R-SCHEDULE"
+      ],
+      "acceptance": "原站班次/假种/期间结算可见规则与既有实现对照，未验证规则单列；不修改原业务",
+      "next": "通过考勤文员工作台唯一菜单进入，核对实际导航，再打开空规则表只读查看"
     }
   ]
 }
