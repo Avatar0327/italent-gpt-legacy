@@ -82,8 +82,15 @@
     "currentPreviewStatus": "stopped",
     "newNavigationAttempts": 0,
     "reason": "没有恢复证据，不重复原路径；Sites环境不允许代理浏览器访问线上Sites",
-    "ownerCurrentSession": "未端到端核验，需所有者正常客户端只读打开"
+    "ownerCurrentSession": "用户已确认两个入口均正常打开；非代理浏览器复测"
   },
   "writes": "无云端数据/权限/发布写入",
-  "conclusion": "现有空业务表与唯一所有者admin已核实；多角色及所有者当前会话尚待准备；非业务或生产验收"
+  "conclusion": "所有者端页面访问已由用户确认；保持仅所有者访问，多角色人工验收暂缓；此前空业务表为原检查时刻证据，未重新读取数据",
+  "userConfirmation": {
+    "recordedAt": "2026-09-08T12:57:16.343604+00:00",
+    "source": "用户本轮明确回复",
+    "E1": "正常，都能正常打开",
+    "E2": "暂时不新增人类测试访问者",
+    "scope": "仅确认/settings与/employees页面可打开；未确认数据内容、业务操作、多角色或生产验收"
+  }
 }
