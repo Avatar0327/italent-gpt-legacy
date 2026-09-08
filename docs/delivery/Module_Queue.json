@@ -258,12 +258,22 @@
     },
     {
       "id": "R-RETRY",
-      "status": "technical-verified-pending-build",
+      "status": "technical-delivered-v91",
       "dependencies": [
         "R-SUBMISSION"
       ],
       "acceptance": "保存并提交一修订原子性、丢失响应创建重放不再写入、请求键冲突、作用域角色及内部信息隔离",
       "next": "类型/构建后统一私有发布；继续独立待办，不将本局部机制说成全API幂等"
+    },
+    {
+      "id": "R-JOB",
+      "status": "in-progress",
+      "dependencies": [
+        "R-SOURCE",
+        "R-SUBMISSION"
+      ],
+      "acceptance": "内部招聘职位独立版本、候选冻结来源、需求容量与权限不扩大；旧候选兼容，外发广告不冒充实现",
+      "next": "BC-R05字段与规则说明已核实，先建领域/契约与关联回归，再接页面"
     }
   ]
 }
