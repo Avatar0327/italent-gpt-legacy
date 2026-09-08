@@ -180,22 +180,22 @@
     },
     {
       "id": "L-HOMEWORK",
-      "status": "validated-awaiting-private-release",
+      "status": "technical-delivered-v83",
       "dependencies": [
         "L-BIND"
       ],
       "acceptance": "独立提交/批阅版本、转交撤权、阶段/循环及单项整单取消隔离",
-      "next": "152项综合及类型/构建通过；统一私有发布"
+      "next": "保留多级批阅/附件/AI及奖励待办"
     },
     {
       "id": "L-WEIGHTED-GRADE",
-      "status": "ready",
+      "status": "validated-awaiting-private-release",
       "dependencies": [
         "L-HOMEWORK",
         "L-GRADE"
       ],
       "acceptance": "BC-L10来源映射，缺失不归零、不同实例不可借用、权重版本冻结",
-      "next": "实现考试最高/平均与作业当前批阅分的显式权重规则，未知政策标记"
+      "next": "153项综合及类型/构建通过；统一发布后继续缺失活动及窗口规则"
     }
   ]
 }

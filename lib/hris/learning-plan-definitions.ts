@@ -1,5 +1,5 @@
 import {learningGradeRuleSchema} from './learning-grades';
-import {resourceRequirements} from './learning-requirements';
+import {resourceRequirements,learningRequirements} from './learning-requirements';
 import {z} from 'zod';
 import {learningModeSchema} from './learning-plan-model';
 import {scopedOrgs,type Member} from './authorization';
@@ -40,7 +40,7 @@ export function applyLearningDefinition(records:R[],state:State,member:Member,in
   return {...old!,id:crypto.randomUUID(),status:'draft',referenceId:old!.id,createdBy:member.userId,createdAt:at,updatedAt:at,payload:{...old!.payload,version:(old!.payload.version??1)+1}};
  }
  if(old&&old.status!=='draft')fail('已定版或归档配置不能修改，请创建后续版本');
- if(c.action==='grading'){if(c.rule.mode!=='none'&&(!(old!.payload.examIds?.length)||c.rule.mode==='specifiedExamHighest'&&!old!.payload.examIds.includes(c.rule.examId)))fail('成绩规则须引用本计划的独立考试');return {...old!,updatedAt:at,payload:{...old!.payload,gradeRule:c.rule}};}
+ if(c.action==='grading'){if(c.rule.mode==='contentWeighted'){const requirements=learningRequirements(old!);if(c.rule.items.some(i=>!requirements.some(r=>r.id===i.requirementId&&r.kind===(i.source==='homeworkLatest'?'homework':'exam'))))fail('权重须引用本计划有计分依据的考试或作业要求');}else if(c.rule.mode!=='none'&&(!(old!.payload.examIds?.length)||c.rule.mode==='specifiedExamHighest'&&!old!.payload.examIds.includes(c.rule.examId)))fail('成绩规则须引用本计划的独立考试');return {...old!,updatedAt:at,payload:{...old!.payload,gradeRule:c.rule}};}
  if(c.action==='stages'){
   const ids=c.stages.flatMap(stage=>stage.courseIds),resources=[...old!.payload.courseIds!,...(old!.payload.examIds??[]),...(old!.payload.homeworkIds??[])];
   if(ids.length!==resources.length||new Set(ids).size!==ids.length||ids.some(id=>!resources.includes(id)))fail('阶段须恰好覆盖当前全部课程与独立考试，每项只能属于一个阶段');
@@ -58,5 +58,5 @@ export function applyLearningDefinition(records:R[],state:State,member:Member,in
  if(old&&old.payload.orgId!==c.orgId)fail('版本所属组织不可更换，请独立新建计划');
  if(old?.referenceId){const previous=records.find(r=>r.id===old.referenceId&&r.kind==='learningDefinition');if(!previous||previous.payload.learningMode?.progressSync!==c.config.progressSync)fail('已定版计划的进度同步设置不可更改');}
  const key=old?.id??crypto.randomUUID();
- return {id:key,kind:'learningDefinition',employeeId:null,positionId:null,referenceId:old?.referenceId??null,status:'draft',createdBy:old?.createdBy??member.userId,createdAt:old?.createdAt??at,updatedAt:at,payload:{title:c.title,orgId:c.orgId,learningMode:c.config,courseIds:c.courseIds,examIds,homeworkIds,gradeRule:(old?.payload.examIds??[]).length===examIds.length&&examIds.every(id=>old?.payload.examIds?.includes(id))?old?.payload.gradeRule:undefined,learningRequirements:resourceRequirements(c.courseIds,examIds,old?.payload.learningRequirements,homeworkIds),trainingStages:old?.payload.trainingStages&&(old.payload.homeworkIds??[]).length===homeworkIds.length&&homeworkIds.every(id=>old.payload.homeworkIds?.includes(id))&&(old.payload.examIds??[]).length===examIds.length&&examIds.every(id=>old.payload.examIds?.includes(id))&&old.payload.courseIds?.length===c.courseIds.length&&c.courseIds.every(id=>old.payload.courseIds!.includes(id))?old.payload.trainingStages:undefined,definitionRootId:old?.payload.definitionRootId??key,version:old?.payload.version??1}};
+ return {id:key,kind:'learningDefinition',employeeId:null,positionId:null,referenceId:old?.referenceId??null,status:'draft',createdBy:old?.createdBy??member.userId,createdAt:old?.createdAt??at,updatedAt:at,payload:{title:c.title,orgId:c.orgId,learningMode:c.config,courseIds:c.courseIds,examIds,homeworkIds,gradeRule:(old?.payload.gradeRule?.mode!=='contentWeighted'||(old.payload.homeworkIds??[]).length===homeworkIds.length&&homeworkIds.every(id=>old.payload.homeworkIds?.includes(id)))&&(old?.payload.examIds??[]).length===examIds.length&&examIds.every(id=>old?.payload.examIds?.includes(id))?old?.payload.gradeRule:undefined,learningRequirements:resourceRequirements(c.courseIds,examIds,old?.payload.learningRequirements,homeworkIds),trainingStages:old?.payload.trainingStages&&(old.payload.homeworkIds??[]).length===homeworkIds.length&&homeworkIds.every(id=>old.payload.homeworkIds?.includes(id))&&(old.payload.examIds??[]).length===examIds.length&&examIds.every(id=>old.payload.examIds?.includes(id))&&old.payload.courseIds?.length===c.courseIds.length&&c.courseIds.every(id=>old.payload.courseIds!.includes(id))?old.payload.trainingStages:undefined,definitionRootId:old?.payload.definitionRootId??key,version:old?.payload.version??1}};
 }

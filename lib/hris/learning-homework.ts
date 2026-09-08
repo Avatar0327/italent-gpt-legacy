@@ -24,7 +24,7 @@ export function homeworkTaskCurrent(task:R,state:State){
 export function homeworkTaskOpen(task:R,state:State,at=new Date().toISOString(),records:R[]=[]){
  return learningStageOpen(task,records,at,state)&&['active','returned'].includes(task.status)&&homeworkTaskCurrent(task,state)&&businessDate(at)>=task.payload.start!&&(!!task.payload.assignmentAllowOverdue||businessDate(at)<=task.payload.due!)&&(task.payload.submissionVersion??0)<task.payload.maxSubmissions!;
 }
-export function canReviewHomework(task:R,state:State,m:Member,records:R[]=[],at=new Date().toISOString()){return learningStageOpen(task,records,at,state)&&task.status==='submitted'&&homeworkTaskCurrent(task,state)&&m.employeeId===task.payload.reviewerEmployeeId&&m.employeeId!==task.employeeId&&['admin','hr','manager','employee'].includes(m.role);}
+export function canReviewHomework(task:R,state:State,m:Member,records:R[]=[],at=new Date().toISOString()){return learningStageOpen(task,records,at,state)&&task.status==='submitted'&&homeworkTaskCurrent(task,state)&&m.employeeId===task.payload.reviewerEmployeeId&&m.employeeId!==task.employeeId&&m.userId!==task.payload.submittedBy&&['admin','hr','manager','employee'].includes(m.role);}
 export function applyHomework(records:R[],state:State,m:Member,input:unknown,at=new Date().toISOString()):R[]{
  const c=schema.parse(input),scope=scopedOrgs(state,m),manage=['admin','hr'].includes(m.role);
  const deny=():never=>{throw new HttpError(403,'没有此作业的办理权限');};const fail=(s:string):never=>{throw new HttpError(400,s);};

@@ -29,8 +29,8 @@ export function makeReport(ctx:DevelopmentContext,input:unknown){
  let columns:string[]=[],rows:Cell[][]=[],title='';
  if(q.dataset==='learningPlanProgress'){
   if(!['admin','hr'].includes(ctx.member.role))throw new HttpError(403,'学习计划台账仅限有范围权限的HR');
-  title='学习计划要求与成绩';columns=['工号','姓名','计划','配置版本','实例状态','已完成要求','要求总数','已达标阶段','阶段总数','成绩状态','计划成绩','缺少有效成绩的考试数'];
-  rows=records.filter(r=>r.kind==='learningAssignment').map(r=>{const progress=learningRequirementProgress(r,records),grade=learningGrade(r,records);return [code(r.employeeId),name(r.employeeId),r.payload.title??'',r.payload.version??1,({active:'进行中',completed:'已结项',cancelled:'已取消'} as Record<string,string>)[r.status]??r.status,progress.completed,progress.total,progress.stages.filter(s=>s.complete).length,progress.stages.length,({not_configured:'未配置',pending:'待定',provisional:'暂计',final:'已结项'})[grade.state],grade.score,grade.missingExamIds.length];});
+  title='学习计划要求与成绩';columns=['工号','姓名','计划','配置版本','实例状态','已完成要求','要求总数','已达标阶段','阶段总数','成绩状态','计划成绩','缺少有效成绩的内容数','成绩依据记录ID'];
+  rows=records.filter(r=>r.kind==='learningAssignment').map(r=>{const progress=learningRequirementProgress(r,records),grade=learningGrade(r,records);return [code(r.employeeId),name(r.employeeId),r.payload.title??'',r.payload.version??1,({active:'进行中',completed:'已结项',cancelled:'已取消'} as Record<string,string>)[r.status]??r.status,progress.completed,progress.total,progress.stages.filter(s=>s.complete).length,progress.stages.length,({not_configured:'未配置',pending:'待定',provisional:'暂计',final:'已结项'})[grade.state],grade.score,grade.missingRequirementIds.length,grade.evidenceIds.join('; ')];});
  }
  if(q.dataset==='homework'){
   if(!['admin','hr'].includes(ctx.member.role))throw new HttpError(403,'独立作业台账仅限有范围权限的HR');

@@ -5,7 +5,7 @@ import {visibleDevelopment,type DevelopmentContext} from './development-reposito
 import {latestPublishedReviews} from './review-versions';
 import {businessDate} from './workforce';
 import type {DevelopmentRecord as R} from './development';
-export const cadreProfileKinds=['homeworkTask','learningAssignment','learningExamAttempt','learningExamTask','cadreTerm','employeeExperience','cadreNomination','cadreObservation','qualificationApplication','succession','review','performance','plan','enrollment'] as const;
+export const cadreProfileKinds=['homeworkSubmission','homeworkTask','learningAssignment','learningExamAttempt','learningExamTask','cadreTerm','employeeExperience','cadreNomination','cadreObservation','qualificationApplication','succession','review','performance','plan','enrollment'] as const;
 export type ProfileItem={id:string;title:string;status:string;detail:string;date:string;href:string};
 export type CadreProfile={employee:{id:string;code:string;name:string;org:string;job:string;status:string};sections:{key:string;title:string;items:ProfileItem[]}[];revision:number;asOf:string};
 const states:Record<string,string>={submitted:'待审议 / 核验',approved:'已批准',rejected:'未通过',withdrawn:'已撤回',appointed:'任用已核对',active:'进行中',returned:'待补充',completed:'已完成',development_needed:'需继续发展',closed:'已关闭',cancelled:'已取消',certified:'已认证',revoked:'已撤销',published:'已发布'};
