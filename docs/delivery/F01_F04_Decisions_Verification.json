@@ -37,5 +37,13 @@
     "drizzle/0009_spotty_redwing.sql": "215b7578ceb3213235fc80d6aab2c7792d02dbcccfd67fd116450db3a0dab858"
   },
   "humanUat": "未执行；E1正常打开仅为用户确认页面访问，E2不新增人类身份；多角色真人验收暂缓",
-  "productionAccepted": false
+  "productionAccepted": false,
+  "testedSourceCommit": "3d690cbbd6336c6de8b76a06fa4459700b1e3a88",
+  "build": {
+    "command": "node /root/.codex/plugins/cache/openai-curated-remote/sites/0.1.51/scripts/build-site.mjs",
+    "exitCode": 0,
+    "result": "五个构建阶段完成；0009迁移随构建打包；不冒称浏览器已验收"
+  },
+  "publishedSourceCommit": "3d690cbbd6336c6de8b76a06fa4459700b1e3a88",
+  "deploymentEvidence": "docs/delivery/Deployment_Evidence.json"
 }
