@@ -45,7 +45,18 @@
           "BC-F10",
           "BC-F11",
           "BC-F12",
-          "BC-F13"
+          "BC-F13",
+          "BC-F14",
+          "BC-F15",
+          "BC-F16",
+          "BC-F17",
+          "BC-F18",
+          "BC-F19",
+          "BC-F20",
+          "BC-F21",
+          "BC-F22",
+          "BC-F23",
+          "BC-F24"
         ],
         "fieldRefs": [
           "BC-F03-F001",
@@ -271,7 +282,42 @@
           "BC-F12-F060",
           "BC-F12-F061",
           "BC-F12-F062",
-          "BC-F12-F063"
+          "BC-F12-F063",
+          "BC-F15-F001",
+          "BC-F15-F002",
+          "BC-F15-F003",
+          "BC-F15-F004",
+          "BC-F15-F005",
+          "BC-F15-F006",
+          "BC-F16-F001",
+          "BC-F16-F002",
+          "BC-F16-F003",
+          "BC-F17-F001",
+          "BC-F18-F001",
+          "BC-F19-F001",
+          "BC-F19-F002",
+          "BC-F19-F003",
+          "BC-F19-F004",
+          "BC-F19-F005",
+          "BC-F20-F001",
+          "BC-F20-F002",
+          "BC-F20-F003",
+          "BC-F20-F004",
+          "BC-F21-F001",
+          "BC-F21-F002",
+          "BC-F21-F003",
+          "BC-F21-F004",
+          "BC-F21-F005",
+          "BC-F21-F006",
+          "BC-F21-F007",
+          "BC-F22-F001",
+          "BC-F22-F002",
+          "BC-F23-F001",
+          "BC-F23-F002",
+          "BC-F23-F003",
+          "BC-F23-F004",
+          "BC-F23-F005",
+          "BC-F24-F001"
         ],
         "sourceDepth": "P：局部页面/字段/说明",
         "gapRef": "M01",
@@ -304,11 +350,22 @@
             "BC-F10",
             "BC-F11",
             "BC-F12",
-            "BC-F13"
+            "BC-F13",
+            "BC-F14",
+            "BC-F15",
+            "BC-F16",
+            "BC-F17",
+            "BC-F18",
+            "BC-F19",
+            "BC-F20",
+            "BC-F21",
+            "BC-F22",
+            "BC-F23",
+            "BC-F24"
           ],
           "inferences": "不从菜单/字段名推断规则；业务包归属为本轮规划分组",
           "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "unexplored": "复杂跨字段联动、兼岗、复杂再入职及法人变更；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；初次入口停留旧页面/加载，有限重载无效后从首页组织员工入口恢复；未打开人员记录；目录同名与跨组织层级生效规则未验证；申请入口点击后未验证空表呈现，不算已读申请字段；生效/终止审批、主兼岗与额度工时联动未知；未点击结束/删除/导入/导出；编辑将涉及已有记录，未读取法人记录值；法人名称唯一性、适用范围层级、历史合同/薪资影响及变更生效未验证；未取得重聘身份复用、工号、司龄、合同继承或审批规则；列集变化原因/默认视图未验证；跨源空表通过受控frameLocator仅取标签；未读取输入值；required选择器未匹配不等于选填；原生select为0不等于没有下拉；未取得类型/枚举/默认/校验。新建待入职不能代替重聘专属规则；只读框架提取未获得配置内容；没有权限拒绝证据，不归因为无权；组织配置说明与字段规则仍待补证",
+          "unexplored": "复杂跨字段联动、兼岗、复杂再入职及法人变更；局部字段/说明或到达证据已有；完整字段属性、角色与实际流程结果未核实；初次入口停留旧页面/加载，有限重载无效后从首页组织员工入口恢复；未打开人员记录；目录同名与跨组织层级生效规则未验证；申请入口点击后未验证空表呈现，不算已读申请字段；生效/终止审批、主兼岗与额度工时联动未知；未点击结束/删除/导入/导出；编辑将涉及已有记录，未读取法人记录值；法人名称唯一性、适用范围层级、历史合同/薪资影响及变更生效未验证；未取得重聘身份复用、工号、司龄、合同继承或审批规则；列集变化原因/默认视图未验证；跨源空表通过受控frameLocator仅取标签；未读取输入值；required选择器未匹配不等于选填；原生select为0不等于没有下拉；未取得类型/枚举/默认/校验。新建待入职不能代替重聘专属规则；只读框架提取未获得配置内容；没有权限拒绝证据，不归因为无权；组织配置说明与字段规则仍待补证；仅目录，配置值与说明尚逐项读取；未保存、发起或运行任何规则；源标题相同不与其他应用字段映射合并；没有读取当前勾选值或把页面显示的默认方式当作出厂默认；合并匹配冲突、历史关联、薪酬假勤及账号继承、撤销恢复未验证；本项目未确认采用哪一种方式；仅记录公式文字；当前开关、日期含首尾/闰年/时区/舍入及多次任职累计边界未验证；不作为本项目已批准算法；当前开关值、关闭后具体重复拦截、存量冲突处置、编码作用域未验证；原站职位和本项目岗位映射仍需需求确认，不能把原站可配置选择写成项目已批准；职级名称唯一性没有证据；当前开关值未读取；仅目标选择范围说明，不证明提交/审批/生效时授权。D3本项目双方范围已确认，不被原站可配置放宽覆盖；未读取薪资值、当前设置或执行联动；不证明计算/保存/薪资生效规则；本项目viewLevel是职级字段权限，不能自动替代薪级薪等权限；候选跨包设计需确认；未读历史单据或现有勾选；“之后”对应任职流程哪个日期字段、边界日、终止通知/可恢复性、跨模块已经生效记录处理未知；不是本项目自动终止规则；18岁仅当前配置提示，不是系统默认、本项目批准或法律结论；校验算法、生日时区、适用身份例外及其余空提示日期边界未验证；不更改开关；未读取业务记录、实际唯一键字段组合/当前选择或执行导入；空值、大小写、历史版本、跨员工作用域、更新冲突和恢复未知；不把本项目主数据code唯一套用到所有子集；原站当前配置说明，不是法律判断或本项目批准。当前显示劳务合同/其他、劳动合同是配置选择示例，非枚举全集或出厂默认；具体次数去重、跨法人计数、时区、自动终止失败恢复、日期连续边界待核实；帮助示例使用虚构人物，未保存人名。不能从连续示例推定同类型允许任意间隔，也不证明新旧合同实际签署状态/用工主体/作废处理。报表判定不等于签署、法律续签或本项目renewalOf已批准规则",
           "next": "补字段属性、权限线索和流程说明；组织层级、主兼岗、法人、再入职及主数据变更影响",
           "accepted": false
         }
@@ -5217,7 +5274,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-08T16:22:21.043904+00:00",
+    "updatedAt": "2026-09-08T16:37:39.021856+00:00",
     "authority": "本轮用户指令；Scope_Register.json是唯一范围与验收事实源；P1附属条目不增加48组或59项分母",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -21960,6 +22017,647 @@
         "unknown": "未读取余额数字、账户名称或个人值；积分单位/小数/授予/撤销/到期/兑换规则及账户权限未知，不以工资CNY分模型替代福利积分",
         "operations": "搜索、账户选择复选框；未选择账户/充值/发放/导出",
         "flowRef": []
+      },
+      {
+        "id": "BC-F14",
+        "moduleId": "M01",
+        "path": "组织员工 > 设置（目录恢复）",
+        "evidenceRef": "BC-F14",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:25:16.776579+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "N",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只提取表头/控件，不取数据行",
+        "fields": [],
+        "visibleStates": "",
+        "sourceStatement": "组织设置自定义导航组件已恢复可读；已定位重点配置，不把此前仅无标准label当页面不可用",
+        "unknown": "仅目录，配置值与说明尚逐项读取；未保存、发起或运行任何规则；源标题相同不与其他应用字段映射合并",
+        "operations": "组织类型/层级/专业条线、职位名称规则、多维组织；任职类型/异动类型/变动原因/人员来源/类别/用工形式、工号生成、子集唯一键、司龄累计；重聘/返聘规则；调动后部门权限控制；离职/退休生效时终止在途流程；合同类型/自动续签；字段映射/不继承字段/任职信息联动薪资范围/取消入职或离职人员储备人才库/人事业务校验",
+        "flowRef": [],
+        "limitationResolution": {
+          "replacesLimitation": "BC-F13",
+          "scope": "配置目录已可读，具体规则继续逐项补证"
+        }
+      },
+      {
+        "id": "BC-F15",
+        "moduleId": "M01",
+        "path": "组织员工 > 设置 > 重聘/返聘规则",
+        "evidenceRef": "BC-F15",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:30:26.677588+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "配置说明和选项标签；不读人员值、不修改配置",
+        "fields": [
+          {
+            "id": "BC-F15-F001",
+            "label": "【重聘/返聘】判定信息",
+            "context": "配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F15",
+            "controlType": "复选框/方式选择，逐项控件映射未核实"
+          },
+          {
+            "id": "BC-F15-F002",
+            "label": "证件类型+证件号码",
+            "context": "配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F15",
+            "controlType": "复选框/方式选择，逐项控件映射未核实"
+          },
+          {
+            "id": "BC-F15-F003",
+            "label": "手机号码",
+            "context": "配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F15",
+            "controlType": "复选框/方式选择，逐项控件映射未核实"
+          },
+          {
+            "id": "BC-F15-F004",
+            "label": "电子邮件",
+            "context": "配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F15",
+            "controlType": "复选框/方式选择，逐项控件映射未核实"
+          },
+          {
+            "id": "BC-F15-F005",
+            "label": "重聘入职方式",
+            "context": "配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": [
+              "合并人员",
+              "生成新人员",
+              "手动选择"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-F15",
+            "controlType": "复选框/方式选择，逐项控件映射未核实"
+          },
+          {
+            "id": "BC-F15-F006",
+            "label": "不允许离职人员【证件类型+证件号码】重复",
+            "context": "配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F15",
+            "controlType": "复选框/方式选择，逐项控件映射未核实"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "页面说明：选中判定信息任意一项与离职/退休人员一致，新增Offer、待入职、入职、新增员工等场景提示离职重聘；新增待入职提示退休返聘。方式包括合并人员、生成新人员、手动选择（含默认方式控件）。唯一性选项说明要求勾选前先处理重复人员",
+        "unknown": "没有读取当前勾选值或把页面显示的默认方式当作出厂默认；合并匹配冲突、历史关联、薪酬假勤及账号继承、撤销恢复未验证；本项目未确认采用哪一种方式",
+        "operations": "配置复选/方式选择、功能介绍、返回；未修改或保存",
+        "flowRef": []
+      },
+      {
+        "id": "BC-F16",
+        "moduleId": "M01",
+        "path": "组织员工 > 设置 > 司龄累计设置",
+        "evidenceRef": "BC-F16",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:30:26.677588+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "配置说明和选项标签；不读人员值、不修改配置",
+        "fields": [
+          {
+            "id": "BC-F16-F001",
+            "label": "【实习转正】累计司龄",
+            "context": "配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F16",
+            "controlType": "复选框/方式选择，逐项控件映射未核实"
+          },
+          {
+            "id": "BC-F16-F002",
+            "label": "【离职重聘】累计司龄",
+            "context": "配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F16",
+            "controlType": "复选框/方式选择，逐项控件映射未核实"
+          },
+          {
+            "id": "BC-F16-F003",
+            "label": "【退休返聘】累计司龄",
+            "context": "配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F16",
+            "controlType": "复选框/方式选择，逐项控件映射未核实"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "三类累计设置分开。页面说明开启后，实习转正将实习期计入司龄校正值；离职重聘/退休返聘将上一次任职期间司龄计入校正值。显示公式：累计司龄=（当前日期-入职日期）/365+司龄校正值",
+        "unknown": "仅记录公式文字；当前开关、日期含首尾/闰年/时区/舍入及多次任职累计边界未验证；不作为本项目已批准算法",
+        "operations": "独立开启设置、司龄计算示例、返回（未变更）",
+        "flowRef": []
+      },
+      {
+        "id": "BC-F17",
+        "moduleId": "M01",
+        "path": "组织员工 > 设置 > 职位名称规则",
+        "evidenceRef": "BC-F17",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:31:01.126783+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只读配置说明",
+        "fields": [
+          {
+            "id": "BC-F17-F001",
+            "label": "职位名称允许重复",
+            "context": "配置开关",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F17",
+            "controlType": "switch"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "页面说明：开启后，同一部门下的职位允许重复，允许保存，以编码作为唯一键",
+        "unknown": "当前开关值、关闭后具体重复拦截、存量冲突处置、编码作用域未验证；原站职位和本项目岗位映射仍需需求确认，不能把原站可配置选择写成项目已批准；职级名称唯一性没有证据",
+        "operations": "开关、返回（未变更）",
+        "flowRef": []
+      },
+      {
+        "id": "BC-F18",
+        "moduleId": "M01",
+        "path": "组织员工 > 设置 > 调动后部门权限控制",
+        "evidenceRef": "BC-F18",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:31:37.177250+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只读权限配置说明",
+        "fields": [
+          {
+            "id": "BC-F18-F001",
+            "label": "调动后部门不受权限控制",
+            "context": "配置开关",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F18",
+            "controlType": "switch"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "说明：开启后标准调动、调动申请、第三方调动申请、批量调动/申请表单的目标部门和机构可选全组织；自定义表单仍受权限控制，开关不生效",
+        "unknown": "当前开关值未读取；仅目标选择范围说明，不证明提交/审批/生效时授权。D3本项目双方范围已确认，不被原站可配置放宽覆盖",
+        "operations": "开关、返回（未变更）",
+        "flowRef": []
+      },
+      {
+        "id": "BC-F19",
+        "moduleId": "M01",
+        "path": "组织员工 > 设置 > 任职信息联动薪资范围",
+        "evidenceRef": "BC-F19",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:32:20.354007+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只读配置说明",
+        "fields": [
+          {
+            "id": "BC-F19-F001",
+            "label": "启用",
+            "context": "配置开关",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F19",
+            "controlType": "switch"
+          },
+          {
+            "id": "BC-F19-F002",
+            "label": "薪资包",
+            "context": "说明提及对象，非本页输入字段",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F19"
+          },
+          {
+            "id": "BC-F19-F003",
+            "label": "薪级",
+            "context": "说明提及对象，非本页输入字段",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F19"
+          },
+          {
+            "id": "BC-F19-F004",
+            "label": "薪等",
+            "context": "说明提及对象，非本页输入字段",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F19"
+          },
+          {
+            "id": "BC-F19-F005",
+            "label": "薪资项目数值或范围",
+            "context": "说明提及对象，非本页输入字段",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F19"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "说明：开启后Offer/入职/转正/调动表单输入薪资包、任职信息、薪级薪等时按薪资标准联动项目数值或范围。提示无论开关均可由任职信息联动薪资包/薪级/薪等；启用前需设置薪级薪等权限，否则可选择薪资包的全部薪级薪等",
+        "unknown": "未读取薪资值、当前设置或执行联动；不证明计算/保存/薪资生效规则；本项目viewLevel是职级字段权限，不能自动替代薪级薪等权限；候选跨包设计需确认",
+        "operations": "启用开关、返回（未变更）",
+        "flowRef": []
+      },
+      {
+        "id": "BC-F20",
+        "moduleId": "M01",
+        "path": "组织员工 > 设置 > 离职/退休生效时终止在途流程",
+        "evidenceRef": "BC-F20",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:33:13.665407+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只读配置说明",
+        "fields": [
+          {
+            "id": "BC-F20-F001",
+            "label": "任职流程",
+            "context": "流程类别复选组",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F20",
+            "controlType": "checkbox group"
+          },
+          {
+            "id": "BC-F20-F002",
+            "label": "合同流程",
+            "context": "流程类别复选组",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F20",
+            "controlType": "checkbox group"
+          },
+          {
+            "id": "BC-F20-F003",
+            "label": "考核流程",
+            "context": "流程类别复选组",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F20",
+            "controlType": "checkbox group"
+          },
+          {
+            "id": "BC-F20-F004",
+            "label": "个人信息流程",
+            "context": "流程类别复选组",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F20",
+            "controlType": "checkbox group"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "任职流程说明未勾选时仅终止员工最后工作日之后的在途任职流程，勾选后终止所选全部；合同说明以员工终止日期是否在最后工作日之后区分。考核、个人信息分类只说明勾选后终止所选流程。任职类型包含转正、调动、机构间/批量调动、劳务转正式、实习转正、新增/延长/结束兼职；合同含新建/续签/变更/终止；考核含试用中/转正；个人信息含经历、子集、意向退休日期等",
+        "unknown": "未读历史单据或现有勾选；“之后”对应任职流程哪个日期字段、边界日、终止通知/可恢复性、跨模块已经生效记录处理未知；不是本项目自动终止规则",
+        "operations": "分类复选、查看历史在途流程（未点击）、返回",
+        "flowRef": []
+      },
+      {
+        "id": "BC-F21",
+        "moduleId": "M01",
+        "path": "组织员工 > 设置 > 人事业务校验",
+        "evidenceRef": "BC-F21",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:34:18.302610+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "配置卡片规则标题和说明，未存组织值",
+        "fields": [
+          {
+            "id": "BC-F21-F001",
+            "label": "入职年龄校验",
+            "context": "规则类别/卡片标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F21"
+          },
+          {
+            "id": "BC-F21-F002",
+            "label": "离职日期校验",
+            "context": "规则类别/卡片标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F21"
+          },
+          {
+            "id": "BC-F21-F003",
+            "label": "入职日期校验",
+            "context": "规则类别/卡片标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F21"
+          },
+          {
+            "id": "BC-F21-F004",
+            "label": "Offer日期校验",
+            "context": "规则类别/卡片标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F21"
+          },
+          {
+            "id": "BC-F21-F005",
+            "label": "特殊身份",
+            "context": "规则类别/卡片标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F21"
+          },
+          {
+            "id": "BC-F21-F006",
+            "label": "适用范围",
+            "context": "规则类别/卡片标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F21"
+          },
+          {
+            "id": "BC-F21-F007",
+            "label": "校验提示",
+            "context": "规则类别/卡片标签",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F21"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "总提示：开启后在发起离职、新建Offer、入职时按规则强校验并提示。四类规则卡片独立；当前入职年龄卡片提示“人员必须满足18岁才能入职”，适用范围显示部门含下级结构（未保存部门值）",
+        "unknown": "18岁仅当前配置提示，不是系统默认、本项目批准或法律结论；校验算法、生日时区、适用身份例外及其余空提示日期边界未验证；不更改开关",
+        "operations": "规则开关、编辑（未编辑）、返回",
+        "flowRef": []
+      },
+      {
+        "id": "BC-F22",
+        "moduleId": "M01",
+        "path": "组织员工 > 设置 > 子集唯一键校验",
+        "evidenceRef": "BC-F22",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:34:54.162858+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "配置提示和通用子集标签",
+        "fields": [
+          {
+            "id": "BC-F22-F001",
+            "label": "启用子集唯一键组合重复校验",
+            "context": "配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F22",
+            "controlType": "switch"
+          },
+          {
+            "id": "BC-F22-F002",
+            "label": "选择子集",
+            "context": "配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F22",
+            "controlType": "多选子集"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "提示：先把用于重复校验的字段分组设为唯一键并处理既有重复；启用后页面新增同唯一键数据不可保存；导入开启重复校验时可以更新唯一键一致记录，不开启则全部新增。可选子集含教育/工作/家庭/考核/培训/奖励/证书/项目/技能/语言，另有租户自定义子集",
+        "unknown": "未读取业务记录、实际唯一键字段组合/当前选择或执行导入；空值、大小写、历史版本、跨员工作用域、更新冲突和恢复未知；不把本项目主数据code唯一套用到所有子集",
+        "operations": "启用/选择子集、返回（未变更或导入）",
+        "flowRef": []
+      },
+      {
+        "id": "BC-F23",
+        "moduleId": "M01",
+        "path": "组织员工 > 设置 > 合同管理设置",
+        "evidenceRef": "BC-F23",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:35:45.762261+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "只读合同配置说明",
+        "fields": [
+          {
+            "id": "BC-F23-F001",
+            "label": "合同协议到期后自动终止",
+            "context": "配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F23"
+          },
+          {
+            "id": "BC-F23-F002",
+            "label": "离职/退休后可签订合同协议类型设置",
+            "context": "配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F23"
+          },
+          {
+            "id": "BC-F23-F003",
+            "label": "期限类型联动设置",
+            "context": "配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F23"
+          },
+          {
+            "id": "BC-F23-F004",
+            "label": "离职重聘累计合同签订次数",
+            "context": "配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F23"
+          },
+          {
+            "id": "BC-F23-F005",
+            "label": "合同续签类型设置",
+            "context": "配置项",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F23"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "到期自动终止为可开启配置；离职退休后选定类型不自动终止且可新增；选定合同类型第3次签订时期限默认无固定期限；重聘可配置累计离职前签订次数。续签类型设置只用于过期未续签列表，以终止日期与选中类型新合同开始日期连续判定",
+        "unknown": "原站当前配置说明，不是法律判断或本项目批准。当前显示劳务合同/其他、劳动合同是配置选择示例，非枚举全集或出厂默认；具体次数去重、跨法人计数、时区、自动终止失败恢复、日期连续边界待核实",
+        "operations": "开关/类型选择、详细规则说明；未变更",
+        "flowRef": []
+      },
+      {
+        "id": "BC-F24",
+        "moduleId": "M01",
+        "path": "组织员工 > 合同管理设置 > 详细规则说明 > 判断合同是否续签",
+        "evidenceRef": "BC-F24",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-08",
+        "recordedAt": "2026-09-08T16:36:33.955500+00:00",
+        "observationTimePrecision": "本轮观察；归档时刻为recordedAt，未记录每次点击精确时刻",
+        "level": "P",
+        "recordType": "原站事实",
+        "role": "当前已授权账号；未验证其他角色",
+        "layout": "原站直达帮助文章",
+        "fields": [
+          {
+            "id": "BC-F24-F001",
+            "label": "合同续签类型设置",
+            "context": "说明提及配置，非本页输入",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F24"
+          }
+        ],
+        "visibleStates": "",
+        "sourceStatement": "帮助分同类型与跨类型：同类型后续合同视为续签，示例给出9月30日终止、10月1日开始；跨类型要求原/新合同类型都属于所选集合且连续。只选一种类型时按同类型逻辑。适用仅过期未续签列表；类型可多选",
+        "unknown": "帮助示例使用虚构人物，未保存人名。不能从连续示例推定同类型允许任意间隔，也不证明新旧合同实际签署状态/用工主体/作废处理。报表判定不等于签署、法律续签或本项目renewalOf已批准规则",
+        "operations": "原站链接打开用户社区帮助页（tab3），只读文章",
+        "flowRef": []
       }
     ],
     "humanAcceptancePrerequisite": false,
@@ -22154,10 +22852,10 @@
       {
         "id": "P1-X04",
         "type": "受限项",
-        "scope": "M01合同类型历史配置占位；组织设置说明仍未读取",
-        "evidence": "BC-F08组织列表已恢复、BC-F13设置只到达；M27学分BC-L12已有局部证据",
-        "impact": "组织列表旧提取限制已解除，不能继续称组织不可读；组织配置/合同类型规则仍需说明证据",
-        "recommendation": "使用已观察载体定位；不能读出的字段保留未知，按当前复核结果更新，不机械重试。"
+        "scope": "M01组织设置已恢复局部说明；合同类型/法人/兼岗完整规则仍缺",
+        "evidence": "BC-F14–24配置目录、重聘/司龄/职位重复/调动权限/薪资联动/离职终止/子集/合同说明",
+        "impact": "不能继续称组织设置仅到达；当前配置不等于默认/产品批准，实际提交和跨角色权限仍未知",
+        "recommendation": "继续安全空表和帮助补证；法人实体/兼职/再入职历史继承未闭合，不用配置说明冒充完整模块。"
       },
       {
         "id": "P1-X05",
@@ -22327,7 +23025,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-08T16:24:10.646429+00:00",
+    "updatedAt": "2026-09-08T16:37:39.021856+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -22347,7 +23045,7 @@
         "dependencies": [],
         "readiness": "未就绪：规格可评审，证据缺口/候选规则与需求签署未关闭",
         "accepted": false,
-        "next": "闭合F-SPEC-01–03；组织/兼岗/再入职/法人新证据纳入差异，M20独立保留",
+        "next": "F-SPEC-01–03集中待评审；继续兼职空表/法人说明，重聘帮助与配置规则补证；M20工时保留独立需求",
         "inputEvidence": "docs/delivery/F01_F04_Requirements_Baseline.md",
         "contracts": [
           {
@@ -22385,7 +23083,7 @@
           },
           {
             "object": "项目人力（M20）",
-            "fields": "仅项目、项目人员、工时管理、统计、设置导航；字段/主键/工时单位未核实",
+            "fields": "BC-P1C-M20-02项目人员已见“人员”“操作”“包含已结项”；其余项目主键/工时单位、填报与审批尚未核实",
             "roles": "项目经理、参与人、HR的具体权限待核实，不套用组织经理",
             "lifecycle": "项目状态、人员加入退出、工时提交审批/回退/锁期尚未探索",
             "actions": "已见导航；不执行工时填报",
@@ -22397,6 +23095,57 @@
             "classification": "原站局部证据及原范围/差异输入；具体产品规则待补证，不声称已实现",
             "accepted": false,
             "id": "BP-F-REQ-03"
+          },
+          {
+            "id": "BP-F-REQ-04",
+            "object": "再入职身份、司龄与签订次数",
+            "fields": "原站BC-F15证件组合/手机/邮箱任一匹配，方式合并/新人员/手动；BC-F16三类司龄累计独立；BC-F23合同次数累计另设开关。当前项目无完整再入职对象。",
+            "roles": "不因匹配成功自动恢复历史访问或成员授权；这是一项待确认权限需求，E2不变化。",
+            "lifecycle": "匹配提示、身份处理、历史关联、司龄校正、合同计次应分别规格化；取消/错误匹配恢复缺证据，不虚构默认合并。",
+            "actions": "只读匹配/配置说明已观察；新建或复用员工、重聘审批、生效及历史消费者未完整定义",
+            "codeRefs": [
+              "lib/hris/model.ts",
+              "lib/hris/module-progress.ts",
+              "docs/P1_Source_Observations_20260907.md"
+            ],
+            "acceptance": "待业务确认身份策略后，用同证件/不同手机、多标识指向不同历史人、多次任职、取消重聘、曾撤权账号的合成样本分别验收；冲突不能以推荐方案冒写预期。当前只可验收证据及未决范围记录是否完整。",
+            "gap": "保留完整M01后续需求，不阻塞D1–D7；身份/司龄/合同计次选择尚未确认，不能借普通员工新增完成再入职",
+            "classification": "原站配置说明事实与项目未实现边界；产品策略待需求评审",
+            "accepted": false
+          },
+          {
+            "id": "BP-F-REQ-05",
+            "object": "合同协议、法人关联及合同字段版本",
+            "fields": "当前合同number/employerName各1–200；agreementCategory可选labor/service/internship，contractType fixed/open/project；fixed需end、open禁end；编号不分大小写唯一，作废不释放。法人是employerName文本，未独立法人ID。自定义字段组织内code不分大小写唯一，文本≤1000、每组织≤20项；inheritPrevious默认true属于现有代码。",
+            "roles": "授权HR/管理员登记；终止须非创建者且非本人；本人仅见signed/ended投影。签署登记不是电子签或独立审批完成。",
+            "lifecycle": "draft→signed/cancelled；signed→ended。续签引用同人signed/ended原单且开始晚于原结束，非作废续签只一份。签署时同人同employerName合同日期不可重叠；不同文本主体一致性待核。字段draft→sealed→archived，修订新版本，续签按rootId继承前单快照；显式空值与省略分开。",
+            "actions": "合同登记/分类/签署事实登记/终止复核/续签及字段修订；原站到期自动终止、次数累计、续签报表分类规则未覆盖",
+            "codeRefs": [
+              "lib/hris/workforce.ts",
+              "lib/hris/contract-fields.ts",
+              "lib/hris/contract-field-model.ts",
+              "lib/hris/development.ts"
+            ],
+            "acceptance": "固定期限缺end、无固定带end、重复编号含大小写及已作废、同主体重叠签署均拒绝；未来signedOn拒绝；同创建者/本人终止拒绝；续签字段省略时只按有效定义继承同root旧值，显式null保留清空来源；归档定义不改旧合同快照。均为当前实现候选，未复测/签署。",
+            "gap": "BC-F23/24原站报表连续判定和显式renewalOf不同；法人文本不能支持法人停用/改名/多主体历史；电子签、到期自动任务、次数累计/日期连续缺口保留",
+            "classification": "本项目既有实现静态事实及原站配置差异；除已确认范围外待产品评审",
+            "accepted": false
+          },
+          {
+            "id": "BP-F-REQ-06",
+            "object": "岗位编制与员工经历子集",
+            "fields": "编制headcount整数0–100000、start/end合法且end≥start，evidence5–3000；同岗位批准期间不能重叠，调整必须同岗位同期间最新批准单。经历仅education/employment/project；机构/名称1–200，起止YYYY-MM，描述/依据5–3000。",
+            "roles": "编制HR发起，非本人且有范围管理员/经理审批；经历HR维护；子集唯一键不是岗位/职级code唯一。",
+            "lifecycle": "编制draft→approved/rejected，supersedes替换旧版；当前容量在增加占用且超标时拒绝，不阻止已有超编不增加人数的变更。经历active→cancelled；更正不改员工/类别，版本递增。",
+            "actions": "编制申请/独立批准/同期间调整；经历登记/更正/作废，不做学历背调、不作任职调动或导入",
+            "codeRefs": [
+              "lib/hris/workforce.ts",
+              "lib/hris/employee-experiences.ts"
+            ],
+            "acceptance": "编制自审/重叠拒绝；满编新增占用拒绝并保持原档案；减少占用不被超编误拦。经历不能未来，进行中无end、已结束需end；同员工同类别/机构/名称/开始月有效记录重复拒绝；作废不可编辑。",
+            "gap": "BC-F22原站按配置唯一键控制新增与导入更新；本项目固定复合键和三类经历不是可配置子集/全量导入。兼职占编和项目人力工时不由主职人数替代。",
+            "classification": "既有实现静态候选；原站子集说明仅作差异依据",
+            "accepted": false
           }
         ],
         "goal": "在保留原范围内形成组织员工的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
@@ -23737,7 +24486,7 @@
         "id": "F-SPEC-01",
         "topic": "岗位/职级目录名称唯一性（组织已排除）",
         "status": "待规格评审，非当前停工条件",
-        "basis": "lib/hris/model.ts org分支明确同级组织名称唯一；position/grade共用分支仅编码唯一。旧F01.2写编码/名称唯一，BC-F08/F10未验证原站重名提交。组织约束无差异，不再提交用户决定。",
+        "basis": "lib/hris/model.ts org分支明确同级组织名称唯一；position/grade共用分支仅编码唯一。旧F01.2写编码/名称唯一，BC-F08/F10未验证原站重名提交。组织约束无差异，不再提交用户决定。 BC-F17原站职位名称规则明确开关开启后同部门可重名、编码唯一；当前开关和关闭后的冲突处理未验证，且不覆盖职级，不等于本项目批准。",
         "proposal": "推荐以稳定ID关联、编码唯一、名称允许重复作为岗位/职级候选要求；界面需能通过编码/组织区分同名项。尚未批准。",
         "impact": "仅阻塞F01.2候选目录名称校验及相应用例签署；组织层级、D1–D7和其他包规格继续",
         "alternatives": [
@@ -23747,7 +24496,8 @@
         "evidence": [
           "lib/hris/model.ts",
           "docs/delivery/F01_F04_Requirements_Baseline.md",
-          "tests/p2-api.test.mjs"
+          "tests/p2-api.test.mjs",
+          "docs/P1_Source_Observations_20260907.md"
         ],
         "decisionRequired": true
       },
@@ -23877,6 +24627,24 @@
         "dependency": "BP-I/M05标签配置→BP-C/M41数字人才与人才盘点",
         "contract": "数字人才标签页以员工/部门/工号关联；标签库应用设置说明开启后按标签范围打标签，且范围可含下级。配置规则存在不证明当前启用、传播时点或所有角色均可见；不让共享标签隐式扩展人才权限。",
         "evidence": "BC-I05及本轮M41人才标签；未读取真实人员标签值、未改变开关"
+      },
+      {
+        "term": "任职字段、薪酬等级和联动范围",
+        "dependency": "BP-F/BP-R人事表单→BP-S薪资标准/权限",
+        "contract": "BC-F19原站区分任职带出薪资包/薪级薪等与开关控制的项目数值/范围。项目gradeId/viewLevel不等于薪级薪等授权；联动值是建议还是生效核算输入仍待定，不新增宽权限。",
+        "evidence": "BC-F19原站配置说明；D5仅本项目职级字段权限"
+      },
+      {
+        "term": "离职生效与在途流程终止",
+        "dependency": "BP-F→合同/考核/兼职/自助及BP-I流程",
+        "contract": "BC-F20按任职/合同/考核/个人信息分别配置；最后工作日与流程日期关系不能统一。现有员工状态离职不证明所有任务已终止；已生效记录不自动抹除，终止事件/消息/恢复须独立规格。",
+        "evidence": "BC-F20配置说明与model.ts现有状态处理"
+      },
+      {
+        "term": "法人实体、合同类别与续签报表",
+        "dependency": "BP-F法人/合同→BP-S核算/预算→BP-I电子签/报表",
+        "contract": "法人ID、employerName显示文本、agreementCategory和contractType是不同维度。BC-F24只定义原站过期未续签列表口径，不替代本项目显式renewalOf或电子签事实；主体改名/多主体计数待确定。",
+        "evidence": "BC-F10/F23/F24及workforce.ts/contract-fields.ts静态核对"
       }
     ],
     "consistencyReview": {
