@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "activeWriter": "总控（当前聊天）",
-  "mode": "single-controller",
+  "activeWriter": null,
+  "mode": "handoff-paused",
   "branchCreationBase": "commit introducing this queue; exact SHA in git history",
   "items": [
     {
@@ -687,5 +687,13 @@
   ],
   "executionMode": "acceptance-closure",
   "activeAcceptancePackage": "F01-F04",
-  "expansionPaused": true
+  "expansionPaused": true,
+  "handoff": {
+    "to": "总控｜P1盘点与需求基线",
+    "status": "本窗口停止并交还唯一写入职责；待新窗口核对后接续",
+    "objective": "继续原规划P1：模块清单、页面目录、字段字典、流程图、差异清单；保留48组；暂停新功能",
+    "humanAcceptancePrerequisite": false,
+    "E2": "暂不新增人类测试访问者",
+    "resumeDocument": "docs/delivery/Controller_Resume.md"
+  }
 }

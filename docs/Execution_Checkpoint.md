@@ -1,3 +1,62 @@
+# 当前有效：交接至“总控｜P1盘点与需求基线”（2026-09-08T13:45:39.865467+00:00）
+
+用户要求本窗口完成安全停点后停止；此节覆盖以下历史连续开发/先人工验收安排。本窗口交还唯一写入职责，不自动创建新聊天或代理，不自行恢复。新窗口核对后接续。
+
+## 安全停点与版本
+
+- 实际云端仓库：`/workspace/sites/italent-hris`；分支`main`；本次停点核对完整HEAD / v112源码：`fdc423fcba607bd5814a0672836b55536c71ecb1`。交接文档提交发生在此HEAD之后，其完整SHA见本窗口最终回执或`git log -1 --format=%H -- docs/delivery/Controller_Resume.md`；不要把文档提交当另一次部署。
+- 停点开始`git status --short`为空；代码全部已提交并推送。随后只修改本交接、发布回执及测试结果记录，完成后提交并推送，不另行发布；任何未提交内容以新窗口首次`git status`为准，禁止丢弃或reset。
+- 未完学习简介隔离成果：`checkpoint/learning-description-20260908`，完整SHA `f5f5b1bd9014d4b6eeb6d32da0f03e34da3bced2`；远端已保存，未合入main、未发布，本次不合并。
+- 最新私有发布：v112，源码`fdc423fcba607bd5814a0672836b55536c71ecb1`；保存版本`appgprj_6a9e2c705cfc819180e0e5251bb025cc~appgver_54fa1b3048f08191ba42a78ebc371c72`；部署`appgdep_6aa010f1e1e481919f2a4331af5b0184`；2026-09-08T13:43:27.663228+00:00，`succeeded`，Sites production运行环境、环境revision1、仅所有者私有。URL https://italent-hris-jack.creamy-fern-1782.chatgpt.site 。这是用户要求停点前已启动的发布，停点后仅取得终态，没有为交接额外发布。
+- 所属项目运行操作：有界/proc检查未发现测试、构建、打包、提交、推送或开发服务；上述部署已终态。受管预览此前已停，本轮未启动。交接提交/推送完成后无本窗口后台任务。
+- 本轮入口修复技术证据：真实React组件渲染5/5，类型及正式构建/打包exit0；`F01_F04_Entry_UI_Verification.json`、原始TAP。历史D1–D7为116项关联API + 3项组件渲染通过，非本轮复测；所有人工/生产验收仍未签署。
+
+## 新窗口目标与约束
+
+继续完成**原规划P1**：交付模块清单、页面目录、字段字典、流程图和差异清单。复用现有资料与已有编号，Scope_Register仍是范围/验收事实源，保留48组全量范围及既有59个验收子任务；八个P1规则项不是全量范围的替代。暂停新功能扩展，不另建项目或第二套独立范围台账。
+
+沿用顺序：组织员工→干部人才→学习→绩效→招聘→假勤→薪酬→自助/报表/集成。原站只读，禁止保存业务、提交审批、发送消息、批量导出真实人员；不得记录凭据、迁移真实数据或生产切换。没有新权限授权。E2暂不新增人类测试访问者继续有效。
+
+D1–D7的已确认决定及实现保留：批准与生效分开，北京时间00:00起由授权HR显式执行；失败恢复和实际时间留痕；不自动追溯，改日期终止原单关联新单完整重审；双范围指定HR发起、调出/调入顺序审批；必要职级变化必须可读、防盲审；驳回原因必填及原单关联；本包两级、不扩会签/分支/委托。它们是**本项目独立设计及用户确认**，不得标成原站完整业务制度已核实。
+
+F01–F04技术成果保留。用户反馈除UAT01/04外找不到操作按钮；截图为离职筛选0行、侧栏入口低可读。v112已前置入口、改善侧栏、补空筛选恢复和显式员工行操作，但**尚未取得用户复验**。不能把按钮存在、渲染测试或发布当作人工通过；UAT01/04也仅有“找到按钮”反馈。完整多角色UAT依E2暂缓。**人工验收不是继续P1的前置条件**，新窗口可直接整理证据与只读盘点，不等待补测试访问者。
+
+## 原站登录状态
+
+原站入口`https://srworkshopbj.italent.cn`。最后有证据的会话核实：**2026-09-08，BC-F03首包只读核对**，当时同一云端会话已登录、停在组织员工→任职管理→调动管理列表，无未提交表单。原记录只含日期，没有精确时分秒；不得拿Git提交时间或本次交接时间冒充最后登录核实时间。本次停点未再访问原站，不保证会话跨聊天可复用；新窗口按现有浏览器能力只读验证，失效则遵守正规登录/平台授权，禁止复制认证头、Cookie或记录凭据。代理内部预览曾ERR_BLOCKED_BY_CLIENT，用户E1仅确认本人端成员/员工页可打开，两者不得混为一谈。
+
+## 必读入口（均为现有文件）
+
+1. `/workspace/sites/italent-hris/docs/Execution_Checkpoint.md`：最新停点及历史执行链。
+2. `/workspace/sites/italent-hris/docs/delivery/Controller_Resume.md`：本交接及唯一写入规则。
+3. `/workspace/sites/italent-hris/docs/HRIS_Project_Plan.md`：原规划P1目标及全量范围。
+4. `/workspace/sites/italent-hris/docs/delivery/Scope_Register.json`、`/workspace/sites/italent-hris/docs/delivery/Module_Queue.json`：范围、验收条件、现有P1待办。
+5. `/workspace/sites/italent-hris/docs/P1_Source_Observations_20260907.md`：原站N/P/F级证据与边界，含BC-F03。
+6. `/workspace/sites/italent-hris/docs/delivery/Cadre_Learning_Source_Gaps.md`、`Performance_Source_Gaps.md`、`Recruitment_Source_Gaps.md`、`Attendance_Source_Gaps.md`、`Payroll_Source_Gaps.md`、`Integration_Source_Gaps.md`（后五份也均位于`/workspace/sites/italent-hris/docs/delivery/`）：已知各域差异，按域复用，不重做已核实项。
+7. `/workspace/sites/italent-hris/docs/delivery/F01_F04_Requirements_Baseline.md`、`/workspace/sites/italent-hris/docs/delivery/F01_F04_Business_Acceptance.md`：已决独立规则、按钮反馈、未完UAT。
+8. `/workspace/sites/italent-hris/docs/delivery/F01_F04_Decisions_Verification.json`、`/workspace/sites/italent-hris/docs/delivery/F01_F04_Entry_UI_Verification.json`、`/workspace/sites/italent-hris/docs/delivery/Deployment_Evidence.json`；历史基础另见`/workspace/sites/italent-hris/docs/P2_Acceptance.md`、`/workspace/sites/italent-hris/docs/delivery/G0_Evidence_Map.md`。
+
+## 当前P1缺口（摘录已有台账，非本次新增盘点）
+
+| 原有任务 | 仍待核实 |
+|---|---|
+| P1-F-RULES | 组织员工复杂字段联动、兼岗、再入职、法人变更；现有调动列表不能证明完整日期/交接规则 |
+| P1-C-RULES | 任用类型、期限计算、干部状态及委员会规则 |
+| P1-L-RULES | 复杂循环、共享、多期、费用和成绩完整规则 |
+| P1-P-RULES | 手工评级、系数、在途更新、组织绩效 |
+| P1-R-RULES | 渠道、电子签、完整录用提交规则 |
+| P1-A-RULES | 跨班、调休、自动结转及企业参数 |
+| P1-S-RULES | 薪资组、企业调动核算选择、完整依赖字段 |
+| P1-I-RULES | 第三方字段、方向、调度、失败重试契约 |
+
+全量48组尚未形成可签署的统一模块→页面→字段→流程→差异映射，许多证据仅导航/列表结构，不能用实现或自动化补成原站事实；不要推算虚构P1完成百分比。
+
+**第一个具体操作（留给新窗口，本窗口不执行）**：先只读核对上述仓库HEAD、工作区与运行操作；随后打开原规划P1、Scope_Register的M01/P1-F-RULES、P1_Source_Observations的组织员工证据，在现有需求资料中列出M01已有证据到页面/字段/流程/差异的对应关系和空缺。优先补“模块清单及页面目录”的证据索引，不写业务代码；再只读核实原站会话，以缺口驱动单页核对。无需先完成人工验收。
+
+---
+
+## 以下为历史检查点
+
 # 当前执行检查点
 
 ## 唯一写入与边界

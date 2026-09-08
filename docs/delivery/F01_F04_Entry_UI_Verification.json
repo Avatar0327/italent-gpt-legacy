@@ -24,5 +24,12 @@
   },
   "userEvidence": "用户image.png：离职筛选0条，长侧栏蓝底蓝字；只有UAT01/04找到按钮，不代表这两项已验收通过",
   "browserLimitation": "未重新访问原已失败的代理预览路径；本轮截图来自用户，组件渲染不替代真实点击",
-  "productionAccepted": false
+  "productionAccepted": false,
+  "testedSourceCommit": "fdc423fcba607bd5814a0672836b55536c71ecb1",
+  "build": {
+    "exitCode": 0,
+    "command": "node /root/.codex/plugins/cache/openai-curated-remote/sites/0.1.51/scripts/build-site.mjs",
+    "packageExitCode": 0
+  },
+  "userRetest": "尚未取得；本窗口按用户指令交接停止，不以人工验收阻断P1"
 }

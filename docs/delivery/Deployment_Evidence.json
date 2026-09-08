@@ -1,10 +1,10 @@
 {
-  "checkedAt": "2026-09-08T13:24:25.422Z",
+  "checkedAt": "2026-09-08T13:45:39.865467+00:00",
   "environment": "Sites production / 仅所有者私有访问",
   "latestDeploymentVerified": true,
-  "latestSavedCommit": "3d690cbbd6336c6de8b76a06fa4459700b1e3a88",
-  "latestSavedVersion": 111,
-  "note": "F01–F04用户D1–D7必要调动实现私有发布成功；业务/生产未验收。看板内构建快照仍为构建时证据，当前回执以本文件为准。",
+  "latestSavedCommit": "fdc423fcba607bd5814a0672836b55536c71ecb1",
+  "latestSavedVersion": 112,
+  "note": "v112首包按钮/导航可发现性修复；发布在停点指令前启动，停点后仅取得终态，不为交接额外发布；未取得用户复验。",
   "schemaVerification": {
     "checkedAt": "2026-09-08T13:23:31.983Z",
     "columns": [
@@ -36,6 +36,16 @@
   },
   "source": "Sites save_site_version + deploy_private_site_version + get_deployment_status（部署ID指定核验）",
   "verified": {
+    "version": 112,
+    "versionId": "appgprj_6a9e2c705cfc819180e0e5251bb025cc~appgver_54fa1b3048f08191ba42a78ebc371c72",
+    "deploymentId": "appgdep_6aa010f1e1e481919f2a4331af5b0184",
+    "commit": "fdc423fcba607bd5814a0672836b55536c71ecb1",
+    "time": "2026-09-08T13:43:27.663228+00:00",
+    "status": "succeeded",
+    "envRevision": 1,
+    "url": "https://italent-hris-jack.creamy-fern-1782.chatgpt.site"
+  },
+  "previousVerified": {
     "commit": "3d690cbbd6336c6de8b76a06fa4459700b1e3a88",
     "deploymentId": "appgdep_6aa00c1c77948191899be9e2c773c84f",
     "envRevision": 1,
