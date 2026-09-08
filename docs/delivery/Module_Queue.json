@@ -153,12 +153,30 @@
     },
     {
       "id": "L-STAGE-WINDOW",
-      "status": "researching",
+      "status": "partially-validated",
       "dependencies": [
         "L-REQ"
       ],
       "acceptance": "阶段截止与逾期规则明确标记原站证据/独立策略；服务端、待办和历史一致，兼容旧版本",
-      "next": "只读核对阶段截止文案与现有计划配置，补齐日期边界和阶段内顺序"
+      "next": "固定起点和阶段内顺序已验证；阶段截止计日及晚解锁重算待核实"
+    },
+    {
+      "id": "L-RECURRENCE",
+      "status": "validated-awaiting-private-release",
+      "dependencies": [
+        "L-BIND"
+      ],
+      "acceptance": "新轮实例与任务原子隔离、重复请求/撤销不重复奖励、不得冒称自动调度",
+      "next": "146项综合通过；统一发布后保留自动调度/积分待办"
+    },
+    {
+      "id": "L-EXAM-TYPES",
+      "status": "ready",
+      "dependencies": [
+        "L-EXAM"
+      ],
+      "acceptance": "客观题版本、计分和答案投影，旧单选兼容；人工题/题库另列",
+      "next": "依据BC-L08抽题与分值证据，增加显式客观题类型和分值，保留百分制与原始分区别"
     }
   ]
 }

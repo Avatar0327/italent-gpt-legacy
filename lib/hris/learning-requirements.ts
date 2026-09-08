@@ -37,7 +37,7 @@ export function learningRequirementProgress(assignment:R,records:R[]){
  return {items,stages,total:requirements.length,completed:items.filter(i=>i.complete).length,complete:valid&&tasks.length===requirements.length&&(stages.length?stages.every(s=>s.complete):items.every(i=>i.complete))};
 }
 export function learningStageStartsOn(assignment:R,stage:NonNullable<R['payload']['trainingStages']>[number]){
- const joined=businessDate(assignment.createdAt),date=new Date(joined+'T00:00:00Z');
+ const origin=assignment.payload.learningMode?.mode==='fixed'?assignment.payload.learningMode.start:assignment.payload.learningMode?.mode==='recurring'&&assignment.payload.previousAssignmentId?assignment.payload.start!:businessDate(assignment.createdAt),date=new Date(origin+'T00:00:00Z');
  date.setUTCDate(date.getUTCDate()+(stage.startAfterDays??0));
  const scheduled=date.toISOString().slice(0,10);
  return assignment.payload.start&&assignment.payload.start>scheduled?assignment.payload.start:scheduled;
@@ -50,8 +50,19 @@ export function learningStageOpen(task:R,records:R[],at=new Date().toISOString()
  if(!assignment.payload.trainingStages?.length)return true;
  const stage=assignment.payload.trainingStages.find(s=>s.courseIds.includes(task.referenceId!));
  if(!stage||businessDate(at)<learningStageStartsOn(assignment,stage))return false;
- if(!assignment.payload.learningMode?.orderedStages)return true;
- const stages=learningRequirementProgress(assignment,records).stages;
- const index=stages.findIndex(stage=>stage.courseIds.includes(task.referenceId!));
- return index>=0&&stages.slice(0,index).every(stage=>stage.complete);
+ const progress=learningRequirementProgress(assignment,records);
+ if(assignment.payload.learningMode?.orderedStages){
+  const index=progress.stages.findIndex(s=>s.courseIds.includes(task.referenceId!));
+  if(index<0||!progress.stages.slice(0,index).every(s=>s.complete))return false;
+ }
+ if(!stage.orderedTasks)return true;
+ const index=stage.courseIds.indexOf(task.referenceId!);
+ return index>=0&&stage.courseIds.slice(0,index).every(resourceId=>{
+  const item=progress.items.find(i=>i.resourceId===resourceId);
+  if(item?.complete)return true;
+  if(!stage.examSubmissionUnlock||item?.kind!=='exam'||!item.taskId)return false;
+  const predecessor=records.find(r=>r.id===item.taskId);
+  if(!predecessor||!['active','failed','completed'].includes(predecessor.status))return false;
+  return records.some(a=>a.kind==='learningExamAttempt'&&a.referenceId===item.taskId&&a.employeeId===assignment.employeeId&&a.payload.examId===resourceId&&Number.isFinite(a.payload.score)&&a.payload.score!>=0&&a.payload.score!<=100);
+ });
 }

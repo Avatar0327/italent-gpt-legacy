@@ -12,7 +12,7 @@ const schema=z.discriminatedUnion('action',[
  z.object({action:z.literal('create'),...fields}).strict(),
  z.object({action:z.literal('edit'),id,...fields}).strict(),
  z.object({action:z.literal('grading'),id,rule:learningGradeRuleSchema}).strict(),
- z.object({action:z.literal('stages'),id,stages:z.array(z.object({title,startAfterDays:z.number().int().min(0).max(36500).optional(),courseIds:z.array(id).min(1).max(20),optionalCourseIds:z.array(id).max(20).optional(),requiredMinimum:z.number().int().min(0).max(20).optional(),optionalMinimum:z.number().int().min(0).max(20).optional()}).strict()).min(1).max(10)}).strict(),
+ z.object({action:z.literal('stages'),id,stages:z.array(z.object({title,orderedTasks:z.boolean().optional(),examSubmissionUnlock:z.boolean().optional(),startAfterDays:z.number().int().min(0).max(36500).optional(),courseIds:z.array(id).min(1).max(20),optionalCourseIds:z.array(id).max(20).optional(),requiredMinimum:z.number().int().min(0).max(20).optional(),optionalMinimum:z.number().int().min(0).max(20).optional()}).strict()).min(1).max(10)}).strict(),
  z.object({action:z.literal('seal'),id}).strict(),
  z.object({action:z.literal('revise'),id}).strict(),
  z.object({action:z.literal('archive'),id}).strict(),
@@ -45,7 +45,7 @@ export function applyLearningDefinition(records:R[],state:State,member:Member,in
   const ids=c.stages.flatMap(stage=>stage.courseIds),resources=[...old!.payload.courseIds!,...(old!.payload.examIds??[])];
   if(ids.length!==resources.length||new Set(ids).size!==ids.length||ids.some(id=>!resources.includes(id)))fail('阶段须恰好覆盖当前全部课程与独立考试，每项只能属于一个阶段');
   if(new Set(c.stages.map(s=>s.title)).size!==c.stages.length)fail('阶段名称不得重复');
-  for(const stage of c.stages){const optional=stage.optionalCourseIds??[],required=stage.courseIds.length-optional.length,rm=stage.requiredMinimum??required,om=stage.optionalMinimum??optional.length;if(new Set(optional).size!==optional.length||optional.some(id=>!stage.courseIds.includes(id))||rm>required||om>optional.length||rm+om<1)fail('选必修范围或完成数量门槛无效');}
+  for(const stage of c.stages){if(stage.examSubmissionUnlock&&!stage.orderedTasks)fail('考试提交放行仅适用于按任务顺序学习的阶段');const optional=stage.optionalCourseIds??[],required=stage.courseIds.length-optional.length,rm=stage.requiredMinimum??required,om=stage.optionalMinimum??optional.length;if(new Set(optional).size!==optional.length||optional.some(id=>!stage.courseIds.includes(id))||rm>required||om>optional.length||rm+om<1)fail('选必修范围或完成数量门槛无效');}
   return {...old!,updatedAt:at,payload:{...old!.payload,trainingStages:c.stages}};
  }
  const courseIds=c.action==='seal'?old!.payload.courseIds!:c.courseIds,examIds=c.action==='seal'?(old!.payload.examIds??[]):c.examIds??old?.payload.examIds??[];

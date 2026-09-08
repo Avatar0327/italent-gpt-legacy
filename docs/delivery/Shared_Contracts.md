@@ -72,3 +72,9 @@ enroll新增可选assignmentId，须匹配有效learningAssignment的员工、�
 - 单选等权百分制取整、通过停止重考为当前独立规则；未核实为原站完整算法。计划总成绩暂未生成。
 
 SC-2成绩增量：gradeRule随定义版本和实例冻结；learningGrade输出state/score/missingExamIds/attemptIds，not_configured与pending的score均为null，provisional和final保留真实0分。只使用本实例requirementId绑定的考试任务与尝试。final仅代表实例已结项；不表示生产或业务已验收。规则保存端点沿用/api/learning-plans的grading命令。
+
+### SC-1 学习阶段窗口和顺序补充（BC-L08）
+
+固定日期模式的 startAfterDays 以 learningMode.start 为起点；relative 以实例加入业务日为起点，0表示当天。原有 relative 数据不变；修正已有 fixed 实例投影，不重写历史完成记录。
+
+阶段增加可选 orderedTasks / examSubmissionUnlock，默认 false。顺序按冻结的 trainingStages[].courseIds（混合资源ID）排列，全部前置要求完成后放行；显式启用考试例外时，可用同实例、同员工、同要求绑定任务的有效作答放行，允许该次作答未及格。例外不改变 requirement 完成状态、实例结项门槛或学分。阶段例外不能在 orderedTasks=false 时设为 true。当前选修任务也遵循前置顺序；原站跳过选修的具体语义待核实。未支持的作业、面授、辅导、线下考核放行例外保留后续，不能映射为课程完成。

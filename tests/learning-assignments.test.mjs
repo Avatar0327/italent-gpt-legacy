@@ -37,10 +37,10 @@ test('first learning instance atomically creates 20 tasks, blocks duplicate inst
  await cmd(api,{action:'closeAssignment',id:instance.id});assert.equal((await expect(await api.GET())).records.find(r=>r.id===instance.id).status,'completed');await cmd(api,{action:'closeAssignment',id:instance.id},400);
  act('employee');await expect(await api.GET(),403);assert.ok(!(await expect(await self.GET())).tasks.some(t=>tasks.some(task=>task.id===t.id)));
 });
-test('first instance refuses unsupported modes, outside scope, expired dates and stale revision without partial records',async t=>{
+test('first instance refuses outside scope, expired dates and stale revision without partial records',async t=>{
  const f=await setup();t.after(()=>f.sqlite.close());const c=await send({action:'course',code:'I-GUARD',title:'合成边界课程',description:'实例权限与日期校验',content:'合成案例只用于验证权限日期，不含真实人员或企业业务信息。'});await send({action:'publishCourse',id:c.id});
  const base={mode:'relative',durationDays:30,allowOverdue:true,progressSync:false,orderedStages:true};
- for(const config of [{...base,mode:'recurring',repeatCredit:false,repeatPoints:false},{mode:'fixed',start:'2020-01-01',end:'2020-01-02',progressSync:false,orderedStages:true}]){const id=await definition(f,[c.id],config);await cmd(api,{action:'assign',definitionId:id,employeeId:f.e.id},400);}
+ for(const config of [{mode:'fixed',start:'2020-01-01',end:'2020-01-02',progressSync:false,orderedStages:true}]){const id=await definition(f,[c.id],config);await cmd(api,{action:'assign',definitionId:id,employeeId:f.e.id},400);}
  const id=await definition(f,[c.id]);act('hr');await cmd(api,{action:'assign',definitionId:id,employeeId:f.other.id},403);
  const revision=(await get()).revision;await definition(f,[c.id]);await cmd(api,{action:'assign',definitionId:id,employeeId:f.e.id},409,revision);
  assert.ok(!(await get()).records.some(r=>r.kind==='learningAssignment'||r.kind==='enrollment'));
