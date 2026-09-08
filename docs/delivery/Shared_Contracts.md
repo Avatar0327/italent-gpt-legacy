@@ -55,3 +55,6 @@
 
 ## 干部任期登记
 新增cadreTerm记录及/api/cadre-terms GET/POST，写入仍为{revision,command}，不改变其他API。register/correct/end/void保存事件历史，关联员工ID和任用岗位ID。HR/admin写且不能本人，经理按当前双组织范围读；结束/作废仅登记，不自动改变人事主数据或发送通知。干部档案消费同记录，作废不展示当前条目、历史仍受当前权限保护。无表结构迁移。
+
+## B1/B2 学习实例契约增量
+learningAssignment引用不可变learningDefinition版本；enrollment的learningAssignmentId/learningDefinitionId和窗口/组织快照由服务器生成，原enroll命令不接受客户端自造关联。首轮派发、结项、整体取消/恢复在/api/learning-assignments下执行，统一revision+command包。saveDevelopmentMany默认20条不变；本入口显式21条（实例+最多20任务）。整体取消用assignmentCancelled及assignmentPreviousStatus保留原任务状态，实例恢复不重置考试、已完成课程或学分。普通员工不访问管理接口，通过既有学习页读取本人任务。课程原唯一性保持；重复课程、循环轮次及历史同步尚未开放。

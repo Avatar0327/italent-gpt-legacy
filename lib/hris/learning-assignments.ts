@@ -9,17 +9,32 @@ const id=z.string().min(1).max(100);
 const command=z.discriminatedUnion('action',[
  z.object({action:z.literal('assign'),definitionId:id,employeeId:id}).strict(),
  z.object({action:z.literal('closeAssignment'),id}).strict(),
+ z.object({action:z.literal('cancelAssignment'),id,evidence:z.string().trim().min(5).max(3000)}).strict(),
+ z.object({action:z.literal('restoreAssignment'),id,evidence:z.string().trim().min(5).max(3000)}).strict(),
 ]);
 export function applyLearningAssignment(records:R[],state:State,m:Member,input:unknown,at=new Date().toISOString()):R[]{
  const c=command.parse(input),scope=scopedOrgs(state,m);
  const deny=():never=>{throw new HttpError(403,'没有此员工学习实例的管理权限');};
  const fail=(text:string):never=>{throw new HttpError(400,text);};
  if(!['admin','hr'].includes(m.role))deny();
- if(c.action==='closeAssignment'){
+ if(c.action!=='assign'){
   const r=records.find(r=>r.kind==='learningAssignment'&&r.id===c.id);
   if(!r||!visibleRecord(r,records,state,m)||!scope.has(r.payload.orgId!))deny();
-  if(r!.status!=='active')fail('实例已结项');
   const tasks=records.filter(t=>t.kind==='enrollment'&&t.payload.learningAssignmentId===r!.id);
+  if(c.action==='cancelAssignment'){
+   if(r!.status!=='active')fail('仅进行中的实例可以取消');
+   return [{...r!,status:'cancelled',updatedAt:at,payload:{...r!.payload,evidence:c.evidence}},...tasks.filter(t=>t.status!=='completed').map(t=>({...t,status:'cancelled',updatedAt:at,payload:{...t.payload,closedReason:c.evidence,assignmentCancelled:true,assignmentPreviousStatus:t.status}}))];
+  }
+  if(c.action==='restoreAssignment'){
+   if(r!.status!=='cancelled')fail('仅已取消实例可整体恢复');
+   const employee=state.employees.find(e=>e.id===r!.employeeId);
+   if(!employee||employee.status==='离职'||employee.orgId!==r!.payload.orgId||!state.orgs.some(o=>o.id===employee.orgId&&o.status==='启用'))fail('恢复须为原组织在职员工');
+   const config=r!.payload.learningMode!;
+   if((config.mode==='fixed'||!config.allowOverdue)&&businessDate(at)>r!.payload.due!)fail('实例已超过允许学习期限，不能恢复');
+   for(const task of tasks.filter(t=>t.payload.assignmentCancelled&&t.payload.assignmentPreviousStatus!=='cancelled'))if(!records.some(course=>course.kind==='course'&&course.id===task.referenceId&&course.status==='published'))fail('恢复任务的课程版本须仍已发布');
+   return [{...r!,status:'active',updatedAt:at,payload:{...r!.payload,evidence:c.evidence}},...tasks.filter(t=>t.payload.assignmentCancelled).map(t=>({...t,status:t.payload.assignmentPreviousStatus==='cancelled'?'cancelled':'active',updatedAt:at,payload:{...t.payload,assignmentCancelled:false,restorationEvidence:c.evidence}}))];
+  }
+  if(r!.status!=='active')fail('仅进行中的实例可结项');
   if(tasks.length!==r!.payload.courseIds!.length||r!.payload.courseIds!.some(course=>!tasks.some(t=>t.referenceId===course&&t.status==='completed'&&t.payload.verifiedBy)))fail('须完成全部课程的独立核验后结项，取消任务不视为完成');
   return [{...r!,status:'completed',updatedAt:at}];
  }

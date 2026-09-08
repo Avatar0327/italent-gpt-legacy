@@ -1,6 +1,8 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {setup,send,get,act,expect,request,due} from './support/foundation-scenario.mjs';
+const {developmentContext}=await import('../lib/hris/development-repository.ts');
+const {applyDevelopment}=await import('../lib/hris/development.ts');
 const definitions=await import('../app/api/learning-plans/route.ts'),api=await import('../app/api/learning-assignments/route.ts'),self=await import('../app/api/self-service/route.ts');
 async function cmd(route,command,status=200,revision){const d=await expect(await route.GET());return expect(await route.POST(request('/api/learning-assignments',{revision:revision??d.revision,command})),status);}
 async function definition(f,courses,config={mode:'relative',durationDays:30,allowOverdue:true,progressSync:false,orderedStages:true}){const r=await cmd(definitions,{action:'create',title:'合成首轮学习',orgId:f.org.id,config,courseIds:courses});await cmd(definitions,{action:'seal',id:r.id});return r.id;}
@@ -13,6 +15,14 @@ test('first learning instance atomically creates 20 tasks, blocks duplicate/reus
  const prior=snapshot();f.sqlite.exec("CREATE TRIGGER fail_instance_audit BEFORE INSERT ON hris_audit_events BEGIN SELECT RAISE(ABORT,'synthetic audit unavailable'); END");await cmd(api,assign,503);assert.deepEqual(snapshot(),prior);f.sqlite.exec('DROP TRIGGER fail_instance_audit');
  const created=await cmd(api,assign);assert.equal(created.ids.length,21);assert.equal((await get()).revision,before+1);
  const rows=(await expect(await api.GET())).records,instance=rows.find(r=>r.kind==='learningAssignment'),tasks=rows.filter(r=>r.payload.learningAssignmentId===instance.id);assert.equal(tasks.length,20);
+ await send({action:'cancelEnrollment',id:tasks[0].id,reason:'合成单项先取消，验证整体恢复保留状态'});
+ const ctx=await developmentContext();const restored=applyDevelopment(ctx.records,ctx.state,ctx.member,{action:'restoreEnrollment',id:tasks[0].id,due:tasks[0].payload.due,evidence:'允许超期的实例恢复仍保留原截止日'},'2099-01-01T00:00:00Z');assert.equal(restored.payload.due,tasks[0].payload.due);
+ await cmd(api,{action:'cancelAssignment',id:instance.id,evidence:'合成整体暂停学习实例'});
+ act('employee');assert.ok(!(await expect(await self.GET())).tasks.some(t=>tasks.some(x=>x.id===t.id)));act('owner');
+ await send({action:'restoreEnrollment',id:tasks[0].id,due:tasks[0].payload.due,evidence:'整体取消期间不允许绕过实例恢复'},400);
+ await cmd(api,{action:'restoreAssignment',id:instance.id,evidence:'合成重新开放原实例学习'});
+ assert.equal((await get()).records.find(r=>r.id===tasks[0].id).status,'cancelled');
+ await send({action:'restoreEnrollment',id:tasks[0].id,due:tasks[0].payload.due,evidence:'合成独立恢复原先单项取消的课程'});
  const count=()=>f.sqlite.prepare('SELECT count(*) AS n FROM hris_development_records').get().n;
  const n=count();await cmd(api,assign,400);assert.equal(count(),n);await cmd(api,{action:'closeAssignment',id:instance.id},400);
  const revised=await cmd(definitions,{action:'revise',id:def});await cmd(definitions,{action:'seal',id:revised.id});await cmd(api,{...assign,definitionId:revised.id},400);assert.equal(count(),n+1);

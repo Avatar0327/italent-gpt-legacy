@@ -2,7 +2,7 @@ import {z} from 'zod';
 import {businessDate} from './business-time';
 import type {DevelopmentRecord as R} from './development';
 type Learner={orgId:string;status:string}|undefined|null;
-export function learningTaskCurrent(r:R,employee:Learner){return !r.payload.learningAssignmentId||!!employee&&employee.status!=='离职'&&employee.orgId===r.payload.assignmentOrgId;}
+export function learningTaskCurrent(r:R,employee:Learner){return !r.payload.learningAssignmentId||!r.payload.assignmentCancelled&&!!employee&&employee.status!=='离职'&&employee.orgId===r.payload.assignmentOrgId;}
 export function learningTaskOpen(r:R,employee:Learner,at=new Date().toISOString()){
  return learningTaskCurrent(r,employee)&&(!r.payload.learningAssignmentId||businessDate(at)>=r.payload.assignmentStart!&&(!!r.payload.assignmentAllowOverdue||businessDate(at)<=r.payload.assignmentDue!));
 }
