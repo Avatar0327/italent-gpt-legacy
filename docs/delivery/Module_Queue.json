@@ -589,12 +589,12 @@
     },
     {
       "id": "P-GOAL-ADVISORY",
-      "status": "tested-awaiting-private-publish",
+      "status": "private-published-v108",
       "dependencies": [
         "P-GOAL-RANGE"
       ],
       "acceptance": "数量和权重分别可配置提示/强制，旧快照默认强制，基础权重总和等约束仍生效；模板修订不能改写既有周期",
-      "next": "25项绩效关联回归和类型检查通过；集中构建发布，后续多维/小数/下发范围继续保留"
+      "next": "25项绩效关联回归、类型和正式构建通过，v108私有发布；完整模板范围及业务验收继续保留"
     },
     {
       "id": "F01",

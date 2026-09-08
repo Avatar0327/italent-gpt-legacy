@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-08T11:00:45.552Z",
+  "at": "2026-09-08T11:21:57.638Z",
   "mode": "isolated synthetic SQLite and memory object store",
   "passed": true,
   "migrations": [
@@ -40,102 +40,102 @@
       "sha256": "ac3581d749f9e6e3d59e995e3133ce3b6740f42e69e3803b2ecc9ceb6b430542"
     }
   ],
-  "restoredRevision": 15,
+  "restoredRevision": 22,
   "tables": [
     {
       "table": "hris_access_grants",
-      "rows": 3,
-      "sha256": "5861a64f512f47d4d56b77226e2ceba4e9d1d975a6aed37f461ea8c7b7eb299b"
+      "rows": 5,
+      "sha256": "54b4ee4f08f0fd5a23bd29ca07a8f36b57146cc4a78f632d72aa1d71704018f4"
     },
     {
       "table": "hris_approval_steps",
-      "rows": 0,
-      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      "rows": 2,
+      "sha256": "434dc7192067f4766850140ea81bb205f366972a0eb5736dfba34c3b76483b3f"
     },
     {
       "table": "hris_approvals",
-      "rows": 0,
-      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      "rows": 1,
+      "sha256": "520099cd4a9af031d842f587597b58e54a4b599b0fa7551da1a2887ef4e82033"
     },
     {
       "table": "hris_assignment_requests",
-      "rows": 0,
-      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      "rows": 1,
+      "sha256": "c672255de5369293c2b7133dbe0689cac161f4b6bf22e0f598c0f4e72b0ea61b"
     },
     {
       "table": "hris_attachments",
       "rows": 1,
-      "sha256": "d66878a65850f4037a16fc8a253cc9ae0262d5f070a833497785b6e948d26716"
+      "sha256": "8192f0e8fd1d541ac2c02db1b8bd6c9699f24c3586261688267fbbeea286b71b"
     },
     {
       "table": "hris_audit_events",
-      "rows": 18,
-      "sha256": "842b998d926d5ccfb51c35d27c74ec6cfe503472cef9ec91655e85f49f25ca97"
+      "rows": 27,
+      "sha256": "380aa5d78ec70c998843bf9437b9bf0cbd04bf62d23765fc8879d41c75e8b76f"
     },
     {
       "table": "hris_development_events",
       "rows": 9,
-      "sha256": "1c3effebe8a0586bfadc11208d2c42a56ef37991ddf1fe79a20562b7586c70b4"
+      "sha256": "b1f8b760e23b3c581744cd5eca1dee2dcf6c0081078b8da57307fb6c2ceda746"
     },
     {
       "table": "hris_development_records",
       "rows": 5,
-      "sha256": "f8131303e04f26bd0bfdb72508cef2887f131871ff03600f6f8ba6dac492e75f"
+      "sha256": "6ea999304f5db470cd63c7a352cde478d447cf54398697d92370c02144d93a4a"
     },
     {
       "table": "hris_employee_positions",
       "rows": 1,
-      "sha256": "dfa6173965518207a8d5cf7633085c801151840e7585ecf22ef25090a29e1d65"
+      "sha256": "21ce1c5ef32e125e62bc692c77a0076201ad4bf55ab6768ef446fb2fd0bf9f31"
     },
     {
       "table": "hris_employees",
       "rows": 1,
-      "sha256": "748435b48366efbe8debb0669fab4d2cea25ffcc487e4bc46c5ee75fee78c694"
+      "sha256": "3f76497ac441a98bc99d94bbc8fed7064e09658f273b46fc3ef6d14d85f6b33c"
     },
     {
       "table": "hris_employment_history",
       "rows": 1,
-      "sha256": "59f0bc3284d1b8bb566145b56b36f8aa0a437064a5c01fece9d75c26084a9f61"
+      "sha256": "90c29cbdbd82602a47e90ef16be070437897e339450f53166f76ad6d1c0e2ee0"
     },
     {
       "table": "hris_grades",
-      "rows": 0,
-      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      "rows": 1,
+      "sha256": "782989097f245c9882d66fdb25e404f080cbca5606205fcffc61c0eed4bcfe83"
     },
     {
       "table": "hris_installation",
       "rows": 1,
-      "sha256": "311959e23d6d669498ceaae2099350d5e0a2363c4cdc107309cd6aab1a5f1c73"
+      "sha256": "595ea4934259272273c1ae8460a7b1fcfdd1108aca0e971267d54a10450abc2c"
     },
     {
       "table": "hris_memberships",
-      "rows": 3,
-      "sha256": "2c6773c9e1deec5463cf2339401d719c3d6324ce52626a86841bdcb76c54b579"
+      "rows": 5,
+      "sha256": "66ac73c057cb2f72e06da1e2b3177c774e7442ea669849c759bde2d1199c05b1"
     },
     {
       "table": "hris_orgs",
       "rows": 1,
-      "sha256": "5d298a6b04da13bf5c4bd20feb5de93494ab7c3b6c70df62263ab1bb588bf030"
+      "sha256": "c04f38913bf5a54ea4f6404e74e611295c858612889b01a2e74940042b3a1a1d"
     },
     {
       "table": "hris_positions",
-      "rows": 0,
-      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      "rows": 1,
+      "sha256": "cdbd6ac0381b04bff193be1a445a45d83947278ab79088198f2208bbd3ca4d7a"
     },
     {
       "table": "hris_workflow_steps",
-      "rows": 0,
-      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      "rows": 2,
+      "sha256": "1dc95aace3ba25cc66a3b1e70c3cbebf9a553266f6af6d909ea57c601cb6f700"
     },
     {
       "table": "hris_workflows",
-      "rows": 0,
-      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      "rows": 1,
+      "sha256": "d53c43de4e5a42fe9dda2d8785af8d72fd9ce8dac4ec2746a611b9fb60057ab9"
     },
     {
       "table": "hris_workspaces",
       "rows": 1,
-      "sha256": "124fdbfadbb77ee87f390fcdf7ac4b9d623f1e00ac8c6e052a876227f291eb05"
+      "sha256": "52363c1cbe7134ce9285c57851adb80b4585d819163cce38f067148be15d7696"
     }
   ],
   "attachmentCount": 1,
@@ -153,15 +153,18 @@
     "restored sealed template rejects edit",
     "backup-cut-later revocation is stale in isolated restore",
     "trusted synthetic revocation reconciled before reopening: application and attachment access denied",
-    "post-restore audited mutation"
+    "post-restore audited mutation",
+    "pending two-step approval and assignment snapshot equal",
+    "completed first approver cannot replay",
+    "restored second approval atomically updates assignment and employment history"
   ],
-  "localRestoreAndValidationMs": 12.26,
+  "localRestoreAndValidationMs": 20.19,
   "limitations": [
     "No deployed D1 or R2 accessed",
     "Quiescent synthetic snapshot only",
     "No cloud backup scheduling, encryption, retention or region failover verified",
     "No real enterprise RPO/RTO acceptance",
     "Only one synthetic trusted post-cut revocation is reconciled using existing member APIs; production trusted revocation feed, durable replay and cloud reopening gate are not implemented",
-    "Not all business tables contain fixture rows"
+    "All current 19 tables contain synthetic rows, but not every business state or failure combination is covered"
   ]
 }
