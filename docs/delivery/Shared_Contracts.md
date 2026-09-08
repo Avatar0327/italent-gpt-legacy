@@ -192,3 +192,8 @@ leave/leaveCredit保留leaveTypeSnapshot。组织调动后当前定义可见性�
 `POST /api/payroll` slip增加可选attendancePeriodIds（最多31，不重复、不重叠、同员工且完整位于同计薪月）；旧客户端编辑时省略字段保留并重新校验已有引用，显式[]才能清除。服务端冻结聚合元数据，不信任客户端快照、不自动计算工资。
 `paySlip.payload.payrollAttendance` 存ID/版本/更新时间/日期/来源修订与计划、批准请假、未覆盖分钟，不复制打卡明细或人员原始数据。GET仅薪酬角色按当前人员范围获取候选聚合；普通员工不返回来源集合与异常映射，工资投影隐藏管理引用。
 提交/批准/发布检查来源仍冻结且版本/时间/员工相同；过期409，退回操作保留。已发布不回写工资，GET展示异常供另行核定补差。现有独立复核、贡献者、权限、CAS和审计完整保留。无迁移、支付或通知。
+
+## SC-I-SOURCES 统一待办与引用核对报表
+
+work-inbox读取attendancePeriod和interviewAppointment来判断可执行性。指定评价待办直接使用既有canEvaluateAppointment；薪酬过期引用不生成批准/发布待办，改为当前角色可处理的核验/退回事项。工资待办batchId深链只选择当前可见批次。
+新增report dataset `payrollAttendanceReferences`：仅admin/payroll_editor/payroll_reviewer并按批次组织范围过滤，行单位为每个工资引用期间，列出旧冻结聚合和当前版本一致性，无原始打卡。旧报表列顺序不变。报表导出继续现有修订/审计和公式转义机制，不扩大访问或自动外发。

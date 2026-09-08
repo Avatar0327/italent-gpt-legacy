@@ -1,3 +1,6 @@
+import {payrollAttendanceIssues} from './payroll-attendance';
+import {canEvaluateAppointment} from './interview-schedule';
+import {attendanceShiftFrozen} from './attendance-locks';
 import {requisitionAwaitingApproval} from './recruitment-status';
 import {canReviewHomework} from './learning-homework';
 import {learningStageOpen} from './learning-requirements';
@@ -10,7 +13,7 @@ import {payrollWriter,payrollReviewer,payrollRecordAccess} from './payroll-acces
 import {authorizeCommand,type Member} from './authorization';
 import type {State} from './model';
 import {visibleRecord,type DevelopmentRecord as R} from './development';
-export const inboxKinds=['homeworkSubmission','homeworkTask','learningExamTask','learningExamAttempt','learningAssignment','performanceCheckin','performanceGoalChange','certificateTemplate','certificateAward','mentorProfile','mentorship','mentoringLog','instructorCampaign','instructorApplication','instructorTrial','instructorProfile','trainingRequest','cadreNomination','cadreObservation','employeeFieldDefinition','employeeFieldValue','review','reviewCalibration','payBatch','paySlip','payAdjustment','payQuery','performancePlan','performanceCycle','performance','performanceAppeal','requisition','candidate','interview','leave','correction','shift','plan','enrollment','instructorCertification','onboardingPlan','trainingAttendance','trainingSession','training','course'] as const;
+export const inboxKinds=['attendancePeriod','interviewAppointment','homeworkSubmission','homeworkTask','learningExamTask','learningExamAttempt','learningAssignment','performanceCheckin','performanceGoalChange','certificateTemplate','certificateAward','mentorProfile','mentorship','mentoringLog','instructorCampaign','instructorApplication','instructorTrial','instructorProfile','trainingRequest','cadreNomination','cadreObservation','employeeFieldDefinition','employeeFieldValue','review','reviewCalibration','payBatch','paySlip','payAdjustment','payQuery','performancePlan','performanceCycle','performance','performanceAppeal','requisition','candidate','interview','leave','correction','shift','plan','enrollment','instructorCertification','onboardingPlan','trainingAttendance','trainingSession','training','course'] as const;
 export type InboxItem={id:string;recordId:string;domain:string;title:string;employeeName:string;action:string;href:string;updatedAt:string;due:string|null};
 export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
  const rows:InboxItem[]=[],hr=['admin','hr'].includes(m.role),manager=hr||m.role==='manager';
@@ -23,6 +26,7 @@ export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
   if(!visibleRecord(r,records,state,m))continue;
   const self=r.employeeId===m.employeeId,e=employee(r.employeeId);
   const add=(domain:string,action:string,href:string,suffix='',title=r.payload.title??action)=>rows.push({id:r.kind+':'+r.id+suffix,recordId:r.id,domain,title,employeeName:e?.name??'—',action,href,updatedAt:r.updatedAt,due:r.payload.due??null});
+  if(r.kind==='interviewAppointment'&&canEvaluateAppointment(r,records,state,m))add('recruitment','指定面试评价','/recruitment-evaluations?'+new URLSearchParams({appointmentId:r.id}),'',r.payload.interviewSchedule?.title??'指定面试');
   if(r.kind==='homeworkTask'&&canReviewHomework(r,state,m,records))add('learning','独立作业批阅','/learning-homework');
   if(r.kind==='performanceCheckin'&&e?.status!=='离职'){
    const p=records.find(p=>p.id===r.referenceId&&p.kind==='performancePlan'),live=performancePlanLive(state,records,p)&&p?.status==='confirmed'&&records.some(c=>c.id===p.referenceId&&c.kind==='performanceCycle'&&c.status==='active')&&!records.some(c=>c.kind==='performance'&&c.payload.sourcePlanId===p.id);
@@ -45,9 +49,13 @@ export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
    if(r.status==='approved'&&hr&&r.payload.verifiedBy!==m.userId)add('development','盘点校准发布','/development','',`${r.payload.period} 盘点校准`);
   }
   if(r.kind==='payBatch'&&payrollRecordAccess(r,records,state,m)){
-   const slips=records.filter(x=>x.kind==='paySlip'&&x.referenceId===r.id&&x.status!=='cancelled'),beneficiary=slips.some(x=>x.employeeId===m.employeeId);
-   if(r.status==='submitted'&&payrollReviewer(m)&&payrollBatchIndependent(r,records,m))add('payroll','工资批次复核','/payroll','',`${r.payload.period} 工资批次`);
-   if(r.status==='approved'&&payrollWriter(m)&&!beneficiary)add('payroll','工资批次发布','/payroll','',`${r.payload.period} 工资批次`);
+   const slips=records.filter(x=>x.kind==='paySlip'&&x.referenceId===r.id&&x.status!=='cancelled'),beneficiary=slips.some(x=>x.employeeId===m.employeeId),stale=slips.some(x=>payrollAttendanceIssues(x,records).length>0);
+   const href='/payroll?'+new URLSearchParams({batchId:r.id});
+   if(stale&&r.status==='draft'&&payrollWriter(m))add('payroll','工资考勤来源核验',href,'',`${r.payload.period} 工资批次`);
+   if(stale&&['submitted','approved'].includes(r.status)&&payrollReviewer(m)&&payrollBatchIndependent(r,records,m))add('payroll','工资来源变化待退回',href,'',`${r.payload.period} 工资批次`);
+   if(stale&&r.status==='published'&&payrollWriter(m))add('payroll','已发布工资来源变更核对',href,'',`${r.payload.period} 工资批次`);
+   if(!stale&&r.status==='submitted'&&payrollReviewer(m)&&payrollBatchIndependent(r,records,m))add('payroll','工资批次复核',href,'',`${r.payload.period} 工资批次`);
+   if(!stale&&r.status==='approved'&&payrollWriter(m)&&!beneficiary)add('payroll','工资批次发布',href,'',`${r.payload.period} 工资批次`);
   }
   if(['payAdjustment','payQuery'].includes(r.kind)&&payrollRecordAccess(r,records,state,m)&&!self){
    const slip=records.find(x=>x.kind==='paySlip'&&x.id===r.referenceId),published=slip?.status!=='cancelled'&&records.some(x=>x.kind==='payBatch'&&x.id===slip?.referenceId&&x.status==='published');
@@ -69,7 +77,7 @@ export function workInbox(state:State,records:R[],m:Member):InboxItem[]{
    if(r.status==='offered'&&['admin','manager'].includes(m.role)&&(r.payload.offeredBy??r.createdBy)!==m.userId)add('recruitment','录用审批','/recruitment','',r.payload.name??'候选人');
    if(r.status==='approved'&&hr)add('recruitment','录用接受确认','/recruitment','',r.payload.name??'候选人');
   }
-  if(['leave','correction'].includes(r.kind)&&manager&&!self&&r.createdBy!==m.userId&&r.status==='pending'&&records.some(x=>x.id===r.referenceId&&x.kind==='shift'&&x.status==='active'))add('attendance',r.kind==='leave'?'请假审批':'补卡审批','/attendance');
+  if(['leave','correction'].includes(r.kind)&&manager&&!self&&r.createdBy!==m.userId&&r.status==='pending'&&records.some(x=>x.id===r.referenceId&&x.kind==='shift'&&x.status==='active'&&!attendanceShiftFrozen(records,x)))add('attendance',r.kind==='leave'?'请假审批':'补卡审批','/attendance');
   if(['plan','enrollment'].includes(r.kind)&&manager&&!self&&r.payload.submittedBy!==m.userId&&r.status==='submitted'&&e&&e.status!=='离职'&&learningTaskCurrent(r,e)&&learningStageOpen(r,records,undefined,state))add('development',r.kind==='plan'?'发展行动核验':'学习成果核验',r.kind==='plan'?'/development':'/learning');
   if(r.kind==='instructorTrial'&&r.status==='active'&&records.some(p=>p.id===r.referenceId&&p.kind==='instructorProfile'&&p.status==='submitted')&&e?.status!=='离职'){const judges=r.payload.participantIds??[],scores=r.payload.trialScores??[];if(r.payload.due!>=businessDate(new Date().toISOString())&&m.employeeId&&judges.includes(m.employeeId)&&state.employees.some(e=>e.id===m.employeeId&&e.status!=='离职')&&!scores.some(s=>s.employeeId===m.employeeId))add('learning','本人试讲评分','/instructor-trials');if(hr&&!self&&r.createdBy!==m.userId&&!(m.employeeId&&judges.includes(m.employeeId))&&judges.every(id=>scores.some(s=>s.employeeId===id)))add('learning','试讲结果冻结','/instructor-trials');}
   if(r.kind==='instructorProfile'&&hr&&!self&&r.createdBy!==m.userId&&r.status==='submitted'&&!records.some(t=>t.kind==='instructorTrial'&&t.referenceId===r.id&&t.status==='active'))add('learning','内部讲师提名复核','/instructor-directory');

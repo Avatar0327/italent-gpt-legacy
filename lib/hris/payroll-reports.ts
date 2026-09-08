@@ -1,3 +1,4 @@
+import {payrollAttendanceIssues} from './payroll-attendance';
 import {scopedOrgs} from './authorization';
 import type {DevelopmentRecord as R} from './development';
 import type {DevelopmentContext} from './development-repository';
@@ -6,7 +7,7 @@ import {payrollTotals} from './payroll';
 import {HttpError} from './http';
 import type {Cell} from './reports';
 
-export function payrollReport(ctx:DevelopmentContext,dataset:'payrollOperations'|'payrollReconciliation'){
+export function payrollReport(ctx:DevelopmentContext,dataset:'payrollOperations'|'payrollReconciliation'|'payrollAttendanceReferences'){
  if(!payrollStaff(ctx.member))throw new HttpError(403,'仅薪酬岗位可查看薪酬管理报表');
  // Use managed records only: an employee's own masked slip is not a management grant.
  const scope=scopedOrgs(ctx.state,ctx.member),batches=ctx.records.filter(r=>r.kind==='payBatch'&&(ctx.member.role==='admin'||scope.has(r.payload.orgId!))),batchById=new Map(batches.map(b=>[b.id,b]));
@@ -16,6 +17,10 @@ export function payrollReport(ctx:DevelopmentContext,dataset:'payrollOperations'
  const statuses:Record<string,string>={draft:'草稿',submitted:'待复核',approved:'已批准待发布',published:'已发布',cancelled:'已取消'};
  const keys=['grossCents','deductionCents','netCents','employerCents'] as const;
  const sum=(values:ReturnType<typeof payrollTotals>[])=>keys.map(k=>values.reduce((n,v)=>{const total=n+v[k];if(!Number.isSafeInteger(total))throw new HttpError(400,'汇总金额超出安全整数范围，请缩小业务范围');return total;},0));
+ if(dataset==='payrollAttendanceReferences'){
+  const rows:Cell[][]=slips.flatMap(s=>(s.payload.payrollAttendance??[]).map(p=>{const current=ctx.records.find(r=>r.kind==='attendancePeriod'&&r.id===p.id);return [batchById.get(s.referenceId!)!.id,s.id,s.payload.period??'',s.payload.employeeSnapshot?.code??'',s.payload.employeeSnapshot?.name??'',statuses[batchById.get(s.referenceId!)!.status]??'',p.id,p.start,p.end,p.version,current?.payload.version??null,current?.status??'不可用',payrollAttendanceIssues({...s,payload:{...s.payload,payrollAttendance:[p]}},ctx.records).length?'来源已变化':'引用一致',p.plannedMinutes,p.approvedLeaveMinutes,p.uncoveredMinutes];}));
+  return {title:'可见范围工资考勤引用核对',columns:['批次编号','工资条编号','计薪月份','工号快照','姓名快照','批次状态','考勤期间编号','开始业务日','结束业务日','引用冻结版本','当前冻结版本','当前期间状态','一致性','引用计划分钟','引用批准请假分钟','引用未覆盖分钟'],rows};
+ }
  if(dataset==='payrollOperations'){
   const rows:Cell[][]=batches.map(b=>{const active=slipsByBatch.get(b.id)??[];return [b.id,b.payload.name??'',b.payload.period??'',orgNames.get(b.payload.orgId!)??'',statuses[b.status]??b.status,active.length,...sum(active.map(s=>payrollTotals(s.payload.payItems??[])))];});
   return {title:'可见范围薪酬批次办理',columns:['批次编号','批次名称','期间','批次组织','状态','有效明细数','明细应发（分）','明细扣款（分）','明细净额（分）','单位承担（分）'],rows};
