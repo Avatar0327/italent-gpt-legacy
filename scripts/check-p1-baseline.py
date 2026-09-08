@@ -18,6 +18,8 @@ for m in s['modules']:
  check(isinstance(m['p1']['coverage']['facts'],list) and all(ref in pages or ref.startswith('BC-NAV') for ref in m['p1']['coverage']['facts']),m['id']+'事实引用类型与有效性')
  check(m['businessPackage'] in [p['id'] for p in s['p1B']['packages'] if m['id'] in p['moduleIds']],m['id']+'分包双向一致')
  check(m['p1']['coverage']['accepted'] is False,m['id']+'未代签P1')
+contract_ids=[c['id'] for p in s['p1B']['packages'] for c in p.get('contracts',[])]
+check(len(contract_ids)==len(set(contract_ids)),'分包需求契约ID唯一')
 for p in s['p1B']['packages']:
  check(p['accepted'] is False,p['id']+'未代签需求')
  for c in p.get('contracts',[]):

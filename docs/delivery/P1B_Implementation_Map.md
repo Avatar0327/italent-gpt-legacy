@@ -1,6 +1,6 @@
 # 已有实现与产品需求对应
 
-生成来源：`Scope_Register.json → p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-08T16:02:40.548294+00:00。
+生成来源：`Scope_Register.json → p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-08T16:22:21.043904+00:00。
 
 对应当前源码静态核对；可复用是技术候选，不是当前测试或业务验收通过。历史测试只在原Verification标注的testedSourceCommit及适用范围有效，本轮未复跑。产品源码未修改。
 
@@ -24,7 +24,7 @@
 | BP-C-REQ-02 | 任职资格标准及认证 | 待核验/可复用候选；差异需补齐，未授权本轮改产品 | lib/hris/qualification.ts | 认证委员会、类别层级及有效期政策需原站与企业基线；现有整数尺度非原站标准 | 新标准版本不得覆盖旧认证依据；相同版本已有有效认证/待审申请时拒绝重复；不达目标或证据版本错误不能认证 |
 | BP-C-REQ-03 | 360项目/关系/答卷/报告 | 待核验/可复用候选；差异需补齐，未授权本轮改产品 | lib/hris/feedback.ts；lib/hris/development.ts | 阈值/匿名性是独立策略待确认；提醒、题型、完整活动运营未覆盖 | 草稿后不能改名单；重复评估人+被评人拒绝；本人关系不匹配拒绝；同事/下属低于阈值返回suppressed与null均值，自评/上级阈值1；不把无响应记0 |
 | BP-C-REQ-04 | 盘点/继任/标准模型 | 待核验/可复用候选；差异需补齐，未授权本轮改产品 | docs/delivery/Cadre_Learning_Source_Gaps.md；docs/delivery/Scope_Register.json | 当前仅重用已有范围描述；多维模型/健康度/测評题库及评分未可验收 | 后续评审必须证明正式绩效快照来源/版本；撤销或新版本不能静默覆盖旧九宫格；无绩效不自动补最低档 |
-| BP-L-REQ-01 | 学习配置与实例 | 待核验/可复用候选；差异需补齐，未授权本轮改产品 | lib/hris/learning-plan-definitions.ts；lib/hris/learning-plan-model.ts | 自动循环不是已实现；共享管理员与可学范围、完成实例重开、跨轮更新待明确 | 已定版配置直接改动拒绝；跨组织试卷/作业引用拒绝；新版本不自动改旧实例；取消/退出要求不伪造完成；固定模式起点按计划日期，非加入日 |
+| BP-L-REQ-01 | 学习配置与实例 | 待核验/可复用候选；差异需补齐，未授权本轮改产品 | lib/hris/learning-plan-definitions.ts；lib/hris/learning-plan-model.ts | 自动循环不是已实现；共享管理员与可学范围、完成实例重开、跨轮更新待明确；当前main学习配置未含原站简介字段；既有learning-description隔离分支f5f5b1bd9014d4b6eeb6d32da0f03e34da3bced2保留未合并，不计main已实现 | 已定版配置直接改动拒绝；跨组织试卷/作业引用拒绝；新版本不自动改旧实例；取消/退出要求不伪造完成；固定模式起点按计划日期，非加入日 |
 | BP-L-REQ-02 | 阶段窗口与任务放行 | 待核验/可复用候选；差异需补齐，未授权本轮改产品 | lib/hris/learning-plan-definitions.ts；lib/hris/learning-requirements.ts | 自然日含首日和顺序晚开启的原站精确算法尚未核实，当前策略需评审 | 有序阶段的考试/作业提交放行不等于通过；未完成必修不满足结项；晚核验不得伪造按期提交；无法完成的数量门槛配置拒绝 |
 | BP-L-REQ-03 | 计划成绩 | 待核验/可复用候选；差异需补齐，未授权本轮改产品 | lib/hris/learning-grades.ts；lib/hris/learning-grade-evidence.ts | 缺失分母、精度、通过过滤及多审批人聚合为候选政策，原站选项存在不能证明算法完整一致 | 缺少有效成绩时pending与null，不能补0/100；按每次考试平均与每场最高平均给出不同期望；无成绩课程不能获得虚构权重成绩 |
 | BP-L-REQ-04 | 学分、撤销、到期 | 待核验/可复用候选；差异需补齐，未授权本轮改产品 | lib/hris/learning-credits.ts | 折抵、企业到期算法、积分和自动发证尚未确认；不得将本项目整数单位当原站字段类型 | 同课程版本重复授予拒绝；允许循环重复的完整新轮且非旧成果复用才可新授；撤销不删除原记录；到期日当天仍有效 |
@@ -48,12 +48,14 @@
 | BP-I-REQ-05 | 工作台/电子签/会议/文化/翻译等周边 | 待核验/可复用候选；差异需补齐，未授权本轮改产品 | docs/delivery/Integration_Source_Gaps.md；docs/delivery/Scope_Register.json | 周边多组只有入口；保留候选接口与证据不足，不能泛化当前自助实现 | 取得配置证据后再定义冲突、重复回执、撤销、时间窗口和访问边界；任何未探索动作不标成可用 |
 | BP-L-REQ-06 | 独立考试与作业批阅 | 可复用候选/需补齐；未业务签署 | lib/hris/learning-homework.ts；lib/hris/learning-exam-definitions.ts | 填空/简答/排序、随机抽题、多级批阅、附件/AI批阅及外部通知尚未实现；原站可选题型不证明当前已支持 | 两种试卷题目结构必须且只能提供一种；已定版不可编辑；作业批阅旧submissionId拒绝，评分为空不补0；批阅后返回可重交且次数受限；人员异动/撤权后不能沿用旧任务授权 |
 | BP-R-REQ-04 | 招聘创建请求恢复与内部接口 | 可复用候选/接口契约待评审 | app/api/recruitment/route.ts；lib/hris/http.ts | 不是原站API说明，不提供外部渠道幂等契约；通用版本冲突不等于所有命令自动幂等 | 网络结果未知后同键重试只返回原记录，不重复创建；修改命令仍用同键拒绝；撤权后原键也不能恢复越权记录；其他动作传创建键拒绝 |
-| BP-C-API-01 | 内部读取/命令接口 | 可复用候选/外部接口另待补齐 | app/api/qualifications/route.ts；app/api/cadres/route.ts | 这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定 | 非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503 |
-| BP-L-API-01 | 内部读取/命令接口 | 可复用候选/外部接口另待补齐 | app/api/learning-homework/route.ts | 这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定 | 非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503 |
-| BP-P-API-01 | 内部读取/命令接口 | 可复用候选/外部接口另待补齐 | app/api/performance/route.ts | 这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定 | 非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503 |
-| BP-R-API-01 | 内部读取/命令接口 | 可复用候选/外部接口另待补齐 | app/api/recruitment/route.ts | 这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定 | 非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503 |
-| BP-A-API-01 | 内部读取/命令接口 | 可复用候选/外部接口另待补齐 | app/api/attendance/route.ts | 这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定 | 非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503 |
-| BP-S-API-01 | 内部读取/命令接口 | 可复用候选/外部接口另待补齐 | app/api/payroll/route.ts | 这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定 | 非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503 |
+| BP-C-API-01 | 内部读取/命令接口 | 可复用候选/外部接口另待补齐 | app/api/qualifications/route.ts；app/api/cadres/route.ts；lib/hris/http.ts | 这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定 | 非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503 |
+| BP-L-API-01 | 内部读取/命令接口 | 可复用候选/外部接口另待补齐 | app/api/learning-homework/route.ts；lib/hris/http.ts | 这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定 | 非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503 |
+| BP-P-API-01 | 内部读取/命令接口 | 可复用候选/外部接口另待补齐 | app/api/performance/route.ts；lib/hris/http.ts | 这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定 | 非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503 |
+| BP-R-API-01 | 内部读取/命令接口 | 可复用候选/外部接口另待补齐 | app/api/recruitment/route.ts；lib/hris/http.ts | 这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定 | 非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503 |
+| BP-A-API-01 | 内部读取/命令接口 | 可复用候选/外部接口另待补齐 | app/api/attendance/route.ts；lib/hris/http.ts | 这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定 | 非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503 |
+| BP-S-API-01 | 内部读取/命令接口 | 可复用候选/外部接口另待补齐 | app/api/payroll/route.ts；lib/hris/http.ts | 这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定 | 非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503 |
+| BP-I-REQ-06 | 独立任务对象（M43） | 需补齐；不可拿聚合待办充当独立任务 | docs/P1_Source_Observations_20260907.md | M43独立任务未实现，现有work-inbox只是其他模块办理入口汇总，不替代该对象 | 待补任务规则后检验负责人和参与人可见/可写区别、历史进展是否追加保留、截止/优先级与完成定义；当前不编造通过预期 |
+| BP-C-REQ-05 | 原站发展计划阶段与执行人（M17） | 需补齐；原简单行动不可替代完整阶段流程 | docs/P1_Source_Observations_20260907.md；docs/delivery/Cadre_Learning_Source_Gaps.md | 指导角色、跨阶段审批、模板变化及状态恢复未核实/未独立覆盖 | 先确认模板阶段开启规则、执行人解析、退回与变动恢复，才能定义步骤完成和阶段切换预期；现有简单发展行动不可冒充整套模板流程 |
 
 ## 其余全范围实现候选
 
@@ -94,16 +96,38 @@
 | M33 森福利 / BP-S | 未独立实现 | 账户、福利、财务、合规、设置 | 待逐包对P1B核验；无需求签署，不自动确认所有已有实现 |
 | M34 AI面试官 / BP-R | 未独立实现 | 面试、企业题库、答疑知识库、看板 | 待逐包对P1B核验；无需求签署，不自动确认所有已有实现 |
 | M35 主数据同步 / BP-I | 未独立实现 | 任务、配置、规则、映射、开放应用、接口 | 待逐包对P1B核验；无需求签署，不自动确认所有已有实现 |
-| M36 北森iTalent / BP-UNASSIGNED | 未独立实现 | 人力报告设置 | 待逐包对P1B核验；无需求签署，不自动确认所有已有实现 |
+| M36 北森iTalent / BP-I | 未独立实现 | 人力报告设置 | 待逐包对P1B核验；无需求签署，不自动确认所有已有实现 |
 | M37 人才标准 / BP-C | 能力标准版本、行为锚点及岗位要求 | 复杂指标组合、多维模型和标准审批机制 | 待逐包对P1B核验；无需求签署，不自动确认所有已有实现 |
 | M38 人才模型 / BP-C | 未独立实现 | 人才模型、角度码 | 待逐包对P1B核验；无需求签署，不自动确认所有已有实现 |
 | M39 会议管理 / BP-I | 未独立实现 | 预定、会议、会议室、日志 | 待逐包对P1B核验；无需求签署，不自动确认所有已有实现 |
 | M40 经理团队分析 / BP-I | 未独立实现 | 团队人事看板 | 待逐包对P1B核验；无需求签署，不自动确认所有已有实现 |
-| M41 数字人才 / BP-UNASSIGNED | 未独立实现 | 搜索、AI选人、对比、标签 | 待逐包对P1B核验；无需求签署，不自动确认所有已有实现 |
+| M41 数字人才 / BP-C | 未独立实现 | 搜索、AI选人、对比、标签 | 待逐包对P1B核验；无需求签署，不自动确认所有已有实现 |
 | M42 佣金管理 / BP-S | 未独立实现 | 方案、计算、结果、提成提点规则 | 待逐包对P1B核验；无需求签署，不自动确认所有已有实现 |
 | M43 任务 / BP-I | 未独立实现 | 任务信息、任务列表 | 待逐包对P1B核验；无需求签署，不自动确认所有已有实现 |
 | M44 RPA招聘助手 / BP-R | 未独立实现 | 个人/企业RPA、历史记录 | 待逐包对P1B核验；无需求签署，不自动确认所有已有实现 |
 | M45 干部管理 / BP-C | 未独立实现 | 任前管理、任职管理 | 待逐包对P1B核验；无需求签署，不自动确认所有已有实现 |
 | M46 职称管理 / BP-C | 未独立实现 | 职称管理 | 待逐包对P1B核验；无需求签署，不自动确认所有已有实现 |
-| M47 翻译工作台 / BP-UNASSIGNED | 未独立实现 | 翻译、导入导出、日志 | 待逐包对P1B核验；无需求签署，不自动确认所有已有实现 |
+| M47 翻译工作台 / BP-I | 未独立实现 | 翻译、导入导出、日志 | 待逐包对P1B核验；无需求签署，不自动确认所有已有实现 |
 | M48 员工自助 / BP-I | 本人档案、融入计划、假勤、学习、问卷、工资和申请进度 | 日程、日报、完整OKR与统一消息 | 待逐包对P1B核验；无需求签署，不自动确认所有已有实现 |
+
+## 历史验证适用版本索引
+
+当前仅读原验证记录，不复跑、不汇总通过数量。baseCommit只作测试前上下文，不能冒充测试代码快照。部分文件哈希不能证明完整环境/依赖相同。
+
+| 原记录/时间 | 版本定位 | 原适用范围 | 本轮状态 |
+|---|---|---|---|
+| [Cadre_Interview_Verification.json](../../docs/delivery/Cadre_Interview_Verification.json)；2026-09-08T11:39:29.631504+00:00 | 原记录仅有部分文件哈希；没有完整测试快照SHA | 当前全部业务测试，明确排除旧Worker渲染环境测试；含干部访谈共享权限、绩效提示、自助与聚合 | 未复跑；未代签业务；仅引用原JSON哈希，不把当前文件一致当重新运行 |
+| [Contract_Fields_Verification.json](../../docs/delivery/Contract_Fields_Verification.json)；2026-09-08T11:54:46.629532+00:00 | 原记录仅有部分文件哈希；没有完整测试快照SHA | 合同字段继承及既有合同/基础/报表权限/看板关联回归，非全量复测 | 未复跑；未代签业务；仅引用原JSON哈希，不把当前文件一致当重新运行 |
+| [Controller_Lifecycle_Verification.json](../../docs/delivery/Controller_Lifecycle_Verification.json)；2026-09-08T10:44:34.710709+00:00 | 原记录仅有部分文件哈希；没有完整测试快照SHA | 组织员工、干部、学习及既有P3 API关联回归 | 未复跑；未代签业务；仅引用原JSON哈希，不把当前文件一致当重新运行 |
+| [Controller_Regression_Verification.json](../../docs/delivery/Controller_Regression_Verification.json)；2026-09-08T10:58:43.305486+00:00 | 原记录仅有部分文件哈希；没有完整测试快照SHA | 本轮领域/API及聚合回归；明确排除旧rendered-html.test.mjs，其Node/cloudflare运行时问题仍未通过 | 未复跑；未代签业务；仅引用原JSON哈希，不把当前文件一致当重新运行 |
+| [Dashboard_Verification.json](../../docs/delivery/Dashboard_Verification.json)；2026-09-08T10:11:36.120150+00:00 | sourceCommit=523fa165ff34c69d7c417ee5a8bb78a234ed378f | 合成数据综合回归，含看板聚合；不代替人工业务验收 | 未复跑；未代签业务；仅引用原JSON哈希，不把当前文件一致当重新运行 |
+| [F01_F04_Closure_Verification.json](../../docs/delivery/F01_F04_Closure_Verification.json)；2026-09-08T12:11:02.862468+00:00 | testedCommit=a54381363e52c513fb79bc1a227368dad8bedab9 | F01–F04核心组织员工/权限/审批与存储；附件复用既有P3技术证据，本批未冒称全量回归 | 未复跑；未代签业务；仅引用原JSON哈希，不把当前文件一致当重新运行 |
+| [F01_F04_Decisions_Verification.json](../../docs/delivery/F01_F04_Decisions_Verification.json)；2026-09-08T13:21:05.083631+00:00 | testedSourceCommit=3d690cbbd6336c6de8b76a06fa4459700b1e3a88 | D1–D7首包必要实现：原子生效/日期/失败恢复/来源目标授权/职级防盲审/驳回重审；关联P2/P3/G1回归，仅合成SQLite/R2替身，不代替真人UAT或生产验收 | 未复跑；未代签业务；仅引用原JSON哈希，不把当前文件一致当重新运行 |
+| [F01_F04_Entry_UI_Verification.json](../../docs/delivery/F01_F04_Entry_UI_Verification.json)；2026-09-08T13:41:50.733266+00:00 | testedSourceCommit=fdc423fcba607bd5814a0672836b55536c71ecb1 | 首包入口/空筛选恢复/既有审批组件真实React渲染；无后端业务或权限修改，未重复全量API回归；非浏览器交互或人工UAT | 未复跑；未代签业务；仅引用原JSON哈希，不把当前文件一致当重新运行 |
+| [F01_F04_Role_Arrangement_Verification.json](../../docs/delivery/F01_F04_Role_Arrangement_Verification.json)；2026-09-08T12:32:08.406906+00:00 | 原记录无完整测试快照SHA；不得据日期补造 | 跨组织发起者/审批者/字段权限安排及关联回归，合成数据；不改变产品行为，不代替UAT | 未复跑；未代签业务；仅引用原JSON哈希，不把当前文件一致当重新运行 |
+| [F04_Closure_Verification.json](../../docs/delivery/F04_Closure_Verification.json)；2026-09-08T12:11:49.230054+00:00 | testedCommit=a54381363e52c513fb79bc1a227368dad8bedab9 | 仅附件、历史读取与成员目录撤权一致性选中场景；未执行其他P3场景 | 未复跑；未代签业务；仅引用原JSON哈希，不把当前文件一致当重新运行 |
+| [G2_performance_Verification.json](../../docs/delivery/G2_performance_Verification.json)；原记录未给统一时间 | applicationAndTestCommit=9d3d416769a7ab28945261d231e1a29eeaaf50da | 详见原记录；不能由文件名推断全部覆盖 | 未复跑；未代签业务；仅引用原JSON哈希，不把当前文件一致当重新运行 |
+| [Goal_Advisory_Verification.json](../../docs/delivery/Goal_Advisory_Verification.json)；2026-09-08T11:18:48.824215+00:00 | 原记录无完整测试快照SHA；不得据日期补造 | 绩效范围提示与强制、模板快照、周期生命周期、指标引用和权限关联回归 | 未复跑；未代签业务；仅引用原JSON哈希，不把当前文件一致当重新运行 |
+| [Indicator_Usage_Verification.json](../../docs/delivery/Indicator_Usage_Verification.json)；2026-09-08T10:49:54.452632+00:00 | 原记录仅有部分文件哈希；没有完整测试快照SHA | 指标版本引用、待审/发布分离、去重与当前HR范围隔离；关联目录回归 | 未复跑；未代签业务；仅引用原JSON哈希，不把当前文件一致当重新运行 |
+| [Scope_Execution_Verification.json](../../docs/delivery/Scope_Execution_Verification.json)；2026-09-08T11:18:48.824647+00:00 | 原记录无完整测试快照SHA；不得据日期补造 | 看板聚合、验收签署门槛和无执行证据的保守分类 | 未复跑；未代签业务；仅引用原JSON哈希，不把当前文件一致当重新运行 |
+| [Self_Report_Verification.json](../../docs/delivery/Self_Report_Verification.json)；2026-09-08T11:12:08.452507+00:00 | 原记录仅有部分文件哈希；没有完整测试快照SHA | 自助离职入口、报表调动撤权、P3既有接口及看板聚合；非全量测试 | 未复跑；未代签业务；仅引用原JSON哈希，不把当前文件一致当重新运行 |

@@ -41,7 +41,7 @@ for m in mods:
  t+=f'## {m["id"]} {m["name"]}\n\n'
  for p in pp:
   t+=f'### {p["id"]} — {p["path"]}\n\n来源：{page_link(p)}。日期：{p["observedDate"]}；等级：{p["level"]}。\n\n'
-  t+=table(['字段观察ID','标签','用途','存储类型','必填','默认观察','选项/限制'],[(f['id'],f['label'],f['context'],f['storageType'],'是' if f['required'] is True else '否' if f['required'] is False else '未核实',f['default'],('；'.join(f['options']) if f['options'] else '')+('；'+f['limit'] if f['limit'] else '') or '未核实') for f in p['fields']])+'\n'
+  t+=table(['字段观察ID','标签','用途','界面控件类型','存储类型','必填','默认观察','选项/限制'],[(f['id'],f['label'],f['context'],f.get('controlType'),f['storageType'],'是' if f['required'] is True else '否' if f['required'] is False else '未核实',f['default'],('；'.join(f['options']) if f['options'] else '')+('；'+f['limit'] if f['limit'] else '') or '未核实') for f in p['fields']])+'\n'
 t+='## 尚无可追溯字段字典的模块\n\n'+table(['模块','已有证据','保留缺口'],[(m['id']+' '+m['name'],'BC-NAV-20260908；'+m['p1']['sourceDepth'],m['p1']['sourceGap']) for m in mods if not m['p1']['fieldRefs']])
 (D/'P1_Field_Dictionary.md').write_text(t)
 # Flows: do not invent edges where the source does not establish them.
@@ -90,7 +90,7 @@ if 'roadmap' in s:
  t+=table(['范围/业务包','已观察事实证据','探索深度','推断边界','访问/取证限制','尚未探索','下一步'],[(m['id']+' '+m['name']+' / '+m['businessPackage'],m['p1']['coverage']['facts'],m['p1']['sourceDepth'],m['p1']['coverage']['inferences'],m['p1']['coverage']['restricted'],m['p1']['coverage']['unexplored'],m['p1']['coverage']['next']) for m in mods])
  (D/'P1A_Coverage.md').write_text(t)
  t=intro('P1B业务包需求就绪表')
- t+='业务包是本轮规划组织方式；共享能力仅归一个主包，消费者通过依赖引用，不重复增加范围。M20项目人力纳入组织员工、M15测评中心纳入干部人才；其招聘/学习用途仍保留跨包依赖。归属待核实项保留独立占位，不影响明确包继续编写。**当前无包被登记为需求已验收。**\n\n'
+ t+='业务包是本轮规划组织方式；共享能力仅归一个主包，消费者通过依赖引用，不重复增加范围。M20项目人力纳入组织员工、M15测评中心纳入干部人才；其招聘/学习用途仍保留跨包依赖。原三组的归属依据与限制单列；空占位只保留历史，不增加业务包或验收分母。**当前无包被登记为需求已验收。**\n\n'
  t+=table(['顺序/业务包','全部范围ID','需求规格或输入','已确认规则','待决策/待补证','验收标准','依赖','就绪及下一步'],[(p['order'],p['id']+' '+p['name']+'：'+ '、'.join(i+' '+names[i] for i in p['moduleIds']),p['spec']+'；'+p['specKind'],p['confirmedRules'],p['pending'],p['acceptance'],p['dependencies'],p['readiness']+'；'+p['next']) for p in pb['packages']])
  t+='\n## 当前首包距离就绪的条件\n\n1. 审阅当前首包规格的对象/字段、角色、审批与执行分离、错误恢复和跨包契约；D1–D7不重问。\n2. 闭合名称唯一性等实质差异；已确认规则与其他既有独立实现不得混写。\n3. 确认本包暂缓边界及验收预期，记录评审人、日期、适用版本和例外；全M01扩展范围继续保留。\n4. 多角色UAT、按钮实际复验及云端附件验证属于P3/P4未完成事项，不是P1B编写前置。\n\n'
  t+=table(['问题','依据','建议','影响/状态'],[(x['id']+' '+x['topic'],x['basis'],x['proposal'],x['impact']+'；'+x['status']) for x in pb['reviewIssues']])
@@ -116,7 +116,7 @@ if 'roadmap' in s:
  # Update existing queue reading entry, preserving its historical content.
  qp=D/'Module_Queue.md';old=qp.read_text();marker='<!-- P1AB_QUEUE_END -->'
  if marker in old:old=old.split(marker,1)[1].lstrip()
- head='# 当前唯一执行队列：P1A/P1B\n\n源：Scope_Register.json.roadmap及Module_Queue.json。首要工作包：'+r['activeWorkPackage']+'。主要开发包：无（暂停扩展）。\n\n'+'\n'.join(f'{i+1}. {v}' for i,v in enumerate(r['nextTasks']))+'\n\n业务顺序：'+ ' → '.join(r['businessOrder'])+'；BP-UNASSIGNED保留待核实。多角色人工UAT不阻断P1；转序不得静默跳过。下方历史队列不构成本轮执行指令。\n\n'+marker+'\n\n'
+ head='# 当前唯一执行队列：P1A/P1B\n\n源：Scope_Register.json.roadmap及Module_Queue.json。首要工作包：'+r['activeWorkPackage']+'。主要开发包：无（暂停扩展）。\n\n'+'\n'.join(f'{i+1}. {v}' for i,v in enumerate(r['nextTasks']))+'\n\n业务顺序：'+ ' → '.join(r['businessOrder'])+'；BP-UNASSIGNED仅保留归属核实历史；无成员时不计业务包。多角色人工UAT不阻断P1；转序不得静默跳过。下方历史队列不构成本轮执行指令。\n\n'+marker+'\n\n'
  qp.write_text(head+old)
  review=D/'P1_Review.md';old=review.read_text();old=old.replace('建议以此作为有例外的P1盘点基线。','本稿为P1A评审输入，例外尚未获批准。').replace('如要求“全量典型页均已核实”才结束P1，则本稿不满足该更高门槛','按本轮明确的P1A退出条件，本稿仍需补证和例外评审')
  review.write_text('# 当前评审状态：P1A/P1B均未验收\n\nP1A/P1B为本轮新增规划细分。当前材料覆盖范围不是完成声明。\n\n- [48组P1A覆盖与缺口](P1A_Coverage.md)\n- [总体PRD](P1B_PRD.md)\n- [分包就绪及映射](P1B_Readiness.md)\n- [已有实现与需求对应](P1B_Implementation_Map.md)\n- [当前路标及阶段退出](../HRIS_Project_Plan.md)\n\n'+old)
@@ -133,7 +133,8 @@ if 'p1B' in s:
   t+='\n本轮暂停实现、部署、业务写入和新增测试访问者。下列待补齐项仍属全项目范围，不因当前子包暂缓而删除。输入：'+link_source(pack['inputEvidence'])+'。\n\n'
   if pack.get('authoritativeDetail'):t+='首要子包详细需求：'+link_source(pack['authoritativeDetail'])+'；D1–D7保持已确认，不以本文件重开决策。\n\n'
   t+='## 已具体化的对象与行为契约\n\n下列“验收预期”是对已确认规则或既有实现候选行为的可执行描述，**未表示已执行或已获企业批准**。仅D1–D7保持既有签署；其他候选约束不得直接用作新开发授权。\n\n'
-  if not pack['contracts']:t+='本组职责和对象字段尚不足以形成行为契约，先保留逐模块证据和候选归属；不以空模板冒充需求完成。\n\n'
+  if not pack['moduleIds']:t+='当前无未归属范围；历史三组依据见[P1B就绪表](P1B_Readiness.md)。此文件不是新增业务包或需求完成声明。\n\n'
+  if not pack['contracts'] and pack['moduleIds']:t+='本组职责和对象字段尚不足以形成行为契约，先保留逐模块证据和候选归属；不以空模板冒充需求完成。\n\n'
   for ct in pack['contracts']:
    t+='### '+ct['id']+' '+ct['object']+'\n\n性质：'+ct['classification']+'。\n\n'
    t+=table(['维度','规格及当前边界'],[('对象/字段/校验',ct['fields']),('角色/数据范围/字段权限',ct['roles']),('状态/审批/生效',ct['lifecycle']),('页面主要操作',ct['actions']),('验收预期（给定条件→操作→结果）',ct['acceptance']),('例外、恢复与仍缺内容',ct['gap']),('静态实现/输入依据','；'.join(link_source(x) for x in ct['codeRefs']))])+'\n'
@@ -159,6 +160,13 @@ if 'p1B' in s:
  read=D/'P1B_Readiness.md';t=read.read_text();t+='\n## 最小必要决策记录（同源，不新建台账）\n\n'
  t+=table(['ID/事项','现状及证据','推荐（未批准）','备选','阻塞范围/状态'],[(x['id']+' '+x['topic'],x['basis'],x['proposal'],x.get('alternatives',[]),x['impact']+'；'+x['status']) for x in pb['reviewIssues']])
  read.write_text(t)
+
+ if pb.get('validationEvidence'):
+  f=D/'P1B_Implementation_Map.md';t=f.read_text()+'\n## 历史验证适用版本索引\n\n当前仅读原验证记录，不复跑、不汇总通过数量。baseCommit只作测试前上下文，不能冒充测试代码快照。部分文件哈希不能证明完整环境/依赖相同。\n\n'
+  t+=table(['原记录/时间','版本定位','原适用范围','本轮状态'],[(link_source(v['path'])+'；'+str(v['observedRecordDate']),v['version'],v['scope'],'未复跑；未代签业务；'+v['hashReference']) for v in pb['validationEvidence']]);f.write_text(t)
+ assignment=[m for m in mods if m.get('assignmentReview')]
+ if assignment:
+  f=D/'P1B_Readiness.md';t=f.read_text()+'\n## 原三组归属核实\n\n'+table(['范围','当前主包/候选','证据','影响/状态'],[(m['id']+' '+m['name'],m['businessPackage']+'；候选：'+'、'.join(m['assignmentReview']['candidates']),m['assignmentReview']['basis'],m['assignmentReview']['impact']+'；'+m['assignmentReview']['status']) for m in assignment]);f.write_text(t)
 
 if b.get('currentRun'):
  f=D/'P1_Review.md';t=f.read_text();current=b['currentRun'];t=t.replace('P1A/P1B为本轮新增规划细分。当前材料覆盖范围不是完成声明。','P1A/P1B为用户新增规划细分。当前材料覆盖范围不是完成声明。\n\n当前接续分支：'+current['branch']+'；开始HEAD：'+current['startHead']+'。本次新增原站只读证据及业务包规格；未修改产品代码、部署、数据库或访问者。下方历史接手/部署段保留原适用时间，不算本轮复验。');f.write_text(t)
