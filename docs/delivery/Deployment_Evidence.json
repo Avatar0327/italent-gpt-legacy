@@ -54,5 +54,16 @@
     "url": "https://italent-hris-jack.creamy-fern-1782.chatgpt.site",
     "version": 111,
     "versionId": "appgprj_6a9e2c705cfc819180e0e5251bb025cc~appgver_0ad28e6fe0ac81919a51e411984b620f"
+  },
+  "p1ReadOnlyRecheck": {
+    "checkedAt": "2026-09-08T14:14:15.632554+00:00",
+    "deploymentId": "appgdep_6aa010f1e1e481919f2a4331af5b0184",
+    "status": "succeeded",
+    "providerUpdatedAt": "2026-09-08T13:43:50.706930+00:00",
+    "version": 112,
+    "envRevision": 1,
+    "externalVisitorCount": 0,
+    "newDeployment": false,
+    "note": "只读复核原部署；不改变原发布时刻/源码，不能当业务或生产验收"
   }
 }

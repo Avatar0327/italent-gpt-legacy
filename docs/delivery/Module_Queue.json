@@ -1,7 +1,7 @@
 {
-  "version": 3,
-  "activeWriter": null,
-  "mode": "handoff-paused",
+  "version": 5,
+  "activeWriter": "当前聊天唯一总控",
+  "mode": "sole-controller-p1-readonly",
   "branchCreationBase": "commit introducing this queue; exact SHA in git history",
   "items": [
     {
@@ -503,64 +503,64 @@
       "status": "in-progress",
       "dependencies": [],
       "acceptance": "将已观察结构、未核实规则与独立设计逐条映射；业务负责人确认范围和规则，记录确认人、时间及证据，不以代码或测试代签",
-      "recoveryCondition": "当前原站会话已恢复；继续逐项只读核实，完整业务规则需负责人确认",
-      "next": "P1-FIELD-01仅确认入口；复杂跨字段联动、兼岗、再入职和法人变更规则待核实。会话已恢复，继续只读核实入口与空表，不执行提交、审批、消息或导出；按既定模块顺序核对"
+      "recoveryCondition": "当前原站会话可复用；按来源缺口只读补证，不将既有人工验收设为前置；具体局部限制见P1_Review例外。",
+      "next": "已补BC-F04–07。继续只读组织视图/配置、再入职说明、兼职生效与终止、法人变更及复杂字段联动；禁止业务提交，不以人工UAT阻断。"
     },
     {
       "id": "P1-C-RULES",
       "status": "in-progress",
       "dependencies": [],
       "acceptance": "将已观察结构、未核实规则与独立设计逐条映射；业务负责人确认范围和规则，记录确认人、时间及证据，不以代码或测试代签",
-      "recoveryCondition": "当前原站会话已恢复；继续逐项只读核实，完整业务规则需负责人确认",
-      "next": "既有干部名册及空表已观察；任用类型、期限计算、状态流转及委员会规则待核实。会话已恢复，继续只读核实入口与空表，不执行提交、审批、消息或导出；按既定模块顺序核对"
+      "recoveryCondition": "当前原站会话可复用；按来源缺口只读补证，不将既有人工验收设为前置；具体局部限制见P1_Review例外。",
+      "next": "已补BC-C04–07；继续任用类型/期限和委员会说明、旧干部与健康分析控件；N级模块按原ID补典型页，不移植其他应用证据。"
     },
     {
       "id": "P1-L-RULES",
-      "status": "paused-by-user",
+      "status": "in-progress",
       "dependencies": [],
       "acceptance": "将已观察结构、未核实规则与独立设计逐条映射；业务负责人确认范围和规则，记录确认人、时间及证据，不以代码或测试代签",
-      "recoveryCondition": "当前原站会话已恢复；继续逐项只读核实，完整业务规则需负责人确认",
-      "next": "用户已暂停扩展；学习发布审批只读证据待后续核实节点，禁止继续实现"
+      "recoveryCondition": "当前原站会话可复用；按来源缺口只读补证，不将既有人工验收设为前置；具体局部限制见P1_Review例外。",
+      "next": "BC-L12已解除学分页历史占位；继续只读设置方式/授予折抵、完整共享/循环/成绩说明；不合并学习简介隔离代码，不扩展实现。"
     },
     {
       "id": "P1-P-RULES",
-      "status": "planned-source-verification",
+      "status": "in-progress",
       "dependencies": [],
       "acceptance": "将已观察结构、未核实规则与独立设计逐条映射；业务负责人确认范围和规则，记录确认人、时间及证据，不以代码或测试代签",
-      "recoveryCondition": "当前原站会话已恢复；继续逐项只读核实，完整业务规则需负责人确认",
-      "next": "活动及指标列已观察；完整手工评级、系数、在途更新与组织绩效规则待核实。会话已恢复，继续只读核实入口与空表，不执行提交、审批、消息或导出；按既定模块顺序核对"
+      "recoveryCondition": "当前原站会话可复用；按来源缺口只读补证，不将既有人工验收设为前置；具体局部限制见P1_Review例外。",
+      "next": "BC-P07已取得组织绩效列表；流程页无内容/无权限仍未核实，补手工评级、系数及组织绩效说明；不开发。"
     },
     {
       "id": "P1-R-RULES",
-      "status": "planned-source-verification",
+      "status": "in-progress",
       "dependencies": [],
       "acceptance": "将已观察结构、未核实规则与独立设计逐条映射；业务负责人确认范围和规则，记录确认人、时间及证据，不以代码或测试代签",
-      "recoveryCondition": "当前原站会话已恢复；继续逐项只读核实，完整业务规则需负责人确认",
-      "next": "需求、评价及排期空表已观察；渠道、电子签和完整录用提交规则待核实。会话已恢复，继续只读核实入口与空表，不执行提交、审批、消息或导出；按既定模块顺序核对"
+      "recoveryCondition": "当前原站会话可复用；按来源缺口只读补证，不将既有人工验收设为前置；具体局部限制见P1_Review例外。",
+      "next": "BC-R09到达Offer审批载体但未取表头；继续只读录用、渠道/电子签、容量扣占说明；不发Offer、不审批、不通知。"
     },
     {
       "id": "P1-A-RULES",
-      "status": "planned-source-verification",
+      "status": "in-progress",
       "dependencies": [],
       "acceptance": "将已观察结构、未核实规则与独立设计逐条映射；业务负责人确认范围和规则，记录确认人、时间及证据，不以代码或测试代签",
-      "recoveryCondition": "当前原站会话已恢复；继续逐项只读核实，完整业务规则需负责人确认",
-      "next": "期间和月报状态结构已观察；跨班、调休、自动结转及企业参数待核实。会话已恢复，继续只读核实入口与空表，不执行提交、审批、消息或导出；按既定模块顺序核对"
+      "recoveryCondition": "当前原站会话可复用；按来源缺口只读补证，不将既有人工验收设为前置；具体局部限制见P1_Review例外。",
+      "next": "BC-A09已取调休假结算表头；继续单位、结转/额度、跨班及月报状态说明；不执行结算。"
     },
     {
       "id": "P1-S-RULES",
-      "status": "planned-source-verification",
+      "status": "in-progress",
       "dependencies": [],
       "acceptance": "将已观察结构、未核实规则与独立设计逐条映射；业务负责人确认范围和规则，记录确认人、时间及证据，不以代码或测试代签",
-      "recoveryCondition": "当前原站会话已恢复；继续逐项只读核实，完整业务规则需负责人确认",
-      "next": "BC-S01至04结构已观察；薪资组、企业调动核算选择和完整依赖字段待核实。会话已恢复，继续只读核实入口与空表，不执行提交、审批、消息或导出；按既定模块顺序核对"
+      "recoveryCondition": "当前原站会话可复用；按来源缺口只读补证，不将既有人工验收设为前置；具体局部限制见P1_Review例外。",
+      "next": "BC-S05已取薪资组层级/对应部门表头；继续薪资组依赖及企业调动核算说明；不选择真实配置展开核算，不执行计算支付。"
     },
     {
       "id": "P1-I-RULES",
-      "status": "planned-source-verification",
+      "status": "in-progress",
       "dependencies": [],
       "acceptance": "将已观察结构、未核实规则与独立设计逐条映射；业务负责人确认范围和规则，记录确认人、时间及证据，不以代码或测试代签",
-      "recoveryCondition": "当前原站会话已恢复；继续逐项只读核实，完整业务规则需负责人确认",
-      "next": "BC-I01/02菜单及映射结构已观察；第三方字段、方向、调度与失败重试契约待核实。会话已恢复，继续只读核实入口与空表，不执行提交、审批、消息或导出；按既定模块顺序核对"
+      "recoveryCondition": "当前原站会话可复用；按来源缺口只读补证，不将既有人工验收设为前置；具体局部限制见P1_Review例外。",
+      "next": "BC-I03报告设置和BC-I04映射筛选复核已记录；继续自助/报表角色及N级扩展模块、第三方方向/调度/重试契约只读说明；不读取秘密、不连接测试或同步。"
     },
     {
       "id": "E-EXIT-TASKS",
@@ -585,7 +585,7 @@
       "status": "technical-validation-human-uat-pending",
       "dependencies": [],
       "acceptance": "组织/员工/岗位标识及入转调离；按业务场景独立验收并记录确认人、时间与证据",
-      "next": "仅推进本包：按D1–D7当前需求基线完成技术核验与所有者可执行UAT；E2不新增真人身份，多角色步骤明确暂缓；不扩展其他模块",
+      "next": "保持历史技术与未完UAT；当前推进BP-F的P1A/P1B，不以E2多人UAT暂缓阻断需求工作",
       "recoveryCondition": "多角色人工验收需用户未来主动恢复具名测试访问；本轮保持单账号，不改业务规则或自审保护",
       "acceptancePackage": "F01-F04"
     },
@@ -594,7 +594,7 @@
       "status": "technical-validation-human-uat-pending",
       "dependencies": [],
       "acceptance": "角色、组织和字段权限及撤权；按业务场景独立验收并记录确认人、时间与证据",
-      "next": "仅推进本包：按D1–D7当前需求基线完成技术核验与所有者可执行UAT；E2不新增真人身份，多角色步骤明确暂缓；不扩展其他模块",
+      "next": "保持历史技术与未完UAT；当前推进BP-F的P1A/P1B，不以E2多人UAT暂缓阻断需求工作",
       "recoveryCondition": "多角色人工验收需用户未来主动恢复具名测试访问；本轮保持单账号，不改业务规则或自审保护",
       "acceptancePackage": "F01-F04"
     },
@@ -603,7 +603,7 @@
       "status": "technical-validation-human-uat-pending",
       "dependencies": [],
       "acceptance": "修订冲突、事务、审批快照、审计；按业务场景独立验收并记录确认人、时间与证据",
-      "next": "仅推进本包：按D1–D7当前需求基线完成技术核验与所有者可执行UAT；E2不新增真人身份，多角色步骤明确暂缓；不扩展其他模块",
+      "next": "保持历史技术与未完UAT；当前推进BP-F的P1A/P1B，不以E2多人UAT暂缓阻断需求工作",
       "recoveryCondition": "多角色人工验收需用户未来主动恢复具名测试访问；本轮保持单账号，不改业务规则或自审保护",
       "acceptancePackage": "F01-F04"
     },
@@ -612,7 +612,7 @@
       "status": "technical-validation-human-uat-pending",
       "dependencies": [],
       "acceptance": "本人附件和历史权限；按业务场景独立验收并记录确认人、时间与证据",
-      "next": "仅推进本包：按D1–D7当前需求基线完成技术核验与所有者可执行UAT；E2不新增真人身份，多角色步骤明确暂缓；不扩展其他模块",
+      "next": "保持历史技术与未完UAT；当前推进BP-F的P1A/P1B，不以E2多人UAT暂缓阻断需求工作",
       "recoveryCondition": "多角色人工验收需用户未来主动恢复具名测试访问；本轮保持单账号，不改业务规则或自审保护",
       "acceptancePackage": "F01-F04"
     },
@@ -685,15 +685,40 @@
       "next": "v110已发布；任职继承/合同变更/其他字段类型保留，人工业务验收待签署"
     }
   ],
-  "executionMode": "acceptance-closure",
-  "activeAcceptancePackage": "F01-F04",
+  "executionMode": "P1A-P1B-inventory-and-product-requirements",
+  "activeAcceptancePackage": null,
   "expansionPaused": true,
   "handoff": {
     "to": "总控｜P1盘点与需求基线",
-    "status": "本窗口停止并交还唯一写入职责；待新窗口核对后接续",
-    "objective": "继续原规划P1：模块清单、页面目录、字段字典、流程图、差异清单；保留48组；暂停新功能",
+    "status": "本聊天已只读核对后接管；唯一执行总控；P1评审稿有例外，未签署完成",
+    "objective": "原规划细化P1A原站证据及P1B产品需求；全项目P1未验收",
     "humanAcceptancePrerequisite": false,
     "E2": "暂不新增人类测试访问者",
     "resumeDocument": "docs/delivery/Controller_Resume.md"
+  },
+  "currentP1": {
+    "updatedAt": "2026-09-08T14:14:15.632554+00:00",
+    "status": "P1A-and-P1B-draft-not-accepted",
+    "review": "docs/delivery/P1_Review.md",
+    "scopeSource": "docs/delivery/Scope_Register.json",
+    "allowedWork": [
+      "原站只读导航/页面/帮助说明",
+      "同一范围台账补证",
+      "P1文档生成与审查",
+      "文档提交保存",
+      "总体PRD及业务包需求规格编写",
+      "既有实现静态差异分析"
+    ],
+    "forbiddenThisRound": [
+      "新增业务功能",
+      "代理或新聊天",
+      "原站业务/配置提交",
+      "真实人员导出",
+      "新增测试访问者",
+      "为盘点额外发布"
+    ],
+    "humanAcceptancePrerequisite": false,
+    "next": "核对首包字段/状态/权限与实现差异并完善P1B",
+    "activeWorkPackage": "BP-F / F01–F04 P1B"
   }
 }
