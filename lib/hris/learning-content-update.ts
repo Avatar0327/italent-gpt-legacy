@@ -5,7 +5,7 @@ import {scopedOrgs,type Member} from './authorization';
 import type {State} from './model';
 import {HttpError} from './http';
 import {businessDate} from './business-time';
-import {learningRequirements,learningRequirementProgress,learningAssignmentCurrent,learningStageStartsOn} from './learning-requirements';
+import {expiredIncompleteLearningStages,learningRequirements,learningRequirementProgress,learningAssignmentCurrent,learningStageStartsOn} from './learning-requirements';
 import {learningGrade} from './learning-grades';
 import {learningAssignmentKey} from './learning-plan-model';
 import {applyLearningExamTask} from './learning-exam-tasks';
@@ -39,6 +39,7 @@ export function previewLearningContentUpdate(records:R[],state:State,m:Member,in
  for(const r of added){const resource=records.find(x=>x.id===r.resourceId&&x.kind===(r.kind==='course'?'course':r.kind==='exam'?'learningExamDefinition':'homeworkDefinition'));if(!resource||!visibleRecord(resource,records,state,m)||resource.status!==(r.kind==='course'?'published':'sealed'))blockers.push('新增内容版本不可用');if(r.kind==='homework'){const reviewer=state.employees.find(e=>e.id===reviewers[r.resourceId]);if(!reviewer||reviewer.id===assignment.employeeId||reviewer.status==='离职'||reviewer.orgId!==assignment.payload.orgId)blockers.push('每项新增作业须指定原组织在职的独立批阅人');}}
  const addedTasks=added.map(r=>{const task:R={id:'preview:'+r.id,kind:r.kind==='course'?'enrollment':r.kind==='exam'?'learningExamTask':'homeworkTask',employeeId:assignment.employeeId,positionId:null,referenceId:r.resourceId,status:'active',createdBy:m.userId,createdAt:at,updatedAt:at,payload:{learningAssignmentId:assignment.id,learningRequirementId:r.id}};return r.kind==='course'?reuseCompletedCourse(task,records,state,m,assignment.payload.learningMode?.progressSync===true):task;});
  const projectedRecords=[...records.filter(r=>!tasks.some(t=>t.id===r.id&&removed.some(x=>x.resourceId===t.referenceId))),...addedTasks];
+ if(expiredIncompleteLearningStages(projected,projectedRecords,at).length)blockers.push('新配置存在已经截止且未完成的阶段，不能更新为不可办理的要求');
  const reusedCourses=addedTasks.filter(r=>r.payload.sourceEnrollmentId).map(r=>({resourceId:r.referenceId!,sourceEnrollmentId:r.payload.sourceEnrollmentId!,sourceVerifiedAt:r.payload.sourceVerifiedAt!}));
  return {assignmentId:assignment.id,fromDefinitionId:assignment.referenceId!,toDefinitionId:target.id,fromVersion:assignment.payload.version,toVersion:target.payload.version,retained,added,removed,blockers:[...new Set(blockers)],canApply:blockers.length===0,beforeProgress:learningRequirementProgress(assignment,records),afterProgress:learningRequirementProgress(projected,projectedRecords),reusedCourses,beforeGrade:learningGrade(assignment,records),afterGrade:learningGrade(projected,projectedRecords),projected};
 }

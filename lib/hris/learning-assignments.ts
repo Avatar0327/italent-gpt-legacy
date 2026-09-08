@@ -1,7 +1,7 @@
 import {reuseCompletedCourse} from './learning-course-reuse';
 import {applyHomework} from './learning-homework';
 import {applyLearningExamTask} from './learning-exam-tasks';
-import {learningRequirements,learningRequirementProgress,learningAssignmentCurrent,learningStageStartsOn} from './learning-requirements';
+import {expiredIncompleteLearningStages,learningRequirements,learningRequirementProgress,learningAssignmentCurrent,learningStageStartsOn} from './learning-requirements';
 import {z} from 'zod';
 import {applyDevelopment,visibleRecord,type DevelopmentRecord as R} from './development';
 import {learningWindow,learningAssignmentKey} from './learning-plan-model';
@@ -75,5 +75,6 @@ export function applyLearningAssignment(records:R[],state:State,m:Member,input:u
  }
  for(const examId of assignment.payload.examIds??[])result.push(...applyLearningExamTask([...records,...result],state,m,{action:'assign',assignmentId:assignment.id,examId,employeeId,start:window.start,due:window.due},at));
  for(const homeworkId of homeworkIds)result.push(...applyHomework([...records,...result],state,m,{action:'assign',assignmentId:assignment.id,definitionId:homeworkId,employeeId,reviewerEmployeeId:homeworkReviewers[homeworkId],start:window.start,due:window.due},at));
+ if(expiredIncompleteLearningStages(assignment,[...records,...result],at).length)fail('存在已经截止且未完成的阶段，请调整后续配置版本再派发');
  return result;
 }

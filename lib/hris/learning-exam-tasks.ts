@@ -4,7 +4,7 @@ import {scopedOrgs,type Member} from './authorization';
 import type {DevelopmentRecord as R} from './development';
 import type {State} from './model';
 import {businessDate} from './business-time';
-import {learningAssignmentCurrent,learningRequirements,learningStageOpen} from './learning-requirements';
+import {learningStageSubmissionOpen,learningAssignmentCurrent,learningRequirements,learningStageOpen} from './learning-requirements';
 import {HttpError} from './http';
 const id=z.string().min(1).max(100),date=z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine(s=>{const d=new Date(s+'T00:00:00Z');return Number.isFinite(d.getTime())&&d.toISOString().slice(0,10)===s;});
 const schema=z.discriminatedUnion('action',[
@@ -38,7 +38,7 @@ export function applyLearningExamTask(records:R[],state:State,m:Member,input:unk
   return [{...task!,status:'cancelled',updatedAt:at,payload:{...task!.payload,closedReason:c.evidence}}];
  }
  if(m.employeeId!==task!.employeeId)deny();
- if(!examTaskOpen(task!,state,at)||!learningStageOpen(task!,records,at,state))fail('考试已关闭、尚未开始、已过期或人员组织状态已变化');
+ if(!examTaskOpen(task!,state,at)||!learningStageSubmissionOpen(task!,records,at)||!learningStageOpen(task!,records,at,state))fail('考试已关闭、尚未开始、已过期或人员组织状态已变化');
  const exam=records.find(r=>r.kind==='learningExamDefinition'&&r.id===task!.referenceId);
  if(!exam||!['sealed','archived'].includes(exam.status))fail('试卷版本不可用');
  const attempts=records.filter(r=>r.kind==='learningExamAttempt'&&r.referenceId===task!.id);

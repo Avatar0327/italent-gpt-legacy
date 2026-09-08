@@ -12,7 +12,7 @@ const schema=z.discriminatedUnion('action',[
  z.object({action:z.literal('create'),...fields}).strict(),
  z.object({action:z.literal('edit'),id,...fields}).strict(),
  z.object({action:z.literal('grading'),id,rule:learningGradeRuleSchema}).strict(),
- z.object({action:z.literal('stages'),id,stages:z.array(z.object({title,homeworkSubmissionUnlock:z.boolean().optional(),orderedTasks:z.boolean().optional(),examSubmissionUnlock:z.boolean().optional(),startAfterDays:z.number().int().min(0).max(36500).optional(),courseIds:z.array(id).min(1).max(20),optionalCourseIds:z.array(id).max(20).optional(),requiredMinimum:z.number().int().min(0).max(20).optional(),optionalMinimum:z.number().int().min(0).max(20).optional()}).strict()).min(1).max(10)}).strict(),
+ z.object({action:z.literal('stages'),id,stages:z.array(z.object({title,deadline:z.object({days:z.number().int().min(1).max(36500),allowOverdue:z.boolean(),policy:z.literal('scheduled-inclusive')}).strict().optional(),homeworkSubmissionUnlock:z.boolean().optional(),orderedTasks:z.boolean().optional(),examSubmissionUnlock:z.boolean().optional(),startAfterDays:z.number().int().min(0).max(36500).optional(),courseIds:z.array(id).min(1).max(20),optionalCourseIds:z.array(id).max(20).optional(),requiredMinimum:z.number().int().min(0).max(20).optional(),optionalMinimum:z.number().int().min(0).max(20).optional()}).strict()).min(1).max(10)}).strict(),
  z.object({action:z.literal('seal'),id}).strict(),
  z.object({action:z.literal('revise'),id}).strict(),
  z.object({action:z.literal('archive'),id}).strict(),

@@ -119,3 +119,10 @@ POST /api/learning-content-update: {revision, action:"preview"|"apply", command:
 
 
 同步扩展：新增课程复用同一个reuseCompletedCourse函数，与原首轮派发来源选择保持一致；非循环实例按冻结progressSync开关执行。preview返回reusedCourses及与实际派发一致的完成投影，apply在CAS提交前重算，不信任预览缓存。没有新来源则待学习；不复制attempt/learningCredit。此扩展覆盖“追加课程仅progressSync=false”的首批限制。
+
+
+## 阶段提交期限契约（BC-L08字段，明确独立计日策略）
+
+learningDefinition/learningAssignment.trainingStages[].deadline?={days:1..36500,allowOverdue:boolean,policy:"scheduled-inclusive"}。旧记录缺失则无独立阶段截止。阶段最早开放业务日期+days-1，前置未完成不重置期限。learningStageSubmissionOpen只约束新提交；learningStageOpen继续负责生命周期/退出/顺序，独立核验不增加提交期限阻断。整计划期限继续独立生效。
+
+配置版本冻结并通过既有内容更新迁移。派发及内容更新拒绝已截止且未完成、又禁止超期的阶段；原子拒绝不落部分任务。精确计日、迟解锁不顺延和超期核验是当前显式实现策略，非原站已实测规则，生产前须结合企业规则验收。

@@ -1,4 +1,4 @@
-import {learningStageOpen} from './learning-requirements';
+import {learningStageSubmissionOpen,learningStageOpen} from './learning-requirements';
 import {z} from 'zod';
 import type {DevelopmentRecord as R} from './development';
 import {visibleRecord} from './development';
@@ -22,7 +22,7 @@ export function homeworkTaskCurrent(task:R,state:State){
  return !task.payload.requirementRetiredAt&&!!learner&&!!reviewer&&learner.id!==reviewer.id&&learner.status!=='离职'&&reviewer.status!=='离职'&&learner.orgId===task.payload.orgId&&reviewer.orgId===task.payload.orgId&&state.orgs.some(o=>o.id===task.payload.orgId&&o.status==='启用');
 }
 export function homeworkTaskOpen(task:R,state:State,at=new Date().toISOString(),records:R[]=[]){
- return learningStageOpen(task,records,at,state)&&['active','returned'].includes(task.status)&&homeworkTaskCurrent(task,state)&&businessDate(at)>=task.payload.start!&&(!!task.payload.assignmentAllowOverdue||businessDate(at)<=task.payload.due!)&&(task.payload.submissionVersion??0)<task.payload.maxSubmissions!;
+ return learningStageSubmissionOpen(task,records,at)&&learningStageOpen(task,records,at,state)&&['active','returned'].includes(task.status)&&homeworkTaskCurrent(task,state)&&businessDate(at)>=task.payload.start!&&(!!task.payload.assignmentAllowOverdue||businessDate(at)<=task.payload.due!)&&(task.payload.submissionVersion??0)<task.payload.maxSubmissions!;
 }
 export function canReviewHomework(task:R,state:State,m:Member,records:R[]=[],at=new Date().toISOString()){return learningStageOpen(task,records,at,state)&&task.status==='submitted'&&homeworkTaskCurrent(task,state)&&m.employeeId===task.payload.reviewerEmployeeId&&m.employeeId!==task.employeeId&&m.userId!==task.payload.submittedBy&&['admin','hr','manager','employee'].includes(m.role);}
 export function applyHomework(records:R[],state:State,m:Member,input:unknown,at=new Date().toISOString()):R[]{

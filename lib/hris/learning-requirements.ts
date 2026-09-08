@@ -69,3 +69,20 @@ export function learningStageOpen(task:R,records:R[],at=new Date().toISOString()
   return records.some(a=>a.kind==='learningExamAttempt'&&a.referenceId===item.taskId&&a.employeeId===assignment.employeeId&&a.payload.examId===resourceId&&Number.isFinite(a.payload.score)&&a.payload.score!>=0&&a.payload.score!<=100);
  });
 }
+
+
+/** Explicit local calendar policy: scheduled start counts as day one; prerequisites do not reset it. */
+export function learningStageDeadline(assignment:R,stage:NonNullable<R['payload']['trainingStages']>[number]):string|null{
+ if(!stage.deadline)return null;const date=new Date(learningStageStartsOn(assignment,stage)+'T00:00:00Z');date.setUTCDate(date.getUTCDate()+stage.deadline.days-1);return date.toISOString().slice(0,10);
+}
+export function learningStageSubmissionOpen(task:R,records:R[],at=new Date().toISOString()){
+ if(!task.payload.learningAssignmentId)return true;const assignment=records.find(r=>r.kind==='learningAssignment'&&r.id===task.payload.learningAssignmentId);if(!assignment)return false;const stage=assignment.payload.trainingStages?.find(s=>s.courseIds.includes(task.referenceId!));if(!stage?.deadline||stage.deadline.allowOverdue)return true;return businessDate(at)<=learningStageDeadline(assignment,stage)!;
+}
+export function expiredIncompleteLearningStages(assignment:R,records:R[],at=new Date().toISOString()){
+ const progress=learningRequirementProgress(assignment,records);return (assignment.payload.trainingStages??[]).filter((s,i)=>s.deadline&&!s.deadline.allowOverdue&&businessDate(at)>learningStageDeadline(assignment,s)!&&!progress.stages[i]?.complete).map(s=>s.title);
+}
+export function learningTaskStageDeadline(task:R,records:R[]){
+ const assignment=records.find(r=>r.kind==='learningAssignment'&&r.id===task.payload.learningAssignmentId),stage=assignment?.payload.trainingStages?.find(s=>s.courseIds.includes(task.referenceId!));return assignment&&stage?learningStageDeadline(assignment,stage):null;
+}
+
+export function learningTaskDisplayDue(task:R,records:R[]){const stageDue=learningTaskStageDeadline(task,records),planDue=task.payload.due;return stageDue&&planDue?(stageDue<planDue?stageDue:planDue):stageDue??planDue??'';}
