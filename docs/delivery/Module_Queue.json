@@ -461,6 +461,15 @@
       ],
       "acceptance": "以实际Worker兼容运行时验证构建产物启动和匿名访问边界，消除普通Node误加载cloudflare协议的测试工具问题；不代替线上或人工验收",
       "next": "Miniflare启动尝试被环境网络审批取消，未建立运行中进程；取得可运行的Worker测试环境后验证，不用普通Node伪替代。继续原站只读核实和独立业务开发"
+    },
+    {
+      "id": "P-INDICATOR-USAGE",
+      "status": "tested-awaiting-private-publish",
+      "dependencies": [
+        "P-INDICATOR-CATALOG"
+      ],
+      "acceptance": "BC-P06引用情况以实际指标版本快照追溯目标/待审/已发布；HR当前权限、分页与同记录去重，不显示未授权人员或评分",
+      "next": "已通过5项关联测试；完成集中类型和构建后与生命周期修复一并私有发布，再进入招聘队列"
     }
   ]
 }

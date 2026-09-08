@@ -1,4 +1,4 @@
-import {readFileSync,writeFileSync,existsSync} from 'node:fs';
+import {readFileSync,writeFileSync,existsSync,readdirSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 const read=p=>readFileSync(p,'utf8');
@@ -6,8 +6,9 @@ const paths=['docs/delivery/Scope_Register.json','docs/delivery/Module_Queue.jso
 const git=(...a)=>execFileSync('git',a,{encoding:'utf8'}).trim();
 const commits=git('log','-8','--format=%H%x09%cI%x09%s').split('\n').map(l=>{const [sha,time,title]=l.split('\t');return {sha,time,title}});
 const checkpoint=read(paths[2]);
-const testsPath=existsSync('docs/delivery/Dashboard_Comprehensive.tap')?'docs/delivery/Dashboard_Comprehensive.tap':'docs/delivery/Performance_Indicators_Comprehensive.tap';
-const tap=read(testsPath);
-const result={generatedAt:new Date().toISOString(),head:git('rev-parse','HEAD'),commits,sources:paths.map(path=>({path,sha256:createHash('sha256').update(read(path)).digest('hex')})),checkpoint,tests:{path:testsPath,tests:Number(tap.match(/^# tests (\d+)/m)?.[1]),passed:Number(tap.match(/^# pass (\d+)/m)?.[1]),failed:Number(tap.match(/^# fail (\d+)/m)?.[1]),note:'综合合成测试；Worker渲染项在普通Node环境受cloudflare协议限制，详见验证记录；不代替人工验收'},verification:JSON.parse(read('docs/delivery/Dashboard_Verification.json')),deployment:JSON.parse(read('docs/delivery/Deployment_Evidence.json'))};
+const verificationPaths=readdirSync('docs/delivery').filter(name=>name.endsWith('_Verification.json')).map(name=>'docs/delivery/'+name);
+const testRuns=verificationPaths.filter(existsSync).map(path=>{const v=JSON.parse(read(path));return {path,completedAt:v.completedAt,tests:v.tests,passed:v.passed,failed:v.failed,scope:v.scope??v.limitation??'见原始验证记录',report:v.report??null};}).filter(v=>typeof v.completedAt==='string'&&Number.isFinite(v.tests)&&Number.isFinite(v.passed)&&Number.isFinite(v.failed)).sort((a,b)=>b.completedAt.localeCompare(a.completedAt));
+const latest=testRuns[0];
+const result={generatedAt:new Date().toISOString(),head:git('rev-parse','HEAD'),commits,sources:paths.map(path=>({path,sha256:createHash('sha256').update(read(path)).digest('hex')})),checkpoint,tests:{path:latest.path,tests:latest.tests,passed:latest.passed,failed:latest.failed,note:latest.scope},testRuns,verification:JSON.parse(read('docs/delivery/Dashboard_Verification.json')),deployment:JSON.parse(read('docs/delivery/Deployment_Evidence.json'))};
 writeFileSync('lib/delivery/evidence.json',JSON.stringify(result,null,2)+'\n');
 console.log('Delivery evidence generated from repository sources');

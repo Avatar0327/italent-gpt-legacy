@@ -29,5 +29,11 @@
     "tests/learning-homework.test.mjs": "ffbb5710e954fe787f7550aa760f48df00cae62d357dbf6919ca0ec22236cc8f"
   },
   "productionAccepted": false,
-  "businessAccepted": false
+  "businessAccepted": false,
+  "report": "docs/delivery/Controller_Lifecycle_Run.tap",
+  "tests": 98,
+  "passed": 98,
+  "failed": 0,
+  "scope": "组织员工、干部、学习及既有P3 API关联回归",
+  "typecheck": "passed"
 }

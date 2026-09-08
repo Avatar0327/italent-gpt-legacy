@@ -1217,6 +1217,27 @@
         "testing": "本轮合成相关测试通过，精确报告见Controller_Lifecycle_Verification.json",
         "production": "未验收"
       }
+    },
+    {
+      "id": "P-INDICATOR-USAGE",
+      "phase": "P3",
+      "moduleId": "M16",
+      "title": "指标版本引用追溯",
+      "queueRef": "P-INDICATOR-USAGE",
+      "criteria": [
+        {
+          "id": "P-INDICATOR-USAGE-AC1",
+          "text": "BC-P06引用情况以实际指标版本快照追溯目标/待审/已发布；HR当前权限、分页与同记录去重，不显示未授权人员或评分",
+          "accepted": false
+        }
+      ],
+      "source": "Performance_Source_Gaps.md#BC-P06",
+      "dimensions": {
+        "requirements": "BC-P06引用情况列已核实；具体统计口径采用独立设计",
+        "development": "已开发HR只读明细与分页",
+        "testing": "本轮5项关联测试通过",
+        "production": "未验收"
+      }
     }
   ],
   "acceptancePolicy": {
