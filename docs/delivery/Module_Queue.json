@@ -153,12 +153,12 @@
     },
     {
       "id": "L-STAGE-WINDOW",
-      "status": "validated-awaiting-private-release",
+      "status": "technical-delivered-v87-partial",
       "dependencies": [
         "L-REQ"
       ],
       "acceptance": "阶段截止与逾期规则明确标记原站证据/独立策略；服务端、待办和历史一致，兼容旧版本",
-      "next": "162项综合/类型通过；显式自然日提交期限已开发，精确原站规则仍待业务对照"
+      "next": "精确原站规则仍待业务对照；保留旧版与跨日回归"
     },
     {
       "id": "L-RECURRENCE",
@@ -210,12 +210,12 @@
     },
     {
       "id": "P-SOURCE",
-      "status": "ready",
+      "status": "in-progress",
       "dependencies": [
         "H004"
       ],
       "acceptance": "核对原站员工绩效字段与流程；分清页面证据、独立实现与企业待确认规则",
-      "next": "私有发布本批后复用原站会话核对绩效，优先补有证据的差异"
+      "next": "员工绩效搜索结果可见但正文未切换；核对应用导航，继续现有流程差异"
     }
   ]
 }
