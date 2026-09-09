@@ -186,6 +186,7 @@ if b.get('dataValidation'):
  section='\n## 原站关联数据验证准备（用户2026-09-09新增要求）\n\n'
  section+=v['authorizationBoundary']+'\n\n目标：'+v['target']+'。状态：'+v['status']+'。'+v['environment']+'。\n\n'
  section+='平台访问：'+v['platformAccess']+'\n\n数据约定候选：'+v['dataPolicy']+'\n\n尚缺信息：'+v['unresolved']+'\n\n'
+ if v.get('markerCompatibility'):section+='测试标记兼容：'+v['markerCompatibility']+'\n\n'
  section+=table(['数据集','拟建对象/数量上限','候选值','前置关系','具体边界'],[(x['id'],x['objects'],x['values'],x['dependency'],x['limit']) for x in v['datasets']])
  section+='\n'+table(['场景/范围','关联数据/证据','跨页面步骤','需要观察的事实','影响/恢复边界','实际执行状态'],[(x['id']+' '+','.join(x['moduleIds']),','.join(x['datasets'])+'；'+','.join(x['evidenceRefs']),x['chain'],x['verify'],x['effects']+'；'+x['recovery'],x['status']) for x in v['scenarios']])
  section+='\n### 合成测试对象及实际操作\n\n'

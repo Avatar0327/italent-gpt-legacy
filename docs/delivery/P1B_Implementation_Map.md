@@ -1,6 +1,6 @@
 # 已有实现与产品需求对应
 
-生成来源：`Scope_Register.json → p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T03:46:19.448442+00:00。
+生成来源：`Scope_Register.json → p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T03:56:24.559618+00:00。
 
 对应当前源码静态核对；可复用是技术候选，不是当前测试或业务验收通过。历史测试只在原Verification标注的testedSourceCommit及适用范围有效，本轮未复跑。产品源码未修改。
 
@@ -177,7 +177,7 @@
 | BP-S/BP-S-REQ-08 | 财务凭证类型、切分及分摊来源；[P1B_BP_S_Specification.md](../../docs/delivery/P1B_BP_S_Specification.md) | 原站局部配置证据；具体计算/接口契约尚受限，未验收 | [P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md)；[Scope_Register.json](../../docs/delivery/Scope_Register.json) | M10未有独立实现；工资发布/工资对账不等同财务凭证或外部入账。BC-S12/13只能确定配置对象，执行规则受限。 |
 | BP-S/BP-S-REQ-09 | 佣金输入、计算过程和结果；[P1B_BP_S_Specification.md](../../docs/delivery/P1B_BP_S_Specification.md) | 原站结构证据及逐项受限需求，未业务评审 | [P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md)；[Scope_Register.json](../../docs/delivery/Scope_Register.json) | M42独立实现缺失；现有人工工资可作为后续接收候选但无确认接口或自动生成工资项目；产品级与部门级多维度需补证。 |
 | BP-S/BP-S-REQ-10 | 福利积分账户与离职/异常处理；[P1B_BP_S_Specification.md](../../docs/delivery/P1B_BP_S_Specification.md) | 原站局部配置证据及受限需求，未签署 | [P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md)；[Scope_Register.json](../../docs/delivery/Scope_Register.json) | M33无独立实现；积分≠学分≠工资现金，原站企业账户不是当前组织目录。完整规则和访问范围待补证，不伪装已就绪。 |
-| BP-S/BP-S-REQ-11 | 薪资包、薪资组和入职前置；[P1B_BP_S_Specification.md](../../docs/delivery/P1B_BP_S_Specification.md) | 原站局部配置事实与现有模型差异；产品建议待评审 | [payroll.ts](../../lib/hris/payroll.ts)；[model.ts](../../lib/hris/model.ts)；[recruitment.ts](../../lib/hris/recruitment.ts)；[P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md) | 薪资组父子和多行政映射已局部实测，专岗继承/重叠/失效、入职引用/档案事件仍未闭合；用户未授权恢复产品扩展，新增业务策略未批准。 |
+| BP-S/BP-S-REQ-11 | 薪资包、薪资组和入职前置；[P1B_BP_S_Specification.md](../../docs/delivery/P1B_BP_S_Specification.md) | 原站局部配置事实与现有模型差异；产品建议待评审 | [payroll.ts](../../lib/hris/payroll.ts)；[model.ts](../../lib/hris/model.ts)；[recruitment.ts](../../lib/hris/recruitment.ts)；[P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md) | 薪资组父子和多行政映射已局部实测，专岗继承/重叠/失效、入职引用/档案事件仍未闭合；用户未授权恢复产品扩展，新增业务策略未批准。 已具备PG和SP两个测试前置，继续EA入职引用，不把它们标成薪酬业务或权限验收通过。 |
 | BP-I/BP-I-REQ-01 | 员工自助/统一待办；[P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 本项目既有实现静态事实；转为产品要求待评审 | [route.ts](../../app/api/self-service/route.ts)；[work-inbox.ts](../../lib/hris/work-inbox.ts) | 日程/日报/完整OKR/消息发送未实现；独立M43任务不等于当前聚合待办；直接办理接口仍需再验版本/角色，页面任务消失不等于原业务被自动取消；不同分支对日期/离职检查不完全同构，不能以聚合页作唯一业务判定。 |
 | BP-I/BP-I-REQ-02 | 报表与指标分母；[P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 本项目既有实现静态事实；转为产品要求待评审 | [reports.ts](../../lib/hris/reports.ts)；[route.ts](../../app/api/reports/route.ts) | 设计器/大规模查询/历史组织快照未就绪；每数据集必须独立定义分母，不能统一套人员数；通用日期控件与各数据集实际过滤口径需对齐；GET先生成全量可见结果再切50行，不是数据库分页或历史时点查询；asOf是生成时刻不是任意历史查询参数。 |
 | BP-I/BP-I-REQ-03 | 实名调查/问卷与360共用模板边界；[P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 本项目既有实现静态事实；转为产品要求待评审 | [surveys.ts](../../lib/hris/surveys.ts)；[feedback.ts](../../lib/hris/feedback.ts) | 员工调查/北森问卷/问卷调查三组不合并，匿名、复杂题型、报告行动计划未完成；HR可看实名原答卷，未实现小样本压制或匿名身份隔离；模板归档不自动终止已创建轮次，新增/离职/调动后名单和答卷统计影响需分别评审。 |
