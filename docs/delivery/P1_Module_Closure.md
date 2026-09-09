@@ -1,14 +1,14 @@
-M01当前集中评审入口：[完整范围、10组选择及受限边界](P1_M01_Review_Package.md)。材料已完成待评审，模块尚无完整/受限批准或转序批准。
+M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Review_Package.md)。状态：P1受限通过，需求基线已批准；批准记录：M01-P1-APPROVAL-20260909。
 
 # 模块闭环、滚动转序及当前收口清单
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T15:58:55.109538+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T16:17:23.873817+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M01；备用 M19；实际执行 M19。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M19；备用 未启用；实际执行 M19。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
 | R版本 | 模块顺序 | 当前边界 |
 |---|---|---|
@@ -23,8 +23,8 @@ R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可
 
 | 模块 | R版本/队列 | P1A判定 | P1B评审 | 转序就绪 | 未达到条件 |
 |---|---|---|---|---|---|
-| M01 组织员工 | R1 / primary_waiting_external | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M19 审批中心 | R1 / backup | 受阻 | 受阻 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M01 组织员工 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
+| M19 审批中心 | R1 / primary | 受阻 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M48 员工自助 | R1 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M32 报表 | R1 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M37 人才标准 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
@@ -39,19 +39,19 @@ R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可
 | M11 假勤管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M07 薪酬社保 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 
-转序就绪 0/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
+转序就绪 1/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
 
 
 ## M01完整登记范围收口清单
 
 | 问题/原范围 | 需求 | 证据 | 具体缺口 | 阻塞P1/风险 | 关闭方式与判据 | 当前状态 |
 |---|---|---|---|---|---|---|
-| M01-CLOSE-01 / 组织 | BP-F-REQ-01；BP-F-REQ-10；BP-F-REQ-14 | BC-F28；BC-F29；BC-F42 | 组织时态/停用依赖采用源规则或批准候选；法人空范围及合同/薪资引用采用批准策略 | True；核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准 | 已有证据足以描述已见结构和差异；按F-SPEC-08,F-SPEC-06推荐或明确替代方案逐项批准，无法核实的源行为按M01-LIMIT-01受限范围另行批准，才可关闭P1门槛。；已完成可决定材料，不等源规则已全验证或用户已批准；F01–04不是完整M01替代。 | 已完成待评审 |
-| M01-CLOSE-02 / 职务体系 | BP-F-REQ-01；BP-F-REQ-11 | BC-F17；BC-F31；BC-F32；BC-F33 | 目录重名与有效区间策略批准；职务/序列/职级范围模型及管理权限批准 | True；核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准 | 已有证据足以描述已见结构和差异；按F-SPEC-01,F-SPEC-08推荐或明确替代方案逐项批准，无法核实的源行为按M01-LIMIT-01受限范围另行批准，才可关闭P1门槛。；已完成可决定材料，不等源规则已全验证或用户已批准；F01–04不是完整M01替代。 | 已完成待评审 |
-| M01-CLOSE-03 / 编制 | BP-F-REQ-06 | BC-F21；BC-F40 | 主兼借派占编及人数版本政策批准；金额预算是否强阻断和未接通状态批准 | True；核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准 | 已有证据足以描述已见结构和差异；按F-SPEC-05,SCOPE-DEP-01推荐或明确替代方案逐项批准，无法核实的源行为按M01-LIMIT-01受限范围另行批准，才可关闭P1门槛。；已完成可决定材料，不等源规则已全验证或用户已批准；F01–04不是完整M01替代。 | 已完成待评审 |
-| M01-CLOSE-04 / 人员 | BP-F-REQ-01；BP-F-REQ-04；BP-F-REQ-06；BP-F-REQ-12 | BC-F22；BC-F35；BC-F36；BC-F39；BC-F43 | 重聘身份/冲突/任期/司龄与恢复边界批准；独立入口模板、人员子集/导入/字段权限基线批准 | True；核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准 | 已有证据足以描述已见结构和差异；按F-SPEC-04,F-SPEC-07推荐或明确替代方案逐项批准，无法核实的源行为按M01-LIMIT-01受限范围另行批准，才可关闭P1门槛。；已完成可决定材料，不等源规则已全验证或用户已批准；F01–04不是完整M01替代。 | 已完成待评审 |
-| M01-CLOSE-05 / 任职 | BP-F-REQ-02；BP-F-REQ-13；BP-F-REQ-15 | BC-F03；BC-F40；BC-F41；BC-F44；BC-F45；BC-F46 | 故障留痕与同事项原单关联的边界批准；主兼职和离职日期、在途流程及消费者状态策略批准 | True；核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准 | 已有证据足以描述已见结构和差异；按F-SPEC-02,F-SPEC-03,F-SPEC-05推荐或明确替代方案逐项批准，无法核实的源行为按M01-LIMIT-01受限范围另行批准，才可关闭P1门槛。；已完成可决定材料，不等源规则已全验证或用户已批准；F01–04不是完整M01替代。 | 已完成待评审 |
-| M01-CLOSE-06 / 合同 | BP-F-REQ-05；BP-F-REQ-14 | P1-CONTRACT-LIST；P1-CONTRACT-TYPE；BC-F23；BC-F24；BC-F42 | 法人ID/日期/续签/计次版本策略批准；外部电子签仅契约边界、失败及历史权限批准 | True；核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准 | 已有证据足以描述已见结构和差异；按F-SPEC-06推荐或明确替代方案逐项批准，无法核实的源行为按M01-LIMIT-01受限范围另行批准，才可关闭P1门槛。；已完成可决定材料，不等源规则已全验证或用户已批准；F01–04不是完整M01替代。 | 已完成待评审 |
+| M01-CLOSE-01 / 组织 | BP-F-REQ-01；BP-F-REQ-10；BP-F-REQ-14 | BC-F28；BC-F29；BC-F42 | P1硬阻塞已关闭；原缺口保留为后续差异验证：组织时态/停用依赖采用源规则或批准候选；法人空范围及合同/薪资引用采用批准策略 | False；核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准 | 所引用规则已由用户批准；源未知按M01-LIMIT-01有范围接受。后续P2/P3/P4验证责任不删除。；M01-P1-APPROVAL-20260909；完整原登记功能未缩减，F01–F04不代整个M01。 | 受限通过 |
+| M01-CLOSE-02 / 职务体系 | BP-F-REQ-01；BP-F-REQ-11 | BC-F17；BC-F31；BC-F32；BC-F33 | P1硬阻塞已关闭；原缺口保留为后续差异验证：目录重名与有效区间策略批准；职务/序列/职级范围模型及管理权限批准 | False；核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准 | 所引用规则已由用户批准；源未知按M01-LIMIT-01有范围接受。后续P2/P3/P4验证责任不删除。；M01-P1-APPROVAL-20260909；完整原登记功能未缩减，F01–F04不代整个M01。 | 受限通过 |
+| M01-CLOSE-03 / 编制 | BP-F-REQ-06 | BC-F21；BC-F40 | P1硬阻塞已关闭；原缺口保留为后续差异验证：主兼借派占编及人数版本政策批准；金额预算是否强阻断和未接通状态批准 | False；核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准 | 所引用规则已由用户批准；源未知按M01-LIMIT-01有范围接受。后续P2/P3/P4验证责任不删除。；M01-P1-APPROVAL-20260909；完整原登记功能未缩减，F01–F04不代整个M01。 | 受限通过 |
+| M01-CLOSE-04 / 人员 | BP-F-REQ-01；BP-F-REQ-04；BP-F-REQ-06；BP-F-REQ-12 | BC-F22；BC-F35；BC-F36；BC-F39；BC-F43 | P1硬阻塞已关闭；原缺口保留为后续差异验证：重聘身份/冲突/任期/司龄与恢复边界批准；独立入口模板、人员子集/导入/字段权限基线批准 | False；核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准 | 所引用规则已由用户批准；源未知按M01-LIMIT-01有范围接受。后续P2/P3/P4验证责任不删除。；M01-P1-APPROVAL-20260909；完整原登记功能未缩减，F01–F04不代整个M01。 | 受限通过 |
+| M01-CLOSE-05 / 任职 | BP-F-REQ-02；BP-F-REQ-13；BP-F-REQ-15 | BC-F03；BC-F40；BC-F41；BC-F44；BC-F45；BC-F46 | P1硬阻塞已关闭；原缺口保留为后续差异验证：故障留痕与同事项原单关联的边界批准；主兼职和离职日期、在途流程及消费者状态策略批准 | False；核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准 | 所引用规则已由用户批准；源未知按M01-LIMIT-01有范围接受。后续P2/P3/P4验证责任不删除。；M01-P1-APPROVAL-20260909；完整原登记功能未缩减，F01–F04不代整个M01。 | 受限通过 |
+| M01-CLOSE-06 / 合同 | BP-F-REQ-05；BP-F-REQ-14 | P1-CONTRACT-LIST；P1-CONTRACT-TYPE；BC-F23；BC-F24；BC-F42 | P1硬阻塞已关闭；原缺口保留为后续差异验证：法人ID/日期/续签/计次版本策略批准；外部电子签仅契约边界、失败及历史权限批准 | False；核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准 | 所引用规则已由用户批准；源未知按M01-LIMIT-01有范围接受。后续P2/P3/P4验证责任不删除。；M01-P1-APPROVAL-20260909；完整原登记功能未缩减，F01–F04不代整个M01。 | 受限通过 |
 
 
 ## M19完整登记范围收口清单

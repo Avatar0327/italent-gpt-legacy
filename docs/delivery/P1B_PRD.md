@@ -1,6 +1,6 @@
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M01；备用 M19；实际执行 M19。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M19；备用 未启用；实际执行 M19。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
 | R版本 | 模块顺序 | 当前边界 |
 |---|---|---|
@@ -15,8 +15,8 @@ R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可
 
 | 模块 | R版本/队列 | P1A判定 | P1B评审 | 转序就绪 | 未达到条件 |
 |---|---|---|---|---|---|
-| M01 组织员工 | R1 / primary_waiting_external | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M19 审批中心 | R1 / backup | 受阻 | 受阻 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M01 组织员工 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
+| M19 审批中心 | R1 / primary | 受阻 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M48 员工自助 | R1 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M32 报表 | R1 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M37 人才标准 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
@@ -31,14 +31,14 @@ R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可
 | M11 假勤管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M07 薪酬社保 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 
-转序就绪 0/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
+转序就绪 1/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
 
 
 ---
 
 # 本项目总体PRD（P1B评审稿）
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T15:58:55.109538+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T16:17:23.873817+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
@@ -69,13 +69,13 @@ R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可
 
 当前暂停产品功能扩展；原站仅在最新授权内操作明确标记的合成测试记录；不导出真实数据，不新增访问者。15模块内原登记的自动调度、复杂审批、兼岗/再入职/法人等继续保留；独立AI与33模块按用户决定暂缓。外部服务仅必要接口契约/状态/失败处理，供应商开通与真实交易不是P1前置；生产切换不在本轮。P1A/P1B退出与后续阶段见[原项目规划](../HRIS_Project_Plan.md)。
 
-本PRD及分包规格均待需求评审，尚无新签署。首包规则确认、首包需求就绪、首包业务验收、全项目P1完成与生产验收各自独立，不从数量推算整体进度。
+本PRD及分包规格按模块批准记录适用；已批准模块不再列为未签署，其他模块不继承批准。首包规则确认、首包需求就绪、首包业务验收、全项目P1完成与生产验收各自独立，不从数量推算整体进度。
 
 ## 业务包规格入口
 
 | 包 | 规格 | 状态 |
 |---|---|---|
-| BP-F | [P1B_BP_F_Specification.md](../../docs/delivery/P1B_BP_F_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合 |
+| BP-F | [P1B_BP_F_Specification.md](../../docs/delivery/P1B_BP_F_Specification.md) | 当前M01需求就绪（P1受限通过）；历史M20暂缓，基础仅M01适用契约获批准 |
 | BP-C | [P1B_BP_C_Specification.md](../../docs/delivery/P1B_BP_C_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合 |
 | BP-L | [P1B_BP_L_Specification.md](../../docs/delivery/P1B_BP_L_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合 |
 | BP-P | [P1B_BP_P_Specification.md](../../docs/delivery/P1B_BP_P_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合 |
@@ -150,7 +150,7 @@ SCOPE-20260909-CORE15；2026-09-09T06:25:42.812752+00:00。用户本窗口明确
 | 当前15模块 | M01 组织员工、M03 干部管理2.0、M06 任职资格、M07 薪酬社保、M11 假勤管理、M12 招聘管理系统、M16 绩效管理、M17 继任与发展、M18 在线盘点、M19 审批中心、M26 360度评估、M27 学习管理、M32 报表、M37 人才标准、M48 员工自助 | 保留15模块原登记scope全部常规业务，不进一步缩为4底座；原始scope不改写。独立AI能力及外部服务真实执行例外按本记录明确暂缓，其他内部删减须集中决定。 |
 | R4：33个模块本次交付暂缓（历史保留，不计完成） | M02 人才评定、M04 HRBP工作台、M05 标签库、M08 我的填报、M09 预算成本、M10 财务凭证、M13 面试官工作台、M14 AI人才库、M15 测评中心、M20 项目人力管理、M21 文化激励、M22 电子签、M23 推荐运营中心、M24 校园大使管理、M25 外部推荐管理、M28 AI陪练、M29 员工调查、M30 北森问卷、M31 问卷调查、M33 森福利、M34 AI面试官、M35 主数据同步、M36 北森iTalent、M38 人才模型、M39 会议管理、M40 经理团队分析、M41 数字人才、M42 佣金管理、M43 任务、M44 RPA招聘助手、M45 干部管理、M46 职称管理、M47 翻译工作台 | 其余33组退出当前P1退出条件/主动探索。历史代码/证据/数据/验收/隔离成果保留；只准为保留模块引用已有前置或最小公共配置，不顺带恢复完整独立模块。 |
 
-P1A完成 0/15；P1B需求就绪 0/15；P1评审通过 0/15。批准的受限结论 0项，单列不混入完整通过。
+P1A关闭 1/15（完整0，受限1）；P1B需求就绪 1/15（完整0，受限1）；P1评审关闭 1/15（完整0，受限1）。受限不混入完整通过，均不代表P3测试/P4业务或生产验收。
 
 
 ## 保留的非模块基础能力（不重复计入15模块）

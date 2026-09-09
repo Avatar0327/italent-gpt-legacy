@@ -1,6 +1,9 @@
 import json,pathlib,subprocess,hashlib,datetime,re
 R=pathlib.Path(__file__).resolve().parents[1];D=R/'docs/delivery';s=json.loads((D/'Scope_Register.json').read_text());old=json.loads(subprocess.check_output(['git','show','HEAD:docs/delivery/Scope_Register.json'],cwd=R))
 checks=[]
+approvals={x['id']:x for x in s['p1B'].get('approvalRecords',[])}
+def has_approval(ref):return ref in approvals and approvals[ref].get('approved') is True
+
 def check(v,name):
  assert v,name
  checks.append(name)
@@ -36,9 +39,9 @@ for m in s['modules']:
  if m['id'] not in active:
   check(a['p1A']=='deferred' and a['p1B']=='deferred' and '本次交付暂缓' in m['p1']['coverage']['next'],m['id']+'退出当前主动探索/完成条件')
  else:
-  check(a['p1A'] in ['in_progress','not_assessed','complete'] and a['p1B'] in ['not_ready','not_assessed','ready'],m['id']+'当前P1A/P1B分别登记')
-  if a['p1A']=='complete' or a['p1B']=='ready' or a['review']=='signed':
-   check(bool(a.get('exitEvidence')) and bool(a.get('reviewRecord')),m['id']+'达到退出计数须具体证据/评审记录')
+  check(a['p1A'] in ['in_progress','not_assessed','complete','restricted_complete'] and a['p1B'] in ['not_ready','not_assessed','ready'],m['id']+'当前P1A/P1B分别登记')
+  if a['p1A'] in ['complete','restricted_complete'] or a['p1B']=='ready' or a['review'] in ['signed','restricted_signed']:
+   check(bool(a.get('exitEvidence')) and has_approval(a.get('reviewRecord')),m['id']+'达到退出计数须具体证据/评审记录')
 check(ds['supportModuleIds']==['M19','M48','M32'] and ds['moduleExecutionOrder'][:4]==['M01','M19','M48','M32'],'R1审批自助报表按明确顺序闭环，依赖补证不另开全量探索')
 q=json.loads((D/'Module_Queue.json').read_text())
 check(q['currentP1']['nextTasks']==s['roadmap']['nextTasks'] and q['currentP1']['businessOrder']==ds['businessOrder'],'唯一队列与Scope当前顺序和下一步一致')
@@ -65,7 +68,7 @@ for m in s['modules']:
  check([x['originalScopeItem'] for x in details]==m['scope'].split('、'),m['id']+'原登记内部功能逐项完整，不静默删减')
  for item in details:
   check(set(item['contractIds'])<=set(contract_ids) and set(item['evidenceRefs'])<=set(pages),m['id']+'/'+item['originalScopeItem']+'规格及证据引用有效')
-  check(bool(item['coverageDepth']) and bool(item['remaining']) and bool(item['next']) and item['complete'] is False and item['requirementAccepted'] is False,m['id']+'/'+item['originalScopeItem']+'深度限制/下一步齐备且未伪报通过')
+  check(bool(item['coverageDepth']) and bool(item['remaining']) and bool(item['next']) and item['complete'] is False and (item['requirementAccepted'] is False or has_approval(item.get('approvalRecord'))),m['id']+'/'+item['originalScopeItem']+'深度限制/下一步齐备且未伪报通过')
   if item['currentMode']=='本次子能力暂缓':check(m['id']=='M11' and item['originalScopeItem']=='AI排班','内部子能力暂缓仅限本次明确AI边界')
   else:check(bool(item['contractIds']),m['id']+'/'+item['originalScopeItem']+'保留功能有规格或受限提纲')
 for p in s['p1B']['packages']:
@@ -128,7 +131,7 @@ for m in s['modules']:
  c=m['p1']['moduleClosure']
  for phase in ['p1AConclusion','p1BConclusion']:
   check(c[phase]['status'] in policy['statusVocabulary'],m['id']+phase+'结论枚举有效')
-  if c[phase]['status'] in ['完整通过','受限通过']:check(bool(c[phase]['approvalRecord']),m['id']+phase+'通过须批准记录')
+  if c[phase]['status'] in ['完整通过','受限通过']:check(has_approval(c[phase]['approvalRecord']),m['id']+phase+'通过须批准记录')
  if any(c[k]['status']=='受限通过' for k in ['p1AConclusion','p1BConclusion']):
   check(all(c.get('restrictedApproval',{}).get(k) for k in ['scope','residualRisk','revalidation','record']),m['id']+'受限批准范围风险补验齐备')
  rows=m['p1'].get('closureChecklist',[])
@@ -148,8 +151,20 @@ for case in review['acceptanceCases']:
  case_ids.append(case['id'])
 view=json.loads((D/'P1_Module_Closure.json').read_text())
 check(view['moduleCount']==15 and view['primaryModuleId']==policy['primaryModuleId'] and view['backupModuleId']==policy['backupModuleId'],'机器视图同源范围/焦点')
-check(all(not x['transitionReady'] for x in view['modules']) and view['transitionReadyCount']==0,'本轮未决/未批不能导出转序就绪')
-check(view['completeCount']==0 and view['restrictedCount']==0,'本轮完整/受限通过均未获批准')
+for x in view['modules']:
+ expected=all(v['value'] is True and bool(v['basis']) for v in x['conditions'].values()) and all(x[k]['status'] in ['完整通过','受限通过'] and has_approval(x[k]['approvalRecord']) for k in ['p1AConclusion','p1BConclusion']) and x['transitionReview']['approved'] is True and has_approval(x['transitionReview']['record'])
+ check(x['transitionReady']==expected,x['moduleId']+'转序由真实条件和批准推导')
+check(view['transitionReadyCount']==sum(x['transitionReady'] for x in view['modules']),'转序计数同源推导')
+for ar in approvals.values():
+ check(all(ar.get(k) for k in ['approvedBy','approvedAt','scope','source','reviewedHead','reviewedDocumentSha256','exclusions']),ar['id']+'用户批准版本与范围可追溯')
+ original=json.loads(subprocess.check_output(['git','show',ar['reviewedHead']+':docs/delivery/Scope_Register.json'],cwd=R))
+ original_issues={x['id']:x for x in original['p1B']['reviewIssues']}
+ for iid,v in ar['approvedRecommendations'].items():
+  check(v['text']==original_issues[iid]['proposal'] and hashlib.sha256(v['text'].encode()).hexdigest()==v['sha256'],iid+'推荐锁定所审版本，不扩写批准')
+ expected_doc=subprocess.check_output(['git','show',ar['reviewedHead']+':'+ar['reviewedDocument']],cwd=R)
+ check(hashlib.sha256(expected_doc).hexdigest()==ar['reviewedDocumentSha256'],ar['id']+'审阅文档哈希匹配')
+check(view['p1ClosedCount']==view['progress']['review']['total'],'P1关闭合计同源且完整/受限分列')
+check(all(not x['transitionReady'] for x in view['ranges']),'当前R版本未获整体评审，不自动启动开发')
 result['checks']=checks
 (D/'P1AB_Document_Check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
 print('PASS: authoritative scope, review packet, rolling gates, recovery views, deterministic generation and unchanged product source; no business retest/signoff')

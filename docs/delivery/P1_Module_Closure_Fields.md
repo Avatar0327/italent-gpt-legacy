@@ -1,6 +1,6 @@
 # 模块闭环字段与看板读取约定
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T15:58:55.109538+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T16:17:23.873817+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
@@ -13,6 +13,7 @@
 | modules[].p1.closureChecklist | 完整原登记范围逐项：需求、证据、缺口、阻塞性、关闭方式、判据；不是另一个任务分母 |
 | modules[].p1.reviewPackage | 模块集中阅读包的唯一原始内容；材料已完成待评审不等签署 |
 | p1B.reviewIssues | 业务建议、备选及影响唯一待决记录；decision为空不能展示已批准 |
+| p1B.approvalRecords | 用户明确批准的版本、文档哈希、推荐原文及哈希、范围、例外与排除项；批准不外推到其他模块 |
 | modules[].p1.moduleClosure.p1AConclusion / p1BConclusion | 分别显示五类结论；通过须approvalRecord，受限须scope/residualRisk/revalidation/record |
 | modules[].p1.moduleClosure.conditions | 四个转序条件的value及basis；null=待判定，false=未满足，不能改为通过 |
 | modules[].p1.moduleClosure.transitionReview | 转序批准必须approved=true、record、scope、approvedAt齐备；不等生产上线批准 |
@@ -25,7 +26,7 @@
 
 [P1_Module_Closure.json](P1_Module_Closure.json)由scripts/render-p1-baseline.py生成。primaryModuleId/backupModuleId/activeExecutionModuleId直接取执行策略；modules[].transitionReady须四条件、两阶段批准及转序批准均满足；ranges[].transitionReady另要求本R全部模块、适用基础能力及范围评审。missingConditions给出尚缺条件。禁止手改派生布尔值。
 
-completeCount和restrictedCount分别是P1A完整通过、受限通过计数，不是P1B就绪或全项目评审计数；transitionReadyCount独立统计。15模块分母保持，基础六类另列。结论枚举为：完整通过、受限通过、已完成待评审、进行中、受阻。
+completeCount和restrictedCount分别是P1A完整通过、受限通过计数；progress.p1A/p1B/review各含full、restricted、total，明确分类后可显示合计；p1ClosedCount为模块P1关闭总数；transitionReadyCount独立统计。15模块分母保持，基础六类另列。结论枚举为：完整通过、受限通过、已完成待评审、进行中、受阻。
 
 ## 快照和历史证据
 

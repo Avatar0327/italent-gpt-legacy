@@ -1,22 +1,40 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-09T15:58:55.109538+00:00",
-  "primaryModuleId": "M01",
-  "backupModuleId": "M19",
+  "generatedFromUpdatedAt": "2026-09-09T16:17:23.873817+00:00",
+  "primaryModuleId": "M19",
+  "backupModuleId": null,
   "activeExecutionModuleId": "M19",
   "moduleCount": 15,
   "completeCount": 0,
-  "restrictedCount": 0,
-  "transitionReadyCount": 0,
+  "restrictedCount": 1,
+  "transitionReadyCount": 1,
+  "progress": {
+    "p1A": {
+      "full": 0,
+      "restricted": 1,
+      "total": 1
+    },
+    "p1B": {
+      "full": 0,
+      "restricted": 1,
+      "total": 1
+    },
+    "review": {
+      "full": 0,
+      "restricted": 1,
+      "total": 1
+    }
+  },
+  "p1ClosedCount": 1,
   "modules": [
     {
       "moduleId": "M01",
       "name": "组织员工",
       "rangeId": "R1",
-      "queueState": "primary_waiting_external",
+      "queueState": "closed_restricted",
       "p1AConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M01-P1-APPROVAL-20260909",
         "evidenceRefs": [
           "BC-F03",
           "BC-F02",
@@ -67,57 +85,63 @@
           "BC-F45",
           "BC-F46"
         ],
-        "limits": "六项范围已有证据/深度/限制/具体关闭方式与风险判断，可提交判定；核心未证源行为须M01-LIMIT-01明确批准，否则仍缺源执行条件。没有完整通过。"
+        "limits": "已有源证据与范围/字段/流程/差异/限制形成充分需求输入；M01-LIMIT-01获用户批准，未证源算法仍未知，按受限P1关闭，不计完整源验证。",
+        "approvedAt": "2026-09-09T16:17:23.873817+00:00"
       },
       "p1BConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M01-P1-APPROVAL-20260909",
         "evidenceRefs": [
           "docs/delivery/P1_M01_Review_Package.md",
           "docs/delivery/P1B_BP_F_Specification.md"
         ],
-        "limits": "各项可实施推荐、既有字段/角色/状态/异常/验收及差异已汇合；10组产品/依赖/基线选择未批准，不计需求就绪。"
+        "limits": "10项推荐与其余明确基线已批准，实施规则、权限及可执行验收明确；源差异按M01-LIMIT-01保留到后续阶段，需求就绪不等实现通过。",
+        "approvedAt": "2026-09-09T16:17:23.873817+00:00"
       },
       "conditions": {
         "applicableScopeDetermined": {
           "value": true,
-          "basis": "用户已确认15完整登记范围及本轮R顺序"
+          "basis": "M01-P1-APPROVAL-20260909：M01六项原登记范围全保留，无内部延期"
         },
         "implementationRulesDecided": {
-          "value": false,
-          "basis": "10组选择未批准"
+          "value": true,
+          "basis": "M01-P1-APPROVAL-20260909：10项当前推荐已批准；D1–D7维持原结论"
         },
         "acceptanceExecutable": {
-          "value": false,
-          "basis": "已有Given/When/Then候选；预期取决于未批准规则，尚非已确定验收"
+          "value": true,
+          "basis": "M01-P1-APPROVAL-20260909：M01-BASELINE-01批准已具体化规格/权限/验收预期；用例未执行，后续责任明确"
         },
         "dependenciesAndExceptionsResolved": {
-          "value": false,
-          "basis": "SCOPE-DEP-01及M01-LIMIT-01未批准"
+          "value": true,
+          "basis": "M01-P1-APPROVAL-20260909：SCOPE-DEP-01人数编制/外部金额未校验；M01-LIMIT-01限制获处理，不再作为P1阻塞"
         }
       },
       "transitionReview": {
-        "approved": false,
-        "record": null,
-        "scope": null,
-        "approvedAt": null
+        "approved": true,
+        "record": "M01-P1-APPROVAL-20260909",
+        "scope": "M01 P1受限关闭及模块转序资格；依据用户条件满足即关闭并转M19指令判定。不等R1四模块/六基础整体获准进入P2/P3。",
+        "approvedAt": "2026-09-09T16:17:23.873817+00:00"
       },
-      "restrictedApproval": null,
-      "transitionReady": false,
-      "missingConditions": [
-        "implementationRulesDecided",
-        "acceptanceExecutable",
-        "dependenciesAndExceptionsResolved",
-        "p1AApproved",
-        "p1BApproved",
-        "transitionReviewApproved"
-      ]
+      "restrictedApproval": {
+        "scope": "原站组织/职位未来时态及停用、重聘执行/冲突恢复、兼职终态/借派占编、法人空范围/合同自动规则、单账号之外权限、通知后效",
+        "residualRisk": "与北森实际边界可能不同；角色/历史/跨模块消费者需在实现后验证，否则可能误授权、错计人数或误显示生效。",
+        "revalidation": "P2负责人复核ID/版本/时态/迁移/事务设计；P3执行者使用合成链验证边界，独立人类权限验收待E2后续授权；P4验收责任人完成全权限和业务准备。若源恢复且结果推翻已批规则，开有范围变更评审，不静默改规则。",
+        "record": "M01-P1-APPROVAL-20260909",
+        "approvedAt": "2026-09-09T16:17:23.873817+00:00",
+        "phaseScope": "仅P1需求基线，不豁免实现或后续测试/UAT/生产验收"
+      },
+      "closureClass": "受限通过",
+      "p1Closed": true,
+      "closureRecord": "M01-P1-APPROVAL-20260909",
+      "closedAt": "2026-09-09T16:17:23.873817+00:00",
+      "transitionReady": true,
+      "missingConditions": []
     },
     {
       "moduleId": "M19",
       "name": "审批中心",
       "rangeId": "R1",
-      "queueState": "backup",
+      "queueState": "primary",
       "p1AConclusion": {
         "status": "受阻",
         "approvalRecord": null,
@@ -129,7 +153,7 @@
         "limits": "已有流程帮助/列表可用；管理员委托细则仅导航，源连接超时；不得当已授权节点代理。"
       },
       "p1BConclusion": {
-        "status": "受阻",
+        "status": "进行中",
         "approvalRecord": null,
         "evidenceRefs": [],
         "limits": "复用既有契约并补以下差异/候选；通用流程/委托权限仍需来源或明确产品评审，未批准。"
@@ -1042,7 +1066,6 @@
       ],
       "transitionReady": false,
       "missingConditions": [
-        "M01",
         "M19",
         "M48",
         "M32",
