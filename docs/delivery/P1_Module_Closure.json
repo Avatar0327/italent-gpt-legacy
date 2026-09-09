@@ -1,31 +1,31 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-09T16:28:57.961445+00:00",
-  "primaryModuleId": "M19",
-  "backupModuleId": "M48",
+  "generatedFromUpdatedAt": "2026-09-09T16:53:50.674271+00:00",
+  "primaryModuleId": "M48",
+  "backupModuleId": null,
   "activeExecutionModuleId": "M48",
   "moduleCount": 15,
   "completeCount": 0,
-  "restrictedCount": 1,
-  "transitionReadyCount": 1,
+  "restrictedCount": 2,
+  "transitionReadyCount": 2,
   "progress": {
     "p1A": {
       "full": 0,
-      "restricted": 1,
-      "total": 1
+      "restricted": 2,
+      "total": 2
     },
     "p1B": {
       "full": 0,
-      "restricted": 1,
-      "total": 1
+      "restricted": 2,
+      "total": 2
     },
     "review": {
       "full": 0,
-      "restricted": 1,
-      "total": 1
+      "restricted": 2,
+      "total": 2
     }
   },
-  "p1ClosedCount": 1,
+  "p1ClosedCount": 2,
   "modules": [
     {
       "moduleId": "M01",
@@ -141,63 +141,69 @@
       "moduleId": "M19",
       "name": "审批中心",
       "rangeId": "R1",
-      "queueState": "primary_waiting_external",
+      "queueState": "closed_restricted",
       "p1AConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M19-P1-APPROVAL-20260909",
         "evidenceRefs": [
           "BC-P1C-M19",
           "BC-I10",
           "BC-I27"
         ],
-        "limits": "已完成两项范围证据/限制整理；源执行缺口具体，需恢复定向取证或批准M19-LIMIT-01，当前未通过"
+        "limits": "当前完整范围证据/深度/限制已齐备用于需求判定；用户批准M19-LIMIT-01，未知源行为保留，不计完整源执行验证。",
+        "approvedAt": "2026-09-09T16:53:50.674271+00:00"
       },
       "p1BConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M19-P1-APPROVAL-20260909",
         "evidenceRefs": [],
-        "limits": "四组推荐、对象/状态/角色/验收和实现差异可评审；未获批准，不计就绪"
+        "limits": "所审版本四组推荐、规格/权限/验收/依赖与受限责任已批准；需求就绪，不代表实现或跨域联调通过。",
+        "approvedAt": "2026-09-09T16:53:50.674271+00:00"
       },
       "conditions": {
         "applicableScopeDetermined": {
           "value": true,
-          "basis": "用户已确认15完整登记范围及本轮R顺序"
+          "basis": "M19-P1-APPROVAL-20260909：原登记范围全部保留，无内部删减"
         },
         "implementationRulesDecided": {
-          "value": false,
-          "basis": "M19-SPEC-01–04 / M19-LIMIT-01及验收批准尚缺，明确材料已齐"
+          "value": true,
+          "basis": "M19-P1-APPROVAL-20260909：四组推荐及明确用户边界已批准，其他模块不继承"
         },
         "acceptanceExecutable": {
-          "value": false,
-          "basis": "M19-SPEC-01–04 / M19-LIMIT-01及验收批准尚缺，明确材料已齐"
+          "value": true,
+          "basis": "M19-P1-APPROVAL-20260909：所审验收场景明确且作为需求基线获批；accepted/executionThisRun仍false"
         },
         "dependenciesAndExceptionsResolved": {
-          "value": false,
-          "basis": "M19-SPEC-01–04 / M19-LIMIT-01及验收批准尚缺，明确材料已齐"
+          "value": true,
+          "basis": "M19-P1-APPROVAL-20260909：原站限制及后续补验责任获批；供应商/跨域未接按已批契约处理，不作当前P1前置"
         }
       },
       "transitionReview": {
-        "approved": false,
-        "record": null,
-        "scope": null,
-        "approvedAt": null
+        "approved": true,
+        "record": "M19-P1-APPROVAL-20260909",
+        "approvedAt": "2026-09-09T16:53:50.674271+00:00",
+        "scope": "M19满足现有条件后P1受限关闭及转序资格；用户明确要求随后转M48，不等R1整体P2/P3批准"
       },
-      "restrictedApproval": null,
-      "transitionReady": false,
-      "missingConditions": [
-        "implementationRulesDecided",
-        "acceptanceExecutable",
-        "dependenciesAndExceptionsResolved",
-        "p1AApproved",
-        "p1BApproved",
-        "transitionReviewApproved"
-      ]
+      "restrictedApproval": {
+        "scope": "原站通用路由、管理员委托、管理干预/撤销补偿、并发撤权和消息结果的未验证行为",
+        "residualRisk": "委托可能与源语义不同；错误路由、撤销/生效竞态、撤权和消息重试需实施后验证，单账号无法替多人验收。",
+        "revalidation": "P2执行者核事务/版本/权限/业务适配器；P3用隔离合成身份及消息拦截器验证路由、撤权、重复和失败；P4责任人完成独立人类权限/跨域业务验收，E2新增人仍须后续授权。",
+        "record": "M19-P1-APPROVAL-20260909",
+        "approvedAt": "2026-09-09T16:53:50.674271+00:00",
+        "phaseScope": "仅P1，不免除实现、测试、跨角色及P4验收"
+      },
+      "closureClass": "受限通过",
+      "p1Closed": true,
+      "closureRecord": "M19-P1-APPROVAL-20260909",
+      "closedAt": "2026-09-09T16:53:50.674271+00:00",
+      "transitionReady": true,
+      "missingConditions": []
     },
     {
       "moduleId": "M48",
       "name": "员工自助",
       "rangeId": "R1",
-      "queueState": "backup",
+      "queueState": "primary",
       "p1AConclusion": {
         "status": "已完成待评审",
         "approvalRecord": null,
@@ -1066,7 +1072,6 @@
       ],
       "transitionReady": false,
       "missingConditions": [
-        "M19",
         "M48",
         "M32",
         "BASE-01",

@@ -182,7 +182,7 @@ if 'p1B' in s:
   for ct in pack['contracts']:
    t+='### '+ct['id']+' '+ct['object']+' — '+ct['currentApplicability']['status']+'\n\n**当前适用：'+ct_scope(ct)+'**\n\n性质：'+ct['classification']+'。下表保留原契约内容；混合/暂缓部分以当前适用边界为准，不作为当前完整模块前置。\n\n'
    t+=table(['维度','规格及当前边界'],[('对象/字段/校验',ct['fields']),('角色/数据范围/字段权限',ct['roles']),('状态/审批/生效',ct['lifecycle']),('页面主要操作',ct['actions']),('验收预期（给定条件→操作→结果）',ct['acceptance']),('例外、恢复与仍缺内容',ct['gap']),('静态实现/输入依据','；'.join(link_source(x) for x in ct['codeRefs']))])+'\n'
-   if ct.get('requirementApproval'):t+='当前需求批准：'+ct['requirementApproval']['record']+'；'+ct['requirementApproval']['scope']+'。下方历史静态/待证措辞保留当时含义；与已批准推荐冲突时以当前M01评审包为准，不把未知源规则改成已验证。\n\n'
+   if ct.get('requirementApproval'):t+='当前需求批准：'+ct['requirementApproval']['record']+'；'+ct['requirementApproval']['scope']+'。下方历史静态/待证措辞保留当时含义；与已批准推荐冲突时以批准记录锁定的对应模块评审包为准，不把未知源规则改成已验证。\n\n'
    if ct.get('fieldDetails'):
     t+='字段与对象细化（来源逐项区分，不用代码补原站事实）：\n\n'+table(['字段/对象','定义及关联','校验/范围','来源与状态'],[(x['field'],x['definition'],x['constraints'],x['basis']) for x in ct['fieldDetails']])+'\n'
    if ct.get('roleMatrix'):
@@ -411,7 +411,7 @@ if policy:
 if pb.get('approvalRecords'):
  t=intro('P1模块需求批准记录（非业务运行验收）')
  for ar in pb['approvalRecords']:
-  t+='## '+ar['id']+'\n\n'+table(['字段','记录'],[(k,ar[k]) for k in ['approvedBy','approvedAt','timeBasis','source','reviewedHead','reviewedDocument','reviewedDocumentSha256','scope','authorization','exclusions']])+'\n'
+  t+='## '+ar['id']+'\n\n'+table(['字段','记录'],[(k,ar[k]) for k in ['approvedBy','approvedAt','timeBasis','source','reviewedHead','reviewedDocument','reviewedDocumentSha256','scope','authorization','exclusions']+(['approvedBoundaries'] if ar.get('approvedBoundaries') else [])])+'\n'
   t+=table(['规则','所审推荐SHA256','采用内容'],[(k,v['sha256'],v['text']) for k,v in ar['approvedRecommendations'].items()])+'\n'
  (D/'P1_Approval_Records.md').write_text(t)
 
@@ -428,12 +428,12 @@ for m in active_mods:
  t+='## 已完成的证据与差异核对\n\n'+table(['问题','实际结论','证据性质'],[(x['problem'],x['resolution'],x['basis']) for x in rp['closedQuestions']])+'\n'
  t+='## 完整收口清单\n\n'+table(['原范围/问题','规格/证据','剩余硬条件','关闭方法'],[(x['scopeItem']+' / '+x['id'],x['requirementIds']+x['evidenceRefs'],x['gap'],x['closureMethod']) for x in p1['closureChecklist']])+'\n'
  if p1.get('consumerContracts'):
-  t+='## 跨模块消费契约（候选，非生产者规则批准）\n\n'+table(['原范围','生产者','明确消费字段','边界','证据'],[(x['scopeItem'],x['producer'],x['fields'],x['boundary'],x['evidence']) for x in p1['consumerContracts']])+'\n'
- t+='## 集中待决（推荐不等批准）\n\n'
+  t+='## 跨模块消费契约（批准见本包记录，不代批生产者规则）\n\n'+table(['原范围','生产者','明确消费字段','边界','证据'],[(x['scopeItem'],x['producer'],x['fields'],x['boundary'],x['evidence']) for x in p1['consumerContracts']])+'\n'
+ t+='## 集中决定与版本依据\n\n'+('批准记录：'+rp['approvalRecord']+'；批准时间：'+rp['approvedAt']+'。下方推荐原文含待批措辞时只属审阅前状态，现已按该批准范围生效；原站未知不改写。' if rp.get('approvalRecord') else '下列推荐未批准，不外推其他模块已有签署。')+'\n\n'
  for iid in rp['decisionIds']:
-  x=issue_by_id[iid];t+='### '+iid+' '+x['topic']+'\n\n'+table(['维度','内容'],[('现状/证据',x['basis']),('推荐，未批准',x['proposal']),('备选',x['alternatives']),('影响',x['impact'])])+'\n'
- t+='## 原站限制及补验责任（尚待批准）\n\n'
- for x in rp['exceptionProposals']:t+='### '+x['id']+'\n\n'+table(['维度','内容'],[(k,x[k]) for k in ['status','scope','evidence','proposal','residualRisk','revalidation']])+'\n'
+  x=issue_by_id[iid];t+='### '+iid+' '+x['topic']+'\n\n'+table(['维度','内容'],[('现状/证据',x['basis']),('已批准推荐（所审原文）' if x.get('approvalRecord') else '推荐，未批准',x['proposal']),('备选',x['alternatives']),('影响',x['impact'])])+'\n'
+ t+='## 原站限制及补验责任（按逐项批准状态）\n\n'
+ for x in rp['exceptionProposals']:t+='### '+x['id']+'\n\n'+table(['维度','内容'],[(k,x[k]) for k in ['status','scope','evidence','proposal','residualRisk','revalidation']+(['approvalConclusion'] if x.get('approvalConclusion') else [])])+'\n'
  t+='## 关键流程与可执行验收预期\n\n'+'\n'.join('- '+x for x in rp['flowSummary'])+'\n\n'
  t+=table(['用例/范围','给定','动作','预期','来源及状态'],[(x['id']+' / '+x['scopeItem'],x['given'],x['when'],x['then'],x['basis']+'；'+x['status']) for x in [all_cases[i] for i in rp['acceptanceCaseRefs']]])+'\n'
  t+='## 进入P2后的复用与差异\n\n'+'\n'.join('- '+x for x in rp['implementationNext'])+'\n\n下一步：'+rp['next']+'\n\n[完整分包规格](P1B_BP_I_Specification.md) · [唯一待决与就绪表](P1B_Readiness.md) · [实现对应](P1B_Implementation_Map.md)。本包由Scope生成，不另维护进度。\n'
