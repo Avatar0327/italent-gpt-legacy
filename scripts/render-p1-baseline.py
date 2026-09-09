@@ -37,7 +37,7 @@ def intro(title):return f'# {title}\n\n生成来源：`Scope_Register.json → d
 def current_scope_table():
  return table(['范围','模块ID及名称','当前边界'],[
  ('当前15模块','、'.join(m['id']+' '+m['name'] for m in active_mods),ds['internalBoundary']),
- ('本次暂缓33模块','、'.join(m['id']+' '+m['name'] for m in deferred_mods),ds['deferredPolicy'])])
+ (ds.get('deferredDisplayLabel','本次暂缓33模块'),'、'.join(m['id']+' '+m['name'] for m in deferred_mods),ds['deferredPolicy'])])
 def progress_table():
  labels={'in_progress':'进行中（未达完整退出）','not_ready':'未就绪','not_signed':'待业务评审签署','complete':'完整完成','ready':'需求就绪','signed':'评审通过','not_assessed':'待判定'}
  return table(['模块/主包','P1A','P1B','P1评审','具体缺口/判断依据','待决定项'],[(m['id']+' '+m['name']+' / '+m['businessPackage'],labels.get(assessment(m)['p1A'],assessment(m)['p1A']),labels.get(assessment(m)['p1B'],assessment(m)['p1B']),labels.get(assessment(m)['review'],assessment(m)['review']),assessment(m)['basis'],assessment(m)['blockingIssueIds']) for m in active_mods])
@@ -62,6 +62,7 @@ for m in mods:
  if not pp:continue
  t+=f'### {m["id"]} {m["name"]} — {scope_status(m["id"])}\n\n'
  t+=table(['页面证据ID','路径/页面','证据等级及日期','字段观察数','状态/页签/说明','来源','未核实及受限项'],[(p['id'],p['path'],p['level']+'；'+p['observedDate'],len(p['fields']),(p['visibleStates']+'；'+p['sourceStatement']).strip('；'),page_link(p),p['unknown']) for p in pp])+'\n'
+t+='## 原子单元收口追溯\n\n'+table(['页面/收口时间','源操作与对象记录','规格与实现对应','收口性质与下一步'],[(p['id']+'；'+p['traceability']['closedAt'],'、'.join(p['traceability']['operationIds'])+'；'+'；'.join(p['traceability']['recordIds']),'、'.join(p['traceability']['contractIds'])+'；实现表同ID：'+'、'.join(p['traceability']['implementationRequirementIds']),p['traceability']['kind']+'；'+p['traceability']['next']) for p in pages if p.get('traceability')])+'\n'
 t+='## 通用页面属性边界\n\n原规划模板要求的布局、排序、错误提示、详情页签、前后置条件及权限，仅在来源明确记载时适用。没有独立证据的属性统一为未核实；仅具体执行记录可证明已诱发的校验结果；没有执行证据的不从本项目代码补写原站默认值。操作入口只证明存在。\n'
 (D/'P1_Page_Catalog.md').write_text(t)
 # Field dictionary: true/false/null remain distinguishable.
@@ -287,3 +288,21 @@ if pb.get('reviewPackage'):
  summary+='## 集中决策与阶段结论\n\n需选择的事项：'+'；'.join(x['id']+' '+x['topic'] for x in decisions)+'。现状、推荐、备选及影响完整见[P1B就绪与待决记录](P1B_Readiness.md)。推荐不代表已批准。R-SPEC-02/S-SPEC-01先补证后评审，不要求即时选择；D1–D7/E1/E2不重问。\n\n'+rp['gateConclusion']+'\n\n'
  summary+='## 证据、规格及测试数据入口\n\n'+table(['材料','作用'],[('[P1A覆盖与内部功能](P1A_Coverage.md)','当前15逐项证据/深度/限制与33暂缓历史'),('[总体PRD](P1B_PRD.md)','业务包入口、全局契约、六基础及外部预留'),('[需求就绪与待决记录](P1B_Readiness.md)','必要选择、先补证事项、原59适用映射'),('[已有实现对应](P1B_Implementation_Map.md)','复用/待核验/补齐/修改及历史验证版本'),('[Scope_Register.json](Scope_Register.json)','p1Baseline.dataValidation.records/operations为合成数据当前状态和逐步操作唯一事实来源；residualHistory保留过时阶段描述'),('[恢复记录](Controller_Resume.md)','实际执行点、已确认结果及连接恢复后顺序')])+'\n下方保留完整同源证据、五类交付及历史适用说明；旧阶段文字不能覆盖上面的当前范围、状态或授权。\n\n---\n\n'
  f=D/'P1_Review.md';f.write_text(summary+f.read_text())
+
+# Recovery headers are views of the same currentRun, not another live ledger.
+cr=b['currentRun']
+if cr.get('currentFocus'):
+ header='# 当前执行恢复点：'+cr['currentFocus']+'\n\n'
+ header+='事实来源：Scope_Register.json / p1Baseline.currentRun、BC-C30.traceability、roadmap。记录时间：'+cr['latestCheckpointAt']+'。\n\n'
+ header+='本单元编辑基准 HEAD：`'+cr['latestCommittedHead']+'`，分支 `'+cr['branch']+'`。该值是编辑前的已存在提交，不冒充本文件最终所属提交。恢复时用 `git log -1 --format=%H` 核实际 HEAD，`git log -1 --format=%H -- docs/delivery/Scope_Register.json` 定位本记录所属提交，`git status --short` 核当前未提交状态；同步结果以同次 push / ls-remote 核验为准。\n\n'
+ header+='恢复时工作区快照：'+cr['workingTreeAtResume']+' 本单元只修改文档和同源生成/一致性脚本；提交前的修改清单不作为提交后的未提交状态。\n\n'
+ header+=progress_text()+' '+ds.get('deferredDisplayLabel','33个模块本次暂缓')+'；原48范围/59任务及历史证据保留，基础六类另列。P2受限技术验收、F01–F04已有实现及历史验证、D1–D7/E1/E2原义不变。\n\n'
+ header+='BC-C30原取证已在此前完成：P1OP-C-019手工入池、020设置培养中/3~6个月；本次完成字段默认值边界、源操作/记录→BP-C-REQ-04→实现差异追溯，修正旧“未手动入池”说明。观察日期仍为原记录日期，本次整理不计新增源执行或复刻测试。\n\n'
+ header+='最近确认的M17池fd92d3a7-7925-4b36-a22b-a4ab1fcfa049有1名EA（EmployeeInformation 71e030ac-c52e-475f-b7bb-c321af71e46c），培养中/3~6个月；成员UUID未知，用复合定位。未出池/重入/建立继任；停用IDP流程一次保存结果未知须先查。M18已保存项目3d1d07ed-d10e-4c51-8a91-22d5d20d83b1仍以最近新建/未启动证据为准，不重建。当前状态未能联网复查，不能将此前状态写成本次新读。\n\n'
+ header+='浏览器：'+cr['sourceBrowsingStatus']+' 合成测试授权保持，不逐条重问；未出现重新登录/全部授权提示，不绕过控制。\n\n'
+ header+='下一步：'+cr['next']+'\n\n'
+ header+='验证范围仅文档一致性、引用、同源生成及改动边界；历史测试不记本轮复验，业务和生产验收未提升。未改产品代码、部署或访问者，未开启代理。后续历史记录只保留发生时含义，不覆盖本段当前焦点。\n\n<!-- P1_RESUME_CURRENT_END -->\n\n'
+ for f in [D/'Controller_Resume.md',R/'docs/Execution_Checkpoint.md']:
+  previous=f.read_text();marker='<!-- P1_RESUME_CURRENT_END -->'
+  if marker in previous:previous=previous.split(marker,1)[1].lstrip()
+  f.write_text(header+previous)

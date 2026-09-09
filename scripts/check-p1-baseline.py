@@ -4,6 +4,17 @@ checks=[]
 def check(v,name):
  assert v,name
  checks.append(name)
+operation_by_id={x['id']:x for x in s['p1Baseline']['dataValidation']['operations']}
+record_ids={x['objectId'] for x in s['p1Baseline']['dataValidation']['records']}
+contract_ids={c['id'] for p in s['p1B']['packages'] for c in p['contracts']}
+implementation_ids={x['requirement'] for x in s['p1B']['implementationMap']}
+for page in s['p1Baseline']['pages']:
+ trace=page.get('traceability')
+ if not trace:continue
+ check(bool(trace['operationIds']) and all(i in operation_by_id and page['id'] in operation_by_id[i]['evidence'] for i in trace['operationIds']),page['id']+'收口操作存在且关联同页证据')
+ check(bool(trace['recordIds']) and set(trace['recordIds'])<=record_ids,page['id']+'收口对象存在于原记录表')
+ check(bool(trace['contractIds']) and set(trace['contractIds'])<=contract_ids and set(trace['implementationRequirementIds'])<=implementation_ids,page['id']+'收口规格及实现映射有效')
+ check(bool(trace['next']) and bool(trace['closedAt']) and bool(trace['kind']),page['id']+'收口时间/性质/下一步明确')
 check(len(s['modules'])==48 and len(s['acceptanceTasks'])==59,'48组和59原任务保留')
 ds=s['deliveryScope']
 expected={'M01','M19','M48','M32','M03','M06','M17','M18','M26','M37','M12','M16','M27','M11','M07'}
