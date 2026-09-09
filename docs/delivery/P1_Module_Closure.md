@@ -2,13 +2,13 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 
 # 模块闭环、滚动转序及当前收口清单
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T18:32:47.077203+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T18:40:16.868160+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M17；备用 未启用；实际执行 M17。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M03；备用 未启用；实际执行 M03。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
 | R版本 | 模块顺序 | 当前边界 |
 |---|---|---|
@@ -37,8 +37,8 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 | M06 任职资格 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M26 360度评估 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M18 在线盘点 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M17 继任与发展 | R2 / primary | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M03 干部管理2.0 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M17 继任与发展 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M03 干部管理2.0 | R2 / primary | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M27 学习管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M16 绩效管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M12 招聘管理系统 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
@@ -68,6 +68,17 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 | M06-CLOSE-02 / 级别 | BP-C-REQ-02 | BC-C20；BC-C21；BC-C24 | P1硬条件已满足；历史差异和补验责任保留后续阶段 | False；稳定关系/评分尺度/版本漂移/错误授予和敏感材料权限 | 按所审完整推荐与受限批准逐项核对；M06-P1-APPROVAL-R2-20260909 | 受限通过 |
 | M06-CLOSE-03 / 指标 | BP-C-REQ-02 | BC-C22；BC-C23；BC-C24 | P1硬条件已满足；历史差异和补验责任保留后续阶段 | False；稳定关系/评分尺度/版本漂移/错误授予和敏感材料权限 | 按所审完整推荐与受限批准逐项核对；M06-P1-APPROVAL-R2-20260909 | 受限通过 |
 | M06-CLOSE-04 / 资格标准 | BP-C-REQ-02 | BC-C21；BC-C23 | P1硬条件已满足；历史差异和补验责任保留后续阶段 | False；稳定关系/评分尺度/版本漂移/错误授予和敏感材料权限 | 按所审完整推荐与受限批准逐项核对；M06-P1-APPROVAL-R2-20260909 | 受限通过 |
+
+
+## M17完整登记范围收口清单
+
+| 问题/原范围 | 需求 | 证据 | 具体缺口 | 阻塞P1/风险 | 关闭方式与判据 | 当前状态 |
+|---|---|---|---|---|---|---|
+| M17-CLOSE-01 / 盘点 | BP-C-REQ-04 | BC-P1C-M17 | 部分覆盖M17入口；与M18记录共用未证，以明确来源引用而不合并模块 | True；错误后备/任用暗示、自动资格变化、指导自审、历史成员区间重叠、健康指标分母偏差和敏感人才名单泄漏。 | 明确批准所列规则与LIMIT，或补针对性证据修订；材料完备不能代签；原站事实/静态事实/候选分列；e40f75f59da103d449e28cb00b87aca4ea8c3e40 | 已完成待评审 |
+| M17-CLOSE-02 / 人才池 | BP-C-REQ-04 | BC-C29；BC-C30 | 历史池/成员/阶段合成执行已覆盖；规则、重入、指导权限部分/未覆盖，待SPEC01/03 | True；错误后备/任用暗示、自动资格变化、指导自审、历史成员区间重叠、健康指标分母偏差和敏感人才名单泄漏。 | 明确批准所列规则与LIMIT，或补针对性证据修订；材料完备不能代签；原站事实/静态事实/候选分列；e40f75f59da103d449e28cb00b87aca4ea8c3e40 | 已完成待评审 |
+| M17-CLOSE-03 / 继任 | BP-C-REQ-04 | BC-C31 | 源表单部分覆盖、目标选择受限；现简单候选静态，准备度/区间/岗位覆盖待SPEC02 | True；错误后备/任用暗示、自动资格变化、指导自审、历史成员区间重叠、健康指标分母偏差和敏感人才名单泄漏。 | 明确批准所列规则与LIMIT，或补针对性证据修订；材料完备不能代签；原站事实/静态事实/候选分列；e40f75f59da103d449e28cb00b87aca4ea8c3e40 | 已完成待评审 |
+| M17-CLOSE-04 / 发展计划 | BP-C-REQ-05 | BC-P1C-M17-02；BC-C27；BC-C28 | 源空表/模板/流程局部；旧流程保存unknown，阶段执行未覆盖，待SPEC03/04 | True；错误后备/任用暗示、自动资格变化、指导自审、历史成员区间重叠、健康指标分母偏差和敏感人才名单泄漏。 | 明确批准所列规则与LIMIT，或补针对性证据修订；材料完备不能代签；原站事实/静态事实/候选分列；e40f75f59da103d449e28cb00b87aca4ea8c3e40 | 已完成待评审 |
+| M17-CLOSE-05 / 健康度 | BP-C-REQ-04 | BC-C06 | 仅页面标题到达；公式/时点/范围未覆盖，不以现继任人数冒完整健康指数 | True；错误后备/任用暗示、自动资格变化、指导自审、历史成员区间重叠、健康指标分母偏差和敏感人才名单泄漏。 | 明确批准所列规则与LIMIT，或补针对性证据修订；材料完备不能代签；原站事实/静态事实/候选分列；e40f75f59da103d449e28cb00b87aca4ea8c3e40 | 已完成待评审 |
 
 
 ## M18完整登记范围收口清单
@@ -133,6 +144,8 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 
 
 M06当前材料：[P1受限通过，需求基线已批准](P1_M06_Review_Package.md)。批准、源取证及后续执行各自独立。
+
+M17当前材料：[材料完成、等待所有者集中评审](P1_M17_Review_Package.md)。批准、源取证及后续执行各自独立。
 
 M18当前材料：[材料完成、等待所有者集中评审](P1_M18_Review_Package.md)。批准、源取证及后续执行各自独立。
 

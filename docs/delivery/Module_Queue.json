@@ -782,7 +782,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M17唯一主模块；夜间材料等待队列M26,M18",
+    "activeWorkPackage": "M03唯一主模块；夜间材料等待队列M26,M18,M17",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -797,7 +797,7 @@
       "BP-S"
     ],
     "nextTasks": [
-      "M17唯一主模块：池、继任、发展计划、健康度完整范围，先核未知旧流程，无法确认保持unknown；原站只读"
+      "M03唯一主模块：选拔任用/档案/考察期/述职，复用任期493a9f87证据，核对独立审批、生效和敏感权限"
     ],
     "state": "R1仅P2设计批准保持；R2模块按真实批准关闭，未批模块材料可串行排队",
     "scopeChange": "SCOPE-20260909-CORE15",
@@ -811,10 +811,10 @@
       "id": "MODE-MODULE-CLOSURE-R-20260909",
       "authorizedAt": "2026-09-09T15:43:36.730682+00:00",
       "mode": "模块闭环优先、按R版本滚动转序",
-      "primaryModuleId": "M17",
+      "primaryModuleId": "M03",
       "backupModuleId": null,
       "backupCandidateId": null,
-      "activeExecutionModuleId": "M17",
+      "activeExecutionModuleId": "M03",
       "wipLimit": 1,
       "backupLimit": 1,
       "backupActivation": "仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归",
@@ -949,6 +949,22 @@
             "M18-LIMIT-01"
           ],
           "restore": "集中决定后按正式关闭顺序M26优先应用；补证仅围绕所列问题"
+        },
+        {
+          "at": "2026-09-09T18:40:16.868160+00:00",
+          "from": "M17",
+          "to": "M03",
+          "reason": "本模块全部可自主材料完成，按本轮明确夜间材料授权串行移交；不代表关闭",
+          "remaining": [
+            "M17-SPEC-01",
+            "M17-SPEC-02",
+            "M17-SPEC-03",
+            "M17-SPEC-04",
+            "M17-SPEC-05",
+            "M17-SPEC-06",
+            "M17-LIMIT-01"
+          ],
+          "restore": "集中决定后按正式关闭顺序M26优先应用；补证仅围绕所列问题"
         }
       ],
       "backupActivationHistory": [
@@ -999,11 +1015,13 @@
         ],
         "waitingModuleIds": [
           "M26",
-          "M18"
+          "M18",
+          "M17"
         ],
         "preparedModuleIds": [
           "M26",
-          "M18"
+          "M18",
+          "M17"
         ],
         "formalClosureOrder": [
           "M37",

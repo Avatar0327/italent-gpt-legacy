@@ -2,7 +2,7 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M17；备用 未启用；实际执行 M17。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M03；备用 未启用；实际执行 M03。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
 | R版本 | 模块顺序 | 当前边界 |
 |---|---|---|
@@ -31,8 +31,8 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 | M06 任职资格 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M26 360度评估 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M18 在线盘点 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M17 继任与发展 | R2 / primary | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M03 干部管理2.0 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M17 继任与发展 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M03 干部管理2.0 | R2 / primary | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M27 学习管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M16 绩效管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M12 招聘管理系统 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
@@ -46,7 +46,7 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 
 # 当前15模块P1集中评审与恢复点
 
-生成来源：同一Scope_Register.p1B.reviewPackage及modules[].p1；2026-09-09T18:32:47.077203+00:00。基于已推送源码/文档提交`7a0b7baafcecc59b4ed5f1501b9f01b8e0d4abbc`；本报告后续提交以实际Git HEAD为准。
+生成来源：同一Scope_Register.p1B.reviewPackage及modules[].p1；2026-09-09T18:40:16.868160+00:00。基于已推送源码/文档提交`e40f75f59da103d449e28cb00b87aca4ea8c3e40`；本报告后续提交以实际Git HEAD为准。
 
 P1受限关闭6/15；R2夜间材料串行准备。
 
@@ -58,7 +58,7 @@ M01组织/职位/入职/兼职/法人/未来离职；M07薪资组/包前置；M0
 
 当前15模块均有总体/分包契约或明确受限规格；原内部功能逐项映射，字段/角色/状态/依赖/异常/验收及实现差异同源。组织绩效、OKR、健康度、社保/个税/激励等未探索细则保留，已确认D1–D7与候选分开。
 
-M18完整范围材料已准备；新规则未批，6/15受限关闭不提升；只main P1文档/生成，无源写/产品/P2工作树修改。
+M17完整范围材料已准备；新规则未批，6/15受限关闭不提升；只main P1文档/生成，无源写/产品/P2工作树修改。
 
 R1六基础需求及1小时/4小时/30天恢复目标已批；平台可行性与运行验收未确认，其他R适用另核
 
@@ -73,7 +73,7 @@ R1六基础需求及1小时/4小时/30天恢复目标已批；平台可行性与
 
 ## 集中决策与阶段结论
 
-需选择的事项：R-SPEC-01 候选人主对象与招聘需求/人才库关系；C-SPEC-01 360评价角色、匿名对象和低样本报告发布边界；M26-SPEC-01 评价角色、邀请身份与匿名承诺；M26-SPEC-02 匿名阈值、分母、缺评与报告开放；M26-SPEC-03 题库、套卷、尺度与题目版本；M26-SPEC-04 活动、答卷撤回及报告更正生命周期；M26-SPEC-05 消费契约、数据用途及异常责任；M18-SPEC-01 项目对象、范围快照与标准工具契约；M18-SPEC-02 多维评价、九宫格和缺失值；M18-SPEC-03 校准会议、利益回避与结果版本；M18-SPEC-04 发布、撤回、更正与敏感结果开放；M18-SPEC-05 人才池、继任消费与异常恢复。现状、推荐、备选及影响完整见[P1B就绪与待决记录](P1B_Readiness.md)。推荐不代表已批准。R-SPEC-02/S-SPEC-01先补证后评审，不要求即时选择；D1–D7/E1/E2不重问。
+需选择的事项：R-SPEC-01 候选人主对象与招聘需求/人才库关系；C-SPEC-01 360评价角色、匿名对象和低样本报告发布边界；M26-SPEC-01 评价角色、邀请身份与匿名承诺；M26-SPEC-02 匿名阈值、分母、缺评与报告开放；M26-SPEC-03 题库、套卷、尺度与题目版本；M26-SPEC-04 活动、答卷撤回及报告更正生命周期；M26-SPEC-05 消费契约、数据用途及异常责任；M18-SPEC-01 项目对象、范围快照与标准工具契约；M18-SPEC-02 多维评价、九宫格和缺失值；M18-SPEC-03 校准会议、利益回避与结果版本；M18-SPEC-04 发布、撤回、更正与敏感结果开放；M18-SPEC-05 人才池、继任消费与异常恢复；M17-SPEC-01 人才池、自动规则与出池重入历史；M17-SPEC-02 准备度、继任资格与岗位覆盖；M17-SPEC-03 指导角色、动态关系与独立核验；M17-SPEC-04 发展计划模板、阶段与异常恢复；M17-SPEC-05 组织健康度与人才分析分母；M17-SPEC-06 敏感权限、跨域建议与迁移边界。现状、推荐、备选及影响完整见[P1B就绪与待决记录](P1B_Readiness.md)。推荐不代表已批准。R-SPEC-02/S-SPEC-01先补证后评审，不要求即时选择；D1–D7/E1/E2不重问。
 
 R1仅P2设计获准；R2未批四模块和基础适用评审不代签
 
@@ -106,7 +106,7 @@ P1A/P1B为用户新增规划细分。当前材料覆盖范围不是完成声明�
 
 # P1原站盘点与需求基线｜评审材料
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T18:32:47.077203+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T18:40:16.868160+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
@@ -128,7 +128,7 @@ P1A/P1B为用户新增规划细分。当前材料覆盖范围不是完成声明�
 | M11 假勤管理 / BP-A | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 已细化固定班/单班请假/额度预留/冻结来源/重冻版本及工资失效场景；原月报发布确认封存保留独立规格。跨班/轮班/加班调休/授予结转/企业参数及原站完整链仍缺，AI排班独立能力已暂缓，未就绪。 |  |
 | M12 招聘管理系统 / BP-R | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 需求/职位/面试/重复关系/入职后管控已有局部证据。已细化自然人-申请-人才库差异、Offer/接受/入职原子性、创建请求恢复与权限场景；R-SPEC-01及SCOPE-DEP-01未决，原站关键链与人才库/身份同步/多角色仍缺，未就绪。 | R-SPEC-01；SCOPE-DEP-01 |
 | M16 绩效管理 / BP-P | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 原站等级/模板/缺评/系数/兼职规则已有；已细化员工活动-计划-结果-申诉状态、角色隔离、空隙/缺评计算候选和跨人才/薪资消费。组织绩效独立规格和OKR受限提纲明确保留，不由个人考核代替；尚缺原站完整链/组织计算/OKR/业务评审，未就绪。 |  |
-| M17 继任与发展 / BP-C | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | C27计划/模板/动态指导角色与草稿已读，C28停用发展流程保存结果未知（查询空不重建）；C29–30池ID/EA入池/培养中/准备度3~6个月已核；C31继任目标选择器未找到既有测试JA/JB，关系草稿取消。仍缺IDP阶段/继任引用源/健康度和角色恢复。 |  |
+| M17 继任与发展 / BP-C | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 完整原范围材料已完成，M17-SPEC-01,M17-SPEC-02,M17-SPEC-03,M17-SPEC-04,M17-SPEC-05,M17-SPEC-06与LIMIT未批准；不计关闭 | M17-SPEC-01；M17-SPEC-02；M17-SPEC-03；M17-SPEC-04；M17-SPEC-05；M17-SPEC-06；M17-LIMIT-01 |
 | M18 在线盘点 / BP-C | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 完整原范围材料已完成，M18-SPEC-01,M18-SPEC-02,M18-SPEC-03,M18-SPEC-04,M18-SPEC-05与LIMIT未批准；不计关闭 | M18-SPEC-01；M18-SPEC-02；M18-SPEC-03；M18-SPEC-04；M18-SPEC-05；M18-LIMIT-01 |
 | M19 审批中心 / BP-I | 受限完成（仅P1） | 需求就绪 | 受限评审通过（仅P1） | M19-P1-APPROVAL-20260909批准所审fb35ba03dfd6563f59c814b52fa8a6fd125422bc推荐及限制；本模块P1无硬阻塞，受限关闭/需求就绪/模块转序就绪。 |  |
 | M26 360度评估 / BP-C | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 完整原范围材料已完成，M26-SPEC-01,M26-SPEC-02,M26-SPEC-03,M26-SPEC-04,M26-SPEC-05与LIMIT未批准；不计关闭 | M26-SPEC-01；M26-SPEC-02；M26-SPEC-03；M26-SPEC-04；M26-SPEC-05；M26-LIMIT-01 |
@@ -170,7 +170,7 @@ P1A/P1B为用户新增规划细分。当前材料覆盖范围不是完成声明�
 | 业务包 | 证据与当前规格 | 未就绪条件与下一步 |
 |---|---|---|
 | 组织员工 | BC-F03、BC-F02、P1-CONTRACT-LIST、P1-CONTRACT-TYPE、BC-F04、BC-F05、BC-F06、BC-F07、P1-ORG-RECHECK、BC-F08、BC-F09、BC-F10、BC-F11、BC-F12、BC-F13、BC-F14、BC-F15、BC-F16、BC-F17、BC-F18、BC-F19、BC-F20、BC-F21、BC-F22、BC-F23、BC-F24、BC-F25、BC-F26、BC-F27、BC-F28、BC-F29、BC-F30、BC-F31、BC-F32、BC-F33、BC-F34、BC-F35、BC-F36、BC-F37、BC-F38、BC-F39、BC-F40、BC-F41、BC-F42、BC-F43、BC-F44、BC-F45、BC-F46；[P1B_BP_F_Specification.md](../../docs/delivery/P1B_BP_F_Specification.md) | 当前M01需求就绪（P1受限通过）；历史M20暂缓，基础仅M01适用契约获批准；M01 组织员工：用户明确批准9e379ff版10项推荐及M01-LIMIT-01；六项原范围关闭，P1受限通过，需求就绪、模块转序就绪。不是完整源验证或P3/P4验收。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；M01关闭转M19；M01 P2工作等待R1版本条件，不重复宽泛原站探索 |
-| 干部人才 | US-C01-02、BC-C01、BC-C02、BC-C03、BC-C08、BC-C09、BC-C10、BC-C11、BC-C12、BC-C13、BC-C25、BC-C26、BC-C04、BC-P1C-M06、BC-C19、BC-C20、BC-C22、BC-C21、BC-C23、BC-C24、BC-C06、BC-P1C-M17、BC-P1C-M17-02、BC-C27、BC-C28、BC-C29、BC-C30、BC-C31、P1-CAL、P1-STD、P1-SUC、P1-POOL、BC-C37、BC-C38、BC-C39、BC-C40、BC-P1C-M26、BC-P1C-M26-02、BC-C14、BC-C15、BC-C16、BC-P1C-M37、BC-C32、BC-C33、BC-C34、BC-C35、BC-C36；[P1B_BP_C_Specification.md](../../docs/delivery/P1B_BP_C_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合；M03 干部管理2.0：BC-C10–13评价配置/算法帮助、C25干部登记/任期ID/述职关联、C26考察结束跨页持久化及考核草稿已有；考核/任免审批通知路由、转正与恢复、角色及评分边界仍缺，未完整P1A/需求就绪。；M06 任职资格：M06-P1-APPROVAL-R2-20260909；四退出条件满足，P1无剩余硬阻塞，原站未知保留受限分类；M17 继任与发展：C27计划/模板/动态指导角色与草稿已读，C28停用发展流程保存结果未知（查询空不重建）；C29–30池ID/EA入池/培养中/准备度3~6个月已核；C31继任目标选择器未找到既有测试JA/JB，关系草稿取消。仍缺IDP阶段/继任引用源/健康度和角色恢复。；M18 在线盘点：完整原范围材料已完成，M18-SPEC-01,M18-SPEC-02,M18-SPEC-03,M18-SPEC-04,M18-SPEC-05与LIMIT未批准；不计关闭；M26 360度评估：完整原范围材料已完成，M26-SPEC-01,M26-SPEC-02,M26-SPEC-03,M26-SPEC-04,M26-SPEC-05与LIMIT未批准；不计关闭；M37 人才标准：M37-P1-APPROVAL-R2-20260909；四退出条件满足，P1无剩余硬阻塞，原站未知保留受限分类；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；执行按roadmap.moduleExecutionOrder及executionPolicy，不以历史业务包成员顺序开启平行全量探索；本包历史范围/实现/证据保留。 |
+| 干部人才 | US-C01-02、BC-C01、BC-C02、BC-C03、BC-C08、BC-C09、BC-C10、BC-C11、BC-C12、BC-C13、BC-C25、BC-C26、BC-C04、BC-P1C-M06、BC-C19、BC-C20、BC-C22、BC-C21、BC-C23、BC-C24、BC-C06、BC-P1C-M17、BC-P1C-M17-02、BC-C27、BC-C28、BC-C29、BC-C30、BC-C31、P1-CAL、P1-STD、P1-SUC、P1-POOL、BC-C37、BC-C38、BC-C39、BC-C40、BC-P1C-M26、BC-P1C-M26-02、BC-C14、BC-C15、BC-C16、BC-P1C-M37、BC-C32、BC-C33、BC-C34、BC-C35、BC-C36；[P1B_BP_C_Specification.md](../../docs/delivery/P1B_BP_C_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合；M03 干部管理2.0：BC-C10–13评价配置/算法帮助、C25干部登记/任期ID/述职关联、C26考察结束跨页持久化及考核草稿已有；考核/任免审批通知路由、转正与恢复、角色及评分边界仍缺，未完整P1A/需求就绪。；M06 任职资格：M06-P1-APPROVAL-R2-20260909；四退出条件满足，P1无剩余硬阻塞，原站未知保留受限分类；M17 继任与发展：完整原范围材料已完成，M17-SPEC-01,M17-SPEC-02,M17-SPEC-03,M17-SPEC-04,M17-SPEC-05,M17-SPEC-06与LIMIT未批准；不计关闭；M18 在线盘点：完整原范围材料已完成，M18-SPEC-01,M18-SPEC-02,M18-SPEC-03,M18-SPEC-04,M18-SPEC-05与LIMIT未批准；不计关闭；M26 360度评估：完整原范围材料已完成，M26-SPEC-01,M26-SPEC-02,M26-SPEC-03,M26-SPEC-04,M26-SPEC-05与LIMIT未批准；不计关闭；M37 人才标准：M37-P1-APPROVAL-R2-20260909；四退出条件满足，P1无剩余硬阻塞，原站未知保留受限分类；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；执行按roadmap.moduleExecutionOrder及executionPolicy，不以历史业务包成员顺序开启平行全量探索；本包历史范围/实现/证据保留。 |
 | 学习 | P1-LEARN-02、P1-LEARN-03-04、US-L01-02、BC-L01-02、BC-L03、BC-L04-05-07-10、BC-L06-08、BC-L06-EXAM、BC-L09、BC-L11、P1-INSTRUCTOR、P1-TEACHING、P1-CERTIFICATION、P1-CERT-DETAIL、P1-MENTOR、P1-CERTIFICATE、P1-CREDIT、BC-L12、BC-P1C-M27、BC-L13、BC-L14、BC-L15、BC-L16、BC-L17、BC-L18、BC-L19、BC-L20、BC-L21、BC-L22；[P1B_BP_L_Specification.md](../../docs/delivery/P1B_BP_L_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合；M27 学习管理：源模式/阶段/成绩/审批/共享/档案/费用配置已有，现补版本根-实例-轮次-任务、内容预览/退休、门槛和不同成绩分母的结构化候选验收。原站合成链、自动循环/已完成学员更新/跨轮版本、共享角色/费用实测仍缺；P1A不完整、P1B未就绪。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；执行按roadmap.moduleExecutionOrder及executionPolicy，不以历史业务包成员顺序开启平行全量探索；本包历史范围/实现/证据保留。 |
 | 绩效 | P1-GOAL、BC-P01、BC-P02、BC-P03、BC-P04、BC-P05、BC-P06、BC-P07、BC-P1C-M16、BC-P08、BC-P09、BC-P10、BC-P11、BC-P12、BC-P13、BC-P14、BC-P15、BC-P16；[P1B_BP_P_Specification.md](../../docs/delivery/P1B_BP_P_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合；M16 绩效管理：原站等级/模板/缺评/系数/兼职规则已有；已细化员工活动-计划-结果-申诉状态、角色隔离、空隙/缺评计算候选和跨人才/薪资消费。组织绩效独立规格和OKR受限提纲明确保留，不由个人考核代替；尚缺原站完整链/组织计算/OKR/业务评审，未就绪。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；执行按roadmap.moduleExecutionOrder及executionPolicy，不以历史业务包成员顺序开启平行全量探索；本包历史范围/实现/证据保留。 |
 | 招聘 | BC-R01、BC-R02、BC-R03、BC-R04-06、BC-R05、BC-R07、BC-R08、BC-P1C-M12、BC-R12、BC-R13、BC-R14、BC-R15、BC-R16；[P1B_BP_R_Specification.md](../../docs/delivery/P1B_BP_R_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合；M12 招聘管理系统：需求/职位/面试/重复关系/入职后管控已有局部证据。已细化自然人-申请-人才库差异、Offer/接受/入职原子性、创建请求恢复与权限场景；R-SPEC-01及SCOPE-DEP-01未决，原站关键链与人才库/身份同步/多角色仍缺，未就绪。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；执行按roadmap.moduleExecutionOrder及executionPolicy，不以历史业务包成员顺序开启平行全量探索；本包历史范围/实现/证据保留。 |
@@ -609,11 +609,11 @@ P1A关闭 6/15（完整0，受限6）；P1B需求就绪 6/15（完整0，受限6
 
 | 原登记功能 | 当前边界 | 规格ID | 证据/深度 | 仍缺内容/后续 |
 |---|---|---|---|---|
-| 盘点 | 保留 | BP-C-REQ-04 | BC-P1C-M17；入口与人才池分析局部观察 | M17盘点入口的对象/来源/校准及结果与M18是否共用未证；不直接将M18项目链作为M17已完成；恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。 |
-| 人才池 | 保留 | BP-C-REQ-04 | BC-C29、BC-C30；局部合成执行 | 测试池已存1EA培养中；自动入池/出池重入/饱和度/权限与版本待证；同人指导仅源事实；恢复云浏览器可列页/导航后，先按fd92d3a7池+EA71e030ac回读当前成员及阶段；补出池确认/重入历史与关联ID，再核继任JA/JB目标候选的可见来源/组织/状态。每次只对已确认合成对象操作；未知IDP流程先查后做，源执行结束立即记录。当前上述源操作因CDP刷新20秒超时受阻，不要求重新授权。 |
-| 继任 | 保留 | BP-C-REQ-04 | BC-C31；表单观察，目标候选受限 | JA/JB在M01已存且M03引用，但继任选择器不可得；需核来源/权限/状态，不重复职位或恢复M35全量；恢复云浏览器可列页/导航后，先按fd92d3a7池+EA71e030ac回读当前成员及阶段；补出池确认/重入历史与关联ID，再核继任JA/JB目标候选的可见来源/组织/状态。每次只对已确认合成对象操作；未知IDP流程先查后做，源执行结束立即记录。当前上述源操作因CDP刷新20秒超时受阻，不要求重新授权。 |
-| 发展计划 | 保留 | BP-C-REQ-05 | BC-P1C-M17-02、BC-C27、BC-C28；表单局部观察；流程保存结果待核 | 停用P1V流程一次保存后回查未得，先查实际结果再做；计划/模板草稿已取消，角色/日期/执行/恢复未闭合；恢复云浏览器可列页/导航后，先按fd92d3a7池+EA71e030ac回读当前成员及阶段；补出池确认/重入历史与关联ID，再核继任JA/JB目标候选的可见来源/组织/状态。每次只对已确认合成对象操作；未知IDP流程先查后做，源执行结束立即记录。当前上述源操作因CDP刷新20秒超时受阻，不要求重新授权。 |
-| 健康度 | 保留 | BP-C-REQ-04 | BC-C06；仅已到达页面标题/结构 | 组织健康分析维度、对象/时间分母、公式和权限未证；当前九宫格或继任人数不代健康度，不造综合指数；恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。 |
+| 盘点 | 保留 | BP-C-REQ-04 | BC-P1C-M17；入口与人才池分析局部观察 | 部分覆盖M17入口；与M18记录共用未证，以明确来源引用而不合并模块；集中规则/LIMIT评审及最小补证，不重开宽泛探索 |
+| 人才池 | 保留 | BP-C-REQ-04 | BC-C29、BC-C30；局部合成执行 | 历史池/成员/阶段合成执行已覆盖；规则、重入、指导权限部分/未覆盖，待SPEC01/03；集中规则/LIMIT评审及最小补证，不重开宽泛探索 |
+| 继任 | 保留 | BP-C-REQ-04 | BC-C31；表单观察，目标候选受限 | 源表单部分覆盖、目标选择受限；现简单候选静态，准备度/区间/岗位覆盖待SPEC02；集中规则/LIMIT评审及最小补证，不重开宽泛探索 |
+| 发展计划 | 保留 | BP-C-REQ-05 | BC-P1C-M17-02、BC-C27、BC-C28；表单局部观察；流程保存结果待核 | 源空表/模板/流程局部；旧流程保存unknown，阶段执行未覆盖，待SPEC03/04；集中规则/LIMIT评审及最小补证，不重开宽泛探索 |
+| 健康度 | 保留 | BP-C-REQ-04 | BC-C06；仅已到达页面标题/结构 | 仅页面标题到达；公式/时点/范围未覆盖，不以现继任人数冒完整健康指数；集中规则/LIMIT评审及最小补证，不重开宽泛探索 |
 
 ### M18 在线盘点
 
@@ -684,6 +684,8 @@ P1A关闭 6/15（完整0，受限6）；P1B需求就绪 6/15（完整0，受限6
 | 发展计划 | 保留 | BP-I-REQ-01；BP-C-REQ-05 | BC-C27、BC-C28；跨模块草稿线索；本人执行待探索 | P1无硬阻塞；后续差异验证保留：IDP本人/指导者/其他角色及日期/阶段/终止恢复待证，源停用流程保存结果先查询，不重复创建；P1关闭转M32；本模块残余验证转P2/P3/P4，R1整体仍需其余模块和适用基础评审 |
 
 M06当前材料：[P1受限通过，需求基线已批准](P1_M06_Review_Package.md)。批准、源取证及后续执行各自独立。
+
+M17当前材料：[材料完成、等待所有者集中评审](P1_M17_Review_Package.md)。批准、源取证及后续执行各自独立。
 
 M18当前材料：[材料完成、等待所有者集中评审](P1_M18_Review_Package.md)。批准、源取证及后续执行各自独立。
 
