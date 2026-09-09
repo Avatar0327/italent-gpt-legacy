@@ -63,7 +63,14 @@ for pack in s['p1B']['packages']:
    check(case.get('accepted') is False and case.get('executionThisRun') is False,case['id']+'候选场景未代签或假造本轮业务执行')
   if any(contract.get(k) for k in ['fieldDetails','roleMatrix','stateTransitions','acceptanceCases']):
    check(contract['currentApplicability']['status']!='本次交付暂缓',contract['id']+'本轮细化仅当前范围/基础，不扩暂缓独立规格')
+for cap in ds['baseCapabilities']:
+ check(cap.get('businessAccepted') is False,cap['id']+'基础能力未代签')
+ check(bool(cap.get('fieldDetails')) and all((R/x).exists() for x in cap.get('codeRefs',[])),cap['id']+'对象约束及静态证据路径齐备')
+ for case in cap.get('acceptanceCases',[]):
+  case_ids.append(case['id'])
+  check(all(case.get(k) for k in ['given','when','then','basis','status']) and case.get('accepted') is False and case.get('executionThisRun') is False,case['id']+'基础验收条件完整且未假造执行/签署')
 check(len(case_ids)==len(set(case_ids)),'细化场景ID唯一，不改变原59任务及完成分母')
+check(all(x.get('decision') or x.get('status') for x in s['p1B']['reviewIssues']),'待补证、待决策及已解决事项有独立状态，不将无需即时选择当作批准')
 for row in s['p1B']['implementationMap']:
  evidence=row.get('evidence')
  check(isinstance(evidence,(str,list)) and bool(evidence),row['requirement']+'实现证据结构有效')

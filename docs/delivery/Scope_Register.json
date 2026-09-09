@@ -838,8 +838,8 @@
           "p1B": "not_ready",
           "review": "not_signed",
           "approvedRestricted": false,
-          "assessmentAt": "2026-09-09T06:25:42.812752+00:00",
-          "basis": "BC-F28–46合成组织/职位/入职/兼职/法人/未来离职已有执行证据；F-SPEC-01–04、兼职终态/再入职时间条件、法人适用范围及完整任职权限尚缺。",
+          "assessmentAt": "2026-09-09T10:13:51.736038+00:00",
+          "basis": "组织/职位/待入职-入职/兼职/法人/未来离职已有合成链，F01–04静态需求补实际拒绝/业务failed/事务回滚/结果不明四类。F-SPEC-01改以同组织有效职位名唯一为推荐但未批准，职级另核；F-SPEC-02/03仍局部待决，完整M01重聘/多段任职/合同/事件和权限规则尚缺，未就绪。",
           "blockingIssueIds": [
             "F-SPEC-01",
             "F-SPEC-02",
@@ -3361,10 +3361,10 @@
           "p1B": "not_ready",
           "review": "not_signed",
           "approvedRestricted": false,
-          "assessmentAt": "2026-09-09T06:25:42.812752+00:00",
-          "basis": "已有流程列表及干预/委托说明；尚缺合成业务申请的审批路由、通知边界与独立角色执行；D7首包固定两级保持。 BC-I27补独立业务类型/8状态和合成标题查询；实际路由/权限/通知/状态回写未执行。",
+          "assessmentAt": "2026-09-09T10:19:00.264568+00:00",
+          "basis": "源流程类型/状态/干预帮助已有；已补实例-业务记录ID、管理员委托与节点办理区别，以及跨业务独立性/待办计数/失效处理场景。通用委托字段/有效期/路由/通知与异常回写尚缺、规则未评审；独立真人UAT归后续，不单独阻P1。",
           "blockingIssueIds": [],
-          "next": "已有流程列表及干预/委托说明；尚缺合成业务申请的审批路由、通知边界与独立角色执行；D7首包固定两级保持。",
+          "next": "浏览器恢复后随当前业务链补源路由/角色/结果；当前先完成15模块内部范围映射与全局一致性集中评审稿。",
           "acceptanceRefs": [
             {
               "taskId": "F03",
@@ -4783,10 +4783,10 @@
           "p1B": "not_ready",
           "review": "not_signed",
           "approvedRestricted": false,
-          "assessmentAt": "2026-09-09T06:25:42.812752+00:00",
-          "basis": "已有数据集/订阅/快照/权限结构；指标分母、时点及撤权后订阅行为、跨域投影尚缺，不发送订阅。",
+          "assessmentAt": "2026-09-09T10:19:00.264568+00:00",
+          "basis": "已补各数据集行粒度/分母/null/替代版本/工资来源与权限、仅三类日期过滤、导出及订阅恢复候选。源设计器/订阅权限与执行、组织历史口径和当前15领域结果报表仍缺，未就绪；没有发送或导出个人明细。",
           "blockingIssueIds": [],
-          "next": "已有数据集/订阅/快照/权限结构；指标分母、时点及撤权后订阅行为、跨域投影尚缺，不发送订阅。",
+          "next": "浏览器恢复后随当前业务链补源路由/角色/结果；当前先完成15模块内部范围映射与全局一致性集中评审稿。",
           "acceptanceRefs": [
             {
               "taskId": "I-INBOX-SOURCES",
@@ -6187,10 +6187,10 @@
           "p1B": "not_ready",
           "review": "not_signed",
           "approvedRestricted": false,
-          "assessmentAt": "2026-09-09T06:25:42.812752+00:00",
-          "basis": "已有本人/团队/待办入口和代码投影；单账号未证明员工身份办理、撤权与历史跨角色权限，按当前业务链同步。",
+          "assessmentAt": "2026-09-09T10:19:00.264568+00:00",
+          "basis": "已补本人/代办任务、请求展示状态、学习/绩效/360/工资分域规则，团队与OKR原范围保留。源员工角色、团队动态关系/各业务页面及权限例外仍需补证和评审；E2单账号不变，独立真人UAT不作P1前置。",
           "blockingIssueIds": [],
-          "next": "已有本人/团队/待办入口和代码投影；单账号未证明员工身份办理、撤权与历史跨角色权限，按当前业务链同步。",
+          "next": "浏览器恢复后随当前业务链补源路由/角色/结果；当前先完成15模块内部范围映射与全局一致性集中评审稿。",
           "acceptanceRefs": [
             {
               "taskId": "E-EXIT-TASKS",
@@ -7415,7 +7415,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-09T10:09:26.039630+00:00",
+    "updatedAt": "2026-09-09T10:21:24.780647+00:00",
     "authority": "Scope_Register.json为唯一范围/验收事实源；历史48/59保留，当前15模块及基础按SCOPE-20260909-CORE15。",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -40411,14 +40411,14 @@
       "latestAuthorizationAt": "2026-09-09T06:25:42.812752+00:00",
       "scopeChangeHead": "f31cb2b5e1894723288fd884d4e3bd895ae57327",
       "scopeChange": "SCOPE-20260909-CORE15",
-      "latestCheckpointAt": "2026-09-09T09:42:48.713911+00:00",
-      "latestCommittedHead": "33f6aa9",
+      "latestCheckpointAt": "2026-09-09T10:21:24.780647+00:00",
+      "latestCommittedHead": "584afb5b164197fdb849d56c4310fa7eced7d44e",
       "latestEvidenceRefs": [
         "BC-C39",
         "BC-C40"
       ],
-      "next": "原站恢复tab8.goto及title均报CDP refresh tabs超时，有限恢复已用；当前连接不可用，不判站点/角色拒绝或要求全量重授权。源M18项目ActivityId3d1d07ed-d10e-4c51-8a91-22d5d20d83b1新建/EA初始未计算，未启动。先继续可离线M16→M12→M11→M07、首包规则和六基础P1B，恢复后按同ID核流程/通知/结果，不重建。",
-      "browserRecovery": "原browser不可发现，按bootstrap指引唯一一次列出当前cdp为-5010-4469-b53e-cce23dbab461；tabs.list超时后遵照API在同实例new成功tab8，正在原站根路径恢复。未绕过访问/认证/网络控制，源业务无重建或启动。",
+      "next": "首包与六基础/三支撑静态细化已保存；继续当前15内部范围逐项映射及全局一致性集中评审。原站仍CDP连接受限，恢复按原ID续，不新建。",
+      "browserRecovery": "当前唯一cdp -5010-4469-b53e-cce23dbab461；tabs.list、tab8.goto及title均超时，已有限恢复，当前不继续重复调用。不是站点/角色拒绝证据，无强制重新登录或授权提示。",
       "sourceBrowsingStatus": "当前工具连接受限：tabs刷新超时；无新原站事实，后续为代码/既有证据静态分析"
     },
     "dataValidation": {
@@ -41532,7 +41532,7 @@
   "roadmap": {
     "revision": "2026-09-08-P1AB",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-09T10:09:26.039630+00:00",
+    "updatedAt": "2026-09-09T10:21:24.780647+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -41615,7 +41615,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "P1当前15模块：绩效/招聘/假勤/薪酬静态需求细化已保存，继续首包差异及六基础/三支撑模块全局审查；原站连接受限",
+    "activeWorkPackage": "P1当前15模块：首包、各专业域、三支撑和六基础静态需求细化已保存；继续原登记内部功能映射与集中评审一致性，原站连接受限",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -41630,8 +41630,8 @@
     ],
     "nextTasks": [
       "原站连接恢复为外部条件：tabs.list/goto/title的CDP超时已有限核查，当前不重复尝试或要求全量授权。源最后M18项目3d1d07ed-d10e-4c51-8a91-22d5d20d83b1新建、EA初始未计算、未启动，保存结果明确。",
-      "先收窄首包F-SPEC-01/02/03及M01完整范围F-SPEC-04；核原已确认决定、目录唯一/故障留痕/历史原单范围，补可执行差异预期。",
-      "完成M19/M48/M32随各当前业务链的角色/字段/状态/版本投影，以及六基础身份/权限/审计/附件历史/恢复/外部契约；一致性检查不执行产品变更或人类多角色测试。",
+      "首包F-SPEC-01/02/03及完整M01 F-SPEC-04已收窄；继续15模块原登记内部功能逐项映射到既有规格/证据/具体受限分支，禁止静默缩减。",
+      "六基础和M19/M48/M32字段/角色/统计/状态/异常/候选验收已细化；继续审查各包来源/角色/历史/接口依赖、去重决策，并形成现有P1_Review集中评审入口。",
       "核当前15全部内部常规范围有规格或具体受限分支，集中去重待源证据/待决定/待评审；33暂缓不恢复、不计P1门槛。",
       "浏览器实际恢复后按现有源数据/操作ID续M18流程通知及采集条件→M26→M27→M16→M12→M11→M07；M19/M48/M32随链。M17流程保存结果待核、继任目标候选受限；EA未来离职10日起，重聘先查实际状态，绝不重复创建。"
     ],
@@ -41645,7 +41645,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-09T10:09:26.039630+00:00",
+    "updatedAt": "2026-09-09T10:21:24.780647+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -41694,7 +41694,59 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "fieldDetails": [
+              {
+                "field": "组织/职位/职级身份",
+                "definition": "组织父级、职位orgId、职级目录分别引用稳定ID；名称用于展示",
+                "constraints": "model组织同级名唯一；职位/职级code精确唯一。现有code未统一大小写归一，不可直接套合同编号规则",
+                "basis": "model.ts当前静态；F-SPEC-01"
+              },
+              {
+                "field": "停用与在用保护",
+                "definition": "现有员工非离职关联和pending审批目标属于目录在用检查",
+                "constraints": "approved但waiting/failed未进入同一目录inUse检查，因此目标可被停用，执行时转failed；这是D1已有恢复用例，不声称所有在途引用均禁止目录停用",
+                "basis": "model.ts/inUse、executeTransfer；历史f01-f04-transfer-roles测试"
+              },
+              {
+                "field": "人员主档与普通编辑",
+                "definition": "当前employee单一orgId/positionId/gradeId及job/level展示，新增默认试用",
+                "constraints": "旧任职标识/组织/职位/职级变化必须走审批；主兼职/待入职/重聘的多段任职是另列完整M01需求，不由upsert替代",
+                "basis": "model.ts/employee；BC-F36–46"
+              }
+            ],
+            "acceptanceCases": [
+              {
+                "id": "BP-F-REQ-01-AC01",
+                "given": "组织A/B有效，各有独立编码但同名职位；A再建第三个同名不同码",
+                "when": "对比源样本与当前代码",
+                "then": "源A内被拒/跨B成功，当前代码只要code不同不由名称拒绝；标“需修改或批准差异”，不将名称唯一历史文字视为当前已验收",
+                "basis": "BC-F32/33；model.ts/F-SPEC-01",
+                "status": "候选待评审；源码/历史证据静态对照，本轮未业务复验",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-F-REQ-01-AC02",
+                "given": "同级组织O与另一个父级下O，同一code的职位J/J2",
+                "when": "分别建立目录",
+                "then": "当前同级组织重名拒绝、不同父级可同名；职位重复code拒绝，即使组织不同。职级重名策略独立待审",
+                "basis": "model.ts org/position/grade静态",
+                "status": "候选待评审；源码/历史证据静态对照，本轮未业务复验",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-F-REQ-01-AC03",
+                "given": "已approved待执行调动目标职位P，无当前在职或pending引用",
+                "when": "停用P后执行调动",
+                "then": "当前目录可能允许停用，执行failed而保留批准/日期；恢复P后有权HR到期重试。不是已批准任意绕过在用保护",
+                "basis": "model.ts＋D1历史自动化证据，当前未复跑",
+                "status": "候选待评审；源码/历史证据静态对照，本轮未业务复验",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "object": "F03调动原单和执行记录",
@@ -41721,7 +41773,95 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "fieldDetails": [
+              {
+                "field": "申请ID与执行状态",
+                "definition": "Approval.status pending/approved/rejected/withdrawn；details.transfer.execution waiting/failed/applied/cancelled",
+                "constraints": "cancelled属于执行字段，不是审批status枚举。原单保留原批准/驳回结论；统一待办与报表须展示两轴",
+                "basis": "personnel-transfer.ts；D1/D2/D6"
+              },
+              {
+                "field": "时间和次数",
+                "definition": "effectiveOn业务日，eligibleAt该日北京00:00，lastAttemptAt/appliedAt实际UTC时刻，attempts已持久化执行尝试数",
+                "constraints": "提前拒绝不增次数；存储回滚后内存尝试不能当持久记录；计划日不替实际生效日",
+                "basis": "model.executeTransfer、route/repository；F-SPEC-02"
+              },
+              {
+                "field": "原单关系",
+                "definition": "previousApprovalId指同员工同类型可读终态原单",
+                "constraints": "当前任意历史终止均强关联，无期限/事项模型；建议更正/独立分开仍F-SPEC-03待批",
+                "basis": "model.request＋API额外可读校验"
+              },
+              {
+                "field": "快照与并发",
+                "definition": "source/target冻结组织/岗位/职级及名称/人员状态；workspace revision为提交前置",
+                "constraints": "当前source任职或目标名称变更可使执行失败需重新审；快照ID相等不等快照内容仍匹配。旧revision重试不能写第二份历史",
+                "basis": "transferSourceMatches及repository CAS"
+              }
+            ],
+            "acceptanceCases": [
+              {
+                "id": "BP-F-REQ-02-AC01",
+                "given": "D1两级均approved，计划日9月10日，业务时刻为9月9日23:59:59北京",
+                "when": "有权HR执行",
+                "then": "400拒绝且持久attempts不变；到10日00:00后才进入尝试校验，实际成功时刻单独记录；本轮不修改源/系统时钟",
+                "basis": "D1/D2已确认；历史测试按3d690cbb版本，不是本轮运行",
+                "status": "候选待评审；源码/历史证据静态对照，本轮未业务复验",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-F-REQ-02-AC02",
+                "given": "已到期approved/waiting，目标停用或编制0；源任职仍匹配",
+                "when": "执行并读取响应，再恢复条件重试",
+                "then": "第一次可HTTP200但execution=failed、attempts增1、员工/任职历史不变；重试成功applied/实际时间，不能用HTTP200提示已生效",
+                "basis": "model/route/commitState；D1，F-SPEC-02边界",
+                "status": "候选待评审；源码/历史证据静态对照，本轮未业务复验",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-F-REQ-02-AC03",
+                "given": "合法已到期执行，在事务写审计时存储异常",
+                "when": "按未来故障验收设计核响应、持久状态及恢复",
+                "then": "503整事务回滚，attempts/员工/历史不承诺变更；读取同审批ID/revision确认再重试，不以日志缺失断定业务未生效。独立故障日志能力尚未有保证",
+                "basis": "历史测试审计trigger全表回滚；本轮静态，无故障注入",
+                "status": "候选待评审；源码/历史证据静态对照，本轮未业务复验",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-F-REQ-02-AC04",
+                "given": "执行已成功，客户端响应丢失；已有appliedAt和新revision",
+                "when": "重新加载同审批ID，然后重放旧revision或再执行",
+                "then": "读取确定原成功；旧revision409/新revision重复状态400均不新增历史，计划/批准/执行事实不抹除。无通用自动重试服务",
+                "basis": "D1结果不明先刷新；route/model",
+                "status": "候选待评审；源码/历史证据静态对照，本轮未业务复验",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-F-REQ-02-AC05",
+                "given": "同员工半年以前有已withdrawn且与新事项无关的调动，无在途申请",
+                "when": "新建未关联独立调动",
+                "then": "当前API仍拒绝，不能称已有业务规则要求永久关联。F-SPEC-03建议显式区分独立事项，未批准前不改当前行为",
+                "basis": "model.request无时间/事项条件；D2/D6只确认更正重审",
+                "status": "候选待评审；源码/历史证据静态对照，本轮未业务复验",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-F-REQ-02-AC06",
+                "given": "原单已rejected/withdrawn或approved+cancelled，同人同类，当前发起者可读",
+                "when": "关联新单或试关联另一员工/不可读原单",
+                "then": "合法更正新单从一级且新审批快照；另一员工/类型/不可读拒绝；原单不复活、不改原日和历史结论",
+                "basis": "D2/D6/D7；API与model附加校验",
+                "status": "候选待评审；源码/历史证据静态对照，本轮未业务复验",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "object": "项目人力（M20）",
@@ -41773,7 +41913,53 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "fieldDetails": [
+              {
+                "field": "主身份和雇佣任职段",
+                "definition": "源EA EmployeeInformation主ID连续，入职/兼职/离职EmploymentRecord独立ID",
+                "constraints": "主ID相同不证明实际重聘已验证；未来离职10日事件与9日当前在职共存，必须先核业务日和实际状态",
+                "basis": "BC-F39/40/45/46，dataValidation实测"
+              },
+              {
+                "field": "重聘匹配与累计",
+                "definition": "源当前证件组合/手机/邮箱任一匹配、合并人员；司龄与合同次数另有配置",
+                "constraints": "匹配冲突、多对象命中、账号撤权恢复、不可回改时的纠错仍缺；不得从任一匹配推自动安全合并或恢复账号",
+                "basis": "BC-F15/16/23/25/43；F-SPEC-04"
+              }
+            ],
+            "acceptanceCases": [
+              {
+                "id": "BP-F-REQ-04-AC01",
+                "given": "同一合成EA有9日在职和10日起离职任职事件，其他源记录保持",
+                "when": "恢复后查询，再判断是否可办理重聘",
+                "then": "以实际业务日期/状态和既有ID确认，不提前新建第二人，不将future日期字段当当前已离职；实际重聘未发生前状态仍受限",
+                "basis": "BC-F45/46；数据操作授权不等生效时点豁免",
+                "status": "候选待评审；源码/历史证据静态对照，本轮未业务复验",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-F-REQ-04-AC02",
+                "given": "候选旧人员有邮箱命中A、手机号命中B，目标身份策略尚未批准",
+                "when": "设计重聘匹配冲突处理",
+                "then": "不得任意自动合并A/B；集中补证及评审冲突消解/复核/恢复，账号访问另行校验，不能继承过去角色",
+                "basis": "F-SPEC-04建议＋BASE-01/02；非原站已执行",
+                "status": "候选待评审；源码/历史证据静态对照，本轮未业务复验",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-F-REQ-04-AC03",
+                "given": "同员工主档重新关联新任职，旧薪资/考勤/资格/绩效已存在",
+                "when": "审阅各消费者字段和统计预期",
+                "then": "每条引用稳定主ID+相关任职/期间/版本，旧数据不覆盖；司龄/合同次数/薪税累计分别配置未明确时不造合计。重复薪资/人才计数须按各数据集定义",
+                "basis": "BC-F15/16/23/25/45＋全局对象契约",
+                "status": "候选待评审；源码/历史证据静态对照，本轮未业务复验",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "id": "BP-F-REQ-05",
@@ -45067,7 +45253,75 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "fieldDetails": [
+              {
+                "field": "本人关联与任务身份",
+                "definition": "平台userId→当前member.employeeId，task.id指业务原记录；人事待办使用personnel:审批ID，融入事项可带子项后缀",
+                "constraints": "没有员工绑定不虚构本人；任务可能多于员工数，不能用任务总数当人数。tasks含有权批阅的他人作业，不等全部本人业务",
+                "basis": "self-service/route.ts、work-inbox.ts"
+              },
+              {
+                "field": "请求投影状态",
+                "definition": "工资异议、假勤、培训、目标调整、绩效申诉、员工字段变更分别投影",
+                "constraints": "绩效申诉approved但无更正结果→awaiting_publish，有对应更正→corrected；不是写回源申诉status。员工字段非pending统一processed是展示汇总，不是完整原枚举",
+                "basis": "self-service/route.ts"
+              },
+              {
+                "field": "员工自助原范围",
+                "definition": "团队/审批/OKR/目标/假勤/学习/发展计划全部保持",
+                "constraints": "现个人聚合页不能代团队经理上下级范围、OKR与所有业务页面；源动态经理角色和当前manager+orgScope不等价",
+                "basis": "原M48登记；BC-L15；BP-P-REQ-09"
+              },
+              {
+                "field": "360任务可办与已答",
+                "definition": "本人assigned邀请+open项目+日期范围+在职，尚无feedbackReply时出任务",
+                "constraints": "答过不出任务，但原模块在开放期可改答；待办消失不等邀请取消/答卷锁定。M18新建对象无采集就不能造待答任务",
+                "basis": "self-service/route.ts；feedback.ts；BC-C40"
+              }
+            ],
+            "acceptanceCases": [
+              {
+                "id": "BP-I-REQ-01-AC01",
+                "given": "当前成员绑定EA，另有可独立批阅的EB作业",
+                "when": "读取自助tasks/requests/payslipCount",
+                "then": "本人请求仅EA相关，批阅任务可含EB但仍重验当前授权；payslipCount只EA非取消且批次published条数，不是工资金额或支付次数",
+                "basis": "self-service/route.ts",
+                "status": "待评审/待后续验证；本轮只静态核对",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-I-REQ-01-AC02",
+                "given": "绩效申诉approved，未生成更正结果，后独立发布更正",
+                "when": "重新读取本人请求",
+                "then": "先awaiting_publish后corrected；保留原申诉ID，不能把approved误报更正已生效或删除旧结果",
+                "basis": "self-service/route.ts＋BP-P-REQ-06",
+                "status": "待评审/待后续验证；本轮只静态核对",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-I-REQ-01-AC03",
+                "given": "360受邀者已提交一次且项目仍open",
+                "when": "查看待办再进原360入口修改答案",
+                "then": "聚合任务消失但源业务仍按开放窗口允许修改；动作必须重新校验当前状态，待办有无不是唯一授权依据",
+                "basis": "self-service/route.ts/feedback.ts",
+                "status": "待评审/待后续验证；本轮只静态核对",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-I-REQ-01-AC04",
+                "given": "M18主项目新建且EA对象初始/未计算，启动路由和通知未核",
+                "when": "审查与M48的任务映射",
+                "then": "当前不应凭对象一行标已生成或完成本人采集任务；需源业务实例ID/启动结果明确后补映射，不新增人类访问者",
+                "basis": "BC-C40；候选接口要求，未执行源启动",
+                "status": "待评审/待后续验证；本轮只静态核对",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "object": "报表与指标分母",
@@ -45094,7 +45348,97 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "fieldDetails": [
+              {
+                "field": "workforce/attendance",
+                "definition": "workforce每个当前可见员工一行，含可见离职；attendance按班次日期行，分钟/null",
+                "constraints": "员工表total不等在职人数，班次行不等员工数；邮箱/职级列按当前字段权，缺勤未知不可转0",
+                "basis": "reports.ts"
+              },
+              {
+                "field": "recruitmentOperations",
+                "definition": "一招聘需求一行，分别计hired/offered/approved/accepted/screening+interviewed/rejected",
+                "constraints": "active剩余名额=max(0,headcount-hired)，非active为null；待Offer人数不从名额预先扣除，不等外部金额预算",
+                "basis": "reports.ts；BP-R-REQ-01/02"
+              },
+              {
+                "field": "talentReview/successionCoverage",
+                "definition": "人才只取published且未被另一published supersedes的记录；继任按启用职位一行、去重当前在职候选员工",
+                "constraints": "latest指显式替代链而非每人按日期取最新；现任数和有效后备人数分开；准备度ready/one_year/two_years不是源M17五候选的已确认映射",
+                "basis": "reports.ts/review-versions.ts；BC-C30"
+              },
+              {
+                "field": "learningPlanProgress/learningExams",
+                "definition": "学习按配置实例/独立考试任务分别成行，完成要求/阶段/成绩来源独立",
+                "constraints": "未答或缺有效成绩null；当前状态/证据ID/历史复用应明示，不从档案缺行推出未学习",
+                "basis": "reports.ts/learning-grades.ts；BC-L19"
+              },
+              {
+                "field": "payrollOperations/Reconciliation/References",
+                "definition": "分别一批次、一已发布工资条、一工资条×考勤引用",
+                "constraints": "金额整数分；补差只加published；按批次组织授权，原员工组织快照保留；引用行total不是员工数或整月覆盖率",
+                "basis": "payroll-reports.ts"
+              },
+              {
+                "field": "日期/快照/导出",
+                "definition": "asOf为生成时刻，revision为当前读取版本；仅部分数据集应用from/to",
+                "constraints": "未实现按任意历史日重建权限与任职；CSV安全转义和审计不等订阅成功。源通知权限未授权时不得实发",
+                "basis": "reports.ts；BP-I-REQ-11"
+              }
+            ],
+            "acceptanceCases": [
+              {
+                "id": "BP-I-REQ-02-AC01",
+                "given": "active招聘需求3人，hired1/offered2/accepted1",
+                "when": "生成当前招聘进度",
+                "then": "剩余可入职2、待审录用2、已接受待入职1分别展示；不是3-所有在途人数，也不自动证明最终入职容量或预算通过",
+                "basis": "reports.ts/recruitmentOperations",
+                "status": "待评审/待后续验证；本轮只静态核对",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-I-REQ-02-AC02",
+                "given": "R1published、R2draft supersedes R1，后来R2published",
+                "when": "生成talentReview",
+                "then": "draft不挤掉R1；R2发布后排除R1；历史仍可追溯，不能只按updatedAt选择最新任意状态",
+                "basis": "review-versions.ts",
+                "status": "待评审/待后续验证；本轮只静态核对",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-I-REQ-02-AC03",
+                "given": "同员工两班次三份工资考勤引用、本人一条工资",
+                "when": "对比各数据集total",
+                "then": "班次/引用/工资各按自身行粒度统计，不声称员工数3或P1完成率；空金额/缺覆盖保留null",
+                "basis": "reports.ts/payroll-reports.ts",
+                "status": "待评审/待后续验证；本轮只静态核对",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-I-REQ-02-AC04",
+                "given": "查询workforce附from/to、查询attendance附相同from/to",
+                "when": "核返回日期行为",
+                "then": "目前只attendance按班次日过滤，workforce不受该日期参数限制；UI/规格需标支持范围或待修改，不能伪报历史区间查询",
+                "basis": "reportQuery与makeReport静态",
+                "status": "待评审/待后续验证；本轮只静态核对",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-I-REQ-02-AC05",
+                "given": "导出请求旧revision或审计写失败，内容含以=开头的合成文本",
+                "when": "评审导出恢复/安全格式",
+                "then": "旧revision/事务异常不能返回成功CSV；合法导出为文本公式前加单引号并引用转义，数值负数保持数值；本轮不实际导出个人明细",
+                "basis": "reports/route.ts、reportCsv；BASE-03",
+                "status": "待评审/待后续验证；本轮只静态核对",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "object": "实名调查/问卷与360共用模板边界",
@@ -45241,7 +45585,95 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "fieldDetails": [
+              {
+                "field": "流程实例与业务记录",
+                "definition": "流程ID、业务类型、业务对象ID/子对象ID、模板版本、节点与办理人需分别关联",
+                "constraints": "当前inbox为原业务聚合，无通用流程实例表；M03任期ID/M18项目ID不能冒作流程ID。空过滤结果不证明免审批",
+                "basis": "BC-I27/C40；work-inbox.ts"
+              },
+              {
+                "field": "管理员委托与节点转交",
+                "definition": "原范围管理员委托，源还见转交/干预/撤销等入口说明",
+                "constraints": "委托起止、对象范围、代办者限制、是否授权审批/仅管理、撤回和审计身份均未闭合；不能把管理员委托直接当全局代理登录",
+                "basis": "BC-I10；原M19登记；待补证"
+              },
+              {
+                "field": "人事待办当前计算",
+                "definition": "workInbox调用authorizeCommand以rejected决策检查当前人事办理人，再生成personnel任务",
+                "constraints": "可拒绝处理不等可批准；过期生效日或失效来源可能仍需撤回/拒绝，不以待办可见保证批准可执行。D7固定两级不被通用委托候选改写",
+                "basis": "work-inbox.ts/authorization.ts/API额外条件"
+              },
+              {
+                "field": "分页与计数",
+                "definition": "inbox GET每页20，domain/q过滤；counts按筛选前当前全可见任务计算",
+                "constraints": "total是筛选后任务数，counts是未加domain/q的全域分组；不能当搜索结果分域计数或业务通过数",
+                "basis": "app/api/work-inbox/route.ts"
+              }
+            ],
+            "roleMatrix": [
+              {
+                "role": "源流程管理员/管理员委托",
+                "read": "实例、节点、操作记录的授权范围待源补证",
+                "write": "干预/转交/撤销等具体动作、委托对象与有效期待证",
+                "boundary": "不自动取得全档案或代签权；无配置/路由不能启动会触及真实收件人的流程"
+              },
+              {
+                "role": "本项目人事两级审批者",
+                "read": "D4指定申请摘要，D5必要职级",
+                "write": "只当前节点且当前组织/字段权限有效，可拒绝≠可以过期批准",
+                "boundary": "D3本人/发起人排除、D7两人顺序保持，通用委托尚未批准"
+              },
+              {
+                "role": "招聘/薪酬/绩效等业务审核者",
+                "read": "各域当前可见原记录",
+                "write": "域内贡献者/本人/原评人排除各不相同，按本包规则执行",
+                "boundary": "共享待办只导向业务动作，不统一弱化成admin均可审批"
+              }
+            ],
+            "acceptanceCases": [
+              {
+                "id": "BP-I-REQ-07-AC01",
+                "given": "两个域各有可办任务，GET domain=payroll且q命中一项",
+                "when": "对比items/total/counts",
+                "then": "items/total只含过滤后项，counts仍全可见域计数；点击后版本/权限需业务接口重核",
+                "basis": "work-inbox/route.ts",
+                "status": "待评审/待后续验证；本轮只静态核对",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-I-REQ-07-AC02",
+                "given": "人事调动已过计划日仍pending，当前节点人有拒绝权",
+                "when": "待办读取后尝试approved",
+                "then": "任务可存在以供处理，API批准拒绝过期；待办不自动删除业务、改日期或跳级",
+                "basis": "work-inbox.ts与hris/route.ts；D2",
+                "status": "待评审/待后续验证；本轮只静态核对",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-I-REQ-07-AC03",
+                "given": "已批准工资引用的考勤被reopen，独立reviewer有权",
+                "when": "读取待办再尝试publish",
+                "then": "待办为来源变化待退回或核对，不能按approved直接发；原批次/工资保持，来源修正后仍需明确重审链",
+                "basis": "work-inbox.ts/payroll-attendance.ts",
+                "status": "待评审/待后续验证；本轮只静态核对",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-I-REQ-07-AC04",
+                "given": "拟把流程或管理员权限委托他人，涉及当前15业务",
+                "when": "评审委托契约/合成验收设计",
+                "then": "必须分别明确管理委托与节点办理、有效期/范围/双方当前权限/原代理审计，旧办理人不能持旧链接越权；尚未知原规则的地方不造默认继承，D7首包不扩转交",
+                "basis": "原M19范围和BC-I10；建议未批准",
+                "status": "待评审/待后续验证；本轮只静态核对",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "id": "BP-I-REQ-08",
@@ -45348,7 +45780,29 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "acceptanceCases": [
+              {
+                "id": "BP-I-REQ-11-AC01",
+                "given": "订阅创建时可见某组织，随后人员或订阅接收方被撤权",
+                "when": "设计下次生成/发送/转交/读取快照行为",
+                "then": "建议发送前重核数据和接收权，撤权内容不得继续出站；旧快照访问也须当前权。源具体“权限类型”未核，不将建议记成原站事实或已批准权限规则",
+                "basis": "BC-P1C-M32；BASE-02/06建议",
+                "status": "待评审/待后续验证；本轮只静态核对",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-I-REQ-11-AC02",
+                "given": "任务已生成快照，但投递结果未知",
+                "when": "设计重试与屏蔽订阅",
+                "then": "以订阅版本/生成批次/接收方/渠道标识查证去重，结果未知不记投递成功；屏蔽新投递不物理删除历史。字段/状态映射和收件界限待源补证",
+                "basis": "源订阅表头＋BASE-06候选，未实发",
+                "status": "待评审/待后续验证；本轮只静态核对",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "id": "BP-I-REQ-12",
@@ -45777,7 +46231,7 @@
           "app/api/hris/route.ts"
         ],
         "gap": "F-SPEC-01仅岗位/职级名称；兼岗/再入职/法人不是普通员工编辑",
-        "acceptance": "已有关联在职员工/启用子组织或岗位的组织，申请停用应拒绝且原数据不变；相同组织名在同父节点拒绝；不同父节点按当前规则核对，不推广成全局唯一",
+        "acceptance": "已有关联在职员工/启用子组织或岗位的组织，申请停用应拒绝且原数据不变；相同组织名在同父节点拒绝；不同父节点按当前规则核对，不推广成全局唯一；细化场景明确F-SPEC-01–04边界，未代签。",
         "currentApplicability": {
           "status": "保留",
           "moduleIds": [
@@ -45799,7 +46253,7 @@
           "tests/f01-f04-transfer-roles.test.mjs"
         ],
         "gap": "D1–D7已确认；F-SPEC-02/03仅异常边界和关联宽度待审",
-        "acceptance": "批准后档案不变；北京时间生效日00:00前拒绝执行；业务校验失败保留原因及计划日；恢复后记实际时间。审计故障整个事务回滚并刷新核对；旧revision拒绝",
+        "acceptance": "批准后档案不变；北京时间生效日00:00前拒绝执行；业务校验失败保留原因及计划日；恢复后记实际时间。审计故障整个事务回滚并刷新核对；旧revision拒绝；细化场景明确F-SPEC-01–04边界，未代签。",
         "currentApplicability": {
           "status": "保留",
           "moduleIds": [
@@ -46317,7 +46771,7 @@
           "lib/hris/work-inbox.ts"
         ],
         "gap": "日程/日报/完整OKR/消息发送未实现；独立M43任务不等于当前聚合待办；直接办理接口仍需再验版本/角色，页面任务消失不等于原业务被自动取消；不同分支对日期/离职检查不完全同构，不能以聚合页作唯一业务判定。",
-        "acceptance": "已取消任务不继续展示可办理；待审目标调整阻断自评入口；本人申诉已批准待发布应显示awaiting_publish；原模块撤权即拒绝直接URL办理；人才链候选：盘点对象配置保存、采集启动、员工待办可办分别核验；未启动/已失效模板或当前角色无权不能因管理员已见EA名单开放本人任务。",
+        "acceptance": "已取消任务不继续展示可办理；待审目标调整阻断自评入口；本人申诉已批准待发布应显示awaiting_publish；原模块撤权即拒绝直接URL办理；人才链候选：盘点对象配置保存、采集启动、员工待办可办分别核验；未启动/已失效模板或当前角色无权不能因管理员已见EA名单开放本人任务。；同源结构化场景明确每域权限/统计/状态边界。",
         "currentApplicability": {
           "status": "保留",
           "moduleIds": [
@@ -46339,7 +46793,7 @@
           "app/api/reports/route.ts"
         ],
         "gap": "设计器/大规模查询/历史组织快照未就绪；每数据集必须独立定义分母，不能统一套人员数；通用日期控件与各数据集实际过滤口径需对齐；GET先生成全量可见结果再切50行，不是数据库分页或历史时点查询；asOf是生成时刻不是任意历史查询参数。",
-        "acceptance": "无字段权时表头/单元格不出现该字段；学习缺分保持null；绩效旧版本不重复计为当前；合同覆盖登记不能证明电子签法律有效或实际在岗；旧revision导出拒绝，审计失败不得返回CSV（本轮未执行导出）；人才链候选：盘点项目对象数、已采集数、已校准数和已发布结果人数分别定义，C39的1条对象配置不等1条有效评分/报告；缺目标或计算项目不写0分/达标。",
+        "acceptance": "无字段权时表头/单元格不出现该字段；学习缺分保持null；绩效旧版本不重复计为当前；合同覆盖登记不能证明电子签法律有效或实际在岗；旧revision导出拒绝，审计失败不得返回CSV（本轮未执行导出）；人才链候选：盘点项目对象数、已采集数、已校准数和已发布结果人数分别定义，C39的1条对象配置不等1条有效评分/报告；缺目标或计算项目不写0分/达标。；同源结构化场景明确每域权限/统计/状态边界。",
         "currentApplicability": {
           "status": "保留",
           "moduleIds": [
@@ -46876,14 +47330,14 @@
     "reviewIssues": [
       {
         "id": "F-SPEC-01",
-        "topic": "岗位/职级目录名称唯一性（组织已排除）",
+        "topic": "职位同组织重名策略与职级名称约束（组织已排除）",
         "status": "原站当前组织内/跨组织同名对照已有执行证据；本项目名称策略及职级规则仍待评审",
-        "basis": "lib/hris/model.ts org分支明确同级组织名称唯一；position/grade共用分支仅编码唯一。旧F01.2写编码/名称唯一，BC-F08/F10未验证原站重名提交。组织约束无差异，不再提交用户决定。 BC-F17原站职位名称规则明确开关开启后同部门可重名、编码唯一；当前开关和关闭后的冲突处理未验证，且不覆盖职级，不等于本项目批准。 2026-09-09合成执行：同测试组织A、同名不同编码JA2被明确拒绝，提示既有同名职位状态生效。跨组织对照继续；不把可配置说明直接当作当前开关状态。 后续同名、不同编码JB在测试B保存成功，和A的JA同时可查。因此当前实测支持同组织生效重名拒绝、跨组织可同名的条件边界；职级规则仍未验证。",
-        "proposal": "推荐以稳定ID关联、编码唯一、名称允许重复作为岗位/职级候选要求；界面需能通过编码/组织区分同名项。尚未批准。",
-        "impact": "仅阻塞F01.2候选目录名称校验及相应用例签署；组织层级、D1–D7和其他包规格继续",
+        "basis": "组织同级名称唯一在model.org明确，已排除歧义。model.position/grade只按编码精确唯一，均未限制重名。BC-F17说明职位重名可配置；BC-F32/33实际A内同名不同码JA2拒绝、A/B同名JA/JB均保存，形成当前租户同组织生效重名拒绝/跨组织允许的样本边界。停用/未来日期/职级重名尚未实测，不能外推。旧F01.2笼统“编码/名称唯一”不能作全局唯一批准。",
+        "proposal": "根据新增源执行证据，修订原推荐：职位以稳定ID关联、编码唯一，建议同组织当前有效职位名称唯一、跨组织允许同名；“有效”与历史/停用冲突需明确后才实施。职级暂按编码唯一、名称可重名提出候选，仍须补源/评审；不由职位规则推导职级。所有建议均未批准。",
+        "impact": "只阻F01.2相应名称校验及验收签署；组织无需再决定。不得改现有JA/JB或产品代码；补停用/职级证据是浏览器恢复后的局部分支。",
         "alternatives": [
-          "岗位名在所属组织内唯一、职级名全局唯一：增加校验并需存量冲突处理",
-          "岗位和职级名称全局唯一：约束更强，需说明跨组织共名迁移"
+          "保持现有职位/职级只编码唯一：复用最多，但同组织同名需编码/组织醒目标识并明确偏离当前源样本的理由",
+          "职位/职级名称全局唯一：更强约束，需处理跨组织同名既有数据及历史名称，不推荐无证据加严"
         ],
         "evidence": [
           "lib/hris/model.ts",
@@ -46898,8 +47352,8 @@
         "id": "F-SPEC-02",
         "topic": "D1失败留痕的事务边界",
         "status": "异常契约已细化，待需求评审",
-        "basis": "D1已确认失败可恢复；model.executeTransfer先增加attempts，业务执行校验失败可返回failed。tests/f01-f04-transfer-roles.test.mjs中目标岗位/编制失败保留批准与计划日、重试次数；审计故障触发503并断言数据全回滚。历史测试结果只适用3d690cbbd6336c6de8b76a06fa4459700b1e3a88，本轮仅读测试。",
-        "proposal": "推荐写清：可提交的业务失败保留原因/次数；数据库或审计事务故障不承诺同事务留痕，刷新核对再重试，实际生效时间不倒写。属于异常边界候选解释，未代签。",
+        "basis": "D1已确认失败可恢复；model.executeTransfer先增加attempts，业务执行校验失败可返回failed。tests/f01-f04-transfer-roles.test.mjs中目标岗位/编制失败保留批准与计划日、重试次数；审计故障触发503并断言数据全回滚。历史测试结果只适用3d690cbbd6336c6de8b76a06fa4459700b1e3a88，本轮仅读测试。 本轮584afb5静态核API/repository：提前执行/授权/业务参数400或403在attempts增加前拒绝；可提交目标失效/编制失败可200带execution=failed并提交失败次数，员工/任职历史不变。CAS不命中409不写；数据库读取/审计batch异常503整体不承诺持久化，网络响应丢失不能由客户端错误推定未生效。",
+        "proposal": "推荐在不重开D1已决重试/实际时间的前提下，分清可提交业务失败和存储不可用：前者保留failed/次数/原因，后者保持结果待核，恢复读取同审批ID/revision后再决定重试，不承诺同一失败事务写日志。若要求每次不可写故障也可靠留痕，另以独立可靠记录通道设计/验收，未批准前不称已覆盖。",
         "impact": "仅阻塞F03极端故障留痕契约签署；D1人工重试/实际时间既定规则不变",
         "alternatives": [
           "要求任意数据库故障都持久记录尝试：须独立可靠日志、关联键、脱敏、重复消解与恢复验收；不在本轮实现"
@@ -46915,8 +47369,8 @@
         "id": "F-SPEC-03",
         "topic": "原单关联规则的适用宽度",
         "status": "待需求评审，先继续补证",
-        "basis": "model.request：同员工存在任意rejected/withdrawn/cancelled调动且无previousApprovalId即拒绝，未限定时间或同一事项。历史测试证明改日/驳回关联链，未证明无关后续调动业务意图；D2/D6已确认更正关联，不自动授权永久全历史关联限制。",
-        "proposal": "推荐区分“更正/改日重审”强制关联与“后续独立调动”可新建，必须有明确事项判定和审计原因；当前代码不改，方案未批准。",
+        "basis": "model.request：同员工存在任意rejected/withdrawn/cancelled调动且无previousApprovalId即拒绝，未限定时间或同一事项。历史测试证明改日/驳回关联链，未证明无关后续调动业务意图；D2/D6已确认更正关联，不自动授权永久全历史关联限制。 本轮确认API强制调动日期必填，故模型effectiveOn条件不会使正常API绕开该历史限制；原单还须当前可读。当前要求没有事项ID、时间窗或最近一条条件，任意终态历史都触发。",
+        "proposal": "建议由发起者显式声明本次是原事项更正/改日重审还是后续独立事项；前者强制选择当前可读、同人同类的终态原单并从一级重审，后者保留独立原因/审计，不由历史终态永久强绑。无论哪类，仍禁止同员工并存pending或approved且waiting/failed调动。事项判定字段/证据为待批增量设计，不以时间窗自动猜测。",
         "impact": "仅阻塞F03后续独立调动的原单关联要求签署；原单不复活、全程重审仍已确认",
         "alternatives": [
           "保留当前任意终止历史均强制关联：实现可复用，但关联将混含无关事项",
@@ -46947,7 +47401,7 @@
         "topic": "再入职身份连续性与适用人群（完整M01后续子包）",
         "status": "待业务选择；不阻塞F01–F04已决调动及其他P1工作",
         "basis": "BC-F25帮助明确合并与新人员会产生不同任职/薪资/社保历史连续性，确认后不可更改；当前本项目未完整实现再入职。 BC-F43当前租户实际选择证件/手机号/邮箱任一匹配、合并人员。BC-F45已实测人员主ID与入职/离职独立任职ID、日期区间连续；实际离职重聘尚未执行，不从配置批准项目策略。",
-        "proposal": "推荐先以稳定自然人关联多段任职履历作为设计方向，业务账号另行授权；须明确与原站合并语义的映射后确认，不能直接视为已批准合并。",
+        "proposal": "建议同一经核实人员保持稳定主身份并关联多段任职，历史来源/前后雇佣分开；手机号/邮箱命中仅作为核对线索，多个冲突候选不得自动选一合并，需有明确复核和纠错边界。重聘不自动恢复业务账号/角色/字段权限。此方向仍待用户选择，不从原站“合并人员”配置或本次主ID连续事实代签。",
         "alternatives": [
           "每次重聘新员工记录：需决定跨任期关联、累计司龄与报表去重规则",
           "按人群人工选择：需清楚的适用规则、默认入口和操作权限；增加误选恢复与审计要求"
@@ -47335,8 +47789,8 @@
       {
         "term": "盘点对象选择与历史结果引入",
         "dependency": "M01稳定员工→M18项目对象；M37标准/盘点模板/方案；M19流程/M48办理/M32结果投影",
-        "contract": "C39只选合成EA并回填未保存草稿；员工选择/项目保存/启动采集分离。历史引入默认否且含义未知，需明确来自何项目/时点/版本/字段、重复和失效策略；不拿M01任职记录或M06资格历史替代盘点结果。",
-        "evidence": "BC-C38/39；原站草稿及当前development.ts静态差异",
+        "contract": "C39添加EA对象后，C40独立列表/详情确认主项目已保存，ActivityId3d1d07ed-d10e-4c51-8a91-22d5d20d83b1、新建，唯一EA初始/未计算；未启动。保存发生于向导哪一步未证，不能把末步未点当不存在。历史引入默认否、来源项目/时点/版本/字段、重复失效仍待核；不拿任职或资格历史替代盘点历史。",
+        "evidence": "BC-C38/39/40；主项目/人员/模板/方案跨页回读；本项目development.ts静态差异",
         "currentApplicability": "当前M01/M18/M37和M19/M48/M32随链，完整外部测评/模型模块不重纳入。"
       },
       {
@@ -47352,17 +47806,49 @@
         "contract": "实例ID不等配置版本ID，轮次也不等定义版本。只完成阶段门槛可结项但不把未完成选修记完成；放行不等通过。内容退休保留历史并禁止继续办，成绩来源/缺项与最终状态独立。源已完成学员更新和自动循环不能被现有限制静默裁掉。",
         "evidence": "BC-L01–11/19/22；33f6aa9学习核心静态与已有测试阅读",
         "currentApplicability": "M27/M01/M48/M32；M28独立AI不新增，M29/M30/M31只最小模板共享。"
+      },
+      {
+        "term": "招聘评价记录与候选状态",
+        "dependency": "M12评价→Offer；M19待办/M32招聘报表",
+        "contract": "当前面试评价新增interview/recorded并可完成排期，不写candidate为interviewed；screening仍可凭最新advance发Offer。需求全部贡献者与Offer本次发起者排除不同，不能统一成“独立审批已全部覆盖”。",
+        "evidence": "584afb5 recruitment.ts/route/work-inbox.ts静态；R-SPEC-02待补证",
+        "currentApplicability": "仅当前15及六基础；不恢复33暂缓模块、真实外部服务或新增访问者。"
+      },
+      {
+        "term": "历史名称、历史身份与当前权限",
+        "dependency": "M01任职史/模板快照→M32/M48/附件",
+        "contract": "稳定员工/任职ID和当时业务字段不等当前展示名称。现任职历史组织名join当前组织表，调动申请source/target另冻名称；“历史可追溯”不自动承诺每页均为当时名称。读取依当前权，重聘不恢复旧账号。",
+        "evidence": "repository/history/personnel-transfer静态；F-SPEC-04",
+        "currentApplicability": "仅当前15及六基础；不恢复33暂缓模块、真实外部服务或新增访问者。"
+      },
+      {
+        "term": "内部请求成功、业务失败与外部结果不明",
+        "dependency": "全部当前15+BASE-03/06",
+        "contract": "HTTP200可以是调动execution=failed；HTTP503或断网不能由客户端推定未落库；external received/published/queued分别不等业务成功。各原对象ID/revision/事件回执先查再恢复，不给所有API强加同一种幂等键。",
+        "evidence": "D1、hris/recruitment接口、integration-preflight、BC-F采集已发送",
+        "currentApplicability": "仅当前15及六基础；不恢复33暂缓模块、真实外部服务或新增访问者。"
+      },
+      {
+        "term": "附件元数据、对象实体与业务版本",
+        "dependency": "BASE-04/05→M01/M27/M48及其他模块需求",
+        "contract": "当前附件只直接归员工或课程，M03/M06等其他对象附件需求须另映射；对象存储put与元数据事务跨存储，孤儿/墓碑与业务可读分别处理。Office ZIP头检查不等完整内容安全扫描。",
+        "evidence": "attachments/route.ts静态与历史恢复证据；未实际传/删附件",
+        "currentApplicability": "仅当前15及六基础；不恢复33暂缓模块、真实外部服务或新增访问者。"
       }
     ],
     "consistencyReview": {
-      "state": "持续审查中；48组当前缺口逐项校正、跨域角色/状态/版本/接口已记录具体差异；未业务签署",
+      "state": "当前15模块与六基础持续审查；原48历史保留，33暂缓不再主动补规则；本单元完成首包/支撑/基础交叉检查，未业务签署",
       "reviewedSourceCommit": "447b02f72a2d2051986aba98e769daa7c2b846a3",
       "issues": [
-        "F-SPEC-01 岗位/职级目录名称唯一性（组织已排除）",
+        "F-SPEC-01 职位同组织重名策略与职级名称约束（组织已排除）",
         "F-SPEC-02 D1失败留痕的事务边界",
         "F-SPEC-03 原单关联规则的适用宽度",
         "R-SPEC-01 候选人主对象与招聘需求/人才库关系",
-        "F-SPEC-04 再入职身份连续性与适用人群（完整M01后续子包）"
+        "F-SPEC-04 再入职身份连续性与适用人群（完整M01后续子包）",
+        "SCOPE-DEP-01 当前Offer/入职是否必须依赖金额预算校验",
+        "C-SPEC-01 360评价角色、匿名对象和低样本报告发布边界",
+        "R-SPEC-02 Offer审批历史参与者排除范围",
+        "S-SPEC-01 补差后负累计净额及追回边界"
       ],
       "findings": [
         "组织同级唯一已排除首包歧义",
@@ -47404,9 +47890,16 @@
         "主职/兼职有独立记录ID与时间区间；原站占人头/卡片占编标签不未经核实统一为编制人数，源兼职列表消失也不证明所有消费者已排除。",
         "法人目录适用范围组织/附加人员不同于薪资组/薪资包范围；空范围无可见含义时不默认为全范围或无权限。",
         "M20工时表单无必填星但保存明确项目必填；UI标记与服务端约束分开。两个同名候选不等于两个人，全部人员可见一行也不证明底层全局唯一。项目组织单选为空与方案部门多选可用分别记录。",
-        "SCOPE-20260909-CORE15：历史48/59不变，当前15/暂缓33、六基础/九依赖同源；当前语义覆盖优先于历史综合契约；所有暂缓混合契约标当前适用边界。15模块未达P1A完整/需求就绪/评审通过，未通过数无提升。"
+        "SCOPE-20260909-CORE15：历史48/59不变，当前15/暂缓33、六基础/九依赖同源；当前语义覆盖优先于历史综合契约；所有暂缓混合契约标当前适用边界。15模块未达P1A完整/需求就绪/评审通过，未通过数无提升。",
+        "Offer审批仅排本次发起者，招聘需求排全部历史贡献者；面试评价单与候选状态不同。",
+        "员工自助申诉awaiting_publish/corrected为派生显示，不改原状态；360答卷提交后任务消失不等不可改答。",
+        "待办counts为未加domain/q过滤的当前可见域计数，total为过滤结果；报表粒度各异不共用人数分母。",
+        "审计/任职历史/业务事件/附件对象是不同记录；DB与对象存储失败补偿、当前历史读权及恢复撤权分别定义。",
+        "薪资社保/个税/激励保持M07内部受限规格，人工deduction不等完整核算；负累计补差先待源证据/政策，未授权支付或扣未来工资。"
       ],
-      "remaining": "全48组当前缺口已清理历史残留；继续各组具体已授权合成测试及只读补证、算法/权限/外部接口未明项及需求业务评审。经理看板与部分空模板保留实际限制，不以例外未批准标通过。"
+      "remaining": "继续当前15内部原登记功能→规格/源证据/限制逐项映射，集中区分原站连接缺证、业务选择、待需求评审与后续P3/P4人工/生产验证；不再探索33暂缓模块。",
+      "latestReviewedHead": "584afb5b164197fdb849d56c4310fa7eced7d44e",
+      "latestReviewAt": "2026-09-09T10:21:24.780647+00:00"
     },
     "validationEvidence": [
       {
@@ -47619,7 +48112,50 @@
           "I-RESTORE-REVOCATIONS",
           "lib/hris/authorization.ts"
         ],
-        "status": "已有实现候选；身份/恢复边界待需求评审，历史技术证据未当前复跑"
+        "status": "字段/权限/失败与验收候选已细化；现有代码与历史证据适用边界明确，完整需求/环境条件待评审，未签署",
+        "fieldDetails": [
+          {
+            "field": "登录主体与企业成员",
+            "definition": "当前平台user.id取成员userId/tenantId/active/role/employeeId，业务员工关联可空",
+            "constraints": "平台可进入不等企业成员有效；memberContext读取业务快照后重读成员，不能用旧身份范围搭配新数据",
+            "basis": "context.ts/authorization.ts"
+          },
+          {
+            "field": "重聘与恢复",
+            "definition": "业务历史身份、访问账号、当前授权分别保留",
+            "constraints": "重聘和旧快照恢复不自动激活账号/角色，E2保持仅所有者；来源主数据接口不是自动开户许可",
+            "basis": "F-SPEC-04；Recovery_Rehearsal.md"
+          }
+        ],
+        "codeRefs": [
+          "lib/hris/context.ts",
+          "lib/hris/authorization.ts",
+          "docs/Recovery_Rehearsal.md"
+        ],
+        "acceptanceCases": [
+          {
+            "id": "BASE-01-AC01",
+            "given": "平台身份有效但成员inactive，或成员tenant与读取快照不一致",
+            "when": "任意受保护读取/写入",
+            "then": "拒绝，不因平台允许访问或历史业务关联放行；未绑定employee不能凭姓名自动匹配员工",
+            "basis": "context.ts/requireMember",
+            "status": "待评审/待后续验证；本轮只静态核对",
+            "accepted": false,
+            "executionThisRun": false
+          },
+          {
+            "id": "BASE-01-AC02",
+            "given": "旧备份中成员active、可信当前记录显示其后已撤权",
+            "when": "隔离恢复后拟开放访问",
+            "then": "须先对账当前撤权，应用/附件仍拒绝；无可信当前授权来源时保持隔离，不能从备份恢复旧访问权",
+            "basis": "历史恢复证据未本轮复跑；生产对账来源待条件",
+            "status": "待评审/待后续验证；本轮只静态核对",
+            "accepted": false,
+            "executionThisRun": false
+          }
+        ],
+        "assessmentAt": "2026-09-09T10:19:00.264568+00:00",
+        "businessAccepted": false
       },
       {
         "id": "BASE-02",
@@ -47638,7 +48174,62 @@
           "D3–D5",
           "lib/hris/authorization.ts"
         ],
-        "status": "首包已确认D3–D5，其余各域矩阵仍待评审/补证"
+        "status": "字段/权限/失败与验收候选已细化；现有代码与历史证据适用边界明确，完整需求/环境条件待评审，未签署",
+        "fieldDetails": [
+          {
+            "field": "组织、记录、字段三层",
+            "definition": "orgScope递归下级；员工/薪酬专岗在核心名册为selfOnly；薪酬管理记录另按批次组织",
+            "constraints": "同一角色在不同数据集不共享一套简化判定；源共享/公开/动态上级与当前orgScope差异保留",
+            "basis": "authorization.ts/payroll-access.ts"
+          },
+          {
+            "field": "历史与摘要",
+            "definition": "D4仅跨组织申请摘要；历史API按当前employee许可读，职级列仍按viewLevel投影",
+            "constraints": "历史中的组织名称当前以组织表join，不能承诺保存当时组织名称；附件还需独立visibility",
+            "basis": "history/route.ts、personnel-transfer.ts、attachments/route.ts"
+          }
+        ],
+        "codeRefs": [
+          "lib/hris/authorization.ts",
+          "lib/hris/personnel-transfer.ts",
+          "lib/hris/payroll-access.ts",
+          "app/api/history/route.ts",
+          "app/api/attachments/route.ts"
+        ],
+        "acceptanceCases": [
+          {
+            "id": "BASE-02-AC01",
+            "given": "调入审批者仅B组织且被指派二级申请，来源EA在A",
+            "when": "读申请摘要后读EA目录/任职史/附件",
+            "then": "允许的申请摘要不派生A目录/历史/附件权，viewLevel撤销时职级变更办理拒绝；D3–D5既有规则不重问",
+            "basis": "D3–D5；authorization/history/attachments",
+            "status": "待评审/待后续验证；本轮只静态核对",
+            "accepted": false,
+            "executionThisRun": false
+          },
+          {
+            "id": "BASE-02-AC02",
+            "given": "岗位组织/成员范围在第一次读取后改变revision",
+            "when": "继续历史补充查询或附件对象读取",
+            "then": "readConsistent核修订变化409，不以先读成功继续输出；每个动作重验当前权，原角色实例不替真人跨角色验收",
+            "basis": "context.ts/readConsistent；附件下载前后核验",
+            "status": "待评审/待后续验证；本轮只静态核对",
+            "accepted": false,
+            "executionThisRun": false
+          },
+          {
+            "id": "BASE-02-AC03",
+            "given": "普通hr或manager能读员工名册，本人能读工资投影",
+            "when": "请求薪酬管理报表或原始薪资来源",
+            "then": "非薪酬专岗拒绝；本人投影与管理权不同，单位承担/原来源不因本人名义开放",
+            "basis": "payroll-reports.ts/薪酬投影",
+            "status": "待评审/待后续验证；本轮只静态核对",
+            "accepted": false,
+            "executionThisRun": false
+          }
+        ],
+        "assessmentAt": "2026-09-09T10:19:00.264568+00:00",
+        "businessAccepted": false
       },
       {
         "id": "BASE-03",
@@ -47655,7 +48246,51 @@
           "F-SPEC-02",
           "F-SPEC-03"
         ],
-        "status": "既有事务/审计技术证据保留；故障留痕与关联策略待决定"
+        "status": "字段/权限/失败与验收候选已细化；现有代码与历史证据适用边界明确，完整需求/环境条件待评审，未签署",
+        "fieldDetails": [
+          {
+            "field": "审计/历史/业务事件",
+            "definition": "核心audit含ID/actor/action/subject/time/revision；任职历史仅相关员工任职状态变化写；扩展业务另存事件快照",
+            "constraints": "写状态与审计同事务token；审计前台最近100只是state读取限制，不能当全历史已删除；audit API按页20独立查",
+            "basis": "repository.ts/development-repository.ts/audit/route.ts"
+          },
+          {
+            "field": "故障留痕边界",
+            "definition": "审批原单ID、workspace revision、执行attempts/实际时点关联",
+            "constraints": "提前拒绝/权限拒绝不等failed尝试，DB不可写不能同事务强保失败日志；结果未知先读。F-SPEC-02/03未批",
+            "basis": "BP-F-REQ-02"
+          }
+        ],
+        "codeRefs": [
+          "lib/hris/repository.ts",
+          "lib/hris/development-repository.ts",
+          "app/api/audit/route.ts",
+          "app/api/history/route.ts"
+        ],
+        "acceptanceCases": [
+          {
+            "id": "BASE-03-AC01",
+            "given": "业务更新待提交，审计写异常或CAS未命中",
+            "when": "按事务故障/并发设计验证",
+            "then": "不出现业务成功而无同事务审计；后续刷新核实际revision/对象。数据库外独立故障留痕并未实现，不代签D1例外",
+            "basis": "repository.ts/commitState；F-SPEC-02",
+            "status": "待评审/待后续验证；本轮只静态核对",
+            "accepted": false,
+            "executionThisRun": false
+          },
+          {
+            "id": "BASE-03-AC02",
+            "given": "员工普通字段变化与任职岗位/组织变化各一次",
+            "when": "核审计和任职历史粒度",
+            "then": "普通字段变更有审计不必产生任职历史；任职变更按实际成功时点产生历史，不拿两类条数相等作正确标准",
+            "basis": "repository.ts/stateStatements",
+            "status": "待评审/待后续验证；本轮只静态核对",
+            "accepted": false,
+            "executionThisRun": false
+          }
+        ],
+        "assessmentAt": "2026-09-09T10:19:00.264568+00:00",
+        "businessAccepted": false
       },
       {
         "id": "BASE-04",
@@ -47674,7 +48309,76 @@
           "F-CONTRACT-FIELDS",
           "L-EXAM-TYPES"
         ],
-        "status": "已有版本/附件实现；保留模块全局版本及云端历史权限仍待审"
+        "status": "字段/权限/失败与验收候选已细化；现有代码与历史证据适用边界明确，完整需求/环境条件待评审，未签署",
+        "fieldDetails": [
+          {
+            "field": "附件归属与可见性",
+            "definition": "当前仅employeeId或course recordId二选一，visibility hr/employee；课件归属具体course版本",
+            "constraints": "不支持任意业务record附件；员工附件默认hr，非HR只本人且employee可见；课程仅draft可写。不能把通用附件能力泛化为15模块全覆盖",
+            "basis": "attachments/route.ts"
+          },
+          {
+            "field": "类型/大小/内容",
+            "definition": "名称1–160且不含控制/路径字符；PDF/PNG/JPEG/TXT/CSV/DOCX/XLSX扩展名与MIME匹配，0<size≤10MiB",
+            "constraints": "文件头检查不等杀毒或完整DOCX/XLSX解包校验；Office只验证ZIP头，限制为现代码候选非源法则",
+            "basis": "attachments/route.ts"
+          },
+          {
+            "field": "对象存储与元数据",
+            "definition": "先对象put后元数据+审计事务；失败尝试删除对象；删除先写tombstone再物理清理",
+            "constraints": "跨DB/对象存储不是单一原子事务，回收失败留下不可达孤儿；metadata删除标记历史保留，cleanupPending不同于业务删除失败",
+            "basis": "attachments/route.ts"
+          }
+        ],
+        "codeRefs": [
+          "app/api/attachments/route.ts",
+          "lib/hris/development-repository.ts",
+          "docs/Recovery_Rehearsal.md"
+        ],
+        "acceptanceCases": [
+          {
+            "id": "BASE-04-AC01",
+            "given": "同一员工有hr附件和employee附件，当前员工本人/经理/范围HR",
+            "when": "分别列表和直接ID下载",
+            "then": "本人只employee附件；经理不因有名册范围获得员工文件，HR按范围；猜ID不能跳过归属/可见性/当前revision检查",
+            "basis": "attachments/route.ts authorize/visibleFile",
+            "status": "待评审/待后续验证；本轮只静态核对",
+            "accepted": false,
+            "executionThisRun": false
+          },
+          {
+            "id": "BASE-04-AC02",
+            "given": "course已发布，原附件仍存在，另有新draft版本",
+            "when": "改或删除已发布版本附件",
+            "then": "当前拒绝，旧版本资料保留；新增版本须独立关联，具体复制/来源策略待各模块，不能把普通删除当历史版本替换",
+            "basis": "attachments/route.ts；课程版本契约",
+            "status": "待评审/待后续验证；本轮只静态核对",
+            "accepted": false,
+            "executionThisRun": false
+          },
+          {
+            "id": "BASE-04-AC03",
+            "given": "对象已put，元数据事务失败且补偿delete再次失败",
+            "when": "核恢复与客户端结果",
+            "then": "不返回可用附件成功；孤儿只在存储维护对账中识别/清理，不向业务列表泄露；生产孤儿扫描策略未实现，需后续设计",
+            "basis": "attachments/route.ts",
+            "status": "待评审/待后续验证；本轮只静态核对",
+            "accepted": false,
+            "executionThisRun": false
+          },
+          {
+            "id": "BASE-04-AC04",
+            "given": "元数据tombstone已提交，物理delete异常",
+            "when": "再列表/ID读取及清理重试",
+            "then": "业务读不可达，返回deleted:true/cleanupPending:true；保留删除审计，不因物理残存恢复对外访问",
+            "basis": "attachments/route.ts DELETE",
+            "status": "待评审/待后续验证；本轮只静态核对",
+            "accepted": false,
+            "executionThisRun": false
+          }
+        ],
+        "assessmentAt": "2026-09-09T10:19:00.264568+00:00",
+        "businessAccepted": false
       },
       {
         "id": "BASE-05",
@@ -47689,7 +48393,50 @@
           "I-RESTORE-REVOCATIONS",
           "F03"
         ],
-        "status": "历史隔离验证保留；生产可信来源/恢复指标与运维签署后阶段待条件"
+        "status": "字段/权限/失败与验收候选已细化；现有代码与历史证据适用边界明确，完整需求/环境条件待评审，未签署",
+        "fieldDetails": [
+          {
+            "field": "恢复单元",
+            "definition": "数据库一致快照+附件对象清单/哈希+应用提交/迁移版本+当前授权对账来源",
+            "constraints": "旧脚本假设静止写入；仅SQLite/内存对象，不是云端D1/R2快照保证，不以本地毫秒估生产RTO",
+            "basis": "Recovery_Rehearsal.md/rehearse-local-recovery.mjs"
+          },
+          {
+            "field": "恢复开放条件",
+            "definition": "完整性/外键/业务状态/附件缺失损坏/撤权及在途审批关系",
+            "constraints": "生产备份周期/保留/加密/恢复点及RPO/RTO数值与责任待环境和业务容忍确认；P1记需求缺口，P4验证，不擅自设“零丢失”",
+            "basis": "原历史恢复证据及用户P0–P5边界"
+          }
+        ],
+        "codeRefs": [
+          "scripts/rehearse-local-recovery.mjs",
+          "docs/Recovery_Rehearsal.md",
+          "docs/Recovery_Synthetic_Report.json"
+        ],
+        "acceptanceCases": [
+          {
+            "id": "BASE-05-AC01",
+            "given": "同静止窗口DB/附件清单，分别移除一个对象或改内容的未来隔离夹具",
+            "when": "核恢复完整性",
+            "then": "识别missing/corrupt并阻相应可用声明，不仅核DB元数据；不运行线上恢复或访问真实附件",
+            "basis": "历史恢复脚本结构，版本见验证索引，未复跑",
+            "status": "待评审/待后续验证；本轮只静态核对",
+            "accepted": false,
+            "executionThisRun": false
+          },
+          {
+            "id": "BASE-05-AC02",
+            "given": "在途两级审批快照已留一级结论，恢复点以后另有撤权",
+            "when": "恢复后拟继续原审批",
+            "then": "先按可信当前授权对账，已处理一级不能重放；后续按当前D1两级与待生效规则办理，旧即时生效测试不能自动证明现定日执行",
+            "basis": "历史Recovery_Rehearsal与D1后续变更分别保留",
+            "status": "待评审/待后续验证；本轮只静态核对",
+            "accepted": false,
+            "executionThisRun": false
+          }
+        ],
+        "assessmentAt": "2026-09-09T10:19:00.264568+00:00",
+        "businessAccepted": false
       },
       {
         "id": "BASE-06",
@@ -47711,7 +48458,104 @@
           "BP-I-REQ-08",
           "BC-C35：M37测评方案未配置且当前未删除目录无候选；无供应商调用"
         ],
-        "status": "当前保留需求契约；具体供应商映射可后补，不以真实交易/供应商授权作P1前置"
+        "status": "字段/权限/失败与验收候选已细化；现有代码与历史证据适用边界明确，完整需求/环境条件待评审，未签署",
+        "fieldDetails": [
+          {
+            "field": "最小接口信封（建议）",
+            "definition": "tenant/source、内部/外部对象ID、事件ID、业务/映射/载荷版本、发生时间/业务日期、摘要、关联请求/回执ID",
+            "constraints": "供应商字段和鉴权方式待适配；不按名字自动匹配，不把菜单追踪ID或会话令牌记业务ID；建议未批准完整线缆schema",
+            "basis": "用户保留接口边界；integration-preflight.ts只主数据预检"
+          },
+          {
+            "field": "状态与失败（建议）",
+            "definition": "未配置/待发送/已接收/处理中/成功/失败/结果不明/取消分别表达",
+            "constraints": "接收成功不等业务生效；未知先查询再有限重试，回执以namespace+eventId去重，旧序号/跳号/内容冲突分开。实际各提供方状态映射待契约",
+            "basis": "integration-preflight.ts与用户授权边界"
+          },
+          {
+            "field": "主数据预检现状",
+            "definition": "profile严格schema/sequence/mappingVersion，规范UTC和递归排序SHA256；ready结果code=DRY_RUN_ONLY",
+            "constraints": "不会写数据/开账号/网络发送；retryDecision只是纯函数(尝试1–6、退避上限/Retry-After)，不是后台队列，不能宣称所有接口已对接",
+            "basis": "integration-preflight.ts"
+          }
+        ],
+        "codeRefs": [
+          "lib/hris/integration-preflight.ts",
+          "lib/hris/workforce.ts",
+          "lib/hris/payroll.ts",
+          "docs/delivery/Integration_Source_Gaps.md"
+        ],
+        "interfaceReservations": [
+          {
+            "service": "电子签",
+            "producers": "M01合同/任职主体；M12录用协议",
+            "mapping": "原M22；合同ID/版本、签约主体/签署人、模板/回执、证据摘要",
+            "completion": "人工signed登记≠供应商签署/存证；失败/撤销保留原版本，未配置可评审内域合同",
+            "limits": "供应商认证/签署/法律有效性未验证；不发真实签署"
+          },
+          {
+            "service": "主数据",
+            "producers": "当前15模块必要员工/组织标识",
+            "mapping": "原M35；tenant+source+externalId→稳定内部ID，映射版本与事件序号",
+            "completion": "预检ready≠接收/执行成功；映射缺失、跳号、旧事件、同ID变内容各阻相应事件",
+            "limits": "不恢复完整同步引擎，不自动授予身份/角色；真实源端不可用不作P1前置"
+          },
+          {
+            "service": "外部测评",
+            "producers": "M26/M18/M17/M37所需标准和结果引用",
+            "mapping": "原M15/M02等外部边界；人员/活动/工具/量表版本、响应与报告状态",
+            "completion": "已创建活动/链接≠已作答或有效评分；缺样本/取消/失败不能填0分，报告权限独立",
+            "limits": "不购买服务、不生成真实外部通知、不恢复暂缓独立测评模块"
+          },
+          {
+            "service": "财务入账/支付",
+            "producers": "M07已核定/发布工资与调整",
+            "mapping": "原M10和M07；批次/条目/更正关联、期间、币种精度、对账/回执ID",
+            "completion": "工资published≠财务已入账或付款成功；部分失败逐项保留、未知不重复打款，冲销/退款另授权",
+            "limits": "当前只契约/合成预期，科目/外部服务与真实交易不作P1条件"
+          },
+          {
+            "service": "必要外部通知",
+            "producers": "当前15业务审批/采集/学习/订阅",
+            "mapping": "保留业务事件、模板版本、收件范围/渠道、去重和投递回执契约",
+            "completion": "queued/已发送标签不证明投递/阅读；重复未知先核结果，不因业务保存自动宣称零通知",
+            "limits": "本轮不向真实接收人发送；P1V例外BC-F36采集已发送触发/投递待核，保留遗留记录"
+          }
+        ],
+        "acceptanceCases": [
+          {
+            "id": "BASE-06-AC01",
+            "given": "同namespace同eventId已留相同digest与sequence回执",
+            "when": "重放相同事件、改内容或跳过前序",
+            "then": "当前主数据预检分别duplicate/conflict/gap；缺映射mapping_required；ready仍DRY_RUN_ONLY，不写任何员工或身份",
+            "basis": "integration-preflight.ts，其他服务仅候选通用边界",
+            "status": "待评审/待后续验证；本轮只静态核对",
+            "accepted": false,
+            "executionThisRun": false
+          },
+          {
+            "id": "BASE-06-AC02",
+            "given": "支付/签署/测评供应商未配置",
+            "when": "审查P1交付与内域流程",
+            "then": "记录未配置与待适配契约，不声称已完成外部交易，也不以取得供应商服务阻当前P1；只阻依赖外部真实结果的后续执行分支",
+            "basis": "用户已确认范围，非新增缩减",
+            "status": "待评审/待后续验证；本轮只静态核对",
+            "accepted": false,
+            "executionThisRun": false
+          },
+          {
+            "id": "BASE-06-AC03",
+            "given": "某请求已发送但响应未知，另有重复回调",
+            "when": "设计恢复与幂等用例",
+            "then": "先以业务关联/外部查询核结果，重复相同回执不重复生效，变内容冲突留痕；无可信结果保持unknown，不能自动重付/重签或返回success",
+            "basis": "BASE-06建议契约；供应商字段/签名待适配",
+            "status": "待评审/待后续验证；本轮只静态核对",
+            "accepted": false,
+            "executionThisRun": false
+          }
+        ],
+        "assessmentAt": "2026-09-09T10:19:00.264568+00:00",
+        "businessAccepted": false
       }
     ],
     "dependencies": [

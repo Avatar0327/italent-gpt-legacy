@@ -203,8 +203,10 @@ if 'p1B' in s:
  prd.write_text(t)
  read=D/'P1B_Readiness.md';t=read.read_text();t+='\n## 最小必要决策记录（同源，不新建台账）\n\n'
  t+=table(['ID/事项','现状及证据','推荐（未批准）','备选','阻塞范围/状态'],[(x['id']+' '+x['topic'],x['basis'],x['proposal'],x.get('alternatives',[]),x['impact']+'；'+x['status']) for x in pb['reviewIssues'] if x.get('decisionRequired',True)])
- resolved=[x for x in pb['reviewIssues'] if not x.get('decisionRequired',True)]
+ resolved=[x for x in pb['reviewIssues'] if not x.get('decisionRequired',True) and x.get('decision')]
  if resolved:t+='\n## 已明确的执行范围（保留历史，不重复询问）\n\n'+table(['事项','结论/时间'],[(x['id']+' '+x['topic'],x.get('decision',x['status'])+'；'+x.get('decidedAt','')) for x in resolved])
+ followups=[x for x in pb['reviewIssues'] if not x.get('decisionRequired',True) and not x.get('decision')]
+ if followups:t+='\n## 先补证后评审的事项（未获批准，暂不要求即时选择）\n\n'+table(['事项','现状/证据','建议及备选（均未批准）','受影响范围/下一步'],[(x['id']+' '+x['topic'],x['basis'],x['proposal']+'；备选：'+esc(x.get('alternatives',[])),x['impact']+'；'+x['status']) for x in followups])
  t+='\n## 各包具体就绪缺口\n\n'+table(['业务包','仍需满足的条件'],[(p['id']+' '+p['name'],pack_conditions(p)) for p in pb['packages'] if p['moduleIds']])
  read.write_text(t)
 
@@ -248,10 +250,19 @@ if b.get('dataValidation'):
 # not a second register. No counts are inferred from documents or source tests.
 scope_intro='## 当前交付范围变更及统计口径\n\n'+ds['changeId']+'；'+ds['authorizedAt']+'。'+ds['authorization']+'\n\n'+current_scope_table()+'\n'+progress_text()+'\n\n'
 foundation='## 保留的非模块基础能力（不重复计入15模块）\n\n'+table(['能力/原映射','当前最小范围','验收预期（未代签）','证据/原任务','状态'],[(x['id']+' '+x['name']+' / '+','.join(x['originalMappings']),x['scope'],x['acceptance'],x['evidence'],x['status']) for x in ds['baseCapabilities']])
+foundation_detail='## 基础能力字段、异常与验收细化\n\n同源Scope_Register.deliveryScope.baseCapabilities；不新建模块或验收分母。全部候选待评审，历史测试按原版本保留，本轮未执行生产恢复、外部交易或多角色业务测试。\n\n'
+for cap in ds['baseCapabilities']:
+ if not cap.get('fieldDetails'):continue
+ foundation_detail+='### '+cap['id']+' '+cap['name']+'\n\n'
+ foundation_detail+=table(['对象/字段','定义','约束与限制','依据'],[(x['field'],x['definition'],x['constraints'],x['basis']) for x in cap['fieldDetails']])+'\n'
+ if cap.get('interfaceReservations'):
+  foundation_detail+=table(['预留服务','当前消费者','原模块/最小映射','成功及失败边界','限制'],[(x['service'],x['producers'],x['mapping'],x['completion'],x['limits']) for x in cap['interfaceReservations']])+'\n'
+ foundation_detail+=table(['场景ID','给定','操作','预期/待定边界','依据与执行状态'],[(x['id'],x['given'],x['when'],x['then'],x['basis']+'；'+x['status']) for x in cap.get('acceptanceCases',[])])+'\n'
+ foundation_detail+='静态/历史证据：'+'；'.join(link_source(x) for x in cap.get('codeRefs',[]))+'。\n\n'
 dependencies='## 保留模块对暂缓模块的依赖与替代\n\n以下不代表暂缓完整模块恢复；未核实依赖不强行分类为重复功能。只有必须完整独立模块且会改变业务门槛的问题集中决定。\n\n'+table(['依赖/消费者','原提供模块','关系','当前最小边界','替代及影响','状态/证据'],[(x['id']+' / '+','.join(x['consumerModuleIds']),x['deferredProviderIds'],x['relation'],x['boundary'],x['alternative'],x['status']+'；'+x['evidence']) for x in ds['dependencies']])
 acceptance='## 原59项验收的当前适用映射（原义与标志保持）\n\n保留/部分适用/本次暂缓按每项语义判定，不仅按原moduleId删分母。历史任务原文不改：历史只读措辞只描述原观察时点，新合成授权单独登记。任务可能跨模块或基础能力关联，不能把同一条算成多个已通过任务。无原独立任务的模块由当前规格补验收预期，但不捏造历史签署。\n\n'+table(['原任务/原模块','适用结论','当前模块/基础','原criteria ID','适用部分与限制'],[(x['taskId']+' / '+x['originalModuleId'],x['status'],x['currentModuleIds']+x['baseCapabilityIds'],x['criteriaIds'],x['note']) for x in ds['acceptanceApplicability']])
 for name in ['P1B_PRD.md','P1_Review.md']:
- f=D/name;f.write_text(f.read_text()+'\n'+scope_intro+'\n'+foundation+'\n'+dependencies)
+ f=D/name;f.write_text(f.read_text()+'\n'+scope_intro+'\n'+foundation+'\n'+foundation_detail+'\n'+dependencies)
 f=D/'P1B_Readiness.md';f.write_text(f.read_text()+'\n'+scope_intro+'\n'+progress_table()+'\n'+acceptance)
 f=R/'docs/HRIS_Project_Plan.md';t=f.read_text();t=t.replace('<!-- ROADMAP_CURRENT_END -->',foundation+'\n'+dependencies+'\n<!-- ROADMAP_CURRENT_END -->');f.write_text(t)
 
