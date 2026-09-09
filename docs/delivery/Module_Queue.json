@@ -782,7 +782,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M48唯一主模块；M19已P1受限关闭",
+    "activeWorkPackage": "M32唯一主模块；M48已P1受限关闭",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -797,12 +797,12 @@
       "BP-S"
     ],
     "nextTasks": [
-      "当前M48唯一主模块：应用本窗口对M48的批准，逐项核对退出后关闭，再转M32。",
+      "当前M32唯一主模块：完成报表六项原范围、指标/数据粒度、权限/快照/导出/订阅的需求与评审材料。",
       "不重问已批准M01/M19/M48规则；后续残余验证归P2/P3/P4。",
       "主模块全部剩余必要工作外部阻塞时才启用一个备用；不按备用数扩并行探索。",
       "R1四模块和适用六基础及版本评审满足后才转P2/P3，历史技术验收不能继承。"
     ],
-    "state": "当前15/六基础与33暂缓保持；按M19→M48→M32顺序执行，最新关闭M19；R1尚未整体转序，产品扩展暂停",
+    "state": "当前15/六基础与33暂缓保持；按M19→M48→M32顺序执行，最新关闭M48；R1尚未整体转序，产品扩展暂停",
     "scopeChange": "SCOPE-20260909-CORE15",
     "supportModuleIds": [
       "M19",
@@ -814,10 +814,10 @@
       "id": "MODE-MODULE-CLOSURE-R-20260909",
       "authorizedAt": "2026-09-09T15:43:36.730682+00:00",
       "mode": "模块闭环优先、按R版本滚动转序",
-      "primaryModuleId": "M48",
+      "primaryModuleId": "M32",
       "backupModuleId": null,
-      "backupCandidateId": "M32",
-      "activeExecutionModuleId": "M48",
+      "backupCandidateId": "M37",
+      "activeExecutionModuleId": "M32",
       "wipLimit": 1,
       "backupLimit": 1,
       "backupActivation": "仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归",
@@ -881,6 +881,14 @@
           "to": "M48",
           "reason": "M19-P1-APPROVAL-20260909明确批准、四项退出条件复核满足，按用户既定顺序受限关闭",
           "remaining": "M19只有P2/P3/P4残余验证，不再有P1硬阻塞",
+          "restore": "仅未来明确的实质变更重新评审受影响条款，不重开宽泛取证"
+        },
+        {
+          "at": "2026-09-09T16:54:17.104368+00:00",
+          "from": "M48",
+          "to": "M32",
+          "reason": "M48-P1-APPROVAL-20260909明确批准、四项退出条件复核满足，按用户既定顺序受限关闭",
+          "remaining": "M48只有P2/P3/P4残余验证，不再有P1硬阻塞",
           "restore": "仅未来明确的实质变更重新评审受影响条款，不重开宽泛取证"
         }
       ],

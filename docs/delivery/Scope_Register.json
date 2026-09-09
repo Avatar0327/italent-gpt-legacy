@@ -7376,7 +7376,7 @@
         ],
         "moduleClosure": {
           "rangeId": "R1",
-          "queueState": "queued",
+          "queueState": "primary",
           "p1AConclusion": {
             "status": "进行中",
             "approvalRecord": null,
@@ -8883,32 +8883,35 @@
           "inferences": "原站已观察事实仅限所列证据；数学示例推导或候选设计另标，未实际执行业务；业务包映射按已观察职责进行规划，不代表需求验收。",
           "restricted": "截至最近证据，完整写入结果未验证；当前已获合成测试授权，按具体场景补证；页面特有限制见所列证据unknown，未探索不标无权限",
           "unexplored": "自助各服务的字段遮蔽、申请/待办/目标复盘状态、日程/日报/OKR与原模块边界。 字段仍未知的类型/必填/默认/枚举/校验/可见性逐条保留在同源字段字典。",
-          "next": "备用自主工作完成；优先等待M19可推进条件；M48必要规则/例外按既定顺序集中审，不启动M32第三模块。",
+          "next": "P1关闭转M32；本模块残余验证转P2/P3/P4，R1整体仍需其余模块和适用基础评审",
           "accepted": false,
-          "currentAssessmentAt": "2026-09-09T16:27:31.659572+00:00"
+          "currentAssessmentAt": "2026-09-09T16:54:17.104368+00:00",
+          "p1RestrictedAccepted": true,
+          "approvalRecord": "M48-P1-APPROVAL-20260909"
         },
         "currentDeliveryAssessment": {
           "scopeChange": "SCOPE-20260909-CORE15",
-          "p1A": "in_progress",
-          "p1B": "not_ready",
-          "review": "not_signed",
-          "approvedRestricted": false,
-          "assessmentAt": "2026-09-09T16:27:31.659572+00:00",
-          "basis": "M48七项完整范围消费契约/候选/验收和代码差异已整理，未批准；M19唯一主模块，M48唯一备用。",
-          "blockingIssueIds": [
-            "M48-SPEC-01",
-            "M48-SPEC-02",
-            "M48-SPEC-03",
-            "M48-SPEC-04",
-            "M48-LIMIT-01"
-          ],
-          "next": "备用自主工作完成；优先等待M19可推进条件；M48必要规则/例外按既定顺序集中审，不启动M32第三模块。",
+          "p1A": "restricted_complete",
+          "p1B": "ready",
+          "review": "restricted_signed",
+          "approvedRestricted": true,
+          "assessmentAt": "2026-09-09T16:54:17.104368+00:00",
+          "basis": "M48-P1-APPROVAL-20260909批准所审fb35ba03dfd6563f59c814b52fa8a6fd125422bc推荐及限制；本模块P1无硬阻塞，受限关闭/需求就绪/模块转序就绪。",
+          "blockingIssueIds": [],
+          "next": "P1关闭转M32；本模块残余验证转P2/P3/P4，R1整体仍需其余模块和适用基础评审",
           "acceptanceRefs": [
             {
               "taskId": "E-EXIT-TASKS",
               "relation": "原直接归属"
             }
-          ]
+          ],
+          "exitEvidence": [
+            "docs/delivery/P1_M48_Review_Package.md",
+            "P1-SELF-REVIEW",
+            "BC-P1C-M48"
+          ],
+          "reviewRecord": "M48-P1-APPROVAL-20260909",
+          "closureClass": "受限通过"
         },
         "internalScopeCoverage": [
           {
@@ -8922,11 +8925,14 @@
               "BC-P1C-M48"
             ],
             "coverageDepth": "跨模块权限说明与档案入口；团队页待探索",
-            "remaining": "直线/虚线/部门负责人/间接下级不可套manager+orgScope；团队访问和当前范围矩阵待源证/评审",
-            "next": "本项已形成M48消费契约与评审候选，待主模块M19关闭后评审M48；依赖生产者具体算法不擅自批准。",
-            "assessedAt": "2026-09-09T16:27:31.659572+00:00",
+            "remaining": "P1无硬阻塞；后续差异验证保留：直线/虚线/部门负责人/间接下级不可套manager+orgScope；团队访问和当前范围矩阵待源证/评审",
+            "next": "P1关闭转M32；本模块残余验证转P2/P3/P4，R1整体仍需其余模块和适用基础评审",
+            "assessedAt": "2026-09-09T16:54:17.104368+00:00",
             "complete": false,
-            "requirementAccepted": false
+            "requirementAccepted": true,
+            "preApprovalRemaining": "直线/虚线/部门负责人/间接下级不可套manager+orgScope；团队访问和当前范围矩阵待源证/评审",
+            "approvalRecord": "M48-P1-APPROVAL-20260909",
+            "p1ClosureClass": "受限通过"
           },
           {
             "originalScopeItem": "审批",
@@ -8940,11 +8946,14 @@
               "BC-I27"
             ],
             "coverageDepth": "跨模块流程线索；本人/代理页面待探索",
-            "remaining": "本人发起/节点办理/代批阅/管理委托分开；菜单或管理员不等员工角色实际可办",
-            "next": "本项已形成M48消费契约与评审候选，待主模块M19关闭后评审M48；依赖生产者具体算法不擅自批准。",
-            "assessedAt": "2026-09-09T16:27:31.659572+00:00",
+            "remaining": "P1无硬阻塞；后续差异验证保留：本人发起/节点办理/代批阅/管理委托分开；菜单或管理员不等员工角色实际可办",
+            "next": "P1关闭转M32；本模块残余验证转P2/P3/P4，R1整体仍需其余模块和适用基础评审",
+            "assessedAt": "2026-09-09T16:54:17.104368+00:00",
             "complete": false,
-            "requirementAccepted": false
+            "requirementAccepted": true,
+            "preApprovalRemaining": "本人发起/节点办理/代批阅/管理委托分开；菜单或管理员不等员工角色实际可办",
+            "approvalRecord": "M48-P1-APPROVAL-20260909",
+            "p1ClosureClass": "受限通过"
           },
           {
             "originalScopeItem": "OKR",
@@ -8954,11 +8963,14 @@
             ],
             "evidenceRefs": [],
             "coverageDepth": "尚未探索详细规则",
-            "remaining": "员工目标/KR/进展与团队对齐、可见及编辑期缺证，受限规格保留",
-            "next": "本项已形成M48消费契约与评审候选，待主模块M19关闭后评审M48；依赖生产者具体算法不擅自批准。",
-            "assessedAt": "2026-09-09T16:27:31.659572+00:00",
+            "remaining": "P1无硬阻塞；后续差异验证保留：员工目标/KR/进展与团队对齐、可见及编辑期缺证，受限规格保留",
+            "next": "P1关闭转M32；本模块残余验证转P2/P3/P4，R1整体仍需其余模块和适用基础评审",
+            "assessedAt": "2026-09-09T16:54:17.104368+00:00",
             "complete": false,
-            "requirementAccepted": false
+            "requirementAccepted": true,
+            "preApprovalRemaining": "员工目标/KR/进展与团队对齐、可见及编辑期缺证，受限规格保留",
+            "approvalRecord": "M48-P1-APPROVAL-20260909",
+            "p1ClosureClass": "受限通过"
           },
           {
             "originalScopeItem": "目标",
@@ -8972,11 +8984,14 @@
               "P1-GOAL"
             ],
             "coverageDepth": "本页与跨模块页面局部观察",
-            "remaining": "目标复盘/进度与自评/调整/申诉是不同动作，当前API派生状态有依据，源员工权限/提交链仍缺",
-            "next": "本项已形成M48消费契约与评审候选，待主模块M19关闭后评审M48；依赖生产者具体算法不擅自批准。",
-            "assessedAt": "2026-09-09T16:27:31.659572+00:00",
+            "remaining": "P1无硬阻塞；后续差异验证保留：目标复盘/进度与自评/调整/申诉是不同动作，当前API派生状态有依据，源员工权限/提交链仍缺",
+            "next": "P1关闭转M32；本模块残余验证转P2/P3/P4，R1整体仍需其余模块和适用基础评审",
+            "assessedAt": "2026-09-09T16:54:17.104368+00:00",
             "complete": false,
-            "requirementAccepted": false
+            "requirementAccepted": true,
+            "preApprovalRemaining": "目标复盘/进度与自评/调整/申诉是不同动作，当前API派生状态有依据，源员工权限/提交链仍缺",
+            "approvalRecord": "M48-P1-APPROVAL-20260909",
+            "p1ClosureClass": "受限通过"
           },
           {
             "originalScopeItem": "假勤",
@@ -8990,11 +9005,14 @@
               "BC-A12"
             ],
             "coverageDepth": "跨模块配置线索；本人办理待探索",
-            "remaining": "本人打卡/请假/补卡/余额与历史范围；不以范围HR数据代本人字段权，独立UAT后续不阻P1继续",
-            "next": "本项已形成M48消费契约与评审候选，待主模块M19关闭后评审M48；依赖生产者具体算法不擅自批准。",
-            "assessedAt": "2026-09-09T16:27:31.659572+00:00",
+            "remaining": "P1无硬阻塞；后续差异验证保留：本人打卡/请假/补卡/余额与历史范围；不以范围HR数据代本人字段权，独立UAT后续不阻P1继续",
+            "next": "P1关闭转M32；本模块残余验证转P2/P3/P4，R1整体仍需其余模块和适用基础评审",
+            "assessedAt": "2026-09-09T16:54:17.104368+00:00",
             "complete": false,
-            "requirementAccepted": false
+            "requirementAccepted": true,
+            "preApprovalRemaining": "本人打卡/请假/补卡/余额与历史范围；不以范围HR数据代本人字段权，独立UAT后续不阻P1继续",
+            "approvalRecord": "M48-P1-APPROVAL-20260909",
+            "p1ClosureClass": "受限通过"
           },
           {
             "originalScopeItem": "学习",
@@ -9010,11 +9028,14 @@
               "BC-L19"
             ],
             "coverageDepth": "跨模块配置线索；学员办理待探索",
-            "remaining": "本人任务/考试/作业/放行/完成/成绩区分，待办消失不等业务取消；当前E2不增加学员访问者",
-            "next": "本项已形成M48消费契约与评审候选，待主模块M19关闭后评审M48；依赖生产者具体算法不擅自批准。",
-            "assessedAt": "2026-09-09T16:27:31.659572+00:00",
+            "remaining": "P1无硬阻塞；后续差异验证保留：本人任务/考试/作业/放行/完成/成绩区分，待办消失不等业务取消；当前E2不增加学员访问者",
+            "next": "P1关闭转M32；本模块残余验证转P2/P3/P4，R1整体仍需其余模块和适用基础评审",
+            "assessedAt": "2026-09-09T16:54:17.104368+00:00",
             "complete": false,
-            "requirementAccepted": false
+            "requirementAccepted": true,
+            "preApprovalRemaining": "本人任务/考试/作业/放行/完成/成绩区分，待办消失不等业务取消；当前E2不增加学员访问者",
+            "approvalRecord": "M48-P1-APPROVAL-20260909",
+            "p1ClosureClass": "受限通过"
           },
           {
             "originalScopeItem": "发展计划",
@@ -9028,56 +9049,72 @@
               "BC-C28"
             ],
             "coverageDepth": "跨模块草稿线索；本人执行待探索",
-            "remaining": "IDP本人/指导者/其他角色及日期/阶段/终止恢复待证，源停用流程保存结果先查询，不重复创建",
-            "next": "本项已形成M48消费契约与评审候选，待主模块M19关闭后评审M48；依赖生产者具体算法不擅自批准。",
-            "assessedAt": "2026-09-09T16:27:31.659572+00:00",
+            "remaining": "P1无硬阻塞；后续差异验证保留：IDP本人/指导者/其他角色及日期/阶段/终止恢复待证，源停用流程保存结果先查询，不重复创建",
+            "next": "P1关闭转M32；本模块残余验证转P2/P3/P4，R1整体仍需其余模块和适用基础评审",
+            "assessedAt": "2026-09-09T16:54:17.104368+00:00",
             "complete": false,
-            "requirementAccepted": false
+            "requirementAccepted": true,
+            "preApprovalRemaining": "IDP本人/指导者/其他角色及日期/阶段/终止恢复待证，源停用流程保存结果先查询，不重复创建",
+            "approvalRecord": "M48-P1-APPROVAL-20260909",
+            "p1ClosureClass": "受限通过"
           }
         ],
         "moduleClosure": {
           "rangeId": "R1",
-          "queueState": "primary",
+          "queueState": "closed_restricted",
           "p1AConclusion": {
-            "status": "已完成待评审",
-            "approvalRecord": null,
+            "status": "受限通过",
+            "approvalRecord": "M48-P1-APPROVAL-20260909",
             "evidenceRefs": [
               "P1-SELF-REVIEW",
               "BC-P1C-M48"
             ],
-            "limits": "七项原范围证据分层及缺口齐备，源角色/链受限待批准例外或补证；未通过"
+            "limits": "当前完整范围证据/深度/限制已齐备用于需求判定；用户批准M48-LIMIT-01，未知源行为保留，不计完整源执行验证。",
+            "approvedAt": "2026-09-09T16:54:17.104368+00:00"
           },
           "p1BConclusion": {
-            "status": "已完成待评审",
-            "approvalRecord": null,
+            "status": "受限通过",
+            "approvalRecord": "M48-P1-APPROVAL-20260909",
             "evidenceRefs": [],
-            "limits": "四组建议、七项消费契约、权限/状态/错误/验收及差异可评审；批准尚缺，不就绪"
+            "limits": "所审版本四组推荐、规格/权限/验收/依赖与受限责任已批准；需求就绪，不代表实现或跨域联调通过。",
+            "approvedAt": "2026-09-09T16:54:17.104368+00:00"
           },
           "conditions": {
             "applicableScopeDetermined": {
               "value": true,
-              "basis": "用户已确认15完整登记范围及本轮R顺序"
+              "basis": "M48-P1-APPROVAL-20260909：原登记范围全部保留，无内部删减"
             },
             "implementationRulesDecided": {
-              "value": false,
-              "basis": "M48-SPEC-01–04、M48-LIMIT-01及验收/依赖边界未批准"
+              "value": true,
+              "basis": "M48-P1-APPROVAL-20260909：四组推荐及明确用户边界已批准，其他模块不继承"
             },
             "acceptanceExecutable": {
-              "value": false,
-              "basis": "M48-SPEC-01–04、M48-LIMIT-01及验收/依赖边界未批准"
+              "value": true,
+              "basis": "M48-P1-APPROVAL-20260909：所审验收场景明确且作为需求基线获批；accepted/executionThisRun仍false"
             },
             "dependenciesAndExceptionsResolved": {
-              "value": false,
-              "basis": "M48-SPEC-01–04、M48-LIMIT-01及验收/依赖边界未批准"
+              "value": true,
+              "basis": "M48-P1-APPROVAL-20260909：原站限制及后续补验责任获批；供应商/跨域未接按已批契约处理，不作当前P1前置"
             }
           },
           "transitionReview": {
-            "approved": false,
-            "record": null,
-            "scope": null,
-            "approvedAt": null
+            "approved": true,
+            "record": "M48-P1-APPROVAL-20260909",
+            "approvedAt": "2026-09-09T16:54:17.104368+00:00",
+            "scope": "M48满足现有条件后P1受限关闭及转序资格；用户明确要求随后转M32，不等R1整体P2/P3批准"
           },
-          "restrictedApproval": null
+          "restrictedApproval": {
+            "scope": "源团队/本人角色、OKR详细页、各域本人提交/撤回/异常链和跨域生产者未接通",
+            "residualRisk": "当前源行为和角色可能不同；团队敏感字段、旧缓存、域状态映射及OKR联调未实证，不能以契约模拟冒充真实业务通过。",
+            "revalidation": "P2核团队有效关系/权限/版本与七项适配；P3用合成且明确授权的独立角色与源适配器验证撤权/状态/错误，联调未具备的功能逐项列未通过；P4完成真实多角色及跨模块业务验收。E2和不实发通知/支付/签署边界保持。",
+            "record": "M48-P1-APPROVAL-20260909",
+            "approvedAt": "2026-09-09T16:54:17.104368+00:00",
+            "phaseScope": "仅P1，不免除实现、测试、跨角色及P4验收"
+          },
+          "closureClass": "受限通过",
+          "p1Closed": true,
+          "closureRecord": "M48-P1-APPROVAL-20260909",
+          "closedAt": "2026-09-09T16:54:17.104368+00:00"
         },
         "consumerContracts": [
           {
@@ -9086,7 +9123,8 @@
             "fields": "当前员工/经理关系ID及类型、validFrom/to、字段投影、组织范围",
             "boundary": "按M48-SPEC-01查团队；不把原学习权限说明等同M48全部权限",
             "evidence": "BC-L15、BC-P1C-M48",
-            "status": "明确候选，未批准"
+            "status": "M48消费契约已批准，不代批生产者业务规则",
+            "approvalRecord": "M48-P1-APPROVAL-20260909"
           },
           {
             "scopeItem": "审批",
@@ -9094,7 +9132,8 @@
             "fields": "实例ID、原单ID、节点版本、approval/effect状态、allowedActions",
             "boundary": "本人申请/他人待办分列，原业务重核；D7不扩",
             "evidence": "BC-I10、BC-I27与M01批准",
-            "status": "明确候选，未批准"
+            "status": "M48消费契约已批准，不代批生产者业务规则",
+            "approvalRecord": "M48-P1-APPROVAL-20260909"
           },
           {
             "scopeItem": "OKR",
@@ -9102,7 +9141,8 @@
             "fields": "目标/KR/周期/owner及对齐ID、指标单位/方向、进展版本、动作及映射状态",
             "boundary": "门户不发明审批/评分；保留创建/编辑/对齐/进展/复盘动作契约",
             "evidence": "原M48范围及BP-P-REQ-09，源详细页未证",
-            "status": "明确候选，未批准"
+            "status": "M48消费契约已批准，不代批生产者业务规则",
+            "approvalRecord": "M48-P1-APPROVAL-20260909"
           },
           {
             "scopeItem": "目标",
@@ -9110,7 +9150,8 @@
             "fields": "planId/cycle/version、进展/复盘ID、提交窗口/动作、原申请与发布状态",
             "boundary": "pending调整不可越过生产者规则自评，approved申诉不等更正已发布",
             "evidence": "P1-SELF-REVIEW、P1-GOAL；self-service API",
-            "status": "明确候选，未批准"
+            "status": "M48消费契约已批准，不代批生产者业务规则",
+            "approvalRecord": "M48-P1-APPROVAL-20260909"
           },
           {
             "scopeItem": "假勤",
@@ -9118,7 +9159,8 @@
             "fields": "recordId/期间/本人/类型/余额及单位/版本/审批生效",
             "boundary": "余额未知不当0；打卡/请假/补卡由源业务校验日期/额度，不消费HR全员投影",
             "evidence": "BC-A07/12跨模块配置线索",
-            "status": "明确候选，未批准"
+            "status": "M48消费契约已批准，不代批生产者业务规则",
+            "approvalRecord": "M48-P1-APPROVAL-20260909"
           },
           {
             "scopeItem": "学习",
@@ -9126,7 +9168,8 @@
             "fields": "assignment/task/attempt/submissionId、阶段/日期/成绩状态/动作/版本",
             "boundary": "任务消失不等完成；交过可否重答、截止/批阅与放行必须调用生产者规则",
             "evidence": "BC-L03/06-08/19；self-service API",
-            "status": "明确候选，未批准"
+            "status": "M48消费契约已批准，不代批生产者业务规则",
+            "approvalRecord": "M48-P1-APPROVAL-20260909"
           },
           {
             "scopeItem": "发展计划",
@@ -9134,7 +9177,8 @@
             "fields": "plan/stage/actionId、角色、目标/日期/状态、版本/反馈",
             "boundary": "阶段任务不得门户直接推进或重开；旧IDP保存未知先查询，当前不重建",
             "evidence": "BC-C27/28；self-service API",
-            "status": "明确候选，未批准"
+            "status": "M48消费契约已批准，不代批生产者业务规则",
+            "approvalRecord": "M48-P1-APPROVAL-20260909"
           }
         ],
         "closureChecklist": [
@@ -9148,12 +9192,12 @@
               "BC-L15",
               "BC-P1C-M48"
             ],
-            "gap": "本项消费字段/权限/行为/验收候选已明确；尚需M48-SPEC-01,M48-SPEC-04及M48-LIMIT-01评审，源详细/独立角色执行未证。",
+            "gap": "P1硬条件已满足；原源证据差异及实现/补验责任保留到P2/P3/P4。",
             "risk": "本人/团队权限、状态、原单完整性或跨域依赖",
-            "blocksP1": true,
-            "closureMethod": "按同源消费契约/候选与受限边界集中评审；不要求为了P1穷尽源配置或先完成R2/R3全部实现",
-            "basis": "原七项完整保留；未批准不得记就绪或跨域业务通过",
-            "status": "已完成待评审",
+            "blocksP1": false,
+            "closureMethod": "用户已批准四组推荐及本模块受限边界，按现有条件核对通过",
+            "basis": "M48-P1-APPROVAL-20260909；不将批准扩为原站全部验证或实现通过",
+            "status": "受限通过",
             "decisionIds": [
               "M48-SPEC-01",
               "M48-SPEC-04"
@@ -9162,7 +9206,9 @@
               "P2适配/权限/版本设计",
               "P3各域真实联调及边界测试，未联调单列",
               "P4多角色/跨域业务验收"
-            ]
+            ],
+            "preApprovalGap": "本项消费字段/权限/行为/验收候选已明确；尚需M48-SPEC-01,M48-SPEC-04及M48-LIMIT-01评审，源详细/独立角色执行未证。",
+            "approvalRecord": "M48-P1-APPROVAL-20260909"
           },
           {
             "id": "M48-CLOSE-02",
@@ -9175,12 +9221,12 @@
               "BC-I10",
               "BC-I27"
             ],
-            "gap": "本项消费字段/权限/行为/验收候选已明确；尚需M48-SPEC-02,M48-SPEC-03,M48-SPEC-04及M48-LIMIT-01评审，源详细/独立角色执行未证。",
+            "gap": "P1硬条件已满足；原源证据差异及实现/补验责任保留到P2/P3/P4。",
             "risk": "本人/团队权限、状态、原单完整性或跨域依赖",
-            "blocksP1": true,
-            "closureMethod": "按同源消费契约/候选与受限边界集中评审；不要求为了P1穷尽源配置或先完成R2/R3全部实现",
-            "basis": "原七项完整保留；未批准不得记就绪或跨域业务通过",
-            "status": "已完成待评审",
+            "blocksP1": false,
+            "closureMethod": "用户已批准四组推荐及本模块受限边界，按现有条件核对通过",
+            "basis": "M48-P1-APPROVAL-20260909；不将批准扩为原站全部验证或实现通过",
+            "status": "受限通过",
             "decisionIds": [
               "M48-SPEC-02",
               "M48-SPEC-03",
@@ -9190,7 +9236,9 @@
               "P2适配/权限/版本设计",
               "P3各域真实联调及边界测试，未联调单列",
               "P4多角色/跨域业务验收"
-            ]
+            ],
+            "preApprovalGap": "本项消费字段/权限/行为/验收候选已明确；尚需M48-SPEC-02,M48-SPEC-03,M48-SPEC-04及M48-LIMIT-01评审，源详细/独立角色执行未证。",
+            "approvalRecord": "M48-P1-APPROVAL-20260909"
           },
           {
             "id": "M48-CLOSE-03",
@@ -9199,12 +9247,12 @@
               "BP-P-REQ-09"
             ],
             "evidenceRefs": [],
-            "gap": "本项消费字段/权限/行为/验收候选已明确；尚需M48-SPEC-02,M48-SPEC-03,M48-SPEC-04及M48-LIMIT-01评审，源详细/独立角色执行未证。",
+            "gap": "P1硬条件已满足；原源证据差异及实现/补验责任保留到P2/P3/P4。",
             "risk": "本人/团队权限、状态、原单完整性或跨域依赖",
-            "blocksP1": true,
-            "closureMethod": "按同源消费契约/候选与受限边界集中评审；不要求为了P1穷尽源配置或先完成R2/R3全部实现",
-            "basis": "原七项完整保留；未批准不得记就绪或跨域业务通过",
-            "status": "已完成待评审",
+            "blocksP1": false,
+            "closureMethod": "用户已批准四组推荐及本模块受限边界，按现有条件核对通过",
+            "basis": "M48-P1-APPROVAL-20260909；不将批准扩为原站全部验证或实现通过",
+            "status": "受限通过",
             "decisionIds": [
               "M48-SPEC-02",
               "M48-SPEC-03",
@@ -9214,7 +9262,9 @@
               "P2适配/权限/版本设计",
               "P3各域真实联调及边界测试，未联调单列",
               "P4多角色/跨域业务验收"
-            ]
+            ],
+            "preApprovalGap": "本项消费字段/权限/行为/验收候选已明确；尚需M48-SPEC-02,M48-SPEC-03,M48-SPEC-04及M48-LIMIT-01评审，源详细/独立角色执行未证。",
+            "approvalRecord": "M48-P1-APPROVAL-20260909"
           },
           {
             "id": "M48-CLOSE-04",
@@ -9227,12 +9277,12 @@
               "P1-SELF-REVIEW",
               "P1-GOAL"
             ],
-            "gap": "本项消费字段/权限/行为/验收候选已明确；尚需M48-SPEC-02,M48-SPEC-03,M48-SPEC-04及M48-LIMIT-01评审，源详细/独立角色执行未证。",
+            "gap": "P1硬条件已满足；原源证据差异及实现/补验责任保留到P2/P3/P4。",
             "risk": "本人/团队权限、状态、原单完整性或跨域依赖",
-            "blocksP1": true,
-            "closureMethod": "按同源消费契约/候选与受限边界集中评审；不要求为了P1穷尽源配置或先完成R2/R3全部实现",
-            "basis": "原七项完整保留；未批准不得记就绪或跨域业务通过",
-            "status": "已完成待评审",
+            "blocksP1": false,
+            "closureMethod": "用户已批准四组推荐及本模块受限边界，按现有条件核对通过",
+            "basis": "M48-P1-APPROVAL-20260909；不将批准扩为原站全部验证或实现通过",
+            "status": "受限通过",
             "decisionIds": [
               "M48-SPEC-02",
               "M48-SPEC-03",
@@ -9242,7 +9292,9 @@
               "P2适配/权限/版本设计",
               "P3各域真实联调及边界测试，未联调单列",
               "P4多角色/跨域业务验收"
-            ]
+            ],
+            "preApprovalGap": "本项消费字段/权限/行为/验收候选已明确；尚需M48-SPEC-02,M48-SPEC-03,M48-SPEC-04及M48-LIMIT-01评审，源详细/独立角色执行未证。",
+            "approvalRecord": "M48-P1-APPROVAL-20260909"
           },
           {
             "id": "M48-CLOSE-05",
@@ -9255,12 +9307,12 @@
               "BC-A07",
               "BC-A12"
             ],
-            "gap": "本项消费字段/权限/行为/验收候选已明确；尚需M48-SPEC-02,M48-SPEC-03,M48-SPEC-04及M48-LIMIT-01评审，源详细/独立角色执行未证。",
+            "gap": "P1硬条件已满足；原源证据差异及实现/补验责任保留到P2/P3/P4。",
             "risk": "本人/团队权限、状态、原单完整性或跨域依赖",
-            "blocksP1": true,
-            "closureMethod": "按同源消费契约/候选与受限边界集中评审；不要求为了P1穷尽源配置或先完成R2/R3全部实现",
-            "basis": "原七项完整保留；未批准不得记就绪或跨域业务通过",
-            "status": "已完成待评审",
+            "blocksP1": false,
+            "closureMethod": "用户已批准四组推荐及本模块受限边界，按现有条件核对通过",
+            "basis": "M48-P1-APPROVAL-20260909；不将批准扩为原站全部验证或实现通过",
+            "status": "受限通过",
             "decisionIds": [
               "M48-SPEC-02",
               "M48-SPEC-03",
@@ -9270,7 +9322,9 @@
               "P2适配/权限/版本设计",
               "P3各域真实联调及边界测试，未联调单列",
               "P4多角色/跨域业务验收"
-            ]
+            ],
+            "preApprovalGap": "本项消费字段/权限/行为/验收候选已明确；尚需M48-SPEC-02,M48-SPEC-03,M48-SPEC-04及M48-LIMIT-01评审，源详细/独立角色执行未证。",
+            "approvalRecord": "M48-P1-APPROVAL-20260909"
           },
           {
             "id": "M48-CLOSE-06",
@@ -9285,12 +9339,12 @@
               "BC-L06-08",
               "BC-L19"
             ],
-            "gap": "本项消费字段/权限/行为/验收候选已明确；尚需M48-SPEC-02,M48-SPEC-03,M48-SPEC-04及M48-LIMIT-01评审，源详细/独立角色执行未证。",
+            "gap": "P1硬条件已满足；原源证据差异及实现/补验责任保留到P2/P3/P4。",
             "risk": "本人/团队权限、状态、原单完整性或跨域依赖",
-            "blocksP1": true,
-            "closureMethod": "按同源消费契约/候选与受限边界集中评审；不要求为了P1穷尽源配置或先完成R2/R3全部实现",
-            "basis": "原七项完整保留；未批准不得记就绪或跨域业务通过",
-            "status": "已完成待评审",
+            "blocksP1": false,
+            "closureMethod": "用户已批准四组推荐及本模块受限边界，按现有条件核对通过",
+            "basis": "M48-P1-APPROVAL-20260909；不将批准扩为原站全部验证或实现通过",
+            "status": "受限通过",
             "decisionIds": [
               "M48-SPEC-02",
               "M48-SPEC-03",
@@ -9300,7 +9354,9 @@
               "P2适配/权限/版本设计",
               "P3各域真实联调及边界测试，未联调单列",
               "P4多角色/跨域业务验收"
-            ]
+            ],
+            "preApprovalGap": "本项消费字段/权限/行为/验收候选已明确；尚需M48-SPEC-02,M48-SPEC-03,M48-SPEC-04及M48-LIMIT-01评审，源详细/独立角色执行未证。",
+            "approvalRecord": "M48-P1-APPROVAL-20260909"
           },
           {
             "id": "M48-CLOSE-07",
@@ -9313,12 +9369,12 @@
               "BC-C27",
               "BC-C28"
             ],
-            "gap": "本项消费字段/权限/行为/验收候选已明确；尚需M48-SPEC-02,M48-SPEC-03,M48-SPEC-04及M48-LIMIT-01评审，源详细/独立角色执行未证。",
+            "gap": "P1硬条件已满足；原源证据差异及实现/补验责任保留到P2/P3/P4。",
             "risk": "本人/团队权限、状态、原单完整性或跨域依赖",
-            "blocksP1": true,
-            "closureMethod": "按同源消费契约/候选与受限边界集中评审；不要求为了P1穷尽源配置或先完成R2/R3全部实现",
-            "basis": "原七项完整保留；未批准不得记就绪或跨域业务通过",
-            "status": "已完成待评审",
+            "blocksP1": false,
+            "closureMethod": "用户已批准四组推荐及本模块受限边界，按现有条件核对通过",
+            "basis": "M48-P1-APPROVAL-20260909；不将批准扩为原站全部验证或实现通过",
+            "status": "受限通过",
             "decisionIds": [
               "M48-SPEC-02",
               "M48-SPEC-03",
@@ -9328,19 +9384,21 @@
               "P2适配/权限/版本设计",
               "P3各域真实联调及边界测试，未联调单列",
               "P4多角色/跨域业务验收"
-            ]
+            ],
+            "preApprovalGap": "本项消费字段/权限/行为/验收候选已明确；尚需M48-SPEC-02,M48-SPEC-03,M48-SPEC-04及M48-LIMIT-01评审，源详细/独立角色执行未证。",
+            "approvalRecord": "M48-P1-APPROVAL-20260909"
           }
         ],
         "reviewPackage": {
           "moduleId": "M48",
-          "documentStatus": "备用模块材料已完成待评审",
+          "documentStatus": "P1受限通过，需求基线已批准",
           "scope": "团队、审批、OKR、目标、假勤、学习、发展计划",
           "preparedAt": "2026-09-09T16:27:31.659572+00:00",
           "basedOnHead": "c0538e7362da8b7ef82b18a13b427d80822ccdac",
-          "approvalRecord": null,
+          "approvalRecord": "M48-P1-APPROVAL-20260909",
           "internalDeferralProposals": [],
           "internalDeferralNote": "七项原范围均保留；R2/R3依赖以明确消费接口/不可用态/补联调责任处理的建议尚待批准，不静默删减。",
-          "confirmedRules": "M01批准的人事字段/权限/生效边界仅相应消费有效；M19候选及M48建议尚未批准，不自动复用签署。",
+          "confirmedRules": "D1–D7及其他已批准模块只按其原范围复用；本包所审四组推荐和受限边界由M48-P1-APPROVAL-20260909明确批准。",
           "decisionIds": [
             "M48-SPEC-01",
             "M48-SPEC-02",
@@ -9350,14 +9408,16 @@
           "exceptionProposals": [
             {
               "id": "M48-LIMIT-01",
-              "status": "建议P1受限边界，未批准",
+              "status": "已批准P1受限边界",
               "scope": "源团队/本人角色、OKR详细页、各域本人提交/撤回/异常链和跨域生产者未接通",
               "evidence": "P1-SELF-REVIEW/BC-P1C-M48、所列跨域证据及c0538e7362da8b7ef82b18a13b427d80822ccdac静态代码；云浏览器刷新超时，未新建或提交源数据",
               "proposal": "建议以明确源事实和获批M48消费契约结束P1；R2/R3详细业务算法在各生产者模块关闭，M48保留接口/不可用状态及补联调责任，不视为内部永久延期或已实现。需用户明确批准，M01-LIMIT-01不自动适用。",
               "residualRisk": "当前源行为和角色可能不同；团队敏感字段、旧缓存、域状态映射及OKR联调未实证，不能以契约模拟冒充真实业务通过。",
               "revalidation": "P2核团队有效关系/权限/版本与七项适配；P3用合成且明确授权的独立角色与源适配器验证撤权/状态/错误，联调未具备的功能逐项列未通过；P4完成真实多角色及跨模块业务验收。E2和不实发通知/支付/签署边界保持。",
-              "approved": false,
-              "approvalRecord": null
+              "approved": true,
+              "approvalRecord": "M48-P1-APPROVAL-20260909",
+              "approvedAt": "2026-09-09T16:54:17.104368+00:00",
+              "approvalConclusion": "本窗口已批准，只限M48 P1；保留原站未知、残余风险及P2/P3/P4补验责任。原建议中“未批准”仅为审阅前状态。"
             }
           ],
           "closedQuestions": [
@@ -9383,9 +9443,9 @@
             }
           ],
           "exitAssessment": {
-            "p1A": "七项原范围证据分层及缺口齐备，源角色/链受限待批准例外或补证；未通过",
-            "p1B": "四组建议、七项消费契约、权限/状态/错误/验收及差异可评审；批准尚缺，不就绪",
-            "transition": "M48为唯一备用，不是新主模块；规则/依赖例外/评审未批准，false"
+            "p1A": "当前完整范围证据/深度/限制已齐备用于需求判定；用户批准M48-LIMIT-01，未知源行为保留，不计完整源执行验证。",
+            "p1B": "所审版本四组推荐、规格/权限/验收/依赖与受限责任已批准；需求就绪，不代表实现或跨域联调通过。",
+            "transition": "四条件及明确模块评审记录齐备，模块转序就绪=true；R1未整体转序，继续M32 P1。"
           },
           "flowSummary": [
             "当前成员绑定→本人或显式团队关系→字段投影→入口允许动作→原业务接口重验→读取新版本",
@@ -9399,7 +9459,7 @@
           ],
           "businessAccepted": false,
           "productionAccepted": false,
-          "next": "备用自主工作完成；优先等待M19可推进条件；M48必要规则/例外按既定顺序集中审，不启动M32第三模块。",
+          "next": "P1关闭转M32；本模块残余验证转P2/P3/P4，R1整体仍需其余模块和适用基础评审",
           "acceptanceCaseRefs": [
             "M48-REVIEW-AC01",
             "M48-REVIEW-AC02",
@@ -9410,7 +9470,9 @@
             "M48-REVIEW-AC07",
             "M48-REVIEW-AC08",
             "M48-REVIEW-AC09"
-          ]
+          ],
+          "approvedAt": "2026-09-09T16:54:17.104368+00:00",
+          "closureClass": "受限通过"
         }
       },
       "businessPackage": "BP-I"
@@ -10629,7 +10691,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-09T16:53:50.674271+00:00",
+    "updatedAt": "2026-09-09T16:54:17.104368+00:00",
     "authority": "Scope_Register.json为唯一范围/验收事实源；历史48/59保留，当前15模块及基础按SCOPE-20260909-CORE15。",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -43646,25 +43708,25 @@
       "latestAuthorizationAt": "2026-09-09T06:25:42.812752+00:00",
       "scopeChangeHead": "f31cb2b5e1894723288fd884d4e3bd895ae57327",
       "scopeChange": "SCOPE-20260909-CORE15",
-      "latestCheckpointAt": "2026-09-09T16:53:50.674271+00:00",
-      "latestCommittedHead": "fb35ba03dfd6563f59c814b52fa8a6fd125422bc",
+      "latestCheckpointAt": "2026-09-09T16:54:17.104368+00:00",
+      "latestCommittedHead": "988ceb8d419ab608fc58af039297ca07d6565113",
       "latestEvidenceRefs": [
         "BC-C39",
         "BC-C40"
       ],
-      "next": "当前M48唯一主模块：应用本窗口对M48的批准，逐项核对退出后关闭，再转M32。",
+      "next": "当前M32唯一主模块：完成报表六项原范围、指标/数据粒度、权限/快照/导出/订阅的需求与评审材料。",
       "browserRecovery": "旧实例失效后按官方指引发现唯一新实例并尝试tabs.list/new/goto/title；tab8创建成功但读取/导航刷新均超时。完成专业域/首包/基础/内部范围离线单元后再核tabs.list仍20s超时，停止重复。同一实例未收到登录/全量授权提示，不绕过控制。",
       "sourceBrowsingStatus": "本轮tabs.list再次返回CDP operation refresh tabs timed out after 20000ms；当前页不可读，无原站新提交，无登录/重新授权提示。",
-      "currentFocus": "M48唯一主模块；M19已P1受限关闭",
+      "currentFocus": "M32唯一主模块；M48已P1受限关闭",
       "checkpointCommitSemantics": "latestCommittedHead为本单元编辑开始前已存在提交；本记录所属提交用git log -1 -- docs/delivery/Scope_Register.json解析，不能将基准冒充最终HEAD。",
-      "workingTreeAtResume": "本单元开始实际main fb35ba03dfd6563f59c814b52fa8a6fd125422bc，工作区clean；仅文档/同源脚本变更，最终以Git HEAD/status核实。",
+      "workingTreeAtResume": "本单元开始实际main 988ceb8d419ab608fc58af039297ca07d6565113，工作区clean；仅文档/同源脚本变更，最终以Git HEAD/status核实。",
       "lastVerifiedSync": {
-        "commit": "fb35ba03dfd6563f59c814b52fa8a6fd125422bc",
+        "commit": "988ceb8d419ab608fc58af039297ca07d6565113",
         "remoteBranch": "main",
         "result": "上个单元已核实push及ls-remote一致；当前仅编辑基准",
         "scope": "非本批准单元最终所属提交"
       },
-      "currentUnitOutcome": "M19所审四项推荐与受限边界按用户批准记录，P1受限关闭、转序就绪；随后提升M48唯一主模块。无产品/原站新写入/测试复跑/发布/访问者变更。",
+      "currentUnitOutcome": "M48所审四项推荐与受限边界按用户批准记录，P1受限关闭、转序就绪；随后提升M32唯一主模块。无产品/原站新写入/测试复跑/发布/访问者变更。",
       "previousAtomicOutcome": "BC-C30与后续M17静态差异已提交b64ce7c；最近池1EA培养中/3~6个月。M17停用IDP流程保存结果未知，M18新建项目未启动；本轮不扩展或重复提交。"
     },
     "dataValidation": {
@@ -44882,7 +44944,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M48唯一主模块；M19已P1受限关闭",
+    "activeWorkPackage": "M32唯一主模块；M48已P1受限关闭",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -44897,12 +44959,12 @@
       "BP-S"
     ],
     "nextTasks": [
-      "当前M48唯一主模块：应用本窗口对M48的批准，逐项核对退出后关闭，再转M32。",
+      "当前M32唯一主模块：完成报表六项原范围、指标/数据粒度、权限/快照/导出/订阅的需求与评审材料。",
       "不重问已批准M01/M19/M48规则；后续残余验证归P2/P3/P4。",
       "主模块全部剩余必要工作外部阻塞时才启用一个备用；不按备用数扩并行探索。",
       "R1四模块和适用六基础及版本评审满足后才转P2/P3，历史技术验收不能继承。"
     ],
-    "state": "当前15/六基础与33暂缓保持；按M19→M48→M32顺序执行，最新关闭M19；R1尚未整体转序，产品扩展暂停",
+    "state": "当前15/六基础与33暂缓保持；按M19→M48→M32顺序执行，最新关闭M48；R1尚未整体转序，产品扩展暂停",
     "scopeChange": "SCOPE-20260909-CORE15",
     "supportModuleIds": [
       "M19",
@@ -44913,10 +44975,10 @@
       "id": "MODE-MODULE-CLOSURE-R-20260909",
       "authorizedAt": "2026-09-09T15:43:36.730682+00:00",
       "mode": "模块闭环优先、按R版本滚动转序",
-      "primaryModuleId": "M48",
+      "primaryModuleId": "M32",
       "backupModuleId": null,
-      "backupCandidateId": "M32",
-      "activeExecutionModuleId": "M48",
+      "backupCandidateId": "M37",
+      "activeExecutionModuleId": "M32",
       "wipLimit": 1,
       "backupLimit": 1,
       "backupActivation": "仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归",
@@ -44980,6 +45042,14 @@
           "to": "M48",
           "reason": "M19-P1-APPROVAL-20260909明确批准、四项退出条件复核满足，按用户既定顺序受限关闭",
           "remaining": "M19只有P2/P3/P4残余验证，不再有P1硬阻塞",
+          "restore": "仅未来明确的实质变更重新评审受影响条款，不重开宽泛取证"
+        },
+        {
+          "at": "2026-09-09T16:54:17.104368+00:00",
+          "from": "M48",
+          "to": "M32",
+          "reason": "M48-P1-APPROVAL-20260909明确批准、四项退出条件复核满足，按用户既定顺序受限关闭",
+          "remaining": "M48只有P2/P3/P4残余验证，不再有P1硬阻塞",
           "restore": "仅未来明确的实质变更重新评审受影响条款，不重开宽泛取证"
         }
       ],
@@ -45158,7 +45228,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-09T16:53:50.674271+00:00",
+    "updatedAt": "2026-09-09T16:54:17.104368+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -47639,7 +47709,7 @@
             "actions": "保留原登记OKR常规入口和M48消费；无AI推荐、独立任务模块恢复。",
             "acceptance": "待字段及政策明确后，核同一目标/关键结果的稳定ID、历史进展可追溯、共享边界和对齐关系；当前不能把绩效goal的完成分数等同KR进度或自动计入绩效。",
             "gap": "本轮在lib/hris/app静态搜索仅见模块导航/remaining中的完整OKR缺口，未确认独立对象和命令；原站页面当前连接不可用。提供受限规格及补证路径，不报需求就绪，也不静默删除OKR。",
-            "classification": "原范围/导航证据＋建议提纲；详细需求受限，未批准",
+            "classification": "M48适用部分产品需求已批准；原站事实与历史静态依据分别保留，其他模块未批部分不外推",
             "codeRefs": [
               "lib/hris/module-progress.ts",
               "app/hris.tsx",
@@ -47657,7 +47727,18 @@
                 "M48"
               ],
               "baseCapabilityIds": [],
-              "note": "原登记组织目标/组织绩效和OKR常规范围保持，不以当前员工绩效实现缩减。"
+              "note": "M48适用部分已获批；所审推荐优先于此前待批措辞，不把源未知变成事实，也不外推其他模块。"
+            },
+            "preApprovalClassification": "原范围/导航证据＋建议提纲；详细需求受限，未批准",
+            "requirementApproval": {
+              "record": "M48-P1-APPROVAL-20260909",
+              "scope": "M48适用部分，所审评审包优先；不批准其他模块算法/权限",
+              "decisionIds": [
+                "M48-SPEC-01",
+                "M48-SPEC-02",
+                "M48-SPEC-03",
+                "M48-SPEC-04"
+              ]
             }
           }
         ],
@@ -49140,7 +49221,7 @@
             ],
             "acceptance": "已取消任务不继续展示可办理；待审目标调整阻断自评入口；本人申诉已批准待发布应显示awaiting_publish；原模块撤权即拒绝直接URL办理；人才链候选：盘点对象配置保存、采集启动、员工待办可办分别核验；未启动/已失效模板或当前角色无权不能因管理员已见EA名单开放本人任务。",
             "gap": "已存在本人投影/部分任务/请求/工资条计数，但团队关系、完整OKR及各域本人端消费未完整实现；awaiting_publish当前误计入待批申请、批阅混入待我完成、错误保留旧data/前端版本使用有静态差异。M48-SPEC-01–04及消费契约尚待评审；R2/R3算法不由门户代定，源未知按M48-LIMIT-01候选处理。",
-            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "classification": "M48适用部分产品需求已批准；原站事实与历史静态依据分别保留，其他模块未批部分不外推",
             "accepted": false,
             "id": "BP-I-REQ-01",
             "currentApplicability": {
@@ -49152,7 +49233,7 @@
                 "M48"
               ],
               "baseCapabilityIds": [],
-              "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
+              "note": "M48适用部分已获批；所审推荐优先于此前待批措辞，不把源未知变成事实，也不外推其他模块。"
             },
             "fieldDetails": [
               {
@@ -49205,9 +49286,11 @@
                 "when": "读取自助tasks/requests/payslipCount",
                 "then": "本人请求仅EA相关，批阅任务可含EB但仍重验当前授权；payslipCount只EA非取消且批次published条数，不是工资金额或支付次数",
                 "basis": "self-service/route.ts",
-                "status": "待评审/待后续验证；本轮只静态核对",
+                "status": "M48验收预期已批准；未执行，历史测试未复验",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M48-P1-APPROVAL-20260909"
               },
               {
                 "id": "BP-I-REQ-01-AC02",
@@ -49215,9 +49298,11 @@
                 "when": "重新读取本人请求",
                 "then": "先awaiting_publish后corrected；保留原申诉ID，不能把approved误报更正已生效或删除旧结果",
                 "basis": "self-service/route.ts＋BP-P-REQ-06",
-                "status": "待评审/待后续验证；本轮只静态核对",
+                "status": "M48验收预期已批准；未执行，历史测试未复验",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M48-P1-APPROVAL-20260909"
               },
               {
                 "id": "BP-I-REQ-01-AC03",
@@ -49225,9 +49310,11 @@
                 "when": "查看待办再进原360入口修改答案",
                 "then": "聚合任务消失但源业务仍按开放窗口允许修改；动作必须重新校验当前状态，待办有无不是唯一授权依据",
                 "basis": "self-service/route.ts/feedback.ts",
-                "status": "待评审/待后续验证；本轮只静态核对",
+                "status": "M48验收预期已批准；未执行，历史测试未复验",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M48-P1-APPROVAL-20260909"
               },
               {
                 "id": "BP-I-REQ-01-AC04",
@@ -49235,9 +49322,11 @@
                 "when": "审查与M48的任务映射",
                 "then": "当前不应凭对象一行标已生成或完成本人采集任务；需源业务实例ID/启动结果明确后补映射，不新增人类访问者",
                 "basis": "BC-C40；候选接口要求，未执行源启动",
-                "status": "待评审/待后续验证；本轮只静态核对",
+                "status": "M48验收预期已批准；未执行，历史测试未复验",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M48-P1-APPROVAL-20260909"
               },
               {
                 "id": "M48-REVIEW-AC01",
@@ -49246,9 +49335,11 @@
                 "when": "查团队和他人档案/工资/答卷",
                 "then": "只授权直线对象及字段，不能读虚线/间接或敏感内容",
                 "basis": "M48-SPEC-01",
-                "status": "候选待评审，未执行",
+                "status": "M48验收预期已批准；未执行，历史测试未复验",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M48-P1-APPROVAL-20260909"
               },
               {
                 "id": "M48-REVIEW-AC02",
@@ -49257,9 +49348,11 @@
                 "when": "刷新本人入口及旧链接",
                 "then": "不返回全员/假本人数据，清对应缓存、禁止办理",
                 "basis": "M48-SPEC-01/04",
-                "status": "候选待评审，未执行",
+                "status": "M48验收预期已批准；未执行，历史测试未复验",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M48-P1-APPROVAL-20260909"
               },
               {
                 "id": "M48-REVIEW-AC03",
@@ -49268,9 +49361,11 @@
                 "when": "读取卡片/申请/待办",
                 "then": "更正待发布与待审批分开；他人批阅不冒充本人学习任务，原ID可追溯",
                 "basis": "M48-SPEC-02",
-                "status": "候选待评审，未执行",
+                "status": "M48验收预期已批准；未执行，历史测试未复验",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M48-P1-APPROVAL-20260909"
               },
               {
                 "id": "M48-REVIEW-AC04",
@@ -49279,9 +49374,11 @@
                 "when": "显示进展或尝试动作",
                 "then": "已配置只展示原指标/单位和允许动作，不自动计绩效分；未接明示未配置，完整范围/后续联调责任保留",
                 "basis": "M48-SPEC-03",
-                "status": "候选待评审，未执行",
+                "status": "M48验收预期已批准；未执行，历史测试未复验",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M48-P1-APPROVAL-20260909"
               },
               {
                 "id": "M48-REVIEW-AC05",
@@ -49290,9 +49387,11 @@
                 "when": "进入自评/查看历史",
                 "then": "遵守原模块动作限制和原版本，不能门户绕过调整或把申诉批准当发布",
                 "basis": "M48-SPEC-03",
-                "status": "候选待评审，未执行",
+                "status": "M48验收预期已批准；未执行，历史测试未复验",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M48-P1-APPROVAL-20260909"
               },
               {
                 "id": "M48-REVIEW-AC06",
@@ -49301,9 +49400,11 @@
                 "when": "显示余额及提交请假/补卡",
                 "then": "未知不是0；动作409刷新、不双提交，日期/额度由M11按批准规则验证",
                 "basis": "M48-SPEC-03/04",
-                "status": "候选待评审，未执行",
+                "status": "M48验收预期已批准；未执行，历史测试未复验",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M48-P1-APPROVAL-20260909"
               },
               {
                 "id": "M48-REVIEW-AC07",
@@ -49312,9 +49413,11 @@
                 "when": "待办消失后进入原业务",
                 "then": "消失不等锁定/已完成；修改/批阅按源有效期/角色/版本再核，不绕放行",
                 "basis": "M48-SPEC-02/03",
-                "status": "候选待评审，未执行",
+                "status": "M48验收预期已批准；未执行，历史测试未复验",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M48-P1-APPROVAL-20260909"
               },
               {
                 "id": "M48-REVIEW-AC08",
@@ -49323,9 +49426,11 @@
                 "when": "打开行动并尝试提交",
                 "then": "显示不可办理原因，不默认推进阶段或重开计划，关联原计划/阶段/行动ID",
                 "basis": "M48-SPEC-03",
-                "status": "候选待评审，未执行",
+                "status": "M48验收预期已批准；未执行，历史测试未复验",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M48-P1-APPROVAL-20260909"
               },
               {
                 "id": "M48-REVIEW-AC09",
@@ -49334,9 +49439,11 @@
                 "when": "重新读取失败并尝试旧下载",
                 "then": "相应旧数据清除、附件直接链接拒绝；服务故障不展示假0或成功",
                 "basis": "M48-SPEC-04",
-                "status": "候选待评审，未执行",
+                "status": "M48验收预期已批准；未执行，历史测试未复验",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M48-P1-APPROVAL-20260909"
               }
             ],
             "roleMatrix": [
@@ -49358,7 +49465,18 @@
                 "write": "原域接口重核版本/本人排除后处理",
                 "boundary": "不因待办可见或admin身份认定任意办理；E2不新增角色访问者"
               }
-            ]
+            ],
+            "preApprovalClassification": "本项目既有实现静态事实；转为产品要求待评审",
+            "requirementApproval": {
+              "record": "M48-P1-APPROVAL-20260909",
+              "scope": "M48适用部分，所审评审包优先；不批准其他模块算法/权限",
+              "decisionIds": [
+                "M48-SPEC-01",
+                "M48-SPEC-02",
+                "M48-SPEC-03",
+                "M48-SPEC-04"
+              ]
+            }
           },
           {
             "object": "报表与指标分母",
@@ -50270,7 +50388,7 @@
           }
         ],
         "goal": "在保留原范围内形成自助/报表/集成的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
-        "specStatus": "按模块批准：M01基础引用保持，M19最新P1受限关闭；M32等未批部分仍单列",
+        "specStatus": "按模块批准：M01基础引用保持，M48最新P1受限关闭；M32等未批部分仍单列",
         "readinessConditions": [
           "已有流程列表及干预/委托说明；尚缺合成业务申请的审批路由、通知边界与独立角色执行；D7首包固定两级保持。 BC-I27补独立业务类型/8状态和合成标题查询；实际路由/权限/通知/状态回写未执行。",
           "已有数据集/订阅/快照/权限结构；指标分母、时点及撤权后订阅行为、跨域投影尚缺，不发送订阅。",
@@ -51095,7 +51213,8 @@
           "baseCapabilityIds": [],
           "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
         },
-        "gaps": "已存在本人投影/部分任务/请求/工资条计数，但团队关系、完整OKR及各域本人端消费未完整实现；awaiting_publish当前误计入待批申请、批阅混入待我完成、错误保留旧data/前端版本使用有静态差异。M48-SPEC-01–04及消费契约尚待评审；R2/R3算法不由门户代定，源未知按M48-LIMIT-01候选处理。"
+        "gaps": "已存在本人投影/部分任务/请求/工资条计数，但团队关系、完整OKR及各域本人端消费未完整实现；awaiting_publish当前误计入待批申请、批阅混入待我完成、错误保留旧data/前端版本使用有静态差异。M48-SPEC-01–04及消费契约尚待评审；R2/R3算法不由门户代定，源未知按M48-LIMIT-01候选处理。",
+        "requirementApprovalRecord": "M48-P1-APPROVAL-20260909"
       },
       {
         "requirement": "BP-I-REQ-02",
@@ -51619,7 +51738,8 @@
           ],
           "baseCapabilityIds": [],
           "note": "原登记组织目标/组织绩效和OKR常规范围保持，不以当前员工绩效实现缩减。"
-        }
+        },
+        "requirementApprovalRecord": "M48-P1-APPROVAL-20260909"
       },
       {
         "requirement": "BP-S-REQ-12",
@@ -52099,13 +52219,18 @@
         "proposal": "建议本人数据只由当前有效成员绑定的稳定员工ID确定，未绑定仅显示关联缺失，不允许浏览器参数选择他人或降级为管理员全量档案。团队读取按显式角色和有效期关系独立授权：直线经理只直线下级，间接下级另显式授权，虚线经理只对应虚线对象，部门负责人只获授权部门及明确授权子部门，不从任一角色自动继承另一类。成员有多角色按各动作适用关系取范围并集，再与当前数据/字段白名单求交，敏感字段遵从M01已批权限，团队关系不自动开放薪资、身份证、成绩/答卷。本人档案更新只M01明示自助字段，其余走原模块已批申请链。任职调动/离职/解绑后用当前授权重核，历史关系不是永久阅读许可。",
         "alternatives": "继续用manager+orgScope作所有团队身份：实现简单但过宽/过窄，需明确接受差异；取消团队：属于内部缩减，本包未提出。",
         "impact": "决定团队完整范围和本人字段安全；不扩M01权限，不新增成员，后续独立角色验收保留。",
-        "status": "M48备用材料已明确，待轮到主模块集中评审",
-        "decisionRequired": true,
-        "decision": null,
+        "status": "已批准产品规则（M48 P1）",
+        "decisionRequired": false,
+        "decision": "批准fb35ba03dfd6563f59c814b52fa8a6fd125422bc评审包当前推荐；限M48需求基线，批准边界见M48-P1-APPROVAL-20260909",
         "moduleIds": [
           "M48"
         ],
-        "preparedAt": "2026-09-09T16:27:31.659572+00:00"
+        "preparedAt": "2026-09-09T16:27:31.659572+00:00",
+        "preApprovalStatus": "M48备用材料已明确，待轮到主模块集中评审",
+        "blockingP1": false,
+        "approvalRecord": "M48-P1-APPROVAL-20260909",
+        "decidedAt": "2026-09-09T16:54:17.104368+00:00",
+        "approvedProposalSha256": "10bbf08c5af580bd6b6b108be6c15907d343508a61dffdde755fde8a0c5ab820"
       },
       {
         "id": "M48-SPEC-02",
@@ -52114,13 +52239,18 @@
         "proposal": "建议区分本人任务、本人申请、授权办理他人任务和团队视图；个人申请只按本人业务关联投影，授权批阅必须当前办理资格。任务键由业务类型+原记录ID+动作/节点版本组成，跳转带稳定ID但原接口重新授权；不复制独立业务记录，不恢复M43完整任务模块。审批中、已批准待生效/待发布、执行失败、已生效/已发布分别显示；卡片与列表使用相同口径，不把awaiting_publish称待审批。待办消失只是当前动作不再可办，不等业务取消、答案锁定或实施成功。最新20条只作分页窗口，给出截断提示/总数或业务完整入口，不把20当全部。",
         "alternatives": "保留现有混合列表/待批名称：容易混淆批阅和本人行动、审批和生效，不推荐；将待办独立另存状态：增加双写偏差，不推荐。",
         "impact": "决定M48本人端信息与可办语义，消费M19接口但不代批M19通用规则。",
-        "status": "M48备用材料已明确，待轮到主模块集中评审",
-        "decisionRequired": true,
-        "decision": null,
+        "status": "已批准产品规则（M48 P1）",
+        "decisionRequired": false,
+        "decision": "批准fb35ba03dfd6563f59c814b52fa8a6fd125422bc评审包当前推荐；限M48需求基线，批准边界见M48-P1-APPROVAL-20260909",
         "moduleIds": [
           "M48"
         ],
-        "preparedAt": "2026-09-09T16:27:31.659572+00:00"
+        "preparedAt": "2026-09-09T16:27:31.659572+00:00",
+        "preApprovalStatus": "M48备用材料已明确，待轮到主模块集中评审",
+        "blockingP1": false,
+        "approvalRecord": "M48-P1-APPROVAL-20260909",
+        "decidedAt": "2026-09-09T16:54:17.104368+00:00",
+        "approvedProposalSha256": "2638ad89193be63e7363b90319ee89c46f0d8b9ae24507eb034c6e5438ec2562"
       },
       {
         "id": "M48-SPEC-03",
@@ -52129,13 +52259,18 @@
         "proposal": "建议M48负责本人/团队入口、权限投影、发起/编辑/提交/撤回/进度/历史的消费协议，规则执行仍由原模块拥有。统一输入包含stableEmployeeId、businessId/type、cycle或period、revision、rawStatus、displayStatus映射版本、allowedActions、reasonCode、effectiveAt、sourceVersion及当前字段投影。OKR消费目标ID/负责人/周期/对齐目标、KR指标名称/单位/基准/目标/当前值/方向和进展历史；允许动作由M16显式返回，缺权重/评分或规则时不算分、不把KR进度自动映为绩效。目标复盘保留新建/历史/提交接口，M16定义审批与周期。假勤消费打卡/请假/补卡/余额及原因；学习消费课程/考试/作业/成绩/计划任务；发展消费计划/阶段/行动/导师反馈；各自遵从生产者的已批规则与版本，不让门户跳过阶段、重开已完业务或替供应商交易。R1需求和适配协议可先评审，R2/R3未接时显式未配置/不可用并保留全部范围、恢复条件；P3跨域功能只有真实生产者或约定模拟契约通过相应验收才计适用验证，模拟不得冒充完整业务联调。完整跨域业务验收保留至依赖模块具备条件，不能因先发R1删除它们。",
         "alternatives": "要求全部R2/R3先完成P1再设计M48：阻塞已批准滚动模式；以普通任务替OKR/学习/发展：丢业务语义，不推荐。",
         "impact": "需要批准R1先完成消费契约、依赖功能分阶段补联调的具体边界；不自动批准R1发布、内部延期或R2/R3域规则。",
-        "status": "M48备用材料已明确，待轮到主模块集中评审",
-        "decisionRequired": true,
-        "decision": null,
+        "status": "已批准产品规则（M48 P1）",
+        "decisionRequired": false,
+        "decision": "批准fb35ba03dfd6563f59c814b52fa8a6fd125422bc评审包当前推荐；限M48需求基线，批准边界见M48-P1-APPROVAL-20260909",
         "moduleIds": [
           "M48"
         ],
-        "preparedAt": "2026-09-09T16:27:31.659572+00:00"
+        "preparedAt": "2026-09-09T16:27:31.659572+00:00",
+        "preApprovalStatus": "M48备用材料已明确，待轮到主模块集中评审",
+        "blockingP1": false,
+        "approvalRecord": "M48-P1-APPROVAL-20260909",
+        "decidedAt": "2026-09-09T16:54:17.104368+00:00",
+        "approvedProposalSha256": "ad84e172a8f160b070e0f9d2aa896301dd32601dffc01919fec673e4fac69a9b"
       },
       {
         "id": "M48-SPEC-04",
@@ -52144,13 +52279,18 @@
         "proposal": "建议接口失败不显示假0或成功：首次失败显示不可用，临时故障保留非敏感摘要须明确观察时间且禁办理；401/403、解绑或字段撤权则清除相应缓存数据并重新登录/取授权，不保留敏感旧屏。动作使用源revision，409刷新再确认，网络结果未知按原业务ID查询后再试，禁自动重复提交。历史记录可见性仍按当前权限和原单版本；附件下载独立验权，不能从旧链接读撤权内容。自助允许动作不包含管理员权限修改、真实支付或签署，外部服务状态仅按接口回执显示。批准本包消费字段/角色/状态/异常及所列验收预期后实施，不把单账号静态核对当真人权限通过。",
         "alternatives": "读取失败继续显示旧数据而不标时点：可能误以为实时和泄漏撤权字段；统一清空为0：掩盖访问/服务故障，不推荐。",
         "impact": "决定M48错误展示/幂等/撤权后历史行为，后续P2设计、P3测试、P4独立权限均保留。",
-        "status": "M48备用材料已明确，待轮到主模块集中评审",
-        "decisionRequired": true,
-        "decision": null,
+        "status": "已批准产品规则（M48 P1）",
+        "decisionRequired": false,
+        "decision": "批准fb35ba03dfd6563f59c814b52fa8a6fd125422bc评审包当前推荐；限M48需求基线，批准边界见M48-P1-APPROVAL-20260909",
         "moduleIds": [
           "M48"
         ],
-        "preparedAt": "2026-09-09T16:27:31.659572+00:00"
+        "preparedAt": "2026-09-09T16:27:31.659572+00:00",
+        "preApprovalStatus": "M48备用材料已明确，待轮到主模块集中评审",
+        "blockingP1": false,
+        "approvalRecord": "M48-P1-APPROVAL-20260909",
+        "decidedAt": "2026-09-09T16:54:17.104368+00:00",
+        "approvedProposalSha256": "450eaa057c277bd4b2e5b24d36f202dba6c524b7a7c58fb9375b2edfeed2b916"
       }
     ],
     "codeReview": {
@@ -52493,17 +52633,13 @@
       }
     ],
     "consistencyReview": {
-      "state": "顺序应用本窗口明确批准；已关闭M01,M19；历史技术证据不继承为业务通过",
+      "state": "顺序应用本窗口明确批准；已关闭M01,M19,M48；历史技术证据不继承为业务通过",
       "reviewedSourceCommit": "447b02f72a2d2051986aba98e769daa7c2b846a3",
       "issues": [
         "R-SPEC-01 候选人主对象与招聘需求/人才库关系",
         "C-SPEC-01 360评价角色、匿名对象和低样本报告发布边界",
         "R-SPEC-02 Offer审批历史参与者排除范围",
-        "S-SPEC-01 补差后负累计净额及追回边界",
-        "M48-SPEC-01 本人身份、团队关系和字段权限",
-        "M48-SPEC-02 本人办理、受托任务、申请与待生效分列",
-        "M48-SPEC-03 七项功能的业务消费契约及R版本依赖",
-        "M48-SPEC-04 异常、撤权与历史视图的验收边界"
+        "S-SPEC-01 补差后负累计净额及追回边界"
       ],
       "findings": [
         "组织同级唯一已排除首包歧义",
@@ -52557,7 +52693,7 @@
       ],
       "remaining": "仅当前未关闭模块及R1适用基础/版本评审，不再重复已批事项",
       "latestReviewedHead": "c0538e7362da8b7ef82b18a13b427d80822ccdac",
-      "latestReviewAt": "2026-09-09T16:53:50.674271+00:00",
+      "latestReviewAt": "2026-09-09T16:54:17.104368+00:00",
       "internalScopeReviewAt": "2026-09-09T10:26:03.101902+00:00",
       "internalScopeSource": "modules[].scope → modules[].p1.internalScopeCoverage；逐个原登记短语精确映射，不增验收分母",
       "internalScopeResult": "当前15模块所有原登记短语均映射到既有规格/直接或跨域证据及具体限制；仅用户明确独立AI排班子能力暂缓、支付外部部分仅契约。其余保留含未探索，未当需求通过。",
@@ -52717,10 +52853,10 @@
     ],
     "packageAssessmentSource": "当前各包就绪条件由modules[].p1.currentDeliveryAssessment.basis及deliveryScope基础边界生成；packages.pending/readinessConditions保留兼容历史快照，不能覆盖逐模块最新评估，后续不手工更新两份。",
     "reviewPackage": {
-      "assessedAt": "2026-09-09T16:53:50.674271+00:00",
-      "basedOnHead": "fb35ba03dfd6563f59c814b52fa8a6fd125422bc",
-      "status": "已受限关闭 M01,M19；其他模块待评审，不等全项目P1验收",
-      "autonomousWork": "M19所审四项推荐与受限边界按用户批准记录，P1受限关闭、转序就绪；随后提升M48唯一主模块。无产品/原站新写入/测试复跑/发布/访问者变更。",
+      "assessedAt": "2026-09-09T16:54:17.104368+00:00",
+      "basedOnHead": "988ceb8d419ab608fc58af039297ca07d6565113",
+      "status": "已受限关闭 M01,M19,M48；其他模块待评审，不等全项目P1验收",
+      "autonomousWork": "M48所审四项推荐与受限边界按用户批准记录，P1受限关闭、转序就绪；随后提升M32唯一主模块。无产品/原站新写入/测试复跑/发布/访问者变更。",
       "sourceProgress": "M01组织/职位/入职/兼职/法人/未来离职；M07薪资组/包前置；M06类别-级别-指标-标准保留链；M03任期/考察期；M17池成员；M37指标/标准启用；M18项目持久化及对象配置均有局部执行。没有将这些链等同整模块P1A完成。",
       "requirementsProgress": "当前15模块均有总体/分包契约或明确受限规格；原内部功能逐项映射，字段/角色/状态/依赖/异常/验收及实现差异同源。组织绩效、OKR、健康度、社保/个税/激励等未探索细则保留，已确认D1–D7与候选分开。",
       "gateConclusion": "模块转序按具体记录；R1尚需未关闭模块/适用基础及版本评审，继续P1",
@@ -52737,7 +52873,7 @@
         {
           "id": "P1-RULES-01",
           "kind": "最小必要业务选择",
-          "action": "M48当前规则/受限边界的剩余条件（若已获本窗口批准直接应用，不重问）",
+          "action": "M32当前规则/受限边界的剩余条件（若已获本窗口批准直接应用，不重问）",
           "evidence": "对应moduleClosure/reviewPackage与approvalRecords",
           "affected": "只当前未关闭模块；已批准模块无P1硬阻塞",
           "restore": "完成当前可执行工作并处理真实未决事项"
@@ -52746,14 +52882,14 @@
           "id": "P1-REVIEW-01",
           "kind": "待业务评审签署",
           "action": "审阅15模块与六基础需求/证据/例外",
-          "evidence": "已受限关闭M01,M19；其余模块及R版本未整体签署",
+          "evidence": "已受限关闭M01,M19,M48；其余模块及R版本未整体签署",
           "affected": "尚未关闭模块与R1版本，不影响已关闭模块",
           "restore": "按单模块证据/规则/例外评审，不自动继承M01批准"
         },
         {
           "id": "P1-LOCAL-CONDITIONS",
           "kind": "局部原站条件待核",
-          "action": "M48定向源证据缺口；已批准限制的模块不再阻塞P1",
+          "action": "M32定向源证据缺口；已批准限制的模块不再阻塞P1",
           "evidence": "BC-C28/C31/C40、BC-F45/46及dataValidation.records/operations；源已确认保存和未知结果分别记录。",
           "affected": "只未处理的当前范围源行为",
           "restore": "必要时恢复浏览器，或明确批准对应模块有范围的产品设计及例外"
@@ -52901,6 +53037,64 @@
           "委托仅双方现有权限与委托范围交集，不增角色/访问者/审批权",
           "审批/业务生效/通知分态，真实外部消息不是P1前置",
           "M01 D1–D7原义保持，D7不得使用通用转交/干预/委托绕过独立审批"
+        ],
+        "exclusions": [
+          "仅P1需求批准，不代表实现、P3测试、多人权限、P4业务/生产验收",
+          "不自动批准其他模块或R1整体进入P2/P3",
+          "D1–D7不重新解释/扩大；不改产品代码、部署、访问者"
+        ]
+      },
+      {
+        "id": "M48-P1-APPROVAL-20260909",
+        "moduleIds": [
+          "M48"
+        ],
+        "approved": true,
+        "approvedBy": "项目所有者（本窗口用户）",
+        "approvedAt": "2026-09-09T16:54:17.104368+00:00",
+        "recordedAt": "2026-09-09T16:54:17.104368+00:00",
+        "timeBasis": "本窗口明确授权的顺序执行登记时间，不声称外部电子签时间",
+        "source": "本窗口用户：继续执行R1模块顺序关闭；一次批准M19/M48但严格M19→M48逐模块判定",
+        "reviewedHead": "fb35ba03dfd6563f59c814b52fa8a6fd125422bc",
+        "reviewedDocument": "docs/delivery/P1_M48_Review_Package.md",
+        "reviewedDocumentSha256": "101c6aaf6ffd7cf9c1125511c1fa6d8e7836954cf6708106bec459e21768e69d",
+        "scope": "M48 团队、审批、OKR、目标、假勤、学习、发展计划完整原登记范围的P1需求基线与所列受限结论",
+        "decisionIds": [
+          "M48-SPEC-01",
+          "M48-SPEC-02",
+          "M48-SPEC-03",
+          "M48-SPEC-04"
+        ],
+        "approvedRecommendations": {
+          "M48-SPEC-01": {
+            "text": "建议本人数据只由当前有效成员绑定的稳定员工ID确定，未绑定仅显示关联缺失，不允许浏览器参数选择他人或降级为管理员全量档案。团队读取按显式角色和有效期关系独立授权：直线经理只直线下级，间接下级另显式授权，虚线经理只对应虚线对象，部门负责人只获授权部门及明确授权子部门，不从任一角色自动继承另一类。成员有多角色按各动作适用关系取范围并集，再与当前数据/字段白名单求交，敏感字段遵从M01已批权限，团队关系不自动开放薪资、身份证、成绩/答卷。本人档案更新只M01明示自助字段，其余走原模块已批申请链。任职调动/离职/解绑后用当前授权重核，历史关系不是永久阅读许可。",
+            "sha256": "10bbf08c5af580bd6b6b108be6c15907d343508a61dffdde755fde8a0c5ab820"
+          },
+          "M48-SPEC-02": {
+            "text": "建议区分本人任务、本人申请、授权办理他人任务和团队视图；个人申请只按本人业务关联投影，授权批阅必须当前办理资格。任务键由业务类型+原记录ID+动作/节点版本组成，跳转带稳定ID但原接口重新授权；不复制独立业务记录，不恢复M43完整任务模块。审批中、已批准待生效/待发布、执行失败、已生效/已发布分别显示；卡片与列表使用相同口径，不把awaiting_publish称待审批。待办消失只是当前动作不再可办，不等业务取消、答案锁定或实施成功。最新20条只作分页窗口，给出截断提示/总数或业务完整入口，不把20当全部。",
+            "sha256": "2638ad89193be63e7363b90319ee89c46f0d8b9ae24507eb034c6e5438ec2562"
+          },
+          "M48-SPEC-03": {
+            "text": "建议M48负责本人/团队入口、权限投影、发起/编辑/提交/撤回/进度/历史的消费协议，规则执行仍由原模块拥有。统一输入包含stableEmployeeId、businessId/type、cycle或period、revision、rawStatus、displayStatus映射版本、allowedActions、reasonCode、effectiveAt、sourceVersion及当前字段投影。OKR消费目标ID/负责人/周期/对齐目标、KR指标名称/单位/基准/目标/当前值/方向和进展历史；允许动作由M16显式返回，缺权重/评分或规则时不算分、不把KR进度自动映为绩效。目标复盘保留新建/历史/提交接口，M16定义审批与周期。假勤消费打卡/请假/补卡/余额及原因；学习消费课程/考试/作业/成绩/计划任务；发展消费计划/阶段/行动/导师反馈；各自遵从生产者的已批规则与版本，不让门户跳过阶段、重开已完业务或替供应商交易。R1需求和适配协议可先评审，R2/R3未接时显式未配置/不可用并保留全部范围、恢复条件；P3跨域功能只有真实生产者或约定模拟契约通过相应验收才计适用验证，模拟不得冒充完整业务联调。完整跨域业务验收保留至依赖模块具备条件，不能因先发R1删除它们。",
+            "sha256": "ad84e172a8f160b070e0f9d2aa896301dd32601dffc01919fec673e4fac69a9b"
+          },
+          "M48-SPEC-04": {
+            "text": "建议接口失败不显示假0或成功：首次失败显示不可用，临时故障保留非敏感摘要须明确观察时间且禁办理；401/403、解绑或字段撤权则清除相应缓存数据并重新登录/取授权，不保留敏感旧屏。动作使用源revision，409刷新再确认，网络结果未知按原业务ID查询后再试，禁自动重复提交。历史记录可见性仍按当前权限和原单版本；附件下载独立验权，不能从旧链接读撤权内容。自助允许动作不包含管理员权限修改、真实支付或签署，外部服务状态仅按接口回执显示。批准本包消费字段/角色/状态/异常及所列验收预期后实施，不把单账号静态核对当真人权限通过。",
+            "sha256": "450eaa057c277bd4b2e5b24d36f202dba6c524b7a7c58fb9375b2edfeed2b916"
+          }
+        },
+        "exceptionIds": [
+          "M48-LIMIT-01"
+        ],
+        "exceptionScope": "源团队/本人角色、OKR详细页、各域本人提交/撤回/异常链和跨域生产者未接通",
+        "authorization": "用户明确批准当前评审包推荐和受限边界；条件满足按受限通过关闭，随后将M32提升唯一主模块。",
+        "approvedBoundaries": [
+          "本人身份来自当前有效成员稳定员工绑定，不能通过参数选择他人",
+          "显式团队关系授权，不自动开放敏感字段；四类视图分列",
+          "审批/待生效发布/失败/已生效发布分态",
+          "七项入口/投影/消费契约属于M48，业务规则属于生产者",
+          "允许R2/R3未完时按接口和未配置/不可用关闭P1，不删范围或冒充完整联调",
+          "401/403、解绑或撤权清相应缓存，临时故障不显示假0/成功"
         ],
         "exclusions": [
           "仅P1需求批准，不代表实现、P3测试、多人权限、P4业务/生产验收",

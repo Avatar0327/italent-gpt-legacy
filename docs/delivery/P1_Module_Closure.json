@@ -1,31 +1,31 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-09T16:53:50.674271+00:00",
-  "primaryModuleId": "M48",
+  "generatedFromUpdatedAt": "2026-09-09T16:54:17.104368+00:00",
+  "primaryModuleId": "M32",
   "backupModuleId": null,
-  "activeExecutionModuleId": "M48",
+  "activeExecutionModuleId": "M32",
   "moduleCount": 15,
   "completeCount": 0,
-  "restrictedCount": 2,
-  "transitionReadyCount": 2,
+  "restrictedCount": 3,
+  "transitionReadyCount": 3,
   "progress": {
     "p1A": {
       "full": 0,
-      "restricted": 2,
-      "total": 2
+      "restricted": 3,
+      "total": 3
     },
     "p1B": {
       "full": 0,
-      "restricted": 2,
-      "total": 2
+      "restricted": 3,
+      "total": 3
     },
     "review": {
       "full": 0,
-      "restricted": 2,
-      "total": 2
+      "restricted": 3,
+      "total": 3
     }
   },
-  "p1ClosedCount": 2,
+  "p1ClosedCount": 3,
   "modules": [
     {
       "moduleId": "M01",
@@ -203,62 +203,68 @@
       "moduleId": "M48",
       "name": "员工自助",
       "rangeId": "R1",
-      "queueState": "primary",
+      "queueState": "closed_restricted",
       "p1AConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M48-P1-APPROVAL-20260909",
         "evidenceRefs": [
           "P1-SELF-REVIEW",
           "BC-P1C-M48"
         ],
-        "limits": "七项原范围证据分层及缺口齐备，源角色/链受限待批准例外或补证；未通过"
+        "limits": "当前完整范围证据/深度/限制已齐备用于需求判定；用户批准M48-LIMIT-01，未知源行为保留，不计完整源执行验证。",
+        "approvedAt": "2026-09-09T16:54:17.104368+00:00"
       },
       "p1BConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M48-P1-APPROVAL-20260909",
         "evidenceRefs": [],
-        "limits": "四组建议、七项消费契约、权限/状态/错误/验收及差异可评审；批准尚缺，不就绪"
+        "limits": "所审版本四组推荐、规格/权限/验收/依赖与受限责任已批准；需求就绪，不代表实现或跨域联调通过。",
+        "approvedAt": "2026-09-09T16:54:17.104368+00:00"
       },
       "conditions": {
         "applicableScopeDetermined": {
           "value": true,
-          "basis": "用户已确认15完整登记范围及本轮R顺序"
+          "basis": "M48-P1-APPROVAL-20260909：原登记范围全部保留，无内部删减"
         },
         "implementationRulesDecided": {
-          "value": false,
-          "basis": "M48-SPEC-01–04、M48-LIMIT-01及验收/依赖边界未批准"
+          "value": true,
+          "basis": "M48-P1-APPROVAL-20260909：四组推荐及明确用户边界已批准，其他模块不继承"
         },
         "acceptanceExecutable": {
-          "value": false,
-          "basis": "M48-SPEC-01–04、M48-LIMIT-01及验收/依赖边界未批准"
+          "value": true,
+          "basis": "M48-P1-APPROVAL-20260909：所审验收场景明确且作为需求基线获批；accepted/executionThisRun仍false"
         },
         "dependenciesAndExceptionsResolved": {
-          "value": false,
-          "basis": "M48-SPEC-01–04、M48-LIMIT-01及验收/依赖边界未批准"
+          "value": true,
+          "basis": "M48-P1-APPROVAL-20260909：原站限制及后续补验责任获批；供应商/跨域未接按已批契约处理，不作当前P1前置"
         }
       },
       "transitionReview": {
-        "approved": false,
-        "record": null,
-        "scope": null,
-        "approvedAt": null
+        "approved": true,
+        "record": "M48-P1-APPROVAL-20260909",
+        "approvedAt": "2026-09-09T16:54:17.104368+00:00",
+        "scope": "M48满足现有条件后P1受限关闭及转序资格；用户明确要求随后转M32，不等R1整体P2/P3批准"
       },
-      "restrictedApproval": null,
-      "transitionReady": false,
-      "missingConditions": [
-        "implementationRulesDecided",
-        "acceptanceExecutable",
-        "dependenciesAndExceptionsResolved",
-        "p1AApproved",
-        "p1BApproved",
-        "transitionReviewApproved"
-      ]
+      "restrictedApproval": {
+        "scope": "源团队/本人角色、OKR详细页、各域本人提交/撤回/异常链和跨域生产者未接通",
+        "residualRisk": "当前源行为和角色可能不同；团队敏感字段、旧缓存、域状态映射及OKR联调未实证，不能以契约模拟冒充真实业务通过。",
+        "revalidation": "P2核团队有效关系/权限/版本与七项适配；P3用合成且明确授权的独立角色与源适配器验证撤权/状态/错误，联调未具备的功能逐项列未通过；P4完成真实多角色及跨模块业务验收。E2和不实发通知/支付/签署边界保持。",
+        "record": "M48-P1-APPROVAL-20260909",
+        "approvedAt": "2026-09-09T16:54:17.104368+00:00",
+        "phaseScope": "仅P1，不免除实现、测试、跨角色及P4验收"
+      },
+      "closureClass": "受限通过",
+      "p1Closed": true,
+      "closureRecord": "M48-P1-APPROVAL-20260909",
+      "closedAt": "2026-09-09T16:54:17.104368+00:00",
+      "transitionReady": true,
+      "missingConditions": []
     },
     {
       "moduleId": "M32",
       "name": "报表",
       "rangeId": "R1",
-      "queueState": "queued",
+      "queueState": "primary",
       "p1AConclusion": {
         "status": "进行中",
         "approvalRecord": null,
@@ -1072,7 +1078,6 @@
       ],
       "transitionReady": false,
       "missingConditions": [
-        "M48",
         "M32",
         "BASE-01",
         "BASE-02",
