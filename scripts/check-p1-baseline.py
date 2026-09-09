@@ -54,6 +54,11 @@ for p in s['p1B']['packages']:
   check(all((R/x).exists() for x in c['codeRefs']),c['id']+'实现证据路径存在')
   app=c['currentApplicability']
   check(app['status'] in ['保留','部分适用','本次交付暂缓'] and set(app['moduleIds'])<=active and set(app['baseCapabilityIds'])<=caps,c['id']+'历史契约当前适用明确')
+for row in s['p1B']['implementationMap']:
+ evidence=row.get('evidence')
+ check(isinstance(evidence,(str,list)) and bool(evidence),row['requirement']+'实现证据结构有效')
+ if isinstance(evidence,list):
+  check(all(isinstance(ref,str) and len(ref.strip())>1 for ref in evidence),row['requirement']+'实现证据保留完整引用，非逐字符列表')
 for m in s['modules']:
  for ref in m['p1']['pageRefs']:check(ref in pages and pages[ref]['moduleId']==m['id'],m['id']+'/'+ref+'证据归属')
 for p in pages.values():check((R/p['source']).exists(),p['id']+'原始来源存在')
