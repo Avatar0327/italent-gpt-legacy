@@ -2,7 +2,7 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 
 # 模块闭环、滚动转序及当前收口清单
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T17:01:22.299836+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T17:11:16.592266+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
@@ -19,14 +19,20 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 
 四项条件均true且有证据；P1A结论及P1B评审均完整通过或获明确受限批准；transitionReview.approved=true且有批准范围/日期/记录才可转序。受限通过自身不足以转序。
 
-R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可实施且版本评审明确允许P2/P3，才转序；不要求后续R版本全部完成P1。P4业务和生产验收独立。
+每R所有模块和适用基础P1条件齐备且版本评审明确批准才进入指定下阶段；R1本次仅准P2设计，P2独立退出评审后才可P3，不继承历史技术验收。P4业务/生产验收独立。
+
+| 版本 | P1转序条件 | 批准进入阶段 | 下游实际状态 |
+|---|---|---|---|
+| R1 | 齐备 | P2 | 已获准进入，待独立设计执行与评审 |
+| R2 | 未齐备：M37,M06,M26,M18,M17,M03,BASE-01,BASE-02,BASE-03,BASE-04,BASE-05,BASE-06,rangeReviewApproved | 未批准 | 未取得该R下游批准 |
+| R3 | 未齐备：M27,M16,M12,M11,M07,BASE-01,BASE-02,BASE-03,BASE-04,BASE-05,BASE-06,rangeReviewApproved | 未批准 | 未取得该R下游批准 |
 
 | 模块 | R版本/队列 | P1A判定 | P1B评审 | 转序就绪 | 未达到条件 |
 |---|---|---|---|---|---|
 | M01 组织员工 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M19 审批中心 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M48 员工自助 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
-| M32 报表 | R1 / primary | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M32 报表 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M37 人才标准 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M06 任职资格 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M26 360度评估 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
@@ -39,7 +45,7 @@ R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可
 | M11 假勤管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M07 薪酬社保 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 
-转序就绪 3/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
+转序就绪 4/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
 
 
 ## M01完整登记范围收口清单
@@ -66,12 +72,12 @@ R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可
 
 | 问题/原范围 | 需求 | 证据 | 具体缺口 | 阻塞P1/风险 | 关闭方式与判据 | 当前状态 |
 |---|---|---|---|---|---|---|
-| M32-CLOSE-01 / 招聘 | BP-I-REQ-02 | BC-R01；BC-R14；BC-R16 | 本域数据粒度/时间/权限/消费依赖已具体化；M32-SPEC-01–06及M32-LIMIT-01未获批准，源报表/设计器详细执行仍未知。 | True；敏感数据/分母和时间正确性、导出/订阅外传、跨域依赖 | 集中审批所列明确候选及有范围例外，或恢复后定向补影响规则的证据；不穷尽配置组合；全部原登记六项保留，旧数据集/原导航仅各自事实，不改代码或真实数据 | 已完成待评审 |
-| M32-CLOSE-02 / 人事 | BP-I-REQ-02 | BC-F39；BC-F45 | 本域数据粒度/时间/权限/消费依赖已具体化；M32-SPEC-01–06及M32-LIMIT-01未获批准，源报表/设计器详细执行仍未知。 | True；敏感数据/分母和时间正确性、导出/订阅外传、跨域依赖 | 集中审批所列明确候选及有范围例外，或恢复后定向补影响规则的证据；不穷尽配置组合；全部原登记六项保留，旧数据集/原导航仅各自事实，不改代码或真实数据 | 已完成待评审 |
-| M32-CLOSE-03 / 假勤 | BP-I-REQ-02 | BC-A04；BC-A11；BC-A12 | 本域数据粒度/时间/权限/消费依赖已具体化；M32-SPEC-01–06及M32-LIMIT-01未获批准，源报表/设计器详细执行仍未知。 | True；敏感数据/分母和时间正确性、导出/订阅外传、跨域依赖 | 集中审批所列明确候选及有范围例外，或恢复后定向补影响规则的证据；不穷尽配置组合；全部原登记六项保留，旧数据集/原导航仅各自事实，不改代码或真实数据 | 已完成待评审 |
-| M32-CLOSE-04 / 薪酬 | BP-I-REQ-02 | BC-S03；BC-S08 | 本域数据粒度/时间/权限/消费依赖已具体化；M32-SPEC-01–06及M32-LIMIT-01未获批准，源报表/设计器详细执行仍未知。 | True；敏感数据/分母和时间正确性、导出/订阅外传、跨域依赖 | 集中审批所列明确候选及有范围例外，或恢复后定向补影响规则的证据；不穷尽配置组合；全部原登记六项保留，旧数据集/原导航仅各自事实，不改代码或真实数据 | 已完成待评审 |
-| M32-CLOSE-05 / 绩效 | BP-I-REQ-02 | BC-P07；BC-P14；BC-P15 | 本域数据粒度/时间/权限/消费依赖已具体化；M32-SPEC-01–06及M32-LIMIT-01未获批准，源报表/设计器详细执行仍未知。 | True；敏感数据/分母和时间正确性、导出/订阅外传、跨域依赖 | 集中审批所列明确候选及有范围例外，或恢复后定向补影响规则的证据；不穷尽配置组合；全部原登记六项保留，旧数据集/原导航仅各自事实，不改代码或真实数据 | 已完成待评审 |
-| M32-CLOSE-06 / 人才等 | BP-I-REQ-02；BP-I-REQ-11 | BC-C40；BC-C30；BC-L19；BC-P1C-M32 | 本域数据粒度/时间/权限/消费依赖已具体化；M32-SPEC-01–06及M32-LIMIT-01未获批准，源报表/设计器详细执行仍未知。 | True；敏感数据/分母和时间正确性、导出/订阅外传、跨域依赖 | 集中审批所列明确候选及有范围例外，或恢复后定向补影响规则的证据；不穷尽配置组合；全部原登记六项保留，旧数据集/原导航仅各自事实，不改代码或真实数据 | 已完成待评审 |
+| M32-CLOSE-01 / 招聘 | BP-I-REQ-02 | BC-R01；BC-R14；BC-R16 | P1硬条件已满足；原站未知及新增实现/补验进入P2/P3/P4 | False；敏感数据/分母和时间正确性、导出/订阅外传、跨域依赖 | 明确批准六组推荐与M32-LIMIT-01，按条件核对；M32-P1-APPROVAL-20260909 | 受限通过 |
+| M32-CLOSE-02 / 人事 | BP-I-REQ-02 | BC-F39；BC-F45 | P1硬条件已满足；原站未知及新增实现/补验进入P2/P3/P4 | False；敏感数据/分母和时间正确性、导出/订阅外传、跨域依赖 | 明确批准六组推荐与M32-LIMIT-01，按条件核对；M32-P1-APPROVAL-20260909 | 受限通过 |
+| M32-CLOSE-03 / 假勤 | BP-I-REQ-02 | BC-A04；BC-A11；BC-A12 | P1硬条件已满足；原站未知及新增实现/补验进入P2/P3/P4 | False；敏感数据/分母和时间正确性、导出/订阅外传、跨域依赖 | 明确批准六组推荐与M32-LIMIT-01，按条件核对；M32-P1-APPROVAL-20260909 | 受限通过 |
+| M32-CLOSE-04 / 薪酬 | BP-I-REQ-02 | BC-S03；BC-S08 | P1硬条件已满足；原站未知及新增实现/补验进入P2/P3/P4 | False；敏感数据/分母和时间正确性、导出/订阅外传、跨域依赖 | 明确批准六组推荐与M32-LIMIT-01，按条件核对；M32-P1-APPROVAL-20260909 | 受限通过 |
+| M32-CLOSE-05 / 绩效 | BP-I-REQ-02 | BC-P07；BC-P14；BC-P15 | P1硬条件已满足；原站未知及新增实现/补验进入P2/P3/P4 | False；敏感数据/分母和时间正确性、导出/订阅外传、跨域依赖 | 明确批准六组推荐与M32-LIMIT-01，按条件核对；M32-P1-APPROVAL-20260909 | 受限通过 |
+| M32-CLOSE-06 / 人才等 | BP-I-REQ-02；BP-I-REQ-11 | BC-C40；BC-C30；BC-L19；BC-P1C-M32 | P1硬条件已满足；原站未知及新增实现/补验进入P2/P3/P4 | False；敏感数据/分母和时间正确性、导出/订阅外传、跨域依赖 | 明确批准六组推荐与M32-LIMIT-01，按条件核对；M32-P1-APPROVAL-20260909 | 受限通过 |
 
 
 ## M48完整登记范围收口清单
@@ -89,6 +95,8 @@ R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可
 
 M19当前材料：[P1受限通过，需求基线已批准](P1_M19_Review_Package.md)。批准、源取证及后续执行各自独立。
 
-M32当前材料：[已完成待评审](P1_M32_Review_Package.md)。批准、源取证及后续执行各自独立。
+M32当前材料：[P1受限通过，需求基线已批准](P1_M32_Review_Package.md)。批准、源取证及后续执行各自独立。
 
 M48当前材料：[P1受限通过，需求基线已批准](P1_M48_Review_Package.md)。批准、源取证及后续执行各自独立。
+
+[R1 P2完整交接](P1_R1_P2_Handoff.md) · [新窗口启动提示词](P1_R1_P2_Start_Prompt.md)：只准P2设计，不等P2退出或P3通过。

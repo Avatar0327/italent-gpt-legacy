@@ -163,6 +163,9 @@ for ar in approvals.values():
   check(v['text']==original_issues[iid]['proposal'] and hashlib.sha256(v['text'].encode()).hexdigest()==v['sha256'],iid+'推荐锁定所审版本，不扩写批准')
  expected_doc=subprocess.check_output(['git','show',ar['reviewedHead']+':'+ar['reviewedDocument']],cwd=R)
  check(hashlib.sha256(expected_doc).hexdigest()==ar['reviewedDocumentSha256'],ar['id']+'审阅文档哈希匹配')
+ for cid,snapshot in ar.get('approvedFoundationSnapshots',{}).items():
+  cap=next(x for x in original['deliveryScope']['baseCapabilities'] if x['id']==cid)
+  check(hashlib.sha256(json.dumps(cap,ensure_ascii=False,sort_keys=True).encode()).hexdigest()==snapshot['sha256'],ar['id']+'/'+cid+'基础批准锁定所审完整字段/验收版本')
 check(view['p1ClosedCount']==view['progress']['review']['total'],'P1关闭合计同源且完整/受限分列')
 for rg in view['ranges']:
  expected=all(next(x for x in view['modules'] if x['moduleId']==mid)['transitionReady'] for mid in rg['moduleIds']) and all(rg['foundationReadiness'][fid]['value'] is True for fid in rg['applicableFoundationIds']) and rg['review']['approved'] is True and has_approval(rg['review']['record'])
@@ -204,6 +207,22 @@ for rg in s['roadmap']['rangeGates']:
   check(all(has_approval(i) for i in a['approvedRuleRefs']),cap['id']+'引用的模块批准可追溯')
   if rg['foundationReadiness'][cap['id']]['value'] is True:
    check(has_approval(a.get('approvalRecord')),cap['id']+'R1基础就绪需自身适用批准，不继承模块批准')
+ h=rg.get('p2Handoff')
+ if h:
+  check(set(h['contractIds'])<=set(contract_ids) and all(has_approval(i) for i in h['approvalRecordIds']),rg['id']+'P2交接仅引用现有需求与明确批准')
+  check(set(h['moduleIds'])==set(next(x for x in ds['rangeLayers'] if x['id']==rg['id'])['moduleIds']) and set(h['baseCapabilityIds'])==set(rg['applicableFoundationIds']),rg['id']+'P2交接范围与版本基础完全一致')
+  check(all((R/p).exists() for w in h['designWorklist'] for p in w['codeRefs']),rg['id']+'设计差异的复用路径存在')
+ downstream=rg.get('downstream')
+ if downstream:
+  check(downstream['authorizedPhase']=='P2' and has_approval(downstream['entryApprovalRecord']),rg['id']+'当前下阶段明确仅P2设计授权')
+  if downstream['p3EntryApproved']:
+   check(downstream['p2ExitApproved'] is True and has_approval(downstream['p2ExitRecord']),rg['id']+'P3不得从P1转序跳过P2退出批准')
+  check(downstream['businessAccepted'] is False and downstream['productionAccepted'] is False,rg['id']+'阶段批准不代签业务或生产')
+cap5=next(x for x in ds['baseCapabilities'] if x['id']=='BASE-05')
+if cap5.get('recoveryTargets'):
+ rt=cap5['recoveryTargets']
+ check(has_approval(rt['approvalRecord']) and (rt['rpoMinutes'],rt['rtoMinutes'],rt['retentionDays'])==(60,240,30),'R1批准恢复目标60分钟/240分钟/30天准确，不由历史耗时推算')
+ check(rt['platformCapabilityVerified'] is False,'恢复目标不冒称云端能力已确认')
 result['checks']=checks
 (D/'P1AB_Document_Check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
 print('PASS: module packets, scoped approvals, dataset mappings and R1 foundation references; no inherited signoff')

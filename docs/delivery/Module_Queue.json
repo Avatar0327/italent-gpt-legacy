@@ -699,7 +699,7 @@
   "currentP1": {
     "revision": "2026-09-09-module-closure-rolling-R",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-09T15:54:02.023639+00:00",
+    "updatedAt": "2026-09-09T17:11:16.592266+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -738,17 +738,17 @@
         "deliverables": "总体PRD、分包规格、需求就绪表、实现对应表",
         "exit": "模块适用范围明确、实施规则已决、验收可执行、依赖/例外已处理，且有P1A/P1B批准及转序评审才就绪；受限通过单列。全项目P1仍须15模块及基础范围评审，版本转序不等待其后R版本。",
         "limits": "编写完成不等于需求验收；首包就绪不等于全项目P1完成；多人UAT不作为P1前置",
-        "next": "R1四模块及适用基础达到条件且版本评审允许后进入R1 P2/P3；R2/R3在可用工作时段继续P1，保持单主要任务。"
+        "next": "R1已准进入P2设计；本P1窗口完成交接后转M37；其他R按具体模块/基础/版本条件转序，不直接进P3。"
       },
       {
         "id": "P2",
         "name": "复核复用技术底座",
         "input": "获模块与R版本转序评审的需求/适用基础、既有技术底座和对应版本历史证据",
-        "work": "核对模型、权限、事务、接口和现有实现差异，仅补必要设计/验证",
-        "deliverables": "复用清单、必要设计、差异验证记录",
-        "exit": "当前包需求与技术设计相符，阻断差异关闭或批准处置，验证注明版本与范围",
+        "work": "复核复用历史底座，独立完成架构、数据、权限、接口、迁移及异常设计评审；验证云端备份目标/成本/责任，仅补必要设计",
+        "deliverables": "R1设计说明、复用/差异/迁移/接口/验收追踪和设计评审结论",
+        "exit": "六类设计齐备可实施，批准需求逐项映射，阻断差异关闭或批准处置，恢复目标可行性/成本及责任明确；设计评审记录批准，证据注明版本",
         "limits": "已有受限技术验收不扩大到当前全量；不重复建底座",
-        "next": "只对已获转序评审的R版本进入P3；不以历史受限技术验收自动算当前复核通过。"
+        "next": "P2退出条件满足并评审批准后才进入该R的P3，不能由P1转序批准或历史技术记录推定"
       },
       {
         "id": "P3",
@@ -757,7 +757,7 @@
         "work": "按获准R版本/业务包复用并补实现、验证、业务验收和问题关闭；一次一个主要执行任务，R2/R3 P1在依赖和可用时段推进",
         "deliverables": "可运行包、版本化测试、业务验收结论和问题关闭记录",
         "exit": "当前包验收结论已记录；未通过项、依赖影响及转序依据明确，阻断项不静默跳过",
-        "limits": "当前未获版本转序，功能扩展保持暂停。达到门槛且版本评审允许后按本轮授权转序；不等全部15 P1，不自动批准业务验收/生产上线；E2保持。",
+        "limits": "本P1窗口不执行产品修改/P3测试/部署；R1仅P2设计已批准，P2退出未评审，不得提前开发。业务/生产验收独立，E2保持。",
         "next": "按队列下一包；全部包达条件后P4"
       },
       {
@@ -782,7 +782,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M32唯一主模块完整评审材料已准备，继续R1适用基础需求核对",
+    "activeWorkPackage": "M32已P1受限关闭；本单元完成R1 P2交接后将M37设唯一主模块",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -797,12 +797,11 @@
       "BP-S"
     ],
     "nextTasks": [
-      "集中处理M32六项推荐与LIMIT、R1基础及恢复目标；按批准重新判定M32，未批不转序，不重复三个已关闭模块。",
-      "不重问已批准M01/M19/M48规则；后续残余验证归P2/P3/P4。",
-      "主模块全部剩余必要工作外部阻塞时才启用一个备用；不按备用数扩并行探索。",
-      "R1四模块和适用六基础及版本评审满足后才转P2/P3，历史技术验收不能继承。"
+      "完成R1 P2交接及启动提示词，同源核对后提交推送；随后M37唯一主模块继续P1。",
+      "R2按M37→M06→M26→M18→M17→M03闭环；M37全部剩余外部阻塞才启M06唯一备用。",
+      "R1已批准事项不重问；P2另窗口按设计授权接续，本P1窗口不改产品/部署/跑P3。"
     ],
-    "state": "当前15/六基础与33暂缓保持；按M19→M48→M32顺序执行，最新关闭M48；R1尚未整体转序，产品扩展暂停",
+    "state": "R1 P1受限关闭并已准P2设计；P1总控继续R2，产品功能开发/P3测试及发布仍暂停",
     "scopeChange": "SCOPE-20260909-CORE15",
     "supportModuleIds": [
       "M19",
@@ -841,7 +840,7 @@
         "dependenciesAndExceptionsResolved"
       ],
       "transitionRule": "四项条件均true且有证据；P1A结论及P1B评审均完整通过或获明确受限批准；transitionReview.approved=true且有批准范围/日期/记录才可转序。受限通过自身不足以转序。",
-      "rangeTransitionRule": "R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可实施且版本评审明确允许P2/P3，才转序；不要求后续R版本全部完成P1。P4业务和生产验收独立。",
+      "rangeTransitionRule": "每R所有模块和适用基础P1条件齐备且版本评审明确批准才进入指定下阶段；R1本次仅准P2设计，P2独立退出评审后才可P3，不继承历史技术验收。P4业务/生产验收独立。",
       "focusHistory": [
         {
           "at": "2026-09-09T15:43:36.730682+00:00",
@@ -946,35 +945,76 @@
         ],
         "foundationReadiness": {
           "BASE-01": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": true,
+            "basis": "R1-FOUNDATION-P1-APPROVAL-20260909已批准该基础R1适用需求/验收及例外，后续实现和生产验证未通过",
+            "approvalRecord": "R1-FOUNDATION-P1-APPROVAL-20260909",
+            "approvedAt": "2026-09-09T17:11:16.592266+00:00"
           },
           "BASE-02": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": true,
+            "basis": "R1-FOUNDATION-P1-APPROVAL-20260909已批准该基础R1适用需求/验收及例外，后续实现和生产验证未通过",
+            "approvalRecord": "R1-FOUNDATION-P1-APPROVAL-20260909",
+            "approvedAt": "2026-09-09T17:11:16.592266+00:00"
           },
           "BASE-03": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": true,
+            "basis": "R1-FOUNDATION-P1-APPROVAL-20260909已批准该基础R1适用需求/验收及例外，后续实现和生产验证未通过",
+            "approvalRecord": "R1-FOUNDATION-P1-APPROVAL-20260909",
+            "approvedAt": "2026-09-09T17:11:16.592266+00:00"
           },
           "BASE-04": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": true,
+            "basis": "R1-FOUNDATION-P1-APPROVAL-20260909已批准该基础R1适用需求/验收及例外，后续实现和生产验证未通过",
+            "approvalRecord": "R1-FOUNDATION-P1-APPROVAL-20260909",
+            "approvedAt": "2026-09-09T17:11:16.592266+00:00"
           },
           "BASE-05": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": true,
+            "basis": "R1-FOUNDATION-P1-APPROVAL-20260909已批准该基础R1适用需求/验收及例外，后续实现和生产验证未通过",
+            "approvalRecord": "R1-FOUNDATION-P1-APPROVAL-20260909",
+            "approvedAt": "2026-09-09T17:11:16.592266+00:00"
           },
           "BASE-06": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": true,
+            "basis": "R1-FOUNDATION-P1-APPROVAL-20260909已批准该基础R1适用需求/验收及例外，后续实现和生产验证未通过",
+            "approvalRecord": "R1-FOUNDATION-P1-APPROVAL-20260909",
+            "approvedAt": "2026-09-09T17:11:16.592266+00:00"
           }
         },
         "review": {
-          "approved": false,
-          "record": null,
-          "approvedAt": null,
-          "scope": null
+          "approved": true,
+          "record": "R1-P1-P2-TRANSITION-20260909",
+          "approvedAt": "2026-09-09T17:11:16.592266+00:00",
+          "scope": "R1 P1关闭，只准P2设计，不准跳过P2退出进入P3"
+        },
+        "foundationReviewPackage": {
+          "status": "R1适用P1需求基线已批准",
+          "preparedAt": "2026-09-09T17:01:22.299836+00:00",
+          "basedOnHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+          "decisionIds": [
+            "R1-BASELINE-01",
+            "R1-RECOVERY-01"
+          ],
+          "approvalRecord": "R1-FOUNDATION-P1-APPROVAL-20260909",
+          "scope": "R1四模块所需六基础能力，其他R版本另核适用差异；不新增模块分母，不代批M32或R1转序。",
+          "next": "按R1转序记录进入P2设计复核；目标/接口/权限残余工作列入交接，不重问已批推荐。",
+          "approvedAt": "2026-09-09T17:11:16.592266+00:00"
+        },
+        "p1Conclusion": {
+          "status": "受限通过并关闭",
+          "approvalRecord": "R1-P1-P2-TRANSITION-20260909",
+          "closedAt": "2026-09-09T17:11:16.592266+00:00"
+        },
+        "downstream": {
+          "authorizedPhase": "P2",
+          "entryApproved": true,
+          "entryApprovalRecord": "R1-P1-P2-TRANSITION-20260909",
+          "p2Status": "已获准进入，待独立设计执行与评审",
+          "p2ExitApproved": false,
+          "p2ExitRecord": null,
+          "p3EntryApproved": false,
+          "businessAccepted": false,
+          "productionAccepted": false
         }
       },
       {

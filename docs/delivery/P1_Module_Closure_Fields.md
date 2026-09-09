@@ -1,6 +1,6 @@
 # 模块闭环字段与看板读取约定
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T17:01:22.299836+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T17:11:16.592266+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
@@ -18,6 +18,8 @@
 | modules[].p1.moduleClosure.conditions | 四个转序条件的value及basis；null=待判定，false=未满足，不能改为通过 |
 | modules[].p1.moduleClosure.transitionReview | 转序批准必须approved=true、record、scope、approvedAt齐备；不等生产上线批准 |
 | roadmap.rangeGates | 该R的适用基础能力及版本评审；满足后无需等待后续R全部P1完成 |
+| roadmap.rangeGates[].downstream / p2Handoff | 指定下阶段授权与P2/P3实际结论分开；R1本次仅P2设计，交接按批准记录和需求引用生成 |
+| deliveryScope.baseCapabilities[].r1Assessment / r1RequirementApproval / recoveryTargets | 六基础R1适用批准及恢复目标；不加模块分母，不将目标当云端能力实证 |
 | modules[].p1.currentDeliveryAssessment | 15模块P1A完成/P1B就绪/评审通过的既有计数口径，历史tested等字段不能替代 |
 | p1Baseline.currentRun | 恢复点、编辑基准HEAD、浏览器阻塞、最近已核实同步及下一步；实际HEAD/工作区须采集Git |
 | p1Baseline.dataValidation.records / operations | 合成对象、关联、每次动作及结果；未知状态不能转成成功或重复提交 |

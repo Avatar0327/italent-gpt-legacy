@@ -260,7 +260,7 @@ if b.get('dataValidation'):
 # not a second register. No counts are inferred from documents or source tests.
 scope_intro='## 当前交付范围变更及统计口径\n\n'+ds['changeId']+'；'+ds['authorizedAt']+'。'+ds['authorization']+'\n\n'+current_scope_table()+'\n'+progress_text()+'\n\n'
 foundation='## 保留的非模块基础能力（不重复计入15模块）\n\n'+table(['能力/原映射','当前最小范围','验收预期（未代签）','证据/原任务','状态'],[(x['id']+' '+x['name']+' / '+','.join(x['originalMappings']),x['scope'],x['acceptance'],x['evidence'],x['status']) for x in ds['baseCapabilities']])
-foundation_detail='## 基础能力字段、异常与验收细化\n\n同源Scope_Register.deliveryScope.baseCapabilities；不新建模块或验收分母。全部候选待评审，历史测试按原版本保留，本轮未执行生产恢复、外部交易或多角色业务测试。\n\n'
+foundation_detail='## 基础能力字段、异常与验收细化\n\n同源Scope_Register.deliveryScope.baseCapabilities；不新建模块或验收分母。批准范围以每项r1RequirementApproval/其他版本评审为准，不能跨R继承；历史测试按原版本保留，本轮未执行生产恢复、外部交易或多角色业务测试。\n\n'
 for cap in ds['baseCapabilities']:
  if not cap.get('fieldDetails'):continue
  foundation_detail+='### '+cap['id']+' '+cap['name']+'\n\n'
@@ -342,6 +342,7 @@ if policy:
  block+='本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 '+policy['primaryModuleId']+'；备用 '+str(policy['backupModuleId'] or '未启用')+'；实际执行 '+policy['activeExecutionModuleId']+'。'+policy['backupActivation']+'。\n\n'
  block+=table(['R版本','模块顺序','当前边界'],[(x['id']+' '+x['name'],'→'.join(x['moduleIds']),x['status']+'；'+x['note']) for x in ds['rangeLayers']])+'\n'
  block+=policy['transitionRule']+'\n\n'+policy['rangeTransitionRule']+'\n\n'
+ block+=table(['版本','P1转序条件','批准进入阶段','下游实际状态'],[(x['id'],'齐备' if x['transitionReady'] else '未齐备：'+','.join(x['missingConditions']),(x.get('downstream') or {}).get('authorizedPhase','未批准'),(x.get('downstream') or {}).get('p2Status','未取得该R下游批准')) for x in range_closures])+'\n'
  block+=table(['模块','R版本/队列','P1A判定','P1B评审','转序就绪','未达到条件'],[(x['moduleId']+' '+x['name'],x['rangeId']+' / '+x['queueState'],x['p1AConclusion']['status'],x['p1BConclusion']['status'],'是' if x['transitionReady'] else '否',x['missingConditions']) for x in module_closures])+'\n'
  block+='转序就绪 '+str(derived['transitionReadyCount'])+'/15；独立指标，不等业务验收或生产上线。风险证据规则：'+ '；'.join(policy['evidencePolicy'].values())+'。\n\n'
  (D/'P1_Module_Closure.md').write_text(intro('模块闭环、滚动转序及当前收口清单')+block)
@@ -398,6 +399,8 @@ if policy:
  ('modules[].p1.moduleClosure.conditions','四个转序条件的value及basis；null=待判定，false=未满足，不能改为通过'),
  ('modules[].p1.moduleClosure.transitionReview','转序批准必须approved=true、record、scope、approvedAt齐备；不等生产上线批准'),
  ('roadmap.rangeGates','该R的适用基础能力及版本评审；满足后无需等待后续R全部P1完成'),
+ ('roadmap.rangeGates[].downstream / p2Handoff','指定下阶段授权与P2/P3实际结论分开；R1本次仅P2设计，交接按批准记录和需求引用生成'),
+ ('deliveryScope.baseCapabilities[].r1Assessment / r1RequirementApproval / recoveryTargets','六基础R1适用批准及恢复目标；不加模块分母，不将目标当云端能力实证'),
  ('modules[].p1.currentDeliveryAssessment','15模块P1A完成/P1B就绪/评审通过的既有计数口径，历史tested等字段不能替代'),
  ('p1Baseline.currentRun','恢复点、编辑基准HEAD、浏览器阻塞、最近已核实同步及下一步；实际HEAD/工作区须采集Git'),
  ('p1Baseline.dataValidation.records / operations','合成对象、关联、每次动作及结果；未知状态不能转成成功或重复提交')]
@@ -412,8 +415,8 @@ if pb.get('approvalRecords'):
  t=intro('P1模块需求批准记录（非业务运行验收）')
  for ar in pb['approvalRecords']:
   t+='## '+ar['id']+'\n\n'+table(['字段','记录'],[(k,ar[k]) for k in ['approvedBy','approvedAt','timeBasis','source','reviewedHead','reviewedDocument','reviewedDocumentSha256','scope','authorization','exclusions']+(['approvedBoundaries'] if ar.get('approvedBoundaries') else [])])+'\n'
-  t+=table(['规则','所审推荐SHA256','采用内容'],[(k,v['sha256'],v['text']) for k,v in ar['approvedRecommendations'].items()])+'\n'
- (D/'P1_Approval_Records.md').write_text(t)
+  if ar['approvedRecommendations']:t+=table(['规则','所审推荐SHA256','采用内容'],[(k,v['sha256'],v['text']) for k,v in ar['approvedRecommendations'].items()])+'\n'
+ (D/'P1_Approval_Records.md').write_text(t.rstrip()+'\n')
 
 # Other current module packets consume contract cases by reference, not copied state.
 all_cases={x['id']:x for pack in pb['packages'] for ct in pack.get('contracts',[]) for x in ct.get('acceptanceCases',[])}
@@ -449,16 +452,61 @@ for rg in s['roadmap']['rangeGates']:
  rp=rg['foundationReviewPackage'];rid=rg['id']
  t=intro(rid+'适用基础能力集中评审')
  t+='状态：**'+rp['status']+'**；准备时间 '+rp['preparedAt']+'；静态基准 `'+rp['basedOnHead']+'`。\n\n'+rp['scope']+'\n\n'
- t+='各模块批准仅按原记录的范围采用。下表r1Assessment不改写基础原始验收，也不自动令foundationReadiness为真。\n\n'
+ t+='各模块及基础批准仅按原记录范围采用。基础就绪依赖其自身适用批准；原始运行验收不提升。'+('批准记录：'+rp['approvalRecord']+'。下方推荐保留所审措辞，当前已按该记录范围获批。' if rp.get('approvalRecord') else '下方推荐未批准。')+'\n\n'
  for cap in ds['baseCapabilities']:
   a=cap.get('r1Assessment')
   if not a or rid!='R1':continue
-  t+='## '+cap['id']+' '+cap['name']+'\n\n'+table(['维度','内容'],[('消费者/原映射',a['consumers']+' / '+','.join(cap['originalMappings'])),('已批准范围',a['approvedScope']),('批准来源',a['approvedRuleRefs']),('具体推荐，未批准',a['proposal']),('剩余条件',a['pending']),('代码/历史证据',cap['codeRefs'])])+'\n'
+  t+='## '+cap['id']+' '+cap['name']+'\n\n'+table(['维度','内容'],[('消费者/原映射',a['consumers']+' / '+','.join(cap['originalMappings'])),('此前模块批准范围',a['approvedScope']),('此前模块批准来源',a['approvedRuleRefs']),('已批准推荐（所审原文）' if a.get('approvalRecord') else '具体推荐，未批准',a['proposal']),('当前适用批准',a.get('approvalRecord')),('审阅前剩余条件（批准见当前记录）',a['pending']),('代码/历史证据',cap['codeRefs'])])+'\n'
   t+=table(['场景','给定/动作','预期','状态'],[(x['id'],x['given']+'；'+x['when'],x['then'],x['status']+'；本轮未执行') for x in cap['acceptanceCases'] if x['id'] in a['acceptanceCaseRefs']])+'\n'
  t+='## 集中决定\n\n'
  for iid in rp['decisionIds']:
-  x=issue_by_id[iid];t+='### '+iid+' '+x['topic']+'\n\n'+table(['维度','内容'],[('依据',x['basis']),('推荐，未批准',x['proposal']),('备选',x['alternatives']),('影响',x['impact'])])+'\n'
- t+='## 转序条件\n\n'+rp['next']+' R1仍须四模块条件、六基础适用及版本评审全部有明确批准。当前M01/M19/M48受限关闭，M32未批准；P2/P3/P4及生产验收状态不变。\n'
+  x=issue_by_id[iid];t+='### '+iid+' '+x['topic']+'\n\n'+table(['维度','内容'],[('依据',x['basis']),('已批准推荐（所审原文）' if x.get('approvalRecord') else '推荐，未批准',x['proposal']),('备选',x['alternatives']),('影响',x['impact']),('当前批准',x.get('approvalRecord'))])+'\n'
+ t+='## 转序条件\n\n'+rp['next']+' 当前版本批准：'+str(rg['review'].get('record') or '未批准')+'；获准阶段：'+str((rg.get('downstream') or {}).get('authorizedPhase','未批准'))+'。P2退出、P3测试和业务/生产验收必须独立记录。\n'
  filename='P1_'+rid+'_Foundation_Review.md';(D/filename).write_text(t)
  for name in ['P1_Review.md','P1B_Readiness.md','P1_M32_Review_Package.md']:
   f=D/name;f.write_text(f.read_text()+'\n['+rid+'六基础适用及集中决定]('+filename+')：'+rp['status']+'，不增加模块分母。\n')
+
+# R-specific P2 handoff consumes approved packets, contracts and historical evidence.
+for rg in s['roadmap']['rangeGates']:
+ h=rg.get('p2Handoff')
+ if not h:continue
+ rid=rg['id'];hm=[by_id[mid] for mid in h['moduleIds']];hc=[x for x in ds['baseCapabilities'] if x['id'] in h['baseCapabilityIds']]
+ armap={x['id']:x for x in pb['approvalRecords']};cts={x['id']:x for pack in pb['packages'] for x in pack['contracts']}
+ handoff_name='P1_'+rid+'_P2_Handoff.md';prompt_name='P1_'+rid+'_P2_Start_Prompt.md'
+ t=intro(rid+' P1关闭与P2设计交接')
+ t+='交接状态：'+h['status']+'；准备时间 '+h['preparedAt']+'；编辑基准 `'+h['basedOnHead']+'`。本文件所属最终提交由 `git log -1 --format=%H -- docs/delivery/'+handoff_name+'` 查询；当前源码和未提交状态须启动时重新核实。\n\n'
+ t+='**P1转序批准：'+h['entryDecision']+'；仅准P2设计。P2退出未批准、P3未开始，本窗口未修改产品或执行P3测试。**\n\n'
+ t+='## 范围与批准版本\n\n'+table(['模块/基础','完整适用范围','批准记录','准确结论'],[(m['id']+' '+m['name'],m['scope'],m['p1']['moduleClosure']['closureRecord'],'P1受限通过；具体风险不豁免') for m in hm]+[(x['id']+' '+x['name'],x['scope'],x['r1RequirementApproval']['record'],'R1适用需求基线已批准，运行/生产未验收') for x in hc])+'\n'
+ t+=table(['批准记录','审阅HEAD','所审材料/哈希','批准范围'],[(x['id'],x['reviewedHead'],x['reviewedDocument']+' / '+x['reviewedDocumentSha256'],x['scope']) for x in [armap[i] for i in h['approvalRecordIds']]])+'\n'
+ t+='完整批准条款与哈希见[P1_Approval_Records.md](P1_Approval_Records.md)，原推荐不得重新解释扩大。\n\n不在本阶段范围内：\n\n'+'\n'.join('- '+x for x in h['exclusions'])+'\n\n'
+ t+='## 受限结论与后续责任\n\n'+table(['模块','批准限制','残余风险','P2/P3/P4补验'],[(m['id'],m['p1']['moduleClosure']['restrictedApproval']['scope'],m['p1']['moduleClosure']['restrictedApproval']['residualRisk'],m['p1']['moduleClosure']['restrictedApproval']['revalidation']) for m in hm])+'\n'
+ t+='六基础具体字段和故障用例见[P1_R1_Foundation_Review.md](P1_R1_Foundation_Review.md)。原站实测、静态代码与已批准产品设计仍分列；供应商未配置/单账号限制不被写成已完成联调。\n\n'
+ t+='## P2必须解决的设计差异\n\n'+table(['任务/方面','批准约束与现状','必须交付','复用/核对代码'],[(x['id']+' '+x['area'],x['constraint'],x['deliverable'],'；'.join(link_source(p) for p in x['codeRefs'])) for x in h['designWorklist']])+'\n'
+ t+='## 需求与现有实现追踪\n\n以下只取R1或基础的适用部分，混合契约中的其他模块未获本次开发授权。当前所审批准优先，静态事实不自动成为实现符合声明。\n\n'
+ t+=table(['需求','对象/范围','当前适用','现有路径','必须核对差异'],[(x['id'],x.get('objects',x.get('title',x.get('name','见规格'))),ct_scope(x),'；'.join(link_source(p) for p in x['codeRefs']),x.get('gaps','见模块集中评审的implementationNext')) for x in [cts[i] for i in h['contractIds']]])+'\n'
+ t+='## 可执行验收用例（需求获批，执行结果不预填）\n\n'
+ seen=set()
+ for m in hm:
+  rp=m['p1']['reviewPackage'];cases=rp.get('acceptanceCases') or [all_cases[i] for i in rp['acceptanceCaseRefs']]
+  cases=[x for x in cases if x['id'] not in seen];seen.update(x['id'] for x in cases)
+  t+='### '+m['id']+'\n\n'+table(['ID','给定','操作','预期','依据/执行状态'],[(x['id'],x['given'],x['when'],x['then'],x['basis']+'；'+x['status']) for x in cases])+'\n'
+ for cap in hc:
+  t+='### '+cap['id']+'\n\n'+table(['ID','给定','操作','预期','执行状态'],[(x['id'],x['given'],x['when'],x['then'],x['status']) for x in cap['acceptanceCases']])+'\n'
+ t+='## 历史技术与部署证据\n\n'+table(['证据','原日期/适用版本','验证范围','本轮复验'],[(link_source(x['path']),x['observedRecordDate']+' / '+x['version'],x['scope'],'否') for x in pb['validationEvidence'] if x['path'] in h['validationEvidencePaths']])+'\n'
+ t+='其他历史入口：'+'；'.join(link_source(p) for p in h['historicalEvidenceRefs'])+'。P2_Acceptance原记录为2026-09-07受限底座/首链技术证据，不是当前R1设计通过；无完整测试SHA的记录明确保留未知。\n\n'
+ dep=json.loads((D/'Deployment_Evidence.json').read_text());v=dep['verified']
+ t+='已记录的适用私有部署：v'+str(v['version'])+'，源码 `'+v['commit']+'`，部署ID `'+v['deploymentId']+'`，原时间 '+v['time']+'，原终态 '+v['status']+'。本轮未重新发布或继承为业务/生产通过；当前Git HEAD不等于部署源码。\n\n'
+ t+='## P2退出、协作与后续\n\n'+'\n'.join('- '+x for x in h['p2ExitConditions'])+'\n\n'+h['collaborationBoundary']+'\n\n不得重复询问：\n\n'+'\n'.join('- '+x for x in h['doNotReask'])+'\n\n'+h['next']+'\n\n可直接使用的完整启动提示词：['+prompt_name+']('+prompt_name+')。\n'
+ (D/handoff_name).write_text(t)
+ prompt='# '+rid+' P2设计窗口启动提示词\n\n以下整段可作为新执行窗口首条指令。授权来源为本窗口已批准的'+h['entryDecision']+'；不代表当前已启动新窗口。\n\n'
+ prompt+='请接续现有iTalent项目，只承担R1 P2设计复核与交接，不重新开发。主仓库参考路径`/workspace/sites/italent-hris`。\n\n先只读核对实际分支、HEAD、工作区、未结束操作与最新Controller_Resume.md、Execution_Checkpoint.md；以当前Scope_Register.json为唯一事实源，读取`docs/delivery/'+handoff_name+'`、四模块评审包、基础评审、批准记录、PRD、实现对应与历史验证。已知交接编辑基准为`'+h['basedOnHead']+'`，如有后续进度接续最新，不回退或重做。\n\n'
+ prompt+='已批准R1范围为M01组织员工、M19审批中心、M48员工自助、M32报表及BASE-01至06。四模块P1受限关闭和基础需求获批；R1获准进入P2设计，绝不代表P2/P3已通过。15模块及33暂缓、原48编号和59任务原义不变；R2/R3完整生产者实现不在本窗口，只保留已批准消费契约和未配置/不可用状态。\n\n'
+ prompt+='本窗口只读现有产品代码/数据结构/测试并编写设计，不修改产品代码、业务数据库、原站数据或部署，不运行P3测试、不新增访问者、不启动代理。复用现有技术底座，完整设计架构、数据、权限、接口、迁移和异常，按交接R1-P2-01至09顺序保持一个主要设计任务；完成一个任务直接继续下一个。\n\n'
+ prompt+='P1总控继续R2并唯一维护Scope与生成视图。先核对是否有正在写入的工作；在隔离工作树/设计分支保存P2文档，保留其他修改，不重置/强推/合并未完分支，不同时改主Scope。设计结论以有证据、版本及引用的提案交总控纳入，不建立第二套手工状态台账。可按完整设计单元提交和推送设计分支，保持引用主事实源；不向主分支并行写入状态。\n\n'
+ prompt+='不重问已批准D1–D7、E1/E2、M01 F-SPEC-01至08/SCOPE-DEP-01/M01-BASELINE-01、M19/M48/M32的SPEC及LIMIT、R1六基础和恢复目标。D7调动仍独立两级，管理权不代审批权。RPO≤1小时、RTO≤4小时、保留30天及加密/可追溯/隔离验权后所有者开放均为批准目标；P2要核云端方案、成本、执行/复核责任和可信当前授权来源。无法经济实现时提交量化差异与成本备选，不能降低目标或声称当前平台已支持。\n\n'
+ prompt+='采用已批准字段/权限/状态/验收基线，按实现版本逐项列可复用、待修改、待新增、受限及依赖。需要迁移的只写增量兼容/完整性/幂等/回滚与历史保护方案，不执行迁移，不继承旧空库结论。外部服务未配置不阻契约设计；报表不得以模拟联调代真实；当前权限覆盖历史/聚合/附件/链接，导出与订阅独立授权。\n\n'
+ prompt+='历史测试只说明原记录版本；无完整SHA保持未知，不重写为本轮复验。P2先完成设计追踪和可执行验收计划；P3合成运行及P4多人权限/跨域/生产准备仍需独立验证。浏览器不可用只阻需要源补证的部分，不阻静态设计；不重复批准事项，不无限取证。新增实质业务规则/权限/范围或无法经济实现的目标才集中提交决定，先继续其他可执行工作。\n\n'
+ prompt+='交付架构/数据/权限/接口/迁移/异常说明、逐需求实现差异与验收矩阵、恢复目标方案和成本/责任、残余风险与P3任务建议、可恢复检查点。对照交接的P2退出条件形成独立设计评审；未获P2退出评审批准，不能进入P3开发测试，更不能发布或宣称业务/生产验收。完成实质单元保存提交并继续，最终集中报告结论、版本、真实硬阻塞与待批准项。\n'
+ (D/prompt_name).write_text(prompt)
+ for name in ['P1_Review.md','P1_Module_Closure.md','P1B_Readiness.md']:
+  f=D/name;f.write_text(f.read_text()+'\n['+rid+' P2完整交接]('+handoff_name+') · [新窗口启动提示词]('+prompt_name+')：只准P2设计，不等P2退出或P3通过。\n')

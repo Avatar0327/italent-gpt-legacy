@@ -11,14 +11,20 @@
 
 四项条件均true且有证据；P1A结论及P1B评审均完整通过或获明确受限批准；transitionReview.approved=true且有批准范围/日期/记录才可转序。受限通过自身不足以转序。
 
-R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可实施且版本评审明确允许P2/P3，才转序；不要求后续R版本全部完成P1。P4业务和生产验收独立。
+每R所有模块和适用基础P1条件齐备且版本评审明确批准才进入指定下阶段；R1本次仅准P2设计，P2独立退出评审后才可P3，不继承历史技术验收。P4业务/生产验收独立。
+
+| 版本 | P1转序条件 | 批准进入阶段 | 下游实际状态 |
+|---|---|---|---|
+| R1 | 齐备 | P2 | 已获准进入，待独立设计执行与评审 |
+| R2 | 未齐备：M37,M06,M26,M18,M17,M03,BASE-01,BASE-02,BASE-03,BASE-04,BASE-05,BASE-06,rangeReviewApproved | 未批准 | 未取得该R下游批准 |
+| R3 | 未齐备：M27,M16,M12,M11,M07,BASE-01,BASE-02,BASE-03,BASE-04,BASE-05,BASE-06,rangeReviewApproved | 未批准 | 未取得该R下游批准 |
 
 | 模块 | R版本/队列 | P1A判定 | P1B评审 | 转序就绪 | 未达到条件 |
 |---|---|---|---|---|---|
 | M01 组织员工 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M19 审批中心 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M48 员工自助 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
-| M32 报表 | R1 / primary | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M32 报表 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M37 人才标准 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M06 任职资格 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M26 360度评估 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
@@ -31,19 +37,18 @@ R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可
 | M11 假勤管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M07 薪酬社保 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 
-转序就绪 3/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
+转序就绪 4/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
 
 
 ---
 
 # 当前唯一执行队列：P1A/P1B
 
-源：Scope_Register.json.roadmap及Module_Queue.json。首要工作包：M32唯一主模块已完成待评审；R1六基础适用核对完成，集中决定后再判转序。主要开发包：无（暂停扩展）。
+源：Scope_Register.json.roadmap及Module_Queue.json。首要工作包：M32已P1受限关闭；本单元完成R1 P2交接后将M37设唯一主模块。主要开发包：无（暂停扩展）。
 
-1. 集中处理M32六项推荐与LIMIT、R1基础及恢复目标；按批准重新判定M32，未批不转序，不重复三个已关闭模块。
-2. 不重问已批准M01/M19/M48规则；后续残余验证归P2/P3/P4。
-3. 主模块全部剩余必要工作外部阻塞时才启用一个备用；不按备用数扩并行探索。
-4. R1四模块和适用六基础及版本评审满足后才转P2/P3，历史技术验收不能继承。
+1. 完成R1 P2交接及启动提示词，同源核对后提交推送；随后M37唯一主模块继续P1。
+2. R2按M37→M06→M26→M18→M17→M03闭环；M37全部剩余外部阻塞才启M06唯一备用。
+3. R1已批准事项不重问；P2另窗口按设计授权接续，本P1窗口不改产品/部署/跑P3。
 
 业务顺序：BP-F → BP-I → BP-C → BP-L → BP-P → BP-R → BP-A → BP-S；BP-UNASSIGNED仅保留归属核实历史；无成员时不计业务包。多角色人工UAT不阻断P1；转序不得静默跳过。下方历史队列不构成本轮执行指令。
 
