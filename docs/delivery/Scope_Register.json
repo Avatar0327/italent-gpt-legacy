@@ -878,7 +878,133 @@
               "relation": "原直接归属"
             }
           ]
-        }
+        },
+        "internalScopeCoverage": [
+          {
+            "originalScopeItem": "组织",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-F-REQ-01",
+              "BP-F-REQ-10",
+              "BP-F-REQ-14"
+            ],
+            "evidenceRefs": [
+              "BC-F28",
+              "BC-F29",
+              "BC-F42"
+            ],
+            "coverageDepth": "局部合成执行",
+            "remaining": "组织有效期/行政维度/停用影响、法人空适用范围和共享权限待证；R/A/B/LA不重建",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "职务体系",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-F-REQ-01",
+              "BP-F-REQ-11"
+            ],
+            "evidenceRefs": [
+              "BC-F17",
+              "BC-F31",
+              "BC-F32",
+              "BC-F33"
+            ],
+            "coverageDepth": "局部合成执行",
+            "remaining": "职位与职务/序列/职级不同；职位同组织/跨组织重名已证，职务/职级及停用时态待证，F-SPEC-01待决",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "编制",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-F-REQ-06"
+            ],
+            "evidenceRefs": [
+              "BC-F21",
+              "BC-F40"
+            ],
+            "coverageDepth": "配置/字段局部观察",
+            "remaining": "源人数/比例/主兼岗占编算法和审批未证；当前按岗位人数计划不代全部编制，M09金额预算仅局部依赖",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "人员",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-F-REQ-01",
+              "BP-F-REQ-04",
+              "BP-F-REQ-06",
+              "BP-F-REQ-12"
+            ],
+            "evidenceRefs": [
+              "BC-F22",
+              "BC-F35",
+              "BC-F36",
+              "BC-F39",
+              "BC-F43"
+            ],
+            "coverageDepth": "局部合成执行",
+            "remaining": "多入口模板、完整自定义子集、重聘匹配冲突与累计/账号边界缺口；F-SPEC-04待决",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "任职",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-F-REQ-02",
+              "BP-F-REQ-13",
+              "BP-F-REQ-15"
+            ],
+            "evidenceRefs": [
+              "BC-F03",
+              "BC-F40",
+              "BC-F41",
+              "BC-F44",
+              "BC-F45",
+              "BC-F46"
+            ],
+            "coverageDepth": "局部合成执行",
+            "remaining": "兼职终态、借调/外派、审批路由与离职后各消费者待证；D1–D7项目设计独立，F-SPEC-02/03待决",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "合同",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-F-REQ-05",
+              "BP-F-REQ-14"
+            ],
+            "evidenceRefs": [
+              "P1-CONTRACT-LIST",
+              "P1-CONTRACT-TYPE",
+              "BC-F23",
+              "BC-F24",
+              "BC-F42"
+            ],
+            "coverageDepth": "页面/配置局部观察",
+            "remaining": "法人稳定关联、合同累计/续签/终止日期及历史字段权限待证；电子签仅BASE-06预留，不等真实签署",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          }
+        ]
       },
       "businessPackage": "BP-F"
     },
@@ -1196,7 +1322,86 @@
               "relation": "原直接归属"
             }
           ]
-        }
+        },
+        "internalScopeCoverage": [
+          {
+            "originalScopeItem": "选拔任用",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-01",
+              "BP-C-REQ-06"
+            ],
+            "evidenceRefs": [
+              "BC-C08",
+              "BC-C09",
+              "BC-C10",
+              "BC-C11",
+              "BC-C12",
+              "BC-C13",
+              "BC-C25"
+            ],
+            "coverageDepth": "局部合成执行",
+            "remaining": "EA任期登记不等选拔评价/任免审批；跨评委/投票阈值及流程权限待源执行，通知需先核收件范围",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "档案",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-01"
+            ],
+            "evidenceRefs": [
+              "US-C01-02",
+              "BC-C02",
+              "BC-C03",
+              "BC-C25"
+            ],
+            "coverageDepth": "局部合成执行",
+            "remaining": "基本信息与访谈/表彰/任免履历不同；已有EA登记，访谈奖惩等子集/附件权限和历史关联未全证",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "考察期",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-01"
+            ],
+            "evidenceRefs": [
+              "BC-C25",
+              "BC-C26"
+            ],
+            "coverageDepth": "局部合成执行及未保存考核草稿",
+            "remaining": "已回读考察中与起止；未转正考核提交/独立审批，模板必填/逾期/异常恢复待证",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "述职",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-01",
+              "BP-C-REQ-06"
+            ],
+            "evidenceRefs": [
+              "BC-C25",
+              "BC-C26"
+            ],
+            "coverageDepth": "空列表/字段局部观察",
+            "remaining": "述职记录为空、来源/阶段/核验与任期关系待执行，不能用考察期日期证明述职通过",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          }
+        ]
       },
       "businessPackage": "BP-C"
     },
@@ -1512,7 +1717,79 @@
               "relation": "跨模块关联，非改写原归属或重复计数；逐模块完整验收仍需在规格补齐"
             }
           ]
-        }
+        },
+        "internalScopeCoverage": [
+          {
+            "originalScopeItem": "类别",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-02"
+            ],
+            "evidenceRefs": [
+              "BC-C19",
+              "BC-C24"
+            ],
+            "coverageDepth": "局部合成执行",
+            "remaining": "QC已建；分类/职务映射与发展通道发布可见性未全证",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "级别",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-02"
+            ],
+            "evidenceRefs": [
+              "BC-C20",
+              "BC-C21",
+              "BC-C24"
+            ],
+            "coverageDepth": "局部合成执行",
+            "remaining": "QL1与QS级别描述已保存回读；跨类别引用/等级边界/停用消费待证",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "指标",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-02"
+            ],
+            "evidenceRefs": [
+              "BC-C22",
+              "BC-C23",
+              "BC-C24"
+            ],
+            "coverageDepth": "局部合成执行",
+            "remaining": "QI类型/评分/停用与旧QS内容保持已证；评级方案只保存配置，评分/评级完整执行与权重待证",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "资格标准",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-02"
+            ],
+            "evidenceRefs": [
+              "BC-C21",
+              "BC-C23"
+            ],
+            "coverageDepth": "局部合成执行",
+            "remaining": "QS启用且关联QC/QL1/QI；新版本/有效期及M03/M17/M18实际资格消费者待证；不恢复M02完整评定模块",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          }
+        ]
       },
       "businessPackage": "BP-C"
     },
@@ -1709,7 +1986,112 @@
               "relation": "原直接归属"
             }
           ]
-        }
+        },
+        "internalScopeCoverage": [
+          {
+            "originalScopeItem": "档案",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-S-REQ-06",
+              "BP-S-REQ-11"
+            ],
+            "evidenceRefs": [
+              "BC-P1C-M07",
+              "BC-S09",
+              "BC-S19",
+              "BC-S20",
+              "BC-S21",
+              "BC-F39"
+            ],
+            "coverageDepth": "局部合成执行及配置观察",
+            "remaining": "PG/SP/包内项目和入职引用已证，自动档案/事件修订/权限继承待证；跨模块F39只证入职结果",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "核算",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-S-REQ-01",
+              "BP-S-REQ-02",
+              "BP-S-REQ-04",
+              "BP-S-REQ-05"
+            ],
+            "evidenceRefs": [
+              "BC-S01-02",
+              "BC-S03",
+              "BC-S04",
+              "BC-S08"
+            ],
+            "coverageDepth": "页面/配置局部观察",
+            "remaining": "公式/活动版本/期间/补差及团队授权待证；现人工工资可复用但不代自动算薪；S-SPEC-01先补证",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "社保",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-S-REQ-12"
+            ],
+            "evidenceRefs": [],
+            "coverageDepth": "尚未探索详细规则",
+            "remaining": "参保/方案/基数/个人与单位承担/更正/有效政策版本缺证，人工deduction不能替代；保留受限规格",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "支付",
+            "currentMode": "仅外部服务契约",
+            "contractIds": [
+              "BP-S-REQ-01",
+              "BP-S-REQ-08"
+            ],
+            "evidenceRefs": [
+              "BC-S03"
+            ],
+            "coverageDepth": "仅配置线索；外部执行不作前置",
+            "remaining": "只保留BASE-06请求/回执/失败/未知/对账契约，不要求供应商或真实付款；不把发薪活动/工资published计支付成功",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "个税通",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-S-REQ-12"
+            ],
+            "evidenceRefs": [],
+            "coverageDepth": "尚未探索详细规则",
+            "remaining": "税期/累计/更正/政策来源和精度尚缺；未编造税率，外部申报/交易仅接口，内域常规需求保留",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "激励",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-S-REQ-12"
+            ],
+            "evidenceRefs": [],
+            "coverageDepth": "尚未探索详细规则",
+            "remaining": "需核M07内激励对象/归属期间/依据/生效及金额接收；M33福利/M42佣金暂缓，不因相似名合并或全量恢复",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          }
+        ]
       },
       "businessPackage": "BP-S"
     },
@@ -2174,7 +2556,113 @@
               "relation": "原直接归属"
             }
           ]
-        }
+        },
+        "internalScopeCoverage": [
+          {
+            "originalScopeItem": "档案",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-A-REQ-01",
+              "BP-A-REQ-05"
+            ],
+            "evidenceRefs": [
+              "BC-A10",
+              "BC-A12"
+            ],
+            "coverageDepth": "导航/配置局部观察",
+            "remaining": "考勤档案的方案分配/人员类型/历史任职范围缺证，不把当前员工orgId当全部历史范围",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "排班",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-A-REQ-04"
+            ],
+            "evidenceRefs": [
+              "BC-A05-06"
+            ],
+            "coverageDepth": "表单局部观察",
+            "remaining": "固定班次可复用；常规轮班/多段/节假日/跨班未证仍保留，独立AI另行暂缓",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "考勤",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-A-REQ-01",
+              "BP-A-REQ-02",
+              "BP-A-REQ-06"
+            ],
+            "evidenceRefs": [
+              "BC-A02-03",
+              "BC-A04",
+              "BC-A11"
+            ],
+            "coverageDepth": "配置/列表局部观察",
+            "remaining": "日报/月报发布确认封存和反向/自动任务尚未实测；单人frozen不能代月报全流程",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "申请",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-A-REQ-01",
+              "BP-A-REQ-05"
+            ],
+            "evidenceRefs": [
+              "BC-A07",
+              "BC-A12"
+            ],
+            "coverageDepth": "配置局部观察",
+            "remaining": "请假/补卡常规链、角色和历史范围待证；其他原登记内申请按现有菜单继续，不能由两类代码推全申请完整",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "假期",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-A-REQ-03",
+              "BP-A-REQ-05"
+            ],
+            "evidenceRefs": [
+              "BC-A07",
+              "BC-A08",
+              "BC-A09",
+              "BC-P1C-M11"
+            ],
+            "coverageDepth": "配置/表头局部观察",
+            "remaining": "授予/额度/预留/结转过期/调休结算公式和审批待证，不使用固定8小时当企业规则",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "AI排班",
+            "currentMode": "本次子能力暂缓",
+            "contractIds": [],
+            "evidenceRefs": [],
+            "coverageDepth": "用户已确认独立智能能力暂缓",
+            "remaining": "只此AI子项按本次明确边界暂缓，不恢复M40/RPA或减少常规排班；不作为当前P1退出条件",
+            "next": "按用户明确暂缓保留历史，不主动探索。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          }
+        ]
       },
       "businessPackage": "BP-A"
     },
@@ -2443,7 +2931,105 @@
               "relation": "原直接归属"
             }
           ]
-        }
+        },
+        "internalScopeCoverage": [
+          {
+            "originalScopeItem": "需求",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-R-REQ-01",
+              "BP-R-REQ-04"
+            ],
+            "evidenceRefs": [
+              "BC-R01",
+              "BC-R02",
+              "BC-P1C-M12"
+            ],
+            "coverageDepth": "列表/空表局部观察",
+            "remaining": "保存/显式提交/独立审批与实际人数占用待源执行；代码历史draft兼容另记",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "职位",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-R-REQ-01"
+            ],
+            "evidenceRefs": [
+              "BC-R05"
+            ],
+            "coverageDepth": "空表/说明局部观察",
+            "remaining": "职位/广告发布/审批三步与有应聘者后流程变更锁定待执行；薪酬/数量预算独立",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "应聘者",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-R-REQ-01",
+              "BP-R-REQ-02",
+              "BP-R-REQ-04",
+              "BP-R-REQ-06"
+            ],
+            "evidenceRefs": [
+              "BC-R03",
+              "BC-R13",
+              "BC-R14",
+              "BC-R16"
+            ],
+            "coverageDepth": "空表/配置局部观察",
+            "remaining": "自然人/申请/录用/入职后管控与多段身份未闭合；R-SPEC-01待决，Offer路由R-SPEC-02先补证",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "面试",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-R-REQ-02",
+              "BP-R-REQ-05"
+            ],
+            "evidenceRefs": [
+              "BC-R04-06",
+              "BC-R07",
+              "BC-R08"
+            ],
+            "coverageDepth": "列表/表单/说明局部观察",
+            "remaining": "排期冲突、评价版本与原角色执行未证；改期自动通知收件范围需核，不擅发真实消息",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "人才库",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-R-REQ-01",
+              "BP-R-REQ-06"
+            ],
+            "evidenceRefs": [
+              "BC-R03",
+              "BC-R14",
+              "BC-R15",
+              "BC-R16"
+            ],
+            "coverageDepth": "配置局部观察",
+            "remaining": "独立入库/多库关系/重复储备更新与权限待完整链；现candidate强关联需求缺模型，不删范围",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          }
+        ]
       },
       "businessPackage": "BP-R"
     },
@@ -2966,7 +3552,77 @@
               "relation": "原直接归属"
             }
           ]
-        }
+        },
+        "internalScopeCoverage": [
+          {
+            "originalScopeItem": "工作台",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-P-REQ-01",
+              "BP-I-REQ-01",
+              "BP-I-REQ-02"
+            ],
+            "evidenceRefs": [
+              "BC-P1C-M16"
+            ],
+            "coverageDepth": "仅局部执行人设置，工作台本身待探索",
+            "remaining": "工作台任务/异常/汇总对象与当前目标报表关系未证；其他页不能代工作台完整证据",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "OKR",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-P-REQ-09"
+            ],
+            "evidenceRefs": [],
+            "coverageDepth": "尚未探索详细规则",
+            "remaining": "目标/KR/对齐/进度/评分/权限/周期及自助关联缺证，保留受限规格而非自动套绩效目标",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "员工/组织目标与绩效",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-P-REQ-01",
+              "BP-P-REQ-02",
+              "BP-P-REQ-03",
+              "BP-P-REQ-04",
+              "BP-P-REQ-05",
+              "BP-P-REQ-06",
+              "BP-P-REQ-07",
+              "BP-P-REQ-08"
+            ],
+            "evidenceRefs": [
+              "P1-GOAL",
+              "BC-P01",
+              "BC-P02",
+              "BC-P03",
+              "BC-P04",
+              "BC-P05",
+              "BC-P06",
+              "BC-P07",
+              "BC-P09",
+              "BC-P10",
+              "BC-P11",
+              "BC-P14",
+              "BC-P15",
+              "BC-P16"
+            ],
+            "coverageDepth": "局部页面/配置及公式推导",
+            "remaining": "员工目标/评价/申诉更正和组织目标/组织绩效分别保留；组织参与数不等员工人数，完整采分/关系/分布/系数消费与兼职上下文待证",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          }
+        ]
       },
       "businessPackage": "BP-P"
     },
@@ -3116,7 +3772,92 @@
               "relation": "跨模块关联，非改写原归属或重复计数；逐模块完整验收仍需在规格补齐"
             }
           ]
-        }
+        },
+        "internalScopeCoverage": [
+          {
+            "originalScopeItem": "盘点",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-04"
+            ],
+            "evidenceRefs": [
+              "BC-P1C-M17"
+            ],
+            "coverageDepth": "入口与人才池分析局部观察",
+            "remaining": "M17盘点入口的对象/来源/校准及结果与M18是否共用未证；不直接将M18项目链作为M17已完成",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "人才池",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-04"
+            ],
+            "evidenceRefs": [
+              "BC-C29",
+              "BC-C30"
+            ],
+            "coverageDepth": "局部合成执行",
+            "remaining": "测试池已存1EA培养中；自动入池/出池重入/饱和度/权限与版本待证；同人指导仅源事实",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "继任",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-04"
+            ],
+            "evidenceRefs": [
+              "BC-C31"
+            ],
+            "coverageDepth": "表单观察，目标候选受限",
+            "remaining": "JA/JB在M01已存且M03引用，但继任选择器不可得；需核来源/权限/状态，不重复职位或恢复M35全量",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "发展计划",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-05"
+            ],
+            "evidenceRefs": [
+              "BC-P1C-M17-02",
+              "BC-C27",
+              "BC-C28"
+            ],
+            "coverageDepth": "表单局部观察；流程保存结果待核",
+            "remaining": "停用P1V流程一次保存后回查未得，先查实际结果再做；计划/模板草稿已取消，角色/日期/执行/恢复未闭合",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "健康度",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-04"
+            ],
+            "evidenceRefs": [
+              "BC-C06"
+            ],
+            "coverageDepth": "仅已到达页面标题/结构",
+            "remaining": "组织健康分析维度、对象/时间分母、公式和权限未证；当前九宫格或继任人数不代健康度，不造综合指数",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          }
+        ]
       },
       "businessPackage": "BP-C"
     },
@@ -3285,7 +4026,98 @@
               "relation": "跨模块关联，非改写原归属或重复计数；逐模块完整验收仍需在规格补齐"
             }
           ]
-        }
+        },
+        "internalScopeCoverage": [
+          {
+            "originalScopeItem": "标准",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-07",
+              "BP-C-REQ-08"
+            ],
+            "evidenceRefs": [
+              "P1-STD",
+              "BC-C37",
+              "BC-C38"
+            ],
+            "coverageDepth": "跨入口回读及局部合成执行",
+            "remaining": "已选M37测试标准，公开载体同TalentCriterion但精确共享UUID未见；版本和不同入口权限待证，M06标准不混用",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "项目",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-08"
+            ],
+            "evidenceRefs": [
+              "BC-C38",
+              "BC-C39",
+              "BC-C40"
+            ],
+            "coverageDepth": "局部合成执行",
+            "remaining": "主ActivityId已确认新建、1EA初始未计算；启动/采集/评分/结果审批与异常待证，先核流程真实接收人",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "校准会",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-04",
+              "BP-C-REQ-08"
+            ],
+            "evidenceRefs": [
+              "P1-CAL",
+              "BC-C40"
+            ],
+            "coverageDepth": "列表/入口局部观察",
+            "remaining": "项目有校准会页签，会议对象/权限/版本冻结/多人关系与发布未执行；本项目校准记录不代完整原会务",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "人才池",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-04"
+            ],
+            "evidenceRefs": [
+              "P1-POOL"
+            ],
+            "coverageDepth": "页面结构局部观察",
+            "remaining": "M18池分析与M17池是否同记录/权限/成员同步尚未执行，不借M17合成池直接算M18验证完成",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "继任",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-04",
+              "BP-C-REQ-08"
+            ],
+            "evidenceRefs": [
+              "P1-SUC",
+              "BC-C40"
+            ],
+            "coverageDepth": "列表/地图入口局部观察",
+            "remaining": "职位继任列表/项目组织和职位地图是不同入口；实际关联、计算与跨M17关系待证",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          }
+        ]
       },
       "businessPackage": "BP-C"
     },
@@ -3379,7 +4211,41 @@
               "relation": "跨模块关联，非改写原归属或重复计数；逐模块完整验收仍需在规格补齐"
             }
           ]
-        }
+        },
+        "internalScopeCoverage": [
+          {
+            "originalScopeItem": "流程管理",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-I-REQ-07"
+            ],
+            "evidenceRefs": [
+              "BC-P1C-M19",
+              "BC-I10",
+              "BC-I27"
+            ],
+            "coverageDepth": "列表/帮助局部观察",
+            "remaining": "路由/节点/操作者/业务回写/通知/异常未全证；M01 D1–D7固定两级保持，不被通用干预候选扩展",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "管理员委托",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-I-REQ-07"
+            ],
+            "evidenceRefs": [],
+            "coverageDepth": "仅原导航，详细规则尚未探索",
+            "remaining": "委托对象/范围/有效期/原人与代理人权限/撤销审计待证；不等平台账号代登，也不自动变成任意节点转交",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          }
+        ]
       },
       "businessPackage": "BP-I"
     },
@@ -4002,7 +4868,73 @@
               "relation": "跨模块关联，非改写原归属或重复计数；逐模块完整验收仍需在规格补齐"
             }
           ]
-        }
+        },
+        "internalScopeCoverage": [
+          {
+            "originalScopeItem": "活动",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-03"
+            ],
+            "evidenceRefs": [
+              "BC-P1C-M26-02",
+              "BC-C14"
+            ],
+            "coverageDepth": "列表及通知配置局部观察",
+            "remaining": "活动创建/角色配置/邀请/作答/关闭/发布源链未执行，通知收件边界待核",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "人员",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-03"
+            ],
+            "evidenceRefs": [
+              "BC-C15",
+              "BC-C16"
+            ],
+            "coverageDepth": "角色配置局部观察",
+            "remaining": "源动态评价角色与现固定4枚举不同；参与人/受评人/评价人及实名可读边界C-SPEC-01待决",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "题库",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-03",
+              "BP-I-REQ-03"
+            ],
+            "evidenceRefs": [],
+            "coverageDepth": "详细题库尚未探索",
+            "remaining": "现共用模板仅最小结构，不等源题库/版本/题型/题目引用已证；不恢复M29/M30/M31独立模块",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "报表",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-03",
+              "BP-I-REQ-02"
+            ],
+            "evidenceRefs": [],
+            "coverageDepth": "源报告详细规则尚未探索",
+            "remaining": "匿名对象/低样本/零响应及个人/组织报告来源待证与C-SPEC-01评审；当前HR实名原卷不能称全匿名",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          }
+        ]
       },
       "businessPackage": "BP-C"
     },
@@ -4387,7 +5319,150 @@
               "relation": "原直接归属"
             }
           ]
-        }
+        },
+        "internalScopeCoverage": [
+          {
+            "originalScopeItem": "资源",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-L-REQ-01"
+            ],
+            "evidenceRefs": [
+              "BC-L03",
+              "BC-L14",
+              "BC-L22"
+            ],
+            "coverageDepth": "配置/说明局部观察",
+            "remaining": "共享/全公司可见与资源权限存量行为已有说明；课程/文档等完整对象、授权与附件版本待证",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "问卷",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-L-REQ-01",
+              "BP-I-REQ-03"
+            ],
+            "evidenceRefs": [],
+            "coverageDepth": "源学习问卷详细规则尚未探索",
+            "remaining": "学习内问卷保留，复用最小模板建议；题型/必答/放行/评分/匿名待证，不恢复独立问卷运营模块",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "计划",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-L-REQ-01",
+              "BP-L-REQ-02",
+              "BP-L-REQ-03"
+            ],
+            "evidenceRefs": [
+              "US-L01-02",
+              "BC-L01-02",
+              "BC-L03",
+              "BC-L04-05-07-10",
+              "BC-L06-08",
+              "BC-L11"
+            ],
+            "coverageDepth": "表单/配置局部观察",
+            "remaining": "源自动循环/更新已完成学员仍保留；当前手动轮次/活动实例更新不完整，审批和完成算法需源链及评审",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "实施",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-L-REQ-07",
+              "BP-L-REQ-11"
+            ],
+            "evidenceRefs": [
+              "P1-LEARN-02",
+              "P1-LEARN-03-04",
+              "BC-P1C-M27",
+              "BC-L16",
+              "BC-L17",
+              "BC-L18"
+            ],
+            "coverageDepth": "列表/配置局部观察",
+            "remaining": "培训计划入口曾到工作台不算计划页已读；报名审批、项目/外派、费用/课酬、出勤与结训待执行，财务只接口",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "考试",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-L-REQ-06"
+            ],
+            "evidenceRefs": [
+              "BC-L06-EXAM",
+              "BC-L09",
+              "BC-L19",
+              "BC-L20",
+              "BC-L21"
+            ],
+            "coverageDepth": "空表/配置局部观察",
+            "remaining": "考试/作业/成绩等级与档案采集时点分开；复杂题型/次数/时限/批阅/重考和历史范围未全证",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "师资",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-L-REQ-08",
+              "BP-L-REQ-09",
+              "BP-L-REQ-10"
+            ],
+            "evidenceRefs": [
+              "P1-INSTRUCTOR",
+              "P1-TEACHING",
+              "P1-CERTIFICATION",
+              "P1-CERT-DETAIL",
+              "P1-MENTOR",
+              "P1-CERTIFICATE"
+            ],
+            "coverageDepth": "列表/详情局部观察",
+            "remaining": "讲师名册/课程授课资格/导师师徒/认证/出师/证书不同；源独立角色和阶段结果未全证，AI陪练暂缓",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "报表",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-L-REQ-03",
+              "BP-L-REQ-04",
+              "BP-I-REQ-02"
+            ],
+            "evidenceRefs": [
+              "P1-CREDIT",
+              "BC-L12",
+              "BC-L19"
+            ],
+            "coverageDepth": "列表/配置线索",
+            "remaining": "学分/课程成绩/考试档案/计划报表分母与历史采集不同；自动授予折抵/有效期及源报表权限未全证",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          }
+        ]
       },
       "businessPackage": "BP-L"
     },
@@ -4797,7 +5872,117 @@
               "relation": "原直接归属"
             }
           ]
-        }
+        },
+        "internalScopeCoverage": [
+          {
+            "originalScopeItem": "招聘",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-I-REQ-02"
+            ],
+            "evidenceRefs": [
+              "BC-R01",
+              "BC-R14",
+              "BC-R16"
+            ],
+            "coverageDepth": "跨模块业务线索；源报表待探索",
+            "remaining": "M12字段不代M32报表，需求/申请/自然人/入库各粒度；当前代码招聘进度候选已细化，源设计器/共享待证",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "人事",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-I-REQ-02"
+            ],
+            "evidenceRefs": [
+              "BC-F39",
+              "BC-F45"
+            ],
+            "coverageDepth": "跨模块业务线索；源报表待探索",
+            "remaining": "主身份/多任职/在职时点/历史组织分母缺源报表依据；当前名册包括可见离职不等在职人数",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "假勤",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-I-REQ-02"
+            ],
+            "evidenceRefs": [
+              "BC-A04",
+              "BC-A11",
+              "BC-A12"
+            ],
+            "coverageDepth": "跨模块业务线索；源报表待探索",
+            "remaining": "日/月/期间及历史组织权限需独立核；现单班分钟报表不代表原月报发布/确认/封存",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "薪酬",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-I-REQ-02"
+            ],
+            "evidenceRefs": [
+              "BC-S03",
+              "BC-S08"
+            ],
+            "coverageDepth": "跨模块业务线索；源报表待探索",
+            "remaining": "批次/条目/补差/引用粒度及专岗隔离已写候选；源团队薪酬授权不直接等批次组织范围",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "绩效",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-I-REQ-02"
+            ],
+            "evidenceRefs": [
+              "BC-P07",
+              "BC-P14",
+              "BC-P15"
+            ],
+            "coverageDepth": "跨模块业务线索；源报表待探索",
+            "remaining": "个人/组织/兼职结果和缺评分母分开；正式发布、档案同步、绩效系数不能混算",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "人才等",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-I-REQ-02",
+              "BP-I-REQ-11"
+            ],
+            "evidenceRefs": [
+              "BC-C40",
+              "BC-C30",
+              "BC-L19",
+              "BC-P1C-M32"
+            ],
+            "coverageDepth": "跨模块数据线索及本模块订阅结构",
+            "remaining": "保留人才、学习等原有报表目录，待核源数据集/设计器/指标和权限；订阅转交/屏蔽/快照与发送待证，不把原“等”扩成无限新增报表",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          }
+        ]
       },
       "businessPackage": "BP-I"
     },
@@ -5262,7 +6447,46 @@
               "relation": "跨模块关联，非改写原归属或重复计数；逐模块完整验收仍需在规格补齐"
             }
           ]
-        }
+        },
+        "internalScopeCoverage": [
+          {
+            "originalScopeItem": "标准",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-07"
+            ],
+            "evidenceRefs": [
+              "BC-C32",
+              "BC-C35",
+              "BC-C36",
+              "BC-C37"
+            ],
+            "coverageDepth": "局部合成执行",
+            "remaining": "测试标准已启用，空目标/1.0权重、其他维度空可启用仅样本；跨M18取用/版本/停用和测评方案消费待证",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "指标库",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-C-REQ-07"
+            ],
+            "evidenceRefs": [
+              "BC-C33",
+              "BC-C34",
+              "BC-C35"
+            ],
+            "coverageDepth": "局部合成执行",
+            "remaining": "能力库/TI/等级1已保存并引用；潜力/经历库及能力描述/行为/发展建议/面试题关系、版本传播待证，M38模型暂缓",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          }
+        ]
       },
       "businessPackage": "BP-C"
     },
@@ -6197,7 +7421,132 @@
               "relation": "原直接归属"
             }
           ]
-        }
+        },
+        "internalScopeCoverage": [
+          {
+            "originalScopeItem": "团队",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-I-REQ-01"
+            ],
+            "evidenceRefs": [
+              "BC-L15",
+              "BC-P1C-M48"
+            ],
+            "coverageDepth": "跨模块权限说明与档案入口；团队页待探索",
+            "remaining": "直线/虚线/部门负责人/间接下级不可套manager+orgScope；团队访问和当前范围矩阵待源证/评审",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "审批",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-I-REQ-01",
+              "BP-I-REQ-07"
+            ],
+            "evidenceRefs": [
+              "BC-I10",
+              "BC-I27"
+            ],
+            "coverageDepth": "跨模块流程线索；本人/代理页面待探索",
+            "remaining": "本人发起/节点办理/代批阅/管理委托分开；菜单或管理员不等员工角色实际可办",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "OKR",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-P-REQ-09"
+            ],
+            "evidenceRefs": [],
+            "coverageDepth": "尚未探索详细规则",
+            "remaining": "员工目标/KR/进展与团队对齐、可见及编辑期缺证，受限规格保留",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "目标",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-I-REQ-01",
+              "BP-P-REQ-05"
+            ],
+            "evidenceRefs": [
+              "P1-SELF-REVIEW",
+              "P1-GOAL"
+            ],
+            "coverageDepth": "本页与跨模块页面局部观察",
+            "remaining": "目标复盘/进度与自评/调整/申诉是不同动作，当前API派生状态有依据，源员工权限/提交链仍缺",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "假勤",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-I-REQ-01",
+              "BP-A-REQ-01"
+            ],
+            "evidenceRefs": [
+              "BC-A07",
+              "BC-A12"
+            ],
+            "coverageDepth": "跨模块配置线索；本人办理待探索",
+            "remaining": "本人打卡/请假/补卡/余额与历史范围；不以范围HR数据代本人字段权，独立UAT后续不阻P1继续",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "学习",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-I-REQ-01",
+              "BP-L-REQ-01",
+              "BP-L-REQ-06"
+            ],
+            "evidenceRefs": [
+              "BC-L03",
+              "BC-L06-08",
+              "BC-L19"
+            ],
+            "coverageDepth": "跨模块配置线索；学员办理待探索",
+            "remaining": "本人任务/考试/作业/放行/完成/成绩区分，待办消失不等业务取消；当前E2不增加学员访问者",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          },
+          {
+            "originalScopeItem": "发展计划",
+            "currentMode": "保留",
+            "contractIds": [
+              "BP-I-REQ-01",
+              "BP-C-REQ-05"
+            ],
+            "evidenceRefs": [
+              "BC-C27",
+              "BC-C28"
+            ],
+            "coverageDepth": "跨模块草稿线索；本人执行待探索",
+            "remaining": "IDP本人/指导者/其他角色及日期/阶段/终止恢复待证，源停用流程保存结果先查询，不重复创建",
+            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "complete": false,
+            "requirementAccepted": false
+          }
+        ]
       },
       "businessPackage": "BP-I"
     }
@@ -7415,7 +8764,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-09T10:21:24.780647+00:00",
+    "updatedAt": "2026-09-09T10:30:56.222812+00:00",
     "authority": "Scope_Register.json为唯一范围/验收事实源；历史48/59保留，当前15模块及基础按SCOPE-20260909-CORE15。",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -40411,28 +41760,28 @@
       "latestAuthorizationAt": "2026-09-09T06:25:42.812752+00:00",
       "scopeChangeHead": "f31cb2b5e1894723288fd884d4e3bd895ae57327",
       "scopeChange": "SCOPE-20260909-CORE15",
-      "latestCheckpointAt": "2026-09-09T10:21:24.780647+00:00",
-      "latestCommittedHead": "584afb5b164197fdb849d56c4310fa7eced7d44e",
+      "latestCheckpointAt": "2026-09-09T10:30:56.222812+00:00",
+      "latestCommittedHead": "79c14d3afdf8499e2093a32bc4f6c03ec7e592e9",
       "latestEvidenceRefs": [
         "BC-C39",
         "BC-C40"
       ],
-      "next": "首包与六基础/三支撑静态细化已保存；继续当前15内部范围逐项映射及全局一致性集中评审。原站仍CDP连接受限，恢复按原ID续，不新建。",
-      "browserRecovery": "当前唯一cdp -5010-4469-b53e-cce23dbab461；tabs.list、tab8.goto及title均超时，已有限恢复，当前不继续重复调用。不是站点/角色拒绝证据，无强制重新登录或授权提示。",
-      "sourceBrowsingStatus": "当前工具连接受限：tabs刷新超时；无新原站事实，后续为代码/既有证据静态分析"
+      "next": "恢复云浏览器连接后按已保存对象查询再续源补证；并集中评审7条必要业务决策。当前全部剩余源链依连接/角色/未来时点，需求签署依业务评审；不自动进入P2/P3。",
+      "browserRecovery": "旧实例失效后按官方指引发现唯一新实例并尝试tabs.list/new/goto/title；tab8创建成功但读取/导航刷新均超时。完成专业域/首包/基础/内部范围离线单元后再核tabs.list仍20s超时，停止重复。同一实例未收到登录/全量授权提示，不绕过控制。",
+      "sourceBrowsingStatus": "长段离线工作后最后一次tabs.list仍CDP refresh tabs timed out after 20000ms；连接不可用，当前无进一步可用源站操作。"
     },
     "dataValidation": {
-      "recordedAt": "2026-09-09T01:32:59.407213+00:00",
+      "recordedAt": "2026-09-09T10:30:56.222812+00:00",
       "userDirective": "我希望你不止有只读访问权限，因为有些是需要新建多条数据、甚至在不同页面建立生产数据才能发生的功能",
-      "status": "测试用途及合成数据已明确授权；执行进行中",
+      "status": "已授权并已有合成链执行；当前原站浏览器连接受限，遗留对象已核对文档及保存恢复点",
       "target": "https://srworkshopbj.italent.cn",
       "environment": "用户确认srworkshopbj.italent.cn可用于测试；是否为技术生产租户不改变本轮只使用明确标记合成记录的边界",
       "authorizationBoundary": "用户已确认当前北森租户可用于测试，并授权P1所需合成关联记录的创建、保存、提交及必要状态流转；先查可复用记录，统一P1V-20260909标记，逐链记录ID/关联/前后状态和结果，不逐条重问。不得任意更改真实员工或既有业务；不扩大到真实业务生效、外部通知、支付、签署或新增人类访问者。产品代码、部署、D1–D7/E1/E2继续保持。 最新范围仅当前15模块和基础/最小必要公共依赖；33模块停止独立探索/新数据链，已有前置可必要引用，不为停点做完整链。",
       "platformAccess": "用户持续授权本项目必要访问；不重复发起对话授权。所附平台弹窗只有允许一次，执行者不能设置始终允许或绕过平台强制审批/登录。",
       "dataPolicy": "只用统一P1V-20260909标记的合成信息；先查已有测试记录，能复用则复用。真实手机号/证件/银行账号/薪资不是默认测试输入，不捏造可投递联系人或冒充真实法定登记。合成记录也记录实际对象ID、关联和状态；不删除业务历史或证据，无法安全清理的保留位置及原因。",
-      "unresolved": "P1-ENV-01已由用户明确回复关闭，不再询问。后续仅具体功能所需但不可用的角色、外部动作或字段条件构成局部限制。",
+      "unresolved": "P1-ENV-01已明确关闭；合成授权持续。当前工具CDP refresh tabs超时，不是缺全量授权或原站拒绝证据；缺新源证据、特定角色/路由、未来生效时点和待决政策分别局部受限。",
       "recording": "每一步保存实际对象ID/关联ID、页面路径、时间、初始/结果状态、可见校验与影响；原站实测、原站说明、本项目候选及D1–D7分列。只记录必要脱敏证据，不保存无关个人值。",
-      "continuation": "按组织员工→干部人才→学习→绩效→招聘→假勤→薪酬推进15模块；M19/M48/M32随链同步，33暂缓不阻当前P1。",
+      "continuation": "连接恢复后以现有records/operations查询最新结果再继续当前15模块，先核M17保存未知流程、EA生效日期及M18未启动项目/路由；已确认保存不重复。文档静态对照与当前15内部范围映射已整理，等待可用源连接和集中需求评审。",
       "sourceWritesExecuted": true,
       "businessAccepted": false,
       "datasets": [
@@ -41446,8 +42795,8 @@
           "objectType": "人才标准 TalentCenter.TalentCriterion",
           "marker": "P1V-20260909-测试人才标准",
           "relations": "分类/模型名称空；能力维度已选TI目标空/权重1.0，其他三维度尚无新配置；无人员/项目",
-          "status": "已启用，列表回读一致；能力TI/目标空/权重1.0，测评方案未绑定，无人员或项目",
-          "evidence": "BC-C32/35/36",
+          "status": "已启用；能力TI/目标空/权重1.0，测评方案未绑定；M18项目已选择本标准，项目仍新建且未采集，不再称无项目引用",
+          "evidence": "BC-C32/35/36；BC-C38/40已在M18项目选择并回读，保留两模块独立状态",
           "retention": "保留人才标准合成前置；不与M06 QS资格标准合并，未启用/评定/通知。"
         },
         {
@@ -41466,8 +42815,8 @@
           "objectType": "人才指标主档",
           "marker": "P1V-20260909-测试人才指标",
           "relations": "测试能力指标库；分类空/顺序900/合成定义；现有1条等级描述（P1V基础），行为/建议/面试子表仍空",
-          "status": "已保存启用，库内代码TI/顺序900/分类--回读；四子集空、未选入标准",
-          "evidence": "BC-C33",
+          "status": "已保存启用；代码TI/顺序900/分类空；等级描述已新增1/P1V基础，已选入测试人才标准能力维度；行为描述/发展建议/面试问题未新增",
+          "evidence": "BC-C33；BC-C34/35后续等级保存及标准引用回读",
           "retention": "保留M37标准引用前置；不可与M06任职资格QI混为同对象，不重复新建。"
         },
         {
@@ -41502,37 +42851,58 @@
         }
       ],
       "residuals": [
-        "组织3342da23-ae25-4968-83fa-6748ee6d29fd（P1V-20260909-R）保留为测试前置；未终止/删除，关系与后续使用见records",
-        "测试组织A 2dabd0b9-b519-4955-af98-aa7fc7a3eaff保留用于关联，父级为测试R",
-        "测试组织B aa1fdd68-e907-4daf-92ce-f22b55aa27fc（编码P1V-20260909-B）已由组织名称筛选取到ID，归属测试R，保留用于JB及人员关联",
-        "职位JA b52e8c1f-d24a-4e1c-9c89-e7c46201e761保留，属于测试A",
-        "职位JB de20395f-6d74-4305-9c45-db3ec2209d2d保留，关联测试B；JA2同组织重复保存被拒，未确认产生记录",
-        "测试EA人员71e030ac-c52e-475f-b7bb-c321af71e46c已完成单账号入职，当前在职视图可查，保留继续兼职；前后人员ID一致，旧关联recordId已由BC-F45核实为入职任职。",
-        "测试薪资组P1V-20260909-PG已保存启用，对应B(含下级)、A(含下级)、R本级；全部是本轮测试组织；系统UUID未显示；保留为测试前置，不曾应用薪资规则或发放。",
-        "测试薪资包 d88fa0ba-5bf6-4034-a7e6-a6c34abd2556（P1V20260909SP）已保存，范围仅测试PG，未设置默认/应用规则；供EA测试入职使用，保留",
-        "测试SP内基本工资引用已保存启用/手动维护；未填任何真实工资数据、未应用规则；包内引用UUID未显示，按SP ID＋基本工资定位。",
-        "EA原关联recordId 0f0ac049已由BC-F45核实为入职EmploymentRecord，不再类型未知；人员父ID71e030ac、独立兼职cf48b4dc和未来离职c074f65a分别记录。",
-        "兼职cf48b4dc已确认离职后自动终止作废，当前列表（含空状态）不见但旧UI仍可读同ID，终态标志/消费者后效待证；未删除或再次保存，不再按在任前置使用。",
-        "测试法人LA ff7be18d-04a6-4f3a-8610-f6f230963349保存启用，范围空表含义待证，未绑定真实业务，保留后续引用补证。",
-        "EA已办理最后工作日9月9日离职，创建c074f65a离职事件9月10日起；9日仍在职。兼职自动终止文案已确认、实际后效待查询；未办理重聘。",
-        "M20测试工时方案P1V-20260909-测试工时方案已启用，优先级7、仅A含下级、消息否；无项目/实际工时/审批记录；业务UUID未显示，保留前置，不重复创建。",
-        "M20工时草稿9日/0.5小时因项目必填拒绝并取消，列表无EA工时行、无确认工时ID；两个同标记候选歧义未解，全部人员当前仅见EA已知主ID一行。",
-        "M06合成任职类别P1V20260909QC已启用保留，关联岗职务空、无活动绑定；UUID未显示，按编码定位。",
-        "M02活动第一步草稿已取消并P1V回查无活动，不再探索。M06测试类别QC、级别QL1各已保存，尚无相互关联/资格标准；按精确码定位，不重建。",
-        "M06类型QT及指标QI已保存，评价评分/通用否/合成说明。tab4标准草稿仍未保存，准备引用QI；无人员成绩/资格授予。",
-        "M06标准b177a56d已保存启用，QC/QL1/QI/QT链明确，无人员结果；初次级别描述未回显，待同ID核对，不能重复新建标准。",
-        "当前M06：QC/QL1/QT/QS保持已保存；QI在引用确认后停用，V2文本留存，QS仍启用且旧能力标准保留，级别描述补存回读一致。无待保存标准草稿/人员资格结果。前文草稿与描述未存为历史阶段，当前状态以records为准。",
-        "M06等级方案保留两级，评级指标草稿仅选方案后取消未保存。编码/显示设置未改变；QI继续停用，QS保持历史说明。",
-        "M03干部EA/任期493a9f87已保存并回读起止，StaffID411825222与员工UUID分列；述职空页已关闭；当前无干部草稿，不重复新建。",
-        "M17流程P1V-20260909-测试发展流程保存结果待核，未取得ID；停用/不向下公开/测试A为提交前值。计划与模板草稿都已取消；不得重复建同名流程或报告成功。"
+        "当前源对象ID/关系/状态以本Scope.p1Baseline.dataValidation.records为准；旧阶段遗留文字已转residualHistory保留，不作为当前恢复动作。未删除源业务或历史。",
+        "M01测试R/A/B、JA/JB与法人LA保留前置；同组织JA2被拒无确认对象。法人范围空语义仍未知，无真实合同绑定。",
+        "EA主ID71e030ac已入职，9日当前在职、离职任职c074f65a从10日起；入职任职0f0ac049截止9日，兼职cf48b4dc列表不见但旧UI可读，终态未知，不能当有效兼职继续；尚未重聘。",
+        "M07 PG/SP/基本工资手动项目保留并已支撑EA入职；范围测试组织/测试PG，未设默认或应用全局规则、未录工资金额或支付。",
+        "M06 QC/QL1/QT/QS及两级等级方案保留，QI已停用/说明V2，QS旧能力说明和级别描述已回读；无待保存标准草稿或人员认证。",
+        "M03 EA任期493a9f87在职干部/考察中，预计任期到2027-09-08、考察至2026-12-08；转正考核和述职无提交/审批，保持单账号源样本事实。",
+        "M17池fd92d3a7现1EA、培养中/准备度3~6个月、指导显式同EA、自动入池关；未出池/发起IDP。P1V停用发展流程一次保存结果待核无ID，禁止重建；发展计划/模板/继任草稿已取消。",
+        "M37测试标准已启用，能力库/TI启用，TI有等级1/P1V基础并已被标准能力引用；目标空/权重1.0，测评方案未绑定；标准已被M18项目选择，无已完成评估。",
+        "M18 ActivityId3d1d07ed-d10e-4c51-8a91-22d5d20d83b1已存新建，1EA初始/未计算；模板/方案已选，未启动采集或通知。恢复先同名/同ID查，不重建主项目或对象。",
+        "M20旧测试工时方案启用、仅A/优先级7/消息否，无确认项目或实际工时记录；本次暂缓，不再补链。M02活动草稿取消且回查无活动；M30/M31无确认新对象，不恢复探索。",
+        "入职链曾出现“采集已发送”源状态，触发时点及投递结果未知；没有手工向真实收件人发送动作，不声称零自动通知，恢复后仅查合成EA相关状态。",
+        "上述数据因后续当前15模块补证及历史可追溯保留；当前浏览器CDP连接不可用，不能安全核销/清理。若后续清理，先查关联和结果，再按系统撤销能力处理，不删业务历史。"
       ],
-      "markerCompatibility": "本轮主标记P1V-20260909；字段拒绝连字符时使用同日无分隔形式P1V20260909，并在records/operations记录完整名称编码映射，查询使用P1V前缀同时覆盖两式。不得为兼容标记改原站校验。"
+      "markerCompatibility": "本轮主标记P1V-20260909；字段拒绝连字符时使用同日无分隔形式P1V20260909，并在records/operations记录完整名称编码映射，查询使用P1V前缀同时覆盖两式。不得为兼容标记改原站校验。",
+      "residualHistory": [
+        {
+          "archivedAt": "2026-09-09T10:30:56.222812+00:00",
+          "basisHead": "79c14d3afdf8499e2093a32bc4f6c03ec7e592e9",
+          "meaning": "此前逐阶段追加的遗留描述原样保留；其中未保存/未关联等已被后续操作覆盖，当前以records及下列最新residuals为准。",
+          "notes": [
+            "组织3342da23-ae25-4968-83fa-6748ee6d29fd（P1V-20260909-R）保留为测试前置；未终止/删除，关系与后续使用见records",
+            "测试组织A 2dabd0b9-b519-4955-af98-aa7fc7a3eaff保留用于关联，父级为测试R",
+            "测试组织B aa1fdd68-e907-4daf-92ce-f22b55aa27fc（编码P1V-20260909-B）已由组织名称筛选取到ID，归属测试R，保留用于JB及人员关联",
+            "职位JA b52e8c1f-d24a-4e1c-9c89-e7c46201e761保留，属于测试A",
+            "职位JB de20395f-6d74-4305-9c45-db3ec2209d2d保留，关联测试B；JA2同组织重复保存被拒，未确认产生记录",
+            "测试EA人员71e030ac-c52e-475f-b7bb-c321af71e46c已完成单账号入职，当前在职视图可查，保留继续兼职；前后人员ID一致，旧关联recordId已由BC-F45核实为入职任职。",
+            "测试薪资组P1V-20260909-PG已保存启用，对应B(含下级)、A(含下级)、R本级；全部是本轮测试组织；系统UUID未显示；保留为测试前置，不曾应用薪资规则或发放。",
+            "测试薪资包 d88fa0ba-5bf6-4034-a7e6-a6c34abd2556（P1V20260909SP）已保存，范围仅测试PG，未设置默认/应用规则；供EA测试入职使用，保留",
+            "测试SP内基本工资引用已保存启用/手动维护；未填任何真实工资数据、未应用规则；包内引用UUID未显示，按SP ID＋基本工资定位。",
+            "EA原关联recordId 0f0ac049已由BC-F45核实为入职EmploymentRecord，不再类型未知；人员父ID71e030ac、独立兼职cf48b4dc和未来离职c074f65a分别记录。",
+            "兼职cf48b4dc已确认离职后自动终止作废，当前列表（含空状态）不见但旧UI仍可读同ID，终态标志/消费者后效待证；未删除或再次保存，不再按在任前置使用。",
+            "测试法人LA ff7be18d-04a6-4f3a-8610-f6f230963349保存启用，范围空表含义待证，未绑定真实业务，保留后续引用补证。",
+            "EA已办理最后工作日9月9日离职，创建c074f65a离职事件9月10日起；9日仍在职。兼职自动终止文案已确认、实际后效待查询；未办理重聘。",
+            "M20测试工时方案P1V-20260909-测试工时方案已启用，优先级7、仅A含下级、消息否；无项目/实际工时/审批记录；业务UUID未显示，保留前置，不重复创建。",
+            "M20工时草稿9日/0.5小时因项目必填拒绝并取消，列表无EA工时行、无确认工时ID；两个同标记候选歧义未解，全部人员当前仅见EA已知主ID一行。",
+            "M06合成任职类别P1V20260909QC已启用保留，关联岗职务空、无活动绑定；UUID未显示，按编码定位。",
+            "M02活动第一步草稿已取消并P1V回查无活动，不再探索。M06测试类别QC、级别QL1各已保存，尚无相互关联/资格标准；按精确码定位，不重建。",
+            "M06类型QT及指标QI已保存，评价评分/通用否/合成说明。tab4标准草稿仍未保存，准备引用QI；无人员成绩/资格授予。",
+            "M06标准b177a56d已保存启用，QC/QL1/QI/QT链明确，无人员结果；初次级别描述未回显，待同ID核对，不能重复新建标准。",
+            "当前M06：QC/QL1/QT/QS保持已保存；QI在引用确认后停用，V2文本留存，QS仍启用且旧能力标准保留，级别描述补存回读一致。无待保存标准草稿/人员资格结果。前文草稿与描述未存为历史阶段，当前状态以records为准。",
+            "M06等级方案保留两级，评级指标草稿仅选方案后取消未保存。编码/显示设置未改变；QI继续停用，QS保持历史说明。",
+            "M03干部EA/任期493a9f87已保存并回读起止，StaffID411825222与员工UUID分列；述职空页已关闭；当前无干部草稿，不重复新建。",
+            "M17流程P1V-20260909-测试发展流程保存结果待核，未取得ID；停用/不向下公开/测试A为提交前值。计划与模板草稿都已取消；不得重复建同名流程或报告成功。"
+          ]
+        }
+      ]
     }
   },
   "roadmap": {
     "revision": "2026-09-08-P1AB",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-09T10:21:24.780647+00:00",
+    "updatedAt": "2026-09-09T10:30:56.222812+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -41615,7 +42985,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "P1当前15模块：首包、各专业域、三支撑和六基础静态需求细化已保存；继续原登记内部功能映射与集中评审一致性，原站连接受限",
+    "activeWorkPackage": "P1当前15模块集中评审输入已保存；原站CDP连接不可用，待恢复后续现有合成链及集中规则/需求评审",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -41629,11 +42999,11 @@
       "BP-S"
     ],
     "nextTasks": [
-      "原站连接恢复为外部条件：tabs.list/goto/title的CDP超时已有限核查，当前不重复尝试或要求全量授权。源最后M18项目3d1d07ed-d10e-4c51-8a91-22d5d20d83b1新建、EA初始未计算、未启动，保存结果明确。",
-      "首包F-SPEC-01/02/03及完整M01 F-SPEC-04已收窄；继续15模块原登记内部功能逐项映射到既有规格/证据/具体受限分支，禁止静默缩减。",
-      "六基础和M19/M48/M32字段/角色/统计/状态/异常/候选验收已细化；继续审查各包来源/角色/历史/接口依赖、去重决策，并形成现有P1_Review集中评审入口。",
-      "核当前15全部内部常规范围有规格或具体受限分支，集中去重待源证据/待决定/待评审；33暂缓不恢复、不计P1门槛。",
-      "浏览器实际恢复后按现有源数据/操作ID续M18流程通知及采集条件→M26→M27→M16→M12→M11→M07；M19/M48/M32随链。M17流程保存结果待核、继任目标候选受限；EA未来离职10日起，重聘先查实际状态，绝不重复创建。"
+      "恢复云浏览器连接，先只读查询源实际页面/合成标记与ID；tabs刷新连续超时已有限重试，不能通过重建记录或修改权限绕过。最新源业务M18项目已存新建、EA初始未计算、未启动。",
+      "从已有记录补局部分支：M17停用IDP流程一次保存未知先查、继任JA/JB候选来源；M18盘点模板流程/通知和采集结果；EA实际10日离职/兼职终态/重聘；D1–D7及E2不重问。",
+      "按组织员工→干部人才→学习→绩效→招聘→假勤→薪酬继续当前15关键链；M19/M48/M32随链，具体每项缺口见modules[].p1.internalScopeCoverage，33暂缓不再探索。",
+      "集中评审7条必要业务选择（F-SPEC-01–04、R-SPEC-01、C-SPEC-01、SCOPE-DEP-01）；R-SPEC-02/S-SPEC-01先补源证再选。补证或有范围的受限结论获批后记录每模块P1A/P1B/评审，不能因文档生成标通过。",
+      "当前不具备15模块整体转下一阶段条件；既有P2受限技术验收、F01–F04实现/历史验证原样保留。后续P2复用/单包P3须就绪与授权，本轮不自动恢复产品开发、部署、真实外部交易或新访问者。"
     ],
     "state": "原48组历史完整保留；当前15组及六类基础能力P1未验收，33组本次暂缓不计完成；P2受限历史技术验收、F01–F04未业务验收、D1–D7/E1/E2保持；不自动恢复开发。",
     "scopeChange": "SCOPE-20260909-CORE15",
@@ -41645,7 +43015,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-09T10:21:24.780647+00:00",
+    "updatedAt": "2026-09-09T10:30:56.222812+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -47388,12 +48758,12 @@
         "topic": "候选人主对象与招聘需求/人才库关系",
         "status": "待补证及产品范围评审，不阻断独立需求编写",
         "basis": "BC-R03原站空表职位或人才库至少一项；recruitment.ts当前候选必须绑定active需求；原48组M14独立AI人才库未实现；BC-R14系统级证件/邮箱/手机号/四字段组合查重及规则变更全量重算，尚未验证重复后合并行为。",
-        "proposal": "推荐保留当前招聘需求内候选链路作为首批可复用对象，另明确全局人员与多职位/人才库关系需求；尚未批准分期边界",
+        "proposal": "推荐复用现有需求内候选/面试/录用链，同时在当前M12范围内明确一个经核实自然人关联多职位申请和多人才库关系，申请状态与入库关系独立，查重关系不自动合并。自然人身份键/冲突消解与权限仍待确认，不再提出把独立人才库移出当前承诺的分期边界。",
         "alternatives": [
           "将现有candidate改为全局人才主档＋多应聘关系：影响去重/权限/录用/历史迁移",
           "继续要求每位候选都绑定需求：不能覆盖原全量人才库范围，若暂缓须明确例外"
         ],
-        "impact": "阻塞完整M12/M14对象模型及去重权限就绪；不阻塞已确认需求内录用/入职契约；当前仅M12常规人才主档/应聘/储备关系，M14/M23/M24/M25独立AI/推荐运营暂缓，不作为本决策必须闭合的扩展。",
+        "impact": "仅阻M12自然人/申请/人才库对象及去重权限就绪，影响M01入职身份映射；其他需求规格继续。M14/M23/M24/M25独立AI/推荐运营已暂缓，不是本项必须补齐范围。",
         "decisionRequired": true
       },
       {
@@ -47837,7 +49207,7 @@
       }
     ],
     "consistencyReview": {
-      "state": "当前15模块与六基础持续审查；原48历史保留，33暂缓不再主动补规则；本单元完成首包/支撑/基础交叉检查，未业务签署",
+      "state": "当前15及六基础的本轮文档/静态一致性审查完成，剩余证据/规则/签署受限；不等P1A完整或需求验收",
       "reviewedSourceCommit": "447b02f72a2d2051986aba98e769daa7c2b846a3",
       "issues": [
         "F-SPEC-01 职位同组织重名策略与职级名称约束（组织已排除）",
@@ -47897,9 +49267,12 @@
         "审计/任职历史/业务事件/附件对象是不同记录；DB与对象存储失败补偿、当前历史读权及恢复撤权分别定义。",
         "薪资社保/个税/激励保持M07内部受限规格，人工deduction不等完整核算；负累计补差先待源证据/政策，未授权支付或扣未来工资。"
       ],
-      "remaining": "继续当前15内部原登记功能→规格/源证据/限制逐项映射，集中区分原站连接缺证、业务选择、待需求评审与后续P3/P4人工/生产验证；不再探索33暂缓模块。",
+      "remaining": "当前剩余原站补证均受不可用浏览器连接；7项必要产品选择、2项先补证再评审政策和15模块/六基础需求签署仍外部依赖。保留33暂缓，不扩开发或部署。",
       "latestReviewedHead": "584afb5b164197fdb849d56c4310fa7eced7d44e",
-      "latestReviewAt": "2026-09-09T10:21:24.780647+00:00"
+      "latestReviewAt": "2026-09-09T10:30:56.222812+00:00",
+      "internalScopeReviewAt": "2026-09-09T10:26:03.101902+00:00",
+      "internalScopeSource": "modules[].scope → modules[].p1.internalScopeCoverage；逐个原登记短语精确映射，不增验收分母",
+      "internalScopeResult": "当前15模块所有原登记短语均映射到既有规格/直接或跨域证据及具体限制；仅用户明确独立AI排班子能力暂缓、支付外部部分仅契约。其余保留含未探索，未当需求通过。"
     },
     "validationEvidence": [
       {
@@ -48053,7 +49426,60 @@
         "businessSignoffThisTurn": false
       }
     ],
-    "packageAssessmentSource": "当前各包就绪条件由modules[].p1.currentDeliveryAssessment.basis及deliveryScope基础边界生成；packages.pending/readinessConditions保留兼容历史快照，不能覆盖逐模块最新评估，后续不手工更新两份。"
+    "packageAssessmentSource": "当前各包就绪条件由modules[].p1.currentDeliveryAssessment.basis及deliveryScope基础边界生成；packages.pending/readinessConditions保留兼容历史快照，不能覆盖逐模块最新评估，后续不手工更新两份。",
+    "reviewPackage": {
+      "assessedAt": "2026-09-09T10:30:56.222812+00:00",
+      "basedOnHead": "79c14d3afdf8499e2093a32bc4f6c03ec7e592e9",
+      "status": "当前15模块集中评审输入已整理；P1A完整证据与P1B需求就绪尚未达成，未申请自动验收通过",
+      "autonomousWork": "本轮可用条件下的范围变更、原站局部合成链、各包需求与实现静态对照、六基础和全局一致性及原登记内部功能映射已保存；当前没有需重复生成而能消除缺口的独立文档任务。",
+      "sourceProgress": "M01组织/职位/入职/兼职/法人/未来离职；M07薪资组/包前置；M06类别-级别-指标-标准保留链；M03任期/考察期；M17池成员；M37指标/标准启用；M18项目持久化及对象配置均有局部执行。没有将这些链等同整模块P1A完成。",
+      "requirementsProgress": "当前15模块均有总体/分包契约或明确受限规格；原内部功能逐项映射，字段/角色/状态/依赖/异常/验收及实现差异同源。组织绩效、OKR、健康度、社保/个税/激励等未探索细则保留，已确认D1–D7与候选分开。",
+      "gateConclusion": "不满足当前15模块整体P1A/P1B退出与P1签署，不能建议整体进入下一阶段。F01–F04子包仍需F-SPEC-01/02/03决策及候选需求评审；完整M01另有F-SPEC-04和多任职/合同/权限证据。既有P2受限技术验收与F01–F04实现/自动化历史保留，不能代替本次需求就绪或业务验收。",
+      "foundationConclusion": "六基础均有字段/权限/异常/候选验收及现有实现证据，完整跨域字段矩阵、生产恢复目标/可信授权来源和外部适配仍需评审/环境条件；不计入15模块数字。多角色真人与云端生产验证属于后续阶段，不把它们单独设为继续P1的前置。",
+      "blockers": [
+        {
+          "id": "P1-CONNECTION-01",
+          "kind": "当前平台连接不可用",
+          "action": "云浏览器CDP tabs刷新/原站导航读取",
+          "evidence": "最后一次tabs.list返回CDP operation refresh tabs timed out after 20000ms；此前同实例goto/title相同超时。",
+          "affected": "当前15模块剩余原站配置/表单/合成业务链补证，以及遗留未知结果回查。",
+          "restore": "恢复此云浏览器实例可正常列页和导航；恢复后先查已有标记/ID。没有重新授权全部或重新登录的要求；若平台后续实际要求登录，仅按那一具体提示恢复。"
+        },
+        {
+          "id": "P1-RULES-01",
+          "kind": "最小必要业务选择",
+          "action": "确认当前7项集中决策中的受影响产品规则",
+          "evidence": "同源p1B.reviewIssues中decisionRequired=true且未解决事项；D1–D7/E1/E2不在重问清单。",
+          "affected": "F01.2/F03、M01重聘、M12身份与人才库、M26匿名及结果、M01/M12金额预算局部门槛；不扩暂缓模块。",
+          "restore": "逐项选择或批准有边界的方案；推荐均未批准。R-SPEC-02和S-SPEC-01先待源补证，不要求即时选择。"
+        },
+        {
+          "id": "P1-REVIEW-01",
+          "kind": "待业务评审签署",
+          "action": "审阅15模块与六基础需求/证据/例外",
+          "evidence": "所有模块p1A in_progress、p1B not_ready、review not_signed；批准受限0。",
+          "affected": "各模块完整就绪/当前全项目P1退出；文档技术自检不代签。",
+          "restore": "先补证/关闭实质规则或批准明确受限边界，记录评审范围/版本/人员/日期；受限批准单列，不计完整通过。"
+        },
+        {
+          "id": "P1-LOCAL-CONDITIONS",
+          "kind": "局部原站条件待核",
+          "action": "M17流程保存结果/继任候选、M18通知路由、EA10日离职后重聘",
+          "evidence": "BC-C28/C31/C40、BC-F45/46及dataValidation.records/operations；源已确认保存和未知结果分别记录。",
+          "affected": "只相应链；浏览器恢复前不能用再次创建或改时钟消除阻塞。",
+          "restore": "先只读核现有记录、目标来源和路由；在已授权合成范围补最小前置。独立角色实测后续保持E2，必要限制如实列出。"
+        }
+      ],
+      "evidenceRefs": [
+        "docs/P1_Source_Observations_20260907.md",
+        "docs/delivery/P1A_Coverage.md",
+        "docs/delivery/P1B_Readiness.md",
+        "docs/delivery/P1B_Implementation_Map.md",
+        "docs/delivery/P1AB_Document_Check.json"
+      ],
+      "businessAccepted": false,
+      "productionAccepted": false
+    }
   },
   "deliveryScope": {
     "changeId": "SCOPE-20260909-CORE15",
@@ -48737,7 +50163,7 @@
       "review": "仅用户确认人/时间/范围/例外明确的signed计通过；受限批准另列不混完整通过。",
       "baseline": "六类基础能力另列，不重复增加模块分母。"
     },
-    "assessmentAt": "2026-09-09T06:25:42.812752+00:00",
+    "assessmentAt": "2026-09-09T10:30:56.222812+00:00",
     "acceptanceApplicability": [
       {
         "taskId": "F01",

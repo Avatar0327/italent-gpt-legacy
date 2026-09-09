@@ -48,6 +48,15 @@ for m in s['modules']:
  check(m['p1']['coverage']['accepted'] is False,m['id']+'未代签P1')
 contract_ids=[c['id'] for p in s['p1B']['packages'] for c in p.get('contracts',[])]
 check(len(contract_ids)==len(set(contract_ids)),'分包需求契约ID唯一')
+for m in s['modules']:
+ if m['id'] not in active:continue
+ details=m['p1'].get('internalScopeCoverage',[])
+ check([x['originalScopeItem'] for x in details]==m['scope'].split('、'),m['id']+'原登记内部功能逐项完整，不静默删减')
+ for item in details:
+  check(set(item['contractIds'])<=set(contract_ids) and set(item['evidenceRefs'])<=set(pages),m['id']+'/'+item['originalScopeItem']+'规格及证据引用有效')
+  check(bool(item['coverageDepth']) and bool(item['remaining']) and bool(item['next']) and item['complete'] is False and item['requirementAccepted'] is False,m['id']+'/'+item['originalScopeItem']+'深度限制/下一步齐备且未伪报通过')
+  if item['currentMode']=='本次子能力暂缓':check(m['id']=='M11' and item['originalScopeItem']=='AI排班','内部子能力暂缓仅限本次明确AI边界')
+  else:check(bool(item['contractIds']),m['id']+'/'+item['originalScopeItem']+'保留功能有规格或受限提纲')
 for p in s['p1B']['packages']:
  check(p['accepted'] is False,p['id']+'未代签需求')
  for c in p.get('contracts',[]):

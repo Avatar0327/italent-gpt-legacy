@@ -1,6 +1,6 @@
 # BP-P 绩效｜产品需求规格评审稿
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T10:21:24.780647+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T10:30:56.222812+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
@@ -13,6 +13,14 @@
 | 原范围ID | 模块 | 当前适用 | 原登记范围 | 原验收归属 |
 |---|---|---|---|---|
 | M16 | 绩效管理 | 当前交付 | 工作台、OKR、员工/组织目标与绩效 | P-SOURCE、P-RATINGS、P-ACTIVITY、P-TEXT-TEMPLATE、P-INBOX-LINK、P-GOAL-RANGE、P-INDICATOR-CATALOG、P-INDICATOR-USAGE、P1-P-RULES、P-GOAL-ADVISORY |
+
+原登记内部功能逐项映射（未探索不等于暂缓；不新增验收分母）：
+
+| 模块/原登记功能 | 当前边界 | 对应规格 | 证据及深度 | 具体缺口 |
+|---|---|---|---|---|
+| M16 / 工作台 | 保留 | BP-P-REQ-01；BP-I-REQ-01；BP-I-REQ-02 | BC-P1C-M16；仅局部执行人设置，工作台本身待探索 | 工作台任务/异常/汇总对象与当前目标报表关系未证；其他页不能代工作台完整证据 |
+| M16 / OKR | 保留 | BP-P-REQ-09 | 无本项详细证据，原范围仍保留；尚未探索详细规则 | 目标/KR/对齐/进度/评分/权限/周期及自助关联缺证，保留受限规格而非自动套绩效目标 |
+| M16 / 员工/组织目标与绩效 | 保留 | BP-P-REQ-01；BP-P-REQ-02；BP-P-REQ-03；BP-P-REQ-04；BP-P-REQ-05；BP-P-REQ-06；BP-P-REQ-07；BP-P-REQ-08 | P1-GOAL、BC-P01、BC-P02、BC-P03、BC-P04、BC-P05、BC-P06、BC-P07、BC-P09、BC-P10、BC-P11、BC-P14、BC-P15、BC-P16；局部页面/配置及公式推导 | 员工目标/评价/申诉更正和组织目标/组织绩效分别保留；组织参与数不等员工人数，完整采分/关系/分布/系数消费与兼职上下文待证 |
 
 本轮暂停产品实现、部署和新增测试访问者；原站关联数据验证依最新已确认授权执行，实际结果以同源dataValidation.operations为准。15模块内待补项继续纳入当前需求；其余成员独立需求明确历史暂缓，不列当前就绪门槛。完整历史内容保留，不代表当前主动探索。输入：[Performance_Source_Gaps.md](../../docs/delivery/Performance_Source_Gaps.md)。
 

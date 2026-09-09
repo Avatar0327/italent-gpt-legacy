@@ -165,6 +165,9 @@ if 'p1B' in s:
   t+='**状态：'+pack['specStatus']+'。'+pack['readiness']+'。** 不以文档生成代替需求签署；本项目既有实现事实与原站事实分别列出。\n\n'
   t+='## 目标、范围和暂缓\n\n'+pack['goal']+'\n\n'
   t+=table(['原范围ID','模块','当前适用','原登记范围','原验收归属'],[(i,by_id[i]['name'],scope_status(i),by_id[i]['scope'],'、'.join(a['id'] for a in s['acceptanceTasks'] if a['moduleId']==i) or '沿用原范围登记；未新造验收任务') for i in pack['moduleIds']])
+  internal=[(i,x) for i in pack['moduleIds'] if i in active_ids for x in by_id[i]['p1'].get('internalScopeCoverage',[])]
+  if internal:
+   t+='\n原登记内部功能逐项映射（未探索不等于暂缓；不新增验收分母）：\n\n'+table(['模块/原登记功能','当前边界','对应规格','证据及深度','具体缺口'],[(i+' / '+x['originalScopeItem'],x['currentMode'],x['contractIds'],('、'.join(x['evidenceRefs']) or '无本项详细证据，原范围仍保留')+'；'+x['coverageDepth'],x['remaining']) for i,x in internal])
   t+='\n本轮暂停产品实现、部署和新增测试访问者；原站关联数据验证依最新已确认授权执行，实际结果以同源dataValidation.operations为准。15模块内待补项继续纳入当前需求；其余成员独立需求明确历史暂缓，不列当前就绪门槛。完整历史内容保留，不代表当前主动探索。输入：'+link_source(pack['inputEvidence'])+'。\n\n'
   if pack.get('authoritativeDetail'):t+='首要子包详细需求：'+link_source(pack['authoritativeDetail'])+'；D1–D7保持已确认，不以本文件重开决策。\n\n'
   t+='## 已具体化的对象与行为契约\n\n下列“验收预期”是对已确认规则或既有实现候选行为的可执行描述，**未表示已执行或已获企业批准**。仅D1–D7保持既有签署；其他候选约束不得直接用作新开发授权。\n\n'
@@ -267,3 +270,20 @@ f=D/'P1B_Readiness.md';f.write_text(f.read_text()+'\n'+scope_intro+'\n'+progress
 f=R/'docs/HRIS_Project_Plan.md';t=f.read_text();t=t.replace('<!-- ROADMAP_CURRENT_END -->',foundation+'\n'+dependencies+'\n<!-- ROADMAP_CURRENT_END -->');f.write_text(t)
 
 f=D/'P1B_Readiness.md';f.write_text(f.read_text()+'\n## 当前模块与原验收任务的可追溯关系\n\n'+table(['当前模块','原任务关联及性质'],[(m['id']+' '+m['name'],['{}：{}'.format(x['taskId'],x['relation']) for x in assessment(m)['acceptanceRefs']]) for m in active_mods]))
+
+internal_scope='\n## 当前15模块原登记内部功能覆盖（同源逐项，未代签）\n\n原始modules[].scope短语原样保持。跨模块引用只作依赖线索，不能替代本模块页面/角色证据；仅用户明确独立AI子能力暂缓，外部服务按接口边界，其余未探索功能仍在当前承诺内。下表不是新增进度台账或验收分母。\n\n'
+for m in active_mods:
+ internal_scope+='### '+m['id']+' '+m['name']+'\n\n'+table(['原登记功能','当前边界','规格ID','证据/深度','仍缺内容/后续'],[(x['originalScopeItem'],x['currentMode'],x['contractIds'],('、'.join(x['evidenceRefs']) or '暂无本项详细证据')+'；'+x['coverageDepth'],x['remaining']+'；'+x['next']) for x in m['p1'].get('internalScopeCoverage',[])])+'\n'
+for name in ['P1A_Coverage.md','P1_Review.md']:
+ f=D/name;f.write_text((f.read_text()+internal_scope).rstrip()+'\n')
+
+if pb.get('reviewPackage'):
+ rp=pb['reviewPackage']
+ summary='# 当前15模块P1集中评审与恢复点\n\n生成来源：同一Scope_Register.p1B.reviewPackage及modules[].p1；'+rp['assessedAt']+'。基于已推送源码/文档提交`'+rp['basedOnHead']+'`；本报告后续提交以实际Git HEAD为准。\n\n'
+ summary+=rp['status']+'。\n\n**'+progress_text()+'**\n\n'
+ summary+='## 已形成的成果及实际状态\n\n'+rp['sourceProgress']+'\n\n'+rp['requirementsProgress']+'\n\n'+rp['autonomousWork']+'\n\n'+rp['foundationConclusion']+'\n\n'
+ summary+='## 剩余阻塞与最小恢复动作\n\n'+table(['类型/编号','受阻动作及证据','影响范围','恢复条件'],[(x['kind']+' / '+x['id'],x['action']+'；'+x['evidence'],x['affected'],x['restore']) for x in rp['blockers']])+'\n'
+ decisions=[x for x in pb['reviewIssues'] if x.get('decisionRequired',True) and not x.get('decision')]
+ summary+='## 集中决策与阶段结论\n\n需选择的事项：'+'；'.join(x['id']+' '+x['topic'] for x in decisions)+'。现状、推荐、备选及影响完整见[P1B就绪与待决记录](P1B_Readiness.md)。推荐不代表已批准。R-SPEC-02/S-SPEC-01先补证后评审，不要求即时选择；D1–D7/E1/E2不重问。\n\n'+rp['gateConclusion']+'\n\n'
+ summary+='## 证据、规格及测试数据入口\n\n'+table(['材料','作用'],[('[P1A覆盖与内部功能](P1A_Coverage.md)','当前15逐项证据/深度/限制与33暂缓历史'),('[总体PRD](P1B_PRD.md)','业务包入口、全局契约、六基础及外部预留'),('[需求就绪与待决记录](P1B_Readiness.md)','必要选择、先补证事项、原59适用映射'),('[已有实现对应](P1B_Implementation_Map.md)','复用/待核验/补齐/修改及历史验证版本'),('[Scope_Register.json](Scope_Register.json)','p1Baseline.dataValidation.records/operations为合成数据当前状态和逐步操作唯一事实来源；residualHistory保留过时阶段描述'),('[恢复记录](Controller_Resume.md)','实际执行点、已确认结果及连接恢复后顺序')])+'\n下方保留完整同源证据、五类交付及历史适用说明；旧阶段文字不能覆盖上面的当前范围、状态或授权。\n\n---\n\n'
+ f=D/'P1_Review.md';f.write_text(summary+f.read_text())
