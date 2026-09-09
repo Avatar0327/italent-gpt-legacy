@@ -1,6 +1,6 @@
 # BP-A 假勤｜产品需求规格评审稿
 
-生成来源：`Scope_Register.json → p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-08T18:10:01.772078+00:00。
+生成来源：`Scope_Register.json → p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T01:32:59.407213+00:00。
 
 **状态：部分契约已具体化；未探索部分明确受限；非完整需求验收。未就绪：规格可评审，证据缺口/候选规则与需求签署未关闭。** 不以文档生成代替需求签署；本项目既有实现事实与原站事实分别列出。
 
@@ -12,7 +12,7 @@
 |---|---|---|---|
 | M11 | 假勤管理 | 档案、排班、考勤、申请、假期、AI排班 | A-SOURCE、A-PERIOD、A-SHIFT-DEFINITION、A-LEAVE-SOURCE、A-LEAVE-RULES、A-PAY-EXIT-SETTLEMENT、P1-A-RULES |
 
-本轮暂停实现、部署、业务写入和新增测试访问者。下列待补齐项仍属全项目范围，不因当前子包暂缓而删除。输入：[Attendance_Source_Gaps.md](../../docs/delivery/Attendance_Source_Gaps.md)。
+本轮暂停产品实现、部署和新增测试访问者；原站关联数据验证按同源dataValidation明确环境、数据及影响后执行，当前尚无写入结果。下列待补齐项仍属全项目范围，不因当前子包暂缓而删除。输入：[Attendance_Source_Gaps.md](../../docs/delivery/Attendance_Source_Gaps.md)。
 
 ## 已具体化的对象与行为契约
 

@@ -15,7 +15,7 @@ def intro(title):return f'# {title}\n\n生成来源：`Scope_Register.json → p
 f=D/'Scope_Register.md';old=f.read_text();marker='<!-- P1_CURRENT_END -->'
 if marker in old:old=old.split(marker,1)[1].lstrip()
 head=intro('全量范围与P1证据总表（当前有效）')
-head+='48组范围、59个原验收任务完整保留；本轮P1证据单元不增加验收分母。N=导航，P=局部页面/字段/说明，F=原站实际流程结果。本轮无F级结果，不执行业务取证。已开发/技术通过/人工业务与生产签署分别记录。\n\n'
+head+='48组范围、59个原验收任务完整保留；本轮P1证据单元不增加验收分母。N=导航，P=局部页面/字段/说明，F=原站实际流程结果。F级只由实际执行证据判定，拟定场景不算结果；当前数据验证边界见P1_Review。已开发/技术通过/人工业务与生产签署分别记录。\n\n'
 head+='入口：[P1评审材料](P1_Review.md) · [页面目录](P1_Page_Catalog.md) · [字段字典](P1_Field_Dictionary.md) · [流程与边界](P1_Flows.md)。\n\n'
 head+=table(['范围ID','模块','保留范围','原站证据深度','页面证据单元','当前部分实现','仍待核实/实现','生产'],[(m['id'],m['name'],m['scope'],m['p1']['sourceDepth'],'、'.join(m['p1']['pageRefs']) or 'BC-NAV-20260908（仅导航）',m['developed'],m['remaining'],m['productionAccepted']) for m in mods])
 head+='\n下方为历史快照，不覆盖上述当前JSON及本轮用户决定。\n\n'+marker+'\n\n';f.write_text(head+old)
@@ -130,7 +130,7 @@ if 'p1B' in s:
   t+='**状态：'+pack['specStatus']+'。'+pack['readiness']+'。** 不以文档生成代替需求签署；本项目既有实现事实与原站事实分别列出。\n\n'
   t+='## 目标、范围和暂缓\n\n'+pack['goal']+'\n\n'
   t+=table(['原范围ID','模块','保留范围','原验收归属'],[(i,by_id[i]['name'],by_id[i]['scope'],'、'.join(a['id'] for a in s['acceptanceTasks'] if a['moduleId']==i) or '沿用原范围登记；未新造验收任务') for i in pack['moduleIds']])
-  t+='\n本轮暂停实现、部署、业务写入和新增测试访问者。下列待补齐项仍属全项目范围，不因当前子包暂缓而删除。输入：'+link_source(pack['inputEvidence'])+'。\n\n'
+  t+='\n本轮暂停产品实现、部署和新增测试访问者；原站关联数据验证按同源dataValidation明确环境、数据及影响后执行，当前尚无写入结果。下列待补齐项仍属全项目范围，不因当前子包暂缓而删除。输入：'+link_source(pack['inputEvidence'])+'。\n\n'
   if pack.get('authoritativeDetail'):t+='首要子包详细需求：'+link_source(pack['authoritativeDetail'])+'；D1–D7保持已确认，不以本文件重开决策。\n\n'
   t+='## 已具体化的对象与行为契约\n\n下列“验收预期”是对已确认规则或既有实现候选行为的可执行描述，**未表示已执行或已获企业批准**。仅D1–D7保持既有签署；其他候选约束不得直接用作新开发授权。\n\n'
   if not pack['moduleIds']:t+='当前无未归属范围；历史三组依据见[P1B就绪表](P1B_Readiness.md)。此文件不是新增业务包或需求完成声明。\n\n'
@@ -175,4 +175,21 @@ if 'p1B' in s:
   f=D/'P1B_Readiness.md';t=f.read_text()+'\n## 原三组归属核实\n\n'+table(['范围','当前主包/候选','证据','影响/状态'],[(m['id']+' '+m['name'],m['businessPackage']+'；候选：'+'、'.join(m['assignmentReview']['candidates']),m['assignmentReview']['basis'],m['assignmentReview']['impact']+'；'+m['assignmentReview']['status']) for m in assignment]);f.write_text(t)
 
 if b.get('currentRun'):
- f=D/'P1_Review.md';t=f.read_text();current=b['currentRun'];t=t.replace('P1A/P1B为本轮新增规划细分。当前材料覆盖范围不是完成声明。','P1A/P1B为用户新增规划细分。当前材料覆盖范围不是完成声明。\n\n当前接续分支：'+current['branch']+'；开始HEAD：'+current['startHead']+'。本次新增原站只读证据及业务包规格；未修改产品代码、部署、数据库或访问者。下方历史接手/部署段保留原适用时间，不算本轮复验。');f.write_text(t)
+  f=D/'P1_Review.md';t=f.read_text();current=b['currentRun'];t=t.replace('P1A/P1B为本轮新增规划细分。当前材料覆盖范围不是完成声明。','P1A/P1B为用户新增规划细分。当前材料覆盖范围不是完成声明。\n\n当前接续分支：'+current['branch']+'；开始HEAD：'+current['startHead']+'。本次新增原站只读证据及业务包规格；未修改产品代码、部署、数据库或访问者。下方历史接手/部署段保留原适用时间，不算本轮复验。');f.write_text(t)
+
+# Proposed source-site data validation is another view of the existing scope.
+# It is never counted as executed evidence or approved product requirements.
+if b.get('dataValidation'):
+ v=b['dataValidation']
+ section='\n## 原站关联数据验证准备（用户2026-09-09新增要求）\n\n'
+ section+=v['authorizationBoundary']+'\n\n目标：'+v['target']+'。状态：'+v['status']+'。'+v['environment']+'。\n\n'
+ section+='平台访问：'+v['platformAccess']+'\n\n数据约定候选：'+v['dataPolicy']+'\n\n尚缺信息：'+v['unresolved']+'\n\n'
+ section+=table(['数据集','拟建对象/数量上限','候选值','前置关系','具体边界'],[(x['id'],x['objects'],x['values'],x['dependency'],x['limit']) for x in v['datasets']])
+ section+='\n'+table(['场景/范围','关联数据/证据','跨页面步骤','需要观察的事实','影响/恢复边界','实际执行状态'],[(x['id']+' '+','.join(x['moduleIds']),','.join(x['datasets'])+'；'+','.join(x['evidenceRefs']),x['chain'],x['verify'],x['effects']+'；'+x['recovery'],x['status']) for x in v['scenarios']])
+ section+='\n'+v['recording']+'\n\n'+v['continuation']+'\n\n'+v['laterPackages']+'\n\n**上述为未执行的场景设计，不增加原59项验收任务，不将原站说明或拟建数据记作F级证据。**\n'
+ for name in ['P1_Review.md','P1B_BP_F_Specification.md']:
+  f=D/name;t=f.read_text().replace('不请求在原站执行业务、','新增原站数据验证边界见下文、')
+  f.write_text(t+section)
+ note='\n## 当前原站数据验证边界\n\n'+v['authorizationBoundary']+' 完整数据集与场景见[P1评审材料](P1_Review.md)；范围澄清见[P1B就绪与待决记录](P1B_Readiness.md)。\n'
+ for name in ['P1A_Coverage.md','P1B_PRD.md','P1B_Readiness.md']:
+  f=D/name;f.write_text(f.read_text()+note)

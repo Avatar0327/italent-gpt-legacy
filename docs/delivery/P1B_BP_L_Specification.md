@@ -1,6 +1,6 @@
 # BP-L 学习｜产品需求规格评审稿
 
-生成来源：`Scope_Register.json → p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-08T18:10:01.772078+00:00。
+生成来源：`Scope_Register.json → p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T01:32:59.407213+00:00。
 
 **状态：部分契约已具体化；未探索部分明确受限；非完整需求验收。未就绪：规格可评审，证据缺口/候选规则与需求签署未关闭。** 不以文档生成代替需求签署；本项目既有实现事实与原站事实分别列出。
 
@@ -13,7 +13,7 @@
 | M27 | 学习管理 | 资源、问卷、计划、实施、考试、师资、报表 | L01、L02、L03、L04、X01、L-STAGE-WINDOW、L-RECURRENCE、L-EXAM-TYPES、L-HOMEWORK、L-WEIGHTED-GRADE、L-CONTENT-UPDATE、L-LIFECYCLE-REVIEW、P1-L-RULES |
 | M28 | AI陪练 | 计划、剧本、话术库、质检、评分、角色库 | 沿用原范围登记；未新造验收任务 |
 
-本轮暂停实现、部署、业务写入和新增测试访问者。下列待补齐项仍属全项目范围，不因当前子包暂缓而删除。输入：[Cadre_Learning_Source_Gaps.md](../../docs/delivery/Cadre_Learning_Source_Gaps.md)。
+本轮暂停产品实现、部署和新增测试访问者；原站关联数据验证按同源dataValidation明确环境、数据及影响后执行，当前尚无写入结果。下列待补齐项仍属全项目范围，不因当前子包暂缓而删除。输入：[Cadre_Learning_Source_Gaps.md](../../docs/delivery/Cadre_Learning_Source_Gaps.md)。
 
 ## 已具体化的对象与行为契约
 
