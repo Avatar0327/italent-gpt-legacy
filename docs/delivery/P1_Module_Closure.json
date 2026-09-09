@@ -1,0 +1,1188 @@
+{
+  "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
+  "generatedFromUpdatedAt": "2026-09-09T15:43:36.730682+00:00",
+  "primaryModuleId": "M01",
+  "backupModuleId": null,
+  "activeExecutionModuleId": "M01",
+  "moduleCount": 15,
+  "completeCount": 0,
+  "restrictedCount": 0,
+  "transitionReadyCount": 0,
+  "modules": [
+    {
+      "moduleId": "M01",
+      "name": "组织员工",
+      "rangeId": "R1",
+      "queueState": "primary",
+      "p1AConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [
+          "BC-F03",
+          "BC-F02",
+          "P1-CONTRACT-LIST",
+          "P1-CONTRACT-TYPE",
+          "BC-F04",
+          "BC-F05",
+          "BC-F06",
+          "BC-F07",
+          "P1-ORG-RECHECK",
+          "BC-F08",
+          "BC-F09",
+          "BC-F10",
+          "BC-F11",
+          "BC-F12",
+          "BC-F13",
+          "BC-F14",
+          "BC-F15",
+          "BC-F16",
+          "BC-F17",
+          "BC-F18",
+          "BC-F19",
+          "BC-F20",
+          "BC-F21",
+          "BC-F22",
+          "BC-F23",
+          "BC-F24",
+          "BC-F25",
+          "BC-F26",
+          "BC-F27",
+          "BC-F28",
+          "BC-F29",
+          "BC-F30",
+          "BC-F31",
+          "BC-F32",
+          "BC-F33",
+          "BC-F34",
+          "BC-F35",
+          "BC-F36",
+          "BC-F37",
+          "BC-F38",
+          "BC-F39",
+          "BC-F40",
+          "BC-F41",
+          "BC-F42",
+          "BC-F43",
+          "BC-F44",
+          "BC-F45",
+          "BC-F46"
+        ],
+        "limits": "沿用已有局部证据，未代签"
+      },
+      "p1BConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [],
+        "limits": "需求尚未批准"
+      },
+      "conditions": {
+        "applicableScopeDetermined": {
+          "value": true,
+          "basis": "用户已确认15完整登记范围及本轮R顺序"
+        },
+        "implementationRulesDecided": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "acceptanceExecutable": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "dependenciesAndExceptionsResolved": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        }
+      },
+      "transitionReview": {
+        "approved": false,
+        "record": null,
+        "scope": null,
+        "approvedAt": null
+      },
+      "restrictedApproval": null,
+      "transitionReady": false,
+      "missingConditions": [
+        "implementationRulesDecided",
+        "acceptanceExecutable",
+        "dependenciesAndExceptionsResolved",
+        "p1AApproved",
+        "p1BApproved",
+        "transitionReviewApproved"
+      ]
+    },
+    {
+      "moduleId": "M19",
+      "name": "审批中心",
+      "rangeId": "R1",
+      "queueState": "queued",
+      "p1AConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [
+          "BC-P1C-M19",
+          "BC-I10",
+          "BC-I27"
+        ],
+        "limits": "沿用已有局部证据，未代签"
+      },
+      "p1BConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [],
+        "limits": "需求尚未批准"
+      },
+      "conditions": {
+        "applicableScopeDetermined": {
+          "value": true,
+          "basis": "用户已确认15完整登记范围及本轮R顺序"
+        },
+        "implementationRulesDecided": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "acceptanceExecutable": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "dependenciesAndExceptionsResolved": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        }
+      },
+      "transitionReview": {
+        "approved": false,
+        "record": null,
+        "scope": null,
+        "approvedAt": null
+      },
+      "restrictedApproval": null,
+      "transitionReady": false,
+      "missingConditions": [
+        "implementationRulesDecided",
+        "acceptanceExecutable",
+        "dependenciesAndExceptionsResolved",
+        "p1AApproved",
+        "p1BApproved",
+        "transitionReviewApproved"
+      ]
+    },
+    {
+      "moduleId": "M48",
+      "name": "员工自助",
+      "rangeId": "R1",
+      "queueState": "queued",
+      "p1AConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [
+          "P1-SELF-REVIEW",
+          "BC-P1C-M48"
+        ],
+        "limits": "沿用已有局部证据，未代签"
+      },
+      "p1BConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [],
+        "limits": "需求尚未批准"
+      },
+      "conditions": {
+        "applicableScopeDetermined": {
+          "value": true,
+          "basis": "用户已确认15完整登记范围及本轮R顺序"
+        },
+        "implementationRulesDecided": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "acceptanceExecutable": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "dependenciesAndExceptionsResolved": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        }
+      },
+      "transitionReview": {
+        "approved": false,
+        "record": null,
+        "scope": null,
+        "approvedAt": null
+      },
+      "restrictedApproval": null,
+      "transitionReady": false,
+      "missingConditions": [
+        "implementationRulesDecided",
+        "acceptanceExecutable",
+        "dependenciesAndExceptionsResolved",
+        "p1AApproved",
+        "p1BApproved",
+        "transitionReviewApproved"
+      ]
+    },
+    {
+      "moduleId": "M32",
+      "name": "报表",
+      "rangeId": "R1",
+      "queueState": "queued",
+      "p1AConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [
+          "BC-P1C-M32"
+        ],
+        "limits": "沿用已有局部证据，未代签"
+      },
+      "p1BConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [],
+        "limits": "需求尚未批准"
+      },
+      "conditions": {
+        "applicableScopeDetermined": {
+          "value": true,
+          "basis": "用户已确认15完整登记范围及本轮R顺序"
+        },
+        "implementationRulesDecided": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "acceptanceExecutable": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "dependenciesAndExceptionsResolved": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        }
+      },
+      "transitionReview": {
+        "approved": false,
+        "record": null,
+        "scope": null,
+        "approvedAt": null
+      },
+      "restrictedApproval": null,
+      "transitionReady": false,
+      "missingConditions": [
+        "implementationRulesDecided",
+        "acceptanceExecutable",
+        "dependenciesAndExceptionsResolved",
+        "p1AApproved",
+        "p1BApproved",
+        "transitionReviewApproved"
+      ]
+    },
+    {
+      "moduleId": "M37",
+      "name": "人才标准",
+      "rangeId": "R2",
+      "queueState": "queued",
+      "p1AConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [
+          "BC-P1C-M37",
+          "BC-C32",
+          "BC-C33",
+          "BC-C34",
+          "BC-C35",
+          "BC-C36"
+        ],
+        "limits": "沿用已有局部证据，未代签"
+      },
+      "p1BConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [],
+        "limits": "需求尚未批准"
+      },
+      "conditions": {
+        "applicableScopeDetermined": {
+          "value": true,
+          "basis": "用户已确认15完整登记范围及本轮R顺序"
+        },
+        "implementationRulesDecided": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "acceptanceExecutable": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "dependenciesAndExceptionsResolved": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        }
+      },
+      "transitionReview": {
+        "approved": false,
+        "record": null,
+        "scope": null,
+        "approvedAt": null
+      },
+      "restrictedApproval": null,
+      "transitionReady": false,
+      "missingConditions": [
+        "implementationRulesDecided",
+        "acceptanceExecutable",
+        "dependenciesAndExceptionsResolved",
+        "p1AApproved",
+        "p1BApproved",
+        "transitionReviewApproved"
+      ]
+    },
+    {
+      "moduleId": "M06",
+      "name": "任职资格",
+      "rangeId": "R2",
+      "queueState": "queued",
+      "p1AConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [
+          "BC-C04",
+          "BC-P1C-M06",
+          "BC-C19",
+          "BC-C20",
+          "BC-C22",
+          "BC-C21",
+          "BC-C23",
+          "BC-C24"
+        ],
+        "limits": "沿用已有局部证据，未代签"
+      },
+      "p1BConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [],
+        "limits": "需求尚未批准"
+      },
+      "conditions": {
+        "applicableScopeDetermined": {
+          "value": true,
+          "basis": "用户已确认15完整登记范围及本轮R顺序"
+        },
+        "implementationRulesDecided": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "acceptanceExecutable": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "dependenciesAndExceptionsResolved": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        }
+      },
+      "transitionReview": {
+        "approved": false,
+        "record": null,
+        "scope": null,
+        "approvedAt": null
+      },
+      "restrictedApproval": null,
+      "transitionReady": false,
+      "missingConditions": [
+        "implementationRulesDecided",
+        "acceptanceExecutable",
+        "dependenciesAndExceptionsResolved",
+        "p1AApproved",
+        "p1BApproved",
+        "transitionReviewApproved"
+      ]
+    },
+    {
+      "moduleId": "M26",
+      "name": "360度评估",
+      "rangeId": "R2",
+      "queueState": "queued",
+      "p1AConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [
+          "BC-P1C-M26",
+          "BC-P1C-M26-02",
+          "BC-C14",
+          "BC-C15",
+          "BC-C16"
+        ],
+        "limits": "沿用已有局部证据，未代签"
+      },
+      "p1BConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [],
+        "limits": "需求尚未批准"
+      },
+      "conditions": {
+        "applicableScopeDetermined": {
+          "value": true,
+          "basis": "用户已确认15完整登记范围及本轮R顺序"
+        },
+        "implementationRulesDecided": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "acceptanceExecutable": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "dependenciesAndExceptionsResolved": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        }
+      },
+      "transitionReview": {
+        "approved": false,
+        "record": null,
+        "scope": null,
+        "approvedAt": null
+      },
+      "restrictedApproval": null,
+      "transitionReady": false,
+      "missingConditions": [
+        "implementationRulesDecided",
+        "acceptanceExecutable",
+        "dependenciesAndExceptionsResolved",
+        "p1AApproved",
+        "p1BApproved",
+        "transitionReviewApproved"
+      ]
+    },
+    {
+      "moduleId": "M18",
+      "name": "在线盘点",
+      "rangeId": "R2",
+      "queueState": "queued",
+      "p1AConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [
+          "P1-CAL",
+          "P1-STD",
+          "P1-SUC",
+          "P1-POOL",
+          "BC-C37",
+          "BC-C38",
+          "BC-C39",
+          "BC-C40"
+        ],
+        "limits": "沿用已有局部证据，未代签"
+      },
+      "p1BConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [],
+        "limits": "需求尚未批准"
+      },
+      "conditions": {
+        "applicableScopeDetermined": {
+          "value": true,
+          "basis": "用户已确认15完整登记范围及本轮R顺序"
+        },
+        "implementationRulesDecided": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "acceptanceExecutable": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "dependenciesAndExceptionsResolved": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        }
+      },
+      "transitionReview": {
+        "approved": false,
+        "record": null,
+        "scope": null,
+        "approvedAt": null
+      },
+      "restrictedApproval": null,
+      "transitionReady": false,
+      "missingConditions": [
+        "implementationRulesDecided",
+        "acceptanceExecutable",
+        "dependenciesAndExceptionsResolved",
+        "p1AApproved",
+        "p1BApproved",
+        "transitionReviewApproved"
+      ]
+    },
+    {
+      "moduleId": "M17",
+      "name": "继任与发展",
+      "rangeId": "R2",
+      "queueState": "queued",
+      "p1AConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [
+          "BC-C06",
+          "BC-P1C-M17",
+          "BC-P1C-M17-02",
+          "BC-C27",
+          "BC-C28",
+          "BC-C29",
+          "BC-C30",
+          "BC-C31"
+        ],
+        "limits": "沿用已有局部证据，未代签"
+      },
+      "p1BConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [],
+        "limits": "需求尚未批准"
+      },
+      "conditions": {
+        "applicableScopeDetermined": {
+          "value": true,
+          "basis": "用户已确认15完整登记范围及本轮R顺序"
+        },
+        "implementationRulesDecided": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "acceptanceExecutable": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "dependenciesAndExceptionsResolved": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        }
+      },
+      "transitionReview": {
+        "approved": false,
+        "record": null,
+        "scope": null,
+        "approvedAt": null
+      },
+      "restrictedApproval": null,
+      "transitionReady": false,
+      "missingConditions": [
+        "implementationRulesDecided",
+        "acceptanceExecutable",
+        "dependenciesAndExceptionsResolved",
+        "p1AApproved",
+        "p1BApproved",
+        "transitionReviewApproved"
+      ]
+    },
+    {
+      "moduleId": "M03",
+      "name": "干部管理2.0",
+      "rangeId": "R2",
+      "queueState": "queued",
+      "p1AConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [
+          "US-C01-02",
+          "BC-C01",
+          "BC-C02",
+          "BC-C03",
+          "BC-C08",
+          "BC-C09",
+          "BC-C10",
+          "BC-C11",
+          "BC-C12",
+          "BC-C13",
+          "BC-C25",
+          "BC-C26"
+        ],
+        "limits": "沿用已有局部证据，未代签"
+      },
+      "p1BConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [],
+        "limits": "需求尚未批准"
+      },
+      "conditions": {
+        "applicableScopeDetermined": {
+          "value": true,
+          "basis": "用户已确认15完整登记范围及本轮R顺序"
+        },
+        "implementationRulesDecided": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "acceptanceExecutable": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "dependenciesAndExceptionsResolved": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        }
+      },
+      "transitionReview": {
+        "approved": false,
+        "record": null,
+        "scope": null,
+        "approvedAt": null
+      },
+      "restrictedApproval": null,
+      "transitionReady": false,
+      "missingConditions": [
+        "implementationRulesDecided",
+        "acceptanceExecutable",
+        "dependenciesAndExceptionsResolved",
+        "p1AApproved",
+        "p1BApproved",
+        "transitionReviewApproved"
+      ]
+    },
+    {
+      "moduleId": "M27",
+      "name": "学习管理",
+      "rangeId": "R3",
+      "queueState": "queued",
+      "p1AConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [
+          "P1-LEARN-02",
+          "P1-LEARN-03-04",
+          "US-L01-02",
+          "BC-L01-02",
+          "BC-L03",
+          "BC-L04-05-07-10",
+          "BC-L06-08",
+          "BC-L06-EXAM",
+          "BC-L09",
+          "BC-L11",
+          "P1-INSTRUCTOR",
+          "P1-TEACHING",
+          "P1-CERTIFICATION",
+          "P1-CERT-DETAIL",
+          "P1-MENTOR",
+          "P1-CERTIFICATE",
+          "P1-CREDIT",
+          "BC-L12",
+          "BC-P1C-M27",
+          "BC-L13",
+          "BC-L14",
+          "BC-L15",
+          "BC-L16",
+          "BC-L17",
+          "BC-L18",
+          "BC-L19",
+          "BC-L20",
+          "BC-L21",
+          "BC-L22"
+        ],
+        "limits": "沿用已有局部证据，未代签"
+      },
+      "p1BConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [],
+        "limits": "需求尚未批准"
+      },
+      "conditions": {
+        "applicableScopeDetermined": {
+          "value": true,
+          "basis": "用户已确认15完整登记范围及本轮R顺序"
+        },
+        "implementationRulesDecided": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "acceptanceExecutable": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "dependenciesAndExceptionsResolved": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        }
+      },
+      "transitionReview": {
+        "approved": false,
+        "record": null,
+        "scope": null,
+        "approvedAt": null
+      },
+      "restrictedApproval": null,
+      "transitionReady": false,
+      "missingConditions": [
+        "implementationRulesDecided",
+        "acceptanceExecutable",
+        "dependenciesAndExceptionsResolved",
+        "p1AApproved",
+        "p1BApproved",
+        "transitionReviewApproved"
+      ]
+    },
+    {
+      "moduleId": "M16",
+      "name": "绩效管理",
+      "rangeId": "R3",
+      "queueState": "queued",
+      "p1AConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [
+          "P1-GOAL",
+          "BC-P01",
+          "BC-P02",
+          "BC-P03",
+          "BC-P04",
+          "BC-P05",
+          "BC-P06",
+          "BC-P07",
+          "BC-P1C-M16",
+          "BC-P08",
+          "BC-P09",
+          "BC-P10",
+          "BC-P11",
+          "BC-P12",
+          "BC-P13",
+          "BC-P14",
+          "BC-P15",
+          "BC-P16"
+        ],
+        "limits": "沿用已有局部证据，未代签"
+      },
+      "p1BConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [],
+        "limits": "需求尚未批准"
+      },
+      "conditions": {
+        "applicableScopeDetermined": {
+          "value": true,
+          "basis": "用户已确认15完整登记范围及本轮R顺序"
+        },
+        "implementationRulesDecided": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "acceptanceExecutable": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "dependenciesAndExceptionsResolved": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        }
+      },
+      "transitionReview": {
+        "approved": false,
+        "record": null,
+        "scope": null,
+        "approvedAt": null
+      },
+      "restrictedApproval": null,
+      "transitionReady": false,
+      "missingConditions": [
+        "implementationRulesDecided",
+        "acceptanceExecutable",
+        "dependenciesAndExceptionsResolved",
+        "p1AApproved",
+        "p1BApproved",
+        "transitionReviewApproved"
+      ]
+    },
+    {
+      "moduleId": "M12",
+      "name": "招聘管理系统",
+      "rangeId": "R3",
+      "queueState": "queued",
+      "p1AConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [
+          "BC-R01",
+          "BC-R02",
+          "BC-R03",
+          "BC-R04-06",
+          "BC-R05",
+          "BC-R07",
+          "BC-R08",
+          "BC-P1C-M12",
+          "BC-R12",
+          "BC-R13",
+          "BC-R14",
+          "BC-R15",
+          "BC-R16"
+        ],
+        "limits": "沿用已有局部证据，未代签"
+      },
+      "p1BConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [],
+        "limits": "需求尚未批准"
+      },
+      "conditions": {
+        "applicableScopeDetermined": {
+          "value": true,
+          "basis": "用户已确认15完整登记范围及本轮R顺序"
+        },
+        "implementationRulesDecided": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "acceptanceExecutable": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "dependenciesAndExceptionsResolved": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        }
+      },
+      "transitionReview": {
+        "approved": false,
+        "record": null,
+        "scope": null,
+        "approvedAt": null
+      },
+      "restrictedApproval": null,
+      "transitionReady": false,
+      "missingConditions": [
+        "implementationRulesDecided",
+        "acceptanceExecutable",
+        "dependenciesAndExceptionsResolved",
+        "p1AApproved",
+        "p1BApproved",
+        "transitionReviewApproved"
+      ]
+    },
+    {
+      "moduleId": "M11",
+      "name": "假勤管理",
+      "rangeId": "R3",
+      "queueState": "queued",
+      "p1AConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [
+          "BC-A02-03",
+          "BC-A04",
+          "BC-A05-06",
+          "BC-A07",
+          "BC-A08",
+          "BC-A09",
+          "BC-P1C-M11",
+          "BC-A10",
+          "BC-A11",
+          "BC-A12"
+        ],
+        "limits": "沿用已有局部证据，未代签"
+      },
+      "p1BConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [],
+        "limits": "需求尚未批准"
+      },
+      "conditions": {
+        "applicableScopeDetermined": {
+          "value": true,
+          "basis": "用户已确认15完整登记范围及本轮R顺序"
+        },
+        "implementationRulesDecided": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "acceptanceExecutable": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "dependenciesAndExceptionsResolved": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        }
+      },
+      "transitionReview": {
+        "approved": false,
+        "record": null,
+        "scope": null,
+        "approvedAt": null
+      },
+      "restrictedApproval": null,
+      "transitionReady": false,
+      "missingConditions": [
+        "implementationRulesDecided",
+        "acceptanceExecutable",
+        "dependenciesAndExceptionsResolved",
+        "p1AApproved",
+        "p1BApproved",
+        "transitionReviewApproved"
+      ]
+    },
+    {
+      "moduleId": "M07",
+      "name": "薪酬社保",
+      "rangeId": "R3",
+      "queueState": "queued",
+      "p1AConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [
+          "BC-S01-02",
+          "BC-S03",
+          "BC-S04",
+          "BC-S05",
+          "BC-P1C-M07",
+          "BC-S07",
+          "BC-S08",
+          "BC-S09",
+          "BC-S18",
+          "BC-S19",
+          "BC-S20",
+          "BC-S21"
+        ],
+        "limits": "沿用已有局部证据，未代签"
+      },
+      "p1BConclusion": {
+        "status": "进行中",
+        "approvalRecord": null,
+        "evidenceRefs": [],
+        "limits": "需求尚未批准"
+      },
+      "conditions": {
+        "applicableScopeDetermined": {
+          "value": true,
+          "basis": "用户已确认15完整登记范围及本轮R顺序"
+        },
+        "implementationRulesDecided": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "acceptanceExecutable": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        },
+        "dependenciesAndExceptionsResolved": {
+          "value": null,
+          "basis": "尚未逐模块闭环判定，不能算通过"
+        }
+      },
+      "transitionReview": {
+        "approved": false,
+        "record": null,
+        "scope": null,
+        "approvedAt": null
+      },
+      "restrictedApproval": null,
+      "transitionReady": false,
+      "missingConditions": [
+        "implementationRulesDecided",
+        "acceptanceExecutable",
+        "dependenciesAndExceptionsResolved",
+        "p1AApproved",
+        "p1BApproved",
+        "transitionReviewApproved"
+      ]
+    }
+  ],
+  "ranges": [
+    {
+      "id": "R1",
+      "applicableFoundationIds": [
+        "BASE-01",
+        "BASE-02",
+        "BASE-03",
+        "BASE-04",
+        "BASE-05",
+        "BASE-06"
+      ],
+      "foundationReadiness": {
+        "BASE-01": {
+          "value": null,
+          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+        },
+        "BASE-02": {
+          "value": null,
+          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+        },
+        "BASE-03": {
+          "value": null,
+          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+        },
+        "BASE-04": {
+          "value": null,
+          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+        },
+        "BASE-05": {
+          "value": null,
+          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+        },
+        "BASE-06": {
+          "value": null,
+          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+        }
+      },
+      "review": {
+        "approved": false,
+        "record": null,
+        "approvedAt": null,
+        "scope": null
+      },
+      "moduleIds": [
+        "M01",
+        "M19",
+        "M48",
+        "M32"
+      ],
+      "transitionReady": false,
+      "missingConditions": [
+        "M01",
+        "M19",
+        "M48",
+        "M32",
+        "BASE-01",
+        "BASE-02",
+        "BASE-03",
+        "BASE-04",
+        "BASE-05",
+        "BASE-06",
+        "rangeReviewApproved"
+      ]
+    },
+    {
+      "id": "R2",
+      "applicableFoundationIds": [
+        "BASE-01",
+        "BASE-02",
+        "BASE-03",
+        "BASE-04",
+        "BASE-05",
+        "BASE-06"
+      ],
+      "foundationReadiness": {
+        "BASE-01": {
+          "value": null,
+          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+        },
+        "BASE-02": {
+          "value": null,
+          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+        },
+        "BASE-03": {
+          "value": null,
+          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+        },
+        "BASE-04": {
+          "value": null,
+          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+        },
+        "BASE-05": {
+          "value": null,
+          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+        },
+        "BASE-06": {
+          "value": null,
+          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+        }
+      },
+      "review": {
+        "approved": false,
+        "record": null,
+        "approvedAt": null,
+        "scope": null
+      },
+      "moduleIds": [
+        "M37",
+        "M06",
+        "M26",
+        "M18",
+        "M17",
+        "M03"
+      ],
+      "transitionReady": false,
+      "missingConditions": [
+        "M37",
+        "M06",
+        "M26",
+        "M18",
+        "M17",
+        "M03",
+        "BASE-01",
+        "BASE-02",
+        "BASE-03",
+        "BASE-04",
+        "BASE-05",
+        "BASE-06",
+        "rangeReviewApproved"
+      ]
+    },
+    {
+      "id": "R3",
+      "applicableFoundationIds": [
+        "BASE-01",
+        "BASE-02",
+        "BASE-03",
+        "BASE-04",
+        "BASE-05",
+        "BASE-06"
+      ],
+      "foundationReadiness": {
+        "BASE-01": {
+          "value": null,
+          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+        },
+        "BASE-02": {
+          "value": null,
+          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+        },
+        "BASE-03": {
+          "value": null,
+          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+        },
+        "BASE-04": {
+          "value": null,
+          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+        },
+        "BASE-05": {
+          "value": null,
+          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+        },
+        "BASE-06": {
+          "value": null,
+          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+        }
+      },
+      "review": {
+        "approved": false,
+        "record": null,
+        "approvedAt": null,
+        "scope": null
+      },
+      "moduleIds": [
+        "M27",
+        "M16",
+        "M12",
+        "M11",
+        "M07"
+      ],
+      "transitionReady": false,
+      "missingConditions": [
+        "M27",
+        "M16",
+        "M12",
+        "M11",
+        "M07",
+        "BASE-01",
+        "BASE-02",
+        "BASE-03",
+        "BASE-04",
+        "BASE-05",
+        "BASE-06",
+        "rangeReviewApproved"
+      ]
+    }
+  ]
+}

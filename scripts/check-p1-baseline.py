@@ -39,7 +39,7 @@ for m in s['modules']:
   check(a['p1A'] in ['in_progress','not_assessed','complete'] and a['p1B'] in ['not_ready','not_assessed','ready'],m['id']+'当前P1A/P1B分别登记')
   if a['p1A']=='complete' or a['p1B']=='ready' or a['review']=='signed':
    check(bool(a.get('exitEvidence')) and bool(a.get('reviewRecord')),m['id']+'达到退出计数须具体证据/评审记录')
-check(ds['supportModuleIds']==['M19','M48','M32'] and 'BP-I' not in ds['businessOrder'],'审批自助报表随链同步，不排最后')
+check(ds['supportModuleIds']==['M19','M48','M32'] and ds['moduleExecutionOrder'][:4]==['M01','M19','M48','M32'],'R1审批自助报表按明确顺序闭环，依赖补证不另开全量探索')
 q=json.loads((D/'Module_Queue.json').read_text())
 check(q['currentP1']['nextTasks']==s['roadmap']['nextTasks'] and q['currentP1']['businessOrder']==ds['businessOrder'],'唯一队列与Scope当前顺序和下一步一致')
 for dep in ds['dependencies']:
@@ -114,3 +114,26 @@ check(all(p.startswith('docs/') or p in ['scripts/render-p1-baseline.py','script
 result={'completedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'baseCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=R,text=True).strip(),'scope':'文档完整性/引用/生成一致性；非业务回归、原站取证、需求签署或UAT','result':'passed','checks':checks,'notes':['对当前HEAD核对原48组及59原验收条件/标志未改变','本检查仅验证文档结构；是否新增原站观察以带来源与观察时间的记录为准，不能由脚本推断','D1历史测试源3d690cbbd6336c6de8b76a06fa4459700b1e3a88；入口渲染源fdc423fcba607bd5814a0672836b55536c71ecb1；本轮未复测'],'businessAccepted':False,'productionAccepted':False}
 (D/'P1AB_Document_Check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
 print('PASS: scope, acceptance flags, package mapping, page attribution, links, deterministic generation and unchanged product source')
+
+policy=s['roadmap']['executionPolicy'];order=s['roadmap']['moduleExecutionOrder']
+expected_order=['M01','M19','M48','M32','M37','M06','M26','M18','M17','M03','M27','M16','M12','M11','M07']
+check(order==expected_order and ds['moduleExecutionOrder']==order,'用户R1–R3模块顺序精确保持')
+check([i for r in ds['rangeLayers'][:3] for i in r['moduleIds']]==order and set(ds['rangeLayers'][3]['moduleIds'])==all_ids-active,'R1–R4完整分区15/33')
+check(policy['wipLimit']==1 and policy['backupLimit']==1 and policy['primaryModuleId'] in active,'单主模块与最多1备用')
+check(policy['backupModuleId'] is None or policy.get('backupActivationEvidence'),'启用备用必须记录外部阻塞与返回条件')
+check(policy['activeExecutionModuleId'] in [policy['primaryModuleId'],policy['backupModuleId']],'实际执行仅主或获准备用')
+check(q['currentP1']['executionPolicy']==policy,'队列执行模式与唯一Scope一致')
+for m in s['modules']:
+ if m['id'] not in active:continue
+ c=m['p1']['moduleClosure']
+ for phase in ['p1AConclusion','p1BConclusion']:
+  check(c[phase]['status'] in policy['statusVocabulary'],m['id']+phase+'结论枚举有效')
+  if c[phase]['status'] in ['完整通过','受限通过']:check(bool(c[phase]['approvalRecord']),m['id']+phase+'通过须批准记录')
+ if any(c[k]['status']=='受限通过' for k in ['p1AConclusion','p1BConclusion']):
+  check(all(c.get('restrictedApproval',{}).get(k) for k in ['scope','residualRisk','revalidation','record']),m['id']+'受限批准范围风险补验齐备')
+ rows=m['p1'].get('closureChecklist',[])
+ if rows:
+  check(set(x['scopeItem'] for x in rows)==set(m['scope'].split('、')),m['id']+'收口覆盖每个原范围')
+  check(all(set(x['requirementIds'])<=set(contract_ids) and set(x['evidenceRefs'])<=set(pages) for x in rows),m['id']+'收口引用真实契约/证据')
+# Persist the additional governance checks into the existing check report.
+result['checks']=checks;(D/'P1AB_Document_Check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')

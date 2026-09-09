@@ -117,6 +117,7 @@ if 'roadmap' in s:
  stage+=table(['阶段','输入','工作内容','交付物','退出条件','受限项','下一步'],[(x['id']+' '+x['name'],x['input'],x['work'],x['deliverables'],x['exit'],x['limits'],x['next']) for x in r['phases']])
  stage+='\n**业务包就绪与全项目P1完成分开登记。** P1A/P1B可按包衔接；需求就绪不是业务运行验收。P3仅一个主要开发包，转序前必须记录当前包结论、未通过项、依赖影响及依据。本轮主要开发包为空，暂停功能扩展。\n\n'
  plan=R/'docs/HRIS_Project_Plan.md';old=plan.read_text();start='<!-- ROADMAP_CURRENT_START -->';end='<!-- ROADMAP_CURRENT_END -->'
+ if '<!-- MODULE_MODE_CURRENT_END -->' in old:old=old.split('<!-- MODULE_MODE_CURRENT_END -->',1)[1].lstrip()
  if start in old:old=old.split(start)[0]+old.split(end,1)[1]
  plan.write_text(start+'\n# 当前有效项目规划细化\n\n'+stage+end+'\n\n'+old.lstrip())
  t=intro('P1A当前15模块覆盖与缺口；33组历史暂缓')
@@ -293,12 +294,11 @@ if pb.get('reviewPackage'):
 cr=b['currentRun']
 if cr.get('currentFocus'):
  header='# 当前执行恢复点：'+cr['currentFocus']+'\n\n'
- header+='事实来源：Scope_Register.json / p1Baseline.currentRun、BC-C30.traceability、roadmap。记录时间：'+cr['latestCheckpointAt']+'。\n\n'
+ header+='事实来源：Scope_Register.json / p1Baseline.currentRun、modules[].p1、roadmap.executionPolicy。记录时间：'+cr['latestCheckpointAt']+'。\n\n'
  header+='本单元编辑基准 HEAD：`'+cr['latestCommittedHead']+'`，分支 `'+cr['branch']+'`。该值是编辑前的已存在提交，不冒充本文件最终所属提交。恢复时用 `git log -1 --format=%H` 核实际 HEAD，`git log -1 --format=%H -- docs/delivery/Scope_Register.json` 定位本记录所属提交，`git status --short` 核当前未提交状态；同步结果以同次 push / ls-remote 核验为准。\n\n'
  header+='恢复时工作区快照：'+cr['workingTreeAtResume']+' 本单元只修改文档和同源生成/一致性脚本；提交前的修改清单不作为提交后的未提交状态。\n\n'
  header+=progress_text()+' '+ds.get('deferredDisplayLabel','33个模块本次暂缓')+'；原48范围/59任务及历史证据保留，基础六类另列。P2受限技术验收、F01–F04已有实现及历史验证、D1–D7/E1/E2原义不变。\n\n'
- header+='BC-C30原取证已在此前完成：P1OP-C-019手工入池、020设置培养中/3~6个月；本次完成字段默认值边界、源操作/记录→BP-C-REQ-04→实现差异追溯，修正旧“未手动入池”说明。观察日期仍为原记录日期，本次整理不计新增源执行或复刻测试。\n\n'
- header+='最近确认的M17池fd92d3a7-7925-4b36-a22b-a4ab1fcfa049有1名EA（EmployeeInformation 71e030ac-c52e-475f-b7bb-c321af71e46c），培养中/3~6个月；成员UUID未知，用复合定位。未出池/重入/建立继任；停用IDP流程一次保存结果未知须先查。M18已保存项目3d1d07ed-d10e-4c51-8a91-22d5d20d83b1仍以最近新建/未启动证据为准，不重建。当前状态未能联网复查，不能将此前状态写成本次新读。\n\n'
+ header+='上一原子单元停点：'+cr.get('previousAtomicOutcome','BC-C30已完成，后续成果以原记录保持。')+'\n\n'
  header+='浏览器：'+cr['sourceBrowsingStatus']+' 合成测试授权保持，不逐条重问；未出现重新登录/全部授权提示，不绕过控制。\n\n'
  if cr.get('lastVerifiedSync'):
   sync=cr['lastVerifiedSync'];header+='最近已核实同步：`'+sync['commit']+'` → `'+sync['remoteBranch']+'`；'+sync['result']+'。范围：'+sync['scope']+'。\n\n'
@@ -309,3 +309,46 @@ if cr.get('currentFocus'):
   previous=f.read_text();marker='<!-- P1_RESUME_CURRENT_END -->'
   if marker in previous:previous=previous.split(marker,1)[1].lstrip()
   f.write_text(header+previous)
+
+# Module/R transition readiness is derived, never edited as an independent percentage.
+policy=s['roadmap'].get('executionPolicy')
+if policy:
+ def approved_review(x):
+  return bool(x.get('approved') is True and x.get('record') and x.get('scope') and x.get('approvedAt'))
+ def phase_approved(x):
+  return x.get('status') in ['完整通过','受限通过'] and bool(x.get('approvalRecord'))
+ module_closures=[]
+ for mid in s['roadmap']['moduleExecutionOrder']:
+  m=by_id[mid];c=m['p1']['moduleClosure'];missing=[k for k in policy['transitionConditions'] if c['conditions'][k]['value'] is not True]
+  if not phase_approved(c['p1AConclusion']):missing.append('p1AApproved')
+  if not phase_approved(c['p1BConclusion']):missing.append('p1BApproved')
+  if not approved_review(c['transitionReview']):missing.append('transitionReviewApproved')
+  if any(x['status']=='受限通过' for x in [c['p1AConclusion'],c['p1BConclusion']]) and not c.get('restrictedApproval'):missing.append('restrictedApprovalDetails')
+  module_closures.append({'moduleId':mid,'name':m['name'],**c,'transitionReady':not missing,'missingConditions':missing})
+ range_closures=[]
+ for rg in s['roadmap']['rangeGates']:
+  layer=next(x for x in ds['rangeLayers'] if x['id']==rg['id']);missing=[x['moduleId'] for x in module_closures if x['moduleId'] in layer['moduleIds'] and not x['transitionReady']]
+  missing+= [k for k in rg['applicableFoundationIds'] if rg['foundationReadiness'][k]['value'] is not True]
+  if not approved_review(rg['review']):missing.append('rangeReviewApproved')
+  range_closures.append({**rg,'moduleIds':layer['moduleIds'],'transitionReady':not missing,'missingConditions':missing})
+ derived={'source':'Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates','generatedFromUpdatedAt':b['updatedAt'],'primaryModuleId':policy['primaryModuleId'],'backupModuleId':policy['backupModuleId'],'activeExecutionModuleId':policy['activeExecutionModuleId'],'moduleCount':15,'completeCount':sum(x['p1AConclusion']['status']=='完整通过' and phase_approved(x['p1AConclusion']) for x in module_closures),'restrictedCount':sum(x['p1AConclusion']['status']=='受限通过' and phase_approved(x['p1AConclusion']) for x in module_closures),'transitionReadyCount':sum(x['transitionReady'] for x in module_closures),'modules':module_closures,'ranges':range_closures}
+ (D/'P1_Module_Closure.json').write_text(json.dumps(derived,ensure_ascii=False,indent=2)+'\n')
+ block='## 当前执行模式：模块闭环优先、按R版本滚动转序\n\n'
+ block+='本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 '+policy['primaryModuleId']+'；备用 '+str(policy['backupModuleId'] or '未启用')+'；实际执行 '+policy['activeExecutionModuleId']+'。'+policy['backupActivation']+'。\n\n'
+ block+=table(['R版本','模块顺序','当前边界'],[(x['id']+' '+x['name'],'→'.join(x['moduleIds']),x['status']+'；'+x['note']) for x in ds['rangeLayers']])+'\n'
+ block+=policy['transitionRule']+'\n\n'+policy['rangeTransitionRule']+'\n\n'
+ block+=table(['模块','R版本/队列','P1A判定','P1B评审','转序就绪','未达到条件'],[(x['moduleId']+' '+x['name'],x['rangeId']+' / '+x['queueState'],x['p1AConclusion']['status'],x['p1BConclusion']['status'],'是' if x['transitionReady'] else '否',x['missingConditions']) for x in module_closures])+'\n'
+ block+='转序就绪 '+str(derived['transitionReadyCount'])+'/15；独立指标，不等业务验收或生产上线。风险证据规则：'+ '；'.join(policy['evidencePolicy'].values())+'。\n\n'
+ (D/'P1_Module_Closure.md').write_text(intro('模块闭环、滚动转序及当前收口清单')+block)
+ for m in active_mods:
+  rows=m['p1'].get('closureChecklist',[])
+  if not rows:continue
+  section='\n## '+m['id']+'完整登记范围收口清单\n\n'+table(['问题/原范围','需求','证据','具体缺口','阻塞P1/风险','关闭方式与判据','当前状态'],[(x['id']+' / '+x['scopeItem'],x['requirementIds'],x['evidenceRefs'],x['gap'],str(x['blocksP1'])+'；'+x['risk'],x['closureMethod']+'；'+x['basis'],x['status']) for x in rows])+'\n'
+  f=D/'P1_Module_Closure.md';f.write_text(f.read_text()+section)
+ for name in ['P1A_Coverage.md','P1B_PRD.md','P1B_Readiness.md','P1_Review.md','Module_Queue.md']:
+  f=D/name;f.write_text(block+'\n---\n\n'+f.read_text())
+ # The existing roadmap header is regenerated earlier; prepend only the current mode once.
+ f=R/'docs/HRIS_Project_Plan.md';old=f.read_text();marker='<!-- MODULE_MODE_CURRENT_END -->'
+ f.write_text(block+'\n'+marker+'\n\n'+old)
+ for f in [D/'Controller_Resume.md',R/'docs/Execution_Checkpoint.md']:
+  t=f.read_text();t=t.replace('<!-- P1_RESUME_CURRENT_END -->','当前执行约束：主模块 '+policy['primaryModuleId']+'；备用 '+str(policy['backupModuleId'] or '未启用')+'；实际执行 '+policy['activeExecutionModuleId']+'。'+policy['rangeTransitionRule']+'\n\n<!-- P1_RESUME_CURRENT_END -->');f.write_text(t)

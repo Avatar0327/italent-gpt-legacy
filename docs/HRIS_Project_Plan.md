@@ -1,9 +1,47 @@
+## 当前执行模式：模块闭环优先、按R版本滚动转序
+
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M01；备用 未启用；实际执行 M01。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+
+| R版本 | 模块顺序 | 当前边界 |
+|---|---|---|
+| R1 核心底座 | M01→M19→M48→M32 | 当前承诺，按模块闭环滚动；用户本轮明确顺序；不是此前已有分层，不批准未决业务规则或内部缩减 |
+| R2 人才管理 | M37→M06→M26→M18→M17→M03 | 当前承诺，按模块闭环滚动；用户本轮明确顺序；不是此前已有分层，不批准未决业务规则或内部缩减 |
+| R3 HR专业领域 | M27→M16→M12→M11→M07 | 当前承诺，按模块闭环滚动；用户本轮明确顺序；不是此前已有分层，不批准未决业务规则或内部缩减 |
+| R4 本次交付暂缓 | M02→M04→M05→M08→M09→M10→M13→M14→M15→M20→M21→M22→M23→M24→M25→M28→M29→M30→M31→M33→M34→M35→M36→M38→M39→M40→M41→M42→M43→M44→M45→M46→M47 | 暂缓；其余33组退出当前P1退出条件/主动探索。历史代码/证据/数据/验收/隔离成果保留；只准为保留模块引用已有前置或最小公共配置，不顺带恢复完整独立模块。 |
+
+四项条件均true且有证据；P1A结论及P1B评审均完整通过或获明确受限批准；transitionReview.approved=true且有批准范围/日期/记录才可转序。受限通过自身不足以转序。
+
+R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可实施且版本评审明确允许P2/P3，才转序；不要求后续R版本全部完成P1。P4业务和生产验收独立。
+
+| 模块 | R版本/队列 | P1A判定 | P1B评审 | 转序就绪 | 未达到条件 |
+|---|---|---|---|---|---|
+| M01 组织员工 | R1 / primary | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M19 审批中心 | R1 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M48 员工自助 | R1 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M32 报表 | R1 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M37 人才标准 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M06 任职资格 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M26 360度评估 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M18 在线盘点 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M17 继任与发展 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M03 干部管理2.0 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M27 学习管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M16 绩效管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M12 招聘管理系统 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M11 假勤管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M07 薪酬社保 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+
+转序就绪 0/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
+
+
+<!-- MODULE_MODE_CURRENT_END -->
+
 <!-- ROADMAP_CURRENT_START -->
 # 当前有效项目规划细化
 
 ## 当前路标：P0–P5与P1A/P1B（用户新增细化）
 
-用户本轮要求新增细化；不是原规划早已定义。原48组历史完整保留；当前15组及六类基础能力P1未验收，33组本次暂缓不计完成；P2受限历史技术验收、F01–F04未业务验收、D1–D7/E1/E2保持；不自动恢复开发。。
+用户本轮要求新增细化；不是原规划早已定义。原48/59保留；当前15及6基础，33暂缓。模块闭环＋R滚动转序，当前M01唯一主模块，尚无模块/版本转序批准。D1–D7/E1/E2及历史P2/F01–04原义保持。。
 
 | 范围 | 模块ID及名称 | 当前边界 |
 |---|---|---|
@@ -14,11 +52,11 @@ P1A完成 0/15；P1B需求就绪 0/15；P1评审通过 0/15。批准的受限结
 
 | 阶段 | 输入 | 工作内容 | 交付物 | 退出条件 | 受限项 | 下一步 |
 |---|---|---|---|---|---|---|
-| P0 规划维护 | 原48组规划/台账、当前用户15核心模块范围变更 | 维护同源当前15/暂缓33与六类基础能力、原验收适用映射、依赖及队列 | 范围变更/路标/同源生成视图/恢复点 | 15+33精确分区，原48编号/59任务与历史不变；未静默删减15模块内部常规业务 | 不重写原规划历史；不宣称该划分启动时已有 | 当前15模块P1A/P1B衔接执行 |
-| P1A 原站盘点与证据基线 | 当前15组原登记范围、六类基础能力、已有48组证据与合成数据 | 仅当前模块按链补观察/合成执行及页面字段/角色状态/依赖；M19/M48/M32同步；暂缓模块只处理最小必要公共依赖 | 模块清单、页面目录、字段字典、流程说明、差异与受限清单 | 当前15模块各自目标典型页、对象字段/校验/角色状态/流程依赖和例外有证据；未证规则明确补证路径并闭合或获有范围的受限批准，受限批准不计完整完成；六类基础证据边界可评审；33暂缓不阻收口 | 合成授权保持，不更改真实业务/外部通知/交易/签署；单账号不能代独立角色；未知不编造，不擅自缩减15模块内部功能 | 已明确模块衔接P1B，其余保留模块继续 |
-| P1B 本项目产品需求基线 | 当前15模块P1A、D1–D7、已有代码和历史证据、六类基础与必要外部契约 | 总体PRD与按当前包的对象字段/角色权限/状态审批/恢复/页面依赖/接口/可执行验收/差异决策；暂缓独立业务不再新增规格 | 总体PRD、分包规格、需求就绪表、实现对应表 | 15模块分别满足完整需求就绪：来源/规则/权限/验收/依赖无实质未决或已有明确批准边界，基础六类契约与全局一致性完成；全项目当前范围P1须15模块及基础评审签署，受限批准单列。33暂缓完整规则/供应商开通/真实外部交易不作前置 | 编写完成不等于需求验收；首包就绪不等于全项目P1完成；多人UAT不作为P1前置 | 形成集中评审和P2复用建议；未获后续开发授权不自动恢复功能扩展 |
-| P2 复核复用技术底座 | 当前就绪模块/包PRD、六类基础契约、既有底座及受限P2历史证据 | 核对模型、权限、事务、接口和现有实现差异，仅补必要设计/验证 | 复用清单、必要设计、差异验证记录 | 当前包需求与技术设计相符，阻断差异关闭或批准处置，验证注明版本与范围 | 已有受限技术验收不扩大到当前全量；不重复建底座 | 满足当前包门槛并获后续工作授权后进入P3；本轮仍只P1 |
-| P3 按业务包实现与验收 | 该包P1B就绪、P2复核、前包验收/转序记录 | 当前15模块按组织员工→干部人才→学习→绩效→招聘→假勤→薪酬实现/验证/验收/关闭问题；M19/M48/M32随链同步，主要开发包一次一个 | 可运行包、版本化测试、业务验收结论和问题关闭记录 | 当前包验收结论已记录；未通过项、依赖影响及转序依据明确，阻断项不静默跳过 | 原则上仅一个主要开发包；本轮暂停功能扩展；E2不增人，管理员不能替代独立审批；33模块暂缓，不恢复AI独立能力或外部真实交易 | 按队列下一包；全部包达条件后P4 |
+| P0 规划维护 | 原48组规划/台账、当前用户15核心模块范围变更 | 在原Scope维护15/33/6及R1–R4、单主模块/备用条件、模块收口与条件化转序，保留48/59历史 | 范围变更/路标/同源生成视图/恢复点 | 15+33精确分区，原48编号/59任务与历史不变；未静默删减15模块内部常规业务 | 不重写原规划历史；不宣称该划分启动时已有 | 当前15模块P1A/P1B衔接执行 |
+| P1A 原站盘点与证据基线 | 当前15组原登记范围、六类基础能力、已有48组证据与合成数据 | 按唯一主模块的具体待关闭问题采用风险匹配证据；普通配置综合页面/帮助/既有证据，高风险优先合成执行。已充分证据不重测；不阻塞项列后续验证。 | 模块清单、页面目录、字段字典、流程说明、差异与受限清单 | 模块完整原登记范围逐项有足以明确需求的证据判定；核心风险未证部分须有明确替代设计与批准例外。完整通过/受限通过/已完成待评审/进行中/受阻分列；15分母不变，不要求穷尽全部组合。 | 合成授权保持，不更改真实业务/外部通知/交易/签署；单账号不能代独立角色；未知不编造，不擅自缩减15模块内部功能 | 衔接本模块P1B评审及转序判断，主模块闭环后按R顺序下一模块。 |
+| P1B 本项目产品需求基线 | 当前15模块P1A、D1–D7、已有代码和历史证据、六类基础与必要外部契约 | 同模块对象/字段/权限/状态/异常/依赖/接口及可执行验收形成集中评审包；原站事实、已确认设计、建议、待决分列；F01–04不代整个M01。 | 总体PRD、分包规格、需求就绪表、实现对应表 | 模块适用范围明确、实施规则已决、验收可执行、依赖/例外已处理，且有P1A/P1B批准及转序评审才就绪；受限通过单列。全项目P1仍须15模块及基础范围评审，版本转序不等待其后R版本。 | 编写完成不等于需求验收；首包就绪不等于全项目P1完成；多人UAT不作为P1前置 | R1四模块及适用基础达到条件且版本评审允许后进入R1 P2/P3；R2/R3在可用工作时段继续P1，保持单主要任务。 |
+| P2 复核复用技术底座 | 获模块与R版本转序评审的需求/适用基础、既有技术底座和对应版本历史证据 | 核对模型、权限、事务、接口和现有实现差异，仅补必要设计/验证 | 复用清单、必要设计、差异验证记录 | 当前包需求与技术设计相符，阻断差异关闭或批准处置，验证注明版本与范围 | 已有受限技术验收不扩大到当前全量；不重复建底座 | 只对已获转序评审的R版本进入P3；不以历史受限技术验收自动算当前复核通过。 |
+| P3 按业务包实现与验收 | 该包P1B就绪、P2复核、前包验收/转序记录 | 按获准R版本/业务包复用并补实现、验证、业务验收和问题关闭；一次一个主要执行任务，R2/R3 P1在依赖和可用时段推进 | 可运行包、版本化测试、业务验收结论和问题关闭记录 | 当前包验收结论已记录；未通过项、依赖影响及转序依据明确，阻断项不静默跳过 | 当前未获版本转序，功能扩展保持暂停。达到门槛且版本评审允许后按本轮授权转序；不等全部15 P1，不自动批准业务验收/生产上线；E2保持。 | 按队列下一包；全部包达条件后P4 |
 | P4 跨模块及生产准备验收 | 当前15模块/基础能力验收与跨包契约、正式环境要求 | 跨模块数据/状态联动、完整权限、业务UAT、容量/恢复/监控/迁移与生产准备验证 | 集成与权限验收、缺陷关闭、生产准备结论 | 当前约定15模块及基础集成/完整权限/生产准备有证据和签署，阻断缺陷关闭；外部预留边界明确，不以私有部署当生产验收 | 完整多人UAT和正式身份、容量、运维指标待条件具备；合成身份测试不能代签 | 进入P5交付及上线审查 |
 | P5 交付运维与上线 | 当前交付15模块/基础的P4结论、上线授权与运行责任 | 交付源码/版本、操作及运维资料、恢复/回滚、培训、上线和切换核对 | 交付清单、运维手册、上线/回滚与生产验收记录 | 约定交付齐备并验收；正式切换获授权，关键路径及运行责任确认 | 私有部署成功不是生产验收；本轮不发布、不切换；33暂缓资产留存，不计本次交付完成 | 运行维护及约定后续变更 |
 

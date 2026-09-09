@@ -1,6 +1,44 @@
+## 当前执行模式：模块闭环优先、按R版本滚动转序
+
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M01；备用 未启用；实际执行 M01。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+
+| R版本 | 模块顺序 | 当前边界 |
+|---|---|---|
+| R1 核心底座 | M01→M19→M48→M32 | 当前承诺，按模块闭环滚动；用户本轮明确顺序；不是此前已有分层，不批准未决业务规则或内部缩减 |
+| R2 人才管理 | M37→M06→M26→M18→M17→M03 | 当前承诺，按模块闭环滚动；用户本轮明确顺序；不是此前已有分层，不批准未决业务规则或内部缩减 |
+| R3 HR专业领域 | M27→M16→M12→M11→M07 | 当前承诺，按模块闭环滚动；用户本轮明确顺序；不是此前已有分层，不批准未决业务规则或内部缩减 |
+| R4 本次交付暂缓 | M02→M04→M05→M08→M09→M10→M13→M14→M15→M20→M21→M22→M23→M24→M25→M28→M29→M30→M31→M33→M34→M35→M36→M38→M39→M40→M41→M42→M43→M44→M45→M46→M47 | 暂缓；其余33组退出当前P1退出条件/主动探索。历史代码/证据/数据/验收/隔离成果保留；只准为保留模块引用已有前置或最小公共配置，不顺带恢复完整独立模块。 |
+
+四项条件均true且有证据；P1A结论及P1B评审均完整通过或获明确受限批准；transitionReview.approved=true且有批准范围/日期/记录才可转序。受限通过自身不足以转序。
+
+R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可实施且版本评审明确允许P2/P3，才转序；不要求后续R版本全部完成P1。P4业务和生产验收独立。
+
+| 模块 | R版本/队列 | P1A判定 | P1B评审 | 转序就绪 | 未达到条件 |
+|---|---|---|---|---|---|
+| M01 组织员工 | R1 / primary | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M19 审批中心 | R1 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M48 员工自助 | R1 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M32 报表 | R1 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M37 人才标准 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M06 任职资格 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M26 360度评估 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M18 在线盘点 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M17 继任与发展 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M03 干部管理2.0 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M27 学习管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M16 绩效管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M12 招聘管理系统 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M11 假勤管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M07 薪酬社保 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+
+转序就绪 0/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
+
+
+---
+
 # 当前15模块P1集中评审与恢复点
 
-生成来源：同一Scope_Register.p1B.reviewPackage及modules[].p1；2026-09-09T14:54:44.227704+00:00。基于已推送源码/文档提交`90fb3e3f56b4457e7f010732198ae59067048e06`；本报告后续提交以实际Git HEAD为准。
+生成来源：同一Scope_Register.p1B.reviewPackage及modules[].p1；2026-09-09T15:43:36.730682+00:00。基于已推送源码/文档提交`b64ce7c1ac21ffe9a46c8f8dca93f25919159f32`；本报告后续提交以实际Git HEAD为准。
 
 当前15模块集中评审输入已整理；P1A完整证据与P1B需求就绪尚未达成，未申请自动验收通过。
 
@@ -12,7 +50,7 @@ M01组织/职位/入职/兼职/法人/未来离职；M07薪资组/包前置；M0
 
 当前15模块均有总体/分包契约或明确受限规格；原内部功能逐项映射，字段/角色/状态/依赖/异常/验收及实现差异同源。组织绩效、OKR、健康度、社保/个税/激励等未探索细则保留，已确认D1–D7与候选分开。
 
-90fb3e3收口推送/远端HEAD相同/工作区干净后已继续M17：补成员关闭/重入历史、双范围权限、继任创建/关闭及报表过滤和IDP五状态与源四状态的静态差异。仅读取源码及历史测试断言；没有复跑业务测试、没有新增原站操作/记录。剩余源链全部依云浏览器可用、候选来源或流程结果回查；同人指导/历史策略在原规格集中待证评审，没有新批准。
+本轮已确认R1–R3模块顺序及单主模块模式；M17原子单元已保存，安全切换M01。开始按六项原登记范围整理收口和集中评审。
 
 六基础均有字段/权限/异常/候选验收及现有实现证据，完整跨域字段矩阵、生产恢复目标/可信授权来源和外部适配仍需评审/环境条件；不计入15模块数字。多角色真人与云端生产验证属于后续阶段，不把它们单独设为继续P1的前置。
 
@@ -20,7 +58,7 @@ M01组织/职位/入职/兼职/法人/未来离职；M07薪资组/包前置；M0
 
 | 类型/编号 | 受阻动作及证据 | 影响范围 | 恢复条件 |
 |---|---|---|---|
-| 当前平台连接不可用 / P1-CONNECTION-01 | 云浏览器CDP tabs刷新/原站导航读取；本次恢复核对tabs.list仍CDP operation refresh tabs timed out after 20000ms；未取得当前页面，无本轮新增原站业务提交。 | 当前15模块剩余原站配置/表单/合成业务链补证，以及遗留未知结果回查。 | 恢复此云浏览器实例可正常列页和导航；恢复后先查已有标记/ID。没有重新授权全部或重新登录的要求；若平台后续实际要求登录，仅按那一具体提示恢复。 |
+| 当前平台连接不可用 / P1-CONNECTION-01 | 云浏览器CDP tabs刷新/原站导航读取；本轮tabs.list再次返回CDP operation refresh tabs timed out after 20000ms，当前页面不可读；没有新的原站提交，无重新授权/登录提示。 | 当前15模块剩余原站配置/表单/合成业务链补证，以及遗留未知结果回查。 | 恢复此云浏览器实例可正常列页和导航；恢复后先查已有标记/ID。没有重新授权全部或重新登录的要求；若平台后续实际要求登录，仅按那一具体提示恢复。 |
 | 最小必要业务选择 / P1-RULES-01 | 确认当前7项集中决策中的受影响产品规则；同源p1B.reviewIssues中decisionRequired=true且未解决事项；D1–D7/E1/E2不在重问清单。 | F01.2/F03、M01重聘、M12身份与人才库、M26匿名及结果、M01/M12金额预算局部门槛；不扩暂缓模块。 | 逐项选择或批准有边界的方案；推荐均未批准。R-SPEC-02和S-SPEC-01先待源补证，不要求即时选择。 |
 | 待业务评审签署 / P1-REVIEW-01 | 审阅15模块与六基础需求/证据/例外；所有模块p1A in_progress、p1B not_ready、review not_signed；批准受限0。 | 各模块完整就绪/当前全项目P1退出；文档技术自检不代签。 | 先补证/关闭实质规则或批准明确受限边界，记录评审范围/版本/人员/日期；受限批准单列，不计完整通过。 |
 | 局部原站条件待核 / P1-LOCAL-CONDITIONS | M17流程保存结果/继任候选、M18通知路由、EA10日离职后重聘；BC-C28/C31/C40、BC-F45/46及dataValidation.records/operations；源已确认保存和未知结果分别记录。 | 只相应链；浏览器恢复前不能用再次创建或改时钟消除阻塞。 | 先只读核现有记录、目标来源和路由；在已授权合成范围补最小前置。独立角色实测后续保持E2，必要限制如实列出。 |
@@ -29,7 +67,7 @@ M01组织/职位/入职/兼职/法人/未来离职；M07薪资组/包前置；M0
 
 需选择的事项：F-SPEC-01 职位同组织重名策略与职级名称约束（组织已排除）；F-SPEC-02 D1失败留痕的事务边界；F-SPEC-03 原单关联规则的适用宽度；R-SPEC-01 候选人主对象与招聘需求/人才库关系；F-SPEC-04 再入职身份连续性与适用人群（完整M01后续子包）；SCOPE-DEP-01 当前Offer/入职是否必须依赖金额预算校验；C-SPEC-01 360评价角色、匿名对象和低样本报告发布边界。现状、推荐、备选及影响完整见[P1B就绪与待决记录](P1B_Readiness.md)。推荐不代表已批准。R-SPEC-02/S-SPEC-01先补证后评审，不要求即时选择；D1–D7/E1/E2不重问。
 
-不满足当前15模块整体P1A/P1B退出与P1签署，不能建议整体进入下一阶段。F01–F04子包仍需F-SPEC-01/02/03决策及候选需求评审；完整M01另有F-SPEC-04和多任职/合同/权限证据。既有P2受限技术验收与F01–F04实现/自动化历史保留，不能代替本次需求就绪或业务验收。
+当前尚无模块或R版本转序批准；按M01逐模块闭环，R1满足四模块＋适用基础＋版本评审后可P2/P3，不等待R2/R3全部P1；全15 P1与业务/生产验收独立。
 
 ## 证据、规格及测试数据入口
 
@@ -60,7 +98,7 @@ P1A/P1B为用户新增规划细分。当前材料覆盖范围不是完成声明�
 
 # P1原站盘点与需求基线｜评审材料
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T14:54:44.227704+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T15:43:36.730682+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
@@ -123,14 +161,14 @@ P1A/P1B为用户新增规划细分。当前材料覆盖范围不是完成声明�
 
 | 业务包 | 证据与当前规格 | 未就绪条件与下一步 |
 |---|---|---|
-| 组织员工 | BC-F03、BC-F02、P1-CONTRACT-LIST、P1-CONTRACT-TYPE、BC-F04、BC-F05、BC-F06、BC-F07、P1-ORG-RECHECK、BC-F08、BC-F09、BC-F10、BC-F11、BC-F12、BC-F13、BC-F14、BC-F15、BC-F16、BC-F17、BC-F18、BC-F19、BC-F20、BC-F21、BC-F22、BC-F23、BC-F24、BC-F25、BC-F26、BC-F27、BC-F28、BC-F29、BC-F30、BC-F31、BC-F32、BC-F33、BC-F34、BC-F35、BC-F36、BC-F37、BC-F38、BC-F39、BC-F40、BC-F41、BC-F42、BC-F43、BC-F44、BC-F45、BC-F46；[P1B_BP_F_Specification.md](../../docs/delivery/P1B_BP_F_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合；M01 组织员工：组织/职位/待入职-入职/兼职/法人/未来离职已有合成链，F01–04静态需求补实际拒绝/业务failed/事务回滚/结果不明四类。F-SPEC-01改以同组织有效职位名唯一为推荐但未批准，职级另核；F-SPEC-02/03仍局部待决，完整M01重聘/多段任职/合同/事件和权限规则尚缺，未就绪。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；继续当前保留模块需求与原站链，联动M19/M48/M32；按原顺序推进其余保留包，不主动探索暂缓成员。 |
-| 干部人才 | US-C01-02、BC-C01、BC-C02、BC-C03、BC-C08、BC-C09、BC-C10、BC-C11、BC-C12、BC-C13、BC-C25、BC-C26、BC-C04、BC-P1C-M06、BC-C19、BC-C20、BC-C22、BC-C21、BC-C23、BC-C24、BC-C06、BC-P1C-M17、BC-P1C-M17-02、BC-C27、BC-C28、BC-C29、BC-C30、BC-C31、P1-CAL、P1-STD、P1-SUC、P1-POOL、BC-C37、BC-C38、BC-C39、BC-C40、BC-P1C-M26、BC-P1C-M26-02、BC-C14、BC-C15、BC-C16、BC-P1C-M37、BC-C32、BC-C33、BC-C34、BC-C35、BC-C36；[P1B_BP_C_Specification.md](../../docs/delivery/P1B_BP_C_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合；M03 干部管理2.0：BC-C10–13评价配置/算法帮助、C25干部登记/任期ID/述职关联、C26考察结束跨页持久化及考核草稿已有；考核/任免审批通知路由、转正与恢复、角色及评分边界仍缺，未完整P1A/需求就绪。；M06 任职资格：C19–24已完成合成类别/级别/类型/指标/资格标准关联、指标修订停用后标准旧说明保留、独立级别说明、编码/发展通道及两级评级方案；目标/认证准入、目录重复/引用改版/角色矩阵仍缺，未完整P1A或P1B就绪。；M17 继任与发展：C27计划/模板/动态指导角色与草稿已读，C28停用发展流程保存结果未知（查询空不重建）；C29–30池ID/EA入池/培养中/准备度3~6个月已核；C31继任目标选择器未找到既有测试JA/JB，关系草稿取消。仍缺IDP阶段/继任引用源/健康度和角色恢复。；M18 在线盘点：C37标准引用、C38五步校验/C39模板方案和合成对象保存、C40独立列表/详情确认项目新建及EA初始未计算；主项目/对象/计算状态分离。启动路由/通知、采集与校准/报告、版本/权限仍缺，模块不完整/需求未就绪。；M26 360度评估：已把原站动态角色/套卷说明与当前项目/邀请/答卷/报告及角色矩阵分开，补8项候选验收、版本/日期/重放/零响应边界；C-SPEC-01待业务选择，原站活动实操/题库/完整权限仍缺，未P1A完整或P1B就绪。；M37 人才标准：C32–36合成人才标准/能力指标库TI/等级1/能力引用目标空权重1.0及最小标准启用已核；C37/38M18读取选择已证，模型名称空和无方案不阻最小主档启用。仍缺目标算法、其他子集/维度、使用中改版/版本和完整角色；不把最小启用计模块完整。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；继续当前保留模块需求与原站链，联动M19/M48/M32；按原顺序推进其余保留包，不主动探索暂缓成员。 |
-| 学习 | P1-LEARN-02、P1-LEARN-03-04、US-L01-02、BC-L01-02、BC-L03、BC-L04-05-07-10、BC-L06-08、BC-L06-EXAM、BC-L09、BC-L11、P1-INSTRUCTOR、P1-TEACHING、P1-CERTIFICATION、P1-CERT-DETAIL、P1-MENTOR、P1-CERTIFICATE、P1-CREDIT、BC-L12、BC-P1C-M27、BC-L13、BC-L14、BC-L15、BC-L16、BC-L17、BC-L18、BC-L19、BC-L20、BC-L21、BC-L22；[P1B_BP_L_Specification.md](../../docs/delivery/P1B_BP_L_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合；M27 学习管理：源模式/阶段/成绩/审批/共享/档案/费用配置已有，现补版本根-实例-轮次-任务、内容预览/退休、门槛和不同成绩分母的结构化候选验收。原站合成链、自动循环/已完成学员更新/跨轮版本、共享角色/费用实测仍缺；P1A不完整、P1B未就绪。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；继续当前保留模块需求与原站链，联动M19/M48/M32；按原顺序推进其余保留包，不主动探索暂缓成员。 |
-| 绩效 | P1-GOAL、BC-P01、BC-P02、BC-P03、BC-P04、BC-P05、BC-P06、BC-P07、BC-P1C-M16、BC-P08、BC-P09、BC-P10、BC-P11、BC-P12、BC-P13、BC-P14、BC-P15、BC-P16；[P1B_BP_P_Specification.md](../../docs/delivery/P1B_BP_P_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合；M16 绩效管理：原站等级/模板/缺评/系数/兼职规则已有；已细化员工活动-计划-结果-申诉状态、角色隔离、空隙/缺评计算候选和跨人才/薪资消费。组织绩效独立规格和OKR受限提纲明确保留，不由个人考核代替；尚缺原站完整链/组织计算/OKR/业务评审，未就绪。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；继续当前保留模块需求与原站链，联动M19/M48/M32；按原顺序推进其余保留包，不主动探索暂缓成员。 |
-| 招聘 | BC-R01、BC-R02、BC-R03、BC-R04-06、BC-R05、BC-R07、BC-R08、BC-P1C-M12、BC-R12、BC-R13、BC-R14、BC-R15、BC-R16；[P1B_BP_R_Specification.md](../../docs/delivery/P1B_BP_R_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合；M12 招聘管理系统：需求/职位/面试/重复关系/入职后管控已有局部证据。已细化自然人-申请-人才库差异、Offer/接受/入职原子性、创建请求恢复与权限场景；R-SPEC-01及SCOPE-DEP-01未决，原站关键链与人才库/身份同步/多角色仍缺，未就绪。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；继续当前保留模块需求与原站链，联动M19/M48/M32；按原顺序推进其余保留包，不主动探索暂缓成员。 |
-| 假勤 | BC-A02-03、BC-A04、BC-A05-06、BC-A07、BC-A08、BC-A09、BC-P1C-M11、BC-A10、BC-A11、BC-A12；[P1B_BP_A_Specification.md](../../docs/delivery/P1B_BP_A_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合；M11 假勤管理：已细化固定班/单班请假/额度预留/冻结来源/重冻版本及工资失效场景；原月报发布确认封存保留独立规格。跨班/轮班/加班调休/授予结转/企业参数及原站完整链仍缺，AI排班独立能力已暂缓，未就绪。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；继续当前保留模块需求与原站链，联动M19/M48/M32；按原顺序推进其余保留包，不主动探索暂缓成员。 |
-| 薪酬 | BC-S01-02、BC-S03、BC-S04、BC-S05、BC-P1C-M07、BC-S07、BC-S08、BC-S09、BC-S18、BC-S19、BC-S20、BC-S21；[P1B_BP_S_Specification.md](../../docs/delivery/P1B_BP_S_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合；M07 薪酬社保：PG/SP/包内项目支撑EA入职已实际验证并校正过时描述；人工工资/考勤引用/独立复核/异议补差/权限有可执行候选。薪资档案事件、自动核算、社保/个税/激励原内域仍保留受限规格；供应商与真实支付不是P1前置，未就绪。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；继续当前保留模块需求与原站链，联动M19/M48/M32；按原顺序推进其余保留包，不主动探索暂缓成员。 |
-| 自助/报表/集成 | BC-P1C-M19、BC-I10、BC-I27、BC-P1C-M32、P1-SELF-REVIEW、BC-P1C-M48；[P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合；M19 审批中心：源流程类型/状态/干预帮助已有；已补实例-业务记录ID、管理员委托与节点办理区别，以及跨业务独立性/待办计数/失效处理场景。通用委托字段/有效期/路由/通知与异常回写尚缺、规则未评审；独立真人UAT归后续，不单独阻P1。；M32 报表：已补各数据集行粒度/分母/null/替代版本/工资来源与权限、仅三类日期过滤、导出及订阅恢复候选。源设计器/订阅权限与执行、组织历史口径和当前15领域结果报表仍缺，未就绪；没有发送或导出个人明细。；M48 员工自助：已补本人/代办任务、请求展示状态、学习/绩效/360/工资分域规则，团队与OKR原范围保留。源员工角色、团队动态关系/各业务页面及权限例外仍需补证和评审；E2单账号不变，独立真人UAT不作P1前置。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；继续当前保留模块需求与原站链，联动M19/M48/M32；按原顺序推进其余保留包，不主动探索暂缓成员。 |
+| 组织员工 | BC-F03、BC-F02、P1-CONTRACT-LIST、P1-CONTRACT-TYPE、BC-F04、BC-F05、BC-F06、BC-F07、P1-ORG-RECHECK、BC-F08、BC-F09、BC-F10、BC-F11、BC-F12、BC-F13、BC-F14、BC-F15、BC-F16、BC-F17、BC-F18、BC-F19、BC-F20、BC-F21、BC-F22、BC-F23、BC-F24、BC-F25、BC-F26、BC-F27、BC-F28、BC-F29、BC-F30、BC-F31、BC-F32、BC-F33、BC-F34、BC-F35、BC-F36、BC-F37、BC-F38、BC-F39、BC-F40、BC-F41、BC-F42、BC-F43、BC-F44、BC-F45、BC-F46；[P1B_BP_F_Specification.md](../../docs/delivery/P1B_BP_F_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合；M01 组织员工：组织/职位/待入职-入职/兼职/法人/未来离职已有合成链，F01–04静态需求补实际拒绝/业务failed/事务回滚/结果不明四类。F-SPEC-01改以同组织有效职位名唯一为推荐但未批准，职级另核；F-SPEC-02/03仍局部待决，完整M01重聘/多段任职/合同/事件和权限规则尚缺，未就绪。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；执行按roadmap.moduleExecutionOrder及executionPolicy，不以历史业务包成员顺序开启平行全量探索；本包历史范围/实现/证据保留。 |
+| 干部人才 | US-C01-02、BC-C01、BC-C02、BC-C03、BC-C08、BC-C09、BC-C10、BC-C11、BC-C12、BC-C13、BC-C25、BC-C26、BC-C04、BC-P1C-M06、BC-C19、BC-C20、BC-C22、BC-C21、BC-C23、BC-C24、BC-C06、BC-P1C-M17、BC-P1C-M17-02、BC-C27、BC-C28、BC-C29、BC-C30、BC-C31、P1-CAL、P1-STD、P1-SUC、P1-POOL、BC-C37、BC-C38、BC-C39、BC-C40、BC-P1C-M26、BC-P1C-M26-02、BC-C14、BC-C15、BC-C16、BC-P1C-M37、BC-C32、BC-C33、BC-C34、BC-C35、BC-C36；[P1B_BP_C_Specification.md](../../docs/delivery/P1B_BP_C_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合；M03 干部管理2.0：BC-C10–13评价配置/算法帮助、C25干部登记/任期ID/述职关联、C26考察结束跨页持久化及考核草稿已有；考核/任免审批通知路由、转正与恢复、角色及评分边界仍缺，未完整P1A/需求就绪。；M06 任职资格：C19–24已完成合成类别/级别/类型/指标/资格标准关联、指标修订停用后标准旧说明保留、独立级别说明、编码/发展通道及两级评级方案；目标/认证准入、目录重复/引用改版/角色矩阵仍缺，未完整P1A或P1B就绪。；M17 继任与发展：C27计划/模板/动态指导角色与草稿已读，C28停用发展流程保存结果未知（查询空不重建）；C29–30池ID/EA入池/培养中/准备度3~6个月已核；C31继任目标选择器未找到既有测试JA/JB，关系草稿取消。仍缺IDP阶段/继任引用源/健康度和角色恢复。；M18 在线盘点：C37标准引用、C38五步校验/C39模板方案和合成对象保存、C40独立列表/详情确认项目新建及EA初始未计算；主项目/对象/计算状态分离。启动路由/通知、采集与校准/报告、版本/权限仍缺，模块不完整/需求未就绪。；M26 360度评估：已把原站动态角色/套卷说明与当前项目/邀请/答卷/报告及角色矩阵分开，补8项候选验收、版本/日期/重放/零响应边界；C-SPEC-01待业务选择，原站活动实操/题库/完整权限仍缺，未P1A完整或P1B就绪。；M37 人才标准：C32–36合成人才标准/能力指标库TI/等级1/能力引用目标空权重1.0及最小标准启用已核；C37/38M18读取选择已证，模型名称空和无方案不阻最小主档启用。仍缺目标算法、其他子集/维度、使用中改版/版本和完整角色；不把最小启用计模块完整。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；执行按roadmap.moduleExecutionOrder及executionPolicy，不以历史业务包成员顺序开启平行全量探索；本包历史范围/实现/证据保留。 |
+| 学习 | P1-LEARN-02、P1-LEARN-03-04、US-L01-02、BC-L01-02、BC-L03、BC-L04-05-07-10、BC-L06-08、BC-L06-EXAM、BC-L09、BC-L11、P1-INSTRUCTOR、P1-TEACHING、P1-CERTIFICATION、P1-CERT-DETAIL、P1-MENTOR、P1-CERTIFICATE、P1-CREDIT、BC-L12、BC-P1C-M27、BC-L13、BC-L14、BC-L15、BC-L16、BC-L17、BC-L18、BC-L19、BC-L20、BC-L21、BC-L22；[P1B_BP_L_Specification.md](../../docs/delivery/P1B_BP_L_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合；M27 学习管理：源模式/阶段/成绩/审批/共享/档案/费用配置已有，现补版本根-实例-轮次-任务、内容预览/退休、门槛和不同成绩分母的结构化候选验收。原站合成链、自动循环/已完成学员更新/跨轮版本、共享角色/费用实测仍缺；P1A不完整、P1B未就绪。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；执行按roadmap.moduleExecutionOrder及executionPolicy，不以历史业务包成员顺序开启平行全量探索；本包历史范围/实现/证据保留。 |
+| 绩效 | P1-GOAL、BC-P01、BC-P02、BC-P03、BC-P04、BC-P05、BC-P06、BC-P07、BC-P1C-M16、BC-P08、BC-P09、BC-P10、BC-P11、BC-P12、BC-P13、BC-P14、BC-P15、BC-P16；[P1B_BP_P_Specification.md](../../docs/delivery/P1B_BP_P_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合；M16 绩效管理：原站等级/模板/缺评/系数/兼职规则已有；已细化员工活动-计划-结果-申诉状态、角色隔离、空隙/缺评计算候选和跨人才/薪资消费。组织绩效独立规格和OKR受限提纲明确保留，不由个人考核代替；尚缺原站完整链/组织计算/OKR/业务评审，未就绪。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；执行按roadmap.moduleExecutionOrder及executionPolicy，不以历史业务包成员顺序开启平行全量探索；本包历史范围/实现/证据保留。 |
+| 招聘 | BC-R01、BC-R02、BC-R03、BC-R04-06、BC-R05、BC-R07、BC-R08、BC-P1C-M12、BC-R12、BC-R13、BC-R14、BC-R15、BC-R16；[P1B_BP_R_Specification.md](../../docs/delivery/P1B_BP_R_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合；M12 招聘管理系统：需求/职位/面试/重复关系/入职后管控已有局部证据。已细化自然人-申请-人才库差异、Offer/接受/入职原子性、创建请求恢复与权限场景；R-SPEC-01及SCOPE-DEP-01未决，原站关键链与人才库/身份同步/多角色仍缺，未就绪。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；执行按roadmap.moduleExecutionOrder及executionPolicy，不以历史业务包成员顺序开启平行全量探索；本包历史范围/实现/证据保留。 |
+| 假勤 | BC-A02-03、BC-A04、BC-A05-06、BC-A07、BC-A08、BC-A09、BC-P1C-M11、BC-A10、BC-A11、BC-A12；[P1B_BP_A_Specification.md](../../docs/delivery/P1B_BP_A_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合；M11 假勤管理：已细化固定班/单班请假/额度预留/冻结来源/重冻版本及工资失效场景；原月报发布确认封存保留独立规格。跨班/轮班/加班调休/授予结转/企业参数及原站完整链仍缺，AI排班独立能力已暂缓，未就绪。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；执行按roadmap.moduleExecutionOrder及executionPolicy，不以历史业务包成员顺序开启平行全量探索；本包历史范围/实现/证据保留。 |
+| 薪酬 | BC-S01-02、BC-S03、BC-S04、BC-S05、BC-P1C-M07、BC-S07、BC-S08、BC-S09、BC-S18、BC-S19、BC-S20、BC-S21；[P1B_BP_S_Specification.md](../../docs/delivery/P1B_BP_S_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合；M07 薪酬社保：PG/SP/包内项目支撑EA入职已实际验证并校正过时描述；人工工资/考勤引用/独立复核/异议补差/权限有可执行候选。薪资档案事件、自动核算、社保/个税/激励原内域仍保留受限规格；供应商与真实支付不是P1前置，未就绪。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；执行按roadmap.moduleExecutionOrder及executionPolicy，不以历史业务包成员顺序开启平行全量探索；本包历史范围/实现/证据保留。 |
+| 自助/报表/集成 | BC-P1C-M19、BC-I10、BC-I27、BC-P1C-M32、P1-SELF-REVIEW、BC-P1C-M48；[P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 未就绪：仅当前保留模块及必需基础契约纳入判断；待补证/规则评审与签署未闭合；M19 审批中心：源流程类型/状态/干预帮助已有；已补实例-业务记录ID、管理员委托与节点办理区别，以及跨业务独立性/待办计数/失效处理场景。通用委托字段/有效期/路由/通知与异常回写尚缺、规则未评审；独立真人UAT归后续，不单独阻P1。；M32 报表：已补各数据集行粒度/分母/null/替代版本/工资来源与权限、仅三类日期过滤、导出及订阅恢复候选。源设计器/订阅权限与执行、组织历史口径和当前15领域结果报表仍缺，未就绪；没有发送或导出个人明细。；M48 员工自助：已补本人/代办任务、请求展示状态、学习/绩效/360/工资分域规则，团队与OKR原范围保留。源员工角色、团队动态关系/各业务页面及权限例外仍需补证和评审；E2单账号不变，独立真人UAT不作P1前置。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。；执行按roadmap.moduleExecutionOrder及executionPolicy，不以历史业务包成员顺序开启平行全量探索；本包历史范围/实现/证据保留。 |
 
 ## 48组差异清单（同一范围台账视图）
 
