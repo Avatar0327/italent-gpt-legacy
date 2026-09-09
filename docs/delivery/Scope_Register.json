@@ -1691,10 +1691,10 @@
           "p1B": "not_ready",
           "review": "not_signed",
           "approvedRestricted": false,
-          "assessmentAt": "2026-09-09T06:25:42.812752+00:00",
-          "basis": "测试PG/SP/包内项目支撑入职已验证；档案/核算/社保/个税等原登记内规则仍待补，支付保留接口契约而不要求真实交易。",
+          "assessmentAt": "2026-09-09T10:06:49.834482+00:00",
+          "basis": "PG/SP/包内项目支撑EA入职已实际验证并校正过时描述；人工工资/考勤引用/独立复核/异议补差/权限有可执行候选。薪资档案事件、自动核算、社保/个税/激励原内域仍保留受限规格；供应商与真实支付不是P1前置，未就绪。",
           "blockingIssueIds": [],
-          "next": "测试PG/SP/包内项目支撑入职已验证；档案/核算/社保/个税等原登记内规则仍待补，支付保留接口契约而不要求真实交易。",
+          "next": "浏览器恢复后按该模块已列关键缺口补证；当前先完成首包/基础与全局一致性，不重复创建源测试对象。",
           "acceptanceRefs": [
             {
               "taskId": "PAY-SOURCE",
@@ -2140,10 +2140,10 @@
           "p1B": "not_ready",
           "review": "not_signed",
           "approvedRestricted": false,
-          "assessmentAt": "2026-09-09T06:25:42.812752+00:00",
-          "basis": "假种/历史范围/月报节点/结算说明已有；跨班/调休/结转/期间链与企业参数尚缺，AI排班独立能力明确暂缓。",
+          "assessmentAt": "2026-09-09T10:06:49.834482+00:00",
+          "basis": "已细化固定班/单班请假/额度预留/冻结来源/重冻版本及工资失效场景；原月报发布确认封存保留独立规格。跨班/轮班/加班调休/授予结转/企业参数及原站完整链仍缺，AI排班独立能力已暂缓，未就绪。",
           "blockingIssueIds": [],
-          "next": "假种/历史范围/月报节点/结算说明已有；跨班/调休/结转/期间链与企业参数尚缺，AI排班独立能力明确暂缓。",
+          "next": "浏览器恢复后按该模块已列关键缺口补证；当前先完成首包/基础与全局一致性，不重复创建源测试对象。",
           "acceptanceRefs": [
             {
               "taskId": "A-SOURCE",
@@ -2398,13 +2398,13 @@
           "p1B": "not_ready",
           "review": "not_signed",
           "approvedRestricted": false,
-          "assessmentAt": "2026-09-09T06:25:42.812752+00:00",
-          "basis": "需求/职位/面试/候选权限及重复关系已有证据与代码；R-SPEC-01、常规Offer/入职链和接口状态契约尚缺。",
+          "assessmentAt": "2026-09-09T10:06:49.834482+00:00",
+          "basis": "需求/职位/面试/重复关系/入职后管控已有局部证据。已细化自然人-申请-人才库差异、Offer/接受/入职原子性、创建请求恢复与权限场景；R-SPEC-01及SCOPE-DEP-01未决，原站关键链与人才库/身份同步/多角色仍缺，未就绪。",
           "blockingIssueIds": [
             "R-SPEC-01",
             "SCOPE-DEP-01"
           ],
-          "next": "需求/职位/面试/候选权限及重复关系已有证据与代码；R-SPEC-01、常规Offer/入职链和接口状态契约尚缺。",
+          "next": "浏览器恢复后按该模块已列关键缺口补证；当前先完成首包/基础与全局一致性，不重复创建源测试对象。",
           "acceptanceRefs": [
             {
               "taskId": "R-SOURCE",
@@ -2920,8 +2920,8 @@
           "p1B": "not_ready",
           "review": "not_signed",
           "approvedRestricted": false,
-          "assessmentAt": "2026-09-09T06:25:42.812752+00:00",
-          "basis": "目标/等级/系数/缺评/兼职和档案同步已读；组织绩效、在途更正、算分阈值与正式结果流转尚缺。",
+          "assessmentAt": "2026-09-09T09:46:13.602571+00:00",
+          "basis": "原站等级/模板/缺评/系数/兼职规则已有；已细化员工活动-计划-结果-申诉状态、角色隔离、空隙/缺评计算候选和跨人才/薪资消费。组织绩效独立规格和OKR受限提纲明确保留，不由个人考核代替；尚缺原站完整链/组织计算/OKR/业务评审，未就绪。",
           "blockingIssueIds": [],
           "next": "目标/等级/系数/缺评/兼职和档案同步已读；组织绩效、在途更正、算分阈值与正式结果流转尚缺。",
           "acceptanceRefs": [
@@ -7415,7 +7415,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-09T09:42:48.713911+00:00",
+    "updatedAt": "2026-09-09T10:09:26.039630+00:00",
     "authority": "Scope_Register.json为唯一范围/验收事实源；历史48/59保留，当前15模块及基础按SCOPE-20260909-CORE15。",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -41532,7 +41532,7 @@
   "roadmap": {
     "revision": "2026-09-08-P1AB",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-09T09:42:48.713911+00:00",
+    "updatedAt": "2026-09-09T10:09:26.039630+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -41615,7 +41615,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "P1当前15模块：原站页面连接暂不可用，继续M16→M12→M11→M07及首包/基础的证据-代码-需求对照；人才/学习细化已保存",
+    "activeWorkPackage": "P1当前15模块：绩效/招聘/假勤/薪酬静态需求细化已保存，继续首包差异及六基础/三支撑模块全局审查；原站连接受限",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -41629,12 +41629,11 @@
       "BP-S"
     ],
     "nextTasks": [
-      "原站恢复tab8.goto及title均报CDP refresh tabs超时，有限恢复已用；当前连接不可用，不判站点/角色拒绝或要求全量重授权。源M18项目ActivityId3d1d07ed-d10e-4c51-8a91-22d5d20d83b1新建/EA初始未计算，未启动。先继续可离线M16→M12→M11→M07、首包规则和六基础P1B，恢复后按同ID核流程/通知/结果，不重建。",
-      "BP-F/M01：关闭仍适用首包差异与法人/兼职终态等可查部分；EA离职10日生效、9日仍在职，日期分支不阻其他模块。F-SPEC-01–04保持集中待决。",
-      "BP-C保留M03/M06/M17/M18/M26/M37按原登记补关键链；旧干部/人才评定/外部测评/人才模型等暂缓，不按相似名称合并。",
-      "随后M27学习→M16绩效→M12招聘→M11假勤→M07薪酬；M19/M48/M32全程同步，BASE-01–06单列验收。",
-      "核对最小公共依赖及接口状态/失败契约；33组退出主动探索与当前P1退出条件，只有具体完整模块强依赖才集中提交决定，不自行恢复。",
-      "逐模块P1A完成/需求就绪/评审通过以证据判定；当前全为未达条件，基础能力另列；持续文档一致性与版本化检查、完整单元提交推送。"
+      "原站连接恢复为外部条件：tabs.list/goto/title的CDP超时已有限核查，当前不重复尝试或要求全量授权。源最后M18项目3d1d07ed-d10e-4c51-8a91-22d5d20d83b1新建、EA初始未计算、未启动，保存结果明确。",
+      "先收窄首包F-SPEC-01/02/03及M01完整范围F-SPEC-04；核原已确认决定、目录唯一/故障留痕/历史原单范围，补可执行差异预期。",
+      "完成M19/M48/M32随各当前业务链的角色/字段/状态/版本投影，以及六基础身份/权限/审计/附件历史/恢复/外部契约；一致性检查不执行产品变更或人类多角色测试。",
+      "核当前15全部内部常规范围有规格或具体受限分支，集中去重待源证据/待决定/待评审；33暂缓不恢复、不计P1门槛。",
+      "浏览器实际恢复后按现有源数据/操作ID续M18流程通知及采集条件→M26→M27→M16→M12→M11→M07；M19/M48/M32随链。M17流程保存结果待核、继任目标候选受限；EA未来离职10日起，重聘先查实际状态，绝不重复创建。"
     ],
     "state": "原48组历史完整保留；当前15组及六类基础能力P1未验收，33组本次暂缓不计完成；P2受限历史技术验收、F01–F04未业务验收、D1–D7/E1/E2保持；不自动恢复开发。",
     "scopeChange": "SCOPE-20260909-CORE15",
@@ -41646,7 +41645,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-09T09:42:48.713911+00:00",
+    "updatedAt": "2026-09-09T10:09:26.039630+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -43129,7 +43128,109 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "fieldDetails": [
+              {
+                "field": "活动配置与正式结果",
+                "definition": "现有performanceCycle冻结模板/评级版本及name/orgId/period/start/end；performancePlan为员工在周期内目标/自评/评价；performance为正式发布快照",
+                "constraints": "源共享组织/是否公开、锁定考核关系、异常处理人及组织绩效影响员工分布另有独立字段，当前单组织周期不覆盖；结果ID不等计划ID",
+                "basis": "BC-P01/03/07；performance.ts静态"
+              },
+              {
+                "field": "结果尺度与缺评",
+                "definition": "现有scores数组每项目标必给数，目标权重合计100；带评级方案时校验冻结方案最小/最大尺度，未绑定时0–100",
+                "constraints": "源支持未评按0或均摊、权限不可见/无法评价脚注另有规则；当前不能用null或0模拟未评。多维结果、系数和纯手工等级保留待补",
+                "basis": "BC-P14–16；performance.ts/performance-ratings.ts"
+              },
+              {
+                "field": "对应任职",
+                "definition": "源主职/兼职任职ID和业务时间确定评价上下文；现有计划以employeeId+cycleId唯一，未含任职ID",
+                "constraints": "同员工不同任职不能按姓名或部门粗暴合并；M01兼职终态未知不自动让现有考核失效",
+                "basis": "BC-P09/10；M01 EA未来离职/兼职结果与M16联动未验证"
+              },
+              {
+                "field": "活动日期与推进",
+                "definition": "代码cycle活跃和当前在职组织范围约束；元数据业务时间与活动start/end是独立字段",
+                "constraints": "核心推进未比较当前日与start/end，不能写成自动期限封锁；原站日期/业务时间规则继续补证",
+                "basis": "performance.ts/cycle及performance-changes.ts/live静态"
+              }
+            ],
+            "stateTransitions": [
+              {
+                "from": "周期draft",
+                "event": "startCycle",
+                "to": "active",
+                "guards": "HR/管理员；仅草稿，无当前日期条件；源启动审批和实际日期行为未证",
+                "basis": "本项目现有实现"
+              },
+              {
+                "from": "计划draft",
+                "event": "独立confirmGoals",
+                "to": "confirmed",
+                "guards": "目标权重100且当前周期/员工组织有效；本人不能确认",
+                "basis": "本项目现有实现"
+              },
+              {
+                "from": "confirmed",
+                "event": "员工selfReview",
+                "to": "submitted",
+                "guards": "本人、周期活跃、无待审目标调整；模板必填问答校验",
+                "basis": "本项目现有实现"
+              },
+              {
+                "from": "submitted",
+                "event": "独立evaluate",
+                "to": "evaluated",
+                "guards": "各项目标完整评分及冻结尺度，非本人；源缺评/多维规则待补",
+                "basis": "本项目现有实现"
+              },
+              {
+                "from": "submitted/evaluated",
+                "event": "returnPerformance",
+                "to": "confirmed",
+                "guards": "尚未发布，清空本次评分/评价，保留退回说明",
+                "basis": "本项目现有实现，不等原站任意流程干预"
+              },
+              {
+                "from": "evaluated计划",
+                "event": "publishPerformance",
+                "to": "新performance published",
+                "guards": "HR且非本人；唯一评级命中/不覆盖已发布正式结果；计划快照、周期快照分别保留",
+                "basis": "本项目现有实现"
+              }
+            ],
+            "acceptanceCases": [
+              {
+                "id": "BP-P-REQ-01-AC01",
+                "given": "活跃周期与员工同范围、待审目标调整已存在",
+                "when": "员工提交自评或再次发起调整",
+                "then": "当前拒绝，先处理/撤回；调整批准时核basePlanVersion/updatedAt/原目标三项，不能拿旧快照批准新目标",
+                "basis": "performance/performance-changes静态；非本轮运行",
+                "status": "候选待评审，原站未执行/本轮未业务复跑",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-P-REQ-01-AC02",
+                "given": "周期active但当前日期已超end、员工和范围仍有效",
+                "when": "对计划执行确认/评价的日期条件审查",
+                "then": "当前代码不提供截止日阻断，不写“已自动关闭”；是否按时间锁定需源规则/产品评审，保留明确差异",
+                "basis": "performance.ts/cycle；不是声称该行为已获批准",
+                "status": "候选待评审，原站未执行/本轮未业务复跑",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-P-REQ-01-AC03",
+                "given": "M01同一员工存在两段不同主/兼职任职，源有各自绩效上下文",
+                "when": "设计同周期两份不同任职考核及读取历史",
+                "then": "须稳定区分任职ID/业务日期；现employeeId+cycle唯一会冲突，记录需补齐，不通过删兼职范围解决",
+                "basis": "BC-P10；performance.ts/goals现有差异",
+                "status": "候选待评审，原站未执行/本轮未业务复跑",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "object": "绩效等级与尺度",
@@ -43155,7 +43256,29 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "acceptanceCases": [
+              {
+                "id": "BP-P-REQ-02-AC01",
+                "given": "冻结等级区间A[0,60)、B[60,80)、C[80,100]",
+                "when": "总分分别60、80和边界匹配",
+                "then": "60仅B、80仅C；边界必须唯一，不按列表先后选第一项；源连续边界规则与当前允许空隙定义差异仍在",
+                "basis": "BC-P02；performanceRatingAt静态",
+                "status": "候选待评审，原站未执行/本轮未业务复跑",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-P-REQ-02-AC02",
+                "given": "方案存在合法定义但总分落入未覆盖空隙",
+                "when": "发布结果或发布申诉更正",
+                "then": "现实现拒绝400且不自动补等级；新定义不改旧活动冻结方案。源在途更新需要独立显式动作，当前未覆盖",
+                "basis": "performanceRatingAt；BC-P02原站修改后按活动更新说明",
+                "status": "候选待评审，原站未执行/本轮未业务复跑",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "object": "目标数量/权重检查与指标引用",
@@ -43292,7 +43415,59 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "roleMatrix": [
+              {
+                "role": "员工本人",
+                "read": "本人正式结果及申诉；旧结果按当前权限可追溯",
+                "write": "最新且具完整快照的正式结果可申诉；本人未审申诉可撤回",
+                "boundary": "旧导入仅分数而无快照不支持此申诉路径；现代码未定义申诉日期窗，不能据此批准无限期"
+              },
+              {
+                "role": "独立复核HR/管理员",
+                "read": "当前管理范围结果及冻结目标/评分、原申诉",
+                "write": "维持或重新按原快照全目标评分",
+                "boundary": "排除员工本人、申诉发起人、原评价人和原发布人；多身份同时存在仍排除"
+              },
+              {
+                "role": "更正发布HR/管理员",
+                "read": "已批准更正及原结果",
+                "write": "独立发布新结果，supersedes/appealId链保留",
+                "boundary": "当前只另外排除复核人和员工本人，没有自动排除原评价/发布者；更严隔离属于待评审建议"
+              }
+            ],
+            "acceptanceCases": [
+              {
+                "id": "BP-P-REQ-06-AC01",
+                "given": "原正式结果R1及冻结目标，原评价人E、原发布人P、申诉人S",
+                "when": "E/P/S尝试reviewAppeal；其他合格HR维持却带新scores",
+                "then": "E/P/S均无复核权；维持不能带新分。获准更正必须按原快照每个目标评分，不能改目标/等级版本",
+                "basis": "performance.ts/reviewAppeal静态",
+                "status": "候选待评审，原站未执行/本轮未业务复跑",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-P-REQ-06-AC02",
+                "given": "申诉已approved，由HR-A复核，HR-B有当前管理权且非本人",
+                "when": "A发布更正，再由B发布并查看人才/报表旧引用",
+                "then": "A拒绝；B产生R2并关联R1/申诉而不覆盖旧R1。M18旧九宫格快照应保留来源版本，是否重新校准须独立规则，不能静默改旧盘点",
+                "basis": "performance.ts/publishCorrection；development.ts/review快照",
+                "status": "候选待评审，原站未执行/本轮未业务复跑",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-P-REQ-06-AC03",
+                "given": "R1已被R2更正或该申诉已发布过更正",
+                "when": "对R1继续申诉或重复发布同更正",
+                "then": "旧结果非最新/重复更正均拒绝，历史仍按权限可读；当前不能借另一个周期覆盖已有正式结果",
+                "basis": "performance.ts/latest/publishPerformance",
+                "status": "候选待评审，原站未执行/本轮未业务复跑",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "id": "BP-P-REQ-07",
@@ -43320,6 +43495,96 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
+            },
+            "acceptanceCases": [
+              {
+                "id": "BP-P-REQ-07-AC01",
+                "given": "源示例权重20/50/30，首项未评，另两项5/3",
+                "when": "对比未评按0和权重均摊",
+                "then": "按0推导3.4、均摊推导4.25；这是帮助公式推导，未执行采分。当前完整数字数组不能表达这两种未评语义",
+                "basis": "BC-P14/15；当前scores差异",
+                "status": "候选待评审，原站未执行/本轮未业务复跑",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-P-REQ-07-AC02",
+                "given": "某角色对首项不可见或选择无法评价，权重仍20/50/30",
+                "when": "依据源脚注计算模块分数",
+                "then": "脚注指定均摊，不能以页面选按0覆盖该例外；全未评/权重和0/精度待补，不能造0分",
+                "basis": "BC-P15直接脚注及推导候选",
+                "status": "候选待评审，原站未执行/本轮未业务复跑",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-P-REQ-07-AC03",
+                "given": "系数规则表有已启用规则，但当前生成方式为等级系数",
+                "when": "查看活动实际取用路径",
+                "then": "不能取未绑定的系数规则；另一方式需模板总览绑定后才消费公式。外部薪资仅接收明确来源版本/有效状态，不据启用列算工资",
+                "basis": "BC-P12/16；M07接口预留不等已算薪",
+                "status": "候选待评审，原站未执行/本轮未业务复跑",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
+          },
+          {
+            "id": "BP-P-REQ-08",
+            "object": "组织目标与组织绩效活动（独立于员工考核）",
+            "fields": "BC-P07直接表头：活动名称、所属组织、共享组织、是否公开、参与组织数、创建人/时间、状态；原导航有组织目标和组织绩效。指标、权重、组织负责人/评价组织关系及计算参数仍未探索，不从员工表复制成事实。",
+            "roles": "组织活动管理、被考核组织负责人、评价人/结果读取角色待证；所属组织、参与组织和共享组织分别定义。",
+            "lifecycle": "只见状态列，未验证枚举/启动/目标下达/审批/发布/终止/重开；不得套员工confirmed/submitted/evaluated状态。",
+            "actions": "组织目标维护、组织绩效活动、结果读取保留；详细页面操作受当前浏览器连接和原站补证限制。",
+            "acceptance": "候选：同一活动参与组织数按稳定组织ID去重，不等员工人数；组织结果不得写入个人绩效作为本人考核，影响员工分布需有明确绑定和版本规则。字段/计算/权限未明确的分支不写默认通过。",
+            "gap": "现有performance.ts核心对象基于employeeId，未读到独立组织计划/结果模型；组织绩效不可用员工样例代验收。需要活动/组织目标/计算/结果评审，属现15模块内部继续范围。",
+            "classification": "BC-P07原站表头事实＋原范围；组织行为规格受限，候选未批准",
+            "codeRefs": [
+              "docs/P1_Source_Observations_20260907.md",
+              "lib/hris/performance.ts",
+              "lib/hris/module-progress.ts"
+            ],
+            "accepted": false,
+            "currentApplicability": {
+              "status": "保留",
+              "moduleIds": [
+                "M16"
+              ],
+              "originalModuleIds": [
+                "M16"
+              ],
+              "baseCapabilityIds": [],
+              "note": "原登记组织目标/组织绩效和OKR常规范围保持，不以当前员工绩效实现缩减。"
+            }
+          },
+          {
+            "id": "BP-P-REQ-09",
+            "object": "OKR管理/设置与自助OKR",
+            "fields": "原M16/M48导航明确OKR管理/OKR设置和员工自助OKR；暂无本轮直接对象/字段证据。建议以目标、关键结果、负责人、期间、对齐关联和进展记录作为待核对象清单，不作为原站字段或已批准必填。",
+            "roles": "管理端与本人端的创建/对齐/共享/读取/反馈权限须单独补证；不能套绩效评分或普通任务权限。",
+            "lifecycle": "立项/对齐/进展/复盘等仅需求提纲候选，原状态和审批未探索；当前不填虚构生命周期枚举。",
+            "actions": "保留原登记OKR常规入口和M48消费；无AI推荐、独立任务模块恢复。",
+            "acceptance": "待字段及政策明确后，核同一目标/关键结果的稳定ID、历史进展可追溯、共享边界和对齐关系；当前不能把绩效goal的完成分数等同KR进度或自动计入绩效。",
+            "gap": "本轮在lib/hris/app静态搜索仅见模块导航/remaining中的完整OKR缺口，未确认独立对象和命令；原站页面当前连接不可用。提供受限规格及补证路径，不报需求就绪，也不静默删除OKR。",
+            "classification": "原范围/导航证据＋建议提纲；详细需求受限，未批准",
+            "codeRefs": [
+              "lib/hris/module-progress.ts",
+              "app/hris.tsx",
+              "docs/delivery/Scope_Register.json"
+            ],
+            "accepted": false,
+            "currentApplicability": {
+              "status": "保留",
+              "moduleIds": [
+                "M16",
+                "M48"
+              ],
+              "originalModuleIds": [
+                "M16",
+                "M48"
+              ],
+              "baseCapabilityIds": [],
+              "note": "原登记组织目标/组织绩效和OKR常规范围保持，不以当前员工绩效实现缩减。"
             }
           }
         ],
@@ -43362,8 +43627,8 @@
           {
             "object": "需求/招聘职位/候选人",
             "fields": "需求草稿/显式提交；candidate必填active requisitionId；姓名1–200；email合法或空；职位冻结版本；CNY月薪整数分或面议；headcount整数1–10000；类型new/replacement/reserve与urgency high/medium/low可选；requestedOn/expectedOn各自合法日期，职责/资格各≤2000；当前schema未定义两日期先后比较，不能写成既有约束；当前候选邮箱仅同需求非rejected记录不区分大小写去重，不按姓名/电话全局合并；旧需求draft且未标requisitionSubmissionRequired仍按待审批兼容，不能将所有draft视为同一种待提交。",
-            "roles": "当前组织HR录入；所有贡献者不能审批自己的需求/录用；指定面试人按排期权限",
-            "lifecycle": "需求draft/submitted/returned/active/closed；候选screening/interviewed/offered/approved/accepted/hired/rejected",
+            "roles": "当前组织HR录入；需求创建者及全部历史贡献者不能审批需求。Offer仅排除offeredBy（缺失时createdBy），不排全部历史Offer发起者；指定面试人按排期路径权限。不同对象的独立性必须分别评审。",
+            "lifecycle": "需求draft/submitted/returned/active/closed；候选可识别screening/interviewed/offered/approved/accepted/hired/rejected。当前新增候选screening，评价另存interview，不更新candidate为interviewed；interviewed是允许输入的兼容状态，不能画成现有必经迁移。",
             "actions": "保存/保存并提交、独立批准、职位启用/修订、候选登记、退回、关闭",
             "codeRefs": [
               "lib/hris/recruitment.ts",
@@ -43384,20 +43649,88 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "fieldDetails": [
+              {
+                "field": "需求与职位版本",
+                "definition": "需求有独立draft/submitted/returned/active/closed状态；职位归需求且定版供候选冻结",
+                "constraints": "新需求只有显式submit才待审；旧draft未标submissionRequired沿历史兼容待审批。任何贡献者不得审自己参与的需求",
+                "basis": "recruitment.ts；BC-R02保存/保存并提交是两个动作"
+              },
+              {
+                "field": "自然人、申请与人才库",
+                "definition": "原站手工候选至少选职位或人才库；重复关系可按证件/邮箱/电话/姓名生日学校专业组合配置",
+                "constraints": "现有candidate必须active requisitionId，email仅同需求非rejected、忽略大小写去重；未建立全局自然人/独立入库模型，不能凭同名自动合并",
+                "basis": "BC-R03/R14/R15；R-SPEC-01待决定"
+              },
+              {
+                "field": "招聘条件与薪资表达",
+                "definition": "职位可冻结CNY整数分月薪或面议，headcount整数，日期为业务日",
+                "constraints": "现有requestedOn/expectedOn没有先后比较；schema上下限是当前实现，不等源规则已确认；薪资组/包及金额预算是另一个依赖",
+                "basis": "recruitment-jobs.ts/recruitment.ts；BP-S-REQ-07/11"
+              },
+              {
+                "field": "候选联系方式",
+                "definition": "姓名1–200，email为空或合法≤200；录入时重验viewEmail",
+                "constraints": "可读姓名不代表能写/读邮箱；原站导入完整电话/邮箱复选项与手工新增不同，不构造全局必填规则",
+                "basis": "BC-R13；recruitment.ts"
+              }
+            ],
+            "acceptanceCases": [
+              {
+                "id": "BP-R-REQ-01-AC01",
+                "given": "同一active需求已有非rejected候选，邮箱p1v@example.invalid",
+                "when": "相同需求用P1V@example.invalid再次新增，再对另一个active需求新增",
+                "then": "当前前者拒绝，后者不由该规则阻断；不声称已实现跨需求查重/合并。目标自然人与申请分离待R-SPEC-01选择",
+                "basis": "recruitment.ts/candidate；BC-R14的配置查重语义不同",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-R-REQ-01-AC02",
+                "given": "需求创建者A，修改者B，其他合格管理员C",
+                "when": "提交后A或B审批，再由当前范围内C审批",
+                "then": "A/B因历史贡献者拒绝，C通过其他条件后可审；退回重提不抹贡献历史，管理员身份不覆盖独立性",
+                "basis": "recruitment.ts/reviseRequisition/approveRequisition静态",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-R-REQ-01-AC03",
+                "given": "一需求有screening候选，另有hired/rejected候选",
+                "when": "关闭需求；待活动候选终结后再关",
+                "then": "第一次拒绝，后者仅在所有候选hired/rejected时可关闭；不能关闭后让排期或Offer继续有效",
+                "basis": "recruitment.ts/closeRequisition；recruitment-status.ts",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-R-REQ-01-AC04",
+                "given": "候选入口只有人才库且无招聘需求",
+                "when": "按保留原范围设计独立入库和后续应聘关联",
+                "then": "现实现无法创建；记录需补模型/接口/去重，不强制造虚假需求或删除人才库范围。入库不自动对外发送通知",
+                "basis": "BC-R03/R15；R-SPEC-01",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "object": "面试/评价/录用入职",
             "fields": "排期、面试评价模板版本与显式结论；有效评价后录用；入职date、code唯一及名额校验；四档评价1–20指标、最多10维、每项四个标签；scores整数1–4，comments每维≤1500；通过必须全项评分，拒绝可仅结论；aggregation=not-configured不计算综合分",
-            "roles": "指定面试人评价；录用独立审批；HR登记候选接受，不冒充候选本人确认",
-            "lifecycle": "排期未结束不可完成评价；推荐推进→录用批准→HR登记接受→到期原子入职",
+            "roles": "有排期结构化评价由当前指定面试人；无排期评价为另一权限路径。需求贡献者全排除与Offer仅当前发起人排除不同；HR登记接受不冒充候选本人。",
+            "lifecycle": "评价独立recorded且有排期时置该排期completed，候选状态本身不自动变interviewed；最新advance→Offer offered→独立approved→HR接受accepted→到期原子hired。",
             "actions": "内部排期/冲突核对、评价、审批、接受登记、入职",
             "codeRefs": [
               "lib/hris/recruitment.ts",
               "lib/hris/recruitment-evaluations.ts"
             ],
             "acceptance": "待进行排期阻断录用；未推荐推进不允许录用；未接受或尚未到入职日拒绝入职；重复入职不重复建员工或计数",
-            "gap": "面试日历/通知、电子签回执、Offer占编与跨法人/再入职接口未就绪；无排期的普通/结构化评价仍有独立路径，不能把指定面试人/结束时间限制泛化为所有评价。",
+            "gap": "面试日历/通知、电子签回执、Offer占编与跨法人/再入职接口未就绪；无排期的普通/结构化评价仍有独立路径，不能把指定面试人/结束时间限制泛化为所有评价。 审批排除集合及Offer退回重提后的参与历史需源证据/业务评审；当前只排本次发起人，不宣称已覆盖全部利益冲突。",
             "classification": "本项目既有实现静态事实；转为产品要求待评审",
             "accepted": false,
             "id": "BP-R-REQ-02",
@@ -43411,7 +43744,106 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "stateTransitions": [
+              {
+                "from": "候选screening/interviewed",
+                "event": "有效面试评价",
+                "to": "新增interview recorded；候选状态保持",
+                "guards": "需求/职位当前有效；有排期路径重验指定人/结束时间/冻结表，完成该排期；没有更新candidate到interviewed的写操作",
+                "basis": "recruitment.ts和app/api/recruitment/route.ts静态，原站实际状态仍待补证"
+              },
+              {
+                "from": "screening/interviewed",
+                "event": "offer",
+                "to": "offered",
+                "guards": "最新评价advance；无scheduled排期；当前grade/组织/字段权限；未验证金额预算",
+                "basis": "现有实现；金额预算SCOPE-DEP-01未决"
+              },
+              {
+                "from": "offered",
+                "event": "approveOffer / returnOffer",
+                "to": "approved / screening",
+                "guards": "admin/manager排除本次offeredBy（缺省createdBy），不排所有历史录用参与者；退回清当前Offer字段但保留审计",
+                "basis": "现有实现"
+              },
+              {
+                "from": "approved",
+                "event": "HR acceptOffer登记",
+                "to": "accepted",
+                "guards": "HR录入接受依据；不是候选本人登录、电子签或外部送达",
+                "basis": "现有实现与外部契约边界"
+              },
+              {
+                "from": "accepted",
+                "event": "hire",
+                "to": "hired + 新员工",
+                "guards": "joined不晚于业务日、工号唯一、人数/组织编制容量、员工和候选同事务；旧身份重聘与薪资包差异未覆盖",
+                "basis": "recruitment.ts/hire及app/api/recruitment/route.ts"
+              }
+            ],
+            "acceptanceCases": [
+              {
+                "id": "BP-R-REQ-02-AC01",
+                "given": "候选已有较早advance评价，最新评价reject，且需求有效",
+                "when": "生成Offer",
+                "then": "必须按最新评价拒绝，不能选择旧有利结论；将来变更结论须有新版本，旧结论仍留存",
+                "basis": "recruitment.ts/offer静态",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-R-REQ-02-AC02",
+                "given": "候选最新advance但仍有scheduled排期",
+                "when": "生成Offer",
+                "then": "当前拒绝；排期completed/cancelled后重新核条件。无排期的评价路径不能虚构指定排期人或时间验证",
+                "basis": "recruitment.ts/offer；BP-R-REQ-05",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-R-REQ-02-AC03",
+                "given": "候选accepted、有效岗位/名额/唯一工号，joined明日",
+                "when": "办理入职；条件到期后在事务写员工时注入故障的未来测试设计",
+                "then": "未来日拒绝；故障时员工/候选状态/审计/revision整体不成功，不能只把候选标hired。此为待执行验收设计，无本轮故障注入",
+                "basis": "recruitment.ts/hire与route事务；历史测试未复跑",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-R-REQ-02-AC04",
+                "given": "已hired且有hiredEmployeeId，客户端结果此前未收到",
+                "when": "重新查询实际候选/员工，再试重复hire",
+                "then": "查询确认原ID；重复hire拒绝，不产生第二员工或累计两个人头。hire不支持创建用Idempotency-Key，不能承诺直接重放即成功",
+                "basis": "recruitment.ts/hire；BP-R-REQ-04",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-R-REQ-02-AC05",
+                "given": "已有M01历史员工身份或源入职要求薪资包内项目",
+                "when": "从候选转员工设计校对",
+                "then": "当前newEmployee路径未覆盖再入职身份合并/多段任职或PG/SP前置；应保留原身份/档案差异与F-SPEC-04，不为绕过依赖新造真实身份",
+                "basis": "BC-F38/39/43/45；BP-S-REQ-11",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-R-REQ-02-AC06",
+                "given": "A发起Offer后被退回，B重提，A当前具有管理审批权",
+                "when": "A审批B重提的Offer，同时核需求审批的贡献者规则",
+                "then": "当前Offer可通过独立人身份校验（其他条件仍需满足），需求审批仍排A贡献历史；此差异不自动升级为已批准政策，完整录用审批边界待审",
+                "basis": "recruitment.ts/approver、returnOffer、approveOffer静态",
+                "status": "候选待评审；本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "object": "推荐/校园/外推/AI/RPA周边",
@@ -43469,7 +43901,39 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "acceptanceCases": [
+              {
+                "id": "BP-R-REQ-04-AC01",
+                "given": "同一actor持有合法8–100字符键和同一已解析command，首次创建实际成功但响应丢失",
+                "when": "先查询；随后同键同command重试",
+                "then": "当前返回同ID、originalRevision、replayed=true及当前revision，不新增业务/审计；内容摘要来自JSON.stringify(command)，不声称任意字段排序都语义等价",
+                "basis": "app/api/recruitment/route.ts/idempotency",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-R-REQ-04-AC02",
+                "given": "同键原请求有姓名A",
+                "when": "改成姓名B或对hire带同键",
+                "then": "前者摘要冲突409，后者不支持该动作400；不能一律用相同键掩盖业务修改或重复生效",
+                "basis": "同接口静态",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-R-REQ-04-AC03",
+                "given": "原创建者已被撤销角色或当前记录组织访问权",
+                "when": "持原键重放",
+                "then": "先按当前权限拒绝，不返回原敏感记录；账号B不匹配A的键记录，不跨身份共享恢复结果",
+                "basis": "同接口权限与actor隔离",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "id": "BP-R-API-01",
@@ -43552,7 +44016,29 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "acceptanceCases": [
+              {
+                "id": "BP-R-REQ-06-AC01",
+                "given": "源入职后管控模式已明确且候选与员工有可信关联",
+                "when": "分别在招聘流程、人才库搜索、报表和详情读取",
+                "then": "所有入口按同一已批准模式处理，不能只隐藏页面按钮；当前仅配置证据，无跨角色结果，验收前需签角色矩阵",
+                "basis": "BC-R16；当前E2单账号",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-R-REQ-06-AC02",
+                "given": "雇佣事件已发生但招聘身份同步结果未知",
+                "when": "再次查询或重试身份关联",
+                "then": "应保留事件ID/目标ID/版本和结果不明，不能因超时解除管控或自动新增另一个人；具体冲突恢复属于候选接口要求",
+                "basis": "BC-R16＋F-SPEC-04；BASE-06建议未批准",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           }
         ],
         "goal": "在保留原范围内形成招聘的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
@@ -43608,7 +44094,39 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "acceptanceCases": [
+              {
+                "id": "BP-A-REQ-01-AC01",
+                "given": "合成固定班09:00–18:00含12:00–13:00休息，假种/余额/人员满足当前条件",
+                "when": "申请11:00–14:00请假，再尝试跨两班请假",
+                "then": "前者有效工作120分钟；当前跨班拒绝，不把本模型支持扩成源多班算法。8小时只是此样本，不作为租户统一日标准",
+                "basis": "attendance.ts单班休息扣除静态；源BC-A05/07",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-A-REQ-01-AC02",
+                "given": "本人EA、HR-A代申请、经理B在当前组织范围",
+                "when": "EA或HR-A审批该请求，随后B审批",
+                "then": "前二者按本人/发起者独立性拒绝；B满足其余权限才可审，经理不得冒充HR替人新申请；本轮未建立人类B账号",
+                "basis": "attendance.ts/independent审批",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-A-REQ-01-AC03",
+                "given": "班次整分钟且未冻；补卡时间含秒、在允许窗口内",
+                "when": "对比录入补卡与将同时间当班次/请假边界",
+                "then": "补卡精度与班次/请假整分钟是不同约束；已有秒级冲突须明确恢复，不能静默截断导致覆盖或薪资变化",
+                "basis": "attendance.ts/时间校验及attendance-periods.ts",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "object": "结算期间与冻结版本",
@@ -43635,7 +44153,92 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "fieldDetails": [
+              {
+                "field": "期间身份和快照",
+                "definition": "同员工start/end业务日期、sourceRevision/capturedAt/来源列表、version及分钟汇总",
+                "constraints": "必须已过去且全班结束，跨度1–31日、来源≤1000，禁止与未void期间交叠；限制为当前实现候选",
+                "basis": "attendance-periods.ts"
+              },
+              {
+                "field": "来源与覆盖",
+                "definition": "班次、打卡、补卡、请假各有独立来源ID/状态/updatedAt",
+                "constraints": "缺班次、未结束夜班、待审、冲突、未覆盖均阻冻结；无明细不等零缺勤",
+                "basis": "attendance-periods.ts/preview"
+              },
+              {
+                "field": "开放与重冻",
+                "definition": "同期间ID重冻version+1，保存当前新快照；已有薪资记录仍持旧引用快照",
+                "constraints": "期间对象内部不保证全部历次快照；重新开放不能直接等原站解封/员工撤确认",
+                "basis": "attendance-periods.ts及payroll-attendance.ts"
+              }
+            ],
+            "stateTransitions": [
+              {
+                "from": "无期间/open",
+                "event": "freeze/refreeze",
+                "to": "frozen",
+                "guards": "范围HR；日期/来源/覆盖/待审/重叠全部满足，重冻同ID增version",
+                "basis": "当前实现"
+              },
+              {
+                "from": "frozen",
+                "event": "reopen",
+                "to": "open",
+                "guards": "范围HR与理由；锁解除使后续来源可变，已引用工资需识别失效",
+                "basis": "当前实现，非源完整月报状态"
+              },
+              {
+                "from": "open",
+                "event": "void",
+                "to": "void",
+                "guards": "不物理删除，不能直接void frozen；未来消费排除作废来源",
+                "basis": "当前实现"
+              }
+            ],
+            "acceptanceCases": [
+              {
+                "id": "BP-A-REQ-02-AC01",
+                "given": "业务日D，待冻期间结束D；另一期间结束D-1但夜班实际尚未结束",
+                "when": "冻结",
+                "then": "均拒绝；日历结束不代替班次实际结束，后续核查用业务时区，不能调系统时钟制造通过",
+                "basis": "attendance-periods.ts/preview",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-A-REQ-02-AC02",
+                "given": "已过期1–31日范围，存在pending请假或补卡，即使表观分钟已足",
+                "when": "冻结",
+                "then": "仍拒绝待审；0行无班次也拒绝，缺失不能当零缺勤后支付",
+                "basis": "attendance-periods.ts/preview",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-A-REQ-02-AC03",
+                "given": "工资草稿引用期间ID=P/version1，P已frozen",
+                "when": "reopen后重新冻结为version2，尝试提交工资",
+                "then": "工资旧引用无效并拒绝提交；先按明确重取/复核流程换引用。已发布旧工资不静默重写，补差另留记录",
+                "basis": "attendance-periods.ts/payroll-attendance.ts",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-A-REQ-02-AC04",
+                "given": "期间P覆盖9月1–15日未void",
+                "when": "对同员工建9月15–30日，再建9月16–30日",
+                "then": "前者边界日重叠拒绝；后者仅在其他条件全满足时允许；不能按两个期间等同全月已发布/确认/封存",
+                "basis": "attendance-periods.ts/overlap",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "object": "假期/调休结算",
@@ -43743,7 +44346,49 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "acceptanceCases": [
+              {
+                "id": "BP-A-REQ-05-AC01",
+                "given": "同员工假种年度登记480分钟、已批120、待审180",
+                "when": "再申请180后尝试额外1分钟，随后撤回一份180待审",
+                "then": "前180在其他条件满足时可预留，额外1拒绝；撤回释放180，已批120继续占用，不能把预留记成已休",
+                "basis": "attendance.ts/balance静态",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-A-REQ-05-AC02",
+                "given": "已用120/预留180/登记480，同来源已有额度记录",
+                "when": "登记-200或复用旧来源改金额",
+                "then": "-200将登记降280低于300而拒绝；同年同人同假种同来源不同金额仍拒绝，不能用覆盖旧条目抹账",
+                "basis": "attendance.ts/creditLeave",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-A-REQ-05-AC03",
+                "given": "假种A已有待审请求，随后A retired",
+                "when": "审批既有请求，再新建A申请或额度",
+                "then": "前者按冻结规则/当前独立权限处理，新业务拒绝；未实现自动年度授予/结转，不能推定年末自动清零",
+                "basis": "attendance.ts/retired与快照",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-A-REQ-05-AC04",
+                "given": "12月31日业务夜班延至1月1日，有跨午夜请假",
+                "when": "核用量归属年度",
+                "then": "当前按班次业务日期归前一年；原站跨年/有效期策略尚缺，不写成本项目已批准法定规则",
+                "basis": "attendance.ts；BC-A07/08缺口",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "id": "BP-A-REQ-06",
@@ -43832,7 +44477,89 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "fieldDetails": [
+              {
+                "field": "批次、工资条和项目",
+                "definition": "批次按组织+年月，条目按员工+批次；CNY整数分，应发/扣款/单位承担三个类别",
+                "constraints": "每条1–40项、项目名唯一、金额0–1e9分；单位承担不从员工净额扣除；本模型人工核定，不自动算税",
+                "basis": "payroll.ts/schema/payrollTotals"
+              },
+              {
+                "field": "人数/人员和重复条目",
+                "definition": "当前薪酬专岗按组织管理；员工历史快照保存姓名/工号/组织",
+                "constraints": "同员工同月在其他非取消批次亦不得有非取消条目；当前创建条目未专门排除离职员工，不能写“只为在职算薪”",
+                "basis": "payroll.ts/paySlip；payroll-access.ts"
+              },
+              {
+                "field": "考勤与复核",
+                "definition": "引用冻结期间可为空数组，并不必然覆盖整月；批次贡献者永久累积",
+                "constraints": "编制/删除条目不能抹参与历史；发布须非自己工资对象，审批还排除全部编制贡献者",
+                "basis": "payroll-review.ts/payroll-attendance.ts"
+              }
+            ],
+            "roleMatrix": [
+              {
+                "role": "admin/payroll_editor",
+                "read": "当前授权批次及最小人员名单；admin按现有全局权",
+                "write": "编制/提交/发布；不能为本人编制或发布本人条目",
+                "boundary": "编制者与发布者可相同；不能因admin身份代替独立审批"
+              },
+              {
+                "role": "admin/payroll_reviewer",
+                "read": "当前授权批次/项目及引用问题",
+                "write": "批准/退回，按历史贡献者与本人排除",
+                "boundary": "创建者、提交者、任一历史条目贡献者、非取消本人条目接收者均不得审批"
+              },
+              {
+                "role": "员工本人",
+                "read": "已发布个人投影；不含单位承担、来源说明、创建者",
+                "write": "工资异议；未直接修改工资金额",
+                "boundary": "本人可见不等管理范围；普通hr/manager不自动拥有薪酬专岗"
+              }
+            ],
+            "acceptanceCases": [
+              {
+                "id": "BP-S-REQ-01-AC01",
+                "given": "应发100000分、扣款10000分、单位承担20000分",
+                "when": "计算并投影本人已发布工资",
+                "then": "净额90000分；单位承担不扣净额且本人投影隐藏该项目，管理投影另按专岗范围",
+                "basis": "payroll.ts/payrollTotals；payroll-access及BP-S-REQ-05",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-S-REQ-01-AC02",
+                "given": "同员工同年月另一组织的非取消批次已有非取消条目",
+                "when": "在新批次另建条目",
+                "then": "当前拒绝重复，即使批次组织不同；跨月/原条目取消后另核条件，不能用转组织制造同月重复工资",
+                "basis": "payroll.ts/paySlip",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-S-REQ-01-AC03",
+                "given": "A编制后删除自己改过的条目，B重新提交，A又持reviewer/admin",
+                "when": "A审批；有本人有效条目的C审批",
+                "then": "两者都拒绝；删除不消贡献历史。独立D需当前批次组织权且不属所有排除集合",
+                "basis": "payroll-review.ts/payrollBatchIndependent",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-S-REQ-01-AC04",
+                "given": "批次approved且所有业务检查通过",
+                "when": "发布后查询工资状态和外部支付记录",
+                "then": "内部仅published工资条，不产生付款成功结论；无供应商配置时外部契约停未配置，P1不要求真实交易",
+                "basis": "payroll.ts/publishPayBatch；用户当前范围BASE-06",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "object": "冻结考勤引用/来源变化",
@@ -43858,7 +44585,39 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "acceptanceCases": [
+              {
+                "id": "BP-S-REQ-02-AC01",
+                "given": "员工E、9月工资，8月31日至9月2日冻结期间或其他员工期间",
+                "when": "尝试关联",
+                "then": "跨计薪月完整边界/人员不一致拒绝；可关联9月1–15日但不得宣称整月考勤完整",
+                "basis": "payroll-attendance.ts/freezePayrollAttendance",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-S-REQ-02-AC02",
+                "given": "工资已submitted/approved，引用期间version1",
+                "when": "期间open/重冻version2后分别复核/发布",
+                "then": "每一关键节点重验当前状态、version与updatedAt，旧引用拒绝；未提供期间时当前允许人工核定，不能伪造自动考勤扣薪",
+                "basis": "payroll-attendance.ts/assertPayrollAttendanceCurrent",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-S-REQ-02-AC03",
+                "given": "工资已published，之后来源期间变化",
+                "when": "读取原工资和差异提示",
+                "then": "保留已发布工资及原快照，差异另提示；是否重核/补差和追缴遵守已批准规则，不能自动改员工实得",
+                "basis": "BP-S-REQ-04；payroll-reports.ts",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "object": "薪资组/预算成本/凭证/福利/佣金",
@@ -43944,7 +44703,39 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "acceptanceCases": [
+              {
+                "id": "BP-S-REQ-04-AC01",
+                "given": "原净额90000分，有已发布earning +5000分和submitted deduction +1000分补差",
+                "when": "读取当前对账",
+                "then": "累计净额95000分，只加已发布补差；原工资90000不变，未发布扣款不提前作用",
+                "basis": "payroll-adjustments.ts/payroll-reports.ts",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-S-REQ-04-AC02",
+                "given": "原净额90000分，拟发布earning -100000分补差",
+                "when": "核现有净额边界",
+                "then": "当前补差模型未检查累计净额非负，可形成-10000分展示；是否允许追缴净欠款必须评审，不能把初始条目净额非负规则误套现状或当已批准政策",
+                "basis": "payroll-adjustments.ts与payroll.ts差异，未执行资金操作",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-S-REQ-04-AC03",
+                "given": "一条工资有submitted工资异议及approved在途补差",
+                "when": "再次新建相同在途记录、将另一工资补差关联答复",
+                "then": "拒绝重复在途和跨工资关联；驳回/取消留痕不计对账，工资答复不得把未发布补差当已生效",
+                "basis": "payroll-adjustments.ts",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "id": "BP-S-REQ-05",
@@ -44122,10 +44913,10 @@
             "object": "薪资包、薪资组和入职前置",
             "fields": "原站薪资包有名称/编码/生效日期/顺序、编辑/使用范围、薪级薪等表和场景联动规则。BC-F37办理入职模板薪资包必填；BC-S18范围树显示薪资组，不能直接当行政组织。当前payroll/model/recruitment静态搜索未见salaryPackage/payPackage/payrollGroup对象引用，工资批次不能代替薪资包。 BC-S19实际薪资组有独立父级、状态及多行政部门映射；多选面板上限30、逐项含下级，编辑还见员工选择。 BC-S20名称/编码均拒绝连字符；编辑范围单选薪资组，使用多选上限50，不能和行政映射上限30共用校验。本次薪级薪等表空且日期/顺序有值可保存。 BC-S21包内项目另有状态/维护方式（三选项）/试用期比例；选基本工资才显示维护方式。",
             "roles": "编辑范围控制薪资包设置维护；使用权限与薪资专岗范围交叉尚未核实，不因HR身份推定可用所有包。",
-            "lifecycle": "配置保存、应用规则、被入职引用、档案事件和实际核算是不同动作，本次尚未保存薪资配置。 本测试PG已经启用且对应R/A/B，和薪资包/工资核算状态分开。 测试薪资包已保存，详情有薪资档案项目和校验规则；保存、配置项目、应用规则、入职引用各自独立。 入职确认后实际提示租户默认包或所选包至少一个项目；本测试只在SP中添加既有定义引用，不更改默认包。",
-            "actions": "查询/新建/停用/应用规则；先补可控测试薪资组，再建立独立测试包。",
+            "lifecycle": "测试PG启用且映射R/A/B；测试SP已保存并配置一个基本工资手动维护项目。EA首次入职确认后被至少一个包内项目检查拒绝，补项后复用同EA/SP再次办理入职成功（BC-F38/39）；未设置默认包、未应用全局规则、未录工资金额。保存配置、入职引用、自动薪资档案及核算/支付分别是不同结果。",
+            "actions": "已有PG/SP/项目和EA均直接复用；不重复建包/员工。浏览器恢复后仅补档案/范围/失效联动及必要当前15模块测试，先核实际结果和通知边界。",
             "acceptance": "候选：按稳定ID、编码及生效日核对配置；编辑与使用分别校验，薪资组与行政组织映射清楚；入职只引用许可有效包，不意外应用其他人规则；停用/改规则对既有档案的版本保留预期需评审。",
-            "gap": "薪资组父子和多行政映射已局部实测，专岗继承/重叠/失效、入职引用/档案事件仍未闭合；用户未授权恢复产品扩展，新增业务策略未批准。 已具备PG和SP两个测试前置，继续EA入职引用，不把它们标成薪酬业务或权限验收通过。 原站一项手动维护配置已保存，金额和公式/比例/统计应用尚未验证。",
+            "gap": "PG/SP/项目及入职前置已有合成执行；专岗权限继承/重叠/失效、自动档案和规则版本、金额/公式仍未闭合。当前代码缺薪资组/包/事件档案实体；现有人工工资不覆盖这些对象，需评审后补齐，未授权恢复产品扩展。",
             "codeRefs": [
               "lib/hris/payroll.ts",
               "lib/hris/model.ts",
@@ -44144,6 +44935,59 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
+            },
+            "acceptanceCases": [
+              {
+                "id": "BP-S-REQ-11-AC01",
+                "given": "已保存有效测试薪资包SP但包内没有项目，其他入职前置满足",
+                "when": "办理合成EA入职",
+                "then": "本轮实际曾拒绝至少一个项目；只在SP加基本工资手动引用再复用EA成功。此为BC-F38/39原站执行事实，不代签本产品验收",
+                "basis": "BC-S19/20/21、BC-F38/39；source执行已在dataValidation记载，本文场景未另复跑",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-S-REQ-11-AC02",
+                "given": "PG父级和多个行政部门含下级映射并存，SP有独立编辑/使用范围",
+                "when": "设计变更范围和重读旧入职/薪资档案",
+                "then": "不能将PG父级直接当行政组织树或权限继承；旧版本来源需稳定引用。实际重叠/失效规则未知，保留待补证而不默认全部可见",
+                "basis": "BC-S19/20；M01/M07/BASE-02",
+                "status": "候选待评审；静态对照，本轮未业务执行",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
+          },
+          {
+            "id": "BP-S-REQ-12",
+            "object": "社保、个税通与激励的模块内部范围（受限规格）",
+            "fields": "M07原登记含社保/个税通/激励；现证据有算薪/计税期间及薪资档案，尚未取得三者完整业务对象、字段/枚举/校验。建议补证目录：参保关系与方案版本、缴费基数/期间、个人与单位承担、申报批次与更正、激励依据/有效期；这些名称为探索提纲，不是已观察原站字段或已批准规则。",
+            "roles": "薪酬编制、专岗复核、员工可见与外部申报/资金权限分别核实；不能由普通HR权限或原站管理员可见推导。",
+            "lifecycle": "档案/核算/复核/发布与对外申报/支付回执分离；源状态枚举和地区/政策版本、追溯调整/异常恢复仍缺证据，不编造税率或强制生效算法。",
+            "actions": "保留模块内常规需求；浏览器恢复后优先配置说明、字段和合成内域流程。外部申报/支付仅BASE-06契约，不要求供应商接通或真实交易。",
+            "acceptance": "就绪前须有适用政策/参数的授权来源、有效期/版本/金额精度、计算边界和合成样例预期；员工/单位承担不混算、同期间重复与更正可追溯、外部结果不明不算完成。未取得规则的数值场景明确受限，不能用人工工资项目数量证明完整社保或个税。",
+            "gap": "当前payroll.ts人工earning/deduction/employer可以承载经核定金额，但无独立社保/个税/激励业务模型与已核公式，需补齐。M33福利/M42佣金仍暂缓，不因“激励”相似名称合并或恢复完整模块。",
+            "codeRefs": [
+              "lib/hris/payroll.ts",
+              "lib/hris/payroll-adjustments.ts",
+              "docs/delivery/Payroll_Source_Gaps.md",
+              "docs/P1_Source_Observations_20260907.md"
+            ],
+            "classification": "原M07登记范围保留；对象和规则探索受限、建议未批准",
+            "accepted": false,
+            "currentApplicability": {
+              "status": "保留",
+              "moduleIds": [
+                "M07"
+              ],
+              "originalModuleIds": [
+                "M07"
+              ],
+              "baseCapabilityIds": [
+                "BASE-06"
+              ],
+              "note": "M07内部常规社保/个税/激励仍承诺；外部真实申报/支付按用户界限，不恢复M33/M42。"
             }
           }
         ],
@@ -45205,7 +46049,7 @@
           "lib/hris/performance-availability.ts"
         ],
         "gap": "组织绩效、关系锁定、强制分布、申诉时间窗及多维流程未就绪",
-        "acceptance": "活动有效且员工在当前范围才能继续；待审调整阻断自评；发布不覆盖原结果；未经审核的更正不能成为正式结果",
+        "acceptance": "活动有效且员工在当前范围才能继续；待审调整阻断自评；发布不覆盖原结果；未经审核的更正不能成为正式结果；详见结构化候选场景。",
         "currentApplicability": {
           "status": "保留",
           "moduleIds": [
@@ -45225,8 +46069,8 @@
         "evidence": [
           "lib/hris/performance-ratings.ts"
         ],
-        "gap": "原站连续区间说明与现实现允许空隙但发布拒绝存在差异；纯手工等级/系数及在途更新未实现",
-        "acceptance": "边界只可匹配一个等级；区间缺口不自动发布；新方案不替换旧活动；总分非百分制按活动范围校验",
+        "gap": "原站连续区间说明与现实现允许空隙但发布拒绝存在差异；纯手工等级/系数及在途更新未实现；BC-P14/15原站未评分可按0或均摊，权限不可见/无法评价脚注要求均摊；当前完整scores数组强制逐项有数，尚无这些状态表达。",
+        "acceptance": "边界只可匹配一个等级；区间缺口不自动发布；新方案不替换旧活动；总分非百分制按活动范围校验；详见结构化候选场景。",
         "currentApplicability": {
           "status": "保留",
           "moduleIds": [
@@ -45269,8 +46113,8 @@
           "lib/hris/recruitment.ts",
           "lib/hris/recruitment-jobs.ts"
         ],
-        "gap": "原站允许职位或人才库入口，当前必须有需求，无法覆盖独立人才库；外部来源/门户未实现",
-        "acceptance": "不同需求的职位版本不能关联；有候选引用的职位改版不能覆盖旧版；需求关闭不能遗留活动候选；邮件权限撤销后不能写邮箱",
+        "gap": "原站允许职位或人才库入口，当前必须有需求，无法覆盖独立人才库；外部来源/门户未实现；BC-R14原站系统级查重条件与当前同需求邮箱去重不同，原站重复关系≠自动合并，R-SPEC-01需同时定义自然人/申请/库关系及去重处理。",
+        "acceptance": "不同需求的职位版本不能关联；有候选引用的职位改版不能覆盖旧版；需求关闭不能遗留活动候选；邮件权限撤销后不能写邮箱；详见结构化候选场景及当前状态/独立性差异。",
         "currentApplicability": {
           "status": "保留",
           "moduleIds": [
@@ -45291,8 +46135,8 @@
           "lib/hris/recruitment.ts",
           "lib/hris/recruitment-evaluations.ts"
         ],
-        "gap": "面试日历/通知、电子签回执、Offer占编与跨法人/再入职接口未就绪",
-        "acceptance": "待进行排期阻断录用；未推荐推进不允许录用；未接受或尚未到入职日拒绝入职；重复入职不重复建员工或计数",
+        "gap": "面试日历/通知、电子签回执、Offer占编与跨法人/再入职接口未就绪；无排期的普通/结构化评价仍有独立路径，不能把指定面试人/结束时间限制泛化为所有评价。 审批排除集合及Offer退回重提后的参与历史需源证据/业务评审；当前只排本次发起人，不宣称已覆盖全部利益冲突。",
+        "acceptance": "待进行排期阻断录用；未推荐推进不允许录用；未接受或尚未到入职日拒绝入职；重复入职不重复建员工或计数；详见结构化候选场景及当前状态/独立性差异。",
         "currentApplicability": {
           "status": "保留",
           "moduleIds": [
@@ -45339,7 +46183,7 @@
           "lib/hris/attendance.ts"
         ],
         "gap": "弹性/轮班/设备/加班调休未实现；分钟规则是本项目候选",
-        "acceptance": "跨班请假当前拒绝；已批准用量与待审批预留分开，超余额不能再申请；重复/反序打卡拒绝；修改后旧版本审批拒绝",
+        "acceptance": "跨班请假当前拒绝；已批准用量与待审批预留分开，超余额不能再申请；重复/反序打卡拒绝；修改后旧版本审批拒绝；详见原分包结构化候选场景。",
         "currentApplicability": {
           "status": "保留",
           "moduleIds": [
@@ -45360,8 +46204,8 @@
           "lib/hris/attendance-periods.ts",
           "lib/hris/attendance-locks.ts"
         ],
-        "gap": "原站冻结/发布/确认/封存为独立列，不能用当前两个状态冒充完整原站月报",
-        "acceptance": "有待审批/未覆盖时不能冻结；冻结阻止来源写；重新开放后工资待发布引用失效；重冻不覆盖旧快照",
+        "gap": "原站冻结/发布/确认/封存为独立列，不能用当前两个状态冒充完整原站月报；期间记录本身不是逐版本不可变归档，审计或外部引用不等于完整历史期间可重放，不作“所有旧期间快照均保留”承诺。；BC-A11已补配置流程次序/发布条件/自动与反向操作依赖，但选项当前值及业务结果未核实，不再仅凭月报列名推断。",
+        "acceptance": "有待审批/未覆盖时不能冻结；冻结阻止来源写；重新开放后工资待发布引用失效；重冻递增同期间记录version并替换该记录内当前快照；既有工资记录保存其引用快照，重新发布前检查是否失效；详见原分包结构化候选场景。",
         "currentApplicability": {
           "status": "保留",
           "moduleIds": [
@@ -45404,7 +46248,7 @@
           "lib/hris/payroll-access.ts"
         ],
         "gap": "仅人工核定值，自动算薪/税社保/支付均未实现，不能以发布工资条冒称发薪",
-        "acceptance": "同员工同月非取消条目重复拒绝；贡献者即使移除所改条目仍不可复核；净额负数拒绝；发布前不能在本人自助看到工资条",
+        "acceptance": "同员工同月非取消条目重复拒绝；贡献者即使移除所改条目仍不可复核；净额负数拒绝；发布前不能在本人自助看到工资条；详见原分包结构化候选场景。",
         "currentApplicability": {
           "status": "保留",
           "moduleIds": [
@@ -45425,7 +46269,7 @@
           "lib/hris/payroll-attendance.ts"
         ],
         "gap": "没有自动由考勤计算工资公式；补差与重核策略需业务评审",
-        "acceptance": "来源开放/版本或时间变化后提交复核发布返回冲突；不能沿用旧复核；已发布后来源变化不静默改工资结果",
+        "acceptance": "来源开放/版本或时间变化后提交复核发布返回冲突；不能沿用旧复核；已发布后来源变化不静默改工资结果；详见原分包结构化候选场景。",
         "currentApplicability": {
           "status": "保留",
           "moduleIds": [
@@ -45618,7 +46462,7 @@
           "lib/hris/http.ts"
         ],
         "gap": "不是原站API说明，不提供外部渠道幂等契约；通用版本冲突不等于所有命令自动幂等",
-        "acceptance": "网络结果未知后同键重试只返回原记录，不重复创建；修改命令仍用同键拒绝；撤权后原键也不能恢复越权记录；其他动作传创建键拒绝",
+        "acceptance": "网络结果未知后同键重试只返回原记录，不重复创建；修改命令仍用同键拒绝；撤权后原键也不能恢复越权记录；其他动作传创建键拒绝；详见原分包结构化候选场景。",
         "currentApplicability": {
           "status": "保留",
           "moduleIds": [
@@ -45828,8 +46672,8 @@
         "capability": "薪资组多行政映射、薪资包和包内项目定义",
         "disposition": "需补齐（需求评审后）",
         "evidence": "lib/hris/payroll.ts / model.ts / recruitment.ts静态核对；lib/app/tests关键词检索仅reports.ts“已接受待入职”报表列相关；BC-S18–21",
-        "gap": "当前核心工资批次及工资条不能替代薪资包/薪资组配置；未找到对应命名模型。复用现有金额处理/权限接口前须明确薪资专岗与行政组织范围差异，不能直接套HR orgScope。",
-        "acceptance": "根据已批准包规格再覆盖父级/多部门含下级、编辑单选/使用多选、字符规则、包内项目与入职消费者；目前无新增产品实现或业务验收",
+        "gap": "PG/SP/项目及入职前置已有合成执行；专岗权限继承/重叠/失效、自动档案和规则版本、金额/公式仍未闭合。当前代码缺薪资组/包/事件档案实体；现有人工工资不覆盖这些对象，需评审后补齐，未授权恢复产品扩展。",
+        "acceptance": "候选：按稳定ID、编码及生效日核对配置；编辑与使用分别校验，薪资组与行政组织映射清楚；入职只引用许可有效包，不意外应用其他人规则；停用/改规则对既有档案的版本保留预期需评审。；详见原分包结构化候选场景。",
         "currentApplicability": {
           "status": "保留",
           "moduleIds": [
@@ -45952,6 +46796,80 @@
           ],
           "baseCapabilityIds": [],
           "note": "M18原盘点项目及工具内部边界，不恢复M02/M15/M38；M19/M48/M32按链另有权限与报告要求。"
+        }
+      },
+      {
+        "requirement": "BP-P-REQ-08",
+        "capability": "组织目标与组织绩效活动（独立于员工考核）",
+        "disposition": "原范围保留/独立模型需补齐；受限规格未就绪",
+        "evidence": [
+          "docs/P1_Source_Observations_20260907.md",
+          "lib/hris/performance.ts",
+          "lib/hris/module-progress.ts"
+        ],
+        "gap": "现有performance.ts核心对象基于employeeId，未读到独立组织计划/结果模型；组织绩效不可用员工样例代验收。需要活动/组织目标/计算/结果评审，属现15模块内部继续范围。",
+        "acceptance": "候选：同一活动参与组织数按稳定组织ID去重，不等员工人数；组织结果不得写入个人绩效作为本人考核，影响员工分布需有明确绑定和版本规则。字段/计算/权限未明确的分支不写默认通过。",
+        "currentApplicability": {
+          "status": "保留",
+          "moduleIds": [
+            "M16"
+          ],
+          "originalModuleIds": [
+            "M16"
+          ],
+          "baseCapabilityIds": [],
+          "note": "原登记组织目标/组织绩效和OKR常规范围保持，不以当前员工绩效实现缩减。"
+        }
+      },
+      {
+        "requirement": "BP-P-REQ-09",
+        "capability": "OKR管理/设置与自助OKR",
+        "disposition": "原范围保留/独立模型需补齐；受限规格未就绪",
+        "evidence": [
+          "lib/hris/module-progress.ts",
+          "app/hris.tsx",
+          "docs/delivery/Scope_Register.json"
+        ],
+        "gap": "本轮在lib/hris/app静态搜索仅见模块导航/remaining中的完整OKR缺口，未确认独立对象和命令；原站页面当前连接不可用。提供受限规格及补证路径，不报需求就绪，也不静默删除OKR。",
+        "acceptance": "待字段及政策明确后，核同一目标/关键结果的稳定ID、历史进展可追溯、共享边界和对齐关系；当前不能把绩效goal的完成分数等同KR进度或自动计入绩效。",
+        "currentApplicability": {
+          "status": "保留",
+          "moduleIds": [
+            "M16",
+            "M48"
+          ],
+          "originalModuleIds": [
+            "M16",
+            "M48"
+          ],
+          "baseCapabilityIds": [],
+          "note": "原登记组织目标/组织绩效和OKR常规范围保持，不以当前员工绩效实现缩减。"
+        }
+      },
+      {
+        "requirement": "BP-S-REQ-12",
+        "capability": "社保、个税通与激励的模块内部范围（受限规格）",
+        "disposition": "人工金额载体可复用；独立模型/规则需补齐，受限未就绪",
+        "evidence": [
+          "lib/hris/payroll.ts",
+          "lib/hris/payroll-adjustments.ts",
+          "docs/delivery/Payroll_Source_Gaps.md",
+          "docs/P1_Source_Observations_20260907.md"
+        ],
+        "gap": "当前payroll.ts人工earning/deduction/employer可以承载经核定金额，但无独立社保/个税/激励业务模型与已核公式，需补齐。M33福利/M42佣金仍暂缓，不因“激励”相似名称合并或恢复完整模块。",
+        "acceptance": "就绪前须有适用政策/参数的授权来源、有效期/版本/金额精度、计算边界和合成样例预期；员工/单位承担不混算、同期间重复与更正可追溯、外部结果不明不算完成。未取得规则的数值场景明确受限，不能用人工工资项目数量证明完整社保或个税。",
+        "currentApplicability": {
+          "status": "保留",
+          "moduleIds": [
+            "M07"
+          ],
+          "originalModuleIds": [
+            "M07"
+          ],
+          "baseCapabilityIds": [
+            "BASE-06"
+          ],
+          "note": "M07内部常规社保/个税/激励仍承诺；外部真实申报/支付按用户界限，不恢复M33/M42。"
         }
       }
     ],
@@ -46095,12 +47013,43 @@
           "tests/p3-api.test.mjs"
         ],
         "decisionRequired": true
+      },
+      {
+        "id": "R-SPEC-02",
+        "topic": "Offer审批历史参与者排除范围",
+        "status": "待源审批补证与业务评审，当前不追加用户即时问题",
+        "basis": "当前需求排全部贡献者；Offer仅排本次offeredBy，退回后换人重提可让旧发起者审批。原站尚无此完整角色链执行证据。",
+        "proposal": "建议保留所有Offer起草/修改/发起贡献者并排除审批；是否也排面试人须单独界定，不将D3首包或薪酬规则自动推广为已批准要求。",
+        "alternatives": "沿当前仅本次发起人隔离；或按经评审的完整利益冲突集合隔离。",
+        "impact": "仅M12录用审批及M19对应待办矩阵；不阻需求/面试/身份规格整理。先补源流程/现有决定，再集中选定。",
+        "evidence": [
+          "lib/hris/recruitment.ts",
+          "app/api/recruitment/route.ts"
+        ],
+        "decisionRequired": false
+      },
+      {
+        "id": "S-SPEC-01",
+        "topic": "补差后负累计净额及追回边界",
+        "status": "待源薪酬补差补证与政策评审，当前不要求真实支付",
+        "basis": "初始工资条净额必须非负；当前带符号补差允许使累计净额为负，没有外部追缴/退款回执。源规则尚未取得。",
+        "proposal": "建议把应追回金额作为独立待处理余额/流程，原工资及补差留存；是否允许负累计展示与后续工资抵扣需依据企业政策评审，不自动扣未来工资或触发付款。",
+        "alternatives": "禁止导致负累计的补差，改独立追回记录；或允许负累计但外部追缴始终单独审批/对账。",
+        "impact": "仅M07补差/对账、M48本人展示与BASE-06契约；不阻人工核定工资/薪资组与档案整理，真实交易不在P1门槛。",
+        "evidence": [
+          "lib/hris/payroll.ts",
+          "lib/hris/payroll-adjustments.ts",
+          "lib/hris/payroll-reports.ts"
+        ],
+        "decisionRequired": false
       }
     ],
     "codeReview": {
       "sourceCommit": "447b02f72a2d2051986aba98e769daa7c2b846a3",
-      "method": "本轮静态阅读源码/schema及相关测试；没有运行业务测试",
-      "businessAccepted": false
+      "method": "原sourceCommit历史记录保留；本轮持续静态阅读当前源码/schema/测试，未运行业务测试；最新文档场景不是当前版本测试通过。",
+      "businessAccepted": false,
+      "latestReviewHead": "b32a391",
+      "latestReviewAt": "2026-09-09T10:06:49.834482+00:00"
     },
     "globalContracts": [
       {
