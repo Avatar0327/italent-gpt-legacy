@@ -1,6 +1,6 @@
 # 已有实现与产品需求对应
 
-生成来源：`Scope_Register.json → p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T04:33:27.264223+00:00。
+生成来源：`Scope_Register.json → p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T04:48:22.026530+00:00。
 
 对应当前源码静态核对；可复用是技术候选，不是当前测试或业务验收通过。历史测试只在原Verification标注的testedSourceCommit及适用范围有效，本轮未复跑。产品源码未修改。
 
@@ -58,6 +58,7 @@
 | BP-C-REQ-05 | 原站发展计划阶段与执行人（M17） | 需补齐；原简单行动不可替代完整阶段流程 | docs/P1_Source_Observations_20260907.md；docs/delivery/Cadre_Learning_Source_Gaps.md | 指导角色、跨阶段审批、模板变化及状态恢复未核实/未独立覆盖 | 先确认模板阶段开启规则、执行人解析、退回与变动恢复，才能定义步骤完成和阶段切换预期；现有简单发展行动不可冒充整套模板流程 |
 | BP-F-REQ-12 | 待入职、办理入职、账号邀请和薪资前置 | 需补齐（需求评审后） | lib/hris/model.ts员工新建无旧状态时直接试用；lib/hris/onboarding.ts为已在职员工的融入计划；BC-F35–38及BC-S18–21原站事实 | 现有员工新增不具备待入职→入职的独立对象/多阶段；onboardingPlan是融入事项，不能替代入职办理/薪资包/账号邀请。可复用稳定ID和范围校验，原站流程是否采用待评审，不自动恢复开发。 | 原站当前链结果与本项目业务验收分开；三入口字段/默认及失败恢复/原单关联需明确，原59项不新增或替代 |
 | BP-S-REQ-11 | 薪资组多行政映射、薪资包和包内项目定义 | 需补齐（需求评审后） | lib/hris/payroll.ts / model.ts / recruitment.ts静态核对；lib/app/tests关键词检索仅reports.ts“已接受待入职”报表列相关；BC-S18–21 | 当前核心工资批次及工资条不能替代薪资包/薪资组配置；未找到对应命名模型。复用现有金额处理/权限接口前须明确薪资专岗与行政组织范围差异，不能直接套HR orgScope。 | 根据已批准包规格再覆盖父级/多部门含下级、编辑单选/使用多选、字符规则、包内项目与入职消费者；目前无新增产品实现或业务验收 |
+| BP-F-REQ-13 | 同一人员的并行兼职任职、起止及状态 | 需补齐（需求评审后） | lib/hris/model.ts员工单org/job＋lib/hris/personnel-transfer.ts调动；BC-F40人员71e030ac→兼职EmploymentRecord cf48b4dc独立ID | 单主职或改主职不能等同并行兼职；起止/独立状态/占编/结束申请与跨包消费者待需求规格 | 原M01验收任务；F01–F04范围不自动扩大，原站实测不代签本项目 |
 
 ## 其余全范围实现候选
 
@@ -127,6 +128,7 @@
 | BP-F/BP-F-REQ-10 | 组织生效日期、行政上级与创建结果核对；[P1B_BP_F_Specification.md](../../docs/delivery/P1B_BP_F_Specification.md) | 原站合成测试直接结果＋本项目静态差异，新增产品规则未签署 | [model.ts](../../lib/hris/model.ts)；[P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md) | 仅有效输入创建结果；重复/必填服务端拒绝、未来生效及停用、数据同步、完整权限未验证；本项目新增字段和时态不在当前功能扩展授权内。 |
 | BP-F/BP-F-REQ-11 | 职位、职务、上下级与两类日期的区别；[P1B_BP_F_Specification.md](../../docs/delivery/P1B_BP_F_Specification.md) | 原站合成执行/字段事实＋现有模型差异，新增产品设计待评审 | [model.ts](../../lib/hris/model.ts)；[P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md) | 同名已有当前租户组织内拒绝/跨组织成功对照，职级及其他状态未证，自动编码规则及发号范围未核实；完整职位-职务-编制-任职关系、上下级/虚线和附件权限未闭合；F-SPEC-01推荐仍未批准。 |
 | BP-F/BP-F-REQ-12 | 人员新增、待入职与默认关联隔离；[P1B_BP_F_Specification.md](../../docs/delivery/P1B_BP_F_Specification.md) | 原站执行校验/控件联动事实，产品扩展与默认建议未批准 | [model.ts](../../lib/hris/model.ts)；[authorization.ts](../../lib/hris/authorization.ts)；[P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md) | 本项目employee简单模型未覆盖原站两入口、试用期明细、雇佣/合同预设和账号邀请；待入职经理已通过选中标签文字悬停清除，原站该路径恢复并已保存；主档新增未完成，两个入口模板/保存约束不能合并。消息、账号、任职消费者仍待证。 入职薪资包与BP-S前置已明确为依赖；本合成链无试用期、签署否可入职；不能扩展为所有合同配置均可或通知后效已测。 薪资包空配置会阻入职，已在新测试包准备手工基本工资；消息消费者及多段任职关联仍未闭合。 |
+| BP-F/BP-F-REQ-13 | 人员主档下的独立兼职/借调/外派任职记录；[P1B_BP_F_Specification.md](../../docs/delivery/P1B_BP_F_Specification.md) | 原站合成执行事实＋候选项目需求；未批准扩展 | [model.ts](../../lib/hris/model.ts)；[personnel-transfer.ts](../../lib/hris/personnel-transfer.ts)；[P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md) | 本项目employee单org/job字段与调动审批模型不可表示多人事任职时间段；需保留可复用人员身份/组织/权限底座，增量模型与消费者方案待P1B评审。完整M01需求不等于F01–F04范围自动扩大。 结束申请无可见审批/通知预览，需衔接M19配置；不把任职中→结束的图示写成强制已证流程。 |
 | BP-C/BP-C-REQ-01 | 干部任期/提名/任用；[P1B_BP_C_Specification.md](../../docs/delivery/P1B_BP_C_Specification.md) | 本项目既有实现静态事实；转为产品要求待评审 | [cadre-terms.ts](../../lib/hris/cadre-terms.ts)；[cadres.ts](../../lib/hris/cadres.ts) | 原站四状态干部身份不可用registered/ended一对一替代；委员会/任期算法/复杂任用类型未就绪；BC-C10原站选拔/述职评价表及评分项是独立配置，当前提名布尔审议与考察证据不覆盖评价表/多评委汇总。 |
 | BP-C/BP-C-REQ-02 | 任职资格标准及认证；[P1B_BP_C_Specification.md](../../docs/delivery/P1B_BP_C_Specification.md) | 本项目既有实现静态事实；转为产品要求待评审 | [qualification.ts](../../lib/hris/qualification.ts) | 认证委员会、类别层级及有效期政策需原站与企业基线；现有整数尺度非原站标准 |
 | BP-C/BP-C-REQ-03 | 360项目/关系/答卷/报告；[P1B_BP_C_Specification.md](../../docs/delivery/P1B_BP_C_Specification.md) | 本项目既有实现静态事实；转为产品要求待评审 | [feedback.ts](../../lib/hris/feedback.ts)；[development.ts](../../lib/hris/development.ts) | 阈值/匿名性是独立策略待确认；提醒、题型、完整活动运营未覆盖；修订答卷的完整历史与是否允许管理员读原答卷须产品评审，不能以均值抑制宣称匿名。；BC-C15原站全局最多90角色、套卷最多15且模板勾选继承，当前固定四类无角色配置/套卷版本，不得一对一映射。 |

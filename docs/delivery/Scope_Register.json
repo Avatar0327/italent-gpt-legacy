@@ -71,7 +71,9 @@
           "BC-F36",
           "BC-F37",
           "BC-F38",
-          "BC-F39"
+          "BC-F39",
+          "BC-F40",
+          "BC-F41"
         ],
         "fieldRefs": [
           "BC-F03-F001",
@@ -606,7 +608,66 @@
           "BC-F39-F012",
           "BC-F39-F013",
           "BC-F39-F014",
-          "BC-F39-F015"
+          "BC-F39-F015",
+          "BC-F40-F001",
+          "BC-F40-F002",
+          "BC-F40-F003",
+          "BC-F40-F004",
+          "BC-F40-F005",
+          "BC-F40-F006",
+          "BC-F40-F007",
+          "BC-F40-F008",
+          "BC-F40-F009",
+          "BC-F40-F010",
+          "BC-F40-F011",
+          "BC-F40-F012",
+          "BC-F40-F013",
+          "BC-F40-F014",
+          "BC-F40-F015",
+          "BC-F40-F016",
+          "BC-F40-F017",
+          "BC-F40-F018",
+          "BC-F40-F019",
+          "BC-F40-F020",
+          "BC-F40-F021",
+          "BC-F40-F022",
+          "BC-F40-F023",
+          "BC-F40-F024",
+          "BC-F40-F025",
+          "BC-F40-F026",
+          "BC-F40-F027",
+          "BC-F40-F028",
+          "BC-F40-F029",
+          "BC-F40-F030",
+          "BC-F40-F031",
+          "BC-F40-F032",
+          "BC-F40-F033",
+          "BC-F40-F034",
+          "BC-F40-F035",
+          "BC-F40-F036",
+          "BC-F40-F037",
+          "BC-F40-F038",
+          "BC-F40-F039",
+          "BC-F40-F040",
+          "BC-F40-F041",
+          "BC-F40-F042",
+          "BC-F41-F001",
+          "BC-F41-F002",
+          "BC-F41-F003",
+          "BC-F41-F004",
+          "BC-F41-F005",
+          "BC-F41-F006",
+          "BC-F41-F007",
+          "BC-F41-F008",
+          "BC-F41-F009",
+          "BC-F41-F010",
+          "BC-F41-F011",
+          "BC-F41-F012",
+          "BC-F41-F013",
+          "BC-F41-F014",
+          "BC-F41-F015",
+          "BC-F41-F016",
+          "BC-F41-F017"
         ],
         "sourceDepth": "P：局部页面/字段/说明；含F：合成组织R/A/B创建及查询、职位JA关联保存；非完整M01",
         "gapRef": "M01",
@@ -665,14 +726,16 @@
             "BC-F36",
             "BC-F37",
             "BC-F38",
-            "BC-F39"
+            "BC-F39",
+            "BC-F40",
+            "BC-F41"
           ],
           "inferences": "业务包映射/模型建议与原站实测分开；已实测的组织、职位及待入职结果仅限各链记录条件，不推断全模块。",
           "restricted": "R/A/B与JA/JB保存、职位同名对照及待入职保存/校验已有F级结果；单账号范围之外的权限、审批、生效与复杂任职仍受限，外部通知/支付/签署不在本次授权内。",
           "unexplored": "兼岗申请/结束的审批与生效；再入职身份连续性/冲突及法人实体历史；源表单服务端校验。组织配置、重聘帮助、法人及待入职空表已部分补证，不能再称仅有导航。 字段仍未知的类型/必填/默认/枚举/校验/可见性逐条保留在同源字段字典。",
           "next": "入职需要薪资包前置，先核实独立合成配置；tab1详情内嵌入职未保存，tab2辅助查薪资包；其余任职/法人/M20与后续包继续。",
           "accepted": false,
-          "currentAssessmentAt": "2026-09-09T04:33:27.264223+00:00"
+          "currentAssessmentAt": "2026-09-09T04:48:22.026530+00:00"
         }
       },
       "businessPackage": "BP-F"
@@ -6081,7 +6144,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-09T04:33:27.264223+00:00",
+    "updatedAt": "2026-09-09T04:48:22.026530+00:00",
     "authority": "本轮用户指令；Scope_Register.json是唯一范围与验收事实源；P1附属条目不增加48组或59项分母",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -33455,6 +33518,704 @@
         "sourceStatement": "复用EA和含1项基本工资手工引用的测试SP。刷新后新开入职仍为待入职；重新关闭默认邀请、保持签署否，补同一example.invalid邮箱，工资及转正前后基本工资空。保存再次提示采集/准备/材料三项未完，确认后表单关闭无错误。刷新待入职视图原姓名筛选无行；转人员信息，当前active在职员工视图选择同EA，实际列表显示EA工号、测试A编码及完整路径、内部员工、测试职位。打开其详情，UI iframe路径/PageHome/Index参数metaObjName=TenantBase.EmployeeInformation且id=71e030ac-c52e-475f-b7bb-c321af71e46c，与入职前同一人员主ID。未完事项提示在本配置/单账号可确认继续；空包项目是另一强制前置，不可混写成同一种门槛。",
         "operations": "P1OP-F-011第二次入职保存及未完提示确认各一次；刷新两视图查询并打开同合成人员详情，未重复创建人员、未设租户默认包、未发起入职申请。",
         "unknown": "本结果只证单账号实际入职链和人员ID连续，不证明独立审批、原站所有状态消费者或复刻业务验收。待入职recordId 0f0ac049-54b1-4c4e-842d-34811f07bb59在在职详情URL未出现，业务类型/后继关联仍待证。历史采集已发送并非此次前后完整对照，实际投递/因果未知；没有手工通知操作，不声称消费者零通知。"
+      },
+      {
+        "evidenceRef": "BC-F40",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-09",
+        "recordedAt": "2026-09-09T04:45:28.314785+00:00",
+        "observationTimePrecision": "本功能链归档时间",
+        "role": "当前单账号",
+        "flowRef": [],
+        "id": "BC-F40",
+        "moduleId": "M01",
+        "path": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+        "level": "F",
+        "recordType": "已通过合成测试数据执行验证（新增兼职）",
+        "layout": "独立新增/编辑表单、分列列表与人员下兼职卡片",
+        "fields": [
+          {
+            "id": "BC-F40-F001",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": "人员选择控件（存储类型未核）",
+            "required": true,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "员工"
+          },
+          {
+            "id": "BC-F40-F002",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": "选EA后带入P1V-20260909-EA",
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "工号"
+          },
+          {
+            "id": "BC-F40-F003",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": true,
+            "default": null,
+            "options": [
+              "兼职",
+              "借调",
+              "外派"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "任职类型"
+          },
+          {
+            "id": "BC-F40-F004",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": "日期控件",
+            "required": true,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "开始日期"
+          },
+          {
+            "id": "BC-F40-F005",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": "日期控件",
+            "required": false,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "结束日期"
+          },
+          {
+            "id": "BC-F40-F006",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": true,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "部门（兼职）"
+          },
+          {
+            "id": "BC-F40-F007",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "是否部门负责人"
+          },
+          {
+            "id": "BC-F40-F008",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "新增下属"
+          },
+          {
+            "id": "BC-F40-F009",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "直线经理"
+          },
+          {
+            "id": "BC-F40-F010",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "职位"
+          },
+          {
+            "id": "BC-F40-F011",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "职务"
+          },
+          {
+            "id": "BC-F40-F012",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "职务序列"
+          },
+          {
+            "id": "BC-F40-F013",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "职级"
+          },
+          {
+            "id": "BC-F40-F014",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "虚线经理"
+          },
+          {
+            "id": "BC-F40-F015",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": "否",
+            "options": [
+              "是",
+              "否"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "兼职是否占人头"
+          },
+          {
+            "id": "BC-F40-F016",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "用工形式"
+          },
+          {
+            "id": "BC-F40-F017",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "人员类别"
+          },
+          {
+            "id": "BC-F40-F018",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "雇佣关系"
+          },
+          {
+            "id": "BC-F40-F019",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "部门（主职只读）"
+          },
+          {
+            "id": "BC-F40-F020",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "直线经理（主职）"
+          },
+          {
+            "id": "BC-F40-F021",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "业务组织"
+          },
+          {
+            "id": "BC-F40-F022",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "利润中心"
+          },
+          {
+            "id": "BC-F40-F023",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "预留组织4"
+          },
+          {
+            "id": "BC-F40-F024",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "预留组织5"
+          },
+          {
+            "id": "BC-F40-F025",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "姓名"
+          },
+          {
+            "id": "BC-F40-F026",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "性别"
+          },
+          {
+            "id": "BC-F40-F027",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "出生日期"
+          },
+          {
+            "id": "BC-F40-F028",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "最高学历"
+          },
+          {
+            "id": "BC-F40-F029",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "薪资组"
+          },
+          {
+            "id": "BC-F40-F030",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "发薪机构"
+          },
+          {
+            "id": "BC-F40-F031",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "成本中心"
+          },
+          {
+            "id": "BC-F40-F032",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "缴税类型"
+          },
+          {
+            "id": "BC-F40-F033",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "法人公司"
+          },
+          {
+            "id": "BC-F40-F034",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "银行"
+          },
+          {
+            "id": "BC-F40-F035",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "银行账号"
+          },
+          {
+            "id": "BC-F40-F036",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "开户行支行"
+          },
+          {
+            "id": "BC-F40-F037",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "币种"
+          },
+          {
+            "id": "BC-F40-F038",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "兼职基本工资"
+          },
+          {
+            "id": "BC-F40-F039",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "任职状态"
+          },
+          {
+            "id": "BC-F40-F040",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "审批状态"
+          },
+          {
+            "id": "BC-F40-F041",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "兼职是否占编"
+          },
+          {
+            "id": "BC-F40-F042",
+            "context": "组织员工→任职管理→兼职管理→新增兼职→EA兼职记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F40",
+            "label": "兼职占编比例"
+          }
+        ],
+        "visibleStates": "列表任职中 / 生效；卡片任职中；开始2026-09-09至今；编辑、结束兼职申请；卡片编辑/删除任职",
+        "sourceStatement": "复用在职EA 71e030ac，选择任职类型兼职、2026-09-09开始、结束空、测试B部门、自动测试职位、不占人头默认否。部门选择自动带入非测试经理，保存前清除并核全部经理token=0；薪资组/法人/银行/金额空。保存后表单关闭，实际列表同EA显示测试B、经理--、任职中、生效、测试职位；主职人员详情标题仍测试A。兼职记录卡片为兼职-测试B·测试职位，任职中，生效2026年9月9日，失效--，兼职是否占编否，占编比例--，直虚线经理--。编辑路由明示Emp/updateEmploymentRecord、id/req_id=cf48b4dc-6d9a-44c8-8d9c-a7fb21271e26，父对象EmployeeInformation且parentDataId=71e030ac-c52e-475f-b7bb-c321af71e46c；仅读取UI路由，未直接调用接口。",
+        "operations": "P1OP-F-012仅一次实际保存；模糊保存定位因2元素未执行，后改实际内层#formSubmitButton。之后打开自己详情/兼职卡片/编辑取路由并取消，无额外保存。人员搜索应填实时查询，本路径Enter会关闭候选不代表无匹配。",
+        "unknown": "新增当前单账号直接保存后生效，不证明必须/无需所有审批。结束兼职申请尚未执行，删除任职未点击。开始/结束重叠、未来生效、兼职权限继承与占人头/占编是否统一计量未证。主职标题A保持，所有薪资/绩效/假勤消费者未全面复核。EA工作履历显示两项相同机构/日期标题，未取各ID或关联，不判为重复/失败残留/兼职履历，不删除。"
+      },
+      {
+        "evidenceRef": "BC-F41",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-09",
+        "recordedAt": "2026-09-09T04:48:22.026530+00:00",
+        "observationTimePrecision": "本功能链归档时间",
+        "role": "当前单账号",
+        "flowRef": [],
+        "id": "BC-F41",
+        "moduleId": "M01",
+        "path": "组织员工→兼职管理→EA/测试B→结束兼职申请",
+        "level": "P",
+        "recordType": "已直接观察（合成已保存任职的结束申请表单）",
+        "layout": "只读原值＋结束日期/备注＋提交，无草稿保存按钮",
+        "fields": [
+          {
+            "id": "BC-F41-F001",
+            "context": "组织员工→兼职管理→EA/测试B→结束兼职申请",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F41",
+            "label": "人员"
+          },
+          {
+            "id": "BC-F41-F002",
+            "context": "组织员工→兼职管理→EA/测试B→结束兼职申请",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F41",
+            "label": "工号"
+          },
+          {
+            "id": "BC-F41-F003",
+            "context": "组织员工→兼职管理→EA/测试B→结束兼职申请",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F41",
+            "label": "任职类型"
+          },
+          {
+            "id": "BC-F41-F004",
+            "context": "组织员工→兼职管理→EA/测试B→结束兼职申请",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F41",
+            "label": "部门（兼职）"
+          },
+          {
+            "id": "BC-F41-F005",
+            "context": "组织员工→兼职管理→EA/测试B→结束兼职申请",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F41",
+            "label": "开始日期"
+          },
+          {
+            "id": "BC-F41-F006",
+            "context": "组织员工→兼职管理→EA/测试B→结束兼职申请",
+            "storageType": null,
+            "required": null,
+            "default": "本记录新增结束留空；结束申请显示9999-12-31",
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F41",
+            "label": "原定结束日期"
+          },
+          {
+            "id": "BC-F41-F007",
+            "context": "组织员工→兼职管理→EA/测试B→结束兼职申请",
+            "storageType": "日期控件",
+            "required": true,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F41",
+            "label": "结束日期"
+          },
+          {
+            "id": "BC-F41-F008",
+            "context": "组织员工→兼职管理→EA/测试B→结束兼职申请",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": "界面0/32766",
+            "evidenceRef": "BC-F41",
+            "label": "结束备注"
+          },
+          {
+            "id": "BC-F41-F009",
+            "context": "组织员工→兼职管理→EA/测试B→结束兼职申请",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F41",
+            "label": "直线经理（兼职）"
+          },
+          {
+            "id": "BC-F41-F010",
+            "context": "组织员工→兼职管理→EA/测试B→结束兼职申请",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F41",
+            "label": "职务"
+          },
+          {
+            "id": "BC-F41-F011",
+            "context": "组织员工→兼职管理→EA/测试B→结束兼职申请",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F41",
+            "label": "职级"
+          },
+          {
+            "id": "BC-F41-F012",
+            "context": "组织员工→兼职管理→EA/测试B→结束兼职申请",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F41",
+            "label": "部门（主职）"
+          },
+          {
+            "id": "BC-F41-F013",
+            "context": "组织员工→兼职管理→EA/测试B→结束兼职申请",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F41",
+            "label": "直线经理（主职）"
+          },
+          {
+            "id": "BC-F41-F014",
+            "context": "组织员工→兼职管理→EA/测试B→结束兼职申请",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F41",
+            "label": "姓名"
+          },
+          {
+            "id": "BC-F41-F015",
+            "context": "组织员工→兼职管理→EA/测试B→结束兼职申请",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F41",
+            "label": "性别"
+          },
+          {
+            "id": "BC-F41-F016",
+            "context": "组织员工→兼职管理→EA/测试B→结束兼职申请",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F41",
+            "label": "出生日期"
+          },
+          {
+            "id": "BC-F41-F017",
+            "context": "组织员工→兼职管理→EA/测试B→结束兼职申请",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F41",
+            "label": "最高学历"
+          }
+        ],
+        "visibleStates": "原定结束9999-12-31；表单提交/取消，无已观察审批人/通知预览",
+        "sourceStatement": "当前合成兼职cf48b4dc的结束申请表单带入EA、兼职类型、测试B、开始2026-09-09；新增时留空的结束日期在此显示原定结束9999-12-31，不等同用户输入该日期。主职A与兼职B分别显示，双方经理空。结束日期UI必填，备注上限计数32766，表单仅提交/取消。未看见审批人或通知预览。",
+        "operations": "仅从已创建合成记录点结束兼职申请，未填写/提交；取消关闭。后续结合审批配置验证具体路由和消息边界后再决定该链可执行步骤，不逐条向用户重复索权。",
+        "unknown": "结束是否审批、谁审批、提交消息渠道及停止日包含性未证。当前不把无预览推为没有审批或无通知，也不因一个表单将整包标为阻塞；列入M19跨包配置补证。9999哨兵显示不证明数据库存储或所有时间模块共用哨兵。"
       }
     ],
     "humanAcceptancePrerequisite": false,
@@ -34114,6 +34875,26 @@
           "after": "复用EA和含1项基本工资手工引用的测试SP。刷新后新开入职仍为待入职；重新关闭默认邀请、保持签署否，补同一example.invalid邮箱，工资及转正前后基本工资空。保存再次提示采集/准备/材料三项未完，确认后表单关闭无错误。刷新待入职视图原姓名筛选无行；转人员信息，当前active在职员工视图选择同EA，实际列表显示EA工号、测试A编码及完整路径、内部员工、测试职位。打开其详情，UI iframe路径/PageHome/Index参数metaObjName=TenantBase.EmployeeInformation且id=71e030ac-c52e-475f-b7bb-c321af71e46c，与入职前同一人员主ID。未完事项提示在本配置/单账号可确认继续；空包项目是另一强制前置，不可混写成同一种门槛。",
           "evidence": "BC-F39",
           "next": "复用在职EA及B/JB探索兼职；仍保留独立审批/消息与多段任职关联限制，不重新入职/创建EA。"
+        },
+        {
+          "id": "P1OP-F-012",
+          "at": "2026-09-09T04:39:31.418300+00:00",
+          "objectRefs": "兼职EmploymentRecord cf48b4dc-6d9a-44c8-8d9c-a7fb21271e26→父人员EA 71e030ac；部门B aa1fdd68；测试职位UI，职位UUID未在本详情显示",
+          "before": "兼职当前列表无P1V标记行；新表单选择EA、任职类型兼职、开始2026-09-09、结束空、部门B、默认不占人头。清除自动真实直线经理并复核全部经理token=0；薪资组/法人/银行/金额空。主职只读部门A",
+          "action": "实际点击内层#formSubmitButton保存一次（先前模糊保存定位遇双元素未执行）",
+          "after": "复用在职EA 71e030ac，选择任职类型兼职、2026-09-09开始、结束空、测试B部门、自动测试职位、不占人头默认否。部门选择自动带入非测试经理，保存前清除并核全部经理token=0；薪资组/法人/银行/金额空。保存后表单关闭，实际列表同EA显示测试B、经理--、任职中、生效、测试职位；主职人员详情标题仍测试A。兼职记录卡片为兼职-测试B·测试职位，任职中，生效2026年9月9日，失效--，兼职是否占编否，占编比例--，直虚线经理--。编辑路由明示Emp/updateEmploymentRecord、id/req_id=cf48b4dc-6d9a-44c8-8d9c-a7fb21271e26，父对象EmployeeInformation且parentDataId=71e030ac-c52e-475f-b7bb-c321af71e46c；仅读取UI路由，未直接调用接口。",
+          "evidence": "BC-F40",
+          "next": "继续仅本合成任职结束申请的表单/审批/通知边界；主职及所有历史保留"
+        },
+        {
+          "id": "P1OP-F-013",
+          "at": "2026-09-09T04:48:22.065178+00:00",
+          "objectRefs": "兼职cf48b4dc→EA 71e030ac",
+          "before": "兼职任职中/生效、结束空",
+          "action": "打开结束申请检查字段和审批/通知预览；未填写/提交，取消",
+          "after": "原定结束显示9999-12-31，主兼职分别A/B，未见审批/通知预览；合成兼职继续保留生效",
+          "evidence": "BC-F41",
+          "next": "M19审批配置补证消息渠道/路由后衔接；继续法人/再入职/M20，局部未执行不阻整包"
         }
       ],
       "records": [
@@ -34216,6 +34997,16 @@
           "status": "仅确认UI链接ID关系，尚不能称审批单或任职记录、也不代表已入职",
           "evidence": "BC-F36–38",
           "retention": "与EA测试人员一起保留，未删除/覆盖关联记录或历史"
+        },
+        {
+          "objectId": "cf48b4dc-6d9a-44c8-8d9c-a7fb21271e26",
+          "moduleId": "M01",
+          "objectType": "兼职任职记录（UI updateEmploymentRecord）",
+          "marker": "P1V-20260909-EA在测试B的兼职",
+          "relations": "parentDataId/PObjectDataID均人员71e030ac；部门B aa1fdd68，测试职位；主职A保持",
+          "status": "已保存任职中/生效，开始2026-09-09，结束空，直虚线经理--，不占人头/卡片占编否",
+          "evidence": "BC-F40",
+          "retention": "保留为结束/历史/消费者验证前置，不删除任职；关联金额/银行/法人未填"
         }
       ],
       "residuals": [
@@ -34228,7 +35019,8 @@
         "测试薪资组P1V-20260909-PG已保存启用，对应B(含下级)、A(含下级)、R本级；全部是本轮测试组织；系统UUID未显示；保留为测试前置，不曾应用薪资规则或发放。",
         "测试薪资包 d88fa0ba-5bf6-4034-a7e6-a6c34abd2556（P1V20260909SP）已保存，范围仅测试PG，未设置默认/应用规则；供EA测试入职使用，保留",
         "测试SP内基本工资引用已保存启用/手动维护；未填任何真实工资数据、未应用规则；包内引用UUID未显示，按SP ID＋基本工资定位。",
-        "EA人员ID 71e030ac另关联recordId 0f0ac049-54b1-4c4e-842d-34811f07bb59；当前关联类型待核实，两者不混作一个对象。"
+        "EA人员ID 71e030ac另关联recordId 0f0ac049-54b1-4c4e-842d-34811f07bb59；当前关联类型待核实，两者不混作一个对象。",
+        "兼职任职cf48b4dc-6d9a-44c8-8d9c-a7fb21271e26已保存生效，父EA/部门B，结束空；后续结束流程只操作本测试记录，保留历史。"
       ],
       "markerCompatibility": "本轮主标记P1V-20260909；字段拒绝连字符时使用同日无分隔形式P1V20260909，并在records/operations记录完整名称编码映射，查询使用P1V前缀同时覆盖两式。不得为兼容标记改原站校验。"
     }
@@ -34344,7 +35136,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-09T04:33:27.264223+00:00",
+    "updatedAt": "2026-09-09T04:48:22.026530+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -34513,6 +35305,23 @@
               "docs/P1_Source_Observations_20260907.md"
             ],
             "classification": "原站执行校验/控件联动事实，产品扩展与默认建议未批准",
+            "accepted": false
+          },
+          {
+            "id": "BP-F-REQ-13",
+            "object": "人员主档下的独立兼职/借调/外派任职记录",
+            "fields": "原站任职类型兼职/借调/外派，员工/类型/开始/部门UI必填、结束选填；主职部门与兼职部门分列，职位/职务/职级不同字段。占人头与卡片占编原标签均保留，计量等价待证。",
+            "roles": "当前单账号可新增和编辑合成任职；自动经理须核最终值；主职/兼职各自权限范围及独立审批未知。E2不新增人，管理员生效不能代替多角色验证。",
+            "lifecycle": "BC-F40新兼职保存→任职中/生效，独立EmploymentRecord ID指向原EmployeeInformation ID；主职A保持。列表有结束兼职申请，卡片有删除任职，业务终止与历史删除不合并。 BC-F41结束申请将空结束回显9999-12-31，提交与删除任职不同；结束日期包含性及审批/消息路由待证。",
+            "actions": "创建、编辑、任职卡片查询、结束申请（待观察）；人员切换/部门关联的工号及经理联动需验最终绑定。",
+            "acceptance": "候选：给定同一人员EA主职A和测试B，建立B兼职后记录具有独立ID、父人员ID保持且主职A不被覆写；状态/审批分别可回读。当前原站路径已实测，但本项目验收未执行。结束申请/区间重叠/未来生效/占编及消费者规则补证后再明确拒绝或生效预期，不编默认。",
+            "gap": "本项目employee单org/job字段与调动审批模型不可表示多人事任职时间段；需保留可复用人员身份/组织/权限底座，增量模型与消费者方案待P1B评审。完整M01需求不等于F01–F04范围自动扩大。 结束申请无可见审批/通知预览，需衔接M19配置；不把任职中→结束的图示写成强制已证流程。",
+            "codeRefs": [
+              "lib/hris/model.ts",
+              "lib/hris/personnel-transfer.ts",
+              "docs/P1_Source_Observations_20260907.md"
+            ],
+            "classification": "原站合成执行事实＋候选项目需求；未批准扩展",
             "accepted": false
           }
         ],
@@ -36463,6 +37272,18 @@
         "evidence": "lib/hris/payroll.ts / model.ts / recruitment.ts静态核对；lib/app/tests关键词检索仅reports.ts“已接受待入职”报表列相关；BC-S18–21",
         "gap": "当前核心工资批次及工资条不能替代薪资包/薪资组配置；未找到对应命名模型。复用现有金额处理/权限接口前须明确薪资专岗与行政组织范围差异，不能直接套HR orgScope。",
         "acceptance": "根据已批准包规格再覆盖父级/多部门含下级、编辑单选/使用多选、字符规则、包内项目与入职消费者；目前无新增产品实现或业务验收"
+      },
+      {
+        "requirement": "BP-F-REQ-13",
+        "package": "BP-F",
+        "disposition": "需补齐（需求评审后）",
+        "implementation": "lib/hris/model.ts员工单org/job＋lib/hris/personnel-transfer.ts调动",
+        "evidence": "lib/hris/model.ts员工单org/job＋lib/hris/personnel-transfer.ts调动；BC-F40人员71e030ac→兼职EmploymentRecord cf48b4dc独立ID",
+        "gap": "单主职或改主职不能等同并行兼职；起止/独立状态/占编/结束申请与跨包消费者待需求规格",
+        "next": "复用身份和组织底座，先补原站结束与权限证据；本轮不实现/部署",
+        "businessAccepted": false,
+        "capability": "同一人员的并行兼职任职、起止及状态",
+        "acceptance": "原M01验收任务；F01–F04范围不自动扩大，原站实测不代签本项目"
       }
     ],
     "reviewIssues": [
