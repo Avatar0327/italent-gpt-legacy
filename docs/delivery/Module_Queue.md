@@ -18,7 +18,7 @@ R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可
 | M01 组织员工 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M19 审批中心 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M48 员工自助 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
-| M32 报表 | R1 / primary | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M32 报表 | R1 / primary | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M37 人才标准 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M06 任职资格 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M26 360度评估 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
@@ -38,9 +38,9 @@ R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可
 
 # 当前唯一执行队列：P1A/P1B
 
-源：Scope_Register.json.roadmap及Module_Queue.json。首要工作包：M32唯一主模块；M48已P1受限关闭。主要开发包：无（暂停扩展）。
+源：Scope_Register.json.roadmap及Module_Queue.json。首要工作包：M32唯一主模块已完成待评审；R1六基础适用核对完成，集中决定后再判转序。主要开发包：无（暂停扩展）。
 
-1. 当前M32唯一主模块：完成报表六项原范围、指标/数据粒度、权限/快照/导出/订阅的需求与评审材料。
+1. 集中处理M32六项推荐与LIMIT、R1基础及恢复目标；按批准重新判定M32，未批不转序，不重复三个已关闭模块。
 2. 不重问已批准M01/M19/M48规则；后续残余验证归P2/P3/P4。
 3. 主模块全部剩余必要工作外部阻塞时才启用一个备用；不按备用数扩并行探索。
 4. R1四模块和适用六基础及版本评审满足后才转P2/P3，历史技术验收不能继承。

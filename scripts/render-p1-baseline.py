@@ -429,6 +429,8 @@ for m in active_mods:
  t+='## 完整收口清单\n\n'+table(['原范围/问题','规格/证据','剩余硬条件','关闭方法'],[(x['scopeItem']+' / '+x['id'],x['requirementIds']+x['evidenceRefs'],x['gap'],x['closureMethod']) for x in p1['closureChecklist']])+'\n'
  if p1.get('consumerContracts'):
   t+='## 跨模块消费契约（批准见本包记录，不代批生产者规则）\n\n'+table(['原范围','生产者','明确消费字段','边界','证据'],[(x['scopeItem'],x['producer'],x['fields'],x['boundary'],x['evidence']) for x in p1['consumerContracts']])+'\n'
+ if p1.get('datasetContracts'):
+  t+='## 当前实现的数据集口径（静态证据，候选基线）\n\n下列事实不等于原站规则或本轮执行验证。指标采用及时间策略须按本包推荐评审，尚无实现的数据集仍按生产者契约保留。\n\n'+table(['数据集/原范围','生产者','一行代表什么','当前计算语义','时间/采用边界','代码来源'],[(x['datasetId']+' / '+x['scopeItem'],x['producerModuleIds'],x['rowGrain'],x['currentSemantics'],x['timeMode']+'；'+x['requirementDecision'],x['sourceHead']+'；'+'；'.join(link_source(r) for r in x['codeRefs'])) for x in p1['datasetContracts']])+'\n'
  t+='## 集中决定与版本依据\n\n'+('批准记录：'+rp['approvalRecord']+'；批准时间：'+rp['approvedAt']+'。下方推荐原文含待批措辞时只属审阅前状态，现已按该批准范围生效；原站未知不改写。' if rp.get('approvalRecord') else '下列推荐未批准，不外推其他模块已有签署。')+'\n\n'
  for iid in rp['decisionIds']:
   x=issue_by_id[iid];t+='### '+iid+' '+x['topic']+'\n\n'+table(['维度','内容'],[('现状/证据',x['basis']),('已批准推荐（所审原文）' if x.get('approvalRecord') else '推荐，未批准',x['proposal']),('备选',x['alternatives']),('影响',x['impact'])])+'\n'
@@ -440,3 +442,23 @@ for m in active_mods:
  (D/('P1_'+mid+'_Review_Package.md')).write_text(t)
  for name in ['P1B_Readiness.md','P1_Review.md','P1_Module_Closure.md']:
   f=D/name;f.write_text(f.read_text()+'\n'+mid+'当前材料：['+rp['documentStatus']+'](P1_'+mid+'_Review_Package.md)。批准、源取证及后续执行各自独立。\n')
+
+# Foundation applicability is a Scope view; it is not a parallel approval ledger.
+for rg in s['roadmap']['rangeGates']:
+ if not rg.get('foundationReviewPackage'):continue
+ rp=rg['foundationReviewPackage'];rid=rg['id']
+ t=intro(rid+'适用基础能力集中评审')
+ t+='状态：**'+rp['status']+'**；准备时间 '+rp['preparedAt']+'；静态基准 `'+rp['basedOnHead']+'`。\n\n'+rp['scope']+'\n\n'
+ t+='各模块批准仅按原记录的范围采用。下表r1Assessment不改写基础原始验收，也不自动令foundationReadiness为真。\n\n'
+ for cap in ds['baseCapabilities']:
+  a=cap.get('r1Assessment')
+  if not a or rid!='R1':continue
+  t+='## '+cap['id']+' '+cap['name']+'\n\n'+table(['维度','内容'],[('消费者/原映射',a['consumers']+' / '+','.join(cap['originalMappings'])),('已批准范围',a['approvedScope']),('批准来源',a['approvedRuleRefs']),('具体推荐，未批准',a['proposal']),('剩余条件',a['pending']),('代码/历史证据',cap['codeRefs'])])+'\n'
+  t+=table(['场景','给定/动作','预期','状态'],[(x['id'],x['given']+'；'+x['when'],x['then'],x['status']+'；本轮未执行') for x in cap['acceptanceCases'] if x['id'] in a['acceptanceCaseRefs']])+'\n'
+ t+='## 集中决定\n\n'
+ for iid in rp['decisionIds']:
+  x=issue_by_id[iid];t+='### '+iid+' '+x['topic']+'\n\n'+table(['维度','内容'],[('依据',x['basis']),('推荐，未批准',x['proposal']),('备选',x['alternatives']),('影响',x['impact'])])+'\n'
+ t+='## 转序条件\n\n'+rp['next']+' R1仍须四模块条件、六基础适用及版本评审全部有明确批准。当前M01/M19/M48受限关闭，M32未批准；P2/P3/P4及生产验收状态不变。\n'
+ filename='P1_'+rid+'_Foundation_Review.md';(D/filename).write_text(t)
+ for name in ['P1_Review.md','P1B_Readiness.md','P1_M32_Review_Package.md']:
+  f=D/name;f.write_text(f.read_text()+'\n['+rid+'六基础适用及集中决定]('+filename+')：'+rp['status']+'，不增加模块分母。\n')

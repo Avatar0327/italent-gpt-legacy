@@ -1,6 +1,6 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-09T16:54:17.104368+00:00",
+  "generatedFromUpdatedAt": "2026-09-09T17:01:22.299836+00:00",
   "primaryModuleId": "M32",
   "backupModuleId": null,
   "activeExecutionModuleId": "M32",
@@ -266,18 +266,18 @@
       "rangeId": "R1",
       "queueState": "primary",
       "p1AConclusion": {
-        "status": "进行中",
+        "status": "已完成待评审",
         "approvalRecord": null,
         "evidenceRefs": [
           "BC-P1C-M32"
         ],
-        "limits": "沿用已有局部证据，未代签"
+        "limits": "六项证据/深度/限制与静态事实已整理，源执行受限未获M32-LIMIT-01批准，未通过"
       },
       "p1BConclusion": {
-        "status": "进行中",
+        "status": "已完成待评审",
         "approvalRecord": null,
         "evidenceRefs": [],
-        "limits": "需求尚未批准"
+        "limits": "六组明确推荐、数据集/权限/时间/设计器/订阅/异常/验收与实现差异可评审；尚未批准"
       },
       "conditions": {
         "applicableScopeDetermined": {
@@ -285,16 +285,16 @@
           "basis": "用户已确认15完整登记范围及本轮R顺序"
         },
         "implementationRulesDecided": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": false,
+          "basis": "M32六项推荐/验收与M32-LIMIT-01尚未批准；明确材料已准备"
         },
         "acceptanceExecutable": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": false,
+          "basis": "M32六项推荐/验收与M32-LIMIT-01尚未批准；明确材料已准备"
         },
         "dependenciesAndExceptionsResolved": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": false,
+          "basis": "M32六项推荐/验收与M32-LIMIT-01尚未批准；明确材料已准备"
         }
       },
       "transitionReview": {
@@ -1041,27 +1041,27 @@
       "foundationReadiness": {
         "BASE-01": {
           "value": null,
-          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+          "basis": "R1适用需求/验收见本能力r1Assessment；已批准模块规则仅按原范围采用，R1-BASELINE-01及恢复目标待评审，不继承全基础签署。"
         },
         "BASE-02": {
           "value": null,
-          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+          "basis": "R1适用需求/验收见本能力r1Assessment；已批准模块规则仅按原范围采用，R1-BASELINE-01及恢复目标待评审，不继承全基础签署。"
         },
         "BASE-03": {
           "value": null,
-          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+          "basis": "R1适用需求/验收见本能力r1Assessment；已批准模块规则仅按原范围采用，R1-BASELINE-01及恢复目标待评审，不继承全基础签署。"
         },
         "BASE-04": {
           "value": null,
-          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+          "basis": "R1适用需求/验收见本能力r1Assessment；已批准模块规则仅按原范围采用，R1-BASELINE-01及恢复目标待评审，不继承全基础签署。"
         },
         "BASE-05": {
           "value": null,
-          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+          "basis": "R1适用需求/验收见本能力r1Assessment；已批准模块规则仅按原范围采用，R1-BASELINE-01及恢复目标待评审，不继承全基础签署。"
         },
         "BASE-06": {
           "value": null,
-          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+          "basis": "R1适用需求/验收见本能力r1Assessment；已批准模块规则仅按原范围采用，R1-BASELINE-01及恢复目标待评审，不继承全基础签署。"
         }
       },
       "review": {
@@ -1069,6 +1069,18 @@
         "record": null,
         "approvedAt": null,
         "scope": null
+      },
+      "foundationReviewPackage": {
+        "status": "已完成待评审",
+        "preparedAt": "2026-09-09T17:01:22.299836+00:00",
+        "basedOnHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+        "decisionIds": [
+          "R1-BASELINE-01",
+          "R1-RECOVERY-01"
+        ],
+        "approvalRecord": null,
+        "scope": "R1四模块所需六基础能力，其他R版本另核适用差异；不新增模块分母，不代批M32或R1转序。",
+        "next": "所有者集中审阅M32-SPEC-01至06、M32-LIMIT-01及R1两项基础建议；全部实际条件满足后再按版本评审决定转序。"
       },
       "moduleIds": [
         "M01",

@@ -7239,9 +7239,9 @@
           "inferences": "原站已观察事实仅限所列证据；数学示例推导或候选设计另标，未实际执行业务；业务包映射按已观察职责进行规划，不代表需求验收。",
           "restricted": "截至最近证据，完整写入结果未验证；当前已获合成测试授权，按具体场景补证；页面特有限制见所列证据unknown，未探索不标无权限",
           "unexplored": "报表设计器、指标口径、订阅快照/实时权限、转交/屏蔽/失败重试；订阅列与操作已读。 字段仍未知的类型/必填/默认/枚举/校验/可见性逐条保留在同源字段字典。",
-          "next": "已有数据集/订阅/快照/权限结构；指标分母、时点及撤权后订阅行为、跨域投影尚缺，不发送订阅。 按当前15模块及基础能力范围继续合成验证/需求衔接；M19/M48/M32随链同步，局部阻塞不停止其他链。",
+          "next": "先完成R1适用六基础的缺口核对，再集中提交M32六项推荐及受限边界；不重问三个已关闭模块。",
           "accepted": false,
-          "currentAssessmentAt": "2026-09-08T18:06:01.449194+00:00"
+          "currentAssessmentAt": "2026-09-09T16:58:19.726091+00:00"
         },
         "currentDeliveryAssessment": {
           "scopeChange": "SCOPE-20260909-CORE15",
@@ -7249,10 +7249,18 @@
           "p1B": "not_ready",
           "review": "not_signed",
           "approvedRestricted": false,
-          "assessmentAt": "2026-09-09T10:19:00.264568+00:00",
-          "basis": "已补各数据集行粒度/分母/null/替代版本/工资来源与权限、仅三类日期过滤、导出及订阅恢复候选。源设计器/订阅权限与执行、组织历史口径和当前15领域结果报表仍缺，未就绪；没有发送或导出个人明细。",
-          "blockingIssueIds": [],
-          "next": "浏览器恢复后随当前业务链补源路由/角色/结果；当前先完成15模块内部范围映射与全局一致性集中评审稿。",
+          "assessmentAt": "2026-09-09T16:58:19.726091+00:00",
+          "basis": "M32六项原范围已形成完整可决定材料，六组推荐及受限结论尚待批准；不自动继承M01/M19/M48。",
+          "blockingIssueIds": [
+            "M32-SPEC-01",
+            "M32-SPEC-02",
+            "M32-SPEC-03",
+            "M32-SPEC-04",
+            "M32-SPEC-05",
+            "M32-SPEC-06",
+            "M32-LIMIT-01"
+          ],
+          "next": "先完成R1适用六基础的缺口核对，再集中提交M32六项推荐及受限边界；不重问三个已关闭模块。",
           "acceptanceRefs": [
             {
               "taskId": "I-INBOX-SOURCES",
@@ -7278,8 +7286,8 @@
             ],
             "coverageDepth": "跨模块业务线索；源报表待探索",
             "remaining": "M12字段不代M32报表，需求/申请/自然人/入库各粒度；当前代码招聘进度候选已细化，源设计器/共享待证",
-            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
-            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "next": "同源M32评审包按明确规则及受限范围一次决定；不把未联调报表算业务通过。",
+            "assessedAt": "2026-09-09T16:58:19.726091+00:00",
             "complete": false,
             "requirementAccepted": false
           },
@@ -7295,8 +7303,8 @@
             ],
             "coverageDepth": "跨模块业务线索；源报表待探索",
             "remaining": "主身份/多任职/在职时点/历史组织分母缺源报表依据；当前名册包括可见离职不等在职人数",
-            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
-            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "next": "同源M32评审包按明确规则及受限范围一次决定；不把未联调报表算业务通过。",
+            "assessedAt": "2026-09-09T16:58:19.726091+00:00",
             "complete": false,
             "requirementAccepted": false
           },
@@ -7313,8 +7321,8 @@
             ],
             "coverageDepth": "跨模块业务线索；源报表待探索",
             "remaining": "日/月/期间及历史组织权限需独立核；现单班分钟报表不代表原月报发布/确认/封存",
-            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
-            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "next": "同源M32评审包按明确规则及受限范围一次决定；不把未联调报表算业务通过。",
+            "assessedAt": "2026-09-09T16:58:19.726091+00:00",
             "complete": false,
             "requirementAccepted": false
           },
@@ -7330,8 +7338,8 @@
             ],
             "coverageDepth": "跨模块业务线索；源报表待探索",
             "remaining": "批次/条目/补差/引用粒度及专岗隔离已写候选；源团队薪酬授权不直接等批次组织范围",
-            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
-            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "next": "同源M32评审包按明确规则及受限范围一次决定；不把未联调报表算业务通过。",
+            "assessedAt": "2026-09-09T16:58:19.726091+00:00",
             "complete": false,
             "requirementAccepted": false
           },
@@ -7348,8 +7356,8 @@
             ],
             "coverageDepth": "跨模块业务线索；源报表待探索",
             "remaining": "个人/组织/兼职结果和缺评分母分开；正式发布、档案同步、绩效系数不能混算",
-            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
-            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "next": "同源M32评审包按明确规则及受限范围一次决定；不把未联调报表算业务通过。",
+            "assessedAt": "2026-09-09T16:58:19.726091+00:00",
             "complete": false,
             "requirementAccepted": false
           },
@@ -7368,8 +7376,8 @@
             ],
             "coverageDepth": "跨模块数据线索及本模块订阅结构",
             "remaining": "保留人才、学习等原有报表目录，待核源数据集/设计器/指标和权限；订阅转交/屏蔽/快照与发送待证，不把原“等”扩成无限新增报表",
-            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
-            "assessedAt": "2026-09-09T10:26:03.101902+00:00",
+            "next": "同源M32评审包按明确规则及受限范围一次决定；不把未联调报表算业务通过。",
+            "assessedAt": "2026-09-09T16:58:19.726091+00:00",
             "complete": false,
             "requirementAccepted": false
           }
@@ -7378,18 +7386,18 @@
           "rangeId": "R1",
           "queueState": "primary",
           "p1AConclusion": {
-            "status": "进行中",
+            "status": "已完成待评审",
             "approvalRecord": null,
             "evidenceRefs": [
               "BC-P1C-M32"
             ],
-            "limits": "沿用已有局部证据，未代签"
+            "limits": "六项证据/深度/限制与静态事实已整理，源执行受限未获M32-LIMIT-01批准，未通过"
           },
           "p1BConclusion": {
-            "status": "进行中",
+            "status": "已完成待评审",
             "approvalRecord": null,
             "evidenceRefs": [],
-            "limits": "需求尚未批准"
+            "limits": "六组明确推荐、数据集/权限/时间/设计器/订阅/异常/验收与实现差异可评审；尚未批准"
           },
           "conditions": {
             "applicableScopeDetermined": {
@@ -7397,16 +7405,16 @@
               "basis": "用户已确认15完整登记范围及本轮R顺序"
             },
             "implementationRulesDecided": {
-              "value": null,
-              "basis": "尚未逐模块闭环判定，不能算通过"
+              "value": false,
+              "basis": "M32六项推荐/验收与M32-LIMIT-01尚未批准；明确材料已准备"
             },
             "acceptanceExecutable": {
-              "value": null,
-              "basis": "尚未逐模块闭环判定，不能算通过"
+              "value": false,
+              "basis": "M32六项推荐/验收与M32-LIMIT-01尚未批准；明确材料已准备"
             },
             "dependenciesAndExceptionsResolved": {
-              "value": null,
-              "basis": "尚未逐模块闭环判定，不能算通过"
+              "value": false,
+              "basis": "M32六项推荐/验收与M32-LIMIT-01尚未批准；明确材料已准备"
             }
           },
           "transitionReview": {
@@ -7416,6 +7424,642 @@
             "approvedAt": null
           },
           "restrictedApproval": null
+        },
+        "datasetContracts": [
+          {
+            "datasetId": "workforce",
+            "scopeItem": "人事",
+            "producerModuleIds": [
+              "M01"
+            ],
+            "rowGrain": "每个当前可见员工一行（含离职）",
+            "currentSemantics": "当前投影，邮箱/职级按字段权；不等在职人数",
+            "sourceKind": "当前实现静态事实，不是北森执行证据",
+            "sourceHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "timeMode": "current",
+            "requirementDecision": "M32-SPEC-01/02/06未批准；若与生产者已批规则冲突需更新定义版本"
+          },
+          {
+            "datasetId": "contractCoverage",
+            "scopeItem": "人事",
+            "producerModuleIds": [
+              "M01"
+            ],
+            "rowGrain": "当前可见在职员工一行，包含无合同者",
+            "currentSemantics": "北京时间当日已登记签署覆盖，不判法律效力或实际原站规则",
+            "sourceKind": "当前实现静态事实，不是北森执行证据",
+            "sourceHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "timeMode": "current",
+            "requirementDecision": "M32-SPEC-01/02/06未批准；若与生产者已批规则冲突需更新定义版本"
+          },
+          {
+            "datasetId": "contractOperations",
+            "scopeItem": "人事",
+            "producerModuleIds": [
+              "M01"
+            ],
+            "rowGrain": "每份当前可见合同登记一行",
+            "currentSemantics": "date=endedOn优先end；续签关联不等已签",
+            "sourceKind": "当前实现静态事实，不是北森执行证据",
+            "sourceHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "timeMode": "event_range",
+            "requirementDecision": "M32-SPEC-01/02/06未批准；若与生产者已批规则冲突需更新定义版本"
+          },
+          {
+            "datasetId": "recruitmentOperations",
+            "scopeItem": "招聘",
+            "producerModuleIds": [
+              "M12"
+            ],
+            "rowGrain": "每条可见招聘需求一行",
+            "currentSemantics": "候选各当前阶段分列，active剩余=max(0,headcount-hired)，不预扣在途或判断金额预算",
+            "sourceKind": "当前实现静态事实，不是北森执行证据",
+            "sourceHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "timeMode": "current",
+            "requirementDecision": "M32-SPEC-01/02/06未批准；若与生产者已批规则冲突需更新定义版本"
+          },
+          {
+            "datasetId": "attendance",
+            "scopeItem": "假勤",
+            "producerModuleIds": [
+              "M11"
+            ],
+            "rowGrain": "每人每班次核验一行",
+            "currentSemantics": "班次日from/to，分钟/null，不等月报发布/冻结",
+            "sourceKind": "当前实现静态事实，不是北森执行证据",
+            "sourceHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "timeMode": "event_range",
+            "requirementDecision": "M32-SPEC-01/02/06未批准；若与生产者已批规则冲突需更新定义版本"
+          },
+          {
+            "datasetId": "payrollOperations",
+            "scopeItem": "薪酬",
+            "producerModuleIds": [
+              "M07"
+            ],
+            "rowGrain": "每可见批次一行",
+            "currentSemantics": "批次状态/有效明细/整数分，发布不等支付",
+            "sourceKind": "当前实现静态事实，不是北森执行证据",
+            "sourceHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "timeMode": "current",
+            "requirementDecision": "M32-SPEC-01/02/06未批准；若与生产者已批规则冲突需更新定义版本"
+          },
+          {
+            "datasetId": "payrollReconciliation",
+            "scopeItem": "薪酬",
+            "producerModuleIds": [
+              "M07"
+            ],
+            "rowGrain": "每已发布工资条一行",
+            "currentSemantics": "只已发布补差计金额，保留员工快照和批次组织权",
+            "sourceKind": "当前实现静态事实，不是北森执行证据",
+            "sourceHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "timeMode": "current",
+            "requirementDecision": "M32-SPEC-01/02/06未批准；若与生产者已批规则冲突需更新定义版本"
+          },
+          {
+            "datasetId": "payrollAttendanceReferences",
+            "scopeItem": "薪酬",
+            "producerModuleIds": [
+              "M07",
+              "M11"
+            ],
+            "rowGrain": "每工资条×考勤引用一行",
+            "currentSemantics": "来源冻结版本，引用行不等人数/月完整覆盖",
+            "sourceKind": "当前实现静态事实，不是北森执行证据",
+            "sourceHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "timeMode": "current",
+            "requirementDecision": "M32-SPEC-01/02/06未批准；若与生产者已批规则冲突需更新定义版本"
+          },
+          {
+            "datasetId": "performanceOperations",
+            "scopeItem": "绩效",
+            "producerModuleIds": [
+              "M16"
+            ],
+            "rowGrain": "每当前可见员工计划一行",
+            "currentSemantics": "计划/待反馈/发布按独立口径，未发布评分不泄漏",
+            "sourceKind": "当前实现静态事实，不是北森执行证据",
+            "sourceHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "timeMode": "current",
+            "requirementDecision": "M32-SPEC-01/02/06未批准；若与生产者已批规则冲突需更新定义版本"
+          },
+          {
+            "datasetId": "performance",
+            "scopeItem": "绩效",
+            "producerModuleIds": [
+              "M16"
+            ],
+            "rowGrain": "正式绩效结果的当前有效发布版本",
+            "currentSemantics": "按显式发布/更正链，不按任意更新时间",
+            "sourceKind": "当前实现静态事实，不是北森执行证据",
+            "sourceHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "timeMode": "current",
+            "requirementDecision": "M32-SPEC-01/02/06未批准；若与生产者已批规则冲突需更新定义版本"
+          },
+          {
+            "datasetId": "talentReview",
+            "scopeItem": "人才等",
+            "producerModuleIds": [
+              "M18",
+              "M17"
+            ],
+            "rowGrain": "未被另一个已发布supersedes的盘点记录",
+            "currentSemantics": "草稿不替代已发布，等级不是原M17准备度",
+            "sourceKind": "当前实现静态事实，不是北森执行证据",
+            "sourceHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "timeMode": "current",
+            "requirementDecision": "M32-SPEC-01/02/06未批准；若与生产者已批规则冲突需更新定义版本"
+          },
+          {
+            "datasetId": "successionCoverage",
+            "scopeItem": "人才等",
+            "producerModuleIds": [
+              "M17"
+            ],
+            "rowGrain": "每可见启用岗位一行",
+            "currentSemantics": "现任与去重在职后备分开；零仅当前可见范围",
+            "sourceKind": "当前实现静态事实，不是北森执行证据",
+            "sourceHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "timeMode": "current",
+            "requirementDecision": "M32-SPEC-01/02/06未批准；若与生产者已批规则冲突需更新定义版本"
+          },
+          {
+            "datasetId": "learning",
+            "scopeItem": "人才等",
+            "producerModuleIds": [
+              "M27"
+            ],
+            "rowGrain": "每当前可见课程任务一行",
+            "currentSemantics": "完成/历史复用/原证据及退出分开",
+            "sourceKind": "当前实现静态事实，不是北森执行证据",
+            "sourceHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "timeMode": "current",
+            "requirementDecision": "M32-SPEC-01/02/06未批准；若与生产者已批规则冲突需更新定义版本"
+          },
+          {
+            "datasetId": "learningPlanProgress",
+            "scopeItem": "人才等",
+            "producerModuleIds": [
+              "M27"
+            ],
+            "rowGrain": "每学习计划实例一行",
+            "currentSemantics": "要求/阶段/成绩状态与缺分null分开",
+            "sourceKind": "当前实现静态事实，不是北森执行证据",
+            "sourceHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "timeMode": "current",
+            "requirementDecision": "M32-SPEC-01/02/06未批准；若与生产者已批规则冲突需更新定义版本"
+          },
+          {
+            "datasetId": "learningExams",
+            "scopeItem": "人才等",
+            "producerModuleIds": [
+              "M27"
+            ],
+            "rowGrain": "每独立考试任务一行",
+            "currentSemantics": "任务/作答次数/原始分与百分制不合并",
+            "sourceKind": "当前实现静态事实，不是北森执行证据",
+            "sourceHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "timeMode": "current",
+            "requirementDecision": "M32-SPEC-01/02/06未批准；若与生产者已批规则冲突需更新定义版本"
+          },
+          {
+            "datasetId": "homework",
+            "scopeItem": "人才等",
+            "producerModuleIds": [
+              "M27"
+            ],
+            "rowGrain": "每独立作业任务一行",
+            "currentSemantics": "任务/提交版本/批阅结论与评分分列",
+            "sourceKind": "当前实现静态事实，不是北森执行证据",
+            "sourceHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "timeMode": "current",
+            "requirementDecision": "M32-SPEC-01/02/06未批准；若与生产者已批规则冲突需更新定义版本"
+          },
+          {
+            "datasetId": "trainingStageProgress",
+            "scopeItem": "人才等",
+            "producerModuleIds": [
+              "M27"
+            ],
+            "rowGrain": "每有非取消项目任务的员工一行",
+            "currentSemantics": "不是全部应参训人；未派发与未完成分开",
+            "sourceKind": "当前实现静态事实，不是北森执行证据",
+            "sourceHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "timeMode": "current",
+            "requirementDecision": "M32-SPEC-01/02/06未批准；若与生产者已批规则冲突需更新定义版本"
+          },
+          {
+            "datasetId": "trainingProgress",
+            "scopeItem": "人才等",
+            "producerModuleIds": [
+              "M27"
+            ],
+            "rowGrain": "每可见培训项目一行",
+            "currentSemantics": "无有效任务比率null，人按员工去重/任务按课程",
+            "sourceKind": "当前实现静态事实，不是北森执行证据",
+            "sourceHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "timeMode": "current",
+            "requirementDecision": "M32-SPEC-01/02/06未批准；若与生产者已批规则冲突需更新定义版本"
+          },
+          {
+            "datasetId": "trainingRoster",
+            "scopeItem": "人才等",
+            "producerModuleIds": [
+              "M27"
+            ],
+            "rowGrain": "员工×课程任务一行",
+            "currentSemantics": "待核验不当缺勤，取消不计，场次与学员分母不同",
+            "sourceKind": "当前实现静态事实，不是北森执行证据",
+            "sourceHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "timeMode": "current",
+            "requirementDecision": "M32-SPEC-01/02/06未批准；若与生产者已批规则冲突需更新定义版本"
+          },
+          {
+            "datasetId": "instructorSchedule",
+            "scopeItem": "人才等",
+            "producerModuleIds": [
+              "M27"
+            ],
+            "rowGrain": "每培训场次一行",
+            "currentSemantics": "date=开始时刻北京日；排期不等实际学时/课酬",
+            "sourceKind": "当前实现静态事实，不是北森执行证据",
+            "sourceHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "timeMode": "event_range",
+            "requirementDecision": "M32-SPEC-01/02/06未批准；若与生产者已批规则冲突需更新定义版本"
+          },
+          {
+            "datasetId": "instructorCampaignProgress",
+            "scopeItem": "人才等",
+            "producerModuleIds": [
+              "M27"
+            ],
+            "rowGrain": "每讲师认证活动一行",
+            "currentSemantics": "报名记录可重报，指标重叠不加为总人数",
+            "sourceKind": "当前实现静态事实，不是北森执行证据",
+            "sourceHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+            "codeRefs": [
+              "lib/hris/reports.ts",
+              "app/api/reports/route.ts"
+            ],
+            "timeMode": "current",
+            "requirementDecision": "M32-SPEC-01/02/06未批准；若与生产者已批规则冲突需更新定义版本"
+          }
+        ],
+        "closureChecklist": [
+          {
+            "id": "M32-CLOSE-01",
+            "scopeItem": "招聘",
+            "requirementIds": [
+              "BP-I-REQ-02"
+            ],
+            "evidenceRefs": [
+              "BC-R01",
+              "BC-R14",
+              "BC-R16"
+            ],
+            "gap": "本域数据粒度/时间/权限/消费依赖已具体化；M32-SPEC-01–06及M32-LIMIT-01未获批准，源报表/设计器详细执行仍未知。",
+            "risk": "敏感数据/分母和时间正确性、导出/订阅外传、跨域依赖",
+            "blocksP1": true,
+            "closureMethod": "集中审批所列明确候选及有范围例外，或恢复后定向补影响规则的证据；不穷尽配置组合",
+            "basis": "全部原登记六项保留，旧数据集/原导航仅各自事实，不改代码或真实数据",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M32-SPEC-01",
+              "M32-SPEC-02",
+              "M32-SPEC-03",
+              "M32-SPEC-04",
+              "M32-SPEC-05",
+              "M32-SPEC-06"
+            ],
+            "followupValidation": [
+              "P2数据/权限/任务/快照设计差异",
+              "P3合成边界与各域真实适配联调",
+              "P4独立角色/数据保护及生产准备验收"
+            ]
+          },
+          {
+            "id": "M32-CLOSE-02",
+            "scopeItem": "人事",
+            "requirementIds": [
+              "BP-I-REQ-02"
+            ],
+            "evidenceRefs": [
+              "BC-F39",
+              "BC-F45"
+            ],
+            "gap": "本域数据粒度/时间/权限/消费依赖已具体化；M32-SPEC-01–06及M32-LIMIT-01未获批准，源报表/设计器详细执行仍未知。",
+            "risk": "敏感数据/分母和时间正确性、导出/订阅外传、跨域依赖",
+            "blocksP1": true,
+            "closureMethod": "集中审批所列明确候选及有范围例外，或恢复后定向补影响规则的证据；不穷尽配置组合",
+            "basis": "全部原登记六项保留，旧数据集/原导航仅各自事实，不改代码或真实数据",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M32-SPEC-01",
+              "M32-SPEC-02",
+              "M32-SPEC-03",
+              "M32-SPEC-04",
+              "M32-SPEC-05",
+              "M32-SPEC-06"
+            ],
+            "followupValidation": [
+              "P2数据/权限/任务/快照设计差异",
+              "P3合成边界与各域真实适配联调",
+              "P4独立角色/数据保护及生产准备验收"
+            ]
+          },
+          {
+            "id": "M32-CLOSE-03",
+            "scopeItem": "假勤",
+            "requirementIds": [
+              "BP-I-REQ-02"
+            ],
+            "evidenceRefs": [
+              "BC-A04",
+              "BC-A11",
+              "BC-A12"
+            ],
+            "gap": "本域数据粒度/时间/权限/消费依赖已具体化；M32-SPEC-01–06及M32-LIMIT-01未获批准，源报表/设计器详细执行仍未知。",
+            "risk": "敏感数据/分母和时间正确性、导出/订阅外传、跨域依赖",
+            "blocksP1": true,
+            "closureMethod": "集中审批所列明确候选及有范围例外，或恢复后定向补影响规则的证据；不穷尽配置组合",
+            "basis": "全部原登记六项保留，旧数据集/原导航仅各自事实，不改代码或真实数据",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M32-SPEC-01",
+              "M32-SPEC-02",
+              "M32-SPEC-03",
+              "M32-SPEC-04",
+              "M32-SPEC-05",
+              "M32-SPEC-06"
+            ],
+            "followupValidation": [
+              "P2数据/权限/任务/快照设计差异",
+              "P3合成边界与各域真实适配联调",
+              "P4独立角色/数据保护及生产准备验收"
+            ]
+          },
+          {
+            "id": "M32-CLOSE-04",
+            "scopeItem": "薪酬",
+            "requirementIds": [
+              "BP-I-REQ-02"
+            ],
+            "evidenceRefs": [
+              "BC-S03",
+              "BC-S08"
+            ],
+            "gap": "本域数据粒度/时间/权限/消费依赖已具体化；M32-SPEC-01–06及M32-LIMIT-01未获批准，源报表/设计器详细执行仍未知。",
+            "risk": "敏感数据/分母和时间正确性、导出/订阅外传、跨域依赖",
+            "blocksP1": true,
+            "closureMethod": "集中审批所列明确候选及有范围例外，或恢复后定向补影响规则的证据；不穷尽配置组合",
+            "basis": "全部原登记六项保留，旧数据集/原导航仅各自事实，不改代码或真实数据",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M32-SPEC-01",
+              "M32-SPEC-02",
+              "M32-SPEC-03",
+              "M32-SPEC-04",
+              "M32-SPEC-05",
+              "M32-SPEC-06"
+            ],
+            "followupValidation": [
+              "P2数据/权限/任务/快照设计差异",
+              "P3合成边界与各域真实适配联调",
+              "P4独立角色/数据保护及生产准备验收"
+            ]
+          },
+          {
+            "id": "M32-CLOSE-05",
+            "scopeItem": "绩效",
+            "requirementIds": [
+              "BP-I-REQ-02"
+            ],
+            "evidenceRefs": [
+              "BC-P07",
+              "BC-P14",
+              "BC-P15"
+            ],
+            "gap": "本域数据粒度/时间/权限/消费依赖已具体化；M32-SPEC-01–06及M32-LIMIT-01未获批准，源报表/设计器详细执行仍未知。",
+            "risk": "敏感数据/分母和时间正确性、导出/订阅外传、跨域依赖",
+            "blocksP1": true,
+            "closureMethod": "集中审批所列明确候选及有范围例外，或恢复后定向补影响规则的证据；不穷尽配置组合",
+            "basis": "全部原登记六项保留，旧数据集/原导航仅各自事实，不改代码或真实数据",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M32-SPEC-01",
+              "M32-SPEC-02",
+              "M32-SPEC-03",
+              "M32-SPEC-04",
+              "M32-SPEC-05",
+              "M32-SPEC-06"
+            ],
+            "followupValidation": [
+              "P2数据/权限/任务/快照设计差异",
+              "P3合成边界与各域真实适配联调",
+              "P4独立角色/数据保护及生产准备验收"
+            ]
+          },
+          {
+            "id": "M32-CLOSE-06",
+            "scopeItem": "人才等",
+            "requirementIds": [
+              "BP-I-REQ-02",
+              "BP-I-REQ-11"
+            ],
+            "evidenceRefs": [
+              "BC-C40",
+              "BC-C30",
+              "BC-L19",
+              "BC-P1C-M32"
+            ],
+            "gap": "本域数据粒度/时间/权限/消费依赖已具体化；M32-SPEC-01–06及M32-LIMIT-01未获批准，源报表/设计器详细执行仍未知。",
+            "risk": "敏感数据/分母和时间正确性、导出/订阅外传、跨域依赖",
+            "blocksP1": true,
+            "closureMethod": "集中审批所列明确候选及有范围例外，或恢复后定向补影响规则的证据；不穷尽配置组合",
+            "basis": "全部原登记六项保留，旧数据集/原导航仅各自事实，不改代码或真实数据",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M32-SPEC-01",
+              "M32-SPEC-02",
+              "M32-SPEC-03",
+              "M32-SPEC-04",
+              "M32-SPEC-05",
+              "M32-SPEC-06"
+            ],
+            "followupValidation": [
+              "P2数据/权限/任务/快照设计差异",
+              "P3合成边界与各域真实适配联调",
+              "P4独立角色/数据保护及生产准备验收"
+            ]
+          }
+        ],
+        "reviewPackage": {
+          "moduleId": "M32",
+          "documentStatus": "已完成待评审",
+          "scope": "招聘、人事、假勤、薪酬、绩效、人才等",
+          "preparedAt": "2026-09-09T16:58:19.726091+00:00",
+          "basedOnHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+          "approvalRecord": null,
+          "internalDeferralProposals": [],
+          "internalDeferralNote": "六项原范围和当前模块来源的既有报表目录全部保留；33暂缓来源保留映射但不恢复独立业务。无内部延期建议。",
+          "confirmedRules": "M01/M19/M48获批规则只相应消费者语义适用；M32新增指标/时间/导出权限/设计器/订阅策略尚待批准。",
+          "decisionIds": [
+            "M32-SPEC-01",
+            "M32-SPEC-02",
+            "M32-SPEC-03",
+            "M32-SPEC-04",
+            "M32-SPEC-05",
+            "M32-SPEC-06"
+          ],
+          "exceptionProposals": [
+            {
+              "id": "M32-LIMIT-01",
+              "status": "建议P1受限边界，未批准",
+              "scope": "原站各域报表/设计器公式/历史快照/订阅权限与执行、导出及独立多角色行为未验证",
+              "evidence": "BC-P1C-M32原表头/操作＋现有跨域证据，仅自身含义；c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08当前reports/API/UI/历史测试静态。本轮tabs.list仍20秒超时，无新源操作。",
+              "proposal": "建议以明确源事实、现有代码静态和获批准的M32-SPEC-01–06形成P1基线；未知算法不复制，源差异与未联调/未实发保留。批准只P1，不批准权限扩张的实际执行、真实外发或生产验收。M01/M19/M48限制批准不自动适用于M32。",
+              "residualRisk": "源算法/订阅权限可能不同；汇总/历史/导出泄漏、错误统计、容量和重复投递未实证；已下载外部副本不可保证收回。",
+              "revalidation": "P2核数据集定义/历史/访问交集/有界任务及引用一致性；P3用合成数据/已授权角色/消息拦截器验证边界与真实生产者联调；P4责任人完成独立多人权限、业务/容量和生产准备；E2保持，不新增访问者。",
+              "approved": false,
+              "approvalRecord": null
+            }
+          ],
+          "closedQuestions": [
+            {
+              "problem": "日期控件是否对全部数据集误展示",
+              "resolution": "当前UI仅三类展示并发送日期；原缺口收窄为API对其他dataset仍接受并忽略，应按明确契约拒绝",
+              "basis": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08 reports.ts与app/reports/workspace.tsx静态"
+            },
+            {
+              "problem": "50行分页/asOf是否历史查询和数据库分页",
+              "resolution": "GET先算当前可见全量后切片，asOf是生成时间；历史快照/有界执行尚需设计，不重复测正常分页",
+              "basis": "reports/route.ts及makeReport静态"
+            },
+            {
+              "problem": "导出是否具备独立权限、订阅是否已有实现",
+              "resolution": "现导出复用dataset角色且审计成功后返回CSV；无独立导出动作权/订阅引擎，列明确差异",
+              "basis": "reports/route.ts/BC-P1C-M32"
+            },
+            {
+              "problem": "单个报表total能否用作所有人数/覆盖率",
+              "resolution": "21当前数据集逐个登记真实行粒度；岗位/班次/引用/任务/员工分开，不推算P1完成率",
+              "basis": "datasetContracts当前代码事实"
+            }
+          ],
+          "exitAssessment": {
+            "p1A": "六项证据/深度/限制与静态事实已整理，源执行受限未获M32-LIMIT-01批准，未通过",
+            "p1B": "六组明确推荐、数据集/权限/时间/设计器/订阅/异常/验收与实现差异可评审；尚未批准",
+            "transition": "规则/验收/例外及模块转序批准缺，false；R1其他三模块已关闭不代签M32"
+          },
+          "acceptanceCaseRefs": [
+            "M32-REVIEW-AC01",
+            "M32-REVIEW-AC02",
+            "M32-REVIEW-AC03",
+            "M32-REVIEW-AC04",
+            "M32-REVIEW-AC05",
+            "M32-REVIEW-AC06",
+            "M32-REVIEW-AC07",
+            "M32-REVIEW-AC08",
+            "M32-REVIEW-AC09",
+            "M32-REVIEW-AC10",
+            "M32-REVIEW-AC11",
+            "M32-REVIEW-AC12",
+            "M32-REVIEW-AC13"
+          ],
+          "flowSummary": [
+            "注册数据集/字段语义→声明式设计/校验发布版本→当前权限查询或快照→分页/受控导出",
+            "订阅定义→按每个收件人当前交集生成→独立投递状态→访问时再次验权；屏蔽/撤权阻后续发送",
+            "结果未知→查同任务/回执→明确失败或恢复；不重放业务、不篡改历史"
+          ],
+          "implementationNext": [
+            "复用21预定义数据集、可见性投影、专岗规则、CSV转义和导出审计；纠正时间API静默忽略",
+            "补显式导出/聚合/订阅权限、定义版本与历史快照、声明式设计器、有界异步任务和投递契约",
+            "按各生产者已批规则核数据粒度/映射；未接通保留未联调，不将R1先发当所有报表完整验收"
+          ],
+          "businessAccepted": false,
+          "productionAccepted": false,
+          "next": "集中处理M32六项推荐与LIMIT、R1基础及恢复目标；按批准重新判定M32，未批不转序，不重复三个已关闭模块。"
         }
       },
       "businessPackage": "BP-I"
@@ -10691,7 +11335,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-09T16:54:17.104368+00:00",
+    "updatedAt": "2026-09-09T17:01:22.299836+00:00",
     "authority": "Scope_Register.json为唯一范围/验收事实源；历史48/59保留，当前15模块及基础按SCOPE-20260909-CORE15。",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -43708,25 +44352,25 @@
       "latestAuthorizationAt": "2026-09-09T06:25:42.812752+00:00",
       "scopeChangeHead": "f31cb2b5e1894723288fd884d4e3bd895ae57327",
       "scopeChange": "SCOPE-20260909-CORE15",
-      "latestCheckpointAt": "2026-09-09T16:54:17.104368+00:00",
-      "latestCommittedHead": "988ceb8d419ab608fc58af039297ca07d6565113",
+      "latestCheckpointAt": "2026-09-09T17:01:22.299836+00:00",
+      "latestCommittedHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
       "latestEvidenceRefs": [
         "BC-C39",
         "BC-C40"
       ],
-      "next": "当前M32唯一主模块：完成报表六项原范围、指标/数据粒度、权限/快照/导出/订阅的需求与评审材料。",
+      "next": "集中处理M32六项推荐与LIMIT、R1基础及恢复目标；按批准重新判定M32，未批不转序，不重复三个已关闭模块。",
       "browserRecovery": "旧实例失效后按官方指引发现唯一新实例并尝试tabs.list/new/goto/title；tab8创建成功但读取/导航刷新均超时。完成专业域/首包/基础/内部范围离线单元后再核tabs.list仍20s超时，停止重复。同一实例未收到登录/全量授权提示，不绕过控制。",
-      "sourceBrowsingStatus": "本轮tabs.list再次返回CDP operation refresh tabs timed out after 20000ms；当前页不可读，无原站新提交，无登录/重新授权提示。",
-      "currentFocus": "M32唯一主模块；M48已P1受限关闭",
+      "sourceBrowsingStatus": "本轮M32取证前tabs.list返回CDP operation refresh tabs timed out after 20000ms；当前页面不可读，无新提交，无登录/重授权提示。",
+      "currentFocus": "M32唯一主模块已完成待评审；R1六基础适用核对完成，集中决定后再判转序",
       "checkpointCommitSemantics": "latestCommittedHead为本单元编辑开始前已存在提交；本记录所属提交用git log -1 -- docs/delivery/Scope_Register.json解析，不能将基准冒充最终HEAD。",
-      "workingTreeAtResume": "本单元开始实际main 988ceb8d419ab608fc58af039297ca07d6565113，工作区clean；仅文档/同源脚本变更，最终以Git HEAD/status核实。",
+      "workingTreeAtResume": "M48关闭后实际main c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08已同步且clean；当前仅文档/同源脚本修改，最终用Git核对。",
       "lastVerifiedSync": {
-        "commit": "988ceb8d419ab608fc58af039297ca07d6565113",
+        "commit": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
         "remoteBranch": "main",
-        "result": "上个单元已核实push及ls-remote一致；当前仅编辑基准",
-        "scope": "非本批准单元最终所属提交"
+        "result": "push成功，ls-remote与本地HEAD一致",
+        "scope": "M48顺序关闭及提升M32单元"
       },
-      "currentUnitOutcome": "M48所审四项推荐与受限边界按用户批准记录，P1受限关闭、转序就绪；随后提升M32唯一主模块。无产品/原站新写入/测试复跑/发布/访问者变更。",
+      "currentUnitOutcome": "顺序提交并同步M19关闭988ceb8、M48关闭c5d52ea，累计P1受限关闭3/15；M32完整六范围/21数据集/权限/状态/订阅及验收差异材料和R1六基础适用已完成待评审。未新增源操作、未复跑历史测试、未修改产品/部署/访问者。",
       "previousAtomicOutcome": "BC-C30与后续M17静态差异已提交b64ce7c；最近池1EA培养中/3~6个月。M17停用IDP流程保存结果未知，M18新建项目未启动；本轮不扩展或重复提交。"
     },
     "dataValidation": {
@@ -44944,7 +45588,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M32唯一主模块；M48已P1受限关闭",
+    "activeWorkPackage": "M32唯一主模块已完成待评审；R1六基础适用核对完成，集中决定后再判转序",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -44959,7 +45603,7 @@
       "BP-S"
     ],
     "nextTasks": [
-      "当前M32唯一主模块：完成报表六项原范围、指标/数据粒度、权限/快照/导出/订阅的需求与评审材料。",
+      "集中处理M32六项推荐与LIMIT、R1基础及恢复目标；按批准重新判定M32，未批不转序，不重复三个已关闭模块。",
       "不重问已批准M01/M19/M48规则；后续残余验证归P2/P3/P4。",
       "主模块全部剩余必要工作外部阻塞时才启用一个备用；不按备用数扩并行探索。",
       "R1四模块和适用六基础及版本评审满足后才转P2/P3，历史技术验收不能继承。"
@@ -45108,27 +45752,27 @@
         "foundationReadiness": {
           "BASE-01": {
             "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "basis": "R1适用需求/验收见本能力r1Assessment；已批准模块规则仅按原范围采用，R1-BASELINE-01及恢复目标待评审，不继承全基础签署。"
           },
           "BASE-02": {
             "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "basis": "R1适用需求/验收见本能力r1Assessment；已批准模块规则仅按原范围采用，R1-BASELINE-01及恢复目标待评审，不继承全基础签署。"
           },
           "BASE-03": {
             "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "basis": "R1适用需求/验收见本能力r1Assessment；已批准模块规则仅按原范围采用，R1-BASELINE-01及恢复目标待评审，不继承全基础签署。"
           },
           "BASE-04": {
             "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "basis": "R1适用需求/验收见本能力r1Assessment；已批准模块规则仅按原范围采用，R1-BASELINE-01及恢复目标待评审，不继承全基础签署。"
           },
           "BASE-05": {
             "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "basis": "R1适用需求/验收见本能力r1Assessment；已批准模块规则仅按原范围采用，R1-BASELINE-01及恢复目标待评审，不继承全基础签署。"
           },
           "BASE-06": {
             "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "basis": "R1适用需求/验收见本能力r1Assessment；已批准模块规则仅按原范围采用，R1-BASELINE-01及恢复目标待评审，不继承全基础签署。"
           }
         },
         "review": {
@@ -45136,6 +45780,18 @@
           "record": null,
           "approvedAt": null,
           "scope": null
+        },
+        "foundationReviewPackage": {
+          "status": "已完成待评审",
+          "preparedAt": "2026-09-09T17:01:22.299836+00:00",
+          "basedOnHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+          "decisionIds": [
+            "R1-BASELINE-01",
+            "R1-RECOVERY-01"
+          ],
+          "approvalRecord": null,
+          "scope": "R1四模块所需六基础能力，其他R版本另核适用差异；不新增模块分母，不代批M32或R1转序。",
+          "next": "所有者集中审阅M32-SPEC-01至06、M32-LIMIT-01及R1两项基础建议；全部实际条件满足后再按版本评审决定转序。"
         }
       },
       {
@@ -45228,7 +45884,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-09T16:54:17.104368+00:00",
+    "updatedAt": "2026-09-09T17:01:22.299836+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -49486,11 +50142,15 @@
             "actions": "查询、分页、原有审计导出（本轮不执行导出）",
             "codeRefs": [
               "lib/hris/reports.ts",
-              "app/api/reports/route.ts"
+              "app/api/reports/route.ts",
+              "app/reports/workspace.tsx",
+              "lib/hris/payroll-reports.ts",
+              "lib/hris/development-repository.ts",
+              "tests/report-current-scope.test.mjs"
             ],
             "acceptance": "无字段权时表头/单元格不出现该字段；学习缺分保持null；绩效旧版本不重复计为当前；合同覆盖登记不能证明电子签法律有效或实际在岗；旧revision导出拒绝，审计失败不得返回CSV（本轮未执行导出）；人才链候选：盘点项目对象数、已采集数、已校准数和已发布结果人数分别定义，C39的1条对象配置不等1条有效评分/报告；缺目标或计算项目不写0分/达标。",
-            "gap": "设计器/大规模查询/历史组织快照未就绪；每数据集必须独立定义分母，不能统一套人员数；通用日期控件与各数据集实际过滤口径需对齐；GET先生成全量可见结果再切50行，不是数据库分页或历史时点查询；asOf是生成时刻不是任意历史查询参数。 M17续查：继任报表按在职员工/active关系计入，离职后原关系仍可active；成员阶段/继任记录/报表纳入条件须分别表达，不把人数0当清理完成（development.ts/reports.ts静态，未复验）。",
-            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "gap": "现有21预定义数据集可复用；日期UI已限定3类，API对其他数据集日期会忽略，须按M32-SPEC-02选择拒绝/明示。历史快照、声明式设计器、独立导出/聚合权限及有界异步任务需P2/P3补齐。M32-SPEC-01–06未批准；源各域数据集/设计器/订阅执行未知，不借其他模块页面当M32源证据。",
+            "classification": "原实现静态事实＋M32完整范围明确候选；尚待本模块批准，未复验",
             "accepted": false,
             "id": "BP-I-REQ-02",
             "currentApplicability": {
@@ -49540,6 +50200,36 @@
                 "definition": "asOf为生成时刻，revision为当前读取版本；仅部分数据集应用from/to",
                 "constraints": "未实现按任意历史日重建权限与任职；CSV安全转义和审计不等订阅成功。源通知权限未授权时不得实发",
                 "basis": "reports.ts；BP-I-REQ-11"
+              },
+              {
+                "field": "数据集与定义",
+                "definition": "datasetId/definitionVersion/domain/rowKey/sourceKind/sourceVersion",
+                "constraints": "字段类型、单位、去重/分母/null和权限必须声明，未批域算法不填默认",
+                "basis": "M32-SPEC-01明确候选，未批准"
+              },
+              {
+                "field": "时间与快照",
+                "definition": "timeMode/dateField/from/to/businessCutoff/generatedAt/snapshotId",
+                "constraints": "支持范围显式，未知历史不可重建，历史读取仍当前权限",
+                "basis": "M32-SPEC-02明确候选，未批准"
+              },
+              {
+                "field": "查询和导出权限",
+                "definition": "read/export/subscribe/manage及row/field/aggregate白名单",
+                "constraints": "分别授权；排序/筛选/聚合不能利用无权字段；敏感汇总缺策略不发布",
+                "basis": "M32-SPEC-03明确候选，未批准"
+              },
+              {
+                "field": "设计器定义",
+                "definition": "dataset/columns/filter AST/group/measure/joinKey/sort/draft/publishedVersion",
+                "constraints": "白名单声明式定义，不开放任意SQL/脚本；稳定分页/有界任务，超限不截断",
+                "basis": "M32-SPEC-04明确候选，未批准"
+              },
+              {
+                "field": "导出任务",
+                "definition": "jobId/idempotencyKey/queryHash/sourceRevision/manifest/status/fileHash/expiry",
+                "constraints": "文件可用前审计与权限校验；重复查原job，下载重验，真实已下载不可保证收回",
+                "basis": "M32-SPEC-03/04明确候选，未批准"
               }
             ],
             "acceptanceCases": [
@@ -49592,6 +50282,169 @@
                 "status": "待评审/待后续验证；本轮只静态核对",
                 "accepted": false,
                 "executionThisRun": false
+              },
+              {
+                "id": "M32-REVIEW-AC01",
+                "scopeItem": "人事",
+                "given": "一人在职主岗+兼职与历史再入职，名册含离职",
+                "when": "查询人数/岗位任职/编制",
+                "then": "按各行主键及M01已批规则分母去重，名册total不冒在职数，兼职不额外当人头",
+                "basis": "M32-SPEC-01",
+                "status": "明确候选，未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M32-REVIEW-AC02",
+                "scopeItem": "招聘",
+                "given": "一人多应聘关系、需求3人且hired1/offered2",
+                "when": "查询需求进度",
+                "then": "自然人/申请/需求人数分列，当前剩余2仅当前候选口径，不能证明金额预算通过",
+                "basis": "M32-SPEC-01/06",
+                "status": "明确候选，未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M32-REVIEW-AC03",
+                "scopeItem": "假勤",
+                "given": "两个班次、一个缺可核值；from/to合法",
+                "when": "查询期间",
+                "then": "按班次日期包含边界，未知分钟为null不补0，不冒充已发布月报",
+                "basis": "M32-SPEC-01/02",
+                "status": "明确候选，未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M32-REVIEW-AC04",
+                "scopeItem": "薪酬",
+                "given": "一个工资条有多考勤引用，工资已发布银行未知",
+                "when": "读取明细/对账/引用",
+                "then": "工资条/引用粒度各自计数，金额整数分，发布不标支付，按当前工资权限投影",
+                "basis": "M32-SPEC-01/03",
+                "status": "明确候选，未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M32-REVIEW-AC05",
+                "scopeItem": "绩效",
+                "given": "旧结果发布、新结果草稿，后新结果发布",
+                "when": "查看最新与历史",
+                "then": "草稿不替换正式，发布替代链可追溯；旧记录仍当前权限下可读，缺评分不补0",
+                "basis": "M32-SPEC-01/02",
+                "status": "明确候选，未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M32-REVIEW-AC06",
+                "scopeItem": "人才等",
+                "given": "岗位可见但无可见后备，盘点对象配置1行未采集",
+                "when": "读取继任/盘点",
+                "then": "零仅当前可见无后备，配置1不等已评分1；不外推源准备度或人才算法",
+                "basis": "M32-SPEC-01/06",
+                "status": "明确候选，未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M32-REVIEW-AC07",
+                "scopeItem": "人才等",
+                "given": "无有效学习任务、缺考试成绩、报名撤回重报",
+                "when": "读取学习/师资",
+                "then": "0分母比率null，缺成绩null；报名按记录、人按去重，不把指标相加",
+                "basis": "M32-SPEC-01",
+                "status": "明确候选，未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M32-REVIEW-AC08",
+                "scopeItem": "人事",
+                "given": "workforce请求from/to或不存在的历史snapshot",
+                "when": "直接调用API",
+                "then": "不支持的时间参数明确拒绝，不默默忽略/伪造历史；已有快照重验当前权限",
+                "basis": "M32-SPEC-02",
+                "status": "明确候选，未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M32-REVIEW-AC09",
+                "scopeItem": "薪酬",
+                "given": "只有汇总读权，无导出/字段/明细权",
+                "when": "尝试导出、排序敏感字段或钻取",
+                "then": "全部服务端拒绝越界，计数/错误不泄漏隐藏数据，旧下载链接也重验",
+                "basis": "M32-SPEC-03",
+                "status": "明确候选，未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M32-REVIEW-AC10",
+                "scopeItem": "人事",
+                "given": "导出10001行或旧revision，含=文本与负数金额",
+                "when": "创建导出/下载",
+                "then": "超同步上限走明确有界任务或阻并提示，不截断；冲突不返回文件；文本安全转义、负数仍数值",
+                "basis": "M32-SPEC-03/04",
+                "status": "明确候选，未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M32-REVIEW-AC11",
+                "scopeItem": "人才等",
+                "given": "设计器选无权字段或任意SQL，零分母公式",
+                "when": "发布定义",
+                "then": "非法字段/表达式拒绝且不新版本；零分母输出null/原因，不假成功",
+                "basis": "M32-SPEC-04",
+                "status": "明确候选，未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M32-REVIEW-AC12",
+                "scopeItem": "薪酬",
+                "given": "管理员订阅两名范围不同收件者，发送前一人撤权",
+                "when": "生成与投递",
+                "then": "各自权限投影，撤权者阻发送；不共用全量附件，unknown先查回执；本轮只设计用例",
+                "basis": "M32-SPEC-05",
+                "status": "明确候选，未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M32-REVIEW-AC13",
+                "scopeItem": "人才等",
+                "given": "生产者M16 OKR未配置/尚无已批指标",
+                "when": "请求报告",
+                "then": "显示未配置/不可用且完整目录保留，不用模拟结果报真实联调或评分",
+                "basis": "M32-SPEC-06",
+                "status": "明确候选，未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ],
+            "roleMatrix": [
+              {
+                "role": "数据集读者",
+                "read": "当前租户/对象/行/字段交集投影",
+                "write": "查询，不因读权自动能导出或设计",
+                "boundary": "所有原业务敏感数据规则保持；历史也重验"
+              },
+              {
+                "role": "定义设计者/管理者",
+                "read": "自己被授权字段元数据和测试投影",
+                "write": "声明式定义版本/管理订阅，不能授予数据权",
+                "boundary": "无任意SQL/跨租户关联，不伪造流程或角色"
+              },
+              {
+                "role": "导出者/订阅接收者",
+                "read": "分别被授权的导出/接收范围",
+                "write": "有显式动作权才创建任务/下载/订阅",
+                "boundary": "生成、发送、读取三次重验；外部已下载副本无法承诺收回"
               }
             ]
           },
@@ -50192,7 +51045,7 @@
               "app/api/reports/route.ts"
             ],
             "acceptance": "先明确快照与发送时权限复核后，覆盖原接收人撤权、跨角色转交、敏感字段隐藏、已过期/屏蔽停止、发送失败重试去重、时区与历史附件撤权边界；目前不声称自动发送已实现。",
-            "gap": "M32订阅/设计器无独立实现；现有按当前范围查询可复用，真实发送调度与接收方数据授权需补齐。",
+            "gap": "源订阅只有表头/按钮，产品无独立实现；完整候选已具体化于M32-SPEC-05，尚需批准链接/交集权限/转交与生命周期。不执行外部消息、真实数据导出或新权限。",
             "classification": "原站局部表头/操作证据与本项目差异候选，未签署",
             "accepted": false,
             "currentApplicability": {
@@ -50226,6 +51079,70 @@
                 "status": "待评审/待后续验证；本轮只静态核对",
                 "accepted": false,
                 "executionThisRun": false
+              }
+            ],
+            "fieldDetails": [
+              {
+                "field": "订阅身份和内容",
+                "definition": "subscriptionId/ownerId/recipientId/dataset/definitionVersion/filter/columnAllowlist/snapshotMode",
+                "constraints": "每接收者独立按双方当前权限交集生成，转交不复制权限",
+                "basis": "源表头BC-P1C-M32＋M32-SPEC-05候选"
+              },
+              {
+                "field": "调度及投递",
+                "definition": "timezone/frequency/sendTime/startAt/endAt/revision/state/period/eventId/receipt",
+                "constraints": "幂等键含版本/周期/收件者/渠道，屏蔽在最终投递前复核，unknown先查回执；真实消息非P1前置",
+                "basis": "M32-SPEC-05，未批准"
+              },
+              {
+                "field": "受控链接与历史",
+                "definition": "snapshotId/fileHash/createdAt/permissionProjectionVersion/expiry/audience",
+                "constraints": "默认登录验权链接，缓存撤权；历史投递身份保留，不承诺回收外部已下载副本",
+                "basis": "M32-SPEC-03/05，未批准"
+              }
+            ],
+            "stateTransitions": [
+              {
+                "from": "draft",
+                "event": "保存并确认内容/接收范围",
+                "to": "active",
+                "guards": "已有成员/内容/周期/权限完整，不实际发送",
+                "basis": "M32-SPEC-05明确候选，未批准"
+              },
+              {
+                "from": "active",
+                "event": "周期到达",
+                "to": "生成任务queued",
+                "guards": "版本+周期+接收方+渠道幂等，范围重核",
+                "basis": "M32-SPEC-05明确候选，未批准"
+              },
+              {
+                "from": "任务running",
+                "event": "生成完成",
+                "to": "snapshot ready / delivery pending",
+                "guards": "源版本/文件清单齐备，业务状态独立",
+                "basis": "M32-SPEC-05明确候选，未批准"
+              },
+              {
+                "from": "delivery pending",
+                "event": "屏蔽/过期/撤权",
+                "to": "cancelled或blocked",
+                "guards": "最终发送前也重核，历史不删",
+                "basis": "M32-SPEC-05明确候选，未批准"
+              },
+              {
+                "from": "delivery pending",
+                "event": "投递无明确回执",
+                "to": "unknown",
+                "guards": "先查询供应商结果，禁止盲重复发送",
+                "basis": "M32-SPEC-05明确候选，未批准"
+              },
+              {
+                "from": "active",
+                "event": "转交并受让接受",
+                "to": "新责任人/新版本",
+                "guards": "不赋予原所有人数据权，接收者另行核验",
+                "basis": "M32-SPEC-05明确候选，未批准"
               }
             ]
           },
@@ -51236,7 +52153,8 @@
           ],
           "baseCapabilityIds": [],
           "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-        }
+        },
+        "gaps": "现有21预定义数据集可复用；日期UI已限定3类，API对其他数据集日期会忽略，须按M32-SPEC-02选择拒绝/明示。历史快照、声明式设计器、独立导出/聚合权限及有界异步任务需P2/P3补齐。M32-SPEC-01–06未批准；源各域数据集/设计器/订阅执行未知，不借其他模块页面当M32源证据。"
       },
       {
         "requirement": "BP-I-REQ-03",
@@ -52291,6 +53209,143 @@
         "approvalRecord": "M48-P1-APPROVAL-20260909",
         "decidedAt": "2026-09-09T16:54:17.104368+00:00",
         "approvedProposalSha256": "450eaa057c277bd4b2e5b24d36f202dba6c524b7a7c58fb9375b2edfeed2b916"
+      },
+      {
+        "id": "M32-SPEC-01",
+        "topic": "数据集粒度、业务分母与缺失值",
+        "basis": "BC-P1C-M32直接证据是订阅管理；跨域字段不代源报表定义。现reports.ts已有21数据集，员工/岗位/候选关系/班次/工资引用/学习实例等粒度不同。",
+        "proposal": "建议每个数据集必须声明稳定datasetId、定义版本、行主键、业务对象/日期字段、单位、分子分母、去重键、null语义、源状态与列权限；缺声明不能发布。保留下方现有数据集的静态口径作为明确基线，若与已批准生产者规则冲突，以生产者版本为准并更改数据集定义版本，不偷偷改历史。人数按明确employeeId去重，岗位/任务/引用/候选申请按其原键，不相加为人数；分母为0或不可确定时比率null。源未评分/未配置/无权读取分别显示，不能补0、补满分或把查询空集当全企业无人。M01主/兼职占编、再入职和稳定身份按已批规则；招聘自然人/应聘关系、绩效组织/个人/兼职、继任现任/后备和学习完成/成绩/学分分别统计。R2/R3未批准算法保留各自产出的事实字段和状态，不由报表定算法。",
+        "alternatives": "所有表统一员工数：会重复计数或丢失业务；完全不冻结口径版本：历史报表无法解释，不推荐。",
+        "impact": "决定M32全六类报表指标的可解释性与复用口径；不是批准其他业务模块尚未决规则。",
+        "status": "已具体化待评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M32"
+        ],
+        "preparedAt": "2026-09-09T16:58:19.726091+00:00"
+      },
+      {
+        "id": "M32-SPEC-02",
+        "topic": "时间、当前范围与历史快照",
+        "basis": "UI只在attendance/instructorSchedule/contractOperations显示from/to；API reportQuery却对全部接受，makeReport只三类应用。asOf为实时生成时间；员工名册包含当前可见离职。",
+        "proposal": "建议数据集显式声明timeMode=current/event_range/snapshot及支持的筛选字段，API对不支持的非空日期/历史参数明确拒绝，UI只显示支持项。事件区间from≤to且边界含当日，按声明字段和北京时间取日期；合同优先已登记终止日否则原结束日，空日期在有范围筛选时不命中。历史快照另存snapshotId、业务截止时点、generatedAt、定义版本、源revision/版本清单及行主键；未有该时点真实快照或可核历史不得假装重建。读取历史仍按当前权限裁剪，保留历史组织标签不授历史永久权限；权限裁剪后合计注明可见范围，不展示未授权原总量。快照/当前结果明确分区，历史值不能静默被当前值覆盖。",
+        "alternatives": "把asOf直接当任意历史日期：没有实现/证据；所有查询强制当前且删除历史快照：属于内部缩减，不采用。",
+        "impact": "决定历史重现、权限及日期正确性；实现中的历史快照能力需P2/P3补齐，P1不要求生成真实人员快照。",
+        "status": "已具体化待评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M32"
+        ],
+        "preparedAt": "2026-09-09T16:58:19.726091+00:00"
+      },
+      {
+        "id": "M32-SPEC-03",
+        "topic": "行列权限、聚合与导出授权",
+        "basis": "当前读取先visibleState/visibleDevelopment，工资走专岗；导出复用数据集角色并记录审计，尚无独立导出动作权限。历史report-current-scope测试文件有撤权场景，本轮只读取。",
+        "proposal": "建议列表、详情、聚合、图表、下载、快照和订阅均服务端按当前租户/成员、数据集、行与字段白名单交集投影。设计器只选择有权字段，无权字段也不得通过排序/筛选/公式/分组/总数推测；授权看汇总不自动授权钻取明细。read/export/subscribe/manage分别显式授予，不因可读自动可导出；薪酬金额、证件、评估答卷等敏感数据沿生产者规则，未有发布/匿名/小样本策略则不发布相应敏感汇总。旧链接/缓存不能越权，401/403及撤权清相应缓存。导出必须当前有export和数据权，记录操作者、数据集/定义版本、筛选摘要、行数、源版本和结果；审计失败或版本冲突不返回文件。文件用公式安全文本转义并保留数值类型，null与真实0区分。已合法下载到外部的文件无法保证远程收回，应在授权范围和操作记录中说明；不作自动可撤回承诺。",
+        "alternatives": "查询与导出永久同权：不能控制批量外传；只在UI隐藏字段：直接API仍可能越权，不推荐。",
+        "impact": "这是M32新的导出/订阅与敏感聚合权限选择，需明确批准；不改变现有访问者或实际导出数据。",
+        "status": "已具体化待评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M32"
+        ],
+        "preparedAt": "2026-09-09T16:58:19.726091+00:00"
+      },
+      {
+        "id": "M32-SPEC-04",
+        "topic": "报表设计器、分页与异常恢复",
+        "basis": "当前预定义21数据集，无通用设计器；GET全量当前可见结果后按50切页，POST上限10000行且审计成功后返回CSV。查询失败UI清data，下载失败保留反馈后再读。",
+        "proposal": "建议设计器基于注册数据集和投影字段的声明式定义：选择字段、类型兼容过滤、分组/排序、sum/count/distinct/min/max/avg及显式分子分母，关联仅用已声明稳定外键；禁止用户任意SQL/脚本、跨租户连接和未授权字段运算。保存draft、校验后发布不可变定义版本，停用阻新任务但历史版本可按当前权查看。零分母/空值/聚合单位不兼容给明确错误，不能当0。分页按稳定行键排序，读取版本变化明确提示重查，不能跨版本拼为同一快照；当前50页宽/10000同步导出上限可复用，超过上限保留异步导出任务需求，使用有界分批、源快照/版本清单、权限重核与原子可用文件，不静默截断或声称全量。任务状态queued/running/ready/failed/cancelled/expired与生成/下载分别记录；网络结果不明先查jobId，不重复排队。具体索引/执行器/容量在P2验证，不能把内存切片说成数据库分页。",
+        "alternatives": "只保留现有固定表：不能覆盖已登记设计器；直接开放数据库查询：权限和负载边界失控，不推荐。",
+        "impact": "决定设计器与大批量查询完整需求，未请求本轮开发；技术方案复用现底座后验证，不重复重建。",
+        "status": "已具体化待评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M32"
+        ],
+        "preparedAt": "2026-09-09T16:58:19.726091+00:00"
+      },
+      {
+        "id": "M32-SPEC-05",
+        "topic": "订阅、快照、转交、屏蔽与投递",
+        "basis": "源订阅管理有频率/时间/快照/权限类型等表头和转交/屏蔽入口；没有执行证据。现CSV导出不等订阅服务，M19通知基线已批准但不自动批准报表收件数据范围。",
+        "proposal": "建议订阅记录含稳定ID、owner/recipientId、dataset/definitionVersion、筛选/列、snapshotMode、时区/频率/发送时刻、生效起止、revision、状态和渠道。创建/生成/发送/读取每个环节重验订阅人及每个接收者当前范围和字段权，按接收者交集单独生成结果，不复用管理员全量快照；无范围则记录不可投递，不显示成功。模板/筛选改变新版本；定时任务以订阅版本+周期+接收人+渠道幂等。默认建议发送需登录且服务端验权的报表链接，不附个人明细附件；若未来要附件外发须单独明确范围和不可收回风险。转交只迁订阅管理责任，受让者须已有成员和对应管理权、明确接受，不新增数据/导出权；新接收人另核授权，历史投递身份保留。屏蔽/过期停止后续生成和投递，已开始任务在最终发送前再核，历史不删除。unknown先查回执不盲重发，发送失败不改变业务/快照成功状态；本轮不实发外部消息。",
+        "alternatives": "转交自动复制原所有人数据权、所有人共用同一敏感附件：扩大权限，不推荐；删除订阅能力：是内部缩减，本次不提出。",
+        "impact": "需要批准收件方交集、链接优先和转交语义；真实供应商发送不作P1前置，后续沙箱/独立角色验证保留。",
+        "status": "已具体化待评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M32"
+        ],
+        "preparedAt": "2026-09-09T16:58:19.726091+00:00"
+      },
+      {
+        "id": "M32-SPEC-06",
+        "topic": "当前15模块报表覆盖与分阶段消费",
+        "basis": "M32原导航包括当前业务及M29员工调查/M15测评等暂缓来源；相似名称不能合并。当前报表来自M01/M07/M11/M12/M16/M17/M18/M27等实现。",
+        "proposal": "建议M32六项原范围逐项保留，人才等明确含当前15中的干部/资格/盘点/继任/360/人才标准、学习，以及M16目标OKR原报表目录；仅消费生产者已有稳定对象和已批准指标，不独立重建完整业务引擎。暂缓33的独立报表目录留历史/暂缓映射，不新增独立需求或数据链；外部测评仅保留接口引用/状态，不恢复M15，People Analytics/同名看板不自动并入另一完整模块。R1先明确完整消费契约和未配置/不可用状态；生产者未完成或规则未批，不能填模拟业绩或报联调通过。需生产者联调的功能保留原范围、阻塞影响及P3/P4补验，不因R1先转序删减；M32只完成P1并不使这些报表已实现或可交付验收。批准本评审包既有字段、权限、状态、异常、验收预期，具体生产者算法仍按其模块。",
+        "alternatives": "等待全部R2/R3实现后才写M32：与滚动模式不符；把暂缓来源悄悄恢复全模块或把接口占位算完成：都不采用。",
+        "impact": "需要确认R1契约先行与跨域未联调单列的具体边界；不批准R1上线或生产验收。",
+        "status": "已具体化待评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M32"
+        ],
+        "preparedAt": "2026-09-09T16:58:19.726091+00:00"
+      },
+      {
+        "id": "R1-BASELINE-01",
+        "topic": "R1六项基础能力的适用需求与验收基线",
+        "basis": "六能力已有字段/异常/验收和静态路径；M01/M19/M48批准只覆盖各自模块，不能自动签署M32或R1全域。",
+        "proposal": "建议采用deliveryScope.baseCapabilities[].r1Assessment六项具体推荐及现有字段/验收预期作为R1设计基线；已批准模块沿用原范围，新增共用能力按候选契约评审。BASE-05量化目标按R1-RECOVERY-01单列。P2复核云端可行性与差异，P3验证新增实现/故障/联调，P4保留独立多角色及生产恢复验收；允许未配置外部服务以契约参与P1，不代替外部成功。",
+        "alternatives": "逐能力批准亦可：只使批准能力就绪，未批准项继续阻R1版本转序，不影响三个已关闭模块。",
+        "impact": "决定R1基础需求是否可用于设计；不新增模块、访问者、供应商调用或生产开放，不自动批准R1进入P2/P3。",
+        "status": "已具体化待评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M01",
+          "M19",
+          "M48",
+          "M32"
+        ],
+        "baseCapabilityIds": [
+          "BASE-01",
+          "BASE-02",
+          "BASE-03",
+          "BASE-04",
+          "BASE-05",
+          "BASE-06"
+        ],
+        "preparedAt": "2026-09-09T17:01:22.299836+00:00"
+      },
+      {
+        "id": "R1-RECOVERY-01",
+        "topic": "R1备份恢复目标及责任基线",
+        "basis": "Recovery_Rehearsal.md只记历史静止窗口SQLite/内存对象演练，没有云端RPO/RTO/保留/加密能力证据，也没有真实业务损失容忍数据。数值只能作为新产品建议，不能从历史耗时推算。",
+        "proposal": "建议待评审目标：RPO不超过1小时、RTO不超过4小时、可恢复版本保留30天；传输与存储加密，备份清单/哈希/版本及恢复审批可追溯。RPO按被恢复系统与对象共同一致的业务时点计算，RTO从确认恢复事件至校验和当前授权对账完成、获准开放计算；时间异常不伪报达标。项目所有者负责目标及开放批准，P2须指定执行/复核责任与独立可信授权记录来源；P3隔离演练、P4实际容量和云端能力核验。不满足目标则提交差异与成本方案，不静默降级或声称现平台已支持。",
+        "alternatives": "若可接受较大丢失/停机窗口，可选RPO24小时、RTO8小时、保留30天，以较低频率/成本优先；或提供其他明确目标。两方案均须可信当前撤权对账且不得因备份可用恢复过期访问。",
+        "impact": "1小时/4小时方案是保守候选而非已有承诺；可能需要额外调度、对象版本和恢复能力。目标影响备份架构/成本及生产门槛，只阻BASE-05和R1整体转序，不重开已关闭模块P1。",
+        "status": "已具体化待评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M01",
+          "M19",
+          "M48",
+          "M32"
+        ],
+        "baseCapabilityIds": [
+          "BASE-05"
+        ],
+        "preparedAt": "2026-09-09T17:01:22.299836+00:00"
       }
     ],
     "codeReview": {
@@ -52633,13 +53688,19 @@
       }
     ],
     "consistencyReview": {
-      "state": "顺序应用本窗口明确批准；已关闭M01,M19,M48；历史技术证据不继承为业务通过",
+      "state": "已完成本单元静态一致性审查：三模块批准独立、M32和六基础未签署、原历史原义保留",
       "reviewedSourceCommit": "447b02f72a2d2051986aba98e769daa7c2b846a3",
       "issues": [
         "R-SPEC-01 候选人主对象与招聘需求/人才库关系",
         "C-SPEC-01 360评价角色、匿名对象和低样本报告发布边界",
-        "R-SPEC-02 Offer审批历史参与者排除范围",
-        "S-SPEC-01 补差后负累计净额及追回边界"
+        "M32-SPEC-01 数据集粒度、业务分母与缺失值",
+        "M32-SPEC-02 时间、当前范围与历史快照",
+        "M32-SPEC-03 行列权限、聚合与导出授权",
+        "M32-SPEC-04 报表设计器、分页与异常恢复",
+        "M32-SPEC-05 订阅、快照、转交、屏蔽与投递",
+        "M32-SPEC-06 当前15模块报表覆盖与分阶段消费",
+        "R1-BASELINE-01 R1六项基础能力的适用需求与验收基线",
+        "R1-RECOVERY-01 R1备份恢复目标及责任基线"
       ],
       "findings": [
         "组织同级唯一已排除首包歧义",
@@ -52689,11 +53750,16 @@
         "薪资社保/个税/激励保持M07内部受限规格，人工deduction不等完整核算；负累计补差先待源证据/政策，未授权支付或扣未来工资。",
         "本次用户批准M01 10项推荐及M01-LIMIT-01，按所审9e379ff原文与哈希锁定；P1关闭1/15（完整0/受限1），不是P3/P4验收。",
         "M19源状态/流程实例、M01业务生效和通知三态分离；学习作业转交非通用委托，不扩D7。",
-        "M48本人任务/批阅/申请/待生效分开；团队关系不等orgScope，R2/R3只预留明确消费契约，未配置不能伪作成功。"
+        "M48本人任务/批阅/申请/待生效分开；团队关系不等orgScope，R2/R3只预留明确消费契约，未配置不能伪作成功。",
+        "本轮M19→M48依次受限关闭，当前累计3/15；早期0/15或1/15属于历史记录，不覆盖当前推导值。",
+        "F-SPEC-01至08与M01-LIMIT已批准；旧观察中“待批”措辞仅指当时状态。",
+        "当前报表UI仅三类显示日期筛选；API忽略其他数据集日期是剩余差异。asOf仅生成时刻，分页在当前可见集生成后切片，不等历史快照或数据库分页。",
+        "M32读取/导出/订阅动作分权、快照权限与逐收件人重验均候选；不继承M19/M48批准。",
+        "六基础R1适用与原模块批准分层，恢复目标建议不声称云平台已满足；历史演练未复跑。"
       ],
-      "remaining": "仅当前未关闭模块及R1适用基础/版本评审，不再重复已批事项",
-      "latestReviewedHead": "c0538e7362da8b7ef82b18a13b427d80822ccdac",
-      "latestReviewAt": "2026-09-09T16:54:17.104368+00:00",
+      "remaining": "M32六项规则及LIMIT、R1两项基础建议与版本转序待决定；其他R顺序保留，当前未启动备用模块。",
+      "latestReviewedHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+      "latestReviewAt": "2026-09-09T17:01:22.299836+00:00",
       "internalScopeReviewAt": "2026-09-09T10:26:03.101902+00:00",
       "internalScopeSource": "modules[].scope → modules[].p1.internalScopeCoverage；逐个原登记短语精确映射，不增验收分母",
       "internalScopeResult": "当前15模块所有原登记短语均映射到既有规格/直接或跨域证据及具体限制；仅用户明确独立AI排班子能力暂缓、支付外部部分仅契约。其余保留含未探索，未当需求通过。",
@@ -52853,14 +53919,14 @@
     ],
     "packageAssessmentSource": "当前各包就绪条件由modules[].p1.currentDeliveryAssessment.basis及deliveryScope基础边界生成；packages.pending/readinessConditions保留兼容历史快照，不能覆盖逐模块最新评估，后续不手工更新两份。",
     "reviewPackage": {
-      "assessedAt": "2026-09-09T16:54:17.104368+00:00",
-      "basedOnHead": "988ceb8d419ab608fc58af039297ca07d6565113",
+      "assessedAt": "2026-09-09T17:01:22.299836+00:00",
+      "basedOnHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
       "status": "已受限关闭 M01,M19,M48；其他模块待评审，不等全项目P1验收",
-      "autonomousWork": "M48所审四项推荐与受限边界按用户批准记录，P1受限关闭、转序就绪；随后提升M32唯一主模块。无产品/原站新写入/测试复跑/发布/访问者变更。",
+      "autonomousWork": "M19/M48依次已P1受限关闭，合计3/15；继续M32六项原范围/21数据集静态口径、权限/设计器/订阅/验收差异和集中材料。无新源写入/业务测试/代码/部署/访问者变更。",
       "sourceProgress": "M01组织/职位/入职/兼职/法人/未来离职；M07薪资组/包前置；M06类别-级别-指标-标准保留链；M03任期/考察期；M17池成员；M37指标/标准启用；M18项目持久化及对象配置均有局部执行。没有将这些链等同整模块P1A完成。",
       "requirementsProgress": "当前15模块均有总体/分包契约或明确受限规格；原内部功能逐项映射，字段/角色/状态/依赖/异常/验收及实现差异同源。组织绩效、OKR、健康度、社保/个税/激励等未探索细则保留，已确认D1–D7与候选分开。",
-      "gateConclusion": "模块转序按具体记录；R1尚需未关闭模块/适用基础及版本评审，继续P1",
-      "foundationConclusion": "六基础均有字段/权限/异常/候选验收及现有实现证据，完整跨域字段矩阵、生产恢复目标/可信授权来源和外部适配仍需评审/环境条件；不计入15模块数字。多角色真人与云端生产验证属于后续阶段，不把它们单独设为继续P1的前置。",
+      "gateConclusion": "M01/M19/M48均P1受限关闭且模块转序就绪，3/15；M32材料已完成待评审，六基础及R1版本尚未批准，R1不可自动进入P2/P3。",
+      "foundationConclusion": "六基础已按R1消费者逐项关联既有批准、实际代码与候选验收；R1-BASELINE-01和R1-RECOVERY-01待评审，未签署，不计模块分母。",
       "blockers": [
         {
           "id": "P1-CONNECTION-01",
@@ -52873,10 +53939,10 @@
         {
           "id": "P1-RULES-01",
           "kind": "最小必要业务选择",
-          "action": "M32当前规则/受限边界的剩余条件（若已获本窗口批准直接应用，不重问）",
-          "evidence": "对应moduleClosure/reviewPackage与approvalRecords",
-          "affected": "只当前未关闭模块；已批准模块无P1硬阻塞",
-          "restore": "完成当前可执行工作并处理真实未决事项"
+          "action": "集中评审M32-SPEC-01至06、M32-LIMIT-01；R1-BASELINE-01及R1-RECOVERY-01另列基础需求",
+          "evidence": "P1_M32_Review_Package.md / P1_R1_Foundation_Review.md，同源推荐均未批准",
+          "affected": "M32关闭及R1版本转序；已关闭M01/M19/M48无新增P1硬阻塞",
+          "restore": "批准或修订具体推荐与受限边界；无须重问已批准模块"
         },
         {
           "id": "P1-REVIEW-01",
@@ -52889,10 +53955,10 @@
         {
           "id": "P1-LOCAL-CONDITIONS",
           "kind": "局部原站条件待核",
-          "action": "M32定向源证据缺口；已批准限制的模块不再阻塞P1",
-          "evidence": "BC-C28/C31/C40、BC-F45/46及dataValidation.records/operations；源已确认保存和未知结果分别记录。",
-          "affected": "只未处理的当前范围源行为",
-          "restore": "必要时恢复浏览器，或明确批准对应模块有范围的产品设计及例外"
+          "action": "M32原报表定义/历史快照/订阅权限执行证据不可新增",
+          "evidence": "BC-P1C-M32只观察订阅表头；tabs.list当前20秒超时，代码证据不能替代源执行",
+          "affected": "M32受限边界的采纳；不重开三个已批准模块",
+          "restore": "批准M32-LIMIT-01后按补验责任关闭P1；否则恢复浏览器，仅定向核所需规则"
         }
       ],
       "evidenceRefs": [
@@ -53205,7 +54271,26 @@
           }
         ],
         "assessmentAt": "2026-09-09T10:19:00.264568+00:00",
-        "businessAccepted": false
+        "businessAccepted": false,
+        "r1Assessment": {
+          "consumers": "M01/M19/M48/M32",
+          "approvedRuleRefs": [
+            "M01-P1-APPROVAL-20260909",
+            "M19-P1-APPROVAL-20260909",
+            "M48-P1-APPROVAL-20260909"
+          ],
+          "approvedScope": "成员有效、稳定员工绑定、撤权不复活已批准于对应模块；不由参数选择他人。",
+          "pending": "跨R1登录/成员/员工映射的一致使用；可信当前授权对账来源仍需设计。",
+          "proposal": "每次服务端请求重验成员、租户、当前范围，未绑定本人不按姓名匹配；恢复开放前对账独立可信授权，无法对账保持隔离。",
+          "status": "适用需求已整理待评审",
+          "approvalRecord": null,
+          "acceptanceCaseRefs": [
+            "BASE-01-AC01",
+            "BASE-01-AC02"
+          ],
+          "basedOnHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+          "assessedAt": "2026-09-09T17:01:22.299836+00:00"
+        }
       },
       {
         "id": "BASE-02",
@@ -53279,7 +54364,27 @@
           }
         ],
         "assessmentAt": "2026-09-09T10:19:00.264568+00:00",
-        "businessAccepted": false
+        "businessAccepted": false,
+        "r1Assessment": {
+          "consumers": "M01/M19/M48/M32",
+          "approvedRuleRefs": [
+            "M01-P1-APPROVAL-20260909",
+            "M19-P1-APPROVAL-20260909",
+            "M48-P1-APPROVAL-20260909"
+          ],
+          "approvedScope": "D3–D7、审批权与管理权分离及本人/团队权限已批准；不自动批准报表导出/订阅权。",
+          "pending": "M32-SPEC-03的读取/导出/订阅分权和历史聚合投影待评审。",
+          "proposal": "对象、动作、字段、组织关系的权限交集贯穿列表/详情/报表/历史/附件；关系变化或撤权清缓存并重算，摘要授权不派生原单敏感详情权。",
+          "status": "适用需求已整理待评审",
+          "approvalRecord": null,
+          "acceptanceCaseRefs": [
+            "BASE-02-AC01",
+            "BASE-02-AC02",
+            "BASE-02-AC03"
+          ],
+          "basedOnHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+          "assessedAt": "2026-09-09T17:01:22.299836+00:00"
+        }
       },
       {
         "id": "BASE-03",
@@ -53290,7 +54395,7 @@
           "M32"
         ],
         "scope": "操作者/对象/修订/关联单/结果、业务失败与事务回滚边界；不新增独立日志模块。",
-        "acceptance": "成功变更与审计同事务；冲突/拒绝不伪报成功；D1执行失败可定位原因与重试记录，数据库不可写时不承诺同库留痕成功；保留原单与历史。F-SPEC-02/03决策未批准。",
+        "acceptance": "成功变更与审计同事务；冲突/拒绝不伪报成功；D1执行失败可定位原因与重试记录，数据库不可写时不承诺同库留痕成功；保留原单与历史。F-SPEC-02/03已获M01批准；跨域基础适用尚待R1评审。",
         "evidence": [
           "F03",
           "F-SPEC-02",
@@ -53307,7 +54412,7 @@
           {
             "field": "故障留痕边界",
             "definition": "审批原单ID、workspace revision、执行attempts/实际时点关联",
-            "constraints": "提前拒绝/权限拒绝不等failed尝试，DB不可写不能同事务强保失败日志；结果未知先读。F-SPEC-02/03未批",
+            "constraints": "提前拒绝/权限拒绝不等failed尝试，DB不可写不能同事务强保失败日志；结果未知先读。F-SPEC-02/03在M01已批准，按对应范围应用",
             "basis": "BP-F-REQ-02"
           }
         ],
@@ -53340,7 +54445,26 @@
           }
         ],
         "assessmentAt": "2026-09-09T10:19:00.264568+00:00",
-        "businessAccepted": false
+        "businessAccepted": false,
+        "r1Assessment": {
+          "consumers": "M01/M19/M48/M32",
+          "approvedRuleRefs": [
+            "M01-P1-APPROVAL-20260909",
+            "M19-P1-APPROVAL-20260909",
+            "M48-P1-APPROVAL-20260909"
+          ],
+          "approvedScope": "F-SPEC-02/03在M01已批准；M19审批操作不伪造业务结果。",
+          "pending": "M32生成/导出/订阅审计和跨模块事件信封待确认，不承诺数据库故障时同库仍成功写入。",
+          "proposal": "成功业务变化与审计同事务；原单、版本、操作者、实际结果和尝试关联。失败前拒绝、业务失败、数据库不可写和结果未知分别表达，未知先查。DB不可写的运行诊断不能伪作已入库审计。",
+          "status": "适用需求已整理待评审",
+          "approvalRecord": null,
+          "acceptanceCaseRefs": [
+            "BASE-03-AC01",
+            "BASE-03-AC02"
+          ],
+          "basedOnHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+          "assessedAt": "2026-09-09T17:01:22.299836+00:00"
+        }
       },
       {
         "id": "BASE-04",
@@ -53428,7 +54552,28 @@
           }
         ],
         "assessmentAt": "2026-09-09T10:19:00.264568+00:00",
-        "businessAccepted": false
+        "businessAccepted": false,
+        "r1Assessment": {
+          "consumers": "M01/M19/M48/M32",
+          "approvedRuleRefs": [
+            "M01-P1-APPROVAL-20260909",
+            "M19-P1-APPROVAL-20260909",
+            "M48-P1-APPROVAL-20260909"
+          ],
+          "approvedScope": "M01合同版本、M19流程实例版本冻结、M48按当前权读历史已批准。",
+          "pending": "当前附件只员工/课程两类归属；M19流程和M32快照等新增归属需P2扩展，非现有通用实现。",
+          "proposal": "业务使用的不可变版本和对象引用可追溯；旧版本读权按当前权限，不能借备份恢复旧访问。附件元数据与对象存储分阶段补偿，孤儿不可读、删除待清理单列；R1复用现有类型/MIME及10MiB限制，扩大类型/上限另评估。",
+          "status": "适用需求已整理待评审",
+          "approvalRecord": null,
+          "acceptanceCaseRefs": [
+            "BASE-04-AC01",
+            "BASE-04-AC02",
+            "BASE-04-AC03",
+            "BASE-04-AC04"
+          ],
+          "basedOnHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+          "assessedAt": "2026-09-09T17:01:22.299836+00:00"
+        }
       },
       {
         "id": "BASE-05",
@@ -53486,7 +54631,26 @@
           }
         ],
         "assessmentAt": "2026-09-09T10:19:00.264568+00:00",
-        "businessAccepted": false
+        "businessAccepted": false,
+        "r1Assessment": {
+          "consumers": "M01/M19/M48/M32",
+          "approvedRuleRefs": [
+            "M01-P1-APPROVAL-20260909",
+            "M19-P1-APPROVAL-20260909",
+            "M48-P1-APPROVAL-20260909"
+          ],
+          "approvedScope": "不将历史本地演练继承为当前云端恢复验收；已有D1规则继续适用。",
+          "pending": "R1-RECOVERY-01恢复目标、保留期限、责任与可信授权来源需要明确，生产实现/演练均未完成。",
+          "proposal": "一致恢复单元含DB/对象版本清单及哈希/源码及迁移/当前授权对账；恢复先隔离、校验、对账，再由所有者授权开放。无可信当前撤权记录或缺关键对象保持隔离，审批不重放已处理节点，不自动补发消息或执行未知交易。",
+          "status": "适用需求已整理待评审",
+          "approvalRecord": null,
+          "acceptanceCaseRefs": [
+            "BASE-05-AC01",
+            "BASE-05-AC02"
+          ],
+          "basedOnHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+          "assessedAt": "2026-09-09T17:01:22.299836+00:00"
+        }
       },
       {
         "id": "BASE-06",
@@ -53605,7 +54769,27 @@
           }
         ],
         "assessmentAt": "2026-09-09T10:19:00.264568+00:00",
-        "businessAccepted": false
+        "businessAccepted": false,
+        "r1Assessment": {
+          "consumers": "M01/M19/M48/M32",
+          "approvedRuleRefs": [
+            "M01-P1-APPROVAL-20260909",
+            "M19-P1-APPROVAL-20260909",
+            "M48-P1-APPROVAL-20260909"
+          ],
+          "approvedScope": "用户允许必要接口契约先行、供应商未配置不阻P1；M19通知三态和M48生产者不可用已批准。",
+          "pending": "R1通用接口信封、去重/回执冲突及M32订阅消息边界候选待批准；具体供应商协议待适配。",
+          "proposal": "显式tenant/source/internalId/externalId/eventId/version/digest/correlationId及业务/通知/回执状态；同键同内容幂等、异内容冲突、未知先查询。未配置显示不可用，签署登记/审批通过不当外部签署/送达；绝不由外部数据自动开户/授予角色。",
+          "status": "适用需求已整理待评审",
+          "approvalRecord": null,
+          "acceptanceCaseRefs": [
+            "BASE-06-AC01",
+            "BASE-06-AC02",
+            "BASE-06-AC03"
+          ],
+          "basedOnHead": "c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08",
+          "assessedAt": "2026-09-09T17:01:22.299836+00:00"
+        }
       }
     ],
     "dependencies": [

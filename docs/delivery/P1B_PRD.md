@@ -18,7 +18,7 @@ R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可
 | M01 组织员工 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M19 审批中心 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M48 员工自助 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
-| M32 报表 | R1 / primary | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M32 报表 | R1 / primary | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M37 人才标准 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M06 任职资格 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M26 360度评估 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
@@ -38,7 +38,7 @@ R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可
 
 # 本项目总体PRD（P1B评审稿）
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T16:54:17.104368+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T17:01:22.299836+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
@@ -159,7 +159,7 @@ P1A关闭 3/15（完整0，受限3）；P1B需求就绪 3/15（完整0，受限3
 |---|---|---|---|---|
 | BASE-01 身份与登录 / M01,M48,M35 | 平台身份到企业成员/业务员工的显式关联、停用撤权和当前会话；不恢复完整主数据同步模块。 | 给定有效/无效/已撤权身份，登录和每次服务端请求分别准入或拒绝；跨租户ID不命中；恢复后撤权身份仍拒绝；E2仅本人，不把管理员当独立业务角色。 | F02；I-RESTORE-REVOCATIONS；lib/hris/authorization.ts | 字段/权限/失败与验收候选已细化；现有代码与历史证据适用边界明确，完整需求/环境条件待评审，未签署 |
 | BASE-02 角色、组织范围和字段权限 / M01,M19,M48,M32 | 各保留模块当前角色/组织/字段矩阵、动作时重核、D3–D5及当前/历史对象范围。 | 同对象通过列表/详情/历史/报表/附件访问均按当前权限；越权返回拒绝且无敏感投影；本人/发起者不能代独立审批；职级不可见时不得盲审；撤权后待办同步不可推进。 | F02；F04；D3–D5；lib/hris/authorization.ts | 字段/权限/失败与验收候选已细化；现有代码与历史证据适用边界明确，完整需求/环境条件待评审，未签署 |
-| BASE-03 审计日志 / M01,M19,M32 | 操作者/对象/修订/关联单/结果、业务失败与事务回滚边界；不新增独立日志模块。 | 成功变更与审计同事务；冲突/拒绝不伪报成功；D1执行失败可定位原因与重试记录，数据库不可写时不承诺同库留痕成功；保留原单与历史。F-SPEC-02/03决策未批准。 | F03；F-SPEC-02；F-SPEC-03 | 字段/权限/失败与验收候选已细化；现有代码与历史证据适用边界明确，完整需求/环境条件待评审，未签署 |
+| BASE-03 审计日志 / M01,M19,M32 | 操作者/对象/修订/关联单/结果、业务失败与事务回滚边界；不新增独立日志模块。 | 成功变更与审计同事务；冲突/拒绝不伪报成功；D1执行失败可定位原因与重试记录，数据库不可写时不承诺同库留痕成功；保留原单与历史。F-SPEC-02/03已获M01批准；跨域基础适用尚待R1评审。 | F03；F-SPEC-02；F-SPEC-03 | 字段/权限/失败与验收候选已细化；现有代码与历史证据适用边界明确，完整需求/环境条件待评审，未签署 |
 | BASE-04 附件与历史版本 / M01,M27,M26,M37,M48 | 对象附件引用、类型大小与存储边界、版本化模板/业务快照/当前读取权；不自动建设暂缓问卷模块。 | 旧业务保留所用模板和文件版本；新版本不覆盖历史；跨人/越权/撤权下载拒绝；重复或失败写入不出现可用假附件；完整云端和多角色验证按后阶段条件，不以历史代码代验收。 | F04；F-CONTRACT-FIELDS；L-EXAM-TYPES | 字段/权限/失败与验收候选已细化；现有代码与历史证据适用边界明确，完整需求/环境条件待评审，未签署 |
 | BASE-05 数据备份和异常恢复 / M35,M01 | 备份版本、完整性/依赖、隔离恢复核验、撤权对账与恢复开放闸门；保留原M35映射，不恢复同步引擎。 | 指定快照恢复到隔离环境，引用/版本一致；恢复后重放不重复业务生效；对账备份后撤权并保持拒绝；失败不开放服务；明确恢复责任/目标及证据版本，当前P1定义契约不运行生产恢复。 | I-RESTORE-REVOCATIONS；F03 | 字段/权限/失败与验收候选已细化；现有代码与历史证据适用边界明确，完整需求/环境条件待评审，未签署 |
 | BASE-06 外部接口预留 / M22,M35,M15,M10,M07,M12 | 保留模块所需电子签/主数据/外部测评/财务/支付适配契约：内部与外部ID、来源和版本、请求关联/幂等键、回执状态、超时重试/对账/人工恢复、权限与敏感字段最小化；无供应商接通承诺。 | 合成契约用例区分未配置/待发送/已接收/处理中/成功/失败/结果不明及取消（实际各供应商映射待规格）；结果不明先查证，重复回执不重复生效；工资发布不作支付成功、合同登记不作签署成功；未知endpoint/密钥不编造。 | I-EXTERNAL-CONTRACT；P1-I-RULES；BP-I-REQ-04；BP-I-REQ-08；BC-C35：M37测评方案未配置且当前未删除目录无候选；无供应商调用 | 字段/权限/失败与验收候选已细化；现有代码与历史证据适用边界明确，完整需求/环境条件待评审，未签署 |
@@ -202,7 +202,7 @@ P1A关闭 3/15（完整0，受限3）；P1B需求就绪 3/15（完整0，受限3
 | 对象/字段 | 定义 | 约束与限制 | 依据 |
 |---|---|---|---|
 | 审计/历史/业务事件 | 核心audit含ID/actor/action/subject/time/revision；任职历史仅相关员工任职状态变化写；扩展业务另存事件快照 | 写状态与审计同事务token；审计前台最近100只是state读取限制，不能当全历史已删除；audit API按页20独立查 | repository.ts/development-repository.ts/audit/route.ts |
-| 故障留痕边界 | 审批原单ID、workspace revision、执行attempts/实际时点关联 | 提前拒绝/权限拒绝不等failed尝试，DB不可写不能同事务强保失败日志；结果未知先读。F-SPEC-02/03未批 | BP-F-REQ-02 |
+| 故障留痕边界 | 审批原单ID、workspace revision、执行attempts/实际时点关联 | 提前拒绝/权限拒绝不等failed尝试，DB不可写不能同事务强保失败日志；结果未知先读。F-SPEC-02/03在M01已批准，按对应范围应用 | BP-F-REQ-02 |
 
 | 场景ID | 给定 | 操作 | 预期/待定边界 | 依据与执行状态 |
 |---|---|---|---|---|

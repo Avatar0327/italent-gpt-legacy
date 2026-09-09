@@ -183,4 +183,27 @@ for m in s['modules']:
 check(s['p1Baseline']['dataValidation']['records']==old['p1Baseline']['dataValidation']['records'] and s['p1Baseline']['dataValidation']['operations']==old['p1Baseline']['dataValidation']['operations'],'本离线单元未改变源操作与遗留合成记录')
 result['checks']=checks
 (D/'P1AB_Document_Check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
-print('PASS: M19/M48 packets reference authoritative cases, full internal scope and distinct unapproved exceptions')
+for m in s['modules']:
+ datasets=m['p1'].get('datasetContracts',[])
+ if not datasets:continue
+ catalog=re.search(r'dataset:\s*z\.enum\(\[(.*?)\]\)',(R/'lib/hris/reports.ts').read_text(),re.S)
+ check(catalog is not None,m['id']+'可定位实际报表枚举')
+ expected=set(re.findall(r"['\"]([^'\"]+)['\"]",catalog.group(1)))
+ check(len(datasets)==len({x['datasetId'] for x in datasets}) and {x['datasetId'] for x in datasets}==expected,m['id']+'数据集口径与现有枚举逐项映射，无遗漏重复')
+ for x in datasets:
+  check(set(x['producerModuleIds'])<=active and x['scopeItem'] in m['scope'].split('、'),x['datasetId']+'消费者/原范围合法，不恢复暂缓模块')
+  check(all((R/r).exists() for r in x['codeRefs']) and all(x.get(k) for k in ['rowGrain','currentSemantics','sourceHead','requirementDecision']),x['datasetId']+'口径与静态版本证据齐备')
+for rg in s['roadmap']['rangeGates']:
+ rp=rg.get('foundationReviewPackage')
+ if not rp:continue
+ check(set(rp['decisionIds'])<=issue_ids,rg['id']+'基础评审引用同源待决事项')
+ for cap in ds['baseCapabilities']:
+  a=cap.get('r1Assessment')
+  if not a or rg['id']!='R1':continue
+  check(set(a['acceptanceCaseRefs'])=={x['id'] for x in cap['acceptanceCases']},cap['id']+'R1基础引用全部原候选验收，不复制状态')
+  check(all(has_approval(i) for i in a['approvedRuleRefs']),cap['id']+'引用的模块批准可追溯')
+  if rg['foundationReadiness'][cap['id']]['value'] is True:
+   check(has_approval(a.get('approvalRecord')),cap['id']+'R1基础就绪需自身适用批准，不继承模块批准')
+result['checks']=checks
+(D/'P1AB_Document_Check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+print('PASS: module packets, scoped approvals, dataset mappings and R1 foundation references; no inherited signoff')

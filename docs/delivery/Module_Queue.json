@@ -782,7 +782,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M32唯一主模块；M48已P1受限关闭",
+    "activeWorkPackage": "M32唯一主模块完整评审材料已准备，继续R1适用基础需求核对",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -797,7 +797,7 @@
       "BP-S"
     ],
     "nextTasks": [
-      "当前M32唯一主模块：完成报表六项原范围、指标/数据粒度、权限/快照/导出/订阅的需求与评审材料。",
+      "集中处理M32六项推荐与LIMIT、R1基础及恢复目标；按批准重新判定M32，未批不转序，不重复三个已关闭模块。",
       "不重问已批准M01/M19/M48规则；后续残余验证归P2/P3/P4。",
       "主模块全部剩余必要工作外部阻塞时才启用一个备用；不按备用数扩并行探索。",
       "R1四模块和适用六基础及版本评审满足后才转P2/P3，历史技术验收不能继承。"
