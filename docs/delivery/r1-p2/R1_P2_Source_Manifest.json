@@ -1,0 +1,87 @@
+{
+  "kind": "immutable_input_provenance",
+  "baseline": "716cd9df5f5776d050f77f57c2ad5a35c0a83882",
+  "mainStartupClean": true,
+  "files": [
+    {
+      "path": "docs/delivery/Controller_Resume.md",
+      "sha256": "d1403c0435cd8a93dc6d8802bfbf9b727b9e94b1cc259de8a478e514552f631d",
+      "lastCommit": "716cd9df5f5776d050f77f57c2ad5a35c0a83882"
+    },
+    {
+      "path": "docs/Execution_Checkpoint.md",
+      "sha256": "305e78350f3eef6904fc551e794f6f82a0040e69b917d63f77467eaf57777d06",
+      "lastCommit": "716cd9df5f5776d050f77f57c2ad5a35c0a83882"
+    },
+    {
+      "path": "docs/delivery/Scope_Register.json",
+      "sha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b",
+      "lastCommit": "716cd9df5f5776d050f77f57c2ad5a35c0a83882"
+    },
+    {
+      "path": "docs/delivery/P1_R1_P2_Handoff.md",
+      "sha256": "f46f17d1a7a56e33d97553c86306a0c39191070da830d43803db88c371d5302d",
+      "lastCommit": "716cd9df5f5776d050f77f57c2ad5a35c0a83882"
+    },
+    {
+      "path": "docs/delivery/P1_R1_P2_Start_Prompt.md",
+      "sha256": "8f5d8d248cb8fcdb299cd0a0b18f5751ea99096183b1133fa44a8f86bccc9983",
+      "lastCommit": "e7f9d3ddf09312a9705814137f4be8ff30bb15e4"
+    },
+    {
+      "path": "docs/delivery/P1_Approval_Records.md",
+      "sha256": "64f0d4fd2fc11635c6689845dd542e98189bba4e8a416c125e2437ca62b566a1",
+      "lastCommit": "716cd9df5f5776d050f77f57c2ad5a35c0a83882"
+    },
+    {
+      "path": "docs/delivery/P1B_PRD.md",
+      "sha256": "af926f33f3a6b8de7679a3403e46f0c3ba0b58b0a8cc493107fc9a15e26b4545",
+      "lastCommit": "716cd9df5f5776d050f77f57c2ad5a35c0a83882"
+    },
+    {
+      "path": "docs/delivery/P1B_Implementation_Map.md",
+      "sha256": "f577046e417afa3c6e6bc72503dc97ac738997a3c1fb318ebd4758505930c28f",
+      "lastCommit": "716cd9df5f5776d050f77f57c2ad5a35c0a83882"
+    },
+    {
+      "path": "docs/delivery/P1B_BP_F_Specification.md",
+      "sha256": "bbb47d97cb793e70acff7c6dd420bf7a442a1fec8d36f69dbaaefa98ed4f597e",
+      "lastCommit": "716cd9df5f5776d050f77f57c2ad5a35c0a83882"
+    },
+    {
+      "path": "docs/delivery/P1B_BP_I_Specification.md",
+      "sha256": "3498dc5c999721adb1df1a1bed0c89c829149d0a3662d28eb1ee7300cb6b53f8",
+      "lastCommit": "716cd9df5f5776d050f77f57c2ad5a35c0a83882"
+    },
+    {
+      "path": "docs/delivery/F01_F04_Requirements_Baseline.md",
+      "sha256": "dbe711da2da1c1d2915aa109efdcdb6147c405de5e4c889b748283899be7418a",
+      "lastCommit": "2df6c2375134e8f6c695cff27188958b915fe3e3"
+    },
+    {
+      "path": "docs/delivery/P1_R1_Foundation_Review.md",
+      "sha256": "fc0a11738cb51159aeaaece0178963e86537fd9a47a71a95e632f6447d7d34be",
+      "lastCommit": "716cd9df5f5776d050f77f57c2ad5a35c0a83882"
+    },
+    {
+      "path": "docs/delivery/P1_M01_Review_Package.md",
+      "sha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da",
+      "lastCommit": "716cd9df5f5776d050f77f57c2ad5a35c0a83882"
+    },
+    {
+      "path": "docs/delivery/P1_M19_Review_Package.md",
+      "sha256": "c9df85cacaa2530b632346abc82ef3525c8f083c44968b16191bfcb30ccbc42e",
+      "lastCommit": "716cd9df5f5776d050f77f57c2ad5a35c0a83882"
+    },
+    {
+      "path": "docs/delivery/P1_M48_Review_Package.md",
+      "sha256": "e6559a7981ed02b3b99df5232718ce289dd971cd5d4ad80975277f017c9b1221",
+      "lastCommit": "716cd9df5f5776d050f77f57c2ad5a35c0a83882"
+    },
+    {
+      "path": "docs/delivery/P1_M32_Review_Package.md",
+      "sha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b",
+      "lastCommit": "716cd9df5f5776d050f77f57c2ad5a35c0a83882"
+    }
+  ]
+}

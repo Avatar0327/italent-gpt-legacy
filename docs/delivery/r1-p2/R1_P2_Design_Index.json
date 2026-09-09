@@ -1,0 +1,96 @@
+{
+  "kind": "design_artifact_index_not_project_facts",
+  "baseline": "716cd9df5f5776d050f77f57c2ad5a35c0a83882",
+  "branch": "design/r1-p2-20260909",
+  "p2ExitApproved": false,
+  "p3Started": false,
+  "tasks": [
+    {
+      "id": "R1-P2-01",
+      "number": 1,
+      "document": "R1_P2_Architecture.md",
+      "requirements": [
+        "R1-P1-P2-TRANSITION-20260909",
+        "R1-BASELINE-01",
+        "BASE-01",
+        "BASE-02",
+        "BASE-03",
+        "BASE-04",
+        "BASE-05",
+        "BASE-06",
+        "E1",
+        "E2"
+      ],
+      "evidence": [
+        {
+          "path": "lib/hris/context.ts",
+          "classification": "可复用",
+          "sha256": "2a2fd5162c44c61cfb8c703d6efc5e7c30e86ec3f4885ce2becb56b1dcac3a45"
+        },
+        {
+          "path": "lib/hris/repository.ts",
+          "classification": "待修改",
+          "sha256": "d29c455ce153d7231728c7821d3571ad92ae60edf6b1811d478dcb6a2f1a1249"
+        },
+        {
+          "path": "lib/hris/development-repository.ts",
+          "classification": "可复用",
+          "sha256": "b0bc2b0cd3490358d0e43d90f8b8f9f0e338a7141672da3dab28efe469a6fd1d"
+        },
+        {
+          "path": ".openai/hosting.json",
+          "classification": "受限",
+          "sha256": "69fbe98861d2790d2d029fca25d257b8bd8b031777e3e164485a60ca69a12638"
+        }
+      ],
+      "cases": [
+        {
+          "id": "P3-ARC-01",
+          "requirements": [
+            "BASE-01",
+            "BASE-02",
+            "BASE-03"
+          ],
+          "given": "有效平台身份、active成员，A范围可见；读取后同role被撤字段/缩范围",
+          "when": "带旧authorizationRevision提交命令",
+          "then": "拒绝旧权提交；业务、审计成功事件和outbox都不产生部分提交；新读取只返回当前交集",
+          "evidence": "角色/授权revision前后及D1事务行差分",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-ARC-02",
+          "requirements": [
+            "R1-BASELINE-01",
+            "BASE-04",
+            "BASE-05",
+            "BASE-06"
+          ],
+          "given": "有效命令准备数据/审计/outbox，同一token；对象服务不可用",
+          "when": "注入审计失败，再以新命令正常提交",
+          "then": "失败全回滚；正常仅一次业务变化，外部/对象失败不伪造业务成功外效；恢复保持隔离",
+          "evidence": "SQL执行计划、不可变事件和独立对象状态",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P4-ARC-03",
+          "requirements": [
+            "E1",
+            "E2",
+            "R1-P1-P2-TRANSITION-20260909"
+          ],
+          "given": "独立评审人持设计包，当前E2仅所有者",
+          "when": "审查P2范围与角色验收安排",
+          "then": "页面可开仅E1；P2退出需所有者显式批准，真人多角色需后续授权，不能单管理员代替",
+          "evidence": "独立评审记录与授权记录",
+          "owner": "项目所有者/独立验收负责人",
+          "gate": "P2退出评审及P4权限验收",
+          "execution": "not_executed"
+        }
+      ]
+    }
+  ]
+}
