@@ -1,6 +1,6 @@
 # 已有实现与产品需求对应
 
-生成来源：`Scope_Register.json → p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T01:32:59.407213+00:00。
+生成来源：`Scope_Register.json → p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T01:38:52.068353+00:00。
 
 对应当前源码静态核对；可复用是技术候选，不是当前测试或业务验收通过。历史测试只在原Verification标注的testedSourceCommit及适用范围有效，本轮未复跑。产品源码未修改。
 
@@ -190,6 +190,7 @@
 | BP-I/BP-I-REQ-14 | 填报活动、方案、工单与审批；[P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 原站局部结构事实和受限需求，未签署 | [P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md)；[Scope_Register.json](../../docs/delivery/Scope_Register.json) | M08无独立实现；与M07薪资填报/M19审批关系待源契约，不能把任一动态表单当通用业务提交引擎。 |
 | BP-I/BP-I-REQ-15 | 翻译资源、语言列与版本记录；[P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 原站局部结构证据和受限需求，未签署 | [P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md)；[Scope_Register.json](../../docs/delivery/Scope_Register.json) | M47按资源本地化事实归BP-I，非待定业务归属；独立工作台未实现，未以现有中文界面/locale日期格式代替多语言资源管理。 |
 | BP-I/BP-I-REQ-16 | HRBP聚合工作台与经理团队指标；[P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 原站局部结构证据和受限需求，未签署 | [P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md)；[work-inbox.ts](../../lib/hris/work-inbox.ts)；[reports.ts](../../lib/hris/reports.ts)；[route.ts](../../app/api/self-service/route.ts) | M04/M40独立工作台未实现，现有work-inbox/self-service/reports可复用局部授权查询；M40当前已局部P级，历史N级限制不再适用，HRBP安全取证改精确标签检测，不读正文容器。；员工审批生效、员工未离职、部门启用三个维度不能统一为active；具体看板还需字段及指标筛选。 |
+| BP-I/BP-I-REQ-17 | 问卷分类、模板与实例的关联及版本差异；[P1B_BP_I_Specification.md](../../docs/delivery/P1B_BP_I_Specification.md) | 原站局部界面事实＋本项目既有静态实现对照＋待确认的关联需求，不是完整可执行需求基线 | [surveys.ts](../../lib/hris/surveys.ts)；[P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md) | 分类模型和多模板引用无当前实现证据；原站新建编辑器未取得。复杂题型、跳转、匿名、报告和模板/分类传播规则未就绪；不能以代码版本化补写原站结论。 |
 
 ## 历史验证适用版本索引
 
