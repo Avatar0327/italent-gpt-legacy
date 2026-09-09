@@ -1,6 +1,6 @@
 # 已有实现与产品需求对应
 
-生成来源：`Scope_Register.json → p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T01:38:52.068353+00:00。
+生成来源：`Scope_Register.json → p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T02:11:43.323982+00:00。
 
 对应当前源码静态核对；可复用是技术候选，不是当前测试或业务验收通过。历史测试只在原Verification标注的testedSourceCommit及适用范围有效，本轮未复跑。产品源码未修改。
 
@@ -122,6 +122,7 @@
 | BP-F/BP-F-REQ-04 | 再入职身份、司龄与签订次数；[P1B_BP_F_Specification.md](../../docs/delivery/P1B_BP_F_Specification.md) | 原站配置说明事实与项目未实现边界；产品策略待需求评审 | [model.ts](../../lib/hris/model.ts)；[module-progress.ts](../../lib/hris/module-progress.ts)；[P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md) | 保留完整M01后续需求，不阻塞D1–D7；身份/司龄/合同计次选择尚未确认，不能借普通员工新增完成再入职 撤销纠错与不可手动入口清单仍未知；初始默认仅帮助出处，不作为本项目要求。 |
 | BP-F/BP-F-REQ-05 | 合同协议、法人关联及合同字段版本；[P1B_BP_F_Specification.md](../../docs/delivery/P1B_BP_F_Specification.md) | 本项目既有实现静态事实及原站配置差异；除已确认范围外待产品评审 | [workforce.ts](../../lib/hris/workforce.ts)；[contract-fields.ts](../../lib/hris/contract-fields.ts)；[contract-field-model.ts](../../lib/hris/contract-field-model.ts)；[development.ts](../../lib/hris/development.ts) | BC-F23/24原站报表连续判定和显式renewalOf不同；法人文本不能支持法人停用/改名/多主体历史；电子签、到期自动任务、次数累计/日期连续缺口保留 |
 | BP-F/BP-F-REQ-06 | 岗位编制与员工经历子集；[P1B_BP_F_Specification.md](../../docs/delivery/P1B_BP_F_Specification.md) | 既有实现静态候选；原站子集说明仅作差异依据 | [workforce.ts](../../lib/hris/workforce.ts)；[employee-experiences.ts](../../lib/hris/employee-experiences.ts) | BC-F22原站按配置唯一键控制新增与导入更新；本项目固定复合键和三类经历不是可配置子集/全量导入。兼职占编和项目人力工时不由主职人数替代。 |
+| BP-F/BP-F-REQ-10 | 组织生效日期、行政上级与创建结果核对；[P1B_BP_F_Specification.md](../../docs/delivery/P1B_BP_F_Specification.md) | 原站合成测试直接结果＋本项目静态差异，新增产品规则未签署 | [model.ts](../../lib/hris/model.ts)；[P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md) | 仅有效输入创建结果；重复/必填服务端拒绝、未来生效及停用、数据同步、完整权限未验证；本项目新增字段和时态不在当前功能扩展授权内。 |
 | BP-C/BP-C-REQ-01 | 干部任期/提名/任用；[P1B_BP_C_Specification.md](../../docs/delivery/P1B_BP_C_Specification.md) | 本项目既有实现静态事实；转为产品要求待评审 | [cadre-terms.ts](../../lib/hris/cadre-terms.ts)；[cadres.ts](../../lib/hris/cadres.ts) | 原站四状态干部身份不可用registered/ended一对一替代；委员会/任期算法/复杂任用类型未就绪；BC-C10原站选拔/述职评价表及评分项是独立配置，当前提名布尔审议与考察证据不覆盖评价表/多评委汇总。 |
 | BP-C/BP-C-REQ-02 | 任职资格标准及认证；[P1B_BP_C_Specification.md](../../docs/delivery/P1B_BP_C_Specification.md) | 本项目既有实现静态事实；转为产品要求待评审 | [qualification.ts](../../lib/hris/qualification.ts) | 认证委员会、类别层级及有效期政策需原站与企业基线；现有整数尺度非原站标准 |
 | BP-C/BP-C-REQ-03 | 360项目/关系/答卷/报告；[P1B_BP_C_Specification.md](../../docs/delivery/P1B_BP_C_Specification.md) | 本项目既有实现静态事实；转为产品要求待评审 | [feedback.ts](../../lib/hris/feedback.ts)；[development.ts](../../lib/hris/development.ts) | 阈值/匿名性是独立策略待确认；提醒、题型、完整活动运营未覆盖；修订答卷的完整历史与是否允许管理员读原答卷须产品评审，不能以均值抑制宣称匿名。；BC-C15原站全局最多90角色、套卷最多15且模板勾选继承，当前固定四类无角色配置/套卷版本，不得一对一映射。 |
