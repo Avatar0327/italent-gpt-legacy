@@ -1,5 +1,5 @@
 {
-  "version": 29,
+  "version": 30,
   "activeWriter": "当前聊天唯一总控",
   "mode": "sole-controller-p1-synthetic-source-testing",
   "branchCreationBase": "commit introducing this queue; exact SHA in git history",
@@ -699,7 +699,7 @@
   "currentP1": {
     "revision": "2026-09-08-P1AB",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-09T04:48:22.093129+00:00",
+    "updatedAt": "2026-09-09T04:59:04.043961+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -804,6 +804,6 @@
       "持续全局术语/对象/字段权限/历史状态/依赖/接口一致性审查；文档自检和业务签署分开，按完整单元提交推送，不恢复P2/P3开发"
     ],
     "state": "P1未整体验收；P2保留受限历史技术验收；F01–F04业务验收未完成；E1仅页面可打开；E2唯一访问者；D1–D7独立设计；所有历史测试不等于当前复验",
-    "currentWork": "BC-F40兼职cf48b4dc已保存任职中/生效，父EA主职A保持；BC-F41结束申请仅读，M19路由/消息待证，继续法人/再入职/M20及后续包"
+    "currentWork": "BC-F42测试法人LA已建；BC-F43当前合并重聘和邮箱匹配勾选，BC-F44离职跨流程条件已核。EA仍在职/兼职生效，正查询办理入口；随后M20及其余业务包。"
   }
 }
