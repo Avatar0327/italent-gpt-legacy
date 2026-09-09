@@ -1185,6 +1185,135 @@
           "execution": "not_executed"
         }
       ]
+    },
+    {
+      "id": "R1-P2-09",
+      "number": 9,
+      "document": "R1_P2_Review_Design.md",
+      "requirements": [
+        "R1-P1-P2-TRANSITION-20260909",
+        "R1-BASELINE-01",
+        "R1-RECOVERY-01",
+        "M01-LIMIT-01",
+        "M19-LIMIT-01",
+        "M48-LIMIT-01",
+        "M32-LIMIT-01",
+        "E1",
+        "E2"
+      ],
+      "evidence": [
+        {
+          "path": "docs/delivery/P1_Approval_Records.md",
+          "classification": "可复用",
+          "sha256": "64f0d4fd2fc11635c6689845dd542e98189bba4e8a416c125e2437ca62b566a1"
+        },
+        {
+          "path": "docs/delivery/P1_R1_P2_Handoff.md",
+          "classification": "可复用",
+          "sha256": "f46f17d1a7a56e33d97553c86306a0c39191070da830d43803db88c371d5302d"
+        },
+        {
+          "path": "docs/P2_Acceptance.md",
+          "classification": "受限",
+          "sha256": "5515191de9fd74c35b0c4263bef12617bdc16d497a069ab7d93d24e91a46ca3f"
+        }
+      ],
+      "cases": [
+        {
+          "id": "P2-REV-01",
+          "requirements": [
+            "R1-P1-P2-TRANSITION-20260909",
+            "R1-BASELINE-01",
+            "R1-RECOVERY-01",
+            "M01-LIMIT-01",
+            "M19-LIMIT-01",
+            "M48-LIMIT-01",
+            "M32-LIMIT-01",
+            "E1",
+            "E2"
+          ],
+          "given": "独立评审持九项设计、原P1批准及源码摘要",
+          "when": "查需求/风险/用例/主事实源边界",
+          "then": "追踪无遗漏且阶段不提升；缺完整资料退回补正",
+          "evidence": "独立P2评审意见及总控批准记录",
+          "owner": "独立评审负责人/项目所有者",
+          "gate": "P2退出评审",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-XMOD-01",
+          "requirements": [
+            "R1-BASELINE-01",
+            "M01-LIMIT-01",
+            "M19-LIMIT-01",
+            "M48-LIMIT-01",
+            "M32-LIMIT-01"
+          ],
+          "given": "人员A调B、模板更新、关系变化、报表任务同时运行",
+          "when": "按不同提交顺序执行合法/撤权/故障路径",
+          "then": "稳定ID和实际生效一致；旧节点/缓存/字段/下载无权即拒绝；全链同correlationId",
+          "evidence": "跨域时序/事务与授权差异报告",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P4-M01-01",
+          "requirements": [
+            "M01-LIMIT-01",
+            "E2"
+          ],
+          "given": "E2后续明确授权的独立HR申请人、双审批人、员工与范围外经理",
+          "when": "实际人分别办理M01/看历史附件、核通知回执",
+          "then": "独立性与当前权限符合D1–D7/任职规则，不以同管理员切换代替",
+          "evidence": "实名角色授权记录和人工验收单",
+          "owner": "HR业务验收/独立安全复核",
+          "gate": "P4完整权限和业务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P4-M19-01",
+          "requirements": [
+            "M19-LIMIT-01",
+            "E2"
+          ],
+          "given": "获明确授权的委托双方、节点审批人、外域业务负责人",
+          "when": "委托到期/撤销、管理撤销、外域补偿与真实回执核对",
+          "then": "三权不互换，未知回执不伪成功，外域更正由原域验收",
+          "evidence": "多角色操作证据和跨域验收单",
+          "owner": "审批业务验收/独立安全复核",
+          "gate": "P4完整权限和跨域验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P4-M48-01",
+          "requirements": [
+            "M48-LIMIT-01",
+            "E2"
+          ],
+          "given": "获授权真人本人/直线/虚线/部门负责人，七项生产者已接通",
+          "when": "各角色消费真实业务状态并核提交/撤回/详情",
+          "then": "范围、字段、任务与原域一致；未完成联调项目仍不通过",
+          "evidence": "真人角色矩阵和七项联调验收单",
+          "owner": "自助业务验收/七生产者负责人",
+          "gate": "P4业务和完整权限验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P4-M32-01",
+          "requirements": [
+            "M32-LIMIT-01",
+            "E2"
+          ],
+          "given": "获授权的read/export/subscribe/manage不同真人，实际代表数据量",
+          "when": "查历史/导出/订阅/转交/撤权，核性能与外发条件",
+          "then": "逐收件者权限生效；不保证收回合法已下载副本；真实外发另获明确授权，容量符合既定服务预算",
+          "evidence": "权限/容量/消息回执及外部副本使用说明",
+          "owner": "报表业务验收/独立安全及运维复核",
+          "gate": "P4业务/容量/生产准备",
+          "execution": "not_executed"
+        }
+      ]
     }
   ]
 }

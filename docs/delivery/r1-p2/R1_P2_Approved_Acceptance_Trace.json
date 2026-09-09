@@ -1,0 +1,1713 @@
+{
+  "kind": "derived_design_trace_not_approval_or_execution",
+  "baseline": "716cd9df5f5776d050f77f57c2ad5a35c0a83882",
+  "records": [
+    {
+      "id": "BASE-01-AC01",
+      "requirement": "BASE-01",
+      "given": "平台身份有效但成员inactive，或成员tenant与读取快照不一致",
+      "when": "任意受保护读取/写入",
+      "originalThen": "拒绝，不因平台允许访问或历史业务关联放行；未绑定employee不能凭姓名自动匹配员工",
+      "source": "docs/delivery/P1_R1_Foundation_Review.md",
+      "designDocuments": [
+        "R1_P2_Architecture.md",
+        "R1_P2_M48_Authorization_Consumers.md"
+      ],
+      "plannedCases": [
+        "P3-ARC-01",
+        "P3-M48-01"
+      ],
+      "targetExpected": "拒绝，不因平台允许访问或历史业务关联放行；未绑定employee不能凭姓名自动匹配员工",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fc0a11738cb51159aeaaece0178963e86537fd9a47a71a95e632f6447d7d34be"
+    },
+    {
+      "id": "BASE-01-AC02",
+      "requirement": "BASE-01",
+      "given": "旧备份中成员active、可信当前记录显示其后已撤权",
+      "when": "隔离恢复后拟开放访问",
+      "originalThen": "须先对账当前撤权，应用/附件仍拒绝；无可信当前授权来源时保持隔离，不能从备份恢复旧访问权",
+      "source": "docs/delivery/P1_R1_Foundation_Review.md",
+      "designDocuments": [
+        "R1_P2_Backup_Recovery.md"
+      ],
+      "plannedCases": [
+        "P3-REC-02"
+      ],
+      "targetExpected": "须先对账当前撤权，应用/附件仍拒绝；无可信当前授权来源时保持隔离，不能从备份恢复旧访问权",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fc0a11738cb51159aeaaece0178963e86537fd9a47a71a95e632f6447d7d34be"
+    },
+    {
+      "id": "BASE-02-AC01",
+      "requirement": "BASE-02",
+      "given": "调入审批者仅B组织且被指派二级申请，来源EA在A",
+      "when": "读申请摘要后读EA目录/任职史/附件",
+      "originalThen": "允许的申请摘要不派生A目录/历史/附件权，viewLevel撤销时职级变更办理拒绝；D3–D5既有规则不重问",
+      "source": "docs/delivery/P1_R1_Foundation_Review.md",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-04"
+      ],
+      "targetExpected": "允许的申请摘要不派生A目录/历史/附件权，viewLevel撤销时职级变更办理拒绝；D3–D5既有规则不重问",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fc0a11738cb51159aeaaece0178963e86537fd9a47a71a95e632f6447d7d34be"
+    },
+    {
+      "id": "BASE-02-AC02",
+      "requirement": "BASE-02",
+      "given": "岗位组织/成员范围在第一次读取后改变revision",
+      "when": "继续历史补充查询或附件对象读取",
+      "originalThen": "readConsistent核修订变化409，不以先读成功继续输出；每个动作重验当前权，原角色实例不替真人跨角色验收",
+      "source": "docs/delivery/P1_R1_Foundation_Review.md",
+      "designDocuments": [
+        "R1_P2_Architecture.md"
+      ],
+      "plannedCases": [
+        "P3-ARC-01"
+      ],
+      "targetExpected": "readConsistent核修订变化409，不以先读成功继续输出；每个动作重验当前权，原角色实例不替真人跨角色验收",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fc0a11738cb51159aeaaece0178963e86537fd9a47a71a95e632f6447d7d34be"
+    },
+    {
+      "id": "BASE-02-AC03",
+      "requirement": "BASE-02",
+      "given": "普通hr或manager能读员工名册，本人能读工资投影",
+      "when": "请求薪酬管理报表或原始薪资来源",
+      "originalThen": "非薪酬专岗拒绝；本人投影与管理权不同，单位承担/原来源不因本人名义开放",
+      "source": "docs/delivery/P1_R1_Foundation_Review.md",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-05"
+      ],
+      "targetExpected": "非薪酬专岗拒绝；本人投影与管理权不同，单位承担/原来源不因本人名义开放",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fc0a11738cb51159aeaaece0178963e86537fd9a47a71a95e632f6447d7d34be"
+    },
+    {
+      "id": "BASE-03-AC01",
+      "requirement": "BASE-03",
+      "given": "业务更新待提交，审计写异常或CAS未命中",
+      "when": "按事务故障/并发设计验证",
+      "originalThen": "不出现业务成功而无同事务审计；后续刷新核实际revision/对象。数据库外独立故障留痕并未实现，不代签D1例外",
+      "source": "docs/delivery/P1_R1_Foundation_Review.md",
+      "designDocuments": [
+        "R1_P2_Interfaces_Exceptions.md"
+      ],
+      "plannedCases": [
+        "P3-INT-02"
+      ],
+      "targetExpected": "不出现业务成功而无同事务审计；后续刷新核实际revision/对象。数据库外独立故障留痕并未实现，不代签D1例外",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fc0a11738cb51159aeaaece0178963e86537fd9a47a71a95e632f6447d7d34be"
+    },
+    {
+      "id": "BASE-03-AC02",
+      "requirement": "BASE-03",
+      "given": "员工普通字段变化与任职岗位/组织变化各一次",
+      "when": "核审计和任职历史粒度",
+      "originalThen": "普通字段变更有审计不必产生任职历史；任职变更按实际成功时点产生历史，不拿两类条数相等作正确标准",
+      "source": "docs/delivery/P1_R1_Foundation_Review.md",
+      "designDocuments": [
+        "R1_P2_Migration_Rollback.md"
+      ],
+      "plannedCases": [
+        "P3-MIG-01"
+      ],
+      "targetExpected": "普通字段变更有审计不必产生任职历史；任职变更按实际成功时点产生历史，不拿两类条数相等作正确标准",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fc0a11738cb51159aeaaece0178963e86537fd9a47a71a95e632f6447d7d34be"
+    },
+    {
+      "id": "BASE-04-AC01",
+      "requirement": "BASE-04",
+      "given": "同一员工有hr附件和employee附件，当前员工本人/经理/范围HR",
+      "when": "分别列表和直接ID下载",
+      "originalThen": "本人只employee附件；经理不因有名册范围获得员工文件，HR按范围；猜ID不能跳过归属/可见性/当前revision检查",
+      "source": "docs/delivery/P1_R1_Foundation_Review.md",
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ],
+      "plannedCases": [
+        "P3-M48-06"
+      ],
+      "targetExpected": "本人只employee附件；经理不因有名册范围获得员工文件，HR按范围；猜ID不能跳过归属/可见性/当前revision检查",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fc0a11738cb51159aeaaece0178963e86537fd9a47a71a95e632f6447d7d34be"
+    },
+    {
+      "id": "BASE-04-AC02",
+      "requirement": "BASE-04",
+      "given": "course已发布，原附件仍存在，另有新draft版本",
+      "when": "改或删除已发布版本附件",
+      "originalThen": "当前拒绝，旧版本资料保留；新增版本须独立关联，具体复制/来源策略待各模块，不能把普通删除当历史版本替换",
+      "source": "docs/delivery/P1_R1_Foundation_Review.md",
+      "designDocuments": [
+        "R1_P2_Migration_Rollback.md"
+      ],
+      "plannedCases": [
+        "P3-MIG-04"
+      ],
+      "targetExpected": "当前拒绝，旧版本资料保留；新增版本须独立关联，具体复制/来源策略待各模块，不能把普通删除当历史版本替换",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fc0a11738cb51159aeaaece0178963e86537fd9a47a71a95e632f6447d7d34be"
+    },
+    {
+      "id": "BASE-04-AC03",
+      "requirement": "BASE-04",
+      "given": "对象已put，元数据事务失败且补偿delete再次失败",
+      "when": "核恢复与客户端结果",
+      "originalThen": "不返回可用附件成功；孤儿只在存储维护对账中识别/清理，不向业务列表泄露；生产孤儿扫描策略未实现，需后续设计",
+      "source": "docs/delivery/P1_R1_Foundation_Review.md",
+      "designDocuments": [
+        "R1_P2_Interfaces_Exceptions.md"
+      ],
+      "plannedCases": [
+        "P3-INT-06"
+      ],
+      "targetExpected": "不返回可用附件成功；孤儿只在存储维护对账中识别/清理，不向业务列表泄露；生产孤儿扫描策略未实现，需后续设计",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fc0a11738cb51159aeaaece0178963e86537fd9a47a71a95e632f6447d7d34be"
+    },
+    {
+      "id": "BASE-04-AC04",
+      "requirement": "BASE-04",
+      "given": "元数据tombstone已提交，物理delete异常",
+      "when": "再列表/ID读取及清理重试",
+      "originalThen": "业务读不可达，返回deleted:true/cleanupPending:true；保留删除审计，不因物理残存恢复对外访问",
+      "source": "docs/delivery/P1_R1_Foundation_Review.md",
+      "designDocuments": [
+        "R1_P2_Interfaces_Exceptions.md"
+      ],
+      "plannedCases": [
+        "P3-INT-06"
+      ],
+      "targetExpected": "业务读不可达，返回deleted:true/cleanupPending:true；保留删除审计，不因物理残存恢复对外访问",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fc0a11738cb51159aeaaece0178963e86537fd9a47a71a95e632f6447d7d34be"
+    },
+    {
+      "id": "BASE-05-AC01",
+      "requirement": "BASE-05",
+      "given": "同静止窗口DB/附件清单，分别移除一个对象或改内容的未来隔离夹具",
+      "when": "核恢复完整性",
+      "originalThen": "识别missing/corrupt并阻相应可用声明，不仅核DB元数据；不运行线上恢复或访问真实附件",
+      "source": "docs/delivery/P1_R1_Foundation_Review.md",
+      "designDocuments": [
+        "R1_P2_Backup_Recovery.md"
+      ],
+      "plannedCases": [
+        "P3-REC-01"
+      ],
+      "targetExpected": "识别missing/corrupt并阻相应可用声明，不仅核DB元数据；不运行线上恢复或访问真实附件",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fc0a11738cb51159aeaaece0178963e86537fd9a47a71a95e632f6447d7d34be"
+    },
+    {
+      "id": "BASE-05-AC02",
+      "requirement": "BASE-05",
+      "given": "在途两级审批快照已留一级结论，恢复点以后另有撤权",
+      "when": "恢复后拟继续原审批",
+      "originalThen": "先按可信当前授权对账，已处理一级不能重放；后续按当前D1两级与待生效规则办理，旧即时生效测试不能自动证明现定日执行",
+      "source": "docs/delivery/P1_R1_Foundation_Review.md",
+      "designDocuments": [
+        "R1_P2_Backup_Recovery.md"
+      ],
+      "plannedCases": [
+        "P3-REC-03"
+      ],
+      "targetExpected": "先按可信当前授权对账，已处理一级不能重放；后续按当前D1两级与待生效规则办理，旧即时生效测试不能自动证明现定日执行",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fc0a11738cb51159aeaaece0178963e86537fd9a47a71a95e632f6447d7d34be"
+    },
+    {
+      "id": "BASE-06-AC01",
+      "requirement": "BASE-06",
+      "given": "同namespace同eventId已留相同digest与sequence回执",
+      "when": "重放相同事件、改内容或跳过前序",
+      "originalThen": "当前主数据预检分别duplicate/conflict/gap；缺映射mapping_required；ready仍DRY_RUN_ONLY，不写任何员工或身份",
+      "source": "docs/delivery/P1_R1_Foundation_Review.md",
+      "designDocuments": [
+        "R1_P2_Interfaces_Exceptions.md"
+      ],
+      "plannedCases": [
+        "P3-INT-01"
+      ],
+      "targetExpected": "当前主数据预检分别duplicate/conflict/gap；缺映射mapping_required；ready仍DRY_RUN_ONLY，不写任何员工或身份",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fc0a11738cb51159aeaaece0178963e86537fd9a47a71a95e632f6447d7d34be"
+    },
+    {
+      "id": "BASE-06-AC02",
+      "requirement": "BASE-06",
+      "given": "支付/签署/测评供应商未配置",
+      "when": "审查P1交付与内域流程",
+      "originalThen": "记录未配置与待适配契约，不声称已完成外部交易，也不以取得供应商服务阻当前P1；只阻依赖外部真实结果的后续执行分支",
+      "source": "docs/delivery/P1_R1_Foundation_Review.md",
+      "designDocuments": [
+        "R1_P2_Interfaces_Exceptions.md"
+      ],
+      "plannedCases": [
+        "P3-INT-04"
+      ],
+      "targetExpected": "记录未配置与待适配契约，不声称已完成外部交易，也不以取得供应商服务阻当前P1；只阻依赖外部真实结果的后续执行分支",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fc0a11738cb51159aeaaece0178963e86537fd9a47a71a95e632f6447d7d34be"
+    },
+    {
+      "id": "BASE-06-AC03",
+      "requirement": "BASE-06",
+      "given": "某请求已发送但响应未知，另有重复回调",
+      "when": "设计恢复与幂等用例",
+      "originalThen": "先以业务关联/外部查询核结果，重复相同回执不重复生效，变内容冲突留痕；无可信结果保持unknown，不能自动重付/重签或返回success",
+      "source": "docs/delivery/P1_R1_Foundation_Review.md",
+      "designDocuments": [
+        "R1_P2_Interfaces_Exceptions.md"
+      ],
+      "plannedCases": [
+        "P3-INT-03"
+      ],
+      "targetExpected": "先以业务关联/外部查询核结果，重复相同回执不重复生效，变内容冲突留痕；无可信结果保持unknown，不能自动重付/重签或返回success",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fc0a11738cb51159aeaaece0178963e86537fd9a47a71a95e632f6447d7d34be"
+    },
+    {
+      "id": "BP-F-REQ-01-AC01",
+      "requirement": "BP-F-REQ-01",
+      "given": "组织A/B有效，各有独立编码但同名职位；A再建第三个同名不同码",
+      "when": "对比源样本与当前代码",
+      "originalThen": "源A内被拒/跨B成功，当前代码只要code不同不由名称拒绝；标“需修改或批准差异”，不将名称唯一历史文字视为当前已验收",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-01"
+      ],
+      "targetExpected": "F-SPEC-01已批准：同组织有效区间重叠职位trim同名拒绝，跨组织允许；按新规则测试实现差异已修复。",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-F-REQ-01-AC02",
+      "requirement": "BP-F-REQ-01",
+      "given": "同级组织O与另一个父级下O，同一code的职位J/J2",
+      "when": "分别建立目录",
+      "originalThen": "当前同级组织重名拒绝、不同父级可同名；职位重复code拒绝，即使组织不同。职级重名策略独立待审",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-01"
+      ],
+      "targetExpected": "F-SPEC-01/08已批准：职级名称可重复，code唯一；组织同父名唯一，稳定ID与有效区间不变。",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-F-REQ-01-AC03",
+      "requirement": "BP-F-REQ-01",
+      "given": "已approved待执行调动目标职位P，无当前在职或pending引用",
+      "when": "停用P后执行调动",
+      "originalThen": "当前目录可能允许停用，执行failed而保留批准/日期；恢复P后有权HR到期重试。不是已批准任意绕过在用保护",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-01"
+      ],
+      "targetExpected": "F-SPEC-08已批准：未完成引用阻停用；旧非法目标只作为历史合成夹具检查执行failed和恢复，不放宽停用。",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-F-REQ-02-AC01",
+      "requirement": "BP-F-REQ-02",
+      "given": "D1两级均approved，计划日9月10日，业务时刻为9月9日23:59:59北京",
+      "when": "有权HR执行",
+      "originalThen": "400拒绝且持久attempts不变；到10日00:00后才进入尝试校验，实际成功时刻单独记录；本轮不修改源/系统时钟",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-04"
+      ],
+      "targetExpected": "400拒绝且持久attempts不变；到10日00:00后才进入尝试校验，实际成功时刻单独记录；本轮不修改源/系统时钟",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-F-REQ-02-AC02",
+      "requirement": "BP-F-REQ-02",
+      "given": "已到期approved/waiting，目标停用或编制0；源任职仍匹配",
+      "when": "执行并读取响应，再恢复条件重试",
+      "originalThen": "第一次可HTTP200但execution=failed、attempts增1、员工/任职历史不变；重试成功applied/实际时间，不能用HTTP200提示已生效",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-04"
+      ],
+      "targetExpected": "第一次可HTTP200但execution=failed、attempts增1、员工/任职历史不变；重试成功applied/实际时间，不能用HTTP200提示已生效",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-F-REQ-02-AC03",
+      "requirement": "BP-F-REQ-02",
+      "given": "合法已到期执行，在事务写审计时存储异常",
+      "when": "按未来故障验收设计核响应、持久状态及恢复",
+      "originalThen": "503整事务回滚，attempts/员工/历史不承诺变更；读取同审批ID/revision确认再重试，不以日志缺失断定业务未生效。独立故障日志能力尚未有保证",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-04"
+      ],
+      "targetExpected": "503整事务回滚，attempts/员工/历史不承诺变更；读取同审批ID/revision确认再重试，不以日志缺失断定业务未生效。独立故障日志能力尚未有保证",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-F-REQ-02-AC04",
+      "requirement": "BP-F-REQ-02",
+      "given": "执行已成功，客户端响应丢失；已有appliedAt和新revision",
+      "when": "重新加载同审批ID，然后重放旧revision或再执行",
+      "originalThen": "读取确定原成功；旧revision409/新revision重复状态400均不新增历史，计划/批准/执行事实不抹除。无通用自动重试服务",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-04"
+      ],
+      "targetExpected": "读取确定原成功；旧revision409/新revision重复状态400均不新增历史，计划/批准/执行事实不抹除。无通用自动重试服务",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-F-REQ-02-AC05",
+      "requirement": "BP-F-REQ-02",
+      "given": "同员工半年以前有已withdrawn且与新事项无关的调动，无在途申请",
+      "when": "新建未关联独立调动",
+      "originalThen": "当前API仍拒绝，不能称已有业务规则要求永久关联。F-SPEC-03建议显式区分独立事项，未批准前不改当前行为",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-04"
+      ],
+      "targetExpected": "F-SPEC-03已批准：独立新事项无在途时不被无关终态永久强绑；更正原事项才强关联并重审。",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-F-REQ-02-AC06",
+      "requirement": "BP-F-REQ-02",
+      "given": "原单已rejected/withdrawn或approved+cancelled，同人同类，当前发起者可读",
+      "when": "关联新单或试关联另一员工/不可读原单",
+      "originalThen": "合法更正新单从一级且新审批快照；另一员工/类型/不可读拒绝；原单不复活、不改原日和历史结论",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-04"
+      ],
+      "targetExpected": "合法更正新单从一级且新审批快照；另一员工/类型/不可读拒绝；原单不复活、不改原日和历史结论",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-F-REQ-04-AC01",
+      "requirement": "BP-F-REQ-04",
+      "given": "同一合成EA有9日在职和10日起离职任职事件，其他源记录保持",
+      "when": "恢复后查询，再判断是否可办理重聘",
+      "originalThen": "以实际业务日期/状态和既有ID确认，不提前新建第二人，不将future日期字段当当前已离职；实际重聘未发生前状态仍受限",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-02"
+      ],
+      "targetExpected": "F-SPEC-04/05已批准：未来离职未执行不冒已退出；执行退出后同稳定person新建雇佣段并核幂等，不自动恢复账号。",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-F-REQ-04-AC02",
+      "requirement": "BP-F-REQ-04",
+      "given": "候选旧人员有邮箱命中A、手机号命中B，目标身份策略尚未批准",
+      "when": "设计重聘匹配冲突处理",
+      "originalThen": "不得任意自动合并A/B；集中补证及评审冲突消解/复核/恢复，账号访问另行校验，不能继承过去角色",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-02"
+      ],
+      "targetExpected": "不得任意自动合并A/B；集中补证及评审冲突消解/复核/恢复，账号访问另行校验，不能继承过去角色",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-F-REQ-04-AC03",
+      "requirement": "BP-F-REQ-04",
+      "given": "同员工主档重新关联新任职，旧薪资/考勤/资格/绩效已存在",
+      "when": "审阅各消费者字段和统计预期",
+      "originalThen": "每条引用稳定主ID+相关任职/期间/版本，旧数据不覆盖；司龄/合同次数/薪税累计分别配置未明确时不造合计。重复薪资/人才计数须按各数据集定义",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-02"
+      ],
+      "targetExpected": "F-SPEC-04/06明确司龄与合同计次；薪税累计由生产者另定，未知历史不补零。",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-I-REQ-01-AC01",
+      "requirement": "BP-I-REQ-01",
+      "given": "当前成员绑定EA，另有可独立批阅的EB作业",
+      "when": "读取自助tasks/requests/payslipCount",
+      "originalThen": "本人请求仅EA相关，批阅任务可含EB但仍重验当前授权；payslipCount只EA非取消且批次published条数，不是工资金额或支付次数",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ],
+      "plannedCases": [
+        "P3-M48-03"
+      ],
+      "targetExpected": "本人请求仅EA相关，批阅任务可含EB但仍重验当前授权；payslipCount只EA非取消且批次published条数，不是工资金额或支付次数",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-I-REQ-01-AC02",
+      "requirement": "BP-I-REQ-01",
+      "given": "绩效申诉approved，未生成更正结果，后独立发布更正",
+      "when": "重新读取本人请求",
+      "originalThen": "先awaiting_publish后corrected；保留原申诉ID，不能把approved误报更正已生效或删除旧结果",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ],
+      "plannedCases": [
+        "P3-M48-03"
+      ],
+      "targetExpected": "先awaiting_publish后corrected；保留原申诉ID，不能把approved误报更正已生效或删除旧结果",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-I-REQ-01-AC03",
+      "requirement": "BP-I-REQ-01",
+      "given": "360受邀者已提交一次且项目仍open",
+      "when": "查看待办再进原360入口修改答案",
+      "originalThen": "聚合任务消失但源业务仍按开放窗口允许修改；动作必须重新校验当前状态，待办有无不是唯一授权依据",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ],
+      "plannedCases": [
+        "P3-M48-03"
+      ],
+      "targetExpected": "聚合任务消失但源业务仍按开放窗口允许修改；动作必须重新校验当前状态，待办有无不是唯一授权依据",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-I-REQ-01-AC04",
+      "requirement": "BP-I-REQ-01",
+      "given": "M18主项目新建且EA对象初始/未计算，启动路由和通知未核",
+      "when": "审查与M48的任务映射",
+      "originalThen": "当前不应凭对象一行标已生成或完成本人采集任务；需源业务实例ID/启动结果明确后补映射，不新增人类访问者",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ],
+      "plannedCases": [
+        "P3-M48-03"
+      ],
+      "targetExpected": "当前不应凭对象一行标已生成或完成本人采集任务；需源业务实例ID/启动结果明确后补映射，不新增人类访问者",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-I-REQ-02-AC01",
+      "requirement": "BP-I-REQ-02",
+      "given": "active招聘需求3人，hired1/offered2/accepted1",
+      "when": "生成当前招聘进度",
+      "originalThen": "剩余可入职2、待审录用2、已接受待入职1分别展示；不是3-所有在途人数，也不自动证明最终入职容量或预算通过",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-01"
+      ],
+      "targetExpected": "剩余可入职2、待审录用2、已接受待入职1分别展示；不是3-所有在途人数，也不自动证明最终入职容量或预算通过",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-I-REQ-02-AC02",
+      "requirement": "BP-I-REQ-02",
+      "given": "R1published、R2draft supersedes R1，后来R2published",
+      "when": "生成talentReview",
+      "originalThen": "draft不挤掉R1；R2发布后排除R1；历史仍可追溯，不能只按updatedAt选择最新任意状态",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-01"
+      ],
+      "targetExpected": "draft不挤掉R1；R2发布后排除R1；历史仍可追溯，不能只按updatedAt选择最新任意状态",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-I-REQ-02-AC03",
+      "requirement": "BP-I-REQ-02",
+      "given": "同员工两班次三份工资考勤引用、本人一条工资",
+      "when": "对比各数据集total",
+      "originalThen": "班次/引用/工资各按自身行粒度统计，不声称员工数3或P1完成率；空金额/缺覆盖保留null",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-01"
+      ],
+      "targetExpected": "班次/引用/工资各按自身行粒度统计，不声称员工数3或P1完成率；空金额/缺覆盖保留null",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-I-REQ-02-AC04",
+      "requirement": "BP-I-REQ-02",
+      "given": "查询workforce附from/to、查询attendance附相同from/to",
+      "when": "核返回日期行为",
+      "originalThen": "目前只attendance按班次日过滤，workforce不受该日期参数限制；UI/规格需标支持范围或待修改，不能伪报历史区间查询",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-01"
+      ],
+      "targetExpected": "M32-SPEC-02已批准：current拒绝不支持的from/to；event_range按各自dateField，快照只能真实snapshotId。",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-I-REQ-02-AC05",
+      "requirement": "BP-I-REQ-02",
+      "given": "导出请求旧revision或审计写失败，内容含以=开头的合成文本",
+      "when": "评审导出恢复/安全格式",
+      "originalThen": "旧revision/事务异常不能返回成功CSV；合法导出为文本公式前加单引号并引用转义，数值负数保持数值；本轮不实际导出个人明细",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-01"
+      ],
+      "targetExpected": "旧revision/事务异常不能返回成功CSV；合法导出为文本公式前加单引号并引用转义，数值负数保持数值；本轮不实际导出个人明细",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-I-REQ-07-AC01",
+      "requirement": "BP-I-REQ-07",
+      "given": "两个域各有可办任务，GET domain=payroll且q命中一项",
+      "when": "对比items/total/counts",
+      "originalThen": "items/total只含过滤后项，counts仍全可见域计数；点击后版本/权限需业务接口重核",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M19_Workflow_Transactions.md"
+      ],
+      "plannedCases": [
+        "P3-M19-01",
+        "P3-M19-03"
+      ],
+      "targetExpected": "items/total只含过滤后项，counts仍全可见域计数；点击后版本/权限需业务接口重核",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-I-REQ-07-AC02",
+      "requirement": "BP-I-REQ-07",
+      "given": "人事调动已过计划日仍pending，当前节点人有拒绝权",
+      "when": "待办读取后尝试approved",
+      "originalThen": "任务可存在以供处理，API批准拒绝过期；待办不自动删除业务、改日期或跳级",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M19_Workflow_Transactions.md"
+      ],
+      "plannedCases": [
+        "P3-M19-01",
+        "P3-M19-03"
+      ],
+      "targetExpected": "任务可存在以供处理，API批准拒绝过期；待办不自动删除业务、改日期或跳级",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-I-REQ-07-AC03",
+      "requirement": "BP-I-REQ-07",
+      "given": "已批准工资引用的考勤被reopen，独立reviewer有权",
+      "when": "读取待办再尝试publish",
+      "originalThen": "待办为来源变化待退回或核对，不能按approved直接发；原批次/工资保持，来源修正后仍需明确重审链",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M19_Workflow_Transactions.md"
+      ],
+      "plannedCases": [
+        "P3-M19-01",
+        "P3-M19-03"
+      ],
+      "targetExpected": "待办为来源变化待退回或核对，不能按approved直接发；原批次/工资保持，来源修正后仍需明确重审链",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-I-REQ-07-AC04",
+      "requirement": "BP-I-REQ-07",
+      "given": "拟把流程或管理员权限委托他人，涉及当前15业务",
+      "when": "评审委托契约/合成验收设计",
+      "originalThen": "必须分别明确管理委托与节点办理、有效期/范围/双方当前权限/原代理审计，旧办理人不能持旧链接越权；尚未知原规则的地方不造默认继承，D7首包不扩转交",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M19_Workflow_Transactions.md"
+      ],
+      "plannedCases": [
+        "P3-M19-01",
+        "P3-M19-03"
+      ],
+      "targetExpected": "必须分别明确管理委托与节点办理、有效期/范围/双方当前权限/原代理审计，旧办理人不能持旧链接越权；尚未知原规则的地方不造默认继承，D7首包不扩转交",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-I-REQ-11-AC01",
+      "requirement": "BP-I-REQ-11",
+      "given": "订阅创建时可见某组织，随后人员或订阅接收方被撤权",
+      "when": "设计下次生成/发送/转交/读取快照行为",
+      "originalThen": "建议发送前重核数据和接收权，撤权内容不得继续出站；旧快照访问也须当前权。源具体“权限类型”未核，不将建议记成原站事实或已批准权限规则",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-08"
+      ],
+      "targetExpected": "M32-SPEC-05已批准：生成/发送/下载逐收件人按当前权交集；撤权阻后续，旧快照重核；源未知仍非源事实。",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "BP-I-REQ-11-AC02",
+      "requirement": "BP-I-REQ-11",
+      "given": "任务已生成快照，但投递结果未知",
+      "when": "设计重试与屏蔽订阅",
+      "originalThen": "以订阅版本/生成批次/接收方/渠道标识查证去重，结果未知不记投递成功；屏蔽新投递不物理删除历史。字段/状态映射和收件界限待源补证",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-08"
+      ],
+      "targetExpected": "M32-SPEC-05已批准：订阅版本+周期+收件人+渠道去重；unknown先查，屏蔽不删历史。",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "M01-REVIEW-AC01",
+      "requirement": "M01评审批准验收",
+      "given": "目录启用/停用有在职或未完成业务引用",
+      "when": "按拟生效日停用",
+      "originalThen": "拒绝并显示权限内依赖摘要；旧版本和已结束引用不改；无引用时按批准时态产生新版本",
+      "source": "docs/delivery/P1_M01_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-12"
+      ],
+      "targetExpected": "拒绝并显示权限内依赖摘要；旧版本和已结束引用不改；无引用时按批准时态产生新版本",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da"
+    },
+    {
+      "id": "M01-REVIEW-AC02",
+      "requirement": "M01评审批准验收",
+      "given": "同组织职位有效区间重叠，同名不同码",
+      "when": "新建/改名；对照跨组织同名",
+      "originalThen": "按批准F-SPEC-01拒绝前者/允许后者，其他目录按各自规则；不以名称替代ID",
+      "source": "docs/delivery/P1_M01_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-01"
+      ],
+      "targetExpected": "按批准F-SPEC-01拒绝前者/允许后者，其他目录按各自规则；不以名称替代ID",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da"
+    },
+    {
+      "id": "M01-REVIEW-AC03",
+      "requirement": "M01评审批准验收",
+      "given": "主职人数已满，兼职/借派类型明确",
+      "when": "新增任职或改变主职",
+      "originalThen": "按批准占编规则计算增量并校验，失败人员/任职/占用均不变；金额服务未接通显示未校验而非通过",
+      "source": "docs/delivery/P1_M01_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-03"
+      ],
+      "targetExpected": "按批准占编规则计算增量并校验，失败人员/任职/占用均不变；金额服务未接通显示未校验而非通过",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da"
+    },
+    {
+      "id": "M01-REVIEW-AC04",
+      "requirement": "M01评审批准验收",
+      "given": "历史人员多标识命中不同主ID或已撤权账号",
+      "when": "提交重聘",
+      "originalThen": "冲突进入人工核对不自动合并；选定稳定身份后新增任职段，历史保留，账号不恢复；同批重试不重复人",
+      "source": "docs/delivery/P1_M01_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-02"
+      ],
+      "targetExpected": "冲突进入人工核对不自动合并；选定稳定身份后新增任职段，历史保留，账号不恢复；同批重试不重复人",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da"
+    },
+    {
+      "id": "M01-REVIEW-AC05",
+      "requirement": "M01评审批准验收",
+      "given": "人员子集唯一键已存在且字段不可写",
+      "when": "新增/导入显式更新",
+      "originalThen": "新增重复拒绝；未获字段修改权限导入仍拒绝；授权更新形成新版本及批次行号，旧记录可追溯",
+      "source": "docs/delivery/P1_M01_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-08"
+      ],
+      "targetExpected": "新增重复拒绝；未获字段修改权限导入仍拒绝；授权更新形成新版本及批次行号，旧记录可追溯",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da"
+    },
+    {
+      "id": "M01-REVIEW-AC06",
+      "requirement": "M01评审批准验收",
+      "given": "批准调动已到期，模拟目标失效/编制不足或持久层不可写",
+      "when": "执行及恢复查询",
+      "originalThen": "业务failed保留次数且任职不变；409/503先读同ID/revision再决定重试；不误记成功或重复执行",
+      "source": "docs/delivery/P1_M01_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-05"
+      ],
+      "targetExpected": "业务failed保留次数且任职不变；409/503先读同ID/revision再决定重试；不误记成功或重复执行",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da"
+    },
+    {
+      "id": "M01-REVIEW-AC07",
+      "requirement": "M01评审批准验收",
+      "given": "员工只有无关历史终态调动且无在途单",
+      "when": "发起独立新事项或原事项改日",
+      "originalThen": "按批准F-SPEC-03独立事项不永久强绑，改日更正强制可读原单并两级重审；两类均保留审计",
+      "source": "docs/delivery/P1_M01_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-06"
+      ],
+      "targetExpected": "按批准F-SPEC-03独立事项不永久强绑，改日更正强制可读原单并两级重审；两类均保留审计",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da"
+    },
+    {
+      "id": "M01-REVIEW-AC08",
+      "requirement": "M01评审批准验收",
+      "given": "EA主职A与兼职B，最后工作日已确定",
+      "when": "离职生效/结束兼职及重复提交",
+      "originalThen": "按批准日期/类型结束有效区间并保留ID/历史；主档、成员消费和人数分列，终态不从列表消失推定",
+      "source": "docs/delivery/P1_M01_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-10"
+      ],
+      "targetExpected": "按批准日期/类型结束有效区间并保留ID/历史；主档、成员消费和人数分列，终态不从列表消失推定",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da"
+    },
+    {
+      "id": "M01-REVIEW-AC09",
+      "requirement": "M01评审批准验收",
+      "given": "旧合同已签，法人改名/停用及续签/重聘",
+      "when": "新引用与续签计次/报表",
+      "originalThen": "停用禁新引用；旧法人快照保持；合同比较连续日与稳定ID，改版不重复计，自动政策未启用不自行转换/终止",
+      "source": "docs/delivery/P1_M01_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-07"
+      ],
+      "targetExpected": "停用禁新引用；旧法人快照保持；合同比较连续日与稳定ID，改版不重复计，自动政策未启用不自行转换/终止",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da"
+    },
+    {
+      "id": "M01-REVIEW-AC10",
+      "requirement": "M01评审批准验收",
+      "given": "操作者只可见组织A而原/目标涉及B，字段被隐藏",
+      "when": "详情/审批摘要/附件/报表/导入",
+      "originalThen": "每条服务端入口再核数据/字段权限；D3–D5独立要求保持，P1签设计不勾选真人跨角色验收",
+      "source": "docs/delivery/P1_M01_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-04"
+      ],
+      "targetExpected": "每条服务端入口再核数据/字段权限；D3–D5独立要求保持，P1签设计不勾选真人跨角色验收",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da"
+    },
+    {
+      "id": "M19-EXECUTION-LIST-01",
+      "requirement": "BP-I-REQ-07",
+      "given": "同员工调动已批准、execution=waiting或failed，另无pending申请",
+      "when": "读取人事审批待办及原申请执行详情",
+      "originalThen": "现有workInbox人事待办可以为0，但详情仍保留待执行/失败；建议分列执行队列，办理时重核双组织/职级/日期且关联同审批ID。此新增展示为候选，不以待办消失作为生效通过",
+      "source": "docs/delivery/Scope_Register.json",
+      "designDocuments": [
+        "R1_P2_M19_Workflow_Transactions.md"
+      ],
+      "plannedCases": [
+        "P3-M19-01",
+        "P3-M19-03"
+      ],
+      "targetExpected": "M19-SPEC-04及M01消费者已批准：审批、执行waiting/failed分列；零待办不等生效。",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "a96cdd32e8d16220d1f98e77cba30ff075f6fa8469d1a9b39abe2ffe163ef62b"
+    },
+    {
+      "id": "M19-REVIEW-AC01",
+      "requirement": "M19评审批准验收",
+      "given": "模板v1实例运行中，模板发布v2",
+      "when": "原实例继续办理",
+      "originalThen": "仍按v1节点/审批约束，原业务ID不变，v2只供后续新实例",
+      "source": "docs/delivery/P1_M19_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M19_Workflow_Transactions.md"
+      ],
+      "plannedCases": [
+        "P3-M19-01"
+      ],
+      "targetExpected": "仍按v1节点/审批约束，原业务ID不变，v2只供后续新实例",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "c9df85cacaa2530b632346abc82ef3525c8f083c44968b16191bfcb30ccbc42e"
+    },
+    {
+      "id": "M19-REVIEW-AC02",
+      "requirement": "M19评审批准验收",
+      "given": "同业务同版本重复启动，或缺有效审批人/无匹配分支",
+      "when": "提交启动",
+      "originalThen": "重复返回原实例；缺配置拒绝且不造无审批自动完成",
+      "source": "docs/delivery/P1_M19_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M19_Workflow_Transactions.md"
+      ],
+      "plannedCases": [
+        "P3-M19-01"
+      ],
+      "targetExpected": "重复返回原实例；缺配置拒绝且不造无审批自动完成",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "c9df85cacaa2530b632346abc82ef3525c8f083c44968b16191bfcb30ccbc42e"
+    },
+    {
+      "id": "M19-REVIEW-AC03",
+      "requirement": "M19评审批准验收",
+      "given": "节点转给另一有资格的已有成员，旧人保留链接",
+      "when": "旧人办理、新人办理",
+      "originalThen": "旧人被拒；新人仍校验当前范围/本人排除/字段；历史身份和理由保留，D7调动一律不走此动作",
+      "source": "docs/delivery/P1_M19_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M19_Workflow_Transactions.md"
+      ],
+      "plannedCases": [
+        "P3-M19-03"
+      ],
+      "targetExpected": "旧人被拒；新人仍校验当前范围/本人排除/字段；历史身份和理由保留，D7调动一律不走此动作",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "c9df85cacaa2530b632346abc82ef3525c8f083c44968b16191bfcb30ccbc42e"
+    },
+    {
+      "id": "M19-REVIEW-AC04",
+      "requirement": "M19评审批准验收",
+      "given": "运行中实例需要撤销，业务撤销写入失败；另有已生效单",
+      "when": "调用撤销",
+      "originalThen": "前者全单保持原态并显示失败；后者拒绝流程直回滚，引导原业务更正，不抹历史",
+      "source": "docs/delivery/P1_M19_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M19_Workflow_Transactions.md"
+      ],
+      "plannedCases": [
+        "P3-M19-04"
+      ],
+      "targetExpected": "前者全单保持原态并显示失败；后者拒绝流程直回滚，引导原业务更正，不抹历史",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "c9df85cacaa2530b632346abc82ef3525c8f083c44968b16191bfcb30ccbc42e"
+    },
+    {
+      "id": "M19-REVIEW-AC05",
+      "requirement": "M19评审批准验收",
+      "given": "批量三单：一单可办、一单revision旧、一单已撤权",
+      "when": "批量审批后重复相同幂等键",
+      "originalThen": "仅可办单一次提交；其余逐项失败且无敏感泄漏；重试不重复推进节点",
+      "source": "docs/delivery/P1_M19_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M19_Workflow_Transactions.md"
+      ],
+      "plannedCases": [
+        "P3-M19-05"
+      ],
+      "targetExpected": "仅可办单一次提交；其余逐项失败且无敏感泄漏；重试不重复推进节点",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "c9df85cacaa2530b632346abc82ef3525c8f083c44968b16191bfcb30ccbc42e"
+    },
+    {
+      "id": "M19-REVIEW-AC06",
+      "requirement": "M19评审批准验收",
+      "given": "委托交集只含某组织查询，不含审批和全员档案",
+      "when": "受托读取/审批/转委托",
+      "originalThen": "仅交集数据可读，其余拒绝；不能自审或提高成员角色",
+      "source": "docs/delivery/P1_M19_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M19_Workflow_Transactions.md"
+      ],
+      "plannedCases": [
+        "P3-M19-06"
+      ],
+      "targetExpected": "仅交集数据可读，其余拒绝；不能自审或提高成员角色",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "c9df85cacaa2530b632346abc82ef3525c8f083c44968b16191bfcb30ccbc42e"
+    },
+    {
+      "id": "M19-REVIEW-AC07",
+      "requirement": "M19评审批准验收",
+      "given": "受托页面打开后委托到期或被撤销",
+      "when": "用旧版本提交管理动作",
+      "originalThen": "服务器拒绝，业务与流程不变，记录可提交的拒绝审计；存储失败不虚称已留痕",
+      "source": "docs/delivery/P1_M19_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M19_Workflow_Transactions.md"
+      ],
+      "plannedCases": [
+        "P3-M19-06"
+      ],
+      "targetExpected": "服务器拒绝，业务与流程不变，记录可提交的拒绝审计；存储失败不虚称已留痕",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "c9df85cacaa2530b632346abc82ef3525c8f083c44968b16191bfcb30ccbc42e"
+    },
+    {
+      "id": "M19-REVIEW-AC08",
+      "requirement": "M19评审批准验收",
+      "given": "业务动作成功但通知结果未知，随后节点转交",
+      "when": "重试/读取通知事件",
+      "originalThen": "先查回执、不重复发；旧节点待发事件失效，业务不因通知失败倒退；当前测试不实发消息",
+      "source": "docs/delivery/P1_M19_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M19_Workflow_Transactions.md"
+      ],
+      "plannedCases": [
+        "P3-M19-07"
+      ],
+      "targetExpected": "先查回执、不重复发；旧节点待发事件失效，业务不因通知失败倒退；当前测试不实发消息",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "c9df85cacaa2530b632346abc82ef3525c8f083c44968b16191bfcb30ccbc42e"
+    },
+    {
+      "id": "M19-REVIEW-AC09",
+      "requirement": "M19评审批准验收",
+      "given": "approved但生效waiting/failed，审批待办为空",
+      "when": "查看列表/详情/执行入口",
+      "originalThen": "显示审批与执行两态，待办0不写已生效；动作重验D1–D7和M01已批约束",
+      "source": "docs/delivery/P1_M19_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M19_Workflow_Transactions.md"
+      ],
+      "plannedCases": [
+        "P3-M19-07"
+      ],
+      "targetExpected": "显示审批与执行两态，待办0不写已生效；动作重验D1–D7和M01已批约束",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "c9df85cacaa2530b632346abc82ef3525c8f083c44968b16191bfcb30ccbc42e"
+    },
+    {
+      "id": "M32-REVIEW-AC01",
+      "requirement": "M32评审批准验收",
+      "given": "一人在职主岗+兼职与历史再入职，名册含离职",
+      "when": "查询人数/岗位任职/编制",
+      "originalThen": "按各行主键及M01已批规则分母去重，名册total不冒在职数，兼职不额外当人头",
+      "source": "docs/delivery/P1_M32_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-01"
+      ],
+      "targetExpected": "按各行主键及M01已批规则分母去重，名册total不冒在职数，兼职不额外当人头",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b"
+    },
+    {
+      "id": "M32-REVIEW-AC02",
+      "requirement": "M32评审批准验收",
+      "given": "一人多应聘关系、需求3人且hired1/offered2",
+      "when": "查询需求进度",
+      "originalThen": "自然人/申请/需求人数分列，当前剩余2仅当前候选口径，不能证明金额预算通过",
+      "source": "docs/delivery/P1_M32_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-02"
+      ],
+      "targetExpected": "自然人/申请/需求人数分列，当前剩余2仅当前候选口径，不能证明金额预算通过",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b"
+    },
+    {
+      "id": "M32-REVIEW-AC03",
+      "requirement": "M32评审批准验收",
+      "given": "两个班次、一个缺可核值；from/to合法",
+      "when": "查询期间",
+      "originalThen": "按班次日期包含边界，未知分钟为null不补0，不冒充已发布月报",
+      "source": "docs/delivery/P1_M32_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-02"
+      ],
+      "targetExpected": "按班次日期包含边界，未知分钟为null不补0，不冒充已发布月报",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b"
+    },
+    {
+      "id": "M32-REVIEW-AC04",
+      "requirement": "M32评审批准验收",
+      "given": "一个工资条有多考勤引用，工资已发布银行未知",
+      "when": "读取明细/对账/引用",
+      "originalThen": "工资条/引用粒度各自计数，金额整数分，发布不标支付，按当前工资权限投影",
+      "source": "docs/delivery/P1_M32_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-02"
+      ],
+      "targetExpected": "工资条/引用粒度各自计数，金额整数分，发布不标支付，按当前工资权限投影",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b"
+    },
+    {
+      "id": "M32-REVIEW-AC05",
+      "requirement": "M32评审批准验收",
+      "given": "旧结果发布、新结果草稿，后新结果发布",
+      "when": "查看最新与历史",
+      "originalThen": "草稿不替换正式，发布替代链可追溯；旧记录仍当前权限下可读，缺评分不补0",
+      "source": "docs/delivery/P1_M32_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-04"
+      ],
+      "targetExpected": "草稿不替换正式，发布替代链可追溯；旧记录仍当前权限下可读，缺评分不补0",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b"
+    },
+    {
+      "id": "M32-REVIEW-AC06",
+      "requirement": "M32评审批准验收",
+      "given": "岗位可见但无可见后备，盘点对象配置1行未采集",
+      "when": "读取继任/盘点",
+      "originalThen": "零仅当前可见无后备，配置1不等已评分1；不外推源准备度或人才算法",
+      "source": "docs/delivery/P1_M32_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-01"
+      ],
+      "targetExpected": "零仅当前可见无后备，配置1不等已评分1；不外推源准备度或人才算法",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b"
+    },
+    {
+      "id": "M32-REVIEW-AC07",
+      "requirement": "M32评审批准验收",
+      "given": "无有效学习任务、缺考试成绩、报名撤回重报",
+      "when": "读取学习/师资",
+      "originalThen": "0分母比率null，缺成绩null；报名按记录、人按去重，不把指标相加",
+      "source": "docs/delivery/P1_M32_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-02"
+      ],
+      "targetExpected": "0分母比率null，缺成绩null；报名按记录、人按去重，不把指标相加",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b"
+    },
+    {
+      "id": "M32-REVIEW-AC08",
+      "requirement": "M32评审批准验收",
+      "given": "workforce请求from/to或不存在的历史snapshot",
+      "when": "直接调用API",
+      "originalThen": "不支持的时间参数明确拒绝，不默默忽略/伪造历史；已有快照重验当前权限",
+      "source": "docs/delivery/P1_M32_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-03"
+      ],
+      "targetExpected": "不支持的时间参数明确拒绝，不默默忽略/伪造历史；已有快照重验当前权限",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b"
+    },
+    {
+      "id": "M32-REVIEW-AC09",
+      "requirement": "M32评审批准验收",
+      "given": "只有汇总读权，无导出/字段/明细权",
+      "when": "尝试导出、排序敏感字段或钻取",
+      "originalThen": "全部服务端拒绝越界，计数/错误不泄漏隐藏数据，旧下载链接也重验",
+      "source": "docs/delivery/P1_M32_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-05"
+      ],
+      "targetExpected": "全部服务端拒绝越界，计数/错误不泄漏隐藏数据，旧下载链接也重验",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b"
+    },
+    {
+      "id": "M32-REVIEW-AC10",
+      "requirement": "M32评审批准验收",
+      "given": "导出10001行或旧revision，含=文本与负数金额",
+      "when": "创建导出/下载",
+      "originalThen": "超同步上限走明确有界任务或阻并提示，不截断；冲突不返回文件；文本安全转义、负数仍数值",
+      "source": "docs/delivery/P1_M32_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-06"
+      ],
+      "targetExpected": "超同步上限走明确有界任务或阻并提示，不截断；冲突不返回文件；文本安全转义、负数仍数值",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b"
+    },
+    {
+      "id": "M32-REVIEW-AC11",
+      "requirement": "M32评审批准验收",
+      "given": "设计器选无权字段或任意SQL，零分母公式",
+      "when": "发布定义",
+      "originalThen": "非法字段/表达式拒绝且不新版本；零分母输出null/原因，不假成功",
+      "source": "docs/delivery/P1_M32_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-07"
+      ],
+      "targetExpected": "非法字段/表达式拒绝且不新版本；零分母输出null/原因，不假成功",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b"
+    },
+    {
+      "id": "M32-REVIEW-AC12",
+      "requirement": "M32评审批准验收",
+      "given": "管理员订阅两名范围不同收件者，发送前一人撤权",
+      "when": "生成与投递",
+      "originalThen": "各自权限投影，撤权者阻发送；不共用全量附件，unknown先查回执；本轮只设计用例",
+      "source": "docs/delivery/P1_M32_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-08"
+      ],
+      "targetExpected": "各自权限投影，撤权者阻发送；不共用全量附件，unknown先查回执；本轮只设计用例",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b"
+    },
+    {
+      "id": "M32-REVIEW-AC13",
+      "requirement": "M32评审批准验收",
+      "given": "生产者M16 OKR未配置/尚无已批指标",
+      "when": "请求报告",
+      "originalThen": "显示未配置/不可用且完整目录保留，不用模拟结果报真实联调或评分",
+      "source": "docs/delivery/P1_M32_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-10"
+      ],
+      "targetExpected": "显示未配置/不可用且完整目录保留，不用模拟结果报真实联调或评分",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b"
+    },
+    {
+      "id": "M48-REVIEW-AC01",
+      "requirement": "M48评审批准验收",
+      "given": "经理只有直线关系及无敏感字段权",
+      "when": "查团队和他人档案/工资/答卷",
+      "originalThen": "只授权直线对象及字段，不能读虚线/间接或敏感内容",
+      "source": "docs/delivery/P1_M48_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ],
+      "plannedCases": [
+        "P3-M48-02"
+      ],
+      "targetExpected": "只授权直线对象及字段，不能读虚线/间接或敏感内容",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "e6559a7981ed02b3b99df5232718ce289dd971cd5d4ad80975277f017c9b1221"
+    },
+    {
+      "id": "M48-REVIEW-AC02",
+      "requirement": "M48评审批准验收",
+      "given": "成员未绑定员工或解绑",
+      "when": "刷新本人入口及旧链接",
+      "originalThen": "不返回全员/假本人数据，清对应缓存、禁止办理",
+      "source": "docs/delivery/P1_M48_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ],
+      "plannedCases": [
+        "P3-M48-01"
+      ],
+      "targetExpected": "不返回全员/假本人数据，清对应缓存、禁止办理",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "e6559a7981ed02b3b99df5232718ce289dd971cd5d4ad80975277f017c9b1221"
+    },
+    {
+      "id": "M48-REVIEW-AC03",
+      "requirement": "M48评审批准验收",
+      "given": "申诉approved但尚未发布，另有他人作业待批阅",
+      "when": "读取卡片/申请/待办",
+      "originalThen": "更正待发布与待审批分开；他人批阅不冒充本人学习任务，原ID可追溯",
+      "source": "docs/delivery/P1_M48_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ],
+      "plannedCases": [
+        "P3-M48-03"
+      ],
+      "targetExpected": "更正待发布与待审批分开；他人批阅不冒充本人学习任务，原ID可追溯",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "e6559a7981ed02b3b99df5232718ce289dd971cd5d4ad80975277f017c9b1221"
+    },
+    {
+      "id": "M48-REVIEW-AC04",
+      "requirement": "M48评审批准验收",
+      "given": "当前目标与KR有最新值但缺权重/评分政策，接口未接",
+      "when": "显示进展或尝试动作",
+      "originalThen": "已配置只展示原指标/单位和允许动作，不自动计绩效分；未接明示未配置，完整范围/后续联调责任保留",
+      "source": "docs/delivery/P1_M48_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ],
+      "plannedCases": [
+        "P3-M48-04"
+      ],
+      "targetExpected": "已配置只展示原指标/单位和允许动作，不自动计绩效分；未接明示未配置，完整范围/后续联调责任保留",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "e6559a7981ed02b3b99df5232718ce289dd971cd5d4ad80975277f017c9b1221"
+    },
+    {
+      "id": "M48-REVIEW-AC05",
+      "requirement": "M48评审批准验收",
+      "given": "本人绩效目标有待审调整，申诉批准待发布",
+      "when": "进入自评/查看历史",
+      "originalThen": "遵守原模块动作限制和原版本，不能门户绕过调整或把申诉批准当发布",
+      "source": "docs/delivery/P1_M48_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ],
+      "plannedCases": [
+        "P3-M48-05"
+      ],
+      "targetExpected": "遵守原模块动作限制和原版本，不能门户绕过调整或把申诉批准当发布",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "e6559a7981ed02b3b99df5232718ce289dd971cd5d4ad80975277f017c9b1221"
+    },
+    {
+      "id": "M48-REVIEW-AC06",
+      "requirement": "M48评审批准验收",
+      "given": "余额服务未知或源申请版本已变",
+      "when": "显示余额及提交请假/补卡",
+      "originalThen": "未知不是0；动作409刷新、不双提交，日期/额度由M11按批准规则验证",
+      "source": "docs/delivery/P1_M48_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ],
+      "plannedCases": [
+        "P3-M48-05"
+      ],
+      "targetExpected": "未知不是0；动作409刷新、不双提交，日期/额度由M11按批准规则验证",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "e6559a7981ed02b3b99df5232718ce289dd971cd5d4ad80975277f017c9b1221"
+    },
+    {
+      "id": "M48-REVIEW-AC07",
+      "requirement": "M48评审批准验收",
+      "given": "360已答但可改期未结束，课程/作业有阶段限制",
+      "when": "待办消失后进入原业务",
+      "originalThen": "消失不等锁定/已完成；修改/批阅按源有效期/角色/版本再核，不绕放行",
+      "source": "docs/delivery/P1_M48_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ],
+      "plannedCases": [
+        "P3-M48-05"
+      ],
+      "targetExpected": "消失不等锁定/已完成；修改/批阅按源有效期/角色/版本再核，不绕放行",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "e6559a7981ed02b3b99df5232718ce289dd971cd5d4ad80975277f017c9b1221"
+    },
+    {
+      "id": "M48-REVIEW-AC08",
+      "requirement": "M48评审批准验收",
+      "given": "计划阶段尚未开放或旧模板失效",
+      "when": "打开行动并尝试提交",
+      "originalThen": "显示不可办理原因，不默认推进阶段或重开计划，关联原计划/阶段/行动ID",
+      "source": "docs/delivery/P1_M48_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ],
+      "plannedCases": [
+        "P3-M48-05"
+      ],
+      "targetExpected": "显示不可办理原因，不默认推进阶段或重开计划，关联原计划/阶段/行动ID",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "e6559a7981ed02b3b99df5232718ce289dd971cd5d4ad80975277f017c9b1221"
+    },
+    {
+      "id": "M48-REVIEW-AC09",
+      "requirement": "M48评审批准验收",
+      "given": "页面曾有敏感数据，后续401/403或撤权",
+      "when": "重新读取失败并尝试旧下载",
+      "originalThen": "相应旧数据清除、附件直接链接拒绝；服务故障不展示假0或成功",
+      "source": "docs/delivery/P1_M48_Review_Package.md",
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ],
+      "plannedCases": [
+        "P3-M48-06"
+      ],
+      "targetExpected": "相应旧数据清除、附件直接链接拒绝；服务故障不展示假0或成功",
+      "priorityRule": "当前明确P1批准SPEC/D1–D7优先；原文历史待批/实现描述不重开批准",
+      "owner": "对应P3任务实施与测试负责人",
+      "gate": "P3对应任务及生产者联调验收；真人/生产另按P4矩阵",
+      "execution": "not_executed",
+      "sourceSha256": "e6559a7981ed02b3b99df5232718ce289dd971cd5d4ad80975277f017c9b1221"
+    }
+  ]
+}

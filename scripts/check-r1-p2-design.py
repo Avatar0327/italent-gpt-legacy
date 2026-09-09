@@ -5,7 +5,7 @@ Never imports product code, executes product tests, opens databases or calls ser
 from pathlib import Path
 import argparse,hashlib,json,re,subprocess,sys
 ROOT=Path(__file__).resolve().parents[1]; OUT=ROOT/'docs/delivery/r1-p2'
-p=argparse.ArgumentParser();p.add_argument('--render',action='store_true');p.add_argument('--complete',action='store_true');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--render',action='store_true');p.add_argument('--complete',action='store_true');p.add_argument('--review-ready',action='store_true');a=p.parse_args()
 def read(n):return json.loads((OUT/n).read_text())
 idx=read('R1_P2_Design_Index.json');source=read('R1_P2_Source_Manifest.json');errors=[]
 def need(ok,msg):
@@ -43,5 +43,73 @@ for doc in OUT.glob('*.md'):
  for target in re.findall(r'\[[^\]]*\]\(([^)]+)\)',doc.read_text()):
   if re.match(r'\w+://',target) or target.startswith('#'):continue
   path=target.split('#')[0];need((doc.parent/path).exists(),f'broken link {doc.name}: {target}')
-print(json.dumps({'kind':'P2_document_check_not_business_test','baseline':idx['baseline'],'tasks':len(nums),'designCases':len(caseids),'requirementDesignLinks':len(rows),'sourceFiles':len(source['files']),'errors':errors,'passed':not errors},ensure_ascii=False,indent=2))
+metrics={}
+if a.complete:
+ coverage=read('R1_P2_Requirement_Coverage.json')
+ requirements={r for t in idx['tasks'] for r in t['requirements']}
+ need(set(coverage['requiredIds'])<=requirements,'approved requirement missing from design')
+ handoff=(ROOT/'docs/delivery/P1_R1_P2_Handoff.md').read_text()
+ bp=set(re.findall(r'BP-[A-Z]-REQ-\d+',handoff))
+ need({r['id'] for r in coverage['contracts']}==bp,'handoff BP coverage differs')
+ need(bp<=set(coverage['requiredIds']),'BP missing required inventory')
+ scope=json.loads((ROOT/'docs/delivery/Scope_Register.json').read_text())
+ expected_ac={c['id'] for p in scope['p1B']['packages'] for r in p.get('contracts',[]) if r['id'] in bp for c in r.get('acceptanceCases',[])}
+ for m in ['M01','M19','M48','M32']:
+  expected_ac.update(re.findall(m+r'-REVIEW-AC\d+', (ROOT/f'docs/delivery/P1_{m}_Review_Package.md').read_text()))
+ expected_ac.update(re.findall(r'BASE-\d+-AC\d+', (ROOT/'docs/delivery/P1_R1_Foundation_Review.md').read_text()))
+ atr=read('R1_P2_Approved_Acceptance_Trace.json')['records']
+ need({r['id'] for r in atr}==expected_ac,'original acceptance IDs lost or invented')
+ case_by_id={c['id']:c for t in idx['tasks'] for c in t['cases']}
+ for r in atr:
+  for k in ['given','when','originalThen','targetExpected','owner','gate']:need(bool(r[k]),'acceptance missing '+r['id']+k)
+  need(r['execution']=='not_executed','source case falsely run '+r['id'])
+  need(bool(r['plannedCases']) and set(r['plannedCases'])<=set(caseids),'source case unmapped '+r['id'])
+  for d in r['designDocuments']:need((OUT/d).exists(),'source case doc missing '+d)
+  need(hashlib.sha256((ROOT/r['source']).read_bytes()).hexdigest()==r['sourceSha256'],'acceptance source hash '+r['id'])
+ risks=read('R1_P2_Limit_Resolution.json')['risks'];riskids=[r['riskId'] for r in risks]
+ need(len(set(riskids))==len(risks),'duplicate LIMIT risk')
+ counts={}
+ dependencies=read('R1_P2_Dependencies_Decisions.json');depids={d['id'] for d in dependencies['dependencies']}
+ for r in risks:
+  need(r['module'] in ['M01','M19','M48','M32'] and r['originalLimit']==r['module']+'-LIMIT-01','risk outside R1')
+  for k in ['originalItem','risk','severity','evidence','p2Handling','p3Synthetic','p4Acceptance','owner','latestGate','status','designDocuments']:need(bool(r[k]),'incomplete risk '+r['riskId']+k)
+  need(r['primaryDisposition'] in ['P2','P3','P4'],'invalid disposition')
+  counts.setdefault(r['module'],{'P2':0,'P3':0,'P4':0})[r['primaryDisposition']]+=1
+  for k in ['p3Synthetic','p4Acceptance']:
+   need(r[k]['execution']=='not_executed','risk validation falsely run')
+   need(bool(r[k]['caseIds']) and set(r[k]['caseIds'])<=set(caseids),'risk case missing '+r['riskId'])
+  for d in r['designDocuments']:need((OUT/d).exists(),'risk document missing '+d)
+  need(not r['sourceEvidenceNeeded'] or r['sourceEvidenceRequest'] in depids,'risk missing targeted evidence')
+ need(set(counts)=={'M01','M19','M48','M32'},'four LIMITs not covered')
+ datasets=read('R1_P2_Report_Datasets.json')['datasets'];dids={d['datasetId'] for d in datasets}
+ src=(ROOT/'lib/hris/reports.ts').read_text()
+ expected_ds=set(re.findall(r"'([^']+)'",re.search(r'dataset:z.enum\(\[([^\]]+)',src)[1]))
+ need(dids==expected_ds and len(datasets)==21,'dataset catalog changed')
+ fs=read('R1_P2_Report_Field_Dictionary.json')['fields'];fids=[f['fieldId'] for f in fs]
+ need(len(set(fids))==len(fs),'duplicate report fieldId')
+ need({f['datasetId'] for f in fs}==dids,'dataset missing field dictionary')
+ for f in fs:
+  for k in ['label','type','unit','nullPolicy','sourceField','accessPolicy','exportRule']:need(bool(f[k]),'incomplete field '+f['fieldId']+k)
+  need(f['type'] in ['text','enum','date','timestamp','integer','decimal','money_cents','opaque_id','boolean'],'invalid field type')
+  need(hashlib.sha256((ROOT/f['sourcePath']).read_bytes()).hexdigest()==f['sourceSha256'],'field source changed')
+ work=read('R1_P2_P3_Work_Packages.json');taskids=[t['id'] for t in work['tasks']];owned=[]
+ for t in work['tasks']:
+  need(t['status']=='proposed_not_authorized' and t['execution']=='not_executed','P3 elevated')
+  need(set(t['dependsOn'])<=set(taskids[:taskids.index(t['id'])]),'P3 dependency cycle/order error')
+  need(set(t['caseIds'])<=set(caseids),'P3 unknown case')
+  need(set(t['approvedAcceptanceSubcases'])<=expected_ac,'P3 unknown approved subcase')
+  owned.extend(t['caseIds'])
+ need(set(owned)=={c for c in caseids if c.startswith('P3-')} and len(owned)==len(set(owned)),'P3 cases need one primary implementation owner')
+ gates=read('R1_P2_Hard_Gates.json')['gates'];need(len(gates)==15,'hard gate count')
+ for g in gates:need((OUT/g['document']).exists() and set(g['caseIds'])<=set(caseids),'hard gate broken '+g['id'])
+ proposal=read('R1_P2_Controller_Proposal.json');need(proposal['status']=='proposed_not_applied','proposal falsely applied')
+ need(not dependencies['newBusinessDecisions'],'new business decision requires owner review')
+ metrics={'uniqueRequirements':len(coverage['requiredIds']),'originalAcceptanceScenarios':len(atr),'limitRisks':len(risks),'limitDispositionCounts':counts,'datasets':len(datasets),'reportFields':len(fs),'p3Tasks':len(taskids),'p3Cases':len(owned),'hardGates':len(gates)}
+if a.review_ready:
+ need(a.complete,'review-ready requires complete')
+ reviews=read('R1_P2_Self_Review_Results.json')
+ need([r['round'] for r in reviews['rounds']]==[1,2],'two reviews required')
+ need(all(r['passed'] and not r['remainingDesignDefects'] for r in reviews['rounds']),'review has unresolved design defects')
+ need('状态：具备提交独立评审条件' in (OUT/'R1_P2_Exit_Review.md').read_text(),'review pack not ready')
+print(json.dumps({'kind':'P2_document_check_not_business_test','baseline':idx['baseline'],'tasks':len(nums),'designCases':len(caseids),'requirementDesignLinks':len(rows),'sourceFiles':len(source['files']),**metrics,'errors':errors,'passed':not errors},ensure_ascii=False,indent=2))
 sys.exit(1 if errors else 0)

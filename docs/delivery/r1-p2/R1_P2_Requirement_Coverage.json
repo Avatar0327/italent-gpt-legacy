@@ -1,0 +1,898 @@
+{
+  "kind": "derived_design_coverage_not_scope_register",
+  "baseline": "716cd9df5f5776d050f77f57c2ad5a35c0a83882",
+  "requiredIds": [
+    "BASE-01",
+    "BASE-02",
+    "BASE-03",
+    "BASE-04",
+    "BASE-05",
+    "BASE-06",
+    "BP-F-REQ-01",
+    "BP-F-REQ-02",
+    "BP-F-REQ-04",
+    "BP-F-REQ-05",
+    "BP-F-REQ-06",
+    "BP-F-REQ-10",
+    "BP-F-REQ-11",
+    "BP-F-REQ-12",
+    "BP-F-REQ-13",
+    "BP-F-REQ-14",
+    "BP-F-REQ-15",
+    "BP-I-REQ-01",
+    "BP-I-REQ-02",
+    "BP-I-REQ-03",
+    "BP-I-REQ-04",
+    "BP-I-REQ-05",
+    "BP-I-REQ-07",
+    "BP-I-REQ-08",
+    "BP-I-REQ-11",
+    "BP-I-REQ-12",
+    "BP-P-REQ-09",
+    "BP-S-REQ-07",
+    "BP-S-REQ-08",
+    "BP-S-REQ-12",
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "E1",
+    "E2",
+    "F-SPEC-01",
+    "F-SPEC-02",
+    "F-SPEC-03",
+    "F-SPEC-04",
+    "F-SPEC-05",
+    "F-SPEC-06",
+    "F-SPEC-07",
+    "F-SPEC-08",
+    "M01-BASELINE-01",
+    "M01-LIMIT-01",
+    "M19-LIMIT-01",
+    "M19-SPEC-01",
+    "M19-SPEC-02",
+    "M19-SPEC-03",
+    "M19-SPEC-04",
+    "M32-LIMIT-01",
+    "M32-SPEC-01",
+    "M32-SPEC-02",
+    "M32-SPEC-03",
+    "M32-SPEC-04",
+    "M32-SPEC-05",
+    "M32-SPEC-06",
+    "M48-LIMIT-01",
+    "M48-SPEC-01",
+    "M48-SPEC-02",
+    "M48-SPEC-03",
+    "M48-SPEC-04",
+    "R1-BASELINE-01",
+    "R1-P1-P2-TRANSITION-20260909",
+    "R1-RECOVERY-01",
+    "SCOPE-DEP-01"
+  ],
+  "contracts": [
+    {
+      "id": "BP-F-REQ-01",
+      "object": "组织/岗位/职级/员工",
+      "fields": "组织同级名称唯一且不成环；岗位/职级code唯一；员工code唯一；具体字段类型见F01–F04基线",
+      "fieldDetails": [
+        {
+          "field": "组织/职位/职级身份",
+          "definition": "组织父级、职位orgId、职级目录分别引用稳定ID；名称用于展示",
+          "constraints": "model组织同级名唯一；职位/职级code精确唯一。现有code未统一大小写归一，不可直接套合同编号规则",
+          "basis": "model.ts当前静态；F-SPEC-01"
+        },
+        {
+          "field": "停用与在用保护",
+          "definition": "现有员工非离职关联和pending审批目标属于目录在用检查",
+          "constraints": "approved但waiting/failed未进入同一目录inUse检查，因此目标可被停用，执行时转failed；这是D1已有恢复用例，不声称所有在途引用均禁止目录停用",
+          "basis": "model.ts/inUse、executeTransfer；历史f01-f04-transfer-roles测试"
+        },
+        {
+          "field": "人员主档与普通编辑",
+          "definition": "当前employee单一orgId/positionId/gradeId及job/level展示，新增默认试用",
+          "constraints": "旧任职标识/组织/职位/职级变化必须走审批；主兼职/待入职/重聘的多段任职是另列完整M01需求，不由upsert替代",
+          "basis": "model.ts/employee；BC-F36–46"
+        }
+      ],
+      "roles": "目录管理员；员工和异动按当前角色/组织/字段权限；E2不新增人",
+      "lifecycle": "组织启用/停用，员工试用/正式/离职与审批状态分开；离职人员不允许普通编辑",
+      "actions": "组织维护、目录关联、档案、调动审批与执行、历史回读",
+      "acceptance": "已有关联在职员工/启用子组织或岗位的组织，申请停用应拒绝且原数据不变；相同组织名在同父节点拒绝；不同父节点按当前规则核对，不推广成全局唯一",
+      "sourceCodeRefs": [
+        "lib/hris/model.ts",
+        "lib/hris/authorization.ts",
+        "app/api/hris/route.ts"
+      ],
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-01"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-F-REQ-02",
+      "object": "F03调动原单和执行记录",
+      "fields": "effectiveOn合法日期；previousApprovalId同员工同类型终态原单；attempts、lastAttemptAt、appliedAt分别留存",
+      "fieldDetails": [
+        {
+          "field": "申请ID与执行状态",
+          "definition": "Approval.status pending/approved/rejected/withdrawn；details.transfer.execution waiting/failed/applied/cancelled",
+          "constraints": "cancelled属于执行字段，不是审批status枚举。原单保留原批准/驳回结论；统一待办与报表须展示两轴",
+          "basis": "personnel-transfer.ts；D1/D2/D6"
+        },
+        {
+          "field": "时间和次数",
+          "definition": "effectiveOn业务日，eligibleAt该日北京00:00，lastAttemptAt/appliedAt实际UTC时刻，attempts已持久化执行尝试数",
+          "constraints": "提前拒绝不增次数；存储回滚后内存尝试不能当持久记录；计划日不替实际生效日",
+          "basis": "model.executeTransfer、route/repository；F-SPEC-02"
+        },
+        {
+          "field": "原单关系",
+          "definition": "previousApprovalId指同员工同类型可读终态原单",
+          "constraints": "当前任意历史终止均强关联，无期限/事项模型；建议更正/独立分开仍F-SPEC-03待批",
+          "basis": "model.request＋API额外可读校验"
+        },
+        {
+          "field": "快照与并发",
+          "definition": "source/target冻结组织/岗位/职级及名称/人员状态；workspace revision为提交前置",
+          "constraints": "当前source任职或目标名称变更可使执行失败需重新审；快照ID相等不等快照内容仍匹配。旧revision重试不能写第二份历史",
+          "basis": "transferSourceMatches及repository CAS"
+        }
+      ],
+      "roles": "D3双方范围发起；D4两级独立；D5当前职级可见；生效执行再次校验范围",
+      "lifecycle": "pending→approved与waiting→applied/failed/cancelled正交；驳回/撤回终态，改日新单重审",
+      "actions": "发起/逐级审批/撤回/取消生效/执行/失败恢复",
+      "acceptance": "批准后档案不变；北京时间生效日00:00前拒绝执行；业务校验失败保留原因及计划日；恢复后记实际时间。审计故障整个事务回滚并刷新核对；旧revision拒绝",
+      "sourceCodeRefs": [
+        "lib/hris/model.ts",
+        "tests/f01-f04-transfer-roles.test.mjs"
+      ],
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-04"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-F-REQ-04",
+      "object": "再入职身份、司龄与签订次数",
+      "fields": "原站BC-F15证件组合/手机/邮箱任一匹配，方式合并/新人员/手动；BC-F16三类司龄累计独立；BC-F23合同次数累计另设开关。当前项目无完整再入职对象。 BC-F25帮助进一步说明合并保留任职/薪资/社保连续、新人员不连续，手动方式部分入口按默认；确认后不可改。",
+      "fieldDetails": [
+        {
+          "field": "主身份和雇佣任职段",
+          "definition": "源EA EmployeeInformation主ID连续，入职/兼职/离职EmploymentRecord独立ID",
+          "constraints": "主ID相同不证明实际重聘已验证；未来离职10日事件与9日当前在职共存，必须先核业务日和实际状态",
+          "basis": "BC-F39/40/45/46，dataValidation实测"
+        },
+        {
+          "field": "重聘匹配与累计",
+          "definition": "源当前证件组合/手机/邮箱任一匹配、合并人员；司龄与合同次数另有配置",
+          "constraints": "匹配冲突、多对象命中、账号撤权恢复、不可回改时的纠错仍缺；不得从任一匹配推自动安全合并或恢复账号",
+          "basis": "BC-F15/16/23/25/43；F-SPEC-04"
+        }
+      ],
+      "roles": "不因匹配成功自动恢复历史访问或成员授权；这是一项待确认权限需求，E2不变化。",
+      "lifecycle": "匹配提示、身份处理、历史关联、司龄校正、合同计次应分别规格化；取消/错误匹配恢复缺证据，不虚构默认合并。",
+      "actions": "只读匹配/配置说明已观察；新建或复用员工、重聘审批、生效及历史消费者未完整定义",
+      "acceptance": "待业务确认身份策略后，用同证件/不同手机、多标识指向不同历史人、多次任职、取消重聘、曾撤权账号的合成样本分别验收；冲突不能以推荐方案冒写预期。当前只可验收证据及未决范围记录是否完整。",
+      "sourceCodeRefs": [
+        "lib/hris/model.ts",
+        "lib/hris/module-progress.ts",
+        "docs/P1_Source_Observations_20260907.md"
+      ],
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-02"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-F-REQ-05",
+      "object": "合同协议、法人关联及合同字段版本",
+      "fields": "当前合同number/employerName各1–200；agreementCategory可选labor/service/internship，contractType fixed/open/project；fixed需end、open禁end；编号不分大小写唯一，作废不释放。法人是employerName文本，未独立法人ID。自定义字段组织内code不分大小写唯一，文本≤1000、每组织≤20项；inheritPrevious默认true属于现有代码。",
+      "fieldDetails": [],
+      "roles": "授权HR/管理员登记；终止须非创建者且非本人；本人仅见signed/ended投影。签署登记不是电子签或独立审批完成。",
+      "lifecycle": "draft→signed/cancelled；signed→ended。续签引用同人signed/ended原单且开始晚于原结束，非作废续签只一份。签署时同人同employerName合同日期不可重叠；不同文本主体一致性待核。字段draft→sealed→archived，修订新版本，续签按rootId继承前单快照；显式空值与省略分开。",
+      "actions": "合同登记/分类/签署事实登记/终止复核/续签及字段修订；原站到期自动终止、次数累计、续签报表分类规则未覆盖",
+      "acceptance": "固定期限缺end、无固定带end、重复编号含大小写及已作废、同主体重叠签署均拒绝；未来signedOn拒绝；同创建者/本人终止拒绝；续签字段省略时只按有效定义继承同root旧值，显式null保留清空来源；归档定义不改旧合同快照。均为当前实现候选，未复测/签署。",
+      "sourceCodeRefs": [
+        "lib/hris/workforce.ts",
+        "lib/hris/contract-fields.ts",
+        "lib/hris/contract-field-model.ts",
+        "lib/hris/development.ts"
+      ],
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-07"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-F-REQ-06",
+      "object": "岗位编制与员工经历子集",
+      "fields": "编制headcount整数0–100000、start/end合法且end≥start，evidence5–3000；同岗位批准期间不能重叠，调整必须同岗位同期间最新批准单。经历仅education/employment/project；机构/名称1–200，起止YYYY-MM，描述/依据5–3000。",
+      "fieldDetails": [],
+      "roles": "编制HR发起，非本人且有范围管理员/经理审批；经历HR维护；子集唯一键不是岗位/职级code唯一。",
+      "lifecycle": "编制draft→approved/rejected，supersedes替换旧版；当前容量在增加占用且超标时拒绝，不阻止已有超编不增加人数的变更。经历active→cancelled；更正不改员工/类别，版本递增。",
+      "actions": "编制申请/独立批准/同期间调整；经历登记/更正/作废，不做学历背调、不作任职调动或导入",
+      "acceptance": "编制自审/重叠拒绝；满编新增占用拒绝并保持原档案；减少占用不被超编误拦。经历不能未来，进行中无end、已结束需end；同员工同类别/机构/名称/开始月有效记录重复拒绝；作废不可编辑。",
+      "sourceCodeRefs": [
+        "lib/hris/workforce.ts",
+        "lib/hris/employee-experiences.ts"
+      ],
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-03",
+        "P3-M01-08"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-F-REQ-10",
+      "object": "组织生效日期、行政上级与创建结果核对",
+      "fields": "BC-F28实测新建组织使用生效日期、行政维度上级、编码/名称/简称；生效日期/编码/名称/简称有界面必填标记。原站简称可由名称自动带入后单独修改；本项目组织对象目前仅name/city/parentId/leader/status等，尚无上述完整时间/行政维度模型。",
+      "fieldDetails": [],
+      "roles": "只验证当前单账号创建带测试标记的下级；没有由此确认其他角色可建根或跨范围创建。负责人/HRBP/工作地关联选项和字段权限未验证。",
+      "lifecycle": "原站保存前明确“保存后即刻建立新组织”，另显示新增对象和生效日期确认；本轮当天日期创建并刷新后存在。未来/过去生效、审批及启停状态规则仍缺，不能用本项目即时启用解释原站全部时态。",
+      "actions": "表单输入→明确新增确认→刷新后按编码展开查询→名称链接对应稳定ID；查询名/编码和折叠状态须在失败判定前核对。",
+      "acceptance": "可直接复验原站已执行部分：给定授权测试父级和本次有效字段，创建确认后按编码重新读取，应对应同一已保存ID和名称；本项目是否引入组织时态/编码/简称及负责人-HRBP关系属于范围需求，先审阅差异。",
+      "sourceCodeRefs": [
+        "lib/hris/model.ts",
+        "docs/P1_Source_Observations_20260907.md"
+      ],
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-01",
+        "P3-M01-12"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-F-REQ-11",
+      "object": "职位、职务、上下级与两类日期的区别",
+      "fields": "原站职位新建有编码/名称/设立日期/所属组织必填标记，对应职务、职位序列、职级类别及上下限、上级职位/虚线上级、是否New、关键职位、生效日期、职责/任职要求/胜任力模型/说明书/审批层级分列。是否New见Backfill/New，不能翻成是/否。现有position仅code/name/orgId/family/responsibilities/status，gradeId多在员工任职侧，不等同原站职位职级范围。",
+      "fieldDetails": [],
+      "roles": "只实测当前账号在测试A建JA，选择器名称/完整路径有助于辨认组织；不据此赋予跨组织或历史数据权限。",
+      "lifecycle": "设立日期默认观察日且必填；本次生效日期为空仍能保存。完整将来生效/停用/审批以及上级职位失效传播需另证。 BC-F33进一步核实JB详情状态启用、生效日期回填为2026-09-09；与输入为空分开记录，回填算法待异日对照。",
+      "actions": "创建JA→关联已建测试A→保存→名称筛选重读ID；复制职位入口已见但未使用，不从空表推出复制范围。",
+      "acceptance": "已执行原站有效字段保存后可按编码/名称查到同一职位ID和所属组织；下一步同组织同名/不同编码验证当前名称策略。拟引入职位职务模型、职级范围和时态前须明确对象/状态/权限与验收，不默认扩展本项目现有岗位。",
+      "sourceCodeRefs": [
+        "lib/hris/model.ts",
+        "docs/P1_Source_Observations_20260907.md"
+      ],
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-01"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-F-REQ-12",
+      "object": "人员新增、待入职与默认关联隔离",
+      "fields": "BC-F27待入职与BC-F35员工新增使用不同字段模板/必填；员工新增邮箱UI必填，邀请激活账号当前否，试用期是/否控制月数和预计结束必填。原站保存另校验劳动合同期限类型。工号可在关联或异步重算后覆盖输入，触发算法未明。 BC-F36原站待入职个人邮箱空保存被拒、补合成邮箱后成功；个人邮箱在详情名为电子邮件。内部员工/实习生是当前雇佣枚举，不等同正式/试用状态。 BC-F37办理入职另需薪资包，个人/详情邮箱未自动填电子邮件输入；不能共用三入口同一表单假设。 BC-F45已证原待入职recordId为入职EmploymentRecord，人员主ID、任职ID与审批ID分开；入职/离职各有独立任职段。",
+      "fieldDetails": [],
+      "roles": "创建权限不等于独立审批或可发账号邀请；合成测试保留邀请否、不选电子签，不能让预置真实经理关联冒充可控测试审批人。 办理入职默认邀请是、员工新增默认否，为入口差异，不能用统一默认替代实测。",
+      "lifecycle": "新增表单草稿与已创建员工/任职分开；保存前检查最终绑定，保存后以结果及实际ID确认。BC-F35新增员工路径仅校验拒绝；BC-F36待入职创建、BC-F39入职成功分别有实际结果。 待入职成功保存仍有独立入职/入职申请动作；详情入职日期与计划日期标签差异不等于入职已完成。 BC-F38已实测先确认信息采集/准备/材料未完，再强制校验所选包项目数；未完提示与不可保存条件分层。 BC-F39第二次确认成功转入在职视图且同人员主ID；未完成采集/准备/材料在该配置允许确认继续，不代表所有租户同规则。",
+      "actions": "主档新增/待入职是不同入口；当新建不响应先有限刷新/公告检查，不重复提交。取消后核对实际窗口和查询，不能从点击返回推定成功。 可见文本覆盖输入时需点击当前可见提示层，不能因输入点击无效就判无权限；保存确认以对象ID为据。 在职前后查询同一id；入职动作与入职申请分别取证，不将可管理员办理等同审批完成。",
+      "acceptance": "候选：分别验证两种入口的必填与默认；切换试用期后校验非必填、已有值保留/清除边界；组织改变后职位筛选和工号/经理/公司最终绑定可核对；失败不产生可误认成功的员工ID；邀请否及签署空时不得据此宣称通知链已测。具体项目业务默认须评审。 原站实际：邮箱空拒绝→补邮箱保存→重读同一ID；BC-F39补齐单账号入职成功并跨视图查同ID；多角色和复刻系统业务验收仍未通过。 需区分人员id、页面关联recordId与审批单；刷新查询同ID及分列状态后才能安全重试，不从正常/已发送标签推定业务生效或通知送达。",
+      "sourceCodeRefs": [
+        "lib/hris/model.ts",
+        "lib/hris/authorization.ts",
+        "docs/P1_Source_Observations_20260907.md"
+      ],
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-09"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-F-REQ-13",
+      "object": "人员主档下的独立兼职/借调/外派任职记录",
+      "fields": "原站任职类型兼职/借调/外派，员工/类型/开始/部门UI必填、结束选填；主职部门与兼职部门分列，职位/职务/职级不同字段。占人头与卡片占编原标签均保留，计量等价待证。",
+      "fieldDetails": [],
+      "roles": "当前单账号可新增和编辑合成任职；自动经理须核最终值；主职/兼职各自权限范围及独立审批未知。E2不新增人，管理员生效不能代替多角色验证。",
+      "lifecycle": "BC-F40新兼职保存→任职中/生效，独立EmploymentRecord ID指向原EmployeeInformation ID；主职A保持。列表有结束兼职申请，卡片有删除任职，业务终止与历史删除不合并。 BC-F41结束申请将空结束回显9999-12-31，提交与删除任职不同；结束日期包含性及审批/消息路由待证。 BC-F45/46离职确认后列表不见原兼职，但旧编辑UI能回读同ID/原值；删除历史、生效终止及作废各自语义需分开，终态/消费者不能从列表缺行推定。",
+      "actions": "创建、编辑、任职卡片查询、结束申请（待观察）；人员切换/部门关联的工号及经理联动需验最终绑定。",
+      "acceptance": "候选：给定同一人员EA主职A和测试B，建立B兼职后记录具有独立ID、父人员ID保持且主职A不被覆写；状态/审批分别可回读。当前原站路径已实测，但本项目验收未执行。结束申请/区间重叠/未来生效/占编及消费者规则补证后再明确拒绝或生效预期，不编默认。",
+      "sourceCodeRefs": [
+        "lib/hris/model.ts",
+        "lib/hris/personnel-transfer.ts",
+        "docs/P1_Source_Observations_20260907.md"
+      ],
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-03"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-F-REQ-14",
+      "object": "法人目录、有效期与适用范围",
+      "fields": "BC-F42五项UI必填，法定代表人空保存成功；编码/名称/简称分开，生效与失效分列，适用范围为组织范围＋附加人员范围，空值语义待证。",
+      "fieldDetails": [],
+      "roles": "当前账号可新建合成法人；法人适用范围与组织可见范围/发薪机构不能自动等同，维护入口及组合逻辑待证。",
+      "lifecycle": "新法人保存启用，失效9999-12-31；停用与删除为独立可见动作，未验证有引用时限制。",
+      "actions": "新建、名称查询、详情、编辑；范围维护、停用保护与法人变更待补证。",
+      "acceptance": "候选：保存法人后按自身ID回读编码/简称/日期，界面空范围不可静默映射成全范围或无权限；作用对象及范围组合明确后测试包含/排除/附加人员、停用时合同及薪资历史保留。当前只有新建原站合成链成功，不代签项目业务验收。",
+      "sourceCodeRefs": [
+        "lib/hris/model.ts",
+        "lib/hris/personnel-transfer.ts",
+        "lib/hris/payroll.ts",
+        "docs/P1_Source_Observations_20260907.md"
+      ],
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-07"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-F-REQ-15",
+      "object": "离职/退休生效与在途流程依赖",
+      "fields": "最后工作日、任职/合同流程日期和流程类型配置分开；原站列表选中结果见BC-F44，不自动成为本项目配置。",
+      "fieldDetails": [],
+      "roles": "当前单账号只读设置；离职办理、审批及全局流程策略的管理权限分开，独立审批仍受E2限制。",
+      "lifecycle": "原站说明按类型/勾选决定全部终止或最后工作日后条件终止；不得画作所有流程无条件终止，也不将生效任职等同在途流程。 BC-F45最后工作日9日→当前入职任职截止9日且次日10日起新离职任职，当前人员9日仍在职。起止切换须区分当前投影与未来事件；兼职自动终止确认单列，不替代后效验证。",
+      "actions": "离职/退休生效时对在途流程判定；历史查看与配置修改独立。",
+      "acceptance": "候选：给定最后工作日前后各类在途记录，按已评审规则精确比较保留/终止结果，验证重复生效、失败恢复、通知边界及历史可追溯。BC-F44仅配置事实，不标此执行场景已通过。 本次原站实际前后区间与不同任职ID已核，午夜触发生效和重聘仍未核；本项目不能用立即改status代替该日期效果。",
+      "sourceCodeRefs": [
+        "lib/hris/model.ts",
+        "lib/hris/personnel-transfer.ts",
+        "docs/P1_Source_Observations_20260907.md"
+      ],
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ],
+      "plannedCases": [
+        "P3-M01-10"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-P-REQ-09",
+      "object": "OKR管理/设置与自助OKR",
+      "fields": "原M16/M48导航明确OKR管理/OKR设置和员工自助OKR；暂无本轮直接对象/字段证据。建议以目标、关键结果、负责人、期间、对齐关联和进展记录作为待核对象清单，不作为原站字段或已批准必填。",
+      "fieldDetails": [],
+      "roles": "管理端与本人端的创建/对齐/共享/读取/反馈权限须单独补证；不能套绩效评分或普通任务权限。",
+      "lifecycle": "立项/对齐/进展/复盘等仅需求提纲候选，原状态和审批未探索；当前不填虚构生命周期枚举。",
+      "actions": "保留原登记OKR常规入口和M48消费；无AI推荐、独立任务模块恢复。",
+      "acceptance": "待字段及政策明确后，核同一目标/关键结果的稳定ID、历史进展可追溯、共享边界和对齐关系；当前不能把绩效goal的完成分数等同KR进度或自动计入绩效。",
+      "sourceCodeRefs": [
+        "lib/hris/module-progress.ts",
+        "app/hris.tsx",
+        "docs/delivery/Scope_Register.json"
+      ],
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ],
+      "plannedCases": [
+        "P3-M48-04"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-S-REQ-07",
+      "object": "人力预算预估、占用和Offer/入职校验",
+      "fields": "预算单元按部门；预算项目/期间月、人员成本估值、占用事件、释放时机、Offer与入职各自强弱策略；具体公式及币种/舍入待补。",
+      "fieldDetails": [],
+      "roles": "预算方案管理、招聘/入职提交、超预算授权与组织范围分别定义；不让人事保存校验泄露他人工资明细。",
+      "lifecycle": "按条件选择人事数据估未来成本；保存/提交Offer或待入职触发月预算校验；撤回/取消/改期/调动/离职释放机制尚未验证。",
+      "actions": "预算配置/预估结果查看/校验提示；不运行预估或提交。",
+      "acceptance": "公式/占用口径确定后覆盖低于/等于/超过预算、强阻断/弱提醒、并发Offer/重复保存/改期释放、部门归属变化；人数编制检查不代替金额预算检查。",
+      "sourceCodeRefs": [
+        "docs/P1_Source_Observations_20260907.md",
+        "lib/hris/recruitment.ts",
+        "lib/hris/model.ts"
+      ],
+      "designDocuments": [
+        "R1_P2_Interfaces_Exceptions.md"
+      ],
+      "plannedCases": [
+        "P3-INT-04"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-S-REQ-08",
+      "object": "财务凭证类型、切分及分摊来源",
+      "fields": "类型名称、切分维度、凭证详情页、分摊来源、启用；来源薪酬/成本数据的期间、版本、币种/科目/借贷属性尚未取得。",
+      "fieldDetails": [],
+      "roles": "类型配置、生成、复核、对外推送、冲销权限需分开；不由工资编辑/复核岗自动派生。",
+      "lifecycle": "类型配置与凭证任务分离；生成/失败/重试/取消/冲销/已入账状态未完整观察，不能从任务列表定义成功语义。",
+      "actions": "类型列表/新增空表已读；任务管理仍局部表头；不运行生成或推送。",
+      "acceptance": "取得科目/来源/分摊规则后编写借贷不平拒绝、分摊尾差、重复生成、源版本变化、部分推送失败/回执重放、冲销关联原凭证预期；目前不虚构会计规则。",
+      "sourceCodeRefs": [
+        "docs/P1_Source_Observations_20260907.md",
+        "docs/delivery/Scope_Register.json"
+      ],
+      "designDocuments": [
+        "R1_P2_Interfaces_Exceptions.md"
+      ],
+      "plannedCases": [
+        "P3-INT-04"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-S-REQ-12",
+      "object": "社保、个税通与激励的模块内部范围（受限规格）",
+      "fields": "M07原登记含社保/个税通/激励；现证据有算薪/计税期间及薪资档案，尚未取得三者完整业务对象、字段/枚举/校验。建议补证目录：参保关系与方案版本、缴费基数/期间、个人与单位承担、申报批次与更正、激励依据/有效期；这些名称为探索提纲，不是已观察原站字段或已批准规则。",
+      "fieldDetails": [],
+      "roles": "薪酬编制、专岗复核、员工可见与外部申报/资金权限分别核实；不能由普通HR权限或原站管理员可见推导。",
+      "lifecycle": "档案/核算/复核/发布与对外申报/支付回执分离；源状态枚举和地区/政策版本、追溯调整/异常恢复仍缺证据，不编造税率或强制生效算法。",
+      "actions": "保留模块内常规需求；浏览器恢复后优先配置说明、字段和合成内域流程。外部申报/支付仅BASE-06契约，不要求供应商接通或真实交易。",
+      "acceptance": "就绪前须有适用政策/参数的授权来源、有效期/版本/金额精度、计算边界和合成样例预期；员工/单位承担不混算、同期间重复与更正可追溯、外部结果不明不算完成。未取得规则的数值场景明确受限，不能用人工工资项目数量证明完整社保或个税。",
+      "sourceCodeRefs": [
+        "lib/hris/payroll.ts",
+        "lib/hris/payroll-adjustments.ts",
+        "docs/delivery/Payroll_Source_Gaps.md",
+        "docs/P1_Source_Observations_20260907.md"
+      ],
+      "designDocuments": [
+        "R1_P2_Interfaces_Exceptions.md"
+      ],
+      "plannedCases": [
+        "P3-INT-04"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-I-REQ-01",
+      "object": "员工自助/统一待办",
+      "fields": "self-service按当前employeeId投影；任务引用具体原记录；payslipCount仅已发布批次；返回revision；自助任务列表含受当前权限约束的作业批阅任务，不仅本人待办；请求进度是本人关联的变更/假勤/培训/异议投影，payslipCount按条非金额。",
+      "fieldDetails": [
+        {
+          "field": "本人关联与任务身份",
+          "definition": "平台userId→当前member.employeeId，task.id指业务原记录；人事待办使用personnel:审批ID，融入事项可带子项后缀",
+          "constraints": "没有员工绑定不虚构本人；任务可能多于员工数，不能用任务总数当人数。tasks含有权批阅的他人作业，不等全部本人业务",
+          "basis": "self-service/route.ts、work-inbox.ts"
+        },
+        {
+          "field": "请求投影状态",
+          "definition": "工资异议、假勤、培训、目标调整、绩效申诉、员工字段变更分别投影",
+          "constraints": "绩效申诉approved但无更正结果→awaiting_publish，有对应更正→corrected；不是写回源申诉status。员工字段非pending统一processed是展示汇总，不是完整原枚举",
+          "basis": "self-service/route.ts"
+        },
+        {
+          "field": "员工自助原范围",
+          "definition": "团队/审批/OKR/目标/假勤/学习/发展计划全部保持",
+          "constraints": "现个人聚合页不能代团队经理上下级范围、OKR与所有业务页面；源动态经理角色和当前manager+orgScope不等价",
+          "basis": "原M48登记；BC-L15；BP-P-REQ-09"
+        },
+        {
+          "field": "360任务可办与已答",
+          "definition": "本人assigned邀请+open项目+日期范围+在职，尚无feedbackReply时出任务",
+          "constraints": "答过不出任务，但原模块在开放期可改答；待办消失不等邀请取消/答卷锁定。M18新建对象无采集就不能造待答任务",
+          "basis": "self-service/route.ts；feedback.ts；BC-C40"
+        },
+        {
+          "field": "本人/团队身份边界",
+          "definition": "stableEmployeeId与明确的managerRelation/type/有效期，当前字段投影",
+          "constraints": "未绑定不提供可选人员；团队与当前授权求交，不自动继承全组织/全字段；M01批准权限优先",
+          "basis": "M48-SPEC-01候选，非源已验证"
+        },
+        {
+          "field": "动作与跨域状态投影",
+          "definition": "businessId/type、revision、rawStatus/displayStatus及映射版本、allowedActions/reasonCode",
+          "constraints": "门户只消费原业务；审批/发布/生效/通知分离；跨域未配置显式展示且范围不删除",
+          "basis": "M48-SPEC-02/03候选；API局部现状"
+        },
+        {
+          "field": "错误和数据时点",
+          "definition": "observedAt、sourceVersion、errorKind、recordId/revision",
+          "constraints": "撤权清敏感缓存；临时失败不假0，禁旧版本办理；未知结果查询后再试",
+          "basis": "M48-SPEC-04候选；workspace.tsx读取失败保留旧data静态差异"
+        }
+      ],
+      "roles": "先visibleState/visibleDevelopment，再按本人筛选；审批入口可见不能扩大记录办理权限",
+      "lifecycle": "原模块取消/退出/离职/撤权/旧版本会改变是否可办；待办不是独立业务状态机",
+      "actions": "本人档案、任务入口、申请进度、原模块办理",
+      "acceptance": "已取消任务不继续展示可办理；待审目标调整阻断自评入口；本人申诉已批准待发布应显示awaiting_publish；原模块撤权即拒绝直接URL办理；人才链候选：盘点对象配置保存、采集启动、员工待办可办分别核验；未启动/已失效模板或当前角色无权不能因管理员已见EA名单开放本人任务。",
+      "sourceCodeRefs": [
+        "app/api/self-service/route.ts",
+        "lib/hris/work-inbox.ts",
+        "app/self-service/workspace.tsx",
+        "lib/hris/authorization.ts",
+        "lib/hris/context.ts",
+        "lib/hris/module-progress.ts",
+        "tests/self-service-exit-tasks.test.mjs"
+      ],
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ],
+      "plannedCases": [
+        "P3-M48-03"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-I-REQ-02",
+      "object": "报表与指标分母",
+      "fields": "reportQuery dataset枚举、日期合法from≤to、search≤100；workforce列按viewEmail/viewLevel；返回asOf/revision；GET每页50、page1–10000；POST导出≤10000行且审计同事务，当前没有大规模流式引擎；from/to仅在contractOperations按endedOn优先于end、attendance按班次日期、instructorSchedule按场次开始北京业务日生效，其他数据集当前未应用日期筛选，不能宣称通用时间过滤。",
+      "fieldDetails": [
+        {
+          "field": "workforce/attendance",
+          "definition": "workforce每个当前可见员工一行，含可见离职；attendance按班次日期行，分钟/null",
+          "constraints": "员工表total不等在职人数，班次行不等员工数；邮箱/职级列按当前字段权，缺勤未知不可转0",
+          "basis": "reports.ts"
+        },
+        {
+          "field": "recruitmentOperations",
+          "definition": "一招聘需求一行，分别计hired/offered/approved/accepted/screening+interviewed/rejected",
+          "constraints": "active剩余名额=max(0,headcount-hired)，非active为null；待Offer人数不从名额预先扣除，不等外部金额预算",
+          "basis": "reports.ts；BP-R-REQ-01/02"
+        },
+        {
+          "field": "talentReview/successionCoverage",
+          "definition": "人才只取published且未被另一published supersedes的记录；继任按启用职位一行、去重当前在职候选员工",
+          "constraints": "latest指显式替代链而非每人按日期取最新；现任数和有效后备人数分开；准备度ready/one_year/two_years不是源M17五候选的已确认映射",
+          "basis": "reports.ts/review-versions.ts；BC-C30"
+        },
+        {
+          "field": "learningPlanProgress/learningExams",
+          "definition": "学习按配置实例/独立考试任务分别成行，完成要求/阶段/成绩来源独立",
+          "constraints": "未答或缺有效成绩null；当前状态/证据ID/历史复用应明示，不从档案缺行推出未学习",
+          "basis": "reports.ts/learning-grades.ts；BC-L19"
+        },
+        {
+          "field": "payrollOperations/Reconciliation/References",
+          "definition": "分别一批次、一已发布工资条、一工资条×考勤引用",
+          "constraints": "金额整数分；补差只加published；按批次组织授权，原员工组织快照保留；引用行total不是员工数或整月覆盖率",
+          "basis": "payroll-reports.ts"
+        },
+        {
+          "field": "日期/快照/导出",
+          "definition": "asOf为生成时刻，revision为当前读取版本；仅部分数据集应用from/to",
+          "constraints": "未实现按任意历史日重建权限与任职；CSV安全转义和审计不等订阅成功。源通知权限未授权时不得实发",
+          "basis": "reports.ts；BP-I-REQ-11"
+        },
+        {
+          "field": "数据集与定义",
+          "definition": "datasetId/definitionVersion/domain/rowKey/sourceKind/sourceVersion",
+          "constraints": "字段类型、单位、去重/分母/null和权限必须声明，未批域算法不填默认",
+          "basis": "M32-SPEC-01明确候选，未批准"
+        },
+        {
+          "field": "时间与快照",
+          "definition": "timeMode/dateField/from/to/businessCutoff/generatedAt/snapshotId",
+          "constraints": "支持范围显式，未知历史不可重建，历史读取仍当前权限",
+          "basis": "M32-SPEC-02明确候选，未批准"
+        },
+        {
+          "field": "查询和导出权限",
+          "definition": "read/export/subscribe/manage及row/field/aggregate白名单",
+          "constraints": "分别授权；排序/筛选/聚合不能利用无权字段；敏感汇总缺策略不发布",
+          "basis": "M32-SPEC-03明确候选，未批准"
+        },
+        {
+          "field": "设计器定义",
+          "definition": "dataset/columns/filter AST/group/measure/joinKey/sort/draft/publishedVersion",
+          "constraints": "白名单声明式定义，不开放任意SQL/脚本；稳定分页/有界任务，超限不截断",
+          "basis": "M32-SPEC-04明确候选，未批准"
+        },
+        {
+          "field": "导出任务",
+          "definition": "jobId/idempotencyKey/queryHash/sourceRevision/manifest/status/fileHash/expiry",
+          "constraints": "文件可用前审计与权限校验；重复查原job，下载重验，真实已下载不可保证收回",
+          "basis": "M32-SPEC-03/04明确候选，未批准"
+        }
+      ],
+      "roles": "每个dataset有角色及当前组织范围；薪酬报表仅专岗；导出与页面读取不是同一权限承诺",
+      "lifecycle": "正式绩效仅最新已发布版本；学习实例进度/成绩分别投影；人才九宫格取发布快照",
+      "actions": "查询、分页、原有审计导出（本轮不执行导出）",
+      "acceptance": "无字段权时表头/单元格不出现该字段；学习缺分保持null；绩效旧版本不重复计为当前；合同覆盖登记不能证明电子签法律有效或实际在岗；旧revision导出拒绝，审计失败不得返回CSV（本轮未执行导出）；人才链候选：盘点项目对象数、已采集数、已校准数和已发布结果人数分别定义，C39的1条对象配置不等1条有效评分/报告；缺目标或计算项目不写0分/达标。",
+      "sourceCodeRefs": [
+        "lib/hris/reports.ts",
+        "app/api/reports/route.ts",
+        "app/reports/workspace.tsx",
+        "lib/hris/payroll-reports.ts",
+        "lib/hris/development-repository.ts",
+        "tests/report-current-scope.test.mjs"
+      ],
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-01"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-I-REQ-03",
+      "object": "实名调查/问卷与360共用模板边界",
+      "fields": "问卷1–20题；量表1–5，单选2–8项不重复；开放名单快照、完整回答；当前答案非匿名；同模板code新建递增version，不是模板代码不可重复；调查轮次冻结题目/版本，名单在open时按当前范围在职员工冻结；量表均值保留两位，choice选项索引0起，rating取1–5。",
+      "fieldDetails": [],
+      "roles": "HR/管理员发布，名单内本人在窗口填报；当前角色可见性单独核对",
+      "lifecycle": "模板发布版本→round draft/open/closed；submitted/withdrawn答卷；统计仅有效提交；开放期重交复用同答卷ID覆盖答案，撤回后再提交也复用；不承诺保留每次答卷历史。管理员可在开始日前open但员工须在日期内填；close可提前手动关闭。",
+      "actions": "发布名单、答卷/撤回、关闭、查看统计",
+      "acceptance": "单选越界/缺题拒绝；撤回不计有效回应；未开放/超日期不能提交；实名不能在文案宣传匿名；360分组压制另按阈值",
+      "sourceCodeRefs": [
+        "lib/hris/surveys.ts",
+        "lib/hris/feedback.ts"
+      ],
+      "designDocuments": [
+        "R1_P2_Interfaces_Exceptions.md"
+      ],
+      "plannedCases": [
+        "P3-INT-05"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-I-REQ-04",
+      "object": "主数据同步契约预检",
+      "fields": "eventId/sourceId/externalEmployeeId 1–100；sequence正安全整数；occurredAt带时区；mappingVersion正整数；profile严格对象；映射命名空间tenant+source；profile code/name1–100、job≤200、email空或合法≤254；occurredAt归一UTC再递归按键排序计算SHA-256。",
+      "fieldDetails": [],
+      "roles": "现有纯函数不访问网络、持久化或授予账号；实际同步权限尚未有接口",
+      "lifecycle": "ready/duplicate/conflict/gap/stale/mapping_required/rejected；ready仍DRY_RUN_ONLY；同命名空间重复回执/非法游标视conflict；无回执旧sequence为stale；映射版本在回执判断前校验。",
+      "actions": "纯输入预检；实际原站任务/连接测试/一键配置不执行",
+      "acceptance": "相同eventId同内容为duplicate；内容不同conflict；缺前序gap；映射缺失/多义不生成可提交结论；ready不得宣称已更新员工；不同mappingVersion先返回mapping_required而非直接重放旧回执；attempt仅1–6，408/429/5xx或无HTTP状态建议重试，其余诊断；延迟max(有效Retry-After上限3600,指数上限300)，仍不执行调度。",
+      "sourceCodeRefs": [
+        "lib/hris/integration-preflight.ts"
+      ],
+      "designDocuments": [
+        "R1_P2_Interfaces_Exceptions.md"
+      ],
+      "plannedCases": [
+        "P3-INT-01"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-I-REQ-05",
+      "object": "工作台/电子签/会议/文化/翻译等周边",
+      "fields": "各原ID保留导航与缺口；认证/印章/签署、会议预定、标签/填报/文化运营、人力报告为不同对象",
+      "fieldDetails": [],
+      "roles": "E2保持仅本人；独立人类角色、签署身份、外部访客均未新增",
+      "lifecycle": "电子签认证/签署回执不可用合同登记代替；会议/福利/文化消息有独立状态",
+      "actions": "只读入口；不发送消息、签署、预约、奖励或导出",
+      "acceptance": "取得配置证据后再定义冲突、重复回执、撤销、时间窗口和访问边界；任何未探索动作不标成可用",
+      "sourceCodeRefs": [
+        "docs/delivery/Integration_Source_Gaps.md",
+        "docs/delivery/Scope_Register.json"
+      ],
+      "designDocuments": [
+        "R1_P2_Interfaces_Exceptions.md"
+      ],
+      "plannedCases": [
+        "P3-INT-04"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-I-REQ-07",
+      "object": "审批中心流程干预与待办同步",
+      "fields": "流程标题/类型/发起人/当前审批人/状态/催办状态；转交目标、干预节点、理由和操作记录待补完整字段/校验。；BC-I27源审批类型区分任免/提名/考察/发展/资格/盘点等；审批中/通过/不通过/已完成/已终止/已驳回/已撤回/空分列，不能按同名合成统一业务状态。",
+      "fieldDetails": [
+        {
+          "field": "流程实例与业务记录",
+          "definition": "流程ID、业务类型、业务对象ID/子对象ID、模板版本、节点与办理人需分别关联",
+          "constraints": "当前inbox为原业务聚合，无通用流程实例表；M03任期ID/M18项目ID不能冒作流程ID。空过滤结果不证明免审批",
+          "basis": "BC-I27/C40；work-inbox.ts"
+        },
+        {
+          "field": "管理员委托与节点转交",
+          "definition": "原范围管理员委托，源还见转交/干预/撤销等入口说明",
+          "constraints": "委托起止、对象范围、代办者限制、是否授权审批/仅管理、撤回和审计身份均未闭合；不能把管理员委托直接当全局代理登录",
+          "basis": "BC-I10；原M19登记；待补证"
+        },
+        {
+          "field": "人事待办当前计算",
+          "definition": "workInbox调用authorizeCommand以rejected决策检查当前人事办理人，再生成personnel任务",
+          "constraints": "可拒绝处理不等可批准；过期生效日或失效来源可能仍需撤回/拒绝，不以待办可见保证批准可执行。D7固定两级不被通用委托候选改写",
+          "basis": "work-inbox.ts/authorization.ts/API额外条件"
+        },
+        {
+          "field": "分页与计数",
+          "definition": "inbox GET每页20，domain/q过滤；counts按筛选前当前全可见任务计算",
+          "constraints": "total是筛选后任务数，counts是未加domain/q的全域分组；不能当搜索结果分域计数或业务通过数",
+          "basis": "app/api/work-inbox/route.ts"
+        },
+        {
+          "field": "审批待办与待生效执行清单分开",
+          "definition": "workInbox的人事任务只遍历status=pending；approved+waiting/failed没有进入该人事待办分支",
+          "constraints": "待办为0不能据此判断无待生效调动。/approvals已有执行入口应保留；建议M01/M19将待审批、待执行、执行失败分列，用同审批ID关联，非本轮产品改动",
+          "basis": "a3c1493 work-inbox.ts/authorization.ts静态；M01 D1依赖，不是源站观察"
+        },
+        {
+          "field": "管理员委托最小产品候选（未批准）",
+          "definition": "委托ID、原管理员/受托者、管理动作集合、组织/业务范围、生效起止、撤销原因、原人与代理人审计身份；只引用已有有效成员",
+          "constraints": "建议有效权限取原人当前权限、受托者当前权限、显式委托范围交集；禁转委托，撤销/过期立即失效。管理委托不自动授审批决策权；节点转交另行定义且D7调动不开放。E2期间只评审设计，不新建账号或执行代办",
+          "basis": "原M19管理员委托登记；BC-I10非委托细则，以上为明确未批准设计建议"
+        },
+        {
+          "field": "实例标识与版本",
+          "definition": "tenantId/instanceId/businessType/businessId/businessRevision/templateId/templateVersion/nodeInstanceId/revision",
+          "constraints": "实例绑定键唯一；原单与节点ID不混用，模板发布/实例启动冻结版本；源字段存储类型仍未知",
+          "basis": "M19-SPEC-01；model.ts已有局部workflowVersion"
+        },
+        {
+          "field": "路由节点",
+          "definition": "节点ID/type、参与人解析器、字段条件、next/join及拒绝策略",
+          "constraints": "发起时验证路径/无环/有效办理人；会签须显式all/any和拒绝规则，缺配置拒绝启动；M01 D7例外固定",
+          "basis": "M19-SPEC-01；候选非源事实"
+        },
+        {
+          "field": "流程与业务状态",
+          "definition": "processStatus/nodeStatus/businessEffectStatus/notificationStatus",
+          "constraints": "不同域保留原始枚举＋映射版本，不将源“通过/已完成/空”粗暴合并；业务完成只由业务契约证明",
+          "basis": "BC-I27；M19-SPEC-01"
+        },
+        {
+          "field": "管理与批量动作",
+          "definition": "actionId/idempotencyKey/expectedRevision/reason/actorId/targetNode/targetMember",
+          "constraints": "每单原子，批量逐项反馈；不以管理员权限代签；跨域补偿必须原业务适配器确认",
+          "basis": "M19-SPEC-02；API CAS/原子提交现状"
+        },
+        {
+          "field": "委托对象与生效",
+          "definition": "delegationId/grantor/grantee/actions/domain/orgIds/fieldAllowlist/startAt/endAt/acceptAt/revokedAt/reason",
+          "constraints": "现有有效成员＋三方权限交集；受托接受且在[start,end)有效；禁止转委托；撤销即时",
+          "basis": "M19-SPEC-03，未批准候选"
+        },
+        {
+          "field": "消息事件",
+          "definition": "eventId/instanceId/nodeRevision/recipientId/templateVersion/state/attemptCount/providerReceipt",
+          "constraints": "审批/业务与通知分态，失效事件停止投递，unknown先查回执，不发送真实通知",
+          "basis": "M19-SPEC-04，接口预留"
+        }
+      ],
+      "roles": "流程管理员、节点审批人、委托人/代理人分开；发起人/本人/审批贡献者隔离不能因转交绕过；当前D1–D7固定两级继续。",
+      "lifecycle": "BC-I10撤销在未完成审批时取消流程及待办；转交调当前节点审批人，干预可换节点及人；业务撤销与审批完成/生效是不同事件，补偿未核实。",
+      "actions": "保留查询/模板配置及原入口的催办、转交、撤销、干预、批量审批、委托完整语义；以上除已有专门实现外均为明确候选，不静默延期，不执行真实消息或成员变更。",
+      "acceptance": "待权限/状态明确后覆盖旧审批人直接URL拒绝、待办失效、撤销已完成拒绝、已生效业务不被流程撤销静默改写、独立审批约束在委托/转交下保持；消息发送非本轮范围。；候选：按业务类型、标题、状态组合过滤，并标明权限范围；无记录不得自动解释为业务未发起或无需审批。引用干部任期ID与流程ID应可追踪，任期登记与审批成功须分别取证。",
+      "sourceCodeRefs": [
+        "docs/P1_Source_Observations_20260907.md",
+        "lib/hris/work-inbox.ts",
+        "lib/hris/authorization.ts",
+        "lib/hris/model.ts",
+        "app/api/hris/route.ts",
+        "app/api/work-inbox/route.ts",
+        "lib/hris/module-progress.ts",
+        "lib/hris/repository.ts",
+        "tests/learning-homework.test.mjs"
+      ],
+      "designDocuments": [
+        "R1_P2_M19_Workflow_Transactions.md"
+      ],
+      "plannedCases": [
+        "P3-M19-01",
+        "P3-M19-03"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-I-REQ-08",
+      "object": "电子签身份映射、场景与签署证据",
+      "fields": "员工认证姓名/手机/证件字段引用组织员工；签署场景、企业认证、印章、签署记录、存证附页是独立对象/设置，模板版本/签约主体/回执ID待补证。",
+      "fieldDetails": [],
+      "roles": "企业认证管理、印章授权、员工本人认证、发起/签署/文件下载分别定义；当前独立合同登记无权替用户签署或认证。",
+      "lifecycle": "认证、签署发起/进行/拒绝/撤销/到期/完成及存证状态尚未完整取得；不能从字段映射或合同signed登记推导真实签署完成。",
+      "actions": "只读更多设置及既有签署场景表头；不认证/发签/盖章/下载。",
+      "acceptance": "取得供应商回执/模板/身份契约后覆盖三要素缺失、撤权、重复/乱序回执、拒签/失效、档案状态与实际签署证据一致；人工签署依据登记明确区别外部已验证回执。",
+      "sourceCodeRefs": [
+        "docs/P1_Source_Observations_20260907.md",
+        "lib/hris/workforce.ts",
+        "docs/delivery/Integration_Source_Gaps.md"
+      ],
+      "designDocuments": [
+        "R1_P2_Interfaces_Exceptions.md"
+      ],
+      "plannedCases": [
+        "P3-INT-04"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-I-REQ-11",
+      "object": "报表订阅、快照、转交与屏蔽",
+      "fields": "订阅内容/所属应用/类型/订阅人/方式/快照数据/频率/发送时刻/开始结束/状态/权限类型/来源；BC-P1C-M32原表头当前复核一致，新增操作标签转交订阅/屏蔽订阅可见。",
+      "fieldDetails": [
+        {
+          "field": "订阅身份和内容",
+          "definition": "subscriptionId/ownerId/recipientId/dataset/definitionVersion/filter/columnAllowlist/snapshotMode",
+          "constraints": "每接收者独立按双方当前权限交集生成，转交不复制权限",
+          "basis": "源表头BC-P1C-M32＋M32-SPEC-05候选"
+        },
+        {
+          "field": "调度及投递",
+          "definition": "timezone/frequency/sendTime/startAt/endAt/revision/state/period/eventId/receipt",
+          "constraints": "幂等键含版本/周期/收件者/渠道，屏蔽在最终投递前复核，unknown先查回执；真实消息非P1前置",
+          "basis": "M32-SPEC-05，未批准"
+        },
+        {
+          "field": "受控链接与历史",
+          "definition": "snapshotId/fileHash/createdAt/permissionProjectionVersion/expiry/audience",
+          "constraints": "默认登录验权链接，缓存撤权；历史投递身份保留，不承诺回收外部已下载副本",
+          "basis": "M32-SPEC-03/05，未批准"
+        }
+      ],
+      "roles": "订阅创建者、接收者、转交管理员、数据集角色/字段范围需分别定义；现有CSV导出审计不等于订阅发送权限。",
+      "lifecycle": "订阅有效期/状态与发送历史分开；快照/实时数据、转交是否保留历史/撤原接收者、屏蔽和过期处理未知。",
+      "actions": "订阅管理、发现中心、转交/屏蔽仅入口；本轮不订阅、不发送、不导出。",
+      "acceptance": "先明确快照与发送时权限复核后，覆盖原接收人撤权、跨角色转交、敏感字段隐藏、已过期/屏蔽停止、发送失败重试去重、时区与历史附件撤权边界；目前不声称自动发送已实现。",
+      "sourceCodeRefs": [
+        "docs/P1_Source_Observations_20260907.md",
+        "lib/hris/reports.ts",
+        "app/api/reports/route.ts"
+      ],
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ],
+      "plannedCases": [
+        "P3-M32-08"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    },
+    {
+      "id": "BP-I-REQ-12",
+      "object": "企业标签库与人才标签应用",
+      "fields": "M05企业/北森标签目录，人才盘点应用开关、标签范围含下级；M41员工人才标签归BP-C；标签ID/层级/版本/来源和关系实例需分开，不用名称合并。；BC-I18帮助补动态标签最多10规则/2对象/同对象2插入字段/生成值50截断，缺任一插入值不生成；预制算法可改，仍非物理存储类型。",
+      "fieldDetails": [],
+      "roles": "目录维护、标签赋予/撤回、标签筛选、被标记员工可见性分别定义；范围包含下级是标签目录还是组织范围须保留原页语境，不能放大人员权限。",
+      "lifecycle": "BC-I18帮助：自动条件满足授予、不满足实时取消；配置新改对存量夜间处理次日可见，新业务实时判断；动态新值生成与手动标签不同，不可手工授予/导入。关闭功能是否清除存量及规则失败仍未知。",
+      "actions": "企业标签库/北森标签库/标签应用设置仅读，不赋标签或改变应用开关。",
+      "acceptance": "取得来源与撤回策略后覆盖同名不同ID、父标签启停、子标签范围、重复打标、跨应用撤权与人才盘点历史快照；不将导航映射归属当数据同步证据。",
+      "sourceCodeRefs": [
+        "docs/P1_Source_Observations_20260907.md",
+        "docs/delivery/Scope_Register.json"
+      ],
+      "designDocuments": [
+        "R1_P2_Interfaces_Exceptions.md"
+      ],
+      "plannedCases": [
+        "P3-INT-05"
+      ],
+      "scopeBoundary": "仅R1或BASE适用部分；原混合契约不恢复暂缓模块",
+      "priority": "最新已批SPEC优先于此原始字段的历史候选措辞"
+    }
+  ]
+}

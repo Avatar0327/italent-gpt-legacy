@@ -1,0 +1,51 @@
+{
+  "kind": "controller_intake_proposal_not_fact_register",
+  "proposalId": "R1-P2-SUBMISSION-20260909",
+  "sourceBranch": "design/r1-p2-20260909",
+  "sourceBaseline": "716cd9df5f5776d050f77f57c2ad5a35c0a83882",
+  "sourceCommitResolution": "取最终交付报告完整HEAD及远端design分支；核git log -1 --本包文件，不伪填自身提交SHA",
+  "status": "proposed_not_applied",
+  "targetFactSource": "docs/delivery/Scope_Register.json",
+  "preconditions": [
+    "P1总控读取其最新main，不回退本包基线",
+    "核R1原批准ID和范围未变；若变，先做明确差异评审",
+    "确认最终设计分支已推送且仅有P2文档/检查脚本",
+    "P1当前R2进度、范围分母、批准记录及用户修改保持"
+  ],
+  "operations": [
+    {
+      "operation": "register_design_submission",
+      "target": "roadmap.phases中的P2阅读/材料引用；具体已有节点由总控校验schema",
+      "payload": {
+        "release": "R1",
+        "artifactPath": "docs/delivery/r1-p2/R1_P2_Exit_Review.md",
+        "reviewState": "submitted_for_independent_review",
+        "approvalState": "not_approved",
+        "implementationState": "not_started"
+      }
+    },
+    {
+      "operation": "link_residual_validation_dependencies",
+      "target": "roadmap.nextTasks中对应R1下游任务的材料引用，不替换现有R2主任务",
+      "payload": {
+        "riskMatrix": "docs/delivery/r1-p2/R1_P2_Limit_Resolution.json",
+        "p3Proposal": "docs/delivery/r1-p2/R1_P2_P3_Work_Packages.json",
+        "dependencies": "docs/delivery/r1-p2/R1_P2_Dependencies_Decisions.json"
+      }
+    },
+    {
+      "operation": "regenerate_controller_views_if_accepted",
+      "target": "Controller_Resume.md / Execution_Checkpoint.md /相关同源阅读视图",
+      "payload": {
+        "note": "由唯一事实源生成；P1四模块仍受限通过、P2待评审、P3未开始，不覆盖P1窗口的当前R2主任务"
+      }
+    }
+  ],
+  "prohibitedChanges": [
+    "不得把四LIMIT风险计数写成模块验收完成数",
+    "不得变更D1–D7/E1/E2、批准SPEC、RPO/RTO/保留目标",
+    "不得自动写入P2批准记录或将P3置已开始",
+    "不得自动合并/cherry-pick/部署/新增访问者"
+  ],
+  "ownerDecision": "独立评审/所有者决定是否批准P2退出；本执行窗口不作该决定"
+}

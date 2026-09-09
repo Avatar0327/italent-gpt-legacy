@@ -101,3 +101,12 @@
 |BASE-05|[R1_P2_Backup_Recovery.md](R1_P2_Backup_Recovery.md)|R1-P2-08|P3-REC-01,P3-REC-02,P3-REC-03,P3-REC-04,P3-REC-05,P4-REC-06|
 |BASE-06|[R1_P2_Backup_Recovery.md](R1_P2_Backup_Recovery.md)|R1-P2-08|P3-REC-03|
 |E2|[R1_P2_Backup_Recovery.md](R1_P2_Backup_Recovery.md)|R1-P2-08|P3-REC-02,P4-REC-06|
+|R1-P1-P2-TRANSITION-20260909|[R1_P2_Review_Design.md](R1_P2_Review_Design.md)|R1-P2-09|P2-REV-01|
+|R1-BASELINE-01|[R1_P2_Review_Design.md](R1_P2_Review_Design.md)|R1-P2-09|P2-REV-01,P3-XMOD-01|
+|R1-RECOVERY-01|[R1_P2_Review_Design.md](R1_P2_Review_Design.md)|R1-P2-09|P2-REV-01|
+|M01-LIMIT-01|[R1_P2_Review_Design.md](R1_P2_Review_Design.md)|R1-P2-09|P2-REV-01,P3-XMOD-01,P4-M01-01|
+|M19-LIMIT-01|[R1_P2_Review_Design.md](R1_P2_Review_Design.md)|R1-P2-09|P2-REV-01,P3-XMOD-01,P4-M19-01|
+|M48-LIMIT-01|[R1_P2_Review_Design.md](R1_P2_Review_Design.md)|R1-P2-09|P2-REV-01,P3-XMOD-01,P4-M48-01|
+|M32-LIMIT-01|[R1_P2_Review_Design.md](R1_P2_Review_Design.md)|R1-P2-09|P2-REV-01,P3-XMOD-01,P4-M32-01|
+|E1|[R1_P2_Review_Design.md](R1_P2_Review_Design.md)|R1-P2-09|P2-REV-01|
+|E2|[R1_P2_Review_Design.md](R1_P2_Review_Design.md)|R1-P2-09|P2-REV-01,P4-M01-01,P4-M19-01,P4-M48-01,P4-M32-01|

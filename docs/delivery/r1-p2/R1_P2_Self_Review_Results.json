@@ -1,0 +1,86 @@
+{
+  "kind": "P2_document_self_review_not_business_verification",
+  "rounds": [
+    {
+      "round": 1,
+      "focus": [
+        "需求完整性",
+        "模块边界",
+        "权限",
+        "数据与接口一致性"
+      ],
+      "at": "2026-09-09T18:48:31.286434+00:00",
+      "checkedParentHead": "0963ec2e10feb4d215305084fcc0f9de06b189d3",
+      "command": "python scripts/check-r1-p2-design.py --complete",
+      "workingTreeCandidate": true,
+      "checks": {
+        "kind": "P2_document_check_not_business_test",
+        "baseline": "716cd9df5f5776d050f77f57c2ad5a35c0a83882",
+        "tasks": 9,
+        "designCases": 64,
+        "requirementDesignLinks": 106,
+        "sourceFiles": 16,
+        "uniqueRequirements": 70,
+        "originalAcceptanceScenarios": 85,
+        "limitRisks": 37,
+        "limitDispositionCounts": {
+          "M01": {
+            "P2": 3,
+            "P3": 5,
+            "P4": 2
+          },
+          "M19": {
+            "P2": 2,
+            "P3": 5,
+            "P4": 2
+          },
+          "M48": {
+            "P2": 2,
+            "P3": 4,
+            "P4": 2
+          },
+          "M32": {
+            "P2": 2,
+            "P3": 6,
+            "P4": 2
+          }
+        },
+        "datasets": 21,
+        "reportFields": 254,
+        "p3Tasks": 11,
+        "p3Cases": 57,
+        "hardGates": 15,
+        "errors": [],
+        "passed": true
+      },
+      "findingsFixed": [
+        {
+          "id": "SR1-01",
+          "finding": "报表现有列只按源码引用，缺逐列稳定字段ID/类型/权限字典",
+          "fix": "增加21数据集254字段字典，标签与固定源码序列对应，金额/分钟/布尔/null明确",
+          "evidence": "R1_P2_Report_Field_Dictionary.json"
+        },
+        {
+          "id": "SR1-02",
+          "finding": "effectStatus遗漏waiting_external，运行缺能力及客户端升级错误存在名称歧义",
+          "fix": "统一规范状态/availability与CLIENT_UPGRADE_REQUIRED，权限水位别名规范化",
+          "evidence": "R1_P2_Consistency_Resolutions.md"
+        },
+        {
+          "id": "SR1-03",
+          "finding": "原BP验收有待批/允许停用/永久原单强绑/忽略日期等历史文字，与已批新SPEC不同",
+          "fix": "保留原文并按批准优先明确目标预期，不降低目录引用保护",
+          "evidence": "R1_P2_Approved_Acceptance_Trace.json"
+        },
+        {
+          "id": "SR1-04",
+          "finding": "部分LIMIT初始映射虽ID有效但指向相邻不同语义用例",
+          "fix": "逐条按Given/When/Then重映委托、取消、分页、设计器及快照用例",
+          "evidence": "R1_P2_Limit_Resolution.json"
+        }
+      ],
+      "remainingDesignDefects": [],
+      "passed": true
+    }
+  ]
+}

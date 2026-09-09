@@ -1,0 +1,158 @@
+{
+  "kind": "design_review_evidence_not_acceptance",
+  "gates": [
+    {
+      "id": "HG01",
+      "requirement": "稳定ID/版本/有效期/历史不可覆盖",
+      "document": "R1_P2_M01_Data_History.md",
+      "caseIds": [
+        "P3-M01-01",
+        "P3-MIG-01"
+      ],
+      "status": "design_addressed_runtime_not_verified"
+    },
+    {
+      "id": "HG02",
+      "requirement": "多任职/再入职/法人合同/编制关系",
+      "document": "R1_P2_M01_Data_History.md",
+      "caseIds": [
+        "P3-M01-02",
+        "P3-M01-03",
+        "P3-M01-07"
+      ],
+      "status": "design_addressed_runtime_not_verified"
+    },
+    {
+      "id": "HG03",
+      "requirement": "审批/生效/通知状态分离",
+      "document": "R1_P2_M19_Workflow_Transactions.md",
+      "caseIds": [
+        "P3-M19-07",
+        "P3-INT-03"
+      ],
+      "status": "design_addressed_runtime_not_verified"
+    },
+    {
+      "id": "HG04",
+      "requirement": "模板冻结/无路由拒绝",
+      "document": "R1_P2_M19_Workflow_Transactions.md",
+      "caseIds": [
+        "P3-M19-01"
+      ],
+      "status": "design_addressed_runtime_not_verified"
+    },
+    {
+      "id": "HG05",
+      "requirement": "管理/委托/节点审批三权分离",
+      "document": "R1_P2_M19_Workflow_Transactions.md",
+      "caseIds": [
+        "P3-M19-06"
+      ],
+      "status": "design_addressed_runtime_not_verified"
+    },
+    {
+      "id": "HG06",
+      "requirement": "本人/直线/虚线/部门关系",
+      "document": "R1_P2_M48_Authorization_Consumers.md",
+      "caseIds": [
+        "P3-M48-01",
+        "P3-M48-02"
+      ],
+      "status": "design_addressed_runtime_not_verified"
+    },
+    {
+      "id": "HG07",
+      "requirement": "对象/动作/范围/字段/历史交集",
+      "document": "R1_P2_M48_Authorization_Consumers.md",
+      "caseIds": [
+        "P3-M48-02",
+        "P3-M32-05"
+      ],
+      "status": "design_addressed_runtime_not_verified"
+    },
+    {
+      "id": "HG08",
+      "requirement": "read/export/subscribe/manage分别授权",
+      "document": "R1_P2_M32_Reports_Jobs.md",
+      "caseIds": [
+        "P3-M32-05",
+        "P3-M32-08"
+      ],
+      "status": "design_addressed_runtime_not_verified"
+    },
+    {
+      "id": "HG09",
+      "requirement": "粒度/分子分母/null/去重/时间",
+      "document": "R1_P2_M32_Reports_Jobs.md",
+      "caseIds": [
+        "P3-M32-01",
+        "P3-M32-02",
+        "P3-M32-03"
+      ],
+      "status": "design_addressed_runtime_not_verified"
+    },
+    {
+      "id": "HG10",
+      "requirement": "有界分页/异步导出/快照/订阅幂等",
+      "document": "R1_P2_M32_Reports_Jobs.md",
+      "caseIds": [
+        "P3-M32-06",
+        "P3-M32-08"
+      ],
+      "status": "design_addressed_runtime_not_verified"
+    },
+    {
+      "id": "HG11",
+      "requirement": "内外部ID/eventId/revision/digest/correlationId",
+      "document": "R1_P2_Interfaces_Exceptions.md",
+      "caseIds": [
+        "P3-INT-01",
+        "P3-INT-02"
+      ],
+      "status": "design_addressed_runtime_not_verified"
+    },
+    {
+      "id": "HG12",
+      "requirement": "业务失败/并发/不可写/未知分别恢复",
+      "document": "R1_P2_Interfaces_Exceptions.md",
+      "caseIds": [
+        "P3-M01-05",
+        "P3-INT-02"
+      ],
+      "status": "design_addressed_runtime_not_verified"
+    },
+    {
+      "id": "HG13",
+      "requirement": "增量/旧字段/未知历史/回滚/重复执行",
+      "document": "R1_P2_Migration_Rollback.md",
+      "caseIds": [
+        "P3-MIG-01",
+        "P3-MIG-02",
+        "P3-MIG-06"
+      ],
+      "status": "design_addressed_runtime_not_verified"
+    },
+    {
+      "id": "HG14",
+      "requirement": "DB附件共同点/撤权/隔离开放",
+      "document": "R1_P2_Backup_Recovery.md",
+      "caseIds": [
+        "P3-REC-01",
+        "P3-REC-02",
+        "P4-REC-06"
+      ],
+      "status": "design_addressed_runtime_not_verified"
+    },
+    {
+      "id": "HG15",
+      "requirement": "RPO/RTO/30天可行性/成本/责任",
+      "document": "R1_P2_Backup_Recovery.md",
+      "caseIds": [
+        "P3-REC-04",
+        "P3-REC-05",
+        "P4-REC-06"
+      ],
+      "status": "design_addressed_runtime_not_verified"
+    }
+  ]
+}

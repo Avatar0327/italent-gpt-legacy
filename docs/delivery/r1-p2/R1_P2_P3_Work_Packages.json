@@ -1,0 +1,437 @@
+{
+  "kind": "implementation_proposal_not_execution_plan_activation",
+  "baseline": "716cd9df5f5776d050f77f57c2ad5a35c0a83882",
+  "p2ExitApprovalRequired": true,
+  "tasks": [
+    {
+      "id": "P3-R1-01",
+      "title": "基础授权、命令及写入屏障",
+      "dependsOn": [],
+      "scope": "服务端身份/成员/字段/关系授权、水位、command ledger/CAS/outbox、恢复全行日志接口；所有旧写入口盘点与epoch保护",
+      "suggestedPaths": [
+        "lib/hris/context.ts",
+        "authorization.ts",
+        "repository.ts",
+        "development-repository.ts",
+        " app/api各写入口",
+        " drizzle新增迁移"
+      ],
+      "caseIds": [
+        "P3-ARC-01",
+        "P3-ARC-02"
+      ],
+      "approvedAcceptanceSubcases": [
+        "BASE-01-AC01",
+        "BASE-02-AC02"
+      ],
+      "acceptanceEvidence": "全写入口守卫清单、事务/审计/撤权负例；不改变D1–D7与真实成员",
+      "entryGate": "P2退出明确批准",
+      "owner": "R1 P3实施负责人及对应领域负责人",
+      "reviewer": "独立P3测试/安全复核人",
+      "status": "proposed_not_authorized",
+      "execution": "not_executed",
+      "outOfScope": "生产数据库/部署/真实外发/新增访问者/未批准生产者业务规则"
+    },
+    {
+      "id": "P3-R1-02",
+      "title": "M01目录、人员、任职、合同与历史",
+      "dependsOn": [
+        "P3-R1-01"
+      ],
+      "scope": "分立稳定对象与有效版本、多任职/重聘、合同/编制、子集模板/导入，全部新功能先受feature gate保护",
+      "suggestedPaths": [
+        "lib/hris/model.ts",
+        "workforce.ts",
+        "personnel-transfer.ts",
+        "contract-fields.ts",
+        "对应M01路由和UI"
+      ],
+      "caseIds": [
+        "P3-M01-01",
+        "P3-M01-02",
+        "P3-M01-03",
+        "P3-M01-04",
+        "P3-M01-05",
+        "P3-M01-06",
+        "P3-M01-07",
+        "P3-M01-08",
+        "P3-M01-09",
+        "P3-M01-10",
+        "P3-M01-11",
+        "P3-M01-12"
+      ],
+      "approvedAcceptanceSubcases": [
+        "BASE-02-AC01",
+        "BP-F-REQ-01-AC01",
+        "BP-F-REQ-01-AC02",
+        "BP-F-REQ-01-AC03",
+        "BP-F-REQ-02-AC01",
+        "BP-F-REQ-02-AC02",
+        "BP-F-REQ-02-AC03",
+        "BP-F-REQ-02-AC04",
+        "BP-F-REQ-02-AC05",
+        "BP-F-REQ-02-AC06",
+        "BP-F-REQ-04-AC01",
+        "BP-F-REQ-04-AC02",
+        "BP-F-REQ-04-AC03",
+        "M01-REVIEW-AC01",
+        "M01-REVIEW-AC02",
+        "M01-REVIEW-AC03",
+        "M01-REVIEW-AC04",
+        "M01-REVIEW-AC05",
+        "M01-REVIEW-AC06",
+        "M01-REVIEW-AC07",
+        "M01-REVIEW-AC08",
+        "M01-REVIEW-AC09",
+        "M01-REVIEW-AC10"
+      ],
+      "acceptanceEvidence": "包含完整P1原验收子场景；失败与历史逐键对账，主职投影不丢旧数据",
+      "entryGate": "迁移切读完成前不启用新能力",
+      "owner": "R1 P3实施负责人及对应领域负责人",
+      "reviewer": "独立P3测试/安全复核人",
+      "status": "proposed_not_authorized",
+      "execution": "not_executed",
+      "outOfScope": "生产数据库/部署/真实外发/新增访问者/未批准生产者业务规则"
+    },
+    {
+      "id": "P3-R1-03",
+      "title": "流程引擎与管理委托",
+      "dependsOn": [
+        "P3-R1-01",
+        "P3-R1-02"
+      ],
+      "scope": "模板/实例/节点、路由/会签、三权、管理撤销事务；D7仍受控固定路径",
+      "suggestedPaths": [
+        "lib/hris/work-inbox.ts",
+        "model.ts",
+        "personnel-transfer.ts",
+        " app/api/hris",
+        "审批中心UI",
+        "新增workflow服务"
+      ],
+      "caseIds": [
+        "P3-M19-01",
+        "P3-M19-02",
+        "P3-M19-03",
+        "P3-M19-04",
+        "P3-M19-05",
+        "P3-M19-06",
+        "P3-M19-07"
+      ],
+      "approvedAcceptanceSubcases": [
+        "BP-I-REQ-07-AC01",
+        "BP-I-REQ-07-AC02",
+        "BP-I-REQ-07-AC03",
+        "BP-I-REQ-07-AC04",
+        "M19-EXECUTION-LIST-01",
+        "M19-REVIEW-AC01",
+        "M19-REVIEW-AC02",
+        "M19-REVIEW-AC03",
+        "M19-REVIEW-AC04",
+        "M19-REVIEW-AC05",
+        "M19-REVIEW-AC06",
+        "M19-REVIEW-AC07",
+        "M19-REVIEW-AC08",
+        "M19-REVIEW-AC09"
+      ],
+      "acceptanceEvidence": "图/版本/并发/原子取消/批量回执；消息拦截器",
+      "entryGate": "任何原域无安全cancel适配时只阻该管理动作",
+      "owner": "R1 P3实施负责人及对应领域负责人",
+      "reviewer": "独立P3测试/安全复核人",
+      "status": "proposed_not_authorized",
+      "execution": "not_executed",
+      "outOfScope": "生产数据库/部署/真实外发/新增访问者/未批准生产者业务规则"
+    },
+    {
+      "id": "P3-R1-04",
+      "title": "内部事件、接口、回执与失败恢复",
+      "dependsOn": [
+        "P3-R1-01"
+      ],
+      "scope": "严格信封/摘要、inbox/outbox、未知结果查询、附件补偿、供应商未配置契约",
+      "suggestedPaths": [
+        "lib/hris/integration-preflight.ts",
+        "http.ts",
+        "app/api/attachments",
+        "新增adapters/commands路由"
+      ],
+      "caseIds": [
+        "P3-INT-01",
+        "P3-INT-02",
+        "P3-INT-03",
+        "P3-INT-04",
+        "P3-INT-05",
+        "P3-INT-06"
+      ],
+      "approvedAcceptanceSubcases": [
+        "BASE-03-AC01",
+        "BASE-04-AC03",
+        "BASE-04-AC04",
+        "BASE-06-AC01",
+        "BASE-06-AC02",
+        "BASE-06-AC03"
+      ],
+      "acceptanceEvidence": "同键重复/异内容冲突/乱序/回调验签模拟，真实网络副作用0",
+      "entryGate": "未配置供应商不阻接口和mock；真实链保留未联调",
+      "owner": "R1 P3实施负责人及对应领域负责人",
+      "reviewer": "独立P3测试/安全复核人",
+      "status": "proposed_not_authorized",
+      "execution": "not_executed",
+      "outOfScope": "生产数据库/部署/真实外发/新增访问者/未批准生产者业务规则"
+    },
+    {
+      "id": "P3-R1-05",
+      "title": "M48七项门户消费",
+      "dependsOn": [
+        "P3-R1-02",
+        "P3-R1-03",
+        "P3-R1-04"
+      ],
+      "scope": "关系权限投影、七适配registry、四任务分区、清缓存/晚响应防护",
+      "suggestedPaths": [
+        "app/api/self-service",
+        "app/self-service",
+        "lib/hris/work-inbox及消费者适配"
+      ],
+      "caseIds": [
+        "P3-M48-01",
+        "P3-M48-02",
+        "P3-M48-03",
+        "P3-M48-04",
+        "P3-M48-05",
+        "P3-M48-06",
+        "P3-M48-07"
+      ],
+      "approvedAcceptanceSubcases": [
+        "BASE-01-AC01",
+        "BASE-04-AC01",
+        "BP-I-REQ-01-AC01",
+        "BP-I-REQ-01-AC02",
+        "BP-I-REQ-01-AC03",
+        "BP-I-REQ-01-AC04",
+        "M48-REVIEW-AC01",
+        "M48-REVIEW-AC02",
+        "M48-REVIEW-AC03",
+        "M48-REVIEW-AC04",
+        "M48-REVIEW-AC05",
+        "M48-REVIEW-AC06",
+        "M48-REVIEW-AC07",
+        "M48-REVIEW-AC08",
+        "M48-REVIEW-AC09"
+      ],
+      "acceptanceEvidence": "七项正常/未配置/无权/未知/旧revision及本人他人分区",
+      "entryGate": "真实R2/R3接入在P3-R1-10，不用mock代通过",
+      "owner": "R1 P3实施负责人及对应领域负责人",
+      "reviewer": "独立P3测试/安全复核人",
+      "status": "proposed_not_authorized",
+      "execution": "not_executed",
+      "outOfScope": "生产数据库/部署/真实外发/新增访问者/未批准生产者业务规则"
+    },
+    {
+      "id": "P3-R1-06",
+      "title": "M32定义、逐列字典与版本查询",
+      "dependsOn": [
+        "P3-R1-02",
+        "P3-R1-04"
+      ],
+      "scope": "21dataset、254字段、类型AST、current/event_range/snapshot、有界read model及稳定generation",
+      "suggestedPaths": [
+        "lib/hris/reports.ts",
+        "payroll-reports.ts",
+        "app/api/reports",
+        "新增report registry/read model"
+      ],
+      "caseIds": [
+        "P3-M32-01",
+        "P3-M32-02",
+        "P3-M32-03",
+        "P3-M32-04",
+        "P3-M32-05",
+        "P3-M32-07",
+        "P3-M32-10"
+      ],
+      "approvedAcceptanceSubcases": [
+        "BASE-02-AC03",
+        "BP-I-REQ-02-AC01",
+        "BP-I-REQ-02-AC02",
+        "BP-I-REQ-02-AC03",
+        "BP-I-REQ-02-AC04",
+        "BP-I-REQ-02-AC05",
+        "M32-REVIEW-AC01",
+        "M32-REVIEW-AC02",
+        "M32-REVIEW-AC03",
+        "M32-REVIEW-AC04",
+        "M32-REVIEW-AC05",
+        "M32-REVIEW-AC06",
+        "M32-REVIEW-AC07",
+        "M32-REVIEW-AC08",
+        "M32-REVIEW-AC09",
+        "M32-REVIEW-AC11",
+        "M32-REVIEW-AC13"
+      ],
+      "acceptanceEvidence": "原列映射/逐键分母/单位/null、发布更正链、权限下聚合与EXPLAIN",
+      "entryGate": "缺源版本读取则显式不可重建，不造历史快照",
+      "owner": "R1 P3实施负责人及对应领域负责人",
+      "reviewer": "独立P3测试/安全复核人",
+      "status": "proposed_not_authorized",
+      "execution": "not_executed",
+      "outOfScope": "生产数据库/部署/真实外发/新增访问者/未批准生产者业务规则"
+    },
+    {
+      "id": "P3-R1-07",
+      "title": "M32分页、异步导出与订阅",
+      "dependsOn": [
+        "P3-R1-06",
+        "P3-R1-04"
+      ],
+      "scope": "job/租约/fence、分块R2、ready审计、逐收件者订阅、转交/屏蔽",
+      "suggestedPaths": [
+        "app/reports",
+        "app/api/reports",
+        "新增job/subscription服务"
+      ],
+      "caseIds": [
+        "P3-M32-06",
+        "P3-M32-08",
+        "P3-M32-09"
+      ],
+      "approvedAcceptanceSubcases": [
+        "BP-I-REQ-11-AC01",
+        "BP-I-REQ-11-AC02",
+        "M32-REVIEW-AC10",
+        "M32-REVIEW-AC12"
+      ],
+      "acceptanceEvidence": "有界数据/字节和并发、旧下载拒绝、同周期幂等，禁止截断",
+      "entryGate": "托管后台执行能力须DEP-PLATFORM-01确认",
+      "owner": "R1 P3实施负责人及对应领域负责人",
+      "reviewer": "独立P3测试/安全复核人",
+      "status": "proposed_not_authorized",
+      "execution": "not_executed",
+      "outOfScope": "生产数据库/部署/真实外发/新增访问者/未批准生产者业务规则"
+    },
+    {
+      "id": "P3-R1-08",
+      "title": "增量迁移与兼容回滚",
+      "dependsOn": [
+        "P3-R1-01",
+        "P3-R1-02",
+        "P3-R1-03",
+        "P3-R1-04",
+        "P3-R1-06"
+      ],
+      "scope": "实际schema清单、确定性回填/映射、双写/兼容读、批次恢复、回滚边界",
+      "suggestedPaths": [
+        "drizzle新增扩展",
+        "lib/hris/repository",
+        "拟新增迁移器；不改旧迁移历史文件"
+      ],
+      "caseIds": [
+        "P3-MIG-01",
+        "P3-MIG-02",
+        "P3-MIG-03",
+        "P3-MIG-04",
+        "P3-MIG-05",
+        "P3-MIG-06",
+        "P3-MIG-07"
+      ],
+      "approvedAcceptanceSubcases": [
+        "BASE-03-AC02",
+        "BASE-04-AC02"
+      ],
+      "acceptanceEvidence": "隔离v0/v1混合夹具；逐键对账；掉线/并发/重复/旧写屏障；不删除用户事实",
+      "entryGate": "P3只隔离合成；P4生产迁移还须恢复能力及切换批准",
+      "owner": "R1 P3实施负责人及对应领域负责人",
+      "reviewer": "独立P3测试/安全复核人",
+      "status": "proposed_not_authorized",
+      "execution": "not_executed",
+      "outOfScope": "生产数据库/部署/真实外发/新增访问者/未批准生产者业务规则"
+    },
+    {
+      "id": "P3-R1-09",
+      "title": "备份恢复与安全对账",
+      "dependsOn": [
+        "P3-R1-01",
+        "P3-R1-04",
+        "P3-R1-08"
+      ],
+      "scope": "独立安全ledger、恢复日志/manifest/流式加密、隔离恢复fence、保留/监控",
+      "suggestedPaths": [
+        "scripts/rehearse-local-recovery.mjs的增量扩展与新增恢复服务/平台配置建议"
+      ],
+      "caseIds": [
+        "P3-REC-01",
+        "P3-REC-02",
+        "P3-REC-03",
+        "P3-REC-04",
+        "P3-REC-05"
+      ],
+      "approvedAcceptanceSubcases": [
+        "BASE-01-AC02",
+        "BASE-05-AC01",
+        "BASE-05-AC02"
+      ],
+      "acceptanceEvidence": "实际schema版本合成全表、RPO/RTO计时、30天依赖、撤权/密钥/对象故障；云端演练须对应授权",
+      "entryGate": "DEP-PLATFORM-01/02能力确认，未具备只阻云端实现与演练",
+      "owner": "R1 P3实施负责人及对应领域负责人",
+      "reviewer": "独立P3测试/安全复核人",
+      "status": "proposed_not_authorized",
+      "execution": "not_executed",
+      "outOfScope": "生产数据库/部署/真实外发/新增访问者/未批准生产者业务规则"
+    },
+    {
+      "id": "P3-R1-10",
+      "title": "R2/R3生产者逐契约联调",
+      "dependsOn": [
+        "P3-R1-05",
+        "P3-R1-06",
+        "P3-R1-07"
+      ],
+      "scope": "生产者只接入已批准schema/动作，不实现其引擎；按7入口和15来源逐一登记",
+      "suggestedPaths": [
+        "M48/M32 adapter registry和各生产者暴露契约"
+      ],
+      "caseIds": [],
+      "approvedAcceptanceSubcases": [],
+      "acceptanceEvidence": "每项producerVersion、real evidence、正常/禁止/不可用；未配置项不得标通过",
+      "entryGate": "各生产者版本就绪；可分项进行，不阻前面R1合成任务",
+      "owner": "R1 P3实施负责人及对应领域负责人",
+      "reviewer": "独立P3测试/安全复核人",
+      "status": "proposed_not_authorized",
+      "execution": "not_executed",
+      "outOfScope": "生产数据库/部署/真实外发/新增访问者/未批准生产者业务规则"
+    },
+    {
+      "id": "P3-R1-11",
+      "title": "跨域回归与P3证据整理",
+      "dependsOn": [
+        "P3-R1-05",
+        "P3-R1-07",
+        "P3-R1-08",
+        "P3-R1-09"
+      ],
+      "scope": "整合稳定ID→审批→执行→关系→报表→恢复链；核所有原批准验收子场景覆盖",
+      "suggestedPaths": [
+        "新增隔离测试夹具/运行报告；禁止以历史17项/旧部署继承复验"
+      ],
+      "caseIds": [
+        "P3-XMOD-01"
+      ],
+      "approvedAcceptanceSubcases": [],
+      "acceptanceEvidence": "按命令/源码/夹具/实际时间保留结果；真实联调缺口按10列明",
+      "entryGate": "P3退出由独立评审，不自动授权P4或部署",
+      "owner": "R1 P3实施负责人及对应领域负责人",
+      "reviewer": "独立P3测试/安全复核人",
+      "status": "proposed_not_authorized",
+      "execution": "not_executed",
+      "outOfScope": "生产数据库/部署/真实外发/新增访问者/未批准生产者业务规则"
+    }
+  ],
+  "p4CaseIds": [
+    "P4-ARC-03",
+    "P4-M01-01",
+    "P4-M19-01",
+    "P4-M32-01",
+    "P4-M48-01",
+    "P4-REC-06"
+  ]
+}

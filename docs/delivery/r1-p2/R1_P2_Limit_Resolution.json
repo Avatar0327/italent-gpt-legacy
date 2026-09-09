@@ -1,0 +1,1519 @@
+{
+  "kind": "design_risk_decomposition_not_project_facts",
+  "baseline": "716cd9df5f5776d050f77f57c2ad5a35c0a83882",
+  "p1LimitApprovalUnchanged": true,
+  "risks": [
+    {
+      "riskId": "R1-M01-L01",
+      "module": "M01",
+      "originalLimit": "M01-LIMIT-01",
+      "originalItem": "组织/职位未来时态及停用",
+      "risk": "未知源规则与已批独立规则的界限",
+      "severity": "medium",
+      "evidence": {
+        "path": "docs/delivery/P1_M01_Review_Package.md",
+        "sha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da",
+        "originalLimitRef": "M01-LIMIT-01"
+      },
+      "p2Handling": "F-SPEC-08明确未来版本/在用拒绝；未知北森算法不作为实现依据",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M01-01"
+        ],
+        "scenario": "F-SPEC-08明确未来版本/在用拒绝；未知北森算法不作为实现依据；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M01-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：未知源规则与已批独立规则的界限；已有合成通过不替代本项。",
+        "owner": "HR业务验收负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M01-01",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P2设计负责人",
+      "latestGate": "P2退出独立评审",
+      "primaryDisposition": "P2",
+      "status": "design_resolved_pending_independent_review",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ]
+    },
+    {
+      "riskId": "R1-M01-L02",
+      "module": "M01",
+      "originalLimit": "M01-LIMIT-01",
+      "originalItem": "重聘执行/冲突恢复",
+      "risk": "稳定身份、雇佣段和未知历史对象结构",
+      "severity": "high",
+      "evidence": {
+        "path": "docs/delivery/P1_M01_Review_Package.md",
+        "sha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da",
+        "originalLimitRef": "M01-LIMIT-01"
+      },
+      "p2Handling": "person/雇佣/任职/identityReview分立，禁止自动合人和回填假历史",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-MIG-01"
+        ],
+        "scenario": "person/雇佣/任职/identityReview分立，禁止自动合人和回填假历史；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M01-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：稳定身份、雇佣段和未知历史对象结构；已有合成通过不替代本项。",
+        "owner": "HR业务验收负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M01-02",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P2设计负责人",
+      "latestGate": "P2退出独立评审",
+      "primaryDisposition": "P2",
+      "status": "design_resolved_pending_independent_review",
+      "designDocuments": [
+        "R1_P2_Migration_Rollback.md"
+      ]
+    },
+    {
+      "riskId": "R1-M01-L03",
+      "module": "M01",
+      "originalLimit": "M01-LIMIT-01",
+      "originalItem": "法人空范围/合同自动规则",
+      "risk": "空范围和自动计次规则无明确实现边界",
+      "severity": "high",
+      "evidence": {
+        "path": "docs/delivery/P1_M01_Review_Package.md",
+        "sha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da",
+        "originalLimitRef": "M01-LIMIT-01"
+      },
+      "p2Handling": "空范围未配置；法人版本、连续续签和独立合同计次明确；自动第三次/到期终止关闭",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M01-07"
+        ],
+        "scenario": "空范围未配置；法人版本、连续续签和独立合同计次明确；自动第三次/到期终止关闭；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M01-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：空范围和自动计次规则无明确实现边界；已有合成通过不替代本项。",
+        "owner": "HR业务验收负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M01-03",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P2设计负责人",
+      "latestGate": "P2退出独立评审",
+      "primaryDisposition": "P2",
+      "status": "design_resolved_pending_independent_review",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ]
+    },
+    {
+      "riskId": "R1-M01-L04",
+      "module": "M01",
+      "originalLimit": "M01-LIMIT-01",
+      "originalItem": "组织/职位未来时态及停用",
+      "risk": "有效区间冲突、未来环和并发依赖遗漏",
+      "severity": "high",
+      "evidence": {
+        "path": "docs/delivery/P1_M01_Review_Package.md",
+        "sha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da",
+        "originalLimitRef": "M01-LIMIT-01"
+      },
+      "p2Handling": "按全部有效切点及同revision在用检查；旧非法目标通过合成夹具验证执行failed",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M01-01",
+          "P3-M01-12"
+        ],
+        "scenario": "按全部有效切点及同revision在用检查；旧非法目标通过合成夹具验证执行failed；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M01-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：有效区间冲突、未来环和并发依赖遗漏；已有合成通过不替代本项。",
+        "owner": "HR业务验收负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M01-01",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P3测试及领域负责人",
+      "latestGate": "P3对应任务验收；生产者未就绪则该联调不通过",
+      "primaryDisposition": "P3",
+      "status": "design_complete_validation_open",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ]
+    },
+    {
+      "riskId": "R1-M01-L05",
+      "module": "M01",
+      "originalLimit": "M01-LIMIT-01",
+      "originalItem": "重聘执行/冲突恢复",
+      "risk": "同人重复重聘、标识冲突与旧角色复活",
+      "severity": "critical",
+      "evidence": {
+        "path": "docs/delivery/P1_M01_Review_Package.md",
+        "sha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da",
+        "originalLimitRef": "M01-LIMIT-01"
+      },
+      "p2Handling": "幂等映射/人工核实边界、账号独立撤权；迁移源hash保护",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M01-02"
+        ],
+        "scenario": "幂等映射/人工核实边界、账号独立撤权；迁移源hash保护；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M01-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：同人重复重聘、标识冲突与旧角色复活；已有合成通过不替代本项。",
+        "owner": "HR业务验收负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M01-02",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P3测试及领域负责人",
+      "latestGate": "P3对应任务验收；生产者未就绪则该联调不通过",
+      "primaryDisposition": "P3",
+      "status": "design_complete_validation_open",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ]
+    },
+    {
+      "riskId": "R1-M01-L06",
+      "module": "M01",
+      "originalLimit": "M01-LIMIT-01",
+      "originalItem": "兼职终态/借派占编",
+      "risk": "多人多任职重复占编与退出遗漏",
+      "severity": "high",
+      "evidence": {
+        "path": "docs/delivery/P1_M01_Review_Package.md",
+        "sha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da",
+        "originalLimitRef": "M01-LIMIT-01"
+      },
+      "p2Handling": "主职1/其他0及exitFence；逐单取消失败可追踪不假完成",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M01-03",
+          "P3-M01-10"
+        ],
+        "scenario": "主职1/其他0及exitFence；逐单取消失败可追踪不假完成；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M01-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：多人多任职重复占编与退出遗漏；已有合成通过不替代本项。",
+        "owner": "HR业务验收负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M01-02",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P3测试及领域负责人",
+      "latestGate": "P3对应任务验收；生产者未就绪则该联调不通过",
+      "primaryDisposition": "P3",
+      "status": "design_complete_validation_open",
+      "designDocuments": [
+        "R1_P2_M01_Data_History.md"
+      ]
+    },
+    {
+      "riskId": "R1-M01-L07",
+      "module": "M01",
+      "originalLimit": "M01-LIMIT-01",
+      "originalItem": "重聘执行/冲突恢复、通知后效",
+      "risk": "业务失败/并发/数据库不可写/结果未知混淆",
+      "severity": "critical",
+      "evidence": {
+        "path": "docs/delivery/P1_M01_Review_Package.md",
+        "sha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da",
+        "originalLimitRef": "M01-LIMIT-01"
+      },
+      "p2Handling": "命令回执与同事务审计；未知先查，业务与消息分离",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M01-05"
+        ],
+        "scenario": "命令回执与同事务审计；未知先查，业务与消息分离；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M01-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：业务失败/并发/数据库不可写/结果未知混淆；已有合成通过不替代本项。",
+        "owner": "HR业务验收负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": false,
+      "sourceEvidenceRequest": null,
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P3测试及领域负责人",
+      "latestGate": "P3对应任务验收；生产者未就绪则该联调不通过",
+      "primaryDisposition": "P3",
+      "status": "design_complete_validation_open",
+      "designDocuments": [
+        "R1_P2_Interfaces_Exceptions.md"
+      ]
+    },
+    {
+      "riskId": "R1-M01-L08",
+      "module": "M01",
+      "originalLimit": "M01-LIMIT-01",
+      "originalItem": "法人空范围/合同自动规则",
+      "risk": "合同版本迁移导致重计或历史覆盖",
+      "severity": "high",
+      "evidence": {
+        "path": "docs/delivery/P1_M01_Review_Package.md",
+        "sha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da",
+        "originalLimitRef": "M01-LIMIT-01"
+      },
+      "p2Handling": "逐源键映射、原合同/法人快照与附件hash不变；回滚保留新事实",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-MIG-04"
+        ],
+        "scenario": "逐源键映射、原合同/法人快照与附件hash不变；回滚保留新事实；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M01-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：合同版本迁移导致重计或历史覆盖；已有合成通过不替代本项。",
+        "owner": "HR业务验收负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M01-03",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P3测试及领域负责人",
+      "latestGate": "P3对应任务验收；生产者未就绪则该联调不通过",
+      "primaryDisposition": "P3",
+      "status": "design_complete_validation_open",
+      "designDocuments": [
+        "R1_P2_Migration_Rollback.md"
+      ]
+    },
+    {
+      "riskId": "R1-M01-L09",
+      "module": "M01",
+      "originalLimit": "M01-LIMIT-01",
+      "originalItem": "单账号之外权限",
+      "risk": "单管理员不能证明双HR/双审批人独立性",
+      "severity": "critical",
+      "evidence": {
+        "path": "docs/delivery/P1_M01_Review_Package.md",
+        "sha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da",
+        "originalLimitRef": "M01-LIMIT-01"
+      },
+      "p2Handling": "P3合成角色验证；P4真人各自操作，E2保持",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M01-04"
+        ],
+        "scenario": "P3合成角色验证；P4真人各自操作，E2保持；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M01-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：单管理员不能证明双HR/双审批人独立性；已有合成通过不替代本项。",
+        "owner": "HR业务验收负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": false,
+      "sourceEvidenceRequest": null,
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "独立P4业务/安全验收负责人",
+      "latestGate": "P4完整权限/业务/生产准备验收，E2或真实外发授权具备后",
+      "primaryDisposition": "P4",
+      "status": "design_complete_acceptance_open",
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ]
+    },
+    {
+      "riskId": "R1-M01-L10",
+      "module": "M01",
+      "originalLimit": "M01-LIMIT-01",
+      "originalItem": "通知后效",
+      "risk": "真实后效和跨域人员状态未验收",
+      "severity": "high",
+      "evidence": {
+        "path": "docs/delivery/P1_M01_Review_Package.md",
+        "sha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da",
+        "originalLimitRef": "M01-LIMIT-01"
+      },
+      "p2Handling": "源生效/通知状态分离，P3拦截器，P4逐业务回执和人工验收",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-INT-03"
+        ],
+        "scenario": "源生效/通知状态分离，P3拦截器，P4逐业务回执和人工验收；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M01-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：真实后效和跨域人员状态未验收；已有合成通过不替代本项。",
+        "owner": "HR业务验收负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M01-04",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "独立P4业务/安全验收负责人",
+      "latestGate": "P4完整权限/业务/生产准备验收，E2或真实外发授权具备后",
+      "primaryDisposition": "P4",
+      "status": "design_complete_acceptance_open",
+      "designDocuments": [
+        "R1_P2_Interfaces_Exceptions.md"
+      ]
+    },
+    {
+      "riskId": "R1-M19-L01",
+      "module": "M19",
+      "originalLimit": "M19-LIMIT-01",
+      "originalItem": "原站通用路由",
+      "risk": "未知源算法被当已实现，D7被通用路由覆盖",
+      "severity": "high",
+      "evidence": {
+        "path": "docs/delivery/P1_M19_Review_Package.md",
+        "sha256": "c9df85cacaa2530b632346abc82ef3525c8f083c44968b16191bfcb30ccbc42e",
+        "originalLimitRef": "M19-LIMIT-01"
+      },
+      "p2Handling": "按已批M19规则实现；D7三个入口固定隔离，源差异交P1定向补证",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M19-01"
+        ],
+        "scenario": "按已批M19规则实现；D7三个入口固定隔离，源差异交P1定向补证；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M19-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：未知源算法被当已实现，D7被通用路由覆盖；已有合成通过不替代本项。",
+        "owner": "审批业务验收负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M19-01",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P2设计负责人",
+      "latestGate": "P2退出独立评审",
+      "primaryDisposition": "P2",
+      "status": "design_resolved_pending_independent_review",
+      "designDocuments": [
+        "R1_P2_M19_Workflow_Transactions.md"
+      ]
+    },
+    {
+      "riskId": "R1-M19-L02",
+      "module": "M19",
+      "originalLimit": "M19-LIMIT-01",
+      "originalItem": "管理员委托",
+      "risk": "管理/委托/审批三权未分开",
+      "severity": "critical",
+      "evidence": {
+        "path": "docs/delivery/P1_M19_Review_Package.md",
+        "sha256": "c9df85cacaa2530b632346abc82ef3525c8f083c44968b16191bfcb30ccbc42e",
+        "originalLimitRef": "M19-LIMIT-01"
+      },
+      "p2Handling": "双方当前权限与委托交集，管理动作不能代签节点",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M19-06"
+        ],
+        "scenario": "双方当前权限与委托交集，管理动作不能代签节点；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M19-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：管理/委托/审批三权未分开；已有合成通过不替代本项。",
+        "owner": "审批业务验收负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M19-02",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P2设计负责人",
+      "latestGate": "P2退出独立评审",
+      "primaryDisposition": "P2",
+      "status": "design_resolved_pending_independent_review",
+      "designDocuments": [
+        "R1_P2_M19_Workflow_Transactions.md"
+      ]
+    },
+    {
+      "riskId": "R1-M19-L03",
+      "module": "M19",
+      "originalLimit": "M19-LIMIT-01",
+      "originalItem": "通用路由",
+      "risk": "空路由、重叠分支和会签竞态",
+      "severity": "critical",
+      "evidence": {
+        "path": "docs/delivery/P1_M19_Review_Package.md",
+        "sha256": "c9df85cacaa2530b632346abc82ef3525c8f083c44968b16191bfcb30ccbc42e",
+        "originalLimitRef": "M19-LIMIT-01"
+      },
+      "p2Handling": "严格图/AST、恰一分支、冻结会签策略和CAS顺序",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M19-01",
+          "P3-M19-02"
+        ],
+        "scenario": "严格图/AST、恰一分支、冻结会签策略和CAS顺序；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M19-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：空路由、重叠分支和会签竞态；已有合成通过不替代本项。",
+        "owner": "审批业务验收负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M19-01",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P3测试及领域负责人",
+      "latestGate": "P3对应任务验收；生产者未就绪则该联调不通过",
+      "primaryDisposition": "P3",
+      "status": "design_complete_validation_open",
+      "designDocuments": [
+        "R1_P2_M19_Workflow_Transactions.md"
+      ]
+    },
+    {
+      "riskId": "R1-M19-L04",
+      "module": "M19",
+      "originalLimit": "M19-LIMIT-01",
+      "originalItem": "通用路由",
+      "risk": "模板升级/重复启动改变旧实例",
+      "severity": "high",
+      "evidence": {
+        "path": "docs/delivery/P1_M19_Review_Package.md",
+        "sha256": "c9df85cacaa2530b632346abc82ef3525c8f083c44968b16191bfcb30ccbc42e",
+        "originalLimitRef": "M19-LIMIT-01"
+      },
+      "p2Handling": "模板及原单版本冻结，复合唯一业务实例键",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M19-01"
+        ],
+        "scenario": "模板及原单版本冻结，复合唯一业务实例键；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M19-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：模板升级/重复启动改变旧实例；已有合成通过不替代本项。",
+        "owner": "审批业务验收负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": false,
+      "sourceEvidenceRequest": null,
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P3测试及领域负责人",
+      "latestGate": "P3对应任务验收；生产者未就绪则该联调不通过",
+      "primaryDisposition": "P3",
+      "status": "design_complete_validation_open",
+      "designDocuments": [
+        "R1_P2_M19_Workflow_Transactions.md"
+      ]
+    },
+    {
+      "riskId": "R1-M19-L05",
+      "module": "M19",
+      "originalLimit": "M19-LIMIT-01",
+      "originalItem": "管理干预/撤销补偿",
+      "risk": "撤销与生效竞争产生半单或擦除历史",
+      "severity": "critical",
+      "evidence": {
+        "path": "docs/delivery/P1_M19_Review_Package.md",
+        "sha256": "c9df85cacaa2530b632346abc82ef3525c8f083c44968b16191bfcb30ccbc42e",
+        "originalLimitRef": "M19-LIMIT-01"
+      },
+      "p2Handling": "本地域取消与流程同事务，外部无安全取消拒绝；生效后只更正",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M19-03",
+          "P3-M19-04"
+        ],
+        "scenario": "本地域取消与流程同事务，外部无安全取消拒绝；生效后只更正；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M19-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：撤销与生效竞争产生半单或擦除历史；已有合成通过不替代本项。",
+        "owner": "审批业务验收负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M19-02",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P3测试及领域负责人",
+      "latestGate": "P3对应任务验收；生产者未就绪则该联调不通过",
+      "primaryDisposition": "P3",
+      "status": "design_complete_validation_open",
+      "designDocuments": [
+        "R1_P2_M19_Workflow_Transactions.md"
+      ]
+    },
+    {
+      "riskId": "R1-M19-L06",
+      "module": "M19",
+      "originalLimit": "M19-LIMIT-01",
+      "originalItem": "并发撤权",
+      "risk": "已撤权/过期委托持旧节点继续办理",
+      "severity": "critical",
+      "evidence": {
+        "path": "docs/delivery/P1_M19_Review_Package.md",
+        "sha256": "c9df85cacaa2530b632346abc82ef3525c8f083c44968b16191bfcb30ccbc42e",
+        "originalLimitRef": "M19-LIMIT-01"
+      },
+      "p2Handling": "SQL提交时核当前权限/委托revision及到期，旧generation作废",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M19-06"
+        ],
+        "scenario": "SQL提交时核当前权限/委托revision及到期，旧generation作废；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M19-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：已撤权/过期委托持旧节点继续办理；已有合成通过不替代本项。",
+        "owner": "审批业务验收负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": false,
+      "sourceEvidenceRequest": null,
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P3测试及领域负责人",
+      "latestGate": "P3对应任务验收；生产者未就绪则该联调不通过",
+      "primaryDisposition": "P3",
+      "status": "design_complete_validation_open",
+      "designDocuments": [
+        "R1_P2_M19_Workflow_Transactions.md"
+      ]
+    },
+    {
+      "riskId": "R1-M19-L07",
+      "module": "M19",
+      "originalLimit": "M19-LIMIT-01",
+      "originalItem": "消息结果",
+      "risk": "转交/重试造成旧收件人重复收到",
+      "severity": "high",
+      "evidence": {
+        "path": "docs/delivery/P1_M19_Review_Package.md",
+        "sha256": "c9df85cacaa2530b632346abc82ef3525c8f083c44968b16191bfcb30ccbc42e",
+        "originalLimitRef": "M19-LIMIT-01"
+      },
+      "p2Handling": "节点generation+订阅版本去重，unknown查询，pending失效",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-INT-03"
+        ],
+        "scenario": "节点generation+订阅版本去重，unknown查询，pending失效；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M19-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：转交/重试造成旧收件人重复收到；已有合成通过不替代本项。",
+        "owner": "审批业务验收负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M19-03",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P3测试及领域负责人",
+      "latestGate": "P3对应任务验收；生产者未就绪则该联调不通过",
+      "primaryDisposition": "P3",
+      "status": "design_complete_validation_open",
+      "designDocuments": [
+        "R1_P2_Interfaces_Exceptions.md"
+      ]
+    },
+    {
+      "riskId": "R1-M19-L08",
+      "module": "M19",
+      "originalLimit": "M19-LIMIT-01",
+      "originalItem": "管理员委托、并发撤权",
+      "risk": "真人管理/节点角色独立未证",
+      "severity": "critical",
+      "evidence": {
+        "path": "docs/delivery/P1_M19_Review_Package.md",
+        "sha256": "c9df85cacaa2530b632346abc82ef3525c8f083c44968b16191bfcb30ccbc42e",
+        "originalLimitRef": "M19-LIMIT-01"
+      },
+      "p2Handling": "不以合成角色代真人；按P4矩阵各人登录",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-XMOD-01"
+        ],
+        "scenario": "不以合成角色代真人；按P4矩阵各人登录；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M19-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：真人管理/节点角色独立未证；已有合成通过不替代本项。",
+        "owner": "审批业务验收负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": false,
+      "sourceEvidenceRequest": null,
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "独立P4业务/安全验收负责人",
+      "latestGate": "P4完整权限/业务/生产准备验收，E2或真实外发授权具备后",
+      "primaryDisposition": "P4",
+      "status": "design_complete_acceptance_open",
+      "designDocuments": [
+        "R1_P2_Review_Design.md"
+      ]
+    },
+    {
+      "riskId": "R1-M19-L09",
+      "module": "M19",
+      "originalLimit": "M19-LIMIT-01",
+      "originalItem": "管理干预/撤销补偿、消息结果",
+      "risk": "外域补偿与实际送达需要业务和供应商配合",
+      "severity": "high",
+      "evidence": {
+        "path": "docs/delivery/P1_M19_Review_Package.md",
+        "sha256": "c9df85cacaa2530b632346abc82ef3525c8f083c44968b16191bfcb30ccbc42e",
+        "originalLimitRef": "M19-LIMIT-01"
+      },
+      "p2Handling": "本轮完成状态/回执/模拟边界；P3真实联调及P4业务回执分别保留",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-INT-04"
+        ],
+        "scenario": "本轮完成状态/回执/模拟边界；P3真实联调及P4业务回执分别保留；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M19-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：外域补偿与实际送达需要业务和供应商配合；已有合成通过不替代本项。",
+        "owner": "审批业务验收负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M19-03",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "独立P4业务/安全验收负责人",
+      "latestGate": "P4完整权限/业务/生产准备验收，E2或真实外发授权具备后",
+      "primaryDisposition": "P4",
+      "status": "design_complete_acceptance_open",
+      "designDocuments": [
+        "R1_P2_Interfaces_Exceptions.md"
+      ]
+    },
+    {
+      "riskId": "R1-M48-L01",
+      "module": "M48",
+      "originalLimit": "M48-LIMIT-01",
+      "originalItem": "源团队/本人角色",
+      "risk": "本人/直线/虚线/部门关系混作通用经理权",
+      "severity": "critical",
+      "evidence": {
+        "path": "docs/delivery/P1_M48_Review_Package.md",
+        "sha256": "e6559a7981ed02b3b99df5232718ce289dd971cd5d4ad80975277f017c9b1221",
+        "originalLimitRef": "M48-LIMIT-01"
+      },
+      "p2Handling": "稳定本人绑定+独立有效关系；逐grant tuple交集，不跨角色拼字段",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M48-02"
+        ],
+        "scenario": "稳定本人绑定+独立有效关系；逐grant tuple交集，不跨角色拼字段；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M48-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：本人/直线/虚线/部门关系混作通用经理权；已有合成通过不替代本项。",
+        "owner": "自助与生产者业务负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M48-01",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P2设计负责人",
+      "latestGate": "P2退出独立评审",
+      "primaryDisposition": "P2",
+      "status": "design_resolved_pending_independent_review",
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ]
+    },
+    {
+      "riskId": "R1-M48-L02",
+      "module": "M48",
+      "originalLimit": "M48-LIMIT-01",
+      "originalItem": "OKR详细页",
+      "risk": "把未证评分算法或绩效目标改名为OKR",
+      "severity": "high",
+      "evidence": {
+        "path": "docs/delivery/P1_M48_Review_Package.md",
+        "sha256": "e6559a7981ed02b3b99df5232718ce289dd971cd5d4ad80975277f017c9b1221",
+        "originalLimitRef": "M48-LIMIT-01"
+      },
+      "p2Handling": "独立objective/KR/cycle/metric契约，缺权重不评分；保留原七项范围",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M48-04"
+        ],
+        "scenario": "独立objective/KR/cycle/metric契约，缺权重不评分；保留原七项范围；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M48-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：把未证评分算法或绩效目标改名为OKR；已有合成通过不替代本项。",
+        "owner": "自助与生产者业务负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M48-02",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P2设计负责人",
+      "latestGate": "P2退出独立评审",
+      "primaryDisposition": "P2",
+      "status": "design_resolved_pending_independent_review",
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ]
+    },
+    {
+      "riskId": "R1-M48-L03",
+      "module": "M48",
+      "originalLimit": "M48-LIMIT-01",
+      "originalItem": "源团队/本人角色",
+      "risk": "旧缓存/晚回请求泄漏撤权数据",
+      "severity": "critical",
+      "evidence": {
+        "path": "docs/delivery/P1_M48_Review_Package.md",
+        "sha256": "e6559a7981ed02b3b99df5232718ce289dd971cd5d4ad80975277f017c9b1221",
+        "originalLimitRef": "M48-LIMIT-01"
+      },
+      "p2Handling": "401/403清缓存、generation失效、字段白名单、直接下载当前权",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M48-06"
+        ],
+        "scenario": "401/403清缓存、generation失效、字段白名单、直接下载当前权；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M48-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：旧缓存/晚回请求泄漏撤权数据；已有合成通过不替代本项。",
+        "owner": "自助与生产者业务负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": false,
+      "sourceEvidenceRequest": null,
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P3测试及领域负责人",
+      "latestGate": "P3对应任务验收；生产者未就绪则该联调不通过",
+      "primaryDisposition": "P3",
+      "status": "design_complete_validation_open",
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ]
+    },
+    {
+      "riskId": "R1-M48-L04",
+      "module": "M48",
+      "originalLimit": "M48-LIMIT-01",
+      "originalItem": "各域本人提交/撤回/异常链",
+      "risk": "待办消失或审批通过误标业务完成",
+      "severity": "high",
+      "evidence": {
+        "path": "docs/delivery/P1_M48_Review_Package.md",
+        "sha256": "e6559a7981ed02b3b99df5232718ce289dd971cd5d4ad80975277f017c9b1221",
+        "originalLimitRef": "M48-LIMIT-01"
+      },
+      "p2Handling": "本人申请/任务/他人授权/团队分区，rawStatus及发布/生效映射独立",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M48-03"
+        ],
+        "scenario": "本人申请/任务/他人授权/团队分区，rawStatus及发布/生效映射独立；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M48-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：待办消失或审批通过误标业务完成；已有合成通过不替代本项。",
+        "owner": "自助与生产者业务负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M48-03",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P3测试及领域负责人",
+      "latestGate": "P3对应任务验收；生产者未就绪则该联调不通过",
+      "primaryDisposition": "P3",
+      "status": "design_complete_validation_open",
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ]
+    },
+    {
+      "riskId": "R1-M48-L05",
+      "module": "M48",
+      "originalLimit": "M48-LIMIT-01",
+      "originalItem": "跨域生产者未接通",
+      "risk": "mock成功掩盖真实未配置服务",
+      "severity": "high",
+      "evidence": {
+        "path": "docs/delivery/P1_M48_Review_Package.md",
+        "sha256": "e6559a7981ed02b3b99df5232718ce289dd971cd5d4ad80975277f017c9b1221",
+        "originalLimitRef": "M48-LIMIT-01"
+      },
+      "p2Handling": "七契约registry；not_configured/unavailable/no_data分开；真实联调逐项记录",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M48-07"
+        ],
+        "scenario": "七契约registry；not_configured/unavailable/no_data分开；真实联调逐项记录；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M48-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：mock成功掩盖真实未配置服务；已有合成通过不替代本项。",
+        "owner": "自助与生产者业务负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": false,
+      "sourceEvidenceRequest": null,
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P3测试及领域负责人",
+      "latestGate": "P3对应任务验收；生产者未就绪则该联调不通过",
+      "primaryDisposition": "P3",
+      "status": "design_complete_validation_open",
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ]
+    },
+    {
+      "riskId": "R1-M48-L06",
+      "module": "M48",
+      "originalLimit": "M48-LIMIT-01",
+      "originalItem": "各域本人提交/撤回/异常链",
+      "risk": "过期版本重复提交和门户绕过原域窗口",
+      "severity": "high",
+      "evidence": {
+        "path": "docs/delivery/P1_M48_Review_Package.md",
+        "sha256": "e6559a7981ed02b3b99df5232718ce289dd971cd5d4ad80975277f017c9b1221",
+        "originalLimitRef": "M48-LIMIT-01"
+      },
+      "p2Handling": "原域allowedActions和提交时版本再验，unknown查同命令",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M48-05",
+          "P3-M48-07"
+        ],
+        "scenario": "原域allowedActions和提交时版本再验，unknown查同命令；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M48-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：过期版本重复提交和门户绕过原域窗口；已有合成通过不替代本项。",
+        "owner": "自助与生产者业务负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M48-03",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P3测试及领域负责人",
+      "latestGate": "P3对应任务验收；生产者未就绪则该联调不通过",
+      "primaryDisposition": "P3",
+      "status": "design_complete_validation_open",
+      "designDocuments": [
+        "R1_P2_M48_Authorization_Consumers.md"
+      ]
+    },
+    {
+      "riskId": "R1-M48-L07",
+      "module": "M48",
+      "originalLimit": "M48-LIMIT-01",
+      "originalItem": "源团队/本人角色",
+      "risk": "真人多关系访问矩阵尚未验收",
+      "severity": "critical",
+      "evidence": {
+        "path": "docs/delivery/P1_M48_Review_Package.md",
+        "sha256": "e6559a7981ed02b3b99df5232718ce289dd971cd5d4ad80975277f017c9b1221",
+        "originalLimitRef": "M48-LIMIT-01"
+      },
+      "p2Handling": "E2解除后的独立本人/各经理角色逐一操作",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M48-02"
+        ],
+        "scenario": "E2解除后的独立本人/各经理角色逐一操作；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M48-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：真人多关系访问矩阵尚未验收；已有合成通过不替代本项。",
+        "owner": "自助与生产者业务负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": false,
+      "sourceEvidenceRequest": null,
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "独立P4业务/安全验收负责人",
+      "latestGate": "P4完整权限/业务/生产准备验收，E2或真实外发授权具备后",
+      "primaryDisposition": "P4",
+      "status": "design_complete_acceptance_open",
+      "designDocuments": [
+        "R1_P2_Review_Design.md"
+      ]
+    },
+    {
+      "riskId": "R1-M48-L08",
+      "module": "M48",
+      "originalLimit": "M48-LIMIT-01",
+      "originalItem": "跨域生产者未接通",
+      "risk": "R2/R3真实七项业务端到端未具备",
+      "severity": "high",
+      "evidence": {
+        "path": "docs/delivery/P1_M48_Review_Package.md",
+        "sha256": "e6559a7981ed02b3b99df5232718ce289dd971cd5d4ad80975277f017c9b1221",
+        "originalLimitRef": "M48-LIMIT-01"
+      },
+      "p2Handling": "P3生产者版本联调，P4各原域真实角色业务验收；依赖未就绪保持相应项不通过",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-XMOD-01"
+        ],
+        "scenario": "P3生产者版本联调，P4各原域真实角色业务验收；依赖未就绪保持相应项不通过；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M48-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：R2/R3真实七项业务端到端未具备；已有合成通过不替代本项。",
+        "owner": "自助与生产者业务负责人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": false,
+      "sourceEvidenceRequest": null,
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "独立P4业务/安全验收负责人",
+      "latestGate": "P4完整权限/业务/生产准备验收，E2或真实外发授权具备后",
+      "primaryDisposition": "P4",
+      "status": "design_complete_acceptance_open",
+      "designDocuments": [
+        "R1_P2_P3_Work_Packages.md"
+      ]
+    },
+    {
+      "riskId": "R1-M32-L01",
+      "module": "M32",
+      "originalLimit": "M32-LIMIT-01",
+      "originalItem": "原站各域报表/设计器公式",
+      "risk": "未知北森算法被当必须复制",
+      "severity": "medium",
+      "evidence": {
+        "path": "docs/delivery/P1_M32_Review_Package.md",
+        "sha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b",
+        "originalLimitRef": "M32-LIMIT-01"
+      },
+      "p2Handling": "已批21数据集及版本定义是产品规则；未知公式不猜测，不擅改已批口径",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M32-01"
+        ],
+        "scenario": "已批21数据集及版本定义是产品规则；未知公式不猜测，不擅改已批口径；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M32-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：未知北森算法被当必须复制；已有合成通过不替代本项。",
+        "owner": "报表业务验收/独立安全及容量复核人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M32-01",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P2设计负责人",
+      "latestGate": "P2退出独立评审",
+      "primaryDisposition": "P2",
+      "status": "design_resolved_pending_independent_review",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ]
+    },
+    {
+      "riskId": "R1-M32-L02",
+      "module": "M32",
+      "originalLimit": "M32-LIMIT-01",
+      "originalItem": "各域报表/历史快照",
+      "risk": "粒度/时间/类型定义不完整",
+      "severity": "high",
+      "evidence": {
+        "path": "docs/delivery/P1_M32_Review_Package.md",
+        "sha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b",
+        "originalLimitRef": "M32-LIMIT-01"
+      },
+      "p2Handling": "补齐21数据集逐列字段字典和时间能力；没有真实快照不造历史",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M32-01"
+        ],
+        "scenario": "补齐21数据集逐列字段字典和时间能力；没有真实快照不造历史；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M32-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：粒度/时间/类型定义不完整；已有合成通过不替代本项。",
+        "owner": "报表业务验收/独立安全及容量复核人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M32-01",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P2设计负责人",
+      "latestGate": "P2退出独立评审",
+      "primaryDisposition": "P2",
+      "status": "design_resolved_pending_independent_review",
+      "designDocuments": [
+        "R1_P2_Report_Field_Dictionary.md"
+      ]
+    },
+    {
+      "riskId": "R1-M32-L03",
+      "module": "M32",
+      "originalLimit": "M32-LIMIT-01",
+      "originalItem": "各域报表",
+      "risk": "分母/null/多任职/更正链错计",
+      "severity": "high",
+      "evidence": {
+        "path": "docs/delivery/P1_M32_Review_Package.md",
+        "sha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b",
+        "originalLimitRef": "M32-LIMIT-01"
+      },
+      "p2Handling": "逐键去重/单位核验；修正仅published supersedes替代，unknown不填0",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M32-01",
+          "P3-M32-02",
+          "P3-M32-04"
+        ],
+        "scenario": "逐键去重/单位核验；修正仅published supersedes替代，unknown不填0；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M32-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：分母/null/多任职/更正链错计；已有合成通过不替代本项。",
+        "owner": "报表业务验收/独立安全及容量复核人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": false,
+      "sourceEvidenceRequest": null,
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P3测试及领域负责人",
+      "latestGate": "P3对应任务验收；生产者未就绪则该联调不通过",
+      "primaryDisposition": "P3",
+      "status": "design_complete_validation_open",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ]
+    },
+    {
+      "riskId": "R1-M32-L04",
+      "module": "M32",
+      "originalLimit": "M32-LIMIT-01",
+      "originalItem": "订阅权限、导出",
+      "risk": "read/export/subscribe/manage混用导致泄漏",
+      "severity": "critical",
+      "evidence": {
+        "path": "docs/delivery/P1_M32_Review_Package.md",
+        "sha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b",
+        "originalLimitRef": "M32-LIMIT-01"
+      },
+      "p2Handling": "各动作单独授权，行/字段/历史交集，hidden filter/join/count拒绝",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M32-05"
+        ],
+        "scenario": "各动作单独授权，行/字段/历史交集，hidden filter/join/count拒绝；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M32-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：read/export/subscribe/manage混用导致泄漏；已有合成通过不替代本项。",
+        "owner": "报表业务验收/独立安全及容量复核人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M32-02",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P3测试及领域负责人",
+      "latestGate": "P3对应任务验收；生产者未就绪则该联调不通过",
+      "primaryDisposition": "P3",
+      "status": "design_complete_validation_open",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ]
+    },
+    {
+      "riskId": "R1-M32-L05",
+      "module": "M32",
+      "originalLimit": "M32-LIMIT-01",
+      "originalItem": "历史快照",
+      "risk": "固定数值被误当固定旧授权",
+      "severity": "critical",
+      "evidence": {
+        "path": "docs/delivery/P1_M32_Review_Package.md",
+        "sha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b",
+        "originalLimitRef": "M32-LIMIT-01"
+      },
+      "p2Handling": "真实manifest、当前授权重裁/重聚合，旧下载拒绝",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M32-03",
+          "P3-M32-05"
+        ],
+        "scenario": "真实manifest、当前授权重裁/重聚合，旧下载拒绝；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M32-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：固定数值被误当固定旧授权；已有合成通过不替代本项。",
+        "owner": "报表业务验收/独立安全及容量复核人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": false,
+      "sourceEvidenceRequest": null,
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P3测试及领域负责人",
+      "latestGate": "P3对应任务验收；生产者未就绪则该联调不通过",
+      "primaryDisposition": "P3",
+      "status": "design_complete_validation_open",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ]
+    },
+    {
+      "riskId": "R1-M32-L06",
+      "module": "M32",
+      "originalLimit": "M32-LIMIT-01",
+      "originalItem": "设计器公式",
+      "risk": "任意表达式/单位/1:N造成错误计算",
+      "severity": "high",
+      "evidence": {
+        "path": "docs/delivery/P1_M32_Review_Package.md",
+        "sha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b",
+        "originalLimitRef": "M32-LIMIT-01"
+      },
+      "p2Handling": "类型AST及注册FK/cardinality，零分母null，非法定义不发布",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M32-07"
+        ],
+        "scenario": "类型AST及注册FK/cardinality，零分母null，非法定义不发布；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M32-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：任意表达式/单位/1:N造成错误计算；已有合成通过不替代本项。",
+        "owner": "报表业务验收/独立安全及容量复核人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M32-01",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P3测试及领域负责人",
+      "latestGate": "P3对应任务验收；生产者未就绪则该联调不通过",
+      "primaryDisposition": "P3",
+      "status": "design_complete_validation_open",
+      "designDocuments": [
+        "R1_P2_Report_Field_Dictionary.md"
+      ]
+    },
+    {
+      "riskId": "R1-M32-L07",
+      "module": "M32",
+      "originalLimit": "M32-LIMIT-01",
+      "originalItem": "导出",
+      "risk": "全量内存、分页漂移、无审计就绪文件",
+      "severity": "critical",
+      "evidence": {
+        "path": "docs/delivery/P1_M32_Review_Package.md",
+        "sha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b",
+        "originalLimitRef": "M32-LIMIT-01"
+      },
+      "p2Handling": "有界seek/generation、异步分块、fence和最终审计/权限后ready",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M32-06",
+          "P3-M32-09"
+        ],
+        "scenario": "有界seek/generation、异步分块、fence和最终审计/权限后ready；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M32-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：全量内存、分页漂移、无审计就绪文件；已有合成通过不替代本项。",
+        "owner": "报表业务验收/独立安全及容量复核人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": false,
+      "sourceEvidenceRequest": null,
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P3测试及领域负责人",
+      "latestGate": "P3对应任务验收；生产者未就绪则该联调不通过",
+      "primaryDisposition": "P3",
+      "status": "design_complete_validation_open",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ]
+    },
+    {
+      "riskId": "R1-M32-L08",
+      "module": "M32",
+      "originalLimit": "M32-LIMIT-01",
+      "originalItem": "订阅权限与执行",
+      "risk": "重复生成/投递、转交继承数据权限",
+      "severity": "critical",
+      "evidence": {
+        "path": "docs/delivery/P1_M32_Review_Package.md",
+        "sha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b",
+        "originalLimitRef": "M32-LIMIT-01"
+      },
+      "p2Handling": "收件者独立交集、周期/版本/渠道键，接受转交不继承数据权、屏蔽最终重验",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M32-08"
+        ],
+        "scenario": "收件者独立交集、周期/版本/渠道键，接受转交不继承数据权、屏蔽最终重验；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M32-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：重复生成/投递、转交继承数据权限；已有合成通过不替代本项。",
+        "owner": "报表业务验收/独立安全及容量复核人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M32-02",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "R1 P3测试及领域负责人",
+      "latestGate": "P3对应任务验收；生产者未就绪则该联调不通过",
+      "primaryDisposition": "P3",
+      "status": "design_complete_validation_open",
+      "designDocuments": [
+        "R1_P2_M32_Reports_Jobs.md"
+      ]
+    },
+    {
+      "riskId": "R1-M32-L09",
+      "module": "M32",
+      "originalLimit": "M32-LIMIT-01",
+      "originalItem": "独立多角色行为",
+      "risk": "真人授权隔离未证",
+      "severity": "critical",
+      "evidence": {
+        "path": "docs/delivery/P1_M32_Review_Package.md",
+        "sha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b",
+        "originalLimitRef": "M32-LIMIT-01"
+      },
+      "p2Handling": "独立只读/导出/订阅/管理角色验收，E2不提前解除",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-XMOD-01"
+        ],
+        "scenario": "独立只读/导出/订阅/管理角色验收，E2不提前解除；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M32-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：真人授权隔离未证；已有合成通过不替代本项。",
+        "owner": "报表业务验收/独立安全及容量复核人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": false,
+      "sourceEvidenceRequest": null,
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "独立P4业务/安全验收负责人",
+      "latestGate": "P4完整权限/业务/生产准备验收，E2或真实外发授权具备后",
+      "primaryDisposition": "P4",
+      "status": "design_complete_acceptance_open",
+      "designDocuments": [
+        "R1_P2_Review_Design.md"
+      ]
+    },
+    {
+      "riskId": "R1-M32-L10",
+      "module": "M32",
+      "originalLimit": "M32-LIMIT-01",
+      "originalItem": "导出、订阅执行",
+      "risk": "实际容量/真实外发及合法外部副本无法收回",
+      "severity": "high",
+      "evidence": {
+        "path": "docs/delivery/P1_M32_Review_Package.md",
+        "sha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b",
+        "originalLimitRef": "M32-LIMIT-01"
+      },
+      "p2Handling": "容量按真实对象规模验收；真实外发须授权，已传出字节不承诺撤回",
+      "p3Synthetic": {
+        "caseIds": [
+          "P3-M32-06",
+          "P3-REC-04"
+        ],
+        "scenario": "容量按真实对象规模验收；真实外发须授权，已传出字节不承诺撤回；注入正常、越权/版本冲突、重复/失败样本，并核原单及回执。",
+        "owner": "R1 P3测试负责人/对应领域实施负责人",
+        "execution": "not_executed"
+      },
+      "p4Acceptance": {
+        "caseIds": [
+          "P4-M32-01"
+        ],
+        "scenario": "独立真人和代表业务逐条核对：实际容量/真实外发及合法外部副本无法收回；已有合成通过不替代本项。",
+        "owner": "报表业务验收/独立安全及容量复核人",
+        "execution": "not_executed"
+      },
+      "sourceEvidenceNeeded": true,
+      "sourceEvidenceRequest": "SRC-M32-03",
+      "sourcePolicy": "已批准独立产品规则；原站补证只确认相似性/事实，推翻已批规则必须另提变更，不能静默改需求",
+      "owner": "独立P4业务/安全验收负责人",
+      "latestGate": "P4完整权限/业务/生产准备验收，E2或真实外发授权具备后",
+      "primaryDisposition": "P4",
+      "status": "design_complete_acceptance_open",
+      "designDocuments": [
+        "R1_P2_Backup_Recovery.md"
+      ]
+    }
+  ],
+  "originalLimits": {
+    "M01-LIMIT-01": {
+      "path": "docs/delivery/P1_M01_Review_Package.md",
+      "sha256": "41c90d7c8f0f2f3e34ae5a9c01f8a85e1c422ac24563a22a1700b0657498e6da",
+      "text": "### M01-LIMIT-01 — 已批准受限边界，仅P1\n\n| 维度 | 内容 |\n|---|---|\n| scope | 原站组织/职位未来时态及停用、重聘执行/冲突恢复、兼职终态/借派占编、法人空范围/合同自动规则、单账号之外权限、通知后效 |\n| evidence | BC-F28–46、BC-F15/16/21–25；原站CDP刷新20秒超时，未知仍按原记录。合成EA未来离职未在本轮读取，不将日前记录充当现在状态。 |\n| proposal | 允许P1以已观察事实＋本包明确获批项目设计确定需求；这些源行为只作为相似性差异/受限证据，不要求复制未证算法。不能豁免产品关键验证；未获批准前M01不记受限通过。 |\n| residualRisk | 与北森实际边界可能不同；角色/历史/跨模块消费者需在实现后验证，否则可能误授权、错计人数或误显示生效。 |\n| revalidation | P2负责人复核ID/版本/时态/迁移/事务设计；P3执行者使用合成链验证边界，独立人类权限验收待E2后续授权；P4验收责任人完成全权限和业务准备。若源恢复且结果推翻已批规则，开有范围变更评审，不静默改规则。 |\n| approvalConclusion | 用户已批准：以既有原站/静态代码证据及本次产品规则关闭P1；未知源算法不再阻塞P1，残余风险转P2/P3/P4。原建议中的未批准措辞仅属此前版本。 |\n"
+    },
+    "M19-LIMIT-01": {
+      "path": "docs/delivery/P1_M19_Review_Package.md",
+      "sha256": "c9df85cacaa2530b632346abc82ef3525c8f083c44968b16191bfcb30ccbc42e",
+      "text": "### M19-LIMIT-01\n\n| 维度 | 内容 |\n|---|---|\n| status | 已批准P1受限边界 |\n| scope | 原站通用路由、管理员委托、管理干预/撤销补偿、并发撤权和消息结果的未验证行为 |\n| evidence | BC-P1C-M19/BC-I10/BC-I27与c0538e7362da8b7ef82b18a13b427d80822ccdac代码静态；本轮云浏览器tabs.list 20秒超时，未进行原站数据操作 |\n| proposal | 建议以所列源事实及经明确批准的M19-SPEC-01–04形成需求基线；未知源算法保留差异，不据此声称原站执行验证。批准仅P1，不连带改变D7或其他模块规则。 |\n| residualRisk | 委托可能与源语义不同；错误路由、撤销/生效竞态、撤权和消息重试需实施后验证，单账号无法替多人验收。 |\n| revalidation | P2执行者核事务/版本/权限/业务适配器；P3用隔离合成身份及消息拦截器验证路由、撤权、重复和失败；P4责任人完成独立人类权限/跨域业务验收，E2新增人仍须后续授权。 |\n| approvalConclusion | 本窗口已批准，只限M19 P1；保留原站未知、残余风险及P2/P3/P4补验责任。原建议中“未批准”仅为审阅前状态。 |\n"
+    },
+    "M48-LIMIT-01": {
+      "path": "docs/delivery/P1_M48_Review_Package.md",
+      "sha256": "e6559a7981ed02b3b99df5232718ce289dd971cd5d4ad80975277f017c9b1221",
+      "text": "### M48-LIMIT-01\n\n| 维度 | 内容 |\n|---|---|\n| status | 已批准P1受限边界 |\n| scope | 源团队/本人角色、OKR详细页、各域本人提交/撤回/异常链和跨域生产者未接通 |\n| evidence | P1-SELF-REVIEW/BC-P1C-M48、所列跨域证据及c0538e7362da8b7ef82b18a13b427d80822ccdac静态代码；云浏览器刷新超时，未新建或提交源数据 |\n| proposal | 建议以明确源事实和获批M48消费契约结束P1；R2/R3详细业务算法在各生产者模块关闭，M48保留接口/不可用状态及补联调责任，不视为内部永久延期或已实现。需用户明确批准，M01-LIMIT-01不自动适用。 |\n| residualRisk | 当前源行为和角色可能不同；团队敏感字段、旧缓存、域状态映射及OKR联调未实证，不能以契约模拟冒充真实业务通过。 |\n| revalidation | P2核团队有效关系/权限/版本与七项适配；P3用合成且明确授权的独立角色与源适配器验证撤权/状态/错误，联调未具备的功能逐项列未通过；P4完成真实多角色及跨模块业务验收。E2和不实发通知/支付/签署边界保持。 |\n| approvalConclusion | 本窗口已批准，只限M48 P1；保留原站未知、残余风险及P2/P3/P4补验责任。原建议中“未批准”仅为审阅前状态。 |\n"
+    },
+    "M32-LIMIT-01": {
+      "path": "docs/delivery/P1_M32_Review_Package.md",
+      "sha256": "fcd5259c5076171070ce3005d1321805f1942858abfa5dba56f3d3a28a0b6b4b",
+      "text": "### M32-LIMIT-01\n\n| 维度 | 内容 |\n|---|---|\n| status | 已批准P1受限边界 |\n| scope | 原站各域报表/设计器公式/历史快照/订阅权限与执行、导出及独立多角色行为未验证 |\n| evidence | BC-P1C-M32原表头/操作＋现有跨域证据，仅自身含义；c5d52eabdcc09f86bfcdb85bf373f2df2f0cfa08当前reports/API/UI/历史测试静态。本轮tabs.list仍20秒超时，无新源操作。 |\n| proposal | 建议以明确源事实、现有代码静态和获批准的M32-SPEC-01–06形成P1基线；未知算法不复制，源差异与未联调/未实发保留。批准只P1，不批准权限扩张的实际执行、真实外发或生产验收。M01/M19/M48限制批准不自动适用于M32。 |\n| residualRisk | 源算法/订阅权限可能不同；汇总/历史/导出泄漏、错误统计、容量和重复投递未实证；已下载外部副本不可保证收回。 |\n| revalidation | P2核数据集定义/历史/访问交集/有界任务及引用一致性；P3用合成数据/已授权角色/消息拦截器验证边界与真实生产者联调；P4责任人完成独立多人权限、业务/容量和生产准备；E2保持，不新增访问者。 |\n| approvalConclusion | 本窗口批准M32-LIMIT-01仅用于需求阶段，源未知与P2/P3/P4残余责任不删除；推荐原文为所审历史措辞。 |\n"
+    }
+  }
+}
