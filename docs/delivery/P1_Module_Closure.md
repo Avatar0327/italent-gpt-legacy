@@ -2,13 +2,13 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 
 # 模块闭环、滚动转序及当前收口清单
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T18:22:46.166597+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T18:28:44.746209+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M26；备用 未启用；实际执行 M26。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M18；备用 未启用；实际执行 M18。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
 | R版本 | 模块顺序 | 当前边界 |
 |---|---|---|
@@ -35,8 +35,8 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 | M32 报表 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M37 人才标准 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M06 任职资格 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
-| M26 360度评估 | R2 / primary | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M18 在线盘点 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M26 360度评估 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M18 在线盘点 | R2 / primary | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M17 继任与发展 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M03 干部管理2.0 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M27 学习管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
@@ -78,6 +78,16 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 | M19-CLOSE-02 / 管理员委托 | BP-I-REQ-07 |  | P1硬条件已满足；原源证据差异及实现/补验责任保留到P2/P3/P4。 | False；权限/业务回写/异常为高风险 | 用户已批准四组推荐及本模块受限边界，按现有条件核对通过；M19-P1-APPROVAL-20260909；不将批准扩为原站全部验证或实现通过 | 受限通过 |
 
 
+## M26完整登记范围收口清单
+
+| 问题/原范围 | 需求 | 证据 | 具体缺口 | 阻塞P1/风险 | 关闭方式与判据 | 当前状态 |
+|---|---|---|---|---|---|---|
+| M26-CLOSE-01 / 活动 | BP-C-REQ-03 | BC-P1C-M26-02；BC-C14 | 部分覆盖：源列表/通知配置、现草稿至发布链；新启停/重开/更正规则待批 | True；评价者身份重识别、低样本差分、跨报告推断、用途越权、问卷版本漂移及报告纠错影响。 | 明确批准所列规则与LIMIT，或补针对性证据修订；材料完备不能代签；原站事实/静态事实/候选分列；3e0c0d502a1a62e5128de160c8237dcf3d19ddd2 | 已完成待评审 |
+| M26-CLOSE-02 / 人员 | BP-C-REQ-03 | BC-C15；BC-C16 | 部分覆盖：源角色帮助/空表；动态角色、邀请去重与匿名身份分离待批 | True；评价者身份重识别、低样本差分、跨报告推断、用途越权、问卷版本漂移及报告纠错影响。 | 明确批准所列规则与LIMIT，或补针对性证据修订；材料完备不能代签；原站事实/静态事实/候选分列；3e0c0d502a1a62e5128de160c8237dcf3d19ddd2 | 已完成待评审 |
+| M26-CLOSE-03 / 题库 | BP-C-REQ-03；BP-I-REQ-03 |  | 未覆盖原站详细题库；共用模板仅静态依据，四题型/尺度/套卷版本建议待批 | True；评价者身份重识别、低样本差分、跨报告推断、用途越权、问卷版本漂移及报告纠错影响。 | 明确批准所列规则与LIMIT，或补针对性证据修订；材料完备不能代签；原站事实/静态事实/候选分列；3e0c0d502a1a62e5128de160c8237dcf3d19ddd2 | 已完成待评审 |
+| M26-CLOSE-04 / 报表 | BP-C-REQ-03；BP-I-REQ-02 |  | 源报告算法受限；现个人分组均值已静态核对，匿名阈值/开放/组织聚合策略待批 | True；评价者身份重识别、低样本差分、跨报告推断、用途越权、问卷版本漂移及报告纠错影响。 | 明确批准所列规则与LIMIT，或补针对性证据修订；材料完备不能代签；原站事实/静态事实/候选分列；3e0c0d502a1a62e5128de160c8237dcf3d19ddd2 | 已完成待评审 |
+
+
 ## M32完整登记范围收口清单
 
 | 问题/原范围 | 需求 | 证据 | 具体缺口 | 阻塞P1/风险 | 关闭方式与判据 | 当前状态 |
@@ -114,6 +124,8 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 M06当前材料：[P1受限通过，需求基线已批准](P1_M06_Review_Package.md)。批准、源取证及后续执行各自独立。
 
 M19当前材料：[P1受限通过，需求基线已批准](P1_M19_Review_Package.md)。批准、源取证及后续执行各自独立。
+
+M26当前材料：[材料完成、等待所有者集中评审](P1_M26_Review_Package.md)。批准、源取证及后续执行各自独立。
 
 M32当前材料：[P1受限通过，需求基线已批准](P1_M32_Review_Package.md)。批准、源取证及后续执行各自独立。
 

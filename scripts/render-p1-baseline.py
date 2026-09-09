@@ -309,7 +309,7 @@ if cr.get('currentFocus'):
  header+='恢复时工作区快照：'+cr['workingTreeAtResume']+' 本单元只修改文档和同源生成/一致性脚本；提交前的修改清单不作为提交后的未提交状态。\n\n'
  header+=progress_text()+' '+ds.get('deferredDisplayLabel','33个模块本次暂缓')+'；原48范围/59任务及历史证据保留，基础六类另列。P2受限技术验收、F01–F04已有实现及历史验证、D1–D7/E1/E2原义不变。\n\n'
  header+='上一原子单元停点：'+cr.get('previousAtomicOutcome','BC-C30已完成，后续成果以原记录保持。')+'\n\n'
- header+='浏览器：'+cr['sourceBrowsingStatus']+' 合成测试授权保持，不逐条重问；未出现重新登录/全部授权提示，不绕过控制。\n\n'
+ header+='浏览器：'+cr['sourceBrowsingStatus']+' '+cr.get('sourceWritePolicy','既有合成测试授权按当时范围保留，具体操作服从最新本轮边界。')+'\n\n'
  if cr.get('lastVerifiedSync'):
   sync=cr['lastVerifiedSync'];header+='最近已核实同步：`'+sync['commit']+'` → `'+sync['remoteBranch']+'`；'+sync['result']+'。范围：'+sync['scope']+'。\n\n'
  if cr.get('currentUnitOutcome'):header+='本单元接续成果：'+cr['currentUnitOutcome']+'\n\n'
@@ -430,7 +430,7 @@ for m in active_mods:
  if m['id']=='M01' or not m['p1'].get('reviewPackage'):continue
  mid=m['id'];rp=m['p1']['reviewPackage'];p1=m['p1']
  t=intro(mid+' '+m['name']+'集中评审包')
- t+='状态：**'+rp['documentStatus']+'**；主模块 '+policy['primaryModuleId']+'，备用 '+str(policy['backupModuleId'] or '无')+'。\n\n准备时间 '+rp['preparedAt']+'；静态代码基准 `'+rp['basedOnHead']+'`。本轮原站无新增操作，历史测试未复验。\n\n'
+ t+='状态：**'+rp['documentStatus']+'**；主模块 '+policy['primaryModuleId']+'，备用 '+str(policy['backupModuleId'] or '无')+'。\n\n准备时间 '+rp['preparedAt']+'；静态代码基准 `'+rp['basedOnHead']+'`。本轮原站未新增业务写入，历史测试未复验。\n\n'
  t+='## 完整范围与既有决定\n\n'+rp['scope']+'。'+rp['internalDeferralNote']+'\n\n'+rp['confirmedRules']+'\n\n'
  t+=table(['层次','退出条件/当前结论'],rp['exitAssessment'].items())+'\n'
  t+='## 已完成的证据与差异核对\n\n'+table(['问题','实际结论','证据性质'],[(x['problem'],x['resolution'],x['basis']) for x in rp['closedQuestions']])+'\n'
@@ -447,6 +447,9 @@ for m in active_mods:
  t+='## 关键流程与可执行验收预期\n\n'+'\n'.join('- '+x for x in rp['flowSummary'])+'\n\n'
  t+=table(['用例/范围','给定','动作','预期','来源及状态'],[(x['id']+' / '+x['scopeItem'],x['given'],x['when'],x['then'],x['basis']+'；'+x['status']) for x in [all_cases[i] for i in rp['acceptanceCaseRefs']]])+'\n'
  t+='## 进入P2后的复用与差异\n\n'+'\n'.join('- '+x for x in rp['implementationNext'])+'\n\n下一步：'+rp['next']+'\n\n[完整分包规格](P1B_'+m['businessPackage'].replace('-','_')+'_Specification.md) · [唯一待决与就绪表](P1B_Readiness.md) · [实现对应](P1B_Implementation_Map.md)。本包由Scope生成，不另维护进度。\n'
+ if p1.get('reviewSupplement'):
+  rs=p1['reviewSupplement'];t+='\n## 本轮覆盖与依赖\n\n'+rs['sourceTimes']+'\n\n'+table(['原范围','已覆盖/部分/未覆盖/受限'],rs['coverage'].items())+'\n'
+  t+='\n'.join('- '+x for x in rs['dependencyContracts'])+'\n\n原站本单元：'+p1['sourceAccessThisUnit']['result']+'\n\n最小定向补证：\n\n'+'\n'.join('- '+x for x in rs['targetedEvidence'])+'\n'
  (D/('P1_'+mid+'_Review_Package.md')).write_text(t)
  for name in ['P1B_Readiness.md','P1_Review.md','P1_Module_Closure.md']:
   f=D/name;f.write_text(f.read_text()+'\n'+mid+'当前材料：['+rp['documentStatus']+'](P1_'+mid+'_Review_Package.md)。批准、源取证及后续执行各自独立。\n')
