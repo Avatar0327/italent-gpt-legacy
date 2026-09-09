@@ -58,3 +58,11 @@
 |BASE-01|[R1_P2_M48_Authorization_Consumers.md](R1_P2_M48_Authorization_Consumers.md)|R1-P2-04|P3-M48-01|
 |BASE-02|[R1_P2_M48_Authorization_Consumers.md](R1_P2_M48_Authorization_Consumers.md)|R1-P2-04|P3-M48-01,P3-M48-02|
 |BASE-04|[R1_P2_M48_Authorization_Consumers.md](R1_P2_M48_Authorization_Consumers.md)|R1-P2-04|P3-M48-06|
+|M32-SPEC-01|[R1_P2_M32_Reports_Jobs.md](R1_P2_M32_Reports_Jobs.md)|R1-P2-05|P3-M32-01,P3-M32-02,P3-M32-04|
+|M32-SPEC-02|[R1_P2_M32_Reports_Jobs.md](R1_P2_M32_Reports_Jobs.md)|R1-P2-05|P3-M32-03,P3-M32-04|
+|M32-SPEC-03|[R1_P2_M32_Reports_Jobs.md](R1_P2_M32_Reports_Jobs.md)|R1-P2-05|P3-M32-05,P3-M32-09|
+|M32-SPEC-04|[R1_P2_M32_Reports_Jobs.md](R1_P2_M32_Reports_Jobs.md)|R1-P2-05|P3-M32-06,P3-M32-07,P3-M32-09|
+|M32-SPEC-05|[R1_P2_M32_Reports_Jobs.md](R1_P2_M32_Reports_Jobs.md)|R1-P2-05|P3-M32-08|
+|M32-SPEC-06|[R1_P2_M32_Reports_Jobs.md](R1_P2_M32_Reports_Jobs.md)|R1-P2-05|P3-M32-02,P3-M32-10|
+|BP-I-REQ-02|[R1_P2_M32_Reports_Jobs.md](R1_P2_M32_Reports_Jobs.md)|R1-P2-05|P3-M32-01|
+|BP-I-REQ-11|[R1_P2_M32_Reports_Jobs.md](R1_P2_M32_Reports_Jobs.md)|R1-P2-05|P3-M32-08|

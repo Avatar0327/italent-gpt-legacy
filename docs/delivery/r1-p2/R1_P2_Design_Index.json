@@ -607,6 +607,180 @@
           "execution": "not_executed"
         }
       ]
+    },
+    {
+      "id": "R1-P2-05",
+      "number": 5,
+      "document": "R1_P2_M32_Reports_Jobs.md",
+      "requirements": [
+        "M32-SPEC-01",
+        "M32-SPEC-02",
+        "M32-SPEC-03",
+        "M32-SPEC-04",
+        "M32-SPEC-05",
+        "M32-SPEC-06",
+        "BP-I-REQ-02",
+        "BP-I-REQ-11"
+      ],
+      "evidence": [
+        {
+          "path": "lib/hris/reports.ts",
+          "classification": "待修改",
+          "sha256": "1149817a3d9792d91b15cc03e4af21a934c7f11299cc1dba04b0a46aa1800f09"
+        },
+        {
+          "path": "lib/hris/payroll-reports.ts",
+          "classification": "可复用",
+          "sha256": "0621acfa2dc5fc9cc7d0f7786b385eb882a314946d7246901f43544d8f969b1b"
+        },
+        {
+          "path": "app/api/reports/route.ts",
+          "classification": "待修改",
+          "sha256": "cfc75d5572ec21a59cbc36f66d3eac29cc4074aa0b10115ae1ac17b6df55ee33"
+        },
+        {
+          "path": "app/reports/workspace.tsx",
+          "classification": "待新增",
+          "sha256": "126d946b092cfeb9ce6cfa6a8a242ba0bff36b9245fa32feaaa875346b49d03a"
+        }
+      ],
+      "cases": [
+        {
+          "id": "P3-M32-01",
+          "requirements": [
+            "M32-SPEC-01",
+            "BP-I-REQ-02"
+          ],
+          "given": "同person多任职/重聘、两份合同，另人无合同；跨数据集任务/岗位/引用多行",
+          "when": "核21数据集行键、人数、单位和比率",
+          "then": "行键唯一；person去重；多合同不重复覆盖人；0分母与unknown为null；不把引用/任务行当人数",
+          "evidence": "21数据集固定夹具与独立手算oracle",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M32-02",
+          "requirements": [
+            "M32-SPEC-01",
+            "M32-SPEC-06"
+          ],
+          "given": "工资条多冻结考勤引用，招聘候选多应聘关系，培训无有效任务",
+          "when": "查询工资/招聘/学习",
+          "then": "钱用整数分、引用不计人数、应聘关系与自然人分列；任务完成比率null，未配置指标不虚构",
+          "evidence": "各源rowId、单位、denominator与null状态",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M32-03",
+          "requirements": [
+            "M32-SPEC-02"
+          ],
+          "given": "current dataset带日期；event_range边界当天/空日期；不存在快照",
+          "when": "执行三种查询；对照真实快照",
+          "then": "current非法参数拒绝；事件含边界且空不命中；无快照不伪造；generatedAt非业务截止",
+          "evidence": "API错误矩阵与snapshotManifest",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M32-04",
+          "requirements": [
+            "M32-SPEC-01",
+            "M32-SPEC-02"
+          ],
+          "given": "绩效旧published，新draft.supersedes旧；人才review同样结构",
+          "when": "依次读current、发布新版本、读旧snapshot",
+          "then": "draft不隐藏旧published；新发布才替换；旧快照值和发布链可追溯",
+          "evidence": "发布版本链和基准源码差异验证",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M32-05",
+          "requirements": [
+            "M32-SPEC-03"
+          ],
+          "given": "有汇总read无export/明细/敏感field；旧快照全量但当前撤权",
+          "when": "导出、drill、排序/筛选隐藏字段及旧URL下载",
+          "then": "服务端拒绝；聚合重裁当前可见范围且不泄露原总数；未定敏感小样本政策不发布",
+          "evidence": "策略元组、SQL授权计划及泄漏否定结果",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M32-06",
+          "requirements": [
+            "M32-SPEC-04"
+          ],
+          "given": "10001行，跨页发生源更新；异常大单行；两个worker租约抢占",
+          "when": "完整分页/异步导出，旧fence完成、审计失败",
+          "then": "固定generation或409重查，无丢/重行；大行明确失败；旧worker不能ready；审计失败不可下载",
+          "evidence": "query plan、cursor链、job fence、manifest/hash",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M32-07",
+          "requirements": [
+            "M32-SPEC-04"
+          ],
+          "given": "设计器非法SQL/隐藏field/单位混算/1:N人数膨胀与合法零分母公式",
+          "when": "发布并求值",
+          "then": "非法定义不发布；1:N必须先去重/聚合；合法零分母null原因；完整列注册无遗漏",
+          "evidence": "AST类型结果、字段字典与非法计划拒绝",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M32-08",
+          "requirements": [
+            "M32-SPEC-05",
+            "BP-I-REQ-11"
+          ],
+          "given": "两收件人范围不同，owner转交未接受；生成后撤一人/屏蔽，外部unknown",
+          "when": "调度重入、接受转交、最终投递及查询回执",
+          "then": "每周期每人每渠道唯一；未接受不转，转交不扩权；撤权屏蔽不发送；unknown先查；历史投递不抹掉",
+          "evidence": "subscription revision、recipient manifests、消息拦截器",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M32-09",
+          "requirements": [
+            "M32-SPEC-03",
+            "M32-SPEC-04"
+          ],
+          "given": "文本以空白=、@或-开始，数值为-100分，null与0并存；导出响应丢失",
+          "when": "生成并按jobId恢复下载",
+          "then": "文本转义而number保持负数；null状态可区分；同键不重建，当前export重核",
+          "evidence": "CSV字节样本、数据字典、job查询记录",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M32-10",
+          "requirements": [
+            "M32-SPEC-06"
+          ],
+          "given": "当前15全部生产者目录，R2/R3适配未接，33暂缓映射存在",
+          "when": "逐目录查数据",
+          "then": "全范围保留，未接明确not_configured/unavailable；不生成模拟业绩、不算真实联调，暂缓不恢复引擎",
+          "evidence": "producer capability目录与逐项联调状态",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        }
+      ]
     }
   ]
 }

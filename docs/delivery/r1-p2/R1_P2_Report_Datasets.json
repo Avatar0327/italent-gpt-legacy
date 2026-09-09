@@ -1,0 +1,222 @@
+{
+  "kind": "P2_design_catalog_not_runtime_or_scope",
+  "baseline": "716cd9df5f5776d050f77f57c2ad5a35c0a83882",
+  "definitionVersion": "r1-v2-proposed",
+  "legacyColumnsPreserved": true,
+  "defaultPageSize": 50,
+  "maxPageSize": 200,
+  "syncExportRowLimit": 10000,
+  "chunkMaxBytes": 4194304,
+  "datasets": [
+    {
+      "datasetId": "workforce",
+      "producer": "M01",
+      "rowKey": "personId",
+      "grain": "当前可见人员，含离职；按personId去重",
+      "numeratorDenominator": "未定义比率；在职人数需status过滤后distinct personId",
+      "nullAndMissing": "不完整任职/字段为null+reason",
+      "timeMode": "current",
+      "dateField": "none"
+    },
+    {
+      "datasetId": "contractCoverage",
+      "producer": "M01",
+      "rowKey": "personId",
+      "grain": "当前可见在职person，左联已登记合同，保留无合同者",
+      "numeratorDenominator": "coveredPersonCount / visibleActivePersonCount；覆盖多合同者仍1人",
+      "nullAndMissing": "分母0→null；待核身份/日期计unknownCoverage，不当未覆盖0",
+      "timeMode": "current",
+      "dateField": "businessDate(now)"
+    },
+    {
+      "datasetId": "contractOperations",
+      "producer": "M01",
+      "rowKey": "contractId",
+      "grain": "每合同登记，含草稿/作废；版本不重复成多份合同",
+      "numeratorDenominator": "签订次数按person+legalEntity+agreementCategory distinct signed/ended contractId；作废排除",
+      "nullAndMissing": "endedOn优先end，空结束筛选不命中；法人/协议未知待核",
+      "timeMode": "event_range",
+      "dateField": "coalesce(endedOn,end)"
+    },
+    {
+      "datasetId": "recruitmentOperations",
+      "producer": "M12",
+      "rowKey": "requisitionId",
+      "grain": "每招聘需求；应聘关系candidateApplicationId计阶段",
+      "numeratorDenominator": "remaining=active?max(0,headcount-hiredApplications):null；自然人数单独distinct candidatePersonId",
+      "nullAndMissing": "headcount未知不得用0推算；非active remaining=null",
+      "timeMode": "current",
+      "dateField": "none"
+    },
+    {
+      "datasetId": "attendance",
+      "producer": "M11",
+      "rowKey": "shiftId",
+      "grain": "每人每有效班次核验；不等月度期间记录",
+      "numeratorDenominator": "分钟按源班次算法；如展示覆盖率仅known coveredMinutes / known plannedMinutes并明示缺失样本",
+      "nullAndMissing": "缺打卡/冲突的uncoveredMinutes=null，不补0；不自动发布月报",
+      "timeMode": "event_range",
+      "dateField": "shift.businessDate"
+    },
+    {
+      "datasetId": "payrollOperations",
+      "producer": "M07",
+      "rowKey": "batchId",
+      "grain": "每可见批次；有效工资条按paySlipId去重",
+      "numeratorDenominator": "gross/deduction/net/employer为整数分分别sum；不跨币种相加",
+      "nullAndMissing": "未配置项目数值沿已批M07；未知/不可用单列，安全整数溢出拒绝",
+      "timeMode": "current",
+      "dateField": "none"
+    },
+    {
+      "datasetId": "payrollReconciliation",
+      "producer": "M07",
+      "rowKey": "paySlipId",
+      "grain": "每已发布工资条；旧原值+published补差事件",
+      "numeratorDenominator": "originalCents + sum(published adjustments Cents)，按adjustmentId去重；不是支付成功",
+      "nullAndMissing": "来源缺失/未知回执不填0或支付已完成",
+      "timeMode": "current",
+      "dateField": "none"
+    },
+    {
+      "datasetId": "payrollAttendanceReferences",
+      "producer": "M07+M11",
+      "rowKey": "paySlipId,attendancePeriodId,frozenVersion",
+      "grain": "每工资条×冻结考勤引用，非员工数",
+      "numeratorDenominator": "引用分钟是各引用快照值；人数distinct personId另算，禁止引用行数作人数",
+      "nullAndMissing": "当前来源不可见/不存在为unavailable/null；原冻结值保留",
+      "timeMode": "current",
+      "dateField": "none"
+    },
+    {
+      "datasetId": "performanceOperations",
+      "producer": "M16",
+      "rowKey": "planId",
+      "grain": "每员工计划；各版本跟进单独状态计数",
+      "numeratorDenominator": "pendingChanges/checkins按各recordId；可反馈只当前角色集合；不相加为总人数",
+      "nullAndMissing": "未发布结果/缺业务日期null，不填低分",
+      "timeMode": "current",
+      "dateField": "none"
+    },
+    {
+      "datasetId": "performance",
+      "producer": "M16",
+      "rowKey": "resultRootId,publishedVersionId",
+      "grain": "仅当前有效published结果；同发布更正链1行",
+      "numeratorDenominator": "评分与评级沿已发布源版本；不得按任意updatedAt选最大",
+      "nullAndMissing": "score缺失null；新draft不能替代旧published",
+      "timeMode": "current",
+      "dateField": "none"
+    },
+    {
+      "datasetId": "talentReview",
+      "producer": "M18",
+      "rowKey": "reviewRootId,publishedVersionId",
+      "grain": "未被另一个已published supersedes替代的review",
+      "numeratorDenominator": "潜力/绩效档位各源字段；配置人数、采集、校准、发布分别count distinct personId",
+      "nullAndMissing": "缺采集/评分null；等级不当M17准备度",
+      "timeMode": "current",
+      "dateField": "none"
+    },
+    {
+      "datasetId": "successionCoverage",
+      "producer": "M17",
+      "rowKey": "positionId",
+      "grain": "每可见启用岗位；现任与后备分开",
+      "numeratorDenominator": "incumbents按有效primary personId；successors distinct active personId per position；ready/one_year/two_years沿版本",
+      "nullAndMissing": "0仅当前可见范围无有效后备；未知准备度单列",
+      "timeMode": "current",
+      "dateField": "none"
+    },
+    {
+      "datasetId": "learning",
+      "producer": "M27",
+      "rowKey": "enrollmentId",
+      "grain": "每课程任务含历史复用/取消，任务不等人",
+      "numeratorDenominator": "completed/enrollment分别计数；复用sourceEnrollmentId与原核验时间保留",
+      "nullAndMissing": "未核验时间/无成绩null，取消不完成",
+      "timeMode": "current",
+      "dateField": "none"
+    },
+    {
+      "datasetId": "learningPlanProgress",
+      "producer": "M27",
+      "rowKey": "learningAssignmentId",
+      "grain": "每学习计划实例",
+      "numeratorDenominator": "completedRequirements / applicableRequirements；completedStages / stages分别定义，不混合权重成绩",
+      "nullAndMissing": "denominator0→null；grade.not_configured/pending/provisional/final与score分列",
+      "timeMode": "current",
+      "dateField": "none"
+    },
+    {
+      "datasetId": "learningExams",
+      "producer": "M27",
+      "rowKey": "examTaskId",
+      "grain": "每独立考试任务；attempt作为子记录",
+      "numeratorDenominator": "attemptCount=distinct attemptId；raw earned/max与percent score分开，不用任务数当作答数",
+      "nullAndMissing": "未答score/earned/max null；次数0是真0",
+      "timeMode": "current",
+      "dateField": "none"
+    },
+    {
+      "datasetId": "homework",
+      "producer": "M27",
+      "rowKey": "homeworkTaskId",
+      "grain": "每独立作业任务，当前submissionId/version引用",
+      "numeratorDenominator": "submissionVersion/score/reviewResult分列；passedTask比率只在明确任务分母下计算",
+      "nullAndMissing": "未评分null；未留reviewer快照明确未知，不编姓名",
+      "timeMode": "current",
+      "dateField": "none"
+    },
+    {
+      "datasetId": "trainingStageProgress",
+      "producer": "M27",
+      "rowKey": "trainingId,personId",
+      "grain": "每培训项目×有非取消任务的人员；不是所有应参训人",
+      "numeratorDenominator": "required course数按阶段定义；completed distinct courseId；missing task与pending task分开",
+      "nullAndMissing": "未完成阶段名可null仅所有阶段完成；分母0比率null",
+      "timeMode": "current",
+      "dateField": "none"
+    },
+    {
+      "datasetId": "trainingProgress",
+      "producer": "M27",
+      "rowKey": "trainingId",
+      "grain": "每培训项目",
+      "numeratorDenominator": "participants=distinct personId(non-cancelled)；completion=completedTasks / validTasks×100，四舍五入2位；任务按enrollmentId",
+      "nullAndMissing": "validTasks0→ratio null；已取消数与有效任务分开",
+      "timeMode": "current",
+      "dateField": "none"
+    },
+    {
+      "datasetId": "trainingRoster",
+      "producer": "M27",
+      "rowKey": "enrollmentId",
+      "grain": "员工×课程任务记录，重复参加用enrollmentId区别",
+      "numeratorDenominator": "requiredSessions=非取消必修场次；present/absent=已verified；pending=required-present-absent",
+      "nullAndMissing": "未登记/待核验不当absent；人员与场次分母分离",
+      "timeMode": "current",
+      "dateField": "none"
+    },
+    {
+      "datasetId": "instructorSchedule",
+      "producer": "M27",
+      "rowKey": "sessionId",
+      "grain": "每培训场次",
+      "numeratorDenominator": "minutes=(endAt-startAt)/60000；cancelled effectiveMinutes=0；不当实际授课/课酬",
+      "nullAndMissing": "未关联内部讲师明确unlinked，不猜person",
+      "timeMode": "event_range",
+      "dateField": "Asia/Shanghai(startAt)"
+    },
+    {
+      "datasetId": "instructorCampaignProgress",
+      "producer": "M27",
+      "rowKey": "campaignId",
+      "grain": "每讲师认证活动",
+      "numeratorDenominator": "applications按applicationId可重报；people distinct personId另算；profiles/latestTrial/mandatoryProof分别计数",
+      "nullAndMissing": "交叉指标不求和为总人；未有有效证据不判通过",
+      "timeMode": "current",
+      "dateField": "none"
+    }
+  ]
+}
