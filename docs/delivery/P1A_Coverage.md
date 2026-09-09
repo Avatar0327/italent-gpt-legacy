@@ -1,6 +1,6 @@
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M18；备用 未启用；实际执行 M18。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M17；备用 未启用；实际执行 M17。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
 | R版本 | 模块顺序 | 当前边界 |
 |---|---|---|
@@ -28,8 +28,8 @@
 | M37 人才标准 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M06 任职资格 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M26 360度评估 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M18 在线盘点 | R2 / primary | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M17 继任与发展 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M18 在线盘点 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M17 继任与发展 | R2 / primary | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M03 干部管理2.0 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M27 学习管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M16 绩效管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
@@ -44,7 +44,7 @@
 
 # P1A当前15模块覆盖与缺口；33组历史暂缓
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T18:28:44.746209+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T18:32:47.077203+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
@@ -60,7 +60,7 @@ P1A关闭 6/15（完整0，受限6）；P1B需求就绪 6/15（完整0，受限6
 | M12 招聘管理系统 / BP-R | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 需求/职位/面试/重复关系/入职后管控已有局部证据。已细化自然人-申请-人才库差异、Offer/接受/入职原子性、创建请求恢复与权限场景；R-SPEC-01及SCOPE-DEP-01未决，原站关键链与人才库/身份同步/多角色仍缺，未就绪。 | R-SPEC-01；SCOPE-DEP-01 |
 | M16 绩效管理 / BP-P | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 原站等级/模板/缺评/系数/兼职规则已有；已细化员工活动-计划-结果-申诉状态、角色隔离、空隙/缺评计算候选和跨人才/薪资消费。组织绩效独立规格和OKR受限提纲明确保留，不由个人考核代替；尚缺原站完整链/组织计算/OKR/业务评审，未就绪。 |  |
 | M17 继任与发展 / BP-C | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | C27计划/模板/动态指导角色与草稿已读，C28停用发展流程保存结果未知（查询空不重建）；C29–30池ID/EA入池/培养中/准备度3~6个月已核；C31继任目标选择器未找到既有测试JA/JB，关系草稿取消。仍缺IDP阶段/继任引用源/健康度和角色恢复。 |  |
-| M18 在线盘点 / BP-C | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | C37标准引用、C38五步校验/C39模板方案和合成对象保存、C40独立列表/详情确认项目新建及EA初始未计算；主项目/对象/计算状态分离。启动路由/通知、采集与校准/报告、版本/权限仍缺，模块不完整/需求未就绪。 |  |
+| M18 在线盘点 / BP-C | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 完整原范围材料已完成，M18-SPEC-01,M18-SPEC-02,M18-SPEC-03,M18-SPEC-04,M18-SPEC-05与LIMIT未批准；不计关闭 | M18-SPEC-01；M18-SPEC-02；M18-SPEC-03；M18-SPEC-04；M18-SPEC-05；M18-LIMIT-01 |
 | M19 审批中心 / BP-I | 受限完成（仅P1） | 需求就绪 | 受限评审通过（仅P1） | M19-P1-APPROVAL-20260909批准所审fb35ba03dfd6563f59c814b52fa8a6fd125422bc推荐及限制；本模块P1无硬阻塞，受限关闭/需求就绪/模块转序就绪。 |  |
 | M26 360度评估 / BP-C | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 完整原范围材料已完成，M26-SPEC-01,M26-SPEC-02,M26-SPEC-03,M26-SPEC-04,M26-SPEC-05与LIMIT未批准；不计关闭 | M26-SPEC-01；M26-SPEC-02；M26-SPEC-03；M26-SPEC-04；M26-SPEC-05；M26-LIMIT-01 |
 | M27 学习管理 / BP-L | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 源模式/阶段/成绩/审批/共享/档案/费用配置已有，现补版本根-实例-轮次-任务、内容预览/退休、门槛和不同成绩分母的结构化候选验收。原站合成链、自动循环/已完成学员更新/跨轮版本、共享角色/费用实测仍缺；P1A不完整、P1B未就绪。 |  |
@@ -217,11 +217,11 @@ P1A关闭 6/15（完整0，受限6）；P1B需求就绪 6/15（完整0，受限6
 
 | 原登记功能 | 当前边界 | 规格ID | 证据/深度 | 仍缺内容/后续 |
 |---|---|---|---|---|
-| 标准 | 保留 | BP-C-REQ-07；BP-C-REQ-08 | P1-STD、BC-C37、BC-C38；跨入口回读及局部合成执行 | 已选M37测试标准，公开载体同TalentCriterion但精确共享UUID未见；版本和不同入口权限待证，M06标准不混用；恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。 |
-| 项目 | 保留 | BP-C-REQ-08 | BC-C38、BC-C39、BC-C40；局部合成执行 | 主ActivityId已确认新建、1EA初始未计算；启动/采集/评分/结果审批与异常待证，先核流程真实接收人；恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。 |
-| 校准会 | 保留 | BP-C-REQ-04；BP-C-REQ-08 | P1-CAL、BC-C40；列表/入口局部观察 | 项目有校准会页签，会议对象/权限/版本冻结/多人关系与发布未执行；本项目校准记录不代完整原会务；恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。 |
-| 人才池 | 保留 | BP-C-REQ-04 | P1-POOL；页面结构局部观察 | M18池分析与M17池是否同记录/权限/成员同步尚未执行，不借M17合成池直接算M18验证完成；恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。 |
-| 继任 | 保留 | BP-C-REQ-04；BP-C-REQ-08 | P1-SUC、BC-C40；列表/地图入口局部观察 | 职位继任列表/项目组织和职位地图是不同入口；实际关联、计算与跨M17关系待证；恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。 |
+| 标准 | 保留 | BP-C-REQ-07；BP-C-REQ-08 | P1-STD、BC-C37、BC-C38；跨入口回读及局部合成执行 | 部分覆盖C37/38与M37已批准契约；源UUID共享未证，M18组合/工具算法新规则待批；集中规则/LIMIT评审及最小补证，不重开宽泛探索 |
+| 项目 | 保留 | BP-C-REQ-08 | BC-C38、BC-C39、BC-C40；局部合成执行 | 部分覆盖C38–40创建及本轮只读回查；启动/采集/结果审批源执行受限；集中规则/LIMIT评审及最小补证，不重开宽泛探索 |
+| 校准会 | 保留 | BP-C-REQ-04；BP-C-REQ-08 | P1-CAL、BC-C40；列表/入口局部观察 | 仅列表/页签与现校准记录静态；会议、议题、回避和多维校准规则未覆盖原站执行；集中规则/LIMIT评审及最小补证，不重开宽泛探索 |
+| 人才池 | 保留 | BP-C-REQ-04 | P1-POOL；页面结构局部观察 | 源看板结构；M17池实体同一性未证，消费契约/入池建议不自动转有效成员；集中规则/LIMIT评审及最小补证，不重开宽泛探索 |
+| 继任 | 保留 | BP-C-REQ-04；BP-C-REQ-08 | P1-SUC、BC-C40；列表/地图入口局部观察 | 源列表/地图入口；岗位和组织地图语义分开，准备度/覆盖归M17决定；集中规则/LIMIT评审及最小补证，不重开宽泛探索 |
 
 ### M19 审批中心
 

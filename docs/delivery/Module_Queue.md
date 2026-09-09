@@ -1,6 +1,6 @@
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M18；备用 未启用；实际执行 M18。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M17；备用 未启用；实际执行 M17。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
 | R版本 | 模块顺序 | 当前边界 |
 |---|---|---|
@@ -28,8 +28,8 @@
 | M37 人才标准 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M06 任职资格 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M26 360度评估 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M18 在线盘点 | R2 / primary | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M17 继任与发展 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M18 在线盘点 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M17 继任与发展 | R2 / primary | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M03 干部管理2.0 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M27 学习管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M16 绩效管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
@@ -44,9 +44,9 @@
 
 # 当前唯一执行队列：P1A/P1B
 
-源：Scope_Register.json.roadmap及Module_Queue.json。首要工作包：M18唯一主模块；夜间材料等待队列M26。主要开发包：无（暂停扩展）。
+源：Scope_Register.json.roadmap及Module_Queue.json。首要工作包：M17唯一主模块；夜间材料等待队列M26,M18。主要开发包：无（暂停扩展）。
 
-1. M18唯一主模块：复用标准/项目/校准/池/继任证据，核对已存合成项目结果，不写原站
+1. M17唯一主模块：池、继任、发展计划、健康度完整范围，先核未知旧流程，无法确认保持unknown；原站只读
 
 业务顺序：BP-F → BP-I → BP-C → BP-L → BP-P → BP-R → BP-A → BP-S；BP-UNASSIGNED仅保留归属核实历史；无成员时不计业务包。多角色人工UAT不阻断P1；转序不得静默跳过。下方历史队列不构成本轮执行指令。
 
