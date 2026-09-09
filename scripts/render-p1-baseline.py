@@ -319,9 +319,9 @@ if cr.get('currentFocus'):
 policy=s['roadmap'].get('executionPolicy')
 if policy:
  def approved_review(x):
-  return bool(x.get('approved') is True and x.get('record') and x.get('scope') and x.get('approvedAt'))
+  return bool(x.get('approved') is True and x.get('record') in {a['id'] for a in pb.get('approvalRecords',[]) if a.get('approved')} and x.get('scope') and x.get('approvedAt'))
  def phase_approved(x):
-  return x.get('status') in ['完整通过','受限通过'] and bool(x.get('approvalRecord'))
+  return x.get('status') in ['完整通过','受限通过'] and x.get('approvalRecord') in {a['id'] for a in pb.get('approvalRecords',[]) if a.get('approved')}
  module_closures=[]
  for mid in s['roadmap']['moduleExecutionOrder']:
   m=by_id[mid];c=m['p1']['moduleClosure'];missing=[k for k in policy['transitionConditions'] if c['conditions'][k]['value'] is not True]
@@ -336,7 +336,7 @@ if policy:
   missing+= [k for k in rg['applicableFoundationIds'] if rg['foundationReadiness'][k]['value'] is not True]
   if not approved_review(rg['review']):missing.append('rangeReviewApproved')
   range_closures.append({**rg,'moduleIds':layer['moduleIds'],'transitionReady':not missing,'missingConditions':missing})
- derived={'source':'Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates','generatedFromUpdatedAt':b['updatedAt'],'primaryModuleId':policy['primaryModuleId'],'backupModuleId':policy['backupModuleId'],'activeExecutionModuleId':policy['activeExecutionModuleId'],'moduleCount':15,'completeCount':sum(x['p1AConclusion']['status']=='完整通过' and phase_approved(x['p1AConclusion']) for x in module_closures),'restrictedCount':sum(x['p1AConclusion']['status']=='受限通过' and phase_approved(x['p1AConclusion']) for x in module_closures),'transitionReadyCount':sum(x['transitionReady'] for x in module_closures),'progress':progress_counts(),'p1ClosedCount':sum(x.get('p1Closed') is True and phase_approved(x['p1AConclusion']) and phase_approved(x['p1BConclusion']) for x in module_closures),'modules':module_closures,'ranges':range_closures}
+ derived={'source':'Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates','generatedFromUpdatedAt':b['updatedAt'],'primaryModuleId':policy['primaryModuleId'],'backupModuleId':policy['backupModuleId'],'activeExecutionModuleId':policy['activeExecutionModuleId'],'moduleCount':15,'completeCount':sum(x['p1AConclusion']['status']=='完整通过' and phase_approved(x['p1AConclusion']) for x in module_closures),'restrictedCount':sum(x['p1AConclusion']['status']=='受限通过' and phase_approved(x['p1AConclusion']) for x in module_closures),'transitionReadyCount':sum(x['transitionReady'] for x in module_closures),'progress':progress_counts(),'p1ClosedCount':sum(x.get('p1Closed') is True and phase_approved(x['p1AConclusion']) and phase_approved(x['p1BConclusion']) and all(v['value'] is True for v in x['conditions'].values()) and approved_review(x['transitionReview']) for x in module_closures),'modules':module_closures,'ranges':range_closures}
  (D/'P1_Module_Closure.json').write_text(json.dumps(derived,ensure_ascii=False,indent=2)+'\n')
  block='## 当前执行模式：模块闭环优先、按R版本滚动转序\n\n'
  block+='本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 '+policy['primaryModuleId']+'；备用 '+str(policy['backupModuleId'] or '未启用')+'；实际执行 '+policy['activeExecutionModuleId']+'。'+policy['backupActivation']+'。\n\n'
@@ -414,3 +414,29 @@ if pb.get('approvalRecords'):
   t+='## '+ar['id']+'\n\n'+table(['字段','记录'],[(k,ar[k]) for k in ['approvedBy','approvedAt','timeBasis','source','reviewedHead','reviewedDocument','reviewedDocumentSha256','scope','authorization','exclusions']])+'\n'
   t+=table(['规则','所审推荐SHA256','采用内容'],[(k,v['sha256'],v['text']) for k,v in ar['approvedRecommendations'].items()])+'\n'
  (D/'P1_Approval_Records.md').write_text(t)
+
+# Other current module packets consume contract cases by reference, not copied state.
+all_cases={x['id']:x for pack in pb['packages'] for ct in pack.get('contracts',[]) for x in ct.get('acceptanceCases',[])}
+issue_by_id={x['id']:x for x in pb['reviewIssues']}
+for m in active_mods:
+ if m['id']=='M01' or not m['p1'].get('reviewPackage'):continue
+ mid=m['id'];rp=m['p1']['reviewPackage'];p1=m['p1']
+ t=intro(mid+' '+m['name']+'集中评审包')
+ t+='状态：**'+rp['documentStatus']+'**；主模块 '+policy['primaryModuleId']+'，备用 '+str(policy['backupModuleId'] or '无')+'。\n\n准备时间 '+rp['preparedAt']+'；静态代码基准 `'+rp['basedOnHead']+'`。本轮原站无新增操作，历史测试未复验。\n\n'
+ t+='## 完整范围与既有决定\n\n'+rp['scope']+'。'+rp['internalDeferralNote']+'\n\n'+rp['confirmedRules']+'\n\n'
+ t+=table(['层次','退出条件/当前结论'],rp['exitAssessment'].items())+'\n'
+ t+='## 已完成的证据与差异核对\n\n'+table(['问题','实际结论','证据性质'],[(x['problem'],x['resolution'],x['basis']) for x in rp['closedQuestions']])+'\n'
+ t+='## 完整收口清单\n\n'+table(['原范围/问题','规格/证据','剩余硬条件','关闭方法'],[(x['scopeItem']+' / '+x['id'],x['requirementIds']+x['evidenceRefs'],x['gap'],x['closureMethod']) for x in p1['closureChecklist']])+'\n'
+ if p1.get('consumerContracts'):
+  t+='## 跨模块消费契约（候选，非生产者规则批准）\n\n'+table(['原范围','生产者','明确消费字段','边界','证据'],[(x['scopeItem'],x['producer'],x['fields'],x['boundary'],x['evidence']) for x in p1['consumerContracts']])+'\n'
+ t+='## 集中待决（推荐不等批准）\n\n'
+ for iid in rp['decisionIds']:
+  x=issue_by_id[iid];t+='### '+iid+' '+x['topic']+'\n\n'+table(['维度','内容'],[('现状/证据',x['basis']),('推荐，未批准',x['proposal']),('备选',x['alternatives']),('影响',x['impact'])])+'\n'
+ t+='## 原站限制及补验责任（尚待批准）\n\n'
+ for x in rp['exceptionProposals']:t+='### '+x['id']+'\n\n'+table(['维度','内容'],[(k,x[k]) for k in ['status','scope','evidence','proposal','residualRisk','revalidation']])+'\n'
+ t+='## 关键流程与可执行验收预期\n\n'+'\n'.join('- '+x for x in rp['flowSummary'])+'\n\n'
+ t+=table(['用例/范围','给定','动作','预期','来源及状态'],[(x['id']+' / '+x['scopeItem'],x['given'],x['when'],x['then'],x['basis']+'；'+x['status']) for x in [all_cases[i] for i in rp['acceptanceCaseRefs']]])+'\n'
+ t+='## 进入P2后的复用与差异\n\n'+'\n'.join('- '+x for x in rp['implementationNext'])+'\n\n下一步：'+rp['next']+'\n\n[完整分包规格](P1B_BP_I_Specification.md) · [唯一待决与就绪表](P1B_Readiness.md) · [实现对应](P1B_Implementation_Map.md)。本包由Scope生成，不另维护进度。\n'
+ (D/('P1_'+mid+'_Review_Package.md')).write_text(t)
+ for name in ['P1B_Readiness.md','P1_Review.md','P1_Module_Closure.md']:
+  f=D/name;f.write_text(f.read_text()+'\n'+mid+'当前材料：['+rp['documentStatus']+'](P1_'+mid+'_Review_Package.md)。批准、源取证及后续执行各自独立。\n')

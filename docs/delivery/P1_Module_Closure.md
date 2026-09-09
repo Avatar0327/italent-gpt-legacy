@@ -2,13 +2,13 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 
 # 模块闭环、滚动转序及当前收口清单
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T16:17:23.873817+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T16:28:57.961445+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M19；备用 未启用；实际执行 M19。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M19；备用 M48；实际执行 M48。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
 | R版本 | 模块顺序 | 当前边界 |
 |---|---|---|
@@ -24,8 +24,8 @@ R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可
 | 模块 | R版本/队列 | P1A判定 | P1B评审 | 转序就绪 | 未达到条件 |
 |---|---|---|---|---|---|
 | M01 组织员工 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
-| M19 审批中心 | R1 / primary | 受阻 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M48 员工自助 | R1 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M19 审批中心 | R1 / primary_waiting_external | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M48 员工自助 | R1 / backup | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M32 报表 | R1 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M37 人才标准 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M06 任职资格 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
@@ -58,6 +58,23 @@ R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可
 
 | 问题/原范围 | 需求 | 证据 | 具体缺口 | 阻塞P1/风险 | 关闭方式与判据 | 当前状态 |
 |---|---|---|---|---|---|---|
-| M19-CLOSE-01 / 流程管理 | BP-I-REQ-07 | BC-P1C-M19；BC-I10；BC-I27 | 路由/节点/操作者/业务回写/通知/异常未全证；M01 D1–D7固定两级保持，不被通用干预候选扩展 | True；权限/业务回写/异常为高风险 | 复用BC-I10/27说明；待连接恢复定向查管理员委托范围/有效期/撤销及源流程回写，或明确批准候选产品设计；旧通用待办和D1–D7仅局部可复用，不能当完整M19通过 | 受阻 |
-| M19-CLOSE-02 / 管理员委托 | BP-I-REQ-07 |  | 委托对象/范围/有效期/原人与代理人权限/撤销审计待证；不等平台账号代登，也不自动变成任意节点转交 | True；权限/业务回写/异常为高风险 | 复用BC-I10/27说明；待连接恢复定向查管理员委托范围/有效期/撤销及源流程回写，或明确批准候选产品设计；旧通用待办和D1–D7仅局部可复用，不能当完整M19通过 | 受阻 |
+| M19-CLOSE-01 / 流程管理 | BP-I-REQ-07 | BC-P1C-M19；BC-I10；BC-I27 | 具体规则与验收候选已明确；尚须所列M19推荐及M19-LIMIT-01批准，或定向源证据后评审 | True；权限/业务回写/异常为高风险 | 按现有reviewIssues与M19评审包一次决定，批准后重算，未获批不作通过；原范围未缩减；M01已批准不扩大到M19 | 已完成待评审 |
+| M19-CLOSE-02 / 管理员委托 | BP-I-REQ-07 |  | 具体规则与验收候选已明确；尚须所列M19推荐及M19-LIMIT-01批准，或定向源证据后评审 | True；权限/业务回写/异常为高风险 | 按现有reviewIssues与M19评审包一次决定，批准后重算，未获批不作通过；原范围未缩减；M01已批准不扩大到M19 | 已完成待评审 |
 
+
+## M48完整登记范围收口清单
+
+| 问题/原范围 | 需求 | 证据 | 具体缺口 | 阻塞P1/风险 | 关闭方式与判据 | 当前状态 |
+|---|---|---|---|---|---|---|
+| M48-CLOSE-01 / 团队 | BP-I-REQ-01 | BC-L15；BC-P1C-M48 | 本项消费字段/权限/行为/验收候选已明确；尚需M48-SPEC-01,M48-SPEC-04及M48-LIMIT-01评审，源详细/独立角色执行未证。 | True；本人/团队权限、状态、原单完整性或跨域依赖 | 按同源消费契约/候选与受限边界集中评审；不要求为了P1穷尽源配置或先完成R2/R3全部实现；原七项完整保留；未批准不得记就绪或跨域业务通过 | 已完成待评审 |
+| M48-CLOSE-02 / 审批 | BP-I-REQ-01；BP-I-REQ-07 | BC-I10；BC-I27 | 本项消费字段/权限/行为/验收候选已明确；尚需M48-SPEC-02,M48-SPEC-03,M48-SPEC-04及M48-LIMIT-01评审，源详细/独立角色执行未证。 | True；本人/团队权限、状态、原单完整性或跨域依赖 | 按同源消费契约/候选与受限边界集中评审；不要求为了P1穷尽源配置或先完成R2/R3全部实现；原七项完整保留；未批准不得记就绪或跨域业务通过 | 已完成待评审 |
+| M48-CLOSE-03 / OKR | BP-P-REQ-09 |  | 本项消费字段/权限/行为/验收候选已明确；尚需M48-SPEC-02,M48-SPEC-03,M48-SPEC-04及M48-LIMIT-01评审，源详细/独立角色执行未证。 | True；本人/团队权限、状态、原单完整性或跨域依赖 | 按同源消费契约/候选与受限边界集中评审；不要求为了P1穷尽源配置或先完成R2/R3全部实现；原七项完整保留；未批准不得记就绪或跨域业务通过 | 已完成待评审 |
+| M48-CLOSE-04 / 目标 | BP-I-REQ-01；BP-P-REQ-05 | P1-SELF-REVIEW；P1-GOAL | 本项消费字段/权限/行为/验收候选已明确；尚需M48-SPEC-02,M48-SPEC-03,M48-SPEC-04及M48-LIMIT-01评审，源详细/独立角色执行未证。 | True；本人/团队权限、状态、原单完整性或跨域依赖 | 按同源消费契约/候选与受限边界集中评审；不要求为了P1穷尽源配置或先完成R2/R3全部实现；原七项完整保留；未批准不得记就绪或跨域业务通过 | 已完成待评审 |
+| M48-CLOSE-05 / 假勤 | BP-I-REQ-01；BP-A-REQ-01 | BC-A07；BC-A12 | 本项消费字段/权限/行为/验收候选已明确；尚需M48-SPEC-02,M48-SPEC-03,M48-SPEC-04及M48-LIMIT-01评审，源详细/独立角色执行未证。 | True；本人/团队权限、状态、原单完整性或跨域依赖 | 按同源消费契约/候选与受限边界集中评审；不要求为了P1穷尽源配置或先完成R2/R3全部实现；原七项完整保留；未批准不得记就绪或跨域业务通过 | 已完成待评审 |
+| M48-CLOSE-06 / 学习 | BP-I-REQ-01；BP-L-REQ-01；BP-L-REQ-06 | BC-L03；BC-L06-08；BC-L19 | 本项消费字段/权限/行为/验收候选已明确；尚需M48-SPEC-02,M48-SPEC-03,M48-SPEC-04及M48-LIMIT-01评审，源详细/独立角色执行未证。 | True；本人/团队权限、状态、原单完整性或跨域依赖 | 按同源消费契约/候选与受限边界集中评审；不要求为了P1穷尽源配置或先完成R2/R3全部实现；原七项完整保留；未批准不得记就绪或跨域业务通过 | 已完成待评审 |
+| M48-CLOSE-07 / 发展计划 | BP-I-REQ-01；BP-C-REQ-05 | BC-C27；BC-C28 | 本项消费字段/权限/行为/验收候选已明确；尚需M48-SPEC-02,M48-SPEC-03,M48-SPEC-04及M48-LIMIT-01评审，源详细/独立角色执行未证。 | True；本人/团队权限、状态、原单完整性或跨域依赖 | 按同源消费契约/候选与受限边界集中评审；不要求为了P1穷尽源配置或先完成R2/R3全部实现；原七项完整保留；未批准不得记就绪或跨域业务通过 | 已完成待评审 |
+
+
+M19当前材料：[已完成待评审](P1_M19_Review_Package.md)。批准、源取证及后续执行各自独立。
+
+M48当前材料：[备用模块材料已完成待评审](P1_M48_Review_Package.md)。批准、源取证及后续执行各自独立。

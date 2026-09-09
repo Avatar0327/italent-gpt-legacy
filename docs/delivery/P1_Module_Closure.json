@@ -1,9 +1,9 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-09T16:17:23.873817+00:00",
+  "generatedFromUpdatedAt": "2026-09-09T16:28:57.961445+00:00",
   "primaryModuleId": "M19",
-  "backupModuleId": null,
-  "activeExecutionModuleId": "M19",
+  "backupModuleId": "M48",
+  "activeExecutionModuleId": "M48",
   "moduleCount": 15,
   "completeCount": 0,
   "restrictedCount": 1,
@@ -141,22 +141,22 @@
       "moduleId": "M19",
       "name": "审批中心",
       "rangeId": "R1",
-      "queueState": "primary",
+      "queueState": "primary_waiting_external",
       "p1AConclusion": {
-        "status": "受阻",
+        "status": "已完成待评审",
         "approvalRecord": null,
         "evidenceRefs": [
           "BC-P1C-M19",
           "BC-I10",
           "BC-I27"
         ],
-        "limits": "已有流程帮助/列表可用；管理员委托细则仅导航，源连接超时；不得当已授权节点代理。"
+        "limits": "已完成两项范围证据/限制整理；源执行缺口具体，需恢复定向取证或批准M19-LIMIT-01，当前未通过"
       },
       "p1BConclusion": {
-        "status": "进行中",
+        "status": "已完成待评审",
         "approvalRecord": null,
         "evidenceRefs": [],
-        "limits": "复用既有契约并补以下差异/候选；通用流程/委托权限仍需来源或明确产品评审，未批准。"
+        "limits": "四组推荐、对象/状态/角色/验收和实现差异可评审；未获批准，不计就绪"
       },
       "conditions": {
         "applicableScopeDetermined": {
@@ -164,16 +164,16 @@
           "basis": "用户已确认15完整登记范围及本轮R顺序"
         },
         "implementationRulesDecided": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": false,
+          "basis": "M19-SPEC-01–04 / M19-LIMIT-01及验收批准尚缺，明确材料已齐"
         },
         "acceptanceExecutable": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": false,
+          "basis": "M19-SPEC-01–04 / M19-LIMIT-01及验收批准尚缺，明确材料已齐"
         },
         "dependenciesAndExceptionsResolved": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": false,
+          "basis": "M19-SPEC-01–04 / M19-LIMIT-01及验收批准尚缺，明确材料已齐"
         }
       },
       "transitionReview": {
@@ -197,21 +197,21 @@
       "moduleId": "M48",
       "name": "员工自助",
       "rangeId": "R1",
-      "queueState": "queued",
+      "queueState": "backup",
       "p1AConclusion": {
-        "status": "进行中",
+        "status": "已完成待评审",
         "approvalRecord": null,
         "evidenceRefs": [
           "P1-SELF-REVIEW",
           "BC-P1C-M48"
         ],
-        "limits": "沿用已有局部证据，未代签"
+        "limits": "七项原范围证据分层及缺口齐备，源角色/链受限待批准例外或补证；未通过"
       },
       "p1BConclusion": {
-        "status": "进行中",
+        "status": "已完成待评审",
         "approvalRecord": null,
         "evidenceRefs": [],
-        "limits": "需求尚未批准"
+        "limits": "四组建议、七项消费契约、权限/状态/错误/验收及差异可评审；批准尚缺，不就绪"
       },
       "conditions": {
         "applicableScopeDetermined": {
@@ -219,16 +219,16 @@
           "basis": "用户已确认15完整登记范围及本轮R顺序"
         },
         "implementationRulesDecided": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": false,
+          "basis": "M48-SPEC-01–04、M48-LIMIT-01及验收/依赖边界未批准"
         },
         "acceptanceExecutable": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": false,
+          "basis": "M48-SPEC-01–04、M48-LIMIT-01及验收/依赖边界未批准"
         },
         "dependenciesAndExceptionsResolved": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": false,
+          "basis": "M48-SPEC-01–04、M48-LIMIT-01及验收/依赖边界未批准"
         }
       },
       "transitionReview": {

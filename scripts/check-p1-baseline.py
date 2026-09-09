@@ -164,7 +164,23 @@ for ar in approvals.values():
  expected_doc=subprocess.check_output(['git','show',ar['reviewedHead']+':'+ar['reviewedDocument']],cwd=R)
  check(hashlib.sha256(expected_doc).hexdigest()==ar['reviewedDocumentSha256'],ar['id']+'审阅文档哈希匹配')
 check(view['p1ClosedCount']==view['progress']['review']['total'],'P1关闭合计同源且完整/受限分列')
-check(all(not x['transitionReady'] for x in view['ranges']),'当前R版本未获整体评审，不自动启动开发')
+for rg in view['ranges']:
+ expected=all(next(x for x in view['modules'] if x['moduleId']==mid)['transitionReady'] for mid in rg['moduleIds']) and all(rg['foundationReadiness'][fid]['value'] is True for fid in rg['applicableFoundationIds']) and rg['review']['approved'] is True and has_approval(rg['review']['record'])
+ check(rg['transitionReady']==expected,rg['id']+'版本整体必须模块/基础/范围评审均齐备')
 result['checks']=checks
 (D/'P1AB_Document_Check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
 print('PASS: authoritative scope, review packet, rolling gates, recovery views, deterministic generation and unchanged product source; no business retest/signoff')
+
+contract_case_by_id={x['id']:x for pack in s['p1B']['packages'] for ct in pack.get('contracts',[]) for x in ct.get('acceptanceCases',[])}
+for m in s['modules']:
+ rp=m['p1'].get('reviewPackage')
+ if not rp or m['id']=='M01':continue
+ check(set(rp['decisionIds'])<=issue_ids,m['id']+'评审问题来自同一reviewIssues')
+ check(set(rp['acceptanceCaseRefs'])<=set(contract_case_by_id),m['id']+'评审用例仅引用既有契约，不另存第二份状态')
+ check(rp['scope']==m['scope'] and rp['businessAccepted'] is False and rp['productionAccepted'] is False,m['id']+'完整范围/无假造业务签署')
+ for x in rp['exceptionProposals']:
+  check((x['approved'] is False and x['approvalRecord'] is None) or (has_approval(x['approvalRecord']) and m['id'] in approvals[x['approvalRecord']].get('moduleIds',[])),m['id']+'受限批准必须明确包含本模块，不继承M01')
+check(s['p1Baseline']['dataValidation']['records']==old['p1Baseline']['dataValidation']['records'] and s['p1Baseline']['dataValidation']['operations']==old['p1Baseline']['dataValidation']['operations'],'本离线单元未改变源操作与遗留合成记录')
+result['checks']=checks
+(D/'P1AB_Document_Check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+print('PASS: M19/M48 packets reference authoritative cases, full internal scope and distinct unapproved exceptions')

@@ -1,6 +1,6 @@
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M19；备用 未启用；实际执行 M19。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M19；备用 M48；实际执行 M48。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
 | R版本 | 模块顺序 | 当前边界 |
 |---|---|---|
@@ -16,8 +16,8 @@ R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可
 | 模块 | R版本/队列 | P1A判定 | P1B评审 | 转序就绪 | 未达到条件 |
 |---|---|---|---|---|---|
 | M01 组织员工 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
-| M19 审批中心 | R1 / primary | 受阻 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M48 员工自助 | R1 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M19 审批中心 | R1 / primary_waiting_external | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M48 员工自助 | R1 / backup | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M32 报表 | R1 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M37 人才标准 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M06 任职资格 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
@@ -38,9 +38,9 @@ R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可
 
 # 当前唯一执行队列：P1A/P1B
 
-源：Scope_Register.json.roadmap及Module_Queue.json。首要工作包：M19审批中心完整范围收口；M01已P1受限关闭。主要开发包：无（暂停扩展）。
+源：Scope_Register.json.roadmap及Module_Queue.json。首要工作包：M19唯一主模块待集中评审；M48唯一备用材料完成，剩余均为明确外部条件。主要开发包：无（暂停扩展）。
 
-1. M19按流程管理/管理员委托两项完整范围，复用现有证据与代码整理可决定规格、验收和实现差异。
+1. 优先M19四组规则/受限边界批准或原站连接恢复；M48备用候选材料已完成，按顺序评审。不启动M32第三模块，不重开已关闭M01。
 2. 原站连接失败只阻M19直接操作；形成明确产品建议及受限结论，不扩D7或已有访问者。
 3. 仅M19全部剩余必要任务外部阻塞后启用M48唯一备用，并记录范围/原因/返回条件。
 4. M19→M48→M32逐模块评审关闭；R1四模块及适用基础达到条件、版本评审允许后方进P2/P3。
