@@ -91,6 +91,251 @@
           "execution": "not_executed"
         }
       ]
+    },
+    {
+      "id": "R1-P2-02",
+      "number": 2,
+      "document": "R1_P2_M01_Data_History.md",
+      "requirements": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7",
+        "F-SPEC-01",
+        "F-SPEC-02",
+        "F-SPEC-03",
+        "F-SPEC-04",
+        "F-SPEC-05",
+        "F-SPEC-06",
+        "F-SPEC-07",
+        "F-SPEC-08",
+        "SCOPE-DEP-01",
+        "M01-BASELINE-01",
+        "BP-F-REQ-01",
+        "BP-F-REQ-02",
+        "BP-F-REQ-04",
+        "BP-F-REQ-05",
+        "BP-F-REQ-06",
+        "BP-F-REQ-10",
+        "BP-F-REQ-11",
+        "BP-F-REQ-12",
+        "BP-F-REQ-13",
+        "BP-F-REQ-14",
+        "BP-F-REQ-15"
+      ],
+      "evidence": [
+        {
+          "path": "lib/hris/model.ts",
+          "classification": "待修改",
+          "sha256": "0261ebfe42dc0227d7889b9bb4e190f0e4b120d86c9b0093fd497d1b1b7a9480"
+        },
+        {
+          "path": "lib/hris/personnel-transfer.ts",
+          "classification": "可复用",
+          "sha256": "5eba784136a5682dab2557322525446a392dc170b09c6f4ead2d68208ac190a6"
+        },
+        {
+          "path": "lib/hris/workforce.ts",
+          "classification": "待修改",
+          "sha256": "63ea24a9d415d9036f90c4e81da748035495bf4e334c57f454293f4e98f7855a"
+        },
+        {
+          "path": "lib/hris/contract-fields.ts",
+          "classification": "可复用",
+          "sha256": "d4285a1633739adf695fb28c8b82a99d2233d3d46e519007cd4fc391dea9d514"
+        },
+        {
+          "path": "lib/hris/employee-experiences.ts",
+          "classification": "待新增",
+          "sha256": "c6ac695274484fc9cc38c85a15ff258c7bdb52688cc680538c60cc2c46572558"
+        }
+      ],
+      "cases": [
+        {
+          "id": "P3-M01-01",
+          "requirements": [
+            "F-SPEC-01",
+            "F-SPEC-08",
+            "BP-F-REQ-01",
+            "BP-F-REQ-10",
+            "BP-F-REQ-11"
+          ],
+          "given": "A/B组织各职位J同名不同码，A内历史已结束同名，未来区间交叉",
+          "when": "分别建A重叠、B同名、A不重叠版本，再构造未来上下级环",
+          "then": "拒绝A重叠及未来环；允许B与不重叠名称复用；ID不复用，职级重名显示编码",
+          "evidence": "时间切点表、版本行和拒绝回执",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M01-02",
+          "requirements": [
+            "F-SPEC-04",
+            "BP-F-REQ-04"
+          ],
+          "given": "两个历史person各命中一个标识，另有已核实人任期跨闰日且账号撤权",
+          "when": "先冲突重聘，再用经核实身份重复同键入职",
+          "then": "冲突不合并；确认后同person新增单一employment；累计任期去重不含间隔/实习，账号不恢复",
+          "evidence": "identityReview、任期天数手算基准、幂等与权限差分",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M01-03",
+          "requirements": [
+            "F-SPEC-05",
+            "BP-F-REQ-06",
+            "BP-F-REQ-13"
+          ],
+          "given": "主职A满1，兼B、借派C；有效期各已批准，另一个HR审核",
+          "when": "执行兼职/借派；尝试同类型同目标重叠；再调动主职到满编B",
+          "then": "兼/接收借派占0而A占1；重叠拒绝；满编调动failed且历史/占用不变；减少占用可执行",
+          "evidence": "占用事件、assignment版本及事务对比",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M01-04",
+          "requirements": [
+            "D1",
+            "D2",
+            "D3",
+            "D4",
+            "D5",
+            "D6",
+            "D7",
+            "F-SPEC-02",
+            "BP-F-REQ-02"
+          ],
+          "given": "A到B未来调动，申请HR覆盖A+B，两个独立审批人，第二人只B",
+          "when": "越级/自审/撤viewLevel/过期批准/提前执行分别尝试，再合法批准到期执行",
+          "then": "均按D1–D7拒绝非法操作且提前不增次数；第二人只原单必要摘要；合法终审只waiting，到期HR一次applied；不能自动执行",
+          "evidence": "审批/执行三时间、字段投影及历史增量",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M01-05",
+          "requirements": [
+            "F-SPEC-02",
+            "D1"
+          ],
+          "given": "到期已批准单目标业务失效，第二样本审计写入异常，第三样本响应丢失",
+          "when": "执行后查同commandId/approvalId",
+          "then": "业务failed可提交并记次数；审计失败全回滚；未知先查一次成功结果不重复任职/占编",
+          "evidence": "数据库提交边界、客户端未知回执和query结果",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M01-06",
+          "requirements": [
+            "F-SPEC-03",
+            "D2",
+            "D6"
+          ],
+          "given": "员工有无关历史终止调动且无在途；另有需要改日的原单",
+          "when": "提交independent与correction；并发再开第二在途",
+          "then": "independent可新建且理由留痕；correction必须有效可读原单并两级重审；并发一单成功一单拒绝",
+          "evidence": "事项ID、原单关联、CAS与审计",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M01-07",
+          "requirements": [
+            "F-SPEC-06",
+            "BP-F-REQ-05",
+            "BP-F-REQ-14"
+          ],
+          "given": "法人空范围/后启用/改名/停用；合同C1已签，C2重聘后续签",
+          "when": "尝试空范围新引用、跨法人续签、隔日续签、合法相邻续签、同合同改版",
+          "then": "前3拒绝；合法续签保旧法人快照；改版计次一次；无协议历史待核；第三次自动政策关闭",
+          "evidence": "合同/法人版本、计次明细、人工登记/外部状态",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M01-08",
+          "requirements": [
+            "F-SPEC-07",
+            "BP-F-REQ-06",
+            "M01-BASELINE-01"
+          ],
+          "given": "十类与custom字段模板齐备，新增/待入职/入职模板不同；已有子集行且某字段不可写",
+          "when": "显式update导入混合成功、拒绝、响应丢失行并重跑批次",
+          "then": "成功行一次；无字段权逐行拒绝；未知查原行；显式null不被默认或继承吞掉，所有旧版本保留",
+          "evidence": "batch行回执、template版本、记录前后哈希",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M01-09",
+          "requirements": [
+            "BP-F-REQ-12",
+            "F-SPEC-07"
+          ],
+          "given": "未配置待入职模板必填/默认，另有完整模板且invite=false",
+          "when": "先提交不完整模板，再保存person/prehire并办理入职",
+          "then": "缺模板配置阻发布/提交且理由明确；三个ID和状态分列；无外部邀请/无新增访问者",
+          "evidence": "入口模板快照、person/employment/approval关联、消息拦截记录",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M01-10",
+          "requirements": [
+            "BP-F-REQ-15",
+            "F-SPEC-05"
+          ],
+          "given": "最后工作日D，主兼任职各1且有101个在途事项，部分域不支持取消",
+          "when": "D+1授权HR执行并并发审批，清理任务中断重启",
+          "then": "退出屏障原子生效，后续审批拒绝；逐单清理进度/失败可追踪，不删历史或称全部成功；重复不重复释放编制",
+          "evidence": "exitFence、101项cancelWork、失败适配回执",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M01-11",
+          "requirements": [
+            "SCOPE-DEP-01"
+          ],
+          "given": "已有人数编制规则；金额预算未配置和企业显式强阻断两种夹具",
+          "when": "分别办理入职/占用",
+          "then": "未配置显示未校验；强阻断依赖缺失则该链拒绝，不以人数通过冒充金额通过",
+          "evidence": "金额检查status/原因和编制delta",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M01-12",
+          "requirements": [
+            "F-SPEC-08",
+            "BP-F-REQ-10"
+          ],
+          "given": "目录拟停用，有当前HR不可见的approved waiting引用",
+          "when": "停用并同时新建引用",
+          "then": "拒绝且仅受保护依赖摘要；并发防漏；历史快照哈希不变",
+          "evidence": "停用拒绝脱敏结果、CAS、版本哈希",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        }
+      ]
     }
   ]
 }
