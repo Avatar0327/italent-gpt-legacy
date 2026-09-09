@@ -1,5 +1,5 @@
 {
-  "version": 26,
+  "version": 27,
   "activeWriter": "当前聊天唯一总控",
   "mode": "sole-controller-p1-synthetic-source-testing",
   "branchCreationBase": "commit introducing this queue; exact SHA in git history",
@@ -699,7 +699,7 @@
   "currentP1": {
     "revision": "2026-09-08-P1AB",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-09T03:58:15.297044+00:00",
+    "updatedAt": "2026-09-09T04:14:34.203534+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -804,6 +804,6 @@
       "持续全局术语/对象/字段权限/历史状态/依赖/接口一致性审查；文档自检和业务签署分开，按完整单元提交推送，不恢复P2/P3开发"
     ],
     "state": "P1未整体验收；P2保留受限历史技术验收；F01–F04业务验收未完成；E1仅页面可打开；E2唯一访问者；D1–D7独立设计；所有历史测试不等于当前复验",
-    "currentWork": "BC-S20测试薪资包d88fa0ba已保存，名称/编码特殊符号规则及单/多选权限分开记录；EA旧入职草稿候选不含新包，已取消并重开，正在核候选刷新/范围。"
+    "currentWork": "BC-S21基本工资包内引用已保存；BC-F38记录入职前置未完确认及空薪资包强制拒绝。EA刷新仍在原列表，人员id71e030ac与recordId0f0ac049分开，正在重开入职核人员状态，未重复创建。"
   }
 }
