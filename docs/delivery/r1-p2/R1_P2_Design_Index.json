@@ -781,6 +781,140 @@
           "execution": "not_executed"
         }
       ]
+    },
+    {
+      "id": "R1-P2-06",
+      "number": 6,
+      "document": "R1_P2_Interfaces_Exceptions.md",
+      "requirements": [
+        "BASE-03",
+        "BASE-04",
+        "BASE-06",
+        "BP-I-REQ-03",
+        "BP-I-REQ-04",
+        "BP-I-REQ-05",
+        "BP-I-REQ-08",
+        "BP-I-REQ-12",
+        "BP-S-REQ-07",
+        "BP-S-REQ-08",
+        "BP-S-REQ-12",
+        "M19-SPEC-04",
+        "M48-SPEC-03",
+        "M32-SPEC-05"
+      ],
+      "evidence": [
+        {
+          "path": "lib/hris/integration-preflight.ts",
+          "classification": "可复用",
+          "sha256": "73baf42daffaaa136c2e1f23f4f6cd7e4c3f6c568e95c2891b7e01f325a2da35"
+        },
+        {
+          "path": "lib/hris/http.ts",
+          "classification": "可复用",
+          "sha256": "32de84dc1331a5b8ad553cd2efcdef0d8e6f454ffdd9b48f6e38b017232b170e"
+        },
+        {
+          "path": "docs/delivery/Integration_Adapter_Contract.md",
+          "classification": "受限",
+          "sha256": "e76c9663b208f9737fba282456dc1c9581a346874454b3e024b228e5625dc1b7"
+        },
+        {
+          "path": "lib/hris/repository.ts",
+          "classification": "待新增",
+          "sha256": "d29c455ce153d7231728c7821d3571ad92ae60edf6b1811d478dcb6a2f1a1249"
+        }
+      ],
+      "cases": [
+        {
+          "id": "P3-INT-01",
+          "requirements": [
+            "BASE-03",
+            "BASE-06",
+            "BP-I-REQ-04"
+          ],
+          "given": "同namespace映射v1，eventId同内容/异内容/缺前序/旧无回执；mappingVersion改变",
+          "when": "调用预检和拟定inbox处理",
+          "then": "duplicate只同摘要；冲突隔离；gap不跳，stale不假成功；mapping不符优先；ready仍DRY_RUN_ONLY",
+          "evidence": "canonical样本/digest、sequence与回执矩阵",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-INT-02",
+          "requirements": [
+            "BASE-03",
+            "BASE-06"
+          ],
+          "given": "同一command两个并发请求，已收到但响应丢失；审计失败样本",
+          "when": "同键查询及相同内容恢复，另试换payload",
+          "then": "最多一次业务效果；无回执不判未提交；异内容409；审计失败全回滚",
+          "evidence": "command ledger/fence、业务/审计/outbox差分",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-INT-03",
+          "requirements": [
+            "M19-SPEC-04",
+            "M32-SPEC-05",
+            "BASE-06"
+          ],
+          "given": "供应商收到请求但响应超时，两个相同回调和一个异内容回调",
+          "when": "查回执，重复回调，人工恢复入口",
+          "then": "unknown先查不重发；同回执不重复生效，异内容隔离；消息失败不倒退业务",
+          "evidence": "消息拦截器与inbox/outbox证据",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-INT-04",
+          "requirements": [
+            "BP-I-REQ-05",
+            "BP-I-REQ-08",
+            "BP-S-REQ-07",
+            "BP-S-REQ-08",
+            "BP-S-REQ-12"
+          ],
+          "given": "电子签/预算/支付/财务均未配置，内部合同signed与工资published",
+          "when": "查询外部状态并尝试依赖外部成功推进",
+          "then": "not_configured/not_checked；强预算链拒绝；登记/发布不当外部签署/付款/入账；没有真实网络副作用",
+          "evidence": "适配catalog与拒绝回执、网络拦截计数0",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-INT-05",
+          "requirements": [
+            "BP-I-REQ-03",
+            "BP-I-REQ-12",
+            "M48-SPEC-03"
+          ],
+          "given": "模板/标签同名不同ID，旧权限撤销，新生产者rawStatus未注册",
+          "when": "读取消费/旧模板与标签引用",
+          "then": "ID/version不按名称合并；撤权拒绝；未定匿名/评分不发布；33暂缓不启引擎",
+          "evidence": "稳定引用映射与能力状态",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-INT-06",
+          "requirements": [
+            "BASE-04"
+          ],
+          "given": "R2上传成功D1失败且删除再次失败；另样本tombstone后delete失败",
+          "when": "读业务列表/猜ID下载/恢复清理",
+          "then": "孤儿不可达；逻辑删除后仍不可达且cleanupPending；清理不复活访问",
+          "evidence": "对象hash、metadata/tombstone和cleanup记录",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        }
+      ]
     }
   ]
 }

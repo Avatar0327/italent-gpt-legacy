@@ -66,3 +66,17 @@
 |M32-SPEC-06|[R1_P2_M32_Reports_Jobs.md](R1_P2_M32_Reports_Jobs.md)|R1-P2-05|P3-M32-02,P3-M32-10|
 |BP-I-REQ-02|[R1_P2_M32_Reports_Jobs.md](R1_P2_M32_Reports_Jobs.md)|R1-P2-05|P3-M32-01|
 |BP-I-REQ-11|[R1_P2_M32_Reports_Jobs.md](R1_P2_M32_Reports_Jobs.md)|R1-P2-05|P3-M32-08|
+|BASE-03|[R1_P2_Interfaces_Exceptions.md](R1_P2_Interfaces_Exceptions.md)|R1-P2-06|P3-INT-01,P3-INT-02|
+|BASE-04|[R1_P2_Interfaces_Exceptions.md](R1_P2_Interfaces_Exceptions.md)|R1-P2-06|P3-INT-06|
+|BASE-06|[R1_P2_Interfaces_Exceptions.md](R1_P2_Interfaces_Exceptions.md)|R1-P2-06|P3-INT-01,P3-INT-02,P3-INT-03|
+|BP-I-REQ-03|[R1_P2_Interfaces_Exceptions.md](R1_P2_Interfaces_Exceptions.md)|R1-P2-06|P3-INT-05|
+|BP-I-REQ-04|[R1_P2_Interfaces_Exceptions.md](R1_P2_Interfaces_Exceptions.md)|R1-P2-06|P3-INT-01|
+|BP-I-REQ-05|[R1_P2_Interfaces_Exceptions.md](R1_P2_Interfaces_Exceptions.md)|R1-P2-06|P3-INT-04|
+|BP-I-REQ-08|[R1_P2_Interfaces_Exceptions.md](R1_P2_Interfaces_Exceptions.md)|R1-P2-06|P3-INT-04|
+|BP-I-REQ-12|[R1_P2_Interfaces_Exceptions.md](R1_P2_Interfaces_Exceptions.md)|R1-P2-06|P3-INT-05|
+|BP-S-REQ-07|[R1_P2_Interfaces_Exceptions.md](R1_P2_Interfaces_Exceptions.md)|R1-P2-06|P3-INT-04|
+|BP-S-REQ-08|[R1_P2_Interfaces_Exceptions.md](R1_P2_Interfaces_Exceptions.md)|R1-P2-06|P3-INT-04|
+|BP-S-REQ-12|[R1_P2_Interfaces_Exceptions.md](R1_P2_Interfaces_Exceptions.md)|R1-P2-06|P3-INT-04|
+|M19-SPEC-04|[R1_P2_Interfaces_Exceptions.md](R1_P2_Interfaces_Exceptions.md)|R1-P2-06|P3-INT-03|
+|M48-SPEC-03|[R1_P2_Interfaces_Exceptions.md](R1_P2_Interfaces_Exceptions.md)|R1-P2-06|P3-INT-05|
+|M32-SPEC-05|[R1_P2_Interfaces_Exceptions.md](R1_P2_Interfaces_Exceptions.md)|R1-P2-06|P3-INT-03|
