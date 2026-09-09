@@ -2,13 +2,13 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 
 # 模块闭环、滚动转序及当前收口清单
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T17:23:50.064749+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T17:35:30.462283+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M37；备用 未启用；实际执行 M37。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M37；备用 M06；实际执行 M06。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
 | R版本 | 模块顺序 | 当前边界 |
 |---|---|---|
@@ -34,7 +34,7 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 | M48 员工自助 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M32 报表 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M37 人才标准 | R2 / primary | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M06 任职资格 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M06 任职资格 | R2 / backup_waiting_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M26 360度评估 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M18 在线盘点 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M17 继任与发展 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
@@ -58,6 +58,16 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 | M01-CLOSE-04 / 人员 | BP-F-REQ-01；BP-F-REQ-04；BP-F-REQ-06；BP-F-REQ-12 | BC-F22；BC-F35；BC-F36；BC-F39；BC-F43 | P1硬阻塞已关闭；原缺口保留为后续差异验证：重聘身份/冲突/任期/司龄与恢复边界批准；独立入口模板、人员子集/导入/字段权限基线批准 | False；核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准 | 所引用规则已由用户批准；源未知按M01-LIMIT-01有范围接受。后续P2/P3/P4验证责任不删除。；M01-P1-APPROVAL-20260909；完整原登记功能未缩减，F01–F04不代整个M01。 | 受限通过 |
 | M01-CLOSE-05 / 任职 | BP-F-REQ-02；BP-F-REQ-13；BP-F-REQ-15 | BC-F03；BC-F40；BC-F41；BC-F44；BC-F45；BC-F46 | P1硬阻塞已关闭；原缺口保留为后续差异验证：故障留痕与同事项原单关联的边界批准；主兼职和离职日期、在途流程及消费者状态策略批准 | False；核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准 | 所引用规则已由用户批准；源未知按M01-LIMIT-01有范围接受。后续P2/P3/P4验证责任不删除。；M01-P1-APPROVAL-20260909；完整原登记功能未缩减，F01–F04不代整个M01。 | 受限通过 |
 | M01-CLOSE-06 / 合同 | BP-F-REQ-05；BP-F-REQ-14 | P1-CONTRACT-LIST；P1-CONTRACT-TYPE；BC-F23；BC-F24；BC-F42 | P1硬阻塞已关闭；原缺口保留为后续差异验证：法人ID/日期/续签/计次版本策略批准；外部电子签仅契约边界、失败及历史权限批准 | False；核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准 | 所引用规则已由用户批准；源未知按M01-LIMIT-01有范围接受。后续P2/P3/P4验证责任不删除。；M01-P1-APPROVAL-20260909；完整原登记功能未缩减，F01–F04不代整个M01。 | 受限通过 |
+
+
+## M06完整登记范围收口清单
+
+| 问题/原范围 | 需求 | 证据 | 具体缺口 | 阻塞P1/风险 | 关闭方式与判据 | 当前状态 |
+|---|---|---|---|---|---|---|
+| M06-CLOSE-01 / 类别 | BP-C-REQ-02 | BC-C19；BC-C24 | 本项具体规格与验收已准备；M06五项推荐/LIMIT未批，M37新尺度契约还需其自身批准，源权限/认证规则未证 | True；稳定关系/评分尺度/版本漂移/错误授予和敏感材料权限 | 待集中批准明确推荐与有范围例外；不得在M37关闭前顺序关闭M06；C19–24既有合成执行＋当前静态；不新增源操作 | 已完成待评审 |
+| M06-CLOSE-02 / 级别 | BP-C-REQ-02 | BC-C20；BC-C21；BC-C24 | 本项具体规格与验收已准备；M06五项推荐/LIMIT未批，M37新尺度契约还需其自身批准，源权限/认证规则未证 | True；稳定关系/评分尺度/版本漂移/错误授予和敏感材料权限 | 待集中批准明确推荐与有范围例外；不得在M37关闭前顺序关闭M06；C19–24既有合成执行＋当前静态；不新增源操作 | 已完成待评审 |
+| M06-CLOSE-03 / 指标 | BP-C-REQ-02 | BC-C22；BC-C23；BC-C24 | 本项具体规格与验收已准备；M06五项推荐/LIMIT未批，M37新尺度契约还需其自身批准，源权限/认证规则未证 | True；稳定关系/评分尺度/版本漂移/错误授予和敏感材料权限 | 待集中批准明确推荐与有范围例外；不得在M37关闭前顺序关闭M06；C19–24既有合成执行＋当前静态；不新增源操作 | 已完成待评审 |
+| M06-CLOSE-04 / 资格标准 | BP-C-REQ-02 | BC-C21；BC-C23 | 本项具体规格与验收已准备；M06五项推荐/LIMIT未批，M37新尺度契约还需其自身批准，源权限/认证规则未证 | True；稳定关系/评分尺度/版本漂移/错误授予和敏感材料权限 | 待集中批准明确推荐与有范围例外；不得在M37关闭前顺序关闭M06；C19–24既有合成执行＋当前静态；不新增源操作 | 已完成待评审 |
 
 
 ## M19完整登记范围收口清单
@@ -100,6 +110,8 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 | M48-CLOSE-06 / 学习 | BP-I-REQ-01；BP-L-REQ-01；BP-L-REQ-06 | BC-L03；BC-L06-08；BC-L19 | P1硬条件已满足；原源证据差异及实现/补验责任保留到P2/P3/P4。 | False；本人/团队权限、状态、原单完整性或跨域依赖 | 用户已批准四组推荐及本模块受限边界，按现有条件核对通过；M48-P1-APPROVAL-20260909；不将批准扩为原站全部验证或实现通过 | 受限通过 |
 | M48-CLOSE-07 / 发展计划 | BP-I-REQ-01；BP-C-REQ-05 | BC-C27；BC-C28 | P1硬条件已满足；原源证据差异及实现/补验责任保留到P2/P3/P4。 | False；本人/团队权限、状态、原单完整性或跨域依赖 | 用户已批准四组推荐及本模块受限边界，按现有条件核对通过；M48-P1-APPROVAL-20260909；不将批准扩为原站全部验证或实现通过 | 受限通过 |
 
+
+M06当前材料：[已完成待评审（唯一备用）](P1_M06_Review_Package.md)。批准、源取证及后续执行各自独立。
 
 M19当前材料：[P1受限通过，需求基线已批准](P1_M19_Review_Package.md)。批准、源取证及后续执行各自独立。
 

@@ -1,9 +1,9 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-09T17:23:50.064749+00:00",
+  "generatedFromUpdatedAt": "2026-09-09T17:35:30.462283+00:00",
   "primaryModuleId": "M37",
-  "backupModuleId": null,
-  "activeExecutionModuleId": "M37",
+  "backupModuleId": "M06",
+  "activeExecutionModuleId": "M06",
   "moduleCount": 15,
   "completeCount": 0,
   "restrictedCount": 4,
@@ -383,9 +383,9 @@
       "moduleId": "M06",
       "name": "任职资格",
       "rangeId": "R2",
-      "queueState": "queued",
+      "queueState": "backup_waiting_review",
       "p1AConclusion": {
-        "status": "进行中",
+        "status": "已完成待评审",
         "approvalRecord": null,
         "evidenceRefs": [
           "BC-C04",
@@ -397,13 +397,13 @@
           "BC-C23",
           "BC-C24"
         ],
-        "limits": "沿用已有局部证据，未代签"
+        "limits": "四项源证据/限制及差异齐备，LIMIT未批，不计关闭"
       },
       "p1BConclusion": {
-        "status": "进行中",
+        "status": "已完成待评审",
         "approvalRecord": null,
         "evidenceRefs": [],
-        "limits": "需求尚未批准"
+        "limits": "五项具体推荐、字段/权限/状态/验收可评审；待本模块及M37依赖批准"
       },
       "conditions": {
         "applicableScopeDetermined": {
@@ -411,16 +411,16 @@
           "basis": "用户已确认15完整登记范围及本轮R顺序"
         },
         "implementationRulesDecided": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": false,
+          "basis": "M06五项/LIMIT及M37依赖未批准，备用材料不等顺序关闭"
         },
         "acceptanceExecutable": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": false,
+          "basis": "M06五项/LIMIT及M37依赖未批准，备用材料不等顺序关闭"
         },
         "dependenciesAndExceptionsResolved": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": false,
+          "basis": "M06五项/LIMIT及M37依赖未批准，备用材料不等顺序关闭"
         }
       },
       "transitionReview": {

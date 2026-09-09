@@ -20,6 +20,11 @@ def pack_pending(pack):return '；'.join(pack_conditions(pack)) or '当前无未
 def ct_scope(c):
  a=c['currentApplicability']
  return a['status']+'；'+('、'.join(a['moduleIds']+a['baseCapabilityIds']) or '无当前独立要求')+'；'+a['note']
+def ct_gap(c):
+ approval=c.get('requirementApproval')
+ records=[approval['record']] if approval else [m['p1']['moduleClosure']['closureRecord'] for m in mods if m['id'] in c['currentApplicability']['moduleIds'] and m['p1'].get('moduleClosure',{}).get('closureRecord')]
+ if not records:return c['gap']
+ return '当前适用批准：'+'、'.join(dict.fromkeys(records))+'。对应模块所批规则不再待批；原站未知、实现差异和后续补验仍保留，不扩大到其他模块。以下为历史差异原文，其中待批措辞不代表当前硬阻塞：'+c['gap']
 def progress_counts():
  def counts(field,full,limited):
   f=sum(assessment(m)[field]==full and not assessment(m)['approvedRestricted'] for m in active_mods)
@@ -138,7 +143,7 @@ if 'roadmap' in s:
  (D/'P1B_Readiness.md').write_text(t)
  t=intro('已有实现与产品需求对应')
  t+='对应当前源码静态核对；可复用是技术候选，不是当前测试或业务验收通过。历史测试只在原Verification标注的testedSourceCommit及适用范围有效，本轮未复跑。产品源码未修改。\n\n'
- t+=table(['需求','能力','当前适用','处置','代码/证据','差异与限制','验收关联'],[(x['requirement'],x['capability'],ct_scope(x),x['disposition'],x['evidence'],x['gap'],x['acceptance']) for x in pb['implementationMap']])
+ t+=table(['需求','能力','当前适用','处置','代码/证据','差异与限制','验收关联'],[(x['requirement'],x['capability'],ct_scope(x),x['disposition'],x['evidence'],ct_gap(x),x['acceptance']) for x in pb['implementationMap']])
  t+='\n## 原48组实现候选与当前适用（历史资产保留）\n\n'+table(['原范围/业务包','当前适用','可复用候选（原登记）','需补齐（原登记）','判定'],[(m['id']+' '+m['name']+' / '+m['businessPackage'],scope_status(m['id']),m['developed'],m['remaining'],'待逐包对P1B核验；无需求签署，不自动确认所有已有实现') for m in mods])
  (D/'P1B_Implementation_Map.md').write_text(t)
  t=intro('本项目总体PRD（P1B评审稿）')
@@ -181,7 +186,7 @@ if 'p1B' in s:
   if not pack['contracts'] and pack['moduleIds']:t+='本组职责和对象字段尚不足以形成行为契约，先保留逐模块证据和候选归属；不以空模板冒充需求完成。\n\n'
   for ct in pack['contracts']:
    t+='### '+ct['id']+' '+ct['object']+' — '+ct['currentApplicability']['status']+'\n\n**当前适用：'+ct_scope(ct)+'**\n\n性质：'+ct['classification']+'。下表保留原契约内容；混合/暂缓部分以当前适用边界为准，不作为当前完整模块前置。\n\n'
-   t+=table(['维度','规格及当前边界'],[('对象/字段/校验',ct['fields']),('角色/数据范围/字段权限',ct['roles']),('状态/审批/生效',ct['lifecycle']),('页面主要操作',ct['actions']),('验收预期（给定条件→操作→结果）',ct['acceptance']),('例外、恢复与仍缺内容',ct['gap']),('静态实现/输入依据','；'.join(link_source(x) for x in ct['codeRefs']))])+'\n'
+   t+=table(['维度','规格及当前边界'],[('对象/字段/校验',ct['fields']),('角色/数据范围/字段权限',ct['roles']),('状态/审批/生效',ct['lifecycle']),('页面主要操作',ct['actions']),('验收预期（给定条件→操作→结果）',ct['acceptance']),('例外、恢复与仍缺内容',ct_gap(ct)),('静态实现/输入依据','；'.join(link_source(x) for x in ct['codeRefs']))])+'\n'
    if ct.get('requirementApproval'):t+='当前需求批准：'+ct['requirementApproval']['record']+'；'+ct['requirementApproval']['scope']+'。下方历史静态/待证措辞保留当时含义；与已批准推荐冲突时以批准记录锁定的对应模块评审包为准，不把未知源规则改成已验证。\n\n'
    if ct.get('fieldDetails'):
     t+='字段与对象细化（来源逐项区分，不用代码补原站事实）：\n\n'+table(['字段/对象','定义及关联','校验/范围','来源与状态'],[(x['field'],x['definition'],x['constraints'],x['basis']) for x in ct['fieldDetails']])+'\n'
@@ -221,7 +226,7 @@ if 'p1B' in s:
  read.write_text(t)
 
  f=D/'P1B_Implementation_Map.md';t=f.read_text()+'\n## 分包契约与实现证据索引\n\n此索引由同一Scope的contracts生成。源码链接只证明静态对应；原站说明或范围文件不能证明已有实现。具体复用/补齐/修改边界按对应规格的差异列评审。\n\n'
- t+=table(['业务包/需求ID','对象与规格','当前适用','证据性质','代码或来源','具体差异/待核验'],[(p['id']+'/'+c['id'],c['object']+'；'+link_source(p['spec']),ct_scope(c),c['classification'],'；'.join(link_source(x) for x in c['codeRefs']),c['gap']) for p in pb['packages'] for c in p.get('contracts',[])])
+ t+=table(['业务包/需求ID','对象与规格','当前适用','证据性质','代码或来源','具体差异/待核验'],[(p['id']+'/'+c['id'],c['object']+'；'+link_source(p['spec']),ct_scope(c),c['classification'],'；'.join(link_source(x) for x in c['codeRefs']),ct_gap(c)) for p in pb['packages'] for c in p.get('contracts',[])])
  f.write_text(t)
 
  if pb.get('validationEvidence'):
@@ -483,7 +488,7 @@ for rg in s['roadmap']['rangeGates']:
  t+='六基础具体字段和故障用例见[P1_R1_Foundation_Review.md](P1_R1_Foundation_Review.md)。原站实测、静态代码与已批准产品设计仍分列；供应商未配置/单账号限制不被写成已完成联调。\n\n'
  t+='## P2必须解决的设计差异\n\n'+table(['任务/方面','批准约束与现状','必须交付','复用/核对代码'],[(x['id']+' '+x['area'],x['constraint'],x['deliverable'],'；'.join(link_source(p) for p in x['codeRefs'])) for x in h['designWorklist']])+'\n'
  t+='## 需求与现有实现追踪\n\n以下只取R1或基础的适用部分，混合契约中的其他模块未获本次开发授权。当前所审批准优先，静态事实不自动成为实现符合声明。\n\n'
- t+=table(['需求','对象/范围','当前适用','现有路径','必须核对差异'],[(x['id'],x.get('objects',x.get('title',x.get('name','见规格'))),ct_scope(x),'；'.join(link_source(p) for p in x['codeRefs']),x.get('gaps','见模块集中评审的implementationNext')) for x in [cts[i] for i in h['contractIds']]])+'\n'
+ t+=table(['需求','对象/范围','当前适用','现有路径','必须核对差异'],[(x['id'],x['object'],ct_scope(x),'；'.join(link_source(p) for p in x['codeRefs']),ct_gap(x)) for x in [cts[i] for i in h['contractIds']]])+'\n'
  t+='## 可执行验收用例（需求获批，执行结果不预填）\n\n'
  seen=set()
  for m in hm:
