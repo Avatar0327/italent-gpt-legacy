@@ -336,6 +336,139 @@
           "execution": "not_executed"
         }
       ]
+    },
+    {
+      "id": "R1-P2-03",
+      "number": 3,
+      "document": "R1_P2_M19_Workflow_Transactions.md",
+      "requirements": [
+        "M19-SPEC-01",
+        "M19-SPEC-02",
+        "M19-SPEC-03",
+        "M19-SPEC-04",
+        "BP-I-REQ-07",
+        "D7",
+        "BASE-03"
+      ],
+      "evidence": [
+        {
+          "path": "lib/hris/model.ts",
+          "classification": "待修改",
+          "sha256": "0261ebfe42dc0227d7889b9bb4e190f0e4b120d86c9b0093fd497d1b1b7a9480"
+        },
+        {
+          "path": "lib/hris/work-inbox.ts",
+          "classification": "可复用",
+          "sha256": "5761147a08f5fb56ddd54acb2e1ae019a5ddf46decea3cce7b791a76138780c0"
+        },
+        {
+          "path": "lib/hris/development-repository.ts",
+          "classification": "可复用",
+          "sha256": "b0bc2b0cd3490358d0e43d90f8b8f9f0e338a7141672da3dab28efe469a6fd1d"
+        },
+        {
+          "path": "app/api/hris/route.ts",
+          "classification": "待修改",
+          "sha256": "87424792fc3a73aceb1437820bdd0d9448827e3e248c76f86857eab7341cd95c"
+        }
+      ],
+      "cases": [
+        {
+          "id": "P3-M19-01",
+          "requirements": [
+            "M19-SPEC-01",
+            "BP-I-REQ-07"
+          ],
+          "given": "模板v1运行、v2已发布；无路径/双路径/空人/有环/缺会签策略各一份",
+          "when": "继续v1，启动各非法模板并重复同业务同版本",
+          "then": "v1冻结；非法实例不自动成功；重复同摘要同instance，异摘要冲突",
+          "evidence": "模板/实例digest、分支验证报告",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M19-02",
+          "requirements": [
+            "M19-SPEC-01",
+            "D7"
+          ],
+          "given": "all/any与拒绝策略已显式配置；同时approve/reject，另有D7调动",
+          "when": "按两种提交顺序注入会签，再尝试给D7启用通用功能",
+          "then": "同CAS排序得到单一可解释终态；终态迟到决定拒绝，历史保持；D7任何分支/会签/委托/转交/干预拒绝",
+          "evidence": "决议序列与generation，D7拒绝矩阵",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M19-03",
+          "requirements": [
+            "M19-SPEC-02",
+            "BP-I-REQ-07"
+          ],
+          "given": "节点转交给合格已有成员，旧人仍持链接，目标干预白名单有限",
+          "when": "转交/合法干预后旧人提交，再跳未允许节点",
+          "then": "旧nodeRevision失效，非法跳转拒绝；已办历史不变，跳过无伪造批准",
+          "evidence": "管理事件、nodeRevision、历史哈希",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M19-04",
+          "requirements": [
+            "M19-SPEC-02",
+            "BASE-03"
+          ],
+          "given": "未完成单adapter可安全取消，但原域写入故障；另单已applied",
+          "when": "撤销两单；对照完整正常撤销",
+          "then": "故障全回滚；已生效拒绝；正常流程/任务/领域同一提交取消",
+          "evidence": "D1原子差分与拒绝原因",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M19-05",
+          "requirements": [
+            "M19-SPEC-02"
+          ],
+          "given": "3单分别可办/旧版本/撤权，同批结果响应丢失",
+          "when": "batchDecide并查询/重复batchId",
+          "then": "仅可办单一次完成，另外两单明确失败；重放返原结果且无额外节点决定",
+          "evidence": "逐项回执与查询结果",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M19-06",
+          "requirements": [
+            "M19-SPEC-03"
+          ],
+          "given": "双方有效但交集只有A读取；受托未接受、已接受、到期前后、被撤销各夹具",
+          "when": "尝试管理、审批、自委托、转委托并在提交前撤字段/到期",
+          "then": "仅已接受有效时间交集内管理；不能代审批/扩权；最终事务重核拒绝旧权",
+          "evidence": "授权版本、委托事件、最终SQL门控",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M19-07",
+          "requirements": [
+            "M19-SPEC-04"
+          ],
+          "given": "业务成功消息unknown，节点随后转交，另有approved/waiting和failed执行单",
+          "when": "读取清单、触发通知重试恢复",
+          "then": "待执行与待审批独立；原unknown只查回执，旧pending失效，消息失败不回退业务",
+          "evidence": "拦截器事件、列表口径、供应商查询计划",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        }
+      ]
     }
   ]
 }

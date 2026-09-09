@@ -42,3 +42,10 @@
 |BP-F-REQ-13|[R1_P2_M01_Data_History.md](R1_P2_M01_Data_History.md)|R1-P2-02|P3-M01-03|
 |BP-F-REQ-14|[R1_P2_M01_Data_History.md](R1_P2_M01_Data_History.md)|R1-P2-02|P3-M01-07|
 |BP-F-REQ-15|[R1_P2_M01_Data_History.md](R1_P2_M01_Data_History.md)|R1-P2-02|P3-M01-10|
+|M19-SPEC-01|[R1_P2_M19_Workflow_Transactions.md](R1_P2_M19_Workflow_Transactions.md)|R1-P2-03|P3-M19-01,P3-M19-02|
+|M19-SPEC-02|[R1_P2_M19_Workflow_Transactions.md](R1_P2_M19_Workflow_Transactions.md)|R1-P2-03|P3-M19-03,P3-M19-04,P3-M19-05|
+|M19-SPEC-03|[R1_P2_M19_Workflow_Transactions.md](R1_P2_M19_Workflow_Transactions.md)|R1-P2-03|P3-M19-06|
+|M19-SPEC-04|[R1_P2_M19_Workflow_Transactions.md](R1_P2_M19_Workflow_Transactions.md)|R1-P2-03|P3-M19-07|
+|BP-I-REQ-07|[R1_P2_M19_Workflow_Transactions.md](R1_P2_M19_Workflow_Transactions.md)|R1-P2-03|P3-M19-01,P3-M19-03|
+|D7|[R1_P2_M19_Workflow_Transactions.md](R1_P2_M19_Workflow_Transactions.md)|R1-P2-03|P3-M19-02|
+|BASE-03|[R1_P2_M19_Workflow_Transactions.md](R1_P2_M19_Workflow_Transactions.md)|R1-P2-03|P3-M19-04|
