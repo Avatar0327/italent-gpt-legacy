@@ -1,3 +1,15 @@
+# 当前执行检查点：合成待入职已创建，入职薪资包前置（2026-09-09T03:23:03.777641+00:00）
+
+已创建71e030ac-c52e-475f-b7bb-c321af71e46c，姓名P1V-20260909-测试甲、工号P1V-20260909-EA；任职详情确认组织A/测试职位JA、日期2026-09-09、直虚线经理--、无试用期。第一次个人邮箱空保存被拒，补p1v-20260909-ea@example.invalid后同草稿保存并重读ID。BC-F36/P1OP-F-009完整记录，不重复创建。
+
+BC-F37/P1OP-F-010：详情更多操作的入职打开嵌套表单，还未保存。邀请激活账号初始是，已改否且确认；发起电子文件签署默认否保持。电子邮件空，已补同一合成邮箱；薪资包必填，已读选项无P1V标记，未借用未知配置。当前tab1（p1Tab）保留该未保存草稿，pendingDetail为iframe.functionpage-push-screen-container，onboardFrame为其中唯一iframe。tab2（p1SupportTab）已到薪酬社保设置，salarySettings=#iTalentFrame，点击薪资包后等待页面加载。先检查可建独立测试薪资包，不能安全准备则仅阻该入职分支，继续其他包。
+
+清空默认经理的方法：点击字段标题使其可见，读取已选.form-item__text.overflowEllipsis文字位置，悬停文字才出现X，再点击.sys-icon-close，确认选中token为0。可见提示层覆盖input时点击可见.form-item_is-hidden-tips或.date-time_is-hidden-tips，不能一律点击底层input。
+
+已有R/A/B、JA/JB及待入职保留为前置，同源dataValidation记录全部关系。6c091a6b05120abf41cdcc32b30ac05cb1dd25d4已推送。P1及首包未需求签署，D1–D7/E1/E2与产品停扩约束保持。
+
+---
+
 # 当前执行检查点：测试关联ID闭合及人员保存边界（2026-09-09T03:07:05.838942+00:00）
 
 组织B已由组织名称筛选查到系统ID aa1fdd68-e907-4daf-92ce-f22b55aa27fc。R/A/B与JA/JB均在Scope_Register.dataValidation记录实际ID/关联/状态，不重复创建。22bfc85815d387c041a4d0ec440b5b03e7f64e01已推送。
