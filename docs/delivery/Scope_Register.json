@@ -8538,7 +8538,7 @@
           "BC-C36-F001",
           "BC-C36-F002"
         ],
-        "sourceDepth": "P：局部页面/字段/说明，未完整掌握模块",
+        "sourceDepth": "F（局部）：标准/库/指标/等级/引用/启用已有合成执行；完整模块与权限算法未通过",
         "gapRef": "M37",
         "sourceGap": "标准指标组合/级别、定版审批、组织共享、引用后改版/失效规则。",
         "reviewDisposition": "保留范围，待P1评审；没有自动豁免",
@@ -8546,11 +8546,11 @@
           "P1-C-SOURCE"
         ],
         "gap": {
-          "source": "原站事实仅限所列N/P证据",
+          "source": "原站已观察/合成执行详C32–36，跨M18仅引用回读",
           "independentDesign": "能力标准版本、行为锚点及岗位要求",
           "unverified": "标准指标组合/级别、定版审批、组织共享、引用后改版/失效规则。",
-          "restricted": "原站只读，完整写入结果未验证；页面特有限制见所列证据unknown，未探索不标无权限",
-          "disposition": "范围保留；已开发和测试成果不作为原站规则证明；本轮不开发",
+          "restricted": "当前浏览器20秒刷新超时；已有源合成执行保留，非仅只读授权；剩余算法/改版/权限未执行",
+          "disposition": "M37明确推荐/验收及差异已可评审，未批准不计就绪",
           "independentDesignApproval": "仅D1–D7按用户明确决定保留；其他已有独立实现不自动视为企业确认。"
         },
         "coverage": {
@@ -8562,12 +8562,12 @@
             "BC-C35",
             "BC-C36"
           ],
-          "inferences": "原站已观察事实仅限所列证据；数学示例推导或候选设计另标，未实际执行业务；业务包映射按已观察职责进行规划，不代表需求验收。",
-          "restricted": "截至最近证据，完整写入结果未验证；当前已获合成测试授权，按具体场景补证；页面特有限制见所列证据unknown，未探索不标无权限",
+          "inferences": "跨M18同对象有名称/内容/时间支持但UUID未见；源共享实体属有据推断，权限不合并",
+          "restricted": "本轮云浏览器刷新超时，无法定向执行版本/停用/角色；C32–36已完成合成链不抹去",
           "unexplored": "标准指标组合/级别、定版审批、组织共享、引用后改版/失效规则。 字段仍未知的类型/必填/默认/枚举/校验/可见性逐条保留在同源字段字典。",
-          "next": "M18实际入口确认同合成标准/指标和项目引用；M37算法与版本/子集/权限后续继续，不以启用计模块完成。",
+          "next": "集中提交M37五项推荐及LIMIT；全部剩余依明确批准/源连接，具备条件后优先回归；M06可作为唯一有界备用，未启动第三模块。",
           "accepted": false,
-          "currentAssessmentAt": "2026-09-09T08:51:44.955753+00:00"
+          "currentAssessmentAt": "2026-09-09T17:23:50.064749+00:00"
         },
         "currentDeliveryAssessment": {
           "scopeChange": "SCOPE-20260909-CORE15",
@@ -8575,10 +8575,17 @@
           "p1B": "not_ready",
           "review": "not_signed",
           "approvedRestricted": false,
-          "assessmentAt": "2026-09-09T09:42:48.713911+00:00",
-          "basis": "C32–36合成人才标准/能力指标库TI/等级1/能力引用目标空权重1.0及最小标准启用已核；C37/38M18读取选择已证，模型名称空和无方案不阻最小主档启用。仍缺目标算法、其他子集/维度、使用中改版/版本和完整角色；不把最小启用计模块完整。",
-          "blockingIssueIds": [],
-          "next": "复用P1V-20260909-测试人才标准，继续M37指标库及M18/M17引用核对；不新建第二标准、不恢复M38。",
+          "assessmentAt": "2026-09-09T17:23:50.064749+00:00",
+          "basis": "M37两项完整范围候选/验收/差异已完成待评审；C32–36局部执行和C37/40引用，不代表完整原站验证。当前五项规则/LIMIT尚未批。",
+          "blockingIssueIds": [
+            "M37-SPEC-01",
+            "M37-SPEC-02",
+            "M37-SPEC-03",
+            "M37-SPEC-04",
+            "M37-SPEC-05",
+            "M37-LIMIT-01"
+          ],
+          "next": "集中提交M37五项推荐及LIMIT；全部剩余依明确批准/源连接，具备条件后优先回归；M06可作为唯一有界备用，未启动第三模块。",
           "acceptanceRefs": [
             {
               "taskId": "C01",
@@ -8609,7 +8616,7 @@
             ],
             "coverageDepth": "局部合成执行",
             "remaining": "测试标准已启用，空目标/1.0权重、其他维度空可启用仅样本；跨M18取用/版本/停用和测评方案消费待证",
-            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "next": "已补M37明确候选/验收/实现差异；待集中评审五项及LIMIT，不重复原保存/启用",
             "assessedAt": "2026-09-09T10:26:03.101902+00:00",
             "complete": false,
             "requirementAccepted": false
@@ -8627,7 +8634,7 @@
             ],
             "coverageDepth": "局部合成执行",
             "remaining": "能力库/TI/等级1已保存并引用；潜力/经历库及能力描述/行为/发展建议/面试题关系、版本传播待证，M38模型暂缓",
-            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "next": "已补M37明确候选/验收/实现差异；待集中评审五项及LIMIT，不重复原保存/启用",
             "assessedAt": "2026-09-09T10:26:03.101902+00:00",
             "complete": false,
             "requirementAccepted": false
@@ -8635,9 +8642,9 @@
         ],
         "moduleClosure": {
           "rangeId": "R2",
-          "queueState": "queued",
+          "queueState": "primary",
           "p1AConclusion": {
-            "status": "进行中",
+            "status": "已完成待评审",
             "approvalRecord": null,
             "evidenceRefs": [
               "BC-P1C-M37",
@@ -8647,13 +8654,13 @@
               "BC-C35",
               "BC-C36"
             ],
-            "limits": "沿用已有局部证据，未代签"
+            "limits": "两项证据/限制/执行深度及关键差异齐备，M37-LIMIT-01未批，尚不计关闭"
           },
           "p1BConclusion": {
-            "status": "进行中",
+            "status": "已完成待评审",
             "approvalRecord": null,
             "evidenceRefs": [],
-            "limits": "需求尚未批准"
+            "limits": "五项明确建议、对象/权限/状态/异常/依赖和可执行用例已完成待评审"
           },
           "conditions": {
             "applicableScopeDetermined": {
@@ -8661,16 +8668,16 @@
               "basis": "用户已确认15完整登记范围及本轮R顺序"
             },
             "implementationRulesDecided": {
-              "value": null,
-              "basis": "尚未逐模块闭环判定，不能算通过"
+              "value": false,
+              "basis": "M37-SPEC-01至05及LIMIT明确待评审，不能由R1或文档生成代批"
             },
             "acceptanceExecutable": {
-              "value": null,
-              "basis": "尚未逐模块闭环判定，不能算通过"
+              "value": false,
+              "basis": "M37-SPEC-01至05及LIMIT明确待评审，不能由R1或文档生成代批"
             },
             "dependenciesAndExceptionsResolved": {
-              "value": null,
-              "basis": "尚未逐模块闭环判定，不能算通过"
+              "value": false,
+              "basis": "M37-SPEC-01至05及LIMIT明确待评审，不能由R1或文档生成代批"
             }
           },
           "transitionReview": {
@@ -8680,6 +8687,144 @@
             "approvedAt": null
           },
           "restrictedApproval": null
+        },
+        "closureChecklist": [
+          {
+            "id": "M37-CLOSE-01",
+            "scopeItem": "标准",
+            "requirementIds": [
+              "BP-C-REQ-07"
+            ],
+            "evidenceRefs": [
+              "BC-C32",
+              "BC-C35",
+              "BC-C36",
+              "BC-C37"
+            ],
+            "gap": "已完成所列具体需求/验收材料；五项业务规则及M37-LIMIT-01未批，原站使用中变更/权限/算法执行受限",
+            "blocksP1": true,
+            "risk": "等级尺度/版本漂移/权限泄漏及缺值误判属于核心需求风险",
+            "closureMethod": "集中评审明确候选与有范围受限责任；不穷尽所有组合",
+            "basis": "C32–36合成结果＋C37/40引用回读＋当前静态；不同模块批准不代批M37",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M37-SPEC-01",
+              "M37-SPEC-02",
+              "M37-SPEC-03",
+              "M37-SPEC-04",
+              "M37-SPEC-05"
+            ]
+          },
+          {
+            "id": "M37-CLOSE-02",
+            "scopeItem": "指标库",
+            "requirementIds": [
+              "BP-C-REQ-07"
+            ],
+            "evidenceRefs": [
+              "BC-C33",
+              "BC-C34",
+              "BC-C35"
+            ],
+            "gap": "已完成所列具体需求/验收材料；五项业务规则及M37-LIMIT-01未批，原站使用中变更/权限/算法执行受限",
+            "blocksP1": true,
+            "risk": "等级尺度/版本漂移/权限泄漏及缺值误判属于核心需求风险",
+            "closureMethod": "集中评审明确候选与有范围受限责任；不穷尽所有组合",
+            "basis": "C32–36合成结果＋C37/40引用回读＋当前静态；不同模块批准不代批M37",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M37-SPEC-01",
+              "M37-SPEC-02",
+              "M37-SPEC-03",
+              "M37-SPEC-04",
+              "M37-SPEC-05"
+            ]
+          }
+        ],
+        "reviewPackage": {
+          "moduleId": "M37",
+          "documentStatus": "已完成待评审",
+          "scope": "标准、指标库",
+          "preparedAt": "2026-09-09T17:23:50.064749+00:00",
+          "basedOnHead": "e7f9d3ddf09312a9705814137f4be8ff30bb15e4",
+          "approvalRecord": null,
+          "internalDeferralProposals": [],
+          "internalDeferralNote": "两项原范围完整保留；四维度/多级与常规组合、四子集不削减，完整M38模型和M15测评仍暂缓，必要来源用最小契约。",
+          "confirmedRules": "R1已批身份/权限/状态/接口原则按原范围消费；D1–D7不外推为M37审批规则。下列M37五项为新建议，尚未批准。",
+          "decisionIds": [
+            "M37-SPEC-01",
+            "M37-SPEC-02",
+            "M37-SPEC-03",
+            "M37-SPEC-04",
+            "M37-SPEC-05"
+          ],
+          "exceptionProposals": [
+            {
+              "id": "M37-LIMIT-01",
+              "status": "待用户批准",
+              "approved": false,
+              "approvalRecord": null,
+              "scope": "原站目标权重算法、潜力/经历库深操作、行为/建议/面试子集保存、使用中改版/停用、独立审批和跨角色权限未执行；共享对象UUID/真实评测未核",
+              "evidence": "C32–36仅最小合成链、C37/40跨入口引用；本轮tabs.list CDP refresh20秒超时；静态代码不能代源规则",
+              "proposal": "建议允许基于既有源样本、当前静态差异和获批的M37-SPEC-01至05关闭P1需求；原站未知继续保留，不以供应商/所有组合/多角色实操为P1前置。该建议尚未批准。",
+              "residualRisk": "本项目独立审批/权限/组合算法可能不同于原站；历史迁移映射、冻结版本和多角色消费实际未验证，真实评测结果不可宣称已接通。",
+              "revalidation": "P2完成根/版本/尺度/范围/审批与旧消费者映射设计；P3用明确授权合成数据验证并发版本、权限、停用在途、null与故障和实际消费；P4多角色、跨模块及生产权限/恢复验收。E2保持，外部真实消息/支付/签署边界不变。"
+            }
+          ],
+          "closedQuestions": [
+            {
+              "problem": "是否原站仅只读/未验证标准写入",
+              "resolution": "C32–36已有主档/库/指标/等级/引用保存及启用，准确标局部合成执行；本轮未重做",
+              "basis": "既有操作记录与源证据"
+            },
+            {
+              "problem": "五级anchors能否直接代表完整人才标准",
+              "resolution": "源四子集/三库类型/四维度独立，等级1保存不证明固定五级；现固定五级只是既有实现",
+              "basis": "C32–35及development.ts静态"
+            },
+            {
+              "problem": "当前标准是否已隔离目录使用与管理权限",
+              "resolution": "同租户有效成员standard可读，admin/hr可建新版本；完整组织共享/发布审批/敏感子集尚需设计",
+              "basis": "e7f9d3ddf09312a9705814137f4be8ff30bb15e4静态代码，未运行"
+            },
+            {
+              "problem": "旧评分能否继承新标准，停用是否已实现",
+              "resolution": "gap精确引用同版、缺评估null可复用；standard新建默认active，无标准启停/定版审批命令；源跨M18仅已存引用未实际评价",
+              "basis": "competencyGaps/command分支、C37/40"
+            }
+          ],
+          "exitAssessment": {
+            "p1A": "两项证据/限制/执行深度及关键差异齐备，M37-LIMIT-01未批，尚不计关闭",
+            "p1B": "五项明确建议、对象/权限/状态/异常/依赖和可执行用例已完成待评审",
+            "transition": "规则/例外/模块评审未获批准，false；R1批准不继承"
+          },
+          "flowSummary": [
+            "原站已执行：标准停用主档→能力库/TI/等级1→标准引用空目标/1.0→标准启用→M18回读/项目引用，未启动评价。",
+            "候选产品：版本草稿→独立审查→批准→发布，启用与用途计算就绪分别表达；停用不静默改旧实例。",
+            "消费者以明确标准和指标版本取投影/就绪原因，评价/岗位/资格/IDP结果仍各自模块拥有。"
+          ],
+          "acceptanceCaseRefs": [
+            "M37-REVIEW-AC01",
+            "M37-REVIEW-AC02",
+            "M37-REVIEW-AC03",
+            "M37-REVIEW-AC04",
+            "M37-REVIEW-AC05",
+            "M37-REVIEW-AC06",
+            "M37-REVIEW-AC07",
+            "M37-REVIEW-AC08",
+            "M37-REVIEW-AC09",
+            "M37-REVIEW-AC10",
+            "M37-REVIEW-AC11",
+            "M37-REVIEW-AC12"
+          ],
+          "implementationNext": [
+            "复用当前记录ID/revision/事件快照和同版本gap；旧五anchors及引用保持legacy。",
+            "补独立库/指标/四子集/四维度与尺度组合、根/版本唯一约束、审批发布/启停与当前目录/字段/用途权限。",
+            "增量映射M06/17/18/03/26/27消费与M32指标，不合并同名对象、不新增M38全模块；P2后按批准设计实施。"
+          ],
+          "businessAccepted": false,
+          "productionAccepted": false,
+          "next": "集中提交M37五项推荐及LIMIT；全部剩余依明确批准/源连接，具备条件后优先回归；M06可作为唯一有界备用，未启动第三模块。"
         }
       },
       "businessPackage": "BP-C"
@@ -11403,7 +11548,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-09T17:11:16.592266+00:00",
+    "updatedAt": "2026-09-09T17:23:50.064749+00:00",
     "authority": "Scope_Register.json为唯一范围/验收事实源；历史48/59保留，当前15模块及基础按SCOPE-20260909-CORE15。",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -44420,25 +44565,25 @@
       "latestAuthorizationAt": "2026-09-09T06:25:42.812752+00:00",
       "scopeChangeHead": "f31cb2b5e1894723288fd884d4e3bd895ae57327",
       "scopeChange": "SCOPE-20260909-CORE15",
-      "latestCheckpointAt": "2026-09-09T17:11:16.592266+00:00",
-      "latestCommittedHead": "c59d1c2653202dfbe2652f84bccfc8bdbc199d9c",
+      "latestCheckpointAt": "2026-09-09T17:23:50.064749+00:00",
+      "latestCommittedHead": "e7f9d3ddf09312a9705814137f4be8ff30bb15e4",
       "latestEvidenceRefs": [
         "BC-C39",
         "BC-C40"
       ],
-      "next": "完成R1 P2交接及启动提示词，同源核对后提交推送；随后M37唯一主模块继续P1。",
+      "next": "集中提交M37五项推荐及LIMIT；全部剩余依明确批准/源连接，具备条件后优先回归；M06可作为唯一有界备用，未启动第三模块。",
       "browserRecovery": "旧实例失效后按官方指引发现唯一新实例并尝试tabs.list/new/goto/title；tab8创建成功但读取/导航刷新均超时。完成专业域/首包/基础/内部范围离线单元后再核tabs.list仍20s超时，停止重复。同一实例未收到登录/全量授权提示，不绕过控制。",
-      "sourceBrowsingStatus": "本轮M32取证前tabs.list返回CDP operation refresh tabs timed out after 20000ms；当前页面不可读，无新提交，无登录/重授权提示。",
-      "currentFocus": "M32已P1受限关闭；本单元完成R1 P2交接后将M37设唯一主模块",
+      "sourceBrowsingStatus": "本轮R1交接后仅一次tabs.list返回CDP operation refresh tabs timed out after 20000ms；当前页不可读，未发现登录/授权提示，无新增源提交。",
+      "currentFocus": "M37唯一主模块完整需求与集中评审材料已完成待评审",
       "checkpointCommitSemantics": "latestCommittedHead为本单元编辑开始前已存在提交；本记录所属提交用git log -1 -- docs/delivery/Scope_Register.json解析，不能将基准冒充最终HEAD。",
-      "workingTreeAtResume": "本轮开始main c59d1c2653202dfbe2652f84bccfc8bdbc199d9c，工作区clean；本单元仅文档/同源生成检查变更，提交后实际Git核对。",
+      "workingTreeAtResume": "R1交接e7f9d3d已同步且clean；随后本单元仅M37文档/同源修改",
       "lastVerifiedSync": {
-        "commit": "c59d1c2653202dfbe2652f84bccfc8bdbc199d9c",
+        "commit": "e7f9d3ddf09312a9705814137f4be8ff30bb15e4",
         "remoteBranch": "main",
-        "result": "上单元push/ls-remote已核实；本单元编辑基准",
-        "scope": "M32评审准备提交"
+        "result": "push成功，ls-remote与本地HEAD一致",
+        "scope": "M32关闭、R1六基础批准与仅P2设计交接"
       },
-      "currentUnitOutcome": "M32六组推荐及LIMIT获批并受限关闭，累计4/15；R1六基础含恢复目标获批，R1条件齐备已准P2设计，尚未P2退出或P3通过。",
+      "currentUnitOutcome": "M37两项原范围、五组明确推荐、字段/版本/权限/组合/接口/验收和实现差异已整理；三处遗留关系说明按旧C35–40校正，无新增源动作；当前4/15受限关闭不变。",
       "previousAtomicOutcome": "BC-C30与后续M17静态差异已提交b64ce7c；最近池1EA培养中/3~6个月。M17停用IDP流程保存结果未知，M18新建项目未启动；本轮不扩展或重复提交。"
     },
     "dataValidation": {
@@ -45465,17 +45610,17 @@
           "moduleId": "M37",
           "objectType": "人才标准 TalentCenter.TalentCriterion",
           "marker": "P1V-20260909-测试人才标准",
-          "relations": "分类/模型名称空；能力维度已选TI目标空/权重1.0，其他三维度尚无新配置；无人员/项目",
+          "relations": "分类/模型名称空；能力TI目标空/1.0；其他三维度无新配；M18项目3d1d07ed-d10e-4c51-8a91-22d5d20d83b1已引用标准，项目新建/未计算，标准UUID未暴露",
           "status": "已启用；能力TI/目标空/权重1.0，测评方案未绑定；M18项目已选择本标准，项目仍新建且未采集，不再称无项目引用",
           "evidence": "BC-C32/35/36；BC-C38/40已在M18项目选择并回读，保留两模块独立状态",
-          "retention": "保留人才标准合成前置；不与M06 QS资格标准合并，未启用/评定/通知。"
+          "retention": "已启用合成标准保留；M18有既有项目引用但未启动评价，不与M06资格标准合并；本轮未新增任何源操作。"
         },
         {
           "objectId": "UI精确名称P1V-20260909-测试人才指标库（业务UUID未显示）",
           "moduleId": "M37",
           "objectType": "人才指标库",
           "marker": "P1V-20260909-测试人才指标库",
-          "relations": "能力库，合成说明；已保存指标P1V20260909TI，未关联标准/人员/项目",
+          "relations": "能力库、合成说明；已存指标P1V20260909TI；该指标经BC-C35选入标准，后续标准在M18项目被引用；库无直接人员评定。",
           "status": "已保存启用，库内现有1个合成人才指标TI（启用）",
           "evidence": "BC-C33",
           "retention": "保留M37人才标准前置；未引用真实人员/项目，独立于M06指标QT/QI。"
@@ -45505,7 +45650,7 @@
           "moduleId": "M37",
           "objectType": "人才标准能力维度指标引用",
           "marker": "P1V-20260909-测试人才标准→TI",
-          "relations": "已存能力指标库TI/等级1；指标类别空/目标空/权重1.0；无评定人员或项目",
+          "relations": "已存能力TI/等级1；指标类别空/目标空/权重1.0；所属标准经C38/40被M18新建项目引用，未计算或启动评定。",
           "status": "引用已保存回读，所属合成标准已启用；空目标可保存和启用不等可完成实际评价",
           "evidence": "BC-C35/36",
           "retention": "保留跨M18/M17引用前置；不得重选制造重复，不合并M06资格标准。"
@@ -45567,13 +45712,77 @@
             "M17流程P1V-20260909-测试发展流程保存结果待核，未取得ID；停用/不向下公开/测试A为提交前值。计划与模板草稿都已取消；不得重复建同名流程或报告成功。"
           ]
         }
+      ],
+      "recordMetadataCorrections": [
+        {
+          "id": "M37-METADATA-1",
+          "objectId": "UI精确名称P1V-20260909-测试人才标准（业务UUID未显示）",
+          "recordedAt": "2026-09-09T17:23:50.064749+00:00",
+          "basedOnHead": "e7f9d3ddf09312a9705814137f4be8ff30bb15e4",
+          "before": {
+            "relations": "分类/模型名称空；能力维度已选TI目标空/权重1.0，其他三维度尚无新配置；无人员/项目",
+            "retention": "保留人才标准合成前置；不与M06 QS资格标准合并，未启用/评定/通知。"
+          },
+          "after": {
+            "relations": "分类/模型名称空；能力TI目标空/1.0；其他三维度无新配；M18项目3d1d07ed-d10e-4c51-8a91-22d5d20d83b1已引用标准，项目新建/未计算，标准UUID未暴露",
+            "retention": "已启用合成标准保留；M18有既有项目引用但未启动评价，不与M06资格标准合并；本轮未新增任何源操作。"
+          },
+          "evidenceRefs": [
+            "BC-C35",
+            "BC-C36",
+            "BC-C38",
+            "BC-C40"
+          ],
+          "reason": "校正滞后的无引用/未启用说明，与记录已有最新status和旧执行证据一致；不是本轮源状态变更",
+          "sourceOperation": false
+        },
+        {
+          "id": "M37-METADATA-2",
+          "objectId": "UI精确名称P1V-20260909-测试人才指标库（业务UUID未显示）",
+          "recordedAt": "2026-09-09T17:23:50.064749+00:00",
+          "basedOnHead": "e7f9d3ddf09312a9705814137f4be8ff30bb15e4",
+          "before": {
+            "relations": "能力库，合成说明；已保存指标P1V20260909TI，未关联标准/人员/项目"
+          },
+          "after": {
+            "relations": "能力库、合成说明；已存指标P1V20260909TI；该指标经BC-C35选入标准，后续标准在M18项目被引用；库无直接人员评定。"
+          },
+          "evidenceRefs": [
+            "BC-C35",
+            "BC-C36",
+            "BC-C38",
+            "BC-C40"
+          ],
+          "reason": "校正滞后的无引用/未启用说明，与记录已有最新status和旧执行证据一致；不是本轮源状态变更",
+          "sourceOperation": false
+        },
+        {
+          "id": "M37-METADATA-3",
+          "objectId": "测试人才标准精确名 + 人才指标P1V20260909TI（引用UUID未显示）",
+          "recordedAt": "2026-09-09T17:23:50.064749+00:00",
+          "basedOnHead": "e7f9d3ddf09312a9705814137f4be8ff30bb15e4",
+          "before": {
+            "relations": "已存能力指标库TI/等级1；指标类别空/目标空/权重1.0；无评定人员或项目"
+          },
+          "after": {
+            "relations": "已存能力TI/等级1；指标类别空/目标空/权重1.0；所属标准经C38/40被M18新建项目引用，未计算或启动评定。"
+          },
+          "evidenceRefs": [
+            "BC-C35",
+            "BC-C36",
+            "BC-C38",
+            "BC-C40"
+          ],
+          "reason": "校正滞后的无引用/未启用说明，与记录已有最新status和旧执行证据一致；不是本轮源状态变更",
+          "sourceOperation": false
+        }
       ]
     }
   },
   "roadmap": {
     "revision": "2026-09-09-module-closure-rolling-R",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-09T17:11:16.592266+00:00",
+    "updatedAt": "2026-09-09T17:23:50.064749+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -45656,7 +45865,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M32已P1受限关闭；本单元完成R1 P2交接后将M37设唯一主模块",
+    "activeWorkPackage": "M37唯一主模块完整需求与集中评审材料已完成待评审",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -45671,7 +45880,7 @@
       "BP-S"
     ],
     "nextTasks": [
-      "完成R1 P2交接及启动提示词，同源核对后提交推送；随后M37唯一主模块继续P1。",
+      "集中提交M37五项推荐及LIMIT；全部剩余依明确批准/源连接，具备条件后优先回归；M06可作为唯一有界备用，未启动第三模块。",
       "R2按M37→M06→M26→M18→M17→M03闭环；M37全部剩余外部阻塞才启M06唯一备用。",
       "R1已批准事项不重问；P2另窗口按设计授权接续，本P1窗口不改产品/部署/跑P3。"
     ],
@@ -45686,10 +45895,10 @@
       "id": "MODE-MODULE-CLOSURE-R-20260909",
       "authorizedAt": "2026-09-09T15:43:36.730682+00:00",
       "mode": "模块闭环优先、按R版本滚动转序",
-      "primaryModuleId": "M32",
+      "primaryModuleId": "M37",
       "backupModuleId": null,
-      "backupCandidateId": "M37",
-      "activeExecutionModuleId": "M32",
+      "backupCandidateId": "M06",
+      "activeExecutionModuleId": "M37",
       "wipLimit": 1,
       "backupLimit": 1,
       "backupActivation": "仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归",
@@ -45762,6 +45971,14 @@
           "reason": "M48-P1-APPROVAL-20260909明确批准、四项退出条件复核满足，按用户既定顺序受限关闭",
           "remaining": "M48只有P2/P3/P4残余验证，不再有P1硬阻塞",
           "restore": "仅未来明确的实质变更重新评审受影响条款，不重开宽泛取证"
+        },
+        {
+          "at": "2026-09-09T17:17:54.867696+00:00",
+          "from": "M32 / R1 P2交接",
+          "to": "M37",
+          "reason": "R1四模块受限关闭、六基础及P2设计转序获批，交接e7f9d3d已推送核实，按用户指定续R2 P1",
+          "remaining": "R1仅后续P2/P3/P4责任，不作为本窗口P1硬阻塞；M37接续已有证据",
+          "restore": "R1需求实质变更才复核受影响条款，不重开宽泛盘点"
         }
       ],
       "backupActivationHistory": [
@@ -46191,7 +46408,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-09T17:11:16.592266+00:00",
+    "updatedAt": "2026-09-09T17:23:50.064749+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -47550,11 +47767,15 @@
             "actions": "创建/编辑标准、选择指标、设置指标类别、设置测评方案；导出仅入口未执行；指标库链待续。",
             "codeRefs": [
               "lib/hris/development.ts",
-              "docs/P1_Source_Observations_20260907.md"
+              "docs/P1_Source_Observations_20260907.md",
+              "lib/hris/development-repository.ts",
+              "app/api/development/route.ts",
+              "app/development/workspace.tsx",
+              "tests/p3-api.test.mjs"
             ],
             "acceptance": "候选：合成名称、空分类/模型名称保存后回查同标准且停用，四维度分别展示；空指标不算完整标准或已启用。模型名称自由文本不得强行映射完整M38对象。标准引用必须区分人才/资格/绩效尺度，目标和权重按对应维度与版本说明；未知算法不填默认1–5。；候选：新能力库说明/类型/状态返回回读一致，指标只属于所选库，以代码引用；新增指标不等于四子集已填或完整标准已启用。子集顺序/定义和版本要可追溯，不把所有内容拼进固定5条anchors。；候选：等级子记录按指标稳定引用，保存顺序/别称/说明回读一致，所属要素空不能推需M38完整模型。表单载体加载失败应保留未提交状态，有限恢复后成功不重复建记录。；候选：选已有TI后空目标/权重1.0保存回读定义和空目标，不能用空值算0分或达标。测评方案无候选应保留未配置并阻相应真实评测动作，不伪造成功/外部ID；不阻无依赖的其他需求。；源实测候选：仅勾测试标准启用并确认后列表启用；准入和真正可评价必须分离，缺方案不虚构评测成功，空目标不自动达标。若本项目另设更严格完整性规则须明确建议和评审依据，不能借启用证据声称全部业务完整。",
-            "gap": "现有development.ts standard code/name/固定5条anchors和递增version可复用记录/版本机制；缺四维度、指标库/类别、目标权重与测评方案契约，固定5级不等原站全貌。C34已补1条等级、C35能力引用、C36最小启用、C37/38跨入口选择；仍缺等级数量/顺序范围/重复约束、目标尺度/算法、成就来源、引用快照与改版治理、消费者实际评价。方案当前无候选是具体限制，保留未配置状态，不恢复M15或以外部服务开通作为P1前置。",
-            "classification": "原站C32实测事实与当前代码静态差异；验收候选待产品评审，未批准",
+            "gap": "当前standard固定五anchors、同code新UUID/version且默认active，租户成员均可读；无独立指标库/四子集/四维度目标权重/审批发布/启停。现引用按版本、gap缺分null/旧版不顶新版可复用；缺root/version唯一约束、组合尺度、当前使用范围及引用冻结治理。M37-SPEC-01至05及LIMIT未批准，不再把已有C32–36保存/启用写成仅只读。",
+            "classification": "原站C32–36合成执行/跨M18回读、e7f9d3ddf09312a9705814137f4be8ff30bb15e4静态代码与M37明确候选分列；未批准",
             "accepted": false,
             "currentApplicability": {
               "status": "保留",
@@ -47566,7 +47787,244 @@
               ],
               "baseCapabilityIds": [],
               "note": "仅M37既有标准/指标库范围；M18入口和选择已核、UUID/快照和M17引用仍待证；不恢复M38。"
-            }
+            },
+            "fieldDetails": [
+              {
+                "field": "目录与版本身份",
+                "definition": "libraryId、indicatorId、standardRootId/versionId、code/name/status/revision/ownerOrgId/共享范围/有效期",
+                "constraints": "候选：稳定ID不由名或UI参数推导；同库代码唯一/显示同名消歧；发布版本只追加",
+                "basis": "M37-SPEC-01/03/04；C32/33源ID未知"
+              },
+              {
+                "field": "标准四维度与库类型",
+                "definition": "standard能力/潜力/经历/成就；library能力/潜力/经历",
+                "constraints": "不将成就自动当绩效；保持M06资格/M16指标独立，成就来源显式契约",
+                "basis": "C32/C33已观察，来源策略M37-SPEC-01/05候选"
+              },
+              {
+                "field": "等级/行为/建议/面试子集",
+                "definition": "每行稳定ID、sort、名称/描述/类型及版本；等级levelId、alias、elementText",
+                "constraints": "等级不固定五个，顺序正整数同父唯一；用途权限不共享；未知源上限不编造",
+                "basis": "C33/C34执行及M37-SPEC-01/04候选"
+              },
+              {
+                "field": "标准指标引用与组合",
+                "definition": "版本引用、dimension、category、typedTarget/unit/direction、weight/scale/aggregationVersion",
+                "constraints": "目标null不算0；有限非负权重，0明确排除，计算就绪与启用分离；序数不默认等距",
+                "basis": "C35源空目标/1.0；M37-SPEC-02候选"
+              },
+              {
+                "field": "审批/发布/启用/计算就绪",
+                "definition": "approvalStatus、publishedVersion、availability、calculationReadiness及reasonCode分别表达",
+                "constraints": "源仅停用→启用已证；完整独立审批和在途快照停用策略是产品建议非源事实",
+                "basis": "C36/37/40；M37-SPEC-03候选"
+              }
+            ],
+            "stateTransitions": [
+              {
+                "from": "源标准不存在",
+                "event": "只填合成名保存",
+                "to": "停用主档",
+                "guards": "分类/模型名空可存；UUID未显示",
+                "basis": "BC-C32原站执行"
+              },
+              {
+                "from": "源指标无等级",
+                "event": "等级顺序1/说明保存",
+                "to": "独立等级行",
+                "guards": "仅该样本；非固定五级证明",
+                "basis": "BC-C34原站执行"
+              },
+              {
+                "from": "源标准停用",
+                "event": "最小配置启用",
+                "to": "启用",
+                "guards": "目标空/权重1.0、方案空；仅目录启用",
+                "basis": "BC-C36原站执行"
+              },
+              {
+                "from": "本项目standard",
+                "event": "同code保存",
+                "to": "新UUID/递增version/active",
+                "guards": "当前仅admin/hr维护，固定五anchors",
+                "basis": "当前HEAD静态"
+              },
+              {
+                "from": "候选draft",
+                "event": "提交/独立审批",
+                "to": "approved或rejected",
+                "guards": "路由有效、提交者与审查独立，审批不等发布",
+                "basis": "M37-SPEC-03未批准"
+              },
+              {
+                "from": "候选approved",
+                "event": "发布并启用",
+                "to": "published+active",
+                "guards": "冻结指标/组合版本；用途校验独立",
+                "basis": "M37-SPEC-02/03未批准"
+              },
+              {
+                "from": "候选published+active",
+                "event": "停用",
+                "to": "published+disabled",
+                "guards": "阻新引用，已有实例冻版继续；撤销由生产者显式办理",
+                "basis": "M37-SPEC-03未批准"
+              }
+            ],
+            "roleMatrix": [
+              {
+                "role": "当前有效租户成员（静态）",
+                "read": "standard全部返回true，历史按当前可见及revision",
+                "write": "仅admin/hr可standard创建；manager可岗位要求/非本人评估",
+                "boundary": "没有原站多角色验证，也不是M37已批准权限"
+              },
+              {
+                "role": "候选标准管理员/编制者",
+                "read": "显式管理组织/共享范围与子集用途权限",
+                "write": "manage编制、提交；publish另权；review不能本人提交自审",
+                "boundary": "M37-SPEC-04待批；不新增实际访问者"
+              },
+              {
+                "role": "候选经理/员工/消费者",
+                "read": "显式use或既有业务冻结版本的必要投影",
+                "write": "不因read获得管理/发布/导出；业务办理回原模块",
+                "boundary": "面试题和敏感子集按字段/用途独立控制；历史仍当前权"
+              }
+            ],
+            "acceptanceCases": [
+              {
+                "id": "M37-REVIEW-AC01",
+                "scopeItem": "标准",
+                "given": "已有同库代码TI，另一库也欲使用TI",
+                "when": "同库重建/跨库新建/代码修名",
+                "then": "同库重复拒绝；跨库按各稳定ID区分；修名保留ID，未把名称作为跨库键",
+                "basis": "M37-SPEC-01",
+                "status": "M37候选验收预期未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M37-REVIEW-AC02",
+                "scopeItem": "指标库",
+                "given": "指标只定义1个等级及独立行为/建议/面试行",
+                "when": "保存并按用途读取",
+                "then": "不要求凑五级；四子集独立，重顺序拒绝，缺必填说明拒绝；无面试题权不投影",
+                "basis": "M37-SPEC-01/04",
+                "status": "M37候选验收预期未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M37-REVIEW-AC03",
+                "scopeItem": "标准",
+                "given": "空目标、权重1.0，无外部方案",
+                "when": "保存/发布后请求用于计算",
+                "then": "目录可保留已批结构；calculationReadiness给缺目标/来源，结果null，不因启用当达标",
+                "basis": "M37-SPEC-02/03",
+                "status": "M37候选验收预期未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M37-REVIEW-AC04",
+                "scopeItem": "标准",
+                "given": "权重0/负数/NaN，混合单位，必需输入缺失",
+                "when": "计算声明式组合",
+                "then": "0明确不计，负数/非有限拒绝，单位不兼容拒绝，缺必需值结果null，零分母不算0",
+                "basis": "M37-SPEC-02",
+                "status": "M37候选验收预期未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M37-REVIEW-AC05",
+                "scopeItem": "标准",
+                "given": "序数等级顺序1/3/5未配数值映射",
+                "when": "尝试加权平均或自动换算百分比",
+                "then": "拒绝缺尺度转换，不能将sort当等距分或继承固定1–5",
+                "basis": "M37-SPEC-02",
+                "status": "M37候选验收预期未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M37-REVIEW-AC06",
+                "scopeItem": "标准",
+                "given": "提交者有管理权但无其他有效审批人",
+                "when": "提交/发布新标准",
+                "then": "阻有效发布，不默认通过；管理转交不伪造独立审查",
+                "basis": "M37-SPEC-03；M19已批引擎边界",
+                "status": "M37候选验收预期未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M37-REVIEW-AC07",
+                "scopeItem": "标准",
+                "given": "业务已冻结v1，v2获批发布；v1随后停用",
+                "when": "继续原实例/新引用",
+                "then": "原实例v1不漂移，新引用不选停用v1；旧业务是否撤销由生产者明示留痕",
+                "basis": "M37-SPEC-03/05",
+                "status": "M37候选验收预期未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M37-REVIEW-AC08",
+                "scopeItem": "指标库",
+                "given": "已引用等级/指标，修改说明或删除",
+                "when": "保存变更并读取历史",
+                "then": "已发布语义新版本，不物理删引用；旧业务保留完整定义版本",
+                "basis": "M37-SPEC-01/03",
+                "status": "M37候选验收预期未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M37-REVIEW-AC09",
+                "scopeItem": "标准",
+                "given": "有效成员无该库共享范围或只有某业务use投影",
+                "when": "直接API/历史/导出/面试题请求",
+                "then": "当前动作/组织/字段交集验权；read不派生export或全库权；撤权清缓存",
+                "basis": "M37-SPEC-04；M32已批导出契约",
+                "status": "M37候选验收预期未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M37-REVIEW-AC10",
+                "scopeItem": "标准",
+                "given": "同岗位旧版assessment存在，新标准版本被引用",
+                "when": "生成缺口或M06/M18消费",
+                "then": "版本不匹配保持null/原因；不合并资格/人才对象，不因旧评分5顶替新目标",
+                "basis": "现competencyGaps静态及M37-SPEC-05",
+                "status": "M37候选验收预期未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M37-REVIEW-AC11",
+                "scopeItem": "指标库",
+                "given": "版本写入与审计事务失败或客户端结果未知",
+                "when": "恢复/重试",
+                "then": "失败不留可用半版本；未知先按键/请求ID/revision查，不连续造version；历史attempt保留",
+                "basis": "M37-SPEC-05；development-repository静态",
+                "status": "M37候选验收预期未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M37-REVIEW-AC12",
+                "scopeItem": "标准",
+                "given": "legacy五anchors及已有课程/计划/资格引用",
+                "when": "拟迁移新多维结构",
+                "then": "保留旧ID/顺序/实际引用，未知审批不补造，显式版本映射及验证，不改生产库",
+                "basis": "M37-SPEC-05",
+                "status": "M37候选验收预期未批准/未执行",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "id": "BP-C-REQ-08",
@@ -52963,19 +53421,18 @@
       },
       {
         "requirement": "BP-C-REQ-07",
-        "capability": "人才标准四维度与指标配置",
-        "disposition": "可复用版本记录/需补齐维度指标契约（待评审）",
+        "capability": "人才标准主档、四维度及指标库（M37）",
+        "disposition": "复用记录/版本及同版本差距；四维度/子集/审批/权限等需增量设计，M37未批准",
         "evidence": [
-          "BC-C32",
-          "BC-C33",
-          "BC-C34",
-          "BC-C35",
-          "BC-C36",
-          "BC-C37",
-          "lib/hris/development.ts"
+          "lib/hris/development.ts",
+          "docs/P1_Source_Observations_20260907.md",
+          "lib/hris/development-repository.ts",
+          "app/api/development/route.ts",
+          "app/development/workspace.tsx",
+          "tests/p3-api.test.mjs"
         ],
-        "gap": "现有development.ts standard code/name/固定5条anchors和递增version可复用记录/版本机制；缺四维度、指标库/类别、目标权重与测评方案契约，固定5级不等原站全貌。C34已补1条等级、C35能力引用、C36最小启用、C37/38跨入口选择；仍缺等级数量/顺序范围/重复约束、目标尺度/算法、成就来源、引用快照与改版治理、消费者实际评价。方案当前无候选是具体限制，保留未配置状态，不恢复M15或以外部服务开通作为P1前置。",
-        "acceptance": "M37原任务与BP-C-REQ-07候选，不增加原59项",
+        "gap": "当前standard固定五anchors、同code新UUID/version且默认active，租户成员均可读；无独立指标库/四子集/四维度目标权重/审批发布/启停。现引用按版本、gap缺分null/旧版不顶新版可复用；缺root/version唯一约束、组合尺度、当前使用范围及引用冻结治理。M37-SPEC-01至05及LIMIT未批准，不再把已有C32–36保存/启用写成仅只读。",
+        "acceptance": "候选：合成名称、空分类/模型名称保存后回查同标准且停用，四维度分别展示；空指标不算完整标准或已启用。模型名称自由文本不得强行映射完整M38对象。标准引用必须区分人才/资格/绩效尺度，目标和权重按对应维度与版本说明；未知算法不填默认1–5。；候选：新能力库说明/类型/状态返回回读一致，指标只属于所选库，以代码引用；新增指标不等于四子集已填或完整标准已启用。子集顺序/定义和版本要可追溯，不把所有内容拼进固定5条anchors。；候选：等级子记录按指标稳定引用，保存顺序/别称/说明回读一致，所属要素空不能推需M38完整模型。表单载体加载失败应保留未提交状态，有限恢复后成功不重复建记录。；候选：选已有TI后空目标/权重1.0保存回读定义和空目标，不能用空值算0分或达标。测评方案无候选应保留未配置并阻相应真实评测动作，不伪造成功/外部ID；不阻无依赖的其他需求。；源实测候选：仅勾测试标准启用并确认后列表启用；准入和真正可评价必须分离，缺方案不虚构评测成功，空目标不自动达标。若本项目另设更严格完整性规则须明确建议和评审依据，不能借启用证据声称全部业务完整。",
         "currentApplicability": {
           "status": "保留",
           "moduleIds": [
@@ -53789,6 +54246,81 @@
         "approvalRecord": "R1-FOUNDATION-P1-APPROVAL-20260909",
         "decidedAt": "2026-09-09T17:11:16.592266+00:00",
         "approvedProposalSha256": "3e8e8db8d465444d948f012186b7d2fe15e4427386be850baeed62bb63d6b4b3"
+      },
+      {
+        "id": "M37-SPEC-01",
+        "topic": "标准、指标库和子集的稳定对象",
+        "basis": "C32四维度能力/潜力/经历/成就；C33指标库只有能力/潜力/经历，四子集独立；C34仅一条等级已执行。代码standard只有code/name/固定五anchors。",
+        "proposal": "建议保留标准与指标库完整范围，新增稳定libraryId/indicatorId/standardRootId/versionId和引用行ID；标准维度固定区分能力、潜力、经历、成就，库类型沿三类，成就通过显式来源及版本契约引用，不能默认为潜力或绩效，也不恢复完整M38模型。指标库、指标、等级/行为/发展建议/面试问题各有独立ID与排序，等级数量按该指标显式定义，不固定五级；顺序为正整数，同父同子集不可重号，别称不作键。标准/库名必填1–200字，指标名及代码必填1–200字、trim后库内代码唯一且区分大小写；同名可存在但选择必须显示库/类型/代码/版本，不以名称合并；已用代码改名不换稳定ID。库说明/指标定义/等级说明500字上限，等级说明必填，其余子集描述必填、至4000字作为本项目建议；分类、模型名称、要素文本可空，不自动创建外部模型或资格对象。库类型有指标后不可原地更换，使用中结构修改走新版本。",
+        "alternatives": "继续固定五anchors并合并子集：会丢业务语义，不采用；代码全企业唯一亦可但会增加跨库约束，建议库内唯一并用稳定ID关联。",
+        "impact": "需要批准对象、唯一性及等级约束；不是宣称原站所有限制已验证。",
+        "status": "已具体化待评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M37"
+        ],
+        "preparedAt": "2026-09-09T17:23:50.064749+00:00"
+      },
+      {
+        "id": "M37-SPEC-02",
+        "topic": "目标、权重、组合与缺失值",
+        "basis": "源目标空、权重1.0可保存/启用；未知尺度/权重算法。现代码target/rating整数1–5，gap=max(0,target-rating)且仅同版本。",
+        "proposal": "建议每个标准引用绑定指标版本、维度、目标类型/值/单位/方向和权重。未设置目标用null，等级目标必须引用该版本存在的levelId；数值目标必须声明单位、方向和有效范围；事实/经历可为布尔或枚举，不强转数值。权重默认1.0、有限非负数；0明确不参与，启用用于计算的组合至少一个正权重。标准可保存及发布仅作为可选目录，calculationReadiness另外逐用途校验：缺尺度/目标/必要来源不得返回达标或0分。兼容同尺度数值的组合只允许显式版本化加权平均sum(w*x)/sum(w)，必需输入缺失则结果null和原因；序数等级不自动当等距分数，须配置明确转换；不跨维度混加。条件组合用声明式AND/OR和明确比较符/来源，禁止循环/脚本；组合结果与人才评价结果分开，具体M18/M26/M06算法仍由生产者批准，M37只输出定义/约束/就绪信息。",
+        "alternatives": "目录一启用即当全部可评价：会伪报就绪；强制所有维度必须填满才可保存：不符合已见源样本，建议保存/发布/用途校验分层。",
+        "impact": "关闭未知原站算法对P1的无限补证依赖需本产品规则及LIMIT批准；保留常规复杂组合，不恢复独立模型引擎。",
+        "status": "已具体化待评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M37"
+        ],
+        "preparedAt": "2026-09-09T17:23:50.064749+00:00"
+      },
+      {
+        "id": "M37-SPEC-03",
+        "topic": "审批、发布、启停与引用版本",
+        "basis": "C32新主档停用、C36最小配置可启用；C37/40 M18回读同标记及内容但UUID/快照未见。现同code新UUID增version，默认active，无标准审批或停用命令。",
+        "proposal": "建议标准/指标内容按根ID管理不可变发布版本：draft→submitted→approved→published，退回rejected可修改后重提；approved不等published，active/disabled为已发布版本可供新引用的独立状态。标准及影响评级的指标/等级/组合改版经M19独立审批，管理员不能自审替代；无有效审批路由阻提交/发布，E2限制保留至后续验证。单純分类排序等展示调整仍新版本留痕，可由有manage者发布但不得变更已用评分语义。新增引用只取当前可访问、已发布且启用版本；已启动业务冻结具体标准及子指标版本和快照，不能自动追最新版。停用阻新引用，已启动业务保留冻结版本继续办理并标记来源停用；若确需中止在途业务，另由生产者显式撤销并留原因。已引用版本不物理删除，改错新版本或显式迁移草稿；升级前legacy active映射已存在版本与来源，不能伪造审批历史或自动发布新结构。",
+        "alternatives": "发布者与作者可同人：操作少但需另批例外，不推荐；停用即回滚所有消费者：影响已审批历史，不采用。",
+        "impact": "独立审批是M37新建议，不从D7或M19引擎批准直接推定；停用后在途继续的边界须用户决定。",
+        "status": "已具体化待评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M37"
+        ],
+        "preparedAt": "2026-09-09T17:23:50.064749+00:00"
+      },
+      {
+        "id": "M37-SPEC-04",
+        "topic": "目录管理、使用与字段权限",
+        "basis": "当前canReadRecord(standard)对同租户有效成员直接true；catalog只admin/hr，可同code创建新版本；源跨角色共享未证，不能把全租户可读当授权要求。",
+        "proposal": "建议read/use/manage/review/publish/export独立动作授权，所属管理组织/明确共享组织/是否含下级按ID和有效期配置，默认不共享；管理员仅有管理能力，审批仍须节点资格且与提交者独立。经理/员工只按显式use范围或所参与业务冻结版本获得必要等级/行为说明，不能由参与一项评估获得整个指标库、内部面试问题或他人评价。面试题/发展建议可配置独立字段用途权限；read不自动export，导出走M32现行当前行列/聚合/链接权限。历史和已停用版本读取仍按当前身份与用途，撤权/解绑清缓存，跨租户ID拒绝，空范围不默认为全员。既有标准全租户可读改为显式范围要经迁移对照，不能猜所有旧使用者都应授权。",
+        "alternatives": "延续全租户可读：需明确公开意图且可能暴露面试题；建议显式授权保留必要消费投影，不新增人类访问者。",
+        "impact": "属于M37目录/敏感子集的新权限设计选择，R1批准仅提供共用原则，不代批这些权限。",
+        "status": "已具体化待评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M37"
+        ],
+        "preparedAt": "2026-09-09T17:23:50.064749+00:00"
+      },
+      {
+        "id": "M37-SPEC-05",
+        "topic": "跨模块消费、异常与迁移验收",
+        "basis": "现requirement/assessment/plan/course引用standardId；gap仅精确版本，缺评估null；M06资格另有qualificationStandard。M18已选P1V标准但未启动/未计算，外部测评方案无候选。",
+        "proposal": "建议M37作为标准定义生产者，给M06/M17/M18/M03/M26/M27/M32的契约含rootId/versionId、dimension、indicatorVersionIds、目标/尺度/组合版本、可用状态、useAllowed及原因；消费者业务对象/评价结果另归其模块，不能仅按同名合并M06资格标准或M16绩效指标。M18现同源推断保留UUID缺口，P2要稳定ID映射，不从菜单参数造ID。测评方案记录provider/type/version/外部映射与未配置/失败/unknown，未配置只阻依赖评测，不阻目录需求关闭。旧五级standard版本保留legacy类型、旧ID/等级和消费者引用；新四维度模型显式映射，无法核实的结构/审批历史保留未知，禁止批量推造。保存按revision原子写版本/引用/审计，重复创建先查业务键/请求ID，冲突或结果未知不再开新版本；缺权限/来源停用/版本不兼容分开报错。批准本包全部具体字段、状态、权限、验收预期与实现差异边界后实施；不把历史测试静态读取当本轮复验。",
+        "alternatives": "复制各消费者自己的标准目录：形成分裂事实源；强制开通完整外部测评/模型作为P1条件：超出当前范围，不采用。",
+        "impact": "完成M37完整需求基线并保留R2/R3真实联调责任；不批准各消费者未决业务算法或生产部署。",
+        "status": "已具体化待评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M37"
+        ],
+        "preparedAt": "2026-09-09T17:23:50.064749+00:00"
       }
     ],
     "codeReview": {
@@ -54190,11 +54722,15 @@
         "F-SPEC-01至08与M01-LIMIT已批准；旧观察中“待批”措辞仅指当时状态。",
         "当前报表UI仅三类显示日期筛选；API忽略其他数据集日期是剩余差异。asOf仅生成时刻，分页在当前可见集生成后切片，不等历史快照或数据库分页。",
         "M32读取/导出/订阅动作分权、快照权限与逐收件人重验均候选；不继承M19/M48批准。",
-        "六基础R1适用与原模块批准分层，恢复目标建议不声称云平台已满足；历史演练未复跑。"
+        "六基础R1适用与原模块批准分层，恢复目标建议不声称云平台已满足；历史演练未复跑。",
+        "M37四维度与指标库三类型不同，等级/行为/建议/面试子集不混为固定五anchors；成就来源不自动等绩效。",
+        "M37当前default active与源新建停用不同；代码所有租户成员可读是静态实现非源权。",
+        "M37同版评分缺失null可复用；草稿/审查/发布/启用/用途计算就绪需分层，待M37批准。",
+        "M37遗留无项目引用说明以既有C38/40纠正；对象ID未知保持，未造新操作。"
       ],
-      "remaining": "R1后续设计/测试/生产责任不转回P1硬阻塞；R2从M37继续",
-      "latestReviewedHead": "c59d1c2653202dfbe2652f84bccfc8bdbc199d9c",
-      "latestReviewAt": "2026-09-09T17:11:16.592266+00:00",
+      "remaining": "M37五项重大规则/LIMIT未批准；所有可自主材料已完成，原站连接受阻；无R1遗留P1硬阻塞",
+      "latestReviewedHead": "e7f9d3ddf09312a9705814137f4be8ff30bb15e4",
+      "latestReviewAt": "2026-09-09T17:23:50.064749+00:00",
       "internalScopeReviewAt": "2026-09-09T10:26:03.101902+00:00",
       "internalScopeSource": "modules[].scope → modules[].p1.internalScopeCoverage；逐个原登记短语精确映射，不增验收分母",
       "internalScopeResult": "当前15模块所有原登记短语均映射到既有规格/直接或跨域证据及具体限制；仅用户明确独立AI排班子能力暂缓、支付外部部分仅契约。其余保留含未探索，未当需求通过。",
@@ -54354,10 +54890,10 @@
     ],
     "packageAssessmentSource": "当前各包就绪条件由modules[].p1.currentDeliveryAssessment.basis及deliveryScope基础边界生成；packages.pending/readinessConditions保留兼容历史快照，不能覆盖逐模块最新评估，后续不手工更新两份。",
     "reviewPackage": {
-      "assessedAt": "2026-09-09T17:11:16.592266+00:00",
-      "basedOnHead": "c59d1c2653202dfbe2652f84bccfc8bdbc199d9c",
-      "status": "R1四模块P1受限关闭4/15；R1六基础已批，只准进入P2设计，全项目P1未完成",
-      "autonomousWork": "M32六组推荐及LIMIT获批并受限关闭，累计4/15；R1六基础含恢复目标获批，R1条件齐备已准P2设计，尚未P2退出或P3通过。",
+      "assessedAt": "2026-09-09T17:23:50.064749+00:00",
+      "basedOnHead": "e7f9d3ddf09312a9705814137f4be8ff30bb15e4",
+      "status": "R1 P1四模块受限关闭且仅准P2设计；M37材料已完成待评审，整体仍4/15",
+      "autonomousWork": "M37两项原范围、五组明确推荐、字段/版本/权限/组合/接口/验收和实现差异已整理；三处遗留关系说明按旧C35–40校正，无新增源动作；当前4/15受限关闭不变。",
       "sourceProgress": "M01组织/职位/入职/兼职/法人/未来离职；M07薪资组/包前置；M06类别-级别-指标-标准保留链；M03任期/考察期；M17池成员；M37指标/标准启用；M18项目持久化及对象配置均有局部执行。没有将这些链等同整模块P1A完成。",
       "requirementsProgress": "当前15模块均有总体/分包契约或明确受限规格；原内部功能逐项映射，字段/角色/状态/依赖/异常/验收及实现差异同源。组织绩效、OKR、健康度、社保/个税/激励等未探索细则保留，已确认D1–D7与候选分开。",
       "gateConclusion": "R1 P1关闭且仅准P2设计；本P1总控交接后继续M37。",
@@ -54367,17 +54903,17 @@
           "id": "P1-CONNECTION-01",
           "kind": "当前平台连接不可用",
           "action": "云浏览器CDP tabs刷新/原站导航读取",
-          "evidence": "本轮tabs.list再次返回CDP operation refresh tabs timed out after 20000ms，当前页面不可读；没有新的原站提交，无重新授权/登录提示。",
+          "evidence": "本轮R1交接后仅一次tabs.list返回CDP operation refresh tabs timed out after 20000ms；当前页不可读，未发现登录/授权提示，无新增源提交。",
           "affected": "当前15模块剩余原站配置/表单/合成业务链补证，以及遗留未知结果回查。",
           "restore": "恢复此云浏览器实例可正常列页和导航；恢复后先查已有标记/ID。没有重新授权全部或重新登录的要求；若平台后续实际要求登录，仅按那一具体提示恢复。"
         },
         {
           "id": "P1-RULES-01",
           "kind": "最小必要业务选择",
-          "action": "M37按原范围形成具体剩余问题，不重开R1已批规则",
-          "evidence": "M37当前原证据及契约；R1批准记录齐备",
-          "affected": "仅R2当前模块",
-          "restore": "先完成可自主证据/规格/差异工作，真实新选择集中评审"
+          "action": "M37-SPEC-01至05及M37-LIMIT-01集中评审",
+          "evidence": "P1_M37_Review_Package.md，同源五项具体建议及残余责任未批准",
+          "affected": "M37闭环；R1无需重问",
+          "restore": "批准或修订明确推荐和限制，先完成其他有界备用工作"
         },
         {
           "id": "P1-REVIEW-01",

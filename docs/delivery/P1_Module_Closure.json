@@ -1,9 +1,9 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-09T17:11:16.592266+00:00",
-  "primaryModuleId": "M32",
+  "generatedFromUpdatedAt": "2026-09-09T17:23:50.064749+00:00",
+  "primaryModuleId": "M37",
   "backupModuleId": null,
-  "activeExecutionModuleId": "M32",
+  "activeExecutionModuleId": "M37",
   "moduleCount": 15,
   "completeCount": 0,
   "restrictedCount": 4,
@@ -324,9 +324,9 @@
       "moduleId": "M37",
       "name": "人才标准",
       "rangeId": "R2",
-      "queueState": "queued",
+      "queueState": "primary",
       "p1AConclusion": {
-        "status": "进行中",
+        "status": "已完成待评审",
         "approvalRecord": null,
         "evidenceRefs": [
           "BC-P1C-M37",
@@ -336,13 +336,13 @@
           "BC-C35",
           "BC-C36"
         ],
-        "limits": "沿用已有局部证据，未代签"
+        "limits": "两项证据/限制/执行深度及关键差异齐备，M37-LIMIT-01未批，尚不计关闭"
       },
       "p1BConclusion": {
-        "status": "进行中",
+        "status": "已完成待评审",
         "approvalRecord": null,
         "evidenceRefs": [],
-        "limits": "需求尚未批准"
+        "limits": "五项明确建议、对象/权限/状态/异常/依赖和可执行用例已完成待评审"
       },
       "conditions": {
         "applicableScopeDetermined": {
@@ -350,16 +350,16 @@
           "basis": "用户已确认15完整登记范围及本轮R顺序"
         },
         "implementationRulesDecided": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": false,
+          "basis": "M37-SPEC-01至05及LIMIT明确待评审，不能由R1或文档生成代批"
         },
         "acceptanceExecutable": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": false,
+          "basis": "M37-SPEC-01至05及LIMIT明确待评审，不能由R1或文档生成代批"
         },
         "dependenciesAndExceptionsResolved": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": false,
+          "basis": "M37-SPEC-01至05及LIMIT明确待评审，不能由R1或文档生成代批"
         }
       },
       "transitionReview": {

@@ -183,7 +183,17 @@ for m in s['modules']:
  check(rp['scope']==m['scope'] and rp['businessAccepted'] is False and rp['productionAccepted'] is False,m['id']+'完整范围/无假造业务签署')
  for x in rp['exceptionProposals']:
   check((x['approved'] is False and x['approvalRecord'] is None) or (has_approval(x['approvalRecord']) and m['id'] in approvals[x['approvalRecord']].get('moduleIds',[])),m['id']+'受限批准必须明确包含本模块，不继承M01')
-check(s['p1Baseline']['dataValidation']['records']==old['p1Baseline']['dataValidation']['records'] and s['p1Baseline']['dataValidation']['operations']==old['p1Baseline']['dataValidation']['operations'],'本离线单元未改变源操作与遗留合成记录')
+dv=s['p1Baseline']['dataValidation'];old_dv=old['p1Baseline']['dataValidation']
+check(dv['operations']==old_dv['operations'],'本离线单元未新增或改变源操作结果')
+old_records={x['objectId']:x for x in old_dv['records']}
+check({x['objectId'] for x in dv['records']}==set(old_records),'本离线单元未新增或删除遗留合成对象')
+for rec in dv['records']:
+ previous=old_records[rec['objectId']]
+ if rec==previous:continue
+ changed={k for k in set(rec)|set(previous) if rec.get(k)!=previous.get(k)}
+ correction=next((x for x in reversed(dv.get('recordMetadataCorrections',[])) if x['objectId']==rec['objectId'] and x['before']=={k:previous[k] for k in changed} and x['after']=={k:rec[k] for k in changed}),None)
+ check(changed<={'relations','retention'} and correction is not None,rec['objectId']+'仅有可追溯的关系/留存说明校正，状态/ID/结果不变')
+ check(correction['sourceOperation'] is False and set(correction['evidenceRefs'])<=set(pages) and bool(correction['reason']),rec['objectId']+'说明校正引用既有证据，不冒新源操作')
 result['checks']=checks
 (D/'P1AB_Document_Check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
 for m in s['modules']:

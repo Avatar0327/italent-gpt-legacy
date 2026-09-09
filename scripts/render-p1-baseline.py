@@ -92,7 +92,7 @@ t+='## D1–D7不重新决策\n\n'+table(['决策','已确认口径'],[
 ('D1','批准与生效分开；北京时间生效日00:00起，由授权HR执行并记实际时间/失败恢复。'),('D2','不得新建过去日期或继续批准过期未批单；改日期终止原单并关联新单完整重审。'),('D3','跨组织发起须覆盖双方；禁止发起人和异动本人自审。'),('D4','调出→调入两级；调入审批人仅见必要摘要。'),('D5','职级变化须在发起和每级办理时可读前后值；权限缺失不能盲审。'),('D6','驳回原因必填，原单终态及关联保留，新单全程重审。'),('D7','本包固定两级不同审批者，不扩会签/分支/委托。')])
 (D/'P1_Flows.md').write_text(t)
 # Review report: overview + single-register difference view.
-pmods=[m for m in mods if m['p1']['sourceDepth'].startswith('P')]
+pmods=[m for m in mods if any(p['level'] in ['P','F'] and p['id'] in m['p1']['pageRefs'] for p in pages)]
 fields=sum(len(p['fields']) for p in pages);navcount=sum(len(m['p1']['navigation']) for m in mods)
 t=intro('P1原站盘点与需求基线｜评审材料')
 t+='**当前范围状态：** '+progress_text()+'六类基础能力另列；模块关闭依据明确用户批准及退出条件；源证据缺口和后续验证另列，不代签业务运行验收。原48组/59项保持历史，33组暂缓不作为当前P1阻塞。\n\n'+current_scope_table()+'\n'
@@ -441,7 +441,7 @@ for m in active_mods:
  for x in rp['exceptionProposals']:t+='### '+x['id']+'\n\n'+table(['维度','内容'],[(k,x[k]) for k in ['status','scope','evidence','proposal','residualRisk','revalidation']+(['approvalConclusion'] if x.get('approvalConclusion') else [])])+'\n'
  t+='## 关键流程与可执行验收预期\n\n'+'\n'.join('- '+x for x in rp['flowSummary'])+'\n\n'
  t+=table(['用例/范围','给定','动作','预期','来源及状态'],[(x['id']+' / '+x['scopeItem'],x['given'],x['when'],x['then'],x['basis']+'；'+x['status']) for x in [all_cases[i] for i in rp['acceptanceCaseRefs']]])+'\n'
- t+='## 进入P2后的复用与差异\n\n'+'\n'.join('- '+x for x in rp['implementationNext'])+'\n\n下一步：'+rp['next']+'\n\n[完整分包规格](P1B_BP_I_Specification.md) · [唯一待决与就绪表](P1B_Readiness.md) · [实现对应](P1B_Implementation_Map.md)。本包由Scope生成，不另维护进度。\n'
+ t+='## 进入P2后的复用与差异\n\n'+'\n'.join('- '+x for x in rp['implementationNext'])+'\n\n下一步：'+rp['next']+'\n\n[完整分包规格](P1B_'+m['businessPackage'].replace('-','_')+'_Specification.md) · [唯一待决与就绪表](P1B_Readiness.md) · [实现对应](P1B_Implementation_Map.md)。本包由Scope生成，不另维护进度。\n'
  (D/('P1_'+mid+'_Review_Package.md')).write_text(t)
  for name in ['P1B_Readiness.md','P1_Review.md','P1_Module_Closure.md']:
   f=D/name;f.write_text(f.read_text()+'\n'+mid+'当前材料：['+rp['documentStatus']+'](P1_'+mid+'_Review_Package.md)。批准、源取证及后续执行各自独立。\n')
