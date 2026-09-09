@@ -1056,6 +1056,135 @@
           "execution": "not_executed"
         }
       ]
+    },
+    {
+      "id": "R1-P2-08",
+      "number": 8,
+      "document": "R1_P2_Backup_Recovery.md",
+      "requirements": [
+        "R1-RECOVERY-01",
+        "BASE-01",
+        "BASE-02",
+        "BASE-03",
+        "BASE-04",
+        "BASE-05",
+        "BASE-06",
+        "E2"
+      ],
+      "evidence": [
+        {
+          "path": "docs/delivery/P1_R1_Foundation_Review.md",
+          "classification": "可复用",
+          "sha256": "fc0a11738cb51159aeaaece0178963e86537fd9a47a71a95e632f6447d7d34be"
+        },
+        {
+          "path": ".openai/hosting.json",
+          "classification": "受限",
+          "sha256": "69fbe98861d2790d2d029fca25d257b8bd8b031777e3e164485a60ca69a12638"
+        },
+        {
+          "path": "scripts/rehearse-local-recovery.mjs",
+          "classification": "待修改",
+          "sha256": "dd462cc8f67c1304a019d613c3092108841fabfb7efa9c30177c0df279f488d4"
+        },
+        {
+          "path": "docs/Recovery_Synthetic_Report.json",
+          "classification": "受限",
+          "sha256": "90e35ae08a3d967122640ad1d015792c4244c40800931de06f43b198366ed76e"
+        }
+      ],
+      "cases": [
+        {
+          "id": "P3-REC-01",
+          "requirements": [
+            "BASE-03",
+            "BASE-04",
+            "BASE-05",
+            "R1-RECOVERY-01"
+          ],
+          "given": "基线后并发改人、合同、附件put/tombstone及增量多事务",
+          "when": "15分钟封存、隔离重放同一恢复点",
+          "then": "只有完整事务+全部可达对象校验后verified，重复重放无双效果；30天所有恢复点依赖可用",
+          "evidence": "恢复manifest、行/对象摘要和重放回执",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-REC-02",
+          "requirements": [
+            "BASE-01",
+            "BASE-02",
+            "BASE-05",
+            "E2"
+          ],
+          "given": "旧DB账号active，恢复点后缩权/停用，独立安全日志有新epoch或断链",
+          "when": "恢复后尝试应用、附件、导出/审批和开放",
+          "then": "当前权交集拒绝；断链/不可达保持隔离；不新增访问者",
+          "evidence": "授权前后集合、epoch与隔离探针",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-REC-03",
+          "requirements": [
+            "BASE-03",
+            "BASE-06",
+            "BASE-05"
+          ],
+          "given": "D7一级已处理、供应商已收到但回执在恢复点后",
+          "when": "恢复原pending和outbox",
+          "then": "不重放已办节点、不自动补发未知交易；先对账回执，业务/消息状态分离",
+          "evidence": "拦截器零重复外效、审批节点差分",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-REC-04",
+          "requirements": [
+            "R1-RECOVERY-01",
+            "BASE-05"
+          ],
+          "given": "小中压力档合成数据，定时器抖动/对象缺失/密钥失效",
+          "when": "全链计时、故障报警、30天窗口逻辑检验",
+          "then": "记录共同恢复点及总RTO，不剔除等待；缺对象/密钥阻开放，年龄45/55/60阈值按设计",
+          "evidence": "逐阶段耗时/吞吐/字节/任务年龄与告警记录",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-REC-05",
+          "requirements": [
+            "BASE-04",
+            "BASE-05"
+          ],
+          "given": "最老有效manifest依赖31天前基线和已墓碑对象",
+          "when": "保留/清理模拟及旧备份恢复",
+          "then": "依赖仍存、墓碑不可读；过期清理不破坏任何存续恢复点",
+          "evidence": "依赖图/保留模拟差异、可恢复点证明",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P4-REC-06",
+          "requirements": [
+            "R1-RECOVERY-01",
+            "BASE-05",
+            "E2"
+          ],
+          "given": "获授权P4隔离目标、实际代表容量、独立执行/复核和所有者",
+          "when": "按真实可用平台能力演练并作开放决定",
+          "then": "RPO≤60、RTO≤240、30天可恢复/加密证据满足才验收；不满足提交量化差异且不开门",
+          "evidence": "能力证明/实际成本/全链演练/所有者审批",
+          "owner": "平台恢复执行人、独立安全及业务复核人",
+          "gate": "P4生产准备/开放前",
+          "execution": "not_executed"
+        }
+      ]
     }
   ]
 }

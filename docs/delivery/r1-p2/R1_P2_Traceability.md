@@ -93,3 +93,11 @@
 |M19-LIMIT-01|[R1_P2_Migration_Rollback.md](R1_P2_Migration_Rollback.md)|R1-P2-07|P3-MIG-05|
 |M48-LIMIT-01|[R1_P2_Migration_Rollback.md](R1_P2_Migration_Rollback.md)|R1-P2-07|P3-MIG-03|
 |M32-LIMIT-01|[R1_P2_Migration_Rollback.md](R1_P2_Migration_Rollback.md)|R1-P2-07|P3-MIG-04|
+|R1-RECOVERY-01|[R1_P2_Backup_Recovery.md](R1_P2_Backup_Recovery.md)|R1-P2-08|P3-REC-01,P3-REC-04,P4-REC-06|
+|BASE-01|[R1_P2_Backup_Recovery.md](R1_P2_Backup_Recovery.md)|R1-P2-08|P3-REC-02|
+|BASE-02|[R1_P2_Backup_Recovery.md](R1_P2_Backup_Recovery.md)|R1-P2-08|P3-REC-02|
+|BASE-03|[R1_P2_Backup_Recovery.md](R1_P2_Backup_Recovery.md)|R1-P2-08|P3-REC-01,P3-REC-03|
+|BASE-04|[R1_P2_Backup_Recovery.md](R1_P2_Backup_Recovery.md)|R1-P2-08|P3-REC-01,P3-REC-05|
+|BASE-05|[R1_P2_Backup_Recovery.md](R1_P2_Backup_Recovery.md)|R1-P2-08|P3-REC-01,P3-REC-02,P3-REC-03,P3-REC-04,P3-REC-05,P4-REC-06|
+|BASE-06|[R1_P2_Backup_Recovery.md](R1_P2_Backup_Recovery.md)|R1-P2-08|P3-REC-03|
+|E2|[R1_P2_Backup_Recovery.md](R1_P2_Backup_Recovery.md)|R1-P2-08|P3-REC-02,P4-REC-06|
