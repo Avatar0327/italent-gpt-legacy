@@ -80,3 +80,16 @@
 |M19-SPEC-04|[R1_P2_Interfaces_Exceptions.md](R1_P2_Interfaces_Exceptions.md)|R1-P2-06|P3-INT-03|
 |M48-SPEC-03|[R1_P2_Interfaces_Exceptions.md](R1_P2_Interfaces_Exceptions.md)|R1-P2-06|P3-INT-05|
 |M32-SPEC-05|[R1_P2_Interfaces_Exceptions.md](R1_P2_Interfaces_Exceptions.md)|R1-P2-06|P3-INT-03|
+|BASE-01|[R1_P2_Migration_Rollback.md](R1_P2_Migration_Rollback.md)|R1-P2-07|P3-MIG-03|
+|BASE-02|[R1_P2_Migration_Rollback.md](R1_P2_Migration_Rollback.md)|R1-P2-07|P3-MIG-03|
+|BASE-03|[R1_P2_Migration_Rollback.md](R1_P2_Migration_Rollback.md)|R1-P2-07|P3-MIG-02,P3-MIG-05,P3-MIG-07|
+|BASE-04|[R1_P2_Migration_Rollback.md](R1_P2_Migration_Rollback.md)|R1-P2-07|P3-MIG-04|
+|BASE-05|[R1_P2_Migration_Rollback.md](R1_P2_Migration_Rollback.md)|R1-P2-07|P3-MIG-04,P3-MIG-06,P3-MIG-07|
+|F-SPEC-04|[R1_P2_Migration_Rollback.md](R1_P2_Migration_Rollback.md)|R1-P2-07|P3-MIG-01|
+|F-SPEC-05|[R1_P2_Migration_Rollback.md](R1_P2_Migration_Rollback.md)|R1-P2-07|P3-MIG-01,P3-MIG-06|
+|F-SPEC-06|[R1_P2_Migration_Rollback.md](R1_P2_Migration_Rollback.md)|R1-P2-07|P3-MIG-01|
+|F-SPEC-08|[R1_P2_Migration_Rollback.md](R1_P2_Migration_Rollback.md)|R1-P2-07|P3-MIG-01|
+|M01-LIMIT-01|[R1_P2_Migration_Rollback.md](R1_P2_Migration_Rollback.md)|R1-P2-07|P3-MIG-02|
+|M19-LIMIT-01|[R1_P2_Migration_Rollback.md](R1_P2_Migration_Rollback.md)|R1-P2-07|P3-MIG-05|
+|M48-LIMIT-01|[R1_P2_Migration_Rollback.md](R1_P2_Migration_Rollback.md)|R1-P2-07|P3-MIG-03|
+|M32-LIMIT-01|[R1_P2_Migration_Rollback.md](R1_P2_Migration_Rollback.md)|R1-P2-07|P3-MIG-04|

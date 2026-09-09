@@ -915,6 +915,147 @@
           "execution": "not_executed"
         }
       ]
+    },
+    {
+      "id": "R1-P2-07",
+      "number": 7,
+      "document": "R1_P2_Migration_Rollback.md",
+      "requirements": [
+        "BASE-01",
+        "BASE-02",
+        "BASE-03",
+        "BASE-04",
+        "BASE-05",
+        "F-SPEC-04",
+        "F-SPEC-05",
+        "F-SPEC-06",
+        "F-SPEC-08",
+        "M01-LIMIT-01",
+        "M19-LIMIT-01",
+        "M48-LIMIT-01",
+        "M32-LIMIT-01"
+      ],
+      "evidence": [
+        {
+          "path": "lib/hris/repository.ts",
+          "classification": "待修改",
+          "sha256": "d29c455ce153d7231728c7821d3571ad92ae60edf6b1811d478dcb6a2f1a1249"
+        },
+        {
+          "path": "drizzle/0009_spotty_redwing.sql",
+          "classification": "可复用",
+          "sha256": "215b7578ceb3213235fc80d6aab2c7792d02dbcccfd67fd116450db3a0dab858"
+        },
+        {
+          "path": "docs/Recovery_Rehearsal.md",
+          "classification": "受限",
+          "sha256": "325fa3054d03a99be4261a048a6cdcfda49a374a5218e4b7cd276abd0da94088"
+        }
+      ],
+      "cases": [
+        {
+          "id": "P3-MIG-01",
+          "requirements": [
+            "F-SPEC-04",
+            "F-SPEC-05",
+            "F-SPEC-06",
+            "F-SPEC-08"
+          ],
+          "given": "含旧JSON租户、规范化租户和未知有效日期/同名法人",
+          "when": "分批回填两遍",
+          "then": "personId不变、未知不猜测、确定性映射不重复，源历史摘要不变",
+          "evidence": "隔离迁移逐键差异和源/目标manifest",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-MIG-02",
+          "requirements": [
+            "BASE-03",
+            "M01-LIMIT-01"
+          ],
+          "given": "100行源在回填中并发变更，某批提交后丢响应",
+          "when": "中断、接管、重复同批请求",
+          "then": "CAS失败无半批、结果未知查回执，旧fence拒绝，cursor不漏不重复",
+          "evidence": "批次回执/租约和故障注入时序",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-MIG-03",
+          "requirements": [
+            "BASE-01",
+            "BASE-02",
+            "M48-LIMIT-01"
+          ],
+          "given": "迁移前后有撤权账号与仅直线权经理",
+          "when": "读兼容投影和写旧API",
+          "then": "撤权保持，字段和关系授权不扩大，新能力无默认授权",
+          "evidence": "双投影授权集合对账",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-MIG-04",
+          "requirements": [
+            "BASE-04",
+            "BASE-05",
+            "M32-LIMIT-01"
+          ],
+          "given": "21数据集、合同/快照附件、墓碑、缺对象",
+          "when": "切读并比对逐键及附件摘要",
+          "then": "不双计、不填补假历史、损坏对象隔离、缺快照不可用",
+          "evidence": "21数据集oracle与对象manifest差异",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-MIG-05",
+          "requirements": [
+            "M19-LIMIT-01",
+            "BASE-03"
+          ],
+          "given": "D7一审在途、终态审批、外部结果未知",
+          "when": "迁移/恢复后查询并重复旧请求",
+          "then": "模板/节点签名保持，终态不重放，未知外部调用不盲重试",
+          "evidence": "审批实例/命令回执前后对照",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-MIG-06",
+          "requirements": [
+            "BASE-05",
+            "F-SPEC-05"
+          ],
+          "given": "切换后新增多任职，旧客户端只有org字段",
+          "when": "要求回退与旧PUT",
+          "then": "旧写被挡，前向修复/兼容只读保全新事实；无drop操作",
+          "evidence": "回滚演练方案执行记录与不丢事实校验",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-MIG-07",
+          "requirements": [
+            "BASE-05",
+            "BASE-03"
+          ],
+          "given": "实际DDL偏离0009或某旧写入口未受epoch控制",
+          "when": "执行前置核查",
+          "then": "SCHEMA_DRIFT/WRITER_NOT_FENCED阻止回填，仅修复前置条件后接续",
+          "evidence": "DDL清单、入口审计和闸门结果",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        }
+      ]
     }
   ]
 }
