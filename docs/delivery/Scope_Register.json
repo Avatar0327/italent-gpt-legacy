@@ -65,7 +65,9 @@
           "BC-F30",
           "BC-F31",
           "BC-F32",
-          "BC-F33"
+          "BC-F33",
+          "BC-F34",
+          "BC-F35"
         ],
         "fieldRefs": [
           "BC-F03-F001",
@@ -450,7 +452,40 @@
           "BC-F33-F016",
           "BC-F33-F017",
           "BC-F33-F018",
-          "BC-F33-F019"
+          "BC-F33-F019",
+          "BC-F35-F001",
+          "BC-F35-F002",
+          "BC-F35-F003",
+          "BC-F35-F004",
+          "BC-F35-F005",
+          "BC-F35-F006",
+          "BC-F35-F007",
+          "BC-F35-F008",
+          "BC-F35-F009",
+          "BC-F35-F010",
+          "BC-F35-F011",
+          "BC-F35-F012",
+          "BC-F35-F013",
+          "BC-F35-F014",
+          "BC-F35-F015",
+          "BC-F35-F016",
+          "BC-F35-F017",
+          "BC-F35-F018",
+          "BC-F35-F019",
+          "BC-F35-F020",
+          "BC-F35-F021",
+          "BC-F35-F022",
+          "BC-F35-F023",
+          "BC-F35-F024",
+          "BC-F35-F025",
+          "BC-F35-F026",
+          "BC-F35-F027",
+          "BC-F35-F028",
+          "BC-F35-F029",
+          "BC-F35-F030",
+          "BC-F35-F031",
+          "BC-F35-F032",
+          "BC-F35-F033"
         ],
         "sourceDepth": "P：局部页面/字段/说明；含F：合成组织R/A/B创建及查询、职位JA关联保存；非完整M01",
         "gapRef": "M01",
@@ -503,7 +538,9 @@
             "BC-F30",
             "BC-F31",
             "BC-F32",
-            "BC-F33"
+            "BC-F33",
+            "BC-F34",
+            "BC-F35"
           ],
           "inferences": "原站已观察事实仅限所列证据；数学示例推导或候选设计另标，未实际执行业务；业务包映射按已观察职责进行规划，不代表需求验收。",
           "restricted": "已验证单账号合成组织创建与重读；其余字段边界、独立审批、跨角色及复杂任职仍按逐页unknown保留。最新合成测试授权继续有效，外部通知/支付/签署未获授权。",
@@ -5880,7 +5917,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-09T02:41:38.744518+00:00",
+    "updatedAt": "2026-09-09T03:02:31.159209+00:00",
     "authority": "本轮用户指令；Scope_Register.json是唯一范围与验收事实源；P1附属条目不增加48组或59项分母",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -30335,7 +30372,8 @@
         "sourceStatement": "输入测试A或B名称后，实时搜索分别返回同名结果及租户根/测试R/测试A或B完整路径。测试B已由此前保存/确认和本次独立查询闭合创建结果；不因原组织树读取超时重建。选择A后职位所属组织字段显示P1V-20260909-测试A。",
         "unknown": "选择器结果未暴露B系统UUID，仍从组织详情待取；其编码/完整路径及唯一匹配结果已记录，不用猜测UUID。搜索树节点与搜索结果列表为不同控件，不能只读取树节点判定无结果；未验证跨角色或历史日期组织选择范围。",
         "operations": "打开所属组织→输入完整测试名称→读取搜索结果路径→选择A，不修改现有组织",
-        "flowRef": []
+        "flowRef": [],
+        "limitationResolution": "2026-09-09后续组织名称筛选补到B系统UUID aa1fdd68-e907-4daf-92ce-f22b55aa27fc；保留早期选择器本身未暴露ID的事实"
       },
       {
         "id": "BC-F31",
@@ -30889,9 +30927,447 @@
         ],
         "visibleStates": "详情启用；重复校验提示用语生效独立记录",
         "sourceStatement": "JB（de20395f-6d74-4305-9c45-db3ec2209d2d）在测试B中使用与A内JA相同名称、不同编码，保存成功；名称筛选同时显示两条不同ID/编码。JB详情确认编码P1V-20260909-JB、所属测试B、设立日期2026-09-09、状态启用。创建时生效日期输入为空，但保存后详情显示2026-09-09。详情另见是否涉密职位/顺序号/直线上级，不能简单等同新建字段集。",
-        "unknown": "当前对照只支持本租户同组织生效同名被拒、不同组织同名可保存；不覆盖其他配置、状态、职级。生效日回填为观察日不证明取服务器当日还是设立日，需要不同日期对照；不把即时启用说明为完整未来生效算法。当前B关联显示名称无UUID链接，编号仍待详情补取。",
+        "unknown": "当前对照只支持本租户同组织生效同名被拒、不同组织同名可保存；不覆盖其他配置、状态、职级。生效日回填为观察日不证明取服务器当日还是设立日，需要不同日期对照；不把即时启用说明为完整未来生效算法。当前职位详情B关联显示名称无UUID链接；后续已由组织列表名称筛选取得B的系统UUID，见BC-F30补证。",
         "operations": "新空表选B→同名不同编码保存→筛选双记录→打开JB详情核对字段",
         "flowRef": []
+      },
+      {
+        "id": "BC-F34",
+        "moduleId": "M01",
+        "path": "入职管理 > 添加待入职（当前新建入口限制）",
+        "evidenceRef": "BC-F34",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-09",
+        "recordedAt": "2026-09-09T02:52:07.283066+00:00",
+        "observationTimePrecision": "本次查询/入口检查归档时间",
+        "level": "P",
+        "recordType": "访问或交互受限",
+        "role": "当前单账号",
+        "layout": "待入职列表姓名筛选与新建按钮",
+        "fields": [],
+        "visibleStates": "未形成新建业务状态",
+        "sourceStatement": "筛选合成标记P1V-20260909，匹配仅筛选标签。添加待入职按钮两次点击均未显示表单；原有popup iframe宽度0，无新增标签页、未见错误提示。未填写/保存，不作创建结果推断。",
+        "unknown": "BC-F27历史可读空表仍保留，当前入口不响应原因未知（未证明权限拒绝）。不把菜单/按钮可见作为可创建或保存成功。",
+        "operations": "查询→两次有限打开尝试→检查实际结果→转替代路径",
+        "flowRef": []
+      },
+      {
+        "id": "BC-F35",
+        "moduleId": "M01",
+        "path": "人员信息 > 员工 > 新增员工（合成草稿与保存校验）",
+        "evidenceRef": "BC-F35",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-09",
+        "recordedAt": "2026-09-09T03:02:31.159209+00:00",
+        "observationTimePrecision": "本链归档时间",
+        "level": "F",
+        "recordType": "已通过合成草稿执行校验（未创建）",
+        "role": "当前单账号",
+        "layout": "新增员工表单33标签；只保存校验，未确认记录创建",
+        "fields": [
+          {
+            "id": "BC-F35-F001",
+            "label": "姓名",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F002",
+            "label": "电子邮件",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": "初始有UI必填标记，服务端完整约束未穷尽",
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F003",
+            "label": "证件类型",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F004",
+            "label": "证件号码",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F005",
+            "label": "手机号码",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F006",
+            "label": "性别",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F007",
+            "label": "邀请激活账号",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F008",
+            "label": "星座",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F009",
+            "label": "用工形式",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F010",
+            "label": "爱好",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F011",
+            "label": "人员类别",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F012",
+            "label": "业务组织",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F013",
+            "label": "利润中心",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F014",
+            "label": "入职日期",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": "初始有UI必填标记，服务端完整约束未穷尽",
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F015",
+            "label": "工号",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F016",
+            "label": "部门",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": "初始有UI必填标记，服务端完整约束未穷尽",
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F017",
+            "label": "职位",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F018",
+            "label": "职级",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F019",
+            "label": "是否部门负责人",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F020",
+            "label": "是否部门负责人",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F021",
+            "label": "工作地点",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F022",
+            "label": "是否有试用期",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": "初始有UI必填标记，服务端完整约束未穷尽",
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F023",
+            "label": "人员品项",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F024",
+            "label": "层级",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F025",
+            "label": "试用期(月)",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": "初始有UI必填标记，服务端完整约束未穷尽",
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F026",
+            "label": "预计试用结束日期",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": "初始有UI必填标记，服务端完整约束未穷尽",
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F027",
+            "label": "直线经理",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F028",
+            "label": "虚线经理",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F029",
+            "label": "公司",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F030",
+            "label": "期限类型",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F031",
+            "label": "合同期限(月)",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F032",
+            "label": "终止日期",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          },
+          {
+            "id": "BC-F35-F033",
+            "label": "选择电子签署模板",
+            "context": "员工新增表单",
+            "controlType": "UI控件，详见源记录",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F35"
+          }
+        ],
+        "visibleStates": "邀请激活账号当前否；试用期初始是改否；保存校验未通过",
+        "sourceStatement": "员工新增与待入职空表不同：电子邮件带必填标记，姓名无该标记但不能推断姓名可空。邀请激活账号默认选否。是否有试用期改否后月数/预计结束必填标记取消；关联A后搜索同名职位仅见JA编码。直接填日期后可能未保留，日期控件今天选择后输入为2026-09-09。合成邮箱example.invalid失焦保留。保存提示劳动合同期限类型必填；没有确认创建。后续核对发现非测试经理/公司自动带入、工号重算；未保存这些真实值到证据。",
+        "unknown": "默认关联具体触发条件、通知/账号实际产生、公司/经理清空语义、合同类型与期限依赖的完整规则未知。试用期字段取消必填不等于被删除或失效。无法借本次失败验证任职/审批/生效。",
+        "operations": "填写合成值→选A/JA→关闭试用期→日期控件今天→保存一次校验拒绝→尝试清除默认关联未确认→取消草稿",
+        "flowRef": [],
+        "limitationResolution": "刷新后丢弃未保存表单；员工选择器按完整合成姓名搜索为空。实际保存结果无已创建ID；入口查询范围之外仍不做绝对不存在断言。"
       }
     ],
     "humanAcceptancePrerequisite": false,
@@ -31258,7 +31734,7 @@
           "verify": "记录必填、重复提示、保存后ID及组织/职位关联；比较当前规则实际结果，不修改规则开关",
           "effects": "组织和职位可能进入全局选择器、指标和自动同步；先确认测试范围",
           "recovery": "仅对本轮对象保留ID及结果；停止或移除须检查引用和批准边界，不保证可删除或物理回滚",
-          "status": "已完成测试组织R保存与重读；A/B及职位关系继续"
+          "status": "测试组织R/A/B和职位JA/JB已保存并重读ID；同组织同名拒绝、跨组织同名成功及状态/日期已补证；后续人员关联继续"
         },
         {
           "id": "P1V-F02",
@@ -31357,7 +31833,7 @@
         }
       ],
       "laterPackages": "首包后按BP-C→BP-L→BP-P→BP-R→BP-A→BP-S→BP-I依次补齐最小合成前置数据、执行必要可控状态流转、即时写入证据和规格；不只创建记录，不等所有48组结束才写需求；所有外部通知/支付/签署仍在本次授权之外。",
-      "creationOutcomeNote": "组织P1V-20260909-R已保存并重新查询，记录ID明确；M30/M31前轮新建入口未保存，无可确认草稿ID，不重复新建相同未知记录。",
+      "creationOutcomeNote": "R/A/B及JA/JB均已保存并查询到系统UUID；JA2同组织同名保存明确被拒且未保存窗口已关闭。M30/M31前轮只点新建未保存，无可确认草稿ID，不重复创建未知对象。",
       "authorizationHistory": [
         {
           "recordedAt": "2026-09-09T01:32:59.407213+00:00",
@@ -31391,12 +31867,13 @@
         {
           "id": "P1OP-F-003",
           "at": "2026-09-09T02:07:41.658936+00:00",
-          "objectRefs": "拟建P1V-20260909-B；父级3342da23-ae25-4968-83fa-6748ee6d29fd",
+          "objectRefs": "aa1fdd68-e907-4daf-92ce-f22b55aa27fc（P1V-20260909-B）；父级3342da23-ae25-4968-83fa-6748ee6d29fd",
           "before": "上级已核对为测试R，生效2026-09-09，名称自动带入简称",
           "action": "保存及确认新增测试B各一次",
-          "after": "在职位新建的部门实时搜索中查到唯一名称P1V-20260909-测试B及根/测试R/测试B路径，独立查询确认B已保存；选择器未显示系统UUID",
+          "after": "在职位新建的部门实时搜索中查到唯一名称P1V-20260909-测试B及根/测试R/测试B路径，独立查询确认B已保存；选择器未显示系统UUID；随后按组织名称筛选查到同编码和系统UUID aa1fdd68-e907-4daf-92ce-f22b55aa27fc",
           "evidence": "BC-F29 / BC-F30",
-          "next": "复用B，不再重复创建；后续从组织详情取得系统UUID"
+          "next": "已确认对象ID，继续复用，不重复创建",
+          "resolvedAt": "2026-09-09T02:49:08.570192+00:00"
         },
         {
           "id": "P1OP-F-004",
@@ -31427,6 +31904,26 @@
           "after": "保存窗口关闭，当前名称筛选列表同时查到JA和JB的不同ID/编码；跨组织同名保存成功",
           "evidence": "BC-F33",
           "next": "保留JB，读取其详情/关联；同名差异只回填证据，不代为选择产品规则"
+        },
+        {
+          "id": "P1OP-F-007",
+          "at": "2026-09-09T02:52:07.283066+00:00",
+          "objectRefs": "待入职列表筛选P1V-20260909；未填写或提交人员记录",
+          "before": "姓名筛选后仅匹配筛选条件标签，未见同标记记录；添加待入职入口可见",
+          "action": "点击添加待入职两次，间隔核对iframe/表单/弹窗/错误和标签；无提交操作",
+          "after": "未显示可见新建表单，隐藏iframe保持宽度0，没有错误文本或新对象ID；不把按钮返回当成创建成功",
+          "evidence": "BC-F34",
+          "next": "停止重复点击；转人员信息替代入口，后续可在页面重新加载后有限复核，禁止盲目重复创建"
+        },
+        {
+          "id": "P1OP-F-008",
+          "at": "2026-09-09T02:57:28.724777+00:00",
+          "objectRefs": "拟新增人员P1V-20260909-测试甲；工号P1V-20260909-EA；部门A 2dabd0b9-b519-4955-af98-aa7fc7a3eaff；职位JA b52e8c1f-d24a-4e1c-9c89-e7c46201e761",
+          "before": "人员新增表单，姓名/合成不可投递邮箱p1v-20260909-ea@example.invalid/工号已填写；入职日期2026-09-09通过日期控件选择；部门A及JA已选择；邀请激活账号选否、是否有试用期选否；无证件/电话/电子签模板/工资",
+          "action": "保存一次，读取明确校验提示；尝试清空自动关联未确认成功，退出未保存草稿",
+          "after": "提示“当类型为劳动合同时，期限类型必填”，窗口仍打开，无成功结果或ID。自动带入非测试经理和公司、自动生成工号覆盖早期输入；不继续补合同后盲目提交，不记录真实经理个人信息；随后内外取消及已定位可见按钮均未使窗口关闭，无JS确认框；执行页面刷新丢弃未保存草稿，刷新后待查合成姓名确保结果。；刷新后员工筛选器输入完整合成姓名并按Enter，搜索结果显示“这里什么都没有...”，未见已创建人员。",
+          "evidence": "BC-F35（待本链结果归档）",
+          "next": "当前查询未见对象，继续待入职替代入口；不将当前范围查询扩成全租户绝无记录的断言。"
         }
       ],
       "records": [
@@ -31451,13 +31948,13 @@
           "retention": "后续职位/人员的测试前置，未清理"
         },
         {
-          "objectId": "未取得系统UUID（编码P1V-20260909-B）",
+          "objectId": "aa1fdd68-e907-4daf-92ce-f22b55aa27fc",
           "moduleId": "M01",
           "objectType": "组织",
           "marker": "P1V-20260909-B / P1V-20260909-测试B",
           "relations": "部门选择器路径为租户根/测试R/测试B；父级测试R UUID 3342da23-ae25-4968-83fa-6748ee6d29fd",
-          "status": "保存成功，已由独立部门选择器查询确认；系统UUID待取得",
-          "evidence": "BC-F30",
+          "status": "保存成功；职位实时搜索完整路径与组织名称筛选均确认，编码/名称/系统UUID一致",
+          "evidence": "BC-F29 / BC-F30 / BC-F33；2026-09-09组织筛选补取UUID",
           "retention": "保留为测试前置，未清理"
         },
         {
@@ -31475,7 +31972,7 @@
           "moduleId": "M01",
           "objectType": "职位",
           "marker": "P1V-20260909-JB / P1V-20260909-测试职位",
-          "relations": "所属组织测试B（UUID待取）；与测试A的JA同名",
+          "relations": "所属组织测试B aa1fdd68-e907-4daf-92ce-f22b55aa27fc；与测试A的JA同名",
           "status": "保存成功，详情状态启用；设立2026-09-09，生效日留空后保存详情为2026-09-09（回填算法待证）",
           "evidence": "BC-F33",
           "retention": "保留为跨组织对照及测试人员前置，未清理"
@@ -31484,7 +31981,7 @@
       "residuals": [
         "组织3342da23-ae25-4968-83fa-6748ee6d29fd（P1V-20260909-R）保留为测试前置；未终止/删除，关系与后续使用见records",
         "测试组织A 2dabd0b9-b519-4955-af98-aa7fc7a3eaff保留用于关联，父级为测试R",
-        "测试组织B（编码P1V-20260909-B）已在部门选择器确认存在并属于测试R，UUID待从详情取得；保留不重复新建",
+        "测试组织B aa1fdd68-e907-4daf-92ce-f22b55aa27fc（编码P1V-20260909-B）已由组织名称筛选取到ID，归属测试R，保留用于JB及人员关联",
         "职位JA b52e8c1f-d24a-4e1c-9c89-e7c46201e761保留，属于测试A",
         "职位JB de20395f-6d74-4305-9c45-db3ec2209d2d保留，关联测试B；JA2同组织重复保存被拒，未确认产生记录"
       ]
@@ -31601,7 +32098,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-09T02:41:38.744518+00:00",
+    "updatedAt": "2026-09-09T03:02:31.159209+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -31753,6 +32250,23 @@
               "docs/P1_Source_Observations_20260907.md"
             ],
             "classification": "原站合成执行/字段事实＋现有模型差异，新增产品设计待评审",
+            "accepted": false
+          },
+          {
+            "id": "BP-F-REQ-12",
+            "object": "人员新增、待入职与默认关联隔离",
+            "fields": "BC-F27待入职与BC-F35员工新增使用不同字段模板/必填；员工新增邮箱UI必填，邀请激活账号当前否，试用期是/否控制月数和预计结束必填。原站保存另校验劳动合同期限类型。工号可在关联或异步重算后覆盖输入，触发算法未明。",
+            "roles": "创建权限不等于独立审批或可发账号邀请；合成测试保留邀请否、不选电子签，不能让预置真实经理关联冒充可控测试审批人。",
+            "lifecycle": "新增表单草稿与已创建员工/任职分开；保存前检查最终绑定，保存后以结果及实际ID确认。原站此链仅校验拒绝，没有生效记录。",
+            "actions": "主档新增/待入职是不同入口；当新建不响应先有限刷新/公告检查，不重复提交。取消后核对实际窗口和查询，不能从点击返回推定成功。",
+            "acceptance": "候选：分别验证两种入口的必填与默认；切换试用期后校验非必填、已有值保留/清除边界；组织改变后职位筛选和工号/经理/公司最终绑定可核对；失败不产生可误认成功的员工ID；邀请否及签署空时不得据此宣称通知链已测。具体项目业务默认须评审。",
+            "gap": "本项目employee简单模型未覆盖原站两入口、试用期明细、雇佣/合同预设和账号邀请；真实关联自动带入的触发/清空需补证，暂阻该原站人员保存路径，其他测试包继续。",
+            "codeRefs": [
+              "lib/hris/model.ts",
+              "lib/hris/authorization.ts",
+              "docs/P1_Source_Observations_20260907.md"
+            ],
+            "classification": "原站执行校验/控件联动事实，产品扩展与默认建议未批准",
             "accepted": false
           }
         ],
@@ -33998,9 +34512,12 @@
         "电子签认证字段映射/存证附页不等于认证或签署成功，人工合同signed与回执验证分开",
         "日期参数只在部分报表有实际过滤，asOf仅生成时刻；订阅转交需独立字段/接收权限",
         "会议多时区使用时间例外不是无限预约；内部排期地点字符串不等于会议资源",
-        "经理团队分析由历史N空态补为BC-I22静态指标/范围P证据；全48组均局部P，不代表完整模块或P1验收，流动与当前范围分母需分开"
+        "经理团队分析由历史N空态补为BC-I22静态指标/范围P证据；全48组均局部P，不代表完整模块或P1验收，流动与当前范围分母需分开",
+        "原站组织编码/生效日/行政上级/简称与项目现有组织对象分开；合成R/A/B父子链已读ID，不自动批准扩展模型",
+        "职位同名约束已以同组织拒绝、跨组织成功对照；代码唯一与名称唯一分开，F-SPEC-01仍待产品策略及职级证据",
+        "原站职位详情启用与重复提示生效分开；空生效日保存后为观察日，只能记实际值，默认算法和未来时点仍待证"
       ],
-      "remaining": "全48组当前缺口已清理历史残留；继续各组具体只读补证、算法/权限/外部接口未明项及需求业务评审。经理看板与部分空模板保留实际限制，不以例外未批准标通过。"
+      "remaining": "全48组当前缺口已清理历史残留；继续各组具体已授权合成测试及只读补证、算法/权限/外部接口未明项及需求业务评审。经理看板与部分空模板保留实际限制，不以例外未批准标通过。"
     },
     "validationEvidence": [
       {
