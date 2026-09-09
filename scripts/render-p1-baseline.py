@@ -300,6 +300,9 @@ if cr.get('currentFocus'):
  header+='BC-C30原取证已在此前完成：P1OP-C-019手工入池、020设置培养中/3~6个月；本次完成字段默认值边界、源操作/记录→BP-C-REQ-04→实现差异追溯，修正旧“未手动入池”说明。观察日期仍为原记录日期，本次整理不计新增源执行或复刻测试。\n\n'
  header+='最近确认的M17池fd92d3a7-7925-4b36-a22b-a4ab1fcfa049有1名EA（EmployeeInformation 71e030ac-c52e-475f-b7bb-c321af71e46c），培养中/3~6个月；成员UUID未知，用复合定位。未出池/重入/建立继任；停用IDP流程一次保存结果未知须先查。M18已保存项目3d1d07ed-d10e-4c51-8a91-22d5d20d83b1仍以最近新建/未启动证据为准，不重建。当前状态未能联网复查，不能将此前状态写成本次新读。\n\n'
  header+='浏览器：'+cr['sourceBrowsingStatus']+' 合成测试授权保持，不逐条重问；未出现重新登录/全部授权提示，不绕过控制。\n\n'
+ if cr.get('lastVerifiedSync'):
+  sync=cr['lastVerifiedSync'];header+='最近已核实同步：`'+sync['commit']+'` → `'+sync['remoteBranch']+'`；'+sync['result']+'。范围：'+sync['scope']+'。\n\n'
+ if cr.get('currentUnitOutcome'):header+='本单元接续成果：'+cr['currentUnitOutcome']+'\n\n'
  header+='下一步：'+cr['next']+'\n\n'
  header+='验证范围仅文档一致性、引用、同源生成及改动边界；历史测试不记本轮复验，业务和生产验收未提升。未改产品代码、部署或访问者，未开启代理。后续历史记录只保留发生时含义，不覆盖本段当前焦点。\n\n<!-- P1_RESUME_CURRENT_END -->\n\n'
  for f in [D/'Controller_Resume.md',R/'docs/Execution_Checkpoint.md']:
