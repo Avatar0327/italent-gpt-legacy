@@ -1,9 +1,9 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-09T18:40:16.868160+00:00",
-  "primaryModuleId": "M03",
+  "generatedFromUpdatedAt": "2026-09-09T18:45:46.389452+00:00",
+  "primaryModuleId": "M26",
   "backupModuleId": null,
-  "activeExecutionModuleId": "M03",
+  "activeExecutionModuleId": "M26",
   "moduleCount": 15,
   "completeCount": 0,
   "restrictedCount": 6,
@@ -639,9 +639,9 @@
       "moduleId": "M03",
       "name": "干部管理2.0",
       "rangeId": "R2",
-      "queueState": "primary",
+      "queueState": "waiting_owner_review",
       "p1AConclusion": {
-        "status": "进行中",
+        "status": "已完成待评审",
         "approvalRecord": null,
         "evidenceRefs": [
           "US-C01-02",
@@ -657,13 +657,13 @@
           "BC-C25",
           "BC-C26"
         ],
-        "limits": "沿用已有局部证据，未代签"
+        "limits": "完整登记范围证据及限制可追溯；LIMIT未批准，不计P1A关闭"
       },
       "p1BConclusion": {
-        "status": "进行中",
+        "status": "已完成待评审",
         "approvalRecord": null,
         "evidenceRefs": [],
-        "limits": "需求尚未批准"
+        "limits": "对象/字段/权限/状态/异常/契约/实现差异及可执行预期已准备；新规则未批准"
       },
       "conditions": {
         "applicableScopeDetermined": {
@@ -671,16 +671,16 @@
           "basis": "用户已确认15完整登记范围及本轮R顺序"
         },
         "implementationRulesDecided": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": false,
+          "basis": "本模块新规则/LIMIT及消费者未批依赖待集中决定"
         },
         "acceptanceExecutable": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": true,
+          "basis": "Given/When/Then及正常/异常用例已具体化；需求是否获批另判，未执行"
         },
         "dependenciesAndExceptionsResolved": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": false,
+          "basis": "本模块新规则/LIMIT及消费者未批依赖待集中决定"
         }
       },
       "transitionReview": {
@@ -690,10 +690,11 @@
         "approvedAt": null
       },
       "restrictedApproval": null,
+      "p1Closed": false,
+      "closureClass": "已完成待评审",
       "transitionReady": false,
       "missingConditions": [
         "implementationRulesDecided",
-        "acceptanceExecutable",
         "dependenciesAndExceptionsResolved",
         "p1AApproved",
         "p1BApproved",

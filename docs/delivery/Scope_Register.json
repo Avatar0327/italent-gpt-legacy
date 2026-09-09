@@ -1938,10 +1938,18 @@
           "p1B": "not_ready",
           "review": "not_signed",
           "approvedRestricted": false,
-          "assessmentAt": "2026-09-09T06:25:42.812752+00:00",
-          "basis": "BC-C10–13评价配置/算法帮助、C25干部登记/任期ID/述职关联、C26考察结束跨页持久化及考核草稿已有；考核/任免审批通知路由、转正与恢复、角色及评分边界仍缺，未完整P1A/需求就绪。",
-          "blockingIssueIds": [],
-          "next": "当前M03申请通知/路由分支待安全可读配置，继续M17/M18/M26/M37；已登记EA及考察数据复用不重建。",
+          "assessmentAt": "2026-09-09T18:45:46.389452+00:00",
+          "basis": "完整原范围材料已完成，M03-SPEC-01,M03-SPEC-02,M03-SPEC-03,M03-SPEC-04,M03-SPEC-05,M03-SPEC-06与LIMIT未批准；不计关闭",
+          "blockingIssueIds": [
+            "M03-SPEC-01",
+            "M03-SPEC-02",
+            "M03-SPEC-03",
+            "M03-SPEC-04",
+            "M03-SPEC-05",
+            "M03-SPEC-06",
+            "M03-LIMIT-01"
+          ],
+          "next": "按夜间授权排队待集中评审；正式关闭仍M26→M18→M17→M03，未获批准不代签。",
           "acceptanceRefs": [
             {
               "taskId": "C01",
@@ -1983,8 +1991,8 @@
               "BC-C25"
             ],
             "coverageDepth": "局部合成执行",
-            "remaining": "EA任期登记不等选拔评价/任免审批；跨评委/投票阈值及流程权限待源执行，通知需先核收件范围",
-            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "remaining": "源活动/模板/评分帮助部分覆盖；合成登记不等任免批准；多评委及生效全链受限",
+            "next": "集中规则/LIMIT评审及最小补证，不重开宽泛探索",
             "assessedAt": "2026-09-09T10:26:03.101902+00:00",
             "complete": false,
             "requirementAccepted": false
@@ -2002,8 +2010,8 @@
               "BC-C25"
             ],
             "coverageDepth": "局部合成执行",
-            "remaining": "基本信息与访谈/表彰/任免履历不同；已有EA登记，访谈奖惩等子集/附件权限和历史关联未全证",
-            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "remaining": "基础/访谈/表彰入口与合成任期部分覆盖；奖惩/附件/敏感版本未完整，候选保留全部子集",
+            "next": "集中规则/LIMIT评审及最小补证，不重开宽泛探索",
             "assessedAt": "2026-09-09T10:26:03.101902+00:00",
             "complete": false,
             "requirementAccepted": false
@@ -2019,8 +2027,8 @@
               "BC-C26"
             ],
             "coverageDepth": "局部合成执行及未保存考核草稿",
-            "remaining": "已回读考察中与起止；未转正考核提交/独立审批，模板必填/逾期/异常恢复待证",
-            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "remaining": "C26已证结束日期持久化；考核草稿未提交，期限/转正/退出候选待批",
+            "next": "集中规则/LIMIT评审及最小补证，不重开宽泛探索",
             "assessedAt": "2026-09-09T10:26:03.101902+00:00",
             "complete": false,
             "requirementAccepted": false
@@ -2037,8 +2045,8 @@
               "BC-C26"
             ],
             "coverageDepth": "空列表/字段局部观察",
-            "remaining": "述职记录为空、来源/阶段/核验与任期关系待执行，不能用考察期日期证明述职通过",
-            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "remaining": "源空列表/字段及评价表帮助；现考察述职静态，不代完整周期述职，待SPEC05",
+            "next": "集中规则/LIMIT评审及最小补证，不重开宽泛探索",
             "assessedAt": "2026-09-09T10:26:03.101902+00:00",
             "complete": false,
             "requirementAccepted": false
@@ -2046,9 +2054,9 @@
         ],
         "moduleClosure": {
           "rangeId": "R2",
-          "queueState": "primary",
+          "queueState": "waiting_owner_review",
           "p1AConclusion": {
-            "status": "进行中",
+            "status": "已完成待评审",
             "approvalRecord": null,
             "evidenceRefs": [
               "US-C01-02",
@@ -2064,13 +2072,13 @@
               "BC-C25",
               "BC-C26"
             ],
-            "limits": "沿用已有局部证据，未代签"
+            "limits": "完整登记范围证据及限制可追溯；LIMIT未批准，不计P1A关闭"
           },
           "p1BConclusion": {
-            "status": "进行中",
+            "status": "已完成待评审",
             "approvalRecord": null,
             "evidenceRefs": [],
-            "limits": "需求尚未批准"
+            "limits": "对象/字段/权限/状态/异常/契约/实现差异及可执行预期已准备；新规则未批准"
           },
           "conditions": {
             "applicableScopeDetermined": {
@@ -2078,16 +2086,16 @@
               "basis": "用户已确认15完整登记范围及本轮R顺序"
             },
             "implementationRulesDecided": {
-              "value": null,
-              "basis": "尚未逐模块闭环判定，不能算通过"
+              "value": false,
+              "basis": "本模块新规则/LIMIT及消费者未批依赖待集中决定"
             },
             "acceptanceExecutable": {
-              "value": null,
-              "basis": "尚未逐模块闭环判定，不能算通过"
+              "value": true,
+              "basis": "Given/When/Then及正常/异常用例已具体化；需求是否获批另判，未执行"
             },
             "dependenciesAndExceptionsResolved": {
-              "value": null,
-              "basis": "尚未逐模块闭环判定，不能算通过"
+              "value": false,
+              "basis": "本模块新规则/LIMIT及消费者未批依赖待集中决定"
             }
           },
           "transitionReview": {
@@ -2096,7 +2104,241 @@
             "scope": null,
             "approvedAt": null
           },
-          "restrictedApproval": null
+          "restrictedApproval": null,
+          "p1Closed": false,
+          "closureClass": "已完成待评审"
+        },
+        "reviewPackage": {
+          "moduleId": "M03",
+          "documentStatus": "材料完成、等待所有者集中评审",
+          "scope": "选拔任用、档案、考察期、述职",
+          "preparedAt": "2026-09-09T18:45:46.389452+00:00",
+          "basedOnHead": "fcd4ea8d9b3480b74ea62f4b822da1fa9dfdc48d",
+          "approvalRecord": null,
+          "internalDeferralProposals": [],
+          "internalDeferralNote": "完整原范围逐项保留；本轮没有新增内部删减。独立AI及33暂缓模块保持暂缓，最小公共依赖不恢复完整模块。",
+          "confirmedRules": "M37/M06定义与资格规则、M19/M48/M32消费和BASE-01至06仅按已批准范围引用；本模块算法、角色开放和LIMIT仍待本模块批准。D1–D7不重释。",
+          "decisionIds": [
+            "M03-SPEC-01",
+            "M03-SPEC-02",
+            "M03-SPEC-03",
+            "M03-SPEC-04",
+            "M03-SPEC-05",
+            "M03-SPEC-06"
+          ],
+          "exceptionProposals": [
+            {
+              "id": "M03-LIMIT-01",
+              "status": "待所有者批准",
+              "approved": false,
+              "approvalRecord": null,
+              "scope": "原站任期通用日期算法、选拔多评委/阈值等值及缺评、任免/转正提交路由、免职恢复/未来离职联动及敏感档案跨角色未验证；本轮不提交实际任用/审批。",
+              "evidence": "既有US-C01-02,BC-C01,BC-C02,BC-C03,BC-C08,BC-C09,BC-C10,BC-C11,BC-C12,BC-C13,BC-C25,BC-C26；本轮fcd4ea8d9b3480b74ea62f4b822da1fa9dfdc48d静态核对；本单元云浏览器标题可读，旧发展流程导航中断结果已定向回查；M03沿用C08–13和C25/26具体证据，不重复已证任期。源投票/任免/考核提交本轮不执行，未写任何源记录。",
+              "proposal": "建议以已有原站证据、静态差异和明确获批的本模块产品规则关闭P1需求；仅本模块有范围例外，不豁免P2/P3/P4。未批准前不计关闭或转序。",
+              "residualRisk": "错误任命或人事生效、投票分母/阈值不一致、自审利益冲突、过期资格被引用、考察期自动转正及档案敏感泄漏。",
+              "revalidation": "P2：设计干部身份/任期/人事生效/提名/任免记录映射、评分策略与委员会、考察/述职版本与当前权限、增量迁移及未知历史标记；P3：合成验证任期月末/闰年/重叠、多评委阈值等值/弃权缺评、资格失效、调动失败/未知、考察延期退回/撤回/退出和档案撤权；P4：独立多角色、敏感字段/历史/附件/下载权限、跨模块业务及生产容量/恢复验收；E2不新增访问者，管理员操作不代验。"
+            }
+          ],
+          "closedQuestions": [
+            {
+              "problem": "干部身份/任期/任用是否同一对象",
+              "resolution": "源四状态在职干部/免职/离职/退休；StaffID与Employee UUID、AppointmentRecordId不同；现cadreTerm registered/ended/voided不能一一替代",
+              "basis": "US-C01-02、BC-C25；cadre-terms.ts静态"
+            },
+            {
+              "problem": "现任用核对是否完成独立业务",
+              "resolution": "现提名审议后引用同人同岗且已实际生效的调动，调动时间需晚于审议；任用核对不自动生成干部任期",
+              "basis": "fcd4ea8 cadres.ts/static；D1–D7保持"
+            },
+            {
+              "problem": "任期算法有什么证据",
+              "resolution": "源样本2026-09-09加1年显示2027-09-08，考察3月到12-08已回读；跨月末/闰年和其他任用类型未证",
+              "basis": "BC-C25/26 2026-09-09；非完整通用算法"
+            },
+            {
+              "problem": "评分边界是否已明确",
+              "resolution": "源帮助得分“高于”、表单“分即为通过”冲突；投票分母总评委、缺席弃权和舍入未执行。现accepted布尔不能代评价表",
+              "basis": "BC-C11–13 2026-09-08；本轮新推荐显式决定"
+            },
+            {
+              "problem": "现述职和档案覆盖",
+              "resolution": "现本人述职、独立完成/退回；访谈是HR回溯登记且角色标签不授关系权限，未覆盖所有奖惩/表彰及任免履历子集",
+              "basis": "cadres.ts/cadre-interviews.ts静态，未复验"
+            }
+          ],
+          "exitAssessment": {
+            "p1A": "完整登记范围证据及限制可追溯；LIMIT未批准，不计P1A关闭",
+            "p1B": "对象/字段/权限/状态/异常/契约/实现差异及可执行预期已准备；新规则未批准",
+            "transition": "false；材料排队不等模块关闭/转序或R2版本P2批准"
+          },
+          "flowSummary": [
+            "源历史：合成干部任期登记→考察结束日期回读→转正草稿取消；未执行任免审批或考核通过。",
+            "候选：选拔模板和资格政策→提名/多评委→独立任免决定→M01生效→任期核对→考察/周期述职；退出及更正各独立留史。"
+          ],
+          "acceptanceCaseRefs": [
+            "M03-REVIEW-AC01",
+            "M03-REVIEW-AC02",
+            "M03-REVIEW-AC03",
+            "M03-REVIEW-AC04",
+            "M03-REVIEW-AC05",
+            "M03-REVIEW-AC06",
+            "M03-REVIEW-AC07",
+            "M03-REVIEW-AC08",
+            "M03-REVIEW-AC09",
+            "M03-REVIEW-AC10",
+            "M03-REVIEW-AC11",
+            "M03-REVIEW-AC12",
+            "M03-REVIEW-AC13",
+            "M03-REVIEW-AC14"
+          ],
+          "implementationNext": [
+            "可复用：提名/审议/调动关联核对、稳定人员与干部任期、访谈追溯、本人述职与独立核验、期间顺序/重叠保护及事务审计。",
+            "待修改主职限定、登记直生效与正式任命区分、四干部状态映射、当前归档/敏感权限；待新增选拔活动/评价表/委员会评分、完整任免期次/审批生效、考察延期/转正/退出、年度述职和奖惩档案子集。",
+            "设计干部身份/任期/人事生效/提名/任免记录映射、评分策略与委员会、考察/述职版本与当前权限、增量迁移及未知历史标记",
+            "合成验证任期月末/闰年/重叠、多评委阈值等值/弃权缺评、资格失效、调动失败/未知、考察延期退回/撤回/退出和档案撤权"
+          ],
+          "businessAccepted": false,
+          "productionAccepted": false,
+          "next": "按夜间授权排队待集中评审；正式关闭仍M26→M18→M17→M03，未获批准不代签。"
+        },
+        "closureChecklist": [
+          {
+            "id": "M03-CLOSE-01",
+            "scopeItem": "选拔任用",
+            "requirementIds": [
+              "BP-C-REQ-01",
+              "BP-C-REQ-06"
+            ],
+            "evidenceRefs": [
+              "BC-C08",
+              "BC-C09",
+              "BC-C10",
+              "BC-C11",
+              "BC-C12",
+              "BC-C13",
+              "BC-C25"
+            ],
+            "gap": "源活动/模板/评分帮助部分覆盖；合成登记不等任免批准；多评委及生效全链受限",
+            "blocksP1": true,
+            "risk": "错误任命或人事生效、投票分母/阈值不一致、自审利益冲突、过期资格被引用、考察期自动转正及档案敏感泄漏。",
+            "closureMethod": "明确批准所列规则与LIMIT，或补针对性证据修订；材料完备不能代签",
+            "basis": "原站事实/静态事实/候选分列；fcd4ea8d9b3480b74ea62f4b822da1fa9dfdc48d",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M03-SPEC-01",
+              "M03-SPEC-02",
+              "M03-SPEC-03",
+              "M03-SPEC-04",
+              "M03-SPEC-05",
+              "M03-SPEC-06"
+            ]
+          },
+          {
+            "id": "M03-CLOSE-02",
+            "scopeItem": "档案",
+            "requirementIds": [
+              "BP-C-REQ-01"
+            ],
+            "evidenceRefs": [
+              "US-C01-02",
+              "BC-C02",
+              "BC-C03",
+              "BC-C25"
+            ],
+            "gap": "基础/访谈/表彰入口与合成任期部分覆盖；奖惩/附件/敏感版本未完整，候选保留全部子集",
+            "blocksP1": true,
+            "risk": "错误任命或人事生效、投票分母/阈值不一致、自审利益冲突、过期资格被引用、考察期自动转正及档案敏感泄漏。",
+            "closureMethod": "明确批准所列规则与LIMIT，或补针对性证据修订；材料完备不能代签",
+            "basis": "原站事实/静态事实/候选分列；fcd4ea8d9b3480b74ea62f4b822da1fa9dfdc48d",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M03-SPEC-01",
+              "M03-SPEC-02",
+              "M03-SPEC-03",
+              "M03-SPEC-04",
+              "M03-SPEC-05",
+              "M03-SPEC-06"
+            ]
+          },
+          {
+            "id": "M03-CLOSE-03",
+            "scopeItem": "考察期",
+            "requirementIds": [
+              "BP-C-REQ-01"
+            ],
+            "evidenceRefs": [
+              "BC-C25",
+              "BC-C26"
+            ],
+            "gap": "C26已证结束日期持久化；考核草稿未提交，期限/转正/退出候选待批",
+            "blocksP1": true,
+            "risk": "错误任命或人事生效、投票分母/阈值不一致、自审利益冲突、过期资格被引用、考察期自动转正及档案敏感泄漏。",
+            "closureMethod": "明确批准所列规则与LIMIT，或补针对性证据修订；材料完备不能代签",
+            "basis": "原站事实/静态事实/候选分列；fcd4ea8d9b3480b74ea62f4b822da1fa9dfdc48d",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M03-SPEC-01",
+              "M03-SPEC-02",
+              "M03-SPEC-03",
+              "M03-SPEC-04",
+              "M03-SPEC-05",
+              "M03-SPEC-06"
+            ]
+          },
+          {
+            "id": "M03-CLOSE-04",
+            "scopeItem": "述职",
+            "requirementIds": [
+              "BP-C-REQ-01",
+              "BP-C-REQ-06"
+            ],
+            "evidenceRefs": [
+              "BC-C25",
+              "BC-C26"
+            ],
+            "gap": "源空列表/字段及评价表帮助；现考察述职静态，不代完整周期述职，待SPEC05",
+            "blocksP1": true,
+            "risk": "错误任命或人事生效、投票分母/阈值不一致、自审利益冲突、过期资格被引用、考察期自动转正及档案敏感泄漏。",
+            "closureMethod": "明确批准所列规则与LIMIT，或补针对性证据修订；材料完备不能代签",
+            "basis": "原站事实/静态事实/候选分列；fcd4ea8d9b3480b74ea62f4b822da1fa9dfdc48d",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M03-SPEC-01",
+              "M03-SPEC-02",
+              "M03-SPEC-03",
+              "M03-SPEC-04",
+              "M03-SPEC-05",
+              "M03-SPEC-06"
+            ]
+          }
+        ],
+        "sourceAccessThisUnit": {
+          "checkedAt": "2026-09-09T18:45:46.389452+00:00",
+          "result": "本单元云浏览器标题可读，旧发展流程导航中断结果已定向回查；M03沿用C08–13和C25/26具体证据，不重复已证任期。源投票/任免/考核提交本轮不执行，未写任何源记录。",
+          "newSourceWrites": false,
+          "newHumanVisitors": false
+        },
+        "reviewSupplement": {
+          "sourceTimes": "既有原站观察日期逐页见P1_Page_Catalog，历史合成结果不记为本轮执行；当前静态基准fcd4ea8d9b3480b74ea62f4b822da1fa9dfdc48d",
+          "coverage": {
+            "选拔任用": "源活动/模板/评分帮助部分覆盖；合成登记不等任免批准；多评委及生效全链受限",
+            "档案": "基础/访谈/表彰入口与合成任期部分覆盖；奖惩/附件/敏感版本未完整，候选保留全部子集",
+            "考察期": "C26已证结束日期持久化；考核草稿未提交，期限/转正/退出候选待批",
+            "述职": "源空列表/字段及评价表帮助；现考察述职静态，不代完整周期述职，待SPEC05"
+          },
+          "dependencyContracts": [
+            "M01生效主兼职/调动，M19独立路由，M37定义/M06资格/M17后备各具体版本；M18/M26只能按允许用途作参考。",
+            "M48本人述职/考察投影，M32任期/评价的许可字段与分母；六基础安全/版本/审计/恢复/接口共用，敏感任用字段属于本模块新评审。",
+            "不恢复M02/M15完整模块，不自动购买测评、电子签、支付；外部未配置不冒成功。"
+          ],
+          "targetedEvidence": [
+            "按AppointmentRecordId493a9f87只读核任期/考察/述职关联；未来离职影响若当前日期变化须按真实时点回查，不改时钟或记录。",
+            "只读评价表阈值/弃权缺评帮助及模板版本；文字冲突保留产品推荐，禁止投真实票补证。",
+            "只读转正/任免流程节点和通知预览；不可见时保留受限，不提交审批。",
+            "只读档案子集与字段权限说明，不打开无关人员敏感材料。"
+          ],
+          "scopeDisposition": "原范围全保留；未覆盖/部分覆盖不等暂缓",
+          "staticHead": "fcd4ea8d9b3480b74ea62f4b822da1fa9dfdc48d"
         }
       },
       "businessPackage": "BP-C"
@@ -12533,7 +12775,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-09T18:40:16.868160+00:00",
+    "updatedAt": "2026-09-09T18:45:46.389452+00:00",
     "authority": "Scope_Register.json为唯一范围/验收事实源；历史48/59保留，当前15模块及基础按SCOPE-20260909-CORE15。",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -45550,25 +45792,25 @@
       "latestAuthorizationAt": "2026-09-09T06:25:42.812752+00:00",
       "scopeChangeHead": "f31cb2b5e1894723288fd884d4e3bd895ae57327",
       "scopeChange": "SCOPE-20260909-CORE15",
-      "latestCheckpointAt": "2026-09-09T18:40:16.868160+00:00",
-      "latestCommittedHead": "e40f75f59da103d449e28cb00b87aca4ea8c3e40",
+      "latestCheckpointAt": "2026-09-09T18:45:46.389452+00:00",
+      "latestCommittedHead": "fcd4ea8d9b3480b74ea62f4b822da1fa9dfdc48d",
       "latestEvidenceRefs": [
         "BC-C39",
         "BC-C40"
       ],
-      "next": "M03唯一主模块：选拔任用/档案/考察期/述职，复用任期493a9f87证据，核对独立审批、生效和敏感权限",
+      "next": "四模块可自主材料齐备；返回M26为正式评审焦点，生成R2合并决定包与一次性批准草稿，不进入R3",
       "browserRecovery": "旧实例失效后按官方指引发现唯一新实例并尝试tabs.list/new/goto/title；tab8创建成功但读取/导航刷新均超时。完成专业域/首包/基础/内部范围离线单元后再核tabs.list仍20s超时，停止重复。同一实例未收到登录/全量授权提示，不绕过控制。",
-      "sourceBrowsingStatus": "本单元tab9可读标题/查询控件；发展流程目录查询调用被工具中断，未确认导航结果，未进行提交。BC-C28旧停用流程无ID、持久化仍unknown；未重复创建或清理。",
-      "currentFocus": "M03唯一主模块；夜间材料等待队列M26,M18,M17",
+      "sourceBrowsingStatus": "本单元云浏览器标题可读，旧发展流程导航中断结果已定向回查；M03沿用C08–13和C25/26具体证据，不重复已证任期。源投票/任免/考核提交本轮不执行，未写任何源记录。",
+      "currentFocus": "M26唯一主模块；夜间材料等待队列M26,M18,M17,M03",
       "checkpointCommitSemantics": "latestCommittedHead为本单元编辑开始前已存在提交；本记录所属提交用git log -1 -- docs/delivery/Scope_Register.json解析，不能将基准冒充最终HEAD。",
-      "workingTreeAtResume": "main e40f75f59da103d449e28cb00b87aca4ea8c3e40；上单元已推送核对，当前仅P1文档/同源脚本",
+      "workingTreeAtResume": "main fcd4ea8d9b3480b74ea62f4b822da1fa9dfdc48d；上单元已推送核对，当前仅P1文档/同源脚本",
       "lastVerifiedSync": {
-        "commit": "e40f75f59da103d449e28cb00b87aca4ea8c3e40",
+        "commit": "fcd4ea8d9b3480b74ea62f4b822da1fa9dfdc48d",
         "remoteBranch": "main",
         "result": "上单元push及ls-remote一致；本单元最终所属提交恢复时查询Git",
         "scope": "P1已保存单元"
       },
-      "currentUnitOutcome": "M17完整范围材料已准备；新规则未批，6/15受限关闭不提升；只main P1文档/生成，无源写/产品/P2工作树修改。",
+      "currentUnitOutcome": "M03完整范围材料已准备；新规则未批，6/15受限关闭不提升；只main P1文档/生成，无源写/产品/P2工作树修改。",
       "previousAtomicOutcome": "BC-C30与后续M17静态差异已提交b64ce7c；最近池1EA培养中/3~6个月。M17停用IDP流程保存结果未知，M18新建项目未启动；本轮不扩展或重复提交。",
       "sourceWritePolicy": "本轮最新边界：原站只读，不修改原站数据；此前合成记录授权作为历史保留，本夜间单元不据此新增写入。"
     },
@@ -46851,7 +47093,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M03唯一主模块；夜间材料等待队列M26,M18,M17",
+    "activeWorkPackage": "M26唯一主模块；夜间材料等待队列M26,M18,M17,M03",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -46866,7 +47108,7 @@
       "BP-S"
     ],
     "nextTasks": [
-      "M03唯一主模块：选拔任用/档案/考察期/述职，复用任期493a9f87证据，核对独立审批、生效和敏感权限"
+      "四模块可自主材料齐备；返回M26为正式评审焦点，生成R2合并决定包与一次性批准草稿，不进入R3"
     ],
     "state": "R1仅P2设计批准保持；R2模块按真实批准关闭，未批模块材料可串行排队",
     "scopeChange": "SCOPE-20260909-CORE15",
@@ -46879,10 +47121,10 @@
       "id": "MODE-MODULE-CLOSURE-R-20260909",
       "authorizedAt": "2026-09-09T15:43:36.730682+00:00",
       "mode": "模块闭环优先、按R版本滚动转序",
-      "primaryModuleId": "M03",
+      "primaryModuleId": "M26",
       "backupModuleId": null,
       "backupCandidateId": null,
-      "activeExecutionModuleId": "M03",
+      "activeExecutionModuleId": "M26",
       "wipLimit": 1,
       "backupLimit": 1,
       "backupActivation": "仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归",
@@ -47033,6 +47275,22 @@
             "M17-LIMIT-01"
           ],
           "restore": "集中决定后按正式关闭顺序M26优先应用；补证仅围绕所列问题"
+        },
+        {
+          "at": "2026-09-09T18:45:46.389452+00:00",
+          "from": "M03",
+          "to": "M26",
+          "reason": "本模块全部可自主材料完成，按本轮明确夜间材料授权串行移交；不代表关闭",
+          "remaining": [
+            "M03-SPEC-01",
+            "M03-SPEC-02",
+            "M03-SPEC-03",
+            "M03-SPEC-04",
+            "M03-SPEC-05",
+            "M03-SPEC-06",
+            "M03-LIMIT-01"
+          ],
+          "restore": "集中决定后按正式关闭顺序M26优先应用；补证仅围绕所列问题"
         }
       ],
       "backupActivationHistory": [
@@ -47084,12 +47342,14 @@
         "waitingModuleIds": [
           "M26",
           "M18",
-          "M17"
+          "M17",
+          "M03"
         ],
         "preparedModuleIds": [
           "M26",
           "M18",
-          "M17"
+          "M17",
+          "M03"
         ],
         "formalClosureOrder": [
           "M37",
@@ -47510,7 +47770,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-09T18:40:16.868160+00:00",
+    "updatedAt": "2026-09-09T18:45:46.389452+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -48268,11 +48528,16 @@
             "actions": "登记/更正/结束/作废、提名/审议、任用核对、考察述职",
             "codeRefs": [
               "lib/hris/cadre-terms.ts",
-              "lib/hris/cadres.ts"
+              "lib/hris/cadres.ts",
+              "lib/hris/cadre-interviews.ts",
+              "lib/hris/development.ts",
+              "lib/hris/development-repository.ts",
+              "app/api/cadres/route.ts",
+              "tests/p3-api.test.mjs"
             ],
             "acceptance": "已有生效任期重叠时登记拒绝；已批准未生效调动不能核对任用；岗位不匹配拒绝；员工离职前不能登记离职原因结束任期；新调动与无transfer结构历史单分开验证，记录适用版本，不用历史单绕过新D1执行。；候选：给定EA在职A/JA，新增合成主职任期9日/1年且通知否，保存回读同任期ID与次年8日；打开该任期述职应按任期筛选而非其他任期。考察期回读、年份边界、重叠和离职后状态需补证/评审后定义。；候选补充：登记考察3月后在考察名单回读同EA/12月8日，转正考核只读带入任期和考察数据；取消不新建申请，不把当前考察中当考核已通过。",
-            "gap": "原站四状态干部身份不可用registered/ended一对一替代；委员会/任期算法/复杂任用类型未就绪；BC-C10原站选拔/述职评价表及评分项是独立配置，当前提名布尔审议与考察证据不覆盖评价表/多评委汇总。；现有cadre-terms直接expectedEnd/observationEnd，未建年/月输入计算或源四状态身份；本次源任期保存不证明审批完成，未来员工离职联动及免职恢复仍缺。；BC-C26已关闭考察结束持久化缺口，仍缺审批路由/通知/日期边界/结果恢复。",
-            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "gap": "待修改主职限定、登记直生效与正式任命区分、四干部状态映射、当前归档/敏感权限；待新增选拔活动/评价表/委员会评分、完整任免期次/审批生效、考察延期/转正/退出、年度述职和奖惩档案子集。；具体候选依M03-SPEC-01,M03-SPEC-02,M03-SPEC-03,M03-SPEC-04,M03-SPEC-05,M03-SPEC-06及M03-LIMIT-01，不自动批准。",
+            "classification": "M03原站既有证据与fcd4ea8d9b3480b74ea62f4b822da1fa9dfdc48d静态核对、新规格建议分列；未批准、不等实现验收",
             "accepted": false,
             "id": "BP-C-REQ-01",
             "currentApplicability": {
@@ -48285,7 +48550,263 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "acceptanceCases": [
+              {
+                "id": "M03-REVIEW-AC01",
+                "scopeItem": "选拔任用",
+                "given": "同人主职任期区间重叠",
+                "when": "新登记/更正",
+                "then": "拒绝；不同任用类型按显式规则，不覆盖旧ID",
+                "basis": "M03-SPEC-01候选；非原站事实",
+                "status": "需求候选未批准；本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M03-REVIEW-AC02",
+                "scopeItem": "选拔任用",
+                "given": "2月29日加1年，显式月末政策",
+                "when": "预览截止",
+                "then": "按批准算法给可追溯日期；显式覆盖留原因，未批不猜",
+                "basis": "M03-SPEC-01候选；非原站事实",
+                "status": "需求候选未批准；本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M03-REVIEW-AC03",
+                "scopeItem": "选拔任用",
+                "given": "已批准提名但调动待生效或失败",
+                "when": "核对任用",
+                "then": "拒绝完成，D1–D7不绕过；同凭证不能重复",
+                "basis": "M03-SPEC-02候选；非原站事实",
+                "status": "需求候选未批准；本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M03-REVIEW-AC04",
+                "scopeItem": "选拔任用",
+                "given": "资格在批准后过期或候选离职",
+                "when": "执行任用",
+                "then": "阻止并保存未生效原因，不按旧快照强行任命",
+                "basis": "M03-SPEC-02候选；非原站事实",
+                "status": "需求候选未批准；本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M03-REVIEW-AC05",
+                "scopeItem": "选拔任用",
+                "given": "5名应投评委1回避、1弃权、3通过",
+                "when": "比例75%时决议",
+                "then": "回避经批准后分母4，3/4达到阈值；未交者则阻决议",
+                "basis": "M03-SPEC-03候选；非原站事实",
+                "status": "需求候选未批准；本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M03-REVIEW-AC06",
+                "scopeItem": "选拔任用",
+                "given": "精确分等于通过线但显示舍入相同",
+                "when": "判通过",
+                "then": "按建议≥精确比较；显示舍入不改变结果",
+                "basis": "M03-SPEC-03候选；非原站事实",
+                "status": "需求候选未批准；本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M03-REVIEW-AC07",
+                "scopeItem": "选拔任用",
+                "given": "无评委/权重和0/必需项缺分",
+                "when": "汇总",
+                "then": "unknown且阻完成，不除0或默认为同意",
+                "basis": "M03-SPEC-03候选；非原站事实",
+                "status": "需求候选未批准；本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M03-REVIEW-AC08",
+                "scopeItem": "考察期",
+                "given": "到截止但未审、或申请提前转正政策未配",
+                "when": "读取状态/提交",
+                "then": "不自动通过；提前路径不可用并明确原因",
+                "basis": "M03-SPEC-04候选；非原站事实",
+                "status": "需求候选未批准；本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M03-REVIEW-AC09",
+                "scopeItem": "考察期",
+                "given": "延期超固定任期或员工已离职",
+                "when": "审批延期/转正",
+                "then": "阻止，先处理有效任期；历史与终止原因保留",
+                "basis": "M03-SPEC-04候选；非原站事实",
+                "status": "需求候选未批准；本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M03-REVIEW-AC10",
+                "scopeItem": "述职",
+                "given": "年度述职与考察述职同人",
+                "when": "保存/提交",
+                "then": "不同活动周期和任期引用，不互相覆盖",
+                "basis": "M03-SPEC-05候选；非原站事实",
+                "status": "需求候选未批准；本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M03-REVIEW-AC11",
+                "scopeItem": "档案",
+                "given": "只有基础档案read无interviewRead/export",
+                "when": "取访谈/附件历史/下载",
+                "then": "服务端拒绝，当前撤权覆盖旧链接",
+                "basis": "M03-SPEC-05候选；非原站事实",
+                "status": "需求候选未批准；本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M03-REVIEW-AC12",
+                "scopeItem": "档案",
+                "given": "HR补录旧奖励且外部支付未配",
+                "when": "保存事实/显示发放",
+                "then": "明确来源与未配置状态，不伪造审批或支付",
+                "basis": "M03-SPEC-05候选；非原站事实",
+                "status": "需求候选未批准；本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M03-REVIEW-AC13",
+                "scopeItem": "选拔任用",
+                "given": "任用响应未知或事务审计失败",
+                "when": "查请求键再重试",
+                "then": "无重复任用/半生效，旧revision拒绝",
+                "basis": "M03-SPEC-06候选；非原站事实",
+                "status": "需求候选未批准；本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M03-REVIEW-AC14",
+                "scopeItem": "档案",
+                "given": "legacy注册无批准凭证",
+                "when": "设计迁移",
+                "then": "保留登记事实/原ID和unknown，不变成已批准任命",
+                "basis": "M03-SPEC-06候选；非原站事实",
+                "status": "需求候选未批准；本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ],
+            "reviewPacketRefs": [
+              "docs/delivery/P1_M03_Review_Package.md"
+            ],
+            "currentReviewDecisionIds": [
+              "M03-SPEC-01",
+              "M03-SPEC-02",
+              "M03-SPEC-03",
+              "M03-SPEC-04",
+              "M03-SPEC-05",
+              "M03-SPEC-06"
+            ],
+            "fieldDetails": [
+              {
+                "field": "干部/任期",
+                "definition": "cadreId/employeeId/termId/appointmentRecordId/employmentRecordId/typeVersion/start/end/actualEnd",
+                "constraints": "ID分立，主职区间不重叠，月末算法明确并可预览",
+                "basis": "M03-SPEC-01未批准推荐"
+              },
+              {
+                "field": "活动/评价模板",
+                "definition": "activityVersion/nominationId/templateVersion/reviewerSet/scale/weight/mode/comparator/threshold",
+                "constraints": "模式互斥、缺评阻决议、权重和正数，未知非0",
+                "basis": "M03-SPEC-03未批准推荐"
+              },
+              {
+                "field": "考察/述职",
+                "definition": "observationId/termId/objectivesVersion/due/extensionApproval；reportId/version/cycle",
+                "constraints": "考察不等任期或员工状态；周期用途分立",
+                "basis": "M03-SPEC-04未批准推荐"
+              },
+              {
+                "field": "敏感档案",
+                "definition": "subsetRecordId/type/occurredAt/source/version/approval/attachments/audience",
+                "constraints": "补录不伪造原批准；当前权限覆盖历史与下载",
+                "basis": "M03-SPEC-05未批准推荐"
+              }
+            ],
+            "roleMatrix": [
+              {
+                "role": "选拔发起/评委/独立发布者",
+                "read": "仅岗位与人员交集内议题及必要字段",
+                "write": "发起/审议/发布分权，本人/提交者/材料编制者回避",
+                "boundary": "HR管理权不等任用授权；候选待批，E2保持"
+              },
+              {
+                "role": "HR任期/档案管理",
+                "read": "授权任期与档案子集，访谈另授",
+                "write": "登记事实/申请更正/核对生效，不代人事执行",
+                "boundary": "实际原单与D1–D7一致；候选待批，E2保持"
+              },
+              {
+                "role": "干部本人",
+                "read": "本人明确开放的述职/考察反馈",
+                "write": "本人提交/撤回待审",
+                "boundary": "不读隐藏委员会讨论或他人评价；候选待批，E2保持"
+              },
+              {
+                "role": "消费者/审计",
+                "read": "允许目的及当前字段，审计访问另授权",
+                "write": "只读引用不触发任用/支付",
+                "boundary": "历史附件下载需当前权限；候选待批，E2保持"
+              }
+            ],
+            "stateTransitions": [
+              {
+                "from": "draft提名",
+                "event": "提交/独立审议",
+                "to": "submitted/approved/rejected/withdrawn",
+                "guards": "同人同岗唯一在途、资格/后备重核",
+                "basis": "M03-SPEC-02候选未批准"
+              },
+              {
+                "from": "approved任用决定",
+                "event": "M01实际生效后核对",
+                "to": "appointed + effective term",
+                "guards": "同人同岗凭证幂等，待生效不冒完成",
+                "basis": "M03-SPEC-02候选未批准"
+              },
+              {
+                "from": "有效任期",
+                "event": "免职/退休/离职/续任",
+                "to": "有授权终止/新任期",
+                "guards": "实际日期和批准原因，历史不删",
+                "basis": "M03-SPEC-01候选未批准"
+              },
+              {
+                "from": "考察active",
+                "event": "本人提交/独立核验",
+                "to": "submitted/returned/passed/extended/exit_recommended",
+                "guards": "不自动转正或改离职，延期不越任期",
+                "basis": "M03-SPEC-04候选未批准"
+              },
+              {
+                "from": "述职submitted",
+                "event": "退回/撤回/发布",
+                "to": "新修订或published",
+                "guards": "独立节点，原版本和附件权限保留",
+                "basis": "M03-SPEC-05候选未批准"
+              }
+            ]
           },
           {
             "object": "任职资格标准及认证",
@@ -49636,11 +50157,17 @@
             "lifecycle": "已观察模板状态列及未保存条件字段；发布/使用中修订/评价锁定、重新投票和回退未核实，不画默认流程。",
             "actions": "配置投票/总分/指标打分、引用任职资格标准或通用评分项；只读空表后取消。",
             "acceptance": "候选用例：在满分100且指标得分合法的合成场景，两个指标20/40：算术均值30；权重60%/40%加权28；加总60（加总模式分别以60/40为指标满分）。两评委最终60/80得到70；平均模式排除隐藏或能力标准为空项。权重一项为空一项有值时空项权重0，全部为空则在资格组内均分。投票4/5在80%条件达到；得分等于阈值的预期待解决表单/帮助边界后填写。无指标、权重和0、弃权/缺评须明确异常，不填虚构0分。以上为对帮助的推导验收候选，未执行或批准。",
-            "gap": "已用帮助缩小算法未知；得分阈值相等、缺评/弃权分母、0除/舍入及评分版本仍待核实/业务评审；当前干部实现不覆盖评价模板/评分汇总。",
-            "classification": "原站空表/配置事实及已有实现差异；需求未就绪",
+            "gap": "待修改主职限定、登记直生效与正式任命区分、四干部状态映射、当前归档/敏感权限；待新增选拔活动/评价表/委员会评分、完整任免期次/审批生效、考察延期/转正/退出、年度述职和奖惩档案子集。；具体候选依M03-SPEC-01,M03-SPEC-02,M03-SPEC-03,M03-SPEC-04,M03-SPEC-05,M03-SPEC-06及M03-LIMIT-01，不自动批准。",
+            "classification": "M03原站既有证据与fcd4ea8d9b3480b74ea62f4b822da1fa9dfdc48d静态核对、新规格建议分列；未批准、不等实现验收",
             "codeRefs": [
               "docs/P1_Source_Observations_20260907.md",
-              "lib/hris/cadres.ts"
+              "lib/hris/cadres.ts",
+              "lib/hris/cadre-terms.ts",
+              "lib/hris/cadre-interviews.ts",
+              "lib/hris/development.ts",
+              "lib/hris/development-repository.ts",
+              "app/api/cadres/route.ts",
+              "tests/p3-api.test.mjs"
             ],
             "accepted": false,
             "currentApplicability": {
@@ -49653,7 +50180,18 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "reviewPacketRefs": [
+              "docs/delivery/P1_M03_Review_Package.md"
+            ],
+            "currentReviewDecisionIds": [
+              "M03-SPEC-01",
+              "M03-SPEC-02",
+              "M03-SPEC-03",
+              "M03-SPEC-04",
+              "M03-SPEC-05",
+              "M03-SPEC-06"
+            ]
           },
           {
             "id": "BP-C-REQ-07",
@@ -54652,13 +55190,17 @@
       {
         "requirement": "BP-C-REQ-01",
         "capability": "干部任期/提名/任用",
-        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "disposition": "可复用：提名/审议/调动关联核对、稳定人员与干部任期、访谈追溯、本人述职与独立核验、期间顺序/重叠保护及事务审计。",
         "evidence": [
           "lib/hris/cadre-terms.ts",
           "lib/hris/cadres.ts",
-          "BC-C25；lib/hris/cadre-terms.ts（本轮静态阅读）"
+          "lib/hris/cadre-interviews.ts",
+          "lib/hris/development.ts",
+          "lib/hris/development-repository.ts",
+          "app/api/cadres/route.ts",
+          "tests/p3-api.test.mjs"
         ],
-        "gap": "原站四状态干部身份不可用registered/ended一对一替代；委员会/任期算法/复杂任用类型未就绪；BC-C10原站选拔/述职评价表及评分项是独立配置，当前提名布尔审议与考察证据不覆盖评价表/多评委汇总。；现有cadre-terms直接expectedEnd/observationEnd，未建年/月输入计算或源四状态身份；本次源任期保存不证明审批完成，未来员工离职联动及免职恢复仍缺。；BC-C26已关闭考察结束持久化缺口，仍缺审批路由/通知/日期边界/结果恢复。",
+        "gap": "待修改主职限定、登记直生效与正式任命区分、四干部状态映射、当前归档/敏感权限；待新增选拔活动/评价表/委员会评分、完整任免期次/审批生效、考察延期/转正/退出、年度述职和奖惩档案子集。；具体候选依M03-SPEC-01,M03-SPEC-02,M03-SPEC-03,M03-SPEC-04,M03-SPEC-05,M03-SPEC-06及M03-LIMIT-01，不自动批准。",
         "acceptance": "已有生效任期重叠时登记拒绝；已批准未生效调动不能核对任用；岗位不匹配拒绝；员工离职前不能登记离职原因结束任期",
         "currentApplicability": {
           "status": "保留",
@@ -56887,6 +57429,102 @@
           "M17"
         ],
         "preparedAt": "2026-09-09T18:40:16.868160+00:00"
+      },
+      {
+        "id": "M03-SPEC-01",
+        "topic": "干部稳定身份、任期及有效日期",
+        "basis": "源四干部状态，StaffID/任期ID/员工UUID不同；当前仅主职且日期直接输入。",
+        "proposal": "建议cadreId显式绑定M01稳定employeeId，appointmentRecordId/termId与任职employmentRecordId独立关联，禁止通过姓名或StaffID数字强转Employee UUID。干部身份状态、任期状态和员工状态分列；每任期含任用类型版本、组织/岗位版本、生效起止/实际结束、审批来源，主职同人时间段不重叠；兼职/挂职等有明确类型与M01任职规则，不默默限制只有主职。期限推荐输入正整数月/年或明确无固定期限，周年/月度结束按本地日历加对应单位后前一日，目标日期不存在时先落该月末再减一日；结果必须预览，允许授权显式截止日及原因覆盖。考察结束不得早于开始或晚于固定任期结束；未知历史不得自动补成算法计算。",
+        "alternatives": "仅存显式日期可以保留精确结果但弱化年/月录入体验；采用不同月末规则会改任期，必须单独选择，源单例不能裁决。",
+        "impact": "决定任期与跨月/闰年政策；与M01主兼职生效交集，不恢复旧M02模块。",
+        "ifUndecided": "任期生效、重复和历史迁移无法关闭。",
+        "status": "已具体化待集中评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M03"
+        ],
+        "preparedAt": "2026-09-09T18:45:46.389452+00:00"
+      },
+      {
+        "id": "M03-SPEC-02",
+        "topic": "选拔活动、提名审议与任免生效",
+        "basis": "源选拔活动/提名/评价配置独立；当前提名→独立布尔审议→生效调动核对，原干部登记未证审议。",
+        "proposal": "建议selectionActivityId/version、nominationId、evaluationInstanceId、appointmentDecisionId、termId分别；活动冻结岗位/资格/标准/评委及路由版本，同人同目标仅一在途提名，驳回/撤回后新提关联前次；本人、发起人及候选材料编制参与者回避审议。每岗位任用政策明确资格/后备是必需还是参考，必需项未配或失效不通过；M06资格/M17候选在提名、批准及生效前重核，并冻结当时证据。任免决定获批与M01实际人事生效分列；涉及调动必须严格D1–D7，引用同人同岗审批及实际applied后才核对任用，一张生效凭证不重复用于同类任用。无需变更主职的任用类型须有其明确授权任职事件，不伪造调动。免职/退休/离职结束、任期续任与错误作废分别留原因、独立批准与实际日期，不能直接回滚已生效人事或删任期。",
+        "alternatives": "干部登记直接视为任命批准会越权；所有任用都强制伪造主职调动也不合语义。",
+        "impact": "改变正式任免生效和复核节点，依赖M01/M19而不改既有D1–D7。",
+        "ifUndecided": "任免边界与进入岗位的效力不能确认。",
+        "status": "已具体化待集中评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M03"
+        ],
+        "preparedAt": "2026-09-09T18:45:46.389452+00:00"
+      },
+      {
+        "id": "M03-SPEC-03",
+        "topic": "投票、总分、指标评分及缺评",
+        "basis": "BC-C11–13三模式及算法帮助；投票初值80只是表单样本；得分等值提示冲突。",
+        "proposal": "建议evaluationTemplateRoot/version冻结模式、指标/资格版本、评委清单/回避、尺度、权重、阈值和比较符；投票/总分/指标评分互斥为主模式，参考分不自动改变通过。推荐投票通过票数/应投有效评委数≥显式通过比例，比例需主动配置且0<比例≤100，不默认80；回避者经批准移出分母，弃权保留分母且非通过，缺席/未交作为未完成并阻最终决议，不默默减少分母。总分/指标评分推荐最终分≥显式阈值，明确这是针对源冲突采用的本项目决定；显示舍入不影响精确比较。评分项有明确满分/方向/有效集合；均值、加权均值、加总分别配置，尺度不兼容先定义转换，权重非负、参与集合固定、合计正数，缺权重阻该算法就绪，不以源“空权重0/均分”当默认。每评委必需项缺分阻完成，跨评委按有效且完成评委总分算术均值；无有效评委/指标不除0、不通过。",
+        "alternatives": "严格大于阈值可选但与“分即通过”冲突；缺席计反对后按期决议需额外明确责任，不默认采用。",
+        "impact": "直接改变人员评价与选拔结果，不能以M06或M37批准代签。",
+        "ifUndecided": "阈值等值、缺评和分母是当前新规则硬条件。",
+        "status": "已具体化待集中评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M03"
+        ],
+        "preparedAt": "2026-09-09T18:45:46.389452+00:00"
+      },
+      {
+        "id": "M03-SPEC-04",
+        "topic": "考察期、转正、延期与退出",
+        "basis": "源考察日期已存、转正考核需要提交审批但路由未见；现考察与任用关联，accepted分completed/development_needed。",
+        "proposal": "建议observationId绑定具体termId/appointmentDecisionId、开始/截止、目标/模板版本和考核实例；在岗考察、提交待审、退回补充、通过、延长、未通过退出分别，逾期单独标识，不到日自动转正。本人提交/撤回待审，独立评委核验，不由管理员代本人；提前转正必须显式申请原因且遵守适用最短考察政策，政策未配则不开放提前路径。延期给新截止/原因/批准版本且不得越固定任期，若需越界先独立处理续任；未通过可形成发展或退出建议，但免职及人事结束另走授权流程。已批考核不覆盖，纠错新版本重审；人员离职/任期结束阻新转正，保留已有考核历史并允许授权终止未完任务。",
+        "alternatives": "到期自动通过风险高；未通过立即改员工离职状态会越权，不采用。",
+        "impact": "决定考察结论与任期/人事效力之间的关系。",
+        "ifUndecided": "考察关闭和异常恢复无法验收。",
+        "status": "已具体化待集中评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M03"
+        ],
+        "preparedAt": "2026-09-09T18:45:46.389452+00:00"
+      },
+      {
+        "id": "M03-SPEC-05",
+        "topic": "周期述职、档案子集与敏感权限",
+        "basis": "源述职按AppointmentRecordId，评价表与选拔不同；档案包括访谈/表彰；现考察述职不能代表年度/任期述职。",
+        "proposal": "建议述职activityId/version绑定周期及termId，报告recordId/version、材料/评审/发布分开；周期述职和考察述职各自用途/模板，不以有考察记录删除年度述职范围。本人草稿→提交→独立评审→已发布，退回/撤回/重提保留版本；改周期/任期不得覆盖原记录。档案保留基础、任免履历、访谈、奖励/惩处/表彰及关联附件子集；每条稳定ID、发生日期、来源、版本和审批状态，补录事实不伪造当时批准；奖励发放/金额只消费外部已授权状态，不发支付。archiveRead/interviewRead/evaluationRead/nominate/review/appoint/export分别授权，岗位及人员双范围，评委只议题最小字段；本人只读明确发布给本人的反馈/述职，潜力/委员会讨论/原始访谈不自动开放，附件历史下载均当前验权。访谈角色标签只是分类，不自动授予关系权限。",
+        "alternatives": "只有考察述职或只保留基本档案会缩范围；所有HR都可看全部敏感材料需要明确更宽授权，本轮不推荐。",
+        "impact": "保留完整常规档案与周期述职，同时明确敏感字段隔离。",
+        "ifUndecided": "档案与述职完整范围和可见性不能确认。",
+        "status": "已具体化待集中评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M03"
+        ],
+        "preparedAt": "2026-09-09T18:45:46.389452+00:00"
+      },
+      {
+        "id": "M03-SPEC-06",
+        "topic": "跨模块契约、并发与历史迁移",
+        "basis": "现任用核对用审批ID与当前岗位，cadreTerm另登记；一般命令只有revision，无全链业务requestKey。",
+        "proposal": "建议M37标准/M06资格/M17后备/M18盘点/M26允许用途报告均通过稳定ID+具体版本+有效时点+缺失原因引用，不按同名或裸分决定任用。M19提供冻结路由与独立节点；M01承担主兼职/调动生效，M03只确认任用和干部任期，不重解释D1–D7。M48仅本人获准述职/考察任务和反馈；M32消费许可范围的任期/选拔/考察状态、版本和真实分母，不导出隐藏访谈。BASE01–06身份、字段权限、事务审计、附件版本、恢复与外部契约按已批原则，任免变更必须幂等请求键/摘要及原决定ID，未知先查，审计失败不得部分生效。迁移保持StaffID映射/employeeId/任期ID/调动来源和历史时间，未有依据的批准、前任、算法/任用类型标未知，不把legacy注册当已审任命；恢复后以当前授权对账。",
+        "alternatives": "把旧注册记录全部改成正式任命或自动同步原始360得分会伪造历史/扩用途，不采用。",
+        "impact": "明确R1依赖和后续设计差异，P1不执行数据迁移或发布。",
+        "ifUndecided": "任用全链一致性与历史效力不能关闭。",
+        "status": "已具体化待集中评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M03"
+        ],
+        "preparedAt": "2026-09-09T18:45:46.389452+00:00"
       }
     ],
     "codeReview": {
@@ -57297,9 +57935,9 @@
         "M06现archive阻新apply但未自动终止在途；认证raw certified与有效性/撤销状态分开，旧proof不因后评改变。",
         "M37主模块全部外部阻塞后只启M06一个备用，完成待评审不等越序关闭；R1仅P2授权不外推R2开发。"
       ],
-      "remaining": "新规则/LIMIT集中决定；M26,M18,M17材料等待，不计关闭",
-      "latestReviewedHead": "e40f75f59da103d449e28cb00b87aca4ea8c3e40",
-      "latestReviewAt": "2026-09-09T18:40:16.868160+00:00",
+      "remaining": "新规则/LIMIT集中决定；M26,M18,M17,M03材料等待，不计关闭",
+      "latestReviewedHead": "fcd4ea8d9b3480b74ea62f4b822da1fa9dfdc48d",
+      "latestReviewAt": "2026-09-09T18:45:46.389452+00:00",
       "internalScopeReviewAt": "2026-09-09T10:26:03.101902+00:00",
       "internalScopeSource": "modules[].scope → modules[].p1.internalScopeCoverage；逐个原登记短语精确映射，不增验收分母",
       "internalScopeResult": "当前15模块所有原登记短语均映射到既有规格/直接或跨域证据及具体限制；仅用户明确独立AI排班子能力暂缓、支付外部部分仅契约。其余保留含未探索，未当需求通过。",
@@ -57459,10 +58097,10 @@
     ],
     "packageAssessmentSource": "当前各包就绪条件由modules[].p1.currentDeliveryAssessment.basis及deliveryScope基础边界生成；packages.pending/readinessConditions保留兼容历史快照，不能覆盖逐模块最新评估，后续不手工更新两份。",
     "reviewPackage": {
-      "assessedAt": "2026-09-09T18:40:16.868160+00:00",
-      "basedOnHead": "e40f75f59da103d449e28cb00b87aca4ea8c3e40",
+      "assessedAt": "2026-09-09T18:45:46.389452+00:00",
+      "basedOnHead": "fcd4ea8d9b3480b74ea62f4b822da1fa9dfdc48d",
       "status": "P1受限关闭6/15；R2夜间材料串行准备",
-      "autonomousWork": "M17完整范围材料已准备；新规则未批，6/15受限关闭不提升；只main P1文档/生成，无源写/产品/P2工作树修改。",
+      "autonomousWork": "M03完整范围材料已准备；新规则未批，6/15受限关闭不提升；只main P1文档/生成，无源写/产品/P2工作树修改。",
       "sourceProgress": "M01组织/职位/入职/兼职/法人/未来离职；M07薪资组/包前置；M06类别-级别-指标-标准保留链；M03任期/考察期；M17池成员；M37指标/标准启用；M18项目持久化及对象配置均有局部执行。没有将这些链等同整模块P1A完成。",
       "requirementsProgress": "当前15模块均有总体/分包契约或明确受限规格；原内部功能逐项映射，字段/角色/状态/依赖/异常/验收及实现差异同源。组织绩效、OKR、健康度、社保/个税/激励等未探索细则保留，已确认D1–D7与候选分开。",
       "gateConclusion": "R1仅P2设计获准；R2未批四模块和基础适用评审不代签",

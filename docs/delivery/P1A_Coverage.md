@@ -1,6 +1,6 @@
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M03；备用 未启用；实际执行 M03。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M26；备用 未启用；实际执行 M26。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
 | R版本 | 模块顺序 | 当前边界 |
 |---|---|---|
@@ -30,7 +30,7 @@
 | M26 360度评估 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M18 在线盘点 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M17 继任与发展 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M03 干部管理2.0 | R2 / primary | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M03 干部管理2.0 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M27 学习管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M16 绩效管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M12 招聘管理系统 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
@@ -44,7 +44,7 @@
 
 # P1A当前15模块覆盖与缺口；33组历史暂缓
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T18:40:16.868160+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T18:45:46.389452+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
@@ -53,7 +53,7 @@ P1A关闭 6/15（完整0，受限6）；P1B需求就绪 6/15（完整0，受限6
 | 模块/主包 | P1A | P1B | P1评审 | 具体缺口/判断依据 | 待决定项 |
 |---|---|---|---|---|---|
 | M01 组织员工 / BP-F | 受限完成（仅P1） | 需求就绪 | 受限评审通过（仅P1） | 用户明确批准9e379ff版10项推荐及M01-LIMIT-01；六项原范围关闭，P1受限通过，需求就绪、模块转序就绪。不是完整源验证或P3/P4验收。 |  |
-| M03 干部管理2.0 / BP-C | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | BC-C10–13评价配置/算法帮助、C25干部登记/任期ID/述职关联、C26考察结束跨页持久化及考核草稿已有；考核/任免审批通知路由、转正与恢复、角色及评分边界仍缺，未完整P1A/需求就绪。 |  |
+| M03 干部管理2.0 / BP-C | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 完整原范围材料已完成，M03-SPEC-01,M03-SPEC-02,M03-SPEC-03,M03-SPEC-04,M03-SPEC-05,M03-SPEC-06与LIMIT未批准；不计关闭 | M03-SPEC-01；M03-SPEC-02；M03-SPEC-03；M03-SPEC-04；M03-SPEC-05；M03-SPEC-06；M03-LIMIT-01 |
 | M06 任职资格 / BP-C | 受限完成（仅P1） | 需求就绪 | 受限评审通过（仅P1） | M06-P1-APPROVAL-R2-20260909；四退出条件满足，P1无剩余硬阻塞，原站未知保留受限分类 |  |
 | M07 薪酬社保 / BP-S | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | PG/SP/包内项目支撑EA入职已实际验证并校正过时描述；人工工资/考勤引用/独立复核/异议补差/权限有可执行候选。薪资档案事件、自动核算、社保/个税/激励原内域仍保留受限规格；供应商与真实支付不是P1前置，未就绪。 |  |
 | M11 假勤管理 / BP-A | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 已细化固定班/单班请假/额度预留/冻结来源/重冻版本及工资失效场景；原月报发布确认封存保留独立规格。跨班/轮班/加班调休/授予结转/企业参数及原站完整链仍缺，AI排班独立能力已暂缓，未就绪。 |  |
@@ -149,10 +149,10 @@ P1A关闭 6/15（完整0，受限6）；P1B需求就绪 6/15（完整0，受限6
 
 | 原登记功能 | 当前边界 | 规格ID | 证据/深度 | 仍缺内容/后续 |
 |---|---|---|---|---|
-| 选拔任用 | 保留 | BP-C-REQ-01；BP-C-REQ-06 | BC-C08、BC-C09、BC-C10、BC-C11、BC-C12、BC-C13、BC-C25；局部合成执行 | EA任期登记不等选拔评价/任免审批；跨评委/投票阈值及流程权限待源执行，通知需先核收件范围；恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。 |
-| 档案 | 保留 | BP-C-REQ-01 | US-C01-02、BC-C02、BC-C03、BC-C25；局部合成执行 | 基本信息与访谈/表彰/任免履历不同；已有EA登记，访谈奖惩等子集/附件权限和历史关联未全证；恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。 |
-| 考察期 | 保留 | BP-C-REQ-01 | BC-C25、BC-C26；局部合成执行及未保存考核草稿 | 已回读考察中与起止；未转正考核提交/独立审批，模板必填/逾期/异常恢复待证；恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。 |
-| 述职 | 保留 | BP-C-REQ-01；BP-C-REQ-06 | BC-C25、BC-C26；空列表/字段局部观察 | 述职记录为空、来源/阶段/核验与任期关系待执行，不能用考察期日期证明述职通过；恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。 |
+| 选拔任用 | 保留 | BP-C-REQ-01；BP-C-REQ-06 | BC-C08、BC-C09、BC-C10、BC-C11、BC-C12、BC-C13、BC-C25；局部合成执行 | 源活动/模板/评分帮助部分覆盖；合成登记不等任免批准；多评委及生效全链受限；集中规则/LIMIT评审及最小补证，不重开宽泛探索 |
+| 档案 | 保留 | BP-C-REQ-01 | US-C01-02、BC-C02、BC-C03、BC-C25；局部合成执行 | 基础/访谈/表彰入口与合成任期部分覆盖；奖惩/附件/敏感版本未完整，候选保留全部子集；集中规则/LIMIT评审及最小补证，不重开宽泛探索 |
+| 考察期 | 保留 | BP-C-REQ-01 | BC-C25、BC-C26；局部合成执行及未保存考核草稿 | C26已证结束日期持久化；考核草稿未提交，期限/转正/退出候选待批；集中规则/LIMIT评审及最小补证，不重开宽泛探索 |
+| 述职 | 保留 | BP-C-REQ-01；BP-C-REQ-06 | BC-C25、BC-C26；空列表/字段局部观察 | 源空列表/字段及评价表帮助；现考察述职静态，不代完整周期述职，待SPEC05；集中规则/LIMIT评审及最小补证，不重开宽泛探索 |
 
 ### M06 任职资格
 
