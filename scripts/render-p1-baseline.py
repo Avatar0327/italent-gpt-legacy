@@ -11,6 +11,12 @@ deferred_mods=[m for m in mods if m['id'] not in active_ids]
 def scope_status(mid):return '当前交付' if mid in active_ids else '本次交付暂缓（历史保留）'
 def assessment(m):return m['p1']['currentDeliveryAssessment']
 def pack_current(pack):return [i for i in pack['moduleIds'] if i in active_ids]
+def pack_conditions(pack):
+ current=pack_current(pack)
+ if not current:
+  return ['本包无当前独立交付模块；历史规格与缺口保留，不阻当前15模块P1退出。'] if pack['moduleIds'] else []
+ return [m['id']+' '+m['name']+'：'+assessment(m)['basis'] for m in mods if m['id'] in current]+['六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。']
+def pack_pending(pack):return '；'.join(pack_conditions(pack)) or '当前无未归属模块。'
 def ct_scope(c):
  a=c['currentApplicability']
  return a['status']+'；'+('、'.join(a['moduleIds']+a['baseCapabilityIds']) or '无当前独立要求')+'；'+a['note']
@@ -91,7 +97,7 @@ t+='## 本轮目标、已有成果与缺口\n\n'+table(['交付物','接手时�
 t+='\n## 历史接手与部署记录（下列本轮措辞属于上轮快照，非本次复验）\n\n'
 t+='- 实际仓库：`/workspace/sites/italent-hris`；接手分支`main`；完整HEAD `72bcf4031fb4fc62d70be8a6c1ae1c491ff90714`；接手时工作区干净，仅一个检出工作树。\n- 未发现Git写锁或可读取的项目cwd运行进程；普通ps工具失败，有界/proc检查17项不可读，运行状态结论有此边界。无本轮新开发、测试、构建或发布任务。\n- 未完学习简介保留在`checkpoint/learning-description-20260908`，`f5f5b1bd9014d4b6eeb6d32da0f03e34da3bced2`；不合并、不重置。其他既有分支全部保留。\n- v112指定部署本轮只读复核`succeeded`；源码`fdc423fcba607bd5814a0672836b55536c71ecb1`；部署ID `appgdep_6aa010f1e1e481919f2a4331af5b0184`。本轮文档提交不改变在线版本。\n- F01–F04保留历史116项API、3项组件及后续5项入口渲染证据；重叠测试不相加为覆盖数，本轮未复跑。用户仅确认成员/员工可打开；按钮缺失反馈和修复后待复验继续保留。E2不增人，多角色UAT暂缓，均非继续P1前置。\n\n'
 t+='## 原站证据与独立设计分类\n\n'+table(['类别','判定','例子'],[('原站事实','N导航或P页面字段/说明，并标明来源日期','BC-F04兼职表头；BC-L11审批开关说明'),('已确认独立设计','有用户明确决定，保留实现与测试','D1–D7；不能写成北森原站制度'),('其他独立实现','仓库代码/测试仅证明本项目技术行为','学分有效期、内部排期、冻结考勤引用等；不是自动获得企业签署'),('待核实','还未取得该页/规则证据，不能当故障或已通过','再入职、薪资组依赖、仅N级模块'),('受限项','存在具体访问/角色/外部动作限制证据','单角色、不可用页面、外部通知/真实交易未授权；合成保存权限已明确')])
-t+='\n## 按既定顺序的领域缺口\n\n'+table(['业务包','证据与当前规格','未就绪条件与下一步'],[(p['name'], '、'.join(ref for m in active_mods if m['id'] in p['moduleIds'] for ref in m['p1']['pageRefs'])+'；'+link_source(p['spec']),p['readiness']+'；'+p['pending']+'；'+p['next']) for p in s['p1B']['packages'] if pack_current(p)])
+t+='\n## 按既定顺序的领域缺口\n\n'+table(['业务包','证据与当前规格','未就绪条件与下一步'],[(p['name'], '、'.join(ref for m in active_mods if m['id'] in p['moduleIds'] for ref in m['p1']['pageRefs'])+'；'+link_source(p['spec']),p['readiness']+'；'+pack_pending(p)+'；'+p['next']) for p in s['p1B']['packages'] if pack_current(p)])
 
 t+='\n## 48组差异清单（同一范围台账视图）\n\n'+table(['原范围ID/模块','当前适用','原站事实边界','本项目已有独立实现','待核实/未覆盖','受限与处理'],[(m['id']+' '+m['name'],scope_status(m['id']),m['p1']['sourceDepth']+'；'+('、'.join(m['p1']['pageRefs']) or 'BC-NAV-20260908'),m['developed'],m['remaining']+'；'+m['p1']['sourceGap'],'详见对应页面及P1-X例外；保留范围，不在本轮开发') for m in mods])
 t+='\n## 例外、建议和影响\n\n'+table(['例外','性质/范围','证据','影响','建议'],[(x['id'],x['type']+'；'+x['scope'],x['evidence'],x['impact'],x['recommendation']) for x in b['exceptions']])
@@ -120,7 +126,7 @@ if 'roadmap' in s:
  (D/'P1A_Coverage.md').write_text(t)
  t=intro('P1B业务包需求就绪表')
  t+='业务包是本轮规划组织方式；共享能力仅归一个主包，消费者通过依赖引用，不重复增加范围。历史48组主包映射不改；M20/M15等当前暂缓成员保留历史映射且退出当前包就绪门槛。M19/M48/M32由BP-I主责，随各业务链同步；空占位不增加包或模块分母。**当前无包被登记为需求已验收。**\n\n'
- t+=table(['顺序/业务包','全部范围ID','需求规格或输入','已确认规则','待决策/待补证','验收标准','依赖','就绪及下一步'],[(p['order'],p['id']+' '+p['name']+'：'+ '、'.join(i+' '+names[i]+'（'+scope_status(i)+'）' for i in p['moduleIds']),p['spec']+'；'+p['specKind'],p['confirmedRules'],p['pending'],p['acceptance'],p['dependencies'],p['readiness']+'；'+p['next']) for p in pb['packages']])
+ t+=table(['顺序/业务包','全部范围ID','需求规格或输入','已确认规则','待决策/待补证','验收标准','依赖','就绪及下一步'],[(p['order'],p['id']+' '+p['name']+'：'+ '、'.join(i+' '+names[i]+'（'+scope_status(i)+'）' for i in p['moduleIds']),p['spec']+'；'+p['specKind'],p['confirmedRules'],pack_pending(p),p['acceptance'],p['dependencies'],p['readiness']+'；'+p['next']) for p in pb['packages']])
  t+='\n## 当前首包距离就绪的条件\n\n1. 审阅当前首包规格的对象/字段、角色、审批与执行分离、错误恢复和跨包契约；D1–D7不重问。\n2. 闭合名称唯一性等实质差异；已确认规则与其他既有独立实现不得混写。\n3. 确认本包暂缓边界及验收预期，记录评审人、日期、适用版本和例外；全M01扩展范围继续保留。\n4. 多角色UAT、按钮实际复验及云端附件验证属于P3/P4未完成事项，不是P1B编写前置。\n\n'
  t+='待决策事项统一见下方最小必要决策记录；推荐不作为批准要求。\n\n'
  (D/'P1B_Readiness.md').write_text(t)
@@ -179,8 +185,8 @@ if 'p1B' in s:
   api_paths=sorted({v for ct in pack['contracts'] for v in ct['codeRefs'] if v.startswith('app/api/')})
   if api_paths:t+='已读内部接口：'+ '；'.join(link_source(v) for v in api_paths)+'。\n\n'
   t+=table(['原任务','验收条件（原样保留）','当前规则/验证状态'],[(a['id']+' '+a['title'],'；'.join(c['text'] for c in a['criteria']),'原accepted保持；本稿不代签，历史测试按原版本') for a in s['acceptanceTasks'] if a['moduleId'] in pack['moduleIds']])+'\n'
-  t+='## 就绪、待决策与下一步\n\n'+pack['currentScopeNote']+'。'+pack['pending']+'。'+pack['next']+'。\n\n需求就绪需要：受影响对象字段和行为无未决歧义；角色/字段范围、状态与恢复、跨包契约及验收预期经过评审；如有例外，记录授权、范围和影响。当前缺少上述完整评审，不满足转入新开发包条件。人工多角色UAT暂缓不阻止本稿继续细化。\n'
-  if pack.get('readinessConditions'):t+='\n'+table(['具体就绪条件'],[(v,) for v in pack['readinessConditions']])+'\n'
+  t+='## 就绪、待决策与下一步\n\n'+pack['currentScopeNote']+'。'+pack_pending(pack)+'。'+pack['next']+'。\n\n需求就绪需要：受影响对象字段和行为无未决歧义；角色/字段范围、状态与恢复、跨包契约及验收预期经过评审；如有例外，记录授权、范围和影响。当前缺少上述完整评审，不满足转入新开发包条件。人工多角色UAT暂缓不阻止本稿继续细化。\n'
+  if pack_conditions(pack):t+='\n'+table(['具体就绪条件'],[(v,) for v in pack_conditions(pack)])+'\n'
   (R/pack['spec']).write_text(t.rstrip()+'\n')
  prd=D/'P1B_PRD.md';t=prd.read_text().replace('其他包Source_Gaps仅是规格输入，不能算已完成的PRD。','各包已有同源生成的规格评审稿；其中仅导航部分明确列出受限原因，不计为完整需求就绪。原Source_Gaps继续作为证据输入。')
  t+='\n## 业务包规格入口\n\n'+table(['包','规格','状态'],[(p['id'],link_source(p['spec']),p['readiness']) for p in pb['packages']])
@@ -191,7 +197,7 @@ if 'p1B' in s:
  t+=table(['ID/事项','现状及证据','推荐（未批准）','备选','阻塞范围/状态'],[(x['id']+' '+x['topic'],x['basis'],x['proposal'],x.get('alternatives',[]),x['impact']+'；'+x['status']) for x in pb['reviewIssues'] if x.get('decisionRequired',True)])
  resolved=[x for x in pb['reviewIssues'] if not x.get('decisionRequired',True)]
  if resolved:t+='\n## 已明确的执行范围（保留历史，不重复询问）\n\n'+table(['事项','结论/时间'],[(x['id']+' '+x['topic'],x.get('decision',x['status'])+'；'+x.get('decidedAt','')) for x in resolved])
- t+='\n## 各包具体就绪缺口\n\n'+table(['业务包','仍需满足的条件'],[(p['id']+' '+p['name'],p.get('readinessConditions',[])) for p in pb['packages'] if p['moduleIds']])
+ t+='\n## 各包具体就绪缺口\n\n'+table(['业务包','仍需满足的条件'],[(p['id']+' '+p['name'],pack_conditions(p)) for p in pb['packages'] if p['moduleIds']])
  read.write_text(t)
 
  f=D/'P1B_Implementation_Map.md';t=f.read_text()+'\n## 分包契约与实现证据索引\n\n此索引由同一Scope的contracts生成。源码链接只证明静态对应；原站说明或范围文件不能证明已有实现。具体复用/补齐/修改边界按对应规格的差异列评审。\n\n'
