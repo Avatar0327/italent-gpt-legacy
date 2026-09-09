@@ -469,6 +469,144 @@
           "execution": "not_executed"
         }
       ]
+    },
+    {
+      "id": "R1-P2-04",
+      "number": 4,
+      "document": "R1_P2_M48_Authorization_Consumers.md",
+      "requirements": [
+        "M48-SPEC-01",
+        "M48-SPEC-02",
+        "M48-SPEC-03",
+        "M48-SPEC-04",
+        "BP-I-REQ-01",
+        "BP-P-REQ-09",
+        "BASE-01",
+        "BASE-02",
+        "BASE-04"
+      ],
+      "evidence": [
+        {
+          "path": "app/api/self-service/route.ts",
+          "classification": "待修改",
+          "sha256": "49142604b1851b51a112611fd911ebf44a589de5b210883dbbc4749c68b7f952"
+        },
+        {
+          "path": "app/self-service/workspace.tsx",
+          "classification": "待修改",
+          "sha256": "ac8fe56d655c8879f187719bc55190378d6bd1d9143e24a61609bd7ac2a68c88"
+        },
+        {
+          "path": "lib/hris/authorization.ts",
+          "classification": "待修改",
+          "sha256": "a05aa4a6264495289b9512bc54f416d38881e905aaa0fa45f96624c1b50abcca"
+        },
+        {
+          "path": "app/api/attachments/route.ts",
+          "classification": "可复用",
+          "sha256": "bc5f8cf99908aa2f1cb9e010695c0f32a56b6503d57d783de0137e7fcb8ef21b"
+        }
+      ],
+      "cases": [
+        {
+          "id": "P3-M48-01",
+          "requirements": [
+            "M48-SPEC-01",
+            "BASE-01",
+            "BASE-02"
+          ],
+          "given": "本人绑定P1，客户端传P2；再解绑/重聘且无新授权",
+          "when": "读取本人、旧缓存与带P2参数详情",
+          "then": "只会话绑定P1；参数不能换本人；解绑清数据，重聘不恢复账号",
+          "evidence": "API投影、浏览器缓存状态和绑定revision",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M48-02",
+          "requirements": [
+            "M48-SPEC-01",
+            "BASE-02"
+          ],
+          "given": "同人有直线A、虚线B、部门C不含子部门，字段权各不同",
+          "when": "读A/B/C及间接D，尝试混用A字段权到B",
+          "then": "每对象字段逐元组并集再敏感交集；D拒绝；薪资/证件/答卷无授权不可读/筛选/计数",
+          "evidence": "角色关系字段矩阵和直接API否定结果",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M48-03",
+          "requirements": [
+            "M48-SPEC-02",
+            "BP-I-REQ-01"
+          ],
+          "given": "25条本人任务，2条他人批阅，申诉approved未发布",
+          "when": "看卡片并翻页/打开原单",
+          "then": "本人/授权他人分列；20条带hasMore且能续页；awaiting_publish不计待审批；同源计数",
+          "evidence": "两页ID去重、四分区计数和原单状态",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M48-04",
+          "requirements": [
+            "M48-SPEC-03",
+            "BP-P-REQ-09"
+          ],
+          "given": "OKR有KR值/单位/方向但无权重评分，M16适配未接和可用各一组",
+          "when": "显示进展/对齐及更新动作",
+          "then": "未接明示not_configured；可用显示原指标，只调用允许动作；不自动绩效计分",
+          "evidence": "OKR请求/响应contractVersion和禁算断言",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M48-05",
+          "requirements": [
+            "M48-SPEC-03"
+          ],
+          "given": "目标pending调整、假勤余额未知、学习未开放阶段、IDP未开放行动",
+          "when": "分别自评、请假、答题、行动提交",
+          "then": "均由原域校验，unknown非0，不能绕阶段；有allowedActions正常路径仍保留源版本与原ID",
+          "evidence": "四个producer请求回执和原数据差分",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M48-06",
+          "requirements": [
+            "M48-SPEC-04",
+            "BASE-04"
+          ],
+          "given": "页面有敏感字段与旧附件URL；旧请求晚回，随后401/403或撤字段",
+          "when": "刷新、旧请求返回和旧URL下载",
+          "then": "清缓存/禁办理，晚回不恢复敏感数据；下载拒绝；503只可保留带时点非敏感摘要",
+          "evidence": "请求generation、缓存和下载状态",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-M48-07",
+          "requirements": [
+            "M48-SPEC-03",
+            "M48-SPEC-04"
+          ],
+          "given": "七入口正常合成适配，再返回新rawStatus/409和写响应丢失",
+          "when": "逐项消费并按commandId查询恢复",
+          "then": "七项完整保留；未知映射不可办；409重新确认；未知查询而非重复提交；mock不标真实联调",
+          "evidence": "七入口契约矩阵、原单关联与模拟标识",
+          "owner": "R1 P3实施及测试负责人",
+          "gate": "P3该任务验收",
+          "execution": "not_executed"
+        }
+      ]
     }
   ]
 }

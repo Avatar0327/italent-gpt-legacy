@@ -49,3 +49,12 @@
 |BP-I-REQ-07|[R1_P2_M19_Workflow_Transactions.md](R1_P2_M19_Workflow_Transactions.md)|R1-P2-03|P3-M19-01,P3-M19-03|
 |D7|[R1_P2_M19_Workflow_Transactions.md](R1_P2_M19_Workflow_Transactions.md)|R1-P2-03|P3-M19-02|
 |BASE-03|[R1_P2_M19_Workflow_Transactions.md](R1_P2_M19_Workflow_Transactions.md)|R1-P2-03|P3-M19-04|
+|M48-SPEC-01|[R1_P2_M48_Authorization_Consumers.md](R1_P2_M48_Authorization_Consumers.md)|R1-P2-04|P3-M48-01,P3-M48-02|
+|M48-SPEC-02|[R1_P2_M48_Authorization_Consumers.md](R1_P2_M48_Authorization_Consumers.md)|R1-P2-04|P3-M48-03|
+|M48-SPEC-03|[R1_P2_M48_Authorization_Consumers.md](R1_P2_M48_Authorization_Consumers.md)|R1-P2-04|P3-M48-04,P3-M48-05,P3-M48-07|
+|M48-SPEC-04|[R1_P2_M48_Authorization_Consumers.md](R1_P2_M48_Authorization_Consumers.md)|R1-P2-04|P3-M48-06,P3-M48-07|
+|BP-I-REQ-01|[R1_P2_M48_Authorization_Consumers.md](R1_P2_M48_Authorization_Consumers.md)|R1-P2-04|P3-M48-03|
+|BP-P-REQ-09|[R1_P2_M48_Authorization_Consumers.md](R1_P2_M48_Authorization_Consumers.md)|R1-P2-04|P3-M48-04|
+|BASE-01|[R1_P2_M48_Authorization_Consumers.md](R1_P2_M48_Authorization_Consumers.md)|R1-P2-04|P3-M48-01|
+|BASE-02|[R1_P2_M48_Authorization_Consumers.md](R1_P2_M48_Authorization_Consumers.md)|R1-P2-04|P3-M48-01,P3-M48-02|
+|BASE-04|[R1_P2_M48_Authorization_Consumers.md](R1_P2_M48_Authorization_Consumers.md)|R1-P2-04|P3-M48-06|
