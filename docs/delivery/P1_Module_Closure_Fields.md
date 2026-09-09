@@ -1,6 +1,6 @@
 # 模块闭环字段与看板读取约定
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T18:45:46.389452+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T18:49:39.142211+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
@@ -10,6 +10,9 @@
 |---|---|
 | deliveryScope.rangeLayers / moduleExecutionOrder | R1–R4分区及确切顺序；保留原48组，R4的33组暂缓，不计为已完成 |
 | roadmap.executionPolicy | 唯一主模块、最多1备用、实际执行焦点、启用依据、返回条件和焦点历史 |
+| roadmap.executionPolicy.nightReviewPipeline / p1B.r2ReviewBundle | 本轮材料准备顺序、完成及等待队列、正式关闭顺序和同源集中决定索引；准备不等关闭或转序 |
+| deliveryScope.baseCapabilities[].r2Assessment | R2基础适用差异及用例引用；不自动继承R1批准 |
+| p1Baseline.dataValidation.readOnlyRechecks | 旧未知结果的只读后续证据、精确前后快照及剩余未知；不改原operations历史 |
 | modules[].p1.closureChecklist | 完整原登记范围逐项：需求、证据、缺口、阻塞性、关闭方式、判据；不是另一个任务分母 |
 | modules[].p1.reviewPackage | 模块集中阅读包的唯一原始内容；材料已完成待评审不等签署 |
 | p1B.reviewIssues | 业务建议、备选及影响唯一待决记录；decision为空不能展示已批准 |

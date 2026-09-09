@@ -782,7 +782,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M26唯一主模块；夜间材料等待队列M26,M18,M17,M03",
+    "activeWorkPackage": "M26唯一主模块待集中评审；M18/M17/M03材料顺序排队",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -797,7 +797,9 @@
       "BP-S"
     ],
     "nextTasks": [
-      "四模块可自主材料齐备；返回M26为正式评审焦点，生成R2合并决定包与一次性批准草稿，不进入R3"
+      "所有者可一次决定23项推荐及四项LIMIT；总控先应用M26批准逐项判定，再M18→M17→M03。局部修订仅阻受影响模块，未获批准不进R3或R2 P2/P3。",
+      "原站只读最小补证按各包targetedEvidence；不重新创建旧流程，不执行新合成写入",
+      "本窗口不进入P2工作树，待其正式提交结构化建议后统一评估"
     ],
     "state": "R1仅P2设计批准保持；R2模块按真实批准关闭，未批模块材料可串行排队",
     "scopeChange": "SCOPE-20260909-CORE15",
@@ -1054,7 +1056,10 @@
         "protectedWorktree": "/workspace/sites/italent-hris-r1-p2-20260909",
         "protectedBranch": "design/r1-p2-20260909",
         "observedProtectedHead": "617a707",
-        "parallelBoundary": "仅git worktree list查看注册信息；不进入、不修改、不合并/cherry-pick其任何提交；P2建议完成后统一纳入"
+        "parallelBoundary": "仅git worktree list查看注册信息；不进入、不修改、不合并/cherry-pick其任何提交；P2建议完成后统一纳入",
+        "status": "四模块材料全部完成，等待集中评审",
+        "nextFormalClosureModule": "M26",
+        "reviewBundleRef": "docs/delivery/P1_R2_Review_Package.md"
       }
     },
     "moduleExecutionOrder": [
@@ -1382,28 +1387,28 @@
         ],
         "foundationReadiness": {
           "BASE-01": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": false,
+            "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
           },
           "BASE-02": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": false,
+            "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
           },
           "BASE-03": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": false,
+            "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
           },
           "BASE-04": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": false,
+            "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
           },
           "BASE-05": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": false,
+            "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
           },
           "BASE-06": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": false,
+            "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
           }
         },
         "review": {

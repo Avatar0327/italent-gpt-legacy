@@ -1,6 +1,6 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-09T18:45:46.389452+00:00",
+  "generatedFromUpdatedAt": "2026-09-09T18:49:39.142211+00:00",
   "primaryModuleId": "M26",
   "backupModuleId": null,
   "activeExecutionModuleId": "M26",
@@ -456,7 +456,7 @@
       "moduleId": "M26",
       "name": "360度评估",
       "rangeId": "R2",
-      "queueState": "waiting_owner_review",
+      "queueState": "primary_waiting_owner_review",
       "p1AConclusion": {
         "status": "已完成待评审",
         "approvalRecord": null,
@@ -1365,28 +1365,28 @@
       ],
       "foundationReadiness": {
         "BASE-01": {
-          "value": null,
-          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+          "value": false,
+          "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
         },
         "BASE-02": {
-          "value": null,
-          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+          "value": false,
+          "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
         },
         "BASE-03": {
-          "value": null,
-          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+          "value": false,
+          "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
         },
         "BASE-04": {
-          "value": null,
-          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+          "value": false,
+          "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
         },
         "BASE-05": {
-          "value": null,
-          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+          "value": false,
+          "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
         },
         "BASE-06": {
-          "value": null,
-          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+          "value": false,
+          "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
         }
       },
       "review": {
@@ -1483,5 +1483,43 @@
         "rangeReviewApproved"
       ]
     }
-  ]
+  ],
+  "nightReviewPipeline": {
+    "authorization": "本窗口最新用户明确授权，仅本轮R2 P1评审材料流水线",
+    "order": [
+      "M26",
+      "M18",
+      "M17",
+      "M03"
+    ],
+    "waitingModuleIds": [
+      "M26",
+      "M18",
+      "M17",
+      "M03"
+    ],
+    "preparedModuleIds": [
+      "M26",
+      "M18",
+      "M17",
+      "M03"
+    ],
+    "formalClosureOrder": [
+      "M37",
+      "M06",
+      "M26",
+      "M18",
+      "M17",
+      "M03"
+    ],
+    "rule": "同一时刻一主模块；材料及可自主工作完成后可排队待集中评审并转下一材料模块，未批准不关闭/不转序；不进R3或P2/P3",
+    "ownerBranch": "main",
+    "protectedWorktree": "/workspace/sites/italent-hris-r1-p2-20260909",
+    "protectedBranch": "design/r1-p2-20260909",
+    "observedProtectedHead": "617a707",
+    "parallelBoundary": "仅git worktree list查看注册信息；不进入、不修改、不合并/cherry-pick其任何提交；P2建议完成后统一纳入",
+    "status": "四模块材料全部完成，等待集中评审",
+    "nextFormalClosureModule": "M26",
+    "reviewBundleRef": "docs/delivery/P1_R2_Review_Package.md"
+  }
 }

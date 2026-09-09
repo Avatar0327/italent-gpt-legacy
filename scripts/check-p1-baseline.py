@@ -186,6 +186,21 @@ for m in s['modules']:
 dv=s['p1Baseline']['dataValidation'];old_dv=old['p1Baseline']['dataValidation']
 check(dv['operations']==old_dv['operations'],'本离线单元未新增或改变源操作结果')
 old_records={x['objectId']:x for x in old_dv['records']}
+# A later read-only observation may resolve an old unknown without rewriting operations.
+for recheck in dv.get('readOnlyRechecks',[]):
+ before,after=recheck['before'],recheck['after']
+ check(recheck['sourceWrite'] is False and recheck['changesBusinessAcceptance'] is False,recheck['id']+'只读回查不提升业务验收')
+ check(recheck['pageRef'] in pages and (R/recheck['source']).exists(),recheck['id']+'来源与原页面存在')
+ source_text=(R/recheck['source']).read_text()
+ check(recheck['id'] in source_text and all(str(v) in source_text for v in recheck['observedFields'].values()),recheck['id']+'观察值在源证据中可追溯')
+ check(before['objectId']==recheck['oldObjectId'] and after['objectId']==recheck['newObjectId'],recheck['id']+'前后对象标识一致')
+ changed={k for k in set(before)|set(after) if before.get(k)!=after.get(k)}
+ check(changed<={'objectId','objectType','status','evidence','retention'} and before['marker']==after['marker']==recheck['observedFields']['name'] and before['moduleId']==after['moduleId']==recheck['moduleId'],recheck['id']+'只校正同一合成对象的可追溯结果')
+ check(after in dv['records'] and bool(recheck['remaining']),recheck['id']+'当前记录匹配且保留未知项')
+ if recheck['oldObjectId'] in old_records:
+  check(old_records[recheck['oldObjectId']]==before and recheck['newObjectId'] not in old_records,recheck['id']+'本单元精确前后映射，无对象新增或覆盖')
+  del old_records[recheck['oldObjectId']]
+  old_records[recheck['newObjectId']]=after
 check({x['objectId'] for x in dv['records']}==set(old_records),'本离线单元未新增或删除遗留合成对象')
 for rec in dv['records']:
  previous=old_records[rec['objectId']]
@@ -236,3 +251,35 @@ if cap5.get('recoveryTargets'):
 result['checks']=checks
 (D/'P1AB_Document_Check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
 print('PASS: module packets, scoped approvals, dataset mappings and R1 foundation references; no inherited signoff')
+
+rb=s['p1B'].get('r2ReviewBundle')
+if rb:
+ pipe=s['roadmap']['executionPolicy']['nightReviewPipeline']
+ expected_order=['M26','M18','M17','M03']
+ check(rb['moduleIds']==rb['formalClosureOrder']==pipe['order']==expected_order,'R2材料及正式关闭顺序不混入R3')
+ check(pipe['preparedModuleIds']==expected_order and rb['allAutonomousMaterialsPrepared'] is True,'四模块材料完成可追溯，不用页面数推算')
+ issues={x['id']:x for x in s['p1B']['reviewIssues']}
+ check(len(rb['decisionIds'])==len(set(rb['decisionIds']))==23 and set(rb['decisionIds'])<=set(issues),'集中23项决定唯一且来自原reviewIssues')
+ check(len(set(rb['exceptionIds']))==4,'四模块各有自身LIMIT，不提前代批')
+ check((R/rb['document']).exists() and (R/rb['approvalDraft']).exists(),'同源集中包和批准草稿生成')
+ bundle_text=(R/rb['document']).read_text()
+ check(all(i in bundle_text for i in rb['decisionIds']+rb['exceptionIds']),'集中包完整包含规则与受限项')
+ for mid in expected_order:
+  m=next(x for x in s['modules'] if x['id']==mid);p=m['p1'];rp=p['reviewPackage']
+  check(set(p['reviewSupplement']['coverage'])==set(m['scope'].split('、')),mid+'集中包覆盖完整原范围')
+  check(all(x in issues for x in rp['decisionIds']) and all(issues[x].get('alternatives') and issues[x].get('ifUndecided') for x in rp['decisionIds']),mid+'推荐备选及未決后果齐备')
+  if not rp.get('approvalRecord'):
+   check(p['moduleClosure'].get('p1Closed') is not True and all(x['approved'] is False for x in rp['exceptionProposals']),mid+'材料完成不代批或关闭')
+ for c in ds['baseCapabilities']:
+  a=c['r2Assessment']
+  check(set(a['acceptanceCaseRefs'])<=set(contract_case_by_id) and set(a['historicalBaseCaseRefs'])<={x['id'] for x in c['acceptanceCases']},c['id']+'R2适用引用有效用例')
+  check(a['executionThisRun'] is False and a['accepted'] is False,c['id']+'R2需求准备不是执行通过')
+ closure=json.loads((D/'P1_Module_Closure.json').read_text())
+ check(closure['nightReviewPipeline']==pipe,'看板流水线由事实源直接派生')
+ pending=[mid for mid in expected_order if not next(m for m in s['modules'] if m['id']==mid)['p1']['reviewPackage'].get('approvalRecord')]
+ if pending==expected_order:
+  check(closure['p1ClosedCount']==6 and closure['restrictedCount']==6 and closure['completeCount']==0,'本夜间单元6/15受限关闭，四待审不计通过')
+ check(s['p1Baseline']['currentRun']['sourceReadOnly'] is True,'本轮最新原站只读边界优先于旧合成授权')
+ result['checks']=checks
+ (D/'P1AB_Document_Check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+ print('PASS: R2 consolidated decisions, complete scope, sequential queue and no premature approval')

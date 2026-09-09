@@ -5290,7 +5290,7 @@
               "BC-C28"
             ],
             "coverageDepth": "表单局部观察；流程保存结果待核",
-            "remaining": "源空表/模板/流程局部；旧流程保存unknown，阶段执行未覆盖，待SPEC03/04",
+            "remaining": "旧流程存在停用已证；稳定UUID/节点/角色和阶段执行仍缺，规则待集中批准",
             "next": "集中规则/LIMIT评审及最小补证，不重开宽泛探索",
             "assessedAt": "2026-09-09T14:54:44.227704+00:00",
             "complete": false,
@@ -5389,7 +5389,7 @@
               "status": "待所有者批准",
               "approved": false,
               "approvalRecord": null,
-              "scope": "原站自动入出池/重入历史、继任目标目录映射与准备度算法、IDP流程保存结果及执行/通知/角色、组织健康公式和跨模块共享未验证。",
+              "scope": "原站自动入出池/重入历史、继任目标目录映射与准备度算法、IDP流程UUID/节点及执行/通知/角色、组织健康公式和跨模块共享未验证。",
               "evidence": "既有BC-C06,BC-P1C-M17,BC-P1C-M17-02,BC-C27,BC-C28,BC-C29,BC-C30,BC-C31；本轮e40f75f59da103d449e28cb00b87aca4ea8c3e40静态核对；本单元tab9可读标题/查询控件；发展流程目录查询调用被工具中断，未确认导航结果，未进行提交。BC-C28旧停用流程无ID、持久化仍unknown；未重复创建或清理。",
               "proposal": "建议以已有原站证据、静态差异和明确获批的本模块产品规则关闭P1需求；仅本模块有范围例外，不豁免P2/P3/P4。未批准前不计关闭或转序。",
               "residualRisk": "错误后备/任用暗示、自动资格变化、指导自审、历史成员区间重叠、健康指标分母偏差和敏感人才名单泄漏。",
@@ -5419,8 +5419,8 @@
             },
             {
               "problem": "发展流程保存状态",
-              "resolution": "停用P1V-20260909-测试发展流程曾保存一次，但无成功/失败证据或ID，不能重建；现简单plan不是多阶段IDP",
-              "basis": "BC-C28历史未知保持"
+              "resolution": "原一次保存曾未知；本轮完整名称查询唯一合成行确认已保存且停用，UUID/节点仍未知；无新写入",
+              "basis": "BC-C28历史；R2-RO-M17-01本轮只读"
             }
           ],
           "exitAssessment": {
@@ -5429,7 +5429,7 @@
             "transition": "false；材料排队不等模块关闭/转序或R2版本P2批准"
           },
           "flowSummary": [
-            "源历史：空池→合成入池→培养中/3~6个月；指导自关联只有样本，旧停用IDP流程结果unknown。",
+            "源历史：空池→合成入池→培养中/3~6个月；指导自关联只有样本；R2-RO-M17-01本轮只读确认旧IDP流程存在且停用，未执行流程。",
             "候选：规则/人工审议→成员有效段→发展计划分阶段核验→准备度独立复核→继任推荐；任用由M03另审。"
           ],
           "acceptanceCaseRefs": [
@@ -5543,7 +5543,7 @@
               "BC-C27",
               "BC-C28"
             ],
-            "gap": "源空表/模板/流程局部；旧流程保存unknown，阶段执行未覆盖，待SPEC03/04",
+            "gap": "源空表/模板/流程局部；本轮已只读确认旧流程存在且停用，UUID/节点及阶段执行未验证，SPEC03/04待批",
             "blocksP1": true,
             "risk": "错误后备/任用暗示、自动资格变化、指导自审、历史成员区间重叠、健康指标分母偏差和敏感人才名单泄漏。",
             "closureMethod": "明确批准所列规则与LIMIT，或补针对性证据修订；材料完备不能代签",
@@ -5585,7 +5585,7 @@
         ],
         "sourceAccessThisUnit": {
           "checkedAt": "2026-09-09T18:40:16.868160+00:00",
-          "result": "本单元tab9可读标题/查询控件；发展流程目录查询调用被工具中断，未确认导航结果，未进行提交。BC-C28旧停用流程无ID、持久化仍unknown；未重复创建或清理。",
+          "result": "只读结果已核对：R2-RO-M17-01确认旧流程存在且停用；UUID和节点仍未取得，未重复创建或提交。",
           "newSourceWrites": false,
           "newHumanVisitors": false
         },
@@ -5595,7 +5595,7 @@
             "盘点": "部分覆盖M17入口；与M18记录共用未证，以明确来源引用而不合并模块",
             "人才池": "历史池/成员/阶段合成执行已覆盖；规则、重入、指导权限部分/未覆盖，待SPEC01/03",
             "继任": "源表单部分覆盖、目标选择受限；现简单候选静态，准备度/区间/岗位覆盖待SPEC02",
-            "发展计划": "源空表/模板/流程局部；旧流程保存unknown，阶段执行未覆盖，待SPEC03/04",
+            "发展计划": "部分覆盖：空表/模板、旧停用流程存在已确认；稳定UUID/节点和阶段执行仍受限",
             "健康度": "仅页面标题到达；公式/时点/范围未覆盖，不以现继任人数冒完整健康指数"
           },
           "dependencyContracts": [
@@ -5604,7 +5604,7 @@
             "六基础按R1批准目标消费；R2人才敏感字段/动态角色和自动规则新增边界须本包批准。"
           ],
           "targetedEvidence": [
-            "按完整名P1V-20260909-测试发展流程在含停用的目录只读查一次；未找到保留unknown，不重复保存。",
+            "R2-RO-M17-01已关闭旧流程持久化未知；下次仅定向读取同记录UUID、节点/模板关联，不再重建或重复全量查询。",
             "按PoolId fd92d3a7与EA稳定ID回查成员区间/历史；只读出池/准备度帮助，不执行状态流转。",
             "继任目标选择器查M01 JA/JB来源字段与过滤说明，目录差异不推断需完整主数据模块。",
             "只读健康指标定义和IDP模板阶段/角色/期限说明，不启用流程、不派发学习。"
@@ -7201,7 +7201,7 @@
         ],
         "moduleClosure": {
           "rangeId": "R2",
-          "queueState": "waiting_owner_review",
+          "queueState": "primary_waiting_owner_review",
           "p1AConclusion": {
             "status": "已完成待评审",
             "approvalRecord": null,
@@ -12775,7 +12775,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-09T18:45:46.389452+00:00",
+    "updatedAt": "2026-09-09T18:49:39.142211+00:00",
     "authority": "Scope_Register.json为唯一范围/验收事实源；历史48/59保留，当前15模块及基础按SCOPE-20260909-CORE15。",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -44014,7 +44014,12 @@
         "visibleStates": "保存动作后表单关闭，名称P1V目录为空；刷新后相同筛选仍空，业务UUID未取得，不判已保存成功或已失败",
         "sourceStatement": "因模板必须关联IDP流程，先查流程名称P1V空，再仅填写合成名/测试A，向下公开否、是否启用否。单选实际active类确认否/否后点击一次保存。弹层宽0但目录仍空；后续只读回查和一次刷新同筛选仍空，未见成功/失败反馈留存或业务ID。该结果与M03/M06已保存回读不同，不能列执行验证成功。",
         "operations": "P1OP-C-017一次保存尝试，无再次保存/重建、未启用/设计节点/关联模板/开始计划或通知；刷新后无未保存草稿。合成流程可能已落存但当前不可见，也可能未持久化，原因未确定。",
-        "unknown": "持久化和当前目录权限/停用过滤原因不明；缺少对象ID，不能称保存成功、保存失败或已清理。后续通过安全UI替代路径查精确名，不改权限、不借真实模板启动计划；其余人才模块可继续。"
+        "unknown": "持久化和当前目录权限/停用过滤原因不明；缺少对象ID，不能称保存成功、保存失败或已清理。后续通过安全UI替代路径查精确名，不改权限、不借真实模板启动计划；其余人才模块可继续。",
+        "limitationResolution": {
+          "subsequentEvidence": "R2-RO-M17-01",
+          "scope": "完整名只读回查已确认存在且停用；UUID/节点仍未核；原观察未知保留当时含义",
+          "businessRulesValidated": false
+        }
       },
       {
         "evidenceRef": "BC-C29",
@@ -45776,14 +45781,14 @@
       "branch": "main",
       "startWorkingTree": "clean",
       "mode": "模块闭环优先、按R版本滚动转序",
-      "sourceReadOnly": false,
+      "sourceReadOnly": true,
       "newProductCodeChanges": false,
       "newDeployments": 0,
       "newHumanVisitors": 0,
       "businessTestsRerun": false,
       "resumedAt": "2026-09-09T01:32:59.407213+00:00",
       "resumeHead": "90e69f066d7f21c5df36b5becffbca2502e008db",
-      "executionBoundary": "用户已确认当前北森租户可用于测试，并授权P1所需合成关联记录的创建、保存、提交及必要状态流转；先查可复用记录，统一P1V-20260909标记，逐链记录ID/关联/前后状态和结果，不逐条重问。不得任意更改真实员工或既有业务；不扩大到真实业务生效、外部通知、支付、签署或新增人类访问者。产品代码、部署、D1–D7/E1/E2继续保持。 最新范围仅当前15模块和基础/最小必要公共依赖；33模块停止独立探索/新数据链，已有前置可必要引用，不为停点做完整链。",
+      "executionBoundary": "本轮最新边界：原站只读，不修改原站数据；此前合成记录授权作为历史保留，本夜间单元不据此新增写入。 只main P1文档和生成检查；不进入R1 P2工作树，不修改产品代码、业务数据库、部署或访问者。",
       "recovery": "2026-09-08两份停止记录及补丁保留；2026-09-09两次读取HEAD/status一致，无Git锁，当前用户明确要求继续。未再发现共享写入；此有界观察不证明所有远端进程状态。",
       "resumeEvidenceRefs": [
         "BC-I25",
@@ -45792,27 +45797,30 @@
       "latestAuthorizationAt": "2026-09-09T06:25:42.812752+00:00",
       "scopeChangeHead": "f31cb2b5e1894723288fd884d4e3bd895ae57327",
       "scopeChange": "SCOPE-20260909-CORE15",
-      "latestCheckpointAt": "2026-09-09T18:45:46.389452+00:00",
-      "latestCommittedHead": "fcd4ea8d9b3480b74ea62f4b822da1fa9dfdc48d",
+      "latestCheckpointAt": "2026-09-09T18:49:39.142211+00:00",
+      "latestCommittedHead": "990fd8cf169f990cd2f67ce3b23ddd6468c101c6",
       "latestEvidenceRefs": [
         "BC-C39",
-        "BC-C40"
+        "BC-C40",
+        "BC-C28",
+        "R2-RO-M17-01"
       ],
-      "next": "四模块可自主材料齐备；返回M26为正式评审焦点，生成R2合并决定包与一次性批准草稿，不进入R3",
-      "browserRecovery": "旧实例失效后按官方指引发现唯一新实例并尝试tabs.list/new/goto/title；tab8创建成功但读取/导航刷新均超时。完成专业域/首包/基础/内部范围离线单元后再核tabs.list仍20s超时，停止重复。同一实例未收到登录/全量授权提示，不绕过控制。",
-      "sourceBrowsingStatus": "本单元云浏览器标题可读，旧发展流程导航中断结果已定向回查；M03沿用C08–13和C25/26具体证据，不重复已证任期。源投票/任免/考核提交本轮不执行，未写任何源记录。",
-      "currentFocus": "M26唯一主模块；夜间材料等待队列M26,M18,M17,M03",
+      "next": "所有者可一次决定23项推荐及四项LIMIT；总控先应用M26批准逐项判定，再M18→M17→M03。局部修订仅阻受影响模块，未获批准不进R3或R2 P2/P3。",
+      "browserRecovery": "历史CDP超时已在本轮恢复：可列出标签及定向只读访问；M26入口误到页未计证，M18/M17有限回查成功。具体访问限制保留于各模块，不再把整站连接故障列为当前共同阻塞。",
+      "sourceBrowsingStatus": "连接已恢复可读；M26入口误到页未计证；M18旧合成项目回查；M17完整名只读确认旧流程存在停用。无新源业务写入。",
+      "currentFocus": "M26唯一主模块待集中评审；M18/M17/M03材料顺序排队",
       "checkpointCommitSemantics": "latestCommittedHead为本单元编辑开始前已存在提交；本记录所属提交用git log -1 -- docs/delivery/Scope_Register.json解析，不能将基准冒充最终HEAD。",
-      "workingTreeAtResume": "main fcd4ea8d9b3480b74ea62f4b822da1fa9dfdc48d；上单元已推送核对，当前仅P1文档/同源脚本",
+      "workingTreeAtResume": "汇编单元基于main 990fd8cf169f990cd2f67ce3b23ddd6468c101c6 clean；仅P1文档/同源生成检查变化，最终所属提交以Git核实",
       "lastVerifiedSync": {
-        "commit": "fcd4ea8d9b3480b74ea62f4b822da1fa9dfdc48d",
+        "commit": "990fd8cf169f990cd2f67ce3b23ddd6468c101c6",
         "remoteBranch": "main",
-        "result": "上单元push及ls-remote一致；本单元最终所属提交恢复时查询Git",
-        "scope": "P1已保存单元"
+        "result": "push成功，ls-remote与HEAD一致；当前汇编为后续编辑单元",
+        "scope": "M03完整评审材料及之前五单元"
       },
-      "currentUnitOutcome": "M03完整范围材料已准备；新规则未批，6/15受限关闭不提升；只main P1文档/生成，无源写/产品/P2工作树修改。",
-      "previousAtomicOutcome": "BC-C30与后续M17静态差异已提交b64ce7c；最近池1EA培养中/3~6个月。M17停用IDP流程保存结果未知，M18新建项目未启动；本轮不扩展或重复提交。",
-      "sourceWritePolicy": "本轮最新边界：原站只读，不修改原站数据；此前合成记录授权作为历史保留，本夜间单元不据此新增写入。"
+      "currentUnitOutcome": "M37/M06先后受限关闭，计数6/15；四模块全部材料与23项推荐/四LIMIT/R2基础适用待集中评审；旧流程只读确认存在停用，UUID/节点仍缺。",
+      "previousAtomicOutcome": "BC-C28旧流程曾未知，现R2-RO-M17-01已确认存在停用，UUID未取；M18已存项目未执行启动，EA/兼职及其他源历史不冒本轮复验。",
+      "sourceWritePolicy": "本轮最新边界：原站只读，不修改原站数据；此前合成记录授权作为历史保留，本夜间单元不据此新增写入。",
+      "historicalExecutionBoundary": "用户已确认当前北森租户可用于测试，并授权P1所需合成关联记录的创建、保存、提交及必要状态流转；先查可复用记录，统一P1V-20260909标记，逐链记录ID/关联/前后状态和结果，不逐条重问。不得任意更改真实员工或既有业务；不扩大到真实业务生效、外部通知、支付、签署或新增人类访问者。产品代码、部署、D1–D7/E1/E2继续保持。 最新范围仅当前15模块和基础/最小必要公共依赖；33模块停止独立探索/新数据链，已有前置可必要引用，不为停点做完整链。"
     },
     "dataValidation": {
       "recordedAt": "2026-09-09T10:30:56.222812+00:00",
@@ -46804,14 +46812,14 @@
           "retention": "保留人才合成前置；通知否；未免职/删除/评分。EA未来10日离职影响尚未执行验证。"
         },
         {
-          "objectId": "未取得；一次保存结果待核",
+          "objectId": "UUID未取得；已确认存在的停用IDP流程",
           "moduleId": "M17",
-          "objectType": "可能遗留的停用IDP流程（未确认持久化）",
+          "objectType": "停用IDP流程（已只读确认持久化）",
           "marker": "P1V-20260909-测试发展流程",
           "relations": "拟所属测试A；向下公开否/启用否；无人员/模板/计划关联",
-          "status": "一次保存后弹层关闭，P1V目录及刷新回查空；状态未知，禁止重复创建",
-          "evidence": "BC-C28",
-          "retention": "保留查询定位与操作证据；未删除、未启用，不声明安全清理完成；后续先查实际结果。"
+          "status": "本轮完整名称查询唯一行：所属P1V-20260909-测试A、向下公开否、是否启用否；已确认存在且停用，业务UUID/节点未核",
+          "evidence": "BC-C28；R2-RO-M17-01",
+          "retention": "保留现有停用流程，不重复创建/启用/删除；本轮只读回查，稳定UUID与节点/模板关联仍待核。"
         },
         {
           "objectId": "fd92d3a7-7925-4b36-a22b-a4ab1fcfa049",
@@ -47004,6 +47012,48 @@
           "reason": "校正滞后的无引用/未启用说明，与记录已有最新status和旧执行证据一致；不是本轮源状态变更",
           "sourceOperation": false
         }
+      ],
+      "readOnlyRechecks": [
+        {
+          "id": "R2-RO-M17-01",
+          "moduleId": "M17",
+          "pageRef": "BC-C28",
+          "source": "docs/P1_Source_Observations_20260907.md",
+          "recordedAt": "2026-09-09T18:49:39.142211+00:00",
+          "timePrecision": "本夜间单元观察后登记；非原创建时间",
+          "sourceWrite": false,
+          "oldObjectId": "未取得；一次保存结果待核",
+          "newObjectId": "UUID未取得；已确认存在的停用IDP流程",
+          "before": {
+            "objectId": "未取得；一次保存结果待核",
+            "moduleId": "M17",
+            "objectType": "可能遗留的停用IDP流程（未确认持久化）",
+            "marker": "P1V-20260909-测试发展流程",
+            "relations": "拟所属测试A；向下公开否/启用否；无人员/模板/计划关联",
+            "status": "一次保存后弹层关闭，P1V目录及刷新回查空；状态未知，禁止重复创建",
+            "evidence": "BC-C28",
+            "retention": "保留查询定位与操作证据；未删除、未启用，不声明安全清理完成；后续先查实际结果。"
+          },
+          "after": {
+            "objectId": "UUID未取得；已确认存在的停用IDP流程",
+            "moduleId": "M17",
+            "objectType": "停用IDP流程（已只读确认持久化）",
+            "marker": "P1V-20260909-测试发展流程",
+            "relations": "拟所属测试A；向下公开否/启用否；无人员/模板/计划关联",
+            "status": "本轮完整名称查询唯一行：所属P1V-20260909-测试A、向下公开否、是否启用否；已确认存在且停用，业务UUID/节点未核",
+            "evidence": "BC-C28；R2-RO-M17-01",
+            "retention": "保留现有停用流程，不重复创建/启用/删除；本轮只读回查，稳定UUID与节点/模板关联仍待核。"
+          },
+          "method": "已到发展计划流程页，展开名称筛选，以完整合成名查询，读取唯一合成行；未提交业务",
+          "observedFields": {
+            "name": "P1V-20260909-测试发展流程",
+            "organization": "P1V-20260909-测试A",
+            "downwardPublic": "否",
+            "enabled": "否"
+          },
+          "remaining": "UUID、节点及原创建时点未取得；查看编辑入口未取得业务ID，无字段修改/保存",
+          "changesBusinessAcceptance": false
+        }
       ]
     }
   },
@@ -47093,7 +47143,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M26唯一主模块；夜间材料等待队列M26,M18,M17,M03",
+    "activeWorkPackage": "M26唯一主模块待集中评审；M18/M17/M03材料顺序排队",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -47108,7 +47158,9 @@
       "BP-S"
     ],
     "nextTasks": [
-      "四模块可自主材料齐备；返回M26为正式评审焦点，生成R2合并决定包与一次性批准草稿，不进入R3"
+      "所有者可一次决定23项推荐及四项LIMIT；总控先应用M26批准逐项判定，再M18→M17→M03。局部修订仅阻受影响模块，未获批准不进R3或R2 P2/P3。",
+      "原站只读最小补证按各包targetedEvidence；不重新创建旧流程，不执行新合成写入",
+      "本窗口不进入P2工作树，待其正式提交结构化建议后统一评估"
     ],
     "state": "R1仅P2设计批准保持；R2模块按真实批准关闭，未批模块材料可串行排队",
     "scopeChange": "SCOPE-20260909-CORE15",
@@ -47364,7 +47416,10 @@
         "protectedWorktree": "/workspace/sites/italent-hris-r1-p2-20260909",
         "protectedBranch": "design/r1-p2-20260909",
         "observedProtectedHead": "617a707",
-        "parallelBoundary": "仅git worktree list查看注册信息；不进入、不修改、不合并/cherry-pick其任何提交；P2建议完成后统一纳入"
+        "parallelBoundary": "仅git worktree list查看注册信息；不进入、不修改、不合并/cherry-pick其任何提交；P2建议完成后统一纳入",
+        "status": "四模块材料全部完成，等待集中评审",
+        "nextFormalClosureModule": "M26",
+        "reviewBundleRef": "docs/delivery/P1_R2_Review_Package.md"
       }
     },
     "moduleExecutionOrder": [
@@ -47692,28 +47747,28 @@
         ],
         "foundationReadiness": {
           "BASE-01": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": false,
+            "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
           },
           "BASE-02": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": false,
+            "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
           },
           "BASE-03": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": false,
+            "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
           },
           "BASE-04": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": false,
+            "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
           },
           "BASE-05": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": false,
+            "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
           },
           "BASE-06": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": false,
+            "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
           }
         },
         "review": {
@@ -47770,7 +47825,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-09T18:45:46.389452+00:00",
+    "updatedAt": "2026-09-09T18:49:39.142211+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -56428,7 +56483,7 @@
       {
         "id": "C-SPEC-01",
         "topic": "360评价角色、匿名对象和低样本报告发布边界",
-        "status": "待集中业务决定；已以原站角色配置和源码缩小范围",
+        "status": "历史问题已拆分到M26-SPEC-01/02，仍待集中评审",
         "basis": "原站BC-C15明确可配置角色及套卷启用上限；当前feedback.ts固定四类，HR/管理员能追溯实名原卷、受评者仅看阈值汇总，peer/report阈值3–10、self/supervisor阈值1；closed且0答卷也可发布空汇总。无原站匿名/阈值和零响应发布实证，不能把既有代码当用户已批准。",
         "proposal": "推荐保留可配置角色的常规范围；在规格中明确受评者只见满足阈值的分组汇总，原卷由明确授权的管理角色审计；低于阈值保留不足样本状态，0响应不作为有效评估完成。具体管理可识别范围、各角色阈值及空报告能否发布需确认，推荐未批准。",
         "alternatives": [
@@ -56442,7 +56497,12 @@
           "lib/hris/development.ts",
           "tests/p3-api.test.mjs"
         ],
-        "decisionRequired": true
+        "decisionRequired": false,
+        "supersededBy": [
+          "M26-SPEC-01",
+          "M26-SPEC-02"
+        ],
+        "decision": null
       },
       {
         "id": "R-SPEC-02",
@@ -57525,6 +57585,25 @@
           "M03"
         ],
         "preparedAt": "2026-09-09T18:45:46.389452+00:00"
+      },
+      {
+        "id": "R2-BASELINE-01",
+        "topic": "R2四模块完整规格、验收及六基础适用边界",
+        "basis": "M37/M06已批准；四模块SPEC/LIMIT及逐项范围、字段/状态/角色/契约和用例已同源准备，六基础R1已批但R2适用尚未签署。",
+        "proposal": "建议批准本次四模块评审包与其引用分包规格中已具体化的完整范围、字段校验、权限/状态/异常/契约和可执行验收预期，并按各SPEC与LIMIT明确边界实施；发生冲突以所审SPEC及所有者明确选择优先，静态事实不自动作为产品要求。六基础沿既有批准目标用于R2，采用本包r2Assessment列明的身份映射/敏感权限/审计/版本/恢复/接口适用差异，后续P2设计和P3/P4实证责任保留。四模块必须按M26→M18→M17→M03逐个核对退出条件，条件未满足不关闭；R2阶段另据真实模块/基础及版本评审记录判定，不自动授权R2 P2/P3。",
+        "alternatives": "逐项修订或只批准部分SPEC/基础适用；未获批部分保持待评审，不修改15分母或删除内部范围。",
+        "impact": "仅P1需求基线与验收预期，不代表实现、原站算法证明、多人权限或生产通过；不修改R1 P2设计分支。",
+        "ifUndecided": "即使各SPEC已批，未覆盖的字段/验收/基础适用及R2版本仍须明确记录，不能自动转序。",
+        "status": "已具体化待集中评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M26",
+          "M18",
+          "M17",
+          "M03"
+        ],
+        "preparedAt": "2026-09-09T18:49:39.142211+00:00"
       }
     ],
     "codeReview": {
@@ -57867,11 +57946,33 @@
       }
     ],
     "consistencyReview": {
-      "state": "R1四模块P1及六基础批准独立追溯，版本仅准P2设计",
+      "state": "四模块对象/尺度/权限/状态/跨模块依赖与历史证据一致性已审查；仅文档自检",
       "reviewedSourceCommit": "447b02f72a2d2051986aba98e769daa7c2b846a3",
       "issues": [
         "R-SPEC-01 候选人主对象与招聘需求/人才库关系",
-        "C-SPEC-01 360评价角色、匿名对象和低样本报告发布边界"
+        "M26-SPEC-01 评价角色、邀请身份与匿名承诺",
+        "M26-SPEC-02 匿名阈值、分母、缺评与报告开放",
+        "M26-SPEC-03 题库、套卷、尺度与题目版本",
+        "M26-SPEC-04 活动、答卷撤回及报告更正生命周期",
+        "M26-SPEC-05 消费契约、数据用途及异常责任",
+        "M18-SPEC-01 项目对象、范围快照与标准工具契约",
+        "M18-SPEC-02 多维评价、九宫格和缺失值",
+        "M18-SPEC-03 校准会议、利益回避与结果版本",
+        "M18-SPEC-04 发布、撤回、更正与敏感结果开放",
+        "M18-SPEC-05 人才池、继任消费与异常恢复",
+        "M17-SPEC-01 人才池、自动规则与出池重入历史",
+        "M17-SPEC-02 准备度、继任资格与岗位覆盖",
+        "M17-SPEC-03 指导角色、动态关系与独立核验",
+        "M17-SPEC-04 发展计划模板、阶段与异常恢复",
+        "M17-SPEC-05 组织健康度与人才分析分母",
+        "M17-SPEC-06 敏感权限、跨域建议与迁移边界",
+        "M03-SPEC-01 干部稳定身份、任期及有效日期",
+        "M03-SPEC-02 选拔活动、提名审议与任免生效",
+        "M03-SPEC-03 投票、总分、指标评分及缺评",
+        "M03-SPEC-04 考察期、转正、延期与退出",
+        "M03-SPEC-05 周期述职、档案子集与敏感权限",
+        "M03-SPEC-06 跨模块契约、并发与历史迁移",
+        "R2-BASELINE-01 R2四模块完整规格、验收及六基础适用边界"
       ],
       "findings": [
         "组织同级唯一已排除首包歧义",
@@ -57935,9 +58036,9 @@
         "M06现archive阻新apply但未自动终止在途；认证raw certified与有效性/撤销状态分开，旧proof不因后评改变。",
         "M37主模块全部外部阻塞后只启M06一个备用，完成待评审不等越序关闭；R1仅P2授权不外推R2开发。"
       ],
-      "remaining": "新规则/LIMIT集中决定；M26,M18,M17,M03材料等待，不计关闭",
-      "latestReviewedHead": "fcd4ea8d9b3480b74ea62f4b822da1fa9dfdc48d",
-      "latestReviewAt": "2026-09-09T18:45:46.389452+00:00",
+      "remaining": "23项新推荐+四LIMIT待所有者，R2基础适用待签；源码/真人/生产均未验证",
+      "latestReviewedHead": "990fd8cf169f990cd2f67ce3b23ddd6468c101c6",
+      "latestReviewAt": "2026-09-09T18:49:39.142211+00:00",
       "internalScopeReviewAt": "2026-09-09T10:26:03.101902+00:00",
       "internalScopeSource": "modules[].scope → modules[].p1.internalScopeCoverage；逐个原登记短语精确映射，不增验收分母",
       "internalScopeResult": "当前15模块所有原登记短语均映射到既有规格/直接或跨域证据及具体限制；仅用户明确独立AI排班子能力暂缓、支付外部部分仅契约。其余保留含未探索，未当需求通过。",
@@ -58097,13 +58198,13 @@
     ],
     "packageAssessmentSource": "当前各包就绪条件由modules[].p1.currentDeliveryAssessment.basis及deliveryScope基础边界生成；packages.pending/readinessConditions保留兼容历史快照，不能覆盖逐模块最新评估，后续不手工更新两份。",
     "reviewPackage": {
-      "assessedAt": "2026-09-09T18:45:46.389452+00:00",
-      "basedOnHead": "fcd4ea8d9b3480b74ea62f4b822da1fa9dfdc48d",
-      "status": "P1受限关闭6/15；R2夜间材料串行准备",
-      "autonomousWork": "M03完整范围材料已准备；新规则未批，6/15受限关闭不提升；只main P1文档/生成，无源写/产品/P2工作树修改。",
+      "assessedAt": "2026-09-09T18:49:39.142211+00:00",
+      "basedOnHead": "990fd8cf169f990cd2f67ce3b23ddd6468c101c6",
+      "status": "可自主材料完成，等待所有者一次集中评审；未代批",
+      "autonomousWork": "M37/M06先后受限关闭，计数6/15；四模块全部材料与23项推荐/四LIMIT/R2基础适用待集中评审；旧流程只读确认存在停用，UUID/节点仍缺。",
       "sourceProgress": "M01组织/职位/入职/兼职/法人/未来离职；M07薪资组/包前置；M06类别-级别-指标-标准保留链；M03任期/考察期；M17池成员；M37指标/标准启用；M18项目持久化及对象配置均有局部执行。没有将这些链等同整模块P1A完成。",
       "requirementsProgress": "当前15模块均有总体/分包契约或明确受限规格；原内部功能逐项映射，字段/角色/状态/依赖/异常/验收及实现差异同源。组织绩效、OKR、健康度、社保/个税/激励等未探索细则保留，已确认D1–D7与候选分开。",
-      "gateConclusion": "R1仅P2设计获准；R2未批四模块和基础适用评审不代签",
+      "gateConclusion": "P1受限关闭6/15；四模块未批，R2基础适用待审，R1仅设计阶段获准；无业务/生产验收提升",
       "foundationConclusion": "R1六基础需求及1小时/4小时/30天恢复目标已批；平台可行性与运行验收未确认，其他R适用另核",
       "blockers": [
         {
@@ -58117,26 +58218,26 @@
         {
           "id": "P1-RULES-01",
           "kind": "最小必要业务选择",
-          "action": "R2未批四模块按夜间材料流水线集中评审",
-          "evidence": "modules[].p1 / approvalRecords",
-          "affected": "仅未关闭模块；M37/M06已获本窗口批准",
-          "restore": "四模块全部可自主材料完成后集中决定，不逐模块停等"
+          "action": "一次集中决定R2新增23项推荐及四项LIMIT",
+          "evidence": "docs/delivery/P1_R2_Review_Package.md",
+          "affected": "M26/M18/M17/M03及R2六基础适用；不重问已批M37/M06/R1",
+          "restore": "明确批准或逐项修订，严格顺序判定，不自动签署"
         },
         {
           "id": "P1-REVIEW-01",
           "kind": "待业务评审签署",
           "action": "R2未批四模块按夜间材料流水线集中评审",
-          "evidence": "modules[].p1 / approvalRecords",
-          "affected": "仅未关闭模块；M37/M06已获本窗口批准",
+          "evidence": "已受限关闭6/15，四模块和R2基础材料已备但未批准",
+          "affected": "四模块、R2版本及未来R3，不影响R1已批状态",
           "restore": "四模块全部可自主材料完成后集中决定，不逐模块停等"
         },
         {
           "id": "P1-LOCAL-CONDITIONS",
           "kind": "局部原站条件待核",
-          "action": "M37必要定向补证及遗留未知结果回查",
-          "evidence": "BC-C32至36；源浏览器上次CDP超时，待一次连接核对",
-          "affected": "M37尚未评审限制",
-          "restore": "恢复具体浏览器连接或明确模块受限方案；不重新授权所有动作"
+          "action": "仅各包最小定向只读缺口；有些规则需要源写入或独立角色，本轮不做",
+          "evidence": "各模块reviewSupplement.targetedEvidence及sourceAccessThisUnit",
+          "affected": "源规则证明/后续补验，不将页面导航问题升级为整个P1不可执行",
+          "restore": "在新明确边界内补证，或批准有范围的产品设计和LIMIT"
         }
       ],
       "evidenceRefs": [
@@ -58655,7 +58756,153 @@
           "不改产品/原站/业务库/部署/访问者；不进入或修改R1 P2工作树分支"
         ]
       }
-    ]
+    ],
+    "r2ReviewBundle": {
+      "id": "R2-NIGHT-REVIEW-20260909",
+      "document": "docs/delivery/P1_R2_Review_Package.md",
+      "preparedAt": "2026-09-09T18:49:39.142211+00:00",
+      "basedOnHead": "990fd8cf169f990cd2f67ce3b23ddd6468c101c6",
+      "status": "可自主材料完成，等待所有者一次集中评审；未代批",
+      "moduleIds": [
+        "M26",
+        "M18",
+        "M17",
+        "M03"
+      ],
+      "approvedModuleIds": [
+        "M37",
+        "M06"
+      ],
+      "decisionIds": [
+        "M26-SPEC-01",
+        "M26-SPEC-02",
+        "M26-SPEC-03",
+        "M26-SPEC-04",
+        "M26-SPEC-05",
+        "M18-SPEC-01",
+        "M18-SPEC-02",
+        "M18-SPEC-03",
+        "M18-SPEC-04",
+        "M18-SPEC-05",
+        "M17-SPEC-01",
+        "M17-SPEC-02",
+        "M17-SPEC-03",
+        "M17-SPEC-04",
+        "M17-SPEC-05",
+        "M17-SPEC-06",
+        "M03-SPEC-01",
+        "M03-SPEC-02",
+        "M03-SPEC-03",
+        "M03-SPEC-04",
+        "M03-SPEC-05",
+        "M03-SPEC-06",
+        "R2-BASELINE-01"
+      ],
+      "exceptionIds": [
+        "M26-LIMIT-01",
+        "M18-LIMIT-01",
+        "M17-LIMIT-01",
+        "M03-LIMIT-01"
+      ],
+      "baselineDecisionId": "R2-BASELINE-01",
+      "formalClosureOrder": [
+        "M26",
+        "M18",
+        "M17",
+        "M03"
+      ],
+      "allAutonomousMaterialsPrepared": true,
+      "approved": false,
+      "scopeNote": "R2六模块完整范围与六基础适用；原15分母、33暂缓保持；本轮不进入R3或执行P2/P3。",
+      "commits": [
+        {
+          "sha": "eabc9d22f220a98a2eff274c386aabc87d53edd2",
+          "subject": "docs(p1): approve and close M37 before M06",
+          "remoteVerified": true
+        },
+        {
+          "sha": "3e0c0d502a1a62e5128de160c8237dcf3d19ddd2",
+          "subject": "docs(p1): close M06 after M37 and start R2 review pipeline",
+          "remoteVerified": true
+        },
+        {
+          "sha": "7a0b7baafcecc59b4ed5f1501b9f01b8e0d4abbc",
+          "subject": "docs(p1): prepare M26 review and advance sequential material queue",
+          "remoteVerified": true
+        },
+        {
+          "sha": "e40f75f59da103d449e28cb00b87aca4ea8c3e40",
+          "subject": "docs(p1): prepare M18 calibration and publication review",
+          "remoteVerified": true
+        },
+        {
+          "sha": "fcd4ea8d9b3480b74ea62f4b822da1fa9dfdc48d",
+          "subject": "docs(p1): prepare M17 succession development and health review",
+          "remoteVerified": true
+        },
+        {
+          "sha": "990fd8cf169f990cd2f67ce3b23ddd6468c101c6",
+          "subject": "docs(p1): prepare M03 appointment assessment and archive review",
+          "remoteVerified": true
+        }
+      ],
+      "syncEvidence": {
+        "lastVerifiedCommit": "990fd8cf169f990cd2f67ce3b23ddd6468c101c6",
+        "remoteBranch": "main",
+        "result": "截至该提交push及ls-remote一致，工作区clean；最终汇编单元是该提交后的文档修改，提交后实际HEAD/status在最终报告核实",
+        "finalCommitResolution": "git log -1 --format=%H -- docs/delivery/P1_R2_Review_Package.md"
+      },
+      "parallelEvidence": {
+        "startMain": "716cd9df5f5776d050f77f57c2ad5a35c0a83882",
+        "userReportedDesignCommit": "f323b47",
+        "registeredDesignHeadAtStart": "617a707",
+        "registeredDesignHeadAtLatestCheck": "65cfcf8",
+        "source": "git worktree list仅注册信息，最后核对见65cfcf8；未进入P2目录或读取/修改其专属文件",
+        "protectedTree": "/workspace/sites/italent-hris-r1-p2-20260909",
+        "protectedBranch": "design/r1-p2-20260909",
+        "result": "本轮只main提交P1文档/生成检查脚本；没有merge/cherry-pick/reset/强推/分支删除，无已观察文件冲突；不能证明另一窗口全部操作。"
+      },
+      "consistencyFindings": [
+        [
+          "对象身份",
+          "M37定义、M06资格、M26邀请/答卷、M18项目/结果、M17成员/候选/计划、M03干部/任期独立；同名不等同ID。",
+          "字段及消费者均引用具体生产者版本；旧ID未知保留unknown"
+        ],
+        [
+          "尺度与缺失",
+          "等级/评分/时间准备度/九格轴不同；M37不代消费者定算法。",
+          "null/无权/未配置/不适用/0分别；M26匿名样本不足同时屏蔽精确人数"
+        ],
+        [
+          "历史及有效性",
+          "发布版本冻结；停用通常阻新引用，既有业务按模块批准的终止/更正规则。",
+          "过期资格/离职候选的事实与当前有效性分开；已生效人事不被审批撤销回滚"
+        ],
+        [
+          "权限和独立性",
+          "read/use/manage/review/publish/export及角色/组织/字段交集，历史按当前权限。",
+          "参与、管理员、指导人与节点权不同；M26审计映射例外/各模块本人回避显式待批"
+        ],
+        [
+          "跨模块生效",
+          "评价报告、九宫格、准备度和资格均不能自动代任用；入池自动化仅已批准配置。",
+          "M01/M19 D1–D7保持；M48/M32仅许可投影；真实外部未配置不冒成功"
+        ],
+        [
+          "范围和阶段",
+          "R2评审材料排队不是开发并行；M37/M06先后关闭，四模块未批。",
+          "6/15受限关闭；R1只有P2设计批准；R2版本和R3不自动进入下游"
+        ],
+        [
+          "源记录恢复",
+          "R2-RO-M17-01已把旧流程持久化unknown缩为UUID/节点未知。",
+          "源历史操作日志保持，新增只读回查说明；没有新数据或清理动作"
+        ]
+      ],
+      "next": "所有者可一次决定23项推荐及四项LIMIT；总控先应用M26批准逐项判定，再M18→M17→M03。局部修订仅阻受影响模块，未获批准不进R3或R2 P2/P3。",
+      "stopBasis": "四模块全部可自主材料已完成；剩余为新重大业务选择/有范围例外及需写入或独立角色的验证。按本轮明确停止标准集中交付，不以普通工具故障结束。",
+      "approvalDraft": "docs/delivery/P1_R2_Approval_Draft.md"
+    }
   },
   "deliveryScope": {
     "changeId": "SCOPE-20260909-CORE15",
@@ -58787,6 +59034,20 @@
           "record": "R1-FOUNDATION-P1-APPROVAL-20260909",
           "scope": "仅R1消费的字段/异常/验收及目标，非全R实现或运行验收",
           "approvedAt": "2026-09-09T17:11:16.592266+00:00"
+        },
+        "r2Assessment": {
+          "status": "适用差异材料完成，待R2集中评审",
+          "approvalRecord": null,
+          "delta": "继任/评委/导师/本人答卷绑定同一稳定员工；解绑离职阻新办理，历史身份不覆盖",
+          "acceptanceCaseRefs": [
+            "M26-REVIEW-AC10"
+          ],
+          "historicalBaseCaseRefs": [
+            "BASE-01-AC01",
+            "BASE-01-AC02"
+          ],
+          "accepted": false,
+          "executionThisRun": false
         }
       },
       {
@@ -58893,6 +59154,21 @@
           "record": "R1-FOUNDATION-P1-APPROVAL-20260909",
           "scope": "仅R1消费的字段/异常/验收及目标，非全R实现或运行验收",
           "approvedAt": "2026-09-09T17:11:16.592266+00:00"
+        },
+        "r2Assessment": {
+          "status": "适用差异材料完成，待R2集中评审",
+          "approvalRecord": null,
+          "delta": "360映射、潜力九格、后备排序、访谈和委员会讨论分别敏感；管理/审议/发布/导出及动态关系独立",
+          "acceptanceCaseRefs": [
+            "M03-REVIEW-AC11"
+          ],
+          "historicalBaseCaseRefs": [
+            "BASE-02-AC01",
+            "BASE-02-AC02",
+            "BASE-02-AC03"
+          ],
+          "accepted": false,
+          "executionThisRun": false
         }
       },
       {
@@ -58983,6 +59259,20 @@
           "record": "R1-FOUNDATION-P1-APPROVAL-20260909",
           "scope": "仅R1消费的字段/异常/验收及目标，非全R实现或运行验收",
           "approvedAt": "2026-09-09T17:11:16.592266+00:00"
+        },
+        "r2Assessment": {
+          "status": "适用差异材料完成，待R2集中评审",
+          "approvalRecord": null,
+          "delta": "评价/校准/自动入出池/任免变化同业务事务留痕；审计本身不扩大实名原卷权限",
+          "acceptanceCaseRefs": [
+            "M17-REVIEW-AC03"
+          ],
+          "historicalBaseCaseRefs": [
+            "BASE-03-AC01",
+            "BASE-03-AC02"
+          ],
+          "accepted": false,
+          "executionThisRun": false
         }
       },
       {
@@ -59106,6 +59396,22 @@
           "record": "R1-FOUNDATION-P1-APPROVAL-20260909",
           "scope": "仅R1消费的字段/异常/验收及目标，非全R实现或运行验收",
           "approvedAt": "2026-09-09T17:11:16.592266+00:00"
+        },
+        "r2Assessment": {
+          "status": "适用差异材料完成，待R2集中评审",
+          "approvalRecord": null,
+          "delta": "问卷/标准/原卷/报告/任期及附件不可变版本、来源链接和当前权限；旧副本无法承诺召回",
+          "acceptanceCaseRefs": [
+            "M26-REVIEW-AC09"
+          ],
+          "historicalBaseCaseRefs": [
+            "BASE-04-AC01",
+            "BASE-04-AC02",
+            "BASE-04-AC03",
+            "BASE-04-AC04"
+          ],
+          "accepted": false,
+          "executionThisRun": false
         }
       },
       {
@@ -59205,6 +59511,20 @@
           "approvalRecord": "R1-FOUNDATION-P1-APPROVAL-20260909",
           "platformCapabilityVerified": false,
           "p2Obligation": "云端实现/成本/责任，不能经济实现须提交量化差异和成本备选，不能静默降低"
+        },
+        "r2Assessment": {
+          "status": "适用差异材料完成，待R2集中评审",
+          "approvalRecord": null,
+          "delta": "R2数据纳入已批RPO≤1小时/RTO≤4小时/30天目标；隔离恢复后当前权限重裁及所有者开放；平台能力仍待P2证实",
+          "acceptanceCaseRefs": [
+            "M03-REVIEW-AC14"
+          ],
+          "historicalBaseCaseRefs": [
+            "BASE-05-AC01",
+            "BASE-05-AC02"
+          ],
+          "accepted": false,
+          "executionThisRun": false
         }
       },
       {
@@ -59356,6 +59676,21 @@
           "record": "R1-FOUNDATION-P1-APPROVAL-20260909",
           "scope": "仅R1消费的字段/异常/验收及目标，非全R实现或运行验收",
           "approvedAt": "2026-09-09T17:11:16.592266+00:00"
+        },
+        "r2Assessment": {
+          "status": "适用差异材料完成，待R2集中评审",
+          "approvalRecord": null,
+          "delta": "M37/06/26/18/17/03事件和消费用途、幂等、未知/未配置分态；真实测评/签署/通知不作P1前置",
+          "acceptanceCaseRefs": [
+            "M18-REVIEW-AC13"
+          ],
+          "historicalBaseCaseRefs": [
+            "BASE-06-AC01",
+            "BASE-06-AC02",
+            "BASE-06-AC03"
+          ],
+          "accepted": false,
+          "executionThisRun": false
         }
       }
     ],

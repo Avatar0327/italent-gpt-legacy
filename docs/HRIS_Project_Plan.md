@@ -2,6 +2,8 @@
 
 本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M26；备用 未启用；实际执行 M26。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
+本次R2材料流水线：同一时刻一主模块；材料及可自主工作完成后可排队待集中评审并转下一材料模块，未批准不关闭/不转序；不进R3或P2/P3；材料完成待评审 M26、M18、M17、M03；正式关闭焦点 M26。[集中评审与决定清单](delivery/P1_R2_Review_Package.md)。
+
 | R版本 | 模块顺序 | 当前边界 |
 |---|---|---|
 | R1 核心底座 | M01→M19→M48→M32 | 当前承诺，按模块闭环滚动；用户本轮明确顺序；不是此前已有分层，不批准未决业务规则或内部缩减 |
@@ -27,7 +29,7 @@
 | M32 报表 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M37 人才标准 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M06 任职资格 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
-| M26 360度评估 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M26 360度评估 | R2 / primary_waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M18 在线盘点 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M17 继任与发展 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M03 干部管理2.0 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
