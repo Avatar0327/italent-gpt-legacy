@@ -81,6 +81,91 @@
       ],
       "remainingDesignDefects": [],
       "passed": true
+    },
+    {
+      "round": 2,
+      "focus": [
+        "迁移可实施性",
+        "失败/恢复/保留",
+        "LIMIT与责任覆盖",
+        "P3可执行性",
+        "文档引用与写入边界"
+      ],
+      "at": "2026-09-09T18:54:01.791028+00:00",
+      "checkedParentHead": "3cb9334a6ec5b8a36fde64598b1c6ae70cc2ee33",
+      "command": "python scripts/check-r1-p2-design.py --complete ; git diff --check",
+      "workingTreeCandidate": true,
+      "checks": {
+        "kind": "P2_document_check_not_business_test",
+        "baseline": "716cd9df5f5776d050f77f57c2ad5a35c0a83882",
+        "tasks": 9,
+        "designCases": 66,
+        "requirementDesignLinks": 111,
+        "sourceFiles": 16,
+        "uniqueRequirements": 70,
+        "originalAcceptanceScenarios": 85,
+        "limitRisks": 37,
+        "limitDispositionCounts": {
+          "M01": {
+            "P2": 3,
+            "P3": 5,
+            "P4": 2
+          },
+          "M19": {
+            "P2": 2,
+            "P3": 5,
+            "P4": 2
+          },
+          "M48": {
+            "P2": 2,
+            "P3": 4,
+            "P4": 2
+          },
+          "M32": {
+            "P2": 2,
+            "P3": 6,
+            "P4": 2
+          }
+        },
+        "datasets": 21,
+        "reportFields": 254,
+        "p3Tasks": 11,
+        "p3Cases": 59,
+        "hardGates": 15,
+        "producerIntegrationScenarios": 22,
+        "errors": [],
+        "passed": true
+      },
+      "findingsFixed": [
+        {
+          "id": "SR2-01",
+          "finding": "workforce邮箱/职级按权限选列导致数组偏移变化，固定位置字典可能误映",
+          "fix": "按注册表达式/实际列标签映射稳定fieldId，加入四授权组合P3-XMOD-02",
+          "evidence": "R1_P2_Report_Field_Dictionary.json"
+        },
+        {
+          "id": "SR2-02",
+          "finding": "旧JSON到storage_version=1的原迁移为全量batch，不能当有界迁移实现",
+          "fix": "补充staging/原JSON继续读/分块回执/最终CAS切1与旧入口写屏障，增加P3-XMOD-03",
+          "evidence": "R1_P2_Consistency_Resolutions.md"
+        },
+        {
+          "id": "SR2-03",
+          "finding": "生产者联调任务缺逐入口/逐来源可执行验收输入和预期",
+          "fix": "新增7项M48入口及15项M32来源共22个真实联调子场景，全部未执行",
+          "evidence": "R1_P2_Producer_Integration_Cases.json"
+        }
+      ],
+      "manualRechecks": [
+        "逐阶段迁移sourceRevision/digest/fence、未知历史和回滚后新事实保持",
+        "完整恢复基线+增量事务+对象manifest，墓碑保留和独立撤权/回执对账",
+        "恢复容量公式、RPO/RTO计时含所有者等待，不以估算代实测",
+        "37风险原LIMIT覆盖、P3/P4场景语义及责任/闸门",
+        "所有设计/原AC/风险/硬门槛有引用；P3运行案例一主要任务所有者",
+        "只改设计目录和检查脚本；P1主事实源hash不变、批准标志false"
+      ],
+      "remainingDesignDefects": [],
+      "passed": true
     }
   ]
 }

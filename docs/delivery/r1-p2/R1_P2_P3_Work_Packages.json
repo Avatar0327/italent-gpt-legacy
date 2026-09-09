@@ -248,7 +248,8 @@
         "P3-M32-04",
         "P3-M32-05",
         "P3-M32-07",
-        "P3-M32-10"
+        "P3-M32-10",
+        "P3-XMOD-02"
       ],
       "approvedAcceptanceSubcases": [
         "BASE-02-AC03",
@@ -332,7 +333,8 @@
         "P3-MIG-04",
         "P3-MIG-05",
         "P3-MIG-06",
-        "P3-MIG-07"
+        "P3-MIG-07",
+        "P3-XMOD-03"
       ],
       "approvedAcceptanceSubcases": [
         "BASE-03-AC02",
@@ -398,7 +400,31 @@
       "reviewer": "独立P3测试/安全复核人",
       "status": "proposed_not_authorized",
       "execution": "not_executed",
-      "outOfScope": "生产数据库/部署/真实外发/新增访问者/未批准生产者业务规则"
+      "outOfScope": "生产数据库/部署/真实外发/新增访问者/未批准生产者业务规则",
+      "integrationCaseIds": [
+        "P3-LINK-M48-team",
+        "P3-LINK-M48-approval",
+        "P3-LINK-M48-okr",
+        "P3-LINK-M48-goal",
+        "P3-LINK-M48-attendance",
+        "P3-LINK-M48-learning",
+        "P3-LINK-M48-development",
+        "P3-LINK-M32-M01",
+        "P3-LINK-M32-M19",
+        "P3-LINK-M32-M48",
+        "P3-LINK-M32-M32",
+        "P3-LINK-M32-M03",
+        "P3-LINK-M32-M06",
+        "P3-LINK-M32-M17",
+        "P3-LINK-M32-M18",
+        "P3-LINK-M32-M26",
+        "P3-LINK-M32-M37",
+        "P3-LINK-M32-M12",
+        "P3-LINK-M32-M16",
+        "P3-LINK-M32-M27",
+        "P3-LINK-M32-M11",
+        "P3-LINK-M32-M07"
+      ]
     },
     {
       "id": "P3-R1-11",

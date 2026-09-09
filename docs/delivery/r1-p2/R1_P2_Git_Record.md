@@ -18,5 +18,8 @@
 |06|617a707|
 |07|235876e|
 |08|0963ec2|
+|09与第一轮整体自检|3cb9334a6ec5b8a36fde64598b1c6ae70cc2ee33|
 
 接续核对命令：`git status --short --branch`、`git rev-parse HEAD`、`git log --oneline 716cd9d..HEAD`。只推送当前设计分支；不fetch合并main、不reset/rebase/强推。
+
+第二轮自检及评审定稿纳入紧随其后的最终提交；最终完整SHA和远端一致性以最终交付报告为准。前述09父提交已可从本分支恢复，不表示自己批准P2。

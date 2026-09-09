@@ -1199,7 +1199,12 @@
         "M48-LIMIT-01",
         "M32-LIMIT-01",
         "E1",
-        "E2"
+        "E2",
+        "M32-SPEC-03",
+        "BASE-02",
+        "BASE-05",
+        "BASE-03",
+        "F-SPEC-04"
       ],
       "evidence": [
         {
@@ -1311,6 +1316,35 @@
           "evidence": "权限/容量/消息回执及外部副本使用说明",
           "owner": "报表业务验收/独立安全及运维复核",
           "gate": "P4业务/容量/生产准备",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-XMOD-02",
+          "requirements": [
+            "M32-SPEC-03",
+            "BASE-02"
+          ],
+          "given": "同一人员分别具有仅viewEmail、仅viewLevel、二者皆有、二者皆无四种授权，旧workforce列数不同",
+          "when": "通过兼容数组映射到稳定fieldId并查询/导出",
+          "then": "字段按注册表达式/实际columns映射；职级不冒邮箱，缺权字段不输出；旧链接也按当前权拒绝",
+          "evidence": "四种列集合/fieldId/value对照及服务端越权否定结果",
+          "owner": "M32实施及独立权限测试负责人",
+          "gate": "P3-R1-06验收",
+          "execution": "not_executed"
+        },
+        {
+          "id": "P3-XMOD-03",
+          "requirements": [
+            "BASE-05",
+            "BASE-03",
+            "F-SPEC-04"
+          ],
+          "given": "storage_version=0旧JSON含大量记录，迁移分块中断并收到旧迁移入口请求，另有来源修订改变",
+          "when": "有界staging、逐批规范化、重入与最终切1",
+          "then": "中断一直读原JSON；旧入口被fence阻断；源变化不覆盖；只在完整逐键核验后CAS切1，原JSON/身份/历史不改",
+          "evidence": "staging回执/逐键摘要、内存/语句上限、0到1切换时序",
+          "owner": "迁移实施及独立数据库测试负责人",
+          "gate": "P3-R1-08验收",
           "execution": "not_executed"
         }
       ]

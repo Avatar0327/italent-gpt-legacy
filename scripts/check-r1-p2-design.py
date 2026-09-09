@@ -100,11 +100,19 @@ if a.complete:
   need(set(t['approvedAcceptanceSubcases'])<=expected_ac,'P3 unknown approved subcase')
   owned.extend(t['caseIds'])
  need(set(owned)=={c for c in caseids if c.startswith('P3-')} and len(owned)==len(set(owned)),'P3 cases need one primary implementation owner')
+ links=read('R1_P2_Producer_Integration_Cases.json')['cases']
+ need(len(links)==22 and len({c['id'] for c in links})==22,'producer integration coverage')
+ need({c['id'] for c in links}==set(next(t for t in work['tasks'] if t['id']=='P3-R1-10')['integrationCaseIds']),'unassigned producer integration scenario')
+ for c in links:
+  for k in ['given','when','then','evidence','owner','gate']:need(bool(c[k]),'incomplete integration '+c['id'])
+  need(c['execution']=='not_executed','integration falsely run')
+ for f in fs:
+  if f['datasetId']=='workforce':need('employee.' in f['sourceField'],'workforce positional field mapping')
  gates=read('R1_P2_Hard_Gates.json')['gates'];need(len(gates)==15,'hard gate count')
  for g in gates:need((OUT/g['document']).exists() and set(g['caseIds'])<=set(caseids),'hard gate broken '+g['id'])
  proposal=read('R1_P2_Controller_Proposal.json');need(proposal['status']=='proposed_not_applied','proposal falsely applied')
  need(not dependencies['newBusinessDecisions'],'new business decision requires owner review')
- metrics={'uniqueRequirements':len(coverage['requiredIds']),'originalAcceptanceScenarios':len(atr),'limitRisks':len(risks),'limitDispositionCounts':counts,'datasets':len(datasets),'reportFields':len(fs),'p3Tasks':len(taskids),'p3Cases':len(owned),'hardGates':len(gates)}
+ metrics={'uniqueRequirements':len(coverage['requiredIds']),'originalAcceptanceScenarios':len(atr),'limitRisks':len(risks),'limitDispositionCounts':counts,'datasets':len(datasets),'reportFields':len(fs),'p3Tasks':len(taskids),'p3Cases':len(owned),'hardGates':len(gates),'producerIntegrationScenarios':len(links)}
 if a.review_ready:
  need(a.complete,'review-ready requires complete')
  reviews=read('R1_P2_Self_Review_Results.json')

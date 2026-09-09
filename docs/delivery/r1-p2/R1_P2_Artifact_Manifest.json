@@ -1,0 +1,178 @@
+{
+  "kind": "design_bundle_integrity_manifest_not_project_facts",
+  "baseline": "716cd9df5f5776d050f77f57c2ad5a35c0a83882",
+  "branch": "design/r1-p2-20260909",
+  "selfExcluded": true,
+  "files": [
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Approved_Acceptance_Trace.json",
+      "sha256": "a0a3a3c0c2b02af103a656fd5c6ce59e6a78c8f62cca1fa3eb375d22a83f5e20",
+      "bytes": 91697
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Approved_Acceptance_Trace.md",
+      "sha256": "b1536ba69d15acb855653c2752fb0bfe5bd21e7bced6c2b2c273541b129933f7",
+      "bytes": 18494
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Architecture.md",
+      "sha256": "e54d8daa427e6cd217f4e57e6ed3232244be93d9423d314353e6d73d78c45f3b",
+      "bytes": 10288
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Backup_Recovery.md",
+      "sha256": "d2956c3c08b7b38b6d1e0debe9dad2663a5ec265a4b4b7e0c338a0572638a3e6",
+      "bytes": 19800
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Checkpoint.md",
+      "sha256": "12ab9b2776afb898ada31d7603b1940ce5add0ad4055aa3b0dee6ce43a44640f",
+      "bytes": 1756
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Consistency_Resolutions.md",
+      "sha256": "7b63bc8988d665f43eb0c2be3b1e0a44ededf1fa38ea64af1055ee8b60051650",
+      "bytes": 5294
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Controller_Proposal.json",
+      "sha256": "b23a3b999280eeddf8c6f37d9c69e679490a0ac521cf1b8711a6fe4068fa028d",
+      "bytes": 2358
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Dependencies_Decisions.json",
+      "sha256": "8b536d2f10e0ef4db8ac583b4e63d7a9643846a1764b6466f21ad6543a902e93",
+      "bytes": 12575
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Dependencies_Decisions.md",
+      "sha256": "fa674d109fffe82141b377bc09168f01b326b84faf388dae14dcee2e06161951",
+      "bytes": 5719
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Design_Index.json",
+      "sha256": "4df326129e1a285ebf26938664817b652e63d0cf07561d93e8e0e37bed71aea8",
+      "bytes": 54106
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Exit_Review.md",
+      "sha256": "e88a0fdbe89efbca2b497b225df54cebb0a114509564b509d3de4cbbfb7c4d07",
+      "bytes": 6566
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Git_Record.md",
+      "sha256": "b094df80ef3e26b574bd174a953a86448364dc5a8a23823f3d156c1a9aa1f3ef",
+      "bytes": 1315
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Hard_Gates.json",
+      "sha256": "012a36cdd10cceb0c5f6aa548a711c27670516a91c440de337758ed14c673b6d",
+      "bytes": 4245
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Interfaces_Exceptions.md",
+      "sha256": "9c3e76479c370eff37981c7617a50cb475210557c9c8905a613c154127b90a0d",
+      "bytes": 17537
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Limit_Resolution.json",
+      "sha256": "d136a1ad113ee039fdca85470ab5fc7d01e6b43d15f4977521e767a1ce03851e",
+      "bytes": 72689
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Limit_Resolution.md",
+      "sha256": "67a3e47a4c17699eda9078db5f0eb38e6db3dbed87508af27390d58339294d80",
+      "bytes": 49317
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+      "sha256": "ad382db0ccfdd37d5029791e6030ac5113ff7411d28e3c9062a39c184d20b88d",
+      "bytes": 22289
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_M19_Workflow_Transactions.md",
+      "sha256": "e6ee21123cc08b2bb769524ee101db997bb65b21df3c12935404bcba073afb8a",
+      "bytes": 14861
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md",
+      "sha256": "4d1752a1057d348e624fc5ec40c6d16d767bf94f157f19b7b33d8532aa93ff14",
+      "bytes": 23143
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_M48_Authorization_Consumers.md",
+      "sha256": "3b715a5eb3b08df606e67b869f9e87619a9e56c94d49285bcc85e192b7644694",
+      "bytes": 15344
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Migration_Rollback.md",
+      "sha256": "e6b8d8d333490ede58eaadafb85e77e971c8c6cb9845355efd2ced1638d6204a",
+      "bytes": 15724
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_P3_Work_Packages.json",
+      "sha256": "973a746de742d9ffc2c93286a05ec0dc5e37c53f455ecdf85daa6e5fdd3b2bc2",
+      "bytes": 15569
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_P3_Work_Packages.md",
+      "sha256": "109487f84d138356065178d8d6f47e749b43ff13103bf6aa820ae17ea3b79416",
+      "bytes": 9189
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Producer_Integration_Cases.json",
+      "sha256": "c539d43cc5f28775470fd233ee956850e19346801903116b476e2cd9ae99aefc",
+      "bytes": 18638
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Report_Datasets.json",
+      "sha256": "98e1a5ae1c812f84995917a2d73c4867a6da63759fb0ed0c9c0f72fc876657a2",
+      "bytes": 9902
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Report_Field_Dictionary.json",
+      "sha256": "06470ad2b37cc73857e974c88fd973483773bc284ccab7da0efea82aa877eb46",
+      "bytes": 219015
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Report_Field_Dictionary.md",
+      "sha256": "f10cf3286061fa6c800b02d3d3b76cc326f2272e1076ee2cd3e0acb998d5e4f8",
+      "bytes": 28839
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Requirement_Coverage.json",
+      "sha256": "0b4b05e5bbee4bedb2f1ec574defa1113686867186b4f55ccdc4f15b40b2ed15",
+      "bytes": 60723
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Review_Design.md",
+      "sha256": "bf4a2b99a5855c8ee79cceb82417aadefcff49d1c411792eb82d801ac68b5f5a",
+      "bytes": 8312
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Self_Review.md",
+      "sha256": "64881db137c15a928e461882d5428c9b1c53dbc5312924eb6036bb446d364c59",
+      "bytes": 2574
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Self_Review_Results.json",
+      "sha256": "176e20163099535704d9e34e9fa2d2aa672f7fcc24d3852963f6e6209517ae68",
+      "bytes": 5901
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Source_Manifest.json",
+      "sha256": "b35c9d925edcc14cf9c6ad886362a0bf044c95f18e85563019714ec3c19fe61b",
+      "bytes": 3575
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Traceability.md",
+      "sha256": "f318bbf40981d0438ea2b9bfad11fbf3e2e68fe54b0b881443947e5c1cbd8d2e",
+      "bytes": 10744
+    },
+    {
+      "path": "scripts/check-r1-p2-design.py",
+      "sha256": "7d79792c120ba11398ddedf9a06d9fdf7f831cca6f02057befb473efa22b1c4a",
+      "bytes": 9957
+    }
+  ]
+}

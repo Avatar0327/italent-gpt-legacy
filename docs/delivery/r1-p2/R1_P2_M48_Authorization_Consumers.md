@@ -143,6 +143,10 @@ taskKey=(businessType,businessId,action,nodeRevision或sourceRevision)，不是�
 - 证据产物：七入口契约矩阵、原单关联与模拟标识
 - 责任：R1 P3实施及测试负责人；关闭闸门：P3该任务验收；状态：未执行。
 
+## 全包一致性补充
+
+本任务随最终评审补齐的字段、状态、旧验收优先级和迁移边界，统一见[R1_P2_Consistency_Resolutions.md](R1_P2_Consistency_Resolutions.md)。这些是设计自检修正，不重开P1批准或重做任务。
+
 ## 本阶段执行边界
 
 本任务只修改P2设计及一致性材料；未运行产品测试、迁移、备份恢复、外部交易或原站操作；不改变业务代码、数据库、部署、访问者及主事实源。所有技术默认均为设计参数，不能覆盖已批准业务规则。

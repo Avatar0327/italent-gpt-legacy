@@ -110,3 +110,8 @@
 |M32-LIMIT-01|[R1_P2_Review_Design.md](R1_P2_Review_Design.md)|R1-P2-09|P2-REV-01,P3-XMOD-01,P4-M32-01|
 |E1|[R1_P2_Review_Design.md](R1_P2_Review_Design.md)|R1-P2-09|P2-REV-01|
 |E2|[R1_P2_Review_Design.md](R1_P2_Review_Design.md)|R1-P2-09|P2-REV-01,P4-M01-01,P4-M19-01,P4-M48-01,P4-M32-01|
+|M32-SPEC-03|[R1_P2_Review_Design.md](R1_P2_Review_Design.md)|R1-P2-09|P3-XMOD-02|
+|BASE-02|[R1_P2_Review_Design.md](R1_P2_Review_Design.md)|R1-P2-09|P3-XMOD-02|
+|BASE-05|[R1_P2_Review_Design.md](R1_P2_Review_Design.md)|R1-P2-09|P3-XMOD-03|
+|BASE-03|[R1_P2_Review_Design.md](R1_P2_Review_Design.md)|R1-P2-09|P3-XMOD-03|
+|F-SPEC-04|[R1_P2_Review_Design.md](R1_P2_Review_Design.md)|R1-P2-09|P3-XMOD-03|

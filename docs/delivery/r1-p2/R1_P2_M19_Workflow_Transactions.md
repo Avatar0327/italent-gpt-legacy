@@ -45,7 +45,7 @@ stateDiagram-v2
   cancelled --> [*]
 ```
 
-图仅审批状态。effectStatus独立为not_requested/waiting/applied/failed/cancelled/blocked；M01调动approved必须waiting，之后由M01 HR执行，M19只投影；通知单独状态。业务已生效但通知failed是合法组合。客户端网络unknown是命令结果未知，不把实例改成unknown代替已提交事实。
+图仅审批状态。effectStatus独立为not_requested/waiting/waiting_external/applied/failed/cancelled/blocked；M01调动approved必须waiting，之后由M01 HR执行，M19只投影；通知单独状态。业务已生效但通知failed是合法组合。客户端网络unknown是命令结果未知，不把实例改成unknown代替已提交事实。
 
 会签并发策略必须随模板冻结：passPolicy=all|any；rejectPolicy=any_reject|all_reject|block_for_review（模板显式选择，无默认）。每次决定在同一实例CAS序列中线性提交并重新计算集合；若同一已提交集合同时满足通过/拒绝，拒绝优先；block_for_review遇拒绝时保留pending与blocked原因，仅已批准模板规定的处理可继续。any已通过终结后的迟到决定返回NODE_CLOSED，不倒写历史；尚未办理参与者写cancelled_by_resolution，不能记为同意。此为引擎决议语义，不替R2/R3选哪条业务政策。未配置策略阻模板发布。
 
@@ -148,6 +148,10 @@ D7不走通用分支/会签/委托/转交/干预路径；在路由API、领域�
 - 预期：待执行与待审批独立；原unknown只查回执，旧pending失效，消息失败不回退业务
 - 证据产物：拦截器事件、列表口径、供应商查询计划
 - 责任：R1 P3实施及测试负责人；关闭闸门：P3该任务验收；状态：未执行。
+
+## 全包一致性补充
+
+本任务随最终评审补齐的字段、状态、旧验收优先级和迁移边界，统一见[R1_P2_Consistency_Resolutions.md](R1_P2_Consistency_Resolutions.md)。这些是设计自检修正，不重开P1批准或重做任务。
 
 ## 本阶段执行边界
 

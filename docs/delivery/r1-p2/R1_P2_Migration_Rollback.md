@@ -46,7 +46,7 @@
 |development其余记录/报表快照|保持生产者原ID、rawStatus、revision、版本化映射；快照按原manifest读取|未发布更正不覆盖已发布结果；缺快照数据不可用当天当前值填过去；未知状态禁动作|
 |workspaces.data (storage_version=0)|保存原JSON摘要及只读归档；验证结构后按明确旧迁移路径转规范化1，再进行R1回填|不能先改storage_version使旧JSON失去读取路径；旧迁移异常不推进R1阶段|
 
-兼容读遵循每对象 `migration_map + sourceRevision`：verified且新投影完整时读新；否则读受当前权限裁剪的旧投影并显式 `legacy_partial`。一次查询固定schemaEpoch与workspaceRevision；混合新旧若无法证明同一修订则409重读，不双计同一person。列表稳定游标包含版本/权限摘要。旧客户端只得到当前主职投影及 `additionalAssignments` 数量，不接收无权兼职详情；旧全对象PUT不能抹除新字段，所有写入经命令适配器，未映射对象与不可表达动作返回 `UPGRADE_REQUIRED` 或 `MIGRATION_CONFLICT`。
+兼容读遵循每对象 `migration_map + sourceRevision`：verified且新投影完整时读新；否则读受当前权限裁剪的旧投影并显式 `legacy_partial`。一次查询固定schemaEpoch与workspaceRevision；混合新旧若无法证明同一修订则409重读，不双计同一person。列表稳定游标包含版本/权限摘要。旧客户端只得到当前主职投影及 `additionalAssignments` 数量，不接收无权兼职详情；旧全对象PUT不能抹除新字段，所有写入经命令适配器，未映射对象与不可表达动作返回 `CLIENT_UPGRADE_REQUIRED` 或 `MIGRATION_CONFLICT`。
 
 ## 扩展、回填、切换与中断状态机
 
@@ -144,6 +144,10 @@
 - 预期：SCHEMA_DRIFT/WRITER_NOT_FENCED阻止回填，仅修复前置条件后接续
 - 证据产物：DDL清单、入口审计和闸门结果
 - 责任：R1 P3实施及测试负责人；关闭闸门：P3该任务验收；状态：未执行。
+
+## 全包一致性补充
+
+本任务随最终评审补齐的字段、状态、旧验收优先级和迁移边界，统一见[R1_P2_Consistency_Resolutions.md](R1_P2_Consistency_Resolutions.md)。这些是设计自检修正，不重开P1批准或重做任务。
 
 ## 本阶段执行边界
 

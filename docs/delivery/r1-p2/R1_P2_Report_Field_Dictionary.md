@@ -406,3 +406,7 @@
 |instructorCampaignProgress.c10|在职在用讲师|integer|count_or_ordinal|dataset_read_and_row_scope|
 |instructorCampaignProgress.c11|最新试讲通过的提名|integer|count_or_ordinal|dataset_read_and_row_scope|
 |instructorCampaignProgress.c12|待完成必修培养关联|integer|count_or_ordinal|dataset_read_and_row_scope|
+
+## 权限裁剪后的旧列映射
+
+workforce的邮箱/职级是独立可选列。字典fieldId固定，旧数组偏移不固定：只有viewLevel而无viewEmail时，最后一列仍是职级，绝不能按第7列映成邮箱。兼容适配按实际columns标签与rows成对映射，或直接按employee已注册字段表达式生成目标对象；服务端先权限裁剪，再返回稳定fieldId。任何未知/重复标签拒绝映射，不猜字段。验收P3-XMOD-02。
