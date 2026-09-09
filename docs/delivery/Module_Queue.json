@@ -699,7 +699,7 @@
   "currentP1": {
     "revision": "2026-09-09-module-closure-rolling-R",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-09T15:43:36.730682+00:00",
+    "updatedAt": "2026-09-09T15:54:02.023639+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -782,7 +782,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M01唯一主模块：F01–F04优先＋组织/职务体系/编制/人员/任职/合同完整收口",
+    "activeWorkPackage": "M01唯一主模块已完成评审材料、待外部决定；M19唯一备用已完成可用静态补充，源流程/委托受阻",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -797,7 +797,7 @@
       "BP-S"
     ],
     "nextTasks": [
-      "M01按closureChecklist逐项收口：先F01–F04的F-SPEC-01–03，结合F-SPEC-04和其余范围形成一次可决定评审包，不重复已有源证。",
+      "优先处理M01集中批准或连接恢复后的定向补证；M19备用仅剩源流程/委托补证或明确产品评审。M01可推进即回归，不启第二备用。",
       "只为M01高风险缺口进行定向补证：兼职终态/再入职/法人范围/时态与消费者；浏览器不可用时保留未知并写建议，不重复提交或重建。",
       "M01所有必要自主工作完成且仅余外部阻塞后才启用M19备用；记录原因/剩余/恢复，M01可推进优先回归。",
       "M01→M19→M48→M32逐模块P1A判定、P1B评审与转序；R1及适用基础获转序评审后可P2复用/P3实现，不等R2/R3全部P1。",
@@ -816,9 +816,9 @@
       "authorizedAt": "2026-09-09T15:43:36.730682+00:00",
       "mode": "模块闭环优先、按R版本滚动转序",
       "primaryModuleId": "M01",
-      "backupModuleId": null,
+      "backupModuleId": "M19",
       "backupCandidateId": "M19",
-      "activeExecutionModuleId": "M01",
+      "activeExecutionModuleId": "M19",
       "wipLimit": 1,
       "backupLimit": 1,
       "backupActivation": "仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归",
@@ -851,8 +851,27 @@
           "reason": "用户确认模块闭环/R顺序；此前原子单元已提交，停止M17扩展",
           "remaining": "M17停用IDP流程一次保存结果未知；池成员培养中/3~6个月为最近证据；原站当前页面不可读，无新增结果不明操作",
           "restore": "轮到R2/M17或M01必要依赖时先查询旧记录；不重复创建"
+        },
+        {
+          "at": "2026-09-09T15:54:02.023639+00:00",
+          "from": "M01",
+          "to": "M19（备用）",
+          "reason": "M01六项收口/10组决策/例外/验收及实现差异已完成可评审材料，剩余关闭动作均依用户批准或原站连接恢复；启用唯一备用M19做现有证据/代码可完成部分",
+          "remaining": "M01仍唯一主模块；无通过/转序批准",
+          "restore": "收到任何可推进M01的规则/例外批准或源连接恢复，先回M01；不等待M19整个模块结束"
         }
-      ]
+      ],
+      "backupActivationEvidence": {
+        "at": "2026-09-09T15:54:02.023639+00:00",
+        "reason": "M01六项收口/10组决策/例外/验收及实现差异已完成可评审材料，剩余关闭动作均依用户批准或原站连接恢复；启用唯一备用M19做现有证据/代码可完成部分",
+        "remainingPrimary": [
+          "F-SPEC-01–08",
+          "SCOPE-DEP-01",
+          "M01-BASELINE-01",
+          "M01-LIMIT-01"
+        ],
+        "returnWhen": "收到任何可推进M01的规则/例外批准或源连接恢复，先回M01；不等待M19整个模块结束"
+      }
     },
     "moduleExecutionOrder": [
       "M01",

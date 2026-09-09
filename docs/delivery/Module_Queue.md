@@ -1,6 +1,6 @@
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M01；备用 未启用；实际执行 M01。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M01；备用 M19；实际执行 M19。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
 | R版本 | 模块顺序 | 当前边界 |
 |---|---|---|
@@ -15,8 +15,8 @@ R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可
 
 | 模块 | R版本/队列 | P1A判定 | P1B评审 | 转序就绪 | 未达到条件 |
 |---|---|---|---|---|---|
-| M01 组织员工 | R1 / primary | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M19 审批中心 | R1 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M01 组织员工 | R1 / primary_waiting_external | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M19 审批中心 | R1 / backup | 受阻 | 受阻 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M48 员工自助 | R1 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M32 报表 | R1 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M37 人才标准 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
@@ -38,9 +38,9 @@ R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可
 
 # 当前唯一执行队列：P1A/P1B
 
-源：Scope_Register.json.roadmap及Module_Queue.json。首要工作包：M01唯一主模块：F01–F04优先＋组织/职务体系/编制/人员/任职/合同完整收口。主要开发包：无（暂停扩展）。
+源：Scope_Register.json.roadmap及Module_Queue.json。首要工作包：M01唯一主模块已完成评审材料、待外部决定；M19唯一备用已完成可用静态补充，源流程/委托受阻。主要开发包：无（暂停扩展）。
 
-1. M01按closureChecklist逐项收口：先F01–F04的F-SPEC-01–03，结合F-SPEC-04和其余范围形成一次可决定评审包，不重复已有源证。
+1. 优先处理M01集中批准或连接恢复后的定向补证；M19备用仅剩源流程/委托补证或明确产品评审。M01可推进即回归，不启第二备用。
 2. 只为M01高风险缺口进行定向补证：兼职终态/再入职/法人范围/时态与消费者；浏览器不可用时保留未知并写建议，不重复提交或重建。
 3. M01所有必要自主工作完成且仅余外部阻塞后才启用M19备用；记录原因/剩余/恢复，M01可推进优先回归。
 4. M01→M19→M48→M32逐模块P1A判定、P1B评审与转序；R1及适用基础获转序评审后可P2复用/P3实现，不等R2/R3全部P1。

@@ -1,12 +1,14 @@
+M01当前集中评审入口：[完整范围、10组选择及受限边界](P1_M01_Review_Package.md)。材料已完成待评审，模块尚无完整/受限批准或转序批准。
+
 # 模块闭环、滚动转序及当前收口清单
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T15:43:36.730682+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T15:58:55.109538+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M01；备用 未启用；实际执行 M01。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M01；备用 M19；实际执行 M19。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
 | R版本 | 模块顺序 | 当前边界 |
 |---|---|---|
@@ -21,8 +23,8 @@ R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可
 
 | 模块 | R版本/队列 | P1A判定 | P1B评审 | 转序就绪 | 未达到条件 |
 |---|---|---|---|---|---|
-| M01 组织员工 | R1 / primary | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M19 审批中心 | R1 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M01 组织员工 | R1 / primary_waiting_external | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M19 审批中心 | R1 / backup | 受阻 | 受阻 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M48 员工自助 | R1 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M32 报表 | R1 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M37 人才标准 | R2 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
@@ -44,10 +46,18 @@ R1/R2/R3本版本所有模块转序就绪、适用基础能力要求已评审可
 
 | 问题/原范围 | 需求 | 证据 | 具体缺口 | 阻塞P1/风险 | 关闭方式与判据 | 当前状态 |
 |---|---|---|---|---|---|---|
-| M01-CLOSE-01 / 组织 | BP-F-REQ-01；BP-F-REQ-10；BP-F-REQ-14 | BC-F28；BC-F29；BC-F42 | 组织有效期/行政维度/停用影响、法人空适用范围和共享权限待证；R/A/B/LA不重建 | True；核心对象/权限/时态/完整性：高风险；静态属性按证据综合 | 先复用证据与源码收窄具体问题；高风险定向补证，或形成明确产品方案和受限边界交用户批准；普通字段不穷尽组合；现有范围逐项映射，未因模式调整缩减 | 进行中 |
-| M01-CLOSE-02 / 职务体系 | BP-F-REQ-01；BP-F-REQ-11 | BC-F17；BC-F31；BC-F32；BC-F33 | 职位与职务/序列/职级不同；职位同组织/跨组织重名已证，职务/职级及停用时态待证，F-SPEC-01待决 | True；核心对象/权限/时态/完整性：高风险；静态属性按证据综合 | 先复用证据与源码收窄具体问题；高风险定向补证，或形成明确产品方案和受限边界交用户批准；普通字段不穷尽组合；现有范围逐项映射，未因模式调整缩减 | 进行中 |
-| M01-CLOSE-03 / 编制 | BP-F-REQ-06 | BC-F21；BC-F40 | 源人数/比例/主兼岗占编算法和审批未证；当前按岗位人数计划不代全部编制，M09金额预算仅局部依赖 | True；核心对象/权限/时态/完整性：高风险；静态属性按证据综合 | 先复用证据与源码收窄具体问题；高风险定向补证，或形成明确产品方案和受限边界交用户批准；普通字段不穷尽组合；现有范围逐项映射，未因模式调整缩减 | 进行中 |
-| M01-CLOSE-04 / 人员 | BP-F-REQ-01；BP-F-REQ-04；BP-F-REQ-06；BP-F-REQ-12 | BC-F22；BC-F35；BC-F36；BC-F39；BC-F43 | 多入口模板、完整自定义子集、重聘匹配冲突与累计/账号边界缺口；F-SPEC-04待决 | True；核心对象/权限/时态/完整性：高风险；静态属性按证据综合 | 先复用证据与源码收窄具体问题；高风险定向补证，或形成明确产品方案和受限边界交用户批准；普通字段不穷尽组合；现有范围逐项映射，未因模式调整缩减 | 进行中 |
-| M01-CLOSE-05 / 任职 | BP-F-REQ-02；BP-F-REQ-13；BP-F-REQ-15 | BC-F03；BC-F40；BC-F41；BC-F44；BC-F45；BC-F46 | 兼职终态、借调/外派、审批路由与离职后各消费者待证；D1–D7项目设计独立，F-SPEC-02/03待决 | True；核心对象/权限/时态/完整性：高风险；静态属性按证据综合 | 先复用证据与源码收窄具体问题；高风险定向补证，或形成明确产品方案和受限边界交用户批准；普通字段不穷尽组合；现有范围逐项映射，未因模式调整缩减 | 进行中 |
-| M01-CLOSE-06 / 合同 | BP-F-REQ-05；BP-F-REQ-14 | P1-CONTRACT-LIST；P1-CONTRACT-TYPE；BC-F23；BC-F24；BC-F42 | 法人稳定关联、合同累计/续签/终止日期及历史字段权限待证；电子签仅BASE-06预留，不等真实签署 | True；核心对象/权限/时态/完整性：高风险；静态属性按证据综合 | 先复用证据与源码收窄具体问题；高风险定向补证，或形成明确产品方案和受限边界交用户批准；普通字段不穷尽组合；现有范围逐项映射，未因模式调整缩减 | 进行中 |
+| M01-CLOSE-01 / 组织 | BP-F-REQ-01；BP-F-REQ-10；BP-F-REQ-14 | BC-F28；BC-F29；BC-F42 | 组织时态/停用依赖采用源规则或批准候选；法人空范围及合同/薪资引用采用批准策略 | True；核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准 | 已有证据足以描述已见结构和差异；按F-SPEC-08,F-SPEC-06推荐或明确替代方案逐项批准，无法核实的源行为按M01-LIMIT-01受限范围另行批准，才可关闭P1门槛。；已完成可决定材料，不等源规则已全验证或用户已批准；F01–04不是完整M01替代。 | 已完成待评审 |
+| M01-CLOSE-02 / 职务体系 | BP-F-REQ-01；BP-F-REQ-11 | BC-F17；BC-F31；BC-F32；BC-F33 | 目录重名与有效区间策略批准；职务/序列/职级范围模型及管理权限批准 | True；核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准 | 已有证据足以描述已见结构和差异；按F-SPEC-01,F-SPEC-08推荐或明确替代方案逐项批准，无法核实的源行为按M01-LIMIT-01受限范围另行批准，才可关闭P1门槛。；已完成可决定材料，不等源规则已全验证或用户已批准；F01–04不是完整M01替代。 | 已完成待评审 |
+| M01-CLOSE-03 / 编制 | BP-F-REQ-06 | BC-F21；BC-F40 | 主兼借派占编及人数版本政策批准；金额预算是否强阻断和未接通状态批准 | True；核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准 | 已有证据足以描述已见结构和差异；按F-SPEC-05,SCOPE-DEP-01推荐或明确替代方案逐项批准，无法核实的源行为按M01-LIMIT-01受限范围另行批准，才可关闭P1门槛。；已完成可决定材料，不等源规则已全验证或用户已批准；F01–04不是完整M01替代。 | 已完成待评审 |
+| M01-CLOSE-04 / 人员 | BP-F-REQ-01；BP-F-REQ-04；BP-F-REQ-06；BP-F-REQ-12 | BC-F22；BC-F35；BC-F36；BC-F39；BC-F43 | 重聘身份/冲突/任期/司龄与恢复边界批准；独立入口模板、人员子集/导入/字段权限基线批准 | True；核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准 | 已有证据足以描述已见结构和差异；按F-SPEC-04,F-SPEC-07推荐或明确替代方案逐项批准，无法核实的源行为按M01-LIMIT-01受限范围另行批准，才可关闭P1门槛。；已完成可决定材料，不等源规则已全验证或用户已批准；F01–04不是完整M01替代。 | 已完成待评审 |
+| M01-CLOSE-05 / 任职 | BP-F-REQ-02；BP-F-REQ-13；BP-F-REQ-15 | BC-F03；BC-F40；BC-F41；BC-F44；BC-F45；BC-F46 | 故障留痕与同事项原单关联的边界批准；主兼职和离职日期、在途流程及消费者状态策略批准 | True；核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准 | 已有证据足以描述已见结构和差异；按F-SPEC-02,F-SPEC-03,F-SPEC-05推荐或明确替代方案逐项批准，无法核实的源行为按M01-LIMIT-01受限范围另行批准，才可关闭P1门槛。；已完成可决定材料，不等源规则已全验证或用户已批准；F01–04不是完整M01替代。 | 已完成待评审 |
+| M01-CLOSE-06 / 合同 | BP-F-REQ-05；BP-F-REQ-14 | P1-CONTRACT-LIST；P1-CONTRACT-TYPE；BC-F23；BC-F24；BC-F42 | 法人ID/日期/续签/计次版本策略批准；外部电子签仅契约边界、失败及历史权限批准 | True；核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准 | 已有证据足以描述已见结构和差异；按F-SPEC-06推荐或明确替代方案逐项批准，无法核实的源行为按M01-LIMIT-01受限范围另行批准，才可关闭P1门槛。；已完成可决定材料，不等源规则已全验证或用户已批准；F01–04不是完整M01替代。 | 已完成待评审 |
+
+
+## M19完整登记范围收口清单
+
+| 问题/原范围 | 需求 | 证据 | 具体缺口 | 阻塞P1/风险 | 关闭方式与判据 | 当前状态 |
+|---|---|---|---|---|---|---|
+| M19-CLOSE-01 / 流程管理 | BP-I-REQ-07 | BC-P1C-M19；BC-I10；BC-I27 | 路由/节点/操作者/业务回写/通知/异常未全证；M01 D1–D7固定两级保持，不被通用干预候选扩展 | True；权限/业务回写/异常为高风险 | 复用BC-I10/27说明；待连接恢复定向查管理员委托范围/有效期/撤销及源流程回写，或明确批准候选产品设计；旧通用待办和D1–D7仅局部可复用，不能当完整M19通过 | 受阻 |
+| M19-CLOSE-02 / 管理员委托 | BP-I-REQ-07 |  | 委托对象/范围/有效期/原人与代理人权限/撤销审计待证；不等平台账号代登，也不自动变成任意节点转交 | True；权限/业务回写/异常为高风险 | 复用BC-I10/27说明；待连接恢复定向查管理员委托范围/有效期/撤销及源流程回写，或明确批准候选产品设计；旧通用待办和D1–D7仅局部可复用，不能当完整M19通过 | 受阻 |
 

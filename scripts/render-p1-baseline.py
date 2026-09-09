@@ -352,3 +352,52 @@ if policy:
  f.write_text(block+'\n'+marker+'\n\n'+old)
  for f in [D/'Controller_Resume.md',R/'docs/Execution_Checkpoint.md']:
   t=f.read_text();t=t.replace('<!-- P1_RESUME_CURRENT_END -->','当前执行约束：主模块 '+policy['primaryModuleId']+'；备用 '+str(policy['backupModuleId'] or '未启用')+'；实际执行 '+policy['activeExecutionModuleId']+'。'+policy['rangeTransitionRule']+'\n\n<!-- P1_RESUME_CURRENT_END -->');f.write_text(t)
+
+# Concise decision packet; content is owned by M01 in the existing register.
+m01=by_id['M01']['p1']
+if m01.get('reviewPackage'):
+ review=m01['reviewPackage'];issue_by_id={x['id']:x for x in pb['reviewIssues']}
+ t=intro('M01完整范围集中评审包')
+ t+='材料状态：**'+review['documentStatus']+'**；基于 `'+review['basedOnHead']+'` 静态核对，准备时间 '+review['preparedAt']+'。原站新增操作为0；本轮未业务复验。\n\n'
+ t+='## 本次需要判断什么\n\nM01完整范围：'+review['scope']+'。'+review['internalDeferralNote']+' F01–F04优先但不代表整个M01。\n\n'+review['confirmedRules']+'\n\n'
+ t+=table(['P1层次','本次结论与仍缺条件'],[(k,v) for k,v in review['exitAssessment'].items()])+'\n'
+ t+='## 已收窄或关闭的问题\n\n'+table(['问题','实际结论','证据性质/来源'],[(x['problem'],x['resolution'],x['type']+'；'+'、'.join(x['evidenceRefs']+x.get('codeRefs',[]))) for x in review['closedQuestions']])+'\n'
+ t+='## 六项完整范围与退出清单\n\n'+table(['原范围','需求/已有证据','未闭合条件','关闭方式'],[(x['scopeItem'],'、'.join(x['requirementIds'])+'；'+ '、'.join(x['evidenceRefs']),x['gap'],x['closureMethod']) for x in m01['closureChecklist']])+'\n'
+ t+='## 一次集中决定的事项\n\n以下均为待批建议，不因本轮执行模式调整自动通过。可逐项选推荐或明确替代，并记录审批人、时间、适用版本/范围；本次不请求重新确认D1–D7或15模块范围。\n\n'
+ for iid in review['decisionIds']:
+  x=issue_by_id[iid];t+='### '+iid+' '+x['topic']+'\n\n'+table(['维度','内容'],[('证据/现状',x['basis']),('推荐（未批准）',x['proposal']),('备选',x.get('alternatives',[])),('影响/阻塞',x['impact'])])+'\n'
+ t+='## 原站受限与后续验证责任（另行批准）\n\n'
+ for x in review['exceptionProposals']:
+  t+='### '+x['id']+' — '+x['status']+'\n\n'+table(['维度','内容'],[(k,x[k]) for k in ['scope','evidence','proposal','residualRisk','revalidation']])+'\n'
+ t+='## 关键流程与验收预期\n\n'+'\n'.join('- '+x for x in review['flowSummary'])+'\n\n'
+ t+=table(['场景/范围','给定','操作','预期','来源/状态'],[(x['id']+' '+x['scopeItem'],x['given'],x['when'],x['then'],x['basis']+'；'+x['status']) for x in review['acceptanceCases']])+'\n'
+ t+='## 获准后P2需要处理的差异\n\n'+'\n'.join('- '+x for x in review['implementationNext'])+'\n\n'+review['signoffRequest']+'\n\n完整字段、角色矩阵、版本化验收和源差异见 [首包规格](F01_F04_Requirements_Baseline.md)、[BP-F规格](P1B_BP_F_Specification.md)、[已有实现对应](P1B_Implementation_Map.md)。本包是Scope派生阅读视图，不是第二套审批台账。\n'
+ (D/'P1_M01_Review_Package.md').write_text(t)
+ for name in ['P1B_BP_F_Specification.md','P1B_Readiness.md','P1_Review.md','P1_Module_Closure.md']:
+  f=D/name;f.write_text('M01当前集中评审入口：[完整范围、10组选择及受限边界](P1_M01_Review_Package.md)。材料已完成待评审，模块尚无完整/受限批准或转序批准。\n\n'+f.read_text())
+ # Keep the authoritative first-package document's latest pointer ahead of historic notes.
+ f=D/'F01_F04_Requirements_Baseline.md';old=f.read_text();marker='<!-- M01_REVIEW_POINTER_END -->'
+ if marker in old:old=old.split(marker,1)[1].lstrip()
+ f.write_text('> 当前M01闭环口径：唯一主模块M01；F01–F04优先，六项完整范围不缩减。D1–D7保持；F-SPEC-01–08、金额依赖及其余基线候选集中见 [M01评审包](P1_M01_Review_Package.md)，均未批准。旧“继续全域扫描”描述仅保留历史。\n\n'+marker+'\n\n'+old)
+
+# Consumer documentation describes the existing authoritative fields, not extra state.
+if policy:
+ fields=[
+ ('deliveryScope.rangeLayers / moduleExecutionOrder','R1–R4分区及确切顺序；保留原48组，R4的33组暂缓，不计为已完成'),
+ ('roadmap.executionPolicy','唯一主模块、最多1备用、实际执行焦点、启用依据、返回条件和焦点历史'),
+ ('modules[].p1.closureChecklist','完整原登记范围逐项：需求、证据、缺口、阻塞性、关闭方式、判据；不是另一个任务分母'),
+ ('modules[].p1.reviewPackage','模块集中阅读包的唯一原始内容；材料已完成待评审不等签署'),
+ ('p1B.reviewIssues','业务建议、备选及影响唯一待决记录；decision为空不能展示已批准'),
+ ('modules[].p1.moduleClosure.p1AConclusion / p1BConclusion','分别显示五类结论；通过须approvalRecord，受限须scope/residualRisk/revalidation/record'),
+ ('modules[].p1.moduleClosure.conditions','四个转序条件的value及basis；null=待判定，false=未满足，不能改为通过'),
+ ('modules[].p1.moduleClosure.transitionReview','转序批准必须approved=true、record、scope、approvedAt齐备；不等生产上线批准'),
+ ('roadmap.rangeGates','该R的适用基础能力及版本评审；满足后无需等待后续R全部P1完成'),
+ ('modules[].p1.currentDeliveryAssessment','15模块P1A完成/P1B就绪/评审通过的既有计数口径，历史tested等字段不能替代'),
+ ('p1Baseline.currentRun','恢复点、编辑基准HEAD、浏览器阻塞、最近已核实同步及下一步；实际HEAD/工作区须采集Git'),
+ ('p1Baseline.dataValidation.records / operations','合成对象、关联、每次动作及结果；未知状态不能转成成功或重复提交')]
+ t=intro('模块闭环字段与看板读取约定')
+ t+='本轮仅事实源和文档生成调整；不改独立看板界面、不发布。独立看板消费这些同源字段，不能写回另一套状态。\n\n'
+ t+=table(['事实源路径（Scope_Register.json）','读取含义'],fields)+'\n'
+ t+='## 派生文件与转序计算\n\n[P1_Module_Closure.json](P1_Module_Closure.json)由scripts/render-p1-baseline.py生成。primaryModuleId/backupModuleId/activeExecutionModuleId直接取执行策略；modules[].transitionReady须四条件、两阶段批准及转序批准均满足；ranges[].transitionReady另要求本R全部模块、适用基础能力及范围评审。missingConditions给出尚缺条件。禁止手改派生布尔值。\n\ncompleteCount和restrictedCount分别是P1A完整通过、受限通过计数，不是P1B就绪或全项目评审计数；transitionReadyCount独立统计。15模块分母保持，基础六类另列。结论枚举为：'+ '、'.join(policy['statusVocabulary'])+'。\n\n'
+ t+='## 快照和历史证据\n\n看板快照应同时读取同一次主仓库Git HEAD、git status --porcelain及来源文件；如有未提交变更须显著标注，不能称为该HEAD已提交内容。generatedFromUpdatedAt是事实台账更新时间，不是看板采集时间；快照时间由采集方记录。部署适用版本读取实际部署证据，不从当前HEAD推断。历史技术测试保留原提交/版本，不能自动继承为本轮复验、P1通过或业务/生产验收。\n\n生成与检查命令：`python scripts/render-p1-baseline.py`，随后`python scripts/check-p1-baseline.py`。看板构建/发布失败不改变主仓库执行队列，也不阻塞其开发/部署链。\n'
+ (D/'P1_Module_Closure_Fields.md').write_text(t)

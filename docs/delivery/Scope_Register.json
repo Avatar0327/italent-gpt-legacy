@@ -828,7 +828,7 @@
           "inferences": "业务包映射/模型建议与原站实测分开；已实测的组织、职位及待入职结果仅限各链记录条件，不推断全模块。",
           "restricted": "R/A/B与JA/JB保存、职位同名对照及待入职保存/校验已有F级结果；单账号范围之外的权限、审批、生效与复杂任职仍受限，外部通知/支付/签署不在本次授权内。",
           "unexplored": "兼岗申请/结束的审批与生效；再入职身份连续性/冲突及法人实体历史；源表单服务端校验。组织配置、重聘帮助、法人及待入职空表已部分补证，不能再称仅有导航。 字段仍未知的类型/必填/默认/枚举/校验/可见性逐条保留在同源字段字典。",
-          "next": "M01按closureChecklist逐项收口：先F01–F04的F-SPEC-01–03，结合F-SPEC-04和其余范围形成一次可决定评审包，不重复已有源证。",
+          "next": "集中评审P1_M01_Review_Package；若继续原站补证只查尚影响当前选择的问题，不扩配置组合。",
           "accepted": false,
           "currentAssessmentAt": "2026-09-09T05:15:26.234878+00:00"
         },
@@ -838,16 +838,21 @@
           "p1B": "not_ready",
           "review": "not_signed",
           "approvedRestricted": false,
-          "assessmentAt": "2026-09-09T10:13:51.736038+00:00",
-          "basis": "组织/职位/待入职-入职/兼职/法人/未来离职已有合成链，F01–04静态需求补实际拒绝/业务failed/事务回滚/结果不明四类。F-SPEC-01改以同组织有效职位名唯一为推荐但未批准，职级另核；F-SPEC-02/03仍局部待决，完整M01重聘/多段任职/合同/事件和权限规则尚缺，未就绪。",
+          "assessmentAt": "2026-09-09T15:50:51.986385+00:00",
+          "basis": "M01六项范围和集中评审材料已准备，10组选择及受限例外未批准；P1A/P1B判定已完成待评审但完整通过/需求就绪/评审通过均未达到。",
           "blockingIssueIds": [
             "F-SPEC-01",
             "F-SPEC-02",
             "F-SPEC-03",
             "F-SPEC-04",
-            "SCOPE-DEP-01"
+            "F-SPEC-05",
+            "F-SPEC-06",
+            "F-SPEC-07",
+            "F-SPEC-08",
+            "SCOPE-DEP-01",
+            "M01-BASELINE-01"
           ],
-          "next": "M01按closureChecklist逐项收口：先F01–F04的F-SPEC-01–03，结合F-SPEC-04和其余范围形成一次可决定评审包，不重复已有源证。",
+          "next": "集中评审P1_M01_Review_Package；若继续原站补证只查尚影响当前选择的问题，不扩配置组合。",
           "acceptanceRefs": [
             {
               "taskId": "F01",
@@ -895,7 +900,7 @@
             ],
             "coverageDepth": "局部合成执行",
             "remaining": "组织有效期/行政维度/停用影响、法人空适用范围和共享权限待证；R/A/B/LA不重建",
-            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "next": "同源M01收口清单/F-SPEC-08,F-SPEC-06集中评审；已有样本不重复取证。",
             "assessedAt": "2026-09-09T10:26:03.101902+00:00",
             "complete": false,
             "requirementAccepted": false
@@ -915,7 +920,7 @@
             ],
             "coverageDepth": "局部合成执行",
             "remaining": "职位与职务/序列/职级不同；职位同组织/跨组织重名已证，职务/职级及停用时态待证，F-SPEC-01待决",
-            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "next": "同源M01收口清单/F-SPEC-01,F-SPEC-08集中评审；已有样本不重复取证。",
             "assessedAt": "2026-09-09T10:26:03.101902+00:00",
             "complete": false,
             "requirementAccepted": false
@@ -932,7 +937,7 @@
             ],
             "coverageDepth": "配置/字段局部观察",
             "remaining": "源人数/比例/主兼岗占编算法和审批未证；当前按岗位人数计划不代全部编制，M09金额预算仅局部依赖",
-            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "next": "同源M01收口清单/F-SPEC-05,SCOPE-DEP-01集中评审；已有样本不重复取证。",
             "assessedAt": "2026-09-09T10:26:03.101902+00:00",
             "complete": false,
             "requirementAccepted": false
@@ -955,7 +960,7 @@
             ],
             "coverageDepth": "局部合成执行",
             "remaining": "多入口模板、完整自定义子集、重聘匹配冲突与累计/账号边界缺口；F-SPEC-04待决",
-            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "next": "同源M01收口清单/F-SPEC-04,F-SPEC-07集中评审；已有样本不重复取证。",
             "assessedAt": "2026-09-09T10:26:03.101902+00:00",
             "complete": false,
             "requirementAccepted": false
@@ -978,7 +983,7 @@
             ],
             "coverageDepth": "局部合成执行",
             "remaining": "兼职终态、借调/外派、审批路由与离职后各消费者待证；D1–D7项目设计独立，F-SPEC-02/03待决",
-            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "next": "同源M01收口清单/F-SPEC-02,F-SPEC-03,F-SPEC-05集中评审；已有样本不重复取证。",
             "assessedAt": "2026-09-09T10:26:03.101902+00:00",
             "complete": false,
             "requirementAccepted": false
@@ -999,7 +1004,7 @@
             ],
             "coverageDepth": "页面/配置局部观察",
             "remaining": "法人稳定关联、合同累计/续签/终止日期及历史字段权限待证；电子签仅BASE-06预留，不等真实签署",
-            "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
+            "next": "同源M01收口清单/F-SPEC-06集中评审；已有样本不重复取证。",
             "assessedAt": "2026-09-09T10:26:03.101902+00:00",
             "complete": false,
             "requirementAccepted": false
@@ -1007,9 +1012,9 @@
         ],
         "moduleClosure": {
           "rangeId": "R1",
-          "queueState": "primary",
+          "queueState": "primary_waiting_external",
           "p1AConclusion": {
-            "status": "进行中",
+            "status": "已完成待评审",
             "approvalRecord": null,
             "evidenceRefs": [
               "BC-F03",
@@ -1061,13 +1066,16 @@
               "BC-F45",
               "BC-F46"
             ],
-            "limits": "沿用已有局部证据，未代签"
+            "limits": "六项范围已有证据/深度/限制/具体关闭方式与风险判断，可提交判定；核心未证源行为须M01-LIMIT-01明确批准，否则仍缺源执行条件。没有完整通过。"
           },
           "p1BConclusion": {
-            "status": "进行中",
+            "status": "已完成待评审",
             "approvalRecord": null,
-            "evidenceRefs": [],
-            "limits": "需求尚未批准"
+            "evidenceRefs": [
+              "docs/delivery/P1_M01_Review_Package.md",
+              "docs/delivery/P1B_BP_F_Specification.md"
+            ],
+            "limits": "各项可实施推荐、既有字段/角色/状态/异常/验收及差异已汇合；10组产品/依赖/基线选择未批准，不计需求就绪。"
           },
           "conditions": {
             "applicableScopeDetermined": {
@@ -1075,16 +1083,16 @@
               "basis": "用户已确认15完整登记范围及本轮R顺序"
             },
             "implementationRulesDecided": {
-              "value": null,
-              "basis": "尚未逐模块闭环判定，不能算通过"
+              "value": false,
+              "basis": "10组选择未批准"
             },
             "acceptanceExecutable": {
-              "value": null,
-              "basis": "尚未逐模块闭环判定，不能算通过"
+              "value": false,
+              "basis": "已有Given/When/Then候选；预期取决于未批准规则，尚非已确定验收"
             },
             "dependenciesAndExceptionsResolved": {
-              "value": null,
-              "basis": "尚未逐模块闭环判定，不能算通过"
+              "value": false,
+              "basis": "SCOPE-DEP-01及M01-LIMIT-01未批准"
             }
           },
           "transitionReview": {
@@ -1109,14 +1117,22 @@
               "BC-F29",
               "BC-F42"
             ],
-            "gap": "组织有效期/行政维度/停用影响、法人空适用范围和共享权限待证；R/A/B/LA不重建",
-            "risk": "核心对象/权限/时态/完整性：高风险；静态属性按证据综合",
+            "gap": "组织时态/停用依赖采用源规则或批准候选；法人空范围及合同/薪资引用采用批准策略",
+            "risk": "核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准",
             "blocksP1": true,
-            "closureMethod": "先复用证据与源码收窄具体问题；高风险定向补证，或形成明确产品方案和受限边界交用户批准；普通字段不穷尽组合",
-            "basis": "现有范围逐项映射，未因模式调整缩减",
-            "status": "进行中",
-            "decisionIds": [],
-            "followupValidation": []
+            "closureMethod": "已有证据足以描述已见结构和差异；按F-SPEC-08,F-SPEC-06推荐或明确替代方案逐项批准，无法核实的源行为按M01-LIMIT-01受限范围另行批准，才可关闭P1门槛。",
+            "basis": "已完成可决定材料，不等源规则已全验证或用户已批准；F01–04不是完整M01替代。",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "F-SPEC-08",
+              "F-SPEC-06",
+              "M01-BASELINE-01"
+            ],
+            "followupValidation": [
+              "P2差异设计与模型/迁移验证",
+              "P3该范围边界及独立多角色人工验收",
+              "P4跨模块权限及业务/生产准备验收"
+            ]
           },
           {
             "id": "M01-CLOSE-02",
@@ -1131,14 +1147,22 @@
               "BC-F32",
               "BC-F33"
             ],
-            "gap": "职位与职务/序列/职级不同；职位同组织/跨组织重名已证，职务/职级及停用时态待证，F-SPEC-01待决",
-            "risk": "核心对象/权限/时态/完整性：高风险；静态属性按证据综合",
+            "gap": "目录重名与有效区间策略批准；职务/序列/职级范围模型及管理权限批准",
+            "risk": "核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准",
             "blocksP1": true,
-            "closureMethod": "先复用证据与源码收窄具体问题；高风险定向补证，或形成明确产品方案和受限边界交用户批准；普通字段不穷尽组合",
-            "basis": "现有范围逐项映射，未因模式调整缩减",
-            "status": "进行中",
-            "decisionIds": [],
-            "followupValidation": []
+            "closureMethod": "已有证据足以描述已见结构和差异；按F-SPEC-01,F-SPEC-08推荐或明确替代方案逐项批准，无法核实的源行为按M01-LIMIT-01受限范围另行批准，才可关闭P1门槛。",
+            "basis": "已完成可决定材料，不等源规则已全验证或用户已批准；F01–04不是完整M01替代。",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "F-SPEC-01",
+              "F-SPEC-08",
+              "M01-BASELINE-01"
+            ],
+            "followupValidation": [
+              "P2差异设计与模型/迁移验证",
+              "P3该范围边界及独立多角色人工验收",
+              "P4跨模块权限及业务/生产准备验收"
+            ]
           },
           {
             "id": "M01-CLOSE-03",
@@ -1150,14 +1174,22 @@
               "BC-F21",
               "BC-F40"
             ],
-            "gap": "源人数/比例/主兼岗占编算法和审批未证；当前按岗位人数计划不代全部编制，M09金额预算仅局部依赖",
-            "risk": "核心对象/权限/时态/完整性：高风险；静态属性按证据综合",
+            "gap": "主兼借派占编及人数版本政策批准；金额预算是否强阻断和未接通状态批准",
+            "risk": "核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准",
             "blocksP1": true,
-            "closureMethod": "先复用证据与源码收窄具体问题；高风险定向补证，或形成明确产品方案和受限边界交用户批准；普通字段不穷尽组合",
-            "basis": "现有范围逐项映射，未因模式调整缩减",
-            "status": "进行中",
-            "decisionIds": [],
-            "followupValidation": []
+            "closureMethod": "已有证据足以描述已见结构和差异；按F-SPEC-05,SCOPE-DEP-01推荐或明确替代方案逐项批准，无法核实的源行为按M01-LIMIT-01受限范围另行批准，才可关闭P1门槛。",
+            "basis": "已完成可决定材料，不等源规则已全验证或用户已批准；F01–04不是完整M01替代。",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "F-SPEC-05",
+              "SCOPE-DEP-01",
+              "M01-BASELINE-01"
+            ],
+            "followupValidation": [
+              "P2差异设计与模型/迁移验证",
+              "P3该范围边界及独立多角色人工验收",
+              "P4跨模块权限及业务/生产准备验收"
+            ]
           },
           {
             "id": "M01-CLOSE-04",
@@ -1175,14 +1207,22 @@
               "BC-F39",
               "BC-F43"
             ],
-            "gap": "多入口模板、完整自定义子集、重聘匹配冲突与累计/账号边界缺口；F-SPEC-04待决",
-            "risk": "核心对象/权限/时态/完整性：高风险；静态属性按证据综合",
+            "gap": "重聘身份/冲突/任期/司龄与恢复边界批准；独立入口模板、人员子集/导入/字段权限基线批准",
+            "risk": "核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准",
             "blocksP1": true,
-            "closureMethod": "先复用证据与源码收窄具体问题；高风险定向补证，或形成明确产品方案和受限边界交用户批准；普通字段不穷尽组合",
-            "basis": "现有范围逐项映射，未因模式调整缩减",
-            "status": "进行中",
-            "decisionIds": [],
-            "followupValidation": []
+            "closureMethod": "已有证据足以描述已见结构和差异；按F-SPEC-04,F-SPEC-07推荐或明确替代方案逐项批准，无法核实的源行为按M01-LIMIT-01受限范围另行批准，才可关闭P1门槛。",
+            "basis": "已完成可决定材料，不等源规则已全验证或用户已批准；F01–04不是完整M01替代。",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "F-SPEC-04",
+              "F-SPEC-07",
+              "M01-BASELINE-01"
+            ],
+            "followupValidation": [
+              "P2差异设计与模型/迁移验证",
+              "P3该范围边界及独立多角色人工验收",
+              "P4跨模块权限及业务/生产准备验收"
+            ]
           },
           {
             "id": "M01-CLOSE-05",
@@ -1200,14 +1240,23 @@
               "BC-F45",
               "BC-F46"
             ],
-            "gap": "兼职终态、借调/外派、审批路由与离职后各消费者待证；D1–D7项目设计独立，F-SPEC-02/03待决",
-            "risk": "核心对象/权限/时态/完整性：高风险；静态属性按证据综合",
+            "gap": "故障留痕与同事项原单关联的边界批准；主兼职和离职日期、在途流程及消费者状态策略批准",
+            "risk": "核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准",
             "blocksP1": true,
-            "closureMethod": "先复用证据与源码收窄具体问题；高风险定向补证，或形成明确产品方案和受限边界交用户批准；普通字段不穷尽组合",
-            "basis": "现有范围逐项映射，未因模式调整缩减",
-            "status": "进行中",
-            "decisionIds": [],
-            "followupValidation": []
+            "closureMethod": "已有证据足以描述已见结构和差异；按F-SPEC-02,F-SPEC-03,F-SPEC-05推荐或明确替代方案逐项批准，无法核实的源行为按M01-LIMIT-01受限范围另行批准，才可关闭P1门槛。",
+            "basis": "已完成可决定材料，不等源规则已全验证或用户已批准；F01–04不是完整M01替代。",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "F-SPEC-02",
+              "F-SPEC-03",
+              "F-SPEC-05",
+              "M01-BASELINE-01"
+            ],
+            "followupValidation": [
+              "P2差异设计与模型/迁移验证",
+              "P3该范围边界及独立多角色人工验收",
+              "P4跨模块权限及业务/生产准备验收"
+            ]
           },
           {
             "id": "M01-CLOSE-06",
@@ -1223,16 +1272,269 @@
               "BC-F24",
               "BC-F42"
             ],
-            "gap": "法人稳定关联、合同累计/续签/终止日期及历史字段权限待证；电子签仅BASE-06预留，不等真实签署",
-            "risk": "核心对象/权限/时态/完整性：高风险；静态属性按证据综合",
+            "gap": "法人ID/日期/续签/计次版本策略批准；外部电子签仅契约边界、失败及历史权限批准",
+            "risk": "核心对象/权限/时态/完整性未证部分待明确规则及有范围例外批准",
             "blocksP1": true,
-            "closureMethod": "先复用证据与源码收窄具体问题；高风险定向补证，或形成明确产品方案和受限边界交用户批准；普通字段不穷尽组合",
-            "basis": "现有范围逐项映射，未因模式调整缩减",
-            "status": "进行中",
-            "decisionIds": [],
-            "followupValidation": []
+            "closureMethod": "已有证据足以描述已见结构和差异；按F-SPEC-06推荐或明确替代方案逐项批准，无法核实的源行为按M01-LIMIT-01受限范围另行批准，才可关闭P1门槛。",
+            "basis": "已完成可决定材料，不等源规则已全验证或用户已批准；F01–04不是完整M01替代。",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "F-SPEC-06",
+              "M01-BASELINE-01"
+            ],
+            "followupValidation": [
+              "P2差异设计与模型/迁移验证",
+              "P3该范围边界及独立多角色人工验收",
+              "P4跨模块权限及业务/生产准备验收"
+            ]
           }
-        ]
+        ],
+        "reviewPackage": {
+          "moduleId": "M01",
+          "preparedAt": "2026-09-09T15:50:51.986385+00:00",
+          "basedOnHead": "a3c1493ba759d8eccb3f5ff9d25a049fe8c0a155",
+          "documentStatus": "已完成待评审",
+          "scope": "组织、职务体系、编制、人员、任职、合同",
+          "internalDeferralProposals": [],
+          "internalDeferralNote": "本包不提出内部功能延期；六项原范围及原契约继续保留。实现缺口归P2/P3，不以缺实现缩减P1。",
+          "confirmedRules": "D1–D7维持：审批与生效分开、北京时间到期HR执行、禁止回溯/过期批准、跨组织范围/独立两级、职级防盲审、驳回/改日原单重审。E1只页面可开；E2只有所有者；其他推荐未批准。",
+          "flowSummary": [
+            "组织/职位稳定ID→人员主ID→独立任职段；待入职和办理入职各有结果，不能以入口保存代业务完成。",
+            "D1–D7调动：申请→调出审批→调入审批→approved/waiting→到期HR执行→applied或failed；原单取消/驳回后新单重审。",
+            "再入职、主兼岗/借派、离职和合同按F-SPEC-04–08建议作版本化状态/引用；尚未批准的箭头不标原站执行。"
+          ],
+          "decisionIds": [
+            "F-SPEC-01",
+            "F-SPEC-02",
+            "F-SPEC-03",
+            "F-SPEC-04",
+            "F-SPEC-05",
+            "F-SPEC-06",
+            "F-SPEC-07",
+            "F-SPEC-08",
+            "SCOPE-DEP-01",
+            "M01-BASELINE-01"
+          ],
+          "exceptionProposals": [
+            {
+              "id": "M01-LIMIT-01",
+              "status": "建议受限边界，待批准",
+              "scope": "原站组织/职位未来时态及停用、重聘执行/冲突恢复、兼职终态/借派占编、法人空范围/合同自动规则、单账号之外权限、通知后效",
+              "evidence": "BC-F28–46、BC-F15/16/21–25；原站CDP刷新20秒超时，未知仍按原记录。合成EA未来离职未在本轮读取，不将日前记录充当现在状态。",
+              "proposal": "允许P1以已观察事实＋本包明确获批项目设计确定需求；这些源行为只作为相似性差异/受限证据，不要求复制未证算法。不能豁免产品关键验证；未获批准前M01不记受限通过。",
+              "residualRisk": "与北森实际边界可能不同；角色/历史/跨模块消费者需在实现后验证，否则可能误授权、错计人数或误显示生效。",
+              "revalidation": "P2负责人复核ID/版本/时态/迁移/事务设计；P3执行者使用合成链验证边界，独立人类权限验收待E2后续授权；P4验收责任人完成全权限和业务准备。若源恢复且结果推翻已批规则，开有范围变更评审，不静默改规则。",
+              "approved": false,
+              "approvalRecord": null
+            }
+          ],
+          "closedQuestions": [
+            {
+              "id": "M01-EVID-01",
+              "problem": "待入职recordId究竟是人员还是审批单",
+              "resolution": "BC-F45已确认是入职EmploymentRecord；人员主ID与入职/离职两段ID分开，规格已引用，不重复查同一身份",
+              "evidenceRefs": [
+                "BC-F36",
+                "BC-F39",
+                "BC-F45"
+              ],
+              "type": "既有原站执行证据关闭对象歧义"
+            },
+            {
+              "id": "M01-EVID-02",
+              "problem": "当前租户职位重名是否一律允许/禁止",
+              "resolution": "BC-F32/33已形成同组织拒绝、跨组织成功；样本事实明确，后续字符/停用时态采用F-SPEC-01产品选择，不无限追加组合",
+              "evidenceRefs": [
+                "BC-F17",
+                "BC-F32",
+                "BC-F33"
+              ],
+              "type": "证据足够回答样本，业务政策仍待批准"
+            },
+            {
+              "id": "M01-EVID-03",
+              "problem": "入职失败是否因人员未保存、薪资包缺前置",
+              "resolution": "BC-F36人员已存；38缺包内项目阻断，39补齐后同主ID入职成功；无需重建EA或恢复全M07探索",
+              "evidenceRefs": [
+                "BC-F36",
+                "BC-F38",
+                "BC-F39"
+              ],
+              "type": "既有执行证据明确最小依赖"
+            },
+            {
+              "id": "M01-SPEC-CLOSE-01",
+              "problem": "数据库故障是否可保证同一失败事务留痕",
+              "resolution": "静态代码已明确业务failed可提交与CAS409/存储503不同；设计选择转F-SPEC-02，不继续用重复正常流程验证数据库故障",
+              "evidenceRefs": [],
+              "codeRefs": [
+                "lib/hris/model.ts",
+                "lib/hris/repository.ts",
+                "app/api/hris/route.ts"
+              ],
+              "type": "源码差异已收窄；不等批准"
+            },
+            {
+              "id": "M01-SPEC-CLOSE-02",
+              "problem": "任意历史终态强制原单关联是否实现存在",
+              "resolution": "model.request确实按任意终态历史拦截；D2/D6不自动要求该宽度，转F-SPEC-03明确业务选择",
+              "evidenceRefs": [],
+              "codeRefs": [
+                "lib/hris/model.ts"
+              ],
+              "type": "静态差异已确认；未业务复验"
+            },
+            {
+              "id": "M01-P1-BOUNDARY-01",
+              "problem": "是否为每个静态字段补存储类型/全部配置组合才能退出",
+              "resolution": "按用户本轮风险匹配指令，普通配置可用页面/帮助/一致证据；源存储类型未知继续保留，不作为P1独立硬门槛，实施类型由已审PRD/P2设计明确",
+              "evidenceRefs": [
+                "BC-F22",
+                "BC-F23",
+                "BC-F24",
+                "BC-F25"
+              ],
+              "type": "已授权P1工作标准调整；非业务验收豁免"
+            },
+            {
+              "id": "M01-M19-DEPENDENCY-01",
+              "problem": "人事待办为空是否证明没有待生效/失败调动",
+              "resolution": "现有workInbox只遍历pending；approved/waiting或failed须从原申请执行状态读取，不能以待办0推定已生效。建议后续M19分列执行清单，原/approvals入口保留",
+              "evidenceRefs": [],
+              "codeRefs": [
+                "lib/hris/work-inbox.ts",
+                "lib/hris/authorization.ts"
+              ],
+              "type": "解决M01 D1办理发现性的跨模块依赖；未增加源事实"
+            }
+          ],
+          "exitAssessment": {
+            "p1A": "六项范围已有证据/深度/限制/具体关闭方式与风险判断，可提交判定；核心未证源行为须M01-LIMIT-01明确批准，否则仍缺源执行条件。没有完整通过。",
+            "p1B": "各项可实施推荐、既有字段/角色/状态/异常/验收及差异已汇合；10组产品/依赖/基线选择未批准，不计需求就绪。",
+            "transition": "范围已确定；实施规则、验收依赖与例外审批未闭合，模块转序批准为空，转序就绪=false。文档准备完成不等模块获准关闭。"
+          },
+          "implementationNext": [
+            "复用现有身份/组织ID、范围权限、D1–D7两级事务/审计、附件和历史机制。",
+            "依据批准版本增量补组织/职位/法人有效版本、多任职/重聘历史、子集模板/导入及合同引用/计次，不重建系统。",
+            "修订F-SPEC-01名称策略、02不可写故障记录边界、03无关后续事项关联；对每个调整执行对应版本验证。",
+            "M19审批实例和M01申请/执行关联；M48本人视图与M32报告使用同一状态/字段权限；M07/M11仅预留消费者契约。"
+          ],
+          "acceptanceCases": [
+            {
+              "id": "M01-REVIEW-AC01",
+              "scopeItem": "组织",
+              "given": "目录启用/停用有在职或未完成业务引用",
+              "when": "按拟生效日停用",
+              "then": "拒绝并显示权限内依赖摘要；旧版本和已结束引用不改；无引用时按批准时态产生新版本",
+              "basis": "F-SPEC-08",
+              "status": "候选；涉及建议部分以批准版本为准；本轮未执行",
+              "accepted": false,
+              "executionThisRun": false
+            },
+            {
+              "id": "M01-REVIEW-AC02",
+              "scopeItem": "职务体系",
+              "given": "同组织职位有效区间重叠，同名不同码",
+              "when": "新建/改名；对照跨组织同名",
+              "then": "按批准F-SPEC-01拒绝前者/允许后者，其他目录按各自规则；不以名称替代ID",
+              "basis": "F-SPEC-01",
+              "status": "候选；涉及建议部分以批准版本为准；本轮未执行",
+              "accepted": false,
+              "executionThisRun": false
+            },
+            {
+              "id": "M01-REVIEW-AC03",
+              "scopeItem": "编制",
+              "given": "主职人数已满，兼职/借派类型明确",
+              "when": "新增任职或改变主职",
+              "then": "按批准占编规则计算增量并校验，失败人员/任职/占用均不变；金额服务未接通显示未校验而非通过",
+              "basis": "F-SPEC-05/SCOPE-DEP-01",
+              "status": "候选；涉及建议部分以批准版本为准；本轮未执行",
+              "accepted": false,
+              "executionThisRun": false
+            },
+            {
+              "id": "M01-REVIEW-AC04",
+              "scopeItem": "人员",
+              "given": "历史人员多标识命中不同主ID或已撤权账号",
+              "when": "提交重聘",
+              "then": "冲突进入人工核对不自动合并；选定稳定身份后新增任职段，历史保留，账号不恢复；同批重试不重复人",
+              "basis": "F-SPEC-04",
+              "status": "候选；涉及建议部分以批准版本为准；本轮未执行",
+              "accepted": false,
+              "executionThisRun": false
+            },
+            {
+              "id": "M01-REVIEW-AC05",
+              "scopeItem": "人员",
+              "given": "人员子集唯一键已存在且字段不可写",
+              "when": "新增/导入显式更新",
+              "then": "新增重复拒绝；未获字段修改权限导入仍拒绝；授权更新形成新版本及批次行号，旧记录可追溯",
+              "basis": "F-SPEC-07",
+              "status": "候选；涉及建议部分以批准版本为准；本轮未执行",
+              "accepted": false,
+              "executionThisRun": false
+            },
+            {
+              "id": "M01-REVIEW-AC06",
+              "scopeItem": "任职",
+              "given": "批准调动已到期，模拟目标失效/编制不足或持久层不可写",
+              "when": "执行及恢复查询",
+              "then": "业务failed保留次数且任职不变；409/503先读同ID/revision再决定重试；不误记成功或重复执行",
+              "basis": "F-SPEC-02/D1",
+              "status": "候选；涉及建议部分以批准版本为准；本轮未执行",
+              "accepted": false,
+              "executionThisRun": false
+            },
+            {
+              "id": "M01-REVIEW-AC07",
+              "scopeItem": "任职",
+              "given": "员工只有无关历史终态调动且无在途单",
+              "when": "发起独立新事项或原事项改日",
+              "then": "按批准F-SPEC-03独立事项不永久强绑，改日更正强制可读原单并两级重审；两类均保留审计",
+              "basis": "F-SPEC-03/D2/D6",
+              "status": "候选；涉及建议部分以批准版本为准；本轮未执行",
+              "accepted": false,
+              "executionThisRun": false
+            },
+            {
+              "id": "M01-REVIEW-AC08",
+              "scopeItem": "任职",
+              "given": "EA主职A与兼职B，最后工作日已确定",
+              "when": "离职生效/结束兼职及重复提交",
+              "then": "按批准日期/类型结束有效区间并保留ID/历史；主档、成员消费和人数分列，终态不从列表消失推定",
+              "basis": "F-SPEC-05",
+              "status": "候选；涉及建议部分以批准版本为准；本轮未执行",
+              "accepted": false,
+              "executionThisRun": false
+            },
+            {
+              "id": "M01-REVIEW-AC09",
+              "scopeItem": "合同",
+              "given": "旧合同已签，法人改名/停用及续签/重聘",
+              "when": "新引用与续签计次/报表",
+              "then": "停用禁新引用；旧法人快照保持；合同比较连续日与稳定ID，改版不重复计，自动政策未启用不自行转换/终止",
+              "basis": "F-SPEC-06",
+              "status": "候选；涉及建议部分以批准版本为准；本轮未执行",
+              "accepted": false,
+              "executionThisRun": false
+            },
+            {
+              "id": "M01-REVIEW-AC10",
+              "scopeItem": "人员",
+              "given": "操作者只可见组织A而原/目标涉及B，字段被隐藏",
+              "when": "详情/审批摘要/附件/报表/导入",
+              "then": "每条服务端入口再核数据/字段权限；D3–D5独立要求保持，P1签设计不勾选真人跨角色验收",
+              "basis": "D3–D5/M01-BASELINE-01",
+              "status": "候选；涉及建议部分以批准版本为准；本轮未执行",
+              "accepted": false,
+              "executionThisRun": false
+            }
+          ],
+          "businessAccepted": false,
+          "productionAccepted": false,
+          "signoffRequest": "可按推荐或明确替代方案逐组批准；例外M01-LIMIT-01另行批准，保留P3/P4验证；记录范围/版本/审批人/时间后重新计算转序。"
+        }
       },
       "businessPackage": "BP-F"
     },
@@ -4901,22 +5203,22 @@
         ],
         "moduleClosure": {
           "rangeId": "R1",
-          "queueState": "queued",
+          "queueState": "backup",
           "p1AConclusion": {
-            "status": "进行中",
+            "status": "受阻",
             "approvalRecord": null,
             "evidenceRefs": [
               "BC-P1C-M19",
               "BC-I10",
               "BC-I27"
             ],
-            "limits": "沿用已有局部证据，未代签"
+            "limits": "已有流程帮助/列表可用；管理员委托细则仅导航，源连接超时；不得当已授权节点代理。"
           },
           "p1BConclusion": {
-            "status": "进行中",
+            "status": "受阻",
             "approvalRecord": null,
             "evidenceRefs": [],
-            "limits": "需求尚未批准"
+            "limits": "复用既有契约并补以下差异/候选；通用流程/委托权限仍需来源或明确产品评审，未批准。"
           },
           "conditions": {
             "applicableScopeDetermined": {
@@ -4943,7 +5245,49 @@
             "approvedAt": null
           },
           "restrictedApproval": null
-        }
+        },
+        "closureChecklist": [
+          {
+            "id": "M19-CLOSE-01",
+            "scopeItem": "流程管理",
+            "requirementIds": [
+              "BP-I-REQ-07"
+            ],
+            "evidenceRefs": [
+              "BC-P1C-M19",
+              "BC-I10",
+              "BC-I27"
+            ],
+            "gap": "路由/节点/操作者/业务回写/通知/异常未全证；M01 D1–D7固定两级保持，不被通用干预候选扩展",
+            "risk": "权限/业务回写/异常为高风险",
+            "blocksP1": true,
+            "closureMethod": "复用BC-I10/27说明；待连接恢复定向查管理员委托范围/有效期/撤销及源流程回写，或明确批准候选产品设计",
+            "basis": "旧通用待办和D1–D7仅局部可复用，不能当完整M19通过",
+            "status": "受阻",
+            "decisionIds": [],
+            "followupValidation": [
+              "保留P3/P4独立角色/并发撤权验证"
+            ]
+          },
+          {
+            "id": "M19-CLOSE-02",
+            "scopeItem": "管理员委托",
+            "requirementIds": [
+              "BP-I-REQ-07"
+            ],
+            "evidenceRefs": [],
+            "gap": "委托对象/范围/有效期/原人与代理人权限/撤销审计待证；不等平台账号代登，也不自动变成任意节点转交",
+            "risk": "权限/业务回写/异常为高风险",
+            "blocksP1": true,
+            "closureMethod": "复用BC-I10/27说明；待连接恢复定向查管理员委托范围/有效期/撤销及源流程回写，或明确批准候选产品设计",
+            "basis": "旧通用待办和D1–D7仅局部可复用，不能当完整M19通过",
+            "status": "受阻",
+            "decisionIds": [],
+            "followupValidation": [
+              "保留P3/P4独立角色/并发撤权验证"
+            ]
+          }
+        ]
       },
       "businessPackage": "BP-I"
     },
@@ -9715,7 +10059,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-09T15:43:36.730682+00:00",
+    "updatedAt": "2026-09-09T15:58:55.109538+00:00",
     "authority": "Scope_Register.json为唯一范围/验收事实源；历史48/59保留，当前15模块及基础按SCOPE-20260909-CORE15。",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -42732,26 +43076,25 @@
       "latestAuthorizationAt": "2026-09-09T06:25:42.812752+00:00",
       "scopeChangeHead": "f31cb2b5e1894723288fd884d4e3bd895ae57327",
       "scopeChange": "SCOPE-20260909-CORE15",
-      "latestCheckpointAt": "2026-09-09T15:43:36.730682+00:00",
-      "latestCommittedHead": "b64ce7c1ac21ffe9a46c8f8dca93f25919159f32",
+      "latestCheckpointAt": "2026-09-09T15:58:55.109538+00:00",
+      "latestCommittedHead": "a3c1493ba759d8eccb3f5ff9d25a049fe8c0a155",
       "latestEvidenceRefs": [
         "BC-C39",
         "BC-C40"
       ],
-      "next": "M01按closureChecklist逐项收口：先F01–F04的F-SPEC-01–03，结合F-SPEC-04和其余范围形成一次可决定评审包，不重复已有源证。",
+      "next": "优先处理M01集中批准或连接恢复后的定向补证；M19备用仅剩源流程/委托补证或明确产品评审。M01可推进即回归，不启第二备用。",
       "browserRecovery": "旧实例失效后按官方指引发现唯一新实例并尝试tabs.list/new/goto/title；tab8创建成功但读取/导航刷新均超时。完成专业域/首包/基础/内部范围离线单元后再核tabs.list仍20s超时，停止重复。同一实例未收到登录/全量授权提示，不绕过控制。",
       "sourceBrowsingStatus": "本轮tabs.list再次返回CDP operation refresh tabs timed out after 20000ms，当前页面不可读；没有新的原站提交，无重新授权/登录提示。",
-      "currentFocus": "M01唯一主模块：F01–F04优先＋组织/职务体系/编制/人员/任职/合同完整收口",
+      "currentFocus": "M01唯一主模块已完成评审材料、待外部决定；M19唯一备用已完成可用静态补充，源流程/委托受阻",
       "checkpointCommitSemantics": "latestCommittedHead为本单元编辑开始前已存在提交；本记录所属提交用git log -1 -- docs/delivery/Scope_Register.json解析，不能将基准冒充最终HEAD。",
-      "workingTreeAtResume": "实际main HEAD b64ce7c1ac21ffe9a46c8f8dca93f25919159f32，工作区clean；无本轮待提交原站动作，旧M17未知流程保持未知。",
+      "workingTreeAtResume": "本单元开始时实际main HEAD为a3c1493ba759d8eccb3f5ff9d25a049fe8c0a155且已同步；本单元提交前为文档/同源脚本修改，新增M01评审包和字段说明。提交后真实状态必须用git status --short核对，不把此历史快照当作当前脏状态。",
       "lastVerifiedSync": {
-        "commit": "90fb3e3f56b4457e7f010732198ae59067048e06",
+        "commit": "a3c1493ba759d8eccb3f5ff9d25a049fe8c0a155",
         "remoteBranch": "main",
-        "result": "push成功，ls-remote main与本地HEAD相同，工作区干净",
-        "verifiedAt": "2026-09-09T14:54:44.227704+00:00",
-        "scope": "BC-C30收口提交；不是本后续单元的最终提交"
+        "result": "push成功，ls-remote main与本地HEAD相同",
+        "scope": "本轮执行模式首单元；不是当前M01评审包最终提交"
       },
-      "currentUnitOutcome": "本轮已确认R1–R3模块顺序及单主模块模式；M17原子单元已保存，安全切换M01。开始按六项原登记范围整理收口和集中评审。",
+      "currentUnitOutcome": "完成M01六项原范围集中评审包，10组规则/依赖/基线和1项受限边界未批准。全部剩余M01关闭动作依用户决定或原站连接后，已启用M19唯一备用；补待审批与待执行分离、委托权限候选和两项收口限制。未启动M48或其他模块，未改产品/部署/访问者，历史测试未复验。",
       "previousAtomicOutcome": "BC-C30与后续M17静态差异已提交b64ce7c；最近池1EA培养中/3~6个月。M17停用IDP流程保存结果未知，M18新建项目未启动；本轮不扩展或重复提交。"
     },
     "dataValidation": {
@@ -43886,7 +44229,7 @@
   "roadmap": {
     "revision": "2026-09-09-module-closure-rolling-R",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-09T15:43:36.730682+00:00",
+    "updatedAt": "2026-09-09T15:54:02.023639+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -43969,7 +44312,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M01唯一主模块：F01–F04优先＋组织/职务体系/编制/人员/任职/合同完整收口",
+    "activeWorkPackage": "M01唯一主模块已完成评审材料、待外部决定；M19唯一备用已完成可用静态补充，源流程/委托受阻",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -43984,7 +44327,7 @@
       "BP-S"
     ],
     "nextTasks": [
-      "M01按closureChecklist逐项收口：先F01–F04的F-SPEC-01–03，结合F-SPEC-04和其余范围形成一次可决定评审包，不重复已有源证。",
+      "优先处理M01集中批准或连接恢复后的定向补证；M19备用仅剩源流程/委托补证或明确产品评审。M01可推进即回归，不启第二备用。",
       "只为M01高风险缺口进行定向补证：兼职终态/再入职/法人范围/时态与消费者；浏览器不可用时保留未知并写建议，不重复提交或重建。",
       "M01所有必要自主工作完成且仅余外部阻塞后才启用M19备用；记录原因/剩余/恢复，M01可推进优先回归。",
       "M01→M19→M48→M32逐模块P1A判定、P1B评审与转序；R1及适用基础获转序评审后可P2复用/P3实现，不等R2/R3全部P1。",
@@ -44002,9 +44345,9 @@
       "authorizedAt": "2026-09-09T15:43:36.730682+00:00",
       "mode": "模块闭环优先、按R版本滚动转序",
       "primaryModuleId": "M01",
-      "backupModuleId": null,
+      "backupModuleId": "M19",
       "backupCandidateId": "M19",
-      "activeExecutionModuleId": "M01",
+      "activeExecutionModuleId": "M19",
       "wipLimit": 1,
       "backupLimit": 1,
       "backupActivation": "仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归",
@@ -44037,8 +44380,27 @@
           "reason": "用户确认模块闭环/R顺序；此前原子单元已提交，停止M17扩展",
           "remaining": "M17停用IDP流程一次保存结果未知；池成员培养中/3~6个月为最近证据；原站当前页面不可读，无新增结果不明操作",
           "restore": "轮到R2/M17或M01必要依赖时先查询旧记录；不重复创建"
+        },
+        {
+          "at": "2026-09-09T15:54:02.023639+00:00",
+          "from": "M01",
+          "to": "M19（备用）",
+          "reason": "M01六项收口/10组决策/例外/验收及实现差异已完成可评审材料，剩余关闭动作均依用户批准或原站连接恢复；启用唯一备用M19做现有证据/代码可完成部分",
+          "remaining": "M01仍唯一主模块；无通过/转序批准",
+          "restore": "收到任何可推进M01的规则/例外批准或源连接恢复，先回M01；不等待M19整个模块结束"
         }
-      ]
+      ],
+      "backupActivationEvidence": {
+        "at": "2026-09-09T15:54:02.023639+00:00",
+        "reason": "M01六项收口/10组决策/例外/验收及实现差异已完成可评审材料，剩余关闭动作均依用户批准或原站连接恢复；启用唯一备用M19做现有证据/代码可完成部分",
+        "remainingPrimary": [
+          "F-SPEC-01–08",
+          "SCOPE-DEP-01",
+          "M01-BASELINE-01",
+          "M01-LIMIT-01"
+        ],
+        "returnWhen": "收到任何可推进M01的规则/例外批准或源连接恢复，先回M01；不等待M19整个模块结束"
+      }
     },
     "moduleExecutionOrder": [
       "M01",
@@ -44226,7 +44588,7 @@
               "app/api/hris/route.ts"
             ],
             "acceptance": "已有关联在职员工/启用子组织或岗位的组织，申请停用应拒绝且原数据不变；相同组织名在同父节点拒绝；不同父节点按当前规则核对，不推广成全局唯一",
-            "gap": "F-SPEC-01仅岗位/职级名称；兼岗/再入职/法人不是普通员工编辑",
+            "gap": "F-SPEC-01仅岗位/职级名称；兼岗/再入职/法人不是普通员工编辑 本项需求选择集中见F-SPEC-07；推荐待批准，源未知仍保留，不为穷尽配置继续扩展。 本项需求选择集中见F-SPEC-08；推荐待批准，源未知仍保留，不为穷尽配置继续扩展。",
             "classification": "本项目既有实现静态事实；转为产品要求待评审",
             "accepted": false,
             "id": "BP-F-REQ-01",
@@ -44292,6 +44654,10 @@
                 "accepted": false,
                 "executionThisRun": false
               }
+            ],
+            "m01DecisionRefs": [
+              "F-SPEC-07",
+              "F-SPEC-08"
             ]
           },
           {
@@ -44305,7 +44671,7 @@
               "tests/f01-f04-transfer-roles.test.mjs"
             ],
             "acceptance": "批准后档案不变；北京时间生效日00:00前拒绝执行；业务校验失败保留原因及计划日；恢复后记实际时间。审计故障整个事务回滚并刷新核对；旧revision拒绝",
-            "gap": "D1–D7已确认；F-SPEC-02/03仅异常边界和关联宽度待审",
+            "gap": "D1–D7已确认；F-SPEC-02/03仅异常边界和关联宽度待审 本项需求选择集中见F-SPEC-05；推荐待批准，源未知仍保留，不为穷尽配置继续扩展。",
             "classification": "本项目既有实现静态事实；转为产品要求待评审",
             "accepted": false,
             "id": "BP-F-REQ-02",
@@ -44407,6 +44773,9 @@
                 "accepted": false,
                 "executionThisRun": false
               }
+            ],
+            "m01DecisionRefs": [
+              "F-SPEC-05"
             ]
           },
           {
@@ -44521,7 +44890,7 @@
               "lib/hris/development.ts"
             ],
             "acceptance": "固定期限缺end、无固定带end、重复编号含大小写及已作废、同主体重叠签署均拒绝；未来signedOn拒绝；同创建者/本人终止拒绝；续签字段省略时只按有效定义继承同root旧值，显式null保留清空来源；归档定义不改旧合同快照。均为当前实现候选，未复测/签署。",
-            "gap": "BC-F23/24原站报表连续判定和显式renewalOf不同；法人文本不能支持法人停用/改名/多主体历史；电子签、到期自动任务、次数累计/日期连续缺口保留",
+            "gap": "BC-F23/24原站报表连续判定和显式renewalOf不同；法人文本不能支持法人停用/改名/多主体历史；电子签、到期自动任务、次数累计/日期连续缺口保留 本项需求选择集中见F-SPEC-06；推荐待批准，源未知仍保留，不为穷尽配置继续扩展。",
             "classification": "本项目既有实现静态事实及原站配置差异；除已确认范围外待产品评审",
             "accepted": false,
             "currentApplicability": {
@@ -44534,7 +44903,10 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "m01DecisionRefs": [
+              "F-SPEC-06"
+            ]
           },
           {
             "id": "BP-F-REQ-06",
@@ -44548,7 +44920,7 @@
               "lib/hris/employee-experiences.ts"
             ],
             "acceptance": "编制自审/重叠拒绝；满编新增占用拒绝并保持原档案；减少占用不被超编误拦。经历不能未来，进行中无end、已结束需end；同员工同类别/机构/名称/开始月有效记录重复拒绝；作废不可编辑。",
-            "gap": "BC-F22原站按配置唯一键控制新增与导入更新；本项目固定复合键和三类经历不是可配置子集/全量导入。兼职占编和项目人力工时不由主职人数替代。",
+            "gap": "BC-F22原站按配置唯一键控制新增与导入更新；本项目固定复合键和三类经历不是可配置子集/全量导入。兼职占编和项目人力工时不由主职人数替代。 本项需求选择集中见F-SPEC-05；推荐待批准，源未知仍保留，不为穷尽配置继续扩展。 本项需求选择集中见F-SPEC-07；推荐待批准，源未知仍保留，不为穷尽配置继续扩展。",
             "classification": "既有实现静态候选；原站子集说明仅作差异依据",
             "accepted": false,
             "currentApplicability": {
@@ -44561,7 +44933,11 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "m01DecisionRefs": [
+              "F-SPEC-05",
+              "F-SPEC-07"
+            ]
           },
           {
             "id": "BP-F-REQ-10",
@@ -44571,7 +44947,7 @@
             "lifecycle": "原站保存前明确“保存后即刻建立新组织”，另显示新增对象和生效日期确认；本轮当天日期创建并刷新后存在。未来/过去生效、审批及启停状态规则仍缺，不能用本项目即时启用解释原站全部时态。",
             "actions": "表单输入→明确新增确认→刷新后按编码展开查询→名称链接对应稳定ID；查询名/编码和折叠状态须在失败判定前核对。",
             "acceptance": "可直接复验原站已执行部分：给定授权测试父级和本次有效字段，创建确认后按编码重新读取，应对应同一已保存ID和名称；本项目是否引入组织时态/编码/简称及负责人-HRBP关系属于范围需求，先审阅差异。",
-            "gap": "仅有效输入创建结果；重复/必填服务端拒绝、未来生效及停用、数据同步、完整权限未验证；本项目新增字段和时态不在当前功能扩展授权内。",
+            "gap": "仅有效输入创建结果；重复/必填服务端拒绝、未来生效及停用、数据同步、完整权限未验证；本项目新增字段和时态不在当前功能扩展授权内。 本项需求选择集中见F-SPEC-08；推荐待批准，源未知仍保留，不为穷尽配置继续扩展。",
             "codeRefs": [
               "lib/hris/model.ts",
               "docs/P1_Source_Observations_20260907.md"
@@ -44588,7 +44964,10 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "m01DecisionRefs": [
+              "F-SPEC-08"
+            ]
           },
           {
             "id": "BP-F-REQ-11",
@@ -44598,7 +44977,7 @@
             "lifecycle": "设立日期默认观察日且必填；本次生效日期为空仍能保存。完整将来生效/停用/审批以及上级职位失效传播需另证。 BC-F33进一步核实JB详情状态启用、生效日期回填为2026-09-09；与输入为空分开记录，回填算法待异日对照。",
             "actions": "创建JA→关联已建测试A→保存→名称筛选重读ID；复制职位入口已见但未使用，不从空表推出复制范围。",
             "acceptance": "已执行原站有效字段保存后可按编码/名称查到同一职位ID和所属组织；下一步同组织同名/不同编码验证当前名称策略。拟引入职位职务模型、职级范围和时态前须明确对象/状态/权限与验收，不默认扩展本项目现有岗位。",
-            "gap": "同名已有当前租户组织内拒绝/跨组织成功对照，职级及其他状态未证，自动编码规则及发号范围未核实；完整职位-职务-编制-任职关系、上下级/虚线和附件权限未闭合；F-SPEC-01推荐仍未批准。",
+            "gap": "同名已有当前租户组织内拒绝/跨组织成功对照，职级及其他状态未证，自动编码规则及发号范围未核实；完整职位-职务-编制-任职关系、上下级/虚线和附件权限未闭合；F-SPEC-01推荐仍未批准。 本项需求选择集中见F-SPEC-08；推荐待批准，源未知仍保留，不为穷尽配置继续扩展。",
             "codeRefs": [
               "lib/hris/model.ts",
               "docs/P1_Source_Observations_20260907.md"
@@ -44615,7 +44994,10 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "m01DecisionRefs": [
+              "F-SPEC-08"
+            ]
           },
           {
             "id": "BP-F-REQ-12",
@@ -44625,7 +45007,7 @@
             "lifecycle": "新增表单草稿与已创建员工/任职分开；保存前检查最终绑定，保存后以结果及实际ID确认。BC-F35新增员工路径仅校验拒绝；BC-F36待入职创建、BC-F39入职成功分别有实际结果。 待入职成功保存仍有独立入职/入职申请动作；详情入职日期与计划日期标签差异不等于入职已完成。 BC-F38已实测先确认信息采集/准备/材料未完，再强制校验所选包项目数；未完提示与不可保存条件分层。 BC-F39第二次确认成功转入在职视图且同人员主ID；未完成采集/准备/材料在该配置允许确认继续，不代表所有租户同规则。",
             "actions": "主档新增/待入职是不同入口；当新建不响应先有限刷新/公告检查，不重复提交。取消后核对实际窗口和查询，不能从点击返回推定成功。 可见文本覆盖输入时需点击当前可见提示层，不能因输入点击无效就判无权限；保存确认以对象ID为据。 在职前后查询同一id；入职动作与入职申请分别取证，不将可管理员办理等同审批完成。",
             "acceptance": "候选：分别验证两种入口的必填与默认；切换试用期后校验非必填、已有值保留/清除边界；组织改变后职位筛选和工号/经理/公司最终绑定可核对；失败不产生可误认成功的员工ID；邀请否及签署空时不得据此宣称通知链已测。具体项目业务默认须评审。 原站实际：邮箱空拒绝→补邮箱保存→重读同一ID；BC-F39补齐单账号入职成功并跨视图查同ID；多角色和复刻系统业务验收仍未通过。 需区分人员id、页面关联recordId与审批单；刷新查询同ID及分列状态后才能安全重试，不从正常/已发送标签推定业务生效或通知送达。",
-            "gap": "本项目employee简单模型未覆盖原站两入口、试用期明细、雇佣/合同预设和账号邀请；待入职经理已通过选中标签文字悬停清除，原站该路径恢复并已保存；主档新增未完成，两个入口模板/保存约束不能合并。消息、账号、任职消费者仍待证。 入职薪资包与BP-S前置已明确为依赖；本合成链无试用期、签署否可入职；不能扩展为所有合同配置均可或通知后效已测。 薪资包空配置会阻入职，已在新测试包准备手工基本工资；消息消费者及多段任职关联仍未闭合。 原recordId业务类型缺口已由BC-F45关闭；合并重聘与账号/消息消费者仍未测。",
+            "gap": "本项目employee简单模型未覆盖原站两入口、试用期明细、雇佣/合同预设和账号邀请；待入职经理已通过选中标签文字悬停清除，原站该路径恢复并已保存；主档新增未完成，两个入口模板/保存约束不能合并。消息、账号、任职消费者仍待证。 入职薪资包与BP-S前置已明确为依赖；本合成链无试用期、签署否可入职；不能扩展为所有合同配置均可或通知后效已测。 薪资包空配置会阻入职，已在新测试包准备手工基本工资；消息消费者及多段任职关联仍未闭合。 原recordId业务类型缺口已由BC-F45关闭；合并重聘与账号/消息消费者仍未测。 本项需求选择集中见F-SPEC-07；推荐待批准，源未知仍保留，不为穷尽配置继续扩展。",
             "codeRefs": [
               "lib/hris/model.ts",
               "lib/hris/authorization.ts",
@@ -44643,7 +45025,10 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "m01DecisionRefs": [
+              "F-SPEC-07"
+            ]
           },
           {
             "id": "BP-F-REQ-13",
@@ -44653,7 +45038,7 @@
             "lifecycle": "BC-F40新兼职保存→任职中/生效，独立EmploymentRecord ID指向原EmployeeInformation ID；主职A保持。列表有结束兼职申请，卡片有删除任职，业务终止与历史删除不合并。 BC-F41结束申请将空结束回显9999-12-31，提交与删除任职不同；结束日期包含性及审批/消息路由待证。 BC-F45/46离职确认后列表不见原兼职，但旧编辑UI能回读同ID/原值；删除历史、生效终止及作废各自语义需分开，终态/消费者不能从列表缺行推定。",
             "actions": "创建、编辑、任职卡片查询、结束申请（待观察）；人员切换/部门关联的工号及经理联动需验最终绑定。",
             "acceptance": "候选：给定同一人员EA主职A和测试B，建立B兼职后记录具有独立ID、父人员ID保持且主职A不被覆写；状态/审批分别可回读。当前原站路径已实测，但本项目验收未执行。结束申请/区间重叠/未来生效/占编及消费者规则补证后再明确拒绝或生效预期，不编默认。",
-            "gap": "本项目employee单org/job字段与调动审批模型不可表示多人事任职时间段；需保留可复用人员身份/组织/权限底座，增量模型与消费者方案待P1B评审。完整M01需求不等于F01–F04范围自动扩大。 结束申请无可见审批/通知预览，需衔接M19配置；不把任职中→结束的图示写成强制已证流程。",
+            "gap": "本项目employee单org/job字段与调动审批模型不可表示多人事任职时间段；需保留可复用人员身份/组织/权限底座，增量模型与消费者方案待P1B评审。完整M01需求不等于F01–F04范围自动扩大。 结束申请无可见审批/通知预览，需衔接M19配置；不把任职中→结束的图示写成强制已证流程。 本项需求选择集中见F-SPEC-05；推荐待批准，源未知仍保留，不为穷尽配置继续扩展。",
             "codeRefs": [
               "lib/hris/model.ts",
               "lib/hris/personnel-transfer.ts",
@@ -44671,7 +45056,10 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "m01DecisionRefs": [
+              "F-SPEC-05"
+            ]
           },
           {
             "id": "BP-F-REQ-14",
@@ -44681,7 +45069,7 @@
             "lifecycle": "新法人保存启用，失效9999-12-31；停用与删除为独立可见动作，未验证有引用时限制。",
             "actions": "新建、名称查询、详情、编辑；范围维护、停用保护与法人变更待补证。",
             "acceptance": "候选：保存法人后按自身ID回读编码/简称/日期，界面空范围不可静默映射成全范围或无权限；作用对象及范围组合明确后测试包含/排除/附加人员、停用时合同及薪资历史保留。当前只有新建原站合成链成功，不代签项目业务验收。",
-            "gap": "当前model/transfer/payroll静态关键词核对未见对应法人主实体/有效期与范围模型；组织ID或工资批次不能替代法人。增量实现和跨包消费者契约待P1B评审，不扩展F01–F04。",
+            "gap": "当前model/transfer/payroll静态关键词核对未见对应法人主实体/有效期与范围模型；组织ID或工资批次不能替代法人。增量实现和跨包消费者契约待P1B评审，不扩展F01–F04。 本项需求选择集中见F-SPEC-06；推荐待批准，源未知仍保留，不为穷尽配置继续扩展。",
             "codeRefs": [
               "lib/hris/model.ts",
               "lib/hris/personnel-transfer.ts",
@@ -44700,7 +45088,10 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "m01DecisionRefs": [
+              "F-SPEC-06"
+            ]
           },
           {
             "id": "BP-F-REQ-15",
@@ -44710,7 +45101,7 @@
             "lifecycle": "原站说明按类型/勾选决定全部终止或最后工作日后条件终止；不得画作所有流程无条件终止，也不将生效任职等同在途流程。 BC-F45最后工作日9日→当前入职任职截止9日且次日10日起新离职任职，当前人员9日仍在职。起止切换须区分当前投影与未来事件；兼职自动终止确认单列，不替代后效验证。",
             "actions": "离职/退休生效时对在途流程判定；历史查看与配置修改独立。",
             "acceptance": "候选：给定最后工作日前后各类在途记录，按已评审规则精确比较保留/终止结果，验证重复生效、失败恢复、通知边界及历史可追溯。BC-F44仅配置事实，不标此执行场景已通过。 本次原站实际前后区间与不同任职ID已核，午夜触发生效和重聘仍未核；本项目不能用立即改status代替该日期效果。",
-            "gap": "现有model.ts拒绝同员工已有待处理人事申请；exit审批完成仅改employee.status离职，未代表原站逐类流程终止策略。复用审批/审计底座；全局消费者与日期契约须P1B/P2后增量设计。",
+            "gap": "现有model.ts拒绝同员工已有待处理人事申请；exit审批完成仅改employee.status离职，未代表原站逐类流程终止策略。复用审批/审计底座；全局消费者与日期契约须P1B/P2后增量设计。 本项需求选择集中见F-SPEC-05；推荐待批准，源未知仍保留，不为穷尽配置继续扩展。",
             "codeRefs": [
               "lib/hris/model.ts",
               "lib/hris/personnel-transfer.ts",
@@ -44728,7 +45119,10 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "m01DecisionRefs": [
+              "F-SPEC-05"
+            ]
           }
         ],
         "goal": "在保留原范围内形成组织员工的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
@@ -48335,7 +48729,7 @@
               "lib/hris/model.ts"
             ],
             "acceptance": "待权限/状态明确后覆盖旧审批人直接URL拒绝、待办失效、撤销已完成拒绝、已生效业务不被流程撤销静默改写、独立审批约束在委托/转交下保持；消息发送非本轮范围。；候选：按业务类型、标题、状态组合过滤，并标明权限范围；无记录不得自动解释为业务未发起或无需审批。引用干部任期ID与流程ID应可追踪，任期登记与审批成功须分别取证。",
-            "gap": "M19完整通用流程尚无独立实现；不得把原站干预当成D7新增规则已批准，通用委托和会签分支保留原范围待设计。；M18 C39有模板绑定盘点流程，但对象列表1行不代表审批实例已生成；需按稳定项目/对象ID映射待办和路由，未知通知接收人只阻启动分支。",
+            "gap": "M19完整通用流程尚无独立实现；不得把原站干预当成D7新增规则已批准，通用委托和会签分支保留原范围待设计。；M18 C39有模板绑定盘点流程，但对象列表1行不代表审批实例已生成；需按稳定项目/对象ID映射待办和路由，未知通知接收人只阻启动分支。 本轮M01依赖静态核对：pending审批待办不覆盖approved/waiting/failed执行清单。M19源管理员委托仍仅导航，已提出交集权限/有效期/撤销/不自动授审批权的候选；未批准，不能通过修改当前访问者验证。",
             "classification": "原站帮助证据和本项目差异候选；未签署",
             "accepted": false,
             "currentApplicability": {
@@ -48373,6 +48767,18 @@
                 "definition": "inbox GET每页20，domain/q过滤；counts按筛选前当前全可见任务计算",
                 "constraints": "total是筛选后任务数，counts是未加domain/q的全域分组；不能当搜索结果分域计数或业务通过数",
                 "basis": "app/api/work-inbox/route.ts"
+              },
+              {
+                "field": "审批待办与待生效执行清单分开",
+                "definition": "workInbox的人事任务只遍历status=pending；approved+waiting/failed没有进入该人事待办分支",
+                "constraints": "待办为0不能据此判断无待生效调动。/approvals已有执行入口应保留；建议M01/M19将待审批、待执行、执行失败分列，用同审批ID关联，非本轮产品改动",
+                "basis": "a3c1493 work-inbox.ts/authorization.ts静态；M01 D1依赖，不是源站观察"
+              },
+              {
+                "field": "管理员委托最小产品候选（未批准）",
+                "definition": "委托ID、原管理员/受托者、管理动作集合、组织/业务范围、生效起止、撤销原因、原人与代理人审计身份；只引用已有有效成员",
+                "constraints": "建议有效权限取原人当前权限、受托者当前权限、显式委托范围交集；禁转委托，撤销/过期立即失效。管理委托不自动授审批决策权；节点转交另行定义且D7调动不开放。E2期间只评审设计，不新建账号或执行代办",
+                "basis": "原M19管理员委托登记；BC-I10非委托细则，以上为明确未批准设计建议"
               }
             ],
             "roleMatrix": [
@@ -48433,6 +48839,16 @@
                 "then": "必须分别明确管理委托与节点办理、有效期/范围/双方当前权限/原代理审计，旧办理人不能持旧链接越权；尚未知原规则的地方不造默认继承，D7首包不扩转交",
                 "basis": "原M19范围和BC-I10；建议未批准",
                 "status": "待评审/待后续验证；本轮只静态核对",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M19-EXECUTION-LIST-01",
+                "given": "同员工调动已批准、execution=waiting或failed，另无pending申请",
+                "when": "读取人事审批待办及原申请执行详情",
+                "then": "现有workInbox人事待办可以为0，但详情仍保留待执行/失败；建议分列执行队列，办理时重核双组织/职级/日期且关联同审批ID。此新增展示为候选，不以待办消失作为生效通过",
+                "basis": "work-inbox.ts、authorization.ts、D1；静态未复验",
+                "status": "未执行/未批准",
                 "accepted": false,
                 "executionThisRun": false
               }
@@ -48993,7 +49409,7 @@
           "lib/hris/authorization.ts",
           "app/api/hris/route.ts"
         ],
-        "gap": "F-SPEC-01仅岗位/职级名称；兼岗/再入职/法人不是普通员工编辑",
+        "gap": "F-SPEC-01仅岗位/职级名称；兼岗/再入职/法人不是普通员工编辑 本项需求选择集中见F-SPEC-07；推荐待批准，源未知仍保留，不为穷尽配置继续扩展。 本项需求选择集中见F-SPEC-08；推荐待批准，源未知仍保留，不为穷尽配置继续扩展。",
         "acceptance": "已有关联在职员工/启用子组织或岗位的组织，申请停用应拒绝且原数据不变；相同组织名在同父节点拒绝；不同父节点按当前规则核对，不推广成全局唯一；细化场景明确F-SPEC-01–04边界，未代签。",
         "currentApplicability": {
           "status": "保留",
@@ -49015,7 +49431,7 @@
           "lib/hris/model.ts",
           "tests/f01-f04-transfer-roles.test.mjs"
         ],
-        "gap": "D1–D7已确认；F-SPEC-02/03仅异常边界和关联宽度待审",
+        "gap": "D1–D7已确认；F-SPEC-02/03仅异常边界和关联宽度待审 本项需求选择集中见F-SPEC-05；推荐待批准，源未知仍保留，不为穷尽配置继续扩展。",
         "acceptance": "批准后档案不变；北京时间生效日00:00前拒绝执行；业务校验失败保留原因及计划日；恢复后记实际时间。审计故障整个事务回滚并刷新核对；旧revision拒绝；细化场景明确F-SPEC-01–04边界，未代签。",
         "currentApplicability": {
           "status": "保留",
@@ -49877,7 +50293,7 @@
         "capability": "待入职、办理入职、账号邀请和薪资前置",
         "disposition": "需补齐（需求评审后）",
         "evidence": "lib/hris/model.ts员工新建无旧状态时直接试用；lib/hris/onboarding.ts为已在职员工的融入计划；BC-F35–38及BC-S18–21原站事实",
-        "gap": "现有员工新增不具备待入职→入职的独立对象/多阶段；onboardingPlan是融入事项，不能替代入职办理/薪资包/账号邀请。可复用稳定ID和范围校验，原站流程是否采用待评审，不自动恢复开发。",
+        "gap": "本项目employee简单模型未覆盖原站两入口、试用期明细、雇佣/合同预设和账号邀请；待入职经理已通过选中标签文字悬停清除，原站该路径恢复并已保存；主档新增未完成，两个入口模板/保存约束不能合并。消息、账号、任职消费者仍待证。 入职薪资包与BP-S前置已明确为依赖；本合成链无试用期、签署否可入职；不能扩展为所有合同配置均可或通知后效已测。 薪资包空配置会阻入职，已在新测试包准备手工基本工资；消息消费者及多段任职关联仍未闭合。 原recordId业务类型缺口已由BC-F45关闭；合并重聘与账号/消息消费者仍未测。 本项需求选择集中见F-SPEC-07；推荐待批准，源未知仍保留，不为穷尽配置继续扩展。",
         "acceptance": "原站当前链结果与本项目业务验收分开；三入口字段/默认及失败恢复/原单关联需明确，原59项不新增或替代",
         "currentApplicability": {
           "status": "保留",
@@ -49916,7 +50332,7 @@
         "disposition": "需补齐（需求评审后）",
         "implementation": "lib/hris/model.ts员工单org/job＋lib/hris/personnel-transfer.ts调动",
         "evidence": "lib/hris/model.ts员工单org/job＋lib/hris/personnel-transfer.ts调动；BC-F40人员71e030ac→兼职EmploymentRecord cf48b4dc独立ID",
-        "gap": "单主职或改主职不能等同并行兼职；起止/独立状态/占编/结束申请与跨包消费者待需求规格",
+        "gap": "本项目employee单org/job字段与调动审批模型不可表示多人事任职时间段；需保留可复用人员身份/组织/权限底座，增量模型与消费者方案待P1B评审。完整M01需求不等于F01–F04范围自动扩大。 结束申请无可见审批/通知预览，需衔接M19配置；不把任职中→结束的图示写成强制已证流程。 本项需求选择集中见F-SPEC-05；推荐待批准，源未知仍保留，不为穷尽配置继续扩展。",
         "next": "复用身份和组织底座，先补原站结束与权限证据；本轮不实现/部署",
         "businessAccepted": false,
         "capability": "同一人员的并行兼职任职、起止及状态",
@@ -49938,7 +50354,7 @@
         "capability": "法人目录/时间与适用范围",
         "disposition": "需补齐（需求评审后）",
         "evidence": "lib/hris/model.ts、personnel-transfer.ts、payroll.ts静态核对；BC-F42新建LA实际ID",
-        "gap": "未见对应命名主实体；组织/发薪机构与法人不同对象，空范围含义及跨包契约待证",
+        "gap": "当前model/transfer/payroll静态关键词核对未见对应法人主实体/有效期与范围模型；组织ID或工资批次不能替代法人。增量实现和跨包消费者契约待P1B评审，不扩展F01–F04。 本项需求选择集中见F-SPEC-06；推荐待批准，源未知仍保留，不为穷尽配置继续扩展。",
         "acceptance": "M01原验收任务；不自动扩展F01–F04，原站实测不代签项目",
         "currentApplicability": {
           "status": "保留",
@@ -49957,7 +50373,7 @@
         "capability": "离职生效的跨流程判定和历史保留",
         "disposition": "待核验/需补齐（需求评审后）",
         "evidence": "BC-F44；lib/hris/model.ts request互斥/exit更改status",
-        "gap": "不同流程类型的日期和终止条件不由简单离职状态覆盖；必须保留D1–D7适用范围",
+        "gap": "现有model.ts拒绝同员工已有待处理人事申请；exit审批完成仅改employee.status离职，未代表原站逐类流程终止策略。复用审批/审计底座；全局消费者与日期契约须P1B/P2后增量设计。 本项需求选择集中见F-SPEC-05；推荐待批准，源未知仍保留，不为穷尽配置继续扩展。",
         "acceptance": "M01原验收任务与跨包依赖；配置观察不等于执行验证",
         "currentApplicability": {
           "status": "保留",
@@ -50103,7 +50519,7 @@
         "topic": "职位同组织重名策略与职级名称约束（组织已排除）",
         "status": "原站当前组织内/跨组织同名对照已有执行证据；本项目名称策略及职级规则仍待评审",
         "basis": "组织同级名称唯一在model.org明确，已排除歧义。model.position/grade只按编码精确唯一，均未限制重名。BC-F17说明职位重名可配置；BC-F32/33实际A内同名不同码JA2拒绝、A/B同名JA/JB均保存，形成当前租户同组织生效重名拒绝/跨组织允许的样本边界。停用/未来日期/职级重名尚未实测，不能外推。旧F01.2笼统“编码/名称唯一”不能作全局唯一批准。",
-        "proposal": "根据新增源执行证据，修订原推荐：职位以稳定ID关联、编码唯一，建议同组织当前有效职位名称唯一、跨组织允许同名；“有效”与历史/停用冲突需明确后才实施。职级暂按编码唯一、名称可重名提出候选，仍须补源/评审；不由职位规则推导职级。所有建议均未批准。",
+        "proposal": "根据新增源执行证据，修订原推荐：职位以稳定ID关联、编码唯一，建议同组织当前有效职位名称唯一、跨组织允许同名；“有效”与历史/停用冲突需明确后才实施。职级暂按编码唯一、名称可重名提出候选，仍须补源/评审；不由职位规则推导职级。所有建议均未批准。 推荐细化：编码保留去首尾空白后区分大小写的全目录唯一；职位名称去首尾空白后在同组织且有效区间重叠时不得重名，跨组织允许；历史已失效区间可复用名称但ID不复用。职级暂编码唯一、名称可重名，显示编码区分；这些时态/字符规则是待批产品设计，不宣称原站已测。",
         "impact": "只阻F01.2相应名称校验及验收签署；组织无需再决定。不得改现有JA/JB或产品代码；补停用/职级证据是浏览器恢复后的局部分支。",
         "alternatives": [
           "保持现有职位/职级只编码唯一：复用最多，但同组织同名需编码/组织醒目标识并明确偏离当前源样本的理由",
@@ -50122,7 +50538,7 @@
         "id": "F-SPEC-02",
         "topic": "D1失败留痕的事务边界",
         "status": "异常契约已细化，待需求评审",
-        "basis": "D1已确认失败可恢复；model.executeTransfer先增加attempts，业务执行校验失败可返回failed。tests/f01-f04-transfer-roles.test.mjs中目标岗位/编制失败保留批准与计划日、重试次数；审计故障触发503并断言数据全回滚。历史测试结果只适用3d690cbbd6336c6de8b76a06fa4459700b1e3a88，本轮仅读测试。 本轮584afb5静态核API/repository：提前执行/授权/业务参数400或403在attempts增加前拒绝；可提交目标失效/编制失败可200带execution=failed并提交失败次数，员工/任职历史不变。CAS不命中409不写；数据库读取/审计batch异常503整体不承诺持久化，网络响应丢失不能由客户端错误推定未生效。",
+        "basis": "D1已确认失败可恢复；model.executeTransfer先增加attempts，业务执行校验失败可返回failed。tests/f01-f04-transfer-roles.test.mjs中目标岗位/编制失败保留批准与计划日、重试次数；审计故障触发503并断言数据全回滚。历史测试结果只适用3d690cbbd6336c6de8b76a06fa4459700b1e3a88，本轮仅读测试。 既有584afb5版本静态核对API/repository（保留原观察版本，本轮未业务复测）：提前执行/授权/业务参数400或403在attempts增加前拒绝；可提交目标失效/编制失败可200带execution=failed并提交失败次数，员工/任职历史不变。CAS不命中409不写；数据库读取/审计batch异常503整体不承诺持久化，网络响应丢失不能由客户端错误推定未生效。",
         "proposal": "推荐在不重开D1已决重试/实际时间的前提下，分清可提交业务失败和存储不可用：前者保留failed/次数/原因，后者保持结果待核，恢复读取同审批ID/revision后再决定重试，不承诺同一失败事务写日志。若要求每次不可写故障也可靠留痕，另以独立可靠记录通道设计/验收，未批准前不称已覆盖。",
         "impact": "仅阻塞F03极端故障留痕契约签署；D1人工重试/实际时间既定规则不变",
         "alternatives": [
@@ -50168,15 +50584,15 @@
       },
       {
         "id": "F-SPEC-04",
-        "topic": "再入职身份连续性与适用人群（完整M01后续子包）",
+        "topic": "再入职稳定身份、冲突恢复与司龄展示（M01当前范围）",
         "status": "待业务选择；不阻塞F01–F04已决调动及其他P1工作",
         "basis": "BC-F25帮助明确合并与新人员会产生不同任职/薪资/社保历史连续性，确认后不可更改；当前本项目未完整实现再入职。 BC-F43当前租户实际选择证件/手机号/邮箱任一匹配、合并人员。BC-F45已实测人员主ID与入职/离职独立任职ID、日期区间连续；实际离职重聘尚未执行，不从配置批准项目策略。",
-        "proposal": "建议同一经核实人员保持稳定主身份并关联多段任职，历史来源/前后雇佣分开；手机号/邮箱命中仅作为核对线索，多个冲突候选不得自动选一合并，需有明确复核和纠错边界。重聘不自动恢复业务账号/角色/字段权限。此方向仍待用户选择，不从原站“合并人员”配置或本次主ID连续事实代签。",
+        "proposal": "建议同一经核实人员保持稳定主身份并关联多段任职，历史来源/前后雇佣分开；手机号/邮箱命中仅作为核对线索，多个冲突候选不得自动选一合并，需有明确复核和纠错边界。重聘不自动恢复业务账号/角色/字段权限。此方向仍待用户选择，不从原站“合并人员”配置或本次主ID连续事实代签。 推荐一并选择司龄展示规则：按已确认各任期入职日至最后工作日的自然日含首尾去重累计，闰日按一天，不计离职间隔；以天保存，年展示用365除且两位小数，独立于假勤权益/外部法定口径。实习期不计、离职重聘及退休返聘前任期计入，均为本项目待批参数；历史缺开始/结束或身份冲突则标待核，不补零或自动归并。",
         "alternatives": [
           "每次重聘新员工记录：需决定跨任期关联、累计司龄与报表去重规则",
           "按人群人工选择：需清楚的适用规则、默认入口和操作权限；增加误选恢复与审计要求"
         ],
-        "impact": "阻塞M01再入职对象/历史关联及薪资假勤消费者契约签署；不阻塞F01–F04现有范围、其他模块盘点和规格编写",
+        "impact": "阻塞完整M01重聘/任期历史/司龄及相关薪资假勤接口规格；不是暂缓子包。F01–F04已决调动规则不重问。",
         "evidence": [
           "docs/P1_Source_Observations_20260907.md",
           "lib/hris/model.ts",
@@ -50266,6 +50682,140 @@
           "lib/hris/payroll-reports.ts"
         ],
         "decisionRequired": false
+      },
+      {
+        "id": "F-SPEC-05",
+        "topic": "主兼职、借调/外派、生效与占编",
+        "basis": "BC-F40独立兼职记录与主职保持；BC-F45未来离职和任职段已证，46只能证明旧兼职UI仍可读，终态未知。现有单org/job及立即离职不能表达完整多任职。",
+        "proposal": "推荐人员主身份不变，兼职/借调/外派均独立任职ID和类型，保存主职、任职组织/职位、起止、审批与执行状态；不以借调/外派隐式覆写主职。新建/变更/结束均由范围内HR申请，另一个覆盖相关组织的HR独立审核，禁止申请人/员工本人自审；本项目调动仍严格D1–D7两级，不套用新路由。自然日闭区间、北京时间，未来记录待生效，到期由授权HR执行并记录实际时间；不得同人员同类型同目标重叠，主职同日唯一。离职自最后工作日次日生效，结束全部主兼任职的未来有效部分，保留原历史；在途申请逐条取消并留原因/失败，不删记录。编制推荐主职占1、兼职占0、借调/外派仍占派出主职1且接收占0，只有未来明确审批的调动改变主职占用；不自动换算比例。",
+        "alternatives": [
+          "采用带比例的多任职占编：须明确各类型权重和跨部门总量约束，增加编制/报表验收",
+          "完全按原站规则：须恢复连接补结束/时点/占编链，在证据齐备前保持受阻"
+        ],
+        "impact": "M01任职/编制及M19执行、M48本人、M32人数、M07/M11接口。增量增加任职段和执行记录；不是已授权开发。",
+        "status": "已形成明确推荐；待用户集中评审，未批准",
+        "decisionRequired": true,
+        "evidence": [
+          "BC-F40",
+          "BC-F41",
+          "BC-F44",
+          "BC-F45",
+          "BC-F46"
+        ],
+        "requirementIds": [
+          "BP-F-REQ-02",
+          "BP-F-REQ-06",
+          "BP-F-REQ-13",
+          "BP-F-REQ-15"
+        ],
+        "moduleIds": [
+          "M01"
+        ],
+        "sourceClassification": "原站局部事实＋本项目设计建议分列"
+      },
+      {
+        "id": "F-SPEC-06",
+        "topic": "法人范围、合同版本及续签计次",
+        "basis": "BC-F42法人已建，空适用范围语义未证；BC-F23/24只解释配置及报表续签，现有employerName自由文本和renewalOf并非源法人ID与报表算法。",
+        "proposal": "推荐建立独立法人ID及有效区间/名称版本；空范围代表未配置，不自动全员开放，新合同引用前须显式配置组织含下级或附加人员，二者取并集且再交操作者权限。停用法人禁新引用，旧合同保留当时法人快照。续签保留原合同ID，新合同与原合同同人同法人且起始日为原结束次日；报表可单独按已选合同类型的连续日期判定，不冒充签署行为。计次按人员＋法人＋协议类型累计独立已签/已终止合同，作废不计、同一合同改版不重复计；重聘保留累计。第三次转无固定期限及到期自动终止默认关闭，仅在后续明确政策版本配置后启用；不把此技术计次当法律判断。电子签仅外部契约/状态/失败，本期以授权人工登记证据表示业务记录，无真实签署。",
+        "alternatives": [
+          "仅保持法人文本：可复用，但无法满足改名/停用/多主体历史需求，需用户明确内部缩减才可采用",
+          "完全复制原租户计次/自动终止配置：需补跨法人/作废/生效证据及业务政策，当前不默认批准"
+        ],
+        "impact": "M01组织/合同、M32合同覆盖与续签报告、M07发薪主体接口；需法人ID和版本迁移映射，原历史不能删除。",
+        "status": "已形成明确推荐；待用户集中评审，未批准",
+        "decisionRequired": true,
+        "evidence": [
+          "BC-F42",
+          "BC-F23",
+          "BC-F24",
+          "P1-CONTRACT-LIST",
+          "P1-CONTRACT-TYPE"
+        ],
+        "requirementIds": [
+          "BP-F-REQ-05",
+          "BP-F-REQ-14"
+        ],
+        "moduleIds": [
+          "M01"
+        ],
+        "sourceClassification": "原站局部事实＋本项目设计建议分列"
+      },
+      {
+        "id": "F-SPEC-07",
+        "topic": "人员子集、字段模板、导入与权限",
+        "basis": "BC-F22说明10类＋自定义子集和唯一键，BC-F35/36/37证实新增/待入职/入职模板不同；现有三类经历和固定复合键覆盖不足。",
+        "proposal": "推荐保留教育/工作/家庭/考核/培训/奖励/证书/项目/技能/语言及自定义子集，模板与人员记录分别有稳定ID/版本；新增员工、待入职、入职模板独立。按字段声明文本/数字/日期/枚举/附件、必填/默认/唯一键及读写权限；未定义的约束不得猜默认。空唯一键必填部分拒绝，唯一键按员工＋子集＋指定字段精确值去首尾空白比较，区分大小写；新增重复拒绝，导入只有显式选更新且具有该员工及字段修改权才更新并记录前后版本，否则逐行拒绝，不静默覆盖；失败行可按导入批次/行号重试，成功行不重复写。HR仅管理可见组织，员工仅看本人开放字段，经理仅看范围内被开放字段；默认敏感字段不开放，字段权限覆盖详情/附件/导入/报表。业务生效和账号邀请分开，未显式授权不创建访问者或发送消息。",
+        "alternatives": [
+          "只保留现有三类经历：属于内部缩减，未批准不采用",
+          "固定不可配置模板：仍需逐子集定义，适配成本和后续变更高"
+        ],
+        "impact": "M01人员/历史及BASE-02/03/04、M48本人/M32报告；字段字典可先按模板规格评审，P2补版本/导入差异，P3做权限和失败恢复验证。",
+        "status": "已形成明确推荐；待用户集中评审，未批准",
+        "decisionRequired": true,
+        "evidence": [
+          "BC-F22",
+          "BC-F35",
+          "BC-F36",
+          "BC-F37"
+        ],
+        "requirementIds": [
+          "BP-F-REQ-01",
+          "BP-F-REQ-06",
+          "BP-F-REQ-12"
+        ],
+        "moduleIds": [
+          "M01"
+        ],
+        "sourceClassification": "原站局部事实＋本项目设计建议分列"
+      },
+      {
+        "id": "F-SPEC-08",
+        "topic": "组织、职位/职务体系与有效历史",
+        "basis": "BC-F28/29已存组织、BC-F31–33已存职位并确认两类日期不同；完整未来/停用时态、职务/序列/职级范围未执行；现有即时组织/岗位模型缺口明确。",
+        "proposal": "推荐组织/职位/职务/序列/职级分立稳定目录，编码/名称/关联/启停及有效区间版本化；组织保留行政上级，职位保留所属组织、职务/序列/职级上下限、上级及虚线职位、设立日期与生效日期，不按名字合并对象。设立日期不得晚于首次生效日；新建/新版本生效日期不得早于北京时间当天，区间不重叠，同版本上下级禁止循环；历史修正通过显式更正事件关联旧版本，不直接回写。组织/职位停用若有生效中人员、启用下级或未完成业务引用则拒绝并列出受权限保护的依赖摘要；已结束引用保留快照。HR可维护授权范围组织/职位，职务/序列/职级目录由管理员维护，读取仍按字段权限；新增目录本期配置公开范围明确，不增加登录人。",
+        "alternatives": [
+          "维持即时目录不保留时态：无法覆盖已登记时态/历史，需用户批准内部缩减",
+          "完整原站组织维度及回溯策略：需补原站配置和迁移规则，延长该部分收口"
+        ],
+        "impact": "M01组织/职务体系及其全部消费者。P2复用ID/权限/事务，增加目录版本/时间投影/停用引用检查；不重建系统。",
+        "status": "已形成明确推荐；待用户集中评审，未批准",
+        "decisionRequired": true,
+        "evidence": [
+          "BC-F28",
+          "BC-F29",
+          "BC-F31",
+          "BC-F32",
+          "BC-F33"
+        ],
+        "requirementIds": [
+          "BP-F-REQ-01",
+          "BP-F-REQ-10",
+          "BP-F-REQ-11"
+        ],
+        "moduleIds": [
+          "M01"
+        ],
+        "sourceClassification": "原站局部事实＋本项目设计建议分列"
+      },
+      {
+        "id": "M01-BASELINE-01",
+        "topic": "接受M01其余已具体化规格候选及权限设计",
+        "basis": "F01_F04_Requirements_Baseline与BP-F现有契约具有字段/权限/操作/异常和验收；只有D1–D7已明确批准，其余既有代码并非自动批准。",
+        "proposal": "推荐以本评审包版本中的M01契约作为实施基线；F-SPEC-01–08、SCOPE-DEP-01单独选择覆盖其冲突部分，其余字段/校验/角色和验收采用原规格明确值。历史测试仅作为实现证据，权限设计评审通过仍保留P3人工多角色和P4完整权限验收。",
+        "alternatives": [
+          "逐项提出不同业务要求，未确认项只阻其范围，不退回重建全项目"
+        ],
+        "impact": "决定未单列差异的M01既有候选能否转为已确认需求；不签业务运行/生产验收",
+        "status": "待集中评审；未批准",
+        "decisionRequired": true,
+        "evidence": [
+          "docs/delivery/F01_F04_Requirements_Baseline.md",
+          "docs/delivery/P1B_BP_F_Specification.md"
+        ],
+        "moduleIds": [
+          "M01"
+        ]
       }
     ],
     "codeReview": {
@@ -50828,13 +51378,13 @@
     ],
     "packageAssessmentSource": "当前各包就绪条件由modules[].p1.currentDeliveryAssessment.basis及deliveryScope基础边界生成；packages.pending/readinessConditions保留兼容历史快照，不能覆盖逐模块最新评估，后续不手工更新两份。",
     "reviewPackage": {
-      "assessedAt": "2026-09-09T15:43:36.730682+00:00",
-      "basedOnHead": "b64ce7c1ac21ffe9a46c8f8dca93f25919159f32",
+      "assessedAt": "2026-09-09T15:54:02.023639+00:00",
+      "basedOnHead": "a3c1493ba759d8eccb3f5ff9d25a049fe8c0a155",
       "status": "当前15模块集中评审输入已整理；P1A完整证据与P1B需求就绪尚未达成，未申请自动验收通过",
-      "autonomousWork": "本轮已确认R1–R3模块顺序及单主模块模式；M17原子单元已保存，安全切换M01。开始按六项原登记范围整理收口和集中评审。",
+      "autonomousWork": "完成M01六项原范围集中评审包，10组规则/依赖/基线和1项受限边界未批准。全部剩余M01关闭动作依用户决定或原站连接后，已启用M19唯一备用；补待审批与待执行分离、委托权限候选和两项收口限制。未启动M48或其他模块，未改产品/部署/访问者，历史测试未复验。",
       "sourceProgress": "M01组织/职位/入职/兼职/法人/未来离职；M07薪资组/包前置；M06类别-级别-指标-标准保留链；M03任期/考察期；M17池成员；M37指标/标准启用；M18项目持久化及对象配置均有局部执行。没有将这些链等同整模块P1A完成。",
       "requirementsProgress": "当前15模块均有总体/分包契约或明确受限规格；原内部功能逐项映射，字段/角色/状态/依赖/异常/验收及实现差异同源。组织绩效、OKR、健康度、社保/个税/激励等未探索细则保留，已确认D1–D7与候选分开。",
-      "gateConclusion": "当前尚无模块或R版本转序批准；按M01逐模块闭环，R1满足四模块＋适用基础＋版本评审后可P2/P3，不等待R2/R3全部P1；全15 P1与业务/生产验收独立。",
+      "gateConclusion": "范围已确定；实施规则、验收依赖与例外审批未闭合，模块转序批准为空，转序就绪=false。文档准备完成不等模块获准关闭。 R1滚动规则已批准，不等待R2/R3；当前没有模块或版本转序通过。",
       "foundationConclusion": "六基础均有字段/权限/异常/候选验收及现有实现证据，完整跨域字段矩阵、生产恢复目标/可信授权来源和外部适配仍需评审/环境条件；不计入15模块数字。多角色真人与云端生产验证属于后续阶段，不把它们单独设为继续P1的前置。",
       "blockers": [
         {
@@ -50848,26 +51398,26 @@
         {
           "id": "P1-RULES-01",
           "kind": "最小必要业务选择",
-          "action": "确认当前7项集中决策中的受影响产品规则",
-          "evidence": "同源p1B.reviewIssues中decisionRequired=true且未解决事项；D1–D7/E1/E2不在重问清单。",
-          "affected": "F01.2/F03、M01重聘、M12身份与人才库、M26匿名及结果、M01/M12金额预算局部门槛；不扩暂缓模块。",
-          "restore": "逐项选择或批准有边界的方案；推荐均未批准。R-SPEC-02和S-SPEC-01先待源补证，不要求即时选择。"
+          "action": "当前主模块M01集中规则/依赖/基线选择；其他模块原待决保留至对应R序",
+          "evidence": "M01.reviewPackage.decisionIds与同源reviewIssues；D1–D7/E1/E2不重问",
+          "affected": "主模块M01完整关闭；M19为唯一备用，不因其他R版本未评审阻塞R1",
+          "restore": "对M01推荐或明确备选逐项作决定，并单列批准/拒绝M01-LIMIT-01；只关闭受影响条件，不自动代签模块或转序。"
         },
         {
           "id": "P1-REVIEW-01",
           "kind": "待业务评审签署",
           "action": "审阅15模块与六基础需求/证据/例外",
-          "evidence": "所有模块p1A in_progress、p1B not_ready、review not_signed；批准受限0。",
+          "evidence": "P1A完整/P1B就绪/评审仍0/15；M01材料已完成待评审，moduleClosure中受限/完整批准和转序批准均为空。",
           "affected": "各模块完整就绪/当前全项目P1退出；文档技术自检不代签。",
           "restore": "先补证/关闭实质规则或批准明确受限边界，记录评审范围/版本/人员/日期；受限批准单列，不计完整通过。"
         },
         {
           "id": "P1-LOCAL-CONDITIONS",
           "kind": "局部原站条件待核",
-          "action": "M17流程保存结果/继任候选、M18通知路由、EA10日离职后重聘",
+          "action": "M01原站高风险未证部分和M19备用流程/委托",
           "evidence": "BC-C28/C31/C40、BC-F45/46及dataValidation.records/operations；源已确认保存和未知结果分别记录。",
-          "affected": "只相应链；浏览器恢复前不能用再次创建或改时钟消除阻塞。",
-          "restore": "先只读核现有记录、目标来源和路由；在已授权合成范围补最小前置。独立角色实测后续保持E2，必要限制如实列出。"
+          "affected": "只当前主/备用相应链；M17未知流程保存于停点，不恢复全链",
+          "restore": "恢复云浏览器列页/导航后按closureChecklist问题ID取证；或明确批准本项目设计及有范围例外。"
         }
       ],
       "evidenceRefs": [

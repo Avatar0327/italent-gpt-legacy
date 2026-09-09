@@ -100,7 +100,7 @@ for m in s['modules']:
  for ref in m['p1']['pageRefs']:check(ref in pages and pages[ref]['moduleId']==m['id'],m['id']+'/'+ref+'证据归属')
 for p in pages.values():check((R/p['source']).exists(),p['id']+'原始来源存在')
 for p in s['p1B']['packages']:check((R/p['spec']).exists(),p['id']+'规格/输入存在')
-files=list(D.glob('P1*.md'))+[R/'docs/HRIS_Project_Plan.md',D/'Scope_Register.md',D/'Module_Queue.md']
+files=list(D.glob('P1*.md'))+[R/'docs/HRIS_Project_Plan.md',D/'Scope_Register.md',D/'Module_Queue.md',D/'P1_Module_Closure.json',D/'Controller_Resume.md',R/'docs/Execution_Checkpoint.md',D/'F01_F04_Requirements_Baseline.md']
 before={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
 subprocess.run(['python','scripts/render-p1-baseline.py'],cwd=R,check=True,capture_output=True)
 after={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
@@ -113,7 +113,7 @@ changed=subprocess.check_output(['git','diff','--name-only'],cwd=R,text=True).sp
 check(all(p.startswith('docs/') or p in ['scripts/render-p1-baseline.py','scripts/check-p1-baseline.py'] for p in changed),'未改产品源码/测试/依赖/配置')
 result={'completedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'baseCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=R,text=True).strip(),'scope':'文档完整性/引用/生成一致性；非业务回归、原站取证、需求签署或UAT','result':'passed','checks':checks,'notes':['对当前HEAD核对原48组及59原验收条件/标志未改变','本检查仅验证文档结构；是否新增原站观察以带来源与观察时间的记录为准，不能由脚本推断','D1历史测试源3d690cbbd6336c6de8b76a06fa4459700b1e3a88；入口渲染源fdc423fcba607bd5814a0672836b55536c71ecb1；本轮未复测'],'businessAccepted':False,'productionAccepted':False}
 (D/'P1AB_Document_Check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
-print('PASS: scope, acceptance flags, package mapping, page attribution, links, deterministic generation and unchanged product source')
+
 
 policy=s['roadmap']['executionPolicy'];order=s['roadmap']['moduleExecutionOrder']
 expected_order=['M01','M19','M48','M32','M37','M06','M26','M18','M17','M03','M27','M16','M12','M11','M07']
@@ -137,3 +137,19 @@ for m in s['modules']:
   check(all(set(x['requirementIds'])<=set(contract_ids) and set(x['evidenceRefs'])<=set(pages) for x in rows),m['id']+'收口引用真实契约/证据')
 # Persist the additional governance checks into the existing check report.
 result['checks']=checks;(D/'P1AB_Document_Check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+
+review=next(m for m in s['modules'] if m['id']=='M01')['p1']['reviewPackage']
+issue_ids={x['id'] for x in s['p1B']['reviewIssues']}
+check(set(review['decisionIds'])<=issue_ids,'M01评审决定引用现有唯一待决记录')
+check(review['businessAccepted'] is False and review['productionAccepted'] is False,'M01材料不代签业务/生产验收')
+for case in review['acceptanceCases']:
+ check(all(case.get(k) for k in ['given','when','then','basis','status']) and case['accepted'] is False and case['executionThisRun'] is False,case['id']+'M01候选验收完整且未假造执行')
+ check(case['id'] not in case_ids,case['id']+'不重复契约/基础验收ID')
+ case_ids.append(case['id'])
+view=json.loads((D/'P1_Module_Closure.json').read_text())
+check(view['moduleCount']==15 and view['primaryModuleId']==policy['primaryModuleId'] and view['backupModuleId']==policy['backupModuleId'],'机器视图同源范围/焦点')
+check(all(not x['transitionReady'] for x in view['modules']) and view['transitionReadyCount']==0,'本轮未决/未批不能导出转序就绪')
+check(view['completeCount']==0 and view['restrictedCount']==0,'本轮完整/受限通过均未获批准')
+result['checks']=checks
+(D/'P1AB_Document_Check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+print('PASS: authoritative scope, review packet, rolling gates, recovery views, deterministic generation and unchanged product source; no business retest/signoff')
