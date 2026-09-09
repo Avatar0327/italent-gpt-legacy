@@ -1,5 +1,5 @@
 {
-  "version": 21,
+  "version": 22,
   "activeWriter": "当前聊天唯一总控",
   "mode": "sole-controller-p1-synthetic-source-testing",
   "branchCreationBase": "commit introducing this queue; exact SHA in git history",
@@ -804,6 +804,6 @@
       "持续全局术语/对象/字段权限/历史状态/依赖/接口一致性审查；文档自检和业务签署分开，按完整单元提交推送，不恢复P2/P3开发"
     ],
     "state": "P1未整体验收；P2保留受限历史技术验收；F01–F04业务验收未完成；E1仅页面可打开；E2唯一访问者；D1–D7独立设计；所有历史测试不等于当前复验",
-    "currentWork": "BC-F28/29组织R/A已验证；B保存确认后结果待查询，不重复提交；tab1职位新建表单，准备部门选择器核对A/B并建JA"
+    "currentWork": "BC-F30–33完成A/B跨页查询和JA/JB同名对照；组织B UUID仍待详情取得；tab1组织查询，随后人员/任职链"
   }
 }
