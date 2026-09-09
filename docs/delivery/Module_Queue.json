@@ -782,7 +782,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M37唯一主模块待集中评审；M06唯一备用材料已完成待评审",
+    "activeWorkPackage": "M06唯一主模块，R2夜间P1评审材料流水线",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -797,11 +797,10 @@
       "BP-S"
     ],
     "nextTasks": [
-      "M06备用材料完成，停止扩展；优先等待并应用M37五项及LIMIT决定，M37先关闭后才将M06提升主模块并按其批准判定。不得启M26第三模块。",
-      "R2按M37→M06→M26→M18→M17→M03闭环；M37全部剩余外部阻塞才启M06唯一备用。",
-      "R1已批准事项不重问；P2另窗口按设计授权接续，本P1窗口不改产品/部署/跑P3。"
+      "M06：应用已批准M06推荐并逐项关闭，再转M26",
+      "依次M26→M18→M17→M03，仅材料完成可滚动，不代签或进R3"
     ],
-    "state": "R1 P1受限关闭并已准P2设计；P1总控继续R2，产品功能开发/P3测试及发布仍暂停",
+    "state": "R1仅P2设计批准保持；R2模块按真实批准关闭，未批模块材料可串行排队",
     "scopeChange": "SCOPE-20260909-CORE15",
     "supportModuleIds": [
       "M19",
@@ -813,9 +812,9 @@
       "id": "MODE-MODULE-CLOSURE-R-20260909",
       "authorizedAt": "2026-09-09T15:43:36.730682+00:00",
       "mode": "模块闭环优先、按R版本滚动转序",
-      "primaryModuleId": "M37",
-      "backupModuleId": "M06",
-      "backupCandidateId": "M06",
+      "primaryModuleId": "M06",
+      "backupModuleId": null,
+      "backupCandidateId": null,
       "activeExecutionModuleId": "M06",
       "wipLimit": 1,
       "backupLimit": 1,
@@ -905,6 +904,14 @@
           "reason": "M37两项完整范围/五组推荐/LIMIT/验收/差异已提交；剩余关闭条件全部依用户批准或不可用源连接，启用M06唯一备用做已有证据和静态需求收口",
           "remaining": "M37仍唯一主模块，未获需求/例外批准",
           "restore": "收到M37可推进批准或源连接恢复即优先回归，不等M06完整结束"
+        },
+        {
+          "at": "2026-09-09T18:22:09.823974+00:00",
+          "from": "M37",
+          "to": "M06",
+          "reason": "M37-P1-APPROVAL-R2-20260909四退出条件满足，严格顺序受限关闭",
+          "remaining": "仅后续阶段风险补验",
+          "restore": "仅明确新变更重新评审受影响条款"
         }
       ],
       "backupActivationHistory": [
@@ -928,22 +935,47 @@
             "原站CDP刷新20秒超时"
           ],
           "returnWhen": "M19获得可推进的批准或原站连接恢复即优先回归，不等M48完整结束"
+        },
+        {
+          "at": "2026-09-09T17:25:41.784317+00:00",
+          "reason": "M37两项完整范围/五组推荐/LIMIT/验收/差异已提交；剩余关闭条件全部依用户批准或不可用源连接，启用M06唯一备用做已有证据和静态需求收口",
+          "remainingPrimary": [
+            "M37-SPEC-01",
+            "M37-SPEC-02",
+            "M37-SPEC-03",
+            "M37-SPEC-04",
+            "M37-SPEC-05",
+            "M37-LIMIT-01",
+            "CDP刷新20秒超时"
+          ],
+          "returnWhen": "收到M37可推进批准或源连接恢复即优先回归，不等M06完整结束",
+          "boundary": "M06仅四项原登记范围与认证依赖，不探索M26及其他第三模块，不改代码/部署/访问者"
         }
       ],
-      "backupActivationEvidence": {
-        "at": "2026-09-09T17:25:41.784317+00:00",
-        "reason": "M37两项完整范围/五组推荐/LIMIT/验收/差异已提交；剩余关闭条件全部依用户批准或不可用源连接，启用M06唯一备用做已有证据和静态需求收口",
-        "remainingPrimary": [
-          "M37-SPEC-01",
-          "M37-SPEC-02",
-          "M37-SPEC-03",
-          "M37-SPEC-04",
-          "M37-SPEC-05",
-          "M37-LIMIT-01",
-          "CDP刷新20秒超时"
+      "nightReviewPipeline": {
+        "authorization": "本窗口最新用户明确授权，仅本轮R2 P1评审材料流水线",
+        "order": [
+          "M26",
+          "M18",
+          "M17",
+          "M03"
         ],
-        "returnWhen": "收到M37可推进批准或源连接恢复即优先回归，不等M06完整结束",
-        "boundary": "M06仅四项原登记范围与认证依赖，不探索M26及其他第三模块，不改代码/部署/访问者"
+        "waitingModuleIds": [],
+        "preparedModuleIds": [],
+        "formalClosureOrder": [
+          "M37",
+          "M06",
+          "M26",
+          "M18",
+          "M17",
+          "M03"
+        ],
+        "rule": "同一时刻一主模块；材料及可自主工作完成后可排队待集中评审并转下一材料模块，未批准不关闭/不转序；不进R3或P2/P3",
+        "ownerBranch": "main",
+        "protectedWorktree": "/workspace/sites/italent-hris-r1-p2-20260909",
+        "protectedBranch": "design/r1-p2-20260909",
+        "observedProtectedHead": "617a707",
+        "parallelBoundary": "仅git worktree list查看注册信息；不进入、不修改、不合并/cherry-pick其任何提交；P2建议完成后统一纳入"
       }
     },
     "moduleExecutionOrder": [
