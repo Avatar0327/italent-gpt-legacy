@@ -1,6 +1,6 @@
 # BP-L 学习｜产品需求规格评审稿
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T09:28:07.492470+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T09:42:48.713911+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
@@ -34,8 +34,49 @@
 | 状态/审批/生效 | 配置draft/sealed/archived；实例active/completed/cancelled；课程核验与实例结项分离 |
 | 页面主要操作 | 草稿、定版、修订、显式派发、新轮、结项、内容更新预览 |
 | 验收预期（给定条件→操作→结果） | 已定版配置直接改动拒绝；跨组织试卷/作业引用拒绝；新版本不自动改旧实例；取消/退出要求不伪造完成；固定模式起点按计划日期，非加入日 |
-| 例外、恢复与仍缺内容 | 自动循环不是已实现；共享管理员与可学范围、完成实例重开、跨轮更新待明确；当前main学习配置未含原站简介字段；既有learning-description隔离分支f5f5b1bd9014d4b6eeb6d32da0f03e34da3bced2保留未合并，不计main已实现；BC-L14历史框架断连已由BC-L22恢复；原站关闭全公司共享/可见开关不撤销存量对象权限及表单默认值；当前课程依可读published版本选择，考试/作业须同组织sealed，不声称共享权限统一。 |
-| 静态实现/输入依据 | [learning-plan-definitions.ts](../../lib/hris/learning-plan-definitions.ts)；[learning-plan-model.ts](../../lib/hris/learning-plan-model.ts) |
+| 例外、恢复与仍缺内容 | 自动循环不是已实现；共享管理员与可学范围、完成实例重开、跨轮更新待明确；当前main学习配置未含原站简介字段；既有learning-description隔离分支f5f5b1bd9014d4b6eeb6d32da0f03e34da3bced2保留未合并，不计main已实现；BC-L14历史框架断连已由BC-L22恢复；原站关闭全公司共享/可见开关不撤销存量对象权限及表单默认值；当前课程依可读published版本选择，考试/作业须同组织sealed，不声称共享权限统一。；本次已明确版本根/实例/轮次/任务要求和内容更新预览的边界，仍保留原站自动循环、完成学员显式更新、循环版本更新及发布审批的未覆盖项，不以现实现上限缩减M27。 |
+| 静态实现/输入依据 | [learning-plan-definitions.ts](../../lib/hris/learning-plan-definitions.ts)；[learning-plan-model.ts](../../lib/hris/learning-plan-model.ts)；[learning-content-update.ts](../../lib/hris/learning-content-update.ts)；[learning-requirements.ts](../../lib/hris/learning-requirements.ts)；[learning-content-update.test.mjs](../../tests/learning-content-update.test.mjs)；[learning-recurrence.test.mjs](../../tests/learning-recurrence.test.mjs) |
+
+字段与对象细化（来源逐项区分，不用代码补原站事实）：
+
+| 字段/对象 | 定义及关联 | 校验/范围 | 来源与状态 |
+|---|---|---|---|
+| 计划根/配置版本/员工实例 | learningDefinition按definitionRootId+version形成版本族；learningAssignment稳定ID引用具体definitionId并冻结学习模式、课程/考试/作业要求、阶段和评分规则 | 配置和实例不是同一个状态；资源版本ID与要求ID分开，不通过标题合并；原组织不变、定版后修改须新版本是现实现 | learning-plan-definitions/assignments；源BC-L01–03说明需映射而非完全相同 |
+| 模式与日期 | relative周期、fixed固定日期、recurring循环；progressSync/orderedStages；周期durationDays/allowOverdue；循环另有repeatCredit/repeatPoints | 现有周期1–36500自然日，固定日期合法且结束不早于开始；含首日策略为项目独立实现。循环字段存在不代表自动派发或积分已实现 | learning-plan-model；BC-L01–02原站自动安排说明，触发调度未验证 |
+| 资源和组织范围 | 课程course已published可读；独立考试learningExamDefinition和作业homeworkDefinition须同组织sealed；实例员工须与配置同组织且在职 | 现有合计1–20资源且不重、阶段最多10并恰覆盖全部内容；这些是现实现上限，未批准裁减原模块；共享可见不等可管理/可学范围 | learning-plan-definitions/assignments；BC-L15/22原站团队角色/存量共享语义 |
+| 实例唯一性和轮次 | assignmentKey为[配置版本ID,员工ID,轮次]元组编码；nextRound保留同配置版本并记录previousAssignmentId | 现有后续轮需前轮completed且recurring，开始不得早于今天/前轮完成日；已存在后续轮拒绝重派，当前不自动迁移最新配置版本 | learning-assignments/learning-plan-model；源跨轮版本规则待补证 |
+| 内容更新 | 预览retained/added/removed、阻断、前后进度/成绩、复用源证据；应用记录from/to版本与contentDefinitionHistoryIds，移除任务打retired历史标记 | 现有只更新active/未到期/同组织同根后续sealed且模式不变；循环、已结项、重新加入已退出资源、重复目标轮实例均阻断；源有更新完成学员入口，现实现未覆盖，继续保留差异 | learning-content-update；BC-L03原站说明，仅本文静态核验 |
+
+角色与字段权限边界：
+
+| 角色/身份 | 可读范围 | 可执行动作 | 限制与来源 |
+|---|---|---|---|
+| 计划管理HR/管理员 | 当前授权组织配置及员工实例，所有历史读取仍受当前权限 | 创建/改版/定版/派发/内容更新预览和应用/取消恢复 | 同组织考试作业、课程可读版本是不同引用边界；不以源全公司可见开关代替原配置实际权限 |
+| 学员本人 | 本人学习任务/当前和历史进度，资源权限单独校验 | 开放且当前任职有效时学习/提交；不能自核验或直接改版本/完成标志 | 员工调离原组织或离职后现有实例不再当前可办，但历史不能被删除或自动记完成 |
+| 独立核验/作业批阅人 | 获授权任务及提交版本；未获管理权不读取全公司学习 | 指定当前版本批阅，退休任务无继续批阅/恢复/转交 | 考试/作业提交放行后续不等独立完成；管理员不可替代独立人验收 |
+
+状态转换（原站与本项目现有实现分开）：
+
+| 起始状态 | 动作 | 结果状态 | 条件/异常 | 证据性质 |
+|---|---|---|---|---|
+| 无配置 | create/edit | draft | 授权启用组织、合法模式/资源；新资源组合可能清空旧阶段/评分配置，须重新核定 | 现有learning-plan-definitions，非原站流程 |
+| draft | seal | sealed | 引用可用、生成稳定学习要求；sealed仅最新版本可派后续版本草稿 | 现有实现，原站发布审批BC-L11另有独立缺口 |
+| sealed + 在职同组织员工 | assign | 独立active实例与各任务 | 同版本同人同轮唯一，作业指定独立批阅人；批量对象与审计同事务 | 现有实现；不表示自动通知或审批完成 |
+| active实例 | cancelAssignment/restoreAssignment | cancelled/active | 取消只连带未完成任务并保存原状态；恢复须原组织在职/期限有效/资源可用，不恢复原已取消为可办 | 现有实现，跨域离职时间消费者待证 |
+| active实例 | closeAssignment | completed | 阶段已开放且独立完成门槛全部满足；未完成的剩余选修关闭，不授予其完成记录/学分 | 现有实现；总体完成与每项完成分开 |
+| completed循环实例 | 显式nextRound | 新active实例round+1 | 保留原版/轮次链；不是自动循环服务，旧成绩不自动复制为新轮成绩 | 现有实现与原站自动安排说明差异 |
+
+可执行验收场景细化：这些是原任务下的场景，不新增验收分母；候选要求未批准，历史测试不视为本轮复验。
+
+| 场景ID | 给定条件 | 操作 | 期望/待定边界 | 来源与执行状态 |
+|---|---|---|---|---|
+| BP-L-REQ-01-AC01 | sealed配置v1、员工EA在同组织；v1已派第1轮 | 再次派v1同人同轮；再建后续配置v2但不应用 | 同轮重复400；v2不静默改原实例或完成/评分证据。原实例按原v1继续 | learning-assignments/definitions；历史tests/learning-assignments.test.mjs静态；候选待业务评审；本轮仅静态对照，未复跑 |
+| BP-L-REQ-01-AC02 | 循环实例第1轮completed，且配置仍sealed | 显式nextRound一次再从旧轮重复请求 | 新实例轮次2/previousAssignmentId，重复后续轮拒绝；无调度任务时不能宣称自动生成，积分标志不等积分账本 | learning-assignments；BC-L01-02；tests/learning-recurrence.test.mjs静态；候选待业务评审；本轮仅静态对照，未复跑 |
+| BP-L-REQ-01-AC03 | active实例、当前员工、后续同根sealed版本只改内容 | 先preview，再以匹配revision apply | 预览不改revision/任务/证据；应用保留同实例ID、未改任务证据，移除项retired，新增独立任务；旧revision/重复更新拒绝 | learning-content-update；tests/learning-content-update.test.mjs静态，未复跑；候选待业务评审；本轮仅静态对照，未复跑 |
+| BP-L-REQ-01-AC04 | 被移除作业已有submitted任务与提交快照 | 应用去除该要求后原批阅人访问待办/尝试review | 历史提交仍可按当前权限查，原待办不可办；批阅/恢复/转交拒绝，不将移除算完成。重新加入旧资源仍是当前明确阻断差异 | learning-content-update/requirements；源BC-L03不证明完全相同行为；候选待业务评审；本轮仅静态对照，未复跑 |
+| BP-L-REQ-01-AC05 | completed或recurring实例，源说明有更新完成学员入口 | 现有内容更新预览 | 现实现返回阻断并保留历史，不用合成成功掩盖未覆盖；保留源已完成学员更新和循环更新为需求缺口，不能静默删除 | BC-L03；learning-content-update静态；候选待业务评审；本轮仅静态对照，未复跑 |
+| BP-L-REQ-01-AC06 | active实例员工调离原组织或已离职；历史任务仍保留 | 读取历史、尝试继续提交/结项/恢复 | 现实现当前可办受任职范围限制；不能删除历史或自动标完成；M48不可因列表可见绕过原命令校验，M32当前/历史分母分别定义 | learningTaskCurrent/learningAssignmentCurrent；M01未来离职链尚未实际验证；候选待业务评审；本轮仅静态对照，未复跑 |
+| BP-L-REQ-01-AC07 | 某阶段已达必修/选修门槛但仍有未完成选修 | 实例结项并核任务/成绩/学分 | 实例completed，剩余未完成任务cancelled；不授予其完成依据或学分，报表不能用实例完成数替代所有任务完成数 | learning-assignments.closeAssignment；现有候选；候选待业务评审；本轮仅静态对照，未复跑 |
 
 ### BP-L-REQ-02 阶段窗口与任务放行 — 保留
 
@@ -53,6 +94,14 @@
 | 例外、恢复与仍缺内容 | 自然日含首日和顺序晚开启的原站精确算法尚未核实，当前策略需评审 |
 | 静态实现/输入依据 | [learning-plan-definitions.ts](../../lib/hris/learning-plan-definitions.ts)；[learning-requirements.ts](../../lib/hris/learning-requirements.ts) |
 
+可执行验收场景细化：这些是原任务下的场景，不新增验收分母；候选要求未批准，历史测试不视为本轮复验。
+
+| 场景ID | 给定条件 | 操作 | 期望/待定边界 | 来源与执行状态 |
+|---|---|---|---|---|
+| BP-L-REQ-02-AC01 | 项目含首日候选策略：计划日9月9日，阶段延迟2日开启、学习3日且不得逾期 | 计算阶段开始/截止并判9月13日和14日提交 | 现实现开始11日、截止13日含当天，14日拒绝；若前阶段晚完成不重置截止日。该日期算法不是原站已执行事实 | learningStageStartsOn/Deadline；BC-L06-08仅说明起算基准；候选待业务评审；本轮仅静态对照，未复跑 |
+| BP-L-REQ-02-AC02 | 顺序任务启用考试提交放行，前考试有合法不及格答卷 | 访问后一任务并计算阶段完成 | 后任务可被放行，但前考试不算完成/学分/最终阶段通过；若未启开关须前项独立完成 | learningStageOpen/RequirementProgress；源提交不等完成；候选待业务评审；本轮仅静态对照，未复跑 |
+| BP-L-REQ-02-AC03 | 作业提交放行开启且原作业被退回，曾有提交版本 | 检查后任务访问与结项 | 当前实现可保留后任务放行，退回作业仍不完整通过；是否因退回重新锁后项需源补证/业务评审，不套考试状态枚举 | learning-requirements静态；作业与考试独立状态；候选待业务评审；本轮仅静态对照，未复跑 |
+
 ### BP-L-REQ-03 计划成绩 — 保留
 
 **当前适用：保留；M27；原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。**
@@ -68,6 +117,14 @@
 | 验收预期（给定条件→操作→结果） | 缺少有效成绩时pending与null，不能补0/100；按每次考试平均与每场最高平均给出不同期望；无成绩课程不能获得虚构权重成绩 |
 | 例外、恢复与仍缺内容 | 缺失分母、精度、通过过滤及多审批人聚合为候选政策，原站选项存在不能证明算法完整一致；BC-L19考试档案有六来源且仅勾选后新数据，不回补历史；当前报表直接读可见考试任务和尝试，不是同一归档机制。；BC-L20/21学习成绩等级另有名称/最低/最高配置，59.9仅既有示例，不与绩效区间或计划成绩精度自动共用。 |
 | 静态实现/输入依据 | [learning-grades.ts](../../lib/hris/learning-grades.ts)；[learning-grade-evidence.ts](../../lib/hris/learning-grade-evidence.ts) |
+
+可执行验收场景细化：这些是原任务下的场景，不新增验收分母；候选要求未批准，历史测试不视为本轮复验。
+
+| 场景ID | 给定条件 | 操作 | 期望/待定边界 | 来源与执行状态 |
+|---|---|---|---|---|
+| BP-L-REQ-03-AC01 | 同实例考试A有效得分50/90、B得分100，attempts=all | 分别用allHighest/allAttemptsAverage/eachExamHighestAverage | 现实现100/80/95；三种分母不同，不混用“平均”。若B缺全部合格依据，三模式均pending/null而非只算A | learning-grades/grade-evidence；原站部分选项事实，算法候选未批准；候选待业务评审；本轮仅静态对照，未复跑 |
+| BP-L-REQ-03-AC02 | 加权仅考试最高分90占60%，作业最后有效审批80占40%，精度2 | 计算计划成绩，随后令作业缺有效评分 | 现实现86；缺作业时pending/null并列缺少requirementId，不把权重重分配或0分；实例active为provisional，completed为final | learning-grades；BC-L04/05/07/10；多审批人源算法仍待证；候选待业务评审；本轮仅静态对照，未复跑 |
+| BP-L-REQ-03-AC03 | 课程未配置成绩、考试档案来源开关仅新增同步 | 查看权重可配置项和历史档案 | 源无成绩课程行权重禁用；不从档案当前空推无考试成绩，也不回填开关前历史。原站档案与当前即时成绩投影分别验收 | BC-L04/05/07/10及BC-L19；本轮未访问原站或运行用例；候选待业务评审；本轮仅静态对照，未复跑 |
 
 ### BP-L-REQ-04 学分、撤销、到期 — 保留
 
@@ -301,11 +358,11 @@
 
 ## 就绪、待决策与下一步
 
-当前交付M27；其余历史成员本次暂缓，不构成当前包就绪阻塞。。M27 学习管理：学习计划/成绩/学分/共享/档案/费用配置与代码已对照；复杂循环/多期/课程权限/费用内域链及恢复尚缺。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。。继续当前保留模块需求与原站链，联动M19/M48/M32；按原顺序推进其余保留包，不主动探索暂缓成员。。
+当前交付M27；其余历史成员本次暂缓，不构成当前包就绪阻塞。。M27 学习管理：源模式/阶段/成绩/审批/共享/档案/费用配置已有，现补版本根-实例-轮次-任务、内容预览/退休、门槛和不同成绩分母的结构化候选验收。原站合成链、自动循环/已完成学员更新/跨轮版本、共享角色/费用实测仍缺；P1A不完整、P1B未就绪。；六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。。继续当前保留模块需求与原站链，联动M19/M48/M32；按原顺序推进其余保留包，不主动探索暂缓成员。。
 
 需求就绪需要：受影响对象字段和行为无未决歧义；角色/字段范围、状态与恢复、跨包契约及验收预期经过评审；如有例外，记录授权、范围和影响。当前缺少上述完整评审，不满足转入新开发包条件。人工多角色UAT暂缓不阻止本稿继续细化。
 
 | 具体就绪条件 |
 |---|
-| M27 学习管理：学习计划/成绩/学分/共享/档案/费用配置与代码已对照；复杂循环/多期/课程权限/费用内域链及恢复尚缺。 |
+| M27 学习管理：源模式/阶段/成绩/审批/共享/档案/费用配置已有，现补版本根-实例-轮次-任务、内容预览/退休、门槛和不同成绩分母的结构化候选验收。原站合成链、自动循环/已完成学员更新/跨轮版本、共享角色/费用实测仍缺；P1A不完整、P1B未就绪。 |
 | 六类基础能力与必要接口单列核验；33暂缓模块不阻当前退出。 |

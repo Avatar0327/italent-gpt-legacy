@@ -54,6 +54,16 @@ for p in s['p1B']['packages']:
   check(all((R/x).exists() for x in c['codeRefs']),c['id']+'实现证据路径存在')
   app=c['currentApplicability']
   check(app['status'] in ['保留','部分适用','本次交付暂缓'] and set(app['moduleIds'])<=active and set(app['baseCapabilityIds'])<=caps,c['id']+'历史契约当前适用明确')
+case_ids=[]
+for pack in s['p1B']['packages']:
+ for contract in pack['contracts']:
+  for case in contract.get('acceptanceCases',[]):
+   case_ids.append(case['id'])
+   check(all(case.get(k) for k in ['given','when','then','basis','status']),case['id']+'验收场景条件/动作/预期/来源完整')
+   check(case.get('accepted') is False and case.get('executionThisRun') is False,case['id']+'候选场景未代签或假造本轮业务执行')
+  if any(contract.get(k) for k in ['fieldDetails','roleMatrix','stateTransitions','acceptanceCases']):
+   check(contract['currentApplicability']['status']!='本次交付暂缓',contract['id']+'本轮细化仅当前范围/基础，不扩暂缓独立规格')
+check(len(case_ids)==len(set(case_ids)),'细化场景ID唯一，不改变原59任务及完成分母')
 for row in s['p1B']['implementationMap']:
  evidence=row.get('evidence')
  check(isinstance(evidence,(str,list)) and bool(evidence),row['requirement']+'实现证据结构有效')

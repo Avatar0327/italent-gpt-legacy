@@ -1498,8 +1498,8 @@
           "p1B": "not_ready",
           "review": "not_signed",
           "approvedRestricted": false,
-          "assessmentAt": "2026-09-09T06:25:42.812752+00:00",
-          "basis": "BC-C19–23完成类别/级别/类型/指标/标准关联保存、源指标修订/停用后标准旧说明保持、描述独立补存回读。新引用/级别评级/目录校验/发展通道/角色与配置仍有缺口，未达到完整P1A或P1B就绪。 BC-C24已补编码/通道显示配置与两级评级方案保存、条件字段；剩余目标/引用改版/校验/角色仍待证。",
+          "assessmentAt": "2026-09-09T09:42:48.713911+00:00",
+          "basis": "C19–24已完成合成类别/级别/类型/指标/资格标准关联、指标修订停用后标准旧说明保留、独立级别说明、编码/发展通道及两级评级方案；目标/认证准入、目录重复/引用改版/角色矩阵仍缺，未完整P1A或P1B就绪。",
           "blockingIssueIds": [],
           "next": "转M03/M19等保留人才链；M06剩余评级目标、发展通道实际关联及目录校验/权限为局部后续，不阻其余模块。",
           "acceptanceRefs": [
@@ -3098,8 +3098,8 @@
           "p1B": "not_ready",
           "review": "not_signed",
           "approvedRestricted": false,
-          "assessmentAt": "2026-09-09T06:25:42.812752+00:00",
-          "basis": "C27计划/模板/9角色/4状态及草稿取消；C29空人才池保存PoolId/0成员已验证，公开/共享/入出标准结构已读。C28停用流程保存结果待核（完整名亦空）；人才池成员/继任/健康度/IDP阶段执行和角色恢复仍缺。 C30已补EA入池/同合成指导人/阶段和准备度变更，仍缺继任/健康度/IDP执行及完整权限。 C31新增继任字段已读，已存测试职位在当前目标选择器不可达；来源/范围未明，草稿取消，不将池内培养当已提名。",
+          "assessmentAt": "2026-09-09T09:42:48.713911+00:00",
+          "basis": "C27计划/模板/动态指导角色与草稿已读，C28停用发展流程保存结果未知（查询空不重建）；C29–30池ID/EA入池/培养中/准备度3~6个月已核；C31继任目标选择器未找到既有测试JA/JB，关系草稿取消。仍缺IDP阶段/继任引用源/健康度和角色恢复。",
           "blockingIssueIds": [],
           "next": "复用人才池fd92d3a7查看手工入池/阶段/继任；停用流程完整名回查仍空不重建；再M18/M26/M37及后续保留包。",
           "acceptanceRefs": [
@@ -3986,9 +3986,11 @@
           "p1B": "not_ready",
           "review": "not_signed",
           "approvedRestricted": false,
-          "assessmentAt": "2026-09-09T06:25:42.812752+00:00",
-          "basis": "角色/套卷配置与现有固定四类差异已读；匿名/阈值/缺评、模板版本与答卷历史、独立角色验证尚缺。",
-          "blockingIssueIds": [],
+          "assessmentAt": "2026-09-09T09:38:22.212529+00:00",
+          "basis": "已把原站动态角色/套卷说明与当前项目/邀请/答卷/报告及角色矩阵分开，补8项候选验收、版本/日期/重放/零响应边界；C-SPEC-01待业务选择，原站活动实操/题库/完整权限仍缺，未P1A完整或P1B就绪。",
+          "blockingIssueIds": [
+            "C-SPEC-01"
+          ],
           "next": "角色/套卷配置与现有固定四类差异已读；匿名/阈值/缺评、模板版本与答卷历史、独立角色验证尚缺。",
           "acceptanceRefs": [
             {
@@ -4327,8 +4329,8 @@
           "p1B": "not_ready",
           "review": "not_signed",
           "approvedRestricted": false,
-          "assessmentAt": "2026-09-09T06:25:42.812752+00:00",
-          "basis": "学习计划/成绩/学分/共享/档案/费用配置与代码已对照；复杂循环/多期/课程权限/费用内域链及恢复尚缺。",
+          "assessmentAt": "2026-09-09T09:41:43.122618+00:00",
+          "basis": "源模式/阶段/成绩/审批/共享/档案/费用配置已有，现补版本根-实例-轮次-任务、内容预览/退休、门槛和不同成绩分母的结构化候选验收。原站合成链、自动循环/已完成学员更新/跨轮版本、共享角色/费用实测仍缺；P1A不完整、P1B未就绪。",
           "blockingIssueIds": [],
           "next": "学习计划/成绩/学分/共享/档案/费用配置与代码已对照；复杂循环/多期/课程权限/费用内域链及恢复尚缺。",
           "acceptanceRefs": [
@@ -5242,8 +5244,8 @@
           "p1B": "not_ready",
           "review": "not_signed",
           "approvedRestricted": false,
-          "assessmentAt": "2026-09-09T06:25:42.812752+00:00",
-          "basis": "C32最小标准已保存停用、空分类/模型名称允许、四维度和指标表结构已读；指标库/权重目标/测评方案/版本启停和权限未闭合，未完整P1A或需求就绪。 C33已保存能力库启用/人才指标主档并读四子集结构，子记录/标准引用及状态版本仍待证。 C34已存1条合成等级描述/空要素允许；载体加载经一次刷新恢复，不列权限阻塞；标准引用/其他子集和等级边界继续。 C35标准TI引用空目标/权重1.0已保存；测评方案当前不可选且未绑定，启用条件及计算/版本待续。 C36仅该标准空目标/无方案可启用已验证；M18/M17引用和真正评价/计算/版本/权限未闭合。",
+          "assessmentAt": "2026-09-09T09:42:48.713911+00:00",
+          "basis": "C32–36合成人才标准/能力指标库TI/等级1/能力引用目标空权重1.0及最小标准启用已核；C37/38M18读取选择已证，模型名称空和无方案不阻最小主档启用。仍缺目标算法、其他子集/维度、使用中改版/版本和完整角色；不把最小启用计模块完整。",
           "blockingIssueIds": [],
           "next": "复用P1V-20260909-测试人才标准，继续M37指标库及M18/M17引用核对；不新建第二标准、不恢复M38。",
           "acceptanceRefs": [
@@ -7413,7 +7415,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-09T09:28:07.492470+00:00",
+    "updatedAt": "2026-09-09T09:42:48.713911+00:00",
     "authority": "Scope_Register.json为唯一范围/验收事实源；历史48/59保留，当前15模块及基础按SCOPE-20260909-CORE15。",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -40409,13 +40411,15 @@
       "latestAuthorizationAt": "2026-09-09T06:25:42.812752+00:00",
       "scopeChangeHead": "f31cb2b5e1894723288fd884d4e3bd895ae57327",
       "scopeChange": "SCOPE-20260909-CORE15",
-      "latestCheckpointAt": "2026-09-09T09:31:21.234012+00:00",
-      "latestCommittedHead": "ff169ba",
+      "latestCheckpointAt": "2026-09-09T09:42:48.713911+00:00",
+      "latestCommittedHead": "33f6aa9",
       "latestEvidenceRefs": [
         "BC-C39",
         "BC-C40"
       ],
-      "next": "M18主项目ActivityId3d1d07ed-d10e-4c51-8a91-22d5d20d83b1已确认新建、EA初始/未计算；对象模板样例指标评估/盘点流程/默认方案/历史否。关闭旧tab4时连接超时，先核当前tab再接续M18设置流程/通知及结果/校准，后M26；不能重建或直接启动未知路由。"
+      "next": "原站恢复tab8.goto及title均报CDP refresh tabs超时，有限恢复已用；当前连接不可用，不判站点/角色拒绝或要求全量重授权。源M18项目ActivityId3d1d07ed-d10e-4c51-8a91-22d5d20d83b1新建/EA初始未计算，未启动。先继续可离线M16→M12→M11→M07、首包规则和六基础P1B，恢复后按同ID核流程/通知/结果，不重建。",
+      "browserRecovery": "原browser不可发现，按bootstrap指引唯一一次列出当前cdp为-5010-4469-b53e-cce23dbab461；tabs.list超时后遵照API在同实例new成功tab8，正在原站根路径恢复。未绕过访问/认证/网络控制，源业务无重建或启动。",
+      "sourceBrowsingStatus": "当前工具连接受限：tabs刷新超时；无新原站事实，后续为代码/既有证据静态分析"
     },
     "dataValidation": {
       "recordedAt": "2026-09-09T01:32:59.407213+00:00",
@@ -41528,7 +41532,7 @@
   "roadmap": {
     "revision": "2026-09-08-P1AB",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-09T09:31:21.234012+00:00",
+    "updatedAt": "2026-09-09T09:42:48.713911+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -41611,7 +41615,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "P1当前15模块：BP-C/M18已保存新建项目，核流程/结果；M26及后续保留包继续，M19/M48/M32随链",
+    "activeWorkPackage": "P1当前15模块：原站页面连接暂不可用，继续M16→M12→M11→M07及首包/基础的证据-代码-需求对照；人才/学习细化已保存",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -41625,7 +41629,7 @@
       "BP-S"
     ],
     "nextTasks": [
-      "M18主项目ActivityId3d1d07ed-d10e-4c51-8a91-22d5d20d83b1已确认新建、EA初始/未计算；对象模板样例指标评估/盘点流程/默认方案/历史否。关闭旧tab4时连接超时，先核当前tab再接续M18设置流程/通知及结果/校准，后M26；不能重建或直接启动未知路由。",
+      "原站恢复tab8.goto及title均报CDP refresh tabs超时，有限恢复已用；当前连接不可用，不判站点/角色拒绝或要求全量重授权。源M18项目ActivityId3d1d07ed-d10e-4c51-8a91-22d5d20d83b1新建/EA初始未计算，未启动。先继续可离线M16→M12→M11→M07、首包规则和六基础P1B，恢复后按同ID核流程/通知/结果，不重建。",
       "BP-F/M01：关闭仍适用首包差异与法人/兼职终态等可查部分；EA离职10日生效、9日仍在职，日期分支不阻其他模块。F-SPEC-01–04保持集中待决。",
       "BP-C保留M03/M06/M17/M18/M26/M37按原登记补关键链；旧干部/人才评定/外部测评/人才模型等暂缓，不按相似名称合并。",
       "随后M27学习→M16绩效→M12招聘→M11假勤→M07薪酬；M19/M48/M32全程同步，BASE-01–06单列验收。",
@@ -41642,7 +41646,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-09T09:28:07.492470+00:00",
+    "updatedAt": "2026-09-09T09:42:48.713911+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -42093,17 +42097,22 @@
           },
           {
             "object": "360项目/关系/答卷/报告",
-            "fields": "纯量表模板；1–20题、1–5整数；minRespondents3–10；关系self/supervisor/peer/report；项目日期合法；现有分组均值按已提交有效答卷人数计算，保留1位小数；不同于干部投票的总评委数口径。",
-            "roles": "HR管理员配置；仅名单中的在职评估人本人填报；范围控制不能等同匿名承诺；development.visibleRecord允许项目范围HR/管理员读取原始答卷，分组阈值只控制汇总显示，不承诺管理员也看不到个人答卷",
-            "lifecycle": "draft→open→closed；报告closed后按被评人一次发布冻结；开放期间同邀请可再次提交并覆盖同ID答卷；关闭后拒绝；当前HR可关项目，无等待全部答卷条件。",
-            "actions": "配置关系、开放/关闭、作答、发布分组汇总",
+            "fields": "原站BC-C14–16：通知模板、评价角色、应用场景和套卷分别配置；角色名不重复/最多18字、全局90/每套卷启用15，新增不支持删除；模板创建继承角色勾选为原站说明。当前代码feedbackProject/Invite/Reply/Report及共享surveyTemplate是五个对象，具体字段和版本见细表，不以固定四关系或纯量表缩减M26既有活动/人员/题库/报表范围。",
+            "roles": "现有可复用行为：HR按项目组织管理、管理员全域；评价者按自己的有效邀请提交，报告受评者只能读本人已发布汇总；HR可读实名原答卷，因此不是对所有角色匿名。原站完整权限/匿名策略尚未取得，C-SPEC-01集中待决；不增加人类访问者或把管理员操作当跨角色验收。",
+            "lifecycle": "现有项目draft→open→closed，独立报告published；邀请assigned/cancelled、答卷submitted分开。草稿名单可改，开放后锁定，关闭后不再作答；重复作答更新同答卷ID并保留事件快照，报告同项目+受评者不可重复发布；不是原站流程证据。",
+            "actions": "保留配置活动/评价关系、开放收集、本人答卷、停止收集、发布分组报告；题库/套卷/应用场景/通知模板等常规范围仍需补证。当前没有发送提醒命令，不把open状态变更视为已送达通知。",
             "codeRefs": [
               "lib/hris/feedback.ts",
-              "lib/hris/development.ts"
+              "lib/hris/development.ts",
+              "lib/hris/development-repository.ts",
+              "lib/hris/surveys.ts",
+              "app/api/feedback/route.ts",
+              "tests/p3-api.test.mjs",
+              "docs/P1_Source_Observations_20260907.md"
             ],
-            "acceptance": "草稿后不能改名单；重复评估人+被评人拒绝；本人关系不匹配拒绝；同事/下属低于阈值返回suppressed与null均值，自评/上级阈值1；不把无响应记0",
-            "gap": "阈值/匿名性是独立策略待确认；提醒、题型、完整活动运营未覆盖；修订答卷的完整历史与是否允许管理员读原答卷须产品评审，不能以均值抑制宣称匿名。；BC-C15原站全局最多90角色、套卷最多15且模板勾选继承，当前固定四类无角色配置/套卷版本，不得一对一映射。",
-            "classification": "本项目既有实现静态事实；转为产品要求待评审",
+            "acceptance": "活动/邀请/答卷/报告与角色分开验收；详细AC01–08仅为原M26范围下候选用例，不新增59任务分母。源可配置角色和匿名治理必须先评审，不能用当前四关系/纯量表自动裁减常规题库和报表。",
+            "gap": "需补齐原站活动/题库/套卷实操、动态评价角色/匿名与缺评规则、结果用途和版本恢复。现有固定四类+纯1–5量表+HR可审计实名答卷是独立实现候选，未批准为全模块需求；没有自动通知或组织多维统计引擎。公开后名单修订/重开/报告更正没有命令，当前受限需设计后续版本或明确不支持，不能绕开追溯。C-SPEC-01只阻角色/匿名报告政策，其他字段/接口规格继续。",
+            "classification": "原站配置帮助事实（BC-C14–16）＋33f6aa9源码/测试静态阅读；产品规则和场景待评审，本轮无业务测试复跑",
             "accepted": false,
             "id": "BP-C-REQ-03",
             "currentApplicability": {
@@ -42116,7 +42125,184 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "fieldDetails": [
+              {
+                "field": "活动主档",
+                "definition": "feedbackProject：name/orgId/templateId/start/end/purpose/minRespondents；referenceId引用模板，复制问题数组和模板version",
+                "constraints": "名称trim1–200；合法日期且end≥start/end≥当前业务日；目的5–3000；阈值整数3–10；只选已发布纯rating模板；这些是现有实现，非已确认原站上限",
+                "basis": "33f6aa9 feedback.ts/schema/project静态；原站活动细则待证"
+              },
+              {
+                "field": "评价关系",
+                "definition": "feedbackInvite：项目referenceId、subjectId/subjectName、reviewer employeeId、relationship",
+                "constraints": "现有self/supervisor/peer/report；双方须当前管理范围内且未离职，被评者在项目组织及下级；同一项目受评者+评价者不重复；自评当且仅当双方同人",
+                "basis": "现有代码；BC-C15原站动态角色与固定四类有差异，C-SPEC-01"
+              },
+              {
+                "field": "答卷",
+                "definition": "feedbackReply：referenceId为邀请ID、employeeId为实际评价者、answers、提交人和时间；不是受评者ID",
+                "constraints": "当前1–20题、每题整数1–5且与项目问题数相同；同一邀请再次提交保留答卷ID/初始创建信息，事件快照另记",
+                "basis": "feedback.ts/respond＋development-repository.ts/saveDevelopment静态，未执行"
+              },
+              {
+                "field": "分组汇总与报告",
+                "definition": "报告快照含问题、分组relationship/responses/suppressed/averages、阈值/用途/发布说明和时刻；employeeId为受评者",
+                "constraints": "响应数为已提交有效邀请答卷数；self/supervisor阈值1，peer/report用项目阈值；低样本均值null，高样本平均保留1位小数；无响应不记0。原始答卷对HR可见",
+                "basis": "feedbackAggregation/visibleRecord；阈值和匿名政策仅现有实现，待C-SPEC-01"
+              },
+              {
+                "field": "版本与并发",
+                "definition": "GET返回当前可见records/canRespondIds/revision等；POST revision+command，成功id/revision+1；同租户事件快照与修改同事务",
+                "constraints": "过期revision拒绝409；普通project创建没有业务requestKey，刷新后盲重发可能形成第二项目；响应不明先读现有结果，不把CAS当所有命令幂等",
+                "basis": "app/api/feedback/route.ts；development-repository.ts；BASE-03/04/06候选"
+              }
+            ],
+            "roleMatrix": [
+              {
+                "role": "HR/管理员",
+                "read": "HR按项目组织；管理员全域可读项目、邀请、实名原答卷与报告",
+                "write": "配置活动/关系、开放、关闭、发布报告",
+                "boundary": "现有HR有可识别答卷权限，不能宣传全匿名；本人无邀请不能冒充评价者填写；C-SPEC-01待决"
+              },
+              {
+                "role": "评价者本人",
+                "read": "非草稿项目中本人有效邀请与本人答卷；自己同时为受评者才有本人报告",
+                "write": "开放期间、仍在职、有效邀请时填评；同邀请可修订答卷",
+                "boundary": "无权读其他评价者答卷；管理员不替其作答。本轮仅静态路径，独立角色人工验收暂缓"
+              },
+              {
+                "role": "受评者本人",
+                "read": "自己已发布报告及关联项目；不能因被评价身份读取他人的邀请/原答卷",
+                "write": "受评身份本身不授予评价/发布/管理",
+                "boundary": "若同时是某关系的评价者，按自己邀请另判，不用“受评者不能读任何答卷”掩盖双重身份"
+              },
+              {
+                "role": "普通经理/未关联账号",
+                "read": "没有项目管理或本人关系时，不因组织范围有权自动读360内容",
+                "write": "不管理项目或代填",
+                "boundary": "现有visibleRecord特例先于通用组织判断；原站完整矩阵仍未验证"
+              }
+            ],
+            "stateTransitions": [
+              {
+                "from": "无活动",
+                "event": "配置主档",
+                "to": "draft",
+                "guards": "当前已发布纯量表模板/启用授权组织/合法期间；保存不发送消息",
+                "basis": "本项目现有静态实现，非原站"
+              },
+              {
+                "from": "draft + assigned邀请",
+                "event": "open",
+                "to": "open",
+                "guards": "至少1有效邀请且结束日未过；可早于开始日开放，但本人实际作答仍受开始日限制",
+                "basis": "本项目现有实现，未来开始日期策略待评审"
+              },
+              {
+                "from": "open + 本人有效邀请",
+                "event": "respond/再次respond",
+                "to": "同一答卷submitted",
+                "guards": "日期窗口含起止、当前在职、题目完整；重复提交覆盖当前快照，事务事件保留历史",
+                "basis": "本项目当前代码；原站答卷版本政策未知"
+              },
+              {
+                "from": "open",
+                "event": "close",
+                "to": "closed",
+                "guards": "HR/管理员且结束原因5–3000字；关闭后无重新开放命令",
+                "basis": "本项目当前代码；是否需纠错重开待评审"
+              },
+              {
+                "from": "closed + 未发布受评报告",
+                "event": "publishReport",
+                "to": "独立feedbackReport published",
+                "guards": "有该受评者邀请即可；当前不强制有答卷，零响应也会生成所有组suppressed的报告；不等评价完成",
+                "basis": "静态推导验收候选，未执行/未批准"
+              }
+            ],
+            "acceptanceCases": [
+              {
+                "id": "BP-C-REQ-03-AC01",
+                "given": "项目草稿、纯量表模板v1已发布，同题库后建v2",
+                "when": "建立v1项目，再读取活动和后续模板",
+                "then": "活动保留v1问题与version；v2不静默改写v1。现有代码创建时复制，但修改模板/改版实际链需补证",
+                "basis": "feedback.ts/project；共享模板最小依赖DEP-04",
+                "status": "候选待评审；本轮仅静态阅读，未复跑",
+                "executionThisRun": false,
+                "accepted": false
+              },
+              {
+                "id": "BP-C-REQ-03-AC02",
+                "given": "同一受评者S与评价者R已有assigned邀请",
+                "when": "以相同双方再建另一关系；或S=R却选peer",
+                "then": "均拒绝400，不能通过换关系绕过重复/本人判定；其他受评者的同一评价者可有独立邀请",
+                "basis": "feedback.ts/invite；现有行为候选",
+                "status": "候选待评审；本轮仅静态阅读，未复跑",
+                "executionThisRun": false,
+                "accepted": false
+              },
+              {
+                "id": "BP-C-REQ-03-AC03",
+                "given": "活动open，开始日在明天且结束日未过，评价者今日在职",
+                "when": "今日尝试respond，然后在开放日期条件下分析入口预期",
+                "then": "今日400且canRespondIds不包含；未来条件应按业务日期再验，不改平台时钟；open状态不代表当前可填",
+                "basis": "feedback.ts/respond；app/api/feedback/route.ts",
+                "status": "候选待评审；本轮仅静态阅读，未复跑",
+                "executionThisRun": false,
+                "accepted": false
+              },
+              {
+                "id": "BP-C-REQ-03-AC04",
+                "given": "peer阈值3、同组有效答卷2份；另一组3份分数2/3/4",
+                "when": "停止收集并发布两个受评者的报告",
+                "then": "2份组responses2/suppressed=true/averages=null；3份组均值3.0；报告不暴露他人邀请/评价者ID，HR仍可审计原卷",
+                "basis": "tests/p3-api.test.mjs已有场景静态读；历史验证不视本轮复验；C-SPEC-01政策待决",
+                "status": "候选待评审；本轮仅静态阅读，未复跑",
+                "executionThisRun": false,
+                "accepted": false
+              },
+              {
+                "id": "BP-C-REQ-03-AC05",
+                "given": "同邀请首次已submitted且活动仍开放，合法当前revision",
+                "when": "同一评价者提交不同合法答案",
+                "then": "复用同答卷ID、创建信息保留、当前答案替换并记新事件；活动closed后提交400。历史事件读取仍服从当前权限",
+                "basis": "feedback.ts/respond；development-repository.ts静态",
+                "status": "候选待评审；本轮仅静态阅读，未复跑",
+                "executionThisRun": false,
+                "accepted": false
+              },
+              {
+                "id": "BP-C-REQ-03-AC06",
+                "given": "活动closed、有受评者有效邀请但0份答卷",
+                "when": "请求发布报告",
+                "then": "现实现可发布各组suppressed/null，不能计为已完成评估；是否允许作为正式报告属C-SPEC-01，未批准",
+                "basis": "feedback.ts/publishReport/aggregation静态推导，非已执行事实",
+                "status": "候选待评审；本轮仅静态阅读，未复跑",
+                "executionThisRun": false,
+                "accepted": false
+              },
+              {
+                "id": "BP-C-REQ-03-AC07",
+                "given": "同一活动+受评者已有published报告",
+                "when": "再次发布或用旧revision重放",
+                "then": "重复报告400/旧revision409；不能为解除阈值反复发布可差分报告。需要更正时先明确版本/旧报告可见规则",
+                "basis": "feedback.ts/publishReport；事务层；既有历史测试仅来源",
+                "status": "候选待评审；本轮仅静态阅读，未复跑",
+                "executionThisRun": false,
+                "accepted": false
+              },
+              {
+                "id": "BP-C-REQ-03-AC08",
+                "given": "仅为受评者且非HR，没有作为评价者的有效邀请",
+                "when": "访问原答卷ID或其他人的邀请，及查看本人报告历史",
+                "then": "原答卷/他人邀请不可读；本人已发布快照可读且仍低样本屏蔽；角色变更后每次请求重新判断",
+                "basis": "visibleRecord；p3-api历史场景静态；E2不新增访问者",
+                "status": "候选待评审；本轮仅静态阅读，未复跑",
+                "executionThisRun": false,
+                "accepted": false
+              }
+            ]
           },
           {
             "object": "盘点/继任/标准模型",
@@ -42338,10 +42524,14 @@
             "actions": "草稿、定版、修订、显式派发、新轮、结项、内容更新预览",
             "codeRefs": [
               "lib/hris/learning-plan-definitions.ts",
-              "lib/hris/learning-plan-model.ts"
+              "lib/hris/learning-plan-model.ts",
+              "lib/hris/learning-content-update.ts",
+              "lib/hris/learning-requirements.ts",
+              "tests/learning-content-update.test.mjs",
+              "tests/learning-recurrence.test.mjs"
             ],
             "acceptance": "已定版配置直接改动拒绝；跨组织试卷/作业引用拒绝；新版本不自动改旧实例；取消/退出要求不伪造完成；固定模式起点按计划日期，非加入日",
-            "gap": "自动循环不是已实现；共享管理员与可学范围、完成实例重开、跨轮更新待明确；当前main学习配置未含原站简介字段；既有learning-description隔离分支f5f5b1bd9014d4b6eeb6d32da0f03e34da3bced2保留未合并，不计main已实现；BC-L14历史框架断连已由BC-L22恢复；原站关闭全公司共享/可见开关不撤销存量对象权限及表单默认值；当前课程依可读published版本选择，考试/作业须同组织sealed，不声称共享权限统一。",
+            "gap": "自动循环不是已实现；共享管理员与可学范围、完成实例重开、跨轮更新待明确；当前main学习配置未含原站简介字段；既有learning-description隔离分支f5f5b1bd9014d4b6eeb6d32da0f03e34da3bced2保留未合并，不计main已实现；BC-L14历史框架断连已由BC-L22恢复；原站关闭全公司共享/可见开关不撤销存量对象权限及表单默认值；当前课程依可读published版本选择，考试/作业须同组织sealed，不声称共享权限统一。；本次已明确版本根/实例/轮次/任务要求和内容更新预览的边界，仍保留原站自动循环、完成学员显式更新、循环版本更新及发布审批的未覆盖项，不以现实现上限缩减M27。",
             "classification": "本项目既有实现静态事实；转为产品要求待评审",
             "accepted": false,
             "id": "BP-L-REQ-01",
@@ -42355,7 +42545,175 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "fieldDetails": [
+              {
+                "field": "计划根/配置版本/员工实例",
+                "definition": "learningDefinition按definitionRootId+version形成版本族；learningAssignment稳定ID引用具体definitionId并冻结学习模式、课程/考试/作业要求、阶段和评分规则",
+                "constraints": "配置和实例不是同一个状态；资源版本ID与要求ID分开，不通过标题合并；原组织不变、定版后修改须新版本是现实现",
+                "basis": "learning-plan-definitions/assignments；源BC-L01–03说明需映射而非完全相同"
+              },
+              {
+                "field": "模式与日期",
+                "definition": "relative周期、fixed固定日期、recurring循环；progressSync/orderedStages；周期durationDays/allowOverdue；循环另有repeatCredit/repeatPoints",
+                "constraints": "现有周期1–36500自然日，固定日期合法且结束不早于开始；含首日策略为项目独立实现。循环字段存在不代表自动派发或积分已实现",
+                "basis": "learning-plan-model；BC-L01–02原站自动安排说明，触发调度未验证"
+              },
+              {
+                "field": "资源和组织范围",
+                "definition": "课程course已published可读；独立考试learningExamDefinition和作业homeworkDefinition须同组织sealed；实例员工须与配置同组织且在职",
+                "constraints": "现有合计1–20资源且不重、阶段最多10并恰覆盖全部内容；这些是现实现上限，未批准裁减原模块；共享可见不等可管理/可学范围",
+                "basis": "learning-plan-definitions/assignments；BC-L15/22原站团队角色/存量共享语义"
+              },
+              {
+                "field": "实例唯一性和轮次",
+                "definition": "assignmentKey为[配置版本ID,员工ID,轮次]元组编码；nextRound保留同配置版本并记录previousAssignmentId",
+                "constraints": "现有后续轮需前轮completed且recurring，开始不得早于今天/前轮完成日；已存在后续轮拒绝重派，当前不自动迁移最新配置版本",
+                "basis": "learning-assignments/learning-plan-model；源跨轮版本规则待补证"
+              },
+              {
+                "field": "内容更新",
+                "definition": "预览retained/added/removed、阻断、前后进度/成绩、复用源证据；应用记录from/to版本与contentDefinitionHistoryIds，移除任务打retired历史标记",
+                "constraints": "现有只更新active/未到期/同组织同根后续sealed且模式不变；循环、已结项、重新加入已退出资源、重复目标轮实例均阻断；源有更新完成学员入口，现实现未覆盖，继续保留差异",
+                "basis": "learning-content-update；BC-L03原站说明，仅本文静态核验"
+              }
+            ],
+            "roleMatrix": [
+              {
+                "role": "计划管理HR/管理员",
+                "read": "当前授权组织配置及员工实例，所有历史读取仍受当前权限",
+                "write": "创建/改版/定版/派发/内容更新预览和应用/取消恢复",
+                "boundary": "同组织考试作业、课程可读版本是不同引用边界；不以源全公司可见开关代替原配置实际权限"
+              },
+              {
+                "role": "学员本人",
+                "read": "本人学习任务/当前和历史进度，资源权限单独校验",
+                "write": "开放且当前任职有效时学习/提交；不能自核验或直接改版本/完成标志",
+                "boundary": "员工调离原组织或离职后现有实例不再当前可办，但历史不能被删除或自动记完成"
+              },
+              {
+                "role": "独立核验/作业批阅人",
+                "read": "获授权任务及提交版本；未获管理权不读取全公司学习",
+                "write": "指定当前版本批阅，退休任务无继续批阅/恢复/转交",
+                "boundary": "考试/作业提交放行后续不等独立完成；管理员不可替代独立人验收"
+              }
+            ],
+            "stateTransitions": [
+              {
+                "from": "无配置",
+                "event": "create/edit",
+                "to": "draft",
+                "guards": "授权启用组织、合法模式/资源；新资源组合可能清空旧阶段/评分配置，须重新核定",
+                "basis": "现有learning-plan-definitions，非原站流程"
+              },
+              {
+                "from": "draft",
+                "event": "seal",
+                "to": "sealed",
+                "guards": "引用可用、生成稳定学习要求；sealed仅最新版本可派后续版本草稿",
+                "basis": "现有实现，原站发布审批BC-L11另有独立缺口"
+              },
+              {
+                "from": "sealed + 在职同组织员工",
+                "event": "assign",
+                "to": "独立active实例与各任务",
+                "guards": "同版本同人同轮唯一，作业指定独立批阅人；批量对象与审计同事务",
+                "basis": "现有实现；不表示自动通知或审批完成"
+              },
+              {
+                "from": "active实例",
+                "event": "cancelAssignment/restoreAssignment",
+                "to": "cancelled/active",
+                "guards": "取消只连带未完成任务并保存原状态；恢复须原组织在职/期限有效/资源可用，不恢复原已取消为可办",
+                "basis": "现有实现，跨域离职时间消费者待证"
+              },
+              {
+                "from": "active实例",
+                "event": "closeAssignment",
+                "to": "completed",
+                "guards": "阶段已开放且独立完成门槛全部满足；未完成的剩余选修关闭，不授予其完成记录/学分",
+                "basis": "现有实现；总体完成与每项完成分开"
+              },
+              {
+                "from": "completed循环实例",
+                "event": "显式nextRound",
+                "to": "新active实例round+1",
+                "guards": "保留原版/轮次链；不是自动循环服务，旧成绩不自动复制为新轮成绩",
+                "basis": "现有实现与原站自动安排说明差异"
+              }
+            ],
+            "acceptanceCases": [
+              {
+                "id": "BP-L-REQ-01-AC01",
+                "given": "sealed配置v1、员工EA在同组织；v1已派第1轮",
+                "when": "再次派v1同人同轮；再建后续配置v2但不应用",
+                "then": "同轮重复400；v2不静默改原实例或完成/评分证据。原实例按原v1继续",
+                "basis": "learning-assignments/definitions；历史tests/learning-assignments.test.mjs静态",
+                "status": "候选待业务评审；本轮仅静态对照，未复跑",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-L-REQ-01-AC02",
+                "given": "循环实例第1轮completed，且配置仍sealed",
+                "when": "显式nextRound一次再从旧轮重复请求",
+                "then": "新实例轮次2/previousAssignmentId，重复后续轮拒绝；无调度任务时不能宣称自动生成，积分标志不等积分账本",
+                "basis": "learning-assignments；BC-L01-02；tests/learning-recurrence.test.mjs静态",
+                "status": "候选待业务评审；本轮仅静态对照，未复跑",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-L-REQ-01-AC03",
+                "given": "active实例、当前员工、后续同根sealed版本只改内容",
+                "when": "先preview，再以匹配revision apply",
+                "then": "预览不改revision/任务/证据；应用保留同实例ID、未改任务证据，移除项retired，新增独立任务；旧revision/重复更新拒绝",
+                "basis": "learning-content-update；tests/learning-content-update.test.mjs静态，未复跑",
+                "status": "候选待业务评审；本轮仅静态对照，未复跑",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-L-REQ-01-AC04",
+                "given": "被移除作业已有submitted任务与提交快照",
+                "when": "应用去除该要求后原批阅人访问待办/尝试review",
+                "then": "历史提交仍可按当前权限查，原待办不可办；批阅/恢复/转交拒绝，不将移除算完成。重新加入旧资源仍是当前明确阻断差异",
+                "basis": "learning-content-update/requirements；源BC-L03不证明完全相同行为",
+                "status": "候选待业务评审；本轮仅静态对照，未复跑",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-L-REQ-01-AC05",
+                "given": "completed或recurring实例，源说明有更新完成学员入口",
+                "when": "现有内容更新预览",
+                "then": "现实现返回阻断并保留历史，不用合成成功掩盖未覆盖；保留源已完成学员更新和循环更新为需求缺口，不能静默删除",
+                "basis": "BC-L03；learning-content-update静态",
+                "status": "候选待业务评审；本轮仅静态对照，未复跑",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-L-REQ-01-AC06",
+                "given": "active实例员工调离原组织或已离职；历史任务仍保留",
+                "when": "读取历史、尝试继续提交/结项/恢复",
+                "then": "现实现当前可办受任职范围限制；不能删除历史或自动标完成；M48不可因列表可见绕过原命令校验，M32当前/历史分母分别定义",
+                "basis": "learningTaskCurrent/learningAssignmentCurrent；M01未来离职链尚未实际验证",
+                "status": "候选待业务评审；本轮仅静态对照，未复跑",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-L-REQ-01-AC07",
+                "given": "某阶段已达必修/选修门槛但仍有未完成选修",
+                "when": "实例结项并核任务/成绩/学分",
+                "then": "实例completed，剩余未完成任务cancelled；不授予其完成依据或学分，报表不能用实例完成数替代所有任务完成数",
+                "basis": "learning-assignments.closeAssignment；现有候选",
+                "status": "候选待业务评审；本轮仅静态对照，未复跑",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "object": "阶段窗口与任务放行",
@@ -42382,7 +42740,39 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "acceptanceCases": [
+              {
+                "id": "BP-L-REQ-02-AC01",
+                "given": "项目含首日候选策略：计划日9月9日，阶段延迟2日开启、学习3日且不得逾期",
+                "when": "计算阶段开始/截止并判9月13日和14日提交",
+                "then": "现实现开始11日、截止13日含当天，14日拒绝；若前阶段晚完成不重置截止日。该日期算法不是原站已执行事实",
+                "basis": "learningStageStartsOn/Deadline；BC-L06-08仅说明起算基准",
+                "status": "候选待业务评审；本轮仅静态对照，未复跑",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-L-REQ-02-AC02",
+                "given": "顺序任务启用考试提交放行，前考试有合法不及格答卷",
+                "when": "访问后一任务并计算阶段完成",
+                "then": "后任务可被放行，但前考试不算完成/学分/最终阶段通过；若未启开关须前项独立完成",
+                "basis": "learningStageOpen/RequirementProgress；源提交不等完成",
+                "status": "候选待业务评审；本轮仅静态对照，未复跑",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-L-REQ-02-AC03",
+                "given": "作业提交放行开启且原作业被退回，曾有提交版本",
+                "when": "检查后任务访问与结项",
+                "then": "当前实现可保留后任务放行，退回作业仍不完整通过；是否因退回重新锁后项需源补证/业务评审，不套考试状态枚举",
+                "basis": "learning-requirements静态；作业与考试独立状态",
+                "status": "候选待业务评审；本轮仅静态对照，未复跑",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "object": "计划成绩",
@@ -42409,7 +42799,39 @@
               ],
               "baseCapabilityIds": [],
               "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
-            }
+            },
+            "acceptanceCases": [
+              {
+                "id": "BP-L-REQ-03-AC01",
+                "given": "同实例考试A有效得分50/90、B得分100，attempts=all",
+                "when": "分别用allHighest/allAttemptsAverage/eachExamHighestAverage",
+                "then": "现实现100/80/95；三种分母不同，不混用“平均”。若B缺全部合格依据，三模式均pending/null而非只算A",
+                "basis": "learning-grades/grade-evidence；原站部分选项事实，算法候选未批准",
+                "status": "候选待业务评审；本轮仅静态对照，未复跑",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-L-REQ-03-AC02",
+                "given": "加权仅考试最高分90占60%，作业最后有效审批80占40%，精度2",
+                "when": "计算计划成绩，随后令作业缺有效评分",
+                "then": "现实现86；缺作业时pending/null并列缺少requirementId，不把权重重分配或0分；实例active为provisional，completed为final",
+                "basis": "learning-grades；BC-L04/05/07/10；多审批人源算法仍待证",
+                "status": "候选待业务评审；本轮仅静态对照，未复跑",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "BP-L-REQ-03-AC03",
+                "given": "课程未配置成绩、考试档案来源开关仅新增同步",
+                "when": "查看权重可配置项和历史档案",
+                "then": "源无成绩课程行权重禁用；不从档案当前空推无考试成绩，也不回填开关前历史。原站档案与当前即时成绩投影分别验收",
+                "basis": "BC-L04/05/07/10及BC-L19；本轮未访问原站或运行用例",
+                "status": "候选待业务评审；本轮仅静态对照，未复跑",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ]
           },
           {
             "object": "学分、撤销、到期",
@@ -44612,13 +45034,18 @@
       {
         "requirement": "BP-C-REQ-03",
         "capability": "360项目/关系/答卷/报告",
-        "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+        "disposition": "版本/角色隔离/阈值汇总可复用候选；动态角色/匿名政策/运营恢复需补齐，待评审",
         "evidence": [
           "lib/hris/feedback.ts",
-          "lib/hris/development.ts"
+          "lib/hris/development.ts",
+          "lib/hris/development-repository.ts",
+          "lib/hris/surveys.ts",
+          "app/api/feedback/route.ts",
+          "tests/p3-api.test.mjs",
+          "docs/P1_Source_Observations_20260907.md"
         ],
-        "gap": "阈值/匿名性是独立策略待确认；提醒、题型、完整活动运营未覆盖",
-        "acceptance": "草稿后不能改名单；重复评估人+被评人拒绝；本人关系不匹配拒绝；同事/下属低于阈值返回suppressed与null均值，自评/上级阈值1；不把无响应记0",
+        "gap": "需补齐原站活动/题库/套卷实操、动态评价角色/匿名与缺评规则、结果用途和版本恢复。现有固定四类+纯1–5量表+HR可审计实名答卷是独立实现候选，未批准为全模块需求；没有自动通知或组织多维统计引擎。公开后名单修订/重开/报告更正没有命令，当前受限需设计后续版本或明确不支持，不能绕开追溯。C-SPEC-01只阻角色/匿名报告政策，其他字段/接口规格继续。",
+        "acceptance": "活动/邀请/答卷/报告与角色分开验收；详细AC01–08仅为原M26范围下候选用例，不新增59任务分母。源可配置角色和匿名治理必须先评审，不能用当前四关系/纯量表自动裁减常规题库和报表。",
         "currentApplicability": {
           "status": "保留",
           "moduleIds": [
@@ -44671,8 +45098,8 @@
           "lib/hris/learning-plan-definitions.ts",
           "lib/hris/learning-plan-model.ts"
         ],
-        "gap": "自动循环不是已实现；共享管理员与可学范围、完成实例重开、跨轮更新待明确；当前main学习配置未含原站简介字段；既有learning-description隔离分支f5f5b1bd9014d4b6eeb6d32da0f03e34da3bced2保留未合并，不计main已实现",
-        "acceptance": "已定版配置直接改动拒绝；跨组织试卷/作业引用拒绝；新版本不自动改旧实例；取消/退出要求不伪造完成；固定模式起点按计划日期，非加入日",
+        "gap": "自动循环不是已实现；共享管理员与可学范围、完成实例重开、跨轮更新待明确；当前main学习配置未含原站简介字段；既有learning-description隔离分支f5f5b1bd9014d4b6eeb6d32da0f03e34da3bced2保留未合并，不计main已实现；BC-L14历史框架断连已由BC-L22恢复；原站关闭全公司共享/可见开关不撤销存量对象权限及表单默认值；当前课程依可读published版本选择，考试/作业须同组织sealed，不声称共享权限统一。；本次已明确版本根/实例/轮次/任务要求和内容更新预览的边界，仍保留原站自动循环、完成学员显式更新、循环版本更新及发布审批的未覆盖项，不以现实现上限缩减M27。",
+        "acceptance": "已定版配置直接改动拒绝；跨组织试卷/作业引用拒绝；新版本不自动改旧实例；取消/退出要求不伪造完成；固定模式起点按计划日期，非加入日；另见同契约结构化验收场景（未执行/未批准）。",
         "currentApplicability": {
           "status": "保留",
           "moduleIds": [
@@ -44694,7 +45121,7 @@
           "lib/hris/learning-requirements.ts"
         ],
         "gap": "自然日含首日和顺序晚开启的原站精确算法尚未核实，当前策略需评审",
-        "acceptance": "有序阶段的考试/作业提交放行不等于通过；未完成必修不满足结项；晚核验不得伪造按期提交；无法完成的数量门槛配置拒绝",
+        "acceptance": "有序阶段的考试/作业提交放行不等于通过；未完成必修不满足结项；晚核验不得伪造按期提交；无法完成的数量门槛配置拒绝；另见同契约结构化验收场景（未执行/未批准）。",
         "currentApplicability": {
           "status": "保留",
           "moduleIds": [
@@ -44715,8 +45142,8 @@
           "lib/hris/learning-grades.ts",
           "lib/hris/learning-grade-evidence.ts"
         ],
-        "gap": "缺失分母、精度、通过过滤及多审批人聚合为候选政策，原站选项存在不能证明算法完整一致",
-        "acceptance": "缺少有效成绩时pending与null，不能补0/100；按每次考试平均与每场最高平均给出不同期望；无成绩课程不能获得虚构权重成绩",
+        "gap": "缺失分母、精度、通过过滤及多审批人聚合为候选政策，原站选项存在不能证明算法完整一致；BC-L19考试档案有六来源且仅勾选后新数据，不回补历史；当前报表直接读可见考试任务和尝试，不是同一归档机制。；BC-L20/21学习成绩等级另有名称/最低/最高配置，59.9仅既有示例，不与绩效区间或计划成绩精度自动共用。",
+        "acceptance": "缺少有效成绩时pending与null，不能补0/100；按每次考试平均与每场最高平均给出不同期望；无成绩课程不能获得虚构权重成绩；另见同契约结构化验收场景（未执行/未批准）。",
         "currentApplicability": {
           "status": "保留",
           "moduleIds": [
@@ -45649,6 +46076,25 @@
         "status": "待用户集中决定；推荐未批准",
         "decisionRequired": true,
         "currentScope": "当前15模块的局部依赖，非请求重新确认范围缩减"
+      },
+      {
+        "id": "C-SPEC-01",
+        "topic": "360评价角色、匿名对象和低样本报告发布边界",
+        "status": "待集中业务决定；已以原站角色配置和源码缩小范围",
+        "basis": "原站BC-C15明确可配置角色及套卷启用上限；当前feedback.ts固定四类，HR/管理员能追溯实名原卷、受评者仅看阈值汇总，peer/report阈值3–10、self/supervisor阈值1；closed且0答卷也可发布空汇总。无原站匿名/阈值和零响应发布实证，不能把既有代码当用户已批准。",
+        "proposal": "推荐保留可配置角色的常规范围；在规格中明确受评者只见满足阈值的分组汇总，原卷由明确授权的管理角色审计；低于阈值保留不足样本状态，0响应不作为有效评估完成。具体管理可识别范围、各角色阈值及空报告能否发布需确认，推荐未批准。",
+        "alternatives": [
+          "严格匿名：仅汇总可读，实名映射单独保护并明确特许审计条件；需重评原始答卷/历史/导出权限",
+          "实名反馈：评价者身份对受评者公开，仍保留缺评/无响应状态；需明确参与者告知和适用场景，当前未授权采用"
+        ],
+        "impact": "只阻M26评价关系/匿名报告及M18/M32消费相应结果的产品政策签署；活动对象、模板版本、并发恢复和其他模块需求继续",
+        "evidence": [
+          "docs/P1_Source_Observations_20260907.md",
+          "lib/hris/feedback.ts",
+          "lib/hris/development.ts",
+          "tests/p3-api.test.mjs"
+        ],
+        "decisionRequired": true
       }
     ],
     "codeReview": {
@@ -45943,6 +46389,20 @@
         "contract": "C39只选合成EA并回填未保存草稿；员工选择/项目保存/启动采集分离。历史引入默认否且含义未知，需明确来自何项目/时点/版本/字段、重复和失效策略；不拿M01任职记录或M06资格历史替代盘点结果。",
         "evidence": "BC-C38/39；原站草稿及当前development.ts静态差异",
         "currentApplicability": "当前M01/M18/M37和M19/M48/M32随链，完整外部测评/模型模块不重纳入。"
+      },
+      {
+        "term": "360受评者、评价者与匿名汇总",
+        "dependency": "M01员工ID→M26项目/邀请/答卷/报告→M18/M32结果消费、M48本人办理",
+        "contract": "邀请含双方ID，答卷employeeId是评价者、报告employeeId是受评者。现有HR可识别原卷，受评者汇总受阈值保护，不等对全部角色匿名。消费方只能用明确来源版本/发布状态和suppressed/null，不能把0响应/不足样本映射0分或九宫格低档。C-SPEC-01未批准，原站角色可配置不等当前4枚举。",
+        "evidence": "BC-C15；33f6aa9 feedback/development及历史测试静态读",
+        "currentApplicability": "M26/M01/M18/M32/M48保留；M29/M30/M31仅复用模板最小结构，不恢复独立调查运营。"
+      },
+      {
+        "term": "学习配置、实例、任务、证据及成绩分母",
+        "dependency": "M27配置版本→员工实例→课程/考试/作业；M48办理/M32当前历史投影，M01任职有效性",
+        "contract": "实例ID不等配置版本ID，轮次也不等定义版本。只完成阶段门槛可结项但不把未完成选修记完成；放行不等通过。内容退休保留历史并禁止继续办，成绩来源/缺项与最终状态独立。源已完成学员更新和自动循环不能被现有限制静默裁掉。",
+        "evidence": "BC-L01–11/19/22；33f6aa9学习核心静态与已有测试阅读",
+        "currentApplicability": "M27/M01/M48/M32；M28独立AI不新增，M29/M30/M31只最小模板共享。"
       }
     ],
     "consistencyReview": {

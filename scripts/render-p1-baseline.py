@@ -173,6 +173,14 @@ if 'p1B' in s:
   for ct in pack['contracts']:
    t+='### '+ct['id']+' '+ct['object']+' — '+ct['currentApplicability']['status']+'\n\n**当前适用：'+ct_scope(ct)+'**\n\n性质：'+ct['classification']+'。下表保留原契约内容；混合/暂缓部分以当前适用边界为准，不作为当前完整模块前置。\n\n'
    t+=table(['维度','规格及当前边界'],[('对象/字段/校验',ct['fields']),('角色/数据范围/字段权限',ct['roles']),('状态/审批/生效',ct['lifecycle']),('页面主要操作',ct['actions']),('验收预期（给定条件→操作→结果）',ct['acceptance']),('例外、恢复与仍缺内容',ct['gap']),('静态实现/输入依据','；'.join(link_source(x) for x in ct['codeRefs']))])+'\n'
+   if ct.get('fieldDetails'):
+    t+='字段与对象细化（来源逐项区分，不用代码补原站事实）：\n\n'+table(['字段/对象','定义及关联','校验/范围','来源与状态'],[(x['field'],x['definition'],x['constraints'],x['basis']) for x in ct['fieldDetails']])+'\n'
+   if ct.get('roleMatrix'):
+    t+='角色与字段权限边界：\n\n'+table(['角色/身份','可读范围','可执行动作','限制与来源'],[(x['role'],x['read'],x['write'],x['boundary']) for x in ct['roleMatrix']])+'\n'
+   if ct.get('stateTransitions'):
+    t+='状态转换（原站与本项目现有实现分开）：\n\n'+table(['起始状态','动作','结果状态','条件/异常','证据性质'],[(x['from'],x['event'],x['to'],x['guards'],x['basis']) for x in ct['stateTransitions']])+'\n'
+   if ct.get('acceptanceCases'):
+    t+='可执行验收场景细化：这些是原任务下的场景，不新增验收分母；候选要求未批准，历史测试不视为本轮复验。\n\n'+table(['场景ID','给定条件','操作','期望/待定边界','来源与执行状态'],[(x['id'],x['given'],x['when'],x['then'],x['basis']+'；'+x['status']) for x in ct['acceptanceCases']])+'\n'
   t+='## 当前模块及历史成员原站证据（当前适用逐项标明）\n\n每个模块均保留页面、字段、角色/状态、依赖/接口四类证据边界。未探索不是无权限；没有提交验证也不能推断规则通过。\n\n'
   for mid in pack['moduleIds']:
    m=by_id[mid]; pp=[p for p in pages if p['moduleId']==mid]
