@@ -1009,7 +1009,8 @@
           "BC-C11",
           "BC-C12",
           "BC-C13",
-          "BC-C25"
+          "BC-C25",
+          "BC-C26"
         ],
         "fieldRefs": [
           "US-C01-02-F001",
@@ -1118,7 +1119,13 @@
           "BC-C25-F011",
           "BC-C25-F012",
           "BC-C25-F013",
-          "BC-C25-F014"
+          "BC-C25-F014",
+          "BC-C26-F001",
+          "BC-C26-F002",
+          "BC-C26-F003",
+          "BC-C26-F004",
+          "BC-C26-F005",
+          "BC-C26-F006"
         ],
         "sourceDepth": "P：局部页面/字段/说明，未完整掌握模块",
         "gapRef": "M03",
@@ -1147,14 +1154,15 @@
             "BC-C11",
             "BC-C12",
             "BC-C13",
-            "BC-C25"
+            "BC-C25",
+            "BC-C26"
           ],
           "inferences": "原站已观察事实仅限所列证据；数学示例推导或候选设计另标，未实际执行业务；业务包映射按已观察职责进行规划，不代表需求验收。",
           "restricted": "截至最近证据，完整写入结果未验证；当前已获合成测试授权，按具体场景补证；页面特有限制见所列证据unknown，未探索不标无权限",
           "unexplored": "干部2.0选拔/述职评分阈值等于边界、缺评/弃权/零分母、任用类型/四名册、委员会/期限及档案联动。评分帮助与空表已读，未执行评价。 字段仍未知的类型/必填/默认/枚举/校验/可见性逐条保留在同源字段字典。",
-          "next": "M19任用审批关联和M03考察期读取，继而M17/M18/M26/M37；不重新创建EA干部。",
+          "next": "当前M03申请通知/路由分支待安全可读配置，继续M17/M18/M26/M37；已登记EA及考察数据复用不重建。",
           "accepted": false,
-          "currentAssessmentAt": "2026-09-09T07:31:04.692151+00:00"
+          "currentAssessmentAt": "2026-09-09T07:38:23.461849+00:00"
         },
         "currentDeliveryAssessment": {
           "scopeChange": "SCOPE-20260909-CORE15",
@@ -1163,9 +1171,9 @@
           "review": "not_signed",
           "approvedRestricted": false,
           "assessmentAt": "2026-09-09T06:25:42.812752+00:00",
-          "basis": "BC-C10–13评价配置/帮助及BC-C25合成干部登记、年/月表单计算、任期持久化及述职ID关联已有；考察持久化/任免审批/终止恢复/单账号角色/评分边界仍缺，未完整P1A或需求就绪。",
+          "basis": "BC-C10–13评价配置/算法帮助、C25干部登记/任期ID/述职关联、C26考察结束跨页持久化及考核草稿已有；考核/任免审批通知路由、转正与恢复、角色及评分边界仍缺，未完整P1A/需求就绪。",
           "blockingIssueIds": [],
-          "next": "M19任用审批关联和M03考察期读取，继而M17/M18/M26/M37；不重新创建EA干部。",
+          "next": "当前M03申请通知/路由分支待安全可读配置，继续M17/M18/M26/M37；已登记EA及考察数据复用不重建。",
           "acceptanceRefs": [
             {
               "taskId": "C01",
@@ -2988,7 +2996,10 @@
         "pageRefs": [
           "BC-C06",
           "BC-P1C-M17",
-          "BC-P1C-M17-02"
+          "BC-P1C-M17-02",
+          "BC-C27",
+          "BC-C28",
+          "BC-C29"
         ],
         "fieldRefs": [
           "BC-P1C-M17-02-F001",
@@ -3004,7 +3015,33 @@
           "BC-P1C-M17-02-F011",
           "BC-P1C-M17-02-F012",
           "BC-P1C-M17-02-F013",
-          "BC-P1C-M17-02-F014"
+          "BC-P1C-M17-02-F014",
+          "BC-C27-F001",
+          "BC-C27-F002",
+          "BC-C27-F003",
+          "BC-C27-F004",
+          "BC-C27-F005",
+          "BC-C27-F006",
+          "BC-C27-F007",
+          "BC-C27-F008",
+          "BC-C27-F009",
+          "BC-C27-F010",
+          "BC-C27-F011",
+          "BC-C27-F012",
+          "BC-C28-F001",
+          "BC-C28-F002",
+          "BC-C28-F003",
+          "BC-C28-F004",
+          "BC-C29-F001",
+          "BC-C29-F002",
+          "BC-C29-F003",
+          "BC-C29-F004",
+          "BC-C29-F005",
+          "BC-C29-F006",
+          "BC-C29-F007",
+          "BC-C29-F008",
+          "BC-C29-F009",
+          "BC-C29-F010"
         ],
         "sourceDepth": "P：局部页面/字段/说明，未完整掌握模块",
         "gapRef": "M17",
@@ -3025,14 +3062,17 @@
           "facts": [
             "BC-C06",
             "BC-P1C-M17",
-            "BC-P1C-M17-02"
+            "BC-P1C-M17-02",
+            "BC-C27",
+            "BC-C28",
+            "BC-C29"
           ],
           "inferences": "原站已观察事实仅限所列证据；数学示例推导或候选设计另标，未实际执行业务；业务包映射按已观察职责进行规划，不代表需求验收。",
           "restricted": "截至最近证据，完整写入结果未验证；当前已获合成测试授权，按具体场景补证；页面特有限制见所列证据unknown，未探索不标无权限",
           "unexplored": "复杂梯队、组织健康分析模型/指标、人才池进退和发展计划/带教联动；健康正文未完整取得。 字段仍未知的类型/必填/默认/枚举/校验/可见性逐条保留在同源字段字典。",
-          "next": "人才池/继任/发展计划阶段和执行人列已读；标准引用/开启/转交与异常恢复尚缺，健康度指标不因M38暂缓自动删除。 按当前15模块及基础能力范围继续合成验证/需求衔接；M19/M48/M32随链同步，局部阻塞不停止其他链。",
+          "next": "复用人才池fd92d3a7查看手工入池/阶段/继任；停用流程完整名回查仍空不重建；再M18/M26/M37及后续保留包。",
           "accepted": false,
-          "currentAssessmentAt": "2026-09-08T18:06:01.449194+00:00"
+          "currentAssessmentAt": "2026-09-09T07:59:37.020533+00:00"
         },
         "currentDeliveryAssessment": {
           "scopeChange": "SCOPE-20260909-CORE15",
@@ -3041,9 +3081,9 @@
           "review": "not_signed",
           "approvedRestricted": false,
           "assessmentAt": "2026-09-09T06:25:42.812752+00:00",
-          "basis": "人才池/继任/发展计划阶段和执行人列已读；标准引用/开启/转交与异常恢复尚缺，健康度指标不因M38暂缓自动删除。",
+          "basis": "C27计划/模板/9角色/4状态及草稿取消；C29空人才池保存PoolId/0成员已验证，公开/共享/入出标准结构已读。C28停用流程保存结果待核（完整名亦空）；人才池成员/继任/健康度/IDP阶段执行和角色恢复仍缺。",
           "blockingIssueIds": [],
-          "next": "人才池/继任/发展计划阶段和执行人列已读；标准引用/开启/转交与异常恢复尚缺，健康度指标不因M38暂缓自动删除。",
+          "next": "复用人才池fd92d3a7查看手工入池/阶段/继任；停用流程完整名回查仍空不重建；再M18/M26/M37及后续保留包。",
           "acceptanceRefs": [
             {
               "taskId": "C01",
@@ -3205,7 +3245,8 @@
         "navigationEvidence": "BC-NAV-20260908",
         "pageRefs": [
           "BC-P1C-M19",
-          "BC-I10"
+          "BC-I10",
+          "BC-I27"
         ],
         "fieldRefs": [
           "BC-P1C-M19-F001",
@@ -3217,7 +3258,11 @@
           "BC-P1C-M19-F007",
           "BC-P1C-M19-F008",
           "BC-P1C-M19-F009",
-          "BC-P1C-M19-F010"
+          "BC-P1C-M19-F010",
+          "BC-I27-F001",
+          "BC-I27-F002",
+          "BC-I27-F003",
+          "BC-I27-F004"
         ],
         "sourceDepth": "P：局部页面/字段/说明，未完整掌握模块",
         "gapRef": "M19",
@@ -3238,14 +3283,15 @@
         "coverage": {
           "facts": [
             "BC-P1C-M19",
-            "BC-I10"
+            "BC-I10",
+            "BC-I27"
           ],
           "inferences": "原站已观察事实仅限所列证据；数学示例推导或候选设计另标，未实际执行业务；业务包映射按已观察职责进行规划，不代表需求验收。",
           "restricted": "截至最近证据，完整写入结果未验证；当前已获合成测试授权，按具体场景补证；页面特有限制见所列证据unknown，未探索不标无权限",
           "unexplored": "管理员委托、转交/干预的独立审批保护及业务补偿、批量审批/消息失败；已读撤销未完成流程及取消待办说明。 字段仍未知的类型/必填/默认/枚举/校验/可见性逐条保留在同源字段字典。",
-          "next": "已有流程列表及干预/委托说明；尚缺合成业务申请的审批路由、通知边界与独立角色执行；D7首包固定两级保持。 按当前15模块及基础能力范围继续合成验证/需求衔接；M19/M48/M32随链同步，局部阻塞不停止其他链。",
+          "next": "继续随M03/M17/M18等源业务流程核路由和通知边界；不为查结果手工催办或干预真实单。",
           "accepted": false,
-          "currentAssessmentAt": "2026-09-08T18:06:01.449194+00:00"
+          "currentAssessmentAt": "2026-09-09T07:36:06.827013+00:00"
         },
         "currentDeliveryAssessment": {
           "scopeChange": "SCOPE-20260909-CORE15",
@@ -3254,7 +3300,7 @@
           "review": "not_signed",
           "approvedRestricted": false,
           "assessmentAt": "2026-09-09T06:25:42.812752+00:00",
-          "basis": "已有流程列表及干预/委托说明；尚缺合成业务申请的审批路由、通知边界与独立角色执行；D7首包固定两级保持。",
+          "basis": "已有流程列表及干预/委托说明；尚缺合成业务申请的审批路由、通知边界与独立角色执行；D7首包固定两级保持。 BC-I27补独立业务类型/8状态和合成标题查询；实际路由/权限/通知/状态回写未执行。",
           "blockingIssueIds": [],
           "next": "已有流程列表及干预/委托说明；尚缺合成业务申请的审批路由、通知边界与独立角色执行；D7首包固定两级保持。",
           "acceptanceRefs": [
@@ -7264,7 +7310,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-09T07:31:04.692151+00:00",
+    "updatedAt": "2026-09-09T07:59:37.020533+00:00",
     "authority": "Scope_Register.json为唯一范围/验收事实源；历史48/59保留，当前15模块及基础按SCOPE-20260909-CORE15。",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -38055,6 +38101,594 @@
         "sourceStatement": "先按完整EA过滤在职干部无行，再新建复用EA/A/JA；任期开始9日、1年、3个月考察，表单预计任期2027-09-08、考察结束2026-12-08。汇报上级空/通知否一次确定后，筛选行出现EA/工号/邮箱/A；打开干部详情后任免记录异步加载，展开唯一条目确认9日至2027-09-08、主职、A/JA、实际结束空。查看详情另开述职页，UI URL明确StaffID=411825222、AppointmentRecordId=493a9f87-726d-489e-bc00-40d44988d837；后者为任期关联ID，数字StaffID不是组织员工UUID。述职页有6列但无记录。",
         "operations": "P1OP-C-014一次保存；未点免职/删除/打印/编辑人员或任何通知。人员详情中已有默认标签显示不推断其来源/授予规则。述职tab6已关闭，tab4干部详情无未保存表单。组织员工EA9日仍在职，10日起未来离职，本次未验证届时干部状态联动。",
         "unknown": "考察结束值尚无保存后明细回读；跨月/闰年/小数年和无任期规则未知，不能从1年/3个月推广。干部身份独立ID未见，任期ID已见；单账号未验证独立审议/权限、同人重复/重叠校验、未来离职联动、免职恢复或述职评分，原站测试不能替代复刻业务验收。"
+      },
+      {
+        "evidenceRef": "BC-I27",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-09",
+        "recordedAt": "2026-09-09T07:36:06.827013+00:00",
+        "observationTimePrecision": "本功能链归档时间",
+        "role": "当前单账号",
+        "flowRef": [],
+        "id": "BC-I27",
+        "moduleId": "M19",
+        "path": "审批中心→流程管理→审批类型/状态筛选（随M03干部链）",
+        "level": "P",
+        "recordType": "已直接观察筛选配置与合成条件查询；未执行审批流转",
+        "layout": "组织员工流程列表，标题/类型/发起人/当前审批人/状态筛选与管理操作",
+        "fields": [
+          {
+            "id": "BC-I27-F001",
+            "context": "审批中心→流程管理→审批类型/状态筛选（随M03干部链）",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": [
+              "干部提名",
+              "考察期考核",
+              "任免审批",
+              "发展计划",
+              "资格申报",
+              "材料举证",
+              "盘点结果审批",
+              "盘点",
+              "兼职",
+              "结束兼职",
+              "延长兼职",
+              "目标审批",
+              "培训发布",
+              "课程发布",
+              "Offer审批",
+              "Offer批量审批",
+              "招聘需求",
+              "请假",
+              "发薪"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-I27",
+            "label": "审批类型（当前保留链节选）"
+          },
+          {
+            "id": "BC-I27-F002",
+            "context": "审批中心→流程管理→审批类型/状态筛选（随M03干部链）",
+            "storageType": null,
+            "required": null,
+            "default": "当前审批中",
+            "options": [
+              "空 (未填写)",
+              "审批中",
+              "通过",
+              "不通过",
+              "已完成",
+              "已终止",
+              "已驳回",
+              "已撤回"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-I27",
+            "label": "审批状态"
+          },
+          {
+            "id": "BC-I27-F003",
+            "context": "审批中心→流程管理→审批类型/状态筛选（随M03干部链）",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I27",
+            "label": "当前审批人",
+            "controlType": "与发起人独立筛选/列；实际解析及跨角色未执行"
+          },
+          {
+            "id": "BC-I27-F004",
+            "context": "审批中心→流程管理→审批类型/状态筛选（随M03干部链）",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-I27",
+            "label": "催办状态",
+            "controlType": "列表独立列，不等于审批状态"
+          }
+        ],
+        "visibleStates": "按标题P1V/类型任免审批/全部8状态（含空）查询为空；不能外推所有类型或其他标题无记录",
+        "sourceStatement": "实际进入流程管理后页头组织员工流程，审批类型包含干部提名/考察期考核/任免审批等独立业务，另有当前各包及暂缓模块类型；仅记录当前保留依赖，不恢复暂缓业务。审批状态下拉有八项含空，默认审批中。标题P1V、任免审批、所有状态回查无行。既有BC-I10催办/转交/撤销/干预帮助仍有效，但本次未操作任何记录。",
+        "operations": "先只读展开类型/状态后应用筛选；未点击催办、转交、撤销、一键审批或导出。菜单首轮误到M37人才标准而未写数据，纠正到实际审批标题后才归此证据。",
+        "unknown": "合成干部保存是否另有系统生成标题、其他类型、隐藏流程及组织权限未知；无筛选结果不证明无需审批。任免/考察业务入口与模板/执行人/通知/补偿要从对应模块核，单账号不能替独立审批。"
+      },
+      {
+        "evidenceRef": "BC-C26",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-09",
+        "recordedAt": "2026-09-09T07:38:23.461849+00:00",
+        "observationTimePrecision": "本功能链归档时间",
+        "role": "当前单账号",
+        "flowRef": [],
+        "id": "BC-C26",
+        "moduleId": "M03",
+        "path": "干部管理2.0→考察期管理→合成EA→转正考核草稿",
+        "level": "F",
+        "recordType": "合成登记后跨页读取验证；考核申请仅打开并取消",
+        "layout": "考察中/考核中/已转正/全部考察记录，人员筛选表及转正考核侧栏",
+        "fields": [
+          {
+            "id": "BC-C26-F001",
+            "context": "干部管理2.0→考察期管理→合成EA→转正考核草稿",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C26",
+            "label": "考察记录人员/部门/职位",
+            "controlType": "EA/A/JA保存后跨页一致"
+          },
+          {
+            "id": "BC-C26-F002",
+            "context": "干部管理2.0→考察期管理→合成EA→转正考核草稿",
+            "storageType": null,
+            "required": null,
+            "default": "该EA记录2026-09-09",
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C26",
+            "label": "开始日期"
+          },
+          {
+            "id": "BC-C26-F003",
+            "context": "干部管理2.0→考察期管理→合成EA→转正考核草稿",
+            "storageType": null,
+            "required": null,
+            "default": "该EA记录2026-12-08（列表持久化回读）",
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C26",
+            "label": "考察结束日期"
+          },
+          {
+            "id": "BC-C26-F004",
+            "context": "干部管理2.0→考察期管理→合成EA→转正考核草稿",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C26",
+            "label": "考核草稿干部信息",
+            "controlType": "姓名/工号/部门/职位/任用类型/任期开始/年数/预计任期结束均只读回填"
+          },
+          {
+            "id": "BC-C26-F005",
+            "context": "干部管理2.0→考察期管理→合成EA→转正考核草稿",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C26",
+            "label": "考察期（月）/预计考察结束日期",
+            "controlType": "只读回填3及2026-12-08"
+          },
+          {
+            "id": "BC-C26-F006",
+            "context": "干部管理2.0→考察期管理→合成EA→转正考核草稿",
+            "storageType": null,
+            "required": null,
+            "default": "空请选择",
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C26",
+            "label": "考核日期",
+            "controlType": "可编辑日期；未见标签必填星，服务端校验未测"
+          }
+        ],
+        "visibleStates": "EA在考察中干部唯一筛选行；另有考核中/已转正分类；转正考核按钮打开只读信息+考核日期，再提交审批，未提交",
+        "sourceStatement": "BC-C25保存后，考察中干部以完整EA筛选唯一行，开始9日/结束12月8日，补齐考察结束持久化证据。打开该行转正考核，干部主职/1年/2027-09-08和考察3月/2026-12-08均只读，只有考核日期可填。表单底部取消/提交审批，未见审批人、通知控制或预览。结合BC-I27考察期考核类型存在，仅证该入口要提交审批，不证明执行路由。",
+        "operations": "人员候选与列表均有EA同名，选搜索mark候选再确定筛选，未新建人员。打开考核草稿后未填日期、未提交；取消成功，EA仍考察中。",
+        "unknown": "考核日期边界、提交后的审批人/消息、提前转正/拒绝/撤回/重提和结果写回尚未验证；提交草稿未暴露通知控制，当前不能确定不触达外部/真实接收人，因此该提交局部分支保留而继续独立工作。独立多角色仍未验证。"
+      },
+      {
+        "evidenceRef": "BC-C27",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-09",
+        "recordedAt": "2026-09-09T07:50:24.596574+00:00",
+        "observationTimePrecision": "本功能链归档时间",
+        "role": "当前单账号",
+        "flowRef": [],
+        "id": "BC-C27",
+        "moduleId": "M17",
+        "path": "继任与发展→人才发展计划→发展计划及模板新增草稿",
+        "level": "P",
+        "recordType": "已直接观察字段/枚举/条件显示；合成员工仅选择器关联，计划及模板均未保存",
+        "layout": "计划状态列表、独立员工选择器、多级指导角色、模板目录及IDP流程关联",
+        "fields": [
+          {
+            "id": "BC-C27-F001",
+            "context": "继任与发展→人才发展计划→发展计划及模板新增草稿",
+            "storageType": null,
+            "required": null,
+            "default": "当前列表未开始/进行中",
+            "options": [
+              "未开始",
+              "进行中",
+              "已结束",
+              "已终止"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-C27",
+            "label": "计划状态"
+          },
+          {
+            "id": "BC-C27-F002",
+            "context": "继任与发展→人才发展计划→发展计划及模板新增草稿",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C27",
+            "label": "计划名称",
+            "uiRequired": true,
+            "controlType": "文本，本次合成名未保存"
+          },
+          {
+            "id": "BC-C27-F003",
+            "context": "继任与发展→人才发展计划→发展计划及模板新增草稿",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C27",
+            "label": "员工",
+            "uiRequired": true,
+            "controlType": "独立选择员工弹层，组织/人才池/职位/职级/人员状态筛选；姓名文本不能替已选身份，直接文本失焦显示必填"
+          },
+          {
+            "id": "BC-C27-F004",
+            "context": "继任与发展→人才发展计划→发展计划及模板新增草稿",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": [
+              "直线经理",
+              "间接经理",
+              "导师",
+              "第三级主管",
+              "第四级主管",
+              "第五级主管",
+              "部门HRBP",
+              "部门负责人",
+              "其他人"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-C27",
+            "label": "指导人角色",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-C27-F005",
+            "context": "继任与发展→人才发展计划→发展计划及模板新增草稿",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C27",
+            "label": "指导人",
+            "controlType": "选其他人后新增独立人员选择，未选；实际服务端必填未测"
+          },
+          {
+            "id": "BC-C27-F006",
+            "context": "继任与发展→人才发展计划→发展计划及模板新增草稿",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C27",
+            "label": "发展计划模板",
+            "uiRequired": true,
+            "controlType": "独立模板候选/全部查找，未选中"
+          },
+          {
+            "id": "BC-C27-F007",
+            "context": "继任与发展→人才发展计划→发展计划及模板新增草稿",
+            "storageType": null,
+            "required": null,
+            "default": "均空",
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C27",
+            "label": "计划开始/结束时间",
+            "uiRequired": true,
+            "controlType": "日期，校验未测"
+          },
+          {
+            "id": "BC-C27-F008",
+            "context": "继任与发展→人才发展计划→发展计划及模板新增草稿",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C27",
+            "label": "模板名称/IDP流程/所属组织",
+            "uiRequired": true,
+            "controlType": "文本/流程lookup/组织lookup"
+          },
+          {
+            "id": "BC-C27-F009",
+            "context": "继任与发展→人才发展计划→发展计划及模板新增草稿",
+            "storageType": null,
+            "required": null,
+            "default": "本次否",
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C27",
+            "label": "模板向下公开",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-C27-F010",
+            "context": "继任与发展→人才发展计划→发展计划及模板新增草稿",
+            "storageType": null,
+            "required": null,
+            "default": "新增默认开启",
+            "options": [
+              "停用",
+              "开启"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-C27",
+            "label": "模板状态",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-C27-F011",
+            "context": "继任与发展→人才发展计划→发展计划及模板新增草稿",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": "32766",
+            "evidenceRef": "BC-C27",
+            "label": "模板描述",
+            "controlType": "多行，计数0/32766"
+          },
+          {
+            "id": "BC-C27-F012",
+            "context": "继任与发展→人才发展计划→发展计划及模板新增草稿",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C27",
+            "label": "发展计划分类",
+            "controlType": "选择，无UI必填星，服务器未验证"
+          }
+        ],
+        "visibleStates": "P1V所有四计划状态无记录；模板P1V开启/停用均无记录；计划草稿和模板草稿都取消，未创建ID",
+        "sourceStatement": "计划新增六项UI必填：名、员工、指导角色、模板、起止。直接输入姓名后有必填提示；独立员工选择器按完整EA过滤唯一行，勾选并保存选入草稿，回显EA及合成邮箱，此保存不保存计划。指导角色九项，其中其他人新增指导人字段；未选择指导人或模板/日期。模板目录状态开启/停用，新增需IDP流程/组织、向下公开默认否、状态默认开启、描述32766、分类可选UI。原模板流程/指导通知未知，因此未选原模板启动计划，改查最小合成流程前置。",
+        "operations": "P1OP-C-016已取消计划，弹层宽0；模板仅打开查看默认/流程候选后取消。均无业务保存、开始/干预/导入导出/通知；该操作不重建EA。",
+        "unknown": "计划模板继承/版本、日期范围、角色解析/变更、步骤执行/开启/转交/恢复及通知/审批未执行。原站阶段流程与当前简单actionPlan并非同一对象；可继续合成停用IDP流程/模板，不以该缺口中止其他保留模块。"
+      },
+      {
+        "evidenceRef": "BC-C28",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-09",
+        "recordedAt": "2026-09-09T07:52:37.004707+00:00",
+        "observationTimePrecision": "本功能链归档时间",
+        "role": "当前单账号",
+        "flowRef": [],
+        "id": "BC-C28",
+        "moduleId": "M17",
+        "path": "继任与发展→发展计划流程→新增停用合成流程与回查",
+        "level": "P",
+        "recordType": "表单已直接观察；已尝试合成保存，实际持久化结果待核",
+        "layout": "流程主档名称/所属组织/向下公开/启用；目录仅名称筛选",
+        "fields": [
+          {
+            "id": "BC-C28-F001",
+            "context": "继任与发展→发展计划流程→新增停用合成流程与回查",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C28",
+            "label": "流程名称",
+            "uiRequired": true,
+            "controlType": "文本，P1V-20260909-测试发展流程"
+          },
+          {
+            "id": "BC-C28-F002",
+            "context": "继任与发展→发展计划流程→新增停用合成流程与回查",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C28",
+            "label": "所属组织",
+            "uiRequired": true,
+            "controlType": "组织选择器，本次测试A，路径森豆集团/华夏九洲集团/测试R/测试A"
+          },
+          {
+            "id": "BC-C28-F003",
+            "context": "继任与发展→发展计划流程→新增停用合成流程与回查",
+            "storageType": null,
+            "required": null,
+            "default": "新增默认否，本次否",
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C28",
+            "label": "是否向下公开",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-C28-F004",
+            "context": "继任与发展→发展计划流程→新增停用合成流程与回查",
+            "storageType": null,
+            "required": null,
+            "default": "新增默认是，本次明确改否",
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C28",
+            "label": "是否启用",
+            "uiRequired": true
+          }
+        ],
+        "visibleStates": "保存动作后表单关闭，名称P1V目录为空；刷新后相同筛选仍空，业务UUID未取得，不判已保存成功或已失败",
+        "sourceStatement": "因模板必须关联IDP流程，先查流程名称P1V空，再仅填写合成名/测试A，向下公开否、是否启用否。单选实际active类确认否/否后点击一次保存。弹层宽0但目录仍空；后续只读回查和一次刷新同筛选仍空，未见成功/失败反馈留存或业务ID。该结果与M03/M06已保存回读不同，不能列执行验证成功。",
+        "operations": "P1OP-C-017一次保存尝试，无再次保存/重建、未启用/设计节点/关联模板/开始计划或通知；刷新后无未保存草稿。合成流程可能已落存但当前不可见，也可能未持久化，原因未确定。",
+        "unknown": "持久化和当前目录权限/停用过滤原因不明；缺少对象ID，不能称保存成功、保存失败或已清理。后续通过安全UI替代路径查精确名，不改权限、不借真实模板启动计划；其余人才模块可继续。"
+      },
+      {
+        "evidenceRef": "BC-C29",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-09",
+        "recordedAt": "2026-09-09T07:59:37.020533+00:00",
+        "observationTimePrecision": "本功能链归档时间",
+        "role": "当前单账号",
+        "flowRef": [],
+        "id": "BC-C29",
+        "moduleId": "M17",
+        "path": "继任与发展→人才池管理→人才池→新建空池→成员详情",
+        "level": "F",
+        "recordType": "合成空人才池保存及UI业务ID/0成员回读验证",
+        "layout": "启用人才池卡片；侧栏基本/人才标准/自动入池；独立成员表与入池/阶段/IDP入口",
+        "fields": [
+          {
+            "id": "BC-C29-F001",
+            "context": "继任与发展→人才池管理→人才池→新建空池→成员详情",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C29",
+            "label": "人才池名称",
+            "uiRequired": true,
+            "controlType": "文本，合成测试名"
+          },
+          {
+            "id": "BC-C29-F002",
+            "context": "继任与发展→人才池管理→人才池→新建空池→成员详情",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C29",
+            "label": "所属分类",
+            "uiRequired": true,
+            "controlType": "现有管理及管理梯队人才池仅作分类引用，不改分类"
+          },
+          {
+            "id": "BC-C29-F003",
+            "context": "继任与发展→人才池管理→人才池→新建空池→成员详情",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C29",
+            "label": "所属组织",
+            "uiRequired": true,
+            "controlType": "选测试A"
+          },
+          {
+            "id": "BC-C29-F004",
+            "context": "继任与发展→人才池管理→人才池→新建空池→成员详情",
+            "storageType": null,
+            "required": null,
+            "default": "否，保持否",
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C29",
+            "label": "向下公开",
+            "uiRequired": true
+          },
+          {
+            "id": "BC-C29-F005",
+            "context": "继任与发展→人才池管理→人才池→新建空池→成员详情",
+            "storageType": null,
+            "required": false,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C29",
+            "label": "共享组织",
+            "controlType": "本次空保存成功"
+          },
+          {
+            "id": "BC-C29-F006",
+            "context": "继任与发展→人才池管理→人才池→新建空池→成员详情",
+            "storageType": null,
+            "required": false,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C29",
+            "label": "预计人数",
+            "controlType": "本次空保存，卡片--"
+          },
+          {
+            "id": "BC-C29-F007",
+            "context": "继任与发展→人才池管理→人才池→新建空池→成员详情",
+            "storageType": null,
+            "required": false,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C29",
+            "label": "入池标准/出池标准",
+            "controlType": "独立标准lookup，本次均空保存成功，不推所有模式都可空"
+          },
+          {
+            "id": "BC-C29-F008",
+            "context": "继任与发展→人才池管理→人才池→新建空池→成员详情",
+            "storageType": null,
+            "required": null,
+            "default": "关，截图核实未开",
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C29",
+            "label": "自动入池",
+            "controlType": "帮助：开启后有符合规则人员时自动入池，本次未测试开启/规则"
+          },
+          {
+            "id": "BC-C29-F009",
+            "context": "继任与发展→人才池管理→人才池→新建空池→成员详情",
+            "storageType": null,
+            "required": null,
+            "default": "0人/预计人数--/饱和度--，无分母时未显示0%",
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C29",
+            "label": "卡片人数/饱和度"
+          },
+          {
+            "id": "BC-C29-F010",
+            "context": "继任与发展→人才池管理→人才池→新建空池→成员详情",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-C29",
+            "label": "池成员",
+            "controlType": "姓名/阶段/指导人/准备度阶段/入池日期/操作；筛选另有部门、准备度；本池空"
+          }
+        ],
+        "visibleStates": "启用人才池卡片已保存，PoolId fd92d3a7-7925-4b36-a22b-a4ab1fcfa049；0人；入池、设置阶段、发起IDP、更多操作为独立入口未执行",
+        "sourceStatement": "名称P1V过滤未见对象，新增只填合成名/分类/测试A；向下公开否，共享/预计人数/入出池标准空，自动入池关，截图确认后一次保存。P1V过滤仍不返回，改完整名称P1V-20260909-测试人才池后出现唯一卡片0人/预计人数--/饱和度--；点击打开成员详情UI URL明确PoolId，成员表为空。此例证明完整名称回查可解消误判，不能外推所有模块前缀查询都失效或等于精确匹配。",
+        "operations": "P1OP-C-018一次保存、完整名回查、打开详情读取真实PoolId。无成员/自动入池/标准/共享组织，无通知、删除、IDP启动；分类为现存公共配置引用不改变原数据。",
+        "unknown": "分类/池名唯一、入出池标准版本及规则布尔关系、自动入池时点/重复/退出、准备度/阶段及继任关系、共享可见与权限尚未验证；原池0人不代表完成全部人才池规则。原站人才标准与M06资格标准不能按相似名字合并。"
       }
     ],
     "humanAcceptancePrerequisite": false,
@@ -38970,6 +39604,46 @@
           "after": "已保存：在职干部按EA过滤出现唯一合成行，任期开始2026-09-09；打开本人干部详情可读。表单计算预计任期结束2027-09-08、考察结束2026-12-08。干部独立ID尚待UI核实，不能重复保存。 保存后任免明细确认任期起止与主职/A/JA，述职路由AppointmentRecordId=493a9f87-726d-489e-bc00-40d44988d837；StaffID=411825222。考察结束仅表单观察，未取得持久化回读。",
           "evidence": "BC-C25",
           "next": "不重复登记；M19路由/考察期/人才其余保留模块继续，未来离职联动待日期条件。"
+        },
+        {
+          "at": "2026-09-09T07:38:23.461849+00:00",
+          "evidence": "BC-C26",
+          "id": "P1OP-C-015",
+          "objectRefs": "EA / M03任期493a9f87；考察记录业务ID未在本页暴露",
+          "before": "干部已保存，考察结束仅表单计算已观察",
+          "action": "按EA查询考察中干部→读列表→打开转正考核只读字段→取消",
+          "after": "考察结束2026-12-08持久化回读，草稿3个月一致；未提交审批/未建立考核申请",
+          "next": "M03审批及通知解析局部待证，继续M17等保留模块"
+        },
+        {
+          "id": "P1OP-C-016",
+          "at": "2026-09-09T07:44:44.158645+00:00",
+          "objectRefs": "M17未保存发展计划草稿P1V-20260909-测试发展计划→已有EA；员工选择器保存仅选入草稿",
+          "before": "发展计划名称P1V/全部4状态筛选无记录，台账无M17计划",
+          "action": "新增草稿填名，通过员工选择器按完整EA筛选/checkbox/保存选入；指导人角色选其他人出现独立指导人字段，查看模板候选尚无选中",
+          "after": "未保存计划，员工选择器只将EA加入草稿；其他人角色新增指导人字段，未指定指导人/模板/起止，草稿已取消，弹层宽0。",
+          "evidence": "BC-C27",
+          "next": "发展计划模板与IDP流程为独立前置；模板空表已取消，当前新增最小停用流程，继续核实际结果。"
+        },
+        {
+          "id": "P1OP-C-017",
+          "at": "2026-09-09T07:49:05.384194+00:00",
+          "objectRefs": "M17新增独立IDP流程P1V-20260909-测试发展流程→测试A，尚无流程ID",
+          "before": "流程目录名称P1V查询空；模板必选IDP流程；无已存合成模板/计划",
+          "action": "确认测试A/向下公开否/启用否后，点击一次保存；表单关闭，名称P1V只读回查、刷新回查均空",
+          "after": "保存结果待核：弹层关闭但未取得ID/成功反馈，目录仍空；不能判成功或失败，不重复创建 BC-C29发现完整名可回查人才池后，本流程又用完整名P1V-20260909-测试发展流程查询仍空，未见停用切换视图；持续结果待核，不推与人才池相同原因。",
+          "evidence": "BC-C28",
+          "next": "完整名替代也空；停止同入口重试，保留可能遗留并继续其他独立链，后续仅有新可读入口再核。"
+        },
+        {
+          "id": "P1OP-C-018",
+          "at": "2026-09-09T07:55:54.758395+00:00",
+          "objectRefs": "拟M17 P1V-20260909-测试人才池，无ID；所属测试A，复用原分类管理及管理梯队人才池只读引用",
+          "before": "人才池名称P1V过滤未显示匹配对象，台账无M17人才池",
+          "action": "草稿填合成名/测试A/原分类；向下公开否，共享组织/预计人数/入出池标准空，自动入池默认关并截图核实；待一次保存",
+          "after": "已保存：完整名称查询出现卡片0人，打开详情UI PoolId=fd92d3a7-7925-4b36-a22b-a4ab1fcfa049，成员空表。P1V前缀查询不返回，不能按此前空结果判失败。",
+          "evidence": "BC-C29",
+          "next": "归档BC-C29；先用完整名核先前IDP流程，再复用此池按授权加入EA/核阶段与IDP依赖；不重复新建人才池。"
         }
       ],
       "records": [
@@ -39179,9 +39853,29 @@
           "objectType": "干部任免记录（AppointmentRecordId）",
           "marker": "P1V-20260909-测试甲干部主职任期",
           "relations": "组织员工EA71e030ac-c52e-475f-b7bb-c321af71e46c；干部详情StaffID411825222；任用A/JA；述职页按此AppointmentRecordId，无述职记录",
-          "status": "在职干部；主职任期2026-09-09至2027-09-08，实际结束--；考察3个月/2026-12-08仅保存前计算已见，持久化待核",
-          "evidence": "BC-C25",
+          "status": "在职干部；主职任期2026-09-09至2027-09-08，实际结束--；考察中，3个月/2026-12-08已跨页列表和考核草稿回读，未提交考核",
+          "evidence": "BC-C25/26",
           "retention": "保留人才合成前置；通知否；未免职/删除/评分。EA未来10日离职影响尚未执行验证。"
+        },
+        {
+          "objectId": "未取得；一次保存结果待核",
+          "moduleId": "M17",
+          "objectType": "可能遗留的停用IDP流程（未确认持久化）",
+          "marker": "P1V-20260909-测试发展流程",
+          "relations": "拟所属测试A；向下公开否/启用否；无人员/模板/计划关联",
+          "status": "一次保存后弹层关闭，P1V目录及刷新回查空；状态未知，禁止重复创建",
+          "evidence": "BC-C28",
+          "retention": "保留查询定位与操作证据；未删除、未启用，不声明安全清理完成；后续先查实际结果。"
+        },
+        {
+          "objectId": "fd92d3a7-7925-4b36-a22b-a4ab1fcfa049",
+          "moduleId": "M17",
+          "objectType": "人才池",
+          "marker": "P1V-20260909-测试人才池",
+          "relations": "所属测试A；分类管理及管理梯队人才池只读引用；向下公开否、共享组织空、入出池标准空、自动入池关",
+          "status": "已保存/启用的人才池卡片，0人；详情无成员；预计人数/饱和度--",
+          "evidence": "BC-C29",
+          "retention": "保留最小合成人才池；未自动/手动入池、未发起IDP，不删除业务历史。"
         }
       ],
       "residuals": [
@@ -39206,7 +39900,8 @@
         "M06标准b177a56d已保存启用，QC/QL1/QI/QT链明确，无人员结果；初次级别描述未回显，待同ID核对，不能重复新建标准。",
         "当前M06：QC/QL1/QT/QS保持已保存；QI在引用确认后停用，V2文本留存，QS仍启用且旧能力标准保留，级别描述补存回读一致。无待保存标准草稿/人员资格结果。前文草稿与描述未存为历史阶段，当前状态以records为准。",
         "M06等级方案保留两级，评级指标草稿仅选方案后取消未保存。编码/显示设置未改变；QI继续停用，QS保持历史说明。",
-        "M03干部EA/任期493a9f87已保存并回读起止，StaffID411825222与员工UUID分列；述职空页已关闭；当前无干部草稿，不重复新建。"
+        "M03干部EA/任期493a9f87已保存并回读起止，StaffID411825222与员工UUID分列；述职空页已关闭；当前无干部草稿，不重复新建。",
+        "M17流程P1V-20260909-测试发展流程保存结果待核，未取得ID；停用/不向下公开/测试A为提交前值。计划与模板草稿都已取消；不得重复建同名流程或报告成功。"
       ],
       "markerCompatibility": "本轮主标记P1V-20260909；字段拒绝连字符时使用同日无分隔形式P1V20260909，并在records/operations记录完整名称编码映射，查询使用P1V前缀同时覆盖两式。不得为兼容标记改原站校验。"
     }
@@ -39214,7 +39909,7 @@
   "roadmap": {
     "revision": "2026-09-08-P1AB",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-09T07:31:04.739383+00:00",
+    "updatedAt": "2026-09-09T07:59:37.096731+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -39297,7 +39992,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "P1当前15模块；BP-C/M03干部登记及M19审批依赖→M17/M18/M26/M37；M06已存资格目录与标准继续保留；M48/M32随链",
+    "activeWorkPackage": "P1当前15模块；BP-C/M17人才池成员与继任链，M03考察期和M19类型证据已补；M48/M32随人才链同步",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -39311,7 +40006,7 @@
       "BP-S"
     ],
     "nextTasks": [
-      "M03：EA干部主职任期493a9f87已保存/起止回读，述职按任期ID空页；继续考察期和M19路由/通知边界，再M17/M18/M26/M37；M06设置/两级方案已归档C24，不复做。",
+      "M17：复用已存空人才池fd92d3a7核手工入池/阶段/继任和IDP依赖；计划/模板草稿取消；停用IDP流程保存结果待核（P1V及完整名皆空）不重复建。随后M18/M26/M37；M03考核通知路由局部待证。",
       "BP-F/M01：关闭仍适用首包差异与法人/兼职终态等可查部分；EA离职10日生效、9日仍在职，日期分支不阻其他模块。F-SPEC-01–04保持集中待决。",
       "BP-C保留M03/M06/M17/M18/M26/M37按原登记补关键链；旧干部/人才评定/外部测评/人才模型等暂缓，不按相似名称合并。",
       "随后M27学习→M16绩效→M12招聘→M11假勤→M07薪酬；M19/M48/M32全程同步，BASE-01–06单列验收。",
@@ -39328,7 +40023,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-09T07:31:04.692151+00:00",
+    "updatedAt": "2026-09-09T07:59:37.020533+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -39714,7 +40409,7 @@
         "spec": "docs/delivery/P1B_BP_C_Specification.md",
         "specKind": "业务包规格评审稿：已观察证据、既有契约与逐组受限需求分列",
         "confirmedRules": "仅复用适用的已确认公共依赖，不把现有独立实现视为本包规则已确认",
-        "pending": "BC-C10–13评价配置/帮助及BC-C25合成干部登记、年/月表单计算、任期持久化及述职ID关联已有；考察持久化/任免审批/终止恢复/单账号角色/评分边界仍缺，未完整P1A或需求就绪。；BC-C19–23完成类别/级别/类型/指标/标准关联保存、源指标修订/停用后标准旧说明保持、描述独立补存回读。新引用/级别评级/目录校验/发展通道/角色与配置仍有缺口，未达到完整P1A或P1B就绪。 BC-C24已补编码/通道显示配置与两级评级方案保存、条件字段；剩余目标/引用改版/校验/角色仍待证。；人才池/继任/发展计划阶段和执行人列已读；标准引用/开启/转交与异常恢复尚缺，健康度指标不因M38暂缓自动删除。；标准/项目/校准/人才池已有局部证据；盘点快照、校准/继任状态及角色矩阵、与M17语义边界尚缺。；角色/套卷配置与现有固定四类差异已读；匿名/阈值/缺评、模板版本与答卷历史、独立角色验证尚缺。；标准/指标库已有局部证据；多版本标准与M06/M18引用、发布归档和缺项恢复尚缺。",
+        "pending": "BC-C10–13评价配置/算法帮助、C25干部登记/任期ID/述职关联、C26考察结束跨页持久化及考核草稿已有；考核/任免审批通知路由、转正与恢复、角色及评分边界仍缺，未完整P1A/需求就绪。；BC-C19–23完成类别/级别/类型/指标/标准关联保存、源指标修订/停用后标准旧说明保持、描述独立补存回读。新引用/级别评级/目录校验/发展通道/角色与配置仍有缺口，未达到完整P1A或P1B就绪。 BC-C24已补编码/通道显示配置与两级评级方案保存、条件字段；剩余目标/引用改版/校验/角色仍待证。；C27计划/模板/9角色/4状态及草稿取消；C29空人才池保存PoolId/0成员已验证，公开/共享/入出标准结构已读。C28停用流程保存结果待核（完整名亦空）；人才池成员/继任/健康度/IDP阶段执行和角色恢复仍缺。；标准/项目/校准/人才池已有局部证据；盘点快照、校准/继任状态及角色矩阵、与M17语义边界尚缺。；角色/套卷配置与现有固定四类差异已读；匿名/阈值/缺评、模板版本与答卷历史、独立角色验证尚缺。；标准/指标库已有局部证据；多版本标准与M06/M18引用、发布归档和缺项恢复尚缺。",
         "acceptance": "原acceptanceTasks按moduleId关联；本规格Given/When/Then为细化场景，未执行/未签署，不增加原验收分母",
         "dependencies": [
           "BP-F"
@@ -39734,8 +40429,8 @@
               "lib/hris/cadre-terms.ts",
               "lib/hris/cadres.ts"
             ],
-            "acceptance": "已有生效任期重叠时登记拒绝；已批准未生效调动不能核对任用；岗位不匹配拒绝；员工离职前不能登记离职原因结束任期；新调动与无transfer结构历史单分开验证，记录适用版本，不用历史单绕过新D1执行。；候选：给定EA在职A/JA，新增合成主职任期9日/1年且通知否，保存回读同任期ID与次年8日；打开该任期述职应按任期筛选而非其他任期。考察期回读、年份边界、重叠和离职后状态需补证/评审后定义。",
-            "gap": "原站四状态干部身份不可用registered/ended一对一替代；委员会/任期算法/复杂任用类型未就绪；BC-C10原站选拔/述职评价表及评分项是独立配置，当前提名布尔审议与考察证据不覆盖评价表/多评委汇总。；现有cadre-terms直接expectedEnd/observationEnd，未建年/月输入计算或源四状态身份；本次源任期保存不证明审批完成，未来员工离职联动、考察持久化及免职恢复仍缺。",
+            "acceptance": "已有生效任期重叠时登记拒绝；已批准未生效调动不能核对任用；岗位不匹配拒绝；员工离职前不能登记离职原因结束任期；新调动与无transfer结构历史单分开验证，记录适用版本，不用历史单绕过新D1执行。；候选：给定EA在职A/JA，新增合成主职任期9日/1年且通知否，保存回读同任期ID与次年8日；打开该任期述职应按任期筛选而非其他任期。考察期回读、年份边界、重叠和离职后状态需补证/评审后定义。；候选补充：登记考察3月后在考察名单回读同EA/12月8日，转正考核只读带入任期和考察数据；取消不新建申请，不把当前考察中当考核已通过。",
+            "gap": "原站四状态干部身份不可用registered/ended一对一替代；委员会/任期算法/复杂任用类型未就绪；BC-C10原站选拔/述职评价表及评分项是独立配置，当前提名布尔审议与考察证据不覆盖评价表/多评委汇总。；现有cadre-terms直接expectedEnd/observationEnd，未建年/月输入计算或源四状态身份；本次源任期保存不证明审批完成，未来员工离职联动、考察持久化及免职恢复仍缺。；BC-C26已关闭考察结束持久化缺口，仍缺审批路由/通知/日期边界/结果恢复。",
             "classification": "本项目既有实现静态事实；转为产品要求待评审",
             "accepted": false,
             "id": "BP-C-REQ-01",
@@ -39806,16 +40501,17 @@
           },
           {
             "object": "盘点/继任/标准模型",
-            "fields": "沿用既有版本化标准、盘点/九宫格快照与继任引用；模型及角度码仅导航，不推造字段",
+            "fields": "沿用既有版本化标准、盘点/九宫格快照与继任引用；模型及角度码仅导航，不推造字段；BC-C29人才池是分类/所属组织/向下公开/共享组织/预计人数/独立入池和出池标准/自动入池配置，成员另有阶段/指导人/准备度。空池可保存且三项关联/预计人数空，本样本不推广自动模式。",
             "roles": "人才敏感档案当前范围与具体记录权限；监察、跨组织池、委员会权限未核实",
             "lifecycle": "盘点、人才池、资格、发展计划是不同记录，不能相同status混用",
-            "actions": "盘点、校准、提名、发展计划衔接；M02/M15/M38/M45/M46保留独立缺口",
+            "actions": "盘点、校准、提名、发展计划衔接；M02/M15/M38/M45/M46保留独立缺口；当前M17创建空池、手工入池、设置阶段、发起IDP分开，暂缓M02/M15/M38/M45/M46仅保留历史缺口不阻当前。",
             "codeRefs": [
-              "docs/delivery/Cadre_Learning_Source_Gaps.md",
-              "docs/delivery/Scope_Register.json"
+              "lib/hris/development.ts",
+              "docs/P1_Source_Observations_20260907.md",
+              "docs/delivery/Cadre_Learning_Source_Gaps.md"
             ],
-            "acceptance": "后续评审必须证明正式绩效快照来源/版本；撤销或新版本不能静默覆盖旧九宫格；无绩效不自动补最低档",
-            "gap": "当前仅重用已有范围描述；多维模型/健康度/测評题库及评分未可验收",
+            "acceptance": "后续评审必须证明正式绩效快照来源/版本；撤销或新版本不能静默覆盖旧九宫格；无绩效不自动补最低档；候选：仅测试A/不向下公开/无共享/自动入池关的新池保存后同PoolId、0成员；预计人数空则饱和度保留未知，不能制造0%或除0。完整名回查与对象ID验证保存，前缀空不判不存在；入出标准和M06资格不自动合并。",
+            "gap": "当前仅重用已有范围描述；多维模型/健康度/测評题库及评分未可验收；现有pool(name,orgId,criteria)只覆盖基础目录，缺分类/共享与公开边界、独立标准引用和自动规则、预计人数及成员阶段/指导映射；保留代码需补必要设计，不重建。",
             "classification": "原站局部证据及原范围/差异输入；具体产品规则待补证，不声称已实现",
             "accepted": false,
             "id": "BP-C-REQ-04",
@@ -39873,16 +40569,16 @@
           {
             "id": "BP-C-REQ-05",
             "object": "原站发展计划阶段与执行人（M17）",
-            "fields": "发展计划列为名称、人员/邮箱、指导人角色/指导人、状态、当前阶段/步骤、下个阶段/开启方式、当前步骤执行人、模板；仅结构证据，类型和角色解析未知",
-            "roles": "指导人、当前步骤执行人和学员是独立列，不等同本项目HR/经理角色；实际录入/审核/转交权限需补证",
-            "lifecycle": "当前阶段、步骤和下阶段开启方式分别存在；未验证自动/手动枚举或顺序，不强画线性工作流",
-            "actions": "只读发展计划列表；未推进阶段/办理任务/通知",
+            "fields": "BC-C27计划名、已选员工身份、9类指导角色、独立模板、起止为UI必填；选其他人增加指导人。模板另有IDP流程、所属组织、向下公开默认否、开启/停用、描述32766和分类。原先已读列表当前阶段/步骤/下阶段开启方式继续保留；均非自由文本actionPlan可覆盖。",
+            "roles": "指导角色九项是源动态解析候选，不等同系统admin/hr/manager权限。员工选择器支持组织/人才池/职位/职级/状态，选择身份而非任意姓名文本。其他人解析、本人可否指导本人、独立审核与角色转交仍待证，不能批准默认规则。",
+            "lifecycle": "源计划未开始/进行中/已结束/已终止；模板开启/停用、流程是否启用与计划状态分开，名称相似不归并。新增/开始/流程干预为不同入口；本次取消不产生计划。",
+            "actions": "创建计划与模板；按组织/状态/人员过滤；角色条件字段；IDP流程前置；启动、阶段执行及恢复待安全链补证。",
             "codeRefs": [
-              "docs/P1_Source_Observations_20260907.md",
-              "docs/delivery/Cadre_Learning_Source_Gaps.md"
+              "lib/hris/development.ts",
+              "docs/P1_Source_Observations_20260907.md"
             ],
-            "acceptance": "先确认模板阶段开启规则、执行人解析、退回与变动恢复，才能定义步骤完成和阶段切换预期；现有简单发展行动不可冒充整套模板流程",
-            "gap": "指导角色、跨阶段审批、模板变化及状态恢复未核实/未独立覆盖",
+            "acceptance": "候选：给定EA身份选择成功，草稿显示同工号/邮箱；只填姓名未建立关联不能当选中。选择其他人显示指导人，切换角色的值保留/清空需补证后定。模板取独立流程与组织范围，向下公开否不自动开放所有子组织；取消计划不保存，员工选择器保存不产生计划。计划阶段、模板版本与指导人变化必须有稳定引用，未开始不得当已执行；后续对开启/终止/恢复明确状态写回。；保存验收需返回稳定对象ID且从列表/详情回读，弹层关闭但记录不可查应明确未知并先查询，不得重复创建；流程/模板/计划三类范围和启停状态单独核对。",
+            "gap": "当前development.ts plan(employeeId,standardId,target,title,actionPlan,due)及verifyPlan独立核验/关联学习未完拒绝可复用；缺IDP流程/模板、动态指导角色、开始日期、分阶段执行和通知路由。当前简单计划与多阶段IDP差异需补齐设计，原站字段不是已批准项目规则。；BC-C28流程主档保存结果待核，停用/所属组织筛选与真实持久化原因未明；不能把弹层关闭视为保存验收通过。",
             "classification": "原站局部结构事实；产品工作流需求受限，未批准默认规则",
             "accepted": false,
             "currentApplicability": {
@@ -39928,9 +40624,9 @@
         "goal": "在保留原范围内形成干部人才的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
         "specStatus": "部分契约已具体化；未探索部分明确受限；非完整需求验收",
         "readinessConditions": [
-          "BC-C10–13评价配置/帮助及BC-C25合成干部登记、年/月表单计算、任期持久化及述职ID关联已有；考察持久化/任免审批/终止恢复/单账号角色/评分边界仍缺，未完整P1A或需求就绪。",
+          "BC-C10–13评价配置/算法帮助、C25干部登记/任期ID/述职关联、C26考察结束跨页持久化及考核草稿已有；考核/任免审批通知路由、转正与恢复、角色及评分边界仍缺，未完整P1A/需求就绪。",
           "BC-C19–23完成类别/级别/类型/指标/标准关联保存、源指标修订/停用后标准旧说明保持、描述独立补存回读。新引用/级别评级/目录校验/发展通道/角色与配置仍有缺口，未达到完整P1A或P1B就绪。 BC-C24已补编码/通道显示配置与两级评级方案保存、条件字段；剩余目标/引用改版/校验/角色仍待证。",
-          "人才池/继任/发展计划阶段和执行人列已读；标准引用/开启/转交与异常恢复尚缺，健康度指标不因M38暂缓自动删除。",
+          "C27计划/模板/9角色/4状态及草稿取消；C29空人才池保存PoolId/0成员已验证，公开/共享/入出标准结构已读。C28停用流程保存结果待核（完整名亦空）；人才池成员/继任/健康度/IDP阶段执行和角色恢复仍缺。",
           "标准/项目/校准/人才池已有局部证据；盘点快照、校准/继任状态及角色矩阵、与M17语义边界尚缺。",
           "角色/套卷配置与现有固定四类差异已读；匿名/阈值/缺评、模板版本与答卷历史、独立角色验证尚缺。",
           "标准/指标库已有局部证据；多版本标准与M06/M18引用、发布归档和缺项恢复尚缺。",
@@ -41391,7 +42087,7 @@
         "spec": "docs/delivery/P1B_BP_I_Specification.md",
         "specKind": "业务包规格评审稿：已观察证据、既有契约与逐组受限需求分列",
         "confirmedRules": "仅复用适用的已确认公共依赖，不把现有独立实现视为本包规则已确认",
-        "pending": "已有流程列表及干预/委托说明；尚缺合成业务申请的审批路由、通知边界与独立角色执行；D7首包固定两级保持。；已有数据集/订阅/快照/权限结构；指标分母、时点及撤权后订阅行为、跨域投影尚缺，不发送订阅。；已有本人/团队/待办入口和代码投影；单账号未证明员工身份办理、撤权与历史跨角色权限，按当前业务链同步。",
+        "pending": "已有流程列表及干预/委托说明；尚缺合成业务申请的审批路由、通知边界与独立角色执行；D7首包固定两级保持。 BC-I27补独立业务类型/8状态和合成标题查询；实际路由/权限/通知/状态回写未执行。；已有数据集/订阅/快照/权限结构；指标分母、时点及撤权后订阅行为、跨域投影尚缺，不发送订阅。；已有本人/团队/待办入口和代码投影；单账号未证明员工身份办理、撤权与历史跨角色权限，按当前业务链同步。",
         "acceptance": "原acceptanceTasks按moduleId关联；本规格Given/When/Then为细化场景，未执行/未签署，不增加原验收分母",
         "dependencies": [
           "BP-F",
@@ -41582,7 +42278,7 @@
           {
             "id": "BP-I-REQ-07",
             "object": "审批中心流程干预与待办同步",
-            "fields": "流程标题/类型/发起人/当前审批人/状态/催办状态；转交目标、干预节点、理由和操作记录待补完整字段/校验。",
+            "fields": "流程标题/类型/发起人/当前审批人/状态/催办状态；转交目标、干预节点、理由和操作记录待补完整字段/校验。；BC-I27源审批类型区分任免/提名/考察/发展/资格/盘点等；审批中/通过/不通过/已完成/已终止/已驳回/已撤回/空分列，不能按同名合成统一业务状态。",
             "roles": "流程管理员、节点审批人、委托人/代理人分开；发起人/本人/审批贡献者隔离不能因转交绕过；当前D1–D7固定两级继续。",
             "lifecycle": "BC-I10撤销在未完成审批时取消流程及待办；转交调当前节点审批人，干预可换节点及人；业务撤销与审批完成/生效是不同事件，补偿未核实。",
             "actions": "查看流程，催办/转交/撤销/干预/一键审批仅原站入口；本轮无操作。现有inbox仅读可办原记录，无通用流程引擎。",
@@ -41592,7 +42288,7 @@
               "lib/hris/authorization.ts",
               "lib/hris/model.ts"
             ],
-            "acceptance": "待权限/状态明确后覆盖旧审批人直接URL拒绝、待办失效、撤销已完成拒绝、已生效业务不被流程撤销静默改写、独立审批约束在委托/转交下保持；消息发送非本轮范围。",
+            "acceptance": "待权限/状态明确后覆盖旧审批人直接URL拒绝、待办失效、撤销已完成拒绝、已生效业务不被流程撤销静默改写、独立审批约束在委托/转交下保持；消息发送非本轮范围。；候选：按业务类型、标题、状态组合过滤，并标明权限范围；无记录不得自动解释为业务未发起或无需审批。引用干部任期ID与流程ID应可追踪，任期登记与审批成功须分别取证。",
             "gap": "M19完整通用流程尚无独立实现；不得把原站干预当成D7新增规则已批准，通用委托和会签分支保留原范围待设计。",
             "classification": "原站帮助证据和本项目差异候选；未签署",
             "accepted": false,
@@ -41876,7 +42572,7 @@
         "goal": "在保留原范围内形成自助/报表/集成的可追溯需求；先复核可复用实现，再明确差异；本轮不开发。",
         "specStatus": "部分契约已具体化；未探索部分明确受限；非完整需求验收",
         "readinessConditions": [
-          "已有流程列表及干预/委托说明；尚缺合成业务申请的审批路由、通知边界与独立角色执行；D7首包固定两级保持。",
+          "已有流程列表及干预/委托说明；尚缺合成业务申请的审批路由、通知边界与独立角色执行；D7首包固定两级保持。 BC-I27补独立业务类型/8状态和合成标题查询；实际路由/权限/通知/状态回写未执行。",
           "已有数据集/订阅/快照/权限结构；指标分母、时点及撤权后订阅行为、跨域投影尚缺，不发送订阅。",
           "已有本人/团队/待办入口和代码投影；单账号未证明员工身份办理、撤权与历史跨角色权限，按当前业务链同步。",
           "基础能力与必要接口按当前依赖契约核验；33暂缓不阻当前退出。"
@@ -42306,9 +43002,40 @@
         "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
         "evidence": [
           "docs/delivery/Cadre_Learning_Source_Gaps.md",
-          "docs/delivery/Scope_Register.json"
+          "docs/delivery/Scope_Register.json",
+          "；",
+          "B",
+          "C",
+          "-",
+          "C",
+          "2",
+          "9",
+          "；",
+          "d",
+          "e",
+          "v",
+          "e",
+          "l",
+          "o",
+          "p",
+          "m",
+          "e",
+          "n",
+          "t",
+          ".",
+          "t",
+          "s",
+          " ",
+          "p",
+          "o",
+          "o",
+          "l",
+          "静",
+          "态",
+          "读",
+          "取"
         ],
-        "gap": "当前仅重用已有范围描述；多维模型/健康度/测評题库及评分未可验收",
+        "gap": "当前仅重用已有范围描述；多维模型/健康度/测評题库及评分未可验收；池分类/共享/入出标准/自动入池和成员阶段不由criteria自由文本覆盖。",
         "acceptance": "后续评审必须证明正式绩效快照来源/版本；撤销或新版本不能静默覆盖旧九宫格；无绩效不自动补最低档",
         "currentApplicability": {
           "status": "部分适用",
@@ -43029,12 +43756,9 @@
       {
         "requirement": "BP-C-REQ-05",
         "capability": "原站发展计划阶段与执行人（M17）",
-        "disposition": "需补齐；原简单行动不可替代完整阶段流程",
-        "evidence": [
-          "docs/P1_Source_Observations_20260907.md",
-          "docs/delivery/Cadre_Learning_Source_Gaps.md"
-        ],
-        "gap": "指导角色、跨阶段审批、模板变化及状态恢复未核实/未独立覆盖",
+        "disposition": "可复用基础/需补齐源多阶段流程（需求评审后）",
+        "evidence": "BC-C27；lib/hris/development.ts plan/verifyPlan静态读取",
+        "gap": "当前development.ts plan(employeeId,standardId,target,title,actionPlan,due)及verifyPlan独立核验/关联学习未完拒绝可复用；缺IDP流程/模板、动态指导角色、开始日期、分阶段执行和通知路由。当前简单计划与多阶段IDP差异需补齐设计，原站字段不是已批准项目规则。",
         "acceptance": "先确认模板阶段开启规则、执行人解析、退回与变动恢复，才能定义步骤完成和阶段切换预期；现有简单发展行动不可冒充整套模板流程",
         "currentApplicability": {
           "status": "保留",
@@ -43521,6 +44245,20 @@
         "contract": "组织员工UUID、干部页数字StaffID与AppointmentRecordId为不同标识；按任期取述职，空述职不等于无任期。实际终止、预计结束和未来人事离职分开；不从已登记推已审批/已述职。",
         "evidence": "BC-C25；源合成保存/回读与述职UI关联路由",
         "currentApplicability": "M01/M03保留；不得因述职路由appCode是TEvaluation而恢复暂缓M02完整人才评定。"
+      },
+      {
+        "term": "审批中心业务类型与领域状态",
+        "dependency": "M19↔M03/M06/M17/M18/M16/M27/M12/M11/M07/M01",
+        "contract": "流程状态与任期/计划/资格/盘点/工资等领域状态分开；独立类型仅证候选/分类存在，不证路由或所有状态可达。筛选空不能充当不存在或免审批证明。",
+        "evidence": "BC-I27；BC-I10",
+        "currentApplicability": "当前15领域与M19同步；类型目录仍含暂缓模块，不据此恢复33模块。"
+      },
+      {
+        "term": "人才池、成员阶段与发展计划",
+        "dependency": "M17池→成员阶段/准备度→IDP；M37人才标准→入/出池候选；M06资格标准保持独立",
+        "contract": "池主档与成员、预计人数、饱和度、入/出标准版本和自动入池规则分开。空预计人数不等于0人数目标，0成员不证明没有授权人员；新建池不等于入池、提名继任或发起IDP。",
+        "evidence": "BC-C27/29；人才池ID及0成员直接回读",
+        "currentApplicability": "M17/M37及M06必要依赖保留，M38等暂缓不自动恢复。标准候选具体同源关系待证。"
       }
     ],
     "consistencyReview": {
