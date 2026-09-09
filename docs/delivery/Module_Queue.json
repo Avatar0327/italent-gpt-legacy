@@ -782,7 +782,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M06唯一主模块，R2夜间P1评审材料流水线",
+    "activeWorkPackage": "M26唯一主模块，R2夜间P1评审材料流水线",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -797,7 +797,7 @@
       "BP-S"
     ],
     "nextTasks": [
-      "M06：应用已批准M06推荐并逐项关闭，再转M26",
+      "M26：完成360活动/人员/题库/报表的定向证据、规格及集中建议",
       "依次M26→M18→M17→M03，仅材料完成可滚动，不代签或进R3"
     ],
     "state": "R1仅P2设计批准保持；R2模块按真实批准关闭，未批模块材料可串行排队",
@@ -812,10 +812,10 @@
       "id": "MODE-MODULE-CLOSURE-R-20260909",
       "authorizedAt": "2026-09-09T15:43:36.730682+00:00",
       "mode": "模块闭环优先、按R版本滚动转序",
-      "primaryModuleId": "M06",
+      "primaryModuleId": "M26",
       "backupModuleId": null,
       "backupCandidateId": null,
-      "activeExecutionModuleId": "M06",
+      "activeExecutionModuleId": "M26",
       "wipLimit": 1,
       "backupLimit": 1,
       "backupActivation": "仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归",
@@ -910,6 +910,14 @@
           "from": "M37",
           "to": "M06",
           "reason": "M37-P1-APPROVAL-R2-20260909四退出条件满足，严格顺序受限关闭",
+          "remaining": "仅后续阶段风险补验",
+          "restore": "仅明确新变更重新评审受影响条款"
+        },
+        {
+          "at": "2026-09-09T18:22:46.166597+00:00",
+          "from": "M06",
+          "to": "M26",
+          "reason": "M06-P1-APPROVAL-R2-20260909四退出条件满足，严格顺序受限关闭",
           "remaining": "仅后续阶段风险补验",
           "restore": "仅明确新变更重新评审受影响条款"
         }

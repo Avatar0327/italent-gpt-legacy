@@ -1,31 +1,31 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-09T18:22:09.823974+00:00",
-  "primaryModuleId": "M06",
+  "generatedFromUpdatedAt": "2026-09-09T18:22:46.166597+00:00",
+  "primaryModuleId": "M26",
   "backupModuleId": null,
-  "activeExecutionModuleId": "M06",
+  "activeExecutionModuleId": "M26",
   "moduleCount": 15,
   "completeCount": 0,
-  "restrictedCount": 5,
-  "transitionReadyCount": 5,
+  "restrictedCount": 6,
+  "transitionReadyCount": 6,
   "progress": {
     "p1A": {
       "full": 0,
-      "restricted": 5,
-      "total": 5
+      "restricted": 6,
+      "total": 6
     },
     "p1B": {
       "full": 0,
-      "restricted": 5,
-      "total": 5
+      "restricted": 6,
+      "total": 6
     },
     "review": {
       "full": 0,
-      "restricted": 5,
-      "total": 5
+      "restricted": 6,
+      "total": 6
     }
   },
-  "p1ClosedCount": 5,
+  "p1ClosedCount": 6,
   "modules": [
     {
       "moduleId": "M01",
@@ -389,10 +389,10 @@
       "moduleId": "M06",
       "name": "任职资格",
       "rangeId": "R2",
-      "queueState": "primary",
+      "queueState": "closed_restricted",
       "p1AConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M06-P1-APPROVAL-R2-20260909",
         "evidenceRefs": [
           "BC-C04",
           "BC-P1C-M06",
@@ -403,54 +403,60 @@
           "BC-C23",
           "BC-C24"
         ],
-        "limits": "四项源证据/限制及差异齐备，LIMIT未批，不计关闭"
+        "limits": "M06-P1-APPROVAL-R2-20260909批准完整所审规格及限制；原站未知/实现差异保留P2/P3/P4，不等实测通过",
+        "approvedAt": "2026-09-09T18:22:46.166597+00:00"
       },
       "p1BConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M06-P1-APPROVAL-R2-20260909",
         "evidenceRefs": [],
-        "limits": "五项具体推荐、字段/权限/状态/验收可评审；待本模块及M37依赖批准"
+        "limits": "M06-P1-APPROVAL-R2-20260909批准完整所审规格及限制；原站未知/实现差异保留P2/P3/P4，不等实测通过",
+        "approvedAt": "2026-09-09T18:22:46.166597+00:00"
       },
       "conditions": {
         "applicableScopeDetermined": {
           "value": true,
-          "basis": "用户已确认15完整登记范围及本轮R顺序"
+          "basis": "M06-P1-APPROVAL-R2-20260909：完整范围保留、五组规则和验收预期及LIMIT获批；M37生产者依赖已处理，不代批其他消费者"
         },
         "implementationRulesDecided": {
-          "value": false,
-          "basis": "M06五项/LIMIT及M37依赖未批准，备用材料不等顺序关闭"
+          "value": true,
+          "basis": "M06-P1-APPROVAL-R2-20260909：完整范围保留、五组规则和验收预期及LIMIT获批；M37生产者依赖已处理，不代批其他消费者"
         },
         "acceptanceExecutable": {
-          "value": false,
-          "basis": "M06五项/LIMIT及M37依赖未批准，备用材料不等顺序关闭"
+          "value": true,
+          "basis": "M06-P1-APPROVAL-R2-20260909：完整范围保留、五组规则和验收预期及LIMIT获批；M37生产者依赖已处理，不代批其他消费者"
         },
         "dependenciesAndExceptionsResolved": {
-          "value": false,
-          "basis": "M06五项/LIMIT及M37依赖未批准，备用材料不等顺序关闭"
+          "value": true,
+          "basis": "M06-P1-APPROVAL-R2-20260909：完整范围保留、五组规则和验收预期及LIMIT获批；M37生产者依赖已处理，不代批其他消费者"
         }
       },
       "transitionReview": {
-        "approved": false,
-        "record": null,
-        "scope": null,
-        "approvedAt": null
+        "approved": true,
+        "record": "M06-P1-APPROVAL-R2-20260909",
+        "scope": "用户明确批准满足条件时模块转序就绪；不等R2版本P2批准",
+        "approvedAt": "2026-09-09T18:22:46.166597+00:00"
       },
-      "restrictedApproval": null,
-      "transitionReady": false,
-      "missingConditions": [
-        "implementationRulesDecided",
-        "acceptanceExecutable",
-        "dependenciesAndExceptionsResolved",
-        "p1AApproved",
-        "p1BApproved",
-        "transitionReviewApproved"
-      ]
+      "restrictedApproval": {
+        "scope": "目录重复/完整级别评级算法、发布审查/委员会、证据时效/续证/撤销及跨角色原站执行未验证；发展通道/学习地图实际关联未知",
+        "residualRisk": "独立委员会/有效期/停用在途策略可能与源不同；权限、目录范围及多版本迁移未实际运行，M37新模型未获需求批准。",
+        "revalidation": "P2核类别/级别/方案/根版本/认证有效性及独立回避设计与迁移；P3合成跑评分/评级、委员会阈值、时效、同版证据、重复续证、事务故障及消费者；P4完整多角色与跨域权限业务验收。E2不新增人，任何内部认证不当外部许可或自动任免。",
+        "record": "M06-P1-APPROVAL-R2-20260909",
+        "approvedAt": "2026-09-09T18:22:46.166597+00:00",
+        "phaseScope": "仅P1"
+      },
+      "closureClass": "受限通过",
+      "p1Closed": true,
+      "closureRecord": "M06-P1-APPROVAL-R2-20260909",
+      "closedAt": "2026-09-09T18:22:46.166597+00:00",
+      "transitionReady": true,
+      "missingConditions": []
     },
     {
       "moduleId": "M26",
       "name": "360度评估",
       "rangeId": "R2",
-      "queueState": "queued",
+      "queueState": "primary",
       "p1AConclusion": {
         "status": "进行中",
         "approvalRecord": null,
@@ -1395,7 +1401,6 @@
       ],
       "transitionReady": false,
       "missingConditions": [
-        "M06",
         "M26",
         "M18",
         "M17",
