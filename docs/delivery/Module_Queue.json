@@ -1,5 +1,5 @@
 {
-  "version": 31,
+  "version": 32,
   "activeWriter": "当前聊天唯一总控",
   "mode": "sole-controller-p1-synthetic-source-testing",
   "branchCreationBase": "commit introducing this queue; exact SHA in git history",
@@ -699,7 +699,7 @@
   "currentP1": {
     "revision": "2026-09-08-P1AB",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-09T05:17:06.802724+00:00",
+    "updatedAt": "2026-09-09T05:34:39.969531+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -804,6 +804,6 @@
       "持续全局术语/对象/字段权限/历史状态/依赖/接口一致性审查；文档自检和业务签署分开，按完整单元提交推送，不恢复P2/P3开发"
     ],
     "state": "P1未整体验收；P2保留受限历史技术验收；F01–F04业务验收未完成；E1仅页面可打开；E2唯一访问者；D1–D7独立设计；所有历史测试不等于当前复验",
-    "currentWork": "BC-F45离职未来事件10日起、9日仍在职；原入职recordId已证EmploymentRecord；BC-F46兼职列表隐藏但原UI可读终态未知。继续M20项目/人员/工时，随后既定业务包。"
+    "currentWork": "M20 BC-F47项目草稿组织候选空已取消；BC-F48仅测试A的工时方案保存启用/消息否，继续负责人联动的有限项目补证及人员/工时，随后其他包。"
   }
 }

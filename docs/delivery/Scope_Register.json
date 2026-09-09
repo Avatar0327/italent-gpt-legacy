@@ -2754,12 +2754,47 @@
         "navigationEvidence": "BC-NAV-20260908",
         "pageRefs": [
           "BC-P1C-M20",
-          "BC-P1C-M20-02"
+          "BC-P1C-M20-02",
+          "BC-F47",
+          "BC-F48"
         ],
         "fieldRefs": [
           "BC-P1C-M20-02-F001",
           "BC-P1C-M20-02-F002",
-          "BC-P1C-M20-02-F003"
+          "BC-P1C-M20-02-F003",
+          "BC-F47-F001",
+          "BC-F47-F002",
+          "BC-F47-F003",
+          "BC-F47-F004",
+          "BC-F47-F005",
+          "BC-F47-F006",
+          "BC-F47-F007",
+          "BC-F47-F008",
+          "BC-F47-F009",
+          "BC-F47-F010",
+          "BC-F48-F001",
+          "BC-F48-F002",
+          "BC-F48-F003",
+          "BC-F48-F004",
+          "BC-F48-F005",
+          "BC-F48-F006",
+          "BC-F48-F007",
+          "BC-F48-F008",
+          "BC-F48-F009",
+          "BC-F48-F010",
+          "BC-F48-F011",
+          "BC-F48-F012",
+          "BC-F48-F013",
+          "BC-F48-F014",
+          "BC-F48-F015",
+          "BC-F48-F016",
+          "BC-F48-F017",
+          "BC-F48-F018",
+          "BC-F48-F019",
+          "BC-F48-F020",
+          "BC-F48-F021",
+          "BC-F48-F022",
+          "BC-F48-F023"
         ],
         "sourceDepth": "P：局部页面/字段/说明，未完整掌握模块",
         "gapRef": "M20",
@@ -2779,14 +2814,16 @@
         "coverage": {
           "facts": [
             "BC-P1C-M20",
-            "BC-P1C-M20-02"
+            "BC-P1C-M20-02",
+            "BC-F47",
+            "BC-F48"
           ],
           "inferences": "原站已观察事实仅限所列证据；数学示例推导或候选设计另标，未实际执行业务；业务包映射按已观察职责进行规划，不代表需求验收。",
-          "restricted": "截至最近证据，完整写入结果未验证；当前已获合成测试授权，按具体场景补证；页面特有限制见所列证据unknown，未探索不标无权限",
+          "restricted": "BC-F47新建必填所属组织候选在测试完整名/前缀/无搜索及选择测试类型后均空，具体原因未知；未保存。其余页面仍可继续，不称整组无权限。",
           "unexplored": "项目人员主兼职关系、分配比例/期间冲突、工时采集审批、统计/成本口径与权限。 字段仍未知的类型/必填/默认/枚举/校验/可见性逐条保留在同源字段字典。",
-          "next": "复用EA/R/A/B检查项目/人员/工时配置，按最新授权创建最小合成项目或分配记录；先核通知/审批边界，项目成本与组织编制、薪资预算分开。",
+          "next": "继续M20设置/工时说明与可控人员表单；组织候选恢复后复用P1V草稿标记新建并分配EA，先按名称确认无已保存记录，不重复创建。",
           "accepted": false,
-          "currentAssessmentAt": "2026-09-08T18:06:01.449194+00:00"
+          "currentAssessmentAt": "2026-09-09T05:33:43.976766+00:00"
         }
       },
       "businessPackage": "BP-F"
@@ -6239,7 +6276,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-09T05:15:26.234878+00:00",
+    "updatedAt": "2026-09-09T05:33:43.976766+00:00",
     "authority": "本轮用户指令；Scope_Register.json是唯一范围与验收事实源；P1附属条目不增加48组或59项分母",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -35368,6 +35405,442 @@
         "sourceStatement": "BC-F45确认合成兼职自动终止作废后，当前任职中及全部兼职记录未见EA；全部视图仍默认筛选任职中/任职结束。状态弹层只有全选、空、任职中、任职结束，无作废选项；选全选后筛选含空仍无EA。随后仅导航到本次之前真实打开过的cf48b4dc编辑UI原URL（未构造API或改URL参数），可读回相同EA工号、类型兼职、B部门、主职A，开始2026-09-09，结束9999-12-31。未见任职状态/作废字段。说明记录仍可由原UI回读，不能声称物理删除；也不能从列表消失把未来定时任务/全部消费者当通过。",
         "operations": "仅两种列表筛选及一次既有UI链接只读回查，没有再次保存、编辑字段、删除、直接接口调用或权限修改。",
         "unknown": "作废标志/时点未在所见字段显示，当前只能报告列表不可见与旧UI可读并存；不是已成功结束且终态审计完整的证据。显示9999不代表仍计入编制/绩效/薪资，消费者需各自复核。"
+      },
+      {
+        "evidenceRef": "BC-F47",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-09",
+        "recordedAt": "2026-09-09T05:22:35.588364+00:00",
+        "observationTimePrecision": "本功能链归档时间",
+        "role": "当前单账号",
+        "flowRef": [],
+        "id": "BC-F47",
+        "moduleId": "M20",
+        "path": "项目人力管理→项目→进行中→新建合成项目草稿（未保存）",
+        "level": "P",
+        "recordType": "已直接观察（填入合成草稿；必填组织无候选）",
+        "layout": "进行中/已结项目录，Nusion新建表单，组织选择器",
+        "fields": [
+          {
+            "id": "BC-F47-F001",
+            "context": "项目人力管理→项目→进行中→新建合成项目草稿（未保存）",
+            "storageType": "文本控件",
+            "required": true,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F47",
+            "label": "项目名称"
+          },
+          {
+            "id": "BC-F47-F002",
+            "context": "项目人力管理→项目→进行中→新建合成项目草稿（未保存）",
+            "storageType": "文本控件",
+            "required": true,
+            "default": "本次新建自动YF00018，可输入修改，生成规则未知",
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F47",
+            "label": "项目编码"
+          },
+          {
+            "id": "BC-F47-F003",
+            "context": "项目人力管理→项目→进行中→新建合成项目草稿（未保存）",
+            "storageType": null,
+            "required": false,
+            "default": null,
+            "options": [
+              "研发项目",
+              "实施项目",
+              "测试项目"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-F47",
+            "label": "项目类型"
+          },
+          {
+            "id": "BC-F47-F004",
+            "context": "项目人力管理→项目→进行中→新建合成项目草稿（未保存）",
+            "storageType": null,
+            "required": false,
+            "default": "空人员选择器",
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F47",
+            "label": "项目负责人"
+          },
+          {
+            "id": "BC-F47-F005",
+            "context": "项目人力管理→项目→进行中→新建合成项目草稿（未保存）",
+            "storageType": "日期控件",
+            "required": true,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F47",
+            "label": "启动日期"
+          },
+          {
+            "id": "BC-F47-F006",
+            "context": "项目人力管理→项目→进行中→新建合成项目草稿（未保存）",
+            "storageType": "日期控件",
+            "required": false,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F47",
+            "label": "预计结项日期"
+          },
+          {
+            "id": "BC-F47-F007",
+            "context": "项目人力管理→项目→进行中→新建合成项目草稿（未保存）",
+            "storageType": "组织选择器",
+            "required": true,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F47",
+            "label": "所属组织"
+          },
+          {
+            "id": "BC-F47-F008",
+            "context": "项目人力管理→项目→进行中→新建合成项目草稿（未保存）",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F47",
+            "label": "上级项目"
+          },
+          {
+            "id": "BC-F47-F009",
+            "context": "项目人力管理→项目→进行中→新建合成项目草稿（未保存）",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F47",
+            "label": "目标"
+          },
+          {
+            "id": "BC-F47-F010",
+            "context": "项目人力管理→项目→进行中→新建合成项目草稿（未保存）",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F47",
+            "label": "立项附件"
+          }
+        ],
+        "visibleStates": "进行中/已结项；新建/导入/项目架构图；取消/确定/确定并添加人员",
+        "sourceStatement": "项目列表表头项目名称/编码/类型/负责人/启动/预计结项。名称筛选P1V显示空表后新建，UI名称/编码/启动/所属组织必填，其余字段未标必填。填测试名P1V-20260909-测试项目、代码P1V-20260909-PRJ、当天启动，无负责人/上级/附件。所属组织完整测试A名称、P1V以及清空搜索后均为空；选择类型测试项目后再次打开仍无候选。没有借用真实项目/范围，也没有改变权限。取消后Nusion字段数0，未点击确定或确定并添加人员，未创建可确认项目ID。",
+        "operations": "P1OP-F-017一次新建草稿、有限不同查询及类型联动检查后取消；原站无项目写入结果，不把填表算保存。",
+        "unknown": "组织候选为空原因未由UI说明，不能判租户无组织、账号无权限或接口故障。新建服务端必填/编号唯一、保存后状态、添加人员比例/期间冲突/工时审批未验证；保留具体前置限制继续设置/工时。项目类型枚举不是全部项目生命周期或项目组织体系。"
+      },
+      {
+        "evidenceRef": "BC-F48",
+        "source": "docs/P1_Source_Observations_20260907.md",
+        "observedDate": "2026-09-09",
+        "recordedAt": "2026-09-09T05:33:43.976766+00:00",
+        "observationTimePrecision": "本功能链归档时间",
+        "role": "当前单账号",
+        "flowRef": [],
+        "id": "BC-F48",
+        "moduleId": "M20",
+        "path": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+        "level": "F",
+        "recordType": "已通过合成测试数据执行验证（限定测试组织的工时方案配置）",
+        "layout": "周期下拉、优先级方案列表、新建/编辑联动表单、组织范围多选弹层",
+        "fields": [
+          {
+            "id": "BC-F48-F001",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": null,
+            "default": "当前自然月",
+            "options": [
+              "自然月",
+              "非自然月"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "汇总周期类型"
+          },
+          {
+            "id": "BC-F48-F002",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": true,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "方案名称"
+          },
+          {
+            "id": "BC-F48-F003",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": true,
+            "default": "本次新建7",
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "优先级"
+          },
+          {
+            "id": "BC-F48-F004",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": true,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "方案适用范围"
+          },
+          {
+            "id": "BC-F48-F005",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "方案说明"
+          },
+          {
+            "id": "BC-F48-F006",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": [
+              "天",
+              "月"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "填写周期"
+          },
+          {
+            "id": "BC-F48-F007",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": [
+              "天",
+              "周",
+              "月"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "提交审批周期（按天填写时）"
+          },
+          {
+            "id": "BC-F48-F008",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": true,
+            "default": "具体时长（小时）",
+            "options": [
+              "具体时长（小时）",
+              "工时占比（百分比）"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "填报单位"
+          },
+          {
+            "id": "BC-F48-F009",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": true,
+            "default": "按【假勤管理】的工作日历",
+            "options": [
+              "按【假勤管理】的工作日历",
+              "按国家法定日历"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "填报日历（按天后出现）"
+          },
+          {
+            "id": "BC-F48-F010",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": null,
+            "default": "否",
+            "options": [
+              "是",
+              "否"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "限制员工本人填报未来工时"
+          },
+          {
+            "id": "BC-F48-F011",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": null,
+            "default": "当前开关开启",
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "限制工作日填报时长"
+          },
+          {
+            "id": "BC-F48-F012",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": true,
+            "default": "指定时长",
+            "options": [
+              "指定时长",
+              "应出勤",
+              "实出勤",
+              "时长范围"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "可填报时长"
+          },
+          {
+            "id": "BC-F48-F013",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": null,
+            "default": "本次8.0小时",
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "指定时长数值"
+          },
+          {
+            "id": "BC-F48-F014",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": null,
+            "default": "未选",
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "加班时长"
+          },
+          {
+            "id": "BC-F48-F015",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": null,
+            "default": "未选",
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "休假时长"
+          },
+          {
+            "id": "BC-F48-F016",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": null,
+            "default": "开关关闭",
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "休息日可填报工时"
+          },
+          {
+            "id": "BC-F48-F017",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": true,
+            "default": "否",
+            "options": [
+              "是",
+              "否"
+            ],
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "是否消息提醒"
+          },
+          {
+            "id": "BC-F48-F018",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "范围部门"
+          },
+          {
+            "id": "BC-F48-F019",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "范围职务序列"
+          },
+          {
+            "id": "BC-F48-F020",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "范围职务"
+          },
+          {
+            "id": "BC-F48-F021",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "范围雇佣关系"
+          },
+          {
+            "id": "BC-F48-F022",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "范围职位"
+          },
+          {
+            "id": "BC-F48-F023",
+            "context": "项目人力管理→设置→周期设置/填报方案→合成方案保存及编辑回读",
+            "storageType": null,
+            "required": null,
+            "default": null,
+            "options": null,
+            "limit": null,
+            "evidenceRef": "BC-F48",
+            "label": "状态"
+          }
+        ],
+        "visibleStates": "新方案列表7/启用/编辑停用复制；全局汇总自然月未改；保存回读按天写/周审、小时、国家法定日历、8.0、消息否",
+        "sourceStatement": "周期设置说明按个人/每月/不同项目汇总工时总数和占比，当前自然月，可选非自然月但未修改。填报方案列表有优先级、状态及默认方案，默认方案说明匹配不到其他方案时使用。新建草稿名称P1V-20260909-测试工时方案，优先级默认7；范围弹窗为部门/职务序列/职务/雇佣关系/职位，无直接员工字段。部门多选能查R/A/B并可选100项，最终仅A(包含下级)，A当前无下级；与BC-F47项目所属组织单选为空区别保留。按天填/周审批后出现日历及工作日限制，选择国家法定日历用于独立合成案例；工作日限制开、指定8.0小时、加班/休假未选、休息日关、未来限制否、消息否。保存表单关闭，列表新增优先级7/名称/启用/编辑停用复制；再打开本方案编辑回读全部上述关键值一致，取消未再保存。",
+        "operations": "P1OP-F-018一次保存，之后编辑只读回查并取消；全局周期/既有方案/默认兜底未改，无填报、审批、提醒发送。合成配置取值是测试样例，不是已批准的项目产品策略。",
+        "unknown": "当前列表和编辑没有显示业务UUID，行data-udc/udt为不同操作追踪ID，不冒作记录ID；iframe navViewMenuID/navCode为导航ID，也不混用。以唯一测试名＋优先级7＋A范围精确定位，待可见记录ID入口。范围多维组合、优先级方向/冲突、0~24与8小时按项目或跨项目合计的口径、占比分母、周周期边界、审批人/通知配置与实际填报未证。名称/说明不能代替实际字段。"
       }
     ],
     "humanAcceptancePrerequisite": false,
@@ -36077,6 +36550,26 @@
           "after": "BC-F45确认合成兼职自动终止作废后，当前任职中及全部兼职记录未见EA；全部视图仍默认筛选任职中/任职结束。状态弹层只有全选、空、任职中、任职结束，无作废选项；选全选后筛选含空仍无EA。随后仅导航到本次之前真实打开过的cf48b4dc编辑UI原URL（未构造API或改URL参数），可读回相同EA工号、类型兼职、B部门、主职A，开始2026-09-09，结束9999-12-31。未见任职状态/作废字段。说明记录仍可由原UI回读，不能声称物理删除；也不能从列表消失把未来定时任务/全部消费者当通过。",
           "evidence": "BC-F46",
           "next": "保存可见性限制，不将记录删除/在任/结束状态编造成已核；其他模块分别核消费者。"
+        },
+        {
+          "id": "P1OP-F-017",
+          "at": "2026-09-09T05:22:35.652232+00:00",
+          "objectRefs": "M20拟建P1V-20260909-PRJ/P1V-20260909-测试项目，无确认ID",
+          "before": "项目名称筛选P1V空表；新建编码初始YF00018，修改为测试标记",
+          "action": "填写名/码/启动日，检查所属组织不同查询及类型联动后取消；没有点击确定/添加人员",
+          "after": "必填组织无候选，草稿已关闭，无可确认创建结果，不借用真实项目",
+          "evidence": "BC-F47",
+          "next": "M20设置/工时继续；组织候选路径待证，恢复后先查询结果再保存。"
+        },
+        {
+          "id": "P1OP-F-018",
+          "at": "2026-09-09T05:30:19.008703+00:00",
+          "objectRefs": "P1V-20260909-测试工时方案/优先级7/仅测试A(包含下级)，业务UUID未在当前UI显示",
+          "before": "填报方案无已建本标记；新建默认优先级7，范围限制A；按天填/周审，小时，国家法定日历，工作日指定8小时；加班/休假未选、休息日关闭、未来限制否、消息提醒否。此为合成案例取值，不是项目已批准规则",
+          "action": "准备保存该独立测试范围方案；不改现有方案或全局周期，不发送提醒或执行人工审批",
+          "after": "周期设置说明按个人/每月/不同项目汇总工时总数和占比，当前自然月，可选非自然月但未修改。填报方案列表有优先级、状态及默认方案，默认方案说明匹配不到其他方案时使用。新建草稿名称P1V-20260909-测试工时方案，优先级默认7；范围弹窗为部门/职务序列/职务/雇佣关系/职位，无直接员工字段。部门多选能查R/A/B并可选100项，最终仅A(包含下级)，A当前无下级；与BC-F47项目所属组织单选为空区别保留。按天填/周审批后出现日历及工作日限制，选择国家法定日历用于独立合成案例；工作日限制开、指定8.0小时、加班/休假未选、休息日关、未来限制否、消息否。保存表单关闭，列表新增优先级7/名称/启用/编辑停用复制；再打开本方案编辑回读全部上述关键值一致，取消未再保存。",
+          "evidence": "BC-F48",
+          "next": "复用本方案，不重复创建；继续项目/人员/工时入口并查询业务UUID可见路径，提醒保持否。"
         }
       ],
       "records": [
@@ -36209,6 +36702,16 @@
           "status": "开始2026-09-10、结束--、人员状态离职、主职；9日当前人员仍在职视图",
           "evidence": "BC-F45",
           "retention": "保留作为后续再入职/时间生效验证前置；不删除历史，不改时钟/原日期以冒充当前离职"
+        },
+        {
+          "objectId": "UI精确名称P1V-20260909-测试工时方案＋优先级7（业务UUID未显示）",
+          "moduleId": "M20",
+          "objectType": "工时填报方案",
+          "marker": "P1V-20260909-测试工时方案",
+          "relations": "仅A 2dabd0b9(包含下级，当前无下级)，其他范围字段空；与真实默认方案独立；无项目/工时记录已提交",
+          "status": "保存启用；按天填/周审、小时、国家法定日历、指定8.0工作日小时、加休假未选、休息日关、未来限制否、消息提醒否",
+          "evidence": "BC-F48",
+          "retention": "保留为M20合成链前置；不改全局周期/真实方案、不发提醒。UUID缺口明确，追踪/菜单ID不冒充业务ID。"
         }
       ],
       "residuals": [
@@ -36224,7 +36727,8 @@
         "EA原关联recordId 0f0ac049已由BC-F45核实为入职EmploymentRecord，不再类型未知；人员父ID71e030ac、独立兼职cf48b4dc和未来离职c074f65a分别记录。",
         "兼职cf48b4dc已确认离职后自动终止作废，当前列表（含空状态）不见但旧UI仍可读同ID，终态标志/消费者后效待证；未删除或再次保存，不再按在任前置使用。",
         "测试法人LA ff7be18d-04a6-4f3a-8610-f6f230963349保存启用，范围空表含义待证，未绑定真实业务，保留后续引用补证。",
-        "EA已办理最后工作日9月9日离职，创建c074f65a离职事件9月10日起；9日仍在职。兼职自动终止文案已确认、实际后效待查询；未办理重聘。"
+        "EA已办理最后工作日9月9日离职，创建c074f65a离职事件9月10日起；9日仍在职。兼职自动终止文案已确认、实际后效待查询；未办理重聘。",
+        "M20测试工时方案P1V-20260909-测试工时方案已启用，优先级7、仅A含下级、消息否；无项目/实际工时/审批记录；业务UUID未显示，保留前置，不重复创建。"
       ],
       "markerCompatibility": "本轮主标记P1V-20260909；字段拒绝连字符时使用同日无分隔形式P1V20260909，并在records/operations记录完整名称编码映射，查询使用P1V前缀同时覆盖两式。不得为兼容标记改原站校验。"
     }
@@ -36340,7 +36844,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-09T05:17:06.802724+00:00",
+    "updatedAt": "2026-09-09T05:33:43.976766+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -36398,15 +36902,15 @@
           },
           {
             "object": "项目人力（M20）",
-            "fields": "BC-P1C-M20-02项目人员已见“人员”“操作”“包含已结项”；其余项目主键/工时单位、填报与审批尚未核实",
+            "fields": "BC-F47项目名称/编码/启动/所属组织UI必填；编码自动值可输入改，类型研发/实施/测试；负责人、预计结项、上级项目、目标、立项附件分列。BC-P1C-M20-02人员列表仍单独保留，比例/工时单位未证。 BC-F48汇总自然月/非自然月，方案优先级/范围/日历/填写与审批周期/小时或比例/时长来源/加休假/未来限制/提醒分别建词条。",
             "roles": "项目经理、参与人、HR的具体权限待核实，不套用组织经理",
-            "lifecycle": "项目状态、人员加入退出、工时提交审批/回退/锁期尚未探索",
-            "actions": "旧证据阶段未执行工时填报；最新合成测试授权允许按可控关联补建最小项目/分配/工时，真实通知和权限边界继续限制。",
+            "lifecycle": "项目进行中/已结项视图与上级项目结构已观察；实际开始/结项、人员入退、工时提交审批/回退/锁期未证。 BC-F48新建合成填报方案保存启用，编辑/停用/复制独立，匹配不到其他方案有默认兜底；优先级方向/冲突未证。",
+            "actions": "项目查询/新建草稿/确定或确定并添加人员为独立入口；本次因必填组织无候选取消，未保存/分配；继续现有设置与工时说明。",
             "codeRefs": [
               "docs/delivery/Scope_Register.json"
             ],
-            "acceptance": "待取得项目与工时表单后才能定义工时重叠、合计、审批、薪资影响场景；当前不设虚构通过预期",
-            "gap": "M20未独立实现；项目归属BP-F不等于可按任职调动替代",
+            "acceptance": "候选：明确组织候选范围后，保存项目须返回稳定ID并回读名称/编码/日期/组织；保存与添加人员结果分别核。当前必填组织空阻本新建链，未硬写成功预期。人员分配比例、跨项目期间冲突和工时单位/审批规则补证后再给精确计算与拒绝预期。 已实测只含测试A、消息否的独立方案创建回读。项目和工时尚未保存，不能称填报审批通过。候选场景应分别验证按天/按月、工作日/休息日、小时/比例、应出勤/实出勤与加休假来源版本、同人跨项目合计、默认兜底及多范围冲突；精确预期需继续补证/评审。",
+            "gap": "当前lib/app静态关键词及文件检索仅见48组入口清单，未见项目人力专用项目/分配/工时实现；原站所属组织候选在多个查询条件和类型选择后均空，原因未说明。不把组织编制/任职调动或学习项目当M20替代。 工时方案部门多选能查测试A/B，但项目所属组织单选无候选，只能定位到控件/场景差异，不推为租户组织不存在。消息实际渠道和审批人仍未知，当前原站测试选择消息否。",
             "classification": "原站局部证据及原范围/差异输入；具体产品规则待补证，不声称已实现",
             "accepted": false,
             "id": "BP-F-REQ-03"
@@ -38841,6 +39345,12 @@
         "dependency": "BP-F人员/主兼职/离职→BP-C/P/L/A/S/I各消费者；不套用单当前orgId或单status",
         "contract": "原站当前在职人员可以有次日离职事件；本合成链最后工作日9日→入职区间截止9日、离职主职10日起。兼职独立记录在确认自动终止作废后列表不见但原UI可读，终态/消费者尚待证。人员主ID、入职/兼职/离职任职ID、审批ID和账号分别建模讨论；只代表源事实，项目策略待评审。",
         "evidence": "BC-F39–46；人员71e030ac，入职0f0ac049，兼职cf48b4dc，离职c074f65a；BC-F43当前重聘合并模式，未执行重聘。"
+      },
+      {
+        "term": "项目工时与假勤时长",
+        "dependency": "BP-F/M20填报方案→BP-A日历/应实出勤/加班/休假；BP-S项目成本消费者待证",
+        "contract": "月汇总、填写周期、审批周期、工作日与休息日、小时与比例、多个项目合计分开。原站方案可选假勤日历或国家日历、指定/应出勤/实出勤/范围，不能把考勤时数直接当项目工时。合成测试取8小时不批准本项目标准工时。",
+        "evidence": "BC-F48；仅测试A方案配置保存，实际填报/审批/成本核算未验证。"
       }
     ],
     "consistencyReview": {

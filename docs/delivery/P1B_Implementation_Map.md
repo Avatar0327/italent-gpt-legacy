@@ -1,6 +1,6 @@
 # 已有实现与产品需求对应
 
-生成来源：`Scope_Register.json → p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T05:15:26.234878+00:00。
+生成来源：`Scope_Register.json → p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T05:33:43.976766+00:00。
 
 对应当前源码静态核对；可复用是技术候选，不是当前测试或业务验收通过。历史测试只在原Verification标注的testedSourceCommit及适用范围有效，本轮未复跑。产品源码未修改。
 
@@ -123,7 +123,7 @@
 |---|---|---|---|---|
 | BP-F/BP-F-REQ-01 | 组织/岗位/职级/员工；[P1B_BP_F_Specification.md](../../docs/delivery/P1B_BP_F_Specification.md) | 本项目既有实现静态事实；转为产品要求待评审 | [model.ts](../../lib/hris/model.ts)；[authorization.ts](../../lib/hris/authorization.ts)；[route.ts](../../app/api/hris/route.ts) | F-SPEC-01仅岗位/职级名称；兼岗/再入职/法人不是普通员工编辑 |
 | BP-F/BP-F-REQ-02 | F03调动原单和执行记录；[P1B_BP_F_Specification.md](../../docs/delivery/P1B_BP_F_Specification.md) | 本项目既有实现静态事实；转为产品要求待评审 | [model.ts](../../lib/hris/model.ts)；[f01-f04-transfer-roles.test.mjs](../../tests/f01-f04-transfer-roles.test.mjs) | D1–D7已确认；F-SPEC-02/03仅异常边界和关联宽度待审 |
-| BP-F/BP-F-REQ-03 | 项目人力（M20）；[P1B_BP_F_Specification.md](../../docs/delivery/P1B_BP_F_Specification.md) | 原站局部证据及原范围/差异输入；具体产品规则待补证，不声称已实现 | [Scope_Register.json](../../docs/delivery/Scope_Register.json) | M20未独立实现；项目归属BP-F不等于可按任职调动替代 |
+| BP-F/BP-F-REQ-03 | 项目人力（M20）；[P1B_BP_F_Specification.md](../../docs/delivery/P1B_BP_F_Specification.md) | 原站局部证据及原范围/差异输入；具体产品规则待补证，不声称已实现 | [Scope_Register.json](../../docs/delivery/Scope_Register.json) | 当前lib/app静态关键词及文件检索仅见48组入口清单，未见项目人力专用项目/分配/工时实现；原站所属组织候选在多个查询条件和类型选择后均空，原因未说明。不把组织编制/任职调动或学习项目当M20替代。 工时方案部门多选能查测试A/B，但项目所属组织单选无候选，只能定位到控件/场景差异，不推为租户组织不存在。消息实际渠道和审批人仍未知，当前原站测试选择消息否。 |
 | BP-F/BP-F-REQ-04 | 再入职身份、司龄与签订次数；[P1B_BP_F_Specification.md](../../docs/delivery/P1B_BP_F_Specification.md) | 原站配置说明事实与项目未实现边界；产品策略待需求评审 | [model.ts](../../lib/hris/model.ts)；[module-progress.ts](../../lib/hris/module-progress.ts)；[P1_Source_Observations_20260907.md](../../docs/P1_Source_Observations_20260907.md) | 保留完整M01后续需求，不阻塞D1–D7；身份/司龄/合同计次选择尚未确认，不能借普通员工新增完成再入职 撤销纠错与不可手动入口清单仍未知；初始默认仅帮助出处，不作为本项目要求。 |
 | BP-F/BP-F-REQ-05 | 合同协议、法人关联及合同字段版本；[P1B_BP_F_Specification.md](../../docs/delivery/P1B_BP_F_Specification.md) | 本项目既有实现静态事实及原站配置差异；除已确认范围外待产品评审 | [workforce.ts](../../lib/hris/workforce.ts)；[contract-fields.ts](../../lib/hris/contract-fields.ts)；[contract-field-model.ts](../../lib/hris/contract-field-model.ts)；[development.ts](../../lib/hris/development.ts) | BC-F23/24原站报表连续判定和显式renewalOf不同；法人文本不能支持法人停用/改名/多主体历史；电子签、到期自动任务、次数累计/日期连续缺口保留 |
 | BP-F/BP-F-REQ-06 | 岗位编制与员工经历子集；[P1B_BP_F_Specification.md](../../docs/delivery/P1B_BP_F_Specification.md) | 既有实现静态候选；原站子集说明仅作差异依据 | [workforce.ts](../../lib/hris/workforce.ts)；[employee-experiences.ts](../../lib/hris/employee-experiences.ts) | BC-F22原站按配置唯一键控制新增与导入更新；本项目固定复合键和三类经历不是可配置子集/全量导入。兼职占编和项目人力工时不由主职人数替代。 |
