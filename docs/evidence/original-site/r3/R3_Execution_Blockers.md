@@ -1,6 +1,6 @@
 # R3 当前执行阻塞
 
-更新时间：2026-09-10T14:26:41.428534+00:00。003已解除；本次真正停止原因004，不是员工单一路径或角色缺口。
+2026-09-10T15:05:13.928972+00:00。003/004已解除，005为当前浏览器输入阻塞；001人员路径及002角色缺口不作为整轮停止原因。
 
 ## R3-EXEC-BLOCK-001
 
@@ -54,7 +54,7 @@
 ```json
 {
   "id": "R3-EXEC-BLOCK-004",
-  "status": "ENV_BLOCKED",
+  "status": "RESOLVED",
   "scope": "srworkshopbj.italent.cn当前浏览器交互",
   "observed": "用户重新授权后曾恢复执行；本次检查未保存薪资方案草稿的算税开关及绩效状态又被自动审批拒绝。随后只读现有草稿名称字段仍被拒绝。",
   "automatic_review_reason": "The salary-plan draft remains unsaved, and this repeats the denied origin access that could discard entered data without new user approval.",
@@ -63,6 +63,25 @@
   "not_observed": "没有实际丢失草稿、串页、互踢或登录失效证据；不将风险推测记为故障事实。",
   "owner_role": "平台自动审批/用户重新确认（不是产品设计缺陷）",
   "resume_condition": "用户重新授权原站访问并确认如何保护已记录薪资草稿；先只读回查，不绕过审批。",
-  "recorded_at": "2026-09-10T14:26:41.428534+00:00"
+  "recorded_at": "2026-09-10T14:26:41.428534+00:00",
+  "resolved_at": "2026-09-10T15:05:13.928972+00:00",
+  "resolution": "用户再次授权原站访问后，现有草稿读取和正式算税单选修改成功；原拒绝解除。"
+}
+```
+
+## R3-EXEC-BLOCK-005
+
+```json
+{
+  "id": "R3-EXEC-BLOCK-005",
+  "status": "ENV_BLOCKED_INPUT_CHANNEL",
+  "scope": "当前所选浏览器的交互输入；M07/M27/M16三张R3独立页面均出现输入超时，读取仍可用",
+  "observed": "M07草稿取消：首次get tabs超时，回读仍可见后一次受控重试Runtime.evaluate超时；M27自有课程编辑及M16分布规则点击均超时；M16新截图确认按钮可见无遮挡，同一浏览器支持的CUA点击亦Input.dispatchMouseEvent超时。",
+  "action_readback": "M16仍原零人员活动，未进入分布规则；M07草稿iframe仍visible=true、zIndex10000，不能记取消成功；M27最后已下架。",
+  "not_observed": "未出现自动审批新拒绝、登录失效、真实串页、数据丢失或站点反自动化提示，不据超时推定这些故障。",
+  "owner_role": "云浏览器运行环境维护者/人工接管诊断（未确认承担）",
+  "resume_condition": "保留同一浏览器及R3数据；恢复可确认的UI输入后，先核对现有草稿/页面再继续，不再要求重复原站授权。",
+  "manual_handoff_next": "可向用户提供当前R3薪资草稿接管入口，正常取消后确认返回列表；字段已有记录，不涉及保存、核算或其他标签。",
+  "recorded_at": "2026-09-10T15:05:13.928972+00:00"
 }
 ```

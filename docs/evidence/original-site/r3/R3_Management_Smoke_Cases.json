@@ -510,8 +510,8 @@
       "id": "M07-RC-13",
       "module": "M07",
       "case": "方案关闭外部算税",
-      "status": "ENV_BLOCKED",
-      "evidence": "精确点击后回读被拒绝，不能记为关闭成功"
+      "status": "VERIFIED_DRAFT_ONLY",
+      "evidence": "M07-ORIGIN-008，正式radio点击后独立回读否；未保存/未计算"
     }
   ]
 }

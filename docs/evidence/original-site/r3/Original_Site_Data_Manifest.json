@@ -649,6 +649,14 @@
       "result": "unsaved; group_unavailable_in_picker; tax_off_unconfirmed",
       "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M07_PLAN01",
       "notes": "未点击保存、未核算、未调用外部算税。"
+    },
+    {
+      "id": "R3-OP-028",
+      "module": "M07",
+      "action": "再次授权后回读并关闭本轮草稿个税通算税",
+      "result": "draft_tax_off_and_month_verified; cancellation_unconfirmed_due_input_timeout",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M07_PLAN01",
+      "notes": "初读仍是，点击正式radio图标，独立回读否选中；月字段确认。未保存、未核算，无新对象。"
     }
   ],
   "counts": {
@@ -667,8 +675,8 @@
   "external_sends": null,
   "payments": 0,
   "declarations": 0,
-  "checkpoint_at": "2026-09-10T14:26:41.428534+00:00",
-  "workflow_status": "ENV_BLOCKED_salary_draft_origin_access_denied_after_reauthorization",
+  "checkpoint_at": "2026-09-10T15:05:13.928972+00:00",
+  "workflow_status": "ENV_BLOCKED_browser_input_channel_timeout; scoped_reads_available",
   "execution_blockers": [
     {
       "id": "R3-EXEC-BLOCK-001",
@@ -704,7 +712,7 @@
     },
     {
       "id": "R3-EXEC-BLOCK-004",
-      "status": "ENV_BLOCKED",
+      "status": "RESOLVED",
       "scope": "srworkshopbj.italent.cn当前浏览器交互",
       "observed": "用户重新授权后曾恢复执行；本次检查未保存薪资方案草稿的算税开关及绩效状态又被自动审批拒绝。随后只读现有草稿名称字段仍被拒绝。",
       "automatic_review_reason": "The salary-plan draft remains unsaved, and this repeats the denied origin access that could discard entered data without new user approval.",
@@ -713,7 +721,21 @@
       "not_observed": "没有实际丢失草稿、串页、互踢或登录失效证据；不将风险推测记为故障事实。",
       "owner_role": "平台自动审批/用户重新确认（不是产品设计缺陷）",
       "resume_condition": "用户重新授权原站访问并确认如何保护已记录薪资草稿；先只读回查，不绕过审批。",
-      "recorded_at": "2026-09-10T14:26:41.428534+00:00"
+      "recorded_at": "2026-09-10T14:26:41.428534+00:00",
+      "resolved_at": "2026-09-10T15:05:13.928972+00:00",
+      "resolution": "用户再次授权原站访问后，现有草稿读取和正式算税单选修改成功；原拒绝解除。"
+    },
+    {
+      "id": "R3-EXEC-BLOCK-005",
+      "status": "ENV_BLOCKED_INPUT_CHANNEL",
+      "scope": "当前所选浏览器的交互输入；M07/M27/M16三张R3独立页面均出现输入超时，读取仍可用",
+      "observed": "M07草稿取消：首次get tabs超时，回读仍可见后一次受控重试Runtime.evaluate超时；M27自有课程编辑及M16分布规则点击均超时；M16新截图确认按钮可见无遮挡，同一浏览器支持的CUA点击亦Input.dispatchMouseEvent超时。",
+      "action_readback": "M16仍原零人员活动，未进入分布规则；M07草稿iframe仍visible=true、zIndex10000，不能记取消成功；M27最后已下架。",
+      "not_observed": "未出现自动审批新拒绝、登录失效、真实串页、数据丢失或站点反自动化提示，不据超时推定这些故障。",
+      "owner_role": "云浏览器运行环境维护者/人工接管诊断（未确认承担）",
+      "resume_condition": "保留同一浏览器及R3数据；恢复可确认的UI输入后，先核对现有草稿/页面再继续，不再要求重复原站授权。",
+      "manual_handoff_next": "可向用户提供当前R3薪资草稿接管入口，正常取消后确认返回列表；字段已有记录，不涉及保存、核算或其他标签。",
+      "recorded_at": "2026-09-10T15:05:13.928972+00:00"
     }
   ],
   "synthetic_input_files": [
@@ -929,7 +951,7 @@
   },
   "employee_established": false,
   "repository_recheck": {
-    "recorded_at": "2026-09-10T14:21:01Z",
+    "recorded_at": "2026-09-10T15:05:13.928972+00:00",
     "remote_main_sha": "22be3a7e366d6787180d4f593a30f5984c70e03a",
     "r3_p2_design_or_review_branch_found": false,
     "p2_status_from_repository": "未启动（已准入）",
@@ -938,7 +960,9 @@
     "tracking_branch": "evidence/r3-origin-parity-20260910",
     "last_pushed_m16_sha": "3f704a456394b1fd7dab126d5a7ef8a0bf9586b8",
     "last_pushed_m11_sha": "d31d7c4f17bf5ce30860409a2ed369958f16ac59",
-    "last_pushed_m12_sha": "2946f0be6a742b4e14f44a559be263f968623fc0"
+    "last_pushed_m12_sha": "2946f0be6a742b4e14f44a559be263f968623fc0",
+    "remote_evidence_sha_before_this_increment": "ee698c2de9ee5d21ad8807fd8c3ccec96bc6cef3",
+    "r1_evidence_readonly_observed_sha": "5aa78e420db1e6df498f3f5101e18af10047d427"
   },
   "unsaved_drafts": [
     {
@@ -952,10 +976,11 @@
         "name_verified": true,
         "own_group_search": "ZZ_R3_R3-ORIGIN-20260910-103900_M07_GROUP01",
         "group_selected": false,
-        "pay_cycle": "月已点击，最终值未回读",
-        "tax_service": "最后验证是；精确点击否后未回读"
+        "pay_cycle": "月，当前草稿输入及可见标签独立回读确认",
+        "tax_service": "否，正式radio图标点击后独立DOM回读：是未选、否已选；仅草稿，未保存"
       },
-      "next_action": "先保留表单查实际状态；未保存，不能核算；不选非R3组。"
+      "next_action": "取消操作超时后草稿仍可见，禁止假定退出或重复建立方案；输入恢复后正常退出/回查R3组资格。不得核算或选原有组。",
+      "cancel_confirmed": false
     }
   ]
 }

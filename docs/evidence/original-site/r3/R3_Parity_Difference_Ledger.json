@@ -189,7 +189,7 @@
       "severity": "Major",
       "module": "M07",
       "title": "月中调动核算与外部算税分别配置",
-      "source_evidence": "M07-ORIGIN-001;002;003;M07-ORIGIN-005;M07-ORIGIN-006;M07-ORIGIN-007",
+      "source_evidence": "M07-ORIGIN-001;002;003;M07-ORIGIN-005;M07-ORIGIN-006;M07-ORIGIN-007;M07-ORIGIN-008",
       "approved_requirement": "M07-SPEC-01; M07-SPEC-02; M07-SPEC-03",
       "design_sha": null,
       "implementation_sha": null,
@@ -201,7 +201,7 @@
       "proposal": "薪资组部门范围、方案编辑/使用权限、月中调动核算、结果来源和税款所属期独立建模。原站个税通算税默认是，不能直接复制为本项目默认外部调用；内部模拟与外部服务须明确隔离、操作前回读有效开关。适用组选择器无R3匹配原因仍待查，不得改选原组。",
       "decision": null,
       "p4_evidence": null,
-      "latest_evidence": "PLAN01仅未保存草稿；个税通关闭动作未获得回读，后续算税/支付/申报未执行。"
+      "latest_evidence": "PLAN01草稿个税通已回读否、周期月；未保存。取消未确认，当前输入通道超时。默认原为是仍成立；无算税、支付或申报。"
     },
     {
       "id": "R3-DIFF-012",
