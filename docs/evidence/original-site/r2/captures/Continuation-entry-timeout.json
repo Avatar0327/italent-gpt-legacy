@@ -1,0 +1,64 @@
+{
+  "id": "R2-ENV-CONT-001",
+  "kind": "execution_environment_incident_not_business_difference",
+  "classification": "ENV_BLOCKED",
+  "severity": "Major",
+  "runId": "R2-ORIGIN-20260910-103952",
+  "checkedAt": "2026-09-10T15:25:01.653347+00:00",
+  "ownedTabs": [
+    "12",
+    "18"
+  ],
+  "observations": [
+    "专属tab12点击360评估活动只改变标题，pathname仍为/portal/convoy/SuccessionAndDevelopment，业务main为空；不能视为已进入M26。",
+    "tab12无未保存表单时重载后仍只有登录外壳；新专属tab18也未加载业务内容。",
+    "tab12另点人才标准入口，标题变化但仍停留上述pathname，main为空。",
+    "tab18末次回读标题人才池，main为空；当前框架请求反复超时。"
+  ],
+  "errors": [
+    {
+      "timestamp": "2026-09-10T15:17:06.430Z",
+      "message": "错误 Error: 请求超时"
+    },
+    {
+      "timestamp": "2026-09-10T15:17:16.432Z",
+      "message": "错误 Error: 请求超时"
+    },
+    {
+      "timestamp": "2026-09-10T15:18:26.457Z",
+      "message": "错误 Error: 请求超时"
+    },
+    {
+      "timestamp": "2026-09-10T15:18:36.519Z",
+      "message": "错误 Error: 请求超时"
+    },
+    {
+      "timestamp": "2026-09-10T15:21:16.530Z",
+      "message": "错误 Error: 请求超时"
+    },
+    {
+      "timestamp": "2026-09-10T15:22:26.545Z",
+      "message": "错误 Error: 请求超时"
+    },
+    {
+      "timestamp": "2026-09-10T15:22:36.696Z",
+      "message": "错误 Error: 请求超时"
+    },
+    {
+      "timestamp": "2026-09-10T15:22:45.147Z",
+      "message": "Uncaught (in promise) Error: timeout, canceled."
+    }
+  ],
+  "limits": [
+    "只证明当前专属标签的业务加载阻塞，不确定后台根因，不推断全租户宕机。",
+    "不是权限不足、验证码阻断、M26查询无结果或业务校验结论。",
+    "未修改其他窗口标签或全局配置；没有本次原站新增、提交或外发操作。"
+  ],
+  "blockedOperations": [
+    "M26双重查重及活动创建",
+    "问卷/对象/评价人与16匿名案例",
+    "M37引用/M06来源续测及M18/M17/M03剩余流程"
+  ],
+  "resumeCondition": "专属标签能显示实际目标模块业务页面后重新核对环境和隔离；先双重查重再创建。",
+  "businessDifferenceCounted": false
+}

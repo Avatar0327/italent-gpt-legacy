@@ -1,0 +1,34 @@
+{
+  "source": "current user message",
+  "baseHead": "d8cc3b44edaab49463b97e09205e008a3841840b",
+  "recordedAt": "2026-09-10T15:09:39.162372+00:00",
+  "CP-002": {
+    "status": "owner_approved",
+    "decision": "产品保持稳定ID和已批准字符串能力；原站adapter可逆映射及冲突检测；不收窄产品数据模型",
+    "implementationStatus": "not_started_in_this_evidence_workflow"
+  },
+  "CP-003": {
+    "status": "owner_approved",
+    "scope": "M26 activity display name only",
+    "originalRunId": "R2-ORIGIN-20260910-103952",
+    "originalName": "ZZ_R2_R2-ORIGIN-20260910-103952_M26_ACT01",
+    "mappedName": "ZZ_R2_R2_ORIGIN_20260910_103952_M26_ACT01",
+    "preserveOriginalIn": [
+      "welcomeText",
+      "dataManifest",
+      "oneToOneMapping"
+    ],
+    "dedupRequired": [
+      "mappedName",
+      "originalRunId"
+    ],
+    "creationStatus": "not_created_ui_unavailable",
+    "currentBlocker": "R2-ENV-CONT-001"
+  },
+  "CP-001": {
+    "status": "design_supplement_proposed_not_approved",
+    "p2IndependentPassRetained": true,
+    "proposalFile": "CP-001_M37_Design_Supplement.md"
+  },
+  "r2P3Started": false
+}

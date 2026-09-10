@@ -32,10 +32,11 @@
       "p1": "M37-SPEC-01 1–200字/trim/库内区分大小写唯一，未规定此字符集",
       "p2": "M37_Design.md及Contract_Repair编码规则未要求此正则",
       "implementation": "旧development.ts code=text 1–200，无该字符集（静态）",
-      "classification": "NEED_OWNER_DECISION",
+      "classification": "INTENTIONAL_DIFFERENCE",
       "evidence": [
         "captures/M37-code-validation.json"
-      ]
+      ],
+      "ownerDecision": "CP-002已批准；原站观察不变。"
     },
     {
       "id": "R2-OBS-M37-004",

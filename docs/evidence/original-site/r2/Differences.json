@@ -13,13 +13,15 @@
   {
     "id": "R2-DIFF-002",
     "module": "M37",
-    "classification": "NEED_OWNER_DECISION",
+    "classification": "INTENTIONAL_DIFFERENCE",
     "severity": "Minor",
     "finding": "原站指标code拒绝连字符/非字母开头；P1/P2未规定该字符集。",
-    "disposition": "建议保留内部稳定ID及现已批字符串能力，原站导入adapter提供可逆编码映射和冲突检查；若要求字段完全一致，由所有者批准收紧新建规则。不阻其余测试。",
+    "disposition": "CP-002推荐方案已获当前用户批准：保留产品稳定ID及字符串能力，源adapter使用显式可逆映射与冲突检测；不全域收窄模型。此窗口未实施adapter。",
     "evidence": [
       "R2-OBS-M37-003"
-    ]
+    ],
+    "previousClassification": "NEED_OWNER_DECISION",
+    "decisionStatus": "owner_approved"
   },
   {
     "id": "R2-DIFF-003",
@@ -27,7 +29,7 @@
     "classification": "DESIGN_GAP",
     "severity": "Minor",
     "finding": "原站行为关键点/面试关键点/发展建议五类型与P2 subsetName的承载语义未明确；不能将子集标题和逐行业务字段混为同值。现字符串结构可能承载，但缺映射/类型校验说明。",
-    "disposition": "M37 P3开工前定向补充字段映射：subsetName承载哪一字段及稳定type字典，或新增专用字段并同步Schema/adapter/原AC02/08；不重做已接受等级修复。",
+    "disposition": "CP-001_M37_Design_Supplement.md已形成定向设计补充建议；由设计负责人确认逐行关键点、建议类型及严格Schema/adapter/AC02/08映射。建议尚未获批，保持既有P2独立通过。",
     "evidence": [
       "R2-OBS-M37-004"
     ]
@@ -59,11 +61,12 @@
     "module": "M26",
     "classification": "ENV_BLOCKED",
     "severity": "Major",
-    "finding": "原站禁止活动名含连字符，与用户强制数据命名规则冲突；合法隔离活动无法创建，16匿名案例及下游报告链路被阻断。",
-    "disposition": "已增量告警；不改名绕开用户规则，不改原站校验。需要所有者允许活动显示名采用可逆下划线映射且原RUN_ID写欢迎语/清单，之后续跑；不是P2撤销或P3缺陷。",
+    "finding": "历史实测：完整RUN_ID活动名被源连字符校验拒绝。当前CP-003已批准仅M26显示名映射，源端接受性尚未验证，16匿名案例仍未执行。",
+    "disposition": "不再等待命名批准。先按映射名及原RUN_ID双重查重，欢迎语保留完整RUN_ID后创建并回读；当前独立执行事件R2-ENV-CONT-001使业务页无法加载。保留本项历史Major至源复验，新增请求超时不重复计作业务差异。",
     "evidence": [
       "R2-OBS-M26-001"
-    ]
+    ],
+    "resolutionStatus": "owner_approved_pending_origin_revalidation"
   },
   {
     "id": "R2-DIFF-M17-001",

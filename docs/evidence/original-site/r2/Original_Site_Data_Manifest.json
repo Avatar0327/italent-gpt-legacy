@@ -289,5 +289,41 @@
   "countingRule": "created数组按可回读登记对象计；子集行/成员关系各计1；recoveredExisting不重复计；失败/未保存不计；干部初始任期不额外虚增。",
   "bulkImportRows": 0,
   "ownedPositionCount": 0,
-  "externalNotificationsEvidence": "所有可见发送/邀请选项保持否；未执行外部发送命令。0为本轮执行计数，未查外部投递日志。"
+  "externalNotificationsEvidence": "所有可见发送/邀请选项保持否；未执行外部发送命令。0为本轮执行计数，未查外部投递日志。",
+  "nameMappings": [
+    {
+      "module": "M26",
+      "type": "feedback_project",
+      "runId": "R2-ORIGIN-20260910-103952",
+      "originalName": "ZZ_R2_R2-ORIGIN-20260910-103952_M26_ACT01",
+      "mappedName": "ZZ_R2_R2_ORIGIN_20260910_103952_M26_ACT01",
+      "approvalRef": "Owner_Decisions_Continuation.json#CP-003",
+      "mappingSemantics": "explicit one-to-one registry; never reverse by blind replacement",
+      "status": "approved_pending_dedup_ui_unavailable",
+      "businessId": null,
+      "dedup": {
+        "mappedName": {
+          "query": "ZZ_R2_R2_ORIGIN_20260910_103952_M26_ACT01",
+          "status": "NOT_EXECUTED_UI_UNAVAILABLE",
+          "matches": null
+        },
+        "originalRunId": {
+          "query": "R2-ORIGIN-20260910-103952",
+          "status": "NOT_EXECUTED_UI_UNAVAILABLE",
+          "matches": null
+        }
+      },
+      "welcomeText": {
+        "plannedValue": "R2原站隔离合成数据验证；RUN_ID：R2-ORIGIN-20260910-103952",
+        "persisted": false
+      },
+      "blocker": "R2-ENV-CONT-001"
+    }
+  ],
+  "continuation": {
+    "baseHead": "d8cc3b44edaab49463b97e09205e008a3841840b",
+    "checkedAt": "2026-09-10T15:25:01.653347+00:00",
+    "newObjects": 0,
+    "currentBlocker": "R2-ENV-CONT-001"
+  }
 }

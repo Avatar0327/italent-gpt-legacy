@@ -7,8 +7,8 @@
   "designContentHead": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
   "designPackageHead": "a7a23d6bff024f4660fd14b0c22f47a6d40d928f",
   "reviewHead": "077e0dc7f37529b9585f030fb1c8460f4c884cd1",
-  "checkpointAt": "2026-09-10T12:32:28.158443+00:00",
-  "status": "paused_at_actual_M26_naming_block_after_independent_module_progress",
+  "checkpointAt": "2026-09-10T15:25:01.653347+00:00",
+  "status": "paused_at_confirmed_business_view_timeouts_after_CP002_CP003_approval",
   "fullModulesComplete": 0,
   "modulesObserved": 6,
   "confirmedCreated": 16,
@@ -16,5 +16,9 @@
   "differenceCount": 8,
   "originEvidenceGate": "NOT_SATISFIED",
   "productTestsExecuted": 0,
-  "p4UatExecuted": 0
+  "p4UatExecuted": 0,
+  "continuationBaseHead": "d8cc3b44edaab49463b97e09205e008a3841840b",
+  "continuationNewObjects": 0,
+  "currentExecutionBlocker": "R2-ENV-CONT-001",
+  "executionIncidents": 1
 }
