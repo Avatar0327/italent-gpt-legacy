@@ -6,6 +6,7 @@
     {
       "id": "M37-SPEC-01",
       "sourcePointer": "/p1B/reviewIssues/31",
+      "topic": "标准、指标库和子集的稳定对象",
       "approvedText": "建议保留标准与指标库完整范围，新增稳定libraryId/indicatorId/standardRootId/versionId和引用行ID；标准维度固定区分能力、潜力、经历、成就，库类型沿三类，成就通过显式来源及版本契约引用，不能默认为潜力或绩效，也不恢复完整M38模型。指标库、指标、等级/行为/发展建议/面试问题各有独立ID与排序，等级数量按该指标显式定义，不固定五级；顺序为正整数，同父同子集不可重号，别称不作键。标准/库名必填1–200字，指标名及代码必填1–200字、trim后库内代码唯一且区分大小写；同名可存在但选择必须显示库/类型/代码/版本，不以名称合并；已用代码改名不换稳定ID。库说明/指标定义/等级说明500字上限，等级说明必填，其余子集描述必填、至4000字作为本项目建议；分类、模型名称、要素文本可空，不自动创建外部模型或资格对象。库类型有指标后不可原地更换，使用中结构修改走新版本。",
       "approvedProposalSha256": "ccf7d658ddfbb6765368fa8321de1ae9031ed55b97b6f01c4fa9d18dc9939082",
       "approvalRecord": "M37-P1-APPROVAL-R2-20260909",
@@ -25,6 +26,7 @@
     {
       "id": "M37-SPEC-02",
       "sourcePointer": "/p1B/reviewIssues/32",
+      "topic": "目标、权重、组合与缺失值",
       "approvedText": "建议每个标准引用绑定指标版本、维度、目标类型/值/单位/方向和权重。未设置目标用null，等级目标必须引用该版本存在的levelId；数值目标必须声明单位、方向和有效范围；事实/经历可为布尔或枚举，不强转数值。权重默认1.0、有限非负数；0明确不参与，启用用于计算的组合至少一个正权重。标准可保存及发布仅作为可选目录，calculationReadiness另外逐用途校验：缺尺度/目标/必要来源不得返回达标或0分。兼容同尺度数值的组合只允许显式版本化加权平均sum(w*x)/sum(w)，必需输入缺失则结果null和原因；序数等级不自动当等距分数，须配置明确转换；不跨维度混加。条件组合用声明式AND/OR和明确比较符/来源，禁止循环/脚本；组合结果与人才评价结果分开，具体M18/M26/M06算法仍由生产者批准，M37只输出定义/约束/就绪信息。",
       "approvedProposalSha256": "3fbc219ecddd798b0c56891b07274ac0de4fe90ad25233b390f7b5435cd03ce9",
       "approvalRecord": "M37-P1-APPROVAL-R2-20260909",
@@ -45,6 +47,7 @@
     {
       "id": "M37-SPEC-03",
       "sourcePointer": "/p1B/reviewIssues/33",
+      "topic": "审批、发布、启停与引用版本",
       "approvedText": "建议标准/指标内容按根ID管理不可变发布版本：draft→submitted→approved→published，退回rejected可修改后重提；approved不等published，active/disabled为已发布版本可供新引用的独立状态。标准及影响评级的指标/等级/组合改版经M19独立审批，管理员不能自审替代；无有效审批路由阻提交/发布，E2限制保留至后续验证。单純分类排序等展示调整仍新版本留痕，可由有manage者发布但不得变更已用评分语义。新增引用只取当前可访问、已发布且启用版本；已启动业务冻结具体标准及子指标版本和快照，不能自动追最新版。停用阻新引用，已启动业务保留冻结版本继续办理并标记来源停用；若确需中止在途业务，另由生产者显式撤销并留原因。已引用版本不物理删除，改错新版本或显式迁移草稿；升级前legacy active映射已存在版本与来源，不能伪造审批历史或自动发布新结构。",
       "approvedProposalSha256": "e345f5b1023d43d85ed5f78949a4e28950b131e769201669f7abd5cd7bc8e84f",
       "approvalRecord": "M37-P1-APPROVAL-R2-20260909",
@@ -65,6 +68,7 @@
     {
       "id": "M37-SPEC-04",
       "sourcePointer": "/p1B/reviewIssues/34",
+      "topic": "目录管理、使用与字段权限",
       "approvedText": "建议read/use/manage/review/publish/export独立动作授权，所属管理组织/明确共享组织/是否含下级按ID和有效期配置，默认不共享；管理员仅有管理能力，审批仍须节点资格且与提交者独立。经理/员工只按显式use范围或所参与业务冻结版本获得必要等级/行为说明，不能由参与一项评估获得整个指标库、内部面试问题或他人评价。面试题/发展建议可配置独立字段用途权限；read不自动export，导出走M32现行当前行列/聚合/链接权限。历史和已停用版本读取仍按当前身份与用途，撤权/解绑清缓存，跨租户ID拒绝，空范围不默认为全员。既有标准全租户可读改为显式范围要经迁移对照，不能猜所有旧使用者都应授权。",
       "approvedProposalSha256": "a4e63ec0fb1588ccb331a926e1415bc2a9e4164eb64bc9b865d59d53edeff661",
       "approvalRecord": "M37-P1-APPROVAL-R2-20260909",
@@ -83,6 +87,7 @@
     {
       "id": "M37-SPEC-05",
       "sourcePointer": "/p1B/reviewIssues/35",
+      "topic": "跨模块消费、异常与迁移验收",
       "approvedText": "建议M37作为标准定义生产者，给M06/M17/M18/M03/M26/M27/M32的契约含rootId/versionId、dimension、indicatorVersionIds、目标/尺度/组合版本、可用状态、useAllowed及原因；消费者业务对象/评价结果另归其模块，不能仅按同名合并M06资格标准或M16绩效指标。M18现同源推断保留UUID缺口，P2要稳定ID映射，不从菜单参数造ID。测评方案记录provider/type/version/外部映射与未配置/失败/unknown，未配置只阻依赖评测，不阻目录需求关闭。旧五级standard版本保留legacy类型、旧ID/等级和消费者引用；新四维度模型显式映射，无法核实的结构/审批历史保留未知，禁止批量推造。保存按revision原子写版本/引用/审计，重复创建先查业务键/请求ID，冲突或结果未知不再开新版本；缺权限/来源停用/版本不兼容分开报错。批准本包全部具体字段、状态、权限、验收预期与实现差异边界后实施；不把历史测试静态读取当本轮复验。",
       "approvedProposalSha256": "3dd28ab3cd6b1d17507d44623cbfd9e868e1f31d442d4d3bb0e6074580192e6a",
       "approvalRecord": "M37-P1-APPROVAL-R2-20260909",
@@ -106,6 +111,7 @@
     {
       "id": "M06-SPEC-01",
       "sourcePointer": "/p1B/reviewIssues/36",
+      "topic": "类别、级别、指标类型与发展通道",
       "approvedText": "建议类别分类树、任职类别、层级、任职级别、指标类型树、指标各有稳定ID/版本/状态，分类与指标类型父子分别禁止成环；类别可显式关联M01职务/职位类型和ID，空关联只表示未配置，不自动全岗适用。级别为独立目录，资格标准通过显式categoryId+levelIds关联，不用相同名称或排序自动归类。名称/编码trim后1–200字；每对象目录内编码唯一且区分大小写，已引用改名不换ID；同名提示编码/层级消歧。顺序正整数、同父展示排序可同号但以稳定ID次序明确，不将排序当级别大小；同资格标准的级别顺序必须明确且不重复。自动编号以对象/规则版本/前缀/计数原子分配，失败不承诺无跳号，不重新使用已发编码；这只是最小目录能力，不建设M35完整主数据引擎。发展通道显示层级/简卡及学习地图各配置版本；地图只按已确认级别→M27资源/计划引用，不自动派课或授资格，未配置保持明确空态。",
       "approvedProposalSha256": "04f970951146e30a518d246d8059997430898eb93c873d2091c6eee94a3a64ad",
       "approvalRecord": "M06-P1-APPROVAL-R2-20260909",
@@ -126,6 +132,7 @@
     {
       "id": "M06-SPEC-02",
       "sourcePointer": "/p1B/reviewIssues/37",
+      "topic": "评分、评级与分级资格标准",
       "approvedText": "建议资格标准含rootId/versionId、类别、级别范围、指标范围及每level×indicator的标准说明/目标；说明首次引入后保存快照，不随原指标文本漂移。评分/评级是不同typedTarget：评分必须另有明确min/max/step/unit/direction及阈值，未知评分满分或精度不默认100/1–5；评级目标引用ratingSchemeVersion+ratingLevelId，以显式等级顺序/达标集合判定，不把任职层级/编号自动映为评分。评级方案等级有唯一正整数序号和名称，至少一个明确等级，说明可空；已用方案变更新版本。通用指标表示可供多个资格标准选用，不自动全员共享或必达。保存/发布目录与certificationReadiness分列，缺关键尺度/目标允许保留标准，但阻相应实际认证，不补0或最低级。多指标默认全部必达；如有组合，按已批准声明式AND/OR及显式阈值版本，缺必需证据为unknown并不得认证，无无依据平均/自动舍入。",
       "approvedProposalSha256": "545ac31b8047e665cd718925599cca675e47c085835fdab4d762d8c3ae5c339c",
       "approvalRecord": "M06-P1-APPROVAL-R2-20260909",
@@ -143,6 +150,7 @@
     {
       "id": "M06-SPEC-03",
       "sourcePointer": "/p1B/reviewIssues/38",
+      "topic": "标准版本、审批与停用影响",
       "approvedText": "建议资格标准和影响评定的目录/评级方案变更走draft→submitted→approved→published，新版本冻结类别/级别/指标/方案/描述和准入策略；通过M19显式版本化路由独立审查，管理员不代自审。发布状态与active/disabled分开；新申请仅可用当前已发布启用且可用规则完整的标准版本。目录/指标停用先给引用清单和影响提示，阻新标准引用；已发布资格标准保留其冻结内容，源停用不自动使所有旧标准/已授资格失效。标准自身停用阻新申请；已提交申请默认按冻结版本继续评审，须明确风险提示，若需中止由授权业务操作逐单终止并记录原因；已经授予的证书只能按独立撤销或到期规则失效。已用版本不物理删除，草稿升级由用户显式迁移，不偷偷追最新。",
       "approvedProposalSha256": "6eba3255667539b353ed5bf64bd8c55663e33cf602c412c5cd4e1feb44f544f8",
       "approvalRecord": "M06-P1-APPROVAL-R2-20260909",
@@ -163,6 +171,7 @@
     {
       "id": "M06-SPEC-04",
       "sourcePointer": "/p1B/reviewIssues/39",
+      "topic": "认证、评审独立性、有效期与续认证",
       "approvedText": "建议本人或有明确代办权的范围HR可申请，申请保存employeeId/standardVersion/level/提交者及材料版本。评审者必须有该资格/级别/组织范围的节点权，排申请人本人、提交者及本申请材料的实际编制参与者；不得凭admin/manager通用角色自动授评审权。委员会机制保留：每节点冻结有效评委与职责，可配置全部通过或明确阈值，必达指标和强制否决项不得用多数票绕过；缺评委/阈值/回避后人数不足阻评审完成，E2不增人，不能一人自审验证。标准明确有效期策略为固定期限或明确长期，两者必须显式选择，不因漏填变永久；固定截止按北京时间含当日，次日派生expired，原certified事实保留；后续评分变化不自动改原授予证据。续认证创建新申请关联previousCertificationId，冻结新版本和证据，不覆盖旧证；同人同资格根与目标级别已有待审/有效证时普通重复拒绝，续认证须显式选择且同一旧证仅一条在途续期，不由新版绕过重复。当前可信证据须同指标/标准版本且满足明确有效窗口；窗口策略可显式不限，但不能从旧版本自动继承。撤销须范围内独立授权HR留原因和当前许可，保留授证快照；不自动升职/调薪或改职级，M01人事仍走既定流程。",
       "approvedProposalSha256": "e68150be044b0c92622c1fa4f244672a400a15b4b7af27c08d01c663aafe80d1",
       "approvalRecord": "M06-P1-APPROVAL-R2-20260909",
@@ -185,6 +194,7 @@
     {
       "id": "M06-SPEC-05",
       "sourcePointer": "/p1B/reviewIssues/40",
+      "topic": "权限、生产者契约、异常与迁移验收",
       "approvedText": "建议目录read/use/manage/review/publish/export、申请代办、评审、撤销和本人结果权限独立，组织/类别/级别及敏感材料字段求交。本人只获本人申请/结果和关联标准必要投影，不能借标准可见读他人评估；历史/附件/导出走当前权限，撤权与离职阻新办理，过去授证保留可追溯。M37仅提供明确版本的能力定义/证据契约，M06资格目录/尺度/结果拥有独立身份，不合并M16绩效或M26答卷；未获M37新规则批准或来源未接时标未配置/版本不兼容，不假装联调成功。M03/M17/M18/M48/M32消费证书ID/标准及级别版本/发证时点/截止/撤销/当前有效性与原因，不通过“certified”单字段判永久有效。复制旧标准/五级引用/有效期空值时保留legacy原语义和历史，不编造原标准审批、资格类别或续证关联。业务变更与审计同revision事务；旧revision拒绝，未知先查原ID/请求键，重复回执不重复授证，撤销失败不虚报已撤销。批准本包字段/状态/权限/验收预期后实施；原站受限与真实多角色验证仍各自记录。",
       "approvedProposalSha256": "fc87038d417dd821847f287a747dccb77a2e4fd7adc2ef68b2dbe3040ee68dc4",
       "approvalRecord": "M06-P1-APPROVAL-R2-20260909",
@@ -208,6 +218,7 @@
     {
       "id": "M26-SPEC-01",
       "sourcePointer": "/p1B/reviewIssues/41",
+      "topic": "评价角色、邀请身份与匿名承诺",
       "approvedText": "建议roleDefinitionId/version、projectId、subjectId、reviewerBindingId、inviteId独立；自评必须同人，非自评不得同人，同项目同受评者同评价者仅一有效邀请，角色冲突在开放前显式处理。角色名trim后1–18字且同目录唯一，最多90角色/套卷15按已见说明作为项目设计，已用角色停用保留历史。对受评者及普通管理者提供分组匿名；自评和明确披露为具名的唯一上级单列，不宣传匿名。HR项目管理权不默认原卷或身份映射读取权；受控审计例外须独立批准、记录目的/范围/时限，并不得向受评者或普通经理披露评价者关联。邀请前展示确切匿名承诺与用途，不新增实际访问者。",
       "approvedProposalSha256": "b8a94bac4ea59d760f926c3a661b3a100ea56031b4c47ded60d54f4247c9956c",
       "approvalRecord": "M26-P1-APPROVAL-20260910",
@@ -227,6 +238,7 @@
     {
       "id": "M26-SPEC-02",
       "sourcePointer": "/p1B/reviewIssues/42",
+      "topic": "匿名阈值、分母、缺评与报告开放",
       "approvedText": "建议匿名组最少3名不同有效评价者，活动可提高阈值而不得低于3；低于阈值同时隐藏分数、精确人数、原评语及可反推的补集，显示“样本不足”。自评/明确具名上级单列；未完成/撤回答卷不入分母，缺失不同0，不达标组不与其他组静默合并。仅可比较尺度一致题目，序数默认分布，中位数或均值必须有显式转换策略。个人报告至少一个合法非自评组才可正式发布，否则仅展示未形成报告状态。组织报告按有效受评者及组双重至少3门槛、独立定义版本与去重，禁止交叠小组差分；先审阅后由独立有权者发布，受评者/团队/HR各有明确开放清单。",
       "approvedProposalSha256": "cce8190c36a9193f1f7c9da9781825b65b0d5f86d13f990cf584ee1a539ae646",
       "approvalRecord": "M26-P1-APPROVAL-20260910",
@@ -240,6 +252,7 @@
         "R2-P3-M26-REVIEW-AC05",
         "R2-M26-S01",
         "R2-M26-S02",
+        "R2-M26-S07",
         "R2-X-05",
         "R2-X-06"
       ],
@@ -251,6 +264,7 @@
     {
       "id": "M26-SPEC-03",
       "sourcePointer": "/p1B/reviewIssues/43",
+      "topic": "题库、套卷、尺度与题目版本",
       "approvedText": "建议题库questionRootId/version，支持量表、单选、多选、文本四类常规题目；每题显式必填、选项ID、允许跳过/不适用、长度及尺度，条件分支须无环且记录未呈现原因。套卷root/version冻结题目顺序/角色适用/维度/M37指标版本；开放活动冻结具体版本，题库停用不改已有卷。数字尺度明确min/max/step/unit/direction，等级引用真实等级ID，不硬编码1–5；选项不同数值，文本不自动量化，不默认AI评分。建议文本上限3000字、普通标题200字、量表/选择需服务端校验；未证明来源上限不写原站事实。问卷规则不完整阻开放，角色启用不得隐式丢题。",
       "approvedProposalSha256": "4cb267f400452e9d3c47a213081373374b9622b7759347e8a9ae877ed01216c0",
       "approvalRecord": "M26-P1-APPROVAL-20260910",
@@ -270,6 +284,7 @@
     {
       "id": "M26-SPEC-04",
       "sourcePointer": "/p1B/reviewIssues/44",
+      "topic": "活动、答卷撤回及报告更正生命周期",
       "approvedText": "建议活动draft→approved→scheduled/open→closed，审批路由复用M19独立节点；保存、开放、到期、停止收集、报告发布不同状态。开放前名单与套卷可改，开放后新增/替换走明确新修订并保留已发邀请/答卷，不能默默改题；主体取消保留原因。本人可在开放窗口内撤回或提交新答卷版本，仅最新有效版汇总；关闭后锁定。纠错重开须独立审批，形成新收集版本，已发布报告标待更正并阻旧链接继续对外提供；新报告新版本关联旧版，权限内保留更正史，不允许重复发布差分探测。撤权/解绑/离职停止本人新答，既有合法答卷按冻结样本政策保留，因质量剔除须授权原因及重新阈值核算。",
       "approvedProposalSha256": "4679199690f5517d89be670769ff543c7d1a3a89842e8a60c2a96b5f16b65ea7",
       "approvalRecord": "M26-P1-APPROVAL-20260910",
@@ -280,7 +295,8 @@
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC08",
         "R2-P3-M26-REVIEW-AC09",
-        "R2-P3-M26-REVIEW-AC10"
+        "R2-P3-M26-REVIEW-AC10",
+        "R2-M26-S05"
       ],
       "taskIds": [
         "P3-R2-M26-04"
@@ -289,6 +305,7 @@
     {
       "id": "M26-SPEC-05",
       "sourcePointer": "/p1B/reviewIssues/45",
+      "topic": "消费契约、数据用途及异常责任",
       "approvedText": "建议M37提供指标/尺度版本，M26输出报告版本、允许分组统计、覆盖/缺失原因、用途及授权状态；不自动回写能力评级、资格通过或任用结论。M48只显示本人邀请/完成状态和已开放本人报告；M32仅在read/export独立许可及相同抑制规则下消费。BASE01/02校验当前身份/组织/字段，BASE03/04审计及附件历史不泄漏身份映射，BASE05恢复后重新授权核对，BASE06通知请求/投递/失败分态。新增请求键+内容摘要，重复返回同结果，未知先查，旧revision拒绝；临时故障不显示假0，撤权清缓存和下载令牌；提醒只留契约，本轮不发送。",
       "approvedProposalSha256": "93177dd731e8c9b42e93cff890fe89c329a1ddf81aa49bc16774a2dbf8ffb6e6",
       "approvalRecord": "M26-P1-APPROVAL-20260910",
@@ -299,6 +316,7 @@
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC11",
         "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S06",
         "R2-X-05",
         "R2-X-06"
       ],
@@ -310,6 +328,7 @@
     {
       "id": "M18-SPEC-01",
       "sourcePointer": "/p1B/reviewIssues/46",
+      "topic": "项目对象、范围快照与标准工具契约",
       "approvedText": "建议projectId/version、subjectRecordId、stableEmployeeId、组织及岗位快照、scenario/category/year/start/end、M37standardVersion、toolContractVersion、templateVersion/workflowVersion/schemeVersion分别保存；名称1–200、日期合法且结束不早于开始、年度明确，场景/分类/组织必选；保存进度独立记录，不以最后一步推断落库。对象同项目同稳定员工唯一，当前组织权限决定能否纳入，启动时冻结范围及评价关系；后续入离调影响办理权限但不覆盖历史快照，增补/排除形成有原因的新版本。引入上次结果必须显式选择具体来源ID/版本/时点/字段，仅作参考，不作新评定或当前授权。",
       "approvedProposalSha256": "05739878d82e0fe785af407fc541bf0698a20a14bd3b117c3d37f7a618ab9254",
       "approvalRecord": "M18-P1-APPROVAL-20260910",
@@ -331,6 +350,7 @@
     {
       "id": "M18-SPEC-02",
       "sourcePointer": "/p1B/reviewIssues/47",
+      "topic": "多维评价、九宫格和缺失值",
       "approvedText": "建议各维度各有来源/尺度/目标/规则版本，采集状态与计算就绪分开；无来源、无规则、无权或缺样本显示原因及null，不补0或中档。九宫格作为一种明确视图，初始推荐横轴绩效、纵轴潜力，每轴各低/中/高三档，标签/阈值及来源映射必须由项目显式批准并冻结；边界采用低档x<低阈，中档低阈≤x<高阈，高档x≥高阈，阈值有序不重叠。序数使用显式档位映射，不默认等距平均；任一轴缺失不入九格且单列未评定，分母与缺失人数可追溯。能力/经历/成就不强制压成二轴，不按九格强制比例或自动淘汰/任用。",
       "approvedProposalSha256": "c55a26e9aa0f721dcc4f3fcff3bae30fa7520ac089fed1dd38ea8c7c61a564ba",
       "approvalRecord": "M18-P1-APPROVAL-20260910",
@@ -349,6 +369,7 @@
     {
       "id": "M18-SPEC-03",
       "sourcePointer": "/p1B/reviewIssues/48",
+      "topic": "校准会议、利益回避与结果版本",
       "approvedText": "建议meetingId/version、agendaId、subjectRecordId/resultVersion、participantRole/授权范围、calibrationProposalId独立；召集/参会/记录不等复核或发布权。校准保留原值、建议值、证据、异议、决定与来源版本；被评价本人及提案提交者不得复核，发布者须不同于复核者且具相应组织/字段权限。会议结论可以记录共识或版本化明确投票门槛，门槛/有效参与者/回避条件不全不通过；未处理异议明确记录，不以多数票覆盖强制证据。允许校准被授权维度但不得改写M16/M26原始结果，改动形成新的盘点版本。每原结果仅一条在途更正；驳回/撤回保留历史，重提关联原提案；会议结束不等结果发布。",
       "approvedProposalSha256": "4e9c093a523933e8ec875bed89d87283e9f1f97bdceb14c8d11e08571475f7dc",
       "approvalRecord": "M18-P1-APPROVAL-20260910",
@@ -369,6 +390,7 @@
     {
       "id": "M18-SPEC-04",
       "sourcePointer": "/p1B/reviewIssues/49",
+      "topic": "发布、撤回、更正与敏感结果开放",
       "approvedText": "建议项目draft→approved→active→collection_closed→closed，对象采集/评价/计算状态独立；首次结果和更正均走M19明确独立复核→有权发布。已发布版本不可编辑，当前版本以显式supersedes追踪；撤回发布须有权原因和新可见状态，历史仍保留当前权限内。项目关闭不清除结果；已关闭项目纠错走明确重开审批及新修订，不直接在终态写新评价。向下公开、共享组织、本人报告各自显式授权，默认不向本人开放潜力/九格/任用讨论；可另批准发展反馈投影，不能由团队关系自动推导。历史、附件、聚合及导出仍按当前权限，不恢复旧权限；缺失/待审批结果不能冒成正式结果。",
       "approvedProposalSha256": "1fdf15fd8058de2afe5eb68ba266bc28ae20a69002abb7c7a71d2a6236e7ec07",
       "approvalRecord": "M18-P1-APPROVAL-20260910",
@@ -388,6 +410,7 @@
     {
       "id": "M18-SPEC-05",
       "sourcePointer": "/p1B/reviewIssues/50",
+      "topic": "人才池、继任消费与异常恢复",
       "approvedText": "建议M18仅输出经批准发布的resultId/version、project/subject/period、标准/轴/规则版本、证据来源和允许用途；向M17提供入池/继任建议，须其授权业务动作后才成有效成员或候选，不自动生效。池分析使用M17明确pool/member/version和 asOf，继任地图使用positionId或orgId的不同数据集，不能互当分母。M06资格有效性按其契约读取，不凭九格授证；M26只消费允许用途且已开放的抑制后结果，不窥匿名原卷。M19路由/生效/通知分态，M48仅获准本人任务/反馈；M32消费同版本/范围/缺失口径。复用六基础，新增业务请求键/摘要/版本，失败回滚业务与审计，未知查ID，通知未配置明确不可用，不以模拟服务冒成功。",
       "approvedProposalSha256": "44dc686ec490515947c322b55fea1521f75c1350d581c4239e0ff48311f5c931",
       "approvalRecord": "M18-P1-APPROVAL-20260910",
@@ -412,6 +435,7 @@
     {
       "id": "M17-SPEC-01",
       "sourcePointer": "/p1B/reviewIssues/51",
+      "topic": "人才池、自动规则与出池重入历史",
       "approvedText": "建议poolRootId/version、categoryId、orgScope、sharingPolicy、expectedCount、entry/exitRuleVersion独立；预计人数可空，配置时正整数，空不默认为0。成员membershipId关联poolId/employeeId/enteredAt/exitedAt/stageVersion/previousMembershipId，任一同池员工有效区间不得重叠，允许不同池不同用途。出池保留旧ID/原因，重入新ID显式关联前次，不覆盖评价/指导史。默认手工独立审批；保留自动入出池能力，但须先明确并批准规则版本、对象范围、AND/OR条件、执行周期、复核责任与生效方式，配置完整且主动启用才执行；缺资格/评估/服务证据为unknown并不自动入出，失败不半入池。自动任务留规则/输入快照/批次/幂等键与可回溯结果，不自动任命或调薪。",
       "approvedProposalSha256": "4e91b6c94fb2db5920b2b97dc3a96f7678cc85f62c7a35bd4e544f2a8bcff930",
       "approvalRecord": "M17-P1-APPROVAL-20260910",
@@ -432,6 +456,7 @@
     {
       "id": "M17-SPEC-02",
       "sourcePointer": "/p1B/reviewIssues/52",
+      "topic": "准备度、继任资格与岗位覆盖",
       "approvedText": "建议readinessDefinitionId/version含代码/名称/业务含义/显式时间区间，保留“现在可就任”和源观察“3~6个月”及legacy原档，不按显示顺序或培养进度自动转换。候选successionId关联稳定positionId/employeeId、start/end、readinessVersion、assessmentAt/nextReviewAt、证据与状态，准备度必须指定审核人及复核时点；逾期单列待复核不冒当前已就绪。有效同人同目标区间不可重叠，允许同岗多后备和同人多岗；选择器无目标则不可提交，先核M01映射，不创建重名职位或自动纳回M35。现在可就任必须满足该岗位已批准要求/有效资格及明确准备度审议，其他档位表示预计发展期限，不保证任命。候选登记/关闭不自动改变M01任职；职位停用/人员离职停止新推荐，已有记录保留并派生当前不可用原因，允许有权关闭历史关系。",
       "approvedProposalSha256": "90ff59a1326d8e58127b63e259144d94a04949c62d2b2b3a1c038b40e715083f",
       "approvalRecord": "M17-P1-APPROVAL-20260910",
@@ -454,6 +479,7 @@
     {
       "id": "M17-SPEC-03",
       "sourcePointer": "/p1B/reviewIssues/53",
+      "topic": "指导角色、动态关系与独立核验",
       "approvedText": "建议保留池与IDP各自roleDefinition/version，不按同名合并；指导关系绑定employeeId、角色来源、有效区间和实际指导人，其他人须显式选合法有效身份。推荐不允许本人担任自己的唯一指导人或完成核验者；本人可制订/提交发展行动，但核验排本人、提交者及该次成果实际编制者。直线/虚线/隔级等按M01显式关系解析，缺关系阻相关节点，不回退管理员；关系变更重新验权，换指导人走授权交接并保留前后版本，不重写已完成核验。多指导人职责和任一/全部完成条件必须配置，不因一个同意隐式代表全部。",
       "approvedProposalSha256": "81b5efc4228bc9366dc49d9d99aec6c7480dfdcd7afcb610a6cb3a76d7194d50",
       "approvalRecord": "M17-P1-APPROVAL-20260910",
@@ -473,6 +499,7 @@
     {
       "id": "M17-SPEC-04",
       "sourcePointer": "/p1B/reviewIssues/54",
+      "topic": "发展计划模板、阶段与异常恢复",
       "approvedText": "建议flowRoot/version、templateRoot/version、planId/version、stageId、taskId和assignmentId独立；发布模板冻结节点/顺序/职责/必需交付/截止规则，实例冻结版本，不因停用模板终止旧计划。计划start≤end且阶段期限在计划范围或明确允许延期，阶段先后/并行依赖无环；未完成前置不开放后续强制任务。任务可提交、退回、撤回待审、独立核验，退回再提保留版本；阶段完成必须全部必需任务核验，选修最少数显式定义，取消是否免除需授权原因。逾期与状态分列，延期/换导师/变任务须留版本和依赖影响；计划暂停/终止不删历史，复开须重新核验当前人员及任务权限。学习成果消费M27真实核验状态，未配置不假完成；计划完成不自动授资格或改准备度。",
       "approvedProposalSha256": "5857ac02919690cf82b148a5ffd907b3d9230a4748cd61ab55b56d6ee8c4221c",
       "approvalRecord": "M17-P1-APPROVAL-20260910",
@@ -492,6 +519,7 @@
     {
       "id": "M17-SPEC-05",
       "sourcePointer": "/p1B/reviewIssues/55",
+      "topic": "组织健康度与人才分析分母",
       "approvedText": "建议健康度以版本化指标定义呈现，至少明确关键岗位覆盖、就绪覆盖、池饱和度和计划逾期率；关键岗位清单由有权者按M01稳定职位显式配置。岗位覆盖=存在至少一有效后备的关键职位数/当前适用关键职位数；就绪覆盖只计未过复核期且确认现在可就任者；池饱和度=指定时点有效成员去重数/明确预计人数，可超过100%，无预计人数为未配置；计划逾期率=截止已过且未完成/未授权终止的计划数/同期应到期计划数，分母0显示无适用数据不记0%。当前查询与历史快照分开，每指标带asOf/范围/定义版本/缺失原因，授权范围决定当前可读。综合健康指数保留定义/版本/配置入口，未获明确维度/权重模型批准则显示未配置，不编总分、不自动评价个人。",
       "approvedProposalSha256": "96f62c2fbd59274f4020d5aa31ea9aaf8f6fced0be298ac6dca8c856368d606a",
       "approvalRecord": "M17-P1-APPROVAL-20260910",
@@ -514,6 +542,7 @@
     {
       "id": "M17-SPEC-06",
       "sourcePointer": "/p1B/reviewIssues/56",
+      "topic": "敏感权限、跨域建议与迁移边界",
       "approvedText": "建议池manage/memberRead/ruleExecute、继任nominate/review/close、计划coach/verify及healthRead/export分别授权，取当前组织/岗位/关系/字段交集；共享/向下公开显式配置，默认不向本人暴露后备排序/潜力/退出讨论，仅开放本人已确认行动与指导任务。M18盘点结果按具体版本只作推荐依据，M37定义/M06资格有效性分别引用，M03任用另走审批，M48本人投影，M19节点独立，M32按已批统计定义读取；不自动跨模块入池/任用/发消息。BASE01–06沿已批身份/权限/审计/附件历史/恢复/接口要求，事务与审计一致、请求幂等、未知先查原ID、缓存撤权；迁移保留旧三档和成员ID，未知原单/生效区间标unknown，不伪造关联或批准。",
       "approvedProposalSha256": "fc40c4a0c4eb1a2c1d3edc921044cb53c2ed1aad9ae3a5cdebfe0c2c480c7541",
       "approvalRecord": "M17-P1-APPROVAL-20260910",
@@ -524,6 +553,7 @@
       "scenarioIds": [
         "R2-P3-M17-REVIEW-AC13",
         "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05",
         "R2-X-01",
         "R2-X-02",
         "R2-X-07"
@@ -536,6 +566,7 @@
     {
       "id": "M03-SPEC-01",
       "sourcePointer": "/p1B/reviewIssues/57",
+      "topic": "干部稳定身份、任期及有效日期",
       "approvedText": "建议cadreId显式绑定M01稳定employeeId，appointmentRecordId/termId与任职employmentRecordId独立关联，禁止通过姓名或StaffID数字强转Employee UUID。干部身份状态、任期状态和员工状态分列；每任期含任用类型版本、组织/岗位版本、生效起止/实际结束、审批来源，主职同人时间段不重叠；兼职/挂职等有明确类型与M01任职规则，不默默限制只有主职。期限推荐输入正整数月/年或明确无固定期限，周年/月度结束按本地日历加对应单位后前一日，目标日期不存在时先落该月末再减一日；结果必须预览，允许授权显式截止日及原因覆盖。考察结束不得早于开始或晚于固定任期结束；未知历史不得自动补成算法计算。",
       "approvedProposalSha256": "201b553ba9e2aac265da010cdefe0fb4424afb654cbee66a0daca8849453f468",
       "approvalRecord": "M03-P1-APPROVAL-20260910",
@@ -555,6 +586,7 @@
     {
       "id": "M03-SPEC-02",
       "sourcePointer": "/p1B/reviewIssues/58",
+      "topic": "选拔活动、提名审议与任免生效",
       "approvedText": "建议selectionActivityId/version、nominationId、evaluationInstanceId、appointmentDecisionId、termId分别；活动冻结岗位/资格/标准/评委及路由版本，同人同目标仅一在途提名，驳回/撤回后新提关联前次；本人、发起人及候选材料编制参与者回避审议。每岗位任用政策明确资格/后备是必需还是参考，必需项未配或失效不通过；M06资格/M17候选在提名、批准及生效前重核，并冻结当时证据。任免决定获批与M01实际人事生效分列；涉及调动必须严格D1–D7，引用同人同岗审批及实际applied后才核对任用，一张生效凭证不重复用于同类任用。无需变更主职的任用类型须有其明确授权任职事件，不伪造调动。免职/退休/离职结束、任期续任与错误作废分别留原因、独立批准与实际日期，不能直接回滚已生效人事或删任期。",
       "approvedProposalSha256": "bfbc7b8335b26ed5f6ee4fcddb30c8e9cf2c258c4e2db7ca02bfc171140a0379",
       "approvalRecord": "M03-P1-APPROVAL-20260910",
@@ -577,6 +609,7 @@
     {
       "id": "M03-SPEC-03",
       "sourcePointer": "/p1B/reviewIssues/59",
+      "topic": "投票、总分、指标评分及缺评",
       "approvedText": "建议evaluationTemplateRoot/version冻结模式、指标/资格版本、评委清单/回避、尺度、权重、阈值和比较符；投票/总分/指标评分互斥为主模式，参考分不自动改变通过。推荐投票通过票数/应投有效评委数≥显式通过比例，比例需主动配置且0<比例≤100，不默认80；回避者经批准移出分母，弃权保留分母且非通过，缺席/未交作为未完成并阻最终决议，不默默减少分母。总分/指标评分推荐最终分≥显式阈值，明确这是针对源冲突采用的本项目决定；显示舍入不影响精确比较。评分项有明确满分/方向/有效集合；均值、加权均值、加总分别配置，尺度不兼容先定义转换，权重非负、参与集合固定、合计正数，缺权重阻该算法就绪，不以源“空权重0/均分”当默认。每评委必需项缺分阻完成，跨评委按有效且完成评委总分算术均值；无有效评委/指标不除0、不通过。",
       "approvedProposalSha256": "fb8edbc794479470ea3cc244d5a77f02a52cd37d61110de0f8f8b2b66ca5283e",
       "approvalRecord": "M03-P1-APPROVAL-20260910",
@@ -597,6 +630,7 @@
     {
       "id": "M03-SPEC-04",
       "sourcePointer": "/p1B/reviewIssues/60",
+      "topic": "考察期、转正、延期与退出",
       "approvedText": "建议observationId绑定具体termId/appointmentDecisionId、开始/截止、目标/模板版本和考核实例；在岗考察、提交待审、退回补充、通过、延长、未通过退出分别，逾期单独标识，不到日自动转正。本人提交/撤回待审，独立评委核验，不由管理员代本人；提前转正必须显式申请原因且遵守适用最短考察政策，政策未配则不开放提前路径。延期给新截止/原因/批准版本且不得越固定任期，若需越界先独立处理续任；未通过可形成发展或退出建议，但免职及人事结束另走授权流程。已批考核不覆盖，纠错新版本重审；人员离职/任期结束阻新转正，保留已有考核历史并允许授权终止未完任务。",
       "approvedProposalSha256": "65df9bd648f46504450ae9b400240ad434e135a10f3d06de7559c8509debecb6",
       "approvalRecord": "M03-P1-APPROVAL-20260910",
@@ -615,6 +649,7 @@
     {
       "id": "M03-SPEC-05",
       "sourcePointer": "/p1B/reviewIssues/61",
+      "topic": "周期述职、档案子集与敏感权限",
       "approvedText": "建议述职activityId/version绑定周期及termId，报告recordId/version、材料/评审/发布分开；周期述职和考察述职各自用途/模板，不以有考察记录删除年度述职范围。本人草稿→提交→独立评审→已发布，退回/撤回/重提保留版本；改周期/任期不得覆盖原记录。档案保留基础、任免履历、访谈、奖励/惩处/表彰及关联附件子集；每条稳定ID、发生日期、来源、版本和审批状态，补录事实不伪造当时批准；奖励发放/金额只消费外部已授权状态，不发支付。archiveRead/interviewRead/evaluationRead/nominate/review/appoint/export分别授权，岗位及人员双范围，评委只议题最小字段；本人只读明确发布给本人的反馈/述职，潜力/委员会讨论/原始访谈不自动开放，附件历史下载均当前验权。访谈角色标签只是分类，不自动授予关系权限。",
       "approvedProposalSha256": "edbd085b302e69a40eed7cc754d9d83384b491d86a369cad330fe185250a7038",
       "approvalRecord": "M03-P1-APPROVAL-20260910",
@@ -635,6 +670,7 @@
     {
       "id": "M03-SPEC-06",
       "sourcePointer": "/p1B/reviewIssues/62",
+      "topic": "跨模块契约、并发与历史迁移",
       "approvedText": "建议M37标准/M06资格/M17后备/M18盘点/M26允许用途报告均通过稳定ID+具体版本+有效时点+缺失原因引用，不按同名或裸分决定任用。M19提供冻结路由与独立节点；M01承担主兼职/调动生效，M03只确认任用和干部任期，不重解释D1–D7。M48仅本人获准述职/考察任务和反馈；M32消费许可范围的任期/选拔/考察状态、版本和真实分母，不导出隐藏访谈。BASE01–06身份、字段权限、事务审计、附件版本、恢复与外部契约按已批原则，任免变更必须幂等请求键/摘要及原决定ID，未知先查，审计失败不得部分生效。迁移保持StaffID映射/employeeId/任期ID/调动来源和历史时间，未有依据的批准、前任、算法/任用类型标未知，不把legacy注册当已审任命；恢复后以当前授权对账。",
       "approvedProposalSha256": "4e66f709773a95666f4f38c0bff2dcc82c71f49fd09c44ab3047ed7f7a506165",
       "approvalRecord": "M03-P1-APPROVAL-20260910",
@@ -656,6 +692,7 @@
     {
       "id": "R2-BASELINE-01",
       "sourcePointer": "/p1B/reviewIssues/63",
+      "topic": "R2四模块完整规格、验收及六基础适用边界",
       "approvedText": "建议批准本次四模块评审包与其引用分包规格中已具体化的完整范围、字段校验、权限/状态/异常/契约和可执行验收预期，并按各SPEC与LIMIT明确边界实施；发生冲突以所审SPEC及所有者明确选择优先，静态事实不自动作为产品要求。六基础沿既有批准目标用于R2，采用本包r2Assessment列明的身份映射/敏感权限/审计/版本/恢复/接口适用差异，后续P2设计和P3/P4实证责任保留。四模块必须按M26→M18→M17→M03逐个核对退出条件，条件未满足不关闭；R2阶段另据真实模块/基础及版本评审记录判定，不自动授权R2 P2/P3。",
       "approvedProposalSha256": "8cc69607685d2dc0be62d8acc5603c3f43d78bf0a66b5b2b68cb0782c98d8b5a",
       "approvalRecord": "M26-P1-APPROVAL-20260910",
@@ -2538,6 +2575,7 @@
         "R2-P3-M26-REVIEW-AC05",
         "R2-M26-S01",
         "R2-M26-S02",
+        "R2-M26-S07",
         "R2-X-05",
         "R2-X-06"
       ],
@@ -2557,6 +2595,7 @@
         "R2-P3-M26-REVIEW-AC05",
         "R2-M26-S01",
         "R2-M26-S02",
+        "R2-M26-S07",
         "R2-X-05",
         "R2-X-06"
       ],
@@ -2576,6 +2615,7 @@
         "R2-P3-M26-REVIEW-AC05",
         "R2-M26-S01",
         "R2-M26-S02",
+        "R2-M26-S07",
         "R2-X-05",
         "R2-X-06"
       ],
@@ -2595,6 +2635,7 @@
         "R2-P3-M26-REVIEW-AC05",
         "R2-M26-S01",
         "R2-M26-S02",
+        "R2-M26-S07",
         "R2-X-05",
         "R2-X-06"
       ],
@@ -2614,6 +2655,7 @@
         "R2-P3-M26-REVIEW-AC05",
         "R2-M26-S01",
         "R2-M26-S02",
+        "R2-M26-S07",
         "R2-X-05",
         "R2-X-06"
       ],
@@ -2633,6 +2675,7 @@
         "R2-P3-M26-REVIEW-AC05",
         "R2-M26-S01",
         "R2-M26-S02",
+        "R2-M26-S07",
         "R2-X-05",
         "R2-X-06"
       ],
@@ -2652,6 +2695,7 @@
         "R2-P3-M26-REVIEW-AC05",
         "R2-M26-S01",
         "R2-M26-S02",
+        "R2-M26-S07",
         "R2-X-05",
         "R2-X-06"
       ],
@@ -2671,6 +2715,7 @@
         "R2-P3-M26-REVIEW-AC05",
         "R2-M26-S01",
         "R2-M26-S02",
+        "R2-M26-S07",
         "R2-X-05",
         "R2-X-06"
       ],
@@ -2822,7 +2867,8 @@
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC08",
         "R2-P3-M26-REVIEW-AC09",
-        "R2-P3-M26-REVIEW-AC10"
+        "R2-P3-M26-REVIEW-AC10",
+        "R2-M26-S05"
       ],
       "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
     },
@@ -2837,7 +2883,8 @@
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC08",
         "R2-P3-M26-REVIEW-AC09",
-        "R2-P3-M26-REVIEW-AC10"
+        "R2-P3-M26-REVIEW-AC10",
+        "R2-M26-S05"
       ],
       "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
     },
@@ -2852,7 +2899,8 @@
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC08",
         "R2-P3-M26-REVIEW-AC09",
-        "R2-P3-M26-REVIEW-AC10"
+        "R2-P3-M26-REVIEW-AC10",
+        "R2-M26-S05"
       ],
       "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
     },
@@ -2867,7 +2915,8 @@
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC08",
         "R2-P3-M26-REVIEW-AC09",
-        "R2-P3-M26-REVIEW-AC10"
+        "R2-P3-M26-REVIEW-AC10",
+        "R2-M26-S05"
       ],
       "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
     },
@@ -2882,7 +2931,8 @@
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC08",
         "R2-P3-M26-REVIEW-AC09",
-        "R2-P3-M26-REVIEW-AC10"
+        "R2-P3-M26-REVIEW-AC10",
+        "R2-M26-S05"
       ],
       "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
     },
@@ -2897,7 +2947,8 @@
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC08",
         "R2-P3-M26-REVIEW-AC09",
-        "R2-P3-M26-REVIEW-AC10"
+        "R2-P3-M26-REVIEW-AC10",
+        "R2-M26-S05"
       ],
       "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
     },
@@ -2912,7 +2963,8 @@
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC08",
         "R2-P3-M26-REVIEW-AC09",
-        "R2-P3-M26-REVIEW-AC10"
+        "R2-P3-M26-REVIEW-AC10",
+        "R2-M26-S05"
       ],
       "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
     },
@@ -2927,7 +2979,8 @@
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC08",
         "R2-P3-M26-REVIEW-AC09",
-        "R2-P3-M26-REVIEW-AC10"
+        "R2-P3-M26-REVIEW-AC10",
+        "R2-M26-S05"
       ],
       "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
     },
@@ -2942,7 +2995,8 @@
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC08",
         "R2-P3-M26-REVIEW-AC09",
-        "R2-P3-M26-REVIEW-AC10"
+        "R2-P3-M26-REVIEW-AC10",
+        "R2-M26-S05"
       ],
       "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
     },
@@ -2957,6 +3011,7 @@
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC11",
         "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S06",
         "R2-X-05",
         "R2-X-06"
       ],
@@ -2973,6 +3028,7 @@
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC11",
         "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S06",
         "R2-X-05",
         "R2-X-06"
       ],
@@ -2989,6 +3045,7 @@
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC11",
         "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S06",
         "R2-X-05",
         "R2-X-06"
       ],
@@ -3005,6 +3062,7 @@
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC11",
         "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S06",
         "R2-X-05",
         "R2-X-06"
       ],
@@ -3021,6 +3079,7 @@
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC11",
         "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S06",
         "R2-X-05",
         "R2-X-06"
       ],
@@ -3037,6 +3096,7 @@
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC11",
         "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S06",
         "R2-X-05",
         "R2-X-06"
       ],
@@ -3053,6 +3113,7 @@
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC11",
         "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S06",
         "R2-X-05",
         "R2-X-06"
       ],
@@ -3069,6 +3130,7 @@
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC11",
         "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S06",
         "R2-X-05",
         "R2-X-06"
       ],
@@ -4402,6 +4464,7 @@
       "scenarioIds": [
         "R2-P3-M17-REVIEW-AC13",
         "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05",
         "R2-X-01",
         "R2-X-02",
         "R2-X-07"
@@ -4419,6 +4482,7 @@
       "scenarioIds": [
         "R2-P3-M17-REVIEW-AC13",
         "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05",
         "R2-X-01",
         "R2-X-02",
         "R2-X-07"
@@ -4436,6 +4500,7 @@
       "scenarioIds": [
         "R2-P3-M17-REVIEW-AC13",
         "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05",
         "R2-X-01",
         "R2-X-02",
         "R2-X-07"
@@ -4453,6 +4518,7 @@
       "scenarioIds": [
         "R2-P3-M17-REVIEW-AC13",
         "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05",
         "R2-X-01",
         "R2-X-02",
         "R2-X-07"
@@ -4470,6 +4536,7 @@
       "scenarioIds": [
         "R2-P3-M17-REVIEW-AC13",
         "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05",
         "R2-X-01",
         "R2-X-02",
         "R2-X-07"
@@ -4487,6 +4554,7 @@
       "scenarioIds": [
         "R2-P3-M17-REVIEW-AC13",
         "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05",
         "R2-X-01",
         "R2-X-02",
         "R2-X-07"
@@ -6498,7 +6566,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -6522,7 +6592,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -6546,7 +6618,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -6570,7 +6644,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -6599,7 +6675,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -6628,7 +6706,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -6657,7 +6737,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -6686,7 +6768,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -6715,7 +6799,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -6744,7 +6830,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -6773,7 +6861,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -6802,7 +6892,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -6831,7 +6923,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -6860,7 +6954,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -6889,7 +6985,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -6918,7 +7016,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -6947,7 +7047,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -6976,7 +7078,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -7005,7 +7109,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -7034,7 +7140,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -7064,7 +7172,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -7094,7 +7204,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -7124,7 +7236,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -7154,7 +7268,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -7184,7 +7300,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -7214,7 +7332,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -7244,7 +7364,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -7274,7 +7396,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -7304,7 +7428,9 @@
         "R2-P3-M26-REVIEW-AC09",
         "R2-P3-M26-REVIEW-AC10",
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S05",
+        "R2-M26-S06"
       ]
     },
     {
@@ -7332,7 +7458,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -7360,7 +7487,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -7388,7 +7516,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -7416,7 +7545,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -7449,7 +7579,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -7482,7 +7613,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -7515,7 +7647,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -7548,7 +7681,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -7581,7 +7715,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -7614,7 +7749,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -7647,7 +7783,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -7680,7 +7817,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -7713,7 +7851,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -7746,7 +7885,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -7779,7 +7919,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -7812,7 +7953,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -7845,7 +7987,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -7878,7 +8021,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -7912,7 +8056,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -7946,7 +8091,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -7980,7 +8126,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -8014,7 +8161,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -8048,7 +8196,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -8082,7 +8231,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -8116,7 +8266,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -8150,7 +8301,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -8184,7 +8336,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -8218,7 +8371,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -8252,7 +8406,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -8286,7 +8441,8 @@
         "R2-P3-M17-REVIEW-AC11",
         "R2-P3-M17-REVIEW-AC12",
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -8508,7 +8664,8 @@
         "R2-M17-S01",
         "R2-M17-S02",
         "R2-M17-S03",
-        "R2-M17-S04"
+        "R2-M17-S04",
+        "R2-M17-S05"
       ]
     },
     {
@@ -8538,7 +8695,8 @@
         "R2-M17-S01",
         "R2-M17-S02",
         "R2-M17-S03",
-        "R2-M17-S04"
+        "R2-M17-S04",
+        "R2-M17-S05"
       ]
     },
     {
@@ -8568,7 +8726,8 @@
         "R2-M17-S01",
         "R2-M17-S02",
         "R2-M17-S03",
-        "R2-M17-S04"
+        "R2-M17-S04",
+        "R2-M17-S05"
       ]
     },
     {
@@ -8598,7 +8757,8 @@
         "R2-M17-S01",
         "R2-M17-S02",
         "R2-M17-S03",
-        "R2-M17-S04"
+        "R2-M17-S04",
+        "R2-M17-S05"
       ]
     },
     {
@@ -8634,7 +8794,8 @@
         "R2-M17-S01",
         "R2-M17-S02",
         "R2-M17-S03",
-        "R2-M17-S04"
+        "R2-M17-S04",
+        "R2-M17-S05"
       ]
     },
     {
@@ -8670,7 +8831,8 @@
         "R2-M17-S01",
         "R2-M17-S02",
         "R2-M17-S03",
-        "R2-M17-S04"
+        "R2-M17-S04",
+        "R2-M17-S05"
       ]
     },
     {
@@ -8706,7 +8868,8 @@
         "R2-M17-S01",
         "R2-M17-S02",
         "R2-M17-S03",
-        "R2-M17-S04"
+        "R2-M17-S04",
+        "R2-M17-S05"
       ]
     },
     {
@@ -8742,7 +8905,8 @@
         "R2-M17-S01",
         "R2-M17-S02",
         "R2-M17-S03",
-        "R2-M17-S04"
+        "R2-M17-S04",
+        "R2-M17-S05"
       ]
     },
     {
@@ -9863,7 +10027,10 @@
         "R2-M26-S01",
         "R2-M26-S02",
         "R2-M26-S03",
-        "R2-M26-S04"
+        "R2-M26-S04",
+        "R2-M26-S05",
+        "R2-M26-S06",
+        "R2-M26-S07"
       ]
     },
     {
@@ -9891,7 +10058,10 @@
         "R2-M26-S01",
         "R2-M26-S02",
         "R2-M26-S03",
-        "R2-M26-S04"
+        "R2-M26-S04",
+        "R2-M26-S05",
+        "R2-M26-S06",
+        "R2-M26-S07"
       ]
     },
     {
@@ -9919,7 +10089,10 @@
         "R2-M26-S01",
         "R2-M26-S02",
         "R2-M26-S03",
-        "R2-M26-S04"
+        "R2-M26-S04",
+        "R2-M26-S05",
+        "R2-M26-S06",
+        "R2-M26-S07"
       ]
     },
     {
@@ -9947,7 +10120,10 @@
         "R2-M26-S01",
         "R2-M26-S02",
         "R2-M26-S03",
-        "R2-M26-S04"
+        "R2-M26-S04",
+        "R2-M26-S05",
+        "R2-M26-S06",
+        "R2-M26-S07"
       ]
     }
   ],
@@ -10332,6 +10508,9 @@
         "R2-M26-S02",
         "R2-M26-S03",
         "R2-M26-S04",
+        "R2-M26-S05",
+        "R2-M26-S06",
+        "R2-M26-S07",
         "R2-X-05",
         "R2-X-06"
       ]
@@ -10385,6 +10564,9 @@
         "R2-M26-S02",
         "R2-M26-S03",
         "R2-M26-S04",
+        "R2-M26-S05",
+        "R2-M26-S06",
+        "R2-M26-S07",
         "R2-X-05",
         "R2-X-06"
       ]
@@ -10436,6 +10618,9 @@
         "R2-M26-S02",
         "R2-M26-S03",
         "R2-M26-S04",
+        "R2-M26-S05",
+        "R2-M26-S06",
+        "R2-M26-S07",
         "R2-X-05",
         "R2-X-06"
       ]
@@ -10487,6 +10672,9 @@
         "R2-M26-S02",
         "R2-M26-S03",
         "R2-M26-S04",
+        "R2-M26-S05",
+        "R2-M26-S06",
+        "R2-M26-S07",
         "R2-X-05",
         "R2-X-06"
       ]
@@ -10826,6 +11014,7 @@
         "R2-M17-S02",
         "R2-M17-S03",
         "R2-M17-S04",
+        "R2-M17-S05",
         "R2-X-01",
         "R2-X-02",
         "R2-X-03",
@@ -10886,6 +11075,7 @@
         "R2-M17-S02",
         "R2-M17-S03",
         "R2-M17-S04",
+        "R2-M17-S05",
         "R2-X-01",
         "R2-X-02",
         "R2-X-03",
@@ -10945,6 +11135,7 @@
         "R2-M17-S02",
         "R2-M17-S03",
         "R2-M17-S04",
+        "R2-M17-S05",
         "R2-X-01",
         "R2-X-02",
         "R2-X-03",
@@ -11006,6 +11197,7 @@
         "R2-M17-S02",
         "R2-M17-S03",
         "R2-M17-S04",
+        "R2-M17-S05",
         "R2-X-01",
         "R2-X-02",
         "R2-X-03",
@@ -11065,6 +11257,7 @@
         "R2-M17-S02",
         "R2-M17-S03",
         "R2-M17-S04",
+        "R2-M17-S05",
         "R2-X-01",
         "R2-X-02",
         "R2-X-03",
@@ -12438,7 +12631,7 @@
       ],
       "designStatus": "complete",
       "scenarioIds": [
-        "R2-P3-M26-REVIEW-AC07"
+        "R2-M26-S05"
       ],
       "legacyDisposition": "retain_strengthen"
     },
@@ -12464,7 +12657,9 @@
       ],
       "designStatus": "complete",
       "scenarioIds": [
-        "R2-P3-M26-REVIEW-AC02"
+        "R2-P3-M26-REVIEW-AC02",
+        "R2-P3-M26-REVIEW-AC03",
+        "R2-P3-M26-REVIEW-AC04"
       ],
       "legacyDisposition": "superseded_expectation"
     },
@@ -12568,7 +12763,7 @@
       ],
       "designStatus": "complete",
       "scenarioIds": [
-        "R2-P3-M26-REVIEW-AC11"
+        "R2-M26-S06"
       ],
       "legacyDisposition": "retain_strengthen"
     },
@@ -13084,7 +13279,7 @@
       ],
       "designStatus": "complete",
       "scenarioIds": [
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-M17-S05"
       ],
       "legacyDisposition": "approved_rule_now_explicit"
     },
@@ -13587,10 +13782,11 @@
         "M17_Design.md#acceptance"
       ],
       "designStatus": "complete",
-      "scenarioIds": [
-        "R2-P3-M17-REVIEW-AC08"
-      ],
-      "legacyDisposition": "source_request_only"
+      "scenarioIds": [],
+      "legacyDisposition": "source_request_only",
+      "evidenceRequestIds": [
+        "R2-SOURCE-M17-01"
+      ]
     },
     {
       "id": "M17-IDP-STATE-01",

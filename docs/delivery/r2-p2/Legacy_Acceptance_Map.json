@@ -63,7 +63,7 @@
         "M26_Design.md#engineering"
       ],
       "currentAcceptanceRefs": [
-        "M26-REVIEW-AC07"
+        "R2-M26-S05"
       ],
       "reason": "scheduled/open不代当前窗口；服务端时钟边界，P3用隔离时钟",
       "executionThisRun": false,
@@ -86,7 +86,9 @@
         "M26_Design.md#engineering"
       ],
       "currentAcceptanceRefs": [
-        "M26-REVIEW-AC02"
+        "M26-REVIEW-AC02",
+        "M26-REVIEW-AC03",
+        "M26-REVIEW-AC04"
       ],
       "reason": "低样本精确responses=2和HR默认原卷权禁止；k=3及同尺度合法均值保留",
       "executionThisRun": false,
@@ -178,7 +180,7 @@
         "M26_Design.md#engineering"
       ],
       "currentAcceptanceRefs": [
-        "M26-REVIEW-AC11"
+        "R2-M26-S06"
       ],
       "reason": "本人也须显式report audience，禁止默认所有本人published可读；原卷拒绝保留",
       "executionThisRun": false,
@@ -316,7 +318,7 @@
         "M17_Design.md#engineering"
       ],
       "currentAcceptanceRefs": [
-        "M17-REVIEW-AC14"
+        "R2-M17-S05"
       ],
       "reason": "当前人员+池/岗位双范围及敏感字段已批，原未批准措辞为历史",
       "executionThisRun": false,
@@ -361,10 +363,8 @@
       "currentDesignRefs": [
         "M17_Design.md#engineering"
       ],
-      "currentAcceptanceRefs": [
-        "M17-REVIEW-AC08"
-      ],
-      "reason": "原站IDP入口已确认；未核节点UUID不重建/重复保存；新计划P3使用合成独立根",
+      "currentAcceptanceRefs": [],
+      "reason": "原站IDP入口已确认；未核节点UUID仅转R2-SOURCE-M17-01定向来源请求，不伪作P3业务用例",
       "executionThisRun": false,
       "phaseResponsibility": "总控来源核证（非本窗口原站执行）"
     },

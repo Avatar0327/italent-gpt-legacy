@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-09-10T07:10:34.036301+00:00",
+  "designParentHead": "666975f3b86110ac30efa2c0d5cc7f13086a786c",
+  "mainStartupHead": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+  "mainObservedHead": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+  "mainClean": true,
+  "allChangedTrackedPathsWithinDesignDirectory": true,
+  "productPathsChanged": [],
+  "r1DesignFixedHead": "e15237281ff19f04f08a354fd9455c518b24ae47",
+  "r1P3ObservedOnlyViaWorktreeMetadata": "cd5d668fb06306d0522308bb107ddf52dde60af7",
+  "otherWindowProgressNotClaimedAsOwn": true,
+  "wrongPathIncident": {
+    "file": "build_resolution.py",
+    "resolution": "仅自建脚本已移回授权目录；误建空目录已删除",
+    "productOrOtherWorktreeTouched": false
+  },
+  "noDeploymentOrPublishOnPush": true,
+  "noP3BusinessTests": true,
+  "noDatabaseMigration": true,
+  "noBrowserOrCdp": true,
+  "noSubagents": true
+}

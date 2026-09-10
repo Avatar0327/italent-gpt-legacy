@@ -43,6 +43,11 @@ for group in ['specs','clauses','contractDetails','closures','foundations','acce
         elif args.final: check(False,'unfinished mapping '+x['id'])
 for f in D.glob('*.json'):json.loads(f.read_text())
 check(True,'all top-level JSON parsed')
+for f in D.glob('*.md'):
+    for target in re.findall(r'\[[^\]]*\]\(([^)]+)\)',f.read_text()):
+        if '://' in target or target.startswith('mailto:'):continue
+        path,_,anchor=target.partition('#'); dest=f.parent/path if path else f
+        check(dest.is_file() and (not anchor or f'id="{anchor}"' in dest.read_text()),'markdown reference '+f.name+' -> '+target)
 if (D/'Interface_Schemas.json').exists():
     schema=read('Interface_Schemas.json'); schema_errors=[]
     def schema_walk(v,path=''):
@@ -89,8 +94,13 @@ if args.final:
     check(all(x.get('scenarioIds') and set(x['scenarioIds'])<=set(ids) for x in tasks),'each P3 task has actual scenario IDs')
     check(all(x['status']=='proposed_not_started' for x in tasks),'P3 tasks proposed, not started')
     for group in ['specs','clauses','contractDetails','closures','foundations','acceptanceIds']:
-        check(all(x.get('scenarioIds') and set(x['scenarioIds'])<=set(ids) for x in t[group]),group+' has resolved design-to-scenario mapping')
+        check(all((x.get('scenarioIds') and set(x['scenarioIds'])<=set(ids)) or (x.get('legacyDisposition')=='source_request_only' and x.get('evidenceRequestIds')==['R2-SOURCE-M17-01']) for x in t[group]),group+' has resolved design-to-scenario or explicit source-evidence mapping')
     check(all(set(x['scenarioRefs'])<=set(ids) for x in lm['historicalTasks']),'historical task criteria scenario references resolve')
+    check(len(read('Historical_Evidence_Index.json')['implementationMap'])==9,'all nine scoped implementation-map entries retained')
+    if (D/'Controller_Proposal.json').exists():
+        p=read('Controller_Proposal.json')
+        check(p['proposalOnly'] and not p['registeredInController'] and not p['p2ExitApproved'] and not p['p3Entered'],'controller proposal preserves exclusive authority')
+        check(p['counts']['p3Tasks']==len(tasks) and p['counts']['scenarios']==len(scenarios),'controller proposal counts match actual task/scenario data')
 # Hash core design inputs; evidence and manifests are excluded to avoid self-referential hashes.
 artifacts=[{'path':f.relative_to(R).as_posix(),'sha256':digest(f.read_bytes()),'bytes':f.stat().st_size} for f in sorted(D.rglob('*')) if f.is_file() and 'evidence' not in f.parts and f.name not in ['Artifact_Manifest.json'] and '__pycache__' not in f.parts]
 (D/'Artifact_Manifest.json').write_text(json.dumps({'scope':'core design artifacts; excludes this manifest and evidence output to avoid circular hashes','artifacts':artifacts},ensure_ascii=False,indent=2)+'\n')

@@ -12,7 +12,7 @@ defs={
 'Id':text(200),'Uuid':{'type':'string','format':'uuid'},'Revision':{'type':'integer','minimum':0,'maximum':9007199254740991},
 'PositiveInteger':{'type':'integer','minimum':1,'maximum':9007199254740991},'Digest':{'type':'string','pattern':'^[a-f0-9]{64}$'},
 'Date':{'type':'string','format':'date','pattern':'^\\d{4}-\\d{2}-\\d{2}$'},'Instant':{'type':'string','format':'date-time','pattern':'Z$'},
-'Decimal':{'type':'string','pattern':'^-?(0|[1-9][0-9]*)(\\.[0-9]*[1-9])?$'},'Boolean':{'type':'boolean'},
+'Decimal':{'type':'string','pattern':'^(?:0|-?(?:[1-9][0-9]*(?:\\.[0-9]*[1-9])?|0\\.[0-9]*[1-9]))$'},'Boolean':{'type':'boolean'},
 'Name':text(200),'Description':text(4000,0),'Reason':text(3000,5),'Purpose':text(100),
 }
 defs['VersionRef']=obj({'producer':text(40),'objectType':text(80),'rootId':ref('Id'),'versionId':ref('Id'),'sourceRevision':ref('Revision'),'digest':ref('Digest'),'capturedAt':ref('Instant'),'purpose':ref('Purpose')})
@@ -26,6 +26,7 @@ defs['Target']={'oneOf':[
  obj({'kind':{'const':'enum'},'optionId':ref('Id'),'definitionVersionRef':ref('VersionRef')}),
  obj({'kind':{'const':'none'}})]}
 defs['Cell']=obj({'state':enum('value','null','not_configured','unavailable','suppressed'),'value':{'type':['string','number','boolean','null']},'reasonCode':text(100),'unit':text(40),'scaleVersionRef':ref('VersionRef')},['state','value','reasonCode'])
+defs['Cell']['allOf']=[{'if':{'properties':{'state':{'enum':['null','not_configured','unavailable','suppressed']}}},'then':{'properties':{'value':{'type':'null'}}}}]
 defs['RuleNode']=obj({'nodeId':ref('Id'),'op':enum('AND','OR','eq','gte','lte','gt','lt','in'),'children':arr('Id'),'lineId':ref('Id'),'target':ref('Target')},['nodeId','op'])
 defs['RuleAst']=obj({'ruleRootId':ref('Id'),'versionId':ref('Id'),'rootNodeId':ref('Id'),'nodes':arr('RuleNode',1)})
 defs['Material']=obj({'objectVersionRef':ref('VersionRef'),'classification':enum('ordinary','sensitive','restricted'),'contributorPersonIds':arr('Id'),'attachmentVersionRefs':arr('VersionRef')})

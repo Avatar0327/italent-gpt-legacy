@@ -10,7 +10,7 @@ for spec in t['specs']:
     m=spec['id'][:3]
     if m not in done:continue
     tasks.append({'id':'P3-R2-'+spec['id'].replace('-SPEC-','-'),'moduleId':m,'requirementRefs':[spec['id']],
-                  'title':spec['approvedText'][:60], 'designRefs':spec['designRefs'],
+                  'title':spec.get('topic',spec['approvedText'][:60]), 'designRefs':spec['designRefs'],
                   'ownerRole':m+'实施负责人；独立测试负责人复核','phase':'P3','status':'proposed_not_started',
                   'dependencies':['R1共同身份/权限/事务/流程契约适配验证'],'deliverables':['规范化对象及API适配','合成正反例与事务/权限证据','兼容/迁移差异报告'],'scenarioIds':[]})
 for a in t['acceptanceIds']:
@@ -37,7 +37,7 @@ if (D/'Supplemental_Scenarios.json').exists():
 for task in tasks:task['scenarioIds']=[x['id'] for x in scenarios if x['taskId']==task['id']]
 task_by_id={x['id']:x for x in tasks}
 def matching(refs):
-    return [x['id'] for x in scenarios if set(refs)&(set(x['requirementRefs'])|set(task_by_id[x['taskId']]['requirementRefs']))]
+    return [x['id'] for x in scenarios if x['id'] in refs or set(refs)&(set(x['requirementRefs'])|set(task_by_id[x['taskId']]['requirementRefs']))]
 for spec in t['specs']:
     spec['scenarioIds']=matching([spec['id']]);spec['taskIds']=[x['id'] for x in tasks if spec['id'] in x['requirementRefs']]
 for clause in t['clauses']:
@@ -55,6 +55,8 @@ if (D/'Legacy_Acceptance_Map.json').exists():
     for a in t['acceptanceIds']:
         if a['id'] in old:
             a['scenarioIds']=matching(old[a['id']]['currentAcceptanceRefs']);a['legacyDisposition']=old[a['id']]['disposition']
+            if old[a['id']]['disposition']=='source_request_only':
+                a['scenarioIds']=[];a['evidenceRequestIds']=['R2-SOURCE-M17-01']
 put('Requirements_Trace.json',t)
 put('P3_Work_Packages.json',{'kind':'proposal_only_not_execution_or_controller_ledger','count':len(tasks),'tasks':tasks})
 put('Acceptance_Scenarios.json',{'kind':'executable_test_design_not_run','count':len(scenarios),'scenarios':scenarios})

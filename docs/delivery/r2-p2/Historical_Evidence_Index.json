@@ -5606,6 +5606,259 @@
       "use": "historical input only; executionThisRun=false"
     }
   ],
-  "implementationMap": [],
+  "implementationMap": [
+    {
+      "requirement": "BP-C-REQ-01",
+      "capability": "干部任期/提名/任用",
+      "disposition": "可复用：提名/审议/调动关联核对、稳定人员与干部任期、访谈追溯、本人述职与独立核验、期间顺序/重叠保护及事务审计。",
+      "evidence": [
+        "lib/hris/cadre-terms.ts",
+        "lib/hris/cadres.ts",
+        "lib/hris/cadre-interviews.ts",
+        "lib/hris/development.ts",
+        "lib/hris/development-repository.ts",
+        "app/api/cadres/route.ts",
+        "tests/p3-api.test.mjs"
+      ],
+      "gap": "待修改主职限定、登记直生效与正式任命区分、四干部状态映射、当前归档/敏感权限；待新增选拔活动/评价表/委员会评分、完整任免期次/审批生效、考察延期/转正/退出、年度述职和奖惩档案子集。；具体候选依M03-SPEC-01,M03-SPEC-02,M03-SPEC-03,M03-SPEC-04,M03-SPEC-05,M03-SPEC-06及M03-LIMIT-01，不自动批准。",
+      "acceptance": "已有生效任期重叠时登记拒绝；已批准未生效调动不能核对任用；岗位不匹配拒绝；员工离职前不能登记离职原因结束任期",
+      "currentApplicability": {
+        "status": "保留",
+        "moduleIds": [
+          "M03"
+        ],
+        "originalModuleIds": [
+          "M03"
+        ],
+        "baseCapabilityIds": [],
+        "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
+      }
+    },
+    {
+      "requirement": "BP-C-REQ-02",
+      "capability": "任职资格标准及认证",
+      "disposition": "复用现有认证证据/版本/事务；目录/评级/委员会/权限/续证须增量设计，候选未批",
+      "evidence": [
+        "lib/hris/qualification.ts",
+        "lib/hris/development.ts",
+        "lib/hris/development-repository.ts",
+        "app/api/qualifications/route.ts",
+        "app/qualifications/workspace.tsx",
+        "lib/hris/cadres.ts",
+        "tests/p3-api.test.mjs"
+      ],
+      "gap": "目录类别/级别/指标/评级方案缺实体实现；当前资格target仍1–5固定。现冻结说明/同版proof/独立非本人审核及到期派生可复用；缺标准独立发布审批、目录范围、委员会门槛、材料贡献者排除、明确有效期策略、同根级别重复与续证原单关联。标准archive仅阻新申请，现review未要求标准published，不能误报停用在途自动终止。源修改/停用QI后旧QS说明保留已有实证，但不是全面版本实测。",
+      "acceptance": "新标准版本不得覆盖旧认证依据；相同版本已有有效认证/待审申请时拒绝重复；不达目标或证据版本错误不能认证；候选补充：独立类别名称/编码/分类保存及回查一致，未选关联类型不绑定真实岗职务；重复、停用和分类变化须补证后明确，不能套用组织员工目录规则。；候选场景：同一码类型/指标保存回查一致；指标类型不因当前目录选择而默认已填；类别/级别/指标各用稳定ID，停用或新版本不默改旧标准；评分/评级和标准内容独立验证，未知满分/舍入留空。；给定QC/QL1/QI目录，标准保存后同ID详情保持类别/层级/指标引用；局部级别描述须独立回读，不由最终保存成功推所有字段已存。原指标改版、停用与旧标准引用仍须补执行证据。；实测候选验收：新指标说明A选入标准后源改B，旧标准仍A；已引用指标停用显示具体引用确认，停用后历史标准仍可读A。是否采纳该引用/停用政策须需求评审，不从一次成功外推所有对象。；候选：两级方案保存回读1/2及名称，评级指标选用方案只改变可选等级来源，不默认为1–5整数；方案修改/停用对引用和目标版本需补证；学习地图可见不等于课程已分配/完成或资格已授予。",
+      "currentApplicability": {
+        "status": "保留",
+        "moduleIds": [
+          "M06"
+        ],
+        "originalModuleIds": [
+          "M06"
+        ],
+        "baseCapabilityIds": [],
+        "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
+      }
+    },
+    {
+      "requirement": "BP-C-REQ-03",
+      "capability": "360项目/关系/答卷/报告",
+      "disposition": "可复用：项目/邀请/答卷/报告稳定ID、模板复制、本人有效邀请校验、低样本null、同revision事务及历史事件。",
+      "evidence": [
+        "lib/hris/feedback.ts",
+        "lib/hris/development.ts",
+        "lib/hris/development-repository.ts",
+        "lib/hris/surveys.ts",
+        "app/api/feedback/route.ts",
+        "tests/p3-api.test.mjs",
+        "docs/P1_Source_Observations_20260907.md"
+      ],
+      "gap": "待修改固定四关系/五分制、HR默认原卷可见、低样本精确人数、零卷正式发布；待新增题库版本/组合套卷、报告授权审批、更正版本、退出与撤权处理，组织聚合防差分。；具体候选依M26-SPEC-01,M26-SPEC-02,M26-SPEC-03,M26-SPEC-04,M26-SPEC-05及M26-LIMIT-01，不自动批准。",
+      "acceptance": "活动/邀请/答卷/报告与角色分开验收；详细AC01–08仅为原M26范围下候选用例，不新增59任务分母。源可配置角色和匿名治理必须先评审，不能用当前四关系/纯量表自动裁减常规题库和报表。",
+      "currentApplicability": {
+        "status": "保留",
+        "moduleIds": [
+          "M26"
+        ],
+        "originalModuleIds": [
+          "M26"
+        ],
+        "baseCapabilityIds": [],
+        "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
+      }
+    },
+    {
+      "requirement": "BP-C-REQ-04",
+      "capability": "盘点/继任/标准模型",
+      "disposition": "可复用：池/成员/继任/计划稳定记录、active/closed历史、本人或有权提交与独立核验、关联学习未完成拦截、当前权限及CAS事务。",
+      "evidence": [
+        "lib/hris/development.ts",
+        "docs/P1_Source_Observations_20260907.md",
+        "docs/delivery/Cadre_Learning_Source_Gaps.md",
+        "lib/hris/reports.ts",
+        "tests/p3-api.test.mjs",
+        "lib/hris/review-versions.ts",
+        "lib/hris/work-inbox.ts",
+        "lib/hris/development-repository.ts"
+      ],
+      "gap": "待修改固定ready/one_year/two_years准备度、成员重入缺原单、active状态与当前有效性混用；待新增规则版本化自动入出池、成员阶段/指导关系、继任起止/复核、IDP模板/阶段/动态职责、组织健康指标及当前/历史口径。；具体候选依M17-SPEC-01,M17-SPEC-02,M17-SPEC-03,M17-SPEC-04,M17-SPEC-05,M17-SPEC-06及M17-LIMIT-01，不自动批准。",
+      "acceptance": "后续评审必须证明正式绩效快照来源/版本；撤销或新版本不能静默覆盖旧九宫格；无绩效不自动补最低档；候选：仅测试A/不向下公开/无共享/自动入池关的新池保存后同PoolId、0成员；预计人数空则饱和度保留未知，不能制造0%或除0。完整名回查与对象ID验证保存，前缀空不判不存在；入出标准和M06资格不自动合并。；候选：手工选择已存池+EA，保存后同复合身份仅一条；阶段改培养中、准备度选3~6个月，回读保持原入池日期/指导身份。显式同人指导源可存，但项目建议将指导关系与独立审批分开，是否禁同人待评审，不自动套D7。；候选：同一稳定目标职位与员工ID按明确权限可追溯，找不到时提示候选限制，不用名称相似自动换真实职位。候选不可达只阻关系创建，不把池成员培养中计为已确认继任。；候选：M37配置的标准在M18选择/详情必须关联明确源版本并保持关键指标/目标/权重，显示一致不能代替标准版本和权限校验；不将M06资格标准自动当人才标准。；追加M17-HISTORY/SCOPE/REPORT三个未执行候选。",
+      "currentApplicability": {
+        "status": "部分适用",
+        "moduleIds": [
+          "M17",
+          "M18",
+          "M37"
+        ],
+        "originalModuleIds": [
+          "M17",
+          "M18",
+          "M37",
+          "M38",
+          "M02",
+          "M15",
+          "M45",
+          "M46"
+        ],
+        "baseCapabilityIds": [],
+        "note": "仅M17/M18/M37原登记内盘点/继任/标准与所需稳定维度；M02/M15/M38/M45/M46独立规则退出当前就绪条件，语义不合并。"
+      }
+    },
+    {
+      "requirement": "BP-I-REQ-03",
+      "capability": "实名调查/问卷与360共用模板边界",
+      "disposition": "待核验/可复用候选；差异需补齐，未授权本轮改产品",
+      "evidence": [
+        "lib/hris/surveys.ts",
+        "lib/hris/feedback.ts"
+      ],
+      "gap": "员工调查/北森问卷/问卷调查三组不合并，匿名、复杂题型、报告行动计划未完成",
+      "acceptance": "单选越界/缺题拒绝；撤回不计有效回应；未开放/超日期不能提交；实名不能在文案宣传匿名；360分组压制另按阈值",
+      "currentApplicability": {
+        "status": "部分适用",
+        "moduleIds": [
+          "M26",
+          "M27"
+        ],
+        "originalModuleIds": [
+          "M29",
+          "M30",
+          "M31",
+          "M26",
+          "M27"
+        ],
+        "baseCapabilityIds": [
+          "BASE-04"
+        ],
+        "note": "仅M26与M27原登记业务所需题目/版本公共结构；独立调查/问卷运营暂缓，实名和360匿名语义分别评审。"
+      }
+    },
+    {
+      "requirement": "BP-C-API-01",
+      "capability": "内部读取/命令接口",
+      "disposition": "可复用候选/外部接口另待补齐",
+      "evidence": [
+        "app/api/qualifications/route.ts",
+        "app/api/cadres/route.ts",
+        "lib/hris/http.ts"
+      ],
+      "gap": "这些是本项目接口，原站外部endpoint/认证/错误/回调尚未取得；分页、重试和大批量能力不由GET存在推定",
+      "acceptance": "非法请求来源403、非JSON415、超过各路由body上限413、格式400；权限拒绝不得带出数据；事务故障不返回成功。业务HttpError按实际状态返回，未分类异常503",
+      "currentApplicability": {
+        "status": "保留",
+        "moduleIds": [
+          "M03",
+          "M06"
+        ],
+        "originalModuleIds": [
+          "M03",
+          "M06"
+        ],
+        "baseCapabilityIds": [],
+        "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
+      }
+    },
+    {
+      "requirement": "BP-C-REQ-05",
+      "capability": "原站发展计划阶段与执行人（M17）",
+      "disposition": "可复用：池/成员/继任/计划稳定记录、active/closed历史、本人或有权提交与独立核验、关联学习未完成拦截、当前权限及CAS事务。",
+      "evidence": [
+        "lib/hris/development.ts",
+        "docs/P1_Source_Observations_20260907.md",
+        "lib/hris/reports.ts",
+        "lib/hris/review-versions.ts",
+        "lib/hris/work-inbox.ts",
+        "lib/hris/development-repository.ts",
+        "tests/p3-api.test.mjs"
+      ],
+      "gap": "待修改固定ready/one_year/two_years准备度、成员重入缺原单、active状态与当前有效性混用；待新增规则版本化自动入出池、成员阶段/指导关系、继任起止/复核、IDP模板/阶段/动态职责、组织健康指标及当前/历史口径。；具体候选依M17-SPEC-01,M17-SPEC-02,M17-SPEC-03,M17-SPEC-04,M17-SPEC-05,M17-SPEC-06及M17-LIMIT-01，不自动批准。",
+      "acceptance": "先确认模板阶段开启规则、执行人解析、退回与变动恢复，才能定义步骤完成和阶段切换预期；现有简单发展行动不可冒充整套模板流程",
+      "currentApplicability": {
+        "status": "保留",
+        "moduleIds": [
+          "M17"
+        ],
+        "originalModuleIds": [
+          "M17"
+        ],
+        "baseCapabilityIds": [],
+        "note": "原契约在所列保留模块内部继续细化；既有候选不等于已批准要求。"
+      }
+    },
+    {
+      "requirement": "BP-C-REQ-07",
+      "capability": "人才标准主档、四维度及指标库（M37）",
+      "disposition": "复用记录/版本及同版本差距；四维度/子集/审批/权限等需增量设计，M37未批准",
+      "evidence": [
+        "lib/hris/development.ts",
+        "docs/P1_Source_Observations_20260907.md",
+        "lib/hris/development-repository.ts",
+        "app/api/development/route.ts",
+        "app/development/workspace.tsx",
+        "tests/p3-api.test.mjs"
+      ],
+      "gap": "当前standard固定五anchors、同code新UUID/version且默认active，租户成员均可读；无独立指标库/四子集/四维度目标权重/审批发布/启停。现引用按版本、gap缺分null/旧版不顶新版可复用；缺root/version唯一约束、组合尺度、当前使用范围及引用冻结治理。M37-SPEC-01至05及LIMIT未批准，不再把已有C32–36保存/启用写成仅只读。",
+      "acceptance": "候选：合成名称、空分类/模型名称保存后回查同标准且停用，四维度分别展示；空指标不算完整标准或已启用。模型名称自由文本不得强行映射完整M38对象。标准引用必须区分人才/资格/绩效尺度，目标和权重按对应维度与版本说明；未知算法不填默认1–5。；候选：新能力库说明/类型/状态返回回读一致，指标只属于所选库，以代码引用；新增指标不等于四子集已填或完整标准已启用。子集顺序/定义和版本要可追溯，不把所有内容拼进固定5条anchors。；候选：等级子记录按指标稳定引用，保存顺序/别称/说明回读一致，所属要素空不能推需M38完整模型。表单载体加载失败应保留未提交状态，有限恢复后成功不重复建记录。；候选：选已有TI后空目标/权重1.0保存回读定义和空目标，不能用空值算0分或达标。测评方案无候选应保留未配置并阻相应真实评测动作，不伪造成功/外部ID；不阻无依赖的其他需求。；源实测候选：仅勾测试标准启用并确认后列表启用；准入和真正可评价必须分离，缺方案不虚构评测成功，空目标不自动达标。若本项目另设更严格完整性规则须明确建议和评审依据，不能借启用证据声称全部业务完整。",
+      "currentApplicability": {
+        "status": "保留",
+        "moduleIds": [
+          "M37"
+        ],
+        "originalModuleIds": [
+          "M37"
+        ],
+        "baseCapabilityIds": [],
+        "note": "仅M37既有标准/指标库范围；M18入口和选择已核、UUID/快照和M17引用仍待证；不恢复M38。"
+      }
+    },
+    {
+      "requirement": "BP-C-REQ-08",
+      "capability": "在线盘点项目、标准选择、维度工具与对象范围（M18）",
+      "disposition": "可复用：项目期间/组织、review稳定ID、绩效快照、supersedes版本链、独立复核发布、未评定null、当前权限及事务事件。",
+      "evidence": [
+        "lib/hris/development.ts",
+        "docs/P1_Source_Observations_20260907.md",
+        "lib/hris/review-versions.ts",
+        "lib/hris/reports.ts",
+        "lib/hris/work-inbox.ts",
+        "lib/hris/development-repository.ts",
+        "tests/p3-api.test.mjs"
+      ],
+      "gap": "待修改固定1–3潜力/绩效轴、首次发布未独立审批、当前身份范围与快照的区分；待新增多维标准/工具、对象模板与采集状态、校准会议与参会权限、版本化九宫格、冻结样本与发布受众、池/继任消费和纠错。；具体候选依M18-SPEC-01,M18-SPEC-02,M18-SPEC-03,M18-SPEC-04,M18-SPEC-05及M18-LIMIT-01，不自动批准。",
+      "acceptance": "候选：六空项在步骤校验被明确阻止，填写合成组织/范围后可下一步；步骤回退保留已填值，重复提交应可查询同对象而不重建。M37标准选择后应追踪引用与版本；工具项目为空不得制造评分/报告数据。关闭某维度应明确是否不采集及对结果的影响，未知值不得记0。最终保存须回查稳定ID/状态/范围/工具/对象；员工自助和报表须沿同项目与稳定员工映射验证范围，不用管理员页面代验收。；候选：人员选择器保存仅回填，不触发项目启动；重复选择应按员工ID去重。引入最近结果必须在需求明确快照来源/版本/日期和缺失处理，不能继承其他员工或把空结果算0。若模板/方案无候选，明确局部前置缺失，不创建无定义的采集任务。；C40候选：恢复中断先按完整标记/稳定ID查项目和对象；已存在新建项目则续配，不能按尚未点启动推未创建。新建项目对象初始/未计算必须区别0分和已完成，资格空不自动继承M06目录或M03干部身份。",
+      "currentApplicability": {
+        "status": "保留",
+        "moduleIds": [
+          "M18"
+        ],
+        "originalModuleIds": [
+          "M18"
+        ],
+        "baseCapabilityIds": [],
+        "note": "M18原盘点项目及工具内部边界，不恢复M02/M15/M38；M19/M48/M32按链另有权限与报告要求。"
+      }
+    }
+  ],
   "executionThisRun": false
 }

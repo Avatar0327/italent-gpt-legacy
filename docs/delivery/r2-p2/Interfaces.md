@@ -11,6 +11,8 @@
 
 回执必填commandId、requestDigest、status=accepted|applied|rejected|unknown、approvalState、effectState、entityRevision、workspaceRevision、occurredAt、correlationId；可选error={code,retryable,reconciliationId}。accepted仅入队；applied表示本地指定动作已提交，不自动代表任用、人事或外发都完成。返回体不得含无权字段。unknown保留原命令键和对账入口，不显示业务成功。
 
+保留BP-C-API-01传输边界：来源/CSRF不符403，非application/json为415，超过路由字节上限413，空体/无效JSON/重复键400，未分类服务异常503；旧兼容路由仍保持现有32768字节默认，不修改通用旧端点预算。拟新增`/api/r2/commands`显式上限256KiB，足以容纳M17模板32766个四字节字符及有界元数据；更大模板/名单走分块准备manifest，不截断字段，也不把4MiB存储块上限当命令无限预算。技术预算由P3核实际运行限额，不能改变批准字段上限。敏感响应Cache-Control: no-store，下载先完全授权再输出字节，文件名安全转义，表格导出沿R1公式注入防护。
+
 引用类型`VersionRef`：{producer,objectType,rootId,versionId,sourceRevision,digest,capturedAt,purpose}；外部另含sourceNamespace/externalId。数字版号不能替代versionId，digest不能代权限/签名。`Cell`使用{value,state,reasonCode,unit?,scaleVersion?}：value/null/not_configured/unavailable；敏感无权字段整体省略。报告可额外`state=suppressed`且不带可反推计数。日期YYYY-MM-DD，时刻UTC RFC3339；schemaVersion不支持返回426/SCHEMA_VERSION_UNSUPPORTED。
 
 事件Envelope：eventId、schemaVersion=1、tenantId、producer、eventType、objectType、rootId、versionId、entityRevision、workspaceRevision、sourceRevision、occurredAt、effectiveAt|null、correlationId、causationId、digestAlgorithm=sha256-canonical-json-v1、digest、payload。版本发布事件还带manifestDigest和availability；撤回/停用事件指向原版本与新状态事件ID，不能修改旧payload。订阅字段按最小purpose选择，原卷/敏感原文不在通用事件中。

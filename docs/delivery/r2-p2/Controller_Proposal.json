@@ -1,0 +1,99 @@
+{
+  "proposalId": "R2-P2-INTAKE-PROPOSAL-20260910",
+  "proposalOnly": true,
+  "registeredInController": false,
+  "proposerRole": "R2 P2独立设计执行者",
+  "authorityOwner": "项目所有者/总控",
+  "entryApproval": "R2-P1-P2-TRANSITION-20260910",
+  "startHead": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+  "branch": "design/r2-p2-20260910",
+  "remote": "r2-p2-origin",
+  "designContentHead": null,
+  "packagingNote": "退出设计提交形成后在最终交接提交固定designContentHead；最终传输HEAD从Git外部核对，避免自身SHA循环",
+  "moduleStates": [
+    {
+      "moduleId": "M37",
+      "designStatus": "closed_for_design_review",
+      "p2ExitApproved": false,
+      "implementationAccepted": false
+    },
+    {
+      "moduleId": "M06",
+      "designStatus": "closed_for_design_review",
+      "p2ExitApproved": false,
+      "implementationAccepted": false
+    },
+    {
+      "moduleId": "M26",
+      "designStatus": "closed_for_design_review",
+      "p2ExitApproved": false,
+      "implementationAccepted": false
+    },
+    {
+      "moduleId": "M18",
+      "designStatus": "closed_for_design_review",
+      "p2ExitApproved": false,
+      "implementationAccepted": false
+    },
+    {
+      "moduleId": "M17",
+      "designStatus": "closed_for_design_review",
+      "p2ExitApproved": false,
+      "implementationAccepted": false
+    },
+    {
+      "moduleId": "M03",
+      "designStatus": "closed_for_design_review",
+      "p2ExitApproved": false,
+      "implementationAccepted": false
+    }
+  ],
+  "counts": {
+    "modules": 6,
+    "p3Tasks": 46,
+    "scenarios": 138,
+    "originalLimitGroups": 6,
+    "originalLimitGroupsFullyClosed": 0,
+    "limitSubitems": 52,
+    "p2DesignClosed": 15,
+    "p3Validation": 25,
+    "p4Acceptance": 12
+  },
+  "originalLimitResidualGroups": {
+    "P3": 6,
+    "P4": 6,
+    "overlap": true
+  },
+  "p2ExitRecommendation": "建议按完整设计包及明确P3/P4责任评审R2 P2退出；非所有者批准",
+  "p2ExitApproved": false,
+  "p3Entered": false,
+  "newBusinessArchitectureCostDecisionsRequired": 0,
+  "pendingOwnerAction": "独立审阅并决定R2 P2退出；P3另行明确准入",
+  "sourceRequests": {
+    "count": 7,
+    "status": "request_only_not_sent_or_executed"
+  },
+  "recoveryTargets": {
+    "rpoMinutes": 60,
+    "rtoMinutes": 240,
+    "retentionDays": 30,
+    "runtimeProvenThisRun": false
+  },
+  "requestedControllerRegistration": [
+    "仅登记设计包固定Git引用、两轮自检和未决实证责任",
+    "保持6个原LIMIT组/15模块P1分母及批准状态",
+    "不得将设计闭环、138个未执行场景或历史通过数登记为P3/P4通过"
+  ],
+  "changesToCanonicalLedger": [],
+  "productModified": false,
+  "deployed": false,
+  "sourceReferenceFiles": [
+    "Source_Manifest.json",
+    "Artifact_Manifest.json",
+    "Exit_Review.md",
+    "Requirements_Trace.json",
+    "Limit_Resolution.json",
+    "P3_Work_Packages.json",
+    "Acceptance_Scenarios.json"
+  ]
+}

@@ -13,7 +13,7 @@
 - [迁移与回滚](Migration_Rollback.md)：保持原ID、隔离冲突、不伪造历史。
 - [恢复、成本和责任](Recovery_Cost_Responsibilities.md)：60分钟/240分钟/30天及能力闸门。
 
-后续模块、验收、LIMIT及退出材料由完成单元逐次加入。`Source_Manifest.json`固定实际Git对象及SHA256；`Requirements_Trace.json`是基于冻结Scope的只读设计映射，源字段中的历史“未批准”措辞须结合该源的当前批准记录解释，不能重新要求批准。
+六模块、基础差异及两轮自检已经完成。完整取件见[退出评审材料](Exit_Review.md)、[需求追踪](Traceability.md)、[P3任务建议](P3_Handoff.md)、[LIMIT责任](Limit_Resolution.md)及[恢复检查点](Resume.md)。结构化总控提案为`Controller_Proposal.json`，未写入Scope或看板。`Source_Manifest.json`固定实际Git对象及SHA256；`Requirements_Trace.json`是基于冻结Scope的只读设计映射，源字段中的历史“未批准”措辞须结合该源的当前批准记录解释，不能重新要求批准。
 
 ## 本轮执行边界
 

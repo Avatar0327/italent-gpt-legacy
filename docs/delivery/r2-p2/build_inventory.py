@@ -23,6 +23,7 @@ for i in issues:
     mid=next((m for m in ORDER if i['id'].startswith(m)),None)
     target=f'{mid}_Design.md#{i["id"].lower()}' if mid else 'Foundations.md#r2-baseline-01'
     rec={'id':i['id'],'sourcePointer':'/p1B/reviewIssues/'+str(s['p1B']['reviewIssues'].index(i)),
+         'topic':i['topic'],
          'approvedText':i['proposal'],'approvedProposalSha256':i.get('approvedProposalSha256') or approved.get('sha256'),
          'approvalRecord':i.get('approvalRecord'),'designRefs':[target],
          'designStatus':'complete' if mid in done or (not mid and state.get('foundationsComplete')) else 'pending'}
@@ -87,7 +88,7 @@ for m in ORDER:
     for page in s['p1Baseline']['pages']:
         if page.get('id') in refs or page.get('moduleId')==m:
             evidence.append({'moduleId':m,'sourcePage':page,'use':'historical input only; executionThisRun=false'})
-put('Historical_Evidence_Index.json',{'sourceGitRef':BASE,'pages':evidence,'implementationMap':[x for x in s['p1B']['implementationMap'] if set(x.get('moduleIds',[]))&set(ORDER)],'executionThisRun':False})
+put('Historical_Evidence_Index.json',{'sourceGitRef':BASE,'pages':evidence,'implementationMap':[x for x in s['p1B']['implementationMap'] if set(x.get('currentApplicability',{}).get('moduleIds',[]))&set(ORDER)],'executionThisRun':False})
 rows=['# 需求—设计—验收追踪','',f'固定源HEAD `{BASE}`；本表为设计索引，精确逐句/字段/角色/状态及原验收ID在`Requirements_Trace.json`。所有用例本轮未执行。','', '|批准需求|设计定位|设计材料状态|','|---|---|---|']
 for x in specs: rows.append('|'+x['id']+'|'+f'[{x["designRefs"][0]}]({x["designRefs"][0]})'+'|'+x['designStatus']+'|')
 rows+=['','原LIMIT组保持6个；分解处置另见Limit_Resolution.json，不能将子项数替代原组分母。']

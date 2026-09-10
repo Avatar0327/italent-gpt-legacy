@@ -8,7 +8,7 @@
       "requirementRefs": [
         "M37-SPEC-01"
       ],
-      "title": "建议保留标准与指标库完整范围，新增稳定libraryId/indicatorId/standardRootId/vers",
+      "title": "标准、指标库和子集的稳定对象",
       "designRefs": [
         "M37_Design.md#m37-spec-01"
       ],
@@ -35,7 +35,7 @@
       "requirementRefs": [
         "M37-SPEC-02"
       ],
-      "title": "建议每个标准引用绑定指标版本、维度、目标类型/值/单位/方向和权重。未设置目标用null，等级目标必须引用该版本存在的l",
+      "title": "目标、权重、组合与缺失值",
       "designRefs": [
         "M37_Design.md#m37-spec-02"
       ],
@@ -63,7 +63,7 @@
       "requirementRefs": [
         "M37-SPEC-03"
       ],
-      "title": "建议标准/指标内容按根ID管理不可变发布版本：draft→submitted→approved→published，退回",
+      "title": "审批、发布、启停与引用版本",
       "designRefs": [
         "M37_Design.md#m37-spec-03"
       ],
@@ -90,7 +90,7 @@
       "requirementRefs": [
         "M37-SPEC-04"
       ],
-      "title": "建议read/use/manage/review/publish/export独立动作授权，所属管理组织/明确共享组织/",
+      "title": "目录管理、使用与字段权限",
       "designRefs": [
         "M37_Design.md#m37-spec-04"
       ],
@@ -116,7 +116,7 @@
       "requirementRefs": [
         "M37-SPEC-05"
       ],
-      "title": "建议M37作为标准定义生产者，给M06/M17/M18/M03/M26/M27/M32的契约含rootId/versio",
+      "title": "跨模块消费、异常与迁移验收",
       "designRefs": [
         "M37_Design.md#m37-spec-05"
       ],
@@ -144,7 +144,7 @@
       "requirementRefs": [
         "M06-SPEC-01"
       ],
-      "title": "建议类别分类树、任职类别、层级、任职级别、指标类型树、指标各有稳定ID/版本/状态，分类与指标类型父子分别禁止成环；类别",
+      "title": "类别、级别、指标类型与发展通道",
       "designRefs": [
         "M06_Design.md#m06-spec-01"
       ],
@@ -172,7 +172,7 @@
       "requirementRefs": [
         "M06-SPEC-02"
       ],
-      "title": "建议资格标准含rootId/versionId、类别、级别范围、指标范围及每level×indicator的标准说明/目",
+      "title": "评分、评级与分级资格标准",
       "designRefs": [
         "M06_Design.md#m06-spec-02"
       ],
@@ -197,7 +197,7 @@
       "requirementRefs": [
         "M06-SPEC-03"
       ],
-      "title": "建议资格标准和影响评定的目录/评级方案变更走draft→submitted→approved→published，新版本",
+      "title": "标准版本、审批与停用影响",
       "designRefs": [
         "M06_Design.md#m06-spec-03"
       ],
@@ -224,7 +224,7 @@
       "requirementRefs": [
         "M06-SPEC-04"
       ],
-      "title": "建议本人或有明确代办权的范围HR可申请，申请保存employeeId/standardVersion/level/提交者",
+      "title": "认证、评审独立性、有效期与续认证",
       "designRefs": [
         "M06_Design.md#m06-spec-04"
       ],
@@ -253,7 +253,7 @@
       "requirementRefs": [
         "M06-SPEC-05"
       ],
-      "title": "建议目录read/use/manage/review/publish/export、申请代办、评审、撤销和本人结果权限独",
+      "title": "权限、生产者契约、异常与迁移验收",
       "designRefs": [
         "M06_Design.md#m06-spec-05"
       ],
@@ -281,7 +281,7 @@
       "requirementRefs": [
         "M26-SPEC-01"
       ],
-      "title": "建议roleDefinitionId/version、projectId、subjectId、reviewerBindi",
+      "title": "评价角色、邀请身份与匿名承诺",
       "designRefs": [
         "M26_Design.md#m26-spec-01"
       ],
@@ -308,7 +308,7 @@
       "requirementRefs": [
         "M26-SPEC-02"
       ],
-      "title": "建议匿名组最少3名不同有效评价者，活动可提高阈值而不得低于3；低于阈值同时隐藏分数、精确人数、原评语及可反推的补集，显示",
+      "title": "匿名阈值、分母、缺评与报告开放",
       "designRefs": [
         "M26_Design.md#m26-spec-02"
       ],
@@ -328,7 +328,8 @@
         "R2-P3-M26-REVIEW-AC04",
         "R2-P3-M26-REVIEW-AC05",
         "R2-M26-S01",
-        "R2-M26-S02"
+        "R2-M26-S02",
+        "R2-M26-S07"
       ]
     },
     {
@@ -337,7 +338,7 @@
       "requirementRefs": [
         "M26-SPEC-03"
       ],
-      "title": "建议题库questionRootId/version，支持量表、单选、多选、文本四类常规题目；每题显式必填、选项ID、允",
+      "title": "题库、套卷、尺度与题目版本",
       "designRefs": [
         "M26_Design.md#m26-spec-03"
       ],
@@ -364,7 +365,7 @@
       "requirementRefs": [
         "M26-SPEC-04"
       ],
-      "title": "建议活动draft→approved→scheduled/open→closed，审批路由复用M19独立节点；保存、开放",
+      "title": "活动、答卷撤回及报告更正生命周期",
       "designRefs": [
         "M26_Design.md#m26-spec-04"
       ],
@@ -382,7 +383,8 @@
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC08",
         "R2-P3-M26-REVIEW-AC09",
-        "R2-P3-M26-REVIEW-AC10"
+        "R2-P3-M26-REVIEW-AC10",
+        "R2-M26-S05"
       ]
     },
     {
@@ -391,7 +393,7 @@
       "requirementRefs": [
         "M26-SPEC-05"
       ],
-      "title": "建议M37提供指标/尺度版本，M26输出报告版本、允许分组统计、覆盖/缺失原因、用途及授权状态；不自动回写能力评级、资格",
+      "title": "消费契约、数据用途及异常责任",
       "designRefs": [
         "M26_Design.md#m26-spec-05"
       ],
@@ -408,7 +410,8 @@
       ],
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC11",
-        "R2-P3-M26-REVIEW-AC12"
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S06"
       ]
     },
     {
@@ -417,7 +420,7 @@
       "requirementRefs": [
         "M18-SPEC-01"
       ],
-      "title": "建议projectId/version、subjectRecordId、stableEmployeeId、组织及岗位快照",
+      "title": "项目对象、范围快照与标准工具契约",
       "designRefs": [
         "M18_Design.md#m18-spec-01"
       ],
@@ -446,7 +449,7 @@
       "requirementRefs": [
         "M18-SPEC-02"
       ],
-      "title": "建议各维度各有来源/尺度/目标/规则版本，采集状态与计算就绪分开；无来源、无规则、无权或缺样本显示原因及null，不补0",
+      "title": "多维评价、九宫格和缺失值",
       "designRefs": [
         "M18_Design.md#m18-spec-02"
       ],
@@ -472,7 +475,7 @@
       "requirementRefs": [
         "M18-SPEC-03"
       ],
-      "title": "建议meetingId/version、agendaId、subjectRecordId/resultVersion、p",
+      "title": "校准会议、利益回避与结果版本",
       "designRefs": [
         "M18_Design.md#m18-spec-03"
       ],
@@ -500,7 +503,7 @@
       "requirementRefs": [
         "M18-SPEC-04"
       ],
-      "title": "建议项目draft→approved→active→collection_closed→closed，对象采集/评价/计",
+      "title": "发布、撤回、更正与敏感结果开放",
       "designRefs": [
         "M18_Design.md#m18-spec-04"
       ],
@@ -527,7 +530,7 @@
       "requirementRefs": [
         "M18-SPEC-05"
       ],
-      "title": "建议M18仅输出经批准发布的resultId/version、project/subject/period、标准/轴/规",
+      "title": "人才池、继任消费与异常恢复",
       "designRefs": [
         "M18_Design.md#m18-spec-05"
       ],
@@ -554,7 +557,7 @@
       "requirementRefs": [
         "M17-SPEC-01"
       ],
-      "title": "建议poolRootId/version、categoryId、orgScope、sharingPolicy、expec",
+      "title": "人才池、自动规则与出池重入历史",
       "designRefs": [
         "M17_Design.md#m17-spec-01"
       ],
@@ -582,7 +585,7 @@
       "requirementRefs": [
         "M17-SPEC-02"
       ],
-      "title": "建议readinessDefinitionId/version含代码/名称/业务含义/显式时间区间，保留“现在可就任”和",
+      "title": "准备度、继任资格与岗位覆盖",
       "designRefs": [
         "M17_Design.md#m17-spec-02"
       ],
@@ -609,7 +612,7 @@
       "requirementRefs": [
         "M17-SPEC-03"
       ],
-      "title": "建议保留池与IDP各自roleDefinition/version，不按同名合并；指导关系绑定employeeId、角色",
+      "title": "指导角色、动态关系与独立核验",
       "designRefs": [
         "M17_Design.md#m17-spec-03"
       ],
@@ -636,7 +639,7 @@
       "requirementRefs": [
         "M17-SPEC-04"
       ],
-      "title": "建议flowRoot/version、templateRoot/version、planId/version、stage",
+      "title": "发展计划模板、阶段与异常恢复",
       "designRefs": [
         "M17_Design.md#m17-spec-04"
       ],
@@ -663,7 +666,7 @@
       "requirementRefs": [
         "M17-SPEC-05"
       ],
-      "title": "建议健康度以版本化指标定义呈现，至少明确关键岗位覆盖、就绪覆盖、池饱和度和计划逾期率；关键岗位清单由有权者按M01稳定职",
+      "title": "组织健康度与人才分析分母",
       "designRefs": [
         "M17_Design.md#m17-spec-05"
       ],
@@ -690,7 +693,7 @@
       "requirementRefs": [
         "M17-SPEC-06"
       ],
-      "title": "建议池manage/memberRead/ruleExecute、继任nominate/review/close、计划c",
+      "title": "敏感权限、跨域建议与迁移边界",
       "designRefs": [
         "M17_Design.md#m17-spec-06"
       ],
@@ -707,7 +710,8 @@
       ],
       "scenarioIds": [
         "R2-P3-M17-REVIEW-AC13",
-        "R2-P3-M17-REVIEW-AC14"
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05"
       ]
     },
     {
@@ -716,7 +720,7 @@
       "requirementRefs": [
         "M03-SPEC-01"
       ],
-      "title": "建议cadreId显式绑定M01稳定employeeId，appointmentRecordId/termId与任职em",
+      "title": "干部稳定身份、任期及有效日期",
       "designRefs": [
         "M03_Design.md#m03-spec-01"
       ],
@@ -743,7 +747,7 @@
       "requirementRefs": [
         "M03-SPEC-02"
       ],
-      "title": "建议selectionActivityId/version、nominationId、evaluationInstanc",
+      "title": "选拔活动、提名审议与任免生效",
       "designRefs": [
         "M03_Design.md#m03-spec-02"
       ],
@@ -770,7 +774,7 @@
       "requirementRefs": [
         "M03-SPEC-03"
       ],
-      "title": "建议evaluationTemplateRoot/version冻结模式、指标/资格版本、评委清单/回避、尺度、权重、阈",
+      "title": "投票、总分、指标评分及缺评",
       "designRefs": [
         "M03_Design.md#m03-spec-03"
       ],
@@ -798,7 +802,7 @@
       "requirementRefs": [
         "M03-SPEC-04"
       ],
-      "title": "建议observationId绑定具体termId/appointmentDecisionId、开始/截止、目标/模板版",
+      "title": "考察期、转正、延期与退出",
       "designRefs": [
         "M03_Design.md#m03-spec-04"
       ],
@@ -824,7 +828,7 @@
       "requirementRefs": [
         "M03-SPEC-05"
       ],
-      "title": "建议述职activityId/version绑定周期及termId，报告recordId/version、材料/评审/发",
+      "title": "周期述职、档案子集与敏感权限",
       "designRefs": [
         "M03_Design.md#m03-spec-05"
       ],
@@ -852,7 +856,7 @@
       "requirementRefs": [
         "M03-SPEC-06"
       ],
-      "title": "建议M37标准/M06资格/M17后备/M18盘点/M26允许用途报告均通过稳定ID+具体版本+有效时点+缺失原因引用，",
+      "title": "跨模块契约、并发与历史迁移",
       "designRefs": [
         "M03_Design.md#m03-spec-06"
       ],

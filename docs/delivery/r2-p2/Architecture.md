@@ -26,6 +26,8 @@ R1 P2固定输入为`e15237281ff19f04f08a354fd9455c518b24ae47`（所有者退出
 
 新业务表按域规范化，保留兼容读投影；不是继续全量JSON读改写。逻辑DDL在P3落实，P2不执行建表。每表至少索引(tenant,rootId,versionId)、(tenant,personId,status,id)、主要父对象及稳定游标；区间冲突在同租户CAS内校验，普通唯一索引不能独自证明无重叠。参数约束在模块字典和严格接口schema双向一致。
 
+批准资料中的employeeId/stableEmployeeId与本包personId/stablePersonId均指M01稳定employee.id，不是账号或StaffID；接口明确一个canonical字段并保留旧字段适配，重复传两个别名且不同值拒绝。M26 projectId映射projectRootId、reviewerBindingId为独立reviewer_binding的bindingId，均通过已核ID映射而非同名合并。M03来源employmentRecordId保持来源namespace及原ID，明确映射至M01 assignmentId才可作任职凭证；M01 employmentId表示雇佣段，二者不得因英文相似混用。所有这些是本项目兼容字段说明，不能伪称原站未知UUID已经匹配。
+
 <a id="lifecycle"></a>
 ## 状态、批准与生效
 

@@ -66,25 +66,25 @@ put('Source_Requests.json',{'requests':requests,'count':len(requests),'newOwnerB
 legacy_rules=[
 ('BP-C-REQ-03-AC01','M26','retain','M26-REVIEW-AC06','冻结v1保留，补独立题卷版本及真实改版链'),
 ('BP-C-REQ-03-AC02','M26','retain_strengthen','M26-REVIEW-AC01','项目根跨角色唯一；语义拒绝保留，422/400统一错误码不当业务通过'),
-('BP-C-REQ-03-AC03','M26','retain_strengthen','M26-REVIEW-AC07','scheduled/open不代当前窗口；服务端时钟边界，P3用隔离时钟'),
-('BP-C-REQ-03-AC04','M26','superseded_expectation','M26-REVIEW-AC02','低样本精确responses=2和HR默认原卷权禁止；k=3及同尺度合法均值保留'),
+('BP-C-REQ-03-AC03','M26','retain_strengthen','R2-M26-S05','scheduled/open不代当前窗口；服务端时钟边界，P3用隔离时钟'),
+('BP-C-REQ-03-AC04','M26','superseded_expectation',['M26-REVIEW-AC02','M26-REVIEW-AC03','M26-REVIEW-AC04'],'低样本精确responses=2和HR默认原卷权禁止；k=3及同尺度合法均值保留'),
 ('BP-C-REQ-03-AC05','M26','refine_identity','M26-REVIEW-AC08','保留responseRootId，答案新version不可覆盖；close后拒绝'),
 ('BP-C-REQ-03-AC06','M26','superseded_expectation','M26-REVIEW-AC05','零合法非self组不能正式发布，旧可发布仅历史实现事实'),
 ('BP-C-REQ-03-AC07','M26','refine_idempotency','M26-REVIEW-AC09','同键同payload回原结果，异键重复发布拒绝；授权更正新版本且防差分'),
-('BP-C-REQ-03-AC08','M26','retain_strengthen','M26-REVIEW-AC11','本人也须显式report audience，禁止默认所有本人published可读；原卷拒绝保留'),
+('BP-C-REQ-03-AC08','M26','retain_strengthen','R2-M26-S06','本人也须显式report audience，禁止默认所有本人published可读；原卷拒绝保留'),
 ('BP-C-REQ-04-BC30-1','M17','retain','M17-REVIEW-AC01','保留同池同人和字段回读证据；new membership ID由本项目明确设计，原站未知不冒证'),
 ('BP-C-REQ-04-BC30-2','M17','retain','M17-REVIEW-AC06','阶段/准备度独立；unknown查询同ID不能重复入池'),
 ('BP-C-REQ-04-BC30-3','M17','superseded_expectation','M17-REVIEW-AC07','原站同EA可存仅事实；本项目禁本人唯一指导与最终自核'),
 ('BP-C-REQ-04-BC30-4','M17','retain','M17-REVIEW-AC13','阶段不产生继任/资格/IDP完成，源目标未配仅阻该依赖'),
 ('M17-HISTORY-01','M17','approved_rule_now_explicit','M17-REVIEW-AC01','本项目新ID+previousMembershipId已批；原站真实重入模式仍请求核证'),
-('M17-SCOPE-01','M17','approved_rule_now_explicit','M17-REVIEW-AC14','当前人员+池/岗位双范围及敏感字段已批，原未批准措辞为历史'),
+('M17-SCOPE-01','M17','approved_rule_now_explicit','R2-M17-S05','当前人员+池/岗位双范围及敏感字段已批，原未批准措辞为历史'),
 ('M17-REPORT-01','M17','retain_strengthen','M17-REVIEW-AC05','current有效性/复核/资格定义优先，active不等有效；保留历史记录'),
-('M17-IDP-RECOVERY-01','M17','source_request_only','M17-REVIEW-AC08','原站IDP入口已确认；未核节点UUID不重建/重复保存；新计划P3使用合成独立根'),
+('M17-IDP-RECOVERY-01','M17','source_request_only',[],'原站IDP入口已确认；未核节点UUID仅转R2-SOURCE-M17-01定向来源请求，不伪作P3业务用例'),
 ('M17-IDP-STATE-01','M17','refine_state_model','M17-REVIEW-AC09','计划/阶段/任务各自状态和核验；取消非自动免除，M27核验不代IDP完成')]
 trace=read('Requirements_Trace.json');old={a['id']:a for a in trace['acceptanceIds'] if a['kind']=='historical'}
 legacy=[]
 for id,m,disp,ac,note in legacy_rules:
-    legacy.append({'id':id,'originalSource':old[id]['source'],'disposition':disp,'currentDesignRefs':[m+'_Design.md#engineering'],'currentAcceptanceRefs':[ac],'reason':note,'executionThisRun':False,'phaseResponsibility':'总控来源核证（非本窗口原站执行）' if disp=='source_request_only' else 'P3独立验证/P4业务验收'})
+    legacy.append({'id':id,'originalSource':old[id]['source'],'disposition':disp,'currentDesignRefs':[m+'_Design.md#engineering'],'currentAcceptanceRefs':ac if isinstance(ac,list) else [ac],'reason':note,'executionThisRun':False,'phaseResponsibility':'总控来源核证（非本窗口原站执行）' if disp=='source_request_only' else 'P3独立验证/P4业务验收'})
 task_map={'C01':('Cross_Module_Contracts.md#ownership',['R2-X-01']),'C02':('Permissions.md#matrix',['R2-X-07']),'C-LIFECYCLE-REVIEW':('M03_Design.md#m03-spec-04',['R2-P3-M03-REVIEW-AC09']),'P1-C-RULES':('M03_Design.md#m03-spec-02',['R2-P3-M03-REVIEW-AC01','R2-P3-M03-REVIEW-AC05']),'C-INTERVIEW-REGISTER':('M03_Design.md#m03-spec-05',['R2-P3-M03-REVIEW-AC11','R2-M03-S04'])}
 hist=[]
 for task in trace['historicalTasks']:

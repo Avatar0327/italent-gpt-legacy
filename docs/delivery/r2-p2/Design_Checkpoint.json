@@ -17,11 +17,24 @@
   "activeModule": null,
   "foundationsComplete": true,
   "completedReviews": [
-    "round1"
+    "round1",
+    "round2"
   ],
   "p2ExitApproved": false,
   "p3Entered": false,
   "productModified": false,
   "deployed": false,
-  "next": "round2 reverse requirement and residual verification"
+  "next": "owner R2 P2 exit review and controller intake; do not start P3",
+  "designStatus": "all_autonomous_design_complete",
+  "counts": {
+    "modules": 6,
+    "p3Tasks": 46,
+    "scenarios": 138,
+    "originalLimitGroups": 6,
+    "originalLimitGroupsFullyClosed": 0,
+    "limitSubitems": 52,
+    "p2DesignClosed": 15,
+    "p3Validation": 25,
+    "p4Acceptance": 12
+  }
 }

@@ -42,6 +42,10 @@ modules={
 }
 for m,arr in modules.items():
     for n,(spec,g,w,t) in enumerate(arr,1):add(f'R2-{m}-S{n:02d}',f'P3-R2-{m}-{spec}',[m+'-SPEC-'+spec],g,w,t)
+add('R2-M26-S05','P3-R2-M26-04',['M26-SPEC-04','BP-C-REQ-03-AC03'],'活动approved/scheduled，start=T0，end=T1；有效本人邀请，测试时钟分别T0前1ms、T0、T1','读取canRespond并直接提交答卷','T0前拒，T0允许，T1拒；项目open字样不能绕窗口；不用改平台真实时钟')
+add('R2-M26-S06','P3-R2-M26-05',['M26-SPEC-05','BP-C-REQ-03-AC08'],'本人E的合法报告已published但audience未包含E，另一版显式包含E；原卷属于他人匿名组','E直接读报告/下载及试查他人原卷','未开放版拒；开放版仅抑制后允许字段，export仍独立；他人原卷/邀请均拒，不能凭本人身份默认开放')
+add('R2-M26-S07','P3-R2-M26-02',['M26-SPEC-02'],'k=3；A/B/C三个cohort各10人，两两交集4、差集6，但三重交集仅X一人；A/B已披露，C待发布','按完整参与签名核第三份报告及相关总计','X构成1人签名类，C相关单元抑制；不能仅凭两两均达标放行，原披露约束保留')
+add('R2-M17-S05','P3-R2-M17-06',['M17-SPEC-06','M17-SCOPE-01'],'用户G1有池A manage但无员工B范围，G2有员工B范围但无目标职位P范围；另有不同grant各一半字段','直接查成员/继任、导出和尝试拼接两角色范围','池+员工、岗位+员工分别双范围拒；完整grant内授权后再敏感交集，不将一角色人员范围与另一角色字段拼接')
 tasks=[]
 def task(id,title,ref,requirements,owner):
     tasks.append({'id':id,'title':title,'moduleId':None,'requirementRefs':requirements,'designRefs':[ref],'ownerRole':owner,'phase':'P3','status':'proposed_not_started','dependencies':['R2 P2退出与P3准入另获所有者批准','对应R1契约实现版本确认'],'deliverables':['隔离实现/适配','可复核正反例和故障证据'],'scenarioIds':[]})
