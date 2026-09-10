@@ -44,16 +44,24 @@
       "evidence": [
         "R2-OBS-M37-005"
       ]
+    },
+    {
+      "id": "R2-DIFF-M06-001",
+      "module": "M06",
+      "classification": "NEED_OWNER_DECISION",
+      "severity": "Observation",
+      "finding": "M37新建指标在M06指标范围搜索为空；跨模块来源配置未明。",
+      "disposition": "继续建立独立M06指标；原站业务所有者补充映射/发布前置，未核实前不改P2，也不声称链路通过。"
     }
   ],
   "counts": {
     "INTENTIONAL_DIFFERENCE": 1,
-    "NEED_OWNER_DECISION": 1,
+    "NEED_OWNER_DECISION": 2,
     "DESIGN_GAP": 1,
     "ENV_BLOCKED": 1
   },
   "severityCounts": {
-    "Observation": 2,
+    "Observation": 3,
     "Minor": 2
   }
 }

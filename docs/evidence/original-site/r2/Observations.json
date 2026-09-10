@@ -57,8 +57,45 @@
     "classification": "ENV_BLOCKED",
     "evidence": [
       "captures/M37-negative-weight.json",
-      "captures/M37-upper-weight.json",
-      "captures/M37-zero-weight.json"
+      "captures/M37-zero-weight.json",
+      "captures/M37-weight-followup.json"
+    ]
+  },
+  {
+    "id": "R2-OBS-M06-001",
+    "module": "M06",
+    "actual": "独立类别新建默认启用，关联岗职务类型留空；停用直接生效，启用筛选隐藏该记录，启用+停用筛选回读并恢复启用。",
+    "p1": "M06-SPEC-01/03 目录与停启用",
+    "p2": "M06_Design.md 类别关联可空、availability另存；独立审核为批准政策，不反推原站",
+    "implementation": "旧qualification.ts缺独立类别目录，P2已列改造；未运行R2 P3",
+    "classification": "MATCH",
+    "evidence": [
+      "captures/M06-category-created.json",
+      "captures/M06-category-disabled.json"
+    ]
+  },
+  {
+    "id": "R2-OBS-M06-002",
+    "module": "M06",
+    "actual": "独立级别保存，排序901，层级/岗职务关联可空；首次定位偏移把名称写成下划线形式且自动编码L100，经仅编辑本轮记录修正并回读完整名称与专属编码。",
+    "p1": "M06-SPEC-01 独立级别目录",
+    "p2": "M06_Design.md 级别独立/正整数排序/空关联",
+    "implementation": "旧requirements五级固定，P2计划改造；非新实施缺陷",
+    "classification": "MATCH",
+    "evidence": [
+      "captures/M06-level-final.json"
+    ]
+  },
+  {
+    "id": "R2-OBS-M06-003",
+    "module": "M06",
+    "actual": "资格标准两步向导；名称/类别/级别范围/指标范围必填。本轮类别及级别可选；M37新建IND01在指标范围精确搜索为空，标准未保存，已取消。不能判断是独立指标目录还是发布/权限/配置前置。",
+    "p1": "M06-SPEC-02/05; M37引用定义与资格独立目录",
+    "p2": "M06_Design.md 显式category/level/indicator版本，不自动映射",
+    "implementation": "静态旧实现不能说明原站候选行为",
+    "classification": "NEED_OWNER_DECISION",
+    "evidence": [
+      "captures/M06-M37-indicator-search.json"
     ]
   }
 ]

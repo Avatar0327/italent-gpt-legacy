@@ -87,9 +87,53 @@
         "ZZ_R2_R2-ORIGIN-20260910-103952_M37_IND01"
       ],
       "currentState": "saved_readback"
+    },
+    {
+      "module": "M06",
+      "type": "qualification_category",
+      "name": "ZZ_R2_R2-ORIGIN-20260910-103952_M06_CAT01",
+      "code": "ZZ_R2_R2_ORIGIN_20260910_103952_M06_CAT01",
+      "status": "confirmed_created",
+      "businessId": null,
+      "currentState": "启用",
+      "references": [],
+      "operations": [
+        "create/readback",
+        "disable/enable/readback"
+      ]
+    },
+    {
+      "module": "M06",
+      "type": "qualification_level",
+      "name": "ZZ_R2_R2-ORIGIN-20260910-103952_M06_LEVEL01",
+      "code": "ZZ_R2_R2_ORIGIN_20260910_103952_M06_LEVEL01",
+      "status": "confirmed_created",
+      "businessId": null,
+      "currentState": "启用",
+      "references": [],
+      "operations": [
+        "create",
+        "correct_own_name_and_code",
+        "readback"
+      ]
     }
   ],
   "pending": [],
   "externalNotificationsSent": 0,
-  "humanVisitorsCreated": 0
+  "humanVisitorsCreated": 0,
+  "uncreatedAttempts": [
+    {
+      "module": "M37",
+      "type": "standard_indicator_reference",
+      "status": "validation_blocked",
+      "evidence": "captures/M37-weight-followup.json"
+    },
+    {
+      "module": "M06",
+      "type": "qualification_standard",
+      "name": "ZZ_R2_R2-ORIGIN-20260910-103952_M06_STD01",
+      "status": "unsaved_cancelled",
+      "reason": "M37 indicator not found; independent M06 indicator still needed"
+    }
+  ]
 }
