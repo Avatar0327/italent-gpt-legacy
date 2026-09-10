@@ -15,6 +15,8 @@
 
 六模块、基础差异及两轮自检已经完成。完整取件见[退出评审材料](Exit_Review.md)、[需求追踪](Traceability.md)、[P3任务建议](P3_Handoff.md)、[LIMIT责任](Limit_Resolution.md)及[恢复检查点](Resume.md)。结构化总控提案为`Controller_Proposal.json`，未写入Scope或看板。`Source_Manifest.json`固定实际Git对象及SHA256；`Requirements_Trace.json`是基于冻结Scope的只读设计映射，源字段中的历史“未批准”措辞须结合该源的当前批准记录解释，不能重新要求批准。
 
+[完整设计提交及同步记录](Commit_Register.md)保留10个设计提交；另有最终交接提交固定该清单和提案，完整传输HEAD以Git分支及最终回交为准。
+
 ## 本轮执行边界
 
 只写本分支本目录。未运行产品代码、P3业务测试、数据库迁移、恢复演练、部署、真实服务或原站浏览器；未新增访问者或启动子代理。文档检查仅验证设计材料、引用、哈希、范围和计数，不证明设计已实现。历史测试各保留原HEAD与时间，不记本轮复验。

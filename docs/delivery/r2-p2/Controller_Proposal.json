@@ -8,8 +8,8 @@
   "startHead": "22be3a7e366d6787180d4f593a30f5984c70e03a",
   "branch": "design/r2-p2-20260910",
   "remote": "r2-p2-origin",
-  "designContentHead": null,
-  "packagingNote": "退出设计提交形成后在最终交接提交固定designContentHead；最终传输HEAD从Git外部核对，避免自身SHA循环",
+  "designContentHead": "7ff3a28c7660dac658d5243d7c4535a9c8037fc2",
+  "packagingNote": "设计正文、追踪及两轮自检固定于designContentHead；最终交接提交只固化登记提案/提交清单/恢复元数据，最终完整HEAD由外部Git回执标识",
   "moduleStates": [
     {
       "moduleId": "M37",
@@ -95,5 +95,62 @@
     "Limit_Resolution.json",
     "P3_Work_Packages.json",
     "Acceptance_Scenarios.json"
+  ],
+  "fixedDesignReferences": [
+    {
+      "gitRef": "7ff3a28c7660dac658d5243d7c4535a9c8037fc2",
+      "path": "docs/delivery/r2-p2/Exit_Review.md",
+      "sha256": "545e646f166e5a4707ccb6dcca2f6893093c23cb107ddfc7b5849d955cbaf847"
+    },
+    {
+      "gitRef": "7ff3a28c7660dac658d5243d7c4535a9c8037fc2",
+      "path": "docs/delivery/r2-p2/Architecture.md",
+      "sha256": "9024938e6ec13f68a7055da673e56095ca6adf27f63e73aaaa794d70b50e34bd"
+    },
+    {
+      "gitRef": "7ff3a28c7660dac658d5243d7c4535a9c8037fc2",
+      "path": "docs/delivery/r2-p2/Cross_Module_Contracts.md",
+      "sha256": "fb0ddb062db795e023b460545863fe36b389e1e660bf752467630cad5540565e"
+    },
+    {
+      "gitRef": "7ff3a28c7660dac658d5243d7c4535a9c8037fc2",
+      "path": "docs/delivery/r2-p2/Requirements_Trace.json",
+      "sha256": "859fc8e1d9884c63973abc071627b6ce7b402a53f2a867461de5d1ec5759e7bc"
+    },
+    {
+      "gitRef": "7ff3a28c7660dac658d5243d7c4535a9c8037fc2",
+      "path": "docs/delivery/r2-p2/Limit_Resolution.json",
+      "sha256": "940d83dfa66eca97d1054e0524e6bb769cace346d8f809f53ae4bc662a56d4e9"
+    },
+    {
+      "gitRef": "7ff3a28c7660dac658d5243d7c4535a9c8037fc2",
+      "path": "docs/delivery/r2-p2/Acceptance_Scenarios.json",
+      "sha256": "a55b147c631fb87aa3c6db0e10c17d2b94a2be8ff86091ee7775a3bfae4d9d99"
+    },
+    {
+      "gitRef": "7ff3a28c7660dac658d5243d7c4535a9c8037fc2",
+      "path": "docs/delivery/r2-p2/P3_Work_Packages.json",
+      "sha256": "194b475503820bc471e8a59dbf105015c41fd6f18009f87b81a64d6283d6b513"
+    },
+    {
+      "gitRef": "7ff3a28c7660dac658d5243d7c4535a9c8037fc2",
+      "path": "docs/delivery/r2-p2/Source_Manifest.json",
+      "sha256": "98d9d5c7369c04b64722859ede12146a6a8c63dc1870f46941f7b5258fb470f6"
+    },
+    {
+      "gitRef": "7ff3a28c7660dac658d5243d7c4535a9c8037fc2",
+      "path": "docs/delivery/r2-p2/Artifact_Manifest.json",
+      "sha256": "a935f358c0c10af430d32db719ec84b1d978398ccc02b845c20e8a6d53cd45d0"
+    },
+    {
+      "gitRef": "7ff3a28c7660dac658d5243d7c4535a9c8037fc2",
+      "path": "docs/delivery/r2-p2/Review_Round1.md",
+      "sha256": "a15f6d41604aa68695906d8a8ac3b51676b307a2073d96a6532c7b4fcfa7e3e7"
+    },
+    {
+      "gitRef": "7ff3a28c7660dac658d5243d7c4535a9c8037fc2",
+      "path": "docs/delivery/r2-p2/Review_Round2.md",
+      "sha256": "316c31928556257878e6f99e02ca1755e0c8a950bc32558b5e4318313d11dc16"
+    }
   ]
 }

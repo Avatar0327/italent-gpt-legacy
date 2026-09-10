@@ -101,6 +101,9 @@ if args.final:
         p=read('Controller_Proposal.json')
         check(p['proposalOnly'] and not p['registeredInController'] and not p['p2ExitApproved'] and not p['p3Entered'],'controller proposal preserves exclusive authority')
         check(p['counts']['p3Tasks']==len(tasks) and p['counts']['scenarios']==len(scenarios),'controller proposal counts match actual task/scenario data')
+        for x in p.get('fixedDesignReferences',[]):
+            data=subprocess.check_output(['git','show',x['gitRef']+':'+x['path']],cwd=R)
+            check(digest(data)==x['sha256'],'controller fixed design hash '+x['path'])
 # Hash core design inputs; evidence and manifests are excluded to avoid self-referential hashes.
 artifacts=[{'path':f.relative_to(R).as_posix(),'sha256':digest(f.read_bytes()),'bytes':f.stat().st_size} for f in sorted(D.rglob('*')) if f.is_file() and 'evidence' not in f.parts and f.name not in ['Artifact_Manifest.json'] and '__pycache__' not in f.parts]
 (D/'Artifact_Manifest.json').write_text(json.dumps({'scope':'core design artifacts; excludes this manifest and evidence output to avoid circular hashes','artifacts':artifacts},ensure_ascii=False,indent=2)+'\n')

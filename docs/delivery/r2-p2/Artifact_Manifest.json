@@ -27,9 +27,19 @@
       "bytes": 19594
     },
     {
+      "path": "docs/delivery/r2-p2/Commit_Register.json",
+      "sha256": "98f9aab6f593f957ce27c4e5fc86c1b9af2691fca1af09e0266efd2e3a6a5b9c",
+      "bytes": 2973
+    },
+    {
+      "path": "docs/delivery/r2-p2/Commit_Register.md",
+      "sha256": "f666522b506d9e42f4b326f5e77be674b1e81a0d00a54d8fb319283bc89055e9",
+      "bytes": 1842
+    },
+    {
       "path": "docs/delivery/r2-p2/Controller_Proposal.json",
-      "sha256": "de637e5ed1cd0a19a4eb2f6929fd64c34437e9895c0b92dcd715366d847a05c0",
-      "bytes": 2975
+      "sha256": "1d671ff0979d86d3bf5bcda231d6292179f167622ff13ad4db9251150f5c3cb8",
+      "bytes": 5442
     },
     {
       "path": "docs/delivery/r2-p2/Cross_Module_Contracts.md",
@@ -38,8 +48,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/Design_Checkpoint.json",
-      "sha256": "54915ba68350c38f96298165e7b54aa59dfb42ecabc25a9425c07aca2e788214",
-      "bytes": 1039
+      "sha256": "7c35d4fb6b2fa895518375b499d63b7134065125ee29bb9cd4b8a2e37d7ec76e",
+      "bytes": 1218
     },
     {
       "path": "docs/delivery/r2-p2/Exit_Review.md",
@@ -143,8 +153,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/README.md",
-      "sha256": "beecc2ba3baf5f6b2e5cabfe634555e31661f1ff6ee6419a4de3613673b21aea",
-      "bytes": 2288
+      "sha256": "95664f71caaea1d346018a7d2364e8b3841f6cd29ade9c0e552f6593fea197fa",
+      "bytes": 2474
     },
     {
       "path": "docs/delivery/r2-p2/Recovery_Cost_Responsibilities.md",
@@ -218,8 +228,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/check_design.py",
-      "sha256": "9f36e72ade63b180d516588ac831b7a5cb27dfce84a2e1e4ae8777a1f3981d25",
-      "bytes": 9624
+      "sha256": "23e997ad65edd6a81f031435423bcf5a5ccefb53b5ae6bbef9df89c4c5d9d16e",
+      "bytes": 9852
     }
   ]
 }
