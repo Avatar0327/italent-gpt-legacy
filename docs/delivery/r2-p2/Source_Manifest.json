@@ -89,6 +89,14 @@
   },
   {
     "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/P3_Cadre_Profiles_Acceptance.md",
+    "sha256": "31edda61187b85f06139f223d41acbc65b0787ceaea80fab6b7198329f099d5a",
+    "bytes": 1455,
+    "readMode": "complete bytes; historical report/structured evidence review",
+    "historicalOnly": true
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
     "path": "docs/P3_Qualification_Acceptance.md",
     "sha256": "b2cf577fae8e000d637a8f77a148f0ea4983c5d07de3543cfdaa5a975bc71764",
     "bytes": 1187,
@@ -121,6 +129,30 @@
   },
   {
     "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/Cadre_Interview_Delivery.md",
+    "sha256": "4ca1f47274269f6967eda5751adbc3f3673a00d30407e3367dcb2002affdebb2",
+    "bytes": 1975,
+    "readMode": "complete bytes; historical report/structured evidence review",
+    "historicalOnly": true
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/Cadre_Interview_Regression.tap",
+    "sha256": "c84d6391b656edd805fe538d9ba433d5e92b1f05f89697f13df0fa9179d95755",
+    "bytes": 65738,
+    "readMode": "complete bytes; historical report/structured evidence review",
+    "historicalOnly": true
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/Cadre_Interview_Verification.json",
+    "sha256": "0153be6af009e37a7f04111e85929a1a9e0b2b5dc5493ea4fa13a8df837dc4b3",
+    "bytes": 3261,
+    "readMode": "complete bytes; historical report/structured evidence review",
+    "historicalOnly": true
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
     "path": "docs/delivery/Cadre_Learning_Source_Gaps.md",
     "sha256": "9ae9daffe4c82e124a23b6104970f71d93ce039b9a7688c0ab8aa3532e1dcf4a",
     "bytes": 18643,
@@ -129,11 +161,75 @@
   },
   {
     "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/Cadre_Terms_Delivery.md",
+    "sha256": "0dc7474b1e7963ba6ca4dda2da820e8a2f5b7f691220b5efeefacfc7cd1a3ee9",
+    "bytes": 2941,
+    "readMode": "complete bytes; historical report/structured evidence review",
+    "historicalOnly": true
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/Cadre_Terms_Test_Output.tap",
+    "sha256": "cf85e2ad78d7918ef855804f42935e197ca8825c18706a8e720e05bfc38d6ec7",
+    "bytes": 31610,
+    "readMode": "complete bytes; historical report/structured evidence review",
+    "historicalOnly": true
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/Controller_Lifecycle_Review.md",
+    "sha256": "2f0b495027a88f139505acebae294f5e0a907f1d685cf7c7fa1c1faa430ad7cb",
+    "bytes": 2262,
+    "readMode": "complete bytes; historical report/structured evidence review",
+    "historicalOnly": true
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/Controller_Lifecycle_Run.tap",
+    "sha256": "a69b1814376ade6a155aecd6754c21b821d7e8df6d35d0bbb9ae476b4bd3c82f",
+    "bytes": 25722,
+    "readMode": "complete bytes; historical report/structured evidence review",
+    "historicalOnly": true
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/Controller_Lifecycle_Verification.json",
+    "sha256": "26d7ff8dfe76d8e67da50847a0110c43ffb853b292c8b524bfef087e899cd9af",
+    "bytes": 1950,
+    "readMode": "complete bytes; historical report/structured evidence review",
+    "historicalOnly": true
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
     "path": "docs/delivery/F01_F04_Requirements_Baseline.md",
     "sha256": "6f1ab3239b2efe26142c970c3a3a2b2ae4bc09c15d768b0e6be046d22a77fca5",
     "bytes": 42339,
     "readMode": "complete bytes; structured/scoped semantic review",
     "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/G1_Integration_Test_Output.tap",
+    "sha256": "47eb9c1347a9b87d530f7023e05b7bdc787f8312b4f19b8d0500566d68cafd6d",
+    "bytes": 29461,
+    "readMode": "complete bytes; historical report/structured evidence review",
+    "historicalOnly": true
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/G1_Integration_Test_Result.json",
+    "sha256": "9a5c6d990e6835dc3ad48f0ed490167c25dfc8fb209b732e12d9732c14cb9ed4",
+    "bytes": 1693,
+    "readMode": "complete bytes; historical report/structured evidence review",
+    "historicalOnly": true
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/G1_PreAcceptance_Report.md",
+    "sha256": "1daa25d12adc05db28839bc4d23d9baba06e1bb83d186708d0d3af8e28a95ff6",
+    "bytes": 3220,
+    "readMode": "complete bytes; historical report/structured evidence review",
+    "historicalOnly": true
   },
   {
     "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",

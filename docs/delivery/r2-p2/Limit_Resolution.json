@@ -1,0 +1,797 @@
+{
+  "kind": "design_disposition_proposal_not_scope_update",
+  "originalGroupCount": 6,
+  "fullyClosedOriginalGroups": 0,
+  "originalGroupsWithP3Residual": 6,
+  "originalGroupsWithP4Residual": 6,
+  "residualGroupCountsOverlap": true,
+  "counts": {
+    "P2_design_closed": 15,
+    "P3_validation": 25,
+    "P4_acceptance": 12
+  },
+  "itemCount": 52,
+  "items": [
+    {
+      "id": "M37-LIMIT-01.01",
+      "parentLimitId": "M37-LIMIT-01",
+      "title": "根/子集/尺度及独立审批模型",
+      "disposition": "P2_design_closed",
+      "designRefs": [
+        "M37_Design.md#m37-spec-01"
+      ],
+      "evidenceStatus": "design_checked",
+      "p2Blocking": false,
+      "ownerRole": "R2 P2设计负责人",
+      "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M37-LIMIT-01.02",
+      "parentLimitId": "M37-LIMIT-01",
+      "title": "旧五级消费者、冻结/停用和迁移策略",
+      "disposition": "P2_design_closed",
+      "designRefs": [
+        "M37_Design.md#m37-spec-05"
+      ],
+      "evidenceStatus": "design_checked",
+      "p2Blocking": false,
+      "ownerRole": "R2 P2设计负责人",
+      "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M37-LIMIT-01.03",
+      "parentLimitId": "M37-LIMIT-01",
+      "title": "并发版本、权重/缺值/规则组合",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M37_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M37实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M37-LIMIT-01.04",
+      "parentLimitId": "M37-LIMIT-01",
+      "title": "多角色及敏感子集的服务端授权",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M37_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M37实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M37-LIMIT-01.05",
+      "parentLimitId": "M37-LIMIT-01",
+      "title": "停用在途、迁移冲突及五域实际消费",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M37_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M37实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M37-LIMIT-01.06",
+      "parentLimitId": "M37-LIMIT-01",
+      "title": "源共享UUID、深子集及真实测评来源核证",
+      "disposition": "P4_acceptance",
+      "designRefs": [
+        "M37_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "总控指定来源核证负责人/数据HR",
+      "closureCriterion": "仅对依赖真实来源迁移/接入的对象核证；无来源则隔离，不要求供应商行为覆盖本项目批准规则",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M37-LIMIT-01.07",
+      "parentLimitId": "M37-LIMIT-01",
+      "title": "真实跨角色/跨模块、生产权限和恢复验收",
+      "disposition": "P4_acceptance",
+      "designRefs": [
+        "M37_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "业务HR/委员会+安全+运维",
+      "closureCriterion": "获授权环境真实多角色/用途与60分钟RPO、240分钟RTO、30天保留证据",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M06-LIMIT-01.01",
+      "parentLimitId": "M06-LIMIT-01",
+      "title": "类别/层级/评级/标准矩阵及回避模型",
+      "disposition": "P2_design_closed",
+      "designRefs": [
+        "M06_Design.md#m06-spec-01"
+      ],
+      "evidenceStatus": "design_checked",
+      "p2Blocking": false,
+      "ownerRole": "R2 P2设计负责人",
+      "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M06-LIMIT-01.02",
+      "parentLimitId": "M06-LIMIT-01",
+      "title": "证书有效性、续期、停用与legacy迁移契约",
+      "disposition": "P2_design_closed",
+      "designRefs": [
+        "M06_Design.md#m06-spec-04"
+      ],
+      "evidenceStatus": "design_checked",
+      "p2Blocking": false,
+      "ownerRole": "R2 P2设计负责人",
+      "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M06-LIMIT-01.03",
+      "parentLimitId": "M06-LIMIT-01",
+      "title": "评分/评级与证据版本/时效",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M06_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M06实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M06-LIMIT-01.04",
+      "parentLimitId": "M06-LIMIT-01",
+      "title": "委员会阈值、回避与强制否决",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M06_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M06实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M06-LIMIT-01.05",
+      "parentLimitId": "M06-LIMIT-01",
+      "title": "目录编号并发、重复续证及授证事务故障",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M06_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M06实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M06-LIMIT-01.06",
+      "parentLimitId": "M06-LIMIT-01",
+      "title": "发展通道/地图与资格消费者实际适配",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M06_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M06实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M06-LIMIT-01.07",
+      "parentLimitId": "M06-LIMIT-01",
+      "title": "来源目录/地图关联及真实旧证映射核证",
+      "disposition": "P4_acceptance",
+      "designRefs": [
+        "M06_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "总控指定来源核证负责人/数据HR",
+      "closureCriterion": "仅对依赖真实来源迁移/接入的对象核证；无来源则隔离，不要求供应商行为覆盖本项目批准规则",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M06-LIMIT-01.08",
+      "parentLimitId": "M06-LIMIT-01",
+      "title": "完整业务多角色、跨域敏感权限及恢复验收",
+      "disposition": "P4_acceptance",
+      "designRefs": [
+        "M06_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "业务HR/委员会+安全+运维",
+      "closureCriterion": "获授权环境真实多角色/用途与60分钟RPO、240分钟RTO、30天保留证据",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M26-LIMIT-01.01",
+      "parentLimitId": "M26-LIMIT-01",
+      "title": "身份桥接/题卷/邀请/答卷不可变模型",
+      "disposition": "P2_design_closed",
+      "designRefs": [
+        "M26_Design.md#m26-spec-01"
+      ],
+      "evidenceStatus": "design_checked",
+      "p2Blocking": false,
+      "ownerRole": "R2 P2设计负责人",
+      "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M26-LIMIT-01.02",
+      "parentLimitId": "M26-LIMIT-01",
+      "title": "阈值、差分和报告用途/授权设计",
+      "disposition": "P2_design_closed",
+      "designRefs": [
+        "M26_Design.md#m26-spec-02"
+      ],
+      "evidenceStatus": "design_checked",
+      "p2Blocking": false,
+      "ownerRole": "R2 P2设计负责人",
+      "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M26-LIMIT-01.03",
+      "parentLimitId": "M26-LIMIT-01",
+      "title": "撤回更正、敏感历史隔离及恢复策略",
+      "disposition": "P2_design_closed",
+      "designRefs": [
+        "M26_Design.md#m26-spec-04"
+      ],
+      "evidenceStatus": "design_checked",
+      "p2Blocking": false,
+      "ownerRole": "R2 P2设计负责人",
+      "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M26-LIMIT-01.04",
+      "parentLimitId": "M26-LIMIT-01",
+      "title": "2/3样本、零样本及跨报告差分",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M26_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M26实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M26-LIMIT-01.05",
+      "parentLimitId": "M26-LIMIT-01",
+      "title": "四题型/套卷版本与角色重叠",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M26_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M26实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M26-LIMIT-01.06",
+      "parentLimitId": "M26-LIMIT-01",
+      "title": "撤回重交、更正发布竞争及审计故障",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M26_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M26实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M26-LIMIT-01.07",
+      "parentLimitId": "M26-LIMIT-01",
+      "title": "原卷/桥接/下载撤权与消费者失败状态",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M26_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M26实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M26-LIMIT-01.08",
+      "parentLimitId": "M26-LIMIT-01",
+      "title": "源匿名/题卷深行为及旧数据映射核证",
+      "disposition": "P4_acceptance",
+      "designRefs": [
+        "M26_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "总控指定来源核证负责人/数据HR",
+      "closureCriterion": "仅对依赖真实来源迁移/接入的对象核证；无来源则隔离，不要求供应商行为覆盖本项目批准规则",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M26-LIMIT-01.09",
+      "parentLimitId": "M26-LIMIT-01",
+      "title": "实际独立角色、隐私用途/容量/恢复验收",
+      "disposition": "P4_acceptance",
+      "designRefs": [
+        "M26_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "业务HR/委员会+安全+运维",
+      "closureCriterion": "获授权环境真实多角色/用途与60分钟RPO、240分钟RTO、30天保留证据",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M18-LIMIT-01.01",
+      "parentLimitId": "M18-LIMIT-01",
+      "title": "项目/会议/结果/九宫格与独立发布模型",
+      "disposition": "P2_design_closed",
+      "designRefs": [
+        "M18_Design.md#m18-spec-01"
+      ],
+      "evidenceStatus": "design_checked",
+      "p2Blocking": false,
+      "ownerRole": "R2 P2设计负责人",
+      "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M18-LIMIT-01.02",
+      "parentLimitId": "M18-LIMIT-01",
+      "title": "历史版本、来源与M17建议/迁移契约",
+      "disposition": "P2_design_closed",
+      "designRefs": [
+        "M18_Design.md#m18-spec-05"
+      ],
+      "evidenceStatus": "design_checked",
+      "p2Blocking": false,
+      "ownerRole": "R2 P2设计负责人",
+      "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M18-LIMIT-01.03",
+      "parentLimitId": "M18-LIMIT-01",
+      "title": "九格等值/缺失、范围变更和版本漂移",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M18_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M18实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M18-LIMIT-01.04",
+      "parentLimitId": "M18-LIMIT-01",
+      "title": "会议回避、驳回撤回及更正唯一性",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M18_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M18实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M18-LIMIT-01.05",
+      "parentLimitId": "M18-LIMIT-01",
+      "title": "首次发布、关闭重开和发布并发",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M18_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M18实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M18-LIMIT-01.06",
+      "parentLimitId": "M18-LIMIT-01",
+      "title": "来源/人才池/继任不同数据集及幂等消费",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M18_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M18实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M18-LIMIT-01.07",
+      "parentLimitId": "M18-LIMIT-01",
+      "title": "源工具/对象子ID/标准共享映射核证",
+      "disposition": "P4_acceptance",
+      "designRefs": [
+        "M18_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "总控指定来源核证负责人/数据HR",
+      "closureCriterion": "仅对依赖真实来源迁移/接入的对象核证；无来源则隔离，不要求供应商行为覆盖本项目批准规则",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M18-LIMIT-01.08",
+      "parentLimitId": "M18-LIMIT-01",
+      "title": "实际校准会、多角色敏感访问/容量/恢复验收",
+      "disposition": "P4_acceptance",
+      "designRefs": [
+        "M18_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "业务HR/委员会+安全+运维",
+      "closureCriterion": "获授权环境真实多角色/用途与60分钟RPO、240分钟RTO、30天保留证据",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M17-LIMIT-01.01",
+      "parentLimitId": "M17-LIMIT-01",
+      "title": "池规则、成员区间、准备度与继任任期",
+      "disposition": "P2_design_closed",
+      "designRefs": [
+        "M17_Design.md#m17-spec-01"
+      ],
+      "evidenceStatus": "design_checked",
+      "p2Blocking": false,
+      "ownerRole": "R2 P2设计负责人",
+      "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M17-LIMIT-01.02",
+      "parentLimitId": "M17-LIMIT-01",
+      "title": "IDP流程/模板/阶段/动态职责与核验",
+      "disposition": "P2_design_closed",
+      "designRefs": [
+        "M17_Design.md#m17-spec-04"
+      ],
+      "evidenceStatus": "design_checked",
+      "p2Blocking": false,
+      "ownerRole": "R2 P2设计负责人",
+      "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M17-LIMIT-01.03",
+      "parentLimitId": "M17-LIMIT-01",
+      "title": "健康分母、历史映射与敏感消费边界",
+      "disposition": "P2_design_closed",
+      "designRefs": [
+        "M17_Design.md#m17-spec-05"
+      ],
+      "evidenceStatus": "design_checked",
+      "p2Blocking": false,
+      "ownerRole": "R2 P2设计负责人",
+      "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M17-LIMIT-01.04",
+      "parentLimitId": "M17-LIMIT-01",
+      "title": "自动入出池幂等、unknown和重入历史",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M17_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M17实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M17-LIMIT-01.05",
+      "parentLimitId": "M17-LIMIT-01",
+      "title": "目标映射、任期/到期/离职及资格有效性",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M17_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M17实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M17-LIMIT-01.06",
+      "parentLimitId": "M17-LIMIT-01",
+      "title": "指导自审、角色替换和当前授权",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M17_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M17实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M17-LIMIT-01.07",
+      "parentLimitId": "M17-LIMIT-01",
+      "title": "IDP依赖阻塞、取消/免除、退回和任务核验",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M17_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M17实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M17-LIMIT-01.08",
+      "parentLimitId": "M17-LIMIT-01",
+      "title": "健康分母/历史快照、审计失败和消费适配",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M17_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M17实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M17-LIMIT-01.09",
+      "parentLimitId": "M17-LIMIT-01",
+      "title": "原IDP节点UUID、成员原单及目标目录核证",
+      "disposition": "P4_acceptance",
+      "designRefs": [
+        "M17_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "总控指定来源核证负责人/数据HR",
+      "closureCriterion": "仅对依赖真实来源迁移/接入的对象核证；无来源则隔离，不要求供应商行为覆盖本项目批准规则",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M17-LIMIT-01.10",
+      "parentLimitId": "M17-LIMIT-01",
+      "title": "实际多角色/名单用途及容量/恢复验收",
+      "disposition": "P4_acceptance",
+      "designRefs": [
+        "M17_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "业务HR/委员会+安全+运维",
+      "closureCriterion": "获授权环境真实多角色/用途与60分钟RPO、240分钟RTO、30天保留证据",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M03-LIMIT-01.01",
+      "parentLimitId": "M03-LIMIT-01",
+      "title": "干部/任期/任用与M01生效映射",
+      "disposition": "P2_design_closed",
+      "designRefs": [
+        "M03_Design.md#m03-spec-01"
+      ],
+      "evidenceStatus": "design_checked",
+      "p2Blocking": false,
+      "ownerRole": "R2 P2设计负责人",
+      "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M03-LIMIT-01.02",
+      "parentLimitId": "M03-LIMIT-01",
+      "title": "委员会精确评分、回避与资格前置",
+      "disposition": "P2_design_closed",
+      "designRefs": [
+        "M03_Design.md#m03-spec-03"
+      ],
+      "evidenceStatus": "design_checked",
+      "p2Blocking": false,
+      "ownerRole": "R2 P2设计负责人",
+      "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M03-LIMIT-01.03",
+      "parentLimitId": "M03-LIMIT-01",
+      "title": "考察/述职/敏感档案及legacy迁移",
+      "disposition": "P2_design_closed",
+      "designRefs": [
+        "M03_Design.md#m03-spec-05"
+      ],
+      "evidenceStatus": "design_checked",
+      "p2Blocking": false,
+      "ownerRole": "R2 P2设计负责人",
+      "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M03-LIMIT-01.04",
+      "parentLimitId": "M03-LIMIT-01",
+      "title": "月末/闰年/覆盖日期及任期区间",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M03_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M03实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M03-LIMIT-01.05",
+      "parentLimitId": "M03-LIMIT-01",
+      "title": "委员会等值、缺评/弃权及精确分数",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M03_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M03实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M03-LIMIT-01.06",
+      "parentLimitId": "M03-LIMIT-01",
+      "title": "资格过期、调动失败/unknown、任用幂等",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M03_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M03实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M03-LIMIT-01.07",
+      "parentLimitId": "M03-LIMIT-01",
+      "title": "考察退回/撤回/延期/退出与年度述职",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M03_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M03实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M03-LIMIT-01.08",
+      "parentLimitId": "M03-LIMIT-01",
+      "title": "档案下载撤权、审计故障及legacy映射",
+      "disposition": "P3_validation",
+      "designRefs": [
+        "M03_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "M03实施负责人+独立测试负责人",
+      "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M03-LIMIT-01.09",
+      "parentLimitId": "M03-LIMIT-01",
+      "title": "真实旧任用来源/类型/时间及源深规则核证",
+      "disposition": "P4_acceptance",
+      "designRefs": [
+        "M03_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "总控指定来源核证负责人/数据HR",
+      "closureCriterion": "仅对依赖真实来源迁移/接入的对象核证；无来源则隔离，不要求供应商行为覆盖本项目批准规则",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    },
+    {
+      "id": "M03-LIMIT-01.10",
+      "parentLimitId": "M03-LIMIT-01",
+      "title": "实际任免多角色、档案用途和生产恢复验收",
+      "disposition": "P4_acceptance",
+      "designRefs": [
+        "M03_Design.md#engineering"
+      ],
+      "evidenceStatus": "not_executed",
+      "p2Blocking": false,
+      "ownerRole": "业务HR/委员会+安全+运维",
+      "closureCriterion": "获授权环境真实多角色/用途与60分钟RPO、240分钟RTO、30天保留证据",
+      "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+    }
+  ],
+  "sourcePrecedenceNote": "M06-LIMIT-01原文含“M37新模型未获需求批准”，是批准前历史残句；M37-P1-APPROVAL-R2-20260909及本次transition已批准，不作为当前待决。源文字未修改。"
+}

@@ -364,7 +364,7 @@
       "designRefs": [
         "Foundations.md#r2-baseline-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     }
   ],
   "clauses": [
@@ -2985,7 +2985,7 @@
       "designRefs": [
         "Foundations.md#r2-baseline-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "R2-BASELINE-01-CLAUSE-02",
@@ -2994,7 +2994,7 @@
       "designRefs": [
         "Foundations.md#r2-baseline-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "R2-BASELINE-01-CLAUSE-03",
@@ -3003,7 +3003,7 @@
       "designRefs": [
         "Foundations.md#r2-baseline-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "R2-BASELINE-01-CLAUSE-04",
@@ -3012,7 +3012,7 @@
       "designRefs": [
         "Foundations.md#r2-baseline-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "R2-BASELINE-01-CLAUSE-05",
@@ -3021,7 +3021,7 @@
       "designRefs": [
         "Foundations.md#r2-baseline-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     }
   ],
   "contractDetails": [
@@ -6027,7 +6027,7 @@
       "designRefs": [
         "Foundations.md#base-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "BASE-02",
@@ -6067,7 +6067,7 @@
       "designRefs": [
         "Foundations.md#base-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "BASE-03",
@@ -6106,7 +6106,7 @@
       "designRefs": [
         "Foundations.md#base-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "BASE-04",
@@ -6153,7 +6153,7 @@
       "designRefs": [
         "Foundations.md#base-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "BASE-05",
@@ -6192,7 +6192,7 @@
       "designRefs": [
         "Foundations.md#base-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "BASE-06",
@@ -6238,7 +6238,7 @@
       "designRefs": [
         "Foundations.md#base-06"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     }
   ],
   "acceptanceIds": [
@@ -8669,7 +8669,7 @@
       "designRefs": [
         "Foundations.md#base-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "BASE-01-AC02",
@@ -8690,7 +8690,7 @@
       "designRefs": [
         "Foundations.md#base-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "BASE-02-AC01",
@@ -8711,7 +8711,7 @@
       "designRefs": [
         "Foundations.md#base-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "BASE-02-AC02",
@@ -8732,7 +8732,7 @@
       "designRefs": [
         "Foundations.md#base-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "BASE-02-AC03",
@@ -8753,7 +8753,7 @@
       "designRefs": [
         "Foundations.md#base-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "BASE-03-AC01",
@@ -8774,7 +8774,7 @@
       "designRefs": [
         "Foundations.md#base-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "BASE-03-AC02",
@@ -8795,7 +8795,7 @@
       "designRefs": [
         "Foundations.md#base-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "BASE-04-AC01",
@@ -8816,7 +8816,7 @@
       "designRefs": [
         "Foundations.md#base-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "BASE-04-AC02",
@@ -8837,7 +8837,7 @@
       "designRefs": [
         "Foundations.md#base-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "BASE-04-AC03",
@@ -8858,7 +8858,7 @@
       "designRefs": [
         "Foundations.md#base-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "BASE-04-AC04",
@@ -8879,7 +8879,7 @@
       "designRefs": [
         "Foundations.md#base-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "BASE-05-AC01",
@@ -8900,7 +8900,7 @@
       "designRefs": [
         "Foundations.md#base-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "BASE-05-AC02",
@@ -8921,7 +8921,7 @@
       "designRefs": [
         "Foundations.md#base-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "BASE-06-AC01",
@@ -8942,7 +8942,7 @@
       "designRefs": [
         "Foundations.md#base-06"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "BASE-06-AC02",
@@ -8963,7 +8963,7 @@
       "designRefs": [
         "Foundations.md#base-06"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "BASE-06-AC03",
@@ -8984,7 +8984,7 @@
       "designRefs": [
         "Foundations.md#base-06"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     }
   ],
   "historicalTasks": [

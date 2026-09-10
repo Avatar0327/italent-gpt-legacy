@@ -1,0 +1,157 @@
+{
+  "requests": [
+    {
+      "id": "R2-SOURCE-M37-01",
+      "moduleId": "M37",
+      "fact": "BC-C32～40已有最小合成链和跨入口引用；共享对象UUID/深子集/原算法未知",
+      "sourceRefs": [
+        "M37-LIMIT-01",
+        "Historical_Evidence_Index.json"
+      ],
+      "requestedEvidence": "标准/指标/子集的真实稳定标识和版本响应；使用中改版/停用的状态及明确来源，不新建真实评测",
+      "impact": "迁移依赖这些UUID的记录；已批准本项目目录/算法设计不阻",
+      "recommended": "由总控在其已授权原站窗口定向只读补证；记录对象ID/版本/时点/可见角色及摘要，取不到明确unknown",
+      "alternative": "不依赖未知原站映射；受影响真实导入行quarantine，其余按已批准独立设计继续",
+      "blocksP2": false,
+      "ownerPhase": "P4真实来源核证（必要时总控可提前只读取证）",
+      "ownerRole": "总控指定来源核证负责人",
+      "status": "request_only_not_sent_or_executed",
+      "forbidden": [
+        "本窗口CDP/浏览器",
+        "新建业务对象/任用/通知",
+        "新增访问者",
+        "真实答卷或员工资料进入设计文档"
+      ]
+    },
+    {
+      "id": "R2-SOURCE-M06-01",
+      "moduleId": "M06",
+      "fact": "目录和标准样本已观察；深评级/委员会/证据窗口及地图实际关联未实证",
+      "sourceRefs": [
+        "M06-LIMIT-01",
+        "Historical_Evidence_Index.json"
+      ],
+      "requestedEvidence": "类别/level/rating scheme真实ID；已知旧证期限语义与发展通道地图引用，不发新证",
+      "impact": "真实旧资格映射与M27来源可用性；新合成规则可继续",
+      "recommended": "由总控在其已授权原站窗口定向只读补证；记录对象ID/版本/时点/可见角色及摘要，取不到明确unknown",
+      "alternative": "不依赖未知原站映射；受影响真实导入行quarantine，其余按已批准独立设计继续",
+      "blocksP2": false,
+      "ownerPhase": "P4真实来源核证（必要时总控可提前只读取证）",
+      "ownerRole": "总控指定来源核证负责人",
+      "status": "request_only_not_sent_or_executed",
+      "forbidden": [
+        "本窗口CDP/浏览器",
+        "新建业务对象/任用/通知",
+        "新增访问者",
+        "真实答卷或员工资料进入设计文档"
+      ]
+    },
+    {
+      "id": "R2-SOURCE-M26-01",
+      "moduleId": "M26",
+      "fact": "当前单账号只读/历史样本；原匿名完整算法、撤回/更正及多角色未验",
+      "sourceRefs": [
+        "M26-LIMIT-01",
+        "Historical_Evidence_Index.json"
+      ],
+      "requestedEvidence": "已有题卷/角色/邀请/报告版本与授权说明，低样本是否泄计数；仅形成只读取件任务，不索取真人答卷",
+      "impact": "旧报告迁移与用途核证；新匿名设计按已批政策继续",
+      "recommended": "由总控在其已授权原站窗口定向只读补证；记录对象ID/版本/时点/可见角色及摘要，取不到明确unknown",
+      "alternative": "不依赖未知原站映射；受影响真实导入行quarantine，其余按已批准独立设计继续",
+      "blocksP2": false,
+      "ownerPhase": "P4真实来源核证（必要时总控可提前只读取证）",
+      "ownerRole": "总控指定来源核证负责人",
+      "status": "request_only_not_sent_or_executed",
+      "forbidden": [
+        "本窗口CDP/浏览器",
+        "新建业务对象/任用/通知",
+        "新增访问者",
+        "真实答卷或员工资料进入设计文档"
+      ]
+    },
+    {
+      "id": "R2-SOURCE-M18-01",
+      "moduleId": "M18",
+      "fact": "项目/标准工具入口与样本可引用；子对象ID、校准深链和共享UUID未知",
+      "sourceRefs": [
+        "M18-LIMIT-01",
+        "Historical_Evidence_Index.json"
+      ],
+      "requestedEvidence": "已有项目/工具/标准引用schema、结果版本与会议状态，只复用既有合成对象",
+      "impact": "依赖原工具的迁移和适配对象；本项目九格/校准设计不阻",
+      "recommended": "由总控在其已授权原站窗口定向只读补证；记录对象ID/版本/时点/可见角色及摘要，取不到明确unknown",
+      "alternative": "不依赖未知原站映射；受影响真实导入行quarantine，其余按已批准独立设计继续",
+      "blocksP2": false,
+      "ownerPhase": "P4真实来源核证（必要时总控可提前只读取证）",
+      "ownerRole": "总控指定来源核证负责人",
+      "status": "request_only_not_sent_or_executed",
+      "forbidden": [
+        "本窗口CDP/浏览器",
+        "新建业务对象/任用/通知",
+        "新增访问者",
+        "真实答卷或员工资料进入设计文档"
+      ]
+    },
+    {
+      "id": "R2-SOURCE-M17-01",
+      "moduleId": "M17",
+      "fact": "BC-C30合成成员及阶段已存；R2-RO-M17-01已确认IDP流程入口/停用状态，不能再写未发现；节点UUID/重入史未知",
+      "sourceRefs": [
+        "M17-LIMIT-01",
+        "Historical_Evidence_Index.json"
+      ],
+      "requestedEvidence": "复用既有pool+person复合定位，核membership根/重入链、flow节点版本/目标目录ID；不重复新建计划或派通知",
+      "impact": "真实IDP/成员/目标映射；本项目新ID与流程设计可继续",
+      "recommended": "由总控在其已授权原站窗口定向只读补证；记录对象ID/版本/时点/可见角色及摘要，取不到明确unknown",
+      "alternative": "不依赖未知原站映射；受影响真实导入行quarantine，其余按已批准独立设计继续",
+      "blocksP2": false,
+      "ownerPhase": "P4真实来源核证（必要时总控可提前只读取证）",
+      "ownerRole": "总控指定来源核证负责人",
+      "status": "request_only_not_sent_or_executed",
+      "forbidden": [
+        "本窗口CDP/浏览器",
+        "新建业务对象/任用/通知",
+        "新增访问者",
+        "真实答卷或员工资料进入设计文档"
+      ]
+    },
+    {
+      "id": "R2-SOURCE-M03-01",
+      "moduleId": "M03",
+      "fact": "任期/考察/访谈样本与静态防错可引用；多评委任免/转正深链未验",
+      "sourceRefs": [
+        "M03-LIMIT-01",
+        "Historical_Evidence_Index.json"
+      ],
+      "requestedEvidence": "既有合成任用/任期/StaffID的明确映射、实际人事生效来源及原日期规则版本；不提交任命审批",
+      "impact": "真实历史迁移/凭证核对；新独立任免设计可继续",
+      "recommended": "由总控在其已授权原站窗口定向只读补证；记录对象ID/版本/时点/可见角色及摘要，取不到明确unknown",
+      "alternative": "不依赖未知原站映射；受影响真实导入行quarantine，其余按已批准独立设计继续",
+      "blocksP2": false,
+      "ownerPhase": "P4真实来源核证（必要时总控可提前只读取证）",
+      "ownerRole": "总控指定来源核证负责人",
+      "status": "request_only_not_sent_or_executed",
+      "forbidden": [
+        "本窗口CDP/浏览器",
+        "新建业务对象/任用/通知",
+        "新增访问者",
+        "真实答卷或员工资料进入设计文档"
+      ]
+    },
+    {
+      "id": "R2-CAPABILITY-01",
+      "moduleId": null,
+      "fact": "固定R1设计列明官方export/import、15分钟调度、独立安全账本/密钥尚需实证；本窗口工具仅发现DB概览/行读取，无备份/恢复专用接口，未调用业务数据读取",
+      "requestedEvidence": "获授权隔离环境的官方API可用性、调度准时、完整事务日志/对象manifest、当前deny独立性和容量耗时/费用摘要",
+      "impact": "BASE-05及六域生产开放，不阻已完成的方案/成本/责任设计",
+      "recommended": "P3共享平台能力验证；P4真实恢复/费用核算；维持A方案和60/240/30门槛",
+      "alternative": "A无法满足后量化B受控官方执行器或C预热副本价差，交所有者决定；不自行降标",
+      "blocksP2": false,
+      "ownerPhase": "P3能力验证 / P4生产验收",
+      "ownerRole": "共享平台/安全/运维负责人",
+      "status": "request_only_not_sent_or_executed"
+    }
+  ],
+  "count": 7,
+  "newOwnerBusinessDecisionsRequired": 0
+}

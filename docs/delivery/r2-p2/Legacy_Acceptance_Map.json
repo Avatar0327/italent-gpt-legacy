@@ -1,0 +1,578 @@
+{
+  "acceptance": [
+    {
+      "id": "BP-C-REQ-03-AC01",
+      "originalSource": {
+        "id": "BP-C-REQ-03-AC01",
+        "given": "项目草稿、纯量表模板v1已发布，同题库后建v2",
+        "when": "建立v1项目，再读取活动和后续模板",
+        "then": "活动保留v1问题与version；v2不静默改写v1。现有代码创建时复制，但修改模板/改版实际链需补证",
+        "basis": "feedback.ts/project；共享模板最小依赖DEP-04",
+        "status": "候选待评审；本轮仅静态阅读，未复跑",
+        "executionThisRun": false,
+        "accepted": false
+      },
+      "disposition": "retain",
+      "currentDesignRefs": [
+        "M26_Design.md#engineering"
+      ],
+      "currentAcceptanceRefs": [
+        "M26-REVIEW-AC06"
+      ],
+      "reason": "冻结v1保留，补独立题卷版本及真实改版链",
+      "executionThisRun": false,
+      "phaseResponsibility": "P3独立验证/P4业务验收"
+    },
+    {
+      "id": "BP-C-REQ-03-AC02",
+      "originalSource": {
+        "id": "BP-C-REQ-03-AC02",
+        "given": "同一受评者S与评价者R已有assigned邀请",
+        "when": "以相同双方再建另一关系；或S=R却选peer",
+        "then": "均拒绝400，不能通过换关系绕过重复/本人判定；其他受评者的同一评价者可有独立邀请",
+        "basis": "feedback.ts/invite；现有行为候选",
+        "status": "候选待评审；本轮仅静态阅读，未复跑",
+        "executionThisRun": false,
+        "accepted": false
+      },
+      "disposition": "retain_strengthen",
+      "currentDesignRefs": [
+        "M26_Design.md#engineering"
+      ],
+      "currentAcceptanceRefs": [
+        "M26-REVIEW-AC01"
+      ],
+      "reason": "项目根跨角色唯一；语义拒绝保留，422/400统一错误码不当业务通过",
+      "executionThisRun": false,
+      "phaseResponsibility": "P3独立验证/P4业务验收"
+    },
+    {
+      "id": "BP-C-REQ-03-AC03",
+      "originalSource": {
+        "id": "BP-C-REQ-03-AC03",
+        "given": "活动open，开始日在明天且结束日未过，评价者今日在职",
+        "when": "今日尝试respond，然后在开放日期条件下分析入口预期",
+        "then": "今日400且canRespondIds不包含；未来条件应按业务日期再验，不改平台时钟；open状态不代表当前可填",
+        "basis": "feedback.ts/respond；app/api/feedback/route.ts",
+        "status": "候选待评审；本轮仅静态阅读，未复跑",
+        "executionThisRun": false,
+        "accepted": false
+      },
+      "disposition": "retain_strengthen",
+      "currentDesignRefs": [
+        "M26_Design.md#engineering"
+      ],
+      "currentAcceptanceRefs": [
+        "M26-REVIEW-AC07"
+      ],
+      "reason": "scheduled/open不代当前窗口；服务端时钟边界，P3用隔离时钟",
+      "executionThisRun": false,
+      "phaseResponsibility": "P3独立验证/P4业务验收"
+    },
+    {
+      "id": "BP-C-REQ-03-AC04",
+      "originalSource": {
+        "id": "BP-C-REQ-03-AC04",
+        "given": "peer阈值3、同组有效答卷2份；另一组3份分数2/3/4",
+        "when": "停止收集并发布两个受评者的报告",
+        "then": "2份组responses2/suppressed=true/averages=null；3份组均值3.0；报告不暴露他人邀请/评价者ID，HR仍可审计原卷",
+        "basis": "tests/p3-api.test.mjs已有场景静态读；历史验证不视本轮复验；C-SPEC-01政策待决",
+        "status": "候选待评审；本轮仅静态阅读，未复跑",
+        "executionThisRun": false,
+        "accepted": false
+      },
+      "disposition": "superseded_expectation",
+      "currentDesignRefs": [
+        "M26_Design.md#engineering"
+      ],
+      "currentAcceptanceRefs": [
+        "M26-REVIEW-AC02"
+      ],
+      "reason": "低样本精确responses=2和HR默认原卷权禁止；k=3及同尺度合法均值保留",
+      "executionThisRun": false,
+      "phaseResponsibility": "P3独立验证/P4业务验收"
+    },
+    {
+      "id": "BP-C-REQ-03-AC05",
+      "originalSource": {
+        "id": "BP-C-REQ-03-AC05",
+        "given": "同邀请首次已submitted且活动仍开放，合法当前revision",
+        "when": "同一评价者提交不同合法答案",
+        "then": "复用同答卷ID、创建信息保留、当前答案替换并记新事件；活动closed后提交400。历史事件读取仍服从当前权限",
+        "basis": "feedback.ts/respond；development-repository.ts静态",
+        "status": "候选待评审；本轮仅静态阅读，未复跑",
+        "executionThisRun": false,
+        "accepted": false
+      },
+      "disposition": "refine_identity",
+      "currentDesignRefs": [
+        "M26_Design.md#engineering"
+      ],
+      "currentAcceptanceRefs": [
+        "M26-REVIEW-AC08"
+      ],
+      "reason": "保留responseRootId，答案新version不可覆盖；close后拒绝",
+      "executionThisRun": false,
+      "phaseResponsibility": "P3独立验证/P4业务验收"
+    },
+    {
+      "id": "BP-C-REQ-03-AC06",
+      "originalSource": {
+        "id": "BP-C-REQ-03-AC06",
+        "given": "活动closed、有受评者有效邀请但0份答卷",
+        "when": "请求发布报告",
+        "then": "现实现可发布各组suppressed/null，不能计为已完成评估；是否允许作为正式报告属C-SPEC-01，未批准",
+        "basis": "feedback.ts/publishReport/aggregation静态推导，非已执行事实",
+        "status": "候选待评审；本轮仅静态阅读，未复跑",
+        "executionThisRun": false,
+        "accepted": false
+      },
+      "disposition": "superseded_expectation",
+      "currentDesignRefs": [
+        "M26_Design.md#engineering"
+      ],
+      "currentAcceptanceRefs": [
+        "M26-REVIEW-AC05"
+      ],
+      "reason": "零合法非self组不能正式发布，旧可发布仅历史实现事实",
+      "executionThisRun": false,
+      "phaseResponsibility": "P3独立验证/P4业务验收"
+    },
+    {
+      "id": "BP-C-REQ-03-AC07",
+      "originalSource": {
+        "id": "BP-C-REQ-03-AC07",
+        "given": "同一活动+受评者已有published报告",
+        "when": "再次发布或用旧revision重放",
+        "then": "重复报告400/旧revision409；不能为解除阈值反复发布可差分报告。需要更正时先明确版本/旧报告可见规则",
+        "basis": "feedback.ts/publishReport；事务层；既有历史测试仅来源",
+        "status": "候选待评审；本轮仅静态阅读，未复跑",
+        "executionThisRun": false,
+        "accepted": false
+      },
+      "disposition": "refine_idempotency",
+      "currentDesignRefs": [
+        "M26_Design.md#engineering"
+      ],
+      "currentAcceptanceRefs": [
+        "M26-REVIEW-AC09"
+      ],
+      "reason": "同键同payload回原结果，异键重复发布拒绝；授权更正新版本且防差分",
+      "executionThisRun": false,
+      "phaseResponsibility": "P3独立验证/P4业务验收"
+    },
+    {
+      "id": "BP-C-REQ-03-AC08",
+      "originalSource": {
+        "id": "BP-C-REQ-03-AC08",
+        "given": "仅为受评者且非HR，没有作为评价者的有效邀请",
+        "when": "访问原答卷ID或其他人的邀请，及查看本人报告历史",
+        "then": "原答卷/他人邀请不可读；本人已发布快照可读且仍低样本屏蔽；角色变更后每次请求重新判断",
+        "basis": "visibleRecord；p3-api历史场景静态；E2不新增访问者",
+        "status": "候选待评审；本轮仅静态阅读，未复跑",
+        "executionThisRun": false,
+        "accepted": false
+      },
+      "disposition": "retain_strengthen",
+      "currentDesignRefs": [
+        "M26_Design.md#engineering"
+      ],
+      "currentAcceptanceRefs": [
+        "M26-REVIEW-AC11"
+      ],
+      "reason": "本人也须显式report audience，禁止默认所有本人published可读；原卷拒绝保留",
+      "executionThisRun": false,
+      "phaseResponsibility": "P3独立验证/P4业务验收"
+    },
+    {
+      "id": "BP-C-REQ-04-BC30-1",
+      "originalSource": {
+        "id": "BP-C-REQ-04-BC30-1",
+        "given": "已有池与合成EA，以稳定ID关联",
+        "when": "手工入池后从独立列表/详情回读",
+        "then": "同池/同EA、阶段/日期/指导人/准备度一致；弹窗关闭不能单独证明成功",
+        "basis": "BC-C30源样本与身份追溯建议",
+        "status": "候选需求；本项目未执行、未评审",
+        "accepted": false,
+        "executionThisRun": false
+      },
+      "disposition": "retain",
+      "currentDesignRefs": [
+        "M17_Design.md#engineering"
+      ],
+      "currentAcceptanceRefs": [
+        "M17-REVIEW-AC01"
+      ],
+      "reason": "保留同池同人和字段回读证据；new membership ID由本项目明确设计，原站未知不冒证",
+      "executionThisRun": false,
+      "phaseResponsibility": "P3独立验证/P4业务验收"
+    },
+    {
+      "id": "BP-C-REQ-04-BC30-2",
+      "originalSource": {
+        "id": "BP-C-REQ-04-BC30-2",
+        "given": "已有成员新入池，原日期和指导身份明确",
+        "when": "设置阶段为培养中、准备度3~6个月",
+        "then": "回读两个独立字段和不变字段；首次读旧值先查最终结果，不重复入池或提交",
+        "basis": "BC-C30源执行；项目候选行为",
+        "status": "候选需求；本项目未执行、未评审",
+        "accepted": false,
+        "executionThisRun": false
+      },
+      "disposition": "retain",
+      "currentDesignRefs": [
+        "M17_Design.md#engineering"
+      ],
+      "currentAcceptanceRefs": [
+        "M17-REVIEW-AC06"
+      ],
+      "reason": "阶段/准备度独立；unknown查询同ID不能重复入池",
+      "executionThisRun": false,
+      "phaseResponsibility": "P3独立验证/P4业务验收"
+    },
+    {
+      "id": "BP-C-REQ-04-BC30-3",
+      "originalSource": {
+        "id": "BP-C-REQ-04-BC30-3",
+        "given": "指导角色其他人，候选与成员同EA",
+        "when": "保存指导关系",
+        "then": "原站本样本允许；本项目是否限制须业务评审，不以D7异动审批规则替代指导规则",
+        "basis": "BC-C30源事实；项目政策未定",
+        "status": "候选需求；本项目未执行、未评审",
+        "accepted": false,
+        "executionThisRun": false
+      },
+      "disposition": "superseded_expectation",
+      "currentDesignRefs": [
+        "M17_Design.md#engineering"
+      ],
+      "currentAcceptanceRefs": [
+        "M17-REVIEW-AC07"
+      ],
+      "reason": "原站同EA可存仅事实；本项目禁本人唯一指导与最终自核",
+      "executionThisRun": false,
+      "phaseResponsibility": "P3独立验证/P4业务验收"
+    },
+    {
+      "id": "BP-C-REQ-04-BC30-4",
+      "originalSource": {
+        "id": "BP-C-REQ-04-BC30-4",
+        "given": "人才池成员已培养中，尚无继任关系",
+        "when": "查看继任和发展计划",
+        "then": "不得因成员阶段/准备度推定继任建立、计划完成或任职资格通过；实际源目标不可用只阻该关系",
+        "basis": "BC-C30/31对象分离事实与候选要求",
+        "status": "候选需求；本项目未执行、未评审",
+        "accepted": false,
+        "executionThisRun": false
+      },
+      "disposition": "retain",
+      "currentDesignRefs": [
+        "M17_Design.md#engineering"
+      ],
+      "currentAcceptanceRefs": [
+        "M17-REVIEW-AC13"
+      ],
+      "reason": "阶段不产生继任/资格/IDP完成，源目标未配仅阻该依赖",
+      "executionThisRun": false,
+      "phaseResponsibility": "P3独立验证/P4业务验收"
+    },
+    {
+      "id": "M17-HISTORY-01",
+      "originalSource": {
+        "id": "M17-HISTORY-01",
+        "given": "同池同EA有closed历史，当前无active成员",
+        "when": "后续在授权测试条件下核原站重入，并对照现有实现",
+        "then": "记录究竟恢复旧ID还是新关联ID、原退出原因/入出日期/角色历史是否保留；源规则未取到前两种均不定为批准方案",
+        "basis": "BC-C30已出池未执行；development.ts仅active去重/新UUID的静态推导",
+        "status": "候选需求/静态对照；未本轮执行、未业务评审",
+        "accepted": false,
+        "executionThisRun": false
+      },
+      "disposition": "approved_rule_now_explicit",
+      "currentDesignRefs": [
+        "M17_Design.md#engineering"
+      ],
+      "currentAcceptanceRefs": [
+        "M17-REVIEW-AC01"
+      ],
+      "reason": "本项目新ID+previousMembershipId已批；原站真实重入模式仍请求核证",
+      "executionThisRun": false,
+      "phaseResponsibility": "P3独立验证/P4业务验收"
+    },
+    {
+      "id": "M17-SCOPE-01",
+      "originalSource": {
+        "id": "M17-SCOPE-01",
+        "given": "执行者可见员工但不可见池，或仅可见目标职位而不可见员工",
+        "when": "尝试读取及办理相应成员/继任",
+        "then": "现有实现组合校验应拒绝；源共享公开/字段权限另核。建议统一服务端双范围校验，未批准，也不新增人类访问者",
+        "basis": "development.ts get/visibleRecord/canReadRecord静态边界",
+        "status": "候选需求/静态对照；未本轮执行、未业务评审",
+        "accepted": false,
+        "executionThisRun": false
+      },
+      "disposition": "approved_rule_now_explicit",
+      "currentDesignRefs": [
+        "M17_Design.md#engineering"
+      ],
+      "currentAcceptanceRefs": [
+        "M17-REVIEW-AC14"
+      ],
+      "reason": "当前人员+池/岗位双范围及敏感字段已批，原未批准措辞为历史",
+      "executionThisRun": false,
+      "phaseResponsibility": "P3独立验证/P4业务验收"
+    },
+    {
+      "id": "M17-REPORT-01",
+      "originalSource": {
+        "id": "M17-REPORT-01",
+        "given": "有active继任关系，人员离职或关系关闭，目标岗位存在",
+        "when": "生成当前可见范围继任覆盖",
+        "then": "统计排除离职或closed；历史记录保留，报表0不等无历史/原记录已关闭；真实源报表计算口径仍待证",
+        "basis": "reports.ts successionCoverage；p3-api历史断言仅阅读",
+        "status": "候选需求/静态对照；未本轮执行、未业务评审",
+        "accepted": false,
+        "executionThisRun": false
+      },
+      "disposition": "retain_strengthen",
+      "currentDesignRefs": [
+        "M17_Design.md#engineering"
+      ],
+      "currentAcceptanceRefs": [
+        "M17-REVIEW-AC05"
+      ],
+      "reason": "current有效性/复核/资格定义优先，active不等有效；保留历史记录",
+      "executionThisRun": false,
+      "phaseResponsibility": "P3独立验证/P4业务验收"
+    },
+    {
+      "id": "M17-IDP-RECOVERY-01",
+      "originalSource": {
+        "id": "M17-IDP-RECOVERY-01",
+        "given": "原站停用P1V流程一次保存后结果未知；计划/模板草稿已取消",
+        "when": "浏览器恢复后按完整名及所属测试A、启停筛选查询",
+        "then": "查到则记录稳定ID/状态并复用；查不到保留未知与筛选证据，不能直接再次创建。EA选择器保存不是计划保存",
+        "basis": "BC-C27/28原站历史观察及结果恢复要求",
+        "status": "待连接恢复补证；未执行候选",
+        "accepted": false,
+        "executionThisRun": false
+      },
+      "disposition": "source_request_only",
+      "currentDesignRefs": [
+        "M17_Design.md#engineering"
+      ],
+      "currentAcceptanceRefs": [
+        "M17-REVIEW-AC08"
+      ],
+      "reason": "原站IDP入口已确认；未核节点UUID不重建/重复保存；新计划P3使用合成独立根",
+      "executionThisRun": false,
+      "phaseResponsibility": "总控来源核证（非本窗口原站执行）"
+    },
+    {
+      "id": "M17-IDP-STATE-01",
+      "originalSource": {
+        "id": "M17-IDP-STATE-01",
+        "given": "当前简单plan关联未完成学习任务，或原站多阶段模板尚未确认",
+        "when": "评审完成/取消/退回边界",
+        "then": "既有completed/returned/cancelled和源未开始/进行中/已结束/已终止保持独立；明确每阶段执行人、放行、退回及通知后再批准映射；不得将学习完成自动当IDP源阶段完成",
+        "basis": "BC-C27；development.ts plan/submitPlan/verifyPlan/cancelPlan静态对照",
+        "status": "待原站阶段/路由证据与需求评审；本轮未业务执行",
+        "accepted": false,
+        "executionThisRun": false
+      },
+      "disposition": "refine_state_model",
+      "currentDesignRefs": [
+        "M17_Design.md#engineering"
+      ],
+      "currentAcceptanceRefs": [
+        "M17-REVIEW-AC09"
+      ],
+      "reason": "计划/阶段/任务各自状态和核验；取消非自动免除，M27核验不代IDP完成",
+      "executionThisRun": false,
+      "phaseResponsibility": "P3独立验证/P4业务验收"
+    }
+  ],
+  "historicalTasks": [
+    {
+      "id": "C01",
+      "criteriaIds": [
+        "C01-AC1"
+      ],
+      "originalSource": {
+        "id": "C01",
+        "phase": "P3",
+        "moduleId": "M03",
+        "title": "标准版本→盘点→发展计划",
+        "criteria": [
+          {
+            "id": "C01-AC1",
+            "text": "标准版本→盘点→发展计划；按业务场景独立验收并记录确认人、时间与证据",
+            "accepted": false
+          }
+        ],
+        "source": "docs/delivery/G1_PreAcceptance_Report.md",
+        "queueRef": "C01"
+      },
+      "designRefs": [
+        "Cross_Module_Contracts.md#ownership"
+      ],
+      "scenarioRefs": [
+        "R2-X-01"
+      ],
+      "treatment": "保留原59任务ID/状态，不计本轮复验；当前P1批准优先，映射仅供后续验收",
+      "executionThisRun": false
+    },
+    {
+      "id": "C02",
+      "criteriaIds": [
+        "C02-AC1"
+      ],
+      "originalSource": {
+        "id": "C02",
+        "phase": "P3",
+        "moduleId": "M03",
+        "title": "人才档案展示授权的计划与学习状态",
+        "criteria": [
+          {
+            "id": "C02-AC1",
+            "text": "人才档案展示授权的计划与学习状态；按业务场景独立验收并记录确认人、时间与证据",
+            "accepted": false
+          }
+        ],
+        "source": "docs/delivery/G1_PreAcceptance_Report.md",
+        "queueRef": "C02"
+      },
+      "designRefs": [
+        "Permissions.md#matrix"
+      ],
+      "scenarioRefs": [
+        "R2-X-07"
+      ],
+      "treatment": "保留原59任务ID/状态，不计本轮复验；当前P1批准优先，映射仅供后续验收",
+      "executionThisRun": false
+    },
+    {
+      "id": "C-LIFECYCLE-REVIEW",
+      "criteriaIds": [
+        "C-LIFECYCLE-REVIEW-AC1"
+      ],
+      "originalSource": {
+        "id": "C-LIFECYCLE-REVIEW",
+        "phase": "P3",
+        "moduleId": "M03",
+        "title": "提名审批时员工及岗位状态重检",
+        "queueRef": "C-LIFECYCLE-REVIEW",
+        "criteria": [
+          {
+            "id": "C-LIFECYCLE-REVIEW-AC1",
+            "text": "核查干部任期/考察待办在员工离职或调动后的读写与历史边界；仅修复有既有规则依据的确切缺陷",
+            "accepted": false
+          }
+        ],
+        "source": "Controller_Lifecycle_Review.md",
+        "dimensions": {
+          "requirements": "既有独立规则；原站详细规则待核实",
+          "development": "已修复",
+          "testing": "本轮合成相关测试通过，精确报告见Controller_Lifecycle_Verification.json",
+          "production": "未验收"
+        }
+      },
+      "designRefs": [
+        "M03_Design.md#m03-spec-04"
+      ],
+      "scenarioRefs": [
+        "R2-P3-M03-REVIEW-AC09"
+      ],
+      "treatment": "保留原59任务ID/状态，不计本轮复验；当前P1批准优先，映射仅供后续验收",
+      "executionThisRun": false
+    },
+    {
+      "id": "P1-C-RULES",
+      "criteriaIds": [
+        "P1-C-RULES-AC1"
+      ],
+      "originalSource": {
+        "id": "P1-C-RULES",
+        "phase": "P1",
+        "moduleId": "M03",
+        "title": "干部人才任用与状态规则",
+        "queueRef": "P1-C-RULES",
+        "criteria": [
+          {
+            "id": "P1-C-RULES-AC1",
+            "text": "既有干部名册及空表已观察；任用类型、期限计算、状态流转及委员会规则待核实；需补范围与规则确认记录。",
+            "accepted": false
+          }
+        ],
+        "source": "docs/delivery/Cadre_Learning_Source_Gaps.md",
+        "dimensions": {
+          "requirements": "已形成同一范围台账的页面/字段/流程/差异映射；局部N/P证据增加，完整规则未核实，评审未签署。",
+          "development": "原站盘点任务，不代替业务功能开发",
+          "testing": "仅文档结构与来源可追溯检查；不是业务测试、原站提交结果或人工验收。",
+          "production": "未验收"
+        },
+        "p1Review": "docs/delivery/P1_Review.md",
+        "currentP1Review": {
+          "sourceRefs": [
+            "US-C01-02",
+            "BC-C01",
+            "BC-C02",
+            "BC-C03",
+            "BC-C08",
+            "BC-C09"
+          ],
+          "packageSpec": "docs/delivery/P1B_BP_C_Specification.md",
+          "readiness": "证据与规格评审稿；未业务签署，不改变原criteria/accepted",
+          "validation": "本轮文档一致性检查；没有复跑业务测试"
+        }
+      },
+      "designRefs": [
+        "M03_Design.md#m03-spec-02"
+      ],
+      "scenarioRefs": [
+        "R2-P3-M03-REVIEW-AC01",
+        "R2-P3-M03-REVIEW-AC05"
+      ],
+      "treatment": "保留原59任务ID/状态，不计本轮复验；当前P1批准优先，映射仅供后续验收",
+      "executionThisRun": false
+    },
+    {
+      "id": "C-INTERVIEW-REGISTER",
+      "criteriaIds": [
+        "C-INTERVIEW-REGISTER-AC1"
+      ],
+      "originalSource": {
+        "id": "C-INTERVIEW-REGISTER",
+        "phase": "P3",
+        "moduleId": "M03",
+        "title": "干部访谈记录登记与历史",
+        "queueRef": "C-INTERVIEW-REGISTER",
+        "criteria": [
+          {
+            "id": "C-INTERVIEW-REGISTER-AC1",
+            "text": "按BC-C02已观察字段登记访谈，权限覆盖通用接口/历史/档案；更正作废保留审计，不改变任用审批",
+            "accepted": false
+          }
+        ],
+        "source": "docs/delivery/Cadre_Learning_Source_Gaps.md#BC-C02",
+        "dimensions": {
+          "requirements": "本轮原站空表字段、类型/角色和200字上限已核实；权限及实际提交规则待核实",
+          "development": "登记、更正、作废、HR档案摘要及分页检索已开发",
+          "testing": "本轮247/247集中回归与类型通过，明确排除Worker旧渲染限制",
+          "production": "未验收"
+        }
+      },
+      "designRefs": [
+        "M03_Design.md#m03-spec-05"
+      ],
+      "scenarioRefs": [
+        "R2-P3-M03-REVIEW-AC11",
+        "R2-M03-S04"
+      ],
+      "treatment": "保留原59任务ID/状态，不计本轮复验；当前P1批准优先，映射仅供后续验收",
+      "executionThisRun": false
+    }
+  ],
+  "historicalAcceptanceCount": 17,
+  "historicalTaskCount": 5
+}

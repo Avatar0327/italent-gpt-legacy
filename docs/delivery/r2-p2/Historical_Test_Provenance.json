@@ -1,0 +1,110 @@
+{
+  "sourceRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+  "reports": [
+    {
+      "path": "docs/delivery/G1_PreAcceptance_Report.md",
+      "lines": 30,
+      "executionThisRun": false,
+      "use": "historical provenance only, not R2 verification",
+      "recordedSummary": []
+    },
+    {
+      "path": "docs/delivery/G1_Integration_Test_Result.json",
+      "lines": 36,
+      "executionThisRun": false,
+      "use": "historical provenance only, not R2 verification",
+      "recordedSummary": []
+    },
+    {
+      "path": "docs/delivery/G1_Integration_Test_Output.tap",
+      "lines": 708,
+      "executionThisRun": false,
+      "use": "historical provenance only, not R2 verification",
+      "recordedSummary": [
+        "# tests 116",
+        "# pass 116",
+        "# fail 0",
+        "# skipped 0"
+      ]
+    },
+    {
+      "path": "docs/delivery/Controller_Lifecycle_Review.md",
+      "lines": 19,
+      "executionThisRun": false,
+      "use": "historical provenance only, not R2 verification",
+      "recordedSummary": []
+    },
+    {
+      "path": "docs/delivery/Controller_Lifecycle_Verification.json",
+      "lines": 39,
+      "executionThisRun": false,
+      "use": "historical provenance only, not R2 verification",
+      "recordedSummary": []
+    },
+    {
+      "path": "docs/delivery/Controller_Lifecycle_Run.tap",
+      "lines": 599,
+      "executionThisRun": false,
+      "use": "historical provenance only, not R2 verification",
+      "recordedSummary": [
+        "# tests 98",
+        "# pass 98",
+        "# fail 0",
+        "# skipped 0"
+      ]
+    },
+    {
+      "path": "docs/delivery/Cadre_Interview_Delivery.md",
+      "lines": 11,
+      "executionThisRun": false,
+      "use": "historical provenance only, not R2 verification",
+      "recordedSummary": []
+    },
+    {
+      "path": "docs/delivery/Cadre_Interview_Verification.json",
+      "lines": 79,
+      "executionThisRun": false,
+      "use": "historical provenance only, not R2 verification",
+      "recordedSummary": []
+    },
+    {
+      "path": "docs/delivery/Cadre_Interview_Regression.tap",
+      "lines": 1495,
+      "executionThisRun": false,
+      "use": "historical provenance only, not R2 verification",
+      "recordedSummary": [
+        "# tests 247",
+        "# pass 247",
+        "# fail 0",
+        "# skipped 0"
+      ]
+    },
+    {
+      "path": "docs/delivery/Cadre_Terms_Delivery.md",
+      "lines": 23,
+      "executionThisRun": false,
+      "use": "historical provenance only, not R2 verification",
+      "recordedSummary": []
+    },
+    {
+      "path": "docs/delivery/Cadre_Terms_Test_Output.tap",
+      "lines": 751,
+      "executionThisRun": false,
+      "use": "historical provenance only, not R2 verification",
+      "recordedSummary": [
+        "# tests 123",
+        "# pass 123",
+        "# fail 0",
+        "# skipped 0"
+      ]
+    },
+    {
+      "path": "docs/P3_Cadre_Profiles_Acceptance.md",
+      "lines": 17,
+      "executionThisRun": false,
+      "use": "historical provenance only, not R2 verification",
+      "recordedSummary": []
+    }
+  ],
+  "executionThisRun": false
+}
