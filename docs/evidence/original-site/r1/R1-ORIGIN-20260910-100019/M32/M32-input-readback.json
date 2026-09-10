@@ -1,0 +1,11 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "time": "2026-09-10T10:22:52.372Z",
+  "origin": "https://srworkshopbj.italent.cn",
+  "page": "1.1.02员工任职信息/姓名选择器",
+  "input": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+  "value": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+  "controls": "    - generic: 返回\n    - generic: 下载\n    - generic: 订阅/发现\n    - generic: 编辑\n    - generic: 设置显示字段\n    - generic: 更多操作\n    - generic: 姓名\n    - generic: 部门\n    - generic: 审批状态\n    - text: ：\n    - generic: 审批通过,生效\n    - generic: 高级筛选\n    - generic: 共380条\n    - generic: 300条/页\n    - generic: 上一页\n    - generic: \"1\"\n    - generic: \"2\"\n    - generic: 下一页\n    - text: 跳至\n    - textbox\n    - text: 页\n    - generic: 员工信息-姓名\n    - textbox \"搜索人员，多个关键词用逗号或空格隔开\" [active]\n    - paragraph: 这里什么都没有...\n    - generic: 已选人员\n    - generic: 0人\n    - generic: 清空已选\n    - generic: 请在左侧选择人员\n    - generic: 取消\n    - generic: 确定",
+  "writes": 0,
+  "correction": "input.value只读DOM已确认。之前快照不显示值不等于输入失败。空候选仍不等于报表空集或统计验证。"
+}
