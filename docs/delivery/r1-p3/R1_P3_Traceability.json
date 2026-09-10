@@ -799,16 +799,88 @@
       "plannedCases": [
         "P3-M32-08"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "local_synthetic_verified_platform_and_independent_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T082305048810Z.json"
+      ],
+      "implementationSha": "74c5b0db8894209b827b8e1b097366ad4c99257d",
+      "code": [
+        "lib/hris/r1-report-projection.ts",
+        "lib/hris/r1-report-m01-producer.ts",
+        "lib/hris/r1-report-jobs.ts",
+        "lib/hris/r1-report-export-plan.ts",
+        "lib/hris/r1-report-definition-service.ts",
+        "lib/hris/r1-report-csv.ts",
+        "lib/hris/r1-report-export.ts",
+        "lib/hris/r1-report-schedule.ts",
+        "lib/hris/r1-report-run.ts",
+        "lib/hris/r1-report-labels.ts",
+        "lib/hris/r1-report-definition.ts",
+        "lib/hris/r1-report-subscriptions.ts",
+        "lib/hris/r1-report-runtime.ts",
+        "lib/hris/r1-report-permissions.ts",
+        "lib/hris/r1-report-catalog.ts",
+        "lib/hris/r1-report-query.ts",
+        "lib/hris/r1-report-aggregate.ts",
+        "lib/hris/r1-report-context.ts",
+        "lib/hris/r1-report-values.ts",
+        "lib/hris/r1-report-command-input.ts",
+        "app/reports/r1-actions.tsx",
+        "app/reports/subscriptions/results/[id]/result.tsx"
+      ],
+      "caseEvidence": "R1_P3_M32_Jobs_Case_Evidence.json",
+      "verificationBoundaries": [
+        "136/136本轮R1合成整体测试、类型、构建通过；非P3最终两轮收口",
+        "真实托管后台/调度仍DEP-PLATFORM-01未核实，HTTP明确blocked_runtime；不能声称云端任务运行",
+        "对象存储和消息传输为显式隔离模拟，未实发通知/附件，不是供应商或R2/R3真实联调",
+        "新页面经类型与构建检查；独立浏览器人工角色验收未执行",
+        "分块导出10001行完整运行；最大10000块/100汇总组为显式预算，未测试云端代表容量",
+        "业务历史不按导出24小时TTL删除；物理保留/恢复点约束交09"
+      ]
     },
     {
       "id": "BP-I-REQ-11-AC02",
       "plannedCases": [
         "P3-M32-08"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "local_synthetic_verified_platform_and_independent_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T082305048810Z.json"
+      ],
+      "implementationSha": "74c5b0db8894209b827b8e1b097366ad4c99257d",
+      "code": [
+        "lib/hris/r1-report-projection.ts",
+        "lib/hris/r1-report-m01-producer.ts",
+        "lib/hris/r1-report-jobs.ts",
+        "lib/hris/r1-report-export-plan.ts",
+        "lib/hris/r1-report-definition-service.ts",
+        "lib/hris/r1-report-csv.ts",
+        "lib/hris/r1-report-export.ts",
+        "lib/hris/r1-report-schedule.ts",
+        "lib/hris/r1-report-run.ts",
+        "lib/hris/r1-report-labels.ts",
+        "lib/hris/r1-report-definition.ts",
+        "lib/hris/r1-report-subscriptions.ts",
+        "lib/hris/r1-report-runtime.ts",
+        "lib/hris/r1-report-permissions.ts",
+        "lib/hris/r1-report-catalog.ts",
+        "lib/hris/r1-report-query.ts",
+        "lib/hris/r1-report-aggregate.ts",
+        "lib/hris/r1-report-context.ts",
+        "lib/hris/r1-report-values.ts",
+        "lib/hris/r1-report-command-input.ts",
+        "app/reports/r1-actions.tsx",
+        "app/reports/subscriptions/results/[id]/result.tsx"
+      ],
+      "caseEvidence": "R1_P3_M32_Jobs_Case_Evidence.json",
+      "verificationBoundaries": [
+        "136/136本轮R1合成整体测试、类型、构建通过；非P3最终两轮收口",
+        "真实托管后台/调度仍DEP-PLATFORM-01未核实，HTTP明确blocked_runtime；不能声称云端任务运行",
+        "对象存储和消息传输为显式隔离模拟，未实发通知/附件，不是供应商或R2/R3真实联调",
+        "新页面经类型与构建检查；独立浏览器人工角色验收未执行",
+        "分块导出10001行完整运行；最大10000块/100汇总组为显式预算，未测试云端代表容量",
+        "业务历史不按导出24小时TTL删除；物理保留/恢复点约束交09"
+      ]
     },
     {
       "id": "M01-REVIEW-AC01",
@@ -1469,11 +1541,45 @@
       "plannedCases": [
         "P3-M32-06"
       ],
-      "status": "partial_local_runtime_evidence_full_case_review_pending",
+      "status": "local_synthetic_verified_platform_and_independent_review_pending",
       "evidence": [
-        "evidence/r1-p3-20260910T080856347352Z.json"
+        "evidence/r1-p3-20260910T080856347352Z.json",
+        "evidence/r1-p3-20260910T082305048810Z.json"
       ],
-      "implementationSha": "b6355ed11cf08dee270dd3e776b4cc7c6bf81f85"
+      "implementationSha": "74c5b0db8894209b827b8e1b097366ad4c99257d",
+      "code": [
+        "lib/hris/r1-report-projection.ts",
+        "lib/hris/r1-report-m01-producer.ts",
+        "lib/hris/r1-report-jobs.ts",
+        "lib/hris/r1-report-export-plan.ts",
+        "lib/hris/r1-report-definition-service.ts",
+        "lib/hris/r1-report-csv.ts",
+        "lib/hris/r1-report-export.ts",
+        "lib/hris/r1-report-schedule.ts",
+        "lib/hris/r1-report-run.ts",
+        "lib/hris/r1-report-labels.ts",
+        "lib/hris/r1-report-definition.ts",
+        "lib/hris/r1-report-subscriptions.ts",
+        "lib/hris/r1-report-runtime.ts",
+        "lib/hris/r1-report-permissions.ts",
+        "lib/hris/r1-report-catalog.ts",
+        "lib/hris/r1-report-query.ts",
+        "lib/hris/r1-report-aggregate.ts",
+        "lib/hris/r1-report-context.ts",
+        "lib/hris/r1-report-values.ts",
+        "lib/hris/r1-report-command-input.ts",
+        "app/reports/r1-actions.tsx",
+        "app/reports/subscriptions/results/[id]/result.tsx"
+      ],
+      "caseEvidence": "R1_P3_M32_Jobs_Case_Evidence.json",
+      "verificationBoundaries": [
+        "136/136本轮R1合成整体测试、类型、构建通过；非P3最终两轮收口",
+        "真实托管后台/调度仍DEP-PLATFORM-01未核实，HTTP明确blocked_runtime；不能声称云端任务运行",
+        "对象存储和消息传输为显式隔离模拟，未实发通知/附件，不是供应商或R2/R3真实联调",
+        "新页面经类型与构建检查；独立浏览器人工角色验收未执行",
+        "分块导出10001行完整运行；最大10000块/100汇总组为显式预算，未测试云端代表容量",
+        "业务历史不按导出24小时TTL删除；物理保留/恢复点约束交09"
+      ]
     },
     {
       "id": "M32-REVIEW-AC11",
@@ -1517,8 +1623,44 @@
       "plannedCases": [
         "P3-M32-08"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "local_synthetic_verified_platform_and_independent_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T082305048810Z.json"
+      ],
+      "implementationSha": "74c5b0db8894209b827b8e1b097366ad4c99257d",
+      "code": [
+        "lib/hris/r1-report-projection.ts",
+        "lib/hris/r1-report-m01-producer.ts",
+        "lib/hris/r1-report-jobs.ts",
+        "lib/hris/r1-report-export-plan.ts",
+        "lib/hris/r1-report-definition-service.ts",
+        "lib/hris/r1-report-csv.ts",
+        "lib/hris/r1-report-export.ts",
+        "lib/hris/r1-report-schedule.ts",
+        "lib/hris/r1-report-run.ts",
+        "lib/hris/r1-report-labels.ts",
+        "lib/hris/r1-report-definition.ts",
+        "lib/hris/r1-report-subscriptions.ts",
+        "lib/hris/r1-report-runtime.ts",
+        "lib/hris/r1-report-permissions.ts",
+        "lib/hris/r1-report-catalog.ts",
+        "lib/hris/r1-report-query.ts",
+        "lib/hris/r1-report-aggregate.ts",
+        "lib/hris/r1-report-context.ts",
+        "lib/hris/r1-report-values.ts",
+        "lib/hris/r1-report-command-input.ts",
+        "app/reports/r1-actions.tsx",
+        "app/reports/subscriptions/results/[id]/result.tsx"
+      ],
+      "caseEvidence": "R1_P3_M32_Jobs_Case_Evidence.json",
+      "verificationBoundaries": [
+        "136/136本轮R1合成整体测试、类型、构建通过；非P3最终两轮收口",
+        "真实托管后台/调度仍DEP-PLATFORM-01未核实，HTTP明确blocked_runtime；不能声称云端任务运行",
+        "对象存储和消息传输为显式隔离模拟，未实发通知/附件，不是供应商或R2/R3真实联调",
+        "新页面经类型与构建检查；独立浏览器人工角色验收未执行",
+        "分块导出10001行完整运行；最大10000块/100汇总组为显式预算，未测试云端代表容量",
+        "业务历史不按导出24小时TTL删除；物理保留/恢复点约束交09"
+      ]
     },
     {
       "id": "M32-REVIEW-AC13",
@@ -2327,7 +2469,8 @@
       "id": "R1-M32-L07",
       "status": "design_complete_validation_open",
       "p3Evidence": [
-        "evidence/r1-p3-20260910T080856347352Z.json"
+        "evidence/r1-p3-20260910T080856347352Z.json",
+        "evidence/r1-p3-20260910T082305048810Z.json"
       ],
       "primaryDisposition": "P3",
       "sourceStatus": "design_complete_validation_open",
@@ -2336,19 +2479,21 @@
         "P3-M32-06",
         "P3-M32-09"
       ],
-      "p3RuntimeStatus": "partial_local_runtime_evidence_full_case_review_pending"
+      "p3RuntimeStatus": "local_runtime_evidence_platform_and_independent_review_pending"
     },
     {
       "id": "R1-M32-L08",
       "status": "design_complete_validation_open",
-      "p3Evidence": [],
+      "p3Evidence": [
+        "evidence/r1-p3-20260910T082305048810Z.json"
+      ],
       "primaryDisposition": "P3",
       "sourceStatus": "design_complete_validation_open",
       "sourceEvidenceOwner": "P1 controller",
       "plannedP3Cases": [
         "P3-M32-08"
       ],
-      "p3RuntimeStatus": "not_executed"
+      "p3RuntimeStatus": "local_runtime_evidence_platform_and_independent_review_pending"
     },
     {
       "id": "R1-M32-L09",
@@ -2366,7 +2511,8 @@
       "id": "R1-M32-L10",
       "status": "design_complete_acceptance_open",
       "p3Evidence": [
-        "evidence/r1-p3-20260910T080856347352Z.json"
+        "evidence/r1-p3-20260910T080856347352Z.json",
+        "evidence/r1-p3-20260910T082305048810Z.json"
       ],
       "primaryDisposition": "P4",
       "sourceStatus": "design_complete_acceptance_open",
@@ -2375,11 +2521,11 @@
         "P3-M32-06",
         "P3-REC-04"
       ],
-      "p3RuntimeStatus": "partial_local_runtime_evidence_full_case_review_pending"
+      "p3RuntimeStatus": "local_runtime_evidence_platform_and_independent_review_pending"
     }
   ],
   "latestEvidence": [
-    "evidence/r1-p3-20260910T075750612916Z.json"
+    "evidence/r1-p3-20260910T082305048810Z.json"
   ],
   "allOriginalAcPassed": false,
   "risksClosedByExecutor": 0,

@@ -1,0 +1,41 @@
+{
+  "kind": "P3_dependency_evidence_projection_not_scope_register",
+  "newBusinessDecisions": [],
+  "ownerDecisionRequiredNow": false,
+  "dependencies": [
+    {
+      "id": "DEP-PLATFORM-01",
+      "owner": "平台负责人",
+      "status": "capability_unverified",
+      "impact": "07/09云端调度、独立导出/导入及隔离目标运行验证阻塞",
+      "localAlternative": "仅本地显式worker和隔离适配器继续实施；不伪造正式平台能力",
+      "evidence": [
+        "evidence/r1-p3-20260910T082305048810Z.json"
+      ]
+    },
+    {
+      "id": "DEP-PLATFORM-02",
+      "owner": "平台/独立安全负责人",
+      "status": "capability_unverified",
+      "impact": "09独立可信授权与恢复开放不得声称已落实"
+    },
+    {
+      "id": "DEP-PRODUCERS-01",
+      "owner": "R2/R3生产者与M48/M32负责人",
+      "status": "real_integration_not_executed",
+      "impact": "10逐生产者真实契约待核；模拟不记真实通过"
+    },
+    {
+      "id": "SRC-13",
+      "owner": "P1总控",
+      "status": "source_evidence_retained",
+      "impact": "本窗口不抢原站浏览器或操作补证"
+    },
+    {
+      "id": "DEP-HUMAN-01",
+      "owner": "所有者及独立P4验收负责人",
+      "status": "P4_retained",
+      "impact": "本窗口不加人、不进入P4"
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "purpose": "static inventory, not dynamic route coverage",
-  "routeCount": 55,
-  "methodCount": 56,
-  "sourceSha": "7ccfbe6029bf28a5e35be97271b16fce7f325325",
+  "routeCount": 60,
+  "methodCount": 61,
+  "sourceSha": "74c5b0db8894209b827b8e1b097366ad4c99257d",
   "routes": [
     {
       "path": "app/api/access/route.ts",
@@ -350,12 +350,52 @@
       "classification": "R1 service command ledger + current authorization + feature gate"
     },
     {
+      "path": "app/api/r1/reports/export/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "sha256": "f9c36eb25cce6ed753443a2102ac4f31753397c61063115f1609d46e00175825",
+      "classification": "R1 service command ledger + current authorization; unverified background steps return blocked_runtime"
+    },
+    {
+      "path": "app/api/r1/reports/jobs/[id]/step/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "sha256": "00281050368284d4841d1f55a114e11c76b5298133ed649ba3a118aa6386cb19",
+      "classification": "R1 service command ledger + current authorization; unverified background steps return blocked_runtime"
+    },
+    {
+      "path": "app/api/r1/reports/jobs/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "sha256": "1279d3e9fed5725bc5f5e1eeba7f4fffce3594dadd6cedba7765e90d5333f886",
+      "classification": "R1 service command ledger + current authorization; unverified background steps return blocked_runtime"
+    },
+    {
       "path": "app/api/r1/reports/projections/route.ts",
       "methods": [
         "POST"
       ],
       "sha256": "0d928c1a9a722d8b3e4d84bbec68a4a8e1bfb3676b17017483cb05b50a783a79",
       "classification": "R1 service command ledger + current authorization + feature gate"
+    },
+    {
+      "path": "app/api/r1/reports/subscriptions/[id]/run/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "sha256": "bd9e3ff72cc3070e15af2dd97d2b7e9cbd09cfdd916aa3e8ed844f8991ead5cb",
+      "classification": "R1 service command ledger + current authorization; unverified background steps return blocked_runtime"
+    },
+    {
+      "path": "app/api/r1/reports/subscriptions/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "sha256": "4e3a9ab55faff2a7d288c8ef401353ed4d76cefe91b5888fa9738576dd0f4897",
+      "classification": "R1 service command ledger + current authorization; unverified background steps return blocked_runtime"
     },
     {
       "path": "app/api/r1/self-service/actions/route.ts",

@@ -235,27 +235,39 @@
         "P3-R1-06",
         "P3-R1-04"
       ],
-      "status": "in_progress",
+      "status": "implemented_synthetic_verified_review_pending",
       "caseIds": [
         "P3-M32-06",
         "P3-M32-08",
         "P3-M32-09"
       ],
       "evidence": [
-        "evidence/r1-p3-20260910T080856347352Z.json"
+        "evidence/r1-p3-20260910T080856347352Z.json",
+        "evidence/r1-p3-20260910T082305048810Z.json"
       ],
-      "implementationSha": "b6355ed11cf08dee270dd3e776b4cc7c6bf81f85",
+      "implementationSha": "74c5b0db8894209b827b8e1b097366ad4c99257d",
       "subworkCompleted": [
         "任务/租约/fence及孤儿分块同事务ready",
         "当前read+export交集、人员调动范围水位及自然到期阻旧文件",
         "同步预算超限转队列、10001行51块完整导出和下载",
         "登录分块流下载、CSV注入/负数/null状态",
-        "后台HTTP显式blocked_runtime不擅接云调度"
+        "后台HTTP显式blocked_runtime不擅接云调度",
+        "逐收件人当前行列权限交集/固定来源清单",
+        "订阅显式周期/DST/原子转交/屏蔽与unknown查询优先",
+        "保存定义固定版本明细和汇总导出",
+        "持久失败及显式安全重试/设计器/订阅管理和收件页面"
       ],
-      "remaining": [
-        "逐收件人订阅/转交/屏蔽/模拟投递与DST",
-        "设计器/导出/订阅页面及保存定义导出",
-        "任务级AC证据收口，正式后台能力仍DEP-PLATFORM-01"
+      "remaining": [],
+      "verificationBoundaries": [
+        "136/136本轮R1合成整体测试、类型、构建通过；非P3最终两轮收口",
+        "真实托管后台/调度仍DEP-PLATFORM-01未核实，HTTP明确blocked_runtime；不能声称云端任务运行",
+        "对象存储和消息传输为显式隔离模拟，未实发通知/附件，不是供应商或R2/R3真实联调",
+        "新页面经类型与构建检查；独立浏览器人工角色验收未执行",
+        "分块导出10001行完整运行；最大10000块/100汇总组为显式预算，未测试云端代表容量",
+        "业务历史不按导出24小时TTL删除；物理保留/恢复点约束交09"
+      ],
+      "blockedValidation": [
+        "DEP-PLATFORM-01"
       ]
     },
     {
@@ -267,7 +279,7 @@
         "P3-R1-04",
         "P3-R1-06"
       ],
-      "status": "pending",
+      "status": "in_progress",
       "caseIds": [
         "P3-MIG-01",
         "P3-MIG-02",
@@ -323,7 +335,7 @@
       "evidence": []
     }
   ],
-  "currentTask": "P3-R1-07",
-  "lastVerifiedSourceSha": "b6355ed11cf08dee270dd3e776b4cc7c6bf81f85",
-  "latestRun": "evidence/r1-p3-20260910T080856347352Z.json"
+  "currentTask": "P3-R1-08",
+  "lastVerifiedSourceSha": "74c5b0db8894209b827b8e1b097366ad4c99257d",
+  "latestRun": "evidence/r1-p3-20260910T082305048810Z.json"
 }
