@@ -169,6 +169,13 @@
       "when": 1789022521990,
       "tag": "0023_r1_report_jobs",
       "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "6",
+      "when": 1789022521991,
+      "tag": "0024_r1_report_subscriptions",
+      "breakpoints": true
     }
   ]
 }

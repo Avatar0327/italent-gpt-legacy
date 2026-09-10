@@ -5,10 +5,10 @@ import {ratio,decimalParts,decimalString,type ReportCell} from './r1-report-valu
 import type {ReportContext} from './r1-report-context';
 const nullCell=(reasonCode:string):ReportCell=>({value:null,state:'null',reasonCode});
 /** Database aggregates process only the current authorized subquery; no hidden raw rows reach the client. */
-export async function aggregateDefinition(ctx:ReportContext,query:URLSearchParams,input:unknown,scopeOrg?:string){
+export async function aggregateDefinition(ctx:ReportContext,query:URLSearchParams,input:unknown,scopeOrg?:string,additionalActions:string[]=[]){
  const validated=validateReportDefinition(input),d=validated.definition;if(!d.metrics.length)throw new HttpError(400,'汇总定义必须声明指标','METRIC_REQUIRED');
  const fields=[...new Set([...d.columns,...validated.usedFields])],definition={...d,columns:fields};
- return readReport(ctx,query,{action:'aggregate',definition,scopeOrg,async execute(plan:AuthorizedReportPlan){
+ return readReport(ctx,query,{action:'aggregate',additionalActions,definition,scopeOrg,async execute(plan:AuthorizedReportPlan){
   const column=(id:string)=>{const index=plan.fields.indexOf(id);if(index<0)throw new HttpError(400,'指标字段未进入授权计划','FIELD_NOT_ALLOWED');return 'f'+index;},value=(id:string)=>`json_extract(${column(id)},'$.value')`,state=(id:string)=>`json_extract(${column(id)},'$.state')`,group=d.groupBy.map(column),partition=group.length?'PARTITION BY '+group.join(',')+' ':'';
   const atoms:any[]=[],windows:string[]=[],selects:string[]=[],atomId=new Map<any,number>(),extraArgs:unknown[]=[];
   const register=(n:any)=>{if(['add','subtract','ratio'].includes(n.op)){register(n.left);register(n.right);return;}if(n.op==='field'){if(!d.groupBy.includes(n.field))throw new HttpError(400,'汇总中裸字段必须属于分组','UNGROUPED_FIELD');return;}const index=atoms.length;atoms.push(n);atomId.set(n,index);const x=n.field?value(n.field):'*',known=n.field?`COUNT(CASE WHEN ${state(n.field)}='value' THEN 1 END)`:'COUNT(*)';selects.push(known+' AS k'+index,'COUNT(*) AS n'+index);
