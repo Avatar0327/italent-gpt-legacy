@@ -1,7 +1,7 @@
 {
   "purpose": "static inventory, not dynamic route coverage",
-  "routeCount": 50,
-  "methodCount": 51,
+  "routeCount": 52,
+  "methodCount": 53,
   "routes": [
     {
       "path": "app/api/access/route.ts",
@@ -17,8 +17,8 @@
         "POST",
         "DELETE"
       ],
-      "sha256": "3c336263814ffa68793ba7eed0a78498e2039b14eb3b4027efa7acb7a0b6d574",
-      "classification": "existing API command bridge; feature gate prevents old writes after switch"
+      "sha256": "72d373bc50d8ce1d0cef0f7fbcc9c8e46af57bb6233c494646542611be99805c",
+      "classification": "R1 command header + actor-bound receipt replay + current attachment tuples; legacy permitted only before feature switch"
     },
     {
       "path": "app/api/attendance/route.ts",
@@ -113,7 +113,7 @@
       "methods": [
         "POST"
       ],
-      "sha256": "87424792fc3a73aceb1437820bdd0d9448827e3e248c76f86857eab7341cd95c",
+      "sha256": "077aed52a9633bc0d99846fd0962f9b4605bb814d05242e21e5e9cd96f012f2e",
       "classification": "existing API command bridge; feature gate prevents old writes after switch"
     },
     {
@@ -325,12 +325,28 @@
       "classification": "existing API command bridge; feature gate prevents old writes after switch"
     },
     {
+      "path": "app/api/r1/adapters/[source]/preflight/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "sha256": "842a13373414ef7744a21d6051d7de39887ad1e1cf1d7b9e3156c077bf6c4c8c",
+      "classification": "R1 explicit versioned service or read-only contract preflight; static inventory is not dynamic proof"
+    },
+    {
       "path": "app/api/r1/commands/route.ts",
       "methods": [
         "POST"
       ],
-      "sha256": "94b51a8b0e19f4be775f799e832ca3eb5037aa7349eb128fa1915c628a27b1c5",
-      "classification": "R1 command service"
+      "sha256": "29332df1bc3e8d009e4dee0e6c5ac7ee20026f5585da726cb5eeb26b456e6eb1",
+      "classification": "R1 explicit versioned service or read-only contract preflight; static inventory is not dynamic proof"
+    },
+    {
+      "path": "app/api/r1/workflows/batch/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "sha256": "dbe9283d49db08c5cd92489749b3d0ca4cd207cc293038cbeff1ddf446e20059",
+      "classification": "R1 explicit versioned service or read-only contract preflight; static inventory is not dynamic proof"
     },
     {
       "path": "app/api/recruitment/route.ts",

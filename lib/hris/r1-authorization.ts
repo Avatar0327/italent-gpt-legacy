@@ -23,4 +23,6 @@ export async function authorizeTuple(db:D1Database,m:Member,q:AccessTuple){
  ]);
  const parsed=grants.results.map((g:any)=>({...g,scope:JSON.parse(g.scope),fields:JSON.parse(g.fields)})) as Grant[];
  if(!tupleAllowed(m,parsed,relations.results as Relationship[],q)||!sameStamp(start,await securityStamp(db,m.tenantId)))throw new HttpError(403,'没有此对象动作或字段权限','FORBIDDEN');
+ const at=new Date().toISOString(),rs=relations.results as Relationship[],ends=parsed.filter(g=>tupleAllowed(m,[g],rs,q,at)).map(g=>{const grantEnd=g.validTo?Date.parse(g.validTo):Number.MAX_SAFE_INTEGER;const relationEnd=['scope','self'].includes(g.relationType)?Number.MAX_SAFE_INTEGER:Math.max(...rs.filter(r=>r.relationType===g.relationType&&r.subjectPersonId===q.personId&&effective(r.validFrom,r.validTo,at)).map(r=>r.validTo?Date.parse(r.validTo):Number.MAX_SAFE_INTEGER));return Math.min(grantEnd,relationEnd);});
+ if(!ends.length)throw new HttpError(403,'权限有效期已结束','FORBIDDEN');m.permissionValidUntil=Math.min(m.permissionValidUntil??Number.MAX_SAFE_INTEGER,Math.max(...ends));
 }
