@@ -1,0 +1,52 @@
+{
+  "kind": "completed_review_content_push_receipt",
+  "observedAt": "2026-09-10T08:30:40.602468+00:00",
+  "branch": "review/r2-p2-exit-20260910",
+  "contentCommit": "fa3b8a354d8fbb44d9202c6efefdaacacd6eb47d",
+  "contentCommits": [
+    "8a5f1e0d8f0d8d0b0197f71306c8ab8f5b275c07 review(r2-p2): record independent source, contract, and gate verification",
+    "fa3b8a354d8fbb44d9202c6efefdaacacd6eb47d review(r2-p2): conclude exit review and define dependency sequencing"
+  ],
+  "remoteReviewHead": "fa3b8a354d8fbb44d9202c6efefdaacacd6eb47d",
+  "remoteDesignHead": "8b3daf9270181ffe2e77015be723da8e611d83a5",
+  "upstream": "r2-p2-origin/review/r2-p2-exit-20260910",
+  "workingTreeStatusImmediatelyAfterPush": "",
+  "publicationRequested": false,
+  "before": {
+    "command": [
+      "git",
+      "ls-remote",
+      "r2-p2-origin",
+      "refs/heads/design/r2-p2-20260910",
+      "refs/heads/review/r2-p2-exit-20260910"
+    ],
+    "exitCode": 0,
+    "stdout": "8b3daf9270181ffe2e77015be723da8e611d83a5\trefs/heads/design/r2-p2-20260910\n",
+    "stderr": ""
+  },
+  "push": {
+    "command": [
+      "git",
+      "push",
+      "--set-upstream",
+      "r2-p2-origin",
+      "HEAD:refs/heads/review/r2-p2-exit-20260910"
+    ],
+    "exitCode": 0,
+    "stdout": "branch 'review/r2-p2-exit-20260910' set up to track 'r2-p2-origin/review/r2-p2-exit-20260910'.\n",
+    "stderr": "To https://git.chatgpt-team.site/3c052162-ec7b-4c58-946f-b503fc0e5624/appgprj_6a9e2c705cfc819180e0e5251bb025cc.git\n * [new branch]      HEAD -> review/r2-p2-exit-20260910\n"
+  },
+  "after": {
+    "command": [
+      "git",
+      "ls-remote",
+      "r2-p2-origin",
+      "refs/heads/design/r2-p2-20260910",
+      "refs/heads/review/r2-p2-exit-20260910"
+    ],
+    "exitCode": 0,
+    "stdout": "8b3daf9270181ffe2e77015be723da8e611d83a5\trefs/heads/design/r2-p2-20260910\nfa3b8a354d8fbb44d9202c6efefdaacacd6eb47d\trefs/heads/review/r2-p2-exit-20260910\n",
+    "stderr": ""
+  },
+  "note": "This receipt will be committed separately. Its own final branch tip is verified after that push and reported in the final response; no circular self-hash."
+}
