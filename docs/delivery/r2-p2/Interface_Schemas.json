@@ -1790,6 +1790,9 @@
         },
         "purpose": {
           "$ref": "#/$defs/Purpose"
+        },
+        "disclosurePlanVersionRef": {
+          "$ref": "#/$defs/InternalVersionRef"
         }
       },
       "required": [
@@ -1799,7 +1802,8 @@
         "suppressionManifestDigest",
         "audiencePolicyVersionRef",
         "expectedDisclosureRevision",
-        "purpose"
+        "purpose",
+        "disclosurePlanVersionRef"
       ],
       "additionalProperties": false
     },
@@ -3218,6 +3222,237 @@
         "selectedFieldIds",
         "purpose",
         "relationship"
+      ],
+      "additionalProperties": false
+    },
+    "Rational": {
+      "type": "object",
+      "properties": {
+        "numerator": {
+          "type": "integer"
+        },
+        "denominator": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "numerator",
+        "denominator"
+      ],
+      "additionalProperties": false
+    },
+    "DisclosureCoefficient": {
+      "type": "object",
+      "properties": {
+        "cellId": {
+          "$ref": "#/$defs/Id"
+        },
+        "coefficient": {
+          "$ref": "#/$defs/Rational"
+        }
+      },
+      "required": [
+        "cellId",
+        "coefficient"
+      ],
+      "additionalProperties": false
+    },
+    "DisclosureAtom": {
+      "type": "object",
+      "properties": {
+        "atomId": {
+          "$ref": "#/$defs/Id"
+        },
+        "responseLineageId": {
+          "$ref": "#/$defs/Id"
+        },
+        "responseVersionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "previousAtomId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "protectedReviewerKey": {
+          "$ref": "#/$defs/Digest"
+        },
+        "protectedSubjectKey": {
+          "$ref": "#/$defs/Digest"
+        },
+        "questionSemanticVersionRef": {
+          "$ref": "#/$defs/InternalVersionRef"
+        },
+        "scaleVersionRef": {
+          "$ref": "#/$defs/InternalVersionRef"
+        },
+        "coefficients": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DisclosureCoefficient"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "atomId",
+        "responseLineageId",
+        "responseVersionId",
+        "previousAtomId",
+        "protectedReviewerKey",
+        "protectedSubjectKey",
+        "questionSemanticVersionRef",
+        "scaleVersionRef",
+        "coefficients"
+      ],
+      "additionalProperties": false
+    },
+    "DisclosureCell": {
+      "type": "object",
+      "properties": {
+        "cellId": {
+          "$ref": "#/$defs/Id"
+        },
+        "reportDisclosureVersionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "linkDomainId": {
+          "$ref": "#/$defs/Id"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "anonymous_numeric",
+            "anonymous_distribution",
+            "named_self",
+            "named_unique_manager",
+            "organization"
+          ]
+        },
+        "purpose": {
+          "$ref": "#/$defs/Purpose"
+        },
+        "sourceManifestDigest": {
+          "$ref": "#/$defs/Digest"
+        },
+        "disclosedAt": {
+          "$ref": "#/$defs/Instant"
+        },
+        "withdrawn": {
+          "$ref": "#/$defs/Boolean"
+        }
+      },
+      "required": [
+        "cellId",
+        "reportDisclosureVersionId",
+        "linkDomainId",
+        "kind",
+        "purpose",
+        "sourceManifestDigest",
+        "disclosedAt",
+        "withdrawn"
+      ],
+      "additionalProperties": false
+    },
+    "DisclosureLedgerEntry": {
+      "type": "object",
+      "properties": {
+        "ledgerId": {
+          "$ref": "#/$defs/Id"
+        },
+        "revision": {
+          "$ref": "#/$defs/Revision"
+        },
+        "previousRevision": {
+          "$ref": "#/$defs/Revision"
+        },
+        "disclosureEpoch": {
+          "$ref": "#/$defs/Id"
+        },
+        "parentEpochManifestDigest": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Digest"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "securityPartitionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "partitionManifestDigest": {
+          "$ref": "#/$defs/Digest"
+        },
+        "linkDomainIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 1
+        },
+        "cells": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DisclosureCell"
+          },
+          "minItems": 1
+        },
+        "atomManifestDigest": {
+          "$ref": "#/$defs/Digest"
+        },
+        "participationSignatureManifestDigest": {
+          "$ref": "#/$defs/Digest"
+        },
+        "coefficientSignatureManifestDigest": {
+          "$ref": "#/$defs/Digest"
+        },
+        "subjectSignatureManifestDigest": {
+          "$ref": "#/$defs/Digest"
+        },
+        "policyVersionRef": {
+          "$ref": "#/$defs/InternalVersionRef"
+        },
+        "k": {
+          "type": "integer",
+          "minimum": 3
+        },
+        "subjectThreshold": {
+          "const": 3
+        },
+        "authorizationRevision": {
+          "$ref": "#/$defs/Revision"
+        },
+        "recoveryEpoch": {
+          "$ref": "#/$defs/Revision"
+        }
+      },
+      "required": [
+        "ledgerId",
+        "revision",
+        "previousRevision",
+        "disclosureEpoch",
+        "parentEpochManifestDigest",
+        "securityPartitionId",
+        "partitionManifestDigest",
+        "linkDomainIds",
+        "cells",
+        "atomManifestDigest",
+        "participationSignatureManifestDigest",
+        "coefficientSignatureManifestDigest",
+        "subjectSignatureManifestDigest",
+        "policyVersionRef",
+        "k",
+        "subjectThreshold",
+        "authorizationRevision",
+        "recoveryEpoch"
       ],
       "additionalProperties": false
     },

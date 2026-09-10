@@ -79,6 +79,8 @@ defs['DateChange']=obj({'businessVersionId':ref('Id'),'newEndOn':ref('Date'),'re
 defs['ReportQuery']=obj({'datasetId':ref('Id'),'definitionVersionId':ref('Id'),'timeMode':enum('current','snapshot'),'snapshotId':ref('Id'),'purpose':ref('Purpose'),'fieldIds':arr('Id'),'cursor':text(4000),'pageSize':{'type':'integer','minimum':1,'maximum':200}},['datasetId','definitionVersionId','timeMode','purpose','fieldIds','pageSize'])
 from repair_contracts import apply, bind
 apply(defs,obj,ref,arr,enum,text,nullable)
+from repair_anonymity_schema import apply as apply_anonymity
+apply_anonymity(defs,obj,ref,arr,enum,text,nullable)
 commands=[]
 def cmd(action,payload,mode,anchor):commands.append({'action':'r2.'+action,'module':action[:3].upper(),'payloadSchema':'#/$defs/'+payload,'operation':mode,'semanticDesignRef':anchor,'implementationStatus':'design_only'})
 direct={
@@ -111,3 +113,4 @@ print(json.dumps({'definitions':len(defs),'commandBindings':len(commands)}))
 
 import runpy
 runpy.run_path(str(D/"build_schema_examples.py"))
+runpy.run_path(str(D/"build_anonymity_cases.py"))

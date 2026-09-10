@@ -1,0 +1,1316 @@
+{
+  "kind": "P2_symbolic_fixtures_not_P3",
+  "algorithm": "coefficient-equivalence-with-answer-lineage-v2",
+  "cases": [
+    {
+      "id": "ANON-01",
+      "title": "三名首次合法发布",
+      "k": 3,
+      "rows": [
+        {
+          "atomId": "A-q-v1",
+          "reviewer": "A",
+          "subject": "E1",
+          "coefficients": [
+            "1/3"
+          ],
+          "value": "2"
+        },
+        {
+          "atomId": "B-q-v1",
+          "reviewer": "B",
+          "subject": "E1",
+          "coefficients": [
+            "1/3"
+          ],
+          "value": "4"
+        },
+        {
+          "atomId": "C-q-v1",
+          "reviewer": "C",
+          "subject": "E1",
+          "coefficients": [
+            "1/3"
+          ],
+          "value": "6"
+        }
+      ],
+      "expectedClassSizes": [
+        3
+      ],
+      "expected": "publish",
+      "manualReason": "ABC同向量(1/3)，人数3；(2+4+6)/3=4。",
+      "expectedValues": [
+        "4"
+      ]
+    },
+    {
+      "id": "ANON-02",
+      "title": "两名必须抑制",
+      "k": 3,
+      "rows": [
+        {
+          "atomId": "A-q-v1",
+          "reviewer": "A",
+          "subject": "E1",
+          "coefficients": [
+            "1/2"
+          ],
+          "value": "2"
+        },
+        {
+          "atomId": "B-q-v1",
+          "reviewer": "B",
+          "subject": "E1",
+          "coefficients": [
+            "1/2"
+          ],
+          "value": "4"
+        }
+      ],
+      "expectedClassSizes": [
+        2
+      ],
+      "expected": "suppress",
+      "manualReason": "AB同类但2<3；内部均值3不得披露。",
+      "expectedValues": [
+        "3"
+      ]
+    },
+    {
+      "id": "ANON-03",
+      "title": "同一人修改重新发布",
+      "k": 3,
+      "rows": [
+        {
+          "atomId": "A-q-v1",
+          "reviewer": "A",
+          "subject": "E1",
+          "coefficients": [
+            "1/3",
+            "0"
+          ],
+          "value": "2"
+        },
+        {
+          "atomId": "A-q-v2",
+          "reviewer": "A",
+          "subject": "E1",
+          "coefficients": [
+            "0",
+            "1/3"
+          ],
+          "value": "5"
+        },
+        {
+          "atomId": "B-q-v1",
+          "reviewer": "B",
+          "subject": "E1",
+          "coefficients": [
+            "1/3",
+            "1/3"
+          ],
+          "value": "4"
+        },
+        {
+          "atomId": "C-q-v1",
+          "reviewer": "C",
+          "subject": "E1",
+          "coefficients": [
+            "1/3",
+            "1/3"
+          ],
+          "value": "6"
+        }
+      ],
+      "expectedClassSizes": [
+        1,
+        1,
+        2
+      ],
+      "expected": "suppress",
+      "manualReason": "A旧(1/3,0)1人，A新(0,1/3)1人，BC(1/3,1/3)2人；新均值5减旧4=1，得A变化3。",
+      "expectedValues": [
+        "4",
+        "5"
+      ]
+    },
+    {
+      "id": "ANON-04",
+      "title": "成员ABC改ABD",
+      "k": 3,
+      "rows": [
+        {
+          "atomId": "A-q-v1",
+          "reviewer": "A",
+          "subject": "E1",
+          "coefficients": [
+            "1/3",
+            "1/3"
+          ],
+          "value": "2"
+        },
+        {
+          "atomId": "B-q-v1",
+          "reviewer": "B",
+          "subject": "E1",
+          "coefficients": [
+            "1/3",
+            "1/3"
+          ],
+          "value": "4"
+        },
+        {
+          "atomId": "C-q-v1",
+          "reviewer": "C",
+          "subject": "E1",
+          "coefficients": [
+            "1/3",
+            "0"
+          ],
+          "value": "6"
+        },
+        {
+          "atomId": "D-q-v1",
+          "reviewer": "D",
+          "subject": "E1",
+          "coefficients": [
+            "0",
+            "1/3"
+          ],
+          "value": "8"
+        }
+      ],
+      "expectedClassSizes": [
+        1,
+        1,
+        2
+      ],
+      "expected": "suppress",
+      "manualReason": "AB交集2，C退出1，D新增1，三个类均不足。",
+      "expectedValues": [
+        "4",
+        "14/3"
+      ]
+    },
+    {
+      "id": "ANON-05A",
+      "title": "交叠前两报告可发布",
+      "k": 3,
+      "rows": [
+        {
+          "atomId": "X0-q-v1",
+          "reviewer": "X0",
+          "subject": "E1",
+          "coefficients": [
+            "1/10",
+            "1/10"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "AB0-q-v1",
+          "reviewer": "AB0",
+          "subject": "E1",
+          "coefficients": [
+            "1/10",
+            "1/10"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "AB1-q-v1",
+          "reviewer": "AB1",
+          "subject": "E1",
+          "coefficients": [
+            "1/10",
+            "1/10"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "AB2-q-v1",
+          "reviewer": "AB2",
+          "subject": "E1",
+          "coefficients": [
+            "1/10",
+            "1/10"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "AC0-q-v1",
+          "reviewer": "AC0",
+          "subject": "E1",
+          "coefficients": [
+            "1/10",
+            "0"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "AC1-q-v1",
+          "reviewer": "AC1",
+          "subject": "E1",
+          "coefficients": [
+            "1/10",
+            "0"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "AC2-q-v1",
+          "reviewer": "AC2",
+          "subject": "E1",
+          "coefficients": [
+            "1/10",
+            "0"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "BC0-q-v1",
+          "reviewer": "BC0",
+          "subject": "E1",
+          "coefficients": [
+            "0",
+            "1/10"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "BC1-q-v1",
+          "reviewer": "BC1",
+          "subject": "E1",
+          "coefficients": [
+            "0",
+            "1/10"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "BC2-q-v1",
+          "reviewer": "BC2",
+          "subject": "E1",
+          "coefficients": [
+            "0",
+            "1/10"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "A0-q-v1",
+          "reviewer": "A0",
+          "subject": "E1",
+          "coefficients": [
+            "1/10",
+            "0"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "A1-q-v1",
+          "reviewer": "A1",
+          "subject": "E1",
+          "coefficients": [
+            "1/10",
+            "0"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "A2-q-v1",
+          "reviewer": "A2",
+          "subject": "E1",
+          "coefficients": [
+            "1/10",
+            "0"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "B0-q-v1",
+          "reviewer": "B0",
+          "subject": "E1",
+          "coefficients": [
+            "0",
+            "1/10"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "B1-q-v1",
+          "reviewer": "B1",
+          "subject": "E1",
+          "coefficients": [
+            "0",
+            "1/10"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "B2-q-v1",
+          "reviewer": "B2",
+          "subject": "E1",
+          "coefficients": [
+            "0",
+            "1/10"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "C0-q-v1",
+          "reviewer": "C0",
+          "subject": "E1",
+          "coefficients": [
+            "0",
+            "0"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "C1-q-v1",
+          "reviewer": "C1",
+          "subject": "E1",
+          "coefficients": [
+            "0",
+            "0"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "C2-q-v1",
+          "reviewer": "C2",
+          "subject": "E1",
+          "coefficients": [
+            "0",
+            "0"
+          ],
+          "value": "3"
+        }
+      ],
+      "expectedClassSizes": [
+        4,
+        6,
+        6
+      ],
+      "expected": "publish",
+      "manualReason": "两个报告各10，交集X+AB=4，两差各6，全部≥3。",
+      "expectedValues": [
+        "3",
+        "3"
+      ]
+    },
+    {
+      "id": "ANON-05B",
+      "title": "第三重交叠必须拒绝",
+      "k": 3,
+      "rows": [
+        {
+          "atomId": "X0-q-v1",
+          "reviewer": "X0",
+          "subject": "E1",
+          "coefficients": [
+            "1/10",
+            "1/10",
+            "1/10"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "AB0-q-v1",
+          "reviewer": "AB0",
+          "subject": "E1",
+          "coefficients": [
+            "1/10",
+            "1/10",
+            "0"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "AB1-q-v1",
+          "reviewer": "AB1",
+          "subject": "E1",
+          "coefficients": [
+            "1/10",
+            "1/10",
+            "0"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "AB2-q-v1",
+          "reviewer": "AB2",
+          "subject": "E1",
+          "coefficients": [
+            "1/10",
+            "1/10",
+            "0"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "AC0-q-v1",
+          "reviewer": "AC0",
+          "subject": "E1",
+          "coefficients": [
+            "1/10",
+            "0",
+            "1/10"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "AC1-q-v1",
+          "reviewer": "AC1",
+          "subject": "E1",
+          "coefficients": [
+            "1/10",
+            "0",
+            "1/10"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "AC2-q-v1",
+          "reviewer": "AC2",
+          "subject": "E1",
+          "coefficients": [
+            "1/10",
+            "0",
+            "1/10"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "BC0-q-v1",
+          "reviewer": "BC0",
+          "subject": "E1",
+          "coefficients": [
+            "0",
+            "1/10",
+            "1/10"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "BC1-q-v1",
+          "reviewer": "BC1",
+          "subject": "E1",
+          "coefficients": [
+            "0",
+            "1/10",
+            "1/10"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "BC2-q-v1",
+          "reviewer": "BC2",
+          "subject": "E1",
+          "coefficients": [
+            "0",
+            "1/10",
+            "1/10"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "A0-q-v1",
+          "reviewer": "A0",
+          "subject": "E1",
+          "coefficients": [
+            "1/10",
+            "0",
+            "0"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "A1-q-v1",
+          "reviewer": "A1",
+          "subject": "E1",
+          "coefficients": [
+            "1/10",
+            "0",
+            "0"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "A2-q-v1",
+          "reviewer": "A2",
+          "subject": "E1",
+          "coefficients": [
+            "1/10",
+            "0",
+            "0"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "B0-q-v1",
+          "reviewer": "B0",
+          "subject": "E1",
+          "coefficients": [
+            "0",
+            "1/10",
+            "0"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "B1-q-v1",
+          "reviewer": "B1",
+          "subject": "E1",
+          "coefficients": [
+            "0",
+            "1/10",
+            "0"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "B2-q-v1",
+          "reviewer": "B2",
+          "subject": "E1",
+          "coefficients": [
+            "0",
+            "1/10",
+            "0"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "C0-q-v1",
+          "reviewer": "C0",
+          "subject": "E1",
+          "coefficients": [
+            "0",
+            "0",
+            "1/10"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "C1-q-v1",
+          "reviewer": "C1",
+          "subject": "E1",
+          "coefficients": [
+            "0",
+            "0",
+            "1/10"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "C2-q-v1",
+          "reviewer": "C2",
+          "subject": "E1",
+          "coefficients": [
+            "0",
+            "0",
+            "1/10"
+          ],
+          "value": "3"
+        }
+      ],
+      "expectedClassSizes": [
+        1,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "expected": "suppress",
+      "manualReason": "三报告各10，两两交集4差6，但111类只有X1；其余六类各3。",
+      "expectedValues": [
+        "3",
+        "3",
+        "3"
+      ]
+    },
+    {
+      "id": "ANON-06A",
+      "title": "可组合推断的安全三人子组",
+      "k": 3,
+      "rows": [
+        {
+          "atomId": "A-q-v1",
+          "reviewer": "A",
+          "subject": "E1",
+          "coefficients": [
+            "1/6",
+            "1/9"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "B-q-v1",
+          "reviewer": "B",
+          "subject": "E1",
+          "coefficients": [
+            "1/6",
+            "1/9"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "C-q-v1",
+          "reviewer": "C",
+          "subject": "E1",
+          "coefficients": [
+            "1/6",
+            "1/9"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "D-q-v1",
+          "reviewer": "D",
+          "subject": "E1",
+          "coefficients": [
+            "1/6",
+            "2/9"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E-q-v1",
+          "reviewer": "E",
+          "subject": "E1",
+          "coefficients": [
+            "1/6",
+            "2/9"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "F-q-v1",
+          "reviewer": "F",
+          "subject": "E1",
+          "coefficients": [
+            "1/6",
+            "2/9"
+          ],
+          "value": "3"
+        }
+      ],
+      "expectedClassSizes": [
+        3,
+        3
+      ],
+      "expected": "publish",
+      "manualReason": "两个向量分别ABC/DEF各3，可解两个三人均值仍满足阈值。",
+      "expectedValues": [
+        "3",
+        "3"
+      ]
+    },
+    {
+      "id": "ANON-06B",
+      "title": "跨报告组合新增单人系数",
+      "k": 3,
+      "rows": [
+        {
+          "atomId": "A-q-v1",
+          "reviewer": "A",
+          "subject": "E1",
+          "coefficients": [
+            "1/6",
+            "1/9",
+            "1/11"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "B-q-v1",
+          "reviewer": "B",
+          "subject": "E1",
+          "coefficients": [
+            "1/6",
+            "1/9",
+            "2/11"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "C-q-v1",
+          "reviewer": "C",
+          "subject": "E1",
+          "coefficients": [
+            "1/6",
+            "1/9",
+            "2/11"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "D-q-v1",
+          "reviewer": "D",
+          "subject": "E1",
+          "coefficients": [
+            "1/6",
+            "2/9",
+            "2/11"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E-q-v1",
+          "reviewer": "E",
+          "subject": "E1",
+          "coefficients": [
+            "1/6",
+            "2/9",
+            "2/11"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "F-q-v1",
+          "reviewer": "F",
+          "subject": "E1",
+          "coefficients": [
+            "1/6",
+            "2/9",
+            "2/11"
+          ],
+          "value": "3"
+        }
+      ],
+      "expectedClassSizes": [
+        1,
+        2,
+        3
+      ],
+      "expected": "suppress",
+      "manualReason": "第三报告区分A与BC，类A1/BC2/DEF3；不能以每份名义n=6放行。",
+      "expectedValues": [
+        "3",
+        "3",
+        "3"
+      ]
+    },
+    {
+      "id": "ANON-07A",
+      "title": "组织人数与答卷双阈值",
+      "k": 3,
+      "rows": [
+        {
+          "atomId": "E0R0-q-v1",
+          "reviewer": "E0R0",
+          "subject": "E0",
+          "coefficients": [
+            "1/9"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E0R1-q-v1",
+          "reviewer": "E0R1",
+          "subject": "E0",
+          "coefficients": [
+            "1/9"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E0R2-q-v1",
+          "reviewer": "E0R2",
+          "subject": "E0",
+          "coefficients": [
+            "1/9"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E1R0-q-v1",
+          "reviewer": "E1R0",
+          "subject": "E1",
+          "coefficients": [
+            "1/9"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E1R1-q-v1",
+          "reviewer": "E1R1",
+          "subject": "E1",
+          "coefficients": [
+            "1/9"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E1R2-q-v1",
+          "reviewer": "E1R2",
+          "subject": "E1",
+          "coefficients": [
+            "1/9"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E2R0-q-v1",
+          "reviewer": "E2R0",
+          "subject": "E2",
+          "coefficients": [
+            "1/9"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E2R1-q-v1",
+          "reviewer": "E2R1",
+          "subject": "E2",
+          "coefficients": [
+            "1/9"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E2R2-q-v1",
+          "reviewer": "E2R2",
+          "subject": "E2",
+          "coefficients": [
+            "1/9"
+          ],
+          "value": "3"
+        }
+      ],
+      "expectedClassSizes": [
+        9
+      ],
+      "expected": "publish",
+      "manualReason": "subject签名人数=3；底层各subject有效匿名卷数=[3, 3, 3]；两个门禁都必须满足。",
+      "organization": true,
+      "subjectRows": [
+        {
+          "subject": "E0",
+          "coefficients": [
+            "1/3"
+          ]
+        },
+        {
+          "subject": "E1",
+          "coefficients": [
+            "1/3"
+          ]
+        },
+        {
+          "subject": "E2",
+          "coefficients": [
+            "1/3"
+          ]
+        }
+      ],
+      "expectedSubjectClassSizes": [
+        3
+      ],
+      "bottomAnonymousCounts": [
+        3,
+        3,
+        3
+      ],
+      "expectedValues": [
+        "3"
+      ]
+    },
+    {
+      "id": "ANON-07B",
+      "title": "组织人数与答卷双阈值",
+      "k": 3,
+      "rows": [
+        {
+          "atomId": "E0R0-q-v1",
+          "reviewer": "E0R0",
+          "subject": "E0",
+          "coefficients": [
+            "1/6"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E0R1-q-v1",
+          "reviewer": "E0R1",
+          "subject": "E0",
+          "coefficients": [
+            "1/6"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E0R2-q-v1",
+          "reviewer": "E0R2",
+          "subject": "E0",
+          "coefficients": [
+            "1/6"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E1R0-q-v1",
+          "reviewer": "E1R0",
+          "subject": "E1",
+          "coefficients": [
+            "1/6"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E1R1-q-v1",
+          "reviewer": "E1R1",
+          "subject": "E1",
+          "coefficients": [
+            "1/6"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E1R2-q-v1",
+          "reviewer": "E1R2",
+          "subject": "E1",
+          "coefficients": [
+            "1/6"
+          ],
+          "value": "3"
+        }
+      ],
+      "expectedClassSizes": [
+        6
+      ],
+      "expected": "suppress",
+      "manualReason": "subject签名人数=2；底层各subject有效匿名卷数=[3, 3]；两个门禁都必须满足。",
+      "organization": true,
+      "subjectRows": [
+        {
+          "subject": "E0",
+          "coefficients": [
+            "1/2"
+          ]
+        },
+        {
+          "subject": "E1",
+          "coefficients": [
+            "1/2"
+          ]
+        }
+      ],
+      "expectedSubjectClassSizes": [
+        2
+      ],
+      "bottomAnonymousCounts": [
+        3,
+        3
+      ],
+      "expectedValues": [
+        "3"
+      ]
+    },
+    {
+      "id": "ANON-07C",
+      "title": "组织人数与答卷双阈值",
+      "k": 3,
+      "rows": [
+        {
+          "atomId": "E0R0-q-v1",
+          "reviewer": "E0R0",
+          "subject": "E0",
+          "coefficients": [
+            "1/8"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E0R1-q-v1",
+          "reviewer": "E0R1",
+          "subject": "E0",
+          "coefficients": [
+            "1/8"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E0R2-q-v1",
+          "reviewer": "E0R2",
+          "subject": "E0",
+          "coefficients": [
+            "1/8"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E1R0-q-v1",
+          "reviewer": "E1R0",
+          "subject": "E1",
+          "coefficients": [
+            "1/8"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E1R1-q-v1",
+          "reviewer": "E1R1",
+          "subject": "E1",
+          "coefficients": [
+            "1/8"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E1R2-q-v1",
+          "reviewer": "E1R2",
+          "subject": "E1",
+          "coefficients": [
+            "1/8"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E2R0-q-v1",
+          "reviewer": "E2R0",
+          "subject": "E2",
+          "coefficients": [
+            "1/8"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "E2R1-q-v1",
+          "reviewer": "E2R1",
+          "subject": "E2",
+          "coefficients": [
+            "1/8"
+          ],
+          "value": "3"
+        }
+      ],
+      "expectedClassSizes": [
+        8
+      ],
+      "expected": "suppress",
+      "manualReason": "subject签名人数=3；底层各subject有效匿名卷数=[3, 3, 2]；两个门禁都必须满足。",
+      "organization": true,
+      "subjectRows": [
+        {
+          "subject": "E0",
+          "coefficients": [
+            "1/3"
+          ]
+        },
+        {
+          "subject": "E1",
+          "coefficients": [
+            "1/3"
+          ]
+        },
+        {
+          "subject": "E2",
+          "coefficients": [
+            "1/3"
+          ]
+        }
+      ],
+      "expectedSubjectClassSizes": [
+        3
+      ],
+      "bottomAnonymousCounts": [
+        3,
+        3,
+        2
+      ],
+      "expectedValues": [
+        "3"
+      ]
+    },
+    {
+      "id": "ANON-08A",
+      "title": "明确具名唯一上级可作为非self组",
+      "k": 3,
+      "rows": [
+        {
+          "atomId": "L-q-v1",
+          "reviewer": "L",
+          "subject": "E1",
+          "coefficients": [
+            "1"
+          ],
+          "value": "4"
+        }
+      ],
+      "expectedClassSizes": [
+        1
+      ],
+      "expected": "publish",
+      "manualReason": "具名notice与唯一关系已冻结，无匿名数据，非self组成立；仍要独立受众。",
+      "namedMode": "unique_manager",
+      "noticeNamed": true,
+      "uniqueManager": true,
+      "expectedValues": [
+        "4"
+      ]
+    },
+    {
+      "id": "ANON-08B",
+      "title": "仅self不能正式发布",
+      "k": 3,
+      "rows": [
+        {
+          "atomId": "E1-q-v1",
+          "reviewer": "E1",
+          "subject": "E1",
+          "coefficients": [
+            "1"
+          ],
+          "value": "4"
+        }
+      ],
+      "expectedClassSizes": [
+        1
+      ],
+      "expected": "suppress",
+      "manualReason": "self具名不适用k，但无非self组，正式报告拒绝。",
+      "namedMode": "self",
+      "noticeNamed": true,
+      "uniqueManager": false,
+      "expectedValues": [
+        "4"
+      ]
+    },
+    {
+      "id": "ANON-08C",
+      "title": "匿名上级不得事后具名",
+      "k": 3,
+      "rows": [
+        {
+          "atomId": "L-q-v1",
+          "reviewer": "L",
+          "subject": "E1",
+          "coefficients": [
+            "1"
+          ],
+          "value": "4"
+        }
+      ],
+      "expectedClassSizes": [
+        1
+      ],
+      "expected": "suppress",
+      "manualReason": "noticeNamed=false，不能使用唯一上级例外。",
+      "namedMode": "unique_manager",
+      "noticeNamed": false,
+      "uniqueManager": true,
+      "expectedValues": [
+        "4"
+      ]
+    },
+    {
+      "id": "ANON-09",
+      "title": "撤回旧报告不清除历史",
+      "k": 3,
+      "rows": [
+        {
+          "atomId": "A-q-v1",
+          "reviewer": "A",
+          "subject": "E1",
+          "coefficients": [
+            "1/3",
+            "0"
+          ],
+          "value": "2"
+        },
+        {
+          "atomId": "A-q-v2",
+          "reviewer": "A",
+          "subject": "E1",
+          "coefficients": [
+            "0",
+            "1/3"
+          ],
+          "value": "5"
+        },
+        {
+          "atomId": "B-q-v1",
+          "reviewer": "B",
+          "subject": "E1",
+          "coefficients": [
+            "1/3",
+            "1/3"
+          ],
+          "value": "4"
+        },
+        {
+          "atomId": "C-q-v1",
+          "reviewer": "C",
+          "subject": "E1",
+          "coefficients": [
+            "1/3",
+            "1/3"
+          ],
+          "value": "6"
+        }
+      ],
+      "expectedClassSizes": [
+        1,
+        1,
+        2
+      ],
+      "expected": "suppress",
+      "manualReason": "旧报告虽然withdrawn，矩阵旧列仍在；同ANON-03拒绝。",
+      "withdrawnColumns": [
+        0
+      ],
+      "expectedValues": [
+        "4",
+        "5"
+      ]
+    },
+    {
+      "id": "ANON-10",
+      "title": "固定分区映射失效",
+      "k": 3,
+      "rows": [
+        {
+          "atomId": "A-q-v1",
+          "reviewer": "A",
+          "subject": "E1",
+          "coefficients": [
+            "1/3"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "B-q-v1",
+          "reviewer": "B",
+          "subject": "E1",
+          "coefficients": [
+            "1/3"
+          ],
+          "value": "3"
+        },
+        {
+          "atomId": "C-q-v1",
+          "reviewer": "C",
+          "subject": "E1",
+          "coefficients": [
+            "1/3"
+          ],
+          "value": "3"
+        }
+      ],
+      "expectedClassSizes": [
+        3
+      ],
+      "expected": "suppress",
+      "manualReason": "数值分组满足但来源更改无法证明原partition映射，拒绝新披露；不得切epoch清账本。",
+      "partitionValid": false,
+      "expectedValues": [
+        "3"
+      ]
+    }
+  ]
+}

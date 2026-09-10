@@ -1,0 +1,635 @@
+{
+  "kind": "P2_independent_symbolic_calculation_not_P3",
+  "count": 16,
+  "publish": 5,
+  "suppress": 11,
+  "results": [
+    {
+      "id": "ANON-01",
+      "classes": [
+        {
+          "signature": [
+            "1/3"
+          ],
+          "members": [
+            "A",
+            "B",
+            "C"
+          ],
+          "size": 3
+        }
+      ],
+      "subjectClasses": [],
+      "columnValues": [
+        "4"
+      ],
+      "actual": "publish",
+      "expected": "publish",
+      "pass_": true
+    },
+    {
+      "id": "ANON-02",
+      "classes": [
+        {
+          "signature": [
+            "1/2"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "size": 2
+        }
+      ],
+      "subjectClasses": [],
+      "columnValues": [
+        "3"
+      ],
+      "actual": "suppress",
+      "expected": "suppress",
+      "pass_": true
+    },
+    {
+      "id": "ANON-03",
+      "classes": [
+        {
+          "signature": [
+            "1/3",
+            "0"
+          ],
+          "members": [
+            "A"
+          ],
+          "size": 1
+        },
+        {
+          "signature": [
+            "0",
+            "1/3"
+          ],
+          "members": [
+            "A"
+          ],
+          "size": 1
+        },
+        {
+          "signature": [
+            "1/3",
+            "1/3"
+          ],
+          "members": [
+            "B",
+            "C"
+          ],
+          "size": 2
+        }
+      ],
+      "subjectClasses": [],
+      "columnValues": [
+        "4",
+        "5"
+      ],
+      "actual": "suppress",
+      "expected": "suppress",
+      "pass_": true
+    },
+    {
+      "id": "ANON-04",
+      "classes": [
+        {
+          "signature": [
+            "1/3",
+            "1/3"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "size": 2
+        },
+        {
+          "signature": [
+            "1/3",
+            "0"
+          ],
+          "members": [
+            "C"
+          ],
+          "size": 1
+        },
+        {
+          "signature": [
+            "0",
+            "1/3"
+          ],
+          "members": [
+            "D"
+          ],
+          "size": 1
+        }
+      ],
+      "subjectClasses": [],
+      "columnValues": [
+        "4",
+        "14/3"
+      ],
+      "actual": "suppress",
+      "expected": "suppress",
+      "pass_": true
+    },
+    {
+      "id": "ANON-05A",
+      "classes": [
+        {
+          "signature": [
+            "1/10",
+            "1/10"
+          ],
+          "members": [
+            "AB0",
+            "AB1",
+            "AB2",
+            "X0"
+          ],
+          "size": 4
+        },
+        {
+          "signature": [
+            "1/10",
+            "0"
+          ],
+          "members": [
+            "A0",
+            "A1",
+            "A2",
+            "AC0",
+            "AC1",
+            "AC2"
+          ],
+          "size": 6
+        },
+        {
+          "signature": [
+            "0",
+            "1/10"
+          ],
+          "members": [
+            "B0",
+            "B1",
+            "B2",
+            "BC0",
+            "BC1",
+            "BC2"
+          ],
+          "size": 6
+        }
+      ],
+      "subjectClasses": [],
+      "columnValues": [
+        "3",
+        "3"
+      ],
+      "actual": "publish",
+      "expected": "publish",
+      "pass_": true
+    },
+    {
+      "id": "ANON-05B",
+      "classes": [
+        {
+          "signature": [
+            "1/10",
+            "1/10",
+            "1/10"
+          ],
+          "members": [
+            "X0"
+          ],
+          "size": 1
+        },
+        {
+          "signature": [
+            "1/10",
+            "1/10",
+            "0"
+          ],
+          "members": [
+            "AB0",
+            "AB1",
+            "AB2"
+          ],
+          "size": 3
+        },
+        {
+          "signature": [
+            "1/10",
+            "0",
+            "1/10"
+          ],
+          "members": [
+            "AC0",
+            "AC1",
+            "AC2"
+          ],
+          "size": 3
+        },
+        {
+          "signature": [
+            "0",
+            "1/10",
+            "1/10"
+          ],
+          "members": [
+            "BC0",
+            "BC1",
+            "BC2"
+          ],
+          "size": 3
+        },
+        {
+          "signature": [
+            "1/10",
+            "0",
+            "0"
+          ],
+          "members": [
+            "A0",
+            "A1",
+            "A2"
+          ],
+          "size": 3
+        },
+        {
+          "signature": [
+            "0",
+            "1/10",
+            "0"
+          ],
+          "members": [
+            "B0",
+            "B1",
+            "B2"
+          ],
+          "size": 3
+        },
+        {
+          "signature": [
+            "0",
+            "0",
+            "1/10"
+          ],
+          "members": [
+            "C0",
+            "C1",
+            "C2"
+          ],
+          "size": 3
+        }
+      ],
+      "subjectClasses": [],
+      "columnValues": [
+        "3",
+        "3",
+        "3"
+      ],
+      "actual": "suppress",
+      "expected": "suppress",
+      "pass_": true
+    },
+    {
+      "id": "ANON-06A",
+      "classes": [
+        {
+          "signature": [
+            "1/6",
+            "1/9"
+          ],
+          "members": [
+            "A",
+            "B",
+            "C"
+          ],
+          "size": 3
+        },
+        {
+          "signature": [
+            "1/6",
+            "2/9"
+          ],
+          "members": [
+            "D",
+            "E",
+            "F"
+          ],
+          "size": 3
+        }
+      ],
+      "subjectClasses": [],
+      "columnValues": [
+        "3",
+        "3"
+      ],
+      "actual": "publish",
+      "expected": "publish",
+      "pass_": true
+    },
+    {
+      "id": "ANON-06B",
+      "classes": [
+        {
+          "signature": [
+            "1/6",
+            "1/9",
+            "1/11"
+          ],
+          "members": [
+            "A"
+          ],
+          "size": 1
+        },
+        {
+          "signature": [
+            "1/6",
+            "1/9",
+            "2/11"
+          ],
+          "members": [
+            "B",
+            "C"
+          ],
+          "size": 2
+        },
+        {
+          "signature": [
+            "1/6",
+            "2/9",
+            "2/11"
+          ],
+          "members": [
+            "D",
+            "E",
+            "F"
+          ],
+          "size": 3
+        }
+      ],
+      "subjectClasses": [],
+      "columnValues": [
+        "3",
+        "3",
+        "3"
+      ],
+      "actual": "suppress",
+      "expected": "suppress",
+      "pass_": true
+    },
+    {
+      "id": "ANON-07A",
+      "classes": [
+        {
+          "signature": [
+            "1/9"
+          ],
+          "members": [
+            "E0R0",
+            "E0R1",
+            "E0R2",
+            "E1R0",
+            "E1R1",
+            "E1R2",
+            "E2R0",
+            "E2R1",
+            "E2R2"
+          ],
+          "size": 9
+        }
+      ],
+      "subjectClasses": [
+        {
+          "signature": [
+            "1/3"
+          ],
+          "members": [
+            "E0",
+            "E1",
+            "E2"
+          ],
+          "size": 3
+        }
+      ],
+      "columnValues": [
+        "3"
+      ],
+      "actual": "publish",
+      "expected": "publish",
+      "pass_": true
+    },
+    {
+      "id": "ANON-07B",
+      "classes": [
+        {
+          "signature": [
+            "1/6"
+          ],
+          "members": [
+            "E0R0",
+            "E0R1",
+            "E0R2",
+            "E1R0",
+            "E1R1",
+            "E1R2"
+          ],
+          "size": 6
+        }
+      ],
+      "subjectClasses": [
+        {
+          "signature": [
+            "1/2"
+          ],
+          "members": [
+            "E0",
+            "E1"
+          ],
+          "size": 2
+        }
+      ],
+      "columnValues": [
+        "3"
+      ],
+      "actual": "suppress",
+      "expected": "suppress",
+      "pass_": true
+    },
+    {
+      "id": "ANON-07C",
+      "classes": [
+        {
+          "signature": [
+            "1/8"
+          ],
+          "members": [
+            "E0R0",
+            "E0R1",
+            "E0R2",
+            "E1R0",
+            "E1R1",
+            "E1R2",
+            "E2R0",
+            "E2R1"
+          ],
+          "size": 8
+        }
+      ],
+      "subjectClasses": [
+        {
+          "signature": [
+            "1/3"
+          ],
+          "members": [
+            "E0",
+            "E1",
+            "E2"
+          ],
+          "size": 3
+        }
+      ],
+      "columnValues": [
+        "3"
+      ],
+      "actual": "suppress",
+      "expected": "suppress",
+      "pass_": true
+    },
+    {
+      "id": "ANON-08A",
+      "classes": [
+        {
+          "signature": [
+            "1"
+          ],
+          "members": [
+            "L"
+          ],
+          "size": 1
+        }
+      ],
+      "subjectClasses": [],
+      "columnValues": [
+        "4"
+      ],
+      "actual": "publish",
+      "expected": "publish",
+      "pass_": true
+    },
+    {
+      "id": "ANON-08B",
+      "classes": [
+        {
+          "signature": [
+            "1"
+          ],
+          "members": [
+            "E1"
+          ],
+          "size": 1
+        }
+      ],
+      "subjectClasses": [],
+      "columnValues": [
+        "4"
+      ],
+      "actual": "suppress",
+      "expected": "suppress",
+      "pass_": true
+    },
+    {
+      "id": "ANON-08C",
+      "classes": [
+        {
+          "signature": [
+            "1"
+          ],
+          "members": [
+            "L"
+          ],
+          "size": 1
+        }
+      ],
+      "subjectClasses": [],
+      "columnValues": [
+        "4"
+      ],
+      "actual": "suppress",
+      "expected": "suppress",
+      "pass_": true
+    },
+    {
+      "id": "ANON-09",
+      "classes": [
+        {
+          "signature": [
+            "1/3",
+            "0"
+          ],
+          "members": [
+            "A"
+          ],
+          "size": 1
+        },
+        {
+          "signature": [
+            "0",
+            "1/3"
+          ],
+          "members": [
+            "A"
+          ],
+          "size": 1
+        },
+        {
+          "signature": [
+            "1/3",
+            "1/3"
+          ],
+          "members": [
+            "B",
+            "C"
+          ],
+          "size": 2
+        }
+      ],
+      "subjectClasses": [],
+      "columnValues": [
+        "4",
+        "5"
+      ],
+      "actual": "suppress",
+      "expected": "suppress",
+      "pass_": true
+    },
+    {
+      "id": "ANON-10",
+      "classes": [
+        {
+          "signature": [
+            "1/3"
+          ],
+          "members": [
+            "A",
+            "B",
+            "C"
+          ],
+          "size": 3
+        }
+      ],
+      "subjectClasses": [],
+      "columnValues": [
+        "3"
+      ],
+      "actual": "suppress",
+      "expected": "suppress",
+      "pass_": true
+    }
+  ]
+}

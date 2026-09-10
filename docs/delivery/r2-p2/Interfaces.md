@@ -55,3 +55,5 @@ inbox唯一(tenant,consumer,eventId)，同digest重复返回原处理结果；�
 ## 001严格契约补齐
 
 [Contract_Repair.md](Contract_Repair.md)规范五组字段、持久化关系、迁移兼容和语义拒绝；[Schema_Examples.json](Schema_Examples.json)给出合法及拒绝实例。Command_Registry.referencePolicy逐命令限制引用类型。
+
+M26 ReportPublish必须带disclosurePlanVersionRef；服务端重新核账本版本和当前epoch。DisclosureLedgerEntry/Atom/Cell为内部严格契约，客户端不能直接写，详见[匿名修订](Anonymity_Repair.md)。

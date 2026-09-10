@@ -809,7 +809,10 @@
         "原验收ID映射和独立复核记录"
       ],
       "executionStatus": "not_run",
-      "historicalExecutionIsNotCurrentEvidence": true
+      "historicalExecutionIsNotCurrentEvidence": true,
+      "anonymityOracleRef": "Anonymity_Cases.json",
+      "normativeAlgorithmRef": "Anonymity_Repair.md",
+      "targetedPrivacyAssertions": "逐格核coefficient向量、不同protectedReviewer数、subject数及历史账本；首报ABC允许，AB/单人改答/成员变化/三重交叠/线性组合/撤回重发/分区错均按表拒绝，不能以全抑制满足正例。"
     },
     {
       "id": "R2-P3-M26-REVIEW-AC05",
@@ -2491,7 +2494,10 @@
         "命令回执、业务前后hash及不可变事件差分",
         "拒绝字段/副作用和对账状态断言；独立测试复核"
       ],
-      "executionStatus": "not_run"
+      "executionStatus": "not_run",
+      "anonymityOracleRef": "Anonymity_Cases.json",
+      "normativeAlgorithmRef": "Anonymity_Repair.md",
+      "targetedPrivacyAssertions": "逐格核coefficient向量、不同protectedReviewer数、subject数及历史账本；首报ABC允许，AB/单人改答/成员变化/三重交叠/线性组合/撤回重发/分区错均按表拒绝，不能以全抑制满足正例。"
     },
     {
       "id": "R2-M26-S02",
@@ -2508,7 +2514,10 @@
         "命令回执、业务前后hash及不可变事件差分",
         "拒绝字段/副作用和对账状态断言；独立测试复核"
       ],
-      "executionStatus": "not_run"
+      "executionStatus": "not_run",
+      "anonymityOracleRef": "Anonymity_Cases.json",
+      "normativeAlgorithmRef": "Anonymity_Repair.md",
+      "targetedPrivacyAssertions": "逐格核coefficient向量、不同protectedReviewer数、subject数及历史账本；首报ABC允许，AB/单人改答/成员变化/三重交叠/线性组合/撤回重发/分区错均按表拒绝，不能以全抑制满足正例。"
     },
     {
       "id": "R2-M26-S03",
@@ -2799,7 +2808,10 @@
         "命令回执、业务前后hash及不可变事件差分",
         "拒绝字段/副作用和对账状态断言；独立测试复核"
       ],
-      "executionStatus": "not_run"
+      "executionStatus": "not_run",
+      "anonymityOracleRef": "Anonymity_Cases.json",
+      "normativeAlgorithmRef": "Anonymity_Repair.md",
+      "targetedPrivacyAssertions": "逐格核coefficient向量、不同protectedReviewer数、subject数及历史账本；首报ABC允许，AB/单人改答/成员变化/三重交叠/线性组合/撤回重发/分区错均按表拒绝，不能以全抑制满足正例。"
     },
     {
       "id": "R2-M17-S05",

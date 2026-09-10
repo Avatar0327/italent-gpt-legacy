@@ -2,9 +2,29 @@
   "scope": "core design artifacts; excludes this manifest and evidence output to avoid circular hashes",
   "artifacts": [
     {
+      "path": "docs/delivery/r2-p2/.gitignore",
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+      "bytes": 19
+    },
+    {
       "path": "docs/delivery/r2-p2/Acceptance_Scenarios.json",
-      "sha256": "8eeb4369b3e53e9ef003df2d734534324805f83f7caa4e3e290395d0ad08165d",
-      "bytes": 144950
+      "sha256": "cf2b4f0041b5882750657b9544297d406f7493fd644b373185403ab389eda737",
+      "bytes": 146458
+    },
+    {
+      "path": "docs/delivery/r2-p2/Anonymity_Calculation.md",
+      "sha256": "d099f7edc9b455515360257103cc01deda74af2f8214b08c6354ffb17855b0a4",
+      "bytes": 8446
+    },
+    {
+      "path": "docs/delivery/r2-p2/Anonymity_Cases.json",
+      "sha256": "c4c527937c83af771a05c3c3e0d3f50bc96f6a976b38bceba3ba30b44df45ebb",
+      "bytes": 27561
+    },
+    {
+      "path": "docs/delivery/r2-p2/Anonymity_Repair.md",
+      "sha256": "497a0b9be6c7a1ac9a941e7c8de4a6268d84f27650b3fdd75b2b4f219707176f",
+      "bytes": 8719
     },
     {
       "path": "docs/delivery/r2-p2/Approval_Provenance.json",
@@ -78,13 +98,13 @@
     },
     {
       "path": "docs/delivery/r2-p2/Interface_Schemas.json",
-      "sha256": "8260b40fcadb9e77a1efa75a42b910376204efa7524de62d9171b24f19c8db3f",
-      "bytes": 127449
+      "sha256": "f5fa19f5c02326228a1490b79d34cc80e27e21aea065962d9a235206f9dae7e7",
+      "bytes": 133059
     },
     {
       "path": "docs/delivery/r2-p2/Interfaces.md",
-      "sha256": "9fe047e554b69b9de7ab9323611808a2653769c378031a9797c39a1a782c4c67",
-      "bytes": 8300
+      "sha256": "0ff388cfd695e6a5b8604849a2e16fbf675882f100c7b5d25e91c810d3a15e20",
+      "bytes": 8528
     },
     {
       "path": "docs/delivery/r2-p2/Legacy_Acceptance_Map.json",
@@ -123,8 +143,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/M26_Design.md",
-      "sha256": "f98873eafb0ec1f5c35672fadbf0e1bb877f0f604a281df556eaacb19876f855",
-      "bytes": 12007
+      "sha256": "56936339e5e94fd82a6733538a8a52e5a134a2bf2f8cdb79a59c4b16d7475245",
+      "bytes": 11918
     },
     {
       "path": "docs/delivery/r2-p2/M37_Design.md",
@@ -153,8 +173,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/Permissions.md",
-      "sha256": "ac2cb7c1a3f29fdd581f58c0d4a499413c53712a208c8a44871189db154efc4b",
-      "bytes": 7700
+      "sha256": "ec736df1487600a19b5847e64a7b3f798c380b27406562288a7e2eb81989d7eb",
+      "bytes": 7874
     },
     {
       "path": "docs/delivery/r2-p2/README.md",
@@ -168,8 +188,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/Repair_Record.json",
-      "sha256": "8dfc949c4aabbd03a0d3eb1a5942afdaf469a9381fcaffc8e82daeb313fc661d",
-      "bytes": 3545
+      "sha256": "b83dc28d5f389fe5c5a6709778b422903a04e4d9349e5f81d9c8f347b6ad7461",
+      "bytes": 3737
     },
     {
       "path": "docs/delivery/r2-p2/Requirements_Trace.json",
@@ -217,6 +237,11 @@
       "bytes": 2980
     },
     {
+      "path": "docs/delivery/r2-p2/build_anonymity_cases.py",
+      "sha256": "eaf1ca3fa027622af818d9da4f79cfc489e976ca1b05bc237fa6a5fb34499110",
+      "bytes": 5437
+    },
+    {
       "path": "docs/delivery/r2-p2/build_handoff.py",
       "sha256": "e19dc002f504e2e0c3b52cd9687d297d37804a7ffe5601fdb4faae684467213a",
       "bytes": 6128
@@ -243,8 +268,13 @@
     },
     {
       "path": "docs/delivery/r2-p2/build_schemas.py",
-      "sha256": "f5b047ac54d6f1d183d02678c88cd6f2373507e7f4a6fc7b4c0a7620d657f732",
-      "bytes": 21164
+      "sha256": "ebba9667c447744331d5fb1d234ca580b5dc9e45047c6b181e5b12a477d019ca",
+      "bytes": 21328
+    },
+    {
+      "path": "docs/delivery/r2-p2/check_anonymity.py",
+      "sha256": "72e0e951c80977b608c5e4d02e262268ec7b21a91186e3c02fe959392b9dd53b",
+      "bytes": 1834
     },
     {
       "path": "docs/delivery/r2-p2/check_design.py",
@@ -255,6 +285,11 @@
       "path": "docs/delivery/r2-p2/check_schema_examples.py",
       "sha256": "e48796f7f6ea05b7a775cbd42926f01b3f5f74f3af3dcea49d8e09751272c756",
       "bytes": 3141
+    },
+    {
+      "path": "docs/delivery/r2-p2/repair_anonymity_schema.py",
+      "sha256": "58157b7d1d2da4c2db0eafa60075bbeea9f8d7e258f0c98c719a27ce64cbac34",
+      "bytes": 1870
     },
     {
       "path": "docs/delivery/r2-p2/repair_contracts.py",
