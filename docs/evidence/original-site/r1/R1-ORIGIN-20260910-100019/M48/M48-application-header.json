@@ -1,0 +1,16 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "time": "2026-09-10T10:17:35.716Z",
+  "role": "ORIGIN-ADMIN-01; independent employee role not verified",
+  "origin": "https://srworkshopbj.italent.cn",
+  "page": "员工自助/自助服务/人事申请",
+  "steps": [
+    "打开员工自助",
+    "自助服务→人事申请",
+    "等待页面最终加载"
+  ],
+  "writes": 0,
+  "recordIds": [],
+  "redaction": "只保留入口和列标题，排除既有人员行",
+  "dom": ":\n  - generic: \n  - generic: 人事申请\n  - generic:  \n  - generic: 可以在当前页面查看您的任职变动信息\n  - generic: 开始日期\n  - text:  \n  - generic: 人员状态\n  - generic: 他人调动申请\n  - generic: 本人调动申请\n  - generic: 离职申请\n  - generic: 新增兼职申请\n  - grid:\n    - row \"姓名 电子邮件 机构 部门 职位 开始日期 结束日期 人员状态 任职状态 审批状态\":\n      - columnheader \"姓名\":\n        - generic: 姓名\n      - columnheader \"电子邮件\":\n        - generic: 电子邮件\n      - columnheader \"机构\":\n        - generic: 机构\n      - columnheader \"部门\":\n        - generic: 部门\n      - columnheader \"职位\":\n        - generic: 职位\n      - columnheader \"开始日期\":\n        - generic: 开始日期\n      - columnheader \"结束日期\":\n        - generic: 结束日期\n      - columnheader \"人员状态\":\n        - generic: 人员状态\n      - columnheader \"任职状态\":\n        - generic: 任职状态\n      - columnheader \"审批状态\":\n        - generic: 审批状态\n      - columnheader:\n"
+}
