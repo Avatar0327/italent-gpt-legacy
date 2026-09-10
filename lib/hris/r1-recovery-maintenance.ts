@@ -1,12 +1,12 @@
 import {HttpError} from './http';
 import {digest} from './r1-command';
-import {verifyRecoveryManifest,type SignedRecoveryManifest,type RecoveryKeyVault,type ImmutableBackupStore} from './r1-recovery-crypto';
+import {verifyRecoveryManifest,type SignedRecoveryManifest,type RecoveryVaultAccess,type ImmutableBackupStore} from './r1-recovery-crypto';
 const DAY=86400000;
 export const recoveryMaintenanceSchema=`CREATE TABLE backup_checkpoints(id TEXT PRIMARY KEY,digest TEXT NOT NULL,manifest TEXT NOT NULL,verified_at INTEGER NOT NULL);CREATE TABLE recovery_gc_receipts(id TEXT PRIMARY KEY,object_key TEXT NOT NULL,version_id TEXT NOT NULL,state TEXT NOT NULL,updated_at INTEGER NOT NULL);`;
 export type CatalogEntry={signed:SignedRecoveryManifest;verifiedAt:number};
 export class RecoveryCatalog {
  constructor(private db:D1Database,readonly storageId:string,businessStorageId:string){if(storageId===businessStorageId)throw new HttpError(409,'备份目录必须独立','RECOVERY_CONTROL_NOT_INDEPENDENT');}
- async register(signed:SignedRecoveryManifest,vault:RecoveryKeyVault,store:ImmutableBackupStore){await verifyRecoveryManifest(signed,vault,store);const old=await this.db.prepare('SELECT digest FROM backup_checkpoints WHERE id=?').bind(signed.manifest.checkpointId).first<{digest:string}>();if(old){if(old.digest!==signed.digest)throw new HttpError(409,'备份目录键冲突','RECOVERY_IDEMPOTENCY_CONFLICT');return;}await this.db.prepare('INSERT INTO backup_checkpoints VALUES (?,?,?,?)').bind(signed.manifest.checkpointId,signed.digest,JSON.stringify(signed),Date.now()).run();}
+ async register(signed:SignedRecoveryManifest,vault:RecoveryVaultAccess,store:ImmutableBackupStore){await verifyRecoveryManifest(signed,vault,store);const old=await this.db.prepare('SELECT digest FROM backup_checkpoints WHERE id=?').bind(signed.manifest.checkpointId).first<{digest:string}>();if(old){if(old.digest!==signed.digest)throw new HttpError(409,'备份目录键冲突','RECOVERY_IDEMPOTENCY_CONFLICT');return;}await this.db.prepare('INSERT INTO backup_checkpoints VALUES (?,?,?,?)').bind(signed.manifest.checkpointId,signed.digest,JSON.stringify(signed),Date.now()).run();}
  async entries(){const rows=(await this.db.prepare('SELECT manifest,digest,verified_at FROM backup_checkpoints ORDER BY verified_at,id LIMIT 10001').all<{manifest:string;digest:string;verified_at:number}>()).results;if(rows.length>10000)throw new HttpError(413,'目录需要分区读取','RECOVERY_CATALOG_BUDGET');const entries:CatalogEntry[]=[];for(const r of rows){const signed=JSON.parse(r.manifest) as SignedRecoveryManifest;if(signed.digest!==r.digest||await digest(signed.manifest)!==r.digest)throw new HttpError(409,'独立备份目录摘要损坏','RECOVERY_CATALOG_INVALID');entries.push({signed,verifiedAt:r.verified_at});}return entries;}
 }
 /** Pure planning over an independently verified catalog; this function grants no delete authority. */
