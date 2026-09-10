@@ -1469,8 +1469,11 @@
       "plannedCases": [
         "P3-M32-06"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "partial_local_runtime_evidence_full_case_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T080856347352Z.json"
+      ],
+      "implementationSha": "b6355ed11cf08dee270dd3e776b4cc7c6bf81f85"
     },
     {
       "id": "M32-REVIEW-AC11",
@@ -2323,7 +2326,9 @@
     {
       "id": "R1-M32-L07",
       "status": "design_complete_validation_open",
-      "p3Evidence": [],
+      "p3Evidence": [
+        "evidence/r1-p3-20260910T080856347352Z.json"
+      ],
       "primaryDisposition": "P3",
       "sourceStatus": "design_complete_validation_open",
       "sourceEvidenceOwner": "P1 controller",
@@ -2331,7 +2336,7 @@
         "P3-M32-06",
         "P3-M32-09"
       ],
-      "p3RuntimeStatus": "not_executed"
+      "p3RuntimeStatus": "partial_local_runtime_evidence_full_case_review_pending"
     },
     {
       "id": "R1-M32-L08",
@@ -2360,7 +2365,9 @@
     {
       "id": "R1-M32-L10",
       "status": "design_complete_acceptance_open",
-      "p3Evidence": [],
+      "p3Evidence": [
+        "evidence/r1-p3-20260910T080856347352Z.json"
+      ],
       "primaryDisposition": "P4",
       "sourceStatus": "design_complete_acceptance_open",
       "sourceEvidenceOwner": "P1 controller",
@@ -2368,7 +2375,7 @@
         "P3-M32-06",
         "P3-REC-04"
       ],
-      "p3RuntimeStatus": "not_executed"
+      "p3RuntimeStatus": "partial_local_runtime_evidence_full_case_review_pending"
     }
   ],
   "latestEvidence": [

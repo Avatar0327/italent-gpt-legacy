@@ -241,7 +241,22 @@
         "P3-M32-08",
         "P3-M32-09"
       ],
-      "evidence": []
+      "evidence": [
+        "evidence/r1-p3-20260910T080856347352Z.json"
+      ],
+      "implementationSha": "b6355ed11cf08dee270dd3e776b4cc7c6bf81f85",
+      "subworkCompleted": [
+        "任务/租约/fence及孤儿分块同事务ready",
+        "当前read+export交集、人员调动范围水位及自然到期阻旧文件",
+        "同步预算超限转队列、10001行51块完整导出和下载",
+        "登录分块流下载、CSV注入/负数/null状态",
+        "后台HTTP显式blocked_runtime不擅接云调度"
+      ],
+      "remaining": [
+        "逐收件人订阅/转交/屏蔽/模拟投递与DST",
+        "设计器/导出/订阅页面及保存定义导出",
+        "任务级AC证据收口，正式后台能力仍DEP-PLATFORM-01"
+      ]
     },
     {
       "id": "P3-R1-08",
@@ -309,6 +324,6 @@
     }
   ],
   "currentTask": "P3-R1-07",
-  "lastVerifiedSourceSha": "7ccfbe6029bf28a5e35be97271b16fce7f325325",
-  "latestRun": "evidence/r1-p3-20260910T075750612916Z.json"
+  "lastVerifiedSourceSha": "b6355ed11cf08dee270dd3e776b4cc7c6bf81f85",
+  "latestRun": "evidence/r1-p3-20260910T080856347352Z.json"
 }
