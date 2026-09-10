@@ -192,7 +192,9 @@
         "P3-M32-10",
         "P3-XMOD-02"
       ],
-      "evidence": [],
+      "evidence": [
+        "evidence/r1-p3-20260910T071309586525Z.json"
+      ],
       "subworkCompleted": [
         "21数据集254字段运行时目录与源版本标识",
         "标签映射防可选字段偏移",
@@ -205,7 +207,8 @@
         "原子定义发布/查询API与权限重裁",
         "真实快照构建及读取",
         "21数据集行粒度独立oracle和M32场景验收"
-      ]
+      ],
+      "implementationSha": "f6dbf2191a9647a78487d863442a17da60fad128"
     },
     {
       "id": "P3-R1-07",
@@ -287,6 +290,6 @@
     }
   ],
   "currentTask": "P3-R1-06",
-  "lastVerifiedSourceSha": "2d6ae4f665154ffafbb301ed6825cb8d32cd8218",
-  "latestRun": "evidence/r1-p3-20260910T070535639941Z.json"
+  "lastVerifiedSourceSha": "f6dbf2191a9647a78487d863442a17da60fad128",
+  "latestRun": "evidence/r1-p3-20260910T071309586525Z.json"
 }
