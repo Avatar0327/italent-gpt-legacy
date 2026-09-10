@@ -336,20 +336,25 @@
         "P3-REC-05"
       ],
       "evidence": [
-        "evidence/r1-p3-20260910T091333336280Z.json"
+        "evidence/r1-p3-20260910T091333336280Z.json",
+        "evidence/r1-p3-20260910T092112866567Z.json"
       ],
       "remaining": [
-        "有界加密/签名清单与实际schema基线增量恢复",
-        "独立安全ledger保守协议/隔离恢复状态机",
-        "依赖保留/GC/共同恢复水位监控与故障容量证据"
+        "完整对象恢复与备份生成服务/中断恢复进一步验证",
+        "独立安全ledger保守协议/当前授权对账与恢复控制状态机",
+        "30天依赖保留/GC/共同水位监控及分档故障证据",
+        "任务09整体验证与AC/风险/LIMIT收口"
       ],
       "blockedValidation": [
         "DEP-PLATFORM-01",
         "DEP-PLATFORM-02"
       ],
-      "implementationSha": "a9dba42cfb229b78cc00023f0fdd7b2f82bd2954",
+      "implementationSha": "a0394c325075a80b05fa7e956269e9cd36a1363d",
       "subworkCompleted": [
-        "4MiB AES-256-GCM/AAD/独立封装密钥/签名与完整对象摘要"
+        "4MiB AES-256-GCM/AAD/独立封装密钥/签名与完整对象摘要",
+        "实际77持久表基线逐页同水位读取（5项日志/缓存/断言表明确排除）",
+        "完整事务日志封印/连续序号及全列镜像校验",
+        "有界UTF-8跨块解码和本地独立SQLite基线+增量幂等还原/关闸暂停outbox"
       ]
     },
     {
@@ -379,6 +384,6 @@
     }
   ],
   "currentTask": "P3-R1-09",
-  "lastVerifiedSourceSha": "a9dba42cfb229b78cc00023f0fdd7b2f82bd2954",
-  "latestRun": "evidence/r1-p3-20260910T091333336280Z.json"
+  "lastVerifiedSourceSha": "a0394c325075a80b05fa7e956269e9cd36a1363d",
+  "latestRun": "evidence/r1-p3-20260910T092112866567Z.json"
 }

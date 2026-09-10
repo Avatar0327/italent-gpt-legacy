@@ -2626,16 +2626,19 @@
     "riskClosure": false
   },
   "latestRecoveryIncrement": {
-    "sourceSha": "a9dba42cfb229b78cc00023f0fdd7b2f82bd2954",
-    "evidence": "evidence/r1-p3-20260910T091333336280Z.json",
-    "status": "partial_crypto_runtime_evidence_not_recovery_complete",
+    "sourceSha": "a0394c325075a80b05fa7e956269e9cd36a1363d",
+    "evidence": "evidence/r1-p3-20260910T092112866567Z.json",
+    "status": "partial_local_database_recovery_evidence_security_objects_retention_remaining",
     "cases": [
       "P3-REC-01",
       "P3-REC-04",
       "P3-REC-05"
     ],
     "code": [
-      "lib/hris/r1-recovery-crypto.ts"
+      "lib/hris/r1-recovery-crypto.ts",
+      "lib/hris/r1-recovery-data.ts",
+      "lib/hris/r1-recovery-restore.ts",
+      "scripts/r1-recovery-isolated-target.mjs"
     ],
     "tests": [
       "tests/r1-p3-recovery.test.mjs"
