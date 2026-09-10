@@ -1,0 +1,15 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "time": "2026-09-10T10:14:11.380Z",
+  "role": "ORIGIN-ADMIN-01 (management entries, exact grants unverified)",
+  "origin": "https://srworkshopbj.italent.cn",
+  "page": "审批中心/组织员工流程",
+  "steps": [
+    "标题筛选本轮前缀",
+    "确认空集"
+  ],
+  "input": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+  "recordIds": [],
+  "writes": 0,
+  "dom": ":\n  - iframe [active] [id=\"iTalentFrame\"]:\n    - generic: \n    - generic: 组织员工流程\n    - generic:  \n    - text: 催办：如果当前审批人迟迟不审批，您可以使用【催办】，系统将会给当前审批人发送消息提醒审批。 转交：如果需要修改当前审批人，您可以使用【转交】调整当前节点审批人。 撤销：如果想要删除/取消已经发起的流程，您可以使用【撤销】功能。撤销后，将会取消审批人的待办。注意：不能撤销已完成审批的流程。 流程干预：如果需要调整流程节点和审批人，您可以使用流程干预，将流程干预到其他审批节点，同时可以指定执行人。 如果您有其他疑问，请点击\n    - generic: 了解更多\n    - text: 收起\n    - generic: 标题\n    - text: ：\n    - generic: ZZ_R1_R1-ORIGIN-20260910-100019_\n    - generic: 审批类型\n    - generic: 发起人\n    - generic: 当前审批人\n    - generic: 审批状态\n    - text: ：\n    - generic: 审批中\n    - paragraph: 高级筛选\n    - generic: 清空已选\n    - generic: 催办\n    - generic: 转交\n    - generic: 撤销\n    - generic: 一键审批\n    - generic: 导出\n    - grid:\n      - row \"标题 审批类型 发起人 工号 当前审批人 审批状态 创建时间 摘要 催办状态 操作\":\n        - columnheader:\n          - checkbox\n        - columnheader \"标题\":\n          - generic: 标题\n        - columnheader \"审批类型\":\n          - generic: 审批类型\n        - columnheader \"发起人\":\n          - generic: 发起人\n        - columnheader \"工号\":\n          - generic: 工号\n        - columnheader \"当前审批人\":\n          - generic: 当前审批人\n        - columnheader \"审批状态\":\n          - generic: 审批状态\n        - columnheader \"创建时间\":\n          - generic: 创建时间\n        - columnheader \"摘要\":\n          - generic: 摘要\n        - columnheader \"催办状态\":\n          - generic: 催办状态\n        - columnheader \"操作\":\n          - generic: 操作\n        - columnheader:\n      - paragraph: 这里什么都没有...\n    - generic: 高级筛选\n    - button \"Close\":"
+}
