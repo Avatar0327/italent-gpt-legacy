@@ -1,31 +1,31 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-10T03:00:48.395105+00:00",
-  "primaryModuleId": "M27",
+  "generatedFromUpdatedAt": "2026-09-10T03:21:03.591922+00:00",
+  "primaryModuleId": "M16",
   "backupModuleId": null,
-  "activeExecutionModuleId": "M27",
+  "activeExecutionModuleId": "M16",
   "moduleCount": 15,
   "completeCount": 0,
-  "restrictedCount": 10,
-  "transitionReadyCount": 10,
+  "restrictedCount": 11,
+  "transitionReadyCount": 11,
   "progress": {
     "p1A": {
       "full": 0,
-      "restricted": 10,
-      "total": 10
+      "restricted": 11,
+      "total": 11
     },
     "p1B": {
       "full": 0,
-      "restricted": 10,
-      "total": 10
+      "restricted": 11,
+      "total": 11
     },
     "review": {
       "full": 0,
-      "restricted": 10,
-      "total": 10
+      "restricted": 11,
+      "total": 11
     }
   },
-  "p1ClosedCount": 10,
+  "p1ClosedCount": 11,
   "modules": [
     {
       "moduleId": "M01",
@@ -725,10 +725,10 @@
       "moduleId": "M27",
       "name": "学习管理",
       "rangeId": "R3",
-      "queueState": "waiting_owner_review",
+      "queueState": "closed_restricted",
       "p1AConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M27-P1-APPROVAL-20260910",
         "evidenceRefs": [
           "P1-LEARN-02",
           "P1-LEARN-03-04",
@@ -760,48 +760,54 @@
           "BC-L21",
           "BC-L22"
         ],
-        "limits": "原站自动循环、已完成学员更新、复杂题型/重考、学习问卷隐私、费用同步/课酬、师资和证书失效传播未执行；单账号不能验证独立审批。"
+        "limits": "原站自动循环、已完成学员更新、复杂题型/重考、学习问卷隐私、费用同步/课酬、师资和证书失效传播未执行；单账号不能验证独立审批。",
+        "approvedAt": "2026-09-10T03:21:03.591922+00:00"
       },
       "p1BConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M27-P1-APPROVAL-20260910",
         "evidenceRefs": [],
-        "limits": "原站自动循环、已完成学员更新、复杂题型/重考、学习问卷隐私、费用同步/课酬、师资和证书失效传播未执行；单账号不能验证独立审批。"
+        "limits": "原站自动循环、已完成学员更新、复杂题型/重考、学习问卷隐私、费用同步/课酬、师资和证书失效传播未执行；单账号不能验证独立审批。",
+        "approvedAt": "2026-09-10T03:21:03.591922+00:00"
       },
       "conditions": {
         "applicableScopeDetermined": {
           "value": true,
-          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+          "basis": "M27-P1-APPROVAL-20260910；原登记完整范围逐项与收口清单一致，无内部删减"
         },
         "implementationRulesDecided": {
-          "value": false,
-          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+          "value": true,
+          "basis": "M27-P1-APPROVAL-20260910；本模块SPEC与R3-BASELINE-01均由所有者明确批准，版本/哈希锁定"
         },
         "acceptanceExecutable": {
           "value": true,
-          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+          "basis": "M27-P1-APPROVAL-20260910；逐项Given/When/Then已存在，作为验收预期获批，未冒本轮执行"
         },
         "dependenciesAndExceptionsResolved": {
-          "value": false,
-          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+          "value": true,
+          "basis": "M27-P1-APPROVAL-20260910；已批准生产者契约与本模块LIMIT；源缺证/独立角色留P2/P3/P4，不要求先实联调"
         }
       },
       "transitionReview": {
-        "approved": false,
-        "record": null,
-        "scope": "未批准",
-        "approvedAt": null
+        "approved": true,
+        "record": "M27-P1-APPROVAL-20260910",
+        "scope": "模块P1转序就绪；R3整体进入P2未批准",
+        "approvedAt": "2026-09-10T03:21:03.591922+00:00"
       },
-      "restrictedApproval": null,
-      "p1Closed": false,
-      "transitionReady": false,
-      "missingConditions": [
-        "implementationRulesDecided",
-        "dependenciesAndExceptionsResolved",
-        "p1AApproved",
-        "p1BApproved",
-        "transitionReviewApproved"
-      ]
+      "restrictedApproval": {
+        "scope": "原站自动循环、已完成学员更新、复杂题型/重考、学习问卷隐私、费用同步/课酬、师资和证书失效传播未执行；单账号不能验证独立审批。",
+        "residualRisk": "错误重复派发/授学分、匿名重识别、考试版本漂移、错误结训/课酬及证书效力",
+        "revalidation": "P2：设计自动循环调度及cycleKey幂等、完成实例显式改版、完整题型/抽题/人工批阅、费用与课酬版本化、问卷隐私、学分事件账及跨模块有效性；保留隔离learning-description分支，不合并；P3：按本包Given/When/Then合成验证正常/边界/并发/故障，补算法及版本迁移证据，历史测试不代复验；P4：独立多角色、敏感字段/历史附件/下载、跨模块业务、生产恢复与外部联调。E2不新增人，单管理员不代验。",
+        "record": "M27-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T03:21:03.591922+00:00",
+        "phaseScope": "仅P1"
+      },
+      "p1Closed": true,
+      "closureClass": "受限通过",
+      "closureRecord": "M27-P1-APPROVAL-20260910",
+      "closedAt": "2026-09-10T03:21:03.591922+00:00",
+      "transitionReady": true,
+      "missingConditions": []
     },
     {
       "moduleId": "M16",
@@ -1485,7 +1491,6 @@
       ],
       "transitionReady": false,
       "missingConditions": [
-        "M27",
         "M16",
         "M12",
         "M11",
@@ -1550,7 +1555,6 @@
       "M07"
     ],
     "waitingModuleIds": [
-      "M27",
       "M16",
       "M12",
       "M11",
@@ -1563,6 +1567,8 @@
       "M11",
       "M07"
     ],
-    "status": "五模块全部可自主材料完成待评审"
+    "status": "R3批准顺序落账中",
+    "nextFormalClosureModule": "M16",
+    "rule": "按最新用户批准顺序关闭R3；随后允许R3串行材料准备，未批准R3不关闭，不进入P2/P3"
   }
 }

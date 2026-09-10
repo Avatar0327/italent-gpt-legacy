@@ -618,3 +618,11 @@ if r3:
  (D/'P1_R3_Approval_Draft.md').write_text(draft)
  for name in ['P1_Review.md','P1B_Readiness.md','P1_Module_Closure.md']:
   f=D/name;f.write_text(f.read_text()+'\nR3当前入口：[五模块完整集中评审材料](P1_R3_Review_Package.md)，30项推荐及5项LIMIT未批准；[批准草稿](P1_R3_Approval_Draft.md)。10/15受限关闭，其他五模块不计通过。\n')
+
+if r3 and r3.get('approved'):
+ archived=subprocess.check_output(['git','show',r3['reviewedHead']+':'+r3['document']],cwd=R,text=True)
+ t=intro('R3批准与顺序关闭记录')+progress_text()+'\n\n已批准30项推荐及5项LIMIT，仅P1；逐模块落账：'+ '、'.join(r3['closedModuleIds'])+'。版本转序以Scope rangeGates为准。\n\n所审HEAD：`'+r3['reviewedHead']+'`；SHA256：`'+r3['reviewedDocumentSha256']+'`。\n\n下文是所审历史原文，其中待批/旧计数不代表当前状态。\n\n---\n\n'+archived
+ (D/'P1_R3_Review_Package.md').write_text(t)
+ (D/'P1_R3_Approval_Draft.md').write_text(intro('R3原批准草稿已由所有者明确批准')+'无需再次批准。批准原文、哈希与逐模块记录见[P1_Approval_Records.md](P1_Approval_Records.md)。\n')
+ for name in ['P1_Review.md','P1B_Readiness.md','P1_Module_Closure.md']:
+  f=D/name;v=f.read_text();v=v.replace('30项推荐及5项LIMIT未批准','30项推荐及5项LIMIT已获所有者批准').replace('10/15受限关闭，其他五模块不计通过。',progress_text());f.write_text(v)

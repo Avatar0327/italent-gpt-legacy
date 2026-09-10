@@ -2,15 +2,15 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 
 # 模块闭环、滚动转序及当前收口清单
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T03:00:48.395105+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T03:21:03.591922+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M27；备用 未启用；实际执行 M27。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M16；备用 未启用；实际执行 M16。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
-R3串行材料队列：五模块全部可自主材料完成待评审；已准备 M27、M16、M12、M11、M07；等待评审 M27、M16、M12、M11、M07。材料完成不等批准或转序。
+R3串行材料队列：R3批准顺序落账中；已准备 M27、M16、M12、M11、M07；等待评审 M16、M12、M11、M07。材料完成不等批准或转序。
 
 | R版本 | 模块顺序 | 当前边界 |
 |---|---|---|
@@ -27,7 +27,7 @@ R3串行材料队列：五模块全部可自主材料完成待评审；已准备
 |---|---|---|---|
 | R1 | 齐备 | P2 | 已获准进入，待独立设计执行与评审 |
 | R2 | 未齐备：rangeReviewApproved | 未批准 | 未取得该R下游批准 |
-| R3 | 未齐备：M27,M16,M12,M11,M07,BASE-01,BASE-02,BASE-03,BASE-04,BASE-05,BASE-06,rangeReviewApproved | 未批准 | 未取得该R下游批准 |
+| R3 | 未齐备：M16,M12,M11,M07,BASE-01,BASE-02,BASE-03,BASE-04,BASE-05,BASE-06,rangeReviewApproved | 未批准 | 未取得该R下游批准 |
 
 | 模块 | R版本/队列 | P1A判定 | P1B评审 | 转序就绪 | 未达到条件 |
 |---|---|---|---|---|---|
@@ -41,13 +41,13 @@ R3串行材料队列：五模块全部可自主材料完成待评审；已准备
 | M18 在线盘点 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M17 继任与发展 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M03 干部管理2.0 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
-| M27 学习管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M27 学习管理 | R3 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M16 绩效管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M12 招聘管理系统 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M11 假勤管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M07 薪酬社保 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 
-转序就绪 10/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
+转序就绪 11/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
 
 
 ## M01完整登记范围收口清单
@@ -170,13 +170,13 @@ R3串行材料队列：五模块全部可自主材料完成待评审；已准备
 
 | 问题/原范围 | 需求 | 证据 | 具体缺口 | 阻塞P1/风险 | 关闭方式与判据 | 当前状态 |
 |---|---|---|---|---|---|---|
-| M27-CLOSE-01 / 资源 | BP-L-REQ-01 | BC-L03；BC-L14；BC-L22 | 规格建议与本模块LIMIT待批；共享/全公司可见与资源权限存量行为已有说明；课程/文档等完整对象、授权与附件版本待证 | True；错误重复派发/授学分、匿名重识别、考试版本漂移、错误结训/课酬及证书效力 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M27-SPEC-01,M27-SPEC-02,M27-SPEC-03,M27-SPEC-04,M27-SPEC-05,M27-SPEC-06 | 已完成待评审 |
-| M27-CLOSE-02 / 问卷 | BP-L-REQ-01；BP-I-REQ-03 |  | 规格建议与本模块LIMIT待批；学习内问卷保留，复用最小模板建议；题型/必答/放行/评分/匿名待证，不恢复独立问卷运营模块 | True；错误重复派发/授学分、匿名重识别、考试版本漂移、错误结训/课酬及证书效力 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M27-SPEC-01,M27-SPEC-02,M27-SPEC-03,M27-SPEC-04,M27-SPEC-05,M27-SPEC-06 | 已完成待评审 |
-| M27-CLOSE-03 / 计划 | BP-L-REQ-01；BP-L-REQ-02；BP-L-REQ-03 | US-L01-02；BC-L01-02；BC-L03；BC-L04-05-07-10；BC-L06-08；BC-L11 | 规格建议与本模块LIMIT待批；源自动循环/更新已完成学员仍保留；当前手动轮次/活动实例更新不完整，审批和完成算法需源链及评审 | True；错误重复派发/授学分、匿名重识别、考试版本漂移、错误结训/课酬及证书效力 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M27-SPEC-01,M27-SPEC-02,M27-SPEC-03,M27-SPEC-04,M27-SPEC-05,M27-SPEC-06 | 已完成待评审 |
-| M27-CLOSE-04 / 实施 | BP-L-REQ-07；BP-L-REQ-11 | P1-LEARN-02；P1-LEARN-03-04；BC-P1C-M27；BC-L16；BC-L17；BC-L18 | 规格建议与本模块LIMIT待批；培训计划入口曾到工作台不算计划页已读；报名审批、项目/外派、费用/课酬、出勤与结训待执行，财务只接口 | True；错误重复派发/授学分、匿名重识别、考试版本漂移、错误结训/课酬及证书效力 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M27-SPEC-01,M27-SPEC-02,M27-SPEC-03,M27-SPEC-04,M27-SPEC-05,M27-SPEC-06 | 已完成待评审 |
-| M27-CLOSE-05 / 考试 | BP-L-REQ-06 | BC-L06-EXAM；BC-L09；BC-L19；BC-L20；BC-L21 | 规格建议与本模块LIMIT待批；考试/作业/成绩等级与档案采集时点分开；复杂题型/次数/时限/批阅/重考和历史范围未全证 | True；错误重复派发/授学分、匿名重识别、考试版本漂移、错误结训/课酬及证书效力 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M27-SPEC-01,M27-SPEC-02,M27-SPEC-03,M27-SPEC-04,M27-SPEC-05,M27-SPEC-06 | 已完成待评审 |
-| M27-CLOSE-06 / 师资 | BP-L-REQ-08；BP-L-REQ-09；BP-L-REQ-10 | P1-INSTRUCTOR；P1-TEACHING；P1-CERTIFICATION；P1-CERT-DETAIL；P1-MENTOR；P1-CERTIFICATE | 规格建议与本模块LIMIT待批；讲师名册/课程授课资格/导师师徒/认证/出师/证书不同；源独立角色和阶段结果未全证，AI陪练暂缓 | True；错误重复派发/授学分、匿名重识别、考试版本漂移、错误结训/课酬及证书效力 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M27-SPEC-01,M27-SPEC-02,M27-SPEC-03,M27-SPEC-04,M27-SPEC-05,M27-SPEC-06 | 已完成待评审 |
-| M27-CLOSE-07 / 报表 | BP-L-REQ-03；BP-L-REQ-04；BP-I-REQ-02 | P1-CREDIT；BC-L12；BC-L19 | 规格建议与本模块LIMIT待批；学分/课程成绩/考试档案/计划报表分母与历史采集不同；自动授予折抵/有效期及源报表权限未全证 | True；错误重复派发/授学分、匿名重识别、考试版本漂移、错误结训/课酬及证书效力 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M27-SPEC-01,M27-SPEC-02,M27-SPEC-03,M27-SPEC-04,M27-SPEC-05,M27-SPEC-06 | 已完成待评审 |
+| M27-CLOSE-01 / 资源 | BP-L-REQ-01 | BC-L03；BC-L14；BC-L22 | P1批准后无剩余硬阻塞；原差异转交后续责任 | False；错误重复派发/授学分、匿名重识别、考试版本漂移、错误结训/课酬及证书效力 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M27-P1-APPROVAL-20260910 | 受限通过 |
+| M27-CLOSE-02 / 问卷 | BP-L-REQ-01；BP-I-REQ-03 |  | P1批准后无剩余硬阻塞；原差异转交后续责任 | False；错误重复派发/授学分、匿名重识别、考试版本漂移、错误结训/课酬及证书效力 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M27-P1-APPROVAL-20260910 | 受限通过 |
+| M27-CLOSE-03 / 计划 | BP-L-REQ-01；BP-L-REQ-02；BP-L-REQ-03 | US-L01-02；BC-L01-02；BC-L03；BC-L04-05-07-10；BC-L06-08；BC-L11 | P1批准后无剩余硬阻塞；原差异转交后续责任 | False；错误重复派发/授学分、匿名重识别、考试版本漂移、错误结训/课酬及证书效力 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M27-P1-APPROVAL-20260910 | 受限通过 |
+| M27-CLOSE-04 / 实施 | BP-L-REQ-07；BP-L-REQ-11 | P1-LEARN-02；P1-LEARN-03-04；BC-P1C-M27；BC-L16；BC-L17；BC-L18 | P1批准后无剩余硬阻塞；原差异转交后续责任 | False；错误重复派发/授学分、匿名重识别、考试版本漂移、错误结训/课酬及证书效力 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M27-P1-APPROVAL-20260910 | 受限通过 |
+| M27-CLOSE-05 / 考试 | BP-L-REQ-06 | BC-L06-EXAM；BC-L09；BC-L19；BC-L20；BC-L21 | P1批准后无剩余硬阻塞；原差异转交后续责任 | False；错误重复派发/授学分、匿名重识别、考试版本漂移、错误结训/课酬及证书效力 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M27-P1-APPROVAL-20260910 | 受限通过 |
+| M27-CLOSE-06 / 师资 | BP-L-REQ-08；BP-L-REQ-09；BP-L-REQ-10 | P1-INSTRUCTOR；P1-TEACHING；P1-CERTIFICATION；P1-CERT-DETAIL；P1-MENTOR；P1-CERTIFICATE | P1批准后无剩余硬阻塞；原差异转交后续责任 | False；错误重复派发/授学分、匿名重识别、考试版本漂移、错误结训/课酬及证书效力 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M27-P1-APPROVAL-20260910 | 受限通过 |
+| M27-CLOSE-07 / 报表 | BP-L-REQ-03；BP-L-REQ-04；BP-I-REQ-02 | P1-CREDIT；BC-L12；BC-L19 | P1批准后无剩余硬阻塞；原差异转交后续责任 | False；错误重复派发/授学分、匿名重识别、考试版本漂移、错误结训/课酬及证书效力 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M27-P1-APPROVAL-20260910 | 受限通过 |
 
 
 ## M32完整登记范围收口清单
@@ -232,7 +232,7 @@ M19当前材料：[P1受限通过，需求基线已批准](P1_M19_Review_Package
 
 M26当前材料：[P1受限通过，需求基线已批准](P1_M26_Review_Package.md)。批准、源取证及后续执行各自独立。
 
-M27当前材料：[材料完成、等待所有者集中评审](P1_M27_Review_Package.md)。批准、源取证及后续执行各自独立。
+M27当前材料：[P1受限通过，需求基线已批准](P1_M27_Review_Package.md)。批准、源取证及后续执行各自独立。
 
 M32当前材料：[P1受限通过，需求基线已批准](P1_M32_Review_Package.md)。批准、源取证及后续执行各自独立。
 
@@ -244,4 +244,4 @@ M48当前材料：[P1受限通过，需求基线已批准](P1_M48_Review_Package
 
 R2当前集中入口：[四模块完整材料、23项推荐及四项限制](P1_R2_Review_Package.md)；[批准草稿](P1_R2_Approval_Draft.md)。各模块按实际批准单独判定，计数从Scope推导。
 
-R3当前入口：[五模块完整集中评审材料](P1_R3_Review_Package.md)，30项推荐及5项LIMIT未批准；[批准草稿](P1_R3_Approval_Draft.md)。10/15受限关闭，其他五模块不计通过。
+R3当前入口：[五模块完整集中评审材料](P1_R3_Review_Package.md)，30项推荐及5项LIMIT已获所有者批准；[批准草稿](P1_R3_Approval_Draft.md)。P1A关闭 11/15（完整0，受限11）；P1B需求就绪 11/15（完整0，受限11）；P1评审关闭 11/15（完整0，受限11）。受限不混入完整通过，均不代表P3测试/P4业务或生产验收。
