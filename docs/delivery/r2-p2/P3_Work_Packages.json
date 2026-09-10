@@ -1,6 +1,6 @@
 {
   "kind": "proposal_only_not_execution_or_controller_ledger",
-  "count": 20,
+  "count": 26,
   "tasks": [
     {
       "id": "P3-R2-M37-01",
@@ -530,6 +530,164 @@
         "R2-P3-M18-REVIEW-AC11",
         "R2-P3-M18-REVIEW-AC12",
         "R2-P3-M18-REVIEW-AC13"
+      ]
+    },
+    {
+      "id": "P3-R2-M17-01",
+      "moduleId": "M17",
+      "requirementRefs": [
+        "M17-SPEC-01"
+      ],
+      "title": "建议poolRootId/version、categoryId、orgScope、sharingPolicy、expec",
+      "designRefs": [
+        "M17_Design.md#m17-spec-01"
+      ],
+      "ownerRole": "M17实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC01",
+        "R2-P3-M17-REVIEW-AC02",
+        "R2-P3-M17-REVIEW-AC03"
+      ]
+    },
+    {
+      "id": "P3-R2-M17-02",
+      "moduleId": "M17",
+      "requirementRefs": [
+        "M17-SPEC-02"
+      ],
+      "title": "建议readinessDefinitionId/version含代码/名称/业务含义/显式时间区间，保留“现在可就任”和",
+      "designRefs": [
+        "M17_Design.md#m17-spec-02"
+      ],
+      "ownerRole": "M17实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC04",
+        "R2-P3-M17-REVIEW-AC05",
+        "R2-P3-M17-REVIEW-AC06"
+      ]
+    },
+    {
+      "id": "P3-R2-M17-03",
+      "moduleId": "M17",
+      "requirementRefs": [
+        "M17-SPEC-03"
+      ],
+      "title": "建议保留池与IDP各自roleDefinition/version，不按同名合并；指导关系绑定employeeId、角色",
+      "designRefs": [
+        "M17_Design.md#m17-spec-03"
+      ],
+      "ownerRole": "M17实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC07",
+        "R2-P3-M17-REVIEW-AC08"
+      ]
+    },
+    {
+      "id": "P3-R2-M17-04",
+      "moduleId": "M17",
+      "requirementRefs": [
+        "M17-SPEC-04"
+      ],
+      "title": "建议flowRoot/version、templateRoot/version、planId/version、stage",
+      "designRefs": [
+        "M17_Design.md#m17-spec-04"
+      ],
+      "ownerRole": "M17实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC09",
+        "R2-P3-M17-REVIEW-AC10"
+      ]
+    },
+    {
+      "id": "P3-R2-M17-05",
+      "moduleId": "M17",
+      "requirementRefs": [
+        "M17-SPEC-05"
+      ],
+      "title": "建议健康度以版本化指标定义呈现，至少明确关键岗位覆盖、就绪覆盖、池饱和度和计划逾期率；关键岗位清单由有权者按M01稳定职",
+      "designRefs": [
+        "M17_Design.md#m17-spec-05"
+      ],
+      "ownerRole": "M17实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC11",
+        "R2-P3-M17-REVIEW-AC12"
+      ]
+    },
+    {
+      "id": "P3-R2-M17-06",
+      "moduleId": "M17",
+      "requirementRefs": [
+        "M17-SPEC-06"
+      ],
+      "title": "建议池manage/memberRead/ruleExecute、继任nominate/review/close、计划c",
+      "designRefs": [
+        "M17_Design.md#m17-spec-06"
+      ],
+      "ownerRole": "M17实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC13",
+        "R2-P3-M17-REVIEW-AC14"
       ]
     }
   ]
