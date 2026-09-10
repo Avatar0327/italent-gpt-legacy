@@ -1,3 +1,4 @@
+import {m01DomainEvents} from './r1-domain-events';
 import {z} from 'zod';
 import {identityKey,resolveIdentity,prepareIdentityKeys,captureR1ContractFields} from './r1-personnel-data';
 import {stateStatements} from './repository';
@@ -273,5 +274,6 @@ export async function executeM01(ctx:{db:D1Database;member:Member;row:{revision:
   for(const e of active)if(!compatibility.positions?.some(p=>p.id===e.id))(compatibility.positions??=[]).push({id:e.id,code:e.code??e.id,name:e.payload.name,orgId:e.orgId!,family:e.payload.attributes?.familyId??'',responsibilities:e.payload.attributes?.responsibilities??'',status:'启用'});
  }
  result.ids=changes.map(e=>e.id);
- return commitCommand(db,m,stamp,intent,token=>[...stateStatements(db,tenant,token,storedBefore,compatibility,m.userId,at),...changes.flatMap(e=>m01Write(db,tenant,token,e,intent.commandId,at)),...extra.flatMap(fn=>fn(token))],result);
+ const domainEvents=await m01DomainEvents(db,tenant,intent,changes);
+ return commitCommand(db,m,stamp,intent,token=>[...stateStatements(db,tenant,token,storedBefore,compatibility,m.userId,at),...changes.flatMap(e=>m01Write(db,tenant,token,e,intent.commandId,at)),...domainEvents(token),...extra.flatMap(fn=>fn(token))],result);
 }

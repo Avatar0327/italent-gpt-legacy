@@ -1,3 +1,4 @@
+import {m01DomainEvents} from './r1-domain-events';
 import {z} from 'zod';
 import {applyCommand,commandSchema,type State} from './model';
 import {authorizeCommand,scopedOrgs,visibleState,type Member} from './authorization';
@@ -100,5 +101,6 @@ export async function executeR1Transfer(ctx:{db:D1Database;member:Member;row:{re
   result.effectStatus=t.execution;result.approvalId=c.id;
  }
  if('id' in c)result.approvalId=c.id;
- return commitCommand(db,m,stamp,intent,token=>[...stateStatements(db,tenant,token,before,after,m.userId,at),...changes.flatMap(e=>m01Write(db,tenant,token,e,intent.commandId,at))],result);
+ const domainEvents=await m01DomainEvents(db,tenant,intent,changes);
+ return commitCommand(db,m,stamp,intent,token=>[...stateStatements(db,tenant,token,before,after,m.userId,at),...changes.flatMap(e=>m01Write(db,tenant,token,e,intent.commandId,at)),...domainEvents(token)],result);
 }

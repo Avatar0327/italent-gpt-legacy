@@ -3,7 +3,7 @@ import {HttpError} from './http';
 import {canonical,digest,commitCommand,securityStamp,sameStamp,type CommandIntent} from './r1-command';
 import type {Member} from './authorization';
 const id=z.string().min(1).max(100);
-export const eventEnvelope=z.object({schemaVersion:z.literal(1),eventId:id,eventType:id,source:id,internalId:id,externalId:id.nullable(),entityRevision:z.number().int().nonnegative(),workspaceRevision:z.number().int().nonnegative(),definitionVersion:id,sourceRevision:z.number().int().nonnegative(),sequence:z.number().int().positive(),mappingVersion:z.number().int().positive(),occurredAt:z.string().datetime({offset:true}),effectiveAt:z.string().datetime({offset:true}),correlationId:id,causationId:id,digestAlgorithm:z.literal('sha256-canonical-json-v1'),digest:z.string().regex(/^[a-f0-9]{64}$/),payload:z.object({personId:id.optional(),assignmentVersionId:id.optional(),receiptId:id.optional(),state:z.enum(['sent','failed','unknown']).optional()}).strict()}).strict();
+export const eventEnvelope=z.object({tenantId:id.optional(),schemaVersion:z.literal(1),eventId:id,eventType:id,source:id,internalId:id,externalId:id.nullable(),entityRevision:z.number().int().nonnegative(),workspaceRevision:z.number().int().nonnegative(),definitionVersion:id,sourceRevision:z.number().int().nonnegative(),sequence:z.number().int().positive(),mappingVersion:z.number().int().positive(),occurredAt:z.string().datetime({offset:true}),effectiveAt:z.string().datetime({offset:true}),correlationId:id,causationId:id,digestAlgorithm:z.literal('sha256-canonical-json-v1'),digest:z.string().regex(/^[a-f0-9]{64}$/),payload:z.object({approvalStatus:z.enum(['pending','approved','rejected','withdrawn','cancelled']).optional(),effectStatus:z.enum(['not_requested','waiting','waiting_external','applied','failed','cancelled','blocked']).optional(),nodeId:id.nullable().optional(),generation:z.number().int().positive().optional(),personId:id.optional(),assignmentVersionId:id.optional(),receiptId:id.optional(),state:z.enum(['sent','failed','unknown']).optional()}).strict()}).strict();
 export type EventEnvelope=z.infer<typeof eventEnvelope>;
 export type SourceContract={source:string;mappingVersion:number;schemaVersion:1;mode:'internal'|'simulated';version:string};
 export async function makeEnvelope(input:Omit<EventEnvelope,'digest'>){const normalized={...input,occurredAt:new Date(input.occurredAt).toISOString(),effectiveAt:new Date(input.effectiveAt).toISOString()};return eventEnvelope.parse({...normalized,digest:await digest(normalized)});}
@@ -13,22 +13,23 @@ export async function verifyEnvelope(input:unknown,contract:SourceContract){
  const normalized={...content,occurredAt:new Date(content.occurredAt).toISOString(),effectiveAt:new Date(content.effectiveAt).toISOString()};
  if(await digest(normalized)!==claimed)throw new HttpError(409,'事件摘要不一致','DIGEST_CONFLICT');return {...normalized,digest:claimed};
 }
-export async function receiveEvent(db:D1Database,m:Member,intent:CommandIntent,input:unknown,contract:SourceContract,projection:(token:string,e:EventEnvelope)=>D1PreparedStatement[]){
- const e=await verifyEnvelope(input,contract),tenant=m.tenantId;
+export async function receiveEvent(db:D1Database,m:Member,intent:CommandIntent,input:unknown,contract:SourceContract,projection:(token:string,e:EventEnvelope)=>D1PreparedStatement[],consumerId='r1.compat'){
+ id.parse(consumerId);
+ const e=await verifyEnvelope(input,contract),tenant=m.tenantId;if(e.tenantId&&(contract.mode!=='internal'||e.tenantId!==tenant))throw new HttpError(403,'事件租户不匹配','TENANT_MISMATCH');
  if(!m.securityStamp||!sameStamp(m.securityStamp,await securityStamp(db,tenant)))throw new HttpError(409,'当前授权已变化','REVISION_CONFLICT');
- const prior=await db.prepare('SELECT digest,status FROM r1_inbox WHERE tenant_id=? AND source=? AND event_id=?').bind(tenant,e.source,e.eventId).first<{digest:string;status:string}>();
+ const prior=await db.prepare('SELECT digest,status FROM r1_consumer_inbox WHERE tenant_id=? AND consumer_id=? AND source=? AND event_id=?').bind(tenant,consumerId,e.source,e.eventId).first<{digest:string;status:string}>();
  if(prior){if(prior.digest!==e.digest){
  if(!m.securityStamp)throw new HttpError(409,'请读取当前授权');
- await commitCommand(db,m,m.securityStamp,intent,token=>[db.prepare('INSERT INTO r1_integration_quarantine SELECT owner,?,?,?,?,? FROM hris_workspaces WHERE owner=? AND last_mutation=?').bind(crypto.randomUUID(),e.source,e.eventId,'EVENT_CONFLICT',e.digest,tenant,token)],{eventId:e.eventId,status:'quarantined',reasonCode:'EVENT_CONFLICT'});
+ await commitCommand(db,m,m.securityStamp,intent,token=>[db.prepare('INSERT INTO r1_integration_quarantine(tenant_id,id,source,event_id,reason,digest) SELECT owner,?,?,?,?,? FROM hris_workspaces WHERE owner=? AND last_mutation=?').bind(crypto.randomUUID(),e.source,e.eventId,'EVENT_CONFLICT',e.digest,tenant,token)],{eventId:e.eventId,status:'quarantined',reasonCode:'EVENT_CONFLICT'});
  throw new HttpError(409,'同事件不同内容，已隔离核对','EVENT_CONFLICT');}return {status:'duplicate',eventId:e.eventId,mode:contract.mode};}
- const cursor=await db.prepare('SELECT sequence FROM r1_source_cursors WHERE tenant_id=? AND source=? AND entity_id=?').bind(tenant,e.source,e.internalId).first<{sequence:number}>();
+ const cursor=await db.prepare('SELECT sequence FROM r1_consumer_cursors WHERE tenant_id=? AND consumer_id=? AND source=? AND entity_id=?').bind(tenant,consumerId,e.source,e.internalId).first<{sequence:number}>();
  const expected=(cursor?.sequence??0)+1;
- if(e.sequence!==expected)return {status:e.sequence>expected?'gap':'stale',eventId:e.eventId,expectedSequence:expected,mode:contract.mode};
+ if(e.sequence!==expected){const status=e.sequence>expected?'gap':'stale';await commitCommand(db,m,m.securityStamp,intent,token=>[db.prepare('INSERT INTO r1_integration_quarantine(tenant_id,id,source,event_id,reason,digest,owner_id,next_action,close_gate) SELECT owner,?,?,?,?,?,?,?,? FROM hris_workspaces WHERE owner=? AND last_mutation=?').bind(crypto.randomUUID(),e.source,e.eventId,status==='gap'?'SEQUENCE_GAP':'STALE_WITHOUT_RECEIPT',e.digest,m.userId,'reconcile_consumer:'+consumerId+':expected:'+expected,'consumer_consistency_acceptance',tenant,token)],{eventId:e.eventId,status,expectedSequence:expected});return {status,eventId:e.eventId,expectedSequence:expected,mode:contract.mode};}
  if(!m.securityStamp)throw new HttpError(409,'请读取当前授权');
  const result=await commitCommand(db,m,m.securityStamp,intent,token=>[
   ...projection(token,e),
-  db.prepare('INSERT INTO r1_inbox SELECT owner,?,?,?,?,?,?,?,? FROM hris_workspaces WHERE owner=? AND last_mutation=?').bind(e.source,e.eventId,e.sequence,e.internalId,e.digest,e.mappingVersion,new Date().toISOString(),'committed',tenant,token),
-  db.prepare('INSERT INTO r1_source_cursors SELECT owner,?,?,? FROM hris_workspaces WHERE owner=? AND last_mutation=? ON CONFLICT(tenant_id,source,entity_id) DO UPDATE SET sequence=excluded.sequence').bind(e.source,e.internalId,e.sequence,tenant,token),
+  db.prepare('INSERT INTO r1_consumer_inbox SELECT owner,?,?,?,?,?,?,?,?,? FROM hris_workspaces WHERE owner=? AND last_mutation=?').bind(consumerId,e.source,e.eventId,e.sequence,e.internalId,e.digest,e.mappingVersion,new Date().toISOString(),'committed',tenant,token),
+  db.prepare('INSERT INTO r1_consumer_cursors SELECT owner,?,?,?,? FROM hris_workspaces WHERE owner=? AND last_mutation=? ON CONFLICT(tenant_id,consumer_id,source,entity_id) DO UPDATE SET sequence=excluded.sequence').bind(consumerId,e.source,e.internalId,e.sequence,tenant,token),
  ],{eventId:e.eventId,mode:contract.mode});return {...result,eventId:e.eventId,mode:contract.mode};
 }
 export const externalAdapters=['master_data','electronic_signing','assessment','budget','payment','notification'] as const;
