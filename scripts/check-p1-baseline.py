@@ -313,7 +313,7 @@ if s['roadmap'].get('p1FinalClosure'):
  check(intake['riskCounts']==dict(total=37,designClosed=9,p3=20,p4=8) and len(intake['sourceEvidenceRequests'])==13,'37风险与13补证责任准确')
  check(intake['businessTestsRun']==intake['historicalTestRevalidations']==0 and not intake['p3Started'],'P2设计不冒测试或P3执行')
  for rid,g in gates.items():
-  d=g['downstream'];check(has_approval(d['entryApprovalRecord']) and not d['p3Started'] and not d['businessAccepted'] and not d['productionAccepted'],rid+'授权/实际执行/验收分开')
+  d=g['downstream'];check(has_approval(d['entryApprovalRecord']) and (not d['p3Started'] or (rid=='R1' and g.get('p3ProgressSnapshot'))) and not d['businessAccepted'] and not d['productionAccepted'],rid+'授权/实际执行/验收分开')
   check(d['authorizedPhase']==('P3' if rid=='R1' else 'P2'),rid+'阶段授权无越序')
   if rid!='R1':
    check(not d['p2ExitApproved'] and not d['p3EntryApproved'] and all(g['foundationReadiness'][k]['value'] for k in caps),rid+'P2进入条件齐备，不提前P3')
@@ -325,3 +325,14 @@ if s['roadmap'].get('p1FinalClosure'):
  check(not subprocess.check_output(['git','log','--merges','--format=%H','5769a420a923024e9c274a4f0084a2a40cef8c02..HEAD'],cwd=R).strip(),'未合并设计分支')
  result['checks']=checks;(D/'P1AB_Document_Check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
  print('PASS: final 15 restricted closures, pinned P2 intake, explicit Release gates and unchanged business evidence')
+
+# Committed downstream progress does not change approved P1 or phase exits.
+for g in s['roadmap']['rangeGates']:
+ snap=g.get('p3ProgressSnapshot')
+ if not snap:continue
+ for ref in snap['references']:
+  check(hashlib.sha256(subprocess.check_output(['git','show',ref['head']+':'+ref['path']],cwd=R)).hexdigest()==ref['sha256'],'P3 snapshot pinned hash '+ref['path'])
+ check(not snap['p3ExitApproved'] and not snap['p4Started'] and not snap['riskClosureApproved'] and snap['controllerTestsRun']==0,'P3进度不代退出或本轮复验')
+ check(len(snap['tasks'])==11 and snap['uncommittedExcluded'],'P3全部任务且未提交内容不计完成')
+ check(g['downstream']['p3Started'] and not g['downstream']['p3ExitApproved'],'P3实际在制与退出分开')
+result['checks']=checks;(D/'P1AB_Document_Check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')

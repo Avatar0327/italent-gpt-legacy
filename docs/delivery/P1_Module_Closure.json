@@ -1,6 +1,6 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-10T03:24:03.609414+00:00",
+  "generatedFromUpdatedAt": "2026-09-10T05:17:20.448590+00:00",
   "primaryModuleId": "M01",
   "backupModuleId": null,
   "activeExecutionModuleId": "M01",
@@ -1183,8 +1183,10 @@
         "businessAccepted": false,
         "productionAccepted": false,
         "p3HandoffReady": true,
-        "p3Started": false,
-        "p3Status": "获准进入，尚未开始"
+        "p3Started": true,
+        "p3Status": "进行中：01实现与首批合成验证完成、独立复核待签；02/04部分，其他8项未实施；P3未退出",
+        "p3ExitApproved": false,
+        "p4Started": false
       },
       "p2Handoff": {
         "id": "R1-P2-HANDOFF",
@@ -1518,6 +1520,127 @@
         "p3Started": false,
         "readOnlyIntake": true,
         "recordedAt": "2026-09-10T03:24:03.609414+00:00"
+      },
+      "p3ProgressSnapshot": {
+        "kind": "committed_progress_snapshot_not_exit_approval",
+        "observedAt": "2026-09-10T05:17:20.448590+00:00",
+        "branch": "impl/r1-p3-20260910",
+        "head": "52cf0dcff2596df271dd4f32c4ba49ca6d07c95a",
+        "remoteHeadVerified": "52cf0dcff2596df271dd4f32c4ba49ca6d07c95a",
+        "worktreeDirtyObserved": true,
+        "uncommittedExcluded": true,
+        "sourceSha": "682e6e46b78e249bde1e42d70868579715155ae8",
+        "references": [
+          {
+            "head": "52cf0dcff2596df271dd4f32c4ba49ca6d07c95a",
+            "path": "docs/delivery/r1-p3/R1_P3_Resume.md",
+            "sha256": "73255b726e2252fc6c8133ab58fe348f60106ea040befb782a54171f7d3ec70e"
+          },
+          {
+            "head": "52cf0dcff2596df271dd4f32c4ba49ca6d07c95a",
+            "path": "docs/delivery/r1-p3/R1_P3_Checkpoint.json",
+            "sha256": "7240c84672156a0abe252d14246c66eba17069e022bdc7f3148cc65cdb62b932"
+          },
+          {
+            "head": "52cf0dcff2596df271dd4f32c4ba49ca6d07c95a",
+            "path": "docs/delivery/r1-p3/R1_P3_Controller_Proposal.json",
+            "sha256": "e03d0ef70ac58d885dc3fef5971912bbaa5bac866ce6d5c2b14805adca94feab"
+          },
+          {
+            "head": "52cf0dcff2596df271dd4f32c4ba49ca6d07c95a",
+            "path": "docs/delivery/r1-p3/evidence/r1-p3-02-d7-20260910T042138Z.json",
+            "sha256": "34aee9009882672bfb49932c3bbcdabb5f15bd877884ad421ee16aa83201ff10"
+          },
+          {
+            "head": "52cf0dcff2596df271dd4f32c4ba49ca6d07c95a",
+            "path": "docs/delivery/r1-p3/evidence/r1-p3-02-d7-20260910T042138Z-tests.log",
+            "sha256": "0da70b638dfdd1e89c6f89aabe5361a3a1224504a5db0411f053e1182c893c09"
+          },
+          {
+            "head": "52cf0dcff2596df271dd4f32c4ba49ca6d07c95a",
+            "path": "docs/delivery/r1-p3/evidence/r1-p3-02-d7-20260910T042138Z-types.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "head": "52cf0dcff2596df271dd4f32c4ba49ca6d07c95a",
+            "path": "docs/delivery/r1-p3/evidence/r1-p3-02-d7-20260910T042138Z-build.log",
+            "sha256": "6e2b5fbb027efc6dbba9f5e9d81a8db285058e24d652ee7637d5759ff6089371"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "P3-R1-01",
+            "status": "implemented_synthetic_verified_review_pending",
+            "implementationSha": "3a843b0f04f076abd9a8a33bf59315b7afe497ff"
+          },
+          {
+            "id": "P3-R1-02",
+            "status": "in_progress_partial_not_dependency_ready",
+            "remaining": [
+              "人员多标识服务端候选解析",
+              "非调动主职/主档全面接线",
+              "合同字段root/继承及计次",
+              "M01前端及未知结果查询接线",
+              "12项设计用例全部条件及原AC完整验证"
+            ],
+            "implementationSha": "682e6e46b78e249bde1e42d70868579715155ae8"
+          },
+          {
+            "id": "P3-R1-03",
+            "status": "pending"
+          },
+          {
+            "id": "P3-R1-04",
+            "status": "in_progress_partial_not_dependency_ready",
+            "remaining": [
+              "持久化投递与重复回调防重放",
+              "全部稳定映射/显示标签/模板版本接线",
+              "6项设计用例完整验证"
+            ],
+            "implementationSha": "1d5e20e97220c8faab1b3510309954439052200a"
+          },
+          {
+            "id": "P3-R1-05",
+            "status": "pending"
+          },
+          {
+            "id": "P3-R1-06",
+            "status": "pending"
+          },
+          {
+            "id": "P3-R1-07",
+            "status": "pending"
+          },
+          {
+            "id": "P3-R1-08",
+            "status": "pending"
+          },
+          {
+            "id": "P3-R1-09",
+            "status": "pending"
+          },
+          {
+            "id": "P3-R1-10",
+            "status": "pending"
+          },
+          {
+            "id": "P3-R1-11",
+            "status": "pending"
+          }
+        ],
+        "currentTask": "P3-R1-02",
+        "syntheticTestsPassed": 29,
+        "typesPassed": true,
+        "buildPassed": true,
+        "evidenceFinishedAt": "2026-09-10T04:21:56.581445+00:00",
+        "environment": "isolated synthetic data; local node:sqlite executes product SQL and transactions; platform identity and object-store adapters simulated; no cloud D1, production or original-site operation",
+        "fullDesignCasesPassed": false,
+        "riskClosureApproved": false,
+        "p3ExitApproved": false,
+        "p4Started": false,
+        "deployed": false,
+        "controllerTestsRun": 0,
+        "sourceNote": "来自独立P3窗口已提交证据；本P1窗口未复跑，未提交修改不用于完成结论"
       },
       "moduleIds": [
         "M01",

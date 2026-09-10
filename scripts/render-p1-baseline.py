@@ -638,9 +638,13 @@ if s['roadmap'].get('p1FinalClosure'):
  t+='## R1 P2只读纳入\n\n所有者批准 R1-P2-EXIT-OWNER-20260910，审阅HEAD `'+intake['reviewedHead']+'`。37项风险：9设计关闭、20转P3、8转P4；13项原站补证继续由P1总控统筹。业务测试和历史测试复验均0。只按Git对象登记，不合并或复制设计分支。\n\n'+refs+'\n'
  t+='## 后续窗口\n\n[R1 P3取件与启动](R1_P3_Controller_Start.md)；[R2 P2交接](P1_R2_P2_Handoff.md)及[启动词](R2_P2_Start_Prompt.md)；[R3 P2交接](P1_R3_P2_Handoff.md)及[启动词](R3_P2_Start_Prompt.md)。本窗口未执行P2/P3。\n\n'
  t+='## 残余责任\n\n全部模块LIMIT保留在各模块评审包、Scope restrictedApproval及交接中；原站未知算法不冒事实。P2负责设计与可行性差异，P3负责隔离实施及实际运行证据，P4负责独立多角色/业务/生产验收。E2不增访问者，D1–D7不扩大；RPO≤1小时/RTO≤4小时/30天目标不降标。外部真实交易、通知、签署、申报均未执行。不存在本轮P1关闭硬阻塞，不等于后续风险已全部关闭。\n'
- (D/'P1_Final_Closure.md').write_text(t)
+ t+='\n'+s['roadmap']['p1FinalClosure'].get('declaration','')+'\n'
+ if gates['R1'].get('p3ProgressSnapshot'):
+  snap=gates['R1']['p3ProgressSnapshot'];t+='\n## R1 P3已提交进度快照\n\n来源 `'+snap['head']+'`；产品验证源码 `'+snap['sourceSha']+'`；采集 '+snap['observedAt']+'。P3工作树在制修改未用于完成结论。29项合成测试、类型检查和构建通过为P3窗口既有证据，本窗口未复跑；全部11任务和风险未关闭，P3未退出，P4未开始，未部署。\n\n'+table(['任务','已提交状态'],[(x['id'],x['status']) for x in snap['tasks']])+'\n'+table(['来源HEAD','路径','SHA256'],[(x['head'],x['path'],x['sha256']) for x in snap['references']])+'\n'
+  residual=s['roadmap']['p1FinalClosure']['residualResponsibilitySummary'];t+='\n## 后续责任矩阵与计数口径\n\n'+residual['unit']+'。P2/P3/P4各15组责任覆盖；不是45个独立风险。R1已拆分风险P2未关闭0、P3未关闭20、P4未关闭8，9项设计问题已关闭；R2/R3未按统一粒度拆分，不能编造全项目风险总数。\n\n'+table(['模块','P1关闭依据','责任及后续关闭证据'],[(x['moduleId'],x['p1ClosureBasis'],x['responsibility']+'；'+str(x['closureEvidence'])) for x in residual['rows']])+'\n'
+ (D/'P1_Final_Closure.md').write_text(t.rstrip()+'\n')
  x=next(x for x in intake['references'] if x['path'].endswith('R1_P2_P3_Start_Prompt.md'))
- (D/'R1_P3_Controller_Start.md').write_text(intro('R1 P3新窗口取件与启动')+'所有者已批准R1 P2退出并明确准入P3；实际P3尚未开始。\n\n请作为独立R1 P3窗口，先只读核main实际HEAD、Scope中的R1 P2纳入记录与R1-P3-ENTRY-OWNER-20260910。不得改main事实源或进入P2工作树。通过以下Git对象读取原完整启动词，校验SHA256后按其完整边界执行；本文件仅提供总控授权及取件索引，不复制设计事实。\n\n```bash\ngit show '+x['head']+':'+x['path']+'\n```\n\nSHA256：`'+x['sha256']+'`。同时读取下列固定对象：\n\n'+refs+'\n按原启动词创建独立P3工作树，复用最新main，保护已有修改；单主任务，隔离合成测试，不新增访问者、不部署、不做生产迁移/真实外发。P2记录本身未授权P3执行，本次总控R1-P3-ENTRY-OWNER-20260910提供进入授权；P4和生产须另行评审。\n')
+ (D/'R1_P3_Controller_Start.md').write_text(intro('R1 P3新窗口取件与启动')+'所有者已批准R1 P2退出并明确准入P3；实际状态以Scope中R1 downstream及已提交进度快照为准；已有工作树时接续，不重复启动。\n\n请作为独立R1 P3窗口，先只读核main实际HEAD、Scope中的R1 P2纳入记录与R1-P3-ENTRY-OWNER-20260910。不得改main事实源或进入P2工作树。通过以下Git对象读取原完整启动词，校验SHA256后按其完整边界执行；本文件仅提供总控授权及取件索引，不复制设计事实。\n\n```bash\ngit show '+x['head']+':'+x['path']+'\n```\n\nSHA256：`'+x['sha256']+'`。同时读取下列固定对象：\n\n'+refs+'\n按原启动词创建独立P3工作树，复用最新main，保护已有修改；单主任务，隔离合成测试，不新增访问者、不部署、不做生产迁移/真实外发。P2记录本身未授权P3执行，本次总控R1-P3-ENTRY-OWNER-20260910提供进入授权；P4和生产须另行评审。\n')
  for rid in ['R2','R3']:
   g=gates[rid];h=g['controllerHandoff'];mm=[by_id[x] for x in h['moduleIds']]
   t=intro(rid+' P1→P2正式交接')+'状态：P1受限关闭，P2设计进入获准，P2尚未开始。批准：'+h['entryRecord']+'。\n\n'

@@ -1,6 +1,6 @@
 {
-  "completedAt": "2026-09-10T03:26:17.074732+00:00",
-  "baseCommit": "7e4a4875f8d0453c948bf2233be28b31799eecbe",
+  "completedAt": "2026-09-10T05:18:14.490595+00:00",
+  "baseCommit": "5988a3000a1ac9ad30c786c84289093d9a6e074f",
   "scope": "文档完整性/引用/生成一致性；非业务回归、原站取证、需求签署或UAT",
   "result": "passed",
   "checks": [
@@ -4884,7 +4884,17 @@
     "R3交接与启动文件存在",
     "本轮原59验收及原站操作全文未改",
     "本轮只修改治理文档和同源生成检查脚本",
-    "未合并设计分支"
+    "未合并设计分支",
+    "P3 snapshot pinned hash docs/delivery/r1-p3/R1_P3_Resume.md",
+    "P3 snapshot pinned hash docs/delivery/r1-p3/R1_P3_Checkpoint.json",
+    "P3 snapshot pinned hash docs/delivery/r1-p3/R1_P3_Controller_Proposal.json",
+    "P3 snapshot pinned hash docs/delivery/r1-p3/evidence/r1-p3-02-d7-20260910T042138Z.json",
+    "P3 snapshot pinned hash docs/delivery/r1-p3/evidence/r1-p3-02-d7-20260910T042138Z-tests.log",
+    "P3 snapshot pinned hash docs/delivery/r1-p3/evidence/r1-p3-02-d7-20260910T042138Z-types.log",
+    "P3 snapshot pinned hash docs/delivery/r1-p3/evidence/r1-p3-02-d7-20260910T042138Z-build.log",
+    "P3进度不代退出或本轮复验",
+    "P3全部任务且未提交内容不计完成",
+    "P3实际在制与退出分开"
   ],
   "notes": [
     "对当前HEAD核对原48组及59原验收条件/标志未改变",

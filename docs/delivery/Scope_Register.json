@@ -14371,7 +14371,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-10T03:24:03.609414+00:00",
+    "updatedAt": "2026-09-10T05:17:20.448590+00:00",
     "authority": "Scope_Register.json为唯一范围/验收事实源；历史48/59保留，当前15模块及基础按SCOPE-20260909-CORE15。",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -47393,29 +47393,29 @@
       "latestAuthorizationAt": "2026-09-09T06:25:42.812752+00:00",
       "scopeChangeHead": "f31cb2b5e1894723288fd884d4e3bd895ae57327",
       "scopeChange": "SCOPE-20260909-CORE15",
-      "latestCheckpointAt": "2026-09-10T03:24:03.609414+00:00",
-      "latestCommittedHead": "7e4a4875f8d0453c948bf2233be28b31799eecbe",
+      "latestCheckpointAt": "2026-09-10T05:17:20.448590+00:00",
+      "latestCommittedHead": "5988a3000a1ac9ad30c786c84289093d9a6e074f",
       "latestEvidenceRefs": [
         "BC-C39",
         "BC-C40",
         "BC-C28",
         "R2-RO-M17-01"
       ],
-      "next": "使用R1 P3 / R2 P2 / R3 P2启动文件；本窗口只保留补证及治理责任",
+      "next": "沿用既有R1 P3窗口和R2/R3 P2交接；本轮不部署或启动CDP",
       "browserRecovery": "历史CDP超时已在本轮恢复：可列出标签及定向只读访问；M26入口误到页未计证，M18/M17有限回查成功。具体访问限制保留于各模块，不再把整站连接故障列为当前共同阻塞。",
       "sourceBrowsingStatus": "本轮未新增原站浏览器取证，沿用归档证据；此前连接恢复只代表前次观察，不宣称本轮复核。所有缺证逐模块列LIMIT及定向清单。",
-      "currentFocus": "P1最终收口及三个Release交接；模块分析队列结束",
+      "currentFocus": "P1冻结后治理核验与R1 P3进度登记",
       "checkpointCommitSemantics": "latestCommittedHead为本单元编辑开始前已存在提交；本记录所属提交用git log -1 -- docs/delivery/Scope_Register.json解析，不能将基准冒充最终HEAD。",
-      "workingTreeAtResume": "基于干净7e4a4875f8d0453c948bf2233be28b31799eecbe，本单元仅治理文档和生成检查脚本",
+      "workingTreeAtResume": "main干净；P3工作树另有在制修改，仅取已提交HEAD",
       "lastVerifiedSync": {
-        "commit": "7e4a4875f8d0453c948bf2233be28b31799eecbe",
+        "commit": "5988a3000a1ac9ad30c786c84289093d9a6e074f",
         "remoteBranch": "main",
-        "result": "逐模块推送成功；最终交接提交另以Git远端核验",
-        "scope": "R3五模块关闭"
+        "result": "本轮开始已只读核远端一致",
+        "scope": "此前P1最终收口"
       },
-      "currentUnitOutcome": "15/15全部受限关闭；R1 P2只读纳入；R1 P3及R2/R3 P2获准进入但未执行",
+      "currentUnitOutcome": "P1既有15/15受限关闭复核，不重复批准；R1 P3快照52cf0dc已登记，非本轮实施",
       "previousAtomicOutcome": "M27→M16→M12→M11→M07分别检查提交推送完成",
-      "sourceWritePolicy": "本轮最新边界：原站只读，不修改原站数据；此前合成记录授权作为历史保留，本夜间单元不据此新增写入。",
+      "sourceWritePolicy": "本轮不启动浏览器/CDP，不写原站或业务数据，不部署任何站点",
       "historicalExecutionBoundary": "用户已确认当前北森租户可用于测试，并授权P1所需合成关联记录的创建、保存、提交及必要状态流转；先查可复用记录，统一P1V-20260909标记，逐链记录ID/关联/前后状态和结果，不逐条重问。不得任意更改真实员工或既有业务；不扩大到真实业务生效、外部通知、支付、签署或新增人类访问者。产品代码、部署、D1–D7/E1/E2继续保持。 最新范围仅当前15模块和基础/最小必要公共依赖；33模块停止独立探索/新数据链，已有前置可必要引用，不为停点做完整链。"
     },
     "dataValidation": {
@@ -48656,7 +48656,7 @@
   "roadmap": {
     "revision": "2026-09-09-module-closure-rolling-R",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-10T03:24:03.609414+00:00",
+    "updatedAt": "2026-09-10T05:17:20.448590+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -48719,7 +48719,7 @@
         "exit": "当前包验收结论已记录；未通过项、依赖影响及转序依据明确，阻断项不静默跳过",
         "limits": "本P1窗口不执行产品修改/P3测试/部署；R2/R3必须先独立P2退出评审。业务和生产验收独立",
         "next": "按队列下一包；全部包达条件后P4",
-        "currentStatus": "R1获准进入，尚未开始；R2/R3未获准"
+        "currentStatus": "进行中：01实现与首批合成验证完成、独立复核待签；02/04部分，其他8项未实施；P3未退出；R2/R3未获准P3"
       },
       {
         "id": "P4",
@@ -48758,10 +48758,10 @@
       "BP-S"
     ],
     "nextTasks": [
-      "R1独立P3窗口读取固定P2对象及启动提示词",
-      "R2独立P2设计窗口读取R2交接与启动提示词",
-      "R3独立P2设计窗口读取R3交接与启动提示词",
-      "P1总控保留13项原站定向补证及各LIMIT责任，不重开宽泛探索"
+      "R1既有P3窗口续P3-R1-02；以其后续已提交证据更新快照",
+      "R2/R3 P2交接已就绪，独立窗口执行；本窗口不启动",
+      "13项原站补证及各LIMIT后续责任保留，本轮不启动CDP",
+      "本轮禁止部署，独立治理看板保持上次成功发布，仅更新主仓库证据源"
     ],
     "state": "当前15模块P1受限关闭，Release分别交接",
     "scopeChange": "SCOPE-20260909-CORE15",
@@ -49307,8 +49307,10 @@
           "businessAccepted": false,
           "productionAccepted": false,
           "p3HandoffReady": true,
-          "p3Started": false,
-          "p3Status": "获准进入，尚未开始"
+          "p3Started": true,
+          "p3Status": "进行中：01实现与首批合成验证完成、独立复核待签；02/04部分，其他8项未实施；P3未退出",
+          "p3ExitApproved": false,
+          "p4Started": false
         },
         "p2Handoff": {
           "id": "R1-P2-HANDOFF",
@@ -49642,6 +49644,127 @@
           "p3Started": false,
           "readOnlyIntake": true,
           "recordedAt": "2026-09-10T03:24:03.609414+00:00"
+        },
+        "p3ProgressSnapshot": {
+          "kind": "committed_progress_snapshot_not_exit_approval",
+          "observedAt": "2026-09-10T05:17:20.448590+00:00",
+          "branch": "impl/r1-p3-20260910",
+          "head": "52cf0dcff2596df271dd4f32c4ba49ca6d07c95a",
+          "remoteHeadVerified": "52cf0dcff2596df271dd4f32c4ba49ca6d07c95a",
+          "worktreeDirtyObserved": true,
+          "uncommittedExcluded": true,
+          "sourceSha": "682e6e46b78e249bde1e42d70868579715155ae8",
+          "references": [
+            {
+              "head": "52cf0dcff2596df271dd4f32c4ba49ca6d07c95a",
+              "path": "docs/delivery/r1-p3/R1_P3_Resume.md",
+              "sha256": "73255b726e2252fc6c8133ab58fe348f60106ea040befb782a54171f7d3ec70e"
+            },
+            {
+              "head": "52cf0dcff2596df271dd4f32c4ba49ca6d07c95a",
+              "path": "docs/delivery/r1-p3/R1_P3_Checkpoint.json",
+              "sha256": "7240c84672156a0abe252d14246c66eba17069e022bdc7f3148cc65cdb62b932"
+            },
+            {
+              "head": "52cf0dcff2596df271dd4f32c4ba49ca6d07c95a",
+              "path": "docs/delivery/r1-p3/R1_P3_Controller_Proposal.json",
+              "sha256": "e03d0ef70ac58d885dc3fef5971912bbaa5bac866ce6d5c2b14805adca94feab"
+            },
+            {
+              "head": "52cf0dcff2596df271dd4f32c4ba49ca6d07c95a",
+              "path": "docs/delivery/r1-p3/evidence/r1-p3-02-d7-20260910T042138Z.json",
+              "sha256": "34aee9009882672bfb49932c3bbcdabb5f15bd877884ad421ee16aa83201ff10"
+            },
+            {
+              "head": "52cf0dcff2596df271dd4f32c4ba49ca6d07c95a",
+              "path": "docs/delivery/r1-p3/evidence/r1-p3-02-d7-20260910T042138Z-tests.log",
+              "sha256": "0da70b638dfdd1e89c6f89aabe5361a3a1224504a5db0411f053e1182c893c09"
+            },
+            {
+              "head": "52cf0dcff2596df271dd4f32c4ba49ca6d07c95a",
+              "path": "docs/delivery/r1-p3/evidence/r1-p3-02-d7-20260910T042138Z-types.log",
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "head": "52cf0dcff2596df271dd4f32c4ba49ca6d07c95a",
+              "path": "docs/delivery/r1-p3/evidence/r1-p3-02-d7-20260910T042138Z-build.log",
+              "sha256": "6e2b5fbb027efc6dbba9f5e9d81a8db285058e24d652ee7637d5759ff6089371"
+            }
+          ],
+          "tasks": [
+            {
+              "id": "P3-R1-01",
+              "status": "implemented_synthetic_verified_review_pending",
+              "implementationSha": "3a843b0f04f076abd9a8a33bf59315b7afe497ff"
+            },
+            {
+              "id": "P3-R1-02",
+              "status": "in_progress_partial_not_dependency_ready",
+              "remaining": [
+                "人员多标识服务端候选解析",
+                "非调动主职/主档全面接线",
+                "合同字段root/继承及计次",
+                "M01前端及未知结果查询接线",
+                "12项设计用例全部条件及原AC完整验证"
+              ],
+              "implementationSha": "682e6e46b78e249bde1e42d70868579715155ae8"
+            },
+            {
+              "id": "P3-R1-03",
+              "status": "pending"
+            },
+            {
+              "id": "P3-R1-04",
+              "status": "in_progress_partial_not_dependency_ready",
+              "remaining": [
+                "持久化投递与重复回调防重放",
+                "全部稳定映射/显示标签/模板版本接线",
+                "6项设计用例完整验证"
+              ],
+              "implementationSha": "1d5e20e97220c8faab1b3510309954439052200a"
+            },
+            {
+              "id": "P3-R1-05",
+              "status": "pending"
+            },
+            {
+              "id": "P3-R1-06",
+              "status": "pending"
+            },
+            {
+              "id": "P3-R1-07",
+              "status": "pending"
+            },
+            {
+              "id": "P3-R1-08",
+              "status": "pending"
+            },
+            {
+              "id": "P3-R1-09",
+              "status": "pending"
+            },
+            {
+              "id": "P3-R1-10",
+              "status": "pending"
+            },
+            {
+              "id": "P3-R1-11",
+              "status": "pending"
+            }
+          ],
+          "currentTask": "P3-R1-02",
+          "syntheticTestsPassed": 29,
+          "typesPassed": true,
+          "buildPassed": true,
+          "evidenceFinishedAt": "2026-09-10T04:21:56.581445+00:00",
+          "environment": "isolated synthetic data; local node:sqlite executes product SQL and transactions; platform identity and object-store adapters simulated; no cloud D1, production or original-site operation",
+          "fullDesignCasesPassed": false,
+          "riskClosureApproved": false,
+          "p3ExitApproved": false,
+          "p4Started": false,
+          "deployed": false,
+          "controllerTestsRun": 0,
+          "sourceNote": "来自独立P3窗口已提交证据；本P1窗口未复跑，未提交修改不用于完成结论"
         }
       },
       {
@@ -49835,7 +49958,7 @@
         }
       }
     ],
-    "currentWork": "P1最终收口与下游交接完成；原站补证责任保留",
+    "currentWork": "P1已冻结关闭；登记R1 P3已提交进度快照，不实施下游",
     "p1FinalClosure": {
       "status": "受限通过并关闭",
       "closedAt": "2026-09-10T03:24:03.609414+00:00",
@@ -49864,12 +49987,271 @@
       "historicalTestRevalidations": 0,
       "businessAccepted": false,
       "productionAccepted": false,
-      "report": "docs/delivery/P1_Final_Closure.md"
+      "report": "docs/delivery/P1_Final_Closure.md",
+      "declaration": "15个核心模块的P1需求基线已经冻结，P1阶段正式关闭；受限通过不等于P2、P3、业务验收或生产验收通过。",
+      "residualResponsibilitySummary": {
+        "unit": "模块LIMIT责任组；跨阶段重叠，不能相加为45个独立风险",
+        "moduleLimitGroups": 15,
+        "stageResponsibilityGroups": {
+          "P2": 15,
+          "P3": 15,
+          "P4": 15
+        },
+        "rows": [
+          {
+            "moduleId": "M01",
+            "sourcePath": "modules.M01.p1.moduleClosure.restrictedApproval",
+            "stages": [
+              "P2",
+              "P3",
+              "P4"
+            ],
+            "responsibility": "P2负责人复核ID/版本/时态/迁移/事务设计；P3执行者使用合成链验证边界，独立人类权限验收待E2后续授权；P4验收责任人完成全权限和业务准备。若源恢复且结果推翻已批规则，开有范围变更评审，不静默改规则。",
+            "closureEvidence": {
+              "P2": "对应设计追踪、差异处置及设计退出评审",
+              "P3": "对应批准用例的实际运行/故障恢复证据及复核",
+              "P4": "独立多角色、业务/生产适用验收及所有者批准"
+            },
+            "p1ClosureBasis": "M01-P1-APPROVAL-20260909"
+          },
+          {
+            "moduleId": "M03",
+            "sourcePath": "modules.M03.p1.moduleClosure.restrictedApproval",
+            "stages": [
+              "P2",
+              "P3",
+              "P4"
+            ],
+            "responsibility": "P2：设计干部身份/任期/人事生效/提名/任免记录映射、评分策略与委员会、考察/述职版本与当前权限、增量迁移及未知历史标记；P3：合成验证任期月末/闰年/重叠、多评委阈值等值/弃权缺评、资格失效、调动失败/未知、考察延期退回/撤回/退出和档案撤权；P4：独立多角色、敏感字段/历史/附件/下载权限、跨模块业务及生产容量/恢复验收；E2不新增访问者，管理员操作不代验。",
+            "closureEvidence": {
+              "P2": "对应设计追踪、差异处置及设计退出评审",
+              "P3": "对应批准用例的实际运行/故障恢复证据及复核",
+              "P4": "独立多角色、业务/生产适用验收及所有者批准"
+            },
+            "p1ClosureBasis": "M03-P1-APPROVAL-20260910"
+          },
+          {
+            "moduleId": "M06",
+            "sourcePath": "modules.M06.p1.moduleClosure.restrictedApproval",
+            "stages": [
+              "P2",
+              "P3",
+              "P4"
+            ],
+            "responsibility": "P2核类别/级别/方案/根版本/认证有效性及独立回避设计与迁移；P3合成跑评分/评级、委员会阈值、时效、同版证据、重复续证、事务故障及消费者；P4完整多角色与跨域权限业务验收。E2不新增人，任何内部认证不当外部许可或自动任免。",
+            "closureEvidence": {
+              "P2": "对应设计追踪、差异处置及设计退出评审",
+              "P3": "对应批准用例的实际运行/故障恢复证据及复核",
+              "P4": "独立多角色、业务/生产适用验收及所有者批准"
+            },
+            "p1ClosureBasis": "M06-P1-APPROVAL-R2-20260909"
+          },
+          {
+            "moduleId": "M07",
+            "sourcePath": "modules.M07.p1.moduleClosure.restrictedApproval",
+            "stages": [
+              "P2",
+              "P3",
+              "P4"
+            ],
+            "responsibility": "P2：补薪资组/包/事件档案、受控公式DAG和输入政策快照、社保/税期/激励对象、负净额待处理账、支付幂等及对账、薪资权限和历史迁移；不引入完整预算/佣金/福利模块；P3：按本包Given/When/Then合成验证正常/边界/并发/故障，补算法及版本迁移证据，历史测试不代复验；P4：独立多角色、敏感字段/历史附件/下载、跨模块业务、生产恢复与外部联调。E2不新增人，单管理员不代验。",
+            "closureEvidence": {
+              "P2": "对应设计追踪、差异处置及设计退出评审",
+              "P3": "对应批准用例的实际运行/故障恢复证据及复核",
+              "P4": "独立多角色、业务/生产适用验收及所有者批准"
+            },
+            "p1ClosureBasis": "M07-P1-APPROVAL-20260910"
+          },
+          {
+            "moduleId": "M11",
+            "sourcePath": "modules.M11.p1.moduleClosure.restrictedApproval",
+            "stages": [
+              "P2",
+              "P3",
+              "P4"
+            ],
+            "responsibility": "P2：补多段常规轮班/节假日与历史任职方案、通用申请分类、额度批次与跨年结转、加班转调休、不可变期间版本及发布确认封存、工资消费撤回阻断；P3：按本包Given/When/Then合成验证正常/边界/并发/故障，补算法及版本迁移证据，历史测试不代复验；P4：独立多角色、敏感字段/历史附件/下载、跨模块业务、生产恢复与外部联调。E2不新增人，单管理员不代验。",
+            "closureEvidence": {
+              "P2": "对应设计追踪、差异处置及设计退出评审",
+              "P3": "对应批准用例的实际运行/故障恢复证据及复核",
+              "P4": "独立多角色、业务/生产适用验收及所有者批准"
+            },
+            "p1ClosureBasis": "M11-P1-APPROVAL-20260910"
+          },
+          {
+            "moduleId": "M12",
+            "sourcePath": "modules.M12.p1.moduleClosure.restrictedApproval",
+            "stages": [
+              "P2",
+              "P3",
+              "P4"
+            ],
+            "responsibility": "P2：拆自然人/申请/库关系与去重审核；Offer版本及参与者历史、人数预留账和失效释放、M01稳定身份与再入职接口、排期修订历史、候选用途权限与外部渠道状态；P3：按本包Given/When/Then合成验证正常/边界/并发/故障，补算法及版本迁移证据，历史测试不代复验；P4：独立多角色、敏感字段/历史附件/下载、跨模块业务、生产恢复与外部联调。E2不新增人，单管理员不代验。",
+            "closureEvidence": {
+              "P2": "对应设计追踪、差异处置及设计退出评审",
+              "P3": "对应批准用例的实际运行/故障恢复证据及复核",
+              "P4": "独立多角色、业务/生产适用验收及所有者批准"
+            },
+            "p1ClosureBasis": "M12-P1-APPROVAL-20260910"
+          },
+          {
+            "moduleId": "M16",
+            "sourcePath": "modules.M16.p1.moduleClosure.restrictedApproval",
+            "stages": [
+              "P2",
+              "P3",
+              "P4"
+            ],
+            "responsibility": "P2：补组织绩效稳定对象、OKR目标/KR/对齐及复盘、多维评分和缺评类型、兼职上下文、时间窗口、强制分布与系数契约；复核更正发布回避及下游影响；P3：按本包Given/When/Then合成验证正常/边界/并发/故障，补算法及版本迁移证据，历史测试不代复验；P4：独立多角色、敏感字段/历史附件/下载、跨模块业务、生产恢复与外部联调。E2不新增人，单管理员不代验。",
+            "closureEvidence": {
+              "P2": "对应设计追踪、差异处置及设计退出评审",
+              "P3": "对应批准用例的实际运行/故障恢复证据及复核",
+              "P4": "独立多角色、业务/生产适用验收及所有者批准"
+            },
+            "p1ClosureBasis": "M16-P1-APPROVAL-20260910"
+          },
+          {
+            "moduleId": "M17",
+            "sourcePath": "modules.M17.p1.moduleClosure.restrictedApproval",
+            "stages": [
+              "P2",
+              "P3",
+              "P4"
+            ],
+            "responsibility": "P2：设计池规则/成员区间/继任任期、准备度词典与版本、IDP阶段职责/任务依赖、历史映射和健康指标定义；保留legacy原义；P3：合成验证自动规则幂等/失效、出池重入、到期/离职、指导自审、阶段阻塞与替换、目标目录缺失、健康分母和审计失败；P4：独立多角色、敏感字段/历史/附件/下载权限、跨模块业务及生产容量/恢复验收；E2不新增访问者，管理员操作不代验。",
+            "closureEvidence": {
+              "P2": "对应设计追踪、差异处置及设计退出评审",
+              "P3": "对应批准用例的实际运行/故障恢复证据及复核",
+              "P4": "独立多角色、业务/生产适用验收及所有者批准"
+            },
+            "p1ClosureBasis": "M17-P1-APPROVAL-20260910"
+          },
+          {
+            "moduleId": "M18",
+            "sourcePath": "modules.M18.p1.moduleClosure.restrictedApproval",
+            "stages": [
+              "P2",
+              "P3",
+              "P4"
+            ],
+            "responsibility": "P2：核对象/采集/会议/评价版本、轴映射与边界、独立节点及来源合同、历史结果保护和迁移；P3：合成验证边界等值、缺失、版本漂移、人员变动、校准驳回撤回/重开、会议回避和发布并发、跨池继任幂等引用；P4：独立多角色、敏感字段/历史/附件/下载权限、跨模块业务及生产容量/恢复验收；E2不新增访问者，管理员操作不代验。",
+            "closureEvidence": {
+              "P2": "对应设计追踪、差异处置及设计退出评审",
+              "P3": "对应批准用例的实际运行/故障恢复证据及复核",
+              "P4": "独立多角色、业务/生产适用验收及所有者批准"
+            },
+            "p1ClosureBasis": "M18-P1-APPROVAL-20260910"
+          },
+          {
+            "moduleId": "M19",
+            "sourcePath": "modules.M19.p1.moduleClosure.restrictedApproval",
+            "stages": [
+              "P2",
+              "P3",
+              "P4"
+            ],
+            "responsibility": "P2执行者核事务/版本/权限/业务适配器；P3用隔离合成身份及消息拦截器验证路由、撤权、重复和失败；P4责任人完成独立人类权限/跨域业务验收，E2新增人仍须后续授权。",
+            "closureEvidence": {
+              "P2": "对应设计追踪、差异处置及设计退出评审",
+              "P3": "对应批准用例的实际运行/故障恢复证据及复核",
+              "P4": "独立多角色、业务/生产适用验收及所有者批准"
+            },
+            "p1ClosureBasis": "M19-P1-APPROVAL-20260909"
+          },
+          {
+            "moduleId": "M26",
+            "sourcePath": "modules.M26.p1.moduleClosure.restrictedApproval",
+            "stages": [
+              "P2",
+              "P3",
+              "P4"
+            ],
+            "responsibility": "P2：复核匿名身份映射隔离、问卷/角色/邀请/答卷版本、报告权限与聚合抑制，设计增量迁移但不执行；P3：合成验证2/3样本边界、角色重叠、零样本、问卷改版、撤回重交、报告更正与事务/消息失败；历史测试不代当前复验；P4：独立多角色、敏感字段/历史/附件/下载权限、跨模块业务及生产容量/恢复验收；E2不新增访问者，管理员操作不代验。",
+            "closureEvidence": {
+              "P2": "对应设计追踪、差异处置及设计退出评审",
+              "P3": "对应批准用例的实际运行/故障恢复证据及复核",
+              "P4": "独立多角色、业务/生产适用验收及所有者批准"
+            },
+            "p1ClosureBasis": "M26-P1-APPROVAL-20260910"
+          },
+          {
+            "moduleId": "M27",
+            "sourcePath": "modules.M27.p1.moduleClosure.restrictedApproval",
+            "stages": [
+              "P2",
+              "P3",
+              "P4"
+            ],
+            "responsibility": "P2：设计自动循环调度及cycleKey幂等、完成实例显式改版、完整题型/抽题/人工批阅、费用与课酬版本化、问卷隐私、学分事件账及跨模块有效性；保留隔离learning-description分支，不合并；P3：按本包Given/When/Then合成验证正常/边界/并发/故障，补算法及版本迁移证据，历史测试不代复验；P4：独立多角色、敏感字段/历史附件/下载、跨模块业务、生产恢复与外部联调。E2不新增人，单管理员不代验。",
+            "closureEvidence": {
+              "P2": "对应设计追踪、差异处置及设计退出评审",
+              "P3": "对应批准用例的实际运行/故障恢复证据及复核",
+              "P4": "独立多角色、业务/生产适用验收及所有者批准"
+            },
+            "p1ClosureBasis": "M27-P1-APPROVAL-20260910"
+          },
+          {
+            "moduleId": "M32",
+            "sourcePath": "modules.M32.p1.moduleClosure.restrictedApproval",
+            "stages": [
+              "P2",
+              "P3",
+              "P4"
+            ],
+            "responsibility": "P2核数据集定义/历史/访问交集/有界任务及引用一致性；P3用合成数据/已授权角色/消息拦截器验证边界与真实生产者联调；P4责任人完成独立多人权限、业务/容量和生产准备；E2保持，不新增访问者。",
+            "closureEvidence": {
+              "P2": "对应设计追踪、差异处置及设计退出评审",
+              "P3": "对应批准用例的实际运行/故障恢复证据及复核",
+              "P4": "独立多角色、业务/生产适用验收及所有者批准"
+            },
+            "p1ClosureBasis": "M32-P1-APPROVAL-20260909"
+          },
+          {
+            "moduleId": "M37",
+            "sourcePath": "modules.M37.p1.moduleClosure.restrictedApproval",
+            "stages": [
+              "P2",
+              "P3",
+              "P4"
+            ],
+            "responsibility": "P2完成根/版本/尺度/范围/审批与旧消费者映射设计；P3用明确授权合成数据验证并发版本、权限、停用在途、null与故障和实际消费；P4多角色、跨模块及生产权限/恢复验收。E2保持，外部真实消息/支付/签署边界不变。",
+            "closureEvidence": {
+              "P2": "对应设计追踪、差异处置及设计退出评审",
+              "P3": "对应批准用例的实际运行/故障恢复证据及复核",
+              "P4": "独立多角色、业务/生产适用验收及所有者批准"
+            },
+            "p1ClosureBasis": "M37-P1-APPROVAL-R2-20260909"
+          },
+          {
+            "moduleId": "M48",
+            "sourcePath": "modules.M48.p1.moduleClosure.restrictedApproval",
+            "stages": [
+              "P2",
+              "P3",
+              "P4"
+            ],
+            "responsibility": "P2核团队有效关系/权限/版本与七项适配；P3用合成且明确授权的独立角色与源适配器验证撤权/状态/错误，联调未具备的功能逐项列未通过；P4完成真实多角色及跨模块业务验收。E2和不实发通知/支付/签署边界保持。",
+            "closureEvidence": {
+              "P2": "对应设计追踪、差异处置及设计退出评审",
+              "P3": "对应批准用例的实际运行/故障恢复证据及复核",
+              "P4": "独立多角色、业务/生产适用验收及所有者批准"
+            },
+            "p1ClosureBasis": "M48-P1-APPROVAL-20260909"
+          }
+        ],
+        "r1DetailedUnclosedRisks": {
+          "P2": 0,
+          "P3": 20,
+          "P4": 8
+        },
+        "r1DesignClosed": 9,
+        "note": "R1细分37风险与模块LIMIT组为不同粒度；R2/R3尚无统一逐风险拆分，不伪造总风险数。P3部分测试没有批准关闭20项风险。"
+      }
     }
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-10T03:24:03.609414+00:00",
+    "updatedAt": "2026-09-10T05:17:20.448590+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -62199,13 +62581,13 @@
     ],
     "packageAssessmentSource": "当前各包就绪条件由modules[].p1.currentDeliveryAssessment.basis及deliveryScope基础边界生成；packages.pending/readinessConditions保留兼容历史快照，不能覆盖逐模块最新评估，后续不手工更新两份。",
     "reviewPackage": {
-      "assessedAt": "2026-09-10T03:24:03.609414+00:00",
-      "basedOnHead": "7e4a4875f8d0453c948bf2233be28b31799eecbe",
+      "assessedAt": "2026-09-10T05:17:20.448590+00:00",
+      "basedOnHead": "5988a3000a1ac9ad30c786c84289093d9a6e074f",
       "status": "当前15模块P1受限通过并关闭",
-      "autonomousWork": "模块顺序关闭、Release闸门与交接已完成",
+      "autonomousWork": "既有关闭与批准幂等复核；仅新增已提交R1 P3进度快照，未执行产品测试",
       "sourceProgress": "原站既有观察与合成记录保留，当前15模块按已批准LIMIT完成P1A受限判定，未新增原站操作；13项R1补证与各模块缺证继续保留。",
       "requirementsProgress": "全部15模块需求与LIMIT获所有者批准；完整0/受限15",
-      "gateConclusion": "R1 P2通过仅准P3；R2/R3仅准P2；无本轮收口硬阻塞。各LIMIT及原站13补证留后续责任",
+      "gateConclusion": "P1已冻结关闭；R1 P2已批准、P3在制未退出；R2/R3仅准P2；P4和生产独立",
       "foundationConclusion": "六基础R1/R2/R3适用需求均批准，运行验收独立",
       "blockers": [],
       "evidenceRefs": [
