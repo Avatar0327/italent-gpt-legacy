@@ -9,6 +9,68 @@
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",
   "cases": [
     {
+      "caseId": "R1-SEP11-FRESH-QUERY-GATE",
+      "module": "M01",
+      "title": "9月11日新服务器查询恢复门槛",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T16:16:42.486Z",
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "全新组织查询tab22；既有正式路径tab19重载",
+      "preconditions": "证据本地/远端HEAD均60cfb04；10对象保留；实际北京时间9/11 00:13:46；只使用本窗口标签。",
+      "steps": [
+        "新建tab22并导航已观察的正式组织地址一次",
+        "既有tab19确认无表单后重载正式路径一次",
+        "仅读取本次导航后的业务区状态和本次请求后错误，过滤历史日志",
+        "两者失败后停止所有浏览器重试，未继续业务查询/写入"
+      ],
+      "inputs": {
+        "newTabNavigations": 1,
+        "existingPathChecks": 1,
+        "systemClockAtStartUTC": "2026-09-10T16:13:46Z",
+        "businessDate": "2026-09-11",
+        "newBusinessWrites": 0
+      },
+      "actualResult": "两次新导航均未取得业务结果；组织main空、控件0，当前请求日志Failed to fetch。9/11日期条件已达；实际离职/终止/报表/再入职仍未知，不能沿用旧DOM。",
+      "pageState": "fresh_navigation_failed_to_fetch_empty_business_main",
+      "recordIds": [],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json",
+        "Future_Date_Recovery.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "未采新图；保存新请求时间、页面main状态和脱敏错误；不复用旧图",
+      "repeatability": "本次重试预算已用完，不自动重放；下次获恢复任务先按同预算核新请求",
+      "requirements": [
+        "F-SPEC-08"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "path": "tests/r1-p3-m01.test.mjs",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "evidenceMode": "静态源码/既有测试映射；本窗口未运行复刻UI或测试"
+      },
+      "classification": "ENV_BLOCKED",
+      "severity": "Observation",
+      "timePrecision": "actual_UTC_capture_end; business_date_Asia_Shanghai_verified",
+      "ledgerId": "ENV-05",
+      "affectedModules": [
+        "M01",
+        "M19",
+        "M48",
+        "M32",
+        "E2E"
+      ]
+    },
+    {
       "caseId": "M32-RESUME-SORT-001",
       "module": "M32",
       "title": "两人报表图表和排序尝试",
@@ -2299,7 +2361,13 @@
       },
       "classification": null,
       "blockerIds": [],
-      "severity": "Observation"
+      "severity": "Observation",
+      "sep11Recheck": {
+        "dateConditionSatisfied": true,
+        "status": "not_executed_fresh_query_gate_failed",
+        "actualResult": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+      }
     },
     {
       "caseId": "M01-PENDING-LEGAL",
@@ -2808,7 +2876,13 @@
       "blockerIds": [
         "ROLE-01"
       ],
-      "severity": "Observation"
+      "severity": "Observation",
+      "sep11Recheck": {
+        "dateConditionSatisfied": true,
+        "status": "not_executed_fresh_query_gate_failed",
+        "actualResult": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+      }
     },
     {
       "caseId": "M19-PENDING-SUMMARY",
@@ -3168,7 +3242,13 @@
       },
       "classification": null,
       "blockerIds": [],
-      "severity": "Observation"
+      "severity": "Observation",
+      "sep11Recheck": {
+        "dateConditionSatisfied": true,
+        "status": "not_executed_fresh_query_gate_failed",
+        "actualResult": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+      }
     },
     {
       "caseId": "M32-PENDING-TIME",
@@ -3218,7 +3298,13 @@
       },
       "classification": null,
       "blockerIds": [],
-      "severity": "Observation"
+      "severity": "Observation",
+      "sep11Recheck": {
+        "dateConditionSatisfied": true,
+        "status": "not_executed_fresh_query_gate_failed",
+        "actualResult": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+      }
     },
     {
       "caseId": "M32-PENDING-PAGING",

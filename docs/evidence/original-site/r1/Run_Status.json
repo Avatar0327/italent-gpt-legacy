@@ -1,7 +1,7 @@
 {
   "runId": "R1-ORIGIN-20260910-100019",
   "origin": "https://srworkshopbj.italent.cn",
-  "concurrency": "prior_scoped_isolation_passed_no_conflict_observed_current_draft_retest_incomplete",
+  "concurrency": "only_own_tabs_22_new_and_19_existing_checked_no_write_no_isolation_pass_claim",
   "createdRecords": 10,
   "createdRecordsDefinition": "3组织+2职位+2员工+2申请+1未来离职任职；不计自动关联重复",
   "smokeNamedObjectsThresholdReached": true,
@@ -64,24 +64,17 @@
   },
   "p3ExitApprovedByThisWindow": false,
   "p4StartedByThisWindow": false,
-  "futureDatePendingCases": [
-    "M01退出实际生效",
-    "M01再入职",
-    "M19退出关联终止后效"
-  ],
+  "futureDatePendingCases": [],
   "currentCheckpoint": "same_run_partial_evidence_not_release_complete",
-  "currentEmployeeOracle": {
-    "people": 2,
-    "formal": 1,
-    "probation": 1
-  },
+  "currentEmployeeOracle": null,
   "scopeStopLimits": [
-    "组织停用涉及整体迁移，未核全部影响清单，不执行该动作",
-    "撤回后编辑未加载，不用同意替代重提",
-    "未来退出/再入职需实际日期与状态前置"
+    "一次新标签和一次既有正式路径已用完且失败，本次停止浏览器重试",
+    "缺少旧雇佣实际结束证据，不可启动再入职或创建同名新人",
+    "ROLE-01不由管理员代替",
+    "不得用计划日或旧DOM推定离职/终止/报表后效"
   ],
   "otherUnexecutedWorkNotEquivalentToBlocker": true,
-  "workflowStatus": "checkpoint_saved_origin_request_timeouts_partial_readonly",
+  "workflowStatus": "stopped_browser_retries_after_one_new_and_one_existing_fresh_query_failure",
   "remainingWorkMayContinue": true,
   "activeMajor": 0,
   "historicalMajor": 1,
@@ -92,9 +85,28 @@
     "Blocker": 0,
     "Major": 0,
     "Minor": 0,
-    "Observation": 1
+    "Observation": 0
   },
-  "currentContinuationLimitation": "管理员当前日期可测范围尚未全做完：原站业务请求超时，岗位/员工表单未加载；已有页面回读不代表新查询成功。",
+  "currentContinuationLimitation": "日期已满足但业务查询失败；全部9/11业务状态未知。按用户限制已停止浏览器重试。下次恢复必须先取得新服务器业务结果。",
   "futureRecovery": "Future_Date_Recovery.json",
-  "futureRecheckScheduled": true
+  "futureRecheckScheduled": true,
+  "historicalEmployeeOracle": {
+    "people": 2,
+    "formal": 1,
+    "probation": 1,
+    "observedOn": "2026-09-10",
+    "evidence": "R1-ORIGIN-20260910-100019/Resume_20260910_1532_DOM.json",
+    "notReassertedAsSep11Current": true
+  },
+  "dateSatisfiedButUnverifiedCases": [
+    "EMP001离职人员/任职状态和实际执行审计",
+    "原撤回调动终止后效",
+    "固定日期当前/历史报表",
+    "EMP001原personId再入职前置"
+  ],
+  "lastRecheckAt": "2026-09-10T16:16:42.486Z",
+  "businessDateConditionSatisfied": true,
+  "existingFindingUpdated": "ENV-05",
+  "newConfirmedBusinessBehaviorsThisContinuation": 0,
+  "freshServerQuerySucceeded": false
 }

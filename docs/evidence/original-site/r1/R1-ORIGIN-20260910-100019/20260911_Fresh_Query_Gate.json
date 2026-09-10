@@ -1,0 +1,150 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "basisHead": "60cfb04dc7fd869cd15b910de10e165cd72a7637",
+  "systemClockAtStartUTC": "2026-09-10T16:13:46Z",
+  "systemClockAtStartBeijing": "2026-09-11T00:13:46+08:00",
+  "businessDateConditionSatisfied": true,
+  "captureStartedAt": "2026-09-10T16:16:42.402Z",
+  "newTab": {
+    "startedAt": "2026-09-10T16:14:32.558Z",
+    "kind": "one_new_tab_formal_org_path",
+    "origin": "https://srworkshopbj.italent.cn",
+    "expectedPage": "组织",
+    "tabId": "22",
+    "navigationReturned": true,
+    "navigationEndedAt": "2026-09-10T16:14:50.539Z",
+    "result": {
+      "adminMatched": true,
+      "authChallengeVisible": false,
+      "mainLength": 0,
+      "origin": "https://srworkshopbj.italent.cn",
+      "queryInputs": [],
+      "title": "组织"
+    },
+    "errors": [
+      {
+        "timestamp": "2026-09-10T16:14:50.003Z",
+        "level": "error",
+        "message": "Error sending browser metadata to extension: Object"
+      },
+      {
+        "timestamp": "2026-09-10T16:14:50.597Z",
+        "level": "error",
+        "message": "错误 TypeError: Failed to fetch\n    at ee ([URL_REDACTED]\n    at ae ([URL_REDACTED]\n    at [URL_REDACTED]\n    at p ([URL_REDACTED]\n    at Generator.<anonymous> ([URL_REDACTED]\n    at Generator.next ([URL_REDACTED]\n    at n ([URL_REDACTED]\n    at s ([URL_REDACTED]\n    at [URL_REDACTED]\n    at new Promise (<anonymous>)"
+      },
+      {
+        "timestamp": "2026-09-10T16:14:51.137Z",
+        "level": "error",
+        "message": "错误 TypeError: Failed to fetch\n    at window.fetch ([URL_REDACTED]\n    at ee ([URL_REDACTED]\n    at ae ([URL_REDACTED]\n    at [URL_REDACTED]\n    at p ([URL_REDACTED]\n    at Generator.<anonymous> ([URL_REDACTED]\n    at Generator.next ([URL_REDACTED]\n    at n ([URL_REDACTED]\n    at s ([URL_REDACTED]"
+      },
+      {
+        "timestamp": "2026-09-10T16:15:02.621Z",
+        "level": "error",
+        "message": "Uncaught (in promise) #<Object>"
+      },
+      {
+        "timestamp": "2026-09-10T16:15:09.464Z",
+        "level": "error",
+        "message": "Uncaught (in promise) #<Object>"
+      },
+      {
+        "timestamp": "2026-09-10T16:15:51.338Z",
+        "level": "error",
+        "message": "错误 TypeError: Failed to fetch\n    at window.fetch ([URL_REDACTED]\n    at ee ([URL_REDACTED]\n    at ae ([URL_REDACTED]\n    at [URL_REDACTED]\n    at p ([URL_REDACTED]\n    at Generator.<anonymous> ([URL_REDACTED]\n    at Generator.next ([URL_REDACTED]\n    at n ([URL_REDACTED]\n    at s ([URL_REDACTED]\n    at [URL_REDACTED]"
+      },
+      {
+        "timestamp": "2026-09-10T16:15:51.479Z",
+        "level": "error",
+        "message": "错误 TypeError: Failed to fetch\n    at window.fetch ([URL_REDACTED]\n    at ee ([URL_REDACTED]\n    at ae ([URL_REDACTED]\n    at [URL_REDACTED]\n    at p ([URL_REDACTED]\n    at Generator.<anonymous> ([URL_REDACTED]\n    at Generator.next ([URL_REDACTED]\n    at n ([URL_REDACTED]\n    at s ([URL_REDACTED]"
+      }
+    ]
+  },
+  "existingPath": {
+    "kind": "one_existing_formal_position_path",
+    "tabId": "19",
+    "startedAt": "2026-09-10T16:15:22.033Z",
+    "precheck": {
+      "mainLength": 0,
+      "origin": "https://srworkshopbj.italent.cn",
+      "title": "职位",
+      "visibleFormInputs": 0
+    },
+    "navigationReturned": true,
+    "navigationEndedAt": "2026-09-10T16:15:25.007Z",
+    "result": {
+      "adminMatched": true,
+      "authChallengeVisible": false,
+      "mainLength": 0,
+      "origin": "https://srworkshopbj.italent.cn",
+      "queryInputs": [],
+      "title": "组织"
+    },
+    "errors": [
+      {
+        "timestamp": "2026-09-10T16:15:24.881Z",
+        "level": "error",
+        "message": "Error sending browser metadata to extension: Object"
+      },
+      {
+        "timestamp": "2026-09-10T16:15:25.861Z",
+        "level": "error",
+        "message": "错误 TypeError: Failed to fetch\n    at ee ([URL_REDACTED]\n    at ae ([URL_REDACTED]\n    at [URL_REDACTED]\n    at p ([URL_REDACTED]\n    at Generator.<anonymous> ([URL_REDACTED]\n    at Generator.next ([URL_REDACTED]\n    at n ([URL_REDACTED]\n    at s ([URL_REDACTED]\n    at [URL_REDACTED]\n    at new Promise (<anonymous>)"
+      },
+      {
+        "timestamp": "2026-09-10T16:15:25.883Z",
+        "level": "error",
+        "message": "错误 TypeError: Failed to fetch\n    at window.fetch ([URL_REDACTED]\n    at ee ([URL_REDACTED]\n    at ae ([URL_REDACTED]\n    at [URL_REDACTED]\n    at p ([URL_REDACTED]\n    at Generator.<anonymous> ([URL_REDACTED]\n    at Generator.next ([URL_REDACTED]\n    at n ([URL_REDACTED]\n    at s ([URL_REDACTED]"
+      },
+      {
+        "timestamp": "2026-09-10T16:15:30.642Z",
+        "level": "error",
+        "message": "Uncaught (in promise) #<Object>"
+      },
+      {
+        "timestamp": "2026-09-10T16:15:40.704Z",
+        "level": "error",
+        "message": "Uncaught (in promise) #<Object>"
+      },
+      {
+        "timestamp": "2026-09-10T16:16:26.042Z",
+        "level": "error",
+        "message": "错误 TypeError: Failed to fetch\n    at window.fetch ([URL_REDACTED]\n    at ee ([URL_REDACTED]\n    at ae ([URL_REDACTED]\n    at [URL_REDACTED]\n    at p ([URL_REDACTED]\n    at Generator.<anonymous> ([URL_REDACTED]\n    at Generator.next ([URL_REDACTED]\n    at n ([URL_REDACTED]\n    at s ([URL_REDACTED]\n    at [URL_REDACTED]"
+      },
+      {
+        "timestamp": "2026-09-10T16:16:26.079Z",
+        "level": "error",
+        "message": "错误 TypeError: Failed to fetch\n    at window.fetch ([URL_REDACTED]\n    at ee ([URL_REDACTED]\n    at ae ([URL_REDACTED]\n    at [URL_REDACTED]\n    at p ([URL_REDACTED]\n    at Generator.<anonymous> ([URL_REDACTED]\n    at Generator.next ([URL_REDACTED]\n    at n ([URL_REDACTED]\n    at s ([URL_REDACTED]"
+      }
+    ]
+  },
+  "captureEndedAt": "2026-09-10T16:16:42.486Z",
+  "result": "fresh_server_business_query_not_obtained",
+  "classification": "ENV_BLOCKED",
+  "ledgerId": "ENV-05",
+  "severity": "Observation",
+  "newBusinessRecords": 0,
+  "newBusinessWrites": 0,
+  "browserRetryBudget": {
+    "newTabsAllowed": 1,
+    "newTabsUsed": 1,
+    "existingFormalPathsAllowed": 1,
+    "existingFormalPathsUsed": 1,
+    "stoppedAfterEvidence": true
+  },
+  "oldDOMReusedAsCurrentEvidence": false,
+  "notExecutedAfterGateFailure": [
+    "EMP001按姓名/personId/任职UUID实时回查",
+    "离职执行人/实际执行审计",
+    "已有撤回调动终止/原因/时间/关联",
+    "M32固定姓名明确日期的新当前/历史查询",
+    "正式再入职",
+    "岗位/员工字段/唯一性/附件/多任职新测试"
+  ],
+  "limits": [
+    "导航返回与管理身份标识不代表业务查询成功",
+    "只有新导航后的页面状态和错误是本次证据；不重复发布旧DOM为新业务结果",
+    "既有路径重载标题职位→组织，未定位原因；无错标签操作或串写已证结论",
+    "不从Failed to fetch推断HTTP状态、认证失效、反自动化、共享环境受损或P3实现缺陷",
+    "未读取/修改其他窗口业务页面；旧tab3/14/15/17已不在标签列表，不猜测关闭原因"
+  ]
+}

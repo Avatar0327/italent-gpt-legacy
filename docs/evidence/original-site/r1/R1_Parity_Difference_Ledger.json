@@ -443,7 +443,7 @@
         "M48",
         "M32"
       ],
-      "title": "原站业务区请求超时与交互超时",
+      "title": "原站业务请求超时/失败与交互超时",
       "actual": "9/10续跑已确认管理身份。tab3无草稿刷新、独立tab19查询恢复后登录框架加载，但组织/职位main为空；tab19正式职位导航成功，业务内容未加载。页面日志15:29–15:35 UTC重复请求超时。tab17撤回编辑及tab2姓名排序交互也超时；已有报表/申请DOM可读。",
       "classification": "ENV_BLOCKED",
       "severity": "Observation",
@@ -464,12 +464,23 @@
         "P3-R1-06",
         "P3-R1-07"
       ],
-      "feedback": "恢复原站业务页面后继续当前日期和管理员可测清单。P3仅使用已存在DOM/审计，不将超时当实现缺陷；P4角色缺口独立保留。",
-      "conclusion": "未定位根因，未确认登录互踢/标签错位/表单串写或共享租户受损；没有限制整个项目并发。不能据旧页面回读宣称刷新服务器查询成功。",
+      "feedback": "P3吸收到期日已达但实效未知的恢复状态，以及一次新标签/一次既有路径失败证据。继续D1–D7；需要真实执行审计和固定日期报表才能解除证据缺口。ROLE-01仍独立保留。",
+      "conclusion": "未定位根因，未确认登录互踢/标签错位/表单串写或共享租户受损；没有限制整个项目并发。不能据旧页面回读宣称刷新服务器查询成功。 9/11新请求再次失败，复载标题职位→组织原因未明；不确认串页或新的业务缺陷。按用户限制停止重试，不能沿用旧报表2人作当前人数。",
       "evidence": [
         "R1-ORIGIN-20260910-100019/Resume_20260910_1532_DOM.json",
         "R1-ORIGIN-20260910-100019/Browser_Resume_Request_Timeout.json",
-        "Current_Executable_Test_Disposition.json"
+        "Current_Executable_Test_Disposition.json",
+        "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+      ],
+      "followups": [
+        {
+          "at": "2026-09-10T16:16:42.486Z",
+          "basisHead": "60cfb04dc7fd869cd15b910de10e165cd72a7637",
+          "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json",
+          "actual": "北京时间9/11 00:14:50起新标签组织页Failed to fetch，00:15:25起既有路径同样失败；业务main均空、输入控件0，管理身份标识匹配。一次新标签+一次既有路径后停止重试。",
+          "impact": "日期条件已满足，EMP001实际离职、原单终止、当前历史报表及再入职前置仍未知。",
+          "newUniqueFinding": false
+        }
       ]
     }
   ],

@@ -33,7 +33,8 @@
     "employee001": "正式；已有报表页面保留当前2人",
     "transfer": "撤回后同流程开始节点；操作记录20:44提交/20:52撤回",
     "regularize002": "撤回开始；21:57提交/22:03撤回",
-    "freshServerQueryAfterReloadConfirmed": false
+    "freshServerQueryAfterReloadConfirmed": false,
+    "scope": "历史9/10已载入页面观察；不得在9/11当新查询或当前状态"
   },
   "steps": [
     {
@@ -46,7 +47,12 @@
         "计划日与实际执行/审计时间",
         "授权HR执行状态（如页面提供）"
       ],
-      "passLimit": "到日不等于生效；页面无执行记录不得声称实际执行完成或执行时刻为00:00。"
+      "passLimit": "到日不等于生效；页面无执行记录不得声称实际执行完成或执行时刻为00:00。",
+      "manualSep11Status": "not_executed_after_fresh_query_gate_failure",
+      "actualResult": null,
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+      ]
     },
     {
       "id": "FUTURE-TERMINATION",
@@ -57,7 +63,12 @@
         "原单关联",
         "终止原因与审计时间"
       ],
-      "passLimit": "撤回/开始节点、先前确认警告均不能代替终止后效。"
+      "passLimit": "撤回/开始节点、先前确认警告均不能代替终止后效。",
+      "manualSep11Status": "not_executed_after_fresh_query_gate_failure",
+      "actualResult": null,
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+      ]
     },
     {
       "id": "FUTURE-REPORT",
@@ -69,7 +80,12 @@
         "正式/试用/离职分类",
         "当前主职与历史任职数量"
       ],
-      "passLimit": "若实际退出成功，当前在职口径预期仅EMP002试用1人；这是条件性预期，绝非提前结果。若源未执行则保留实际值及未知原因。"
+      "passLimit": "若实际退出成功，当前在职口径预期仅EMP002试用1人；这是条件性预期，绝非提前结果。若源未执行则保留实际值及未知原因。",
+      "manualSep11Status": "not_executed_after_fresh_query_gate_failure",
+      "actualResult": null,
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+      ]
     },
     {
       "id": "FUTURE-REHIRE",
@@ -81,7 +97,12 @@
         "再入职开始日及实际执行时间",
         "邀请否/账号未恢复"
       ],
-      "passLimit": "不可新建同名第二人员替代再入职；不可修改历史或系统时间制造前置；缺角色部分仍ROLE_BLOCKED。"
+      "passLimit": "不可新建同名第二人员替代再入职；不可修改历史或系统时间制造前置；缺角色部分仍ROLE_BLOCKED。",
+      "manualSep11Status": "not_executed_after_fresh_query_gate_failure",
+      "actualResult": null,
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+      ]
     }
   ],
   "retention": "10对象全部保留；原单/历史不删除；任何非本轮依赖停止相关写入",
@@ -91,5 +112,33 @@
     "bulkModules": "0/4",
     "p3ParityModules": "0/4",
     "e2e": "0/5"
+  },
+  "manualRecheck": {
+    "startedAtUTC": "2026-09-10T16:13:46Z",
+    "startedAtBeijing": "2026-09-11T00:13:46+08:00",
+    "completedEvidenceCaptureAt": "2026-09-10T16:16:42.486Z",
+    "basisHead": "60cfb04dc7fd869cd15b910de10e165cd72a7637",
+    "dateConditionSatisfied": true,
+    "freshBusinessQuerySucceeded": false,
+    "gate": "ENV-05",
+    "outcome": "date_reached_business_effects_unverified",
+    "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json",
+    "actualExitStatus": null,
+    "actualExitExecutor": null,
+    "actualExitAuditAt": null,
+    "transferTerminationStatus": null,
+    "transferTerminationReason": null,
+    "transferTerminationAt": null,
+    "currentReportDistinctPeople": null,
+    "currentAssignmentCount": null,
+    "rehirePrerequisiteConfirmed": false,
+    "rehireAttempted": false,
+    "newPersonCreated": false
+  },
+  "currentNextStep": "业务日期已满足；下次恢复先按一次新标签+一次既有正式路径验证服务器查询。若仍失败立即停止浏览器重试，保留未知，不等待未来日期作为剩余阻塞。",
+  "recoveryAttemptLimit": {
+    "newTab": 1,
+    "existingFormalPath": 1,
+    "onFailure": "停止浏览器重试；不得读取旧DOM替代新查询"
   }
 }

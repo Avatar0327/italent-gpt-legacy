@@ -10,7 +10,9 @@
       "attempt": "tab3职位点击、刷新；tab19新查询并正式职位导航；业务main空且源请求超时",
       "dependency": "需要可加载的本轮对象查询/详情，不能凭历史UUID盲写",
       "blocker": "ENV-05",
-      "notClaimed": "没有逐项提交这些校验，也没有证明每项单独失效"
+      "notClaimed": "没有逐项提交这些校验，也没有证明每项单独失效",
+      "priorExecutionScope": "此前9/10观察，非9/11新查询",
+      "sep11Status": "not_executed_after_fresh_query_gate_failure"
     },
     {
       "module": "M19",
@@ -18,7 +20,9 @@
       "execution": "readback_observed_edit_not_opened",
       "attempt": "两原流程DOM与审计回查；转正编辑点击未开表单",
       "blocker": "ENV-04/ENV-05",
-      "excluded": "独立两方审批/驳回/HR执行仍ROLE-01；不自审"
+      "excluded": "独立两方审批/驳回/HR执行仍ROLE-01；不自审",
+      "priorExecutionScope": "此前9/10观察，非9/11新查询",
+      "sep11Status": "not_executed_after_fresh_query_gate_failure"
     },
     {
       "module": "M48",
@@ -26,7 +30,9 @@
       "execution": "existing_admin_applicant_state_only",
       "attempt": "本轮两申请状态已从管理员申请人页面回读；没有独立员工身份",
       "blocker": "ROLE-01；新增业务入口受ENV-05影响",
-      "notClaimed": "普通员工字段可改、附件和他人数据拒绝没有验证；不把真实管理员个人资料改成测试数据"
+      "notClaimed": "普通员工字段可改、附件和他人数据拒绝没有验证；不把真实管理员个人资料改成测试数据",
+      "priorExecutionScope": "此前9/10观察，非9/11新查询",
+      "sep11Status": "not_executed_after_fresh_query_gate_failure"
     },
     {
       "module": "M32",
@@ -34,14 +40,18 @@
       "execution": "existing_DOM_and_chart_readback_sort_attempt_failed",
       "attempt": "2=正式1+试用1；姓名排序语义/坐标点击超时，行序未变",
       "blocker": "ENV-03/04/05",
-      "notClaimed": "无导出文件、无新的历史快照查询、无分页/30–50量级"
+      "notClaimed": "无导出文件、无新的历史快照查询、无分页/30–50量级",
+      "priorExecutionScope": "此前9/10观察，非9/11新查询",
+      "sep11Status": "not_executed_after_fresh_query_gate_failure"
     },
     {
       "module": "E2E",
       "scope": "成功/驳回/撤回/改日期后重审/执行失败",
       "execution": "partial_fragments_only",
       "blocker": "ROLE-01 + 原站编辑/业务区限制 + 未来实际日期",
-      "completed": "0/5"
+      "completed": "0/5",
+      "priorExecutionScope": "此前9/10观察，非9/11新查询",
+      "sep11Status": "not_executed_after_fresh_query_gate_failure"
     }
   ],
   "quantity": {
@@ -53,5 +63,18 @@
     "smokeAllCasesPassed": false,
     "expanded30to50": false
   },
-  "continuationInstruction": "页面恢复继续全部上列可执行项；未来项仅按Future_Date_Recovery实际回查，不能把检查点结束称四模块完成。"
+  "continuationInstruction": "下次恢复先按一次新标签+一次既有正式路径核新查询；失败立即停止浏览器重试。日期已达，不再标未来日期未到；实际退出/终止未知不可推进再入职。",
+  "currentAttempt": {
+    "basisHead": "60cfb04dc7fd869cd15b910de10e165cd72a7637",
+    "checkedAt": "2026-09-10T16:16:42.486Z",
+    "dateConditionSatisfied": true,
+    "attempts": {
+      "newTab": 1,
+      "existingPath": 1
+    },
+    "outcome": "fresh_query_failed_browser_retries_stopped",
+    "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json",
+    "allBusinessTestsAfterGate": "not_executed",
+    "oldDOMReusableForCurrentConclusion": false
+  }
 }

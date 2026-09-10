@@ -27,7 +27,16 @@
         "R1-ORIGIN-20260910-100019/M19/M19-REG-002-row.json",
         "R1-ORIGIN-20260910-100019/M19/M19-REG-002-detail.json",
         "R1-ORIGIN-20260910-100019/M19/M19-REG-002-recall-audit.json"
-      ]
+      ],
+      "statusScope": "historical_last_observed_not_reasserted_as_current",
+      "sep11Verification": {
+        "asOf": "2026-09-10T16:16:42.486Z",
+        "currentStatus": null,
+        "executionPerson": null,
+        "actualAuditTime": null,
+        "result": "not_reached_fresh_query_gate_failed",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+      }
     },
     {
       "runId": "R1-ORIGIN-20260910-100019",
@@ -52,7 +61,16 @@
         "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-readback.json",
         "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-corrected.json",
         "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-org-date-validation.json"
-      ]
+      ],
+      "statusScope": "historical_last_observed_not_reasserted_as_current",
+      "sep11Verification": {
+        "asOf": "2026-09-10T16:16:42.486Z",
+        "currentStatus": null,
+        "executionPerson": null,
+        "actualAuditTime": null,
+        "result": "not_reached_fresh_query_gate_failed",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+      }
     },
     {
       "runId": "R1-ORIGIN-20260910-100019",
@@ -77,7 +95,16 @@
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-history.json",
         "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-ID-report.json"
-      ]
+      ],
+      "statusScope": "historical_last_observed_not_reasserted_as_current",
+      "sep11Verification": {
+        "asOf": "2026-09-10T16:16:42.486Z",
+        "currentStatus": null,
+        "executionPerson": null,
+        "actualAuditTime": null,
+        "result": "not_reached_fresh_query_gate_failed",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+      }
     },
     {
       "runId": "R1-ORIGIN-20260910-100019",
@@ -105,7 +132,16 @@
         "R1-ORIGIN-20260910-100019/M19/M19-TRANSFER-REQUEST-001-recall-audit.json",
         "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-ID-report.json"
       ],
-      "auditCreatedAtMinute": "2026-09-10 20:44 Asia/Shanghai"
+      "auditCreatedAtMinute": "2026-09-10 20:44 Asia/Shanghai",
+      "statusScope": "historical_last_observed_not_reasserted_as_current",
+      "sep11Verification": {
+        "asOf": "2026-09-10T16:16:42.486Z",
+        "currentStatus": null,
+        "executionPerson": null,
+        "actualAuditTime": null,
+        "result": "not_reached_fresh_query_gate_failed",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+      }
     },
     {
       "runId": "R1-ORIGIN-20260910-100019",
@@ -130,7 +166,16 @@
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/M01-EMP-001.json",
         "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-ID-report.json"
-      ]
+      ],
+      "statusScope": "historical_last_observed_not_reasserted_as_current",
+      "sep11Verification": {
+        "asOf": "2026-09-10T16:16:42.486Z",
+        "currentStatus": null,
+        "executionPerson": null,
+        "actualAuditTime": null,
+        "result": "not_reached_fresh_query_gate_failed",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+      }
     },
     {
       "runId": "R1-ORIGIN-20260910-100019",
@@ -150,7 +195,16 @@
       "deletionGate": "UUID+完整名称核定，无非本轮依赖时才清理",
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/M01-JOB-002.json"
-      ]
+      ],
+      "statusScope": "historical_last_observed_not_reasserted_as_current",
+      "sep11Verification": {
+        "asOf": "2026-09-10T16:16:42.486Z",
+        "currentStatus": null,
+        "executionPerson": null,
+        "actualAuditTime": null,
+        "result": "not_reached_fresh_query_gate_failed",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+      }
     },
     {
       "runId": "R1-ORIGIN-20260910-100019",
@@ -170,7 +224,16 @@
       "deletionGate": "UUID+完整名称核定，只在无非本轮依赖时清理",
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/M01-continuation-smoke.json"
-      ]
+      ],
+      "statusScope": "historical_last_observed_not_reasserted_as_current",
+      "sep11Verification": {
+        "asOf": "2026-09-10T16:16:42.486Z",
+        "currentStatus": null,
+        "executionPerson": null,
+        "actualAuditTime": null,
+        "result": "not_reached_fresh_query_gate_failed",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+      }
     },
     {
       "runId": "R1-ORIGIN-20260910-100019",
@@ -188,7 +251,16 @@
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-001-success-message.json",
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-001-readback.json"
       ],
-      "createdAtBasis": "原站组织操作记录设立时间"
+      "createdAtBasis": "原站组织操作记录设立时间",
+      "statusScope": "historical_last_observed_not_reasserted_as_current",
+      "sep11Verification": {
+        "asOf": "2026-09-10T16:16:42.486Z",
+        "currentStatus": null,
+        "executionPerson": null,
+        "actualAuditTime": null,
+        "result": "not_reached_fresh_query_gate_failed",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+      }
     },
     {
       "runId": "R1-ORIGIN-20260910-100019",
@@ -207,7 +279,16 @@
       "allowLaterDelete": true,
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-002-readback.json"
-      ]
+      ],
+      "statusScope": "historical_last_observed_not_reasserted_as_current",
+      "sep11Verification": {
+        "asOf": "2026-09-10T16:16:42.486Z",
+        "currentStatus": null,
+        "executionPerson": null,
+        "actualAuditTime": null,
+        "result": "not_reached_fresh_query_gate_failed",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+      }
     },
     {
       "runId": "R1-ORIGIN-20260910-100019",
@@ -230,7 +311,16 @@
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-history.json",
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-stop-preview.json"
       ],
-      "lastModifiedField": "备注说明"
+      "lastModifiedField": "备注说明",
+      "statusScope": "historical_last_observed_not_reasserted_as_current",
+      "sep11Verification": {
+        "asOf": "2026-09-10T16:16:42.486Z",
+        "currentStatus": null,
+        "executionPerson": null,
+        "actualAuditTime": null,
+        "result": "not_reached_fresh_query_gate_failed",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+      }
     }
   ],
   "createdCount": 10,
@@ -364,7 +454,7 @@
     }
   ],
   "successMessagePendingIdCount": 0,
-  "writesSuspendedReason": "本次恢复原站组织/职位业务区请求超时；未取得可安全提交的本轮表单，继续只读证据。非导入下载全局停工。",
+  "writesSuspendedReason": "2026-09-11一次新标签和一次既有正式路径均Failed to fetch、业务区为空；已按用户限制停止浏览器重试，未进入任何业务保存。",
   "retainedCount": 10,
   "deletedCount": 0,
   "drafts": {
@@ -389,15 +479,19 @@
     "note": "达到5–10总量门槛，未达到全部场景冒烟通过；只有2员工，不宣称员工批量测试"
   },
   "lastContinuation": {
-    "basisHead": "5aa78e420db1e6df498f3f5101e18af10047d427",
+    "basisHead": "60cfb04dc7fd869cd15b910de10e165cd72a7637",
+    "actualBeijingStart": "2026-09-11T00:13:46+08:00",
+    "dateConditionSatisfied": true,
     "newBusinessRecords": 0,
+    "newBusinessWrites": 0,
     "retainedCount": 10,
     "deletedCount": 0,
+    "freshServerQuerySucceeded": false,
+    "existingObjectsRecreated": false,
     "recordUUIDsConfirmedFromManifest": 10,
-    "allThreeOrganizationUUIDsLiveReverifiedThisContinuation": false,
-    "notes": "初始ORG003名称/备注/在岗1页面可读，三组织完整UUID重新页面核验未完成；未重建任何对象。后续组织/职位业务区空白，请求超时。",
+    "liveObjectReadbacksCompleted": 0,
     "evidence": [
-      "R1-ORIGIN-20260910-100019/Browser_Resume_Request_Timeout.json",
+      "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json",
       "Future_Date_Recovery.json"
     ]
   }

@@ -1,9 +1,12 @@
-# R1 原站行为矩阵（同 RUN 续跑）
+# R1 原站行为矩阵
 
-完整验证、批量、需求完整对照、P3 完整对照、退出对照就绪均 0/4，E2E 0/5。矩阵 69 项：33 项窄范围观察（含失败与限制）、其余按 JSON execution 逐项记录；任何窄项不代表模块通过。10 对象/2 员工，本增量新增业务 0。MATCH 3 仅窄项静态对照；直接调动经所有者决定为 INTENTIONAL_DIFFERENCE，历史 Major 1、待决 Major 0。当前管理员和当天可执行项尚未全完成，见 Current_Executable_Test_Disposition.json。
+9/11实际北京时间已到，服务器业务查询恢复门槛失败。仅一次新标签与一次既有正式路径，均Failed to fetch、业务区空；本次没有新人员/离职/终止/报表行为结论。旧DOM不作当前证据。共70项：34窄项观察（含本次失败门槛及历史限制）、18部分、18未执行；不是通过数。
+
+完整行为/批量/需求对照/P3对照/退出对照就绪各0/4，E2E0/5。MATCH3为此前窄项静态对照，本次新增MATCH0；已批准INTENTIONAL_DIFFERENCE1不变。累计10对象/2员工，本次新增0。详见Future_Date_Recovery.json。
 
 | 用例 | 模块 | 执行状态 | 实际结果 | 分类 | 证据 |
 |---|---|---|---|---|---|
+| R1-SEP11-FRESH-QUERY-GATE | M01 | observed | 两次新导航均未取得业务结果；组织main空、控件0，当前请求日志Failed to fetch。9/11日期条件已达；实际离职/终止/报表/再入职仍未知，不能沿用旧DOM。 | ENV_BLOCKED | [20260911_Fresh_Query_Gate.json](R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json)；[Future_Date_Recovery.json](Future_Date_Recovery.json) |
 | M32-RESUME-SORT-001 | M32 | observed | 旧页面DOM仍EMP002试用1、EMP001正式1，总2；截图柱图2。姓名表头语义/可见坐标点击超时，行序未变，不判排序通过或缺陷。 | ENV_BLOCKED | [Resume_20260910_1532_DOM.json](R1-ORIGIN-20260910-100019/Resume_20260910_1532_DOM.json)；[Browser_Resume_Request_Timeout.json](R1-ORIGIN-20260910-100019/Browser_Resume_Request_Timeout.json)；[M32-two-people-graph-resume.jpg](R1-ORIGIN-20260910-100019/M32/M32-two-people-graph-resume.jpg) |
 | M19-RESUME-RECALL-002 | M19 | observed | 调动与转正均仍同流程开始节点，审计分别20:44/20:52、21:57/22:03，编辑未出现新表单；未重提/代审。 | 待判定 | [Resume_20260910_1532_DOM.json](R1-ORIGIN-20260910-100019/Resume_20260910_1532_DOM.json)；[Browser_Resume_Request_Timeout.json](R1-ORIGIN-20260910-100019/Browser_Resume_Request_Timeout.json) |
 | R1-RESUME-ENV-001 | M01 | observed | 测试管理员身份标识正常；职位新查询业务区持续空白并记录请求超时；未重复创建组织。 | ENV_BLOCKED | [Resume_20260910_1532_DOM.json](R1-ORIGIN-20260910-100019/Resume_20260910_1532_DOM.json)；[Browser_Resume_Request_Timeout.json](R1-ORIGIN-20260910-100019/Browser_Resume_Request_Timeout.json) |
