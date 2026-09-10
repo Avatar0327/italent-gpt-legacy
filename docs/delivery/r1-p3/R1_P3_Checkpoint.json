@@ -35,14 +35,17 @@
         "P3-M01-11",
         "P3-M01-12"
       ],
-      "evidence": [],
+      "evidence": [
+        "evidence/r1-p3-02-04-20260910T041245Z.json"
+      ],
       "remaining": [
         "D7与新主职模型兼容及占用事件",
         "身份多标识服务端候选解析",
         "合同字段root/继承及计次",
         "M01前端接线",
         "12项设计用例及全部原AC完整验证"
-      ]
+      ],
+      "implementationSha": "1d5e20e97220c8faab1b3510309954439052200a"
     },
     {
       "id": "P3-R1-03",
@@ -76,12 +79,15 @@
         "P3-INT-05",
         "P3-INT-06"
       ],
-      "evidence": [],
+      "evidence": [
+        "evidence/r1-p3-02-04-20260910T041245Z.json"
+      ],
       "remaining": [
         "持久化投递与重复回调防重放",
         "全部稳定映射/显示标签/模板版本接线",
         "6项设计用例完整验证"
-      ]
+      ],
+      "implementationSha": "1d5e20e97220c8faab1b3510309954439052200a"
     },
     {
       "id": "P3-R1-05",
@@ -200,5 +206,6 @@
       "evidence": []
     }
   ],
-  "currentTask": "P3-R1-02"
+  "currentTask": "P3-R1-02",
+  "lastVerifiedSourceSha": "1d5e20e97220c8faab1b3510309954439052200a"
 }
