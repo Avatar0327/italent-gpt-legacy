@@ -1,0 +1,8 @@
+{
+  "kind": "browser_dom_excerpt",
+  "runId": "R2-ORIGIN-20260910-103952",
+  "tabId": "7",
+  "notificationEnabled": false,
+  "preSaveVisualRead": "2026-09-10；其他；通知否；仅本轮合成员工",
+  "text": "- iframe:\n  - generic: ZZ_R\n  - generic: ZZ_R2_R2-ORIGIN-20260910-103952_PRE_EMP01\n  - generic: 1年内新员工\n  - generic: 高潜力\n  - generic: ZZ_R2_R2-ORIGIN-20260910-103952_PRE_ORG01\n  - generic: \"--\"\n  - generic: 工号：\n  - generic: ZZ_R2_R2_ORIGIN_20260910_103952_PRE_EMP01\n  - generic: 电子邮件：\n  - generic: zz_r2_r2-origin-20260910-103952_pre_emp01@example.invalid\n  - generic: 编辑人员\n  - generic: 打印\n  - tablist:\n    - tab \"干部信息\":\n      - generic: 干部信息\n    - tab \"任免记录\" [selected]:\n      - generic: 任免记录\n    - tab \"业绩成果\":\n      - generic: 业绩成果\n    - tab \"访谈记录\":\n      - generic: 访谈记录\n    - tab \"监察信息\":\n      - generic: 监察信息\n    - tab \"360评估报告\":\n      - generic: 360评估报告\n    - tab \"测评信息\":\n      - generic: 测评信息\n    - tab \"干部关怀记录\":\n      - generic: 干部关怀记录\n  - tabpanel\n  - generic: 任免记录\n  - img \"下拉\"\n  - generic: \"--\"\n  - text: \"-\"\n  - generic: \"--\"\n  - generic: \"|\"\n  - generic: 2026年9月10日\n  - text: 至\n  - generic: \"--\"\n  - generic: 免职\n  - generic: 任期开始日期\n  - generic: 2026年9月10日\n  - generic: 任用类型\n  - generic: 主职\n  - generic: 预计任期结束日期\n  - generic: \"--\"\n  - generic: 实际任期结束日期\n  - generic: 2026年9月10日\n  - generic: 部门\n  - generic: \"--\"\n  - generic: 职位\n  - generic: \"--\"\n  - generic: 职务\n  - generic: \"--\"\n  - generic: 职级\n  - generic: \"--\"\n  - generic: 述职记录\n  - generic \"查看详情\""
+}

@@ -1,0 +1,7 @@
+{
+  "kind": "dom_snapshot_excerpt",
+  "attemptDate": "2026-09-09",
+  "termStart": "2026-09-10",
+  "createdDismissal": false,
+  "snapshot": "\n    - generic: 免职日期不能早于任期开始日期（2026-09-10）\n    - generic: 免职\n    - generic: 翻译助手\n    - generic: 人员\n    - generic: ZZ_R2_R2-ORIGIN-20260910-103952_PRE_EMP01(zz_r2_r2-origin-20260910-103952_pre_emp01@example.invalid)\n    - generic: Z\n    - list:\n      - textbox [disabled]\n      - generic: ZZ_R2_R2-ORIGIN-20260910-103952_PRE_EMP01(zz_r2_r2-origin-20260910-103952_pre_emp01@example.invalid)\n    - generic: 拟免部门\n    - textbox \"请选择\"\n    - generic: 请选择\n    - generic: 拟免职位\n    - generic: 请选择\n    - generic: 免职日期\n    - textbox\n    - text: \n    - generic: 免职原因\n    - generic: 其他\n    - textbox \"请选择\"\n    - generic: \n    - generic: 免职文件\n    - generic: 上传\n    - generic: 是否发送通知\n    - generic: 是\n    - generic: 否\n    - generic: 保存\n    - generic: 取消"
+}

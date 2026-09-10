@@ -137,7 +137,7 @@
       "type": "employee",
       "name": "ZZ_R2_R2-ORIGIN-20260910-103952_PRE_EMP01",
       "status": "confirmed_created",
-      "businessId": null,
+      "businessId": "411836804",
       "currentState": "active",
       "references": [
         "ZZ_R2_R2-ORIGIN-20260910-103952_PRE_ORG01"
@@ -145,7 +145,8 @@
       "operations": [
         "create/readback"
       ],
-      "notes": "employee: invite=false; managers/company/sign-template cleared; email example.invalid; first auto-review rejected, cleared fields proved by full DOM+screenshot before safe retry"
+      "notes": "employee: invite=false; managers/company/sign-template cleared; email example.invalid; first auto-review rejected, cleared fields proved by full DOM+screenshot before safe retry",
+      "idEvidence": "userId in own M03 UI profile link; signed full URL omitted"
     },
     {
       "module": "M18",
@@ -213,6 +214,30 @@
         "已出池/历史回读"
       ],
       "guidePerson": "ZZ_R2_R2-ORIGIN-20260910-103952_PRE_EMP01"
+    },
+    {
+      "module": "M03",
+      "type": "cadre_profile_with_initial_term",
+      "name": "ZZ_R2_R2-ORIGIN-20260910-103952_PRE_EMP01",
+      "recordKey": "ZZ_R2_R2-ORIGIN-20260910-103952_M03_CADRE_TAB7_01",
+      "nameSemantics": "干部档案引用同一合成员工；不虚构可编辑档案名称",
+      "businessId": null,
+      "personId": "411836804",
+      "status": "confirmed_created",
+      "currentState": "实际任期已结束2026-09-10；免职保存成功；汇总列表待刷新",
+      "references": [
+        "ZZ_R2_R2-ORIGIN-20260910-103952_PRE_EMP01"
+      ],
+      "notificationEnabled": false,
+      "operations": [
+        "create/readback",
+        "dismissal_date_2026-09-09_rejected",
+        "reload_active_list_readback",
+        "legal_dismissal_2026-09-10_notification_false",
+        "actual_term_end_readback"
+      ],
+      "notes": "档案及随档案初始任期合计为1个登记对象；UI未暴露独立term ID，不虚增条数",
+      "actualEndedOn": "2026-09-10"
     }
   ],
   "pending": [],
@@ -238,6 +263,13 @@
       "type": "feedback_project",
       "status": "rejected_no_create",
       "reason": "hyphen disallowed; exact required naming cannot save"
+    },
+    {
+      "module": "M03",
+      "type": "dismissal",
+      "status": "rejected_no_effect",
+      "effectiveDate": "2026-09-09",
+      "reason": "免职日期不能早于任期开始日期（2026-09-10）"
     }
   ],
   "recoveredExisting": [
@@ -253,5 +285,9 @@
       "status": "existing_run_record_recovered",
       "evidence": "captures/M18-resume-empty.json"
     }
-  ]
+  ],
+  "countingRule": "created数组按可回读登记对象计；子集行/成员关系各计1；recoveredExisting不重复计；失败/未保存不计；干部初始任期不额外虚增。",
+  "bulkImportRows": 0,
+  "ownedPositionCount": 0,
+  "externalNotificationsEvidence": "所有可见发送/邀请选项保持否；未执行外部发送命令。0为本轮执行计数，未查外部投递日志。"
 }
