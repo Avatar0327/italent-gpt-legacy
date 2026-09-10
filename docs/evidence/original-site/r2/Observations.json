@@ -109,5 +109,18 @@
     "evidence": [
       "captures/M26-activity-name-block.json"
     ]
+  },
+  {
+    "id": "R2-OBS-M18-001",
+    "module": "M18",
+    "actual": "恢复只读确认本RUN的PROJECT01已保存且处于新建；对象表为空、人才标准和维度未配置。点击启动出现发起流程/待办及条件性测评360联动提示，选择否取消，未实际启动。",
+    "p1": "M18-SPEC-01/02/04；空数据及启动前置",
+    "p2": "M18_Design.md 范围与用途就绪分列；通知与发布分态",
+    "implementation": "未运行；R2 P3未启动",
+    "classification": "MATCH",
+    "scope": "仅确认空目录和启动确认存在，不覆盖启动校验或算法",
+    "evidence": [
+      "captures/M18-resume-empty.json"
+    ]
   }
 ]

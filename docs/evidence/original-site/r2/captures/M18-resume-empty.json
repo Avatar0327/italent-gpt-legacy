@@ -1,0 +1,14 @@
+{
+  "runId": "R2-ORIGIN-20260910-103952",
+  "tabId": "12",
+  "source": "live DOM read in this continuation",
+  "result": {
+    "content": [
+      {
+        "text": "\n  - generic: ZZ_R2_R2-ORIGIN-20260910-103952_M18_PROJECT01\n  - generic: 收起看板\n  - img \"收起 小\"\n  - generic: 进度监控\n  - generic: 盘点信息采集进展\n  - generic: 查看\n  - img \"icon/dire/right-middle\"\n  - generic: 人才盘点\n  - generic: 盘点场景\n  - generic: \"--\"\n  - generic: 人才标准\n  - generic: 查看\n  - img \"icon/dire/right-middle\"\n  - generic: \"--\"\n  - generic: 盘点维度\n  - generic: 查看\n  - img \"icon/dire/right-middle\"\n  - generic: 返回\n  - generic: 结束\n  - generic: 启动\n  - generic: 编辑项目\n  - generic: 盘点对象\n  - generic: 多人评价关系\n  - generic: 指标明细\n  - generic: 九宫格\n  - generic: 组织继任地图\n  - generic: 职位继任地图\n  - generic: 仪表盘\n  - generic: 校准会\n  - generic: 结果审批流程\n  - generic: 姓名\n  - generic: 部门\n  - generic: 九宫格位置\n  - generic: 目标职位\n  - generic: 计算状态\n  - paragraph: 高级筛选\n  - generic: 添加盘点对象\n  - generic: 流程干预\n  - generic: 编辑盘点结果\n  - generic: 同步数据\n  - generic: 更多操作\n  - grid:\n    - row \"姓名 任职资格 任职类别 任职级别 状态 当前步骤 当前步骤执行人 计算状态 计算消息\":\n      - columnheader:\n        - checkbox\n      - columnheader \"姓名\":\n        - generic: 姓名\n      - columnheader \"任职资格\":\n        - generic: 任职资格\n      - columnheader \"任职类别\":\n        - generic: 任职类别\n      - columnheader \"任职级别\":\n        - generic: 任职级别\n      - columnheader \"状态\":\n        - generic: 状态\n      - columnheader \"当前步骤\":\n        - generic: 当前步骤\n      - columnheader \"当前步骤执行人\":\n        - generic: 当前步骤执行人\n      - columnheader \"计算状态\":\n        - generic: 计算状态\n      - columnheader \"计算消息\":\n        - generic: 计算消息\n      - columnheader:\n    - paragraph: 这里什么都没有...\n  - generic: 高级筛选\n  - button \"Close\":",
+        "type": "text"
+      }
+    ],
+    "isError": false
+  }
+}
