@@ -1,31 +1,31 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-10T03:21:54.095842+00:00",
-  "primaryModuleId": "M11",
+  "generatedFromUpdatedAt": "2026-09-10T03:22:13.305264+00:00",
+  "primaryModuleId": "M07",
   "backupModuleId": null,
-  "activeExecutionModuleId": "M11",
+  "activeExecutionModuleId": "M07",
   "moduleCount": 15,
   "completeCount": 0,
-  "restrictedCount": 13,
-  "transitionReadyCount": 13,
+  "restrictedCount": 14,
+  "transitionReadyCount": 14,
   "progress": {
     "p1A": {
       "full": 0,
-      "restricted": 13,
-      "total": 13
+      "restricted": 14,
+      "total": 14
     },
     "p1B": {
       "full": 0,
-      "restricted": 13,
-      "total": 13
+      "restricted": 14,
+      "total": 14
     },
     "review": {
       "full": 0,
-      "restricted": 13,
-      "total": 13
+      "restricted": 14,
+      "total": 14
     }
   },
-  "p1ClosedCount": 13,
+  "p1ClosedCount": 14,
   "modules": [
     {
       "moduleId": "M01",
@@ -962,10 +962,10 @@
       "moduleId": "M11",
       "name": "假勤管理",
       "rangeId": "R3",
-      "queueState": "waiting_owner_review",
+      "queueState": "closed_restricted",
       "p1AConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M11-P1-APPROVAL-20260910",
         "evidenceRefs": [
           "BC-A02-03",
           "BC-A04",
@@ -978,48 +978,54 @@
           "BC-A11",
           "BC-A12"
         ],
-        "limits": "原站常规多段/轮班/日历、自动授假折算/结转/过期/调休结算、月报自动和反向流程未执行；部分申请子类仅配置线索。AI排班按既有决定暂缓不纳退出。"
+        "limits": "原站常规多段/轮班/日历、自动授假折算/结转/过期/调休结算、月报自动和反向流程未执行；部分申请子类仅配置线索。AI排班按既有决定暂缓不纳退出。",
+        "approvedAt": "2026-09-10T03:22:13.305264+00:00"
       },
       "p1BConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M11-P1-APPROVAL-20260910",
         "evidenceRefs": [],
-        "limits": "原站常规多段/轮班/日历、自动授假折算/结转/过期/调休结算、月报自动和反向流程未执行；部分申请子类仅配置线索。AI排班按既有决定暂缓不纳退出。"
+        "limits": "原站常规多段/轮班/日历、自动授假折算/结转/过期/调休结算、月报自动和反向流程未执行；部分申请子类仅配置线索。AI排班按既有决定暂缓不纳退出。",
+        "approvedAt": "2026-09-10T03:22:13.305264+00:00"
       },
       "conditions": {
         "applicableScopeDetermined": {
           "value": true,
-          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+          "basis": "M11-P1-APPROVAL-20260910；原登记完整范围逐项与收口清单一致，无内部删减"
         },
         "implementationRulesDecided": {
-          "value": false,
-          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+          "value": true,
+          "basis": "M11-P1-APPROVAL-20260910；本模块SPEC与R3-BASELINE-01均由所有者明确批准，版本/哈希锁定"
         },
         "acceptanceExecutable": {
           "value": true,
-          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+          "basis": "M11-P1-APPROVAL-20260910；逐项Given/When/Then已存在，作为验收预期获批，未冒本轮执行"
         },
         "dependenciesAndExceptionsResolved": {
-          "value": false,
-          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+          "value": true,
+          "basis": "M11-P1-APPROVAL-20260910；已批准生产者契约与本模块LIMIT；源缺证/独立角色留P2/P3/P4，不要求先实联调"
         }
       },
       "transitionReview": {
-        "approved": false,
-        "record": null,
-        "scope": "未批准",
-        "approvedAt": null
+        "approved": true,
+        "record": "M11-P1-APPROVAL-20260910",
+        "scope": "模块P1转序就绪；R3整体进入P2未批准",
+        "approvedAt": "2026-09-10T03:22:13.305264+00:00"
       },
-      "restrictedApproval": null,
-      "p1Closed": false,
-      "transitionReady": false,
-      "missingConditions": [
-        "implementationRulesDecided",
-        "dependenciesAndExceptionsResolved",
-        "p1AApproved",
-        "p1BApproved",
-        "transitionReviewApproved"
-      ]
+      "restrictedApproval": {
+        "scope": "原站常规多段/轮班/日历、自动授假折算/结转/过期/调休结算、月报自动和反向流程未执行；部分申请子类仅配置线索。AI排班按既有决定暂缓不纳退出。",
+        "residualRisk": "错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权",
+        "revalidation": "P2：补多段常规轮班/节假日与历史任职方案、通用申请分类、额度批次与跨年结转、加班转调休、不可变期间版本及发布确认封存、工资消费撤回阻断；P3：按本包Given/When/Then合成验证正常/边界/并发/故障，补算法及版本迁移证据，历史测试不代复验；P4：独立多角色、敏感字段/历史附件/下载、跨模块业务、生产恢复与外部联调。E2不新增人，单管理员不代验。",
+        "record": "M11-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T03:22:13.305264+00:00",
+        "phaseScope": "仅P1"
+      },
+      "p1Closed": true,
+      "closureClass": "受限通过",
+      "closureRecord": "M11-P1-APPROVAL-20260910",
+      "closedAt": "2026-09-10T03:22:13.305264+00:00",
+      "transitionReady": true,
+      "missingConditions": []
     },
     {
       "moduleId": "M07",
@@ -1503,7 +1509,6 @@
       ],
       "transitionReady": false,
       "missingConditions": [
-        "M11",
         "M07",
         "BASE-01",
         "BASE-02",
@@ -1565,7 +1570,6 @@
       "M07"
     ],
     "waitingModuleIds": [
-      "M11",
       "M07"
     ],
     "formalClosureOrder": [
@@ -1576,7 +1580,7 @@
       "M07"
     ],
     "status": "R3批准顺序落账中",
-    "nextFormalClosureModule": "M11",
+    "nextFormalClosureModule": "M07",
     "rule": "按最新用户批准顺序关闭R3；随后允许R3串行材料准备，未批准R3不关闭，不进入P2/P3"
   }
 }

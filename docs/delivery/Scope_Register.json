@@ -4089,21 +4089,14 @@
         },
         "currentDeliveryAssessment": {
           "scopeChange": "SCOPE-20260909-CORE15",
-          "p1A": "in_progress",
-          "p1B": "not_ready",
-          "review": "not_signed",
-          "approvedRestricted": false,
-          "assessmentAt": "2026-09-10T02:56:23.457492+00:00",
-          "basis": "完整范围材料已完成待评审；推荐/LIMIT未批准",
-          "blockingIssueIds": [
-            "M11-SPEC-01",
-            "M11-SPEC-02",
-            "M11-SPEC-03",
-            "M11-SPEC-04",
-            "M11-SPEC-05",
-            "M11-LIMIT-01"
-          ],
-          "next": "顺序准备M07；本模块等待R3集中评审",
+          "p1A": "restricted_complete",
+          "p1B": "ready",
+          "review": "restricted_signed",
+          "approvedRestricted": true,
+          "assessmentAt": "2026-09-10T03:22:13.305264+00:00",
+          "basis": "M11-P1-APPROVAL-20260910；四退出条件经逐项核对满足，仅P1受限关闭",
+          "blockingIssueIds": [],
+          "next": "残余责任见LIMIT；继续M07",
           "acceptanceRefs": [
             {
               "taskId": "A-SOURCE",
@@ -4133,7 +4126,22 @@
               "taskId": "P1-A-RULES",
               "relation": "原直接归属"
             }
-          ]
+          ],
+          "exitEvidence": [
+            "docs/delivery/P1_R3_Review_Package.md",
+            "BC-A02-03",
+            "BC-A04",
+            "BC-A05-06",
+            "BC-A07",
+            "BC-A08",
+            "BC-A09",
+            "BC-P1C-M11",
+            "BC-A10",
+            "BC-A11",
+            "BC-A12"
+          ],
+          "reviewRecord": "M11-P1-APPROVAL-20260910",
+          "closureClass": "受限通过"
         },
         "internalScopeCoverage": [
           {
@@ -4152,7 +4160,8 @@
             "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
             "assessedAt": "2026-09-09T10:26:03.101902+00:00",
             "complete": false,
-            "requirementAccepted": false
+            "requirementAccepted": true,
+            "approvalRecord": "M11-P1-APPROVAL-20260910"
           },
           {
             "originalScopeItem": "排班",
@@ -4168,7 +4177,8 @@
             "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
             "assessedAt": "2026-09-09T10:26:03.101902+00:00",
             "complete": false,
-            "requirementAccepted": false
+            "requirementAccepted": true,
+            "approvalRecord": "M11-P1-APPROVAL-20260910"
           },
           {
             "originalScopeItem": "考勤",
@@ -4188,7 +4198,8 @@
             "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
             "assessedAt": "2026-09-09T10:26:03.101902+00:00",
             "complete": false,
-            "requirementAccepted": false
+            "requirementAccepted": true,
+            "approvalRecord": "M11-P1-APPROVAL-20260910"
           },
           {
             "originalScopeItem": "申请",
@@ -4206,7 +4217,8 @@
             "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
             "assessedAt": "2026-09-09T10:26:03.101902+00:00",
             "complete": false,
-            "requirementAccepted": false
+            "requirementAccepted": true,
+            "approvalRecord": "M11-P1-APPROVAL-20260910"
           },
           {
             "originalScopeItem": "假期",
@@ -4226,7 +4238,8 @@
             "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
             "assessedAt": "2026-09-09T10:26:03.101902+00:00",
             "complete": false,
-            "requirementAccepted": false
+            "requirementAccepted": true,
+            "approvalRecord": "M11-P1-APPROVAL-20260910"
           },
           {
             "originalScopeItem": "AI排班",
@@ -4243,10 +4256,10 @@
         ],
         "moduleClosure": {
           "rangeId": "R3",
-          "queueState": "waiting_owner_review",
+          "queueState": "closed_restricted",
           "p1AConclusion": {
-            "status": "已完成待评审",
-            "approvalRecord": null,
+            "status": "受限通过",
+            "approvalRecord": "M11-P1-APPROVAL-20260910",
             "evidenceRefs": [
               "BC-A02-03",
               "BC-A04",
@@ -4259,51 +4272,63 @@
               "BC-A11",
               "BC-A12"
             ],
-            "limits": "原站常规多段/轮班/日历、自动授假折算/结转/过期/调休结算、月报自动和反向流程未执行；部分申请子类仅配置线索。AI排班按既有决定暂缓不纳退出。"
+            "limits": "原站常规多段/轮班/日历、自动授假折算/结转/过期/调休结算、月报自动和反向流程未执行；部分申请子类仅配置线索。AI排班按既有决定暂缓不纳退出。",
+            "approvedAt": "2026-09-10T03:22:13.305264+00:00"
           },
           "p1BConclusion": {
-            "status": "已完成待评审",
-            "approvalRecord": null,
+            "status": "受限通过",
+            "approvalRecord": "M11-P1-APPROVAL-20260910",
             "evidenceRefs": [],
-            "limits": "原站常规多段/轮班/日历、自动授假折算/结转/过期/调休结算、月报自动和反向流程未执行；部分申请子类仅配置线索。AI排班按既有决定暂缓不纳退出。"
+            "limits": "原站常规多段/轮班/日历、自动授假折算/结转/过期/调休结算、月报自动和反向流程未执行；部分申请子类仅配置线索。AI排班按既有决定暂缓不纳退出。",
+            "approvedAt": "2026-09-10T03:22:13.305264+00:00"
           },
           "conditions": {
             "applicableScopeDetermined": {
               "value": true,
-              "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+              "basis": "M11-P1-APPROVAL-20260910；原登记完整范围逐项与收口清单一致，无内部删减"
             },
             "implementationRulesDecided": {
-              "value": false,
-              "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+              "value": true,
+              "basis": "M11-P1-APPROVAL-20260910；本模块SPEC与R3-BASELINE-01均由所有者明确批准，版本/哈希锁定"
             },
             "acceptanceExecutable": {
               "value": true,
-              "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+              "basis": "M11-P1-APPROVAL-20260910；逐项Given/When/Then已存在，作为验收预期获批，未冒本轮执行"
             },
             "dependenciesAndExceptionsResolved": {
-              "value": false,
-              "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+              "value": true,
+              "basis": "M11-P1-APPROVAL-20260910；已批准生产者契约与本模块LIMIT；源缺证/独立角色留P2/P3/P4，不要求先实联调"
             }
           },
           "transitionReview": {
-            "approved": false,
-            "record": null,
-            "scope": "未批准",
-            "approvedAt": null
+            "approved": true,
+            "record": "M11-P1-APPROVAL-20260910",
+            "scope": "模块P1转序就绪；R3整体进入P2未批准",
+            "approvedAt": "2026-09-10T03:22:13.305264+00:00"
           },
-          "restrictedApproval": null,
-          "p1Closed": false
+          "restrictedApproval": {
+            "scope": "原站常规多段/轮班/日历、自动授假折算/结转/过期/调休结算、月报自动和反向流程未执行；部分申请子类仅配置线索。AI排班按既有决定暂缓不纳退出。",
+            "residualRisk": "错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权",
+            "revalidation": "P2：补多段常规轮班/节假日与历史任职方案、通用申请分类、额度批次与跨年结转、加班转调休、不可变期间版本及发布确认封存、工资消费撤回阻断；P3：按本包Given/When/Then合成验证正常/边界/并发/故障，补算法及版本迁移证据，历史测试不代复验；P4：独立多角色、敏感字段/历史附件/下载、跨模块业务、生产恢复与外部联调。E2不新增人，单管理员不代验。",
+            "record": "M11-P1-APPROVAL-20260910",
+            "approvedAt": "2026-09-10T03:22:13.305264+00:00",
+            "phaseScope": "仅P1"
+          },
+          "p1Closed": true,
+          "closureClass": "受限通过",
+          "closureRecord": "M11-P1-APPROVAL-20260910",
+          "closedAt": "2026-09-10T03:22:13.305264+00:00"
         },
         "reviewPackage": {
           "moduleId": "M11",
-          "documentStatus": "材料完成、等待所有者集中评审",
+          "documentStatus": "P1受限通过，需求基线已批准",
           "scope": "档案、排班、考勤、申请、假期、AI排班",
           "preparedAt": "2026-09-10T02:56:23.457492+00:00",
           "basedOnHead": "f24db9de072b23fd7e607f102c0bfee474688f09",
-          "approvalRecord": null,
+          "approvalRecord": "M11-P1-APPROVAL-20260910",
           "internalDeferralProposals": [],
           "internalDeferralNote": "原登记完整范围全部保留；独立AI和33暂缓模块不恢复；外部服务以契约保留，不静默缩减普通业务。",
-          "confirmedRules": "当前有效成员绑定稳定员工ID；read/use/manage/review/publish/export与组织范围/字段权限求交；本人、提交者、实际材料编制者回避独立审批。版本历史、附件和下载按当前权限校验；401/403/解绑清缓存，临时故障不假0。命令以requestId+payloadHash幂等，revision并发冲突拒绝，结果未知先查原ID，不重做；业务与审计事务边界沿D1既有批准。M19审批、业务生效、外部通知分别记录；M48只消费本人许可投影，M32按明确分母与版本统计。BASE01–06沿R1目标；供应商未配置返回未配置，不模拟成功；这些共用原则引用既有批准，模块新增算法仍待批准。 模块SPEC均为建议未批准。",
+          "confirmedRules": "所审推荐及LIMIT由M11-P1-APPROVAL-20260910批准，其他模块不外推",
           "decisionIds": [
             "M11-SPEC-01",
             "M11-SPEC-02",
@@ -4314,14 +4339,16 @@
           "exceptionProposals": [
             {
               "id": "M11-LIMIT-01",
-              "status": "待所有者批准",
-              "approved": false,
-              "approvalRecord": null,
+              "status": "已批准P1受限边界",
+              "approved": true,
+              "approvalRecord": "M11-P1-APPROVAL-20260910",
               "scope": "原站常规多段/轮班/日历、自动授假折算/结转/过期/调休结算、月报自动和反向流程未执行；部分申请子类仅配置线索。AI排班按既有决定暂缓不纳退出。",
               "evidence": "已有页面索引 BC-A02-03,BC-A04,BC-A05-06,BC-A07,BC-A08,BC-A09,BC-P1C-M11,BC-A10,BC-A11,BC-A12；当前静态HEAD f24db9de072b23fd7e607f102c0bfee474688f09；本轮未写原站或执行业务测试",
               "proposal": "建议以原有局部证据、静态差异和经所有者批准的模块完整产品规则关闭P1需求；暂未验证算法留后续责任，不作为无限取证前置。未经批准不关闭。",
               "residualRisk": "错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权",
-              "revalidation": "P2：补多段常规轮班/节假日与历史任职方案、通用申请分类、额度批次与跨年结转、加班转调休、不可变期间版本及发布确认封存、工资消费撤回阻断；P3：按本包Given/When/Then合成验证正常/边界/并发/故障，补算法及版本迁移证据，历史测试不代复验；P4：独立多角色、敏感字段/历史附件/下载、跨模块业务、生产恢复与外部联调。E2不新增人，单管理员不代验。"
+              "revalidation": "P2：补多段常规轮班/节假日与历史任职方案、通用申请分类、额度批次与跨年结转、加班转调休、不可变期间版本及发布确认封存、工资消费撤回阻断；P3：按本包Given/When/Then合成验证正常/边界/并发/故障，补算法及版本迁移证据，历史测试不代复验；P4：独立多角色、敏感字段/历史附件/下载、跨模块业务、生产恢复与外部联调。E2不新增人，单管理员不代验。",
+              "approvedAt": "2026-09-10T03:22:13.305264+00:00",
+              "approvalConclusion": "仅P1，原推荐措辞保留审阅时含义；后续验证责任不免除"
             }
           ],
           "closedQuestions": [
@@ -4332,9 +4359,9 @@
             }
           ],
           "exitAssessment": {
-            "p1A": "局部原站与静态事实已汇总，未执行项明确LIMIT；完整/受限判定待所有者批准",
-            "p1B": "字段、权限、状态、异常、契约和验收预期已具体化；SPEC/LIMIT待批",
-            "transition": "未批准，不关闭、不转序"
+            "p1A": "M11-P1-APPROVAL-20260910；四条件齐备，模块转序就绪，R3下阶段未批准",
+            "p1B": "M11-P1-APPROVAL-20260910；四条件齐备，模块转序就绪，R3下阶段未批准",
+            "transition": "M11-P1-APPROVAL-20260910；四条件齐备，模块转序就绪，R3下阶段未批准"
           },
           "flowSummary": [
             "档案和方案版本按生效区间；排班draft→reviewed→published，取消保留历史；申请draft→submitted→approved/rejected/withdrawn，生效及核算分列；额度grant/reserve/consume/release/expire/carry/correct追加事件；期间draft→frozen→published→confirmed→sealed，反向操作须独立权限和新版本。",
@@ -4363,7 +4390,9 @@
           ],
           "businessAccepted": false,
           "productionAccepted": false,
-          "next": "顺序准备M07；本模块等待R3集中评审"
+          "next": "残余责任见LIMIT；继续M07",
+          "approvedAt": "2026-09-10T03:22:13.305264+00:00",
+          "closureClass": "受限通过"
         },
         "sourceAccessThisUnit": {
           "result": "本单元沿用已归档源证据，未新增浏览器取证；未遇需要重复源提交的结果未知动作。当前算法缺口以具体建议/LIMIT表达，后续仅按定向清单补证。",
@@ -4402,19 +4431,21 @@
               "BC-A10",
               "BC-A12"
             ],
-            "gap": "规格建议与本模块LIMIT待批；考勤档案的方案分配/人员类型/历史任职范围缺证，不把当前员工orgId当全部历史范围",
-            "blocksP1": true,
+            "gap": "P1批准后无剩余硬阻塞；原差异转交后续责任",
+            "blocksP1": false,
             "risk": "错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权",
             "closureMethod": "核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定",
-            "basis": "M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
-            "status": "已完成待评审",
+            "basis": "M11-P1-APPROVAL-20260910",
+            "status": "受限通过",
             "decisionIds": [
               "M11-SPEC-01",
               "M11-SPEC-02",
               "M11-SPEC-03",
               "M11-SPEC-04",
               "M11-SPEC-05"
-            ]
+            ],
+            "preApprovalGap": "规格建议与本模块LIMIT待批；考勤档案的方案分配/人员类型/历史任职范围缺证，不把当前员工orgId当全部历史范围",
+            "approvalRecord": "M11-P1-APPROVAL-20260910"
           },
           {
             "id": "M11-CLOSE-02",
@@ -4425,19 +4456,21 @@
             "evidenceRefs": [
               "BC-A05-06"
             ],
-            "gap": "规格建议与本模块LIMIT待批；固定班次可复用；常规轮班/多段/节假日/跨班未证仍保留，独立AI另行暂缓",
-            "blocksP1": true,
+            "gap": "P1批准后无剩余硬阻塞；原差异转交后续责任",
+            "blocksP1": false,
             "risk": "错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权",
             "closureMethod": "核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定",
-            "basis": "M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
-            "status": "已完成待评审",
+            "basis": "M11-P1-APPROVAL-20260910",
+            "status": "受限通过",
             "decisionIds": [
               "M11-SPEC-01",
               "M11-SPEC-02",
               "M11-SPEC-03",
               "M11-SPEC-04",
               "M11-SPEC-05"
-            ]
+            ],
+            "preApprovalGap": "规格建议与本模块LIMIT待批；固定班次可复用；常规轮班/多段/节假日/跨班未证仍保留，独立AI另行暂缓",
+            "approvalRecord": "M11-P1-APPROVAL-20260910"
           },
           {
             "id": "M11-CLOSE-03",
@@ -4452,19 +4485,21 @@
               "BC-A04",
               "BC-A11"
             ],
-            "gap": "规格建议与本模块LIMIT待批；日报/月报发布确认封存和反向/自动任务尚未实测；单人frozen不能代月报全流程",
-            "blocksP1": true,
+            "gap": "P1批准后无剩余硬阻塞；原差异转交后续责任",
+            "blocksP1": false,
             "risk": "错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权",
             "closureMethod": "核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定",
-            "basis": "M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
-            "status": "已完成待评审",
+            "basis": "M11-P1-APPROVAL-20260910",
+            "status": "受限通过",
             "decisionIds": [
               "M11-SPEC-01",
               "M11-SPEC-02",
               "M11-SPEC-03",
               "M11-SPEC-04",
               "M11-SPEC-05"
-            ]
+            ],
+            "preApprovalGap": "规格建议与本模块LIMIT待批；日报/月报发布确认封存和反向/自动任务尚未实测；单人frozen不能代月报全流程",
+            "approvalRecord": "M11-P1-APPROVAL-20260910"
           },
           {
             "id": "M11-CLOSE-04",
@@ -4477,19 +4512,21 @@
               "BC-A07",
               "BC-A12"
             ],
-            "gap": "规格建议与本模块LIMIT待批；请假/补卡常规链、角色和历史范围待证；其他原登记内申请按现有菜单继续，不能由两类代码推全申请完整",
-            "blocksP1": true,
+            "gap": "P1批准后无剩余硬阻塞；原差异转交后续责任",
+            "blocksP1": false,
             "risk": "错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权",
             "closureMethod": "核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定",
-            "basis": "M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
-            "status": "已完成待评审",
+            "basis": "M11-P1-APPROVAL-20260910",
+            "status": "受限通过",
             "decisionIds": [
               "M11-SPEC-01",
               "M11-SPEC-02",
               "M11-SPEC-03",
               "M11-SPEC-04",
               "M11-SPEC-05"
-            ]
+            ],
+            "preApprovalGap": "规格建议与本模块LIMIT待批；请假/补卡常规链、角色和历史范围待证；其他原登记内申请按现有菜单继续，不能由两类代码推全申请完整",
+            "approvalRecord": "M11-P1-APPROVAL-20260910"
           },
           {
             "id": "M11-CLOSE-05",
@@ -4504,32 +4541,36 @@
               "BC-A09",
               "BC-P1C-M11"
             ],
-            "gap": "规格建议与本模块LIMIT待批；授予/额度/预留/结转过期/调休结算公式和审批待证，不使用固定8小时当企业规则",
-            "blocksP1": true,
+            "gap": "P1批准后无剩余硬阻塞；原差异转交后续责任",
+            "blocksP1": false,
             "risk": "错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权",
             "closureMethod": "核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定",
-            "basis": "M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
-            "status": "已完成待评审",
+            "basis": "M11-P1-APPROVAL-20260910",
+            "status": "受限通过",
             "decisionIds": [
               "M11-SPEC-01",
               "M11-SPEC-02",
               "M11-SPEC-03",
               "M11-SPEC-04",
               "M11-SPEC-05"
-            ]
+            ],
+            "preApprovalGap": "规格建议与本模块LIMIT待批；授予/额度/预留/结转过期/调休结算公式和审批待证，不使用固定8小时当企业规则",
+            "approvalRecord": "M11-P1-APPROVAL-20260910"
           },
           {
             "id": "M11-CLOSE-06",
             "scopeItem": "AI排班",
             "requirementIds": [],
             "evidenceRefs": [],
-            "gap": "用户已确认独立AI能力暂缓；不计当前退出条件",
+            "gap": "P1批准后无剩余硬阻塞；原差异转交后续责任",
             "blocksP1": false,
             "risk": "错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权",
             "closureMethod": "核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定",
-            "basis": "SCOPE-20260909-CORE15原批准",
-            "status": "本次子能力暂缓",
-            "decisionIds": []
+            "basis": "M11-P1-APPROVAL-20260910",
+            "status": "受限通过",
+            "decisionIds": [],
+            "preApprovalGap": "用户已确认独立AI能力暂缓；不计当前退出条件",
+            "approvalRecord": "M11-P1-APPROVAL-20260910"
           }
         ]
       },
@@ -14286,7 +14327,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-10T03:21:54.095842+00:00",
+    "updatedAt": "2026-09-10T03:22:13.305264+00:00",
     "authority": "Scope_Register.json为唯一范围/验收事实源；历史48/59保留，当前15模块及基础按SCOPE-20260909-CORE15。",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -47308,27 +47349,27 @@
       "latestAuthorizationAt": "2026-09-09T06:25:42.812752+00:00",
       "scopeChangeHead": "f31cb2b5e1894723288fd884d4e3bd895ae57327",
       "scopeChange": "SCOPE-20260909-CORE15",
-      "latestCheckpointAt": "2026-09-10T03:21:54.095842+00:00",
-      "latestCommittedHead": "fcc22705475f38a49df21c2dbf39482374929d55",
+      "latestCheckpointAt": "2026-09-10T03:22:13.305264+00:00",
+      "latestCommittedHead": "825f14f3fc77ddddf7445ccb00101b044ef525a8",
       "latestEvidenceRefs": [
         "BC-C39",
         "BC-C40",
         "BC-C28",
         "R2-RO-M17-01"
       ],
-      "next": "继续M11；本窗口仅P1",
+      "next": "继续M07；本窗口仅P1",
       "browserRecovery": "历史CDP超时已在本轮恢复：可列出标签及定向只读访问；M26入口误到页未计证，M18/M17有限回查成功。具体访问限制保留于各模块，不再把整站连接故障列为当前共同阻塞。",
       "sourceBrowsingStatus": "本轮未新增原站浏览器取证，沿用归档证据；此前连接恢复只代表前次观察，不宣称本轮复核。所有缺证逐模块列LIMIT及定向清单。",
-      "currentFocus": "M11唯一主模块",
+      "currentFocus": "M07唯一主模块",
       "checkpointCommitSemantics": "latestCommittedHead为本单元编辑开始前已存在提交；本记录所属提交用git log -1 -- docs/delivery/Scope_Register.json解析，不能将基准冒充最终HEAD。",
-      "workingTreeAtResume": "本单元基于fcc22705475f38a49df21c2dbf39482374929d55干净工作区，仅文档/生成脚本",
+      "workingTreeAtResume": "本单元基于825f14f3fc77ddddf7445ccb00101b044ef525a8干净工作区，仅文档/生成脚本",
       "lastVerifiedSync": {
         "commit": "161579443b880302957e92c22ab6414941cdf3e9",
         "remoteBranch": "main",
         "result": "同步已核；该提交汇总字段kind/evidence缺失，需以本次修正及重新生成检查结果为最终版本",
         "scope": "R3集中汇总"
       },
-      "currentUnitOutcome": "M12受限关闭，继续M11",
+      "currentUnitOutcome": "M11受限关闭，继续M07",
       "previousAtomicOutcome": "M07完整原范围材料已保存并推送；无新增原站动作或结果未知提交",
       "sourceWritePolicy": "本轮最新边界：原站只读，不修改原站数据；此前合成记录授权作为历史保留，本夜间单元不据此新增写入。",
       "historicalExecutionBoundary": "用户已确认当前北森租户可用于测试，并授权P1所需合成关联记录的创建、保存、提交及必要状态流转；先查可复用记录，统一P1V-20260909标记，逐链记录ID/关联/前后状态和结果，不逐条重问。不得任意更改真实员工或既有业务；不扩大到真实业务生效、外部通知、支付、签署或新增人类访问者。产品代码、部署、D1–D7/E1/E2继续保持。 最新范围仅当前15模块和基础/最小必要公共依赖；33模块停止独立探索/新数据链，已有前置可必要引用，不为停点做完整链。"
@@ -48571,7 +48612,7 @@
   "roadmap": {
     "revision": "2026-09-09-module-closure-rolling-R",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-10T03:21:54.095842+00:00",
+    "updatedAt": "2026-09-10T03:22:13.305264+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -48654,7 +48695,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M11唯一主模块",
+    "activeWorkPackage": "M07唯一主模块",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -48669,7 +48710,7 @@
       "BP-S"
     ],
     "nextTasks": [
-      "按顺序继续M11的P1工作",
+      "按顺序继续M07的P1工作",
       "按实质单元保存并推送，独立看板失败不阻P1",
       "不修改产品、不进入P2/P3，保持15模块和33暂缓"
     ],
@@ -48684,10 +48725,10 @@
       "id": "MODE-MODULE-CLOSURE-R-20260909",
       "authorizedAt": "2026-09-09T15:43:36.730682+00:00",
       "mode": "模块闭环优先、按R版本滚动转序",
-      "primaryModuleId": "M11",
+      "primaryModuleId": "M07",
       "backupModuleId": null,
       "backupCandidateId": null,
-      "activeExecutionModuleId": "M11",
+      "activeExecutionModuleId": "M07",
       "wipLimit": 1,
       "backupLimit": 1,
       "backupActivation": "仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归",
@@ -48989,6 +49030,14 @@
           "reason": "M12-P1-APPROVAL-20260910四条件满足，按批准顺序受限关闭",
           "remaining": "仅P2设计/P3验证/P4验收残余责任",
           "restore": "仅新批准变更回到受影响条款，不重开宽泛盘点"
+        },
+        {
+          "at": "2026-09-10T03:22:13.305264+00:00",
+          "from": "M11",
+          "to": "M07",
+          "reason": "M11-P1-APPROVAL-20260910四条件满足，按批准顺序受限关闭",
+          "remaining": "仅P2设计/P3验证/P4验收残余责任",
+          "restore": "仅新批准变更回到受影响条款，不重开宽泛盘点"
         }
       ],
       "backupActivationHistory": [
@@ -49079,7 +49128,6 @@
           "M07"
         ],
         "waitingModuleIds": [
-          "M11",
           "M07"
         ],
         "formalClosureOrder": [
@@ -49090,7 +49138,7 @@
           "M07"
         ],
         "status": "R3批准顺序落账中",
-        "nextFormalClosureModule": "M11",
+        "nextFormalClosureModule": "M07",
         "rule": "按最新用户批准顺序关闭R3；随后允许R3串行材料准备，未批准R3不关闭，不进入P2/P3"
       }
     },
@@ -49500,11 +49548,11 @@
         }
       }
     ],
-    "currentWork": "M12批准收口完成；下一M11"
+    "currentWork": "M11批准收口完成；下一M07"
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-10T03:21:54.095842+00:00",
+    "updatedAt": "2026-09-10T03:22:13.305264+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -54951,7 +54999,9 @@
                 "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M11-P1-APPROVAL-20260910"
               },
               {
                 "id": "M11-REVIEW-AC02",
@@ -54962,7 +55012,9 @@
                 "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M11-P1-APPROVAL-20260910"
               },
               {
                 "id": "M11-REVIEW-AC03",
@@ -54973,7 +55025,9 @@
                 "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M11-P1-APPROVAL-20260910"
               },
               {
                 "id": "M11-REVIEW-AC04",
@@ -54984,7 +55038,9 @@
                 "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M11-P1-APPROVAL-20260910"
               },
               {
                 "id": "M11-REVIEW-AC05",
@@ -54995,7 +55051,9 @@
                 "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M11-P1-APPROVAL-20260910"
               },
               {
                 "id": "M11-REVIEW-AC06",
@@ -55006,7 +55064,9 @@
                 "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M11-P1-APPROVAL-20260910"
               },
               {
                 "id": "M11-REVIEW-AC07",
@@ -55017,7 +55077,9 @@
                 "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M11-P1-APPROVAL-20260910"
               },
               {
                 "id": "M11-REVIEW-AC08",
@@ -55028,7 +55090,9 @@
                 "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M11-P1-APPROVAL-20260910"
               },
               {
                 "id": "M11-REVIEW-AC09",
@@ -55039,7 +55103,9 @@
                 "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M11-P1-APPROVAL-20260910"
               },
               {
                 "id": "M11-REVIEW-AC10",
@@ -55050,7 +55116,9 @@
                 "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M11-P1-APPROVAL-20260910"
               },
               {
                 "id": "M11-REVIEW-AC11",
@@ -55061,7 +55129,9 @@
                 "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M11-P1-APPROVAL-20260910"
               },
               {
                 "id": "M11-REVIEW-AC12",
@@ -55072,7 +55142,9 @@
                 "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M11-P1-APPROVAL-20260910"
               },
               {
                 "id": "M11-REVIEW-RETURN",
@@ -55083,7 +55155,9 @@
                 "basis": "本模块推荐待批准；不冒原站事实",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M11-P1-APPROVAL-20260910"
               },
               {
                 "id": "M11-REVIEW-WITHDRAW",
@@ -55094,7 +55168,9 @@
                 "basis": "本模块推荐待批准；不冒原站事实",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M11-P1-APPROVAL-20260910"
               }
             ],
             "moduleReviewRecommendationRefs": [
@@ -60973,13 +61049,15 @@
         "alternatives": "按自然日拆跨日班可选，但需整套工资/假期一致口径。",
         "impact": "历史考勤完整性、常规排班及分钟精度。",
         "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
-        "status": "已具体化待集中评审",
-        "decisionRequired": true,
-        "decision": null,
+        "status": "已批准P1需求",
+        "decisionRequired": false,
+        "decision": "批准所审推荐，无改选；M11-P1-APPROVAL-20260910",
         "moduleIds": [
           "M11"
         ],
-        "preparedAt": "2026-09-10T02:56:23.457492+00:00"
+        "preparedAt": "2026-09-10T02:56:23.457492+00:00",
+        "approvalRecord": "M11-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T03:22:13.305264+00:00"
       },
       {
         "id": "M11-SPEC-02",
@@ -60989,13 +61067,15 @@
         "alternatives": "直接编辑原打卡记录无法追溯，不推荐。",
         "impact": "补正证据、冲突和审批效力。",
         "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
-        "status": "已具体化待集中评审",
-        "decisionRequired": true,
-        "decision": null,
+        "status": "已批准P1需求",
+        "decisionRequired": false,
+        "decision": "批准所审推荐，无改选；M11-P1-APPROVAL-20260910",
         "moduleIds": [
           "M11"
         ],
-        "preparedAt": "2026-09-10T02:56:23.457492+00:00"
+        "preparedAt": "2026-09-10T02:56:23.457492+00:00",
+        "approvalRecord": "M11-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T03:22:13.305264+00:00"
       },
       {
         "id": "M11-SPEC-03",
@@ -61005,13 +61085,15 @@
         "alternatives": "按审批年份扣全量或统一永不过期简化实现，但可能错扣，不推荐。",
         "impact": "余额完整性和法域参数；不替代政策合规评审。",
         "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
-        "status": "已具体化待集中评审",
-        "decisionRequired": true,
-        "decision": null,
+        "status": "已批准P1需求",
+        "decisionRequired": false,
+        "decision": "批准所审推荐，无改选；M11-P1-APPROVAL-20260910",
         "moduleIds": [
           "M11"
         ],
-        "preparedAt": "2026-09-10T02:56:23.457492+00:00"
+        "preparedAt": "2026-09-10T02:56:23.457492+00:00",
+        "approvalRecord": "M11-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T03:22:13.305264+00:00"
       },
       {
         "id": "M11-SPEC-04",
@@ -61021,13 +61103,15 @@
         "alternatives": "允许跳确认直接封存须显式审批例外和异议补办责任，不默认豁免。",
         "impact": "月报状态、员工异议及工资历史。",
         "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
-        "status": "已具体化待集中评审",
-        "decisionRequired": true,
-        "decision": null,
+        "status": "已批准P1需求",
+        "decisionRequired": false,
+        "decision": "批准所审推荐，无改选；M11-P1-APPROVAL-20260910",
         "moduleIds": [
           "M11"
         ],
-        "preparedAt": "2026-09-10T02:56:23.457492+00:00"
+        "preparedAt": "2026-09-10T02:56:23.457492+00:00",
+        "approvalRecord": "M11-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T03:22:13.305264+00:00"
       },
       {
         "id": "M11-SPEC-05",
@@ -61037,13 +61121,15 @@
         "alternatives": "以缺卡直接扣整日将新增处罚规则，不采用默认。",
         "impact": "工资与考勤准确性、异常恢复。",
         "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
-        "status": "已具体化待集中评审",
-        "decisionRequired": true,
-        "decision": null,
+        "status": "已批准P1需求",
+        "decisionRequired": false,
+        "decision": "批准所审推荐，无改选；M11-P1-APPROVAL-20260910",
         "moduleIds": [
           "M11"
         ],
-        "preparedAt": "2026-09-10T02:56:23.457492+00:00"
+        "preparedAt": "2026-09-10T02:56:23.457492+00:00",
+        "approvalRecord": "M11-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T03:22:13.305264+00:00"
       },
       {
         "id": "M07-SPEC-01",
@@ -62729,6 +62815,62 @@
           "不改产品、原站、数据、部署、访问者；不进入R1 P2工作树",
           "本批准不执行P2/P3，版本进入另按条件核定"
         ]
+      },
+      {
+        "id": "M11-P1-APPROVAL-20260910",
+        "moduleIds": [
+          "M11"
+        ],
+        "approved": true,
+        "approvedBy": "项目所有者（本窗口用户）",
+        "approvedAt": "2026-09-10T03:22:13.305264+00:00",
+        "recordedAt": "2026-09-10T03:22:13.305264+00:00",
+        "timeBasis": "按M27→M16→M12→M11→M07顺序登记时间",
+        "source": "本窗口2026-09-10用户：批准R3集中评审包全部30项推荐及五LIMIT，无改选；逐模块核退出条件，仅P1",
+        "reviewedHead": "161579443b880302957e92c22ab6414941cdf3e9",
+        "reviewedDocument": "docs/delivery/P1_R3_Review_Package.md",
+        "reviewedDocumentSha256": "6758b458c681a0a5c9ce09406ee45d08abce5a1a9e4fc2c22deae488fd9ad562",
+        "scope": "M11完整P1需求及本模块LIMIT",
+        "decisionIds": [
+          "M11-SPEC-01",
+          "M11-SPEC-02",
+          "M11-SPEC-03",
+          "M11-SPEC-04",
+          "M11-SPEC-05"
+        ],
+        "approvedRecommendations": {
+          "M11-SPEC-01": {
+            "text": "建议员工稳定ID+任职上下文+考勤方案有效区间，区间不重叠；排班冻结日历/班次版本，保留固定/轮班/多工作段和多休息段，不以当前单段限制缩范围。跨日班按开始业务日归属，核算按实际时区瞬时时长及工作段并集，重叠工作/休息冲突拒绝；假期天数以当天应工作分钟折算，不硬编码8小时。无方案或节假日参数时标未配置，不产生缺勤判罚。",
+            "sha256": "fa4ea3a3e9c698ed9be37538c105b6c5773d9be25907d33fee9700f4f21eda57"
+          },
+          "M11-SPEC-02": {
+            "text": "建议请假、补卡及原登记内加班/调班/外出/出差以显式type和独立字段规则维护，不互相伪装。原始打卡事件只追加、设备来源和接收时点留存，服务端打卡不冒GPS/设备验证。补正新版本覆盖解析视图而不删原事件；同一时段冲突申请阻提交或要求明确兼容策略；审批、生效、核算分列，冻结期更正须走期间重开或后续调整。",
+            "sha256": "4509b4ea8ff3cf40e57814c7d8d373fb894fabbef8e3a8fae5eff76dacf7b609"
+          },
+          "M11-SPEC-03": {
+            "text": "建议额度按员工/假种/批次/适用年度/生效截止/政策版本事件账记录，使用最早到期批次优先且提交即预留；批准转消费，拒绝撤回释放。跨年请假按排班工作段分年扣账；已过期额度释放不重新变可用，需按原批次时点派生。授予/工龄折算/上限/结转期限/调休兑换及结算须经审批的法域和企业参数完整，未配置阻计算，不能推定法定额度。加班须核验实际工作及明确兑换率，支付与调休只能按显式政策分配不重复享用。",
+            "sha256": "458aeca876cbcbbf57e615098b9c38b084df13278434543ec09896779b6f50c5"
+          },
+          "M11-SPEC-04": {
+            "text": "建议采用显式冻结→发布→确认→封存作为本项目默认配置，冻结需无未处理冲突/在途影响项；源可选步骤不冒必然顺序。发布冻结快照，员工确认是确认收到及异议状态，不等放弃申诉；超期不自动视为确认。解封/撤回/解冻独立授权留原因并产生新版本；已被工资引用的旧版保留，重开先提示影响并阻悄悄改写已核薪结果。自动任务只调用同一守卫，失败保留可重试状态。",
+            "sha256": "777cb57db904e65345f5fec9e02a27dd9a9c7b99af9ca2c7f2ae8eaacf3f998b"
+          },
+          "M11-SPEC-05": {
+            "text": "建议考勤完整性与缺勤/迟到/加班业务算法分别配置；缺卡/冲突/无排班为待核实，不自动扣薪。报表行粒度为员工任职/班次/期间，统计缺失单列；工资映射需字段单位、版本、有效日期与冻结来源校验。并发额度预留与期间冻结同revision一致，重复请求/设备事件不重复入账；断网回执未知先按原事件查询，外部未配置不冒同步成功。",
+            "sha256": "31b5831715e41dea216809b42bfb5b163034bb7f6c1a4554e7301d9b586fe43c"
+          }
+        },
+        "exceptionIds": [
+          "M11-LIMIT-01"
+        ],
+        "exceptionScope": "原站常规多段/轮班/日历、自动授假折算/结转/过期/调休结算、月报自动和反向流程未执行；部分申请子类仅配置线索。AI排班按既有决定暂缓不纳退出。",
+        "authorization": "满足已登记四条件时受限关闭及模块转序就绪；不批准R3下游P2/P3",
+        "exclusions": [
+          "不代表实现、P3测试、多角色业务或生产验收",
+          "D1–D7/E1/E2及R1恢复目标不变",
+          "不改产品、原站、数据、部署、访问者；不进入R1 P2工作树",
+          "本批准不执行P2/P3，版本进入另按条件核定"
+        ]
       }
     ],
     "r2ReviewBundle": {
@@ -62938,9 +63080,9 @@
         "M11-LIMIT-01",
         "M07-LIMIT-01"
       ],
-      "status": "所有者已批准，按模块顺序登记；已关闭M27,M16,M12",
+      "status": "所有者已批准，按模块顺序登记；已关闭M27,M16,M12,M11",
       "approved": true,
-      "next": "继续M11；R3进入P2/P3未批准",
+      "next": "继续M07；R3进入P2/P3未批准",
       "consistencyFindings": [
         [
           "身份/主体",
@@ -62984,7 +63126,8 @@
       "closedModuleIds": [
         "M27",
         "M16",
-        "M12"
+        "M12",
+        "M11"
       ]
     },
     "reviewPackageHistory": [
