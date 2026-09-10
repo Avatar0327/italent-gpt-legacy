@@ -1,0 +1,88 @@
+{
+  "kind": "repair_packaging_record_not_owner_approval",
+  "branch": "design/r2-p2-20260910",
+  "remote": "r2-p2-origin",
+  "worktree": "/workspace/sites/italent-hris-r2-p2-20260910",
+  "reviewHead": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+  "priorFinalHead": "8b3daf9270181ffe2e77015be723da8e611d83a5",
+  "priorContentHead": "7ff3a28c7660dac658d5243d7c4535a9c8037fc2",
+  "newFixedContentHead": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+  "contentRemoteHeadVerified": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+  "contentWorktreeCleanAfterPush": true,
+  "contentCommits": [
+    {
+      "head": "bf34f3e02dda22841b3ff5ae4c2330b76f7a0a0f",
+      "subject": "docs(r2-p2): repair strict source and approved field contracts for exit 001",
+      "remoteBranch": "design/r2-p2-20260910",
+      "sync": "normal push and ls-remote verified at each stable unit"
+    },
+    {
+      "head": "3d72a1057f76ddf7117b9f10a19db0cd7017e98e",
+      "subject": "docs(r2-p2): define anonymity lineage and disclosure equivalence for exit 002",
+      "remoteBranch": "design/r2-p2-20260910",
+      "sync": "normal push and ls-remote verified at each stable unit"
+    },
+    {
+      "head": "08e3db7042dcfaa5c6205e3f928d862aeab2110e",
+      "subject": "docs(r2-p2): make three inherited foundation scenarios executable for exit 003",
+      "remoteBranch": "design/r2-p2-20260910",
+      "sync": "normal push and ls-remote verified at each stable unit"
+    },
+    {
+      "head": "0d1e77365e243276029093055f21714085ed2ce9",
+      "subject": "docs(r2-p2): specify 46-task DAG and unfrozen shared capability slots for exit 004",
+      "remoteBranch": "design/r2-p2-20260910",
+      "sync": "normal push and ls-remote verified at each stable unit"
+    },
+    {
+      "head": "f5ad2d5a16b44f9a3ea5d33f1c1b9f9539d510fc",
+      "subject": "docs(r2-p2): prove six disputed LIMIT closures and complete repair review round one",
+      "remoteBranch": "design/r2-p2-20260910",
+      "sync": "normal push and ls-remote verified at each stable unit"
+    },
+    {
+      "head": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+      "subject": "docs(r2-p2): complete reverse repair review and freeze revised design content",
+      "remoteBranch": "design/r2-p2-20260910",
+      "sync": "normal push and ls-remote verified at each stable unit"
+    }
+  ],
+  "finalPackagingHead": "containing Git commit; resolve externally to avoid recursive hash",
+  "fixedReferenceCount": 44,
+  "fixedReferenceIndex": "Controller_Proposal.json/fixedDesignReferences",
+  "repairScope": "Recheck_Scope.md",
+  "schemaExamples": {
+    "count": 34,
+    "accepted": 9,
+    "rejected": 25,
+    "productTests": 0
+  },
+  "anonymityTables": {
+    "count": 16,
+    "publish": 5,
+    "suppress": 11,
+    "productTests": 0
+  },
+  "foundationDesktopCases": 3,
+  "p3TaskCount": 46,
+  "proposedScenarios": 138,
+  "scenariosExecuted": 0,
+  "dependencyGraph": {
+    "nodes": 55,
+    "edges": 165,
+    "cycles": 0
+  },
+  "limitAccounting": {
+    "independentAcceptedBeforeRepair": 9,
+    "disputedBeforeRepair": 6,
+    "repairReproposedP2Closed": 6,
+    "independentAcceptedAfterRepair": null,
+    "meaning": "9原独立接受+6本轮逐项证明后重新提请关闭；15为设计负责人提案，独立复核/所有者批准尚未发生"
+  },
+  "observationsOpen": [
+    "R2-EXIT-005",
+    "R2-EXIT-006"
+  ],
+  "ownerP2Approved": false,
+  "r2P3Started": false
+}

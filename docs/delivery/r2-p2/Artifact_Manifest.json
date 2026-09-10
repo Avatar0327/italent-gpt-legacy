@@ -48,13 +48,13 @@
     },
     {
       "path": "docs/delivery/r2-p2/Commit_Register.json",
-      "sha256": "98f9aab6f593f957ce27c4e5fc86c1b9af2691fca1af09e0266efd2e3a6a5b9c",
-      "bytes": 2973
+      "sha256": "c38a79740e6f8a74394ced508a51c40195644391687d6425ae5c2758656bc1f3",
+      "bytes": 5018
     },
     {
       "path": "docs/delivery/r2-p2/Commit_Register.md",
-      "sha256": "f666522b506d9e42f4b326f5e77be674b1e81a0d00a54d8fb319283bc89055e9",
-      "bytes": 1842
+      "sha256": "efa8a4a3c0f8e1afe4c4a063d81ab1cb5855ffe2b203a1e07395a2af5b593d7c",
+      "bytes": 2138
     },
     {
       "path": "docs/delivery/r2-p2/Contract_Repair.md",
@@ -63,8 +63,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/Controller_Proposal.json",
-      "sha256": "5ffeab2e93b042c41e085b8a5bd24e5f744e0d3591dd9e1c465868f25639cece",
-      "bytes": 6182
+      "sha256": "c755e95830782c987baff877fea3b3a86e14502e02035fe13d351f4301c39149",
+      "bytes": 13431
     },
     {
       "path": "docs/delivery/r2-p2/Cross_Module_Contracts.md",
@@ -73,8 +73,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/Design_Checkpoint.json",
-      "sha256": "36b73f1a6243df62432ae757c80f03ca40936a67d7f3efd868abbda3c2e582ce",
-      "bytes": 1458
+      "sha256": "8bdd7ce52261bd8519a434f2c70075902acd5ab075269ef27cc50de13113ecd1",
+      "bytes": 1475
     },
     {
       "path": "docs/delivery/r2-p2/Exit_Review.md",
@@ -202,6 +202,11 @@
       "bytes": 5574
     },
     {
+      "path": "docs/delivery/r2-p2/Repair_Delivery_Record.json",
+      "sha256": "f0e47f23b5192bc8116e2713b3c1ac306260e439545860e7b962427538683476",
+      "bytes": 3393
+    },
+    {
       "path": "docs/delivery/r2-p2/Repair_Record.json",
       "sha256": "f45716a5b4ac37239d52030176219e1cc1c0bfe135f82619d12e301fdf4bbb9d",
       "bytes": 3966
@@ -223,8 +228,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/Resume.md",
-      "sha256": "2dce923016e5dd467c07c506c67411ebc47db827790b4dd6b078ee32cd785c6d",
-      "bytes": 3928
+      "sha256": "1b302753f319d0e5a49ba7d5caeb405986909afdaeb5e3224c76ab0b30362ce9",
+      "bytes": 4285
     },
     {
       "path": "docs/delivery/r2-p2/Review_Round1.md",

@@ -23,3 +23,5 @@
 规范重建入口为rebuild_repair.py：只执行本目录生成器、JSON Schema/符号/桌面/依赖及反向追踪文档检查。需隔离Python环境的jsonschema==4.23.0；本轮依赖位于/workspace/scratch/b398096054d2/r2-schema-validator，通过PYTHONPATH加载，不安装到产品、不调用产品。依赖环境恢复后再运行，不能退回仅结构检查却声称完整实例校验。随后运行check_design.py --unit repair-resume --final。所有原138场景仍未执行，46任务未开始。
 
 LIMIT闭合提案=原独立接受9+逐项重新提请6；原组完整0、P3 25/P4 12均保持。R1 A/B/C实际基线为空且待所有者冻结；当前移动HEAD只作只读观察，绝不可擅自升级为可用基线。新固定引用以最终Controller_Proposal.designContentHead和Repair_Delivery_Record.json为准；最终包装HEAD从Git/远端取得，避免自引用。
+
+本轮新固定设计内容HEAD：`dc6dd896fbf388b70069ecb756547f85ee89d08a`，已正常推送并核对远端一致。最终包装是该内容之后的独立提交；Controller_Proposal固定44项设计/证据引用，旧引用不覆盖。恢复复核使用该HEAD的内容及本分支最终包装，不能将旧7ff3内容或旧8b3包装误作返修版。
