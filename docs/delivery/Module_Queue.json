@@ -699,7 +699,7 @@
   "currentP1": {
     "revision": "2026-09-09-module-closure-rolling-R",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-10T03:21:49.283664+00:00",
+    "updatedAt": "2026-09-10T03:21:54.095842+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -782,7 +782,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M12唯一主模块",
+    "activeWorkPackage": "M11唯一主模块",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -797,7 +797,7 @@
       "BP-S"
     ],
     "nextTasks": [
-      "按顺序继续M12的P1工作",
+      "按顺序继续M11的P1工作",
       "按实质单元保存并推送，独立看板失败不阻P1",
       "不修改产品、不进入P2/P3，保持15模块和33暂缓"
     ],
@@ -808,15 +808,15 @@
       "M48",
       "M32"
     ],
-    "currentWork": "M16批准收口完成；下一M12",
+    "currentWork": "M12批准收口完成；下一M11",
     "executionPolicy": {
       "id": "MODE-MODULE-CLOSURE-R-20260909",
       "authorizedAt": "2026-09-09T15:43:36.730682+00:00",
       "mode": "模块闭环优先、按R版本滚动转序",
-      "primaryModuleId": "M12",
+      "primaryModuleId": "M11",
       "backupModuleId": null,
       "backupCandidateId": null,
-      "activeExecutionModuleId": "M12",
+      "activeExecutionModuleId": "M11",
       "wipLimit": 1,
       "backupLimit": 1,
       "backupActivation": "仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归",
@@ -1110,6 +1110,14 @@
           "reason": "M16-P1-APPROVAL-20260910四条件满足，按批准顺序受限关闭",
           "remaining": "仅P2设计/P3验证/P4验收残余责任",
           "restore": "仅新批准变更回到受影响条款，不重开宽泛盘点"
+        },
+        {
+          "at": "2026-09-10T03:21:54.095842+00:00",
+          "from": "M12",
+          "to": "M11",
+          "reason": "M12-P1-APPROVAL-20260910四条件满足，按批准顺序受限关闭",
+          "remaining": "仅P2设计/P3验证/P4验收残余责任",
+          "restore": "仅新批准变更回到受影响条款，不重开宽泛盘点"
         }
       ],
       "backupActivationHistory": [
@@ -1200,7 +1208,6 @@
           "M07"
         ],
         "waitingModuleIds": [
-          "M12",
           "M11",
           "M07"
         ],
@@ -1212,7 +1219,7 @@
           "M07"
         ],
         "status": "R3批准顺序落账中",
-        "nextFormalClosureModule": "M12",
+        "nextFormalClosureModule": "M11",
         "rule": "按最新用户批准顺序关闭R3；随后允许R3串行材料准备，未批准R3不关闭，不进入P2/P3"
       }
     },

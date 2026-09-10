@@ -2,15 +2,15 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 
 # 模块闭环、滚动转序及当前收口清单
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T03:21:49.283664+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T03:21:54.095842+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M12；备用 未启用；实际执行 M12。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M11；备用 未启用；实际执行 M11。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
-R3串行材料队列：R3批准顺序落账中；已准备 M27、M16、M12、M11、M07；等待评审 M12、M11、M07。材料完成不等批准或转序。
+R3串行材料队列：R3批准顺序落账中；已准备 M27、M16、M12、M11、M07；等待评审 M11、M07。材料完成不等批准或转序。
 
 | R版本 | 模块顺序 | 当前边界 |
 |---|---|---|
@@ -27,7 +27,7 @@ R3串行材料队列：R3批准顺序落账中；已准备 M27、M16、M12、M11
 |---|---|---|---|
 | R1 | 齐备 | P2 | 已获准进入，待独立设计执行与评审 |
 | R2 | 未齐备：rangeReviewApproved | 未批准 | 未取得该R下游批准 |
-| R3 | 未齐备：M12,M11,M07,BASE-01,BASE-02,BASE-03,BASE-04,BASE-05,BASE-06,rangeReviewApproved | 未批准 | 未取得该R下游批准 |
+| R3 | 未齐备：M11,M07,BASE-01,BASE-02,BASE-03,BASE-04,BASE-05,BASE-06,rangeReviewApproved | 未批准 | 未取得该R下游批准 |
 
 | 模块 | R版本/队列 | P1A判定 | P1B评审 | 转序就绪 | 未达到条件 |
 |---|---|---|---|---|---|
@@ -43,11 +43,11 @@ R3串行材料队列：R3批准顺序落账中；已准备 M27、M16、M12、M11
 | M03 干部管理2.0 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M27 学习管理 | R3 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M16 绩效管理 | R3 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
-| M12 招聘管理系统 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M12 招聘管理系统 | R3 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M11 假勤管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M07 薪酬社保 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 
-转序就绪 12/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
+转序就绪 13/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
 
 
 ## M01完整登记范围收口清单
@@ -110,11 +110,11 @@ R3串行材料队列：R3批准顺序落账中；已准备 M27、M16、M12、M11
 
 | 问题/原范围 | 需求 | 证据 | 具体缺口 | 阻塞P1/风险 | 关闭方式与判据 | 当前状态 |
 |---|---|---|---|---|---|---|
-| M12-CLOSE-01 / 需求 | BP-R-REQ-01；BP-R-REQ-04 | BC-R01；BC-R02；BC-P1C-M12 | 规格建议与本模块LIMIT待批；保存/显式提交/独立审批与实际人数占用待源执行；代码历史draft兼容另记 | True；误合并自然人、超编或错误入职、Offer利益冲突、候选隐私及外部回执伪成功 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M12-SPEC-01,M12-SPEC-02,M12-SPEC-03,M12-SPEC-04,M12-SPEC-05,M12-SPEC-06 | 已完成待评审 |
-| M12-CLOSE-02 / 职位 | BP-R-REQ-01 | BC-R05 | 规格建议与本模块LIMIT待批；职位/广告发布/审批三步与有应聘者后流程变更锁定待执行；薪酬/数量预算独立 | True；误合并自然人、超编或错误入职、Offer利益冲突、候选隐私及外部回执伪成功 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M12-SPEC-01,M12-SPEC-02,M12-SPEC-03,M12-SPEC-04,M12-SPEC-05,M12-SPEC-06 | 已完成待评审 |
-| M12-CLOSE-03 / 应聘者 | BP-R-REQ-01；BP-R-REQ-02；BP-R-REQ-04；BP-R-REQ-06 | BC-R03；BC-R13；BC-R14；BC-R16 | 规格建议与本模块LIMIT待批；自然人/申请/录用/入职后管控与多段身份未闭合；R-SPEC-01待决，Offer路由R-SPEC-02先补证 | True；误合并自然人、超编或错误入职、Offer利益冲突、候选隐私及外部回执伪成功 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M12-SPEC-01,M12-SPEC-02,M12-SPEC-03,M12-SPEC-04,M12-SPEC-05,M12-SPEC-06 | 已完成待评审 |
-| M12-CLOSE-04 / 面试 | BP-R-REQ-02；BP-R-REQ-05 | BC-R04-06；BC-R07；BC-R08 | 规格建议与本模块LIMIT待批；排期冲突、评价版本与原角色执行未证；改期自动通知收件范围需核，不擅发真实消息 | True；误合并自然人、超编或错误入职、Offer利益冲突、候选隐私及外部回执伪成功 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M12-SPEC-01,M12-SPEC-02,M12-SPEC-03,M12-SPEC-04,M12-SPEC-05,M12-SPEC-06 | 已完成待评审 |
-| M12-CLOSE-05 / 人才库 | BP-R-REQ-01；BP-R-REQ-06 | BC-R03；BC-R14；BC-R15；BC-R16 | 规格建议与本模块LIMIT待批；独立入库/多库关系/重复储备更新与权限待完整链；现candidate强关联需求缺模型，不删范围 | True；误合并自然人、超编或错误入职、Offer利益冲突、候选隐私及外部回执伪成功 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M12-SPEC-01,M12-SPEC-02,M12-SPEC-03,M12-SPEC-04,M12-SPEC-05,M12-SPEC-06 | 已完成待评审 |
+| M12-CLOSE-01 / 需求 | BP-R-REQ-01；BP-R-REQ-04 | BC-R01；BC-R02；BC-P1C-M12 | P1批准后无剩余硬阻塞；原差异转交后续责任 | False；误合并自然人、超编或错误入职、Offer利益冲突、候选隐私及外部回执伪成功 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M12-P1-APPROVAL-20260910 | 受限通过 |
+| M12-CLOSE-02 / 职位 | BP-R-REQ-01 | BC-R05 | P1批准后无剩余硬阻塞；原差异转交后续责任 | False；误合并自然人、超编或错误入职、Offer利益冲突、候选隐私及外部回执伪成功 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M12-P1-APPROVAL-20260910 | 受限通过 |
+| M12-CLOSE-03 / 应聘者 | BP-R-REQ-01；BP-R-REQ-02；BP-R-REQ-04；BP-R-REQ-06 | BC-R03；BC-R13；BC-R14；BC-R16 | P1批准后无剩余硬阻塞；原差异转交后续责任 | False；误合并自然人、超编或错误入职、Offer利益冲突、候选隐私及外部回执伪成功 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M12-P1-APPROVAL-20260910 | 受限通过 |
+| M12-CLOSE-04 / 面试 | BP-R-REQ-02；BP-R-REQ-05 | BC-R04-06；BC-R07；BC-R08 | P1批准后无剩余硬阻塞；原差异转交后续责任 | False；误合并自然人、超编或错误入职、Offer利益冲突、候选隐私及外部回执伪成功 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M12-P1-APPROVAL-20260910 | 受限通过 |
+| M12-CLOSE-05 / 人才库 | BP-R-REQ-01；BP-R-REQ-06 | BC-R03；BC-R14；BC-R15；BC-R16 | P1批准后无剩余硬阻塞；原差异转交后续责任 | False；误合并自然人、超编或错误入职、Offer利益冲突、候选隐私及外部回执伪成功 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M12-P1-APPROVAL-20260910 | 受限通过 |
 
 
 ## M16完整登记范围收口清单
@@ -220,7 +220,7 @@ M07当前材料：[材料完成、等待所有者集中评审](P1_M07_Review_Pac
 
 M11当前材料：[材料完成、等待所有者集中评审](P1_M11_Review_Package.md)。批准、源取证及后续执行各自独立。
 
-M12当前材料：[材料完成、等待所有者集中评审](P1_M12_Review_Package.md)。批准、源取证及后续执行各自独立。
+M12当前材料：[P1受限通过，需求基线已批准](P1_M12_Review_Package.md)。批准、源取证及后续执行各自独立。
 
 M16当前材料：[P1受限通过，需求基线已批准](P1_M16_Review_Package.md)。批准、源取证及后续执行各自独立。
 
@@ -244,4 +244,4 @@ M48当前材料：[P1受限通过，需求基线已批准](P1_M48_Review_Package
 
 R2当前集中入口：[四模块完整材料、23项推荐及四项限制](P1_R2_Review_Package.md)；[批准草稿](P1_R2_Approval_Draft.md)。各模块按实际批准单独判定，计数从Scope推导。
 
-R3当前入口：[五模块完整集中评审材料](P1_R3_Review_Package.md)，30项推荐及5项LIMIT已获所有者批准；[批准草稿](P1_R3_Approval_Draft.md)。P1A关闭 12/15（完整0，受限12）；P1B需求就绪 12/15（完整0，受限12）；P1评审关闭 12/15（完整0，受限12）。受限不混入完整通过，均不代表P3测试/P4业务或生产验收。
+R3当前入口：[五模块完整集中评审材料](P1_R3_Review_Package.md)，30项推荐及5项LIMIT已获所有者批准；[批准草稿](P1_R3_Approval_Draft.md)。P1A关闭 13/15（完整0，受限13）；P1B需求就绪 13/15（完整0，受限13）；P1评审关闭 13/15（完整0，受限13）。受限不混入完整通过，均不代表P3测试/P4业务或生产验收。

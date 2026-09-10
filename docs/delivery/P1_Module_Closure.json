@@ -1,31 +1,31 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-10T03:21:49.283664+00:00",
-  "primaryModuleId": "M12",
+  "generatedFromUpdatedAt": "2026-09-10T03:21:54.095842+00:00",
+  "primaryModuleId": "M11",
   "backupModuleId": null,
-  "activeExecutionModuleId": "M12",
+  "activeExecutionModuleId": "M11",
   "moduleCount": 15,
   "completeCount": 0,
-  "restrictedCount": 12,
-  "transitionReadyCount": 12,
+  "restrictedCount": 13,
+  "transitionReadyCount": 13,
   "progress": {
     "p1A": {
       "full": 0,
-      "restricted": 12,
-      "total": 12
+      "restricted": 13,
+      "total": 13
     },
     "p1B": {
       "full": 0,
-      "restricted": 12,
-      "total": 12
+      "restricted": 13,
+      "total": 13
     },
     "review": {
       "full": 0,
-      "restricted": 12,
-      "total": 12
+      "restricted": 13,
+      "total": 13
     }
   },
-  "p1ClosedCount": 12,
+  "p1ClosedCount": 13,
   "modules": [
     {
       "moduleId": "M01",
@@ -890,10 +890,10 @@
       "moduleId": "M12",
       "name": "招聘管理系统",
       "rangeId": "R3",
-      "queueState": "waiting_owner_review",
+      "queueState": "closed_restricted",
       "p1AConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M12-P1-APPROVAL-20260910",
         "evidenceRefs": [
           "BC-R01",
           "BC-R02",
@@ -909,48 +909,54 @@
           "BC-R15",
           "BC-R16"
         ],
-        "limits": "原站系统查重、多库/多申请、完整Offer路由及占编、再入职交接、排期通知和入职后权限传播均未执行；没有外部签署/门户联调。"
+        "limits": "原站系统查重、多库/多申请、完整Offer路由及占编、再入职交接、排期通知和入职后权限传播均未执行；没有外部签署/门户联调。",
+        "approvedAt": "2026-09-10T03:21:54.095842+00:00"
       },
       "p1BConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M12-P1-APPROVAL-20260910",
         "evidenceRefs": [],
-        "limits": "原站系统查重、多库/多申请、完整Offer路由及占编、再入职交接、排期通知和入职后权限传播均未执行；没有外部签署/门户联调。"
+        "limits": "原站系统查重、多库/多申请、完整Offer路由及占编、再入职交接、排期通知和入职后权限传播均未执行；没有外部签署/门户联调。",
+        "approvedAt": "2026-09-10T03:21:54.095842+00:00"
       },
       "conditions": {
         "applicableScopeDetermined": {
           "value": true,
-          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+          "basis": "M12-P1-APPROVAL-20260910；原登记完整范围逐项与收口清单一致，无内部删减"
         },
         "implementationRulesDecided": {
-          "value": false,
-          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+          "value": true,
+          "basis": "M12-P1-APPROVAL-20260910；本模块SPEC与R3-BASELINE-01均由所有者明确批准，版本/哈希锁定"
         },
         "acceptanceExecutable": {
           "value": true,
-          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+          "basis": "M12-P1-APPROVAL-20260910；逐项Given/When/Then已存在，作为验收预期获批，未冒本轮执行"
         },
         "dependenciesAndExceptionsResolved": {
-          "value": false,
-          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+          "value": true,
+          "basis": "M12-P1-APPROVAL-20260910；已批准生产者契约与本模块LIMIT；源缺证/独立角色留P2/P3/P4，不要求先实联调"
         }
       },
       "transitionReview": {
-        "approved": false,
-        "record": null,
-        "scope": "未批准",
-        "approvedAt": null
+        "approved": true,
+        "record": "M12-P1-APPROVAL-20260910",
+        "scope": "模块P1转序就绪；R3整体进入P2未批准",
+        "approvedAt": "2026-09-10T03:21:54.095842+00:00"
       },
-      "restrictedApproval": null,
-      "p1Closed": false,
-      "transitionReady": false,
-      "missingConditions": [
-        "implementationRulesDecided",
-        "dependenciesAndExceptionsResolved",
-        "p1AApproved",
-        "p1BApproved",
-        "transitionReviewApproved"
-      ]
+      "restrictedApproval": {
+        "scope": "原站系统查重、多库/多申请、完整Offer路由及占编、再入职交接、排期通知和入职后权限传播均未执行；没有外部签署/门户联调。",
+        "residualRisk": "误合并自然人、超编或错误入职、Offer利益冲突、候选隐私及外部回执伪成功",
+        "revalidation": "P2：拆自然人/申请/库关系与去重审核；Offer版本及参与者历史、人数预留账和失效释放、M01稳定身份与再入职接口、排期修订历史、候选用途权限与外部渠道状态；P3：按本包Given/When/Then合成验证正常/边界/并发/故障，补算法及版本迁移证据，历史测试不代复验；P4：独立多角色、敏感字段/历史附件/下载、跨模块业务、生产恢复与外部联调。E2不新增人，单管理员不代验。",
+        "record": "M12-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T03:21:54.095842+00:00",
+        "phaseScope": "仅P1"
+      },
+      "p1Closed": true,
+      "closureClass": "受限通过",
+      "closureRecord": "M12-P1-APPROVAL-20260910",
+      "closedAt": "2026-09-10T03:21:54.095842+00:00",
+      "transitionReady": true,
+      "missingConditions": []
     },
     {
       "moduleId": "M11",
@@ -1497,7 +1503,6 @@
       ],
       "transitionReady": false,
       "missingConditions": [
-        "M12",
         "M11",
         "M07",
         "BASE-01",
@@ -1560,7 +1565,6 @@
       "M07"
     ],
     "waitingModuleIds": [
-      "M12",
       "M11",
       "M07"
     ],
@@ -1572,7 +1576,7 @@
       "M07"
     ],
     "status": "R3批准顺序落账中",
-    "nextFormalClosureModule": "M12",
+    "nextFormalClosureModule": "M11",
     "rule": "按最新用户批准顺序关闭R3；随后允许R3串行材料准备，未批准R3不关闭，不进入P2/P3"
   }
 }
