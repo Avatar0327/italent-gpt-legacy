@@ -1,31 +1,31 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-10T03:22:13.305264+00:00",
+  "generatedFromUpdatedAt": "2026-09-10T03:22:17.727544+00:00",
   "primaryModuleId": "M07",
   "backupModuleId": null,
   "activeExecutionModuleId": "M07",
   "moduleCount": 15,
   "completeCount": 0,
-  "restrictedCount": 14,
-  "transitionReadyCount": 14,
+  "restrictedCount": 15,
+  "transitionReadyCount": 15,
   "progress": {
     "p1A": {
       "full": 0,
-      "restricted": 14,
-      "total": 14
+      "restricted": 15,
+      "total": 15
     },
     "p1B": {
       "full": 0,
-      "restricted": 14,
-      "total": 14
+      "restricted": 15,
+      "total": 15
     },
     "review": {
       "full": 0,
-      "restricted": 14,
-      "total": 14
+      "restricted": 15,
+      "total": 15
     }
   },
-  "p1ClosedCount": 14,
+  "p1ClosedCount": 15,
   "modules": [
     {
       "moduleId": "M01",
@@ -1031,10 +1031,10 @@
       "moduleId": "M07",
       "name": "薪酬社保",
       "rangeId": "R3",
-      "queueState": "waiting_owner_review",
+      "queueState": "closed_restricted",
       "p1AConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M07-P1-APPROVAL-20260910",
         "evidenceRefs": [
           "BC-S01-02",
           "BC-S03",
@@ -1049,48 +1049,54 @@
           "BC-S20",
           "BC-S21"
         ],
-        "limits": "自动档案、公式/多期间/追溯补差仅局部源证据；社保/个税/激励详细原站规则尚未探索；无银行支付、税务申报及多角色薪酬验证。外部交易不作P1前置。"
+        "limits": "自动档案、公式/多期间/追溯补差仅局部源证据；社保/个税/激励详细原站规则尚未探索；无银行支付、税务申报及多角色薪酬验证。外部交易不作P1前置。",
+        "approvedAt": "2026-09-10T03:22:17.727544+00:00"
       },
       "p1BConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M07-P1-APPROVAL-20260910",
         "evidenceRefs": [],
-        "limits": "自动档案、公式/多期间/追溯补差仅局部源证据；社保/个税/激励详细原站规则尚未探索；无银行支付、税务申报及多角色薪酬验证。外部交易不作P1前置。"
+        "limits": "自动档案、公式/多期间/追溯补差仅局部源证据；社保/个税/激励详细原站规则尚未探索；无银行支付、税务申报及多角色薪酬验证。外部交易不作P1前置。",
+        "approvedAt": "2026-09-10T03:22:17.727544+00:00"
       },
       "conditions": {
         "applicableScopeDetermined": {
           "value": true,
-          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+          "basis": "M07-P1-APPROVAL-20260910；原登记完整范围逐项与收口清单一致，无内部删减"
         },
         "implementationRulesDecided": {
-          "value": false,
-          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+          "value": true,
+          "basis": "M07-P1-APPROVAL-20260910；本模块SPEC与R3-BASELINE-01均由所有者明确批准，版本/哈希锁定"
         },
         "acceptanceExecutable": {
           "value": true,
-          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+          "basis": "M07-P1-APPROVAL-20260910；逐项Given/When/Then已存在，作为验收预期获批，未冒本轮执行"
         },
         "dependenciesAndExceptionsResolved": {
-          "value": false,
-          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+          "value": true,
+          "basis": "M07-P1-APPROVAL-20260910；已批准生产者契约与本模块LIMIT；源缺证/独立角色留P2/P3/P4，不要求先实联调"
         }
       },
       "transitionReview": {
-        "approved": false,
-        "record": null,
-        "scope": "未批准",
-        "approvedAt": null
+        "approved": true,
+        "record": "M07-P1-APPROVAL-20260910",
+        "scope": "模块P1转序就绪；R3整体进入P2未批准",
+        "approvedAt": "2026-09-10T03:22:17.727544+00:00"
       },
-      "restrictedApproval": null,
-      "p1Closed": false,
-      "transitionReady": false,
-      "missingConditions": [
-        "implementationRulesDecided",
-        "dependenciesAndExceptionsResolved",
-        "p1AApproved",
-        "p1BApproved",
-        "transitionReviewApproved"
-      ]
+      "restrictedApproval": {
+        "scope": "自动档案、公式/多期间/追溯补差仅局部源证据；社保/个税/激励详细原站规则尚未探索；无银行支付、税务申报及多角色薪酬验证。外部交易不作P1前置。",
+        "residualRisk": "错误计薪或扣款、政策/身份错配、负净额不当追收、薪酬泄露及重复支付",
+        "revalidation": "P2：补薪资组/包/事件档案、受控公式DAG和输入政策快照、社保/税期/激励对象、负净额待处理账、支付幂等及对账、薪资权限和历史迁移；不引入完整预算/佣金/福利模块；P3：按本包Given/When/Then合成验证正常/边界/并发/故障，补算法及版本迁移证据，历史测试不代复验；P4：独立多角色、敏感字段/历史附件/下载、跨模块业务、生产恢复与外部联调。E2不新增人，单管理员不代验。",
+        "record": "M07-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T03:22:17.727544+00:00",
+        "phaseScope": "仅P1"
+      },
+      "p1Closed": true,
+      "closureClass": "受限通过",
+      "closureRecord": "M07-P1-APPROVAL-20260910",
+      "closedAt": "2026-09-10T03:22:17.727544+00:00",
+      "transitionReady": true,
+      "missingConditions": []
     }
   ],
   "ranges": [
@@ -1470,28 +1476,28 @@
       ],
       "foundationReadiness": {
         "BASE-01": {
-          "value": null,
-          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+          "value": true,
+          "basis": "R3-BASELINE-01由M27-P1-APPROVAL-20260910记录；仅需求"
         },
         "BASE-02": {
-          "value": null,
-          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+          "value": true,
+          "basis": "R3-BASELINE-01由M27-P1-APPROVAL-20260910记录；仅需求"
         },
         "BASE-03": {
-          "value": null,
-          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+          "value": true,
+          "basis": "R3-BASELINE-01由M27-P1-APPROVAL-20260910记录；仅需求"
         },
         "BASE-04": {
-          "value": null,
-          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+          "value": true,
+          "basis": "R3-BASELINE-01由M27-P1-APPROVAL-20260910记录；仅需求"
         },
         "BASE-05": {
-          "value": null,
-          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+          "value": true,
+          "basis": "R3-BASELINE-01由M27-P1-APPROVAL-20260910记录；仅需求"
         },
         "BASE-06": {
-          "value": null,
-          "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+          "value": true,
+          "basis": "R3-BASELINE-01由M27-P1-APPROVAL-20260910记录；仅需求"
         }
       },
       "review": {
@@ -1499,6 +1505,12 @@
         "record": null,
         "approvedAt": null,
         "scope": null
+      },
+      "p1ClosureSummary": {
+        "status": "R3 P1六模块与基础需求受限关闭；下游进入未批准",
+        "record": "M07-P1-APPROVAL-20260910",
+        "at": "2026-09-10T03:22:17.727544+00:00",
+        "downstreamAuthorized": false
       },
       "moduleIds": [
         "M27",
@@ -1509,13 +1521,6 @@
       ],
       "transitionReady": false,
       "missingConditions": [
-        "M07",
-        "BASE-01",
-        "BASE-02",
-        "BASE-03",
-        "BASE-04",
-        "BASE-05",
-        "BASE-06",
         "rangeReviewApproved"
       ]
     }
@@ -1569,9 +1574,7 @@
       "M11",
       "M07"
     ],
-    "waitingModuleIds": [
-      "M07"
-    ],
+    "waitingModuleIds": [],
     "formalClosureOrder": [
       "M27",
       "M16",
@@ -1579,7 +1582,7 @@
       "M11",
       "M07"
     ],
-    "status": "R3批准顺序落账中",
+    "status": "R3四模块均受限关闭",
     "nextFormalClosureModule": "M07",
     "rule": "按最新用户批准顺序关闭R3；随后允许R3串行材料准备，未批准R3不关闭，不进入P2/P3"
   }

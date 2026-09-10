@@ -699,7 +699,7 @@
   "currentP1": {
     "revision": "2026-09-09-module-closure-rolling-R",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-10T03:22:13.305264+00:00",
+    "updatedAt": "2026-09-10T03:22:17.727544+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -808,7 +808,7 @@
       "M48",
       "M32"
     ],
-    "currentWork": "M11批准收口完成；下一M07",
+    "currentWork": "M07批准收口完成；下一M07",
     "executionPolicy": {
       "id": "MODE-MODULE-CLOSURE-R-20260909",
       "authorizedAt": "2026-09-09T15:43:36.730682+00:00",
@@ -1126,6 +1126,14 @@
           "reason": "M11-P1-APPROVAL-20260910四条件满足，按批准顺序受限关闭",
           "remaining": "仅P2设计/P3验证/P4验收残余责任",
           "restore": "仅新批准变更回到受影响条款，不重开宽泛盘点"
+        },
+        {
+          "at": "2026-09-10T03:22:17.727544+00:00",
+          "from": "M07",
+          "to": "M07",
+          "reason": "M07-P1-APPROVAL-20260910四条件满足，按批准顺序受限关闭",
+          "remaining": "仅P2设计/P3验证/P4验收残余责任",
+          "restore": "仅新批准变更回到受影响条款，不重开宽泛盘点"
         }
       ],
       "backupActivationHistory": [
@@ -1215,9 +1223,7 @@
           "M11",
           "M07"
         ],
-        "waitingModuleIds": [
-          "M07"
-        ],
+        "waitingModuleIds": [],
         "formalClosureOrder": [
           "M27",
           "M16",
@@ -1225,7 +1231,7 @@
           "M11",
           "M07"
         ],
-        "status": "R3批准顺序落账中",
+        "status": "R3四模块均受限关闭",
         "nextFormalClosureModule": "M07",
         "rule": "按最新用户批准顺序关闭R3；随后允许R3串行材料准备，未批准R3不关闭，不进入P2/P3"
       }
@@ -1604,28 +1610,28 @@
         ],
         "foundationReadiness": {
           "BASE-01": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": true,
+            "basis": "R3-BASELINE-01由M27-P1-APPROVAL-20260910记录；仅需求"
           },
           "BASE-02": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": true,
+            "basis": "R3-BASELINE-01由M27-P1-APPROVAL-20260910记录；仅需求"
           },
           "BASE-03": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": true,
+            "basis": "R3-BASELINE-01由M27-P1-APPROVAL-20260910记录；仅需求"
           },
           "BASE-04": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": true,
+            "basis": "R3-BASELINE-01由M27-P1-APPROVAL-20260910记录；仅需求"
           },
           "BASE-05": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": true,
+            "basis": "R3-BASELINE-01由M27-P1-APPROVAL-20260910记录；仅需求"
           },
           "BASE-06": {
-            "value": null,
-            "basis": "须对本R版本消费的基础契约及例外评审，不以全部供应商接通/生产演练作P1前置"
+            "value": true,
+            "basis": "R3-BASELINE-01由M27-P1-APPROVAL-20260910记录；仅需求"
           }
         },
         "review": {
@@ -1633,6 +1639,12 @@
           "record": null,
           "approvedAt": null,
           "scope": null
+        },
+        "p1ClosureSummary": {
+          "status": "R3 P1六模块与基础需求受限关闭；下游进入未批准",
+          "record": "M07-P1-APPROVAL-20260910",
+          "at": "2026-09-10T03:22:17.727544+00:00",
+          "downstreamAuthorized": false
         }
       }
     ]
