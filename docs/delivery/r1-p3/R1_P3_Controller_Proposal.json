@@ -13,7 +13,8 @@
     "P3-R1-04",
     "P3-R1-05",
     "P3-R1-06",
-    "P3-R1-07"
+    "P3-R1-07",
+    "P3-R1-08"
   ],
   "p3CaseDesignsLocallyExercised": [
     "P3-ARC-01",
@@ -60,7 +61,15 @@
     "P3-XMOD-02",
     "P3-M32-06",
     "P3-M32-08",
-    "P3-M32-09"
+    "P3-M32-09",
+    "P3-MIG-01",
+    "P3-MIG-02",
+    "P3-MIG-03",
+    "P3-MIG-04",
+    "P3-MIG-05",
+    "P3-MIG-06",
+    "P3-MIG-07",
+    "P3-XMOD-03"
   ],
   "newTestAssertions": null,
   "independentReview": "pending",
@@ -71,20 +80,18 @@
   "partialImplementationTasks": [],
   "testCountNote": "原值6指测试条目而非断言数；本次精确条目数以提交SHA对应运行证据为准。",
   "latestEvidence": "evidence/r1-p3-20260910T090521350287Z.json",
-  "testEntriesPassed": 74,
+  "testEntriesPassed": 148,
   "remainingTasksComplete": false,
   "compatibilityTestEntriesPassed": 3,
   "latestTaskEvidence": [
-    "evidence/r1-p3-20260910T070210483124Z.json",
-    "evidence/r1-p3-20260910T070522816543Z.json",
-    "evidence/r1-p3-20260910T070535639941Z.json"
+    "evidence/r1-p3-20260910T090521350287Z.json"
   ],
   "latestTaskBoundaries": [
-    "只证明R1本地隔离合成运行；独立角色/浏览器人工验收待评审",
-    "R2/R3新办理契约和真实联调未执行，责任保留P3-R1-10",
-    "旧360办理只在旧功能开关兼容路径复验，不标新生产者契约通过",
-    "current门户来源最多500记录，超出显式BOUNDED_QUERY_REQUIRED；无截断成功",
-    "84项和类型构建证据固定b7dac9c；新增11门户+5指定兼容证据固定2d6ae4f；两个源码间产品代码未变"
+    "仅本地SQLite隔离合成；148/148和类型构建固定c36094e，不是P3最终两轮收口",
+    "JSON归档预算4MiB/数组10000项；规范化和回填100行批次；超预算显式失败",
+    "未知历史/法律实体/关系不推断；目录补齐有效期等新事实须按已批准业务规则核实",
+    "旧审批保留原表/签名/节点及只读兼容视图；未核安全适配器的旧办理局部阻断，不猜测外部后效",
+    "未证明R2/R3真实版本契约、云端容量/生产迁移或独立人类验收；不关闭风险或批准退出"
   ],
   "latestVerifiedSourceSha": "c36094e2f407fd0e2101b2b0e3988fc278b4ec1b",
   "task08Status": "implemented_synthetic_verified_review_pending",

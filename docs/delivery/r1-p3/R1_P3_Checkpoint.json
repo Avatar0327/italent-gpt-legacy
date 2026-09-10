@@ -335,7 +335,9 @@
         "P3-REC-04",
         "P3-REC-05"
       ],
-      "evidence": [],
+      "evidence": [
+        "evidence/r1-p3-20260910T091333336280Z.json"
+      ],
       "remaining": [
         "有界加密/签名清单与实际schema基线增量恢复",
         "独立安全ledger保守协议/隔离恢复状态机",
@@ -344,6 +346,10 @@
       "blockedValidation": [
         "DEP-PLATFORM-01",
         "DEP-PLATFORM-02"
+      ],
+      "implementationSha": "a9dba42cfb229b78cc00023f0fdd7b2f82bd2954",
+      "subworkCompleted": [
+        "4MiB AES-256-GCM/AAD/独立封装密钥/签名与完整对象摘要"
       ]
     },
     {
@@ -373,6 +379,6 @@
     }
   ],
   "currentTask": "P3-R1-09",
-  "lastVerifiedSourceSha": "c36094e2f407fd0e2101b2b0e3988fc278b4ec1b",
-  "latestRun": "evidence/r1-p3-20260910T090521350287Z.json"
+  "lastVerifiedSourceSha": "a9dba42cfb229b78cc00023f0fdd7b2f82bd2954",
+  "latestRun": "evidence/r1-p3-20260910T091333336280Z.json"
 }
