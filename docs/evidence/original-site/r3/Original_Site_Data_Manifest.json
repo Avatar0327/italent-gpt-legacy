@@ -514,7 +514,7 @@
   "payments": 0,
   "declarations": 0,
   "checkpoint_at": "2026-09-10T12:16:26.833054+00:00",
-  "workflow_status": "blocked_at_employee_prerequisite; five_modules_incomplete",
+  "workflow_status": "resumed; continue_employee_independent_management_cases",
   "execution_blockers": [
     {
       "id": "R3-EXEC-BLOCK-001",
@@ -578,5 +578,157 @@
       "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE10.txt",
       "sha256": "497ec11d1665d7b42da011285df47219d2c96abed0fca77f980763b824f1428d"
     }
-  ]
+  ],
+  "resume_reverification": {
+    "at": "2026-09-10T13:21:03.879651+00:00",
+    "starting_head": "1fbf5250335258a58b8fd305a1c8149ff264ed71",
+    "workspace_clean": true,
+    "remote_head_matches": true,
+    "r3_p2_branch_found": false,
+    "original_27_verified": 27,
+    "new_objects": 0,
+    "checks": [
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_ORG01",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE01",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE02",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE03",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE04",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE05",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE06",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE07",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE08",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE09",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE10",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M16_SMOKE01",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_POOL01",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M11_SMOKE01",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE01",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE02",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE03",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE04",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE05",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE06",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE07",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE08",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE09",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE10",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M11_SMOKE02",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M11_SMOKE03",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      },
+      {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M07_GROUP01",
+        "result": "matched_exact_name_in_module_list_or_detail",
+        "at": "2026-09-10T13:21:03.879651+00:00"
+      }
+    ],
+    "employee_check": {
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_EMP01",
+      "search_value_readback": true,
+      "result": "搜索结果：这里什么都没有",
+      "existing_unsaved_draft_readback": true
+    }
+  }
 }
