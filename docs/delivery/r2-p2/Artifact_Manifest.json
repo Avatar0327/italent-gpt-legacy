@@ -73,8 +73,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/Design_Checkpoint.json",
-      "sha256": "90a8f8c6c081d9857d14f76ac5cca75ecbf6ad8fb8991b3222c1286d4a1a6490",
-      "bytes": 1398
+      "sha256": "36b73f1a6243df62432ae757c80f03ca40936a67d7f3efd868abbda3c2e582ce",
+      "bytes": 1458
     },
     {
       "path": "docs/delivery/r2-p2/Exit_Review.md",
@@ -108,8 +108,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/Interface_Schemas.json",
-      "sha256": "89f79ffe817cad1c1ee0944e7ebb3cdda310b1d2480075b4fa139874b1cdc52f",
-      "bytes": 135769
+      "sha256": "1a68f08566965a645e760ea094e5179fb8daeb02c68c1177ba81a97c35dbc188",
+      "bytes": 136067
     },
     {
       "path": "docs/delivery/r2-p2/Interfaces.md",
@@ -123,7 +123,7 @@
     },
     {
       "path": "docs/delivery/r2-p2/Limit_Resolution.json",
-      "sha256": "46d0eaf0a8814e8b2fcb2b730ec9d93d23cbbea241920f832128d25072d85e97",
+      "sha256": "55f1c3f4e989f887f026f115c9e9a3b0dc209b08018b425c17bc9929dd056175",
       "bytes": 44910
     },
     {
@@ -192,19 +192,29 @@
       "bytes": 2474
     },
     {
+      "path": "docs/delivery/r2-p2/Recheck_Scope.md",
+      "sha256": "4be0f4688521615a8eed39671e8b1ca3f4f5626ceb7838b3c055b65f1bdf2820",
+      "bytes": 2677
+    },
+    {
       "path": "docs/delivery/r2-p2/Recovery_Cost_Responsibilities.md",
       "sha256": "35a9de08a30574d7f026b182a88e2bd8b7808ace05a38d747695393e9f3f253f",
       "bytes": 5574
     },
     {
       "path": "docs/delivery/r2-p2/Repair_Record.json",
-      "sha256": "7d01c07f15cb31890c028268b4f7da363458bb57b42d16ec0123e81427baa7c4",
-      "bytes": 3801
+      "sha256": "f45716a5b4ac37239d52030176219e1cc1c0bfe135f82619d12e301fdf4bbb9d",
+      "bytes": 3966
     },
     {
       "path": "docs/delivery/r2-p2/Repair_Review_Round1.md",
       "sha256": "a21a169556c649b8b471234a0427a1b665598d771c3b3d6e86c47d209fe519f3",
       "bytes": 2875
+    },
+    {
+      "path": "docs/delivery/r2-p2/Repair_Review_Round2.md",
+      "sha256": "5320a91f4761d69e6cc9e98b31637427dac60b2ed393420545474d7f00e65c58",
+      "bytes": 3118
     },
     {
       "path": "docs/delivery/r2-p2/Requirements_Trace.json",
@@ -327,6 +337,11 @@
       "bytes": 2611
     },
     {
+      "path": "docs/delivery/r2-p2/check_rebuild.py",
+      "sha256": "3c7f030cc8f91bcef0b4b284be730218e530bc76ea700ee8101a47948d112b4a",
+      "bytes": 853
+    },
+    {
       "path": "docs/delivery/r2-p2/check_repair.py",
       "sha256": "05a4cf8cbf169d116531823a2497068e1cf52a1a5b27c8e1afd0e63e451ce42a",
       "bytes": 3812
@@ -348,8 +363,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/repair_contracts.py",
-      "sha256": "6637235f9688e923b338e4db7fc1cccfc5726130f3045acc2085b695fc117e5e",
-      "bytes": 6282
+      "sha256": "5d9247d55a3a4307ada351b7066bb5f42ced4a7ba08bcdb59a6333d1184c6f38",
+      "bytes": 6359
     },
     {
       "path": "docs/delivery/r2-p2/repair_handoff.py",

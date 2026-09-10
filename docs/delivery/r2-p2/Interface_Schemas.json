@@ -3186,15 +3186,26 @@
         "resultVersionRef": {
           "allOf": [
             {
-              "$ref": "#/$defs/InternalVersionRef"
+              "allOf": [
+                {
+                  "$ref": "#/$defs/InternalVersionRef"
+                },
+                {
+                  "properties": {
+                    "producer": {
+                      "const": "M18"
+                    },
+                    "objectType": {
+                      "const": "published_result"
+                    }
+                  }
+                }
+              ]
             },
             {
               "properties": {
-                "producer": {
-                  "const": "M18"
-                },
-                "objectType": {
-                  "const": "published_result"
+                "purpose": {
+                  "const": "historical_reference_only"
                 }
               }
             }

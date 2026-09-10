@@ -42,7 +42,7 @@
           "REF-COMMAND-SOURCE"
         ],
         "evidencePath": "evidence/repair-001-schema.json",
-        "evidenceSha256": "87c6431d5fff83bb329e90a6cc84b1c3cb7305d0b3b25c6b74ab611dd110aa36",
+        "evidenceSha256": "2cec0c86373490403d88ac2d143d948a98b5e6e73b3f9032e94431f881feb2f7",
         "result": "design_close_reproposed",
         "independentlyAcceptedThisRepair": false
       }
@@ -168,7 +168,7 @@
           "TYPE-EXACT-VERSION"
         ],
         "evidencePath": "evidence/repair-001-schema.json",
-        "evidenceSha256": "87c6431d5fff83bb329e90a6cc84b1c3cb7305d0b3b25c6b74ab611dd110aa36",
+        "evidenceSha256": "2cec0c86373490403d88ac2d143d948a98b5e6e73b3f9032e94431f881feb2f7",
         "result": "design_close_reproposed",
         "independentlyAcceptedThisRepair": false
       }
@@ -307,7 +307,7 @@
           "QUESTION-MISSING"
         ],
         "evidencePath": "evidence/repair-001-schema.json",
-        "evidenceSha256": "87c6431d5fff83bb329e90a6cc84b1c3cb7305d0b3b25c6b74ab611dd110aa36",
+        "evidenceSha256": "2cec0c86373490403d88ac2d143d948a98b5e6e73b3f9032e94431f881feb2f7",
         "result": "design_close_reproposed",
         "independentlyAcceptedThisRepair": false
       }
@@ -488,7 +488,7 @@
           "HISTORY-MISSING"
         ],
         "evidencePath": "evidence/repair-001-schema.json",
-        "evidenceSha256": "87c6431d5fff83bb329e90a6cc84b1c3cb7305d0b3b25c6b74ab611dd110aa36",
+        "evidenceSha256": "2cec0c86373490403d88ac2d143d948a98b5e6e73b3f9032e94431f881feb2f7",
         "result": "design_close_reproposed",
         "independentlyAcceptedThisRepair": false
       }
@@ -520,7 +520,7 @@
           "HISTORY-SOURCE"
         ],
         "evidencePath": "evidence/repair-001-schema.json",
-        "evidenceSha256": "87c6431d5fff83bb329e90a6cc84b1c3cb7305d0b3b25c6b74ab611dd110aa36",
+        "evidenceSha256": "2cec0c86373490403d88ac2d143d948a98b5e6e73b3f9032e94431f881feb2f7",
         "result": "design_close_reproposed",
         "independentlyAcceptedThisRepair": false
       }

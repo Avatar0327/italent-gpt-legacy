@@ -90,5 +90,11 @@
   ],
   "ownerP2ExitApproved": false,
   "r2P3Started": false,
-  "generatedBytecodeCleanup": "001提交误包含两个本目录Python缓存；003显式git rm删除并保留目录内gitignore，未触及产品或其他工作树。"
+  "generatedBytecodeCleanup": "001提交误包含两个本目录Python缓存；003显式git rm删除并保留目录内gitignore，未触及产品或其他工作树。",
+  "selfReviews": [
+    "Repair_Review_Round1.md",
+    "Repair_Review_Round2.md"
+  ],
+  "recheckScope": "Recheck_Scope.md",
+  "ownerNewBusinessDecisionsRequired": 0
 }
