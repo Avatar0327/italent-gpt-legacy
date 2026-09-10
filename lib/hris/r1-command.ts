@@ -4,14 +4,14 @@ import { HttpError } from './http';
 
 export type SecurityStamp = {
  authorizationRevision:number; writerEpoch:number; recoveryEpoch:number;
- openGate:number; phase:string; featuresEnabled:number;
+ openGate:number; phase:string; featuresEnabled:number; externalSecurityEpoch?:number;
 };
 export async function securityStamp(db:D1Database,tenant:string):Promise<SecurityStamp> {
  const s=await db.prepare('SELECT authorization_revision AS authorizationRevision,writer_epoch AS writerEpoch,recovery_epoch AS recoveryEpoch,open_gate AS openGate,phase,features_enabled AS featuresEnabled FROM r1_schema_state WHERE tenant_id=?').bind(tenant).first<SecurityStamp>();
  if(!s||!s.openGate)throw new HttpError(503,'恢复隔离中或授权水位不可用','RECOVERY_ISOLATED');
- return s;
+ const {assertRuntimeSecurity}=await import('./r1-security-runtime');await assertRuntimeSecurity(db,tenant,s);return s;
 }
-export function sameStamp(a:SecurityStamp,b:SecurityStamp){return a.authorizationRevision===b.authorizationRevision&&a.writerEpoch===b.writerEpoch&&a.recoveryEpoch===b.recoveryEpoch&&b.openGate===1;}
+export function sameStamp(a:SecurityStamp,b:SecurityStamp){return a.authorizationRevision===b.authorizationRevision&&a.writerEpoch===b.writerEpoch&&a.recoveryEpoch===b.recoveryEpoch&&b.openGate===1&&a.externalSecurityEpoch===b.externalSecurityEpoch;}
 export function canonical(value:unknown):string {
  if(value===null||typeof value==='string'||typeof value==='boolean')return JSON.stringify(value);
  if(typeof value==='number'&&Number.isSafeInteger(value))return JSON.stringify(value);
@@ -53,6 +53,7 @@ async function commitCommandInternal(db:D1Database,m:Member,stamp:SecurityStamp,
  const event={schemaVersion:1,eventId:token,eventType:'command.committed',tenantId:tenant,source:'BASE',internalId:intent.commandId,externalId:null,entityRevision:1,workspaceRevision:revision+1,definitionVersion:'r1-command-v1',sourceRevision:revision,occurredAt:at,effectiveAt:at,correlationId:intent.commandId,causationId:intent.commandId,digestAlgorithm:'sha256-canonical-json-v1',payload:{commandId:intent.commandId,action:intent.action}};
  const eventPayload=JSON.stringify({...event,digest:await digest(event)});
  const memberScope=typeof m.orgScope==='string'?m.orgScope:JSON.stringify(m.orgScope??[]);
+ const {prepareRuntimeSecurityWrite}=await import('./r1-security-runtime');const securityLease=await prepareRuntimeSecurityWrite({tenant,commandId:intent.commandId,requestDigest,authorizationRevision:stamp.authorizationRevision,workspaceRevision:revision,recoveryEpoch:stamp.recoveryEpoch});if(securityLease)m.permissionValidUntil=Math.min(m.permissionValidUntil??Number.MAX_SAFE_INTEGER,securityLease.expiresAt);
  const statements=[
   db.prepare(`INSERT INTO r1_commands(tenant_id,command_id,actor_id,action,idempotency_key,request_digest,token,status,workspace_revision,authorization_revision,writer_epoch,recovery_epoch,created_at)
    SELECT w.owner,?,?,?,?,?,?,'processing',w.revision,s.authorization_revision,s.writer_epoch,s.recovery_epoch,?
@@ -68,6 +69,7 @@ async function commitCommandInternal(db:D1Database,m:Member,stamp:SecurityStamp,
  ];
  const committed=await db.batch(statements);
  if(!committed[1].meta.changes)throw new HttpError(409,'数据、字段授权或恢复版本已变化','REVISION_CONFLICT');
+ if(securityLease)await securityLease.finalize();
  return {commandId:intent.commandId,status:'committed',result,workspaceRevision:revision+1,replayed:false};
 }
 export async function commitCommand(db:D1Database,m:Member,stamp:SecurityStamp,intent:CommandIntent,plan:(token:string)=>D1PreparedStatement[],result:Record<string,unknown>={}){return commitCommandInternal(db,m,stamp,intent,plan,result);}
