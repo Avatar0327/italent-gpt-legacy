@@ -92,6 +92,13 @@
       "when": 1789012802000,
       "tag": "0012_r1_integration_receipts",
       "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "6",
+      "when": 1789013918168,
+      "tag": "0013_r1_occupancy_events",
+      "breakpoints": true
     }
   ]
 }

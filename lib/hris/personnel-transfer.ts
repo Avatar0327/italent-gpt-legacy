@@ -3,7 +3,7 @@ import type {Member} from './authorization';
 
 export type TransferSnapshot={orgId:string;orgName:string;positionId:string|null;job:string;gradeId:string|null;level:string;status:string};
 export type ApprovalDetails={intent?:'independent'|'correction';previousApprovalId?:string;rejectionReason?:string;transfer?:{
- policy:'two-party-dated-v1';gradeChanged:boolean;effectiveOn:string;eligibleAt:string;employeeName:string;employeeCode:string;
+ sourceAssignmentId?:string;sourceAssignmentVersion?:number;exitFenceObserved?:string|null;policy:'two-party-dated-v1';gradeChanged:boolean;effectiveOn:string;eligibleAt:string;employeeName:string;employeeCode:string;
  source:TransferSnapshot;target:TransferSnapshot;
  execution:'waiting'|'failed'|'applied'|'cancelled';attempts:number;lastAttemptAt?:string;failure?:string;appliedAt?:string;appliedBy?:string;cancelledAt?:string;cancelReason?:string;
 }};
