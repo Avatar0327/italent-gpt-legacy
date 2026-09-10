@@ -181,7 +181,7 @@
         "P3-R1-02",
         "P3-R1-04"
       ],
-      "status": "in_progress",
+      "status": "implemented_synthetic_verified_review_pending",
       "caseIds": [
         "P3-M32-01",
         "P3-M32-02",
@@ -195,7 +195,8 @@
       "evidence": [
         "evidence/r1-p3-20260910T071309586525Z.json",
         "evidence/r1-p3-20260910T072924847968Z.json",
-        "evidence/r1-p3-20260910T074453122156Z.json"
+        "evidence/r1-p3-20260910T074453122156Z.json",
+        "evidence/r1-p3-20260910T075750612916Z.json"
       ],
       "subworkCompleted": [
         "21数据集254字段运行时目录与源版本标识",
@@ -213,14 +214,20 @@
         "保存定义按不可变发布版本执行、禁止临时覆盖",
         "稳定多字段排序/唯一行键游标与缺值顺序",
         "10001行51个真实SQLite事务构建块和索引分页",
-        "原报表入口feature gate切换及新版读取页面"
+        "原报表入口feature gate切换及新版读取页面",
+        "已注册精确汇总/条件指标与固定来源1:N根去重",
+        "21逐数据集合成手算源计算核对/缺打卡不报未知分钟数"
       ],
-      "remaining": [
-        "注册业务指标与1:N固定关联执行",
-        "21数据集业务粒度/源契约oracle的完整核对",
-        "任务级AC/风险/LIMIT证据收口；真实R2/R3联调保留10"
-      ],
-      "implementationSha": "1d7725cef06a753063a2080ac0f0c37b1f493713"
+      "remaining": [],
+      "implementationSha": "7ccfbe6029bf28a5e35be97271b16fce7f325325",
+      "verificationBoundaries": [
+        "仅本地隔离合成；39测试/类型/构建固定源码7ccfbe6",
+        "21手算是实际兼容计算；R2/R3新版本化生产者未联调，任务10保留",
+        "真实M01版本投影/快照已验证；其他版本化源未配置，旧数据不伪造历史",
+        "关联限根字段固定版本先去重/聚合；关联历史快照未冻结清单则拒绝",
+        "导出/订阅与设计器页面操作归07；06交叉验收的导出子条件未计通过",
+        "独立真人和云端性能未执行，风险不由本窗口关闭"
+      ]
     },
     {
       "id": "P3-R1-07",
@@ -228,7 +235,7 @@
         "P3-R1-06",
         "P3-R1-04"
       ],
-      "status": "pending",
+      "status": "in_progress",
       "caseIds": [
         "P3-M32-06",
         "P3-M32-08",
@@ -301,7 +308,7 @@
       "evidence": []
     }
   ],
-  "currentTask": "P3-R1-06",
-  "lastVerifiedSourceSha": "1d7725cef06a753063a2080ac0f0c37b1f493713",
-  "latestRun": "evidence/r1-p3-20260910T074453122156Z.json"
+  "currentTask": "P3-R1-07",
+  "lastVerifiedSourceSha": "7ccfbe6029bf28a5e35be97271b16fce7f325325",
+  "latestRun": "evidence/r1-p3-20260910T075750612916Z.json"
 }

@@ -5,13 +5,14 @@
   "sourceBaseline": "5988a3000a1ac9ad30c786c84289093d9a6e074f",
   "p2ApprovalId": "R1-P2-EXIT-OWNER-20260910",
   "p3StartedBy": "project owner message in R1 P3 window",
-  "currentTask": "P3-R1-06",
+  "currentTask": "P3-R1-07",
   "completedImplementationTasks": [
     "P3-R1-01",
     "P3-R1-02",
     "P3-R1-03",
     "P3-R1-04",
-    "P3-R1-05"
+    "P3-R1-05",
+    "P3-R1-06"
   ],
   "p3CaseDesignsLocallyExercised": [
     "P3-ARC-01",
@@ -47,7 +48,15 @@
     "P3-M48-04",
     "P3-M48-05",
     "P3-M48-06",
-    "P3-M48-07"
+    "P3-M48-07",
+    "P3-M32-01",
+    "P3-M32-02",
+    "P3-M32-03",
+    "P3-M32-04",
+    "P3-M32-05",
+    "P3-M32-07",
+    "P3-M32-10",
+    "P3-XMOD-02"
   ],
   "newTestAssertions": null,
   "independentReview": "pending",

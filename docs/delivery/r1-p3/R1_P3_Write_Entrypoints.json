@@ -1,7 +1,8 @@
 {
   "purpose": "static inventory, not dynamic route coverage",
-  "routeCount": 53,
-  "methodCount": 54,
+  "routeCount": 55,
+  "methodCount": 56,
+  "sourceSha": "7ccfbe6029bf28a5e35be97271b16fce7f325325",
   "routes": [
     {
       "path": "app/api/access/route.ts",
@@ -341,12 +342,28 @@
       "classification": "R1 explicit versioned service or read-only contract preflight; static inventory is not dynamic proof"
     },
     {
-      "path": "app/api/r1/self-service/actions/route.ts",
-      "classification": "R1 command gateway; exact route dynamic coverage tracked separately",
+      "path": "app/api/r1/reports/definitions/route.ts",
       "methods": [
         "POST"
       ],
-      "sha256": "c86efa7790df8a2a5ed34c4c2009d3d119a0ad875b3b4cd02729e24e985ea0b5"
+      "sha256": "7f313e063e1ae62ed888dd72976b0525b90144efb355c801843d9d97f8065b21",
+      "classification": "R1 service command ledger + current authorization + feature gate"
+    },
+    {
+      "path": "app/api/r1/reports/projections/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "sha256": "0d928c1a9a722d8b3e4d84bbec68a4a8e1bfb3676b17017483cb05b50a783a79",
+      "classification": "R1 service command ledger + current authorization + feature gate"
+    },
+    {
+      "path": "app/api/r1/self-service/actions/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "sha256": "c86efa7790df8a2a5ed34c4c2009d3d119a0ad875b3b4cd02729e24e985ea0b5",
+      "classification": "R1 command gateway; exact route dynamic coverage tracked separately"
     },
     {
       "path": "app/api/r1/workflows/batch/route.ts",
@@ -377,7 +394,7 @@
       "methods": [
         "POST"
       ],
-      "sha256": "cfc75d5572ec21a59cbc36f66d3eac29cc4074aa0b10115ae1ac17b6df55ee33",
+      "sha256": "1f56c94a73a985e7c527e36782cebd7c27d0de036f050a03228b485e78696ea1",
       "classification": "existing API command bridge; feature gate prevents old writes after switch"
     },
     {
@@ -428,6 +445,5 @@
       "sha256": "ca8a156a638568d278e35fe32add73c58d093d31c9a57615e2686cef844a6a4a",
       "classification": "existing API command bridge; feature gate prevents old writes after switch"
     }
-  ],
-  "sourceSha": "2d6ae4f665154ffafbb301ed6825cb8d32cd8218"
+  ]
 }
