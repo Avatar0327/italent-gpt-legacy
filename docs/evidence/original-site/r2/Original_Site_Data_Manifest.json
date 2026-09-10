@@ -321,9 +321,20 @@
     }
   ],
   "continuation": {
-    "baseHead": "d8cc3b44edaab49463b97e09205e008a3841840b",
-    "checkedAt": "2026-09-10T15:25:01.653347+00:00",
+    "baseHead": "3fa2f42960aedf046ab08987d2a31edf8b77c143",
+    "checkedAt": "2026-09-10T15:48:59.472Z",
     "newObjects": 0,
-    "currentBlocker": "R2-ENV-CONT-001"
-  }
+    "currentBlocker": "R2-ENV-CONT-001",
+    "ownedTab": "21",
+    "evidence": "captures/Recovery-window-20260910.json",
+    "readbackQueue": "Recovery_Readback_Queue.json"
+  },
+  "continuationHistory": [
+    {
+      "baseHead": "d8cc3b44edaab49463b97e09205e008a3841840b",
+      "checkedAt": "2026-09-10T15:25:01.653347+00:00",
+      "newObjects": 0,
+      "currentBlocker": "R2-ENV-CONT-001"
+    }
+  ]
 }

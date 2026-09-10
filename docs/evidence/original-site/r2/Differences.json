@@ -29,7 +29,7 @@
     "classification": "DESIGN_GAP",
     "severity": "Minor",
     "finding": "原站行为关键点/面试关键点/发展建议五类型与P2 subsetName的承载语义未明确；不能将子集标题和逐行业务字段混为同值。现字符串结构可能承载，但缺映射/类型校验说明。",
-    "disposition": "CP-001_M37_Design_Supplement.md已形成定向设计补充建议；由设计负责人确认逐行关键点、建议类型及严格Schema/adapter/AC02/08映射。建议尚未获批，保持既有P2独立通过。",
+    "disposition": "CP-001_M37_Design_Supplement.md待R2 P2设计负责人接收并完成定向字段映射补充；无需所有者重新选择业务规则。原站窗口只补证，不改P2。本轮ENV阻塞未产生更充分字段证据，既有P2独立通过保留。",
     "evidence": [
       "R2-OBS-M37-004"
     ]

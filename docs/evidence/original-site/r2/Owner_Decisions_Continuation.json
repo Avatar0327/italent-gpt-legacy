@@ -26,9 +26,25 @@
     "currentBlocker": "R2-ENV-CONT-001"
   },
   "CP-001": {
-    "status": "design_supplement_proposed_not_approved",
+    "status": "pending_R2_P2_design_owner_receipt",
     "p2IndependentPassRetained": true,
-    "proposalFile": "CP-001_M37_Design_Supplement.md"
+    "proposalFile": "CP-001_M37_Design_Supplement.md",
+    "previousStatus": "design_supplement_proposed_not_approved",
+    "ownerDecisionRequired": false,
+    "designBranchModified": false,
+    "additionalBusinessEvidenceInRecovery": false
   },
-  "r2P3Started": false
+  "r2P3Started": false,
+  "recoveryOwnerDirective": {
+    "source": "current owner-authored R2 recovery message",
+    "baseHead": "3fa2f42960aedf046ab08987d2a31edf8b77c143",
+    "soleExecutor": "R2｜原站验证恢复",
+    "previousWindowPausedByOwner": true,
+    "completeOriginBeforeP2Increment": true,
+    "startR2P3": false,
+    "sameApprovalsMustNotBeRequestedAgain": [
+      "CP-002",
+      "CP-003"
+    ]
+  }
 }

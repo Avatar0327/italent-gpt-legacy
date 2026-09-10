@@ -1,0 +1,759 @@
+{
+  "runId": "R2-ORIGIN-20260910-103952",
+  "baseHead": "3fa2f42960aedf046ab08987d2a31edf8b77c143",
+  "ownedTab": "21",
+  "startedAt": "2026-09-10T15:41:27.974Z",
+  "completedAt": "2026-09-10T15:48:59.472Z",
+  "classification": "ENV_BLOCKED",
+  "resolved": false,
+  "checks": [
+    {
+      "pathId": "ROOT_MENU",
+      "attempt": 0,
+      "at": "2026-09-10T15:42:43.695Z",
+      "title": "首页",
+      "url": "https://srworkshopbj.italent.cn/portal/iTalentHome/",
+      "snapshot": "- text: 快捷操作\n- list:\n  - listitem: 日程\n  - listitem: 通讯录\n  - listitem: 人事申请\n  - listitem: 我的工资\n  - listitem: 工作台\n  - listitem: 问卷管理\n  - listitem: 资源管理\n  - listitem: 培训实施\n  - listitem: 考试管理\n  - listitem: 师资管理\n  - listitem: 数据报表\n  - listitem: 运营中心\n  - listitem: 人才标准\n- img \"logo\"\n- text: 全部菜单\n- textbox:\n  - /placeholder: \" \"\n- generic: 搜索应聘者\n- superscript: \"9\"\n- superscript: 99+\n- generic: [CURRENT_ACCOUNT]\n- generic: [CURRENT_ACCOUNT]\n- img \"logo\"\n- text: 全部菜单\n- textbox \"搜索菜单\"\n- generic: 员工自助\n- generic: 管理者工作台\n- generic: 文化激励\n- generic: 我的团队\n- generic: 团队假勤\n- generic: 团队盘点\n- generic: 我的审批\n- generic: OKR\n- generic: 日程\n- generic: 日报\n- generic: 我的目标\n- generic: 绩效\n- generic: 我的融入计划\n- generic: 我的假勤\n- generic: 自助服务\n- generic: 我的学习\n- generic: 我的教务\n- generic: 我的发展计划\n- generic: 通讯录\n- generic: 任务\n- generic: 组织员工\n- generic: 组织管理\n- generic: 职务体系\n- generic: 编制管理\n- generic: 人员信息\n- generic: 人员子集\n- generic: 任职管理\n- generic: 合同协议\n- generic: 职责转交\n- generic: 黑名单管理\n- generic: 数据分析\n- generic: 设置\n- generic: 全部人员\n- generic: 人才评定\n- generic: 评定过程\n- generic: 评定记录\n- generic: 活动设置\n- generic: 基础设置\n- generic: 统计分析\n- generic: 干部管理2.0\n- generic: 选拔任用\n- generic: 干部档案\n- generic: 考察期管理\n- generic: 干部述职\n- generic: 统计分析\n- generic: 设置\n- generic: HRBP工作台\n- generic: 首页\n- generic: 员工\n- generic: 录用入职\n- generic: 任职管理\n- generic: 合同协议\n- generic: 应聘者\n- generic: 考勤管理\n- generic: 员工绩效活动\n- generic: 目标管理\n- generic: OKR管理\n- generic: 数据分析\n- generic: 标签库\n- generic: 企业标签库\n- generic: 北森标签库\n- generic: 标签应用设置\n- generic: 任职资格\n- generic: 任职类别\n- generic: 任职级别\n- generic: 指标\n- generic: 任职资格标准\n- generic: 设置\n- generic: 薪酬社保\n- generic: 薪资档案\n- generic: 薪酬核算\n- generic: 核算相关数据\n- generic: 社保管理\n- generic: 薪酬支付\n- generic: 个税通\n- generic: 薪酬激励\n- generic: 数据分析\n- generic: 设置\n- generic: 我的填报\n- generic: 我发起的填报\n- generic: 预算成本\n- generic: 预算管理\n- generic: 成本管理\n- generic: 统计分析\n- generic: 设置\n- generic: 财务凭证\n- generic: 任务管理\n- generic: 设置\n- generic: 假勤管理\n- generic: 考勤文员工作台\n- generic: 考勤综合查询\n- generic: 考勤档案\n- generic: 排班管理\n- generic: 考勤管理\n- generic: 考勤申请\n- generic: 假期管理\n- generic: 数据分析\n- generic: 打卡数据\n- generic: 设置\n- generic: AI排班方案\n- generic: 招聘管理系统\n- generic: 招聘需求\n- generic: 招聘管理系统\n- generic: 首页\n- generic: 仪表盘\n- generic: 招聘需求\n- generic: 职位发布\n- generic: 应聘者\n- generic: AI推荐\n- generic: 面试管理\n- generic: 猎头推荐\n- generic: 人才库\n- generic: 数据分析\n- generic: 设置\n- generic: 面试官工作台\n- generic: 首页\n- generic: 筛选简历\n- generic: 我的面试\n- generic: Offer审批\n- generic: 招聘需求\n- generic: 我的面试题库\n- generic: AI人才库\n- generic: 人才地图\n- generic: 智能分类\n- generic: 多维分析\n- generic: 测评中心\n- generic: 首页\n- generic: 仪表盘\n- generic: 项目\n- generic: 人才\n- generic: 方案\n- generic: 活动\n- generic: 考试\n- generic: 设置\n- generic: 绩效管理\n- generic: 绩效工作台\n- generic: OKR管理\n- generic: 员工目标\n- generic: 员工绩效\n- generic: 组织目标\n- generic: 组织绩效\n- generic: 数据分析\n- generic: OKR设置\n- generic: 目标设置\n- generic: 绩效设置\n- generic: 公共设置\n- generic: 继任与发展\n- generic: 人才盘点\n- generic: 人才池管理\n- generic: 继任管理\n- generic: 人才发展计划\n- generic: 组织健康度分析\n- generic: 带教信息\n- generic: 人才数据洞察\n- generic: 人才搜索\n- generic: 设置\n- generic: 在线盘点\n- generic: 人才标准\n- generic: 盘点项目\n- generic: 盘点校准会\n- generic: 人才池\n- generic: 继任管理\n- generic: 人才搜索\n- generic: 组织人才分析\n- generic: 设置\n- generic: 审批中心\n- generic: 流程管理\n- generic: 管理员委托\n- generic: 项目人力管理\n- generic: 项目\n- generic: 项目人员\n- generic: 工时管理\n- generic: 统计\n- generic: 设置\n- generic: 文化激励\n- generic: 文化激励\n- generic: 首页配置\n- generic: 企业活动\n- generic: 员工圈设置\n- generic: 企业文化史\n- generic: 企业榜样墙\n- generic: 商城管理\n- generic: 祝福管理\n- generic: 员工总结报告\n- generic: 企业勋章管理\n- generic: 企业标签管理\n- generic: 打赏管理\n- generic: 数据统计\n- generic: 动态管理\n- generic: 频道管理\n- generic: 内容管理\n- generic: 动态设置\n- generic: 电子签\n- generic: 企业认证\n- generic: 员工认证\n- generic: 我的签署\n- generic: 签署记录\n- generic: 印章管理\n- generic: 签署场景设置\n- generic: 设置\n- generic: 推荐运营中心\n- generic: 工作台\n- generic: 奖金管理\n- generic: 积分管理\n- generic: 推荐记录\n- generic: 设置\n- generic: 校园大使管理\n- generic: 校园大使工作台\n- generic: 人员管理\n- generic: 推荐管理\n- generic: 奖金管理\n- generic: 积分管理\n- generic: 奖励规则管理\n- generic: 设置\n- generic: 外部推荐管理\n- generic: 人员管理\n- generic: 推荐管理\n- generic: 奖金管理\n- generic: 积分管理\n- generic: 奖励规则\n- generic: 设置\n- generic: 360度评估\n- generic: 首页\n- generic: 评估活动\n- generic: 人员\n- generic: 题库\n- generic: 报表\n- generic: 设置\n- generic: 学习管理\n- generic: 工作台\n- generic: 资源管理\n- generic: 问卷管理\n- generic: 培训计划\n- generic: 培训实施\n- generic: 考试管理\n- generic: 师资管理\n- generic: 数据报表\n- generic: 运营中心\n- generic: 设置\n- generic: 模板管理\n- generic: AI陪练\n- generic: 陪练计划\n- generic: 剧本管理\n- generic: 话术库管理\n- generic: 质检管理\n- generic: 评分指标\n- generic: 评分模板\n- generic: 学员管理\n- generic: AI角色库\n- generic: 数据报表\n- generic: 设置\n- generic: 员工调查\n- generic: 问卷\n- generic: 数据分析\n- generic: 调查报告\n- generic: 行动计划\n- generic: 项目\n- generic: 设置\n- generic: 北森问卷\n- generic: 问卷管理\n- generic: 问卷调查\n- generic: 问卷\n- generic: 问卷模板\n- generic: 问卷分类\n- generic: 报表\n- generic: 招聘\n- generic: 组织员工\n- generic: 假勤管理\n- generic: 薪酬管理\n- generic: 绩效管理\n- generic: 继任与发展\n- generic: 个人发展计划\n- generic: 360度评估\n- generic: 员工调查\n- generic: 目标OKR报表设计\n- generic: 测评\n- generic: People Analytics\n- generic: 我的设置\n- generic: 森福利\n- generic: 账户中心\n- generic: 福利中心\n- generic: 财务中心\n- generic: 合规工作台\n- generic: 设置中心\n- generic: AI面试官\n- generic: AI面试管理\n- generic: 企业题库管理\n- generic: 答疑知识库\n- generic: 数据看板\n- generic: 设置\n- generic: 主数据同步\n- generic: 任务管理\n- generic: 配置管理\n- generic: 规则设置\n- generic: 映射关系\n- generic: 消息待办\n- generic: 开放应用连接\n- generic: 人员关系映射表\n- generic: 开放应用帐号\n- generic: 操作日志\n- generic: 开放应用链接\n- generic: 接口域名映射\n- generic: 接口管理\n- generic: 北森iTalent\n- generic: 人力报告设置\n- generic: 人才标准\n- generic: 人才标准\n- generic: 指标库\n- generic: 设置\n- generic: 人才模型\n- generic: 人才模型\n- generic: 角度码\n- generic: 会议管理\n- generic: 会议预定\n- generic: 我的会议\n- generic: 会议设置\n- generic: 违约用户\n- generic: 地区与会议室管理\n- generic: 操作日志\n- generic: 数据变更日志\n- generic: 签到日志\n- generic: 经理团队分析\n- generic: 团队人事看板\n- generic: 数字人才\n- generic: 人才搜索\n- generic: AI选人\n- generic: 人才对比\n- generic: 人才标签\n- generic: 企业标签库\n- generic: 设置\n- generic: 佣金管理\n- generic: 佣金设置\n- generic: 计算方案\n- generic: 佣金计算\n- generic: 佣金结果\n- generic: 提成提点规则设置\n- generic: 任务\n- generic: 任务信息\n- generic: 任务列表\n- generic: RPA招聘助手\n- generic: 个人RPA\n- generic: 企业RPA\n- generic: RPA招聘助手\n- generic: 历史记录\n- generic: 设置\n- generic: 干部管理\n- generic: 干部任前管理\n- generic: 干部任职管理\n- generic: 设置\n- generic: 职称管理\n- generic: 职称管理\n- generic: 翻译工作台\n- generic: 翻译\n- generic: 导出\n- generic: 导入\n- generic: 日志\n- tablist:\n  - tab \"首页\":\n    - generic: 首页\n  - tab \"导航台\" [selected]:\n    - generic: 导航台\n  - tab \"HRBP工作台\":\n    - generic: HRBP工作台\n  - tab \"管理者工作台\":\n    - generic: 管理者工作台\n  - tab \"培训工作台\":\n    - generic: 培训工作台\n- tabpanel\n- tabpanel:\n  - iframe [id=\"workbench-iframe-Navigation\"]\n- tabpanel\n- tabpanel\n- tabpanel",
+      "logs": [
+        {
+          "level": "warn",
+          "message": "no active app, return [window.location.href]",
+          "timestamp": "2026-09-10T15:42:37.208Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "warn",
+          "message": "no active app, return [window.location.origin]",
+          "timestamp": "2026-09-10T15:42:37.211Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "warn",
+          "message": "no active app, return [window.location.port]",
+          "timestamp": "2026-09-10T15:42:37.212Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "warn",
+          "message": "no active app, return [window.location.pathname]",
+          "timestamp": "2026-09-10T15:42:37.213Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "warn",
+          "message": "no active app, return [window.location.hash]",
+          "timestamp": "2026-09-10T15:42:37.214Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "warn",
+          "message": "no active app, return [window.location.href]",
+          "timestamp": "2026-09-10T15:42:37.303Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "warn",
+          "message": "no active app, return [window.location.origin]",
+          "timestamp": "2026-09-10T15:42:37.307Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "warn",
+          "message": "no active app, return [window.location.port]",
+          "timestamp": "2026-09-10T15:42:37.309Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "warn",
+          "message": "no active app, return [window.location.pathname]",
+          "timestamp": "2026-09-10T15:42:37.309Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "warn",
+          "message": "no active app, return [window.location.hash]",
+          "timestamp": "2026-09-10T15:42:37.310Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "warn",
+          "message": "no active app, return [window.location.href]",
+          "timestamp": "2026-09-10T15:42:38.231Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "warn",
+          "message": "no active app, return [window.location.origin]",
+          "timestamp": "2026-09-10T15:42:38.233Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "warn",
+          "message": "no active app, return [window.location.port]",
+          "timestamp": "2026-09-10T15:42:38.234Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "warn",
+          "message": "no active app, return [window.location.pathname]",
+          "timestamp": "2026-09-10T15:42:38.235Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "warn",
+          "message": "no active app, return [window.location.hash]",
+          "timestamp": "2026-09-10T15:42:38.235Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        }
+      ]
+    },
+    {
+      "pathId": "ROOT_MENU",
+      "attempt": 1,
+      "at": "2026-09-10T15:44:40.739Z",
+      "title": "首页",
+      "url": "https://srworkshopbj.italent.cn/portal/iTalentHome/",
+      "snapshot": "- text: 快捷操作\n- list:\n  - listitem: 日程\n  - listitem: 通讯录\n  - listitem: 人事申请\n  - listitem: 我的工资\n  - listitem: 工作台\n  - listitem: 问卷管理\n  - listitem: 资源管理\n  - listitem: 培训实施\n  - listitem: 考试管理\n  - listitem: 师资管理\n  - listitem: 数据报表\n  - listitem: 运营中心\n  - listitem: 人才标准\n- img \"logo\"\n- text: 全部菜单\n- textbox:\n  - /placeholder: \" \"\n- generic: 搜索应聘者\n- superscript: \"9\"\n- superscript: 99+\n- generic: [CURRENT_ACCOUNT]\n- generic: [CURRENT_ACCOUNT]\n- img \"logo\"\n- text: 全部菜单\n- textbox \"搜索菜单\": 任职类别\n- heading \"搜索结果 2\" [level=5]\n- mark: 任职类别\n- generic: 任职资格\n- mark: 任职类别\n- generic: 任职资格 > 设置\n- tablist:\n  - tab \"首页\":\n    - generic: 首页\n  - tab \"导航台\" [selected]:\n    - generic: 导航台\n  - tab \"HRBP工作台\":\n    - generic: HRBP工作台\n  - tab \"管理者工作台\":\n    - generic: 管理者工作台\n  - tab \"培训工作台\":\n    - generic: 培训工作台\n- tabpanel\n- tabpanel:\n  - iframe [id=\"workbench-iframe-Navigation\"]:\n    - generic: 我的应用\n    - generic: 设置\n    - generic: 组织员工\n    - generic: 人才评定\n    - generic: 干部管理2.0\n    - generic: HRBP工作台\n    - generic: 标签库\n    - generic: 任职资格\n    - generic: 薪酬社保\n    - generic: 我的填报\n    - generic: 预算成本\n    - generic: 更多\n    - generic: 员工自助\n    - generic: 设置\n    - generic: 管理者工作台\n    - generic: 文化激励\n    - generic: 我的团队\n    - generic: 团队假勤\n    - generic: 团队盘点\n    - generic: 我的审批\n    - generic: OKR\n    - generic: 日程\n    - generic: 日报\n    - generic: 我的目标\n    - generic: 绩效\n    - generic: 我的融入计划\n    - generic: 我的假勤\n    - generic: 自助服务\n    - generic: 我的学习\n    - generic: 我的教务\n    - generic: 我的发展计划\n    - generic: 通讯录\n    - generic: 任务\n- tabpanel\n- tabpanel\n- tabpanel",
+      "logs": [
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:42:21.412Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:43:29.943Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:43:31.086Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:43:35.987Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:43:36.056Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:43:36.951Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:43:41.148Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:43:43.952Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:43:51.695Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:43:58.773Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:44:05.831Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:44:13.425Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        }
+      ]
+    },
+    {
+      "pathId": "ROOT_MENU",
+      "attempt": 2,
+      "controlledRetry": true,
+      "at": "2026-09-10T15:46:14.627Z",
+      "title": "任职类别",
+      "url": "https://srworkshopbj.italent.cn/portal/convoy/?_menuId=f6b11d51-aa23-4081-be59-9fd08d5e7895&_menuRootId=a9e0a2ce-d904-40e5-999a-e8e82ed2438a&_pageTitle=%E4%BB%BB%E8%81%8C%E7%B1%BB%E5%88%AB&_pageType=legacy",
+      "snapshot": "- img \"logo\"\n- text: 任职资格\n- textbox:\n  - /placeholder: \" \"\n- generic: 搜索应聘者\n- superscript: \"9\"\n- superscript: 99+\n- generic: [CURRENT_ACCOUNT]\n- generic: [CURRENT_ACCOUNT]\n- img \"logo\"\n- text: 任职资格\n- textbox \"搜索菜单\"\n- generic: 员工自助\n- generic: 管理者工作台\n- generic: 文化激励\n- generic: 我的团队\n- generic: 团队假勤\n- generic: 团队盘点\n- generic: 我的审批\n- generic: OKR\n- generic: 日程\n- generic: 日报\n- generic: 我的目标\n- generic: 绩效\n- generic: 我的融入计划\n- generic: 我的假勤\n- generic: 自助服务\n- generic: 我的学习\n- generic: 我的教务\n- generic: 我的发展计划\n- generic: 通讯录\n- generic: 任务\n- generic: 组织员工\n- generic: 组织管理\n- generic: 职务体系\n- generic: 编制管理\n- generic: 人员信息\n- generic: 人员子集\n- generic: 任职管理\n- generic: 合同协议\n- generic: 职责转交\n- generic: 黑名单管理\n- generic: 数据分析\n- generic: 设置\n- generic: 全部人员\n- generic: 人才评定\n- generic: 评定过程\n- generic: 评定记录\n- generic: 活动设置\n- generic: 基础设置\n- generic: 统计分析\n- generic: 干部管理2.0\n- generic: 选拔任用\n- generic: 干部档案\n- generic: 考察期管理\n- generic: 干部述职\n- generic: 统计分析\n- generic: 设置\n- generic: HRBP工作台\n- generic: 首页\n- generic: 员工\n- generic: 录用入职\n- generic: 任职管理\n- generic: 合同协议\n- generic: 应聘者\n- generic: 考勤管理\n- generic: 员工绩效活动\n- generic: 目标管理\n- generic: OKR管理\n- generic: 数据分析\n- generic: 标签库\n- generic: 企业标签库\n- generic: 北森标签库\n- generic: 标签应用设置\n- generic: 任职资格\n- generic: 任职类别\n- generic: 任职级别\n- generic: 指标\n- generic: 任职资格标准\n- generic: 设置\n- generic: 薪酬社保\n- generic: 薪资档案\n- generic: 薪酬核算\n- generic: 核算相关数据\n- generic: 社保管理\n- generic: 薪酬支付\n- generic: 个税通\n- generic: 薪酬激励\n- generic: 数据分析\n- generic: 设置\n- generic: 我的填报\n- generic: 我发起的填报\n- generic: 预算成本\n- generic: 预算管理\n- generic: 成本管理\n- generic: 统计分析\n- generic: 设置\n- generic: 财务凭证\n- generic: 任务管理\n- generic: 设置\n- generic: 假勤管理\n- generic: 考勤文员工作台\n- generic: 考勤综合查询\n- generic: 考勤档案\n- generic: 排班管理\n- generic: 考勤管理\n- generic: 考勤申请\n- generic: 假期管理\n- generic: 数据分析\n- generic: 打卡数据\n- generic: 设置\n- generic: AI排班方案\n- generic: 招聘管理系统\n- generic: 招聘需求\n- generic: 招聘管理系统\n- generic: 首页\n- generic: 仪表盘\n- generic: 招聘需求\n- generic: 职位发布\n- generic: 应聘者\n- generic: AI推荐\n- generic: 面试管理\n- generic: 猎头推荐\n- generic: 人才库\n- generic: 数据分析\n- generic: 设置\n- generic: 面试官工作台\n- generic: 首页\n- generic: 筛选简历\n- generic: 我的面试\n- generic: Offer审批\n- generic: 招聘需求\n- generic: 我的面试题库\n- generic: AI人才库\n- generic: 人才地图\n- generic: 智能分类\n- generic: 多维分析\n- generic: 测评中心\n- generic: 首页\n- generic: 仪表盘\n- generic: 项目\n- generic: 人才\n- generic: 方案\n- generic: 活动\n- generic: 考试\n- generic: 设置\n- generic: 绩效管理\n- generic: 绩效工作台\n- generic: OKR管理\n- generic: 员工目标\n- generic: 员工绩效\n- generic: 组织目标\n- generic: 组织绩效\n- generic: 数据分析\n- generic: OKR设置\n- generic: 目标设置\n- generic: 绩效设置\n- generic: 公共设置\n- generic: 继任与发展\n- generic: 人才盘点\n- generic: 人才池管理\n- generic: 继任管理\n- generic: 人才发展计划\n- generic: 组织健康度分析\n- generic: 带教信息\n- generic: 人才数据洞察\n- generic: 人才搜索\n- generic: 设置\n- generic: 在线盘点\n- generic: 人才标准\n- generic: 盘点项目\n- generic: 盘点校准会\n- generic: 人才池\n- generic: 继任管理\n- generic: 人才搜索\n- generic: 组织人才分析\n- generic: 设置\n- generic: 审批中心\n- generic: 流程管理\n- generic: 管理员委托\n- generic: 项目人力管理\n- generic: 项目\n- generic: 项目人员\n- generic: 工时管理\n- generic: 统计\n- generic: 设置\n- generic: 文化激励\n- generic: 文化激励\n- generic: 首页配置\n- generic: 企业活动\n- generic: 员工圈设置\n- generic: 企业文化史\n- generic: 企业榜样墙\n- generic: 商城管理\n- generic: 祝福管理\n- generic: 员工总结报告\n- generic: 企业勋章管理\n- generic: 企业标签管理\n- generic: 打赏管理\n- generic: 数据统计\n- generic: 动态管理\n- generic: 频道管理\n- generic: 内容管理\n- generic: 动态设置\n- generic: 电子签\n- generic: 企业认证\n- generic: 员工认证\n- generic: 我的签署\n- generic: 签署记录\n- generic: 印章管理\n- generic: 签署场景设置\n- generic: 设置\n- generic: 推荐运营中心\n- generic: 工作台\n- generic: 奖金管理\n- generic: 积分管理\n- generic: 推荐记录\n- generic: 设置\n- generic: 校园大使管理\n- generic: 校园大使工作台\n- generic: 人员管理\n- generic: 推荐管理\n- generic: 奖金管理\n- generic: 积分管理\n- generic: 奖励规则管理\n- generic: 设置\n- generic: 外部推荐管理\n- generic: 人员管理\n- generic: 推荐管理\n- generic: 奖金管理\n- generic: 积分管理\n- generic: 奖励规则\n- generic: 设置\n- generic: 360度评估\n- generic: 首页\n- generic: 评估活动\n- generic: 人员\n- generic: 题库\n- generic: 报表\n- generic: 设置\n- generic: 学习管理\n- generic: 工作台\n- generic: 资源管理\n- generic: 问卷管理\n- generic: 培训计划\n- generic: 培训实施\n- generic: 考试管理\n- generic: 师资管理\n- generic: 数据报表\n- generic: 运营中心\n- generic: 设置\n- generic: 模板管理\n- generic: AI陪练\n- generic: 陪练计划\n- generic: 剧本管理\n- generic: 话术库管理\n- generic: 质检管理\n- generic: 评分指标\n- generic: 评分模板\n- generic: 学员管理\n- generic: AI角色库\n- generic: 数据报表\n- generic: 设置\n- generic: 员工调查\n- generic: 问卷\n- generic: 数据分析\n- generic: 调查报告\n- generic: 行动计划\n- generic: 项目\n- generic: 设置\n- generic: 北森问卷\n- generic: 问卷管理\n- generic: 问卷调查\n- generic: 问卷\n- generic: 问卷模板\n- generic: 问卷分类\n- generic: 报表\n- generic: 招聘\n- generic: 组织员工\n- generic: 假勤管理\n- generic: 薪酬管理\n- generic: 绩效管理\n- generic: 继任与发展\n- generic: 个人发展计划\n- generic: 360度评估\n- generic: 员工调查\n- generic: 目标OKR报表设计\n- generic: 测评\n- generic: People Analytics\n- generic: 我的设置\n- generic: 森福利\n- generic: 账户中心\n- generic: 福利中心\n- generic: 财务中心\n- generic: 合规工作台\n- generic: 设置中心\n- generic: AI面试官\n- generic: AI面试管理\n- generic: 企业题库管理\n- generic: 答疑知识库\n- generic: 数据看板\n- generic: 设置\n- generic: 主数据同步\n- generic: 任务管理\n- generic: 配置管理\n- generic: 规则设置\n- generic: 映射关系\n- generic: 消息待办\n- generic: 开放应用连接\n- generic: 人员关系映射表\n- generic: 开放应用帐号\n- generic: 操作日志\n- generic: 开放应用链接\n- generic: 接口域名映射\n- generic: 接口管理\n- generic: 北森iTalent\n- generic: 人力报告设置\n- generic: 人才标准\n- generic: 人才标准\n- generic: 指标库\n- generic: 设置\n- generic: 人才模型\n- generic: 人才模型\n- generic: 角度码\n- generic: 会议管理\n- generic: 会议预定\n- generic: 我的会议\n- generic: 会议设置\n- generic: 违约用户\n- generic: 地区与会议室管理\n- generic: 操作日志\n- generic: 数据变更日志\n- generic: 签到日志\n- generic: 经理团队分析\n- generic: 团队人事看板\n- generic: 数字人才\n- generic: 人才搜索\n- generic: AI选人\n- generic: 人才对比\n- generic: 人才标签\n- generic: 企业标签库\n- generic: 设置\n- generic: 佣金管理\n- generic: 佣金设置\n- generic: 计算方案\n- generic: 佣金计算\n- generic: 佣金结果\n- generic: 提成提点规则设置\n- generic: 任务\n- generic: 任务信息\n- generic: 任务列表\n- generic: RPA招聘助手\n- generic: 个人RPA\n- generic: 企业RPA\n- generic: RPA招聘助手\n- generic: 历史记录\n- generic: 设置\n- generic: 干部管理\n- generic: 干部任前管理\n- generic: 干部任职管理\n- generic: 设置\n- generic: 职称管理\n- generic: 职称管理\n- generic: 翻译工作台\n- generic: 翻译\n- generic: 导出\n- generic: 导入\n- generic: 日志\n- list:\n  - generic: 任职类别\n  - list\n  - generic: 任职级别\n  - list\n  - generic: 指标\n  - list\n  - generic: 任职资格标准\n  - list\n  - generic: 设置\n  - list\n- main",
+      "inputError": "Input.dispatchMouseEvent timed out",
+      "logs": [
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:42:21.412Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:43:29.943Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:43:31.086Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:43:35.987Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:43:36.056Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:43:36.951Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:43:41.148Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:43:43.952Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:43:51.695Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:43:58.773Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:44:05.831Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:44:13.425Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:44:43.962Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:44:50.971Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:44:51.114Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:45:01.206Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:45:21.464Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:45:37.569Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:45:54.047Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:46:11.211Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        }
+      ]
+    },
+    {
+      "pathId": "KNOWN_M17_ROUTE",
+      "attempt": 0,
+      "startedAt": "2026-09-10T15:46:38.097Z",
+      "source": "tab metadata only; original tab not opened or modified; PoolId matches manifest and successful M17 exit-history evidence",
+      "intendedPath": "/portal/convoy/SuccessionAndDevelopment"
+    },
+    {
+      "pathId": "KNOWN_M17_ROUTE",
+      "attempt": 0,
+      "at": "2026-09-10T15:47:49.350Z",
+      "title": "人才池",
+      "url": "https://srworkshopbj.italent.cn/portal/convoy/SuccessionAndDevelopment?app=SuccessionAndDevelopment&PoolId=1edcc966-d102-4542-b4d3-47699df554a6&metaObjName=SuccessionAndDevelopment.StoreTalent&viewName=SuccessionAndDevelopment.OutStoreTalentView&navViewMenuID=57801f83-08c4-41cf-bcb5-4a1a66f45699&navType=2&navCode=57801f83-08c4-41cf-bcb5-4a1a66f45699&navVersion=1679332846963&_menuId=7d0a54fa-861d-4320-8071-9c9d6064e97e&_menuRootId=945b36e1-786b-44ab-a162-80645f73f8f1&_pageTitle=%E4%BA%BA%E6%89%8D%E6%B1%A0&_pageType=cloud&_pageId=8pJVDF#/IndexPage",
+      "snapshot": "- img \"logo\"\n- text: 继任与发展\n- textbox:\n  - /placeholder: \" \"\n- generic: 搜索应聘者\n- superscript: \"9\"\n- superscript: 99+\n- generic: [CURRENT_ACCOUNT]\n- generic: [CURRENT_ACCOUNT]\n- img \"logo\"\n- text: 继任与发展\n- textbox \"搜索菜单\"\n- generic: 员工自助\n- generic: 管理者工作台\n- generic: 文化激励\n- generic: 我的团队\n- generic: 团队假勤\n- generic: 团队盘点\n- generic: 我的审批\n- generic: OKR\n- generic: 日程\n- generic: 日报\n- generic: 我的目标\n- generic: 绩效\n- generic: 我的融入计划\n- generic: 我的假勤\n- generic: 自助服务\n- generic: 我的学习\n- generic: 我的教务\n- generic: 我的发展计划\n- generic: 通讯录\n- generic: 任务\n- generic: 组织员工\n- generic: 组织管理\n- generic: 职务体系\n- generic: 编制管理\n- generic: 人员信息\n- generic: 人员子集\n- generic: 任职管理\n- generic: 合同协议\n- generic: 职责转交\n- generic: 黑名单管理\n- generic: 数据分析\n- generic: 设置\n- generic: 全部人员\n- generic: 人才评定\n- generic: 评定过程\n- generic: 评定记录\n- generic: 活动设置\n- generic: 基础设置\n- generic: 统计分析\n- generic: 干部管理2.0\n- generic: 选拔任用\n- generic: 干部档案\n- generic: 考察期管理\n- generic: 干部述职\n- generic: 统计分析\n- generic: 设置\n- generic: HRBP工作台\n- generic: 首页\n- generic: 员工\n- generic: 录用入职\n- generic: 任职管理\n- generic: 合同协议\n- generic: 应聘者\n- generic: 考勤管理\n- generic: 员工绩效活动\n- generic: 目标管理\n- generic: OKR管理\n- generic: 数据分析\n- generic: 标签库\n- generic: 企业标签库\n- generic: 北森标签库\n- generic: 标签应用设置\n- generic: 任职资格\n- generic: 任职类别\n- generic: 任职级别\n- generic: 指标\n- generic: 任职资格标准\n- generic: 设置\n- generic: 薪酬社保\n- generic: 薪资档案\n- generic: 薪酬核算\n- generic: 核算相关数据\n- generic: 社保管理\n- generic: 薪酬支付\n- generic: 个税通\n- generic: 薪酬激励\n- generic: 数据分析\n- generic: 设置\n- generic: 我的填报\n- generic: 我发起的填报\n- generic: 预算成本\n- generic: 预算管理\n- generic: 成本管理\n- generic: 统计分析\n- generic: 设置\n- generic: 财务凭证\n- generic: 任务管理\n- generic: 设置\n- generic: 假勤管理\n- generic: 考勤文员工作台\n- generic: 考勤综合查询\n- generic: 考勤档案\n- generic: 排班管理\n- generic: 考勤管理\n- generic: 考勤申请\n- generic: 假期管理\n- generic: 数据分析\n- generic: 打卡数据\n- generic: 设置\n- generic: AI排班方案\n- generic: 招聘管理系统\n- generic: 招聘需求\n- generic: 招聘管理系统\n- generic: 首页\n- generic: 仪表盘\n- generic: 招聘需求\n- generic: 职位发布\n- generic: 应聘者\n- generic: AI推荐\n- generic: 面试管理\n- generic: 猎头推荐\n- generic: 人才库\n- generic: 数据分析\n- generic: 设置\n- generic: 面试官工作台\n- generic: 首页\n- generic: 筛选简历\n- generic: 我的面试\n- generic: Offer审批\n- generic: 招聘需求\n- generic: 我的面试题库\n- generic: AI人才库\n- generic: 人才地图\n- generic: 智能分类\n- generic: 多维分析\n- generic: 测评中心\n- generic: 首页\n- generic: 仪表盘\n- generic: 项目\n- generic: 人才\n- generic: 方案\n- generic: 活动\n- generic: 考试\n- generic: 设置\n- generic: 绩效管理\n- generic: 绩效工作台\n- generic: OKR管理\n- generic: 员工目标\n- generic: 员工绩效\n- generic: 组织目标\n- generic: 组织绩效\n- generic: 数据分析\n- generic: OKR设置\n- generic: 目标设置\n- generic: 绩效设置\n- generic: 公共设置\n- generic: 继任与发展\n- generic: 人才盘点\n- generic: 人才池管理\n- generic: 继任管理\n- generic: 人才发展计划\n- generic: 组织健康度分析\n- generic: 带教信息\n- generic: 人才数据洞察\n- generic: 人才搜索\n- generic: 设置\n- generic: 在线盘点\n- generic: 人才标准\n- generic: 盘点项目\n- generic: 盘点校准会\n- generic: 人才池\n- generic: 继任管理\n- generic: 人才搜索\n- generic: 组织人才分析\n- generic: 设置\n- generic: 审批中心\n- generic: 流程管理\n- generic: 管理员委托\n- generic: 项目人力管理\n- generic: 项目\n- generic: 项目人员\n- generic: 工时管理\n- generic: 统计\n- generic: 设置\n- generic: 文化激励\n- generic: 文化激励\n- generic: 首页配置\n- generic: 企业活动\n- generic: 员工圈设置\n- generic: 企业文化史\n- generic: 企业榜样墙\n- generic: 商城管理\n- generic: 祝福管理\n- generic: 员工总结报告\n- generic: 企业勋章管理\n- generic: 企业标签管理\n- generic: 打赏管理\n- generic: 数据统计\n- generic: 动态管理\n- generic: 频道管理\n- generic: 内容管理\n- generic: 动态设置\n- generic: 电子签\n- generic: 企业认证\n- generic: 员工认证\n- generic: 我的签署\n- generic: 签署记录\n- generic: 印章管理\n- generic: 签署场景设置\n- generic: 设置\n- generic: 推荐运营中心\n- generic: 工作台\n- generic: 奖金管理\n- generic: 积分管理\n- generic: 推荐记录\n- generic: 设置\n- generic: 校园大使管理\n- generic: 校园大使工作台\n- generic: 人员管理\n- generic: 推荐管理\n- generic: 奖金管理\n- generic: 积分管理\n- generic: 奖励规则管理\n- generic: 设置\n- generic: 外部推荐管理\n- generic: 人员管理\n- generic: 推荐管理\n- generic: 奖金管理\n- generic: 积分管理\n- generic: 奖励规则\n- generic: 设置\n- generic: 360度评估\n- generic: 首页\n- generic: 评估活动\n- generic: 人员\n- generic: 题库\n- generic: 报表\n- generic: 设置\n- generic: 学习管理\n- generic: 工作台\n- generic: 资源管理\n- generic: 问卷管理\n- generic: 培训计划\n- generic: 培训实施\n- generic: 考试管理\n- generic: 师资管理\n- generic: 数据报表\n- generic: 运营中心\n- generic: 设置\n- generic: 模板管理\n- generic: AI陪练\n- generic: 陪练计划\n- generic: 剧本管理\n- generic: 话术库管理\n- generic: 质检管理\n- generic: 评分指标\n- generic: 评分模板\n- generic: 学员管理\n- generic: AI角色库\n- generic: 数据报表\n- generic: 设置\n- generic: 员工调查\n- generic: 问卷\n- generic: 数据分析\n- generic: 调查报告\n- generic: 行动计划\n- generic: 项目\n- generic: 设置\n- generic: 北森问卷\n- generic: 问卷管理\n- generic: 问卷调查\n- generic: 问卷\n- generic: 问卷模板\n- generic: 问卷分类\n- generic: 报表\n- generic: 招聘\n- generic: 组织员工\n- generic: 假勤管理\n- generic: 薪酬管理\n- generic: 绩效管理\n- generic: 继任与发展\n- generic: 个人发展计划\n- generic: 360度评估\n- generic: 员工调查\n- generic: 目标OKR报表设计\n- generic: 测评\n- generic: People Analytics\n- generic: 我的设置\n- generic: 森福利\n- generic: 账户中心\n- generic: 福利中心\n- generic: 财务中心\n- generic: 合规工作台\n- generic: 设置中心\n- generic: AI面试官\n- generic: AI面试管理\n- generic: 企业题库管理\n- generic: 答疑知识库\n- generic: 数据看板\n- generic: 设置\n- generic: 主数据同步\n- generic: 任务管理\n- generic: 配置管理\n- generic: 规则设置\n- generic: 映射关系\n- generic: 消息待办\n- generic: 开放应用连接\n- generic: 人员关系映射表\n- generic: 开放应用帐号\n- generic: 操作日志\n- generic: 开放应用链接\n- generic: 接口域名映射\n- generic: 接口管理\n- generic: 北森iTalent\n- generic: 人力报告设置\n- generic: 人才标准\n- generic: 人才标准\n- generic: 指标库\n- generic: 设置\n- generic: 人才模型\n- generic: 人才模型\n- generic: 角度码\n- generic: 会议管理\n- generic: 会议预定\n- generic: 我的会议\n- generic: 会议设置\n- generic: 违约用户\n- generic: 地区与会议室管理\n- generic: 操作日志\n- generic: 数据变更日志\n- generic: 签到日志\n- generic: 经理团队分析\n- generic: 团队人事看板\n- generic: 数字人才\n- generic: 人才搜索\n- generic: AI选人\n- generic: 人才对比\n- generic: 人才标签\n- generic: 企业标签库\n- generic: 设置\n- generic: 佣金管理\n- generic: 佣金设置\n- generic: 计算方案\n- generic: 佣金计算\n- generic: 佣金结果\n- generic: 提成提点规则设置\n- generic: 任务\n- generic: 任务信息\n- generic: 任务列表\n- generic: RPA招聘助手\n- generic: 个人RPA\n- generic: 企业RPA\n- generic: RPA招聘助手\n- generic: 历史记录\n- generic: 设置\n- generic: 干部管理\n- generic: 干部任前管理\n- generic: 干部任职管理\n- generic: 设置\n- generic: 职称管理\n- generic: 职称管理\n- generic: 翻译工作台\n- generic: 翻译\n- generic: 导出\n- generic: 导入\n- generic: 日志\n- list:\n  - generic: 人才盘点\n  - list:\n    - generic: 人才标准\n    - generic: 盘点项目\n    - generic: 盘点校准会\n  - generic: 人才池管理\n  - list:\n    - generic: 人才池分析\n    - generic: 人才梯队地图\n    - generic: 人才池\n  - generic: 继任管理\n  - list\n  - generic: 人才发展计划\n  - list:\n    - generic: 发展计划\n    - generic: 发展计划模板\n    - generic: 发展计划流程\n    - generic: 职业发展信息\n    - generic: 轮岗信息\n    - generic: 开关参数\n    - generic: IDP看板\n  - generic: 组织健康度分析\n  - list:\n    - generic: 组织健康分析\n    - generic: 组织人才分析\n    - generic: 团队分析\n  - generic: 带教信息\n  - list:\n    - generic: 带教信息\n  - generic: 人才数据洞察\n  - list:\n    - generic: 组织评估\n    - generic: 人才分析\n    - generic: 人才洞察报告\n  - generic: 人才搜索\n  - list\n  - generic: 设置\n  - list\n- main",
+      "logs": [
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:43:36.056Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:43:36.951Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:43:41.148Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:43:43.952Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:43:51.695Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:43:58.773Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:44:05.831Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:44:13.425Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:44:43.962Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:44:50.971Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:44:51.114Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:45:01.206Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:45:21.464Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:45:37.569Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:45:54.047Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:46:11.211Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:46:21.156Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:46:45.678Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:46:56.272Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:47:06.023Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        }
+      ]
+    },
+    {
+      "pathId": "KNOWN_M17_ROUTE",
+      "attempt": 1,
+      "controlledRetry": true,
+      "action": "reload own tab once",
+      "startedAt": "2026-09-10T15:48:05.588Z"
+    },
+    {
+      "pathId": "KNOWN_M17_ROUTE",
+      "attempt": 1,
+      "controlledRetry": true,
+      "at": "2026-09-10T15:48:59.472Z",
+      "title": "人才池",
+      "url": "https://srworkshopbj.italent.cn/portal/convoy/SuccessionAndDevelopment?app=SuccessionAndDevelopment&PoolId=1edcc966-d102-4542-b4d3-47699df554a6&metaObjName=SuccessionAndDevelopment.StoreTalent&viewName=SuccessionAndDevelopment.OutStoreTalentView&navViewMenuID=57801f83-08c4-41cf-bcb5-4a1a66f45699&navType=2&navCode=57801f83-08c4-41cf-bcb5-4a1a66f45699&navVersion=1679332846963&_menuId=7d0a54fa-861d-4320-8071-9c9d6064e97e&_menuRootId=945b36e1-786b-44ab-a162-80645f73f8f1&_pageTitle=%E4%BA%BA%E6%89%8D%E6%B1%A0&_pageType=cloud&_pageId=8pJVDF#/IndexPage",
+      "snapshot": "- img \"logo\"\n- text: 继任与发展\n- textbox:\n  - /placeholder: \" \"\n- generic: 搜索学习课程\n- superscript: \"9\"\n- superscript: 99+\n- generic: [CURRENT_ACCOUNT]\n- generic: [CURRENT_ACCOUNT]\n- img \"logo\"\n- text: 继任与发展\n- textbox \"搜索菜单\"\n- generic: 员工自助\n- generic: 管理者工作台\n- generic: 文化激励\n- generic: 我的团队\n- generic: 团队假勤\n- generic: 团队盘点\n- generic: 我的审批\n- generic: OKR\n- generic: 日程\n- generic: 日报\n- generic: 我的目标\n- generic: 绩效\n- generic: 我的融入计划\n- generic: 我的假勤\n- generic: 自助服务\n- generic: 我的学习\n- generic: 我的教务\n- generic: 我的发展计划\n- generic: 通讯录\n- generic: 任务\n- generic: 组织员工\n- generic: 组织管理\n- generic: 职务体系\n- generic: 编制管理\n- generic: 人员信息\n- generic: 人员子集\n- generic: 任职管理\n- generic: 合同协议\n- generic: 职责转交\n- generic: 黑名单管理\n- generic: 数据分析\n- generic: 设置\n- generic: 全部人员\n- generic: 人才评定\n- generic: 评定过程\n- generic: 评定记录\n- generic: 活动设置\n- generic: 基础设置\n- generic: 统计分析\n- generic: 干部管理2.0\n- generic: 选拔任用\n- generic: 干部档案\n- generic: 考察期管理\n- generic: 干部述职\n- generic: 统计分析\n- generic: 设置\n- generic: HRBP工作台\n- generic: 首页\n- generic: 员工\n- generic: 录用入职\n- generic: 任职管理\n- generic: 合同协议\n- generic: 应聘者\n- generic: 考勤管理\n- generic: 员工绩效活动\n- generic: 目标管理\n- generic: OKR管理\n- generic: 数据分析\n- generic: 标签库\n- generic: 企业标签库\n- generic: 北森标签库\n- generic: 标签应用设置\n- generic: 任职资格\n- generic: 任职类别\n- generic: 任职级别\n- generic: 指标\n- generic: 任职资格标准\n- generic: 设置\n- generic: 薪酬社保\n- generic: 薪资档案\n- generic: 薪酬核算\n- generic: 核算相关数据\n- generic: 社保管理\n- generic: 薪酬支付\n- generic: 个税通\n- generic: 薪酬激励\n- generic: 数据分析\n- generic: 设置\n- generic: 我的填报\n- generic: 我发起的填报\n- generic: 预算成本\n- generic: 预算管理\n- generic: 成本管理\n- generic: 统计分析\n- generic: 设置\n- generic: 财务凭证\n- generic: 任务管理\n- generic: 设置\n- generic: 假勤管理\n- generic: 考勤文员工作台\n- generic: 考勤综合查询\n- generic: 考勤档案\n- generic: 排班管理\n- generic: 考勤管理\n- generic: 考勤申请\n- generic: 假期管理\n- generic: 数据分析\n- generic: 打卡数据\n- generic: 设置\n- generic: AI排班方案\n- generic: 招聘管理系统\n- generic: 招聘需求\n- generic: 招聘管理系统\n- generic: 首页\n- generic: 仪表盘\n- generic: 招聘需求\n- generic: 职位发布\n- generic: 应聘者\n- generic: AI推荐\n- generic: 面试管理\n- generic: 猎头推荐\n- generic: 人才库\n- generic: 数据分析\n- generic: 设置\n- generic: 面试官工作台\n- generic: 首页\n- generic: 筛选简历\n- generic: 我的面试\n- generic: Offer审批\n- generic: 招聘需求\n- generic: 我的面试题库\n- generic: AI人才库\n- generic: 人才地图\n- generic: 智能分类\n- generic: 多维分析\n- generic: 测评中心\n- generic: 首页\n- generic: 仪表盘\n- generic: 项目\n- generic: 人才\n- generic: 方案\n- generic: 活动\n- generic: 考试\n- generic: 设置\n- generic: 绩效管理\n- generic: 绩效工作台\n- generic: OKR管理\n- generic: 员工目标\n- generic: 员工绩效\n- generic: 组织目标\n- generic: 组织绩效\n- generic: 数据分析\n- generic: OKR设置\n- generic: 目标设置\n- generic: 绩效设置\n- generic: 公共设置\n- generic: 继任与发展\n- generic: 人才盘点\n- generic: 人才池管理\n- generic: 继任管理\n- generic: 人才发展计划\n- generic: 组织健康度分析\n- generic: 带教信息\n- generic: 人才数据洞察\n- generic: 人才搜索\n- generic: 设置\n- generic: 在线盘点\n- generic: 人才标准\n- generic: 盘点项目\n- generic: 盘点校准会\n- generic: 人才池\n- generic: 继任管理\n- generic: 人才搜索\n- generic: 组织人才分析\n- generic: 设置\n- generic: 审批中心\n- generic: 流程管理\n- generic: 管理员委托\n- generic: 项目人力管理\n- generic: 项目\n- generic: 项目人员\n- generic: 工时管理\n- generic: 统计\n- generic: 设置\n- generic: 文化激励\n- generic: 文化激励\n- generic: 首页配置\n- generic: 企业活动\n- generic: 员工圈设置\n- generic: 企业文化史\n- generic: 企业榜样墙\n- generic: 商城管理\n- generic: 祝福管理\n- generic: 员工总结报告\n- generic: 企业勋章管理\n- generic: 企业标签管理\n- generic: 打赏管理\n- generic: 数据统计\n- generic: 动态管理\n- generic: 频道管理\n- generic: 内容管理\n- generic: 动态设置\n- generic: 电子签\n- generic: 企业认证\n- generic: 员工认证\n- generic: 我的签署\n- generic: 签署记录\n- generic: 印章管理\n- generic: 签署场景设置\n- generic: 设置\n- generic: 推荐运营中心\n- generic: 工作台\n- generic: 奖金管理\n- generic: 积分管理\n- generic: 推荐记录\n- generic: 设置\n- generic: 校园大使管理\n- generic: 校园大使工作台\n- generic: 人员管理\n- generic: 推荐管理\n- generic: 奖金管理\n- generic: 积分管理\n- generic: 奖励规则管理\n- generic: 设置\n- generic: 外部推荐管理\n- generic: 人员管理\n- generic: 推荐管理\n- generic: 奖金管理\n- generic: 积分管理\n- generic: 奖励规则\n- generic: 设置\n- generic: 360度评估\n- generic: 首页\n- generic: 评估活动\n- generic: 人员\n- generic: 题库\n- generic: 报表\n- generic: 设置\n- generic: 学习管理\n- generic: 工作台\n- generic: 资源管理\n- generic: 问卷管理\n- generic: 培训计划\n- generic: 培训实施\n- generic: 考试管理\n- generic: 师资管理\n- generic: 数据报表\n- generic: 运营中心\n- generic: 设置\n- generic: 模板管理\n- generic: AI陪练\n- generic: 陪练计划\n- generic: 剧本管理\n- generic: 话术库管理\n- generic: 质检管理\n- generic: 评分指标\n- generic: 评分模板\n- generic: 学员管理\n- generic: AI角色库\n- generic: 数据报表\n- generic: 设置\n- generic: 员工调查\n- generic: 问卷\n- generic: 数据分析\n- generic: 调查报告\n- generic: 行动计划\n- generic: 项目\n- generic: 设置\n- generic: 北森问卷\n- generic: 问卷管理\n- generic: 问卷调查\n- generic: 问卷\n- generic: 问卷模板\n- generic: 问卷分类\n- generic: 报表\n- generic: 招聘\n- generic: 组织员工\n- generic: 假勤管理\n- generic: 薪酬管理\n- generic: 绩效管理\n- generic: 继任与发展\n- generic: 个人发展计划\n- generic: 360度评估\n- generic: 员工调查\n- generic: 目标OKR报表设计\n- generic: 测评\n- generic: People Analytics\n- generic: 我的设置\n- generic: 森福利\n- generic: 账户中心\n- generic: 福利中心\n- generic: 财务中心\n- generic: 合规工作台\n- generic: 设置中心\n- generic: AI面试官\n- generic: AI面试管理\n- generic: 企业题库管理\n- generic: 答疑知识库\n- generic: 数据看板\n- generic: 设置\n- generic: 主数据同步\n- generic: 任务管理\n- generic: 配置管理\n- generic: 规则设置\n- generic: 映射关系\n- generic: 消息待办\n- generic: 开放应用连接\n- generic: 人员关系映射表\n- generic: 开放应用帐号\n- generic: 操作日志\n- generic: 开放应用链接\n- generic: 接口域名映射\n- generic: 接口管理\n- generic: 北森iTalent\n- generic: 人力报告设置\n- generic: 人才标准\n- generic: 人才标准\n- generic: 指标库\n- generic: 设置\n- generic: 人才模型\n- generic: 人才模型\n- generic: 角度码\n- generic: 会议管理\n- generic: 会议预定\n- generic: 我的会议\n- generic: 会议设置\n- generic: 违约用户\n- generic: 地区与会议室管理\n- generic: 操作日志\n- generic: 数据变更日志\n- generic: 签到日志\n- generic: 经理团队分析\n- generic: 团队人事看板\n- generic: 数字人才\n- generic: 人才搜索\n- generic: AI选人\n- generic: 人才对比\n- generic: 人才标签\n- generic: 企业标签库\n- generic: 设置\n- generic: 佣金管理\n- generic: 佣金设置\n- generic: 计算方案\n- generic: 佣金计算\n- generic: 佣金结果\n- generic: 提成提点规则设置\n- generic: 任务\n- generic: 任务信息\n- generic: 任务列表\n- generic: RPA招聘助手\n- generic: 个人RPA\n- generic: 企业RPA\n- generic: RPA招聘助手\n- generic: 历史记录\n- generic: 设置\n- generic: 干部管理\n- generic: 干部任前管理\n- generic: 干部任职管理\n- generic: 设置\n- generic: 职称管理\n- generic: 职称管理\n- generic: 翻译工作台\n- generic: 翻译\n- generic: 导出\n- generic: 导入\n- generic: 日志\n- list:\n  - generic: 人才盘点\n  - list:\n    - generic: 人才标准\n    - generic: 盘点项目\n    - generic: 盘点校准会\n  - generic: 人才池管理\n  - list:\n    - generic: 人才池分析\n    - generic: 人才梯队地图\n    - generic: 人才池\n  - generic: 继任管理\n  - list\n  - generic: 人才发展计划\n  - list:\n    - generic: 发展计划\n    - generic: 发展计划模板\n    - generic: 发展计划流程\n    - generic: 职业发展信息\n    - generic: 轮岗信息\n    - generic: 开关参数\n    - generic: IDP看板\n  - generic: 组织健康度分析\n  - list:\n    - generic: 组织健康分析\n    - generic: 组织人才分析\n    - generic: 团队分析\n  - generic: 带教信息\n  - list:\n    - generic: 带教信息\n  - generic: 人才数据洞察\n  - list:\n    - generic: 组织评估\n    - generic: 人才分析\n    - generic: 人才洞察报告\n  - generic: 人才搜索\n  - list\n  - generic: 设置\n  - list\n- main",
+      "domState": {
+        "frameSources": [
+          {
+            "id": "iTalentFrameProxy",
+            "src": "https://cloud.italent.cn/italent-transfer-data.html"
+          }
+        ],
+        "images": [
+          {
+            "alt": "logo",
+            "complete": true,
+            "naturalWidth": 2032
+          },
+          {
+            "alt": "",
+            "complete": true,
+            "naturalWidth": 31
+          },
+          {
+            "alt": "logo",
+            "complete": true,
+            "naturalWidth": 2032
+          }
+        ],
+        "mainExists": true,
+        "mainText": "",
+        "scriptSources": [
+          "https://acdn.bstatics.com/ux/beisen-common/@beisen/analysis-pms/udcitalent-2d0be68f-2.0.38.min.js",
+          "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/ui-common-9ac36c58065167bd5dcd.bundle.min.js",
+          "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/ui-9ac36c58065167bd5dcd.bundle.min.js",
+          "https://acdn.bstatics.com/ux/upaas/beisen-global-helper/1.12.0/release/dist/main-4501808cd-1.12.0.min.js",
+          "https://acdn.bstatics.com/ux/upaas/beisen-global-helper/1.12.0/release/dist/core-js-4501808cd-1.12.0.min.js",
+          "https://acdn.bstatics.com/ux/upaas/beisen-global-helper/1.12.0/release/dist/HelperCenter~TaskExecutionList-4501808cd-1.12.0.min.js",
+          "https://acdn.bstatics.com/ux/upaas/beisen-global-helper/1.12.0/release/dist/HelperCenter-4501808cd-1.12.0.min.js",
+          "https://acdn.bstatics.com/ux/upaas/beisen-global-helper/1.12.0/release/dist/TaskExecutionList-4501808cd-1.12.0.min.js",
+          "https://acdn.bstatics.com/ux/ux-p-convoy-icon/release/dist/main-996de45eb94613a82f3e.bundle.min.js",
+          "https://acdn.bstatics.com/ux/ux-widget/@beisen/socket-max/release/dist/main-4.0.20-3.min.js",
+          "https://acdn.bstatics.com/ux/beisen-common/talent/extras/iTalentSDKServer-0.1.41.js",
+          "https://acdn.bstatics.com/ux/upaas/ux-static/platform-static/cross-work-js-loader/1.2.0/main.js",
+          "https://acdn.bstatics.com/ux/nps-survey/release/dist/ux-nps-survey-d1d28eee607058017d10.chunk.min.js",
+          "https://acdn.bstatics.com/ux/ux-widget/ux-page-loading/release/dist/index-1.0.0.js",
+          "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/react-2332ae559405fcc7a0cf.bundle.min.js",
+          "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js",
+          "https://acdn.bstatics.com/ux/ux-widget/feature-sdk/release/dist/sdk-2.3.1.min.js",
+          "https://acdn.bstatics.com/ux/ux-widget/italent-msg-sdk/release/dist/sdk-2.0.1.min.js",
+          "https://acdn.bstatics.com/ux/ux-widget/watermark/release/dist/watermark-2.1.3.js",
+          "https://acdn.bstatics.com/ux/ux-widget/ux-agreement-tools/release/dist/index-2.3.4.js",
+          "https://acdn.bstatics.com/ux/ux-widget/user-logout/release/dist/main-1.2.1.js",
+          "https://acdn.bstatics.com/ux/upaas/ux-static/platform-static/platform-small-screen-adapter/1.0.0/convoy.js"
+        ]
+      },
+      "logs": [
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:42:00.854Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:42:12.045Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:42:21.412Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:43:29.943Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:43:31.086Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:43:35.987Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:43:36.056Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:43:36.951Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:43:41.148Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:43:43.952Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:43:51.695Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:43:58.773Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:44:05.831Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:44:13.425Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:44:43.962Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js:2:392081",
+          "timestamp": "2026-09-10T15:44:50.971Z",
+          "url": "https://acdn.bstatics.com/ux/ux-nusion-runtime/release/dist/main-pc-4350df0b5915d9bc7307.chunk.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:44:51.114Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:45:01.206Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:45:21.464Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:45:37.569Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:45:54.047Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:46:11.211Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:46:21.156Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:46:45.678Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:46:56.272Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:47:06.023Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "Error sending browser metadata to extension: Object",
+          "timestamp": "2026-09-10T15:48:10.354Z",
+          "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:48:20.484Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        },
+        {
+          "level": "error",
+          "message": "错误 Error: 请求超时\n    at https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js:1:119220",
+          "timestamp": "2026-09-10T15:48:31.166Z",
+          "url": "https://acdn.bstatics.com/ux/ux-convoy-framework/release/dist/convoy-7f3aad8f566e88d3f20b.bundle.min.js"
+        }
+      ]
+    }
+  ],
+  "screenshot": "r2-recovery-final-blocked-20260910.jpg",
+  "signedUrlValuesOmitted": true,
+  "browserNetworkResponseInspection": "not_advertised; console errors do not expose request endpoint or HTTP status",
+  "dataMutations": 0,
+  "notifications": 0,
+  "id": "R2-ENV-CONT-001",
+  "kind": "execution_environment_incident_not_business_difference",
+  "severity": "Major",
+  "businessDifferenceCounted": false,
+  "historicalEvidence": "captures/Continuation-entry-timeout.json",
+  "recoveryPathCounts": {
+    "independentPaths": 2,
+    "ROOT_MENU": {
+      "initialNavigation": 1,
+      "controlledRetries": 1,
+      "reloads": 0
+    },
+    "KNOWN_M17_ROUTE": {
+      "initialNavigation": 1,
+      "controlledRetries": 1,
+      "reloads": 1
+    },
+    "note": "checks是观察采样而非重试计数；ROOT_MENU attempt0是根入口，attempt1是首次菜单点击回读，attempt2是唯一受控重试。严格定位歧义未发出点击，不计导航。"
+  },
+  "layerStatus": {
+    "loginShell": "账户标识、导航和菜单显示；未出现登录表单。仅外壳可见，不证明全部业务接口认证有效。",
+    "staticResources": "logo图像complete=true/naturalWidth=2032，布局和菜单已渲染，框架脚本产生运行日志；另一个图像未完成。只确认部分静态资源可用，不宣称所有资源HTTP成功。",
+    "businessRequests": "框架日志反复请求超时；最终重载后15:48:20.484Z、15:48:31.166Z再现。已广告浏览器接口不含网络响应列表，因此具体请求URL/HTTP状态/服务端日志unknown。",
+    "routing": "M06菜单重试后标题任职类别、path=/portal/convoy/；M17既有正式路径标题人才池、path=/portal/convoy/SuccessionAndDevelopment，PoolId匹配清单。",
+    "businessBody": "两条R2模块路径均main为空，无目录、表格或本RUN记录回读；三重成功条件不满足。",
+    "inputChannel": "菜单受控重试返回Input.dispatchMouseEvent timed out；后续标题/侧栏已改变。不能当点击完全未送达，也不能据此判业务恢复。"
+  },
+  "rootCause": "unknown",
+  "notEstablished": [
+    "权限不足",
+    "登录失效",
+    "R1/R3并发导致",
+    "全租户故障",
+    "产品缺陷",
+    "反自动化拦截"
+  ],
+  "scope": {
+    "onlyTabOperated": "21",
+    "otherTabsNavigatedRefreshedOrClosed": 0,
+    "oldR2TabsAdopted": 0,
+    "sessionCleared": false,
+    "formsSubmitted": 0
+  },
+  "stopReason": "新专属标签菜单与一个已验证业务路径均未恢复且已完成各一次受控重试；按所有者边界停止本轮源操作。",
+  "minimalManualAction": "在本对话接管R2专属tab21，仅确认该人才池页面是否能显示业务列表；若仍空白，反馈仍为空白即可。无需重新授权、重复刷新、退出登录或操作测试数据。",
+  "resumeCondition": "R2业务页面标题、正式路径及实际业务主体同时正确；先只读查重/回读，再续测。",
+  "capturedFiles": [
+    "captures/r2-recovery-final-blocked-20260910.jpg"
+  ]
+}

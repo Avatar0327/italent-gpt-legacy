@@ -1,0 +1,29 @@
+{
+  "runId": "R2-ORIGIN-20260910-103952",
+  "asOf": "2026-09-10T15:48:59.472Z",
+  "source": "Planned_Comparison_Cases.json",
+  "approvedScenarios": 138,
+  "assignedForRecovery": 138,
+  "unassigned": 0,
+  "completeDispositionCounts": {
+    "ORIGIN_EXECUTED": 0,
+    "CONFIRMED_INTENTIONAL_DIFFERENCE": 0,
+    "TRANSFER_P3": 0,
+    "TRANSFER_P4": 0
+  },
+  "pendingOriginValidation": 138,
+  "pendingByResponsibleModule": {
+    "M03": 18,
+    "M06": 17,
+    "M26": 19,
+    "M17": 19,
+    "M37": 16,
+    "M18": 17,
+    "CROSS_OR_BASE": 32
+  },
+  "plannedP3Tasks": 46,
+  "p3TasksStarted": 0,
+  "p4Executed": 0,
+  "dispositionGateSatisfied": false,
+  "countingNote": "责任归属与完整处置分开计数；不通过批量转P3/P4绕开原站完整退出。既有19条观察与4项有意差异不等完整批准场景。"
+}

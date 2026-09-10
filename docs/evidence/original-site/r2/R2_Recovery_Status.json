@@ -1,0 +1,148 @@
+{
+  "runId": "R2-ORIGIN-20260910-103952",
+  "baseHead": "3fa2f42960aedf046ab08987d2a31edf8b77c143",
+  "checkpointAt": "2026-09-10T15:48:59.472Z",
+  "environmentBlockerResolved": false,
+  "evidence": "captures/Recovery-window-20260910.json",
+  "modules": [
+    {
+      "id": "M26",
+      "created": 0,
+      "status": "ENV_BLOCKED",
+      "complete": false,
+      "known": "历史命名拒绝；CP-003已批准",
+      "remaining": "双重查重、唯一活动/ID、问卷、对象、评价人、16匿名案例、报告/权限"
+    },
+    {
+      "id": "M37",
+      "created": 7,
+      "status": "PARTIAL",
+      "complete": false,
+      "known": "标准/库/指标/四子集，启用回读",
+      "remaining": "权重格式、引用、审核/版本、冲突、权限/下游"
+    },
+    {
+      "id": "M06",
+      "created": 2,
+      "status": "PARTIAL",
+      "complete": false,
+      "known": "类别停启与独立级别",
+      "remaining": "标准/来源、申报、认证、复审、失效、源版本影响"
+    },
+    {
+      "id": "M18",
+      "created": 1,
+      "status": "PARTIAL",
+      "complete": false,
+      "known": "空项目、空九格、必填拦截",
+      "remaining": "模板/方案、对象、采集/校准/锁定/发布、组织变化/历史"
+    },
+    {
+      "id": "M17",
+      "created": 3,
+      "status": "PARTIAL",
+      "complete": false,
+      "known": "两池；成员入池→培养中→出池历史",
+      "remaining": "重入新关系ID、关键岗位、准备度/独立审议、IDP/结果消费"
+    },
+    {
+      "id": "M03",
+      "created": 1,
+      "status": "PARTIAL",
+      "complete": false,
+      "known": "干部登记、日期拒绝、当天免职结束日回读",
+      "remaining": "免职汇总、正式审批/M01回执、轮岗/续任/前后任、附件/权限/上游"
+    }
+  ],
+  "fullModulesComplete": 0,
+  "fullModulesTotal": 6,
+  "confirmedCreated": 16,
+  "newObjects": 0,
+  "createdRecordsSha256": "501803144e902a4e0e8936db2d4f49e531e12019bdf7d7f9f771a4f0ce025f50",
+  "anonymousExecuted": 0,
+  "anonymousTotal": 16,
+  "crossModuleChain": {
+    "status": "NOT_COMPLETED",
+    "completeTraceableChains": 0,
+    "links": [
+      {
+        "from": "M37",
+        "to": "M06",
+        "sourceVersion": null,
+        "consumerId": null,
+        "consumptionStatus": "NOT_ESTABLISHED",
+        "changeImpact": "NOT_RUN",
+        "rejectionOrInvalidation": "NOT_RUN",
+        "history": "NOT_RUN"
+      },
+      {
+        "from": "M37",
+        "to": "M26",
+        "sourceVersion": null,
+        "consumerId": null,
+        "consumptionStatus": "NOT_ESTABLISHED",
+        "changeImpact": "NOT_RUN",
+        "rejectionOrInvalidation": "NOT_RUN",
+        "history": "NOT_RUN"
+      },
+      {
+        "from": "M06",
+        "to": "M18",
+        "sourceVersion": null,
+        "consumerId": null,
+        "consumptionStatus": "NOT_ESTABLISHED",
+        "changeImpact": "NOT_RUN",
+        "rejectionOrInvalidation": "NOT_RUN",
+        "history": "NOT_RUN"
+      },
+      {
+        "from": "M26",
+        "to": "M18",
+        "sourceVersion": null,
+        "consumerId": null,
+        "consumptionStatus": "NOT_ESTABLISHED",
+        "changeImpact": "NOT_RUN",
+        "rejectionOrInvalidation": "NOT_RUN",
+        "history": "NOT_RUN"
+      },
+      {
+        "from": "M18",
+        "to": "M17",
+        "sourceVersion": null,
+        "consumerId": null,
+        "consumptionStatus": "NOT_ESTABLISHED",
+        "changeImpact": "NOT_RUN",
+        "rejectionOrInvalidation": "NOT_RUN",
+        "history": "NOT_RUN"
+      },
+      {
+        "from": "M18",
+        "to": "M03",
+        "sourceVersion": null,
+        "consumerId": null,
+        "consumptionStatus": "NOT_ESTABLISHED",
+        "changeImpact": "NOT_RUN",
+        "rejectionOrInvalidation": "NOT_RUN",
+        "history": "NOT_RUN"
+      }
+    ]
+  },
+  "newBusinessDifferences": 0,
+  "businessObservations": 19,
+  "businessDifferences": 8,
+  "CP001AdditionalEvidence": false,
+  "CP001Recipient": "R2 P2设计负责人",
+  "CP001OwnerReapprovalRequired": false,
+  "scenarioSummary": "Scenario_Disposition_Summary.json",
+  "readbacksComplete": false,
+  "readbackQueue": "Recovery_Readback_Queue.json",
+  "singleAccountRemainingWorkComplete": false,
+  "minimalRoleListReady": false,
+  "completeOriginExit": false,
+  "oneTimeP2EvidenceIncrementReady": false,
+  "r2P2ExitApprovedByThisWindow": false,
+  "r2P3Started": false,
+  "productTests": 0,
+  "p4Uat": 0,
+  "minimalManualAction": "在本对话接管R2专属tab21，仅确认该人才池页面是否能显示业务列表；若仍空白，反馈仍为空白即可。无需重新授权、重复刷新、退出登录或操作测试数据。"
+}

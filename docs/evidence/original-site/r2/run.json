@@ -7,8 +7,8 @@
   "designContentHead": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
   "designPackageHead": "a7a23d6bff024f4660fd14b0c22f47a6d40d928f",
   "reviewHead": "077e0dc7f37529b9585f030fb1c8460f4c884cd1",
-  "checkpointAt": "2026-09-10T15:25:01.653347+00:00",
-  "status": "paused_at_confirmed_business_view_timeouts_after_CP002_CP003_approval",
+  "checkpointAt": "2026-09-10T15:48:59.472Z",
+  "status": "ENV_BLOCKED_after_bounded_recovery_in_sole_owner_tab21",
   "fullModulesComplete": 0,
   "modulesObserved": 6,
   "confirmedCreated": 16,
@@ -20,5 +20,12 @@
   "continuationBaseHead": "d8cc3b44edaab49463b97e09205e008a3841840b",
   "continuationNewObjects": 0,
   "currentExecutionBlocker": "R2-ENV-CONT-001",
-  "executionIncidents": 1
+  "executionIncidents": 1,
+  "recoveryBaseHead": "3fa2f42960aedf046ab08987d2a31edf8b77c143",
+  "recoveryEvidence": "captures/Recovery-window-20260910.json",
+  "recoveryReport": "R2_Recovery_Checkpoint_Report.md",
+  "soleExecutor": "R2｜原站验证恢复",
+  "currentOwnedTab": "21",
+  "originComplete": false,
+  "r2P3Started": false
 }

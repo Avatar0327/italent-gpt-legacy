@@ -236,5 +236,6 @@
       ]
     }
   ],
-  "notProductTests": true
+  "notProductTests": true,
+  "recoveryEvidence": "captures/Recovery-window-20260910.json"
 }
