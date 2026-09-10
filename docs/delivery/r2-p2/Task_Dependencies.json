@@ -1,0 +1,1823 @@
+{
+  "kind": "proposed_dependency_graph_not_execution",
+  "reviewSource": {
+    "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+    "path": "docs/delivery/r2-p2-exit-review/P3_Sequencing_Recommendations.json",
+    "sha256": "53776d7511d0be5caab266b8714b9c88dd8ed88eb07e6d74b044561ac30677d2"
+  },
+  "r1CapabilitySlots": {
+    "A": {
+      "title": "身份、权限、事务、流程及对象适配稳定基线",
+      "r1TaskIds": [
+        "P3-R1-01",
+        "P3-R1-02",
+        "P3-R1-03",
+        "P3-R1-04"
+      ],
+      "status": "pending_owner_freeze",
+      "implementationCommitSha": null,
+      "p2ContractSource": "e15237281ff19f04f08a354fd9455c518b24ae47",
+      "schemaVersion": null,
+      "adapterVersion": null,
+      "securityEpochContractVersion": null,
+      "writerEpochContractVersion": null,
+      "recoveryEpochContractVersion": null,
+      "migrationVersion": null,
+      "independentEvidenceRefs": [],
+      "rollbackCommitSha": null,
+      "capabilityOpen": false,
+      "requiredSemantics": [
+        "trusted identity/person binding and exitFence",
+        "current complete row/action/field grant; deny wins",
+        "tenant CAS + entity/auth revision + atomic audit/receipt/outbox/recovery journal",
+        "M19 transaction-plan adapter, independent review",
+        "immutable owner-version attachment binding + current download authorization",
+        "source event schema, digest/signature verification and inbox dedupe"
+      ],
+      "releaseCondition": "所有者填写完整实现SHA及全部版本槽位，独立证据覆盖requiredSemantics，批准能力开放/回退范围；P2设计来源不替代实现基线"
+    },
+    "B": {
+      "title": "消费、报表及作业能力",
+      "r1TaskIds": [
+        "P3-R1-05",
+        "P3-R1-06",
+        "P3-R1-07"
+      ],
+      "status": "pending_owner_freeze",
+      "implementationCommitSha": null,
+      "p2ContractSource": "e15237281ff19f04f08a354fd9455c518b24ae47",
+      "schemaVersion": null,
+      "adapterVersion": null,
+      "securityEpochContractVersion": null,
+      "writerEpochContractVersion": null,
+      "recoveryEpochContractVersion": null,
+      "migrationVersion": null,
+      "independentEvidenceRefs": [],
+      "rollbackCommitSha": null,
+      "capabilityOpen": false,
+      "requiredSemantics": [
+        "M48 producer authorized projection and current source fallback",
+        "M32 exact source snapshot/current fields; no anonymous recomputation",
+        "bounded job lease/fence/cursor and atomic ready manifest",
+        "download revoke and no stale sensitive bytes; subscription capability conditional"
+      ],
+      "releaseCondition": "所有者填写完整实现SHA及全部版本槽位，独立证据覆盖requiredSemantics，批准能力开放/回退范围；P2设计来源不替代实现基线"
+    },
+    "C": {
+      "title": "迁移与恢复能力",
+      "r1TaskIds": [
+        "P3-R1-08",
+        "P3-R1-09"
+      ],
+      "status": "pending_owner_freeze",
+      "implementationCommitSha": null,
+      "p2ContractSource": "e15237281ff19f04f08a354fd9455c518b24ae47",
+      "schemaVersion": null,
+      "adapterVersion": null,
+      "securityEpochContractVersion": null,
+      "writerEpochContractVersion": null,
+      "recoveryEpochContractVersion": null,
+      "migrationVersion": null,
+      "independentEvidenceRefs": [],
+      "rollbackCommitSha": null,
+      "capabilityOpen": false,
+      "requiredSemantics": [
+        "migration source mapping/cursor and conflict quarantine",
+        "writer cutover epoch and read-only/forward repair rollback",
+        "full transaction journal + attachment manifest + independent deny/key continuity",
+        "common recovery point; RPO<=60min RTO<=240min retention30d; owner open gate"
+      ],
+      "releaseCondition": "所有者填写完整实现SHA及全部版本槽位，独立证据覆盖requiredSemantics，批准能力开放/回退范围；P2设计来源不替代实现基线"
+    }
+  },
+  "tasks": [
+    {
+      "taskId": "P3-R2-M37-01",
+      "r2CompletionPredecessors": [],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/LibraryDraft",
+        "Interface_Schemas.json#/$defs/IndicatorDraft",
+        "Interface_Schemas.json#/$defs/IndicatorChild"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M37.domain_adapter"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": "目录/子集字段及唯一性",
+      "independentStartCondition": "另获所有者P2退出/P3准入；纯函数使用冻结P2文档和合成输入，可在A/B/C未就绪时实施但不能关闭整任务",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M37-02",
+      "r2CompletionPredecessors": [
+        "P3-R2-M37-01"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/StandardDraft",
+        "Interface_Schemas.json#/$defs/Target",
+        "Interface_Schemas.json#/$defs/RuleAst"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M37.domain_adapter"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": "尺度/精确权重/规则AST",
+      "independentStartCondition": "另获所有者P2退出/P3准入；纯函数使用冻结P2文档和合成输入，可在A/B/C未就绪时实施但不能关闭整任务",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M37-03",
+      "r2CompletionPredecessors": [
+        "P3-R2-M37-01",
+        "P3-R2-M37-02"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/SubmitAction",
+        "Interface_Schemas.json#/$defs/PublishAction",
+        "Interface_Schemas.json#/$defs/AvailabilityAction"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M37.domain_adapter",
+        "A.M19_transaction_plan"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M37-04",
+      "r2CompletionPredecessors": [
+        "P3-R2-M37-01"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/Scope",
+        "Interface_Schemas.json#/$defs/Material"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M37.domain_adapter"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M37-05",
+      "r2CompletionPredecessors": [
+        "P3-R2-M37-03",
+        "P3-R2-M37-04",
+        "P3-R2-M06-04",
+        "P3-R2-M26-04",
+        "P3-R2-M18-04",
+        "P3-R2-M17-04",
+        "P3-R2-M03-02"
+      ],
+      "requiredR1CapabilityGates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "baselineSlots": [
+        "R1-A",
+        "R1-B",
+        "R1-C"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/VersionRef",
+        "Interface_Schemas.json#/$defs/StandardLine",
+        "Interface_Schemas.json#/$defs/Event"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M37.domain_adapter",
+        "B.M32_snapshot_field_projection",
+        "B.M48_authorized_projection",
+        "B.export_download_lease",
+        "C.migration_quarantine_writer_fence",
+        "C.restore_current_deny_disclosure_ledger"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "C: conflict quarantine, full journal/object manifests, independent deny/disclosure continuity",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M06-01",
+      "r2CompletionPredecessors": [],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/CatalogDraft",
+        "Interface_Schemas.json#/$defs/NumericScaleConfig",
+        "Interface_Schemas.json#/$defs/RatingSelection"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M06.domain_adapter"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": "目录树/指标类型/编号",
+      "independentStartCondition": "另获所有者P2退出/P3准入；纯函数使用冻结P2文档和合成输入，可在A/B/C未就绪时实施但不能关闭整任务",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M06-02",
+      "r2CompletionPredecessors": [
+        "P3-R2-M06-01",
+        "P3-R2-M37-02"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/QualificationDraft",
+        "Interface_Schemas.json#/$defs/QualificationLine",
+        "Interface_Schemas.json#/$defs/Target"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M06.domain_adapter"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": "矩阵/评级/证据窗口",
+      "independentStartCondition": "另获所有者P2退出/P3准入；纯函数使用冻结P2文档和合成输入，可在A/B/C未就绪时实施但不能关闭整任务",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M06-03",
+      "r2CompletionPredecessors": [
+        "P3-R2-M06-01",
+        "P3-R2-M06-02",
+        "P3-R2-M37-03"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/PublishAction",
+        "Interface_Schemas.json#/$defs/AvailabilityAction"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M06.domain_adapter",
+        "A.M19_transaction_plan"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M06-04",
+      "r2CompletionPredecessors": [
+        "P3-R2-M06-03"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/QualificationApplication",
+        "Interface_Schemas.json#/$defs/Committee",
+        "Interface_Schemas.json#/$defs/ValidityPolicy"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M06.domain_adapter",
+        "A.M19_transaction_plan"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": "委员会分母/有效期/续期",
+      "independentStartCondition": "另获所有者P2退出/P3准入；纯函数使用冻结P2文档和合成输入，可在A/B/C未就绪时实施但不能关闭整任务",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M06-05",
+      "r2CompletionPredecessors": [
+        "P3-R2-M06-04"
+      ],
+      "requiredR1CapabilityGates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "baselineSlots": [
+        "R1-A",
+        "R1-B",
+        "R1-C"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/VersionRef",
+        "Interface_Schemas.json#/$defs/Event"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M06.domain_adapter",
+        "B.M32_snapshot_field_projection",
+        "B.M48_authorized_projection",
+        "B.export_download_lease",
+        "C.migration_quarantine_writer_fence",
+        "C.restore_current_deny_disclosure_ledger"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "C: conflict quarantine, full journal/object manifests, independent deny/disclosure continuity",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M26-01",
+      "r2CompletionPredecessors": [],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/FeedbackProject",
+        "Interface_Schemas.json#/$defs/Invite"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M26.domain_adapter"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": "邀请唯一/角色适用",
+      "independentStartCondition": "另获所有者P2退出/P3准入；纯函数使用冻结P2文档和合成输入，可在A/B/C未就绪时实施但不能关闭整任务",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M26-02",
+      "r2CompletionPredecessors": [
+        "P3-R2-M26-01",
+        "P3-R2-M26-03"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/DisclosureAtom",
+        "Interface_Schemas.json#/$defs/DisclosureCell",
+        "Interface_Schemas.json#/$defs/DisclosureLedgerEntry"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M26.domain_adapter"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": "固定匿名矩阵/谱系/分区",
+      "independentStartCondition": "另获所有者P2退出/P3准入；纯函数使用冻结P2文档和合成输入，可在A/B/C未就绪时实施但不能关闭整任务",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M26-03",
+      "r2CompletionPredecessors": [
+        "P3-R2-M26-01",
+        "P3-R2-M37-03"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+        "Interface_Schemas.json#/$defs/Question",
+        "Interface_Schemas.json#/$defs/QuestionApplicability"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M26.domain_adapter"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": "四题型及条件DAG",
+      "independentStartCondition": "另获所有者P2退出/P3准入；纯函数使用冻结P2文档和合成输入，可在A/B/C未就绪时实施但不能关闭整任务",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M26-04",
+      "r2CompletionPredecessors": [
+        "P3-R2-M26-02",
+        "P3-R2-M26-03"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/ResponseSubmit",
+        "Interface_Schemas.json#/$defs/ReportPublish"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M26.domain_adapter",
+        "A.M19_transaction_plan",
+        "A.attachment_owner_binding_download"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M26-05",
+      "r2CompletionPredecessors": [
+        "P3-R2-M26-04"
+      ],
+      "requiredR1CapabilityGates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "baselineSlots": [
+        "R1-A",
+        "R1-B",
+        "R1-C"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/ReportQuery",
+        "Interface_Schemas.json#/$defs/Event"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M26.domain_adapter",
+        "B.M32_snapshot_field_projection",
+        "B.M48_authorized_projection",
+        "B.export_download_lease",
+        "C.migration_quarantine_writer_fence",
+        "C.restore_current_deny_disclosure_ledger"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "C: conflict quarantine, full journal/object manifests, independent deny/disclosure continuity",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M18-01",
+      "r2CompletionPredecessors": [
+        "P3-R2-M37-03",
+        "P3-R2-M37-04"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/ReviewProject",
+        "Interface_Schemas.json#/$defs/PreviousResultRef"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M18.domain_adapter"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": "范围及历史关系校验",
+      "independentStartCondition": "另获所有者P2退出/P3准入；纯函数使用冻结P2文档和合成输入，可在A/B/C未就绪时实施但不能关闭整任务",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [
+        "R3-M16-performance-source"
+      ],
+      "externalProducerStatus": "pending_release_owner_freeze",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M18-02",
+      "r2CompletionPredecessors": [
+        "P3-R2-M18-01"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/Axis",
+        "Interface_Schemas.json#/$defs/GridDefinition",
+        "Interface_Schemas.json#/$defs/Cell"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M18.domain_adapter"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": "轴映射/等值/null",
+      "independentStartCondition": "另获所有者P2退出/P3准入；纯函数使用冻结P2文档和合成输入，可在A/B/C未就绪时实施但不能关闭整任务",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [
+        "R3-M16-performance-source"
+      ],
+      "externalProducerStatus": "pending_release_owner_freeze",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M18-03",
+      "r2CompletionPredecessors": [
+        "P3-R2-M18-02"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/Calibration",
+        "Interface_Schemas.json#/$defs/Committee"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M18.domain_adapter",
+        "A.M19_transaction_plan"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M18-04",
+      "r2CompletionPredecessors": [
+        "P3-R2-M18-03"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/PublishAction",
+        "Interface_Schemas.json#/$defs/ReviewProject"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M18.domain_adapter",
+        "A.M19_transaction_plan"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M18-05",
+      "r2CompletionPredecessors": [
+        "P3-R2-M18-04",
+        "P3-R2-M17-01",
+        "P3-R2-M17-02"
+      ],
+      "requiredR1CapabilityGates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "baselineSlots": [
+        "R1-A",
+        "R1-B",
+        "R1-C"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/PreviousResultRef",
+        "Interface_Schemas.json#/$defs/ReportQuery",
+        "Interface_Schemas.json#/$defs/Event"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M18.domain_adapter",
+        "B.M32_snapshot_field_projection",
+        "B.M48_authorized_projection",
+        "B.export_download_lease",
+        "C.migration_quarantine_writer_fence",
+        "C.restore_current_deny_disclosure_ledger"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "C: conflict quarantine, full journal/object manifests, independent deny/disclosure continuity",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [
+        "R3-M16-performance-source"
+      ],
+      "externalProducerStatus": "pending_release_owner_freeze",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M17-01",
+      "r2CompletionPredecessors": [],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/PoolDraft",
+        "Interface_Schemas.json#/$defs/PoolRule",
+        "Interface_Schemas.json#/$defs/Membership"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M17.domain_adapter"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": "池规则/区间/重入",
+      "independentStartCondition": "另获所有者P2退出/P3准入；纯函数使用冻结P2文档和合成输入，可在A/B/C未就绪时实施但不能关闭整任务",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M17-02",
+      "r2CompletionPredecessors": [
+        "P3-R2-M17-01",
+        "P3-R2-M06-04"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/Succession",
+        "Interface_Schemas.json#/$defs/ValidityPolicy"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M17.domain_adapter"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": "准备度/任期",
+      "independentStartCondition": "另获所有者P2退出/P3准入；纯函数使用冻结P2文档和合成输入，可在A/B/C未就绪时实施但不能关闭整任务",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M17-03",
+      "r2CompletionPredecessors": [
+        "P3-R2-M17-01"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/Mentor"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M17.domain_adapter",
+        "A.M19_transaction_plan"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": "动态职责及回避校验",
+      "independentStartCondition": "另获所有者P2退出/P3准入；纯函数使用冻结P2文档和合成输入，可在A/B/C未就绪时实施但不能关闭整任务",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M17-04",
+      "r2CompletionPredecessors": [
+        "P3-R2-M17-03",
+        "P3-R2-M37-03"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/IdpTemplate",
+        "Interface_Schemas.json#/$defs/IdpPlan",
+        "Interface_Schemas.json#/$defs/IdpTaskAction"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M17.domain_adapter",
+        "A.M19_transaction_plan"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": "IDP阶段任务DAG",
+      "independentStartCondition": "另获所有者P2退出/P3准入；纯函数使用冻结P2文档和合成输入，可在A/B/C未就绪时实施但不能关闭整任务",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [
+        "R3-M27-learning-evidence"
+      ],
+      "externalProducerStatus": "pending_release_owner_freeze",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M17-05",
+      "r2CompletionPredecessors": [
+        "P3-R2-M17-01",
+        "P3-R2-M17-02"
+      ],
+      "requiredR1CapabilityGates": [
+        "A",
+        "B"
+      ],
+      "baselineSlots": [
+        "R1-A",
+        "R1-B"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/ReportQuery",
+        "Interface_Schemas.json#/$defs/Cell"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M17.domain_adapter",
+        "B.M32_snapshot_field_projection",
+        "B.M48_authorized_projection",
+        "B.export_download_lease"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": "健康分母/去重",
+      "independentStartCondition": "另获所有者P2退出/P3准入；纯函数使用冻结P2文档和合成输入，可在A/B/C未就绪时实施但不能关闭整任务",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M17-06",
+      "r2CompletionPredecessors": [
+        "P3-R2-M17-04",
+        "P3-R2-M17-05",
+        "P3-R2-M18-04"
+      ],
+      "requiredR1CapabilityGates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "baselineSlots": [
+        "R1-A",
+        "R1-B",
+        "R1-C"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/Scope",
+        "Interface_Schemas.json#/$defs/Event"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M17.domain_adapter",
+        "B.M32_snapshot_field_projection",
+        "B.M48_authorized_projection",
+        "B.export_download_lease",
+        "C.migration_quarantine_writer_fence",
+        "C.restore_current_deny_disclosure_ledger"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "C: conflict quarantine, full journal/object manifests, independent deny/disclosure continuity",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [
+        "R3-M27-learning-evidence"
+      ],
+      "externalProducerStatus": "pending_release_owner_freeze",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M03-01",
+      "r2CompletionPredecessors": [],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/TermDraft"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M03.domain_adapter",
+        "A.M01_actual_assignment_receipt"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": "日期/闰年/区间",
+      "independentStartCondition": "另获所有者P2退出/P3准入；纯函数使用冻结P2文档和合成输入，可在A/B/C未就绪时实施但不能关闭整任务",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M03-02",
+      "r2CompletionPredecessors": [
+        "P3-R2-M03-01",
+        "P3-R2-M03-03",
+        "P3-R2-M06-04"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/Appointment",
+        "Interface_Schemas.json#/$defs/TermChange"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M03.domain_adapter",
+        "A.M19_transaction_plan",
+        "A.M01_actual_assignment_receipt"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M03-03",
+      "r2CompletionPredecessors": [
+        "P3-R2-M03-01"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/EvaluationDraft",
+        "Interface_Schemas.json#/$defs/Committee"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M03.domain_adapter",
+        "A.M19_transaction_plan"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": "精确评分/缺评/弃权",
+      "independentStartCondition": "另获所有者P2退出/P3准入；纯函数使用冻结P2文档和合成输入，可在A/B/C未就绪时实施但不能关闭整任务",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M03-04",
+      "r2CompletionPredecessors": [
+        "P3-R2-M03-02"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/ObservationAction",
+        "Interface_Schemas.json#/$defs/DateChange"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M03.domain_adapter",
+        "A.M19_transaction_plan",
+        "A.M01_actual_assignment_receipt"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": "考察日期",
+      "independentStartCondition": "另获所有者P2退出/P3准入；纯函数使用冻结P2文档和合成输入，可在A/B/C未就绪时实施但不能关闭整任务",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M03-05",
+      "r2CompletionPredecessors": [
+        "P3-R2-M03-01"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/InterviewDraft",
+        "Interface_Schemas.json#/$defs/Material"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M03.domain_adapter",
+        "A.attachment_owner_binding_download"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": "述职/敏感档案字段",
+      "independentStartCondition": "另获所有者P2退出/P3准入；纯函数使用冻结P2文档和合成输入，可在A/B/C未就绪时实施但不能关闭整任务",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-M03-06",
+      "r2CompletionPredecessors": [
+        "P3-R2-M03-02",
+        "P3-R2-M03-04",
+        "P3-R2-M03-05"
+      ],
+      "requiredR1CapabilityGates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "baselineSlots": [
+        "R1-A",
+        "R1-B",
+        "R1-C"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/VersionRef",
+        "Interface_Schemas.json#/$defs/Event"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "M03.domain_adapter",
+        "B.M32_snapshot_field_projection",
+        "B.M48_authorized_projection",
+        "B.export_download_lease",
+        "C.migration_quarantine_writer_fence",
+        "C.restore_current_deny_disclosure_ledger"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "C: conflict quarantine, full journal/object manifests, independent deny/disclosure continuity",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-BASE-01",
+      "r2CompletionPredecessors": [
+        "P3-R2-M26-01",
+        "P3-R2-M17-03"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/Invite",
+        "Interface_Schemas.json#/$defs/Mentor"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-BASE-02",
+      "r2CompletionPredecessors": [
+        "P3-R2-M37-04",
+        "P3-R2-M26-04",
+        "P3-R2-M03-05"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/Scope",
+        "Interface_Schemas.json#/$defs/ReportQuery"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-BASE-03",
+      "r2CompletionPredecessors": [
+        "P3-R2-M06-04",
+        "P3-R2-M17-01",
+        "P3-R2-M03-02"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/CatalogDraft",
+        "Interface_Schemas.json#/$defs/ReasonAction",
+        "Interface_Schemas.json#/$defs/Event"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-BASE-04",
+      "r2CompletionPredecessors": [
+        "P3-R2-M26-04",
+        "P3-R2-M03-05"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/Material",
+        "Interface_Schemas.json#/$defs/VersionRef"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "A.attachment_owner_binding_download"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-BASE-05",
+      "r2CompletionPredecessors": [
+        "P3-R2-COM-03",
+        "P3-R2-COM-04"
+      ],
+      "requiredR1CapabilityGates": [
+        "C"
+      ],
+      "baselineSlots": [
+        "R1-C"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/DisclosureLedgerEntry",
+        "Interface_Schemas.json#/$defs/Event"
+      ],
+      "requiredAdapters": [
+        "C.migration_quarantine_writer_fence",
+        "C.restore_current_deny_disclosure_ledger"
+      ],
+      "requiredSecurityContract": [
+        "current deny and writer/recovery epoch inherited via C"
+      ],
+      "requiredMigrationOrRecovery": "C: conflict quarantine, full journal/object manifests, independent deny/disclosure continuity",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-BASE-06",
+      "r2CompletionPredecessors": [
+        "P3-R2-COM-02"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/Event",
+        "Interface_Schemas.json#/$defs/Command"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-COM-01",
+      "r2CompletionPredecessors": [],
+      "requiredR1CapabilityGates": [
+        "A",
+        "B"
+      ],
+      "baselineSlots": [
+        "R1-A",
+        "R1-B"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/Command",
+        "Interface_Schemas.json#/$defs/Event"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "B.M32_snapshot_field_projection",
+        "B.M48_authorized_projection",
+        "B.export_download_lease"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-COM-02",
+      "r2CompletionPredecessors": [],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/VersionRef",
+        "Interface_Schemas.json#/$defs/Command",
+        "Interface_Schemas.json#/$defs/Event"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": "严格schema及事件格式守卫",
+      "independentStartCondition": "另获所有者P2退出/P3准入；纯函数使用冻结P2文档和合成输入，可在A/B/C未就绪时实施但不能关闭整任务",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-COM-03",
+      "r2CompletionPredecessors": [
+        "P3-R2-M37-03",
+        "P3-R2-M06-04",
+        "P3-R2-M26-04",
+        "P3-R2-M18-04",
+        "P3-R2-M17-04",
+        "P3-R2-M03-02"
+      ],
+      "requiredR1CapabilityGates": [
+        "C"
+      ],
+      "baselineSlots": [
+        "R1-C"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/VersionRef",
+        "Interface_Schemas.json#/$defs/DisclosureLedgerEntry"
+      ],
+      "requiredAdapters": [
+        "C.migration_quarantine_writer_fence",
+        "C.restore_current_deny_disclosure_ledger"
+      ],
+      "requiredSecurityContract": [
+        "current deny and writer/recovery epoch inherited via C"
+      ],
+      "requiredMigrationOrRecovery": "C: conflict quarantine, full journal/object manifests, independent deny/disclosure continuity",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-COM-04",
+      "r2CompletionPredecessors": [
+        "P3-R2-COM-03"
+      ],
+      "requiredR1CapabilityGates": [
+        "C"
+      ],
+      "baselineSlots": [
+        "R1-C"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/DisclosureLedgerEntry",
+        "Interface_Schemas.json#/$defs/Event"
+      ],
+      "requiredAdapters": [
+        "C.migration_quarantine_writer_fence",
+        "C.restore_current_deny_disclosure_ledger"
+      ],
+      "requiredSecurityContract": [
+        "current deny and writer/recovery epoch inherited via C"
+      ],
+      "requiredMigrationOrRecovery": "C: conflict quarantine, full journal/object manifests, independent deny/disclosure continuity",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-X-01",
+      "r2CompletionPredecessors": [
+        "P3-R2-M37-03",
+        "P3-R2-M18-04",
+        "P3-R2-M17-04"
+      ],
+      "requiredR1CapabilityGates": [
+        "A",
+        "B"
+      ],
+      "baselineSlots": [
+        "R1-A",
+        "R1-B"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/StandardLine",
+        "Interface_Schemas.json#/$defs/PreviousResultRef"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "B.M32_snapshot_field_projection",
+        "B.M48_authorized_projection",
+        "B.export_download_lease"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [
+        "R3-M16-performance-source"
+      ],
+      "externalProducerStatus": "pending_release_owner_freeze",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-X-02",
+      "r2CompletionPredecessors": [
+        "P3-R2-M06-04",
+        "P3-R2-M17-02",
+        "P3-R2-M03-02"
+      ],
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "baselineSlots": [
+        "R1-A"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/ValidityPolicy",
+        "Interface_Schemas.json#/$defs/Appointment"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "A.M01_actual_assignment_receipt"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-X-03",
+      "r2CompletionPredecessors": [
+        "P3-R2-M26-04",
+        "P3-R2-M18-04"
+      ],
+      "requiredR1CapabilityGates": [
+        "A",
+        "B"
+      ],
+      "baselineSlots": [
+        "R1-A",
+        "R1-B"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/ReportPublish",
+        "Interface_Schemas.json#/$defs/DisclosureLedgerEntry"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "B.M32_snapshot_field_projection",
+        "B.M48_authorized_projection",
+        "B.export_download_lease"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [],
+      "externalProducerStatus": "not_applicable",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    },
+    {
+      "taskId": "P3-R2-X-04",
+      "r2CompletionPredecessors": [
+        "P3-R2-M17-04",
+        "P3-R2-M17-05",
+        "P3-R2-M03-05"
+      ],
+      "requiredR1CapabilityGates": [
+        "A",
+        "B"
+      ],
+      "baselineSlots": [
+        "R1-A",
+        "R1-B"
+      ],
+      "requiredSchemas": [
+        "Interface_Schemas.json#/$defs/ReportQuery",
+        "Interface_Schemas.json#/$defs/IdpTaskAction"
+      ],
+      "requiredAdapters": [
+        "A.current_grant",
+        "A.command_transaction_receipt",
+        "A.identity_exitFence",
+        "B.M32_snapshot_field_projection",
+        "B.M48_authorized_projection",
+        "B.export_download_lease"
+      ],
+      "requiredSecurityContract": [
+        "current authorization revision and deny",
+        "writer/recovery epoch and exitFence"
+      ],
+      "requiredMigrationOrRecovery": "A/B changes must already participate in full journal; C needed before migration/recovery closure",
+      "independentSlice": null,
+      "independentStartCondition": "无独立完成路径；按前置任务及共享能力实施适配",
+      "completionCondition": "全部R2完成前置+对应R1槽位冻结并有独立证据+本任务实际领域适配与原场景证据；仅桩或文档不能结项",
+      "externalProducerDependencies": [
+        "R3-M27-learning-evidence"
+      ],
+      "externalProducerStatus": "pending_release_owner_freeze",
+      "missingDependencyBehavior": "blocked_dependency；未配置反例可验证，不能当真实消费已成功",
+      "status": "proposed_not_started"
+    }
+  ],
+  "jointClosure": {
+    "id": "JOINT-R1-10-R2-R3",
+    "completionPredecessors": [
+      "P3-R2-X-01",
+      "P3-R2-X-02",
+      "P3-R2-X-03",
+      "P3-R2-X-04",
+      "R3-PRODUCERS-READY",
+      "R1-CAP-A",
+      "R1-CAP-B",
+      "R1-CAP-C"
+    ],
+    "rule": "R1-10接口就绪由A/B能力交付；真实R2/R3生产者分别先实现再联合取证。R2 X完成不依赖R1-10整任务通过，R1-10整体验收消费联合证据。R1-11退出在联合门禁之后且仍满足自身所有要求。",
+    "status": "not_authorized_not_started",
+    "ownerRole": "R1集成负责人+R2/R3生产者负责人+独立复核，所有者放行"
+  },
+  "externalProducerSlots": {
+    "R3-M27-learning-evidence": {
+      "status": "pending_release_owner_freeze",
+      "implementationCommitSha": null,
+      "schemaVersion": null,
+      "evidenceRefs": []
+    },
+    "R3-M16-performance-source": {
+      "status": "pending_release_owner_freeze",
+      "implementationCommitSha": null,
+      "schemaVersion": null,
+      "evidenceRefs": []
+    }
+  }
+}

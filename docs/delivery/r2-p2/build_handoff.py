@@ -59,6 +59,7 @@ if (D/'Legacy_Acceptance_Map.json').exists():
                 a['scenarioIds']=[];a['evidenceRequestIds']=['R2-SOURCE-M17-01']
 import runpy
 runpy.run_path(str(D/"build_foundation_adaptations.py"))
+runpy.run_path(str(D/"build_dependencies.py"))
 from repair_handoff import apply
 apply(t,tasks,scenarios)
 put('Requirements_Trace.json',t)
@@ -68,3 +69,6 @@ lines=['# P3任务与可执行验收建议','',f'任务{len(tasks)}项，场景{
 for x in tasks:lines.append('|'+x['id']+'|'+','.join(x['requirementRefs'])+'|'+str(len(x['scenarioIds']))+'|'+x['ownerRole']+'|')
 (D/'P3_Handoff.md').write_text('\n'.join(lines)+'\n')
 print(json.dumps({'tasks':len(tasks),'scenarios':len(scenarios),'tasksWithoutScenarios':[x['id'] for x in tasks if not x['scenarioIds']]},ensure_ascii=False))
+
+with (D/"P3_Handoff.md").open("a") as f:
+ f.write("\n46项任务完成依赖、纯领域启动边界和A/B/C待冻结槽位见[Task_Dependencies.md](Task_Dependencies.md)。R1-10与实际R2/R3生产者联合收口，不把全部R1退出设为循环前置。全部138场景仍not_run，P3未启动。\n")

@@ -50,3 +50,5 @@
 |P3-R2-X-02|M06-SPEC-05,M17-SPEC-02,M03-SPEC-02|2|M06/M17/M03与M01接口负责人|
 |P3-R2-X-03|M26-SPEC-02,M26-SPEC-05,BASE-02|2|M26/M18/M32安全接口负责人|
 |P3-R2-X-04|M17-SPEC-05,M03-SPEC-06,C02-AC1|2|M48/M32既有接口与R2负责人|
+
+46项任务完成依赖、纯领域启动边界和A/B/C待冻结槽位见[Task_Dependencies.md](Task_Dependencies.md)。R1-10与实际R2/R3生产者联合收口，不把全部R1退出设为循环前置。全部138场景仍not_run，P3未启动。

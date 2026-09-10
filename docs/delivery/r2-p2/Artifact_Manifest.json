@@ -173,13 +173,13 @@
     },
     {
       "path": "docs/delivery/r2-p2/P3_Handoff.md",
-      "sha256": "467682d9f09d3242c4daa77541ed44dab512be02288de56b02d7e654c295d34c",
-      "bytes": 3835
+      "sha256": "2edd60656a083e4f4ba558a90e7ba50c0f12e693bfad13b81691ca621d9f8d7e",
+      "bytes": 4083
     },
     {
       "path": "docs/delivery/r2-p2/P3_Work_Packages.json",
-      "sha256": "194b475503820bc471e8a59dbf105015c41fd6f18009f87b81a64d6283d6b513",
-      "bytes": 34086
+      "sha256": "261d41322b8b869c10419fb358235785892c357f02b1c95d9143ae56f2bd6d7e",
+      "bytes": 102429
     },
     {
       "path": "docs/delivery/r2-p2/Permissions.md",
@@ -198,8 +198,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/Repair_Record.json",
-      "sha256": "0897d4717c4f3932ff64c1fe5555b95e82738c1d0fe05eb5f524e370b1fb4976",
-      "bytes": 3772
+      "sha256": "7d01c07f15cb31890c028268b4f7da363458bb57b42d16ec0123e81427baa7c4",
+      "bytes": 3801
     },
     {
       "path": "docs/delivery/r2-p2/Requirements_Trace.json",
@@ -242,6 +242,16 @@
       "bytes": 41525
     },
     {
+      "path": "docs/delivery/r2-p2/Task_Dependencies.json",
+      "sha256": "49d7a41ad3a811e5de5863db53cef5bce2e629704e16640586fbc0d9ca90b976",
+      "bytes": 73842
+    },
+    {
+      "path": "docs/delivery/r2-p2/Task_Dependencies.md",
+      "sha256": "79a67000c082cece932310cf7f3d9039770c73a0a8459597fff05b51acd0f2c5",
+      "bytes": 4677
+    },
+    {
       "path": "docs/delivery/r2-p2/Traceability.md",
       "sha256": "d4bd9164a3bfea2f02f47b7b19d3e44a01e86cbdaa5d0c15e75917703b711ae7",
       "bytes": 2980
@@ -252,14 +262,19 @@
       "bytes": 5437
     },
     {
+      "path": "docs/delivery/r2-p2/build_dependencies.py",
+      "sha256": "1c62e7c064c1fff103fe528ad004b2d999f1f23d7d18e8f584e9e4a01e51feeb",
+      "bytes": 9615
+    },
+    {
       "path": "docs/delivery/r2-p2/build_foundation_adaptations.py",
       "sha256": "df26d334809b360e91169913255ab724135796f78b0af30c86443b2102398e99",
       "bytes": 7393
     },
     {
       "path": "docs/delivery/r2-p2/build_handoff.py",
-      "sha256": "c94295539d5fb33ab6455bd228cccc3e026c8650ba0a1ac6e5720e4f24f24542",
-      "bytes": 6198
+      "sha256": "28164deed9e3e3a8092a4ac9fed5f134ba2e52af7e45ad6d440e3d1c12d3f86c",
+      "bytes": 6550
     },
     {
       "path": "docs/delivery/r2-p2/build_inventory.py",
@@ -290,6 +305,11 @@
       "path": "docs/delivery/r2-p2/check_anonymity.py",
       "sha256": "72e0e951c80977b608c5e4d02e262268ec7b21a91186e3c02fe959392b9dd53b",
       "bytes": 1834
+    },
+    {
+      "path": "docs/delivery/r2-p2/check_dependencies.py",
+      "sha256": "95b9465b358b0818c7933b07f97d2a246ef4423693494138156e7b10cfd47f27",
+      "bytes": 1730
     },
     {
       "path": "docs/delivery/r2-p2/check_design.py",

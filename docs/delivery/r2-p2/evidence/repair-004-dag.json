@@ -1,0 +1,337 @@
+{
+  "kind": "P2_dependency_analysis_not_task_execution",
+  "r2TaskCount": 46,
+  "fullGraphNodeCount": 55,
+  "edges": 165,
+  "cycles": 0,
+  "topologicalOrder": [
+    "R1-CAP-A",
+    "R1-CAP-B",
+    "R1-CAP-C",
+    "R3-M16-performance-source",
+    "R3-M27-learning-evidence",
+    "P3-R2-M37-01",
+    "P3-R2-M06-01",
+    "P3-R2-M26-01",
+    "P3-R2-M17-01",
+    "P3-R2-M03-01",
+    "P3-R2-COM-02",
+    "P3-R2-COM-01",
+    "R3-PRODUCERS-READY",
+    "P3-R2-M37-02",
+    "P3-R2-M37-04",
+    "P3-R2-M17-03",
+    "P3-R2-M03-03",
+    "P3-R2-M03-05",
+    "P3-R2-BASE-06",
+    "P3-R2-M37-03",
+    "P3-R2-M06-02",
+    "P3-R2-BASE-01",
+    "P3-R2-M26-03",
+    "P3-R2-M18-01",
+    "P3-R2-M17-04",
+    "P3-R2-M06-03",
+    "P3-R2-M26-02",
+    "P3-R2-M18-02",
+    "P3-R2-M06-04",
+    "P3-R2-M26-04",
+    "P3-R2-M18-03",
+    "P3-R2-M06-05",
+    "P3-R2-M17-02",
+    "P3-R2-M03-02",
+    "P3-R2-M26-05",
+    "P3-R2-BASE-02",
+    "P3-R2-BASE-04",
+    "P3-R2-M18-04",
+    "P3-R2-M17-05",
+    "P3-R2-M03-04",
+    "P3-R2-BASE-03",
+    "P3-R2-X-02",
+    "P3-R2-M37-05",
+    "P3-R2-M18-05",
+    "P3-R2-COM-03",
+    "P3-R2-X-01",
+    "P3-R2-X-03",
+    "P3-R2-M17-06",
+    "P3-R2-X-04",
+    "P3-R2-M03-06",
+    "P3-R2-COM-04",
+    "JOINT-R1-10-R2-R3",
+    "P3-R2-BASE-05",
+    "P3-R1-10-COMPLETE",
+    "P3-R1-11-EXIT"
+  ],
+  "graph": {
+    "P3-R2-M37-01": [
+      "R1-CAP-A"
+    ],
+    "P3-R2-M37-02": [
+      "P3-R2-M37-01",
+      "R1-CAP-A"
+    ],
+    "P3-R2-M37-03": [
+      "P3-R2-M37-01",
+      "P3-R2-M37-02",
+      "R1-CAP-A"
+    ],
+    "P3-R2-M37-04": [
+      "P3-R2-M37-01",
+      "R1-CAP-A"
+    ],
+    "P3-R2-M37-05": [
+      "P3-R2-M37-03",
+      "P3-R2-M37-04",
+      "P3-R2-M06-04",
+      "P3-R2-M26-04",
+      "P3-R2-M18-04",
+      "P3-R2-M17-04",
+      "P3-R2-M03-02",
+      "R1-CAP-A",
+      "R1-CAP-B",
+      "R1-CAP-C"
+    ],
+    "P3-R2-M06-01": [
+      "R1-CAP-A"
+    ],
+    "P3-R2-M06-02": [
+      "P3-R2-M06-01",
+      "P3-R2-M37-02",
+      "R1-CAP-A"
+    ],
+    "P3-R2-M06-03": [
+      "P3-R2-M06-01",
+      "P3-R2-M06-02",
+      "P3-R2-M37-03",
+      "R1-CAP-A"
+    ],
+    "P3-R2-M06-04": [
+      "P3-R2-M06-03",
+      "R1-CAP-A"
+    ],
+    "P3-R2-M06-05": [
+      "P3-R2-M06-04",
+      "R1-CAP-A",
+      "R1-CAP-B",
+      "R1-CAP-C"
+    ],
+    "P3-R2-M26-01": [
+      "R1-CAP-A"
+    ],
+    "P3-R2-M26-02": [
+      "P3-R2-M26-01",
+      "P3-R2-M26-03",
+      "R1-CAP-A"
+    ],
+    "P3-R2-M26-03": [
+      "P3-R2-M26-01",
+      "P3-R2-M37-03",
+      "R1-CAP-A"
+    ],
+    "P3-R2-M26-04": [
+      "P3-R2-M26-02",
+      "P3-R2-M26-03",
+      "R1-CAP-A"
+    ],
+    "P3-R2-M26-05": [
+      "P3-R2-M26-04",
+      "R1-CAP-A",
+      "R1-CAP-B",
+      "R1-CAP-C"
+    ],
+    "P3-R2-M18-01": [
+      "P3-R2-M37-03",
+      "P3-R2-M37-04",
+      "R1-CAP-A",
+      "R3-M16-performance-source"
+    ],
+    "P3-R2-M18-02": [
+      "P3-R2-M18-01",
+      "R1-CAP-A",
+      "R3-M16-performance-source"
+    ],
+    "P3-R2-M18-03": [
+      "P3-R2-M18-02",
+      "R1-CAP-A"
+    ],
+    "P3-R2-M18-04": [
+      "P3-R2-M18-03",
+      "R1-CAP-A"
+    ],
+    "P3-R2-M18-05": [
+      "P3-R2-M18-04",
+      "P3-R2-M17-01",
+      "P3-R2-M17-02",
+      "R1-CAP-A",
+      "R1-CAP-B",
+      "R1-CAP-C",
+      "R3-M16-performance-source"
+    ],
+    "P3-R2-M17-01": [
+      "R1-CAP-A"
+    ],
+    "P3-R2-M17-02": [
+      "P3-R2-M17-01",
+      "P3-R2-M06-04",
+      "R1-CAP-A"
+    ],
+    "P3-R2-M17-03": [
+      "P3-R2-M17-01",
+      "R1-CAP-A"
+    ],
+    "P3-R2-M17-04": [
+      "P3-R2-M17-03",
+      "P3-R2-M37-03",
+      "R1-CAP-A",
+      "R3-M27-learning-evidence"
+    ],
+    "P3-R2-M17-05": [
+      "P3-R2-M17-01",
+      "P3-R2-M17-02",
+      "R1-CAP-A",
+      "R1-CAP-B"
+    ],
+    "P3-R2-M17-06": [
+      "P3-R2-M17-04",
+      "P3-R2-M17-05",
+      "P3-R2-M18-04",
+      "R1-CAP-A",
+      "R1-CAP-B",
+      "R1-CAP-C",
+      "R3-M27-learning-evidence"
+    ],
+    "P3-R2-M03-01": [
+      "R1-CAP-A"
+    ],
+    "P3-R2-M03-02": [
+      "P3-R2-M03-01",
+      "P3-R2-M03-03",
+      "P3-R2-M06-04",
+      "R1-CAP-A"
+    ],
+    "P3-R2-M03-03": [
+      "P3-R2-M03-01",
+      "R1-CAP-A"
+    ],
+    "P3-R2-M03-04": [
+      "P3-R2-M03-02",
+      "R1-CAP-A"
+    ],
+    "P3-R2-M03-05": [
+      "P3-R2-M03-01",
+      "R1-CAP-A"
+    ],
+    "P3-R2-M03-06": [
+      "P3-R2-M03-02",
+      "P3-R2-M03-04",
+      "P3-R2-M03-05",
+      "R1-CAP-A",
+      "R1-CAP-B",
+      "R1-CAP-C"
+    ],
+    "P3-R2-BASE-01": [
+      "P3-R2-M26-01",
+      "P3-R2-M17-03",
+      "R1-CAP-A"
+    ],
+    "P3-R2-BASE-02": [
+      "P3-R2-M37-04",
+      "P3-R2-M26-04",
+      "P3-R2-M03-05",
+      "R1-CAP-A"
+    ],
+    "P3-R2-BASE-03": [
+      "P3-R2-M06-04",
+      "P3-R2-M17-01",
+      "P3-R2-M03-02",
+      "R1-CAP-A"
+    ],
+    "P3-R2-BASE-04": [
+      "P3-R2-M26-04",
+      "P3-R2-M03-05",
+      "R1-CAP-A"
+    ],
+    "P3-R2-BASE-05": [
+      "P3-R2-COM-03",
+      "P3-R2-COM-04",
+      "R1-CAP-C"
+    ],
+    "P3-R2-BASE-06": [
+      "P3-R2-COM-02",
+      "R1-CAP-A"
+    ],
+    "P3-R2-COM-01": [
+      "R1-CAP-A",
+      "R1-CAP-B"
+    ],
+    "P3-R2-COM-02": [
+      "R1-CAP-A"
+    ],
+    "P3-R2-COM-03": [
+      "P3-R2-M37-03",
+      "P3-R2-M06-04",
+      "P3-R2-M26-04",
+      "P3-R2-M18-04",
+      "P3-R2-M17-04",
+      "P3-R2-M03-02",
+      "R1-CAP-C"
+    ],
+    "P3-R2-COM-04": [
+      "P3-R2-COM-03",
+      "R1-CAP-C"
+    ],
+    "P3-R2-X-01": [
+      "P3-R2-M37-03",
+      "P3-R2-M18-04",
+      "P3-R2-M17-04",
+      "R1-CAP-A",
+      "R1-CAP-B",
+      "R3-M16-performance-source"
+    ],
+    "P3-R2-X-02": [
+      "P3-R2-M06-04",
+      "P3-R2-M17-02",
+      "P3-R2-M03-02",
+      "R1-CAP-A"
+    ],
+    "P3-R2-X-03": [
+      "P3-R2-M26-04",
+      "P3-R2-M18-04",
+      "R1-CAP-A",
+      "R1-CAP-B"
+    ],
+    "P3-R2-X-04": [
+      "P3-R2-M17-04",
+      "P3-R2-M17-05",
+      "P3-R2-M03-05",
+      "R1-CAP-A",
+      "R1-CAP-B",
+      "R3-M27-learning-evidence"
+    ],
+    "R1-CAP-A": [],
+    "R1-CAP-B": [],
+    "R1-CAP-C": [],
+    "R3-M27-learning-evidence": [],
+    "R3-M16-performance-source": [],
+    "R3-PRODUCERS-READY": [
+      "R3-M27-learning-evidence",
+      "R3-M16-performance-source"
+    ],
+    "JOINT-R1-10-R2-R3": [
+      "P3-R2-X-01",
+      "P3-R2-X-02",
+      "P3-R2-X-03",
+      "P3-R2-X-04",
+      "R3-PRODUCERS-READY",
+      "R1-CAP-A",
+      "R1-CAP-B",
+      "R1-CAP-C"
+    ],
+    "P3-R1-10-COMPLETE": [
+      "JOINT-R1-10-R2-R3"
+    ],
+    "P3-R1-11-EXIT": [
+      "P3-R1-10-COMPLETE"
+    ]
+  },
+  "allImplementationBaselinesUnfrozen": true
+}
