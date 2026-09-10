@@ -94,7 +94,7 @@ export async function executeR1Transfer(ctx:{db:D1Database;member:Member;row:{re
    else {
     changes.push({...primary!,revision:primary!.revision+1,status:'ended',payload:{...primary!.payload,validTo:primary!.payload.validFrom===today?today:previousDay(today),dayProjectionExcluded:primary!.payload.validFrom===today,effectiveToAt:at,endedAt:at,occupancy:0,executionId:intent.commandId}});
     const assignment:Entity={id:crypto.randomUUID(),kind:'assignment',personId,orgId:t.target.orgId,code:null,revision:1,status:'active',payload:{...primary!.payload,orgId:t.target.orgId,positionId:t.target.positionId,gradeId:t.target.gradeId,validFrom:today,validTo:null,dayProjectionExcluded:false,effectiveToAt:null,endedAt:null,effectiveFromAt:at,appliedAt:at,plannedEffectiveOn:t.effectiveOn,occupancy:1,approvalId:approval.id,executionId:intent.commandId}};
-    changes.push(assignment);result.assignmentId=assignment.id;
+    changes.push(assignment);const person=await m01Entity(db,tenant,personId);if(person.kind!=='person')fail('人员稳定身份映射无效','PRIMARY_MAPPING_REQUIRED');changes.push({...person,orgId:t.target.orgId,revision:person.revision+1,payload:{...person.payload,orgId:t.target.orgId,currentPrimaryId:assignment.id}});result.assignmentId=assignment.id;
    }
   }
   result.effectStatus=t.execution;result.approvalId=c.id;

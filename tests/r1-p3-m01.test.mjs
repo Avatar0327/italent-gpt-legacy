@@ -15,7 +15,7 @@ async function fixture(){
  sqlite.exec('DROP TRIGGER r1_guard_hris_orgs_insert; DROP TRIGGER r1_guard_hris_memberships_insert');
  sqlite.prepare("INSERT INTO hris_orgs(tenant_id,id,name,city,leader,status) VALUES (?,'A','合成A','上海','','启用'),(?,'B','合成B','上海','','启用')").run(tenant,tenant);
  sqlite.prepare("INSERT INTO hris_memberships(user_id,tenant_id,role,org_scope,view_email,view_level,active) VALUES ('reviewer',?,'hr','[\"A\",\"B\"]',1,1,1)").run(tenant);
- for(const who of ['owner','reviewer'])for(const op of ['catalog','identityReview','identityBind','contractField','person','employment','assignmentRequest','assignmentApprove','assignmentExecute','exitRequest','exitApprove','exitExecute','exitCleanup','contract','contractSign','contractEnd','template','subsetImport']){
+ for(const who of ['owner','reviewer'])for(const op of ['catalog','identityReview','identityBind','contractField','person','employment','assignmentRequest','assignmentApprove','assignmentCancel','exitCancel','assignmentExecute','exitRequest','exitApprove','exitExecute','exitCleanup','contract','contractSign','contractEnd','template','subsetImport']){
   sqlite.prepare('INSERT INTO r1_permission_grants VALUES (?,?,?,?,?,?,?,?,?,?,?)').run(tenant,who+op,who,'M01',op,'scope','["A","B"]','["record","name","email","skill"]','current',past,null);
  }
  sqlite.exec('UPDATE r1_schema_state SET features_enabled=1');
@@ -157,4 +157,56 @@ test('client unknown result retains exact command identity and resolves through 
  const intent=clientIntent({revision:7,securityStamp:{authorizationRevision:3,writerEpoch:1,recoveryEpoch:2,openGate:1,phase:'features_enabled',featuresEnabled:1}},'person',{operation:'person',code:'fixture'});let sends=0;
  const lost=await sendClientCommand(intent,async()=>{sends++;throw Error('synthetic lost response');});assert.equal(lost.state,'unknown');assert.equal(lost.commandId,intent.commandId);
  const found=await queryClientCommand(intent.commandId,async url=>{assert.ok(url.endsWith(intent.commandId));return Response.json({status:'committed',commandId:intent.commandId,result:'{}'});});assert.equal(found.state,'committed');assert.equal(sends,1);
+});
+test('catalog acceptance: sibling names, cross-parent reuse, same grade names with distinct codes, and concurrent protected references',async()=>{
+ const f=await fixture();const org={operation:'catalog',kind:'org',code:'CHILD-1',name:'同名部门',orgId:'A',parentId:'A',status:'active',validFrom:today,validTo:null,attributes:{}};
+ await f.send(org);await assert.rejects(f.send({...org,code:'CHILD-2'}),/名称冲突/);await f.send({...org,code:'CHILD-2',orgId:'B',parentId:'B'});
+ const grade={operation:'catalog',kind:'grade',code:'G1',name:'专家',orgId:'A',parentId:'',status:'active',validFrom:today,validTo:null,attributes:{sequence:1,familyId:'family'}};
+ await f.send(grade);await f.send({...grade,code:'G2',attributes:{sequence:2,familyId:'family'}});await assert.rejects(f.send({...grade,orgId:'B'}),/编码已存在/);
+ f.seed('employment','employment','A','person',{startOn:past},'active');
+ const ctx=await memberContext(),stamp=ctx.member.securityStamp;function intent(payload){const key=crypto.randomUUID();return {commandId:key,idempotencyKey:key,action:'M01.'+payload.operation,payload,expectedWorkspaceRevision:ctx.row.revision,expectedAuthorizationRevision:stamp.authorizationRevision,expectedWriterEpoch:stamp.writerEpoch,expectedRecoveryEpoch:stamp.recoveryEpoch};}
+ const disable={operation:'catalog',id:'position-a',closePreviousVersion:1,kind:'position',code:'PA',name:'岗位',orgId:'A',parentId:'',status:'inactive',validFrom:today,validTo:null,attributes:{}};
+ const request={operation:'assignmentRequest',personId:'person',employmentId:'employment',orgId:'A',positionId:'position-a',type:'primary',homePrimaryId:null,validFrom:today,validTo:null,reviewerId:'reviewer',reason:'并发依赖合成'};
+ const result=await Promise.allSettled([executeM01(ctx,intent(disable)),executeM01(ctx,intent(request))]);assert.ok(result.filter(r=>r.status==='fulfilled').length<=1);f.sqlite.close();
+});
+test('all additional assignments occupy zero; duplicate overlap fails, cancellation preserves the case, ending releases no extra headcount',async()=>{
+ const f=await fixture();f.seed('employment','employment','A','person',{startOn:past},'active');f.seed('primary','assignment','A','person',{type:'primary',employmentId:'employment',positionId:'position-a',validFrom:past,validTo:null,occupancy:1});
+ for(const type of ['part_time','secondment','expatriate']){
+  const request={operation:'assignmentRequest',personId:'person',employmentId:'employment',orgId:'B',positionId:'position-b',type,homePrimaryId:'primary',validFrom:today,validTo:null,reviewerId:'reviewer',reason:'合成'+type};
+  let id=(await f.send(request)).result.ids[0];act('reviewer');await f.send({operation:'assignmentApprove',id});act('owner');const assignment=(await f.send({operation:'assignmentExecute',id})).result.assignmentId;
+  id=(await f.send(request)).result.ids[0];act('reviewer');await f.send({operation:'assignmentApprove',id});act('owner');assert.equal((await f.send({operation:'assignmentExecute',id})).result.effectStatus,'failed');await f.send({operation:'assignmentCancel',id,reason:'保留重复申请失败后取消记录'});
+  id=(await f.send({...request,endAssignmentId:assignment})).result.ids[0];act('reviewer');await f.send({operation:'assignmentApprove',id});act('owner');await f.send({operation:'assignmentExecute',id});assert.equal((await m01Entity(f.db,f.tenant,assignment)).status,'ended');
+ }
+ assert.equal(f.sqlite.prepare('SELECT sum(delta) n FROM r1_occupancy_events').get().n,0);assert.equal((await m01Entity(f.db,f.tenant,'primary')).payload.occupancy,1);f.sqlite.close();
+});
+test('history read needs separate history authorization; present record access never reveals past fields',async()=>{
+ const f=await fixture(),route=await import('../app/api/r1/m01/[id]/history/route.ts');
+ const t=(await f.send({operation:'template',orgId:'A',kind:'skill',entryType:'subset',fields:[{code:'skill',type:'text',required:false,default:null,uniqueKey:false,readActions:['read'],writeActions:['update']}]})).result.ids[0];
+ const id=(await f.send({operation:'subsetImport',personId:'person',orgId:'A',templateId:t,templateVersion:1,batchId:'history',rowNo:1,attemptVersion:1,mode:'create',recordId:null,fields:{skill:'受保护历史'}})).result.ids[0];
+ const call=()=>route.GET(request('/api/r1/m01/'+id+'/history'),{params:Promise.resolve({id})});assert.equal((await call()).status,403);
+ f.sqlite.prepare('INSERT INTO r1_permission_grants VALUES (?,?,?,?,?,?,?,?,?,?,?)').run(f.tenant,'history-read','owner','M01','read','scope','["A"]','["record"]','history',past,null);
+ const response=await call();assert.equal(response.status,200);const body=await response.json();assert.deepEqual(body.items[0].payload.payload.fields,{});f.sqlite.close();
+});
+test('UI form payloads keep explicit null, stable IDs, two D7 reviewers and server validation contracts',async()=>{
+ const {personnelPayload}=await import('../lib/hris/r1-form-model.ts'),{m01Input}=await import('../lib/hris/r1-m01.ts');
+ const lists={person:[{id:'p',orgId:'A'}],template:[{id:'t',revision:3}]};
+ const row=personnelPayload('subsetImport',{personId:'p',templateId:'t',batchId:'b',rowNo:'2',attemptVersion:'1',mode:'update',recordId:'r'},lists,{skill:null},[]);assert.equal(m01Input.parse(row).fields.skill,null);assert.equal(row.templateVersion,3);
+ const workflow=personnelPayload('transferWorkflow',{reviewerOutId:'a',reviewerInId:'b'},lists,{},[]);assert.deepEqual(workflow.command.steps.map(x=>x.userId),['a','b']);
+ const sign=personnelPayload('contractSign',{id:'c',signedOn:today,evidence:'明确为人工登记'},lists,{},[]);assert.equal(m01Input.parse(sign).operation,'contractSign');
+});
+test('three entry templates stay independent and saving never invites or creates membership',async()=>{
+ const f=await fixture(),before=f.sqlite.prepare('SELECT * FROM hris_memberships ORDER BY user_id').all();
+ for(const entryType of ['employee_create','prehire','onboard']){
+  const t=(await f.send({operation:'template',orgId:'A',kind:'custom',entryType,fields:[{code:'name',type:'text',required:true,default:null,uniqueKey:false,readActions:['read'],writeActions:['update']}]})).result.ids[0];
+  const person={operation:'person',orgId:'A',code:'NEW-'+entryType,name:'入口合成人员',entryType,templateId:t,fields:{name:'真实填写的合成值'}};
+  await assert.rejects(f.send({...person,entryType:entryType==='prehire'?'onboard':'prehire'}),/入口模板/);const id=(await f.send(person)).result.ids[0];assert.equal((await m01Entity(f.db,f.tenant,id)).payload.invite,false);
+ }
+ assert.deepEqual(f.sqlite.prepare('SELECT * FROM hris_memberships ORDER BY user_id').all(),before);f.sqlite.close();
+});
+test('exit and approval racing share the tenant CAS; final exit blocks every later completion',async()=>{
+ const f=await fixture();f.seed('employment','employment','A','person',{startOn:past},'active');f.seed('exit-race','exit_request','A','person',{lastWorkingOn:'2026-01-01'},'approved');f.seed('approval-race','assignment_request','A','person',{reviewerId:'reviewer',createdBy:'owner',employmentId:'employment'},'pending');
+ act('owner');const owner=await memberContext();act('reviewer');const reviewer=await memberContext();
+ const intent=(ctx,payload)=>{const id=crypto.randomUUID(),s=ctx.member.securityStamp;return {commandId:id,idempotencyKey:id,action:'M01.'+payload.operation,payload,expectedWorkspaceRevision:ctx.row.revision,expectedAuthorizationRevision:s.authorizationRevision,expectedWriterEpoch:s.writerEpoch,expectedRecoveryEpoch:s.recoveryEpoch};};
+ const exit={operation:'exitExecute',id:'exit-race'},approve={operation:'assignmentApprove',id:'approval-race'},out=await Promise.allSettled([executeM01(owner,intent(owner,exit)),executeM01(reviewer,intent(reviewer,approve))]);assert.equal(out.filter(r=>r.status==='fulfilled').length,1);
+ act('owner');if(!f.sqlite.prepare('SELECT 1 FROM r1_exit_fences').get())await f.send(exit);act('reviewer');await assert.rejects(f.send(approve),/退出/);f.sqlite.close();
 });

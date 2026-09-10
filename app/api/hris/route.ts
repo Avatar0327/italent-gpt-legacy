@@ -1,3 +1,4 @@
+import {projectR1CoreState} from '@/lib/hris/r1-core-read';
 import {assertStaffingCapacity} from '@/lib/hris/workforce';
 import type {DevelopmentRecord} from '@/lib/hris/development';
 import {memberContext as context} from '@/lib/hris/context';
@@ -8,7 +9,7 @@ import { scopedOrgs, visibleState, authorizeCommand, AccessError, type Member } 
 export const dynamic='force-dynamic';
 const headers={'Cache-Control':'no-store'};
 function json(body:unknown,status=200){return Response.json(body,{status,headers});}
-export async function GET(){try{const c=await context();if(!c)return json({error:'请先登录'},401);return json({state:visibleState(JSON.parse(c.row.data),c.member),revision:c.row.revision,role:c.member.role,userId:c.member.userId,storageVersion:c.row.storageVersion,permissions:{viewEmail:c.member.role==='admin'||!!c.member.viewEmail,viewLevel:c.member.role==='admin'||!!c.member.viewLevel}});}catch(e){if(e instanceof HttpError)return json({error:e.message},e.status);if(e instanceof AccessError)return json({error:e.message},403);return json({error:'数据暂时无法读取，请稍后重试'},503);}}
+export async function GET(){try{const c=await context();if(!c)return json({error:'请先登录'},401);return json({state:await projectR1CoreState(c.db,c.member,visibleState(JSON.parse(c.row.data),c.member)),securityStamp:c.member.securityStamp,revision:c.row.revision,role:c.member.role,userId:c.member.userId,storageVersion:c.row.storageVersion,permissions:{viewEmail:c.member.role==='admin'||!!c.member.viewEmail,viewLevel:c.member.role==='admin'||!!c.member.viewLevel}});}catch(e){if(e instanceof HttpError)return json({error:e.message},e.status);if(e instanceof AccessError)return json({error:e.message},403);return json({error:'数据暂时无法读取，请稍后重试'},503);}}
 export async function POST(request:Request){
  const origin=request.headers.get('origin');if(!origin||new URL(request.url).origin!==origin)return json({error:'请求来源无效'},403);
  if(!request.headers.get('content-type')?.toLowerCase().startsWith('application/json'))return json({error:'请求格式无效'},415);

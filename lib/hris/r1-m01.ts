@@ -9,6 +9,7 @@ import {scopedOrgs,type Member} from './authorization';
 import type {State} from './model';
 import {catalogTimeline,effectiveVersions,temporalCatalogCheck,previousDay} from './r1-temporal';
 
+const short=z.string().trim().min(1).max(100);
 const id=z.string().min(1).max(100),text=z.string().trim().min(1).max(200);
 const date=z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine(s=>{const d=new Date(s+'T00:00:00Z');return !isNaN(+d)&&d.toISOString().slice(0,10)===s;});
 const interval={validFrom:date,validTo:date.nullable()};
@@ -16,17 +17,17 @@ const catalogKind=z.enum(['org','position','job','job_family','grade','legal_ent
 const subsetKind=z.enum(['education','employment','family','appraisal','training','reward','certificate','project','skill','language','custom']);
 const field=z.object({code:id,type:z.enum(['text','number','date','enum','attachment']),required:z.boolean(),default:z.union([z.string(),z.number().int().safe(),z.null()]),uniqueKey:z.boolean(),readActions:z.array(id).min(1),writeActions:z.array(id).min(1),options:z.array(text).optional(),unit:z.string().optional(),precision:z.number().int().min(0).max(6).optional()}).strict();
 export const m01Input=z.discriminatedUnion('operation',[
- z.object({operation:z.literal('catalog'),id:id.optional(),kind:catalogKind,closePreviousVersion:z.number().int().positive().optional(),code:text,name:text,orgId:z.string(),parentId:z.string(),status:z.enum(['active','inactive']),...interval,attributes:z.object({abbr:z.string().max(100).optional(),city:z.string().max(100).optional(),jobId:id.optional(),familyId:id.optional(),gradeMinId:id.optional(),gradeMaxId:id.optional(),sequence:z.number().int().min(0).max(999).optional(),establishedOn:date.optional(),newType:z.enum(['New','Backfill']).optional(),responsibilities:z.string().max(4000).optional(),includeDescendants:z.boolean().optional(),dottedParentPositionId:id.optional(),keyPosition:z.boolean().optional(),legacyLeader:z.string().max(100).optional(),orgIds:z.array(id).optional(),extraPersonIds:z.array(id).optional()}).strict()}).strict(),
+ z.object({operation:z.literal('catalog'),id:id.optional(),kind:catalogKind,closePreviousVersion:z.number().int().positive().optional(),code:short,name:short,orgId:z.string(),parentId:z.string(),status:z.enum(['active','inactive']),...interval,attributes:z.object({abbr:z.string().max(100).optional(),city:z.string().max(100).optional(),jobId:id.optional(),familyId:id.optional(),gradeMinId:id.optional(),gradeMaxId:id.optional(),sequence:z.number().int().min(0).max(999).optional(),establishedOn:date.optional(),newType:z.enum(['New','Backfill']).optional(),responsibilities:z.string().max(4000).optional(),includeDescendants:z.boolean().optional(),dottedParentPositionId:id.optional(),keyPosition:z.boolean().optional(),legacyLeader:z.string().max(100).optional(),orgIds:z.array(id).optional(),extraPersonIds:z.array(id).optional()}).strict()}).strict(),
  z.object({operation:z.literal('identityReview'),personId:id,candidateIds:z.array(id).min(1),identifiers:z.array(identityKey).min(1).max(4).optional(),reason:text,evidenceRef:id}).strict(),
  z.object({operation:z.literal('identityBind'),personId:id,orgId:id,identifiers:z.array(identityKey).min(1).max(4),evidenceRef:id}).strict(),
  z.object({operation:z.literal('contractField'),id:id.optional(),orgId:id,code:z.string().trim().regex(/^[A-Za-z0-9_-]{1,60}$/),name:text,inheritPrevious:z.boolean(),status:z.enum(['active','archived'])}).strict(),
- z.object({operation:z.literal('person'),code:text,name:text,orgId:id,identifiers:z.array(identityKey).max(4).optional(),templateId:id,entryType:z.enum(['employee_create','prehire','onboard']),fields:z.record(z.unknown())}).strict(),
+ z.object({operation:z.literal('person'),code:short,name:short,orgId:id,identifiers:z.array(identityKey).max(4).optional(),templateId:id,entryType:z.enum(['employee_create','prehire','onboard']),fields:z.record(z.unknown())}).strict(),
  z.object({operation:z.literal('employment'),personId:id,orgId:id,identityReviewId:id,predecessorId:id.nullable(),startOn:date,employmentType:z.enum(['employee','internship','retired_rehire'])}).strict(),
  z.object({operation:z.literal('assignmentRequest'),personId:id,employmentId:id,orgId:id,positionId:id,gradeId:id.nullable().optional(),replacesAssignmentId:id.optional(),endAssignmentId:id.optional(),type:z.enum(['primary','part_time','secondment','expatriate']),homePrimaryId:id.nullable(),...interval,reviewerId:id,reason:text}).strict(),
- z.object({operation:z.literal('assignmentApprove'),id}).strict(),z.object({operation:z.literal('assignmentExecute'),id}).strict(),
+ z.object({operation:z.literal('assignmentCancel'),id,reason:text}).strict(),z.object({operation:z.literal('exitCancel'),id,reason:text}).strict(),z.object({operation:z.literal('assignmentApprove'),id}).strict(),z.object({operation:z.literal('assignmentExecute'),id}).strict(),
  z.object({operation:z.literal('exitRequest'),personId:id,orgId:id,lastWorkingOn:date,reviewerId:id,reason:text}).strict(),z.object({operation:z.literal('exitApprove'),id}).strict(),z.object({operation:z.literal('exitExecute'),id}).strict(),
  z.object({operation:z.literal('exitCleanup'),personId:id,orgId:id,limit:z.number().int().min(1).max(20)}).strict(),
- z.object({operation:z.literal('contract'),id:id.optional(),personId:id,orgId:id,legalEntityId:id,number:text,agreementCategory:z.enum(['labor','service','internship']),contractType:z.enum(['fixed','open','project']),start:date,end:date.nullable(),renewalOf:id.nullable(),fields:z.record(z.union([z.string().max(1000),z.null()]))}).strict(),
+ z.object({operation:z.literal('contract'),id:id.optional(),personId:id,orgId:id,legalEntityId:id,number:short,agreementCategory:z.enum(['labor','service','internship']),contractType:z.enum(['fixed','open','project']),start:date,end:date.nullable(),renewalOf:id.nullable(),fields:z.record(z.union([z.string().max(1000),z.null()]))}).strict(),
  z.object({operation:z.literal('contractSign'),id,signedOn:date,evidence:text}).strict(),z.object({operation:z.literal('contractEnd'),id,endedOn:date,evidence:text}).strict(),
  z.object({operation:z.literal('template'),id:id.optional(),orgId:id,kind:subsetKind,entryType:z.enum(['employee_create','prehire','onboard','subset']),fields:z.array(field).min(1).max(20)}).strict(),
  z.object({operation:z.literal('subsetImport'),personId:id,orgId:id,templateId:id,templateVersion:z.number().int().positive(),batchId:id,rowNo:z.number().int().positive(),attemptVersion:z.number().int().positive(),mode:z.enum(['create','update']),recordId:id.nullable(),fields:z.record(z.unknown())}).strict(),
@@ -109,7 +110,9 @@ export async function executeM01(ctx:{db:D1Database;member:Member;row:{revision:
   }else if(c.closePreviousVersion)invalid('原版本已变化或无须关闭','REVISION_CONFLICT');
   const cuts=temporalCatalogCheck(effectiveVersions([...all,...changes,e]),c.kind);result.temporalCuts=cuts;
   if(c.status==='inactive'){
-   const refs=await db.prepare("SELECT 1 FROM r1_m01_entities WHERE tenant_id=? AND id<>? AND status IN ('active','pending','approved','waiting','failed') AND (org_id=? OR json_extract(payload,'$.positionId')=? OR json_extract(payload,'$.parentId')=?) LIMIT 1").bind(tenant,e.id,e.id,e.id,e.id).first();
+   const legacyRefs=await db.prepare("SELECT 1 FROM hris_approvals a LEFT JOIN hris_assignment_requests q ON q.tenant_id=a.tenant_id AND q.approval_id=a.id WHERE a.tenant_id=? AND (a.status='pending' OR a.status='approved' AND json_extract(a.details,'$.transfer.execution') IN ('waiting','failed')) AND (a.org_id=? OR json_extract(a.details,'$.transfer.source.orgId')=? OR q.position_id=? OR q.grade_id=?) LIMIT 1").bind(tenant,e.id,e.id,e.id,e.id).first();
+   if(legacyRefs)invalid('存在受保护的未完成依赖，请联系负责人','PROTECTED_DEPENDENCY');
+   const refs=await db.prepare("SELECT 1 FROM r1_m01_entities WHERE tenant_id=? AND id<>? AND status IN ('active','pending','approved','waiting','failed') AND (org_id=? OR json_extract(payload,'$.positionId')=? OR json_extract(payload,'$.parentId')=? OR json_extract(payload,'$.gradeId')=? OR json_extract(payload,'$.attributes.familyId')=? OR json_extract(payload,'$.attributes.gradeMinId')=? OR json_extract(payload,'$.attributes.gradeMaxId')=?) AND coalesce(json_extract(payload,'$.validTo'),'9999-12-31')>=? LIMIT 1").bind(tenant,e.id,e.id,e.id,e.id,e.id,e.id,e.id,e.id,c.validFrom).first();
    if(refs)invalid('存在受保护的未完成依赖，请联系负责人','PROTECTED_DEPENDENCY');
   }
   changes.push(e);break;
@@ -141,7 +144,7 @@ export async function executeM01(ctx:{db:D1Database;member:Member;row:{revision:
  case 'person':{
   const template=await get(c.templateId);if(template.kind!=='template'||template.status!=='published'||template.orgId!==c.orgId||template.payload.entryType!==c.entryType)invalid('入口模板未配置','TEMPLATE_NOT_CONFIGURED');
   for(const f of template.payload.fields)await authorize(c.orgId,'',f.code);
-  const values=templateValues(template,c.fields,'create');const keys=[{type:'code' as const,value:c.code},...(c.identifiers??[])];
+  const values=templateValues(template,c.fields,'create');if(values.email!==undefined&&values.email!==null&&!z.string().email().or(z.literal('')).safeParse(values.email).success)invalid('员工邮箱格式无效');const keys=[{type:'code' as const,value:c.code},...(c.identifiers??[])];
   if((await resolveIdentity(db,tenant,keys)).length)invalid('标识命中历史人员，需身份复核','IDENTITY_REVIEW_REQUIRED');
   const {identifiers,...safe}=c,person=make('person',c.orgId,null,{...safe,fields:values,templateVersion:template.revision,invite:false},'draft',c.code);changes.push(person);
   const prepared=await prepareIdentityKeys(tenant,keys);extra.push(token=>prepared.map(k=>db.prepare('INSERT INTO r1_identity_keys SELECT owner,?,?,?,?,? FROM hris_workspaces WHERE owner=? AND last_mutation=? ON CONFLICT DO NOTHING').bind(person.id,k.type,k.digest,m.userId,at,tenant,token)));break;
@@ -165,6 +168,7 @@ export async function executeM01(ctx:{db:D1Database;member:Member;row:{revision:
   const segment=c.operation==='assignmentRequest'?await get(c.employmentId):(await rows(db,tenant,'employment',person.id)).find(e=>e.status==='active');
   changes.push(make(c.operation==='assignmentRequest'?'assignment_request':'exit_request',c.orgId,person.id,{...c,employmentId:segment?.id??null,exitFenceObserved:segment?.payload.exitFenceObserved??null,createdBy:m.userId,attempts:0,effectStatus:'waiting'},'pending'));break;
  }
+ case 'assignmentCancel':case 'exitCancel':{const e=await get(c.id);if(e.kind!==(c.operation==='assignmentCancel'?'assignment_request':'exit_request')||!['pending','approved','failed'].includes(e.status)||e.status==='pending'&&e.payload.createdBy!==m.userId)invalid('只能取消尚未生效且有权处理的原单');changes.push(revise(e,{effectStatus:'cancelled',cancelledAt:at,cancelReason:c.reason},'cancelled'));break;}
  case 'assignmentApprove':case 'exitApprove':{
   const e=await get(c.id);if(e.kind!==(c.operation==='assignmentApprove'?'assignment_request':'exit_request')||e.status!=='pending'||e.payload.reviewerId!==m.userId||e.payload.createdBy===m.userId||e.personId===m.employeeId)invalid('审核角色或原单状态无效');changes.push(revise(e,{approvedBy:m.userId,approvedAt:at},'approved'));break;
  }
@@ -172,15 +176,15 @@ export async function executeM01(ctx:{db:D1Database;member:Member;row:{revision:
   const e=await get(c.id),p=e.payload;if(e.kind!=='assignment_request'||!['approved','failed'].includes(e.status))invalid('原单非已批准待执行');
   if(today<p.validFrom)invalid('未到生效日期，不增加尝试');
   let failure:string|null=null;
-  try{const position=await activeCatalog(p.positionId,'position');await activeCatalog(p.orgId,'org');if(position.orgId!==p.orgId)invalid('职位不属于目标组织');
+  try{if(!p.endAssignmentId){const position=await activeCatalog(p.positionId,'position');await activeCatalog(p.orgId,'org');if(position.orgId!==p.orgId)invalid('职位不属于目标组织');}
    const assignments=await rows(db,tenant,'assignment',e.personId!);
    if(p.replacesAssignmentId||p.endAssignmentId){const old=await get(p.replacesAssignmentId??p.endAssignmentId);if(old.kind!=='assignment'||old.personId!==e.personId||old.status!=='active')invalid('被变更任职已变化');}
    if(!p.endAssignmentId&&assignments.some(a=>a.id!==p.replacesAssignmentId&&a.status==='active'&&overlaps(a.payload as any,p as {validFrom:string;validTo:string|null})&&(p.type==='primary'&&a.payload.type==='primary'||a.payload.type===p.type&&a.payload.positionId===p.positionId)))invalid('存在重叠任职');
-   if(p.type!=='primary'){const home=await get(p.homePrimaryId);if(home.kind!=='assignment'||home.personId!==e.personId||home.status!=='active'||home.payload.type!=='primary')invalid('派出主职无效');}
+   if(p.type!=='primary'&&!p.endAssignmentId){const home=await get(p.homePrimaryId);if(home.kind!=='assignment'||home.personId!==e.personId||home.status!=='active'||home.payload.type!=='primary')invalid('派出主职无效');}
    if(p.type==='primary'&&!p.endAssignmentId){const budget=await db.prepare("SELECT payload FROM r1_m01_entities WHERE tenant_id=? AND kind='budget_policy' AND org_id=? AND status='active' LIMIT 1").bind(tenant,p.orgId).first<{payload:string}>();
     if(budget&&JSON.parse(budget.payload).strongBlocking)invalid('金额预算服务未接通，强阻断链不可执行','EXTERNAL_BUDGET_REQUIRED');result.budgetStatus='not_checked';
-    const plans=await db.prepare("SELECT payload FROM hris_development_records WHERE tenant_id=? AND kind='staffingPlan' AND position_id=? AND status='approved' AND json_extract(payload,'$.start')<=? AND json_extract(payload,'$.end')>=? LIMIT 201").bind(tenant,p.positionId,today,today).all();if(plans.results.length>200)invalid('编制版本待核');
-    const active=plans.results.map((x:any)=>JSON.parse(x.payload)).filter((x:any,_i:number,a:any[])=>!a.some(y=>y.supersedes===x.id));
+    const plans=await db.prepare("SELECT id,payload FROM hris_development_records WHERE tenant_id=? AND kind='staffingPlan' AND position_id=? AND status='approved' AND json_extract(payload,'$.start')<=? AND json_extract(payload,'$.end')>=? LIMIT 201").bind(tenant,p.positionId,today,today).all();if(plans.results.length>200)invalid('编制版本待核');
+    const active=plans.results.map((x:any)=>({...JSON.parse(x.payload),id:x.id})).filter((x:any,_i:number,a:any[])=>!a.some(y=>y.supersedes===x.id));
     const usage=await db.prepare("SELECT COUNT(*) n FROM r1_m01_entities WHERE tenant_id=? AND kind='assignment' AND status='active' AND json_extract(payload,'$.type')='primary' AND json_extract(payload,'$.positionId')=?").bind(tenant,p.positionId).first<{n:number}>();
     if(active.length&&usage!.n>=Math.min(...active.map((x:any)=>x.headcount)))invalid('目标编制已满');
    }
@@ -188,7 +192,7 @@ export async function executeM01(ctx:{db:D1Database;member:Member;row:{revision:
   changes.push(revise(e,{attempts:p.attempts+1,lastAttemptAt:at,effectStatus:failure?'failed':'applied',failure,appliedAt:failure?null:at},failure?'failed':'applied'));
   if(failure){result.effectStatus='failed';result.reasonCode='BUSINESS_FAILED';break;}
   if(p.replacesAssignmentId||p.endAssignmentId){const old=await get(p.replacesAssignmentId??p.endAssignmentId);changes.push(revise(old,{validTo:old.payload.validFrom===today?today:previousDay(today),dayProjectionExcluded:old.payload.validFrom===today,effectiveToAt:at,endedAt:at,occupancy:0},'ended'));}
-  if(p.endAssignmentId){result.effectStatus='applied';break;}
+  if(p.endAssignmentId){if(p.type==='primary'){const old=compatibility.employees.find(x=>x.id===e.personId);if(old){old.positionId=null;old.gradeId=null;old.job='';old.level='';}const person=await get(e.personId!);changes.push(revise(person,{currentPrimaryId:null}));}result.effectStatus='applied';break;}
   const assignment=make('assignment',e.orgId,e.personId,{...p,validFrom:today,appliedAt:at,occupancy:p.type==='primary'?1:0,approvalId:e.id});changes.push(assignment);
   const employment=await get(p.employmentId);if(employment.status==='pending')changes.push(revise(employment,{actualStartedAt:at},'active'));
   if(p.type==='primary'){
@@ -196,7 +200,7 @@ export async function executeM01(ctx:{db:D1Database;member:Member;row:{revision:
    const old=compatibility.employees.find(x=>x.id===person.id),fields=person.payload.fields??{};
    const employee={id:person.id,code:person.code??person.payload.code,name:person.payload.name,orgId:p.orgId,positionId:p.positionId,gradeId:p.gradeId??null,job:position.payload.name,level:grade?.payload.name??'',joined:old?.joined??today,status:old&&old.status!=='离职'?old.status:'试用',email:old?.email??fields.email??''};
    if(!z.string().email().or(z.literal('')).safeParse(employee.email).success)invalid('员工邮箱格式无效');
-   if(old)Object.assign(old,employee);else compatibility.employees.push(employee);changes.push(revise(person,{currentPrimaryId:assignment.id},'active'));
+   if(old)Object.assign(old,employee);else compatibility.employees.push(employee);changes.push({...revise(person,{currentPrimaryId:assignment.id,orgId:p.orgId},'active'),orgId:p.orgId});
   }
   result.assignmentId=assignment.id;result.effectStatus='applied';break;
  }
