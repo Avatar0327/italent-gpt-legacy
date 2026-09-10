@@ -435,6 +435,62 @@
       "case": "停用后恢复启用并回读",
       "status": "VERIFIED",
       "evidence": "M11-ORIGIN-007"
+    },
+    {
+      "id": "M16-RC-11",
+      "module": "M16",
+      "case": "空人员开启绩效",
+      "status": "VERIFIED_VALIDATION_ONLY",
+      "evidence": "M16-ORIGIN-004"
+    },
+    {
+      "id": "M16-RC-12",
+      "module": "M16",
+      "case": "空人员重新算分",
+      "status": "VERIFIED_VALIDATION_ONLY",
+      "evidence": "M16-ORIGIN-004"
+    },
+    {
+      "id": "M16-RC-13",
+      "module": "M16",
+      "case": "空人员调整步骤",
+      "status": "VERIFIED_VALIDATION_ONLY",
+      "evidence": "M16-ORIGIN-004"
+    },
+    {
+      "id": "M16-RC-14",
+      "module": "M16",
+      "case": "空人员暂停绩效",
+      "status": "VERIFIED_VALIDATION_ONLY",
+      "evidence": "M16-ORIGIN-004"
+    },
+    {
+      "id": "M16-RC-15",
+      "module": "M16",
+      "case": "空人员终止绩效",
+      "status": "VERIFIED_VALIDATION_ONLY",
+      "evidence": "M16-ORIGIN-004"
+    },
+    {
+      "id": "M16-RC-16",
+      "module": "M16",
+      "case": "空人员重启绩效",
+      "status": "VERIFIED_VALIDATION_ONLY",
+      "evidence": "M16-ORIGIN-004"
+    },
+    {
+      "id": "M16-RC-17",
+      "module": "M16",
+      "case": "无考核组生成等级",
+      "status": "VERIFIED_VALIDATION_ONLY",
+      "evidence": "M16-ORIGIN-005"
+    },
+    {
+      "id": "M16-RC-18",
+      "module": "M16",
+      "case": "活动内方案空表与作用域提示",
+      "status": "CONFIG_OBSERVED",
+      "evidence": "M16-ORIGIN-006"
     }
   ]
 }

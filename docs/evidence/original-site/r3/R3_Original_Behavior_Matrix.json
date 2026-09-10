@@ -718,6 +718,66 @@
       "design_sha": null,
       "implementation_tested": false,
       "p4_accepted": false
+    },
+    {
+      "id": "M16-ORIGIN-004",
+      "module": "M16",
+      "topic": "空活动业务操作校验",
+      "original_behavior": "复用本轮SMOKE01零被考核人活动，逐项点击开启绩效、重新算分、调整步骤、暂停绩效、终止绩效、重启绩效，均回读请至少选择一条数据。没有选择原有人员或触发通知，不能代替有人员状态流转。",
+      "approved_requirement": "M16-SPEC-01;M16-SPEC-03;M16-SPEC-05",
+      "evidence_kind": "empty_scope_validation",
+      "source_page": "绩效管理 > 本轮SMOKE01员工绩效活动",
+      "observed_at": "2026-09-10T14:23:07.383003+00:00",
+      "runtime_verified": true,
+      "source_ref": "Source_Observations.md#m16-origin-004",
+      "design_sha": null,
+      "implementation_tested": false,
+      "p4_accepted": false
+    },
+    {
+      "id": "M16-ORIGIN-005",
+      "module": "M16",
+      "topic": "生成等级需要考核组",
+      "original_behavior": "同一空活动生成绩效等级的反馈是请先选择考核组，再操作生成绩效等级，而非通用选择人员提示。未选择其他组、未生成结果。",
+      "approved_requirement": "M16-SPEC-03;M16-SPEC-04",
+      "evidence_kind": "empty_scope_validation",
+      "source_page": "绩效管理 > 本轮SMOKE01员工绩效活动",
+      "observed_at": "2026-09-10T14:23:07.383003+00:00",
+      "runtime_verified": true,
+      "source_ref": "Source_Observations.md#m16-origin-005",
+      "design_sha": null,
+      "implementation_tested": false,
+      "p4_accepted": false
+    },
+    {
+      "id": "M16-ORIGIN-006",
+      "module": "M16",
+      "topic": "活动内方案的修改作用域",
+      "original_behavior": "考核方案页表为空，列为绩效模板/使用人数/所属组织/操作；明确说明修改配置后只对本活动考核有效，不影响其他活动，也不影响新发起活动。未修改共享模板或验证有人员模板版本。",
+      "approved_requirement": "M16-SPEC-01;M16-SPEC-03",
+      "evidence_kind": "page_help_observed",
+      "source_page": "绩效管理 > 本轮SMOKE01员工绩效活动",
+      "observed_at": "2026-09-10T14:23:07.383003+00:00",
+      "runtime_verified": false,
+      "source_ref": "Source_Observations.md#m16-origin-006",
+      "design_sha": null,
+      "implementation_tested": false,
+      "p4_accepted": false
+    },
+    {
+      "id": "M16-ORIGIN-007",
+      "module": "M16",
+      "topic": "流程与结果操作分层",
+      "original_behavior": "流程监控菜单包括调整步骤、完成步骤、暂停、终止、重启等；结果更新菜单分别列360结果、汇总/组织绩效数据、重新算分、调整结果、生成绩效等级及集成信息。未操作催办、转交、HR发布等可能通知的动作。调整结果点击未定位成功；分布规则仅点击无回读，不记通过。",
+      "approved_requirement": "M16-SPEC-03;M16-SPEC-04;M16-SPEC-05",
+      "evidence_kind": "page_options_observed",
+      "source_page": "绩效管理 > 本轮SMOKE01员工绩效活动",
+      "observed_at": "2026-09-10T14:23:07.383003+00:00",
+      "runtime_verified": false,
+      "source_ref": "Source_Observations.md#m16-origin-007",
+      "design_sha": null,
+      "implementation_tested": false,
+      "p4_accepted": false
     }
   ]
 }

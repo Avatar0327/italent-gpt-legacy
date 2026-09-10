@@ -633,6 +633,14 @@
       "result": "confirmed_off_shelf",
       "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE02",
       "notes": "此前拒绝组合动作有部分执行可能；以本次状态回读为准。1分钟持久值尚未取得，编辑操作尚未进入可见内容页。"
+    },
+    {
+      "id": "R3-OP-026",
+      "module": "M16",
+      "action": "自有零人员活动七项空范围校验与方案作用域观察",
+      "result": "validation_observed_no_state_transition",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M16_SMOKE01",
+      "notes": "六项至少选择一条，生成等级须先选择考核组；无新对象、无人员、无通知，分布规则未回读。"
     }
   ],
   "counts": {

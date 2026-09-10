@@ -134,7 +134,7 @@
       "severity": "Major",
       "module": "M16",
       "title": "活动日期、参与人和锁定考核关系分层",
-      "source_evidence": "M16-ORIGIN-001;002;003",
+      "source_evidence": "M16-ORIGIN-001;002;003;M16-ORIGIN-004;M16-ORIGIN-005",
       "approved_requirement": "M16-SPEC-01",
       "design_sha": null,
       "implementation_sha": null,
@@ -145,7 +145,8 @@
       "target_phase": "P2设计冻结前",
       "proposal": "周期可自动填日期，但活动保存可无参与人；应分别建活动、被考核人任职上下文、考核关系锁和评价窗口，不能由活动已保存推断已开始评价。",
       "decision": null,
-      "p4_evidence": null
+      "p4_evidence": null,
+      "latest_evidence": "空活动可以保存；六项人员级动作拒绝空选择，等级生成另有考核组前置。"
     },
     {
       "id": "R3-DIFF-009",
@@ -273,6 +274,24 @@
       "decision": null,
       "p4_evidence": null,
       "latest_evidence": "非R3关联纠正成功；已发送状态未复位、实际投递未知。候选仍待P2负责人裁决。"
+    },
+    {
+      "id": "R3-DIFF-016",
+      "severity": "Major",
+      "module": "M16",
+      "title": "活动内模板配置与等级组作用域独立",
+      "source_evidence": "M16-ORIGIN-005;M16-ORIGIN-006;M16-ORIGIN-007",
+      "approved_requirement": "M16-SPEC-01;M16-SPEC-03;M16-SPEC-04",
+      "design_sha": null,
+      "implementation_sha": null,
+      "classification": "design_input_candidate_not_confirmed_implementation_defect",
+      "status": "待R3 P2接收",
+      "owner_role": "R3 P2设计负责人",
+      "owner_acceptance": "未确认",
+      "target_phase": "P2设计冻结前",
+      "proposal": "活动内方案编辑不能写回共享模板或影响后续活动；方案来源版本与活动配置应可追溯。等级生成以考核组为前置，区分人员算分、组分布校准和最终发布；本轮只验证空范围校验和页面作用域提示。",
+      "decision": null,
+      "p4_evidence": null
     }
   ]
 }
