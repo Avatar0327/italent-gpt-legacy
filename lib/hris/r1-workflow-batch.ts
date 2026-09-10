@@ -18,10 +18,10 @@ export async function executeWorkflowBatch(context:()=>Promise<Context>,input:un
  const results:Record<string,unknown>[]=[];
  for(const item of b.items){
   const ctx=await context();await check(ctx);const itemDigest=await digest(item),read=()=>db.prepare('SELECT request_digest,result FROM r1_workflow_batch_items WHERE tenant_id=? AND batch_id=? AND item_id=? AND actor_id=?').bind(t,b.batchId,item.itemId,actor).first<{request_digest:string;result:string}>();const old=await read();if(old){if(old.request_digest!==itemDigest)throw new HttpError(409,'条目键冲突','BATCH_CONFLICT');results.push({itemId:item.itemId,...JSON.parse(old.result),replayed:true});continue;}
-  try{await executeWorkflow(ctx,make(ctx,item.commandId,'M19.decide',item.payload),registry,{batchId:b.batchId,itemId:item.itemId,requestDigest:itemDigest});results.push({itemId:item.itemId,status:'committed',commandId:item.commandId});}
+  try{await executeWorkflow(ctx,make(ctx,item.commandId,'M19.decide',item.payload),registry,{batchId:b.batchId,itemId:item.itemId,requestDigest:itemDigest});results.push({itemId:item.itemId,...JSON.parse((await read())!.result)});}
   catch(e){const receipt=await read();if(receipt){results.push({itemId:item.itemId,...JSON.parse(receipt.result),recovered:true});continue;}
    if(!(e instanceof HttpError)||e.status>=500){results.push({itemId:item.itemId,status:'unknown',commandId:item.commandId});continue;}
-   const safe={status:'rejected',machineCode:e.status===403||e.status===404?'NOT_ACTIONABLE':e.machineCode??'REJECTED',commandId:item.commandId},fresh=await context();
+   const safe={status:'rejected',beforeRevision:'expectedRevision' in item.payload?item.payload.expectedRevision:null,afterRevision:null,queryRef:'/api/r1/commands/'+item.commandId,machineCode:e.status===403||e.status===404?'NOT_ACTIONABLE':e.machineCode??'REJECTED',commandId:item.commandId},fresh=await context();
    await commitCommand(db,fresh.member,await check(fresh),make(fresh,item.commandId,'M19.batchRejected',{batchId:b.batchId,itemId:item.itemId,digest:itemDigest}),token=>[db.prepare('INSERT INTO r1_workflow_batch_items SELECT owner,?,?,?,?,?,? FROM hris_workspaces WHERE owner=? AND last_mutation=?').bind(b.batchId,item.itemId,actor,itemDigest,item.commandId,JSON.stringify(safe),t,token)],safe);results.push({itemId:item.itemId,...safe});
   }
  }
