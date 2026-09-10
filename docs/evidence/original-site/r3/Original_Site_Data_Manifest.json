@@ -1,0 +1,230 @@
+{
+  "run_id": "R3-ORIGIN-20260910-103900",
+  "timezone": "UTC",
+  "branch": "evidence/r3-origin-parity-20260910",
+  "base_sha": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+  "target_origin": "https://srworkshopbj.italent.cn",
+  "data_prefix": "ZZ_R3_R3-ORIGIN-20260910-103900_<MODULE>_<CASE>",
+  "environment_confirmation": {
+    "source": "Scope_Register.json:p1Baseline.dataValidation.environment and current user instruction",
+    "kind": "user_confirmed_test_use",
+    "technical_deployment_classification": "not_independently_verified"
+  },
+  "baseline_files": [
+    {
+      "path": "docs/delivery/Scope_Register.json",
+      "sha256": "eab87b17f36cd11f49f76c494f9867da3cb7d076d82e3bbd5445e045377f3f52"
+    },
+    {
+      "path": "docs/delivery/P1_R3_P2_Handoff.md",
+      "sha256": "576340dcde0a18ab40466a963a291b8fc1d7e6c2a9f4d58939aa7bd730d8b503"
+    },
+    {
+      "path": "docs/delivery/P1_R3_Review_Package.md",
+      "sha256": "43106796f2db1f5f9b0672a9c0c07aa5d30118c2bb06c0df78c6d9c562ddc544"
+    },
+    {
+      "path": "docs/delivery/R3_P2_Start_Prompt.md",
+      "sha256": "aaae429ecbe224329ede10b98140ada97aa436f6ac1a66ce5ba238b8d1f33db8"
+    },
+    {
+      "path": "docs/delivery/P1_M27_Review_Package.md",
+      "sha256": "e1b921836151dfc8fb9fd7137707233f56387511ff63e8e6b7b19cd5b49ed372"
+    },
+    {
+      "path": "docs/delivery/P1_M16_Review_Package.md",
+      "sha256": "4ae740b7298e74f88654c2e98035da3aeac0c13c8afc2b612ebdb63a01c90e93"
+    },
+    {
+      "path": "docs/delivery/P1_M12_Review_Package.md",
+      "sha256": "181094952b09f471ef7055dbe0501815cd13f49cf114209d894ddafe2f66f71d"
+    },
+    {
+      "path": "docs/delivery/P1_M11_Review_Package.md",
+      "sha256": "a93d027cfd2e92acd4268c24b921068410ba9845c30597daac0695b4a6cd9f76"
+    },
+    {
+      "path": "docs/delivery/P1_M07_Review_Package.md",
+      "sha256": "e5a4bfb435207ce497f534a3aa8b84d9d817044868b2c13f7c8efb32c25a0c75"
+    }
+  ],
+  "records": [
+    {
+      "module": "BASE",
+      "object_type": "organization",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_ORG01",
+      "business_code": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_ORG01",
+      "internal_id": "9c30929a-42a0-46aa-b5f7-f6874c26a8ad",
+      "state": "saved; listed under enabled organization filter",
+      "cleanup": "retain as R3 test prerequisite; do not duplicate",
+      "readback": "exact name filtered list, clickable one matching organization"
+    },
+    {
+      "module": "M27",
+      "object_type": "course",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE01",
+      "internal_id": "ffe3f402-7dee-4200-86a1-a99f8b7771cb",
+      "state": "未发布",
+      "visibility": "不公开; 不共享; 游客关闭",
+      "readback": "课程列表匹配记录; 本轮下载模板自己记录的ID",
+      "cleanup": "保留供本轮生命周期验证"
+    },
+    {
+      "module": "M27",
+      "object_type": "course",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE02",
+      "internal_id": "83f83fe6-b496-42dd-a530-219229d85989",
+      "state": "未发布",
+      "readback": "确认导入后课程列表逐条匹配本轮名称和部门，共9条新增",
+      "visibility_input": "不共享; 不公开",
+      "visibility_saved_readback": "待编辑回查",
+      "cleanup": "保留供本轮验证"
+    },
+    {
+      "module": "M27",
+      "object_type": "course",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE03",
+      "internal_id": "c291426a-4840-4500-bd4c-b429e03d8b88",
+      "state": "未发布",
+      "readback": "确认导入后课程列表逐条匹配本轮名称和部门，共9条新增",
+      "visibility_input": "不共享; 不公开",
+      "visibility_saved_readback": "待编辑回查",
+      "cleanup": "保留供本轮验证"
+    },
+    {
+      "module": "M27",
+      "object_type": "course",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE04",
+      "internal_id": "ec02b992-d090-46c6-b41d-9142c87e8006",
+      "state": "未发布",
+      "readback": "确认导入后课程列表逐条匹配本轮名称和部门，共9条新增",
+      "visibility_input": "不共享; 不公开",
+      "visibility_saved_readback": "待编辑回查",
+      "cleanup": "保留供本轮验证"
+    },
+    {
+      "module": "M27",
+      "object_type": "course",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE05",
+      "internal_id": "49a9fb48-7930-4f26-b924-13b5d6771b8f",
+      "state": "未发布",
+      "readback": "确认导入后课程列表逐条匹配本轮名称和部门，共9条新增",
+      "visibility_input": "不共享; 不公开",
+      "visibility_saved_readback": "待编辑回查",
+      "cleanup": "保留供本轮验证"
+    },
+    {
+      "module": "M27",
+      "object_type": "course",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE06",
+      "internal_id": "87abe778-491e-4751-849e-b2e5cf449b29",
+      "state": "未发布",
+      "readback": "确认导入后课程列表逐条匹配本轮名称和部门，共9条新增",
+      "visibility_input": "不共享; 不公开",
+      "visibility_saved_readback": "待编辑回查",
+      "cleanup": "保留供本轮验证"
+    },
+    {
+      "module": "M27",
+      "object_type": "course",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE07",
+      "internal_id": "01050d23-4999-4df0-9d96-879e4cd09fa3",
+      "state": "未发布",
+      "readback": "确认导入后课程列表逐条匹配本轮名称和部门，共9条新增",
+      "visibility_input": "不共享; 不公开",
+      "visibility_saved_readback": "待编辑回查",
+      "cleanup": "保留供本轮验证"
+    },
+    {
+      "module": "M27",
+      "object_type": "course",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE08",
+      "internal_id": "65b2c687-1d83-47b4-83c6-86652762e2e9",
+      "state": "未发布",
+      "readback": "确认导入后课程列表逐条匹配本轮名称和部门，共9条新增",
+      "visibility_input": "不共享; 不公开",
+      "visibility_saved_readback": "待编辑回查",
+      "cleanup": "保留供本轮验证"
+    },
+    {
+      "module": "M27",
+      "object_type": "course",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE09",
+      "internal_id": "c4fb2316-6633-4394-ade5-f8fc50579dac",
+      "state": "未发布",
+      "readback": "确认导入后课程列表逐条匹配本轮名称和部门，共9条新增",
+      "visibility_input": "不共享; 不公开",
+      "visibility_saved_readback": "待编辑回查",
+      "cleanup": "保留供本轮验证"
+    },
+    {
+      "module": "M27",
+      "object_type": "course",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE10",
+      "internal_id": "cd414cf1-fc29-4525-9097-c91657c0fc5c",
+      "state": "未发布",
+      "readback": "确认导入后课程列表逐条匹配本轮名称和部门，共9条新增",
+      "visibility_input": "不共享; 不公开",
+      "visibility_saved_readback": "待编辑回查",
+      "cleanup": "保留供本轮验证"
+    }
+  ],
+  "operations": [
+    {
+      "id": "R3-OP-001",
+      "module": "M27",
+      "action": "填写课程标题；未点保存或发布",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE01",
+      "result": "form_only",
+      "evidence": "DOM-CUA and screenshot show title; content warning explicitly requires save/submit"
+    },
+    {
+      "id": "R3-OP-002",
+      "module": "BASE",
+      "action": "新建组织并单次点击确定",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_ORG01",
+      "input": {
+        "name": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_ORG01",
+        "short_name": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_ORG01",
+        "code": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_ORG01",
+        "effective_date": "2026-09-10",
+        "type": "部门",
+        "administrative_parent": "existing tenant root; reference only",
+        "level": "二级组织"
+      },
+      "result": "confirmed_saved_by_exact_name_readback",
+      "at": "2026-09-10T10:46:18.278624+00:00"
+    },
+    {
+      "id": "R3-OP-003",
+      "module": "M27",
+      "action": "单次保存SMOKE01",
+      "result": "confirmed_saved",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE01"
+    },
+    {
+      "id": "R3-OP-004",
+      "module": "M27",
+      "action": "上传9条课程 -> 导入预览 -> 单次确认导入",
+      "result": "confirmed_imported_by_nine_named_list_rows",
+      "file": "data/R3_M27_Smoke_Import.xlsx",
+      "planned_records": 9
+    }
+  ],
+  "counts": {
+    "confirmed_records": 11,
+    "by_module": {
+      "BASE": 1,
+      "M27": 10,
+      "M16": 0,
+      "M12": 0,
+      "M11": 0,
+      "M07": 0
+    },
+    "pending_import_records": 0,
+    "unknown_records": 0
+  },
+  "external_sends": 0,
+  "payments": 0,
+  "declarations": 0
+}
