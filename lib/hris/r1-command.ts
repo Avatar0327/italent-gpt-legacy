@@ -38,7 +38,7 @@ export async function commandReceipt(db:D1Database,m:Member,commandId:string){
  return db.prepare('SELECT command_id AS commandId,status,result,workspace_revision+1 AS workspaceRevision FROM r1_commands WHERE tenant_id=? AND actor_id=? AND command_id=? AND EXISTS(SELECT 1 FROM hris_memberships m WHERE m.tenant_id=r1_commands.tenant_id AND m.user_id=r1_commands.actor_id AND m.active=1)').bind(m.tenantId,m.userId,commandId).first();
 }
 /** Only service-validated SQL plans enter here. Callers must authorize the business action. */
-export async function commitCommand(db:D1Database,m:Member,stamp:SecurityStamp,intent:CommandIntent,plan:(token:string)=>D1PreparedStatement[],result:Record<string,unknown>={}) {
+async function commitCommandInternal(db:D1Database,m:Member,stamp:SecurityStamp,intent:CommandIntent,plan:(token:string)=>D1PreparedStatement[],result:Record<string,unknown>={},legacyStorage=false,normalizeComplete=false,control?:{phase:string;featuresEnabled:0|1;bumpWriterEpoch:boolean}) {
  requireMember(m);
  if(!sameStamp(stamp,await securityStamp(db,m.tenantId)))throw new HttpError(409,'授权水位已变化','REVISION_CONFLICT');
  for(const v of [intent.expectedWorkspaceRevision,intent.expectedAuthorizationRevision,intent.expectedWriterEpoch,intent.expectedRecoveryEpoch])if(!Number.isSafeInteger(v)||v<0)throw new HttpError(400,'版本号无效','INVALID_INPUT');
@@ -57,17 +57,22 @@ export async function commitCommand(db:D1Database,m:Member,stamp:SecurityStamp,i
   db.prepare(`INSERT INTO r1_commands(tenant_id,command_id,actor_id,action,idempotency_key,request_digest,token,status,workspace_revision,authorization_revision,writer_epoch,recovery_epoch,created_at)
    SELECT w.owner,?,?,?,?,?,?,'processing',w.revision,s.authorization_revision,s.writer_epoch,s.recovery_epoch,?
    FROM hris_workspaces w JOIN r1_schema_state s ON s.tenant_id=w.owner JOIN hris_memberships m ON m.tenant_id=w.owner
-   WHERE w.owner=? AND w.revision=? AND w.storage_version=1 AND s.open_gate=1 AND s.authorization_revision=? AND s.writer_epoch=? AND s.recovery_epoch=?
+   WHERE w.owner=? AND w.revision=? AND w.storage_version=${legacyStorage?0:1} AND s.open_gate=1 AND s.authorization_revision=? AND s.writer_epoch=? AND s.recovery_epoch=?
    AND m.user_id=? AND m.active=1 AND m.role=? AND m.employee_id IS ? AND m.org_scope=? AND m.view_email=? AND m.view_level=? AND (julianday('now')-2440587.5)*86400000<?`).bind(intent.commandId,m.userId,intent.action,intent.idempotencyKey,requestDigest,token,at,tenant,revision,stamp.authorizationRevision,stamp.writerEpoch,stamp.recoveryEpoch,m.userId,m.role,m.employeeId,memberScope,Number(!!m.viewEmail),Number(!!m.viewLevel),m.permissionValidUntil??Number.MAX_SAFE_INTEGER),
-  db.prepare(`UPDATE hris_workspaces SET revision=revision+1,last_mutation=? WHERE owner=? AND revision=? AND EXISTS(SELECT 1 FROM r1_commands WHERE tenant_id=? AND token=? AND status='processing')`).bind(token,tenant,revision,tenant,token),
+  db.prepare(`UPDATE hris_workspaces SET revision=revision+1,last_mutation=?${normalizeComplete?",storage_version=1":""} WHERE owner=? AND revision=? AND EXISTS(SELECT 1 FROM r1_commands WHERE tenant_id=? AND token=? AND status='processing')`).bind(token,tenant,revision,tenant,token),
   ...body,
   db.prepare('INSERT INTO hris_audit_events(tenant_id,id,actor_id,action,subject,at,revision) SELECT owner,?,?,?,?,?,revision FROM hris_workspaces WHERE owner=? AND last_mutation=?').bind(token,m.userId,intent.action,intent.commandId,at,tenant,token),
   db.prepare('INSERT INTO r1_outbox(tenant_id,event_id,command_id,event_type,workspace_revision,payload) SELECT owner,?,?,?,revision,? FROM hris_workspaces WHERE owner=? AND last_mutation=?').bind(token,intent.commandId,intent.action,eventPayload,tenant,token),
+  ...(control?[db.prepare('UPDATE r1_schema_state SET phase=?,features_enabled=?,writer_epoch=writer_epoch+? WHERE tenant_id=? AND EXISTS(SELECT 1 FROM hris_workspaces WHERE owner=? AND last_mutation=?)').bind(control.phase,control.featuresEnabled,Number(control.bumpWriterEpoch),tenant,tenant,token)]:[]),
   db.prepare("UPDATE r1_commands SET status='committed',result=? WHERE tenant_id=? AND token=? AND EXISTS(SELECT 1 FROM hris_workspaces WHERE owner=? AND last_mutation=?)").bind(JSON.stringify(result),tenant,token,tenant,token),
  ];
  const committed=await db.batch(statements);
  if(!committed[1].meta.changes)throw new HttpError(409,'数据、字段授权或恢复版本已变化','REVISION_CONFLICT');
  return {commandId:intent.commandId,status:'committed',result,workspaceRevision:revision+1,replayed:false};
+}
+export async function commitCommand(db:D1Database,m:Member,stamp:SecurityStamp,intent:CommandIntent,plan:(token:string)=>D1PreparedStatement[],result:Record<string,unknown>={}){return commitCommandInternal(db,m,stamp,intent,plan,result);}
+export async function commitMigrationTransaction(db:D1Database,m:Member,stamp:SecurityStamp,intent:CommandIntent,plan:(token:string)=>D1PreparedStatement[],result:Record<string,unknown>,options:{storageVersion:0|1;normalizeComplete?:boolean;control?:{phase:string;featuresEnabled:0|1;bumpWriterEpoch:boolean}}){
+ if(!intent.action.startsWith('BASE.migration.')||options.storageVersion===0&&stamp.featuresEnabled)throw new HttpError(409,'迁移必须经过专用写屏障','MIGRATION_GATE_REQUIRED');const {authorizeTuple}=await import('./r1-authorization');await authorizeTuple(db,m,{objectType:'BASE',action:'migration.manage',orgId:'__tenant__',personId:'',field:'record',historyMode:'current'});return commitCommandInternal(db,m,stamp,intent,plan,result,options.storageVersion===0,!!options.normalizeComplete,options.control);
 }
 export async function commitLegacy(db:D1Database,m:Member,revision:number,action:string,plan:(token:string)=>D1PreparedStatement[]){
  const stamp=m.securityStamp;

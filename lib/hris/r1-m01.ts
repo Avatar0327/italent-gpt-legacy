@@ -38,9 +38,9 @@ export type M01Input=z.infer<typeof m01Input>;
 export type Entity={id:string;kind:string;personId:string|null;orgId:string|null;code:string|null;revision:number;status:string;payload:Record<string,any>};
 export const overlaps=(a:{validFrom:string;validTo:string|null},b:{validFrom:string;validTo:string|null})=>a.validFrom<=(b.validTo??'9999-12-31')&&b.validFrom<=(a.validTo??'9999-12-31');
 export const nextDay=(day:string)=>new Date(Date.parse(day+'T00:00:00Z')+86400000).toISOString().slice(0,10);
-export function tenure(segments:{startOn:string|null;lastWorkingOn:string|null;status:string;employmentType:string}[],asOf:string){
+export function tenure(segments:{startOn:string|null;lastWorkingOn:string|null;status:string;employmentType:string;historyIncomplete?:boolean}[],asOf:string){
  const ranges: [number,number][]=[];
- for(const s of segments){if(s.employmentType==='internship')continue;if(!s.startOn||s.status==='ended'&&!s.lastWorkingOn)return {days:null,years:null,reasonCode:'HISTORY_UNVERIFIABLE'};if(s.status==='cancelled'||s.startOn>asOf)continue;ranges.push([Date.parse(s.startOn),Date.parse(s.lastWorkingOn&&s.lastWorkingOn<asOf?s.lastWorkingOn:asOf)]);}
+ for(const s of segments){if(s.historyIncomplete)return {days:null,years:null,reasonCode:'HISTORY_UNVERIFIABLE'};if(s.employmentType==='internship')continue;if(!s.startOn||s.status==='ended'&&!s.lastWorkingOn)return {days:null,years:null,reasonCode:'HISTORY_UNVERIFIABLE'};if(s.status==='cancelled'||s.startOn>asOf)continue;ranges.push([Date.parse(s.startOn),Date.parse(s.lastWorkingOn&&s.lastWorkingOn<asOf?s.lastWorkingOn:asOf)]);}
  ranges.sort((a,b)=>a[0]-b[0]);const merged:[number,number][]=[];for(const [a,b] of ranges){const last=merged.at(-1);if(last&&a<=last[1]+86400000)last[1]=Math.max(last[1],b);else merged.push([a,b]);}
  const days=merged.reduce((n,[a,b])=>n+(b-a)/86400000+1,0);return {days,years:Math.round(days/365*100)/100,reasonCode:null};
 }
