@@ -1,0 +1,57 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "basisHead": "5979d5dd7ee9000789b678027dc2444438d7d5cc",
+  "scope": "当前无需独立角色、无需未来日期，不等于已全部完成",
+  "groups": [
+    {
+      "module": "M01",
+      "scope": "岗位编辑/停用/名称编码重复、组织更名/唯一性/层级、员工字段长度格式重复、附件/子集/多任职管理员入口",
+      "execution": "not_entered_after_recovery",
+      "attempt": "tab3职位点击、刷新；tab19新查询并正式职位导航；业务main空且源请求超时",
+      "dependency": "需要可加载的本轮对象查询/详情，不能凭历史UUID盲写",
+      "blocker": "ENV-05",
+      "notClaimed": "没有逐项提交这些校验，也没有证明每项单独失效"
+    },
+    {
+      "module": "M19",
+      "scope": "本轮申请人原单历史/撤回状态；编辑改期重提",
+      "execution": "readback_observed_edit_not_opened",
+      "attempt": "两原流程DOM与审计回查；转正编辑点击未开表单",
+      "blocker": "ENV-04/ENV-05",
+      "excluded": "独立两方审批/驳回/HR执行仍ROLE-01；不自审"
+    },
+    {
+      "module": "M48",
+      "scope": "现有管理员办理本轮申请及状态读取",
+      "execution": "existing_admin_applicant_state_only",
+      "attempt": "本轮两申请状态已从管理员申请人页面回读；没有独立员工身份",
+      "blocker": "ROLE-01；新增业务入口受ENV-05影响",
+      "notClaimed": "普通员工字段可改、附件和他人数据拒绝没有验证；不把真实管理员个人资料改成测试数据"
+    },
+    {
+      "module": "M32",
+      "scope": "两员工当前明细、图表人数、日期/排序/组织条件、导出文件",
+      "execution": "existing_DOM_and_chart_readback_sort_attempt_failed",
+      "attempt": "2=正式1+试用1；姓名排序语义/坐标点击超时，行序未变",
+      "blocker": "ENV-03/04/05",
+      "notClaimed": "无导出文件、无新的历史快照查询、无分页/30–50量级"
+    },
+    {
+      "module": "E2E",
+      "scope": "成功/驳回/撤回/改日期后重审/执行失败",
+      "execution": "partial_fragments_only",
+      "blocker": "ROLE-01 + 原站编辑/业务区限制 + 未来实际日期",
+      "completed": "0/5"
+    }
+  ],
+  "quantity": {
+    "businessObjects": 10,
+    "employees": 2,
+    "newThisContinuation": 0,
+    "bulkRows": 0,
+    "threshold5to10Quantity": true,
+    "smokeAllCasesPassed": false,
+    "expanded30to50": false
+  },
+  "continuationInstruction": "页面恢复继续全部上列可执行项；未来项仅按Future_Date_Recovery实际回查，不能把检查点结束称四模块完成。"
+}

@@ -3,7 +3,7 @@
   "runId": "R1-ORIGIN-20260910-100019",
   "authority": "项目所有者本轮用户消息",
   "basisHead": "5aa78e420db1e6df498f3f5101e18af10047d427",
-  "recordedAt": "2026-09-10T15:21:00Z",
+  "recordedAt": "2026-09-10T15:23:45Z",
   "classification": "INTENTIONAL_DIFFERENCE",
   "decision": [
     "原站管理员直接调动、保存即生效登记为有意差异",
@@ -16,5 +16,6 @@
   ],
   "scope": "仅直接调动路径；不扩展授权到其他原站行为",
   "p3ExitApproved": false,
-  "p4Started": false
+  "p4Started": false,
+  "recordedAtBasis": "首次提交5979d5d的实际Git提交时刻；不是所有者消息精确发出时刻"
 }

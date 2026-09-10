@@ -1,4 +1,7 @@
 {
+  "runId": "R1-ORIGIN-20260910-100019",
+  "algorithm": "sha256",
+  "selfExcluded": true,
   "files": [
     {
       "path": "ALERT-MAJOR-001.md",
@@ -7,38 +10,48 @@
     },
     {
       "path": "Browser_Concurrency_Check.md",
-      "bytes": 5263,
-      "sha256": "05875cc6f1b4bf774a004ae2bc98c6fd2779a529b80d99a1a18c6c4e99a856e7"
+      "bytes": 5768,
+      "sha256": "36315a1f5d2e42e8b57afe9f1837e369b2cd5ee0bf761ad4bc2a477b6203dd80"
     },
     {
       "path": "Continuation_Validation.json",
-      "bytes": 954,
-      "sha256": "6b3a3bb0833a1e9bb665b46149ad5cb77cd630df32f193d7b786952a182f42d0"
+      "bytes": 1043,
+      "sha256": "67652b3e0cfc02b3588f8f207809afcdf34e9197a59d2680640e1dcfa57191b2"
+    },
+    {
+      "path": "Current_Executable_Test_Disposition.json",
+      "bytes": 2698,
+      "sha256": "38975a86c7faad9d8ce3c27643f3aac14824036a1975b162f2a39e3a6f7496a8"
+    },
+    {
+      "path": "Future_Date_Recovery.json",
+      "bytes": 4004,
+      "sha256": "c012bc2ffe949eb67e93ee4a2aa4457be3934fe4b6be37f9d5416c8dd57cfef6"
     },
     {
       "path": "M01_Checkpoint.md",
-      "bytes": 1803,
-      "sha256": "0a9b95aad1c0b5ded0f37cea48376750976cafd72be39c7d8ddb9a059aee4ee2"
+      "bytes": 2433,
+      "sha256": "7e32047ea55fe9d33e61f7500fc599a23436baa700b985a8e4cc113ca4582a2e"
     },
     {
       "path": "M19_Checkpoint.md",
-      "bytes": 1372,
-      "sha256": "3e6eb3706fbf191bfba50b1da6847c6497346c824074fe5435ab0d6e5849fe7e"
+      "bytes": 1876,
+      "sha256": "6a6c1d6b1a6ad26dd3a301ddb7c91676e4534c929b26580f4a912742379f11c3"
     },
     {
       "path": "M32_Checkpoint.md",
-      "bytes": 1529,
-      "sha256": "463daee7ec228df6a82c8f7591299ddf24fa949c7f9814bc0044216fd9982cb3"
+      "bytes": 2075,
+      "sha256": "af27df3c6bf87e900a02ff9efb69a8a77f2e9056e5fcc83a7f6fea4a610d749d"
     },
     {
       "path": "M48_Checkpoint.md",
-      "bytes": 907,
-      "sha256": "5c90f49736a073b2fb3325f4cc3f95625ce9c7231604245bc78119599b2002c6"
+      "bytes": 1405,
+      "sha256": "bc5ca71b76934503aa7375dd337f40521d2be9917011da29b026a19d80385b1d"
     },
     {
       "path": "Original_Site_Data_Manifest.json",
-      "bytes": 15869,
-      "sha256": "3c5f24dd4bb43afe05ba1f9dc24786c484a121c970ccbfc8aedd2dbb348b662d"
+      "bytes": 16615,
+      "sha256": "cfbea108d42cbfb05550d80a3c45a1ffb69cb9c67c2942561a420284775255f1"
     },
     {
       "path": "Original_Site_Test_Plan.md",
@@ -47,8 +60,8 @@
     },
     {
       "path": "Owner_Decision_DIFF_MAJOR_001_20260910.json",
-      "bytes": 761,
-      "sha256": "6226fec7dba2324b568f00f7d50b930a0bbbc92ecacb873193bb58dd719fc43f"
+      "bytes": 871,
+      "sha256": "adc06d6d2b18d99560f3ef5828e54c6ed4e5267f886123ba4edba5aacd158ef9"
     },
     {
       "path": "P3_Source_Delta_Check.json",
@@ -59,6 +72,11 @@
       "path": "P3_Source_Delta_Check.md",
       "bytes": 983,
       "sha256": "f8ea85a706d9906b0f508879d45f602876956809ff6f42ec5111d3819d9d5615"
+    },
+    {
+      "path": "R1-ORIGIN-20260910-100019/Browser_Resume_Request_Timeout.json",
+      "bytes": 3208,
+      "sha256": "14b3bdafac2c8a6e9dc1bc98cd250ad0b79fd3184c88ad59b14693b52b124382"
     },
     {
       "path": "R1-ORIGIN-20260910-100019/M01/M01-EMP-001-assignment.json",
@@ -336,6 +354,11 @@
       "sha256": "dc1e5e987192e4d5ce064778f3538b69d9a371cb3bef2cff554c64f4ebadc78e"
     },
     {
+      "path": "R1-ORIGIN-20260910-100019/M32/M32-two-people-graph-resume.jpg",
+      "bytes": 24054,
+      "sha256": "5c059fd061a8dcfd89ed98c6b18b14f05565b23568cdeb79b82a1dd46a2b5b20"
+    },
+    {
       "path": "R1-ORIGIN-20260910-100019/M48/M48-admin-own-request-state.json",
       "bytes": 662,
       "sha256": "719d689a2bd481b8946698920e85fdd466953d8867c075ab93bfe1087400e8ed"
@@ -346,34 +369,39 @@
       "sha256": "55c0aa7bc15493832b95f7b6c2e96603b008efb7607515c98a2c48dcb66933f6"
     },
     {
+      "path": "R1-ORIGIN-20260910-100019/Resume_20260910_1532_DOM.json",
+      "bytes": 10071,
+      "sha256": "2a101fc81a871fd2e369b3be95117758a67d7c4682241de86611d00cbeb25f32"
+    },
+    {
       "path": "R1_Original_Behavior_Matrix.json",
-      "bytes": 133484,
-      "sha256": "cb1cb387dfff65ea76f6a6dc8a069a0d53272feffdc3abc37ac35a3ee3402bed"
+      "bytes": 140558,
+      "sha256": "2a08348609edea1aff626f8e360ff9466ffdf9efe9cf2776cc6f2e0279a3284b"
     },
     {
       "path": "R1_Original_Behavior_Matrix.md",
-      "bytes": 18985,
-      "sha256": "802da981ec40de9b6e235508d589e34acdb767736dadf4a5b1ba683692b79d07"
+      "bytes": 20019,
+      "sha256": "44712e2180bbcbc60cc918ad002ae1c391d0c21a30cc9eee7b76b0728c2c522b"
     },
     {
       "path": "R1_P3_Evidence_Feedback.md",
-      "bytes": 8194,
-      "sha256": "d0d21be5e682ec8fd1de0b42541c29bcef959d12512423cd562cf081e441fed1"
+      "bytes": 9527,
+      "sha256": "32457999455004e1b8f4338ddc9ac50708416817290a0e1c29d0d90dc967d332"
     },
     {
       "path": "R1_P4_Comparison_Cases.md",
-      "bytes": 8437,
-      "sha256": "7e16c0e6d3fe4faa2e05815be4c44f756d70384be56352e8087c64f308a08997"
+      "bytes": 9770,
+      "sha256": "f070485f1877a8bf36066d9a1eee65f5320882a7f5ed694d8921ab0ed6a683ab"
     },
     {
       "path": "R1_Parity_Difference_Ledger.json",
-      "bytes": 17254,
-      "sha256": "ebf8cfe44c009acd487d154e5d70f085e1eaff685a7f8a5b1badf7a50f0aa3e2"
+      "bytes": 18860,
+      "sha256": "8c5ddbe2a4396d1a8eb64ddb174cfe9732f23183c0a6b5abb9a8aa44368fae30"
     },
     {
       "path": "R1_Parity_Difference_Ledger.md",
-      "bytes": 9422,
-      "sha256": "1058d54ab06a766b7cddd28e3cc55f7df6b02b7c42f111b3a8cca3d8c14d210e"
+      "bytes": 10499,
+      "sha256": "1f393a6e74280184bc046dc1a7af71b2d6f324697caf358fe89b6fde653401fd"
     },
     {
       "path": "Repository_Source_Manifest.json",
@@ -382,13 +410,13 @@
     },
     {
       "path": "Resume.md",
-      "bytes": 6373,
-      "sha256": "009f1414ea2aa1d5c208551d8721bd6012b03427f7fba0912fed824c95260529"
+      "bytes": 7706,
+      "sha256": "c0daa06f0141cfb68a7604d08eaa0f8742b4b6ab404bb04256f637e08f75eb46"
     },
     {
       "path": "Run_Status.json",
-      "bytes": 2669,
-      "sha256": "16c11c6939609036ada6a058ba9365ea570dd98f740f92921153f1cbf744a020"
+      "bytes": 3163,
+      "sha256": "5bd2f71b6dda96042dff740fe0d0df3a4a6891a563bfe72e316048fd4682941b"
     },
     {
       "path": "run.json",
@@ -396,15 +424,7 @@
       "sha256": "bd8664ee8eaeda8e04f22f354ba993e7379a417fe05e4c95c12733a0b34bed64"
     }
   ],
-  "validation": {
-    "errors": [],
-    "matrixRows": 66,
-    "observedRows": 30,
-    "partialRows": 18,
-    "unexecutedRows": 18,
-    "manifestRecords": 10,
-    "scope": "same RUN evidence; source paths exist at referenced SHAs; no product tests run",
-    "details": "Continuation_Validation.json"
-  },
-  "ownerDecisionRegistered": true
+  "fileCount": 84,
+  "jsonValidationFile": "Continuation_Validation.json",
+  "scope": "仅证据分支；不代表模块或阶段验收通过"
 }

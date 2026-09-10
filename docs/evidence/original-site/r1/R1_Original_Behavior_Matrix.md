@@ -1,13 +1,12 @@
-# R1 原站行为矩阵（同RUN续跑）
+# R1 原站行为矩阵（同 RUN 续跑）
 
-RUN_ID：R1-ORIGIN-20260910-100019。完整验证/批量/P3完整对照均0/4。矩阵66项：30项窄范围已观察（含失败和限制，不等于通过）、18组合部分观察、18未执行。MATCH3仅组织ID稳定、当前人数粒度、退出次日边界；后两项P3静态对照，不等于动态复刻验收。10个主动创建对象、2员工，30–50/100–500未执行。
-
-实际输入、记录ID、角色、时间精度、设计SHA和P3映射详见JSON及证据。D1–D7不变，P1不重开；原站差异不自动覆盖批准目标。多条用例关联同一Major仅计台账ID一次。
-
-所有者决定：直接调动为 INTENTIONAL_DIFFERENCE，历史 Major 1、待决 Major 0；独立申请/撤回观察不扩大为批准。
+完整验证、批量、需求完整对照、P3 完整对照、退出对照就绪均 0/4，E2E 0/5。矩阵 69 项：33 项窄范围观察（含失败与限制）、其余按 JSON execution 逐项记录；任何窄项不代表模块通过。10 对象/2 员工，本增量新增业务 0。MATCH 3 仅窄项静态对照；直接调动经所有者决定为 INTENTIONAL_DIFFERENCE，历史 Major 1、待决 Major 0。当前管理员和当天可执行项尚未全完成，见 Current_Executable_Test_Disposition.json。
 
 | 用例 | 模块 | 执行状态 | 实际结果 | 分类 | 证据 |
 |---|---|---|---|---|---|
+| M32-RESUME-SORT-001 | M32 | observed | 旧页面DOM仍EMP002试用1、EMP001正式1，总2；截图柱图2。姓名表头语义/可见坐标点击超时，行序未变，不判排序通过或缺陷。 | ENV_BLOCKED | [Resume_20260910_1532_DOM.json](R1-ORIGIN-20260910-100019/Resume_20260910_1532_DOM.json)；[Browser_Resume_Request_Timeout.json](R1-ORIGIN-20260910-100019/Browser_Resume_Request_Timeout.json)；[M32-two-people-graph-resume.jpg](R1-ORIGIN-20260910-100019/M32/M32-two-people-graph-resume.jpg) |
+| M19-RESUME-RECALL-002 | M19 | observed | 调动与转正均仍同流程开始节点，审计分别20:44/20:52、21:57/22:03，编辑未出现新表单；未重提/代审。 | 待判定 | [Resume_20260910_1532_DOM.json](R1-ORIGIN-20260910-100019/Resume_20260910_1532_DOM.json)；[Browser_Resume_Request_Timeout.json](R1-ORIGIN-20260910-100019/Browser_Resume_Request_Timeout.json) |
+| R1-RESUME-ENV-001 | M01 | observed | 测试管理员身份标识正常；职位新查询业务区持续空白并记录请求超时；未重复创建组织。 | ENV_BLOCKED | [Resume_20260910_1532_DOM.json](R1-ORIGIN-20260910-100019/Resume_20260910_1532_DOM.json)；[Browser_Resume_Request_Timeout.json](R1-ORIGIN-20260910-100019/Browser_Resume_Request_Timeout.json) |
 | M32-ORG-SELECT-LIMIT | M32 | observed | ORG002经候选文字/完整行/CUA点击仍已选0，已取消；当前2员工结果没有应用组织条件，不能判组织过滤缺陷。 | ENV_BLOCKED | [M32-org-filter.json](R1-ORIGIN-20260910-100019/M32/M32-org-filter.json)；[M32-org-selector-limit.json](R1-ORIGIN-20260910-100019/M32/M32-org-selector-limit.json) |
 | M01-ORG-003-EDIT-STOP | M01 | observed | 同UUID备注持久化，名称/代码/归属/日期不变；操作记录仅设立18:34:09，变更记录仅1版本，编辑审计未取得。停用包含全体职位人员迁移，未核完整影响清单而取消，未实际停用。 | 待判定 | [M01-ORG-003-edit-presubmit.json](R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-presubmit.json)；[M01-ORG-003-edit-result.json](R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-result.json)；[M01-ORG-003-edit-history.json](R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-history.json)；[M01-ORG-003-stop-preview.json](R1-ORIGIN-20260910-100019/M01/M01-ORG-003-stop-preview.json) |
 | M32-TWO-EMP-001 | M32 | observed | 仅EMP001+EMP002及今天入职，正式1、试用1、合计2，各人数1；未来离职和撤回转正申请未提前改变当前人数。非分页或批量通过。 | 待判定 | [M32-two-employees.json](R1-ORIGIN-20260910-100019/M32/M32-two-employees.json) |

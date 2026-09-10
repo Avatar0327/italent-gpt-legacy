@@ -1,11 +1,11 @@
 {
   "runId": "R1-ORIGIN-20260910-100019",
   "origin": "https://srworkshopbj.italent.cn",
-  "concurrency": "passed_scoped_to_own_two_tabs_and_draft",
+  "concurrency": "prior_scoped_isolation_passed_no_conflict_observed_current_draft_retest_incomplete",
   "createdRecords": 10,
   "createdRecordsDefinition": "3组织+2职位+2员工+2申请+1未来离职任职；不计自动关联重复",
   "smokeNamedObjectsThresholdReached": true,
-  "continuationInProgress": true,
+  "continuationInProgress": false,
   "bulkImportedRows": 0,
   "modules": [
     {
@@ -53,14 +53,14 @@
   "e2eCompleted": 0,
   "e2eRequired": 5,
   "activeRoleBlockers": 1,
-  "activeEnvBlockers": 3,
+  "activeEnvBlockers": 4,
   "resolvedEnvBlockers": 1,
   "matchRules": 3,
   "severities": {
     "Blocker": 0,
     "Major": 1,
     "Minor": 0,
-    "Observation": 13
+    "Observation": 14
   },
   "p3ExitApprovedByThisWindow": false,
   "p4StartedByThisWindow": false,
@@ -81,10 +81,20 @@
     "未来退出/再入职需实际日期与状态前置"
   ],
   "otherUnexecutedWorkNotEquivalentToBlocker": true,
-  "workflowStatus": "continuing_currently_executable_cases",
+  "workflowStatus": "checkpoint_saved_origin_request_timeouts_partial_readonly",
   "remainingWorkMayContinue": true,
   "activeMajor": 0,
   "historicalMajor": 1,
   "intentionalDifferences": 1,
-  "ownerDecision": "Owner_Decision_DIFF_MAJOR_001_20260910.json"
+  "ownerDecision": "Owner_Decision_DIFF_MAJOR_001_20260910.json",
+  "newBusinessObjectsThisContinuation": 0,
+  "newFindingsThisContinuation": {
+    "Blocker": 0,
+    "Major": 0,
+    "Minor": 0,
+    "Observation": 1
+  },
+  "currentContinuationLimitation": "管理员当前日期可测范围尚未全做完：原站业务请求超时，岗位/员工表单未加载；已有页面回读不代表新查询成功。",
+  "futureRecovery": "Future_Date_Recovery.json",
+  "futureRecheckScheduled": true
 }

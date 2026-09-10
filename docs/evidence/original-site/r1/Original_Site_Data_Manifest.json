@@ -364,7 +364,7 @@
     }
   ],
   "successMessagePendingIdCount": 0,
-  "writesSuspendedReason": null,
+  "writesSuspendedReason": "本次恢复原站组织/职位业务区请求超时；未取得可安全提交的本轮表单，继续只读证据。非导入下载全局停工。",
   "retainedCount": 10,
   "deletedCount": 0,
   "drafts": {
@@ -387,5 +387,18 @@
     "expansionGate": "页面运行稳定且可审计逐条UUID；现已多次出现数十秒加载/回执延迟，不在回执未核定时重放或扩量。未证共享环境受影响。",
     "completedBusinessLifecycle": false,
     "note": "达到5–10总量门槛，未达到全部场景冒烟通过；只有2员工，不宣称员工批量测试"
+  },
+  "lastContinuation": {
+    "basisHead": "5aa78e420db1e6df498f3f5101e18af10047d427",
+    "newBusinessRecords": 0,
+    "retainedCount": 10,
+    "deletedCount": 0,
+    "recordUUIDsConfirmedFromManifest": 10,
+    "allThreeOrganizationUUIDsLiveReverifiedThisContinuation": false,
+    "notes": "初始ORG003名称/备注/在岗1页面可读，三组织完整UUID重新页面核验未完成；未重建任何对象。后续组织/职位业务区空白，请求超时。",
+    "evidence": [
+      "R1-ORIGIN-20260910-100019/Browser_Resume_Request_Timeout.json",
+      "Future_Date_Recovery.json"
+    ]
   }
 }

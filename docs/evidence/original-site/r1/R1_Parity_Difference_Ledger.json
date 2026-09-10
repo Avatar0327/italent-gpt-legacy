@@ -433,6 +433,44 @@
       ],
       "feedback": "仅该编辑/改期/重提能力待原站页面或浏览器恢复；其他页面正常继续，不限制整个项目并发。 M32只限制组织条件应用，该报表姓名/日期查询和人数读取已执行。",
       "conclusion": "阻塞原因未定位，不认定权限缺陷或P3实现缺陷；完整改期新单链未验。"
+    },
+    {
+      "id": "ENV-05",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "modules": [
+        "M01",
+        "M19",
+        "M48",
+        "M32"
+      ],
+      "title": "原站业务区请求超时与交互超时",
+      "actual": "9/10续跑已确认管理身份。tab3无草稿刷新、独立tab19查询恢复后登录框架加载，但组织/职位main为空；tab19正式职位导航成功，业务内容未加载。页面日志15:29–15:35 UTC重复请求超时。tab17撤回编辑及tab2姓名排序交互也超时；已有报表/申请DOM可读。",
+      "classification": "ENV_BLOCKED",
+      "severity": "Observation",
+      "status": "open",
+      "productDefectConfirmed": false,
+      "ownerDecisionRequired": false,
+      "requirements": [
+        "F-SPEC-07",
+        "F-SPEC-08",
+        "D2",
+        "D6",
+        "M32-SPEC-04"
+      ],
+      "p3Tasks": [
+        "P3-R1-02",
+        "P3-R1-03",
+        "P3-R1-05",
+        "P3-R1-06",
+        "P3-R1-07"
+      ],
+      "feedback": "恢复原站业务页面后继续当前日期和管理员可测清单。P3仅使用已存在DOM/审计，不将超时当实现缺陷；P4角色缺口独立保留。",
+      "conclusion": "未定位根因，未确认登录互踢/标签错位/表单串写或共享租户受损；没有限制整个项目并发。不能据旧页面回读宣称刷新服务器查询成功。",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/Resume_20260910_1532_DOM.json",
+        "R1-ORIGIN-20260910-100019/Browser_Resume_Request_Timeout.json",
+        "Current_Executable_Test_Disposition.json"
+      ]
     }
   ],
   "counts": {
@@ -442,14 +480,14 @@
     "IMPLEMENTATION_DEFECT": 0,
     "INTENTIONAL_DIFFERENCE": 1,
     "ROLE_BLOCKED": 1,
-    "ENV_BLOCKED": 3,
+    "ENV_BLOCKED": 4,
     "NEED_OWNER_DECISION": 0,
     "resolved_ENV_BLOCKED": 1,
     "observationsWithoutClassification": 8,
     "Blocker": 0,
     "Major": 1,
     "Minor": 0,
-    "Observation": 13,
+    "Observation": 14,
     "activeMajor": 0,
     "historicalMajor": 1
   },

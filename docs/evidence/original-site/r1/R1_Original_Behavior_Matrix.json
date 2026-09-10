@@ -9,6 +9,179 @@
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",
   "cases": [
     {
+      "caseId": "M32-RESUME-SORT-001",
+      "module": "M32",
+      "title": "两人报表图表和排序尝试",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T15:32:31.909Z",
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "两人报表图表和排序尝试",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "steps": [
+        "恢复同RUN并核指定证据HEAD",
+        "仅自有标签进行低风险查询或本轮原单回查",
+        "保存DOM和超时回执，不重放业务保存"
+      ],
+      "inputs": {
+        "newBusinessWrites": 0,
+        "existingRecordIds": [
+          "927ef593-f930-4bcb-963f-e463df2e9e84",
+          "66ea978b-f2e9-47b1-b3a6-6176234d1fe0"
+        ]
+      },
+      "actualResult": "旧页面DOM仍EMP002试用1、EMP001正式1，总2；截图柱图2。姓名表头语义/可见坐标点击超时，行序未变，不判排序通过或缺陷。",
+      "pageState": "readable_existing_DOM_or_request_timeout",
+      "recordIds": [
+        "927ef593-f930-4bcb-963f-e463df2e9e84",
+        "66ea978b-f2e9-47b1-b3a6-6176234d1fe0"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/Resume_20260910_1532_DOM.json",
+        "R1-ORIGIN-20260910-100019/Browser_Resume_Request_Timeout.json",
+        "R1-ORIGIN-20260910-100019/M32/M32-two-people-graph-resume.jpg"
+      ],
+      "screenshot": "R1-ORIGIN-20260910-100019/M32/M32-two-people-graph-resume.jpg",
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "M32-SPEC-01",
+        "M32-SPEC-04"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "path": "lib/hris/r1-report-m01-producer.ts",
+        "task": "P3-R1-06/07",
+        "cases": [
+          "P3-M32-01",
+          "P3-M32-02"
+        ],
+        "evidenceMode": "静态来源映射；未运行复刻UI或本窗口产品测试"
+      },
+      "classification": "ENV_BLOCKED",
+      "severity": "Observation",
+      "timePrecision": "capture_start_UTC_not_new_business_execution",
+      "ledgerId": "ENV-05"
+    },
+    {
+      "caseId": "M19-RESUME-RECALL-002",
+      "module": "M19",
+      "title": "两张撤回原单只读回查",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T15:32:31.909Z",
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "两张撤回原单只读回查",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "steps": [
+        "恢复同RUN并核指定证据HEAD",
+        "仅自有标签进行低风险查询或本轮原单回查",
+        "保存DOM和超时回执，不重放业务保存"
+      ],
+      "inputs": {
+        "newBusinessWrites": 0,
+        "existingRecordIds": [
+          "1cc37027-478b-4a9d-b055-e5a4f55b38e5",
+          "98436444-b9e5-468c-9abf-b3212bd666eb",
+          "9737bceb-e7ee-499d-abf4-e05014e9185f",
+          "fb06f86c-9f0b-4859-96d7-b70d5e804f67"
+        ]
+      },
+      "actualResult": "调动与转正均仍同流程开始节点，审计分别20:44/20:52、21:57/22:03，编辑未出现新表单；未重提/代审。",
+      "pageState": "readable_existing_DOM_or_request_timeout",
+      "recordIds": [
+        "1cc37027-478b-4a9d-b055-e5a4f55b38e5",
+        "98436444-b9e5-468c-9abf-b3212bd666eb",
+        "9737bceb-e7ee-499d-abf4-e05014e9185f",
+        "fb06f86c-9f0b-4859-96d7-b70d5e804f67"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/Resume_20260910_1532_DOM.json",
+        "R1-ORIGIN-20260910-100019/Browser_Resume_Request_Timeout.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "局部截图超时不阻塞；本条采用结构化DOM/字段值/ID",
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "D2",
+        "D6",
+        "M19-SPEC-01"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M19_Workflow_Transactions.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "path": "tests/r1-p3-workflow.test.mjs",
+        "task": "P3-R1-03",
+        "cases": [
+          "P3-M19-01",
+          "P3-M19-04"
+        ],
+        "evidenceMode": "静态源码/既有测试映射；本窗口未运行复刻UI或测试"
+      },
+      "classification": null,
+      "severity": "Observation",
+      "timePrecision": "capture_start_UTC_not_new_business_execution"
+    },
+    {
+      "caseId": "R1-RESUME-ENV-001",
+      "module": "M01",
+      "title": "恢复身份与独立业务区加载",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T15:32:31.909Z",
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "恢复身份与独立业务区加载",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "steps": [
+        "恢复同RUN并核指定证据HEAD",
+        "仅自有标签进行低风险查询或本轮原单回查",
+        "保存DOM和超时回执，不重放业务保存"
+      ],
+      "inputs": {
+        "newBusinessWrites": 0,
+        "existingRecordIds": []
+      },
+      "actualResult": "测试管理员身份标识正常；职位新查询业务区持续空白并记录请求超时；未重复创建组织。",
+      "pageState": "readable_existing_DOM_or_request_timeout",
+      "recordIds": [],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/Resume_20260910_1532_DOM.json",
+        "R1-ORIGIN-20260910-100019/Browser_Resume_Request_Timeout.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "局部截图超时不阻塞；本条采用结构化DOM/字段值/ID",
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "F-SPEC-08"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "path": "tests/r1-p3-m01.test.mjs",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "evidenceMode": "静态源码/既有测试映射；本窗口未运行复刻UI或测试"
+      },
+      "classification": "ENV_BLOCKED",
+      "severity": "Observation",
+      "timePrecision": "capture_start_UTC_not_new_business_execution",
+      "ledgerId": "ENV-05"
+    },
+    {
       "caseId": "M32-ORG-SELECT-LIMIT",
       "module": "M32",
       "title": "本轮组织条件未选中",

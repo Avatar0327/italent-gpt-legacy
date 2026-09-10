@@ -1,0 +1,107 @@
+{
+  "attemptedActions": [
+    "tab3职位语义点击",
+    "tab3职位可见坐标点击",
+    "tab3无草稿刷新",
+    "tab19新查询恢复页",
+    "tab19 DOM可见职位点击成功导航但业务main空",
+    "tab17本轮转正撤回编辑点击，未出现新表单",
+    "tab2姓名列语义/可见坐标点击，原行序EMP002→EMP001未变"
+  ],
+  "capturedAt": "2026-09-10T15:38:14.368Z",
+  "causalLimit": "源页面请求超时与浏览器交互超时并存，未定位根因；未证明并发污染、登录互踢、平台反自动化或P3实现缺陷",
+  "classification": "ENV_BLOCKED",
+  "newBusinessWritesThisContinuation": 0,
+  "origin": "https://srworkshopbj.italent.cn",
+  "ownedTabs": [
+    "2",
+    "3",
+    "14",
+    "15",
+    "17",
+    "19"
+  ],
+  "pageErrors": [
+    {
+      "level": "error",
+      "message": "错误 Error: 请求超时\n    at [URL_REDACTED]",
+      "timestamp": "2026-09-10T15:29:47.961Z"
+    },
+    {
+      "level": "error",
+      "message": "错误 Error: 请求超时\n    at [URL_REDACTED]",
+      "timestamp": "2026-09-10T15:30:58.088Z"
+    },
+    {
+      "level": "error",
+      "message": "错误 Error: 请求超时\n    at [URL_REDACTED]",
+      "timestamp": "2026-09-10T15:31:07.978Z"
+    },
+    {
+      "level": "error",
+      "message": "错误 Error: 请求超时\n    at [URL_REDACTED]",
+      "timestamp": "2026-09-10T15:32:17.978Z"
+    },
+    {
+      "level": "error",
+      "message": "错误 Error: 请求超时\n    at [URL_REDACTED]",
+      "timestamp": "2026-09-10T15:32:29.074Z"
+    },
+    {
+      "level": "error",
+      "message": "错误 Error: 请求超时\n    at [URL_REDACTED]",
+      "timestamp": "2026-09-10T15:33:38.030Z"
+    },
+    {
+      "level": "error",
+      "message": "错误 Error: 请求超时\n    at [URL_REDACTED]",
+      "timestamp": "2026-09-10T15:33:48.042Z"
+    },
+    {
+      "level": "error",
+      "message": "Uncaught (in promise) Error: timeout, canceled.",
+      "timestamp": "2026-09-10T15:33:56.660Z"
+    },
+    {
+      "level": "error",
+      "message": "错误 Error: 请求超时\n    at [URL_REDACTED]",
+      "timestamp": "2026-09-10T15:34:58.046Z"
+    },
+    {
+      "level": "error",
+      "message": "错误 Error: 请求超时\n    at [URL_REDACTED]",
+      "timestamp": "2026-09-10T15:35:08.294Z"
+    }
+  ],
+  "role": "ORIGIN-ADMIN-01",
+  "runId": "R1-ORIGIN-20260910-100019",
+  "severity": "Observation",
+  "tab15ProcessMatched": true,
+  "tab17ProcessMatched": true,
+  "tab19": {
+    "identityMatched": true,
+    "mainLength": 0,
+    "origin": "https://srworkshopbj.italent.cn",
+    "title": "职位"
+  },
+  "tab3": {
+    "identityMatched": true,
+    "mainLength": 0,
+    "origin": "https://srworkshopbj.italent.cn",
+    "title": "组织"
+  },
+  "toolErrors": [
+    "Runtime.evaluate timed out",
+    "Input.dispatchMouseEvent timed out"
+  ],
+  "unexpectedWritesObserved": false,
+  "finalRead": {
+    "time": "2026-09-10T15:43:48.908Z",
+    "tabId": "19",
+    "title": "职位",
+    "identityMatched": true,
+    "mainLength": 0,
+    "queryInputs": [],
+    "conclusion": "原站职位业务区仍未恢复，不能安全进入岗位编辑/新增；不改变环境/角色限制口径。"
+  }
+}
