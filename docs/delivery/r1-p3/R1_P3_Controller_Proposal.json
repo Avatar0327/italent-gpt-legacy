@@ -23,5 +23,8 @@
     "P3-R1-02",
     "P3-R1-04"
   ],
-  "testCountNote": "原值6指测试条目而非断言数；本次精确条目数以提交SHA对应运行证据为准。"
+  "testCountNote": "原值6指测试条目而非断言数；本次精确条目数以提交SHA对应运行证据为准。",
+  "latestEvidence": "evidence/r1-p3-02-d7-20260910T042138Z.json",
+  "testEntriesPassed": 29,
+  "remainingTasksComplete": false
 }
