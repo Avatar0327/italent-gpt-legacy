@@ -338,26 +338,29 @@
       "evidence": [
         "evidence/r1-p3-20260910T091333336280Z.json",
         "evidence/r1-p3-20260910T092112866567Z.json",
-        "evidence/r1-p3-20260910T092744057535Z.json"
+        "evidence/r1-p3-20260910T092744057535Z.json",
+        "evidence/r1-p3-20260910T093905777390Z.json"
       ],
       "remaining": [
-        "完整对象恢复与备份生成服务/中断恢复进一步验证",
-        "独立安全ledger保守协议/当前授权对账与恢复控制状态机",
+        "备份生成服务/完整恢复控制状态机及当前授权覆盖",
         "30天依赖保留/GC/共同水位监控及分档故障证据",
+        "独立安全未确认命令保持deny，可信fence/对账能力及云端接线仍受平台02约束",
         "任务09整体验证与AC/风险/LIMIT收口"
       ],
       "blockedValidation": [
         "DEP-PLATFORM-01",
         "DEP-PLATFORM-02"
       ],
-      "implementationSha": "01863cfb8b54636cd2340be8415ae36304a5ed23",
+      "implementationSha": "b3efb63ec5e2d639243dd2056ea6bde2f467eb84",
       "subworkCompleted": [
         "4MiB AES-256-GCM/AAD/独立封装密钥/签名与完整对象摘要",
         "实际77持久表基线逐页同水位读取（5项日志/缓存/断言表明确排除）",
         "完整事务日志封印/连续序号及全列镜像校验",
         "有界UTF-8跨块解码和本地独立SQLite基线+增量幂等还原/关闸暂停outbox",
         "文件持久SQL目标丢导入响应后重开恢复",
-        "显式模拟独立对象目标逐范围/整体验证与墓碑字节恢复"
+        "显式模拟独立对象目标逐范围/整体验证与墓碑字节恢复",
+        "独立SQL安全ledger链式签名/CAS/deny-first与双方映像确认",
+        "新challenge当前权证明和通用命令prepare→DB→finalize接线"
       ]
     },
     {
@@ -387,6 +390,6 @@
     }
   ],
   "currentTask": "P3-R1-09",
-  "lastVerifiedSourceSha": "01863cfb8b54636cd2340be8415ae36304a5ed23",
-  "latestRun": "evidence/r1-p3-20260910T092744057535Z.json"
+  "lastVerifiedSourceSha": "b3efb63ec5e2d639243dd2056ea6bde2f467eb84",
+  "latestRun": "evidence/r1-p3-20260910T093905777390Z.json"
 }
