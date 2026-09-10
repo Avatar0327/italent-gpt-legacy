@@ -20,14 +20,15 @@ export function canonical(value:unknown):string {
  throw new HttpError(400,'不支持的命令值','INVALID_INPUT');
 }
 export async function digest(value:unknown){const bytes=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(canonical(value)));return [...new Uint8Array(bytes)].map(b=>b.toString(16).padStart(2,'0')).join('');}
-export type CommandIntent={commandId:string;idempotencyKey:string;action:string;payload:unknown;expectedWorkspaceRevision:number;expectedAuthorizationRevision:number;expectedWriterEpoch:number;expectedRecoveryEpoch:number};
+export type CommandIntent={correlationId?:string;causationId?:string;commandId:string;idempotencyKey:string;action:string;payload:unknown;expectedWorkspaceRevision:number;expectedAuthorizationRevision:number;expectedWriterEpoch:number;expectedRecoveryEpoch:number};
+export function commandTrace(intent:CommandIntent){const trace:Record<string,string>={};for(const key of ['correlationId','causationId'] as const)if(intent[key]!==undefined){if(!/^[A-Za-z0-9:_-]{1,100}$/.test(intent[key]!))throw new HttpError(400,'追踪标识无效','INVALID_INPUT');trace[key]=intent[key]!;}return trace;}
 type Receipt={commandId:string;requestDigest:string;status:string;result:string;workspaceRevision:number};
 export async function replayCommand(db:D1Database,m:Member,stamp:SecurityStamp,intent:CommandIntent){
  requireMember(m);
  if(!sameStamp(stamp,await securityStamp(db,m.tenantId))||intent.expectedAuthorizationRevision!==stamp.authorizationRevision||intent.expectedWriterEpoch!==stamp.writerEpoch||intent.expectedRecoveryEpoch!==stamp.recoveryEpoch)throw new HttpError(409,'权限或写入版本已变化','REVISION_CONFLICT');
  const prior=await db.prepare('SELECT command_id AS commandId,request_digest AS requestDigest,status,result,workspace_revision+1 AS workspaceRevision FROM r1_commands WHERE tenant_id=? AND actor_id=? AND action=? AND idempotency_key=?').bind(m.tenantId,m.userId,intent.action,intent.idempotencyKey).first<Receipt>();
  if(!prior)return null;
- const requestDigest=await digest({action:intent.action,payload:intent.payload,expectedWorkspaceRevision:intent.expectedWorkspaceRevision,expectedAuthorizationRevision:intent.expectedAuthorizationRevision,expectedWriterEpoch:intent.expectedWriterEpoch,expectedRecoveryEpoch:intent.expectedRecoveryEpoch});
+ const requestDigest=await digest({...commandTrace(intent),action:intent.action,payload:intent.payload,expectedWorkspaceRevision:intent.expectedWorkspaceRevision,expectedAuthorizationRevision:intent.expectedAuthorizationRevision,expectedWriterEpoch:intent.expectedWriterEpoch,expectedRecoveryEpoch:intent.expectedRecoveryEpoch});
  if(prior.requestDigest!==requestDigest||prior.commandId!==intent.commandId)throw new HttpError(409,'同一命令键内容冲突','IDEMPOTENCY_CONFLICT');
  if(prior.status!=='committed')throw new HttpError(409,'命令未确认或已归档，请查询原回执','COMMAND_RECEIPT_REQUIRED');
  return {...prior,result:JSON.parse(prior.result) as Record<string,unknown>,replayed:true};
@@ -44,13 +45,13 @@ async function commitCommandInternal(db:D1Database,m:Member,stamp:SecurityStamp,
  for(const v of [intent.expectedWorkspaceRevision,intent.expectedAuthorizationRevision,intent.expectedWriterEpoch,intent.expectedRecoveryEpoch])if(!Number.isSafeInteger(v)||v<0)throw new HttpError(400,'版本号无效','INVALID_INPUT');
  if(!intent.commandId||!intent.idempotencyKey||!intent.action)throw new HttpError(400,'缺少命令标识','INVALID_INPUT');
  if(intent.expectedAuthorizationRevision!==stamp.authorizationRevision||intent.expectedWriterEpoch!==stamp.writerEpoch||intent.expectedRecoveryEpoch!==stamp.recoveryEpoch)throw new HttpError(409,'权限或写入版本已变化','REVISION_CONFLICT');
- const requestDigest=await digest({action:intent.action,payload:intent.payload,expectedWorkspaceRevision:intent.expectedWorkspaceRevision,expectedAuthorizationRevision:intent.expectedAuthorizationRevision,expectedWriterEpoch:intent.expectedWriterEpoch,expectedRecoveryEpoch:intent.expectedRecoveryEpoch});
+ const requestDigest=await digest({...commandTrace(intent),action:intent.action,payload:intent.payload,expectedWorkspaceRevision:intent.expectedWorkspaceRevision,expectedAuthorizationRevision:intent.expectedAuthorizationRevision,expectedWriterEpoch:intent.expectedWriterEpoch,expectedRecoveryEpoch:intent.expectedRecoveryEpoch});
  const prior=await db.prepare('SELECT command_id AS commandId,request_digest AS requestDigest,status,result,workspace_revision+1 AS workspaceRevision FROM r1_commands WHERE tenant_id=? AND actor_id=? AND action=? AND idempotency_key=?').bind(m.tenantId,m.userId,intent.action,intent.idempotencyKey).first<Receipt>();
  if(prior){if(prior.requestDigest!==requestDigest||prior.commandId!==intent.commandId)throw new HttpError(409,'同一命令键内容冲突','IDEMPOTENCY_CONFLICT');if(prior.status==='archived')throw new HttpError(409,'命令已归档，请查历史回执','IDEMPOTENCY_ARCHIVED');return {...prior,result:JSON.parse(prior.result),replayed:true};}
  const token=crypto.randomUUID(),at=new Date().toISOString();
  const body=plan(token);if(body.length>74)throw new HttpError(413,'请按受控批次提交','TRANSACTION_TOO_LARGE');
  const tenant=m.tenantId,revision=intent.expectedWorkspaceRevision;
- const event={schemaVersion:1,eventId:token,eventType:'command.committed',tenantId:tenant,source:'BASE',internalId:intent.commandId,externalId:null,entityRevision:1,workspaceRevision:revision+1,definitionVersion:'r1-command-v1',sourceRevision:revision,occurredAt:at,effectiveAt:at,correlationId:intent.commandId,causationId:intent.commandId,digestAlgorithm:'sha256-canonical-json-v1',payload:{commandId:intent.commandId,action:intent.action}};
+ const event={schemaVersion:1,eventId:token,eventType:'command.committed',tenantId:tenant,source:'BASE',internalId:intent.commandId,externalId:null,entityRevision:1,workspaceRevision:revision+1,definitionVersion:'r1-command-v1',sourceRevision:revision,occurredAt:at,effectiveAt:at,correlationId:intent.correlationId??intent.commandId,causationId:intent.causationId??intent.commandId,digestAlgorithm:'sha256-canonical-json-v1',payload:{commandId:intent.commandId,action:intent.action}};
  const eventPayload=JSON.stringify({...event,digest:await digest(event)});
  const memberScope=typeof m.orgScope==='string'?m.orgScope:JSON.stringify(m.orgScope??[]);
  const {prepareRuntimeSecurityWrite}=await import('./r1-security-runtime');const securityLease=await prepareRuntimeSecurityWrite({tenant,commandId:intent.commandId,requestDigest,authorizationRevision:stamp.authorizationRevision,workspaceRevision:revision,recoveryEpoch:stamp.recoveryEpoch});if(securityLease)m.permissionValidUntil=Math.min(m.permissionValidUntil??Number.MAX_SAFE_INTEGER,securityLease.expiresAt);

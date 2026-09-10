@@ -5,7 +5,7 @@ import {executeWorkflow} from '@/lib/hris/r1-workflow';
 import {executeR1Transfer} from '@/lib/hris/r1-transfer';
 import {executeM01} from '@/lib/hris/r1-m01';
 export const dynamic='force-dynamic';
-const input=z.object({commandId:z.string().uuid(),idempotencyKey:z.string().min(1).max(100),action:z.string().min(1).max(100),payload:z.unknown(),expectedWorkspaceRevision:z.number().int().nonnegative(),expectedAuthorizationRevision:z.number().int().nonnegative(),expectedWriterEpoch:z.number().int().nonnegative(),expectedRecoveryEpoch:z.number().int().nonnegative()}).strict();
+const input=z.object({correlationId:z.string().regex(/^[A-Za-z0-9:_-]{1,100}$/).optional(),causationId:z.string().regex(/^[A-Za-z0-9:_-]{1,100}$/).optional(),commandId:z.string().uuid(),idempotencyKey:z.string().min(1).max(100),action:z.string().min(1).max(100),payload:z.unknown(),expectedWorkspaceRevision:z.number().int().nonnegative(),expectedAuthorizationRevision:z.number().int().nonnegative(),expectedWriterEpoch:z.number().int().nonnegative(),expectedRecoveryEpoch:z.number().int().nonnegative()}).strict();
 export async function POST(request:Request){try{
  const b=input.parse(await readBody(request)),ctx=await memberContext();
  const operation=(b.payload as {operation?:string}|null)?.operation;
