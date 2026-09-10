@@ -1,0 +1,3646 @@
+{
+  "kind": "independent_document_checks_not_product_tests",
+  "startedAt": "2026-09-10T08:03:54.296771+00:00",
+  "finishedAt": "2026-09-10T08:03:56.196473+00:00",
+  "reviewedFinalHead": "8b3daf9270181ffe2e77015be723da8e611d83a5",
+  "fixedDesignHead": "7ff3a28c7660dac658d5243d7c4535a9c8037fc2",
+  "sourceMain": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+  "sharedR1Design": "e15237281ff19f04f08a354fd9455c518b24ae47",
+  "counts": {
+    "modules": 6,
+    "specs": 33,
+    "clauses": 295,
+    "contractDetails": 149,
+    "closures": 24,
+    "moduleAC": 78,
+    "foundationAC": 16,
+    "historicalAC": 17,
+    "historicalTasks": 5,
+    "historicalCriteria": 5,
+    "tasks": 46,
+    "scenarios": 138,
+    "LIMITgroups": 6,
+    "LIMITitems": 52,
+    "dispositions": {
+      "P2_design_closed": 15,
+      "P3_validation": 25,
+      "P4_acceptance": 12
+    }
+  },
+  "checks": [
+    {
+      "id": "final-is-direct-child-of-fixed",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "base-is-ancestor",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "design-change-boundary",
+      "ok": true,
+      "detail": [
+        "docs/delivery/r2-p2/Acceptance_Scenarios.json",
+        "docs/delivery/r2-p2/Approval_Provenance.json",
+        "docs/delivery/r2-p2/Architecture.md",
+        "docs/delivery/r2-p2/Artifact_Manifest.json",
+        "docs/delivery/r2-p2/Boundary_Verification.json",
+        "docs/delivery/r2-p2/Command_Registry.json",
+        "docs/delivery/r2-p2/Commit_Register.json",
+        "docs/delivery/r2-p2/Commit_Register.md",
+        "docs/delivery/r2-p2/Controller_Proposal.json",
+        "docs/delivery/r2-p2/Cross_Module_Contracts.md",
+        "docs/delivery/r2-p2/Design_Checkpoint.json",
+        "docs/delivery/r2-p2/Exit_Review.md",
+        "docs/delivery/r2-p2/Foundations.md",
+        "docs/delivery/r2-p2/Historical_Evidence_Index.json",
+        "docs/delivery/r2-p2/Historical_Test_Provenance.json",
+        "docs/delivery/r2-p2/Interface_Schemas.json",
+        "docs/delivery/r2-p2/Interfaces.md",
+        "docs/delivery/r2-p2/Legacy_Acceptance_Map.json",
+        "docs/delivery/r2-p2/Limit_Resolution.json",
+        "docs/delivery/r2-p2/Limit_Resolution.md",
+        "docs/delivery/r2-p2/M03_Design.md",
+        "docs/delivery/r2-p2/M06_Design.md",
+        "docs/delivery/r2-p2/M17_Design.md",
+        "docs/delivery/r2-p2/M18_Design.md",
+        "docs/delivery/r2-p2/M26_Design.md",
+        "docs/delivery/r2-p2/M37_Design.md",
+        "docs/delivery/r2-p2/Migration_Rollback.md",
+        "docs/delivery/r2-p2/Original_Limits.json",
+        "docs/delivery/r2-p2/P3_Handoff.md",
+        "docs/delivery/r2-p2/P3_Work_Packages.json",
+        "docs/delivery/r2-p2/Permissions.md",
+        "docs/delivery/r2-p2/README.md",
+        "docs/delivery/r2-p2/Recovery_Cost_Responsibilities.md",
+        "docs/delivery/r2-p2/Requirements_Trace.json",
+        "docs/delivery/r2-p2/Resume.md",
+        "docs/delivery/r2-p2/Review_Round1.md",
+        "docs/delivery/r2-p2/Review_Round2.md",
+        "docs/delivery/r2-p2/Source_Manifest.json",
+        "docs/delivery/r2-p2/Source_Requests.json",
+        "docs/delivery/r2-p2/Supplemental_Scenarios.json",
+        "docs/delivery/r2-p2/Traceability.md",
+        "docs/delivery/r2-p2/build_handoff.py",
+        "docs/delivery/r2-p2/build_inventory.py",
+        "docs/delivery/r2-p2/build_resolution.py",
+        "docs/delivery/r2-p2/build_scenarios.py",
+        "docs/delivery/r2-p2/build_schemas.py",
+        "docs/delivery/r2-p2/check_design.py",
+        "docs/delivery/r2-p2/evidence/01-architecture.json",
+        "docs/delivery/r2-p2/evidence/02-m37.json",
+        "docs/delivery/r2-p2/evidence/03-m06.json",
+        "docs/delivery/r2-p2/evidence/04-m26.json",
+        "docs/delivery/r2-p2/evidence/05-m18.json",
+        "docs/delivery/r2-p2/evidence/06-m17.json",
+        "docs/delivery/r2-p2/evidence/07-m03.json",
+        "docs/delivery/r2-p2/evidence/08-foundations-handoff.json",
+        "docs/delivery/r2-p2/evidence/09-review-round1.json",
+        "docs/delivery/r2-p2/evidence/10-review-round2.json",
+        "docs/delivery/r2-p2/evidence/11-final-handoff.json",
+        "docs/delivery/r2-p2/evidence/11-generation-drift.json"
+      ]
+    },
+    {
+      "id": "fixed-design-body-unchanged",
+      "ok": true,
+      "detail": [
+        "docs/delivery/r2-p2/Artifact_Manifest.json",
+        "docs/delivery/r2-p2/Commit_Register.json",
+        "docs/delivery/r2-p2/Commit_Register.md",
+        "docs/delivery/r2-p2/Controller_Proposal.json",
+        "docs/delivery/r2-p2/Design_Checkpoint.json",
+        "docs/delivery/r2-p2/README.md",
+        "docs/delivery/r2-p2/check_design.py",
+        "docs/delivery/r2-p2/evidence/11-final-handoff.json",
+        "docs/delivery/r2-p2/evidence/11-generation-drift.json"
+      ]
+    },
+    {
+      "id": "all-package-json-parses-without-duplicate-keys",
+      "ok": true,
+      "detail": 59
+    },
+    {
+      "id": "proposal-fixed-hash:docs/delivery/r2-p2/Exit_Review.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "proposal-fixed-hash:docs/delivery/r2-p2/Architecture.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "proposal-fixed-hash:docs/delivery/r2-p2/Cross_Module_Contracts.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "proposal-fixed-hash:docs/delivery/r2-p2/Requirements_Trace.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "proposal-fixed-hash:docs/delivery/r2-p2/Limit_Resolution.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "proposal-fixed-hash:docs/delivery/r2-p2/Acceptance_Scenarios.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "proposal-fixed-hash:docs/delivery/r2-p2/P3_Work_Packages.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "proposal-fixed-hash:docs/delivery/r2-p2/Source_Manifest.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "proposal-fixed-hash:docs/delivery/r2-p2/Artifact_Manifest.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "proposal-fixed-hash:docs/delivery/r2-p2/Review_Round1.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "proposal-fixed-hash:docs/delivery/r2-p2/Review_Round2.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-paths-unique:7ff3a28c7660dac658d5243d7c4535a9c8037fc2",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Acceptance_Scenarios.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Approval_Provenance.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Architecture.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Boundary_Verification.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Command_Registry.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Controller_Proposal.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Cross_Module_Contracts.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Design_Checkpoint.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Exit_Review.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Foundations.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Historical_Evidence_Index.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Historical_Test_Provenance.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Interface_Schemas.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Interfaces.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Legacy_Acceptance_Map.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Limit_Resolution.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Limit_Resolution.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/M03_Design.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/M06_Design.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/M17_Design.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/M18_Design.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/M26_Design.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/M37_Design.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Migration_Rollback.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Original_Limits.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/P3_Handoff.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/P3_Work_Packages.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Permissions.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/README.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Recovery_Cost_Responsibilities.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Requirements_Trace.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Resume.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Review_Round1.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Review_Round2.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Source_Manifest.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Source_Requests.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Supplemental_Scenarios.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/Traceability.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/build_handoff.py",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/build_inventory.py",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/build_resolution.py",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/build_scenarios.py",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/build_schemas.py",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:7ff3a28c7660dac658d5243d7c4535a9c8037fc2:docs/delivery/r2-p2/check_design.py",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-no-self-or-evidence:7ff3a28c7660dac658d5243d7c4535a9c8037fc2",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-paths-unique:8b3daf9270181ffe2e77015be723da8e611d83a5",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Acceptance_Scenarios.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Approval_Provenance.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Architecture.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Boundary_Verification.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Command_Registry.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Commit_Register.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Commit_Register.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Controller_Proposal.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Cross_Module_Contracts.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Design_Checkpoint.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Exit_Review.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Foundations.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Historical_Evidence_Index.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Historical_Test_Provenance.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Interface_Schemas.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Interfaces.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Legacy_Acceptance_Map.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Limit_Resolution.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Limit_Resolution.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/M03_Design.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/M06_Design.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/M17_Design.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/M18_Design.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/M26_Design.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/M37_Design.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Migration_Rollback.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Original_Limits.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/P3_Handoff.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/P3_Work_Packages.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Permissions.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/README.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Recovery_Cost_Responsibilities.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Requirements_Trace.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Resume.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Review_Round1.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Review_Round2.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Source_Manifest.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Source_Requests.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Supplemental_Scenarios.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/Traceability.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/build_handoff.py",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/build_inventory.py",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/build_resolution.py",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/build_scenarios.py",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/build_schemas.py",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-hash:8b3daf9270181ffe2e77015be723da8e611d83a5:docs/delivery/r2-p2/check_design.py",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "artifact-no-self-or-evidence:8b3daf9270181ffe2e77015be723da8e611d83a5",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-ref-paths-unique",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:app/api/attachments/route.ts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:app/api/cadres/route.ts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:app/api/development/route.ts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:app/api/feedback/route.ts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:app/api/qualifications/route.ts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:app/development/workspace.tsx",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:app/qualifications/workspace.tsx",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/HRIS_Project_Plan.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/P1_Source_Observations_20260907.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/P3_360_Acceptance.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/P3_Cadre_Acceptance.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/P3_Cadre_Profiles_Acceptance.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/P3_Qualification_Acceptance.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/P3_Talent_Learning_Acceptance.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/Recovery_Rehearsal.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/Recovery_Synthetic_Report.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/Cadre_Interview_Delivery.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/Cadre_Interview_Regression.tap",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/Cadre_Interview_Verification.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/Cadre_Learning_Source_Gaps.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/Cadre_Terms_Delivery.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/Cadre_Terms_Test_Output.tap",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/Controller_Lifecycle_Review.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/Controller_Lifecycle_Run.tap",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/Controller_Lifecycle_Verification.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/F01_F04_Requirements_Baseline.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/G1_Integration_Test_Output.tap",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/G1_Integration_Test_Result.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/G1_PreAcceptance_Report.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/Integration_Adapter_Contract.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/P1B_BP_C_Specification.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/P1B_Implementation_Map.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/P1_Approval_Records.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/P1_Final_Closure.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/P1_M03_Review_Package.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/P1_M06_Review_Package.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/P1_M17_Review_Package.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/P1_M18_Review_Package.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/P1_M26_Review_Package.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/P1_M37_Review_Package.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/P1_Module_Closure.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/P1_R2_P2_Handoff.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/P1_R2_Review_Package.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/R2_P2_Start_Prompt.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:docs/delivery/Scope_Register.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:lib/hris/authorization.ts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:lib/hris/cadre-interview-fields.ts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:lib/hris/cadre-interviews.ts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:lib/hris/cadre-terms.ts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:lib/hris/cadres.ts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:lib/hris/context.ts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:lib/hris/development-repository.ts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:lib/hris/development.ts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:lib/hris/feedback.ts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:lib/hris/http.ts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:lib/hris/qualification.ts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:lib/hris/reports.ts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:lib/hris/repository.ts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:lib/hris/review-versions.ts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:lib/hris/surveys.ts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:lib/hris/work-inbox.ts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:scripts/check-p1-baseline.py",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:scripts/render-p1-baseline.py",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:22be3a7e366d6787180d4f593a30f5984c70e03a:tests/p3-api.test.mjs",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:e15237281ff19f04f08a354fd9455c518b24ae47:docs/delivery/r1-p2/R1_P2_Architecture.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:e15237281ff19f04f08a354fd9455c518b24ae47:docs/delivery/r1-p2/R1_P2_Backup_Recovery.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:e15237281ff19f04f08a354fd9455c518b24ae47:docs/delivery/r1-p2/R1_P2_Consistency_Resolutions.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:e15237281ff19f04f08a354fd9455c518b24ae47:docs/delivery/r1-p2/R1_P2_Interfaces_Exceptions.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:e15237281ff19f04f08a354fd9455c518b24ae47:docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:e15237281ff19f04f08a354fd9455c518b24ae47:docs/delivery/r1-p2/R1_P2_M19_Workflow_Transactions.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:e15237281ff19f04f08a354fd9455c518b24ae47:docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:e15237281ff19f04f08a354fd9455c518b24ae47:docs/delivery/r1-p2/R1_P2_M48_Authorization_Consumers.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:e15237281ff19f04f08a354fd9455c518b24ae47:docs/delivery/r1-p2/R1_P2_Migration_Rollback.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:e15237281ff19f04f08a354fd9455c518b24ae47:docs/delivery/r1-p2/R1_P2_Owner_Exit_Approval.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:e15237281ff19f04f08a354fd9455c518b24ae47:docs/delivery/r1-p2/R1_P2_P3_Handoff.md",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:e15237281ff19f04f08a354fd9455c518b24ae47:docs/delivery/r1-p2/R1_P2_P3_Work_Packages.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:e15237281ff19f04f08a354fd9455c518b24ae47:docs/delivery/r1-p2/R1_P2_Report_Datasets.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "source-hash:e15237281ff19f04f08a354fd9455c518b24ae47:docs/delivery/r1-p2/R1_P2_Report_Field_Dictionary.json",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "approval-exact-source:M37-P1-APPROVAL-R2-20260909",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "approval-reviewed-hash:M37-P1-APPROVAL-R2-20260909",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "approval-exact-source:M06-P1-APPROVAL-R2-20260909",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "approval-reviewed-hash:M06-P1-APPROVAL-R2-20260909",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "approval-exact-source:M26-P1-APPROVAL-20260910",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "approval-reviewed-hash:M26-P1-APPROVAL-20260910",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "approval-exact-source:M18-P1-APPROVAL-20260910",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "approval-reviewed-hash:M18-P1-APPROVAL-20260910",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "approval-exact-source:M17-P1-APPROVAL-20260910",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "approval-reviewed-hash:M17-P1-APPROVAL-20260910",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "approval-exact-source:M03-P1-APPROVAL-20260910",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "approval-reviewed-hash:M03-P1-APPROVAL-20260910",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "approval-exact-source:R2-P1-P2-TRANSITION-20260910",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "approval-reviewed-hash:R2-P1-P2-TRANSITION-20260910",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "trace-scope-digest",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "approved-spec-set",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M37-SPEC-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M37-SPEC-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M37-SPEC-02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M37-SPEC-02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M37-SPEC-03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M37-SPEC-03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M37-SPEC-04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M37-SPEC-04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M37-SPEC-05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M37-SPEC-05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M06-SPEC-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M06-SPEC-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M06-SPEC-02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M06-SPEC-02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M06-SPEC-03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M06-SPEC-03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M06-SPEC-04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M06-SPEC-04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M06-SPEC-05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M06-SPEC-05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M26-SPEC-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M26-SPEC-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M26-SPEC-02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M26-SPEC-02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M26-SPEC-03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M26-SPEC-03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M26-SPEC-04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M26-SPEC-04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M26-SPEC-05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M26-SPEC-05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M18-SPEC-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M18-SPEC-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M18-SPEC-02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M18-SPEC-02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M18-SPEC-03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M18-SPEC-03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M18-SPEC-04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M18-SPEC-04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M18-SPEC-05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M18-SPEC-05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M17-SPEC-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M17-SPEC-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M17-SPEC-02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M17-SPEC-02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M17-SPEC-03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M17-SPEC-03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M17-SPEC-04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M17-SPEC-04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M17-SPEC-05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M17-SPEC-05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M17-SPEC-06",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M17-SPEC-06",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M03-SPEC-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M03-SPEC-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M03-SPEC-02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M03-SPEC-02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M03-SPEC-03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M03-SPEC-03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M03-SPEC-04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M03-SPEC-04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M03-SPEC-05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M03-SPEC-05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:M03-SPEC-06",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:M03-SPEC-06",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-exact-source:R2-BASELINE-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "spec-approval-content:R2-BASELINE-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "all-295-clauses-exact",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "149-details-exact-source",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "24-closures-exact-source",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-repeated-ids-do-not-conflict",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-exact-source-set",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M03-REVIEW-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M03-REVIEW-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M03-REVIEW-AC03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M03-REVIEW-AC04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M03-REVIEW-AC05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M03-REVIEW-AC06",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M03-REVIEW-AC07",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M03-REVIEW-AC08",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M03-REVIEW-AC09",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M03-REVIEW-AC10",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M03-REVIEW-AC11",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M03-REVIEW-AC12",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M03-REVIEW-AC13",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M03-REVIEW-AC14",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M06-REVIEW-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M06-REVIEW-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M06-REVIEW-AC03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M06-REVIEW-AC04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M06-REVIEW-AC05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M06-REVIEW-AC06",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M06-REVIEW-AC07",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M06-REVIEW-AC08",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M06-REVIEW-AC09",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M06-REVIEW-AC10",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M06-REVIEW-AC11",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M06-REVIEW-AC12",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M06-REVIEW-AC13",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BP-C-REQ-03-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BP-C-REQ-03-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BP-C-REQ-03-AC03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BP-C-REQ-03-AC04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BP-C-REQ-03-AC05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BP-C-REQ-03-AC06",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BP-C-REQ-03-AC07",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BP-C-REQ-03-AC08",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M26-REVIEW-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M26-REVIEW-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M26-REVIEW-AC03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M26-REVIEW-AC04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M26-REVIEW-AC05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M26-REVIEW-AC06",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M26-REVIEW-AC07",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M26-REVIEW-AC08",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M26-REVIEW-AC09",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M26-REVIEW-AC10",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M26-REVIEW-AC11",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M26-REVIEW-AC12",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BP-C-REQ-04-BC30-1",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BP-C-REQ-04-BC30-2",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BP-C-REQ-04-BC30-3",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BP-C-REQ-04-BC30-4",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M17-HISTORY-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M17-SCOPE-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M17-REPORT-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M17-REVIEW-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M17-REVIEW-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M17-REVIEW-AC03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M17-REVIEW-AC04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M17-REVIEW-AC05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M17-REVIEW-AC06",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M17-REVIEW-AC07",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M17-REVIEW-AC08",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M17-REVIEW-AC09",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M17-REVIEW-AC10",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M17-REVIEW-AC11",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M17-REVIEW-AC12",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M17-REVIEW-AC13",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M17-REVIEW-AC14",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M17-IDP-RECOVERY-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M17-IDP-STATE-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M37-REVIEW-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M37-REVIEW-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M37-REVIEW-AC03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M37-REVIEW-AC04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M37-REVIEW-AC05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M37-REVIEW-AC06",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M37-REVIEW-AC07",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M37-REVIEW-AC08",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M37-REVIEW-AC09",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M37-REVIEW-AC10",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M37-REVIEW-AC11",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M37-REVIEW-AC12",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M18-REVIEW-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M18-REVIEW-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M18-REVIEW-AC03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M18-REVIEW-AC04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M18-REVIEW-AC05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M18-REVIEW-AC06",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M18-REVIEW-AC07",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M18-REVIEW-AC08",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M18-REVIEW-AC09",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M18-REVIEW-AC10",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M18-REVIEW-AC11",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M18-REVIEW-AC12",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:M18-REVIEW-AC13",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BASE-01-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BASE-01-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BASE-02-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BASE-02-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BASE-02-AC03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BASE-03-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BASE-03-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BASE-04-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BASE-04-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BASE-04-AC03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BASE-04-AC04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BASE-05-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BASE-05-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BASE-06-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BASE-06-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "acceptance-source:BASE-06-AC03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "approved-module-AC-set",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "unique:specs",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "design-refs:specs",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "unique:clauses",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "design-refs:clauses",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "unique:contractDetails",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "design-refs:contractDetails",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "unique:closures",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "design-refs:closures",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "unique:foundations",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "design-refs:foundations",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "unique:acceptanceIds",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "design-refs:acceptanceIds",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "unique:historicalTasks",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "unique-scenarios",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "unique-tasks",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "all-scenarios-not-run",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "all-tasks-not-started",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "all-GWT-evidence-exists",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "scenario-task-links",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "task-scenario-links",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M03-REVIEW-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M03-REVIEW-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M03-REVIEW-AC03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M03-REVIEW-AC04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M03-REVIEW-AC05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M03-REVIEW-AC06",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M03-REVIEW-AC07",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M03-REVIEW-AC08",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M03-REVIEW-AC09",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M03-REVIEW-AC10",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M03-REVIEW-AC11",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M03-REVIEW-AC12",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M03-REVIEW-AC13",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M03-REVIEW-AC14",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M06-REVIEW-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M06-REVIEW-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M06-REVIEW-AC03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M06-REVIEW-AC04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M06-REVIEW-AC05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M06-REVIEW-AC06",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M06-REVIEW-AC07",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M06-REVIEW-AC08",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M06-REVIEW-AC09",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M06-REVIEW-AC10",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M06-REVIEW-AC11",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M06-REVIEW-AC12",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M06-REVIEW-AC13",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M26-REVIEW-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M26-REVIEW-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M26-REVIEW-AC03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M26-REVIEW-AC04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M26-REVIEW-AC05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M26-REVIEW-AC06",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M26-REVIEW-AC07",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M26-REVIEW-AC08",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M26-REVIEW-AC09",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M26-REVIEW-AC10",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M26-REVIEW-AC11",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M26-REVIEW-AC12",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M17-REVIEW-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M17-REVIEW-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M17-REVIEW-AC03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M17-REVIEW-AC04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M17-REVIEW-AC05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M17-REVIEW-AC06",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M17-REVIEW-AC07",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M17-REVIEW-AC08",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M17-REVIEW-AC09",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M17-REVIEW-AC10",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M17-REVIEW-AC11",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M17-REVIEW-AC12",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M17-REVIEW-AC13",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M17-REVIEW-AC14",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M37-REVIEW-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M37-REVIEW-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M37-REVIEW-AC03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M37-REVIEW-AC04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M37-REVIEW-AC05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M37-REVIEW-AC06",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M37-REVIEW-AC07",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M37-REVIEW-AC08",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M37-REVIEW-AC09",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M37-REVIEW-AC10",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M37-REVIEW-AC11",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M37-REVIEW-AC12",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M18-REVIEW-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M18-REVIEW-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M18-REVIEW-AC03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M18-REVIEW-AC04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M18-REVIEW-AC05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M18-REVIEW-AC06",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M18-REVIEW-AC07",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M18-REVIEW-AC08",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M18-REVIEW-AC09",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M18-REVIEW-AC10",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M18-REVIEW-AC11",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M18-REVIEW-AC12",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:M18-REVIEW-AC13",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:BASE-01-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:BASE-01-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:BASE-02-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:BASE-02-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:BASE-02-AC03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:BASE-03-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:BASE-03-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:BASE-04-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:BASE-04-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:BASE-04-AC03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:BASE-04-AC04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:BASE-05-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:BASE-05-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:BASE-06-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:BASE-06-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "GWT-source-preserved:BASE-06-AC03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "trace-scenario-resolution:specs",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "trace-scenario-resolution:clauses",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "trace-scenario-resolution:contractDetails",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "trace-scenario-resolution:closures",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "trace-scenario-resolution:foundations",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "trace-scenario-resolution:acceptanceIds",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-17-set",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-original:BP-C-REQ-03-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-refs:BP-C-REQ-03-AC01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-original:BP-C-REQ-03-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-refs:BP-C-REQ-03-AC02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-original:BP-C-REQ-03-AC03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-refs:BP-C-REQ-03-AC03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-original:BP-C-REQ-03-AC04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-refs:BP-C-REQ-03-AC04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-original:BP-C-REQ-03-AC05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-refs:BP-C-REQ-03-AC05",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-original:BP-C-REQ-03-AC06",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-refs:BP-C-REQ-03-AC06",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-original:BP-C-REQ-03-AC07",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-refs:BP-C-REQ-03-AC07",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-original:BP-C-REQ-03-AC08",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-refs:BP-C-REQ-03-AC08",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-original:BP-C-REQ-04-BC30-1",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-refs:BP-C-REQ-04-BC30-1",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-original:BP-C-REQ-04-BC30-2",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-refs:BP-C-REQ-04-BC30-2",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-original:BP-C-REQ-04-BC30-3",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-refs:BP-C-REQ-04-BC30-3",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-original:BP-C-REQ-04-BC30-4",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-refs:BP-C-REQ-04-BC30-4",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-original:M17-HISTORY-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-refs:M17-HISTORY-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-original:M17-SCOPE-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-refs:M17-SCOPE-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-original:M17-REPORT-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-refs:M17-REPORT-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-original:M17-IDP-RECOVERY-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-refs:M17-IDP-RECOVERY-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-original:M17-IDP-STATE-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-refs:M17-IDP-STATE-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-task:C01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-task:C02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-task:C-LIFECYCLE-REVIEW",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-task:P1-C-RULES",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "legacy-task:C-INTERVIEW-REGISTER",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "LIMIT-original-exact",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "LIMIT-unique",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "LIMIT-counts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "LIMIT-phases:M37",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "LIMIT-phases:M06",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "LIMIT-phases:M26",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "LIMIT-phases:M18",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "LIMIT-phases:M17",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "LIMIT-phases:M03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "independent-counts",
+      "ok": true,
+      "detail": {
+        "modules": 6,
+        "specs": 33,
+        "clauses": 295,
+        "contractDetails": 149,
+        "closures": 24,
+        "moduleAC": 78,
+        "foundationAC": 16,
+        "historicalAC": 17,
+        "historicalTasks": 5,
+        "historicalCriteria": 5,
+        "tasks": 46,
+        "scenarios": 138,
+        "LIMITgroups": 6,
+        "LIMITitems": 52,
+        "dispositions": {
+          "P2_design_closed": 15,
+          "P3_validation": 25,
+          "P4_acceptance": 12
+        }
+      }
+    },
+    {
+      "id": "approval-stage-boundary",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "generation-reproduction",
+      "ok": true,
+      "detail": {
+        "drift": [],
+        "runs": [
+          {
+            "script": "build_inventory.py",
+            "exitCode": 0,
+            "stdout": "{\"inventoryCounts\": {\"specs\": 33, \"clauses\": 295, \"contractDetails\": 149, \"closures\": 24, \"approvedModuleAcceptance\": 78, \"historicalAcceptance\": 17, \"foundationAcceptance\": 16, \"historicalTasks\": 5}, \"sources\": 78}\n",
+            "stderr": ""
+          },
+          {
+            "script": "build_resolution.py",
+            "exitCode": 0,
+            "stdout": "{\"limitItems\": 52, \"dispositions\": {\"P2_design_closed\": 15, \"P3_validation\": 25, \"P4_acceptance\": 12}, \"sourceRequests\": 7, \"legacyAcceptance\": 17, \"historicalTasks\": 5}\n",
+            "stderr": ""
+          },
+          {
+            "script": "build_scenarios.py",
+            "exitCode": 0,
+            "stdout": "{\"supplementalTasks\": 8, \"supplementalScenarios\": 44}\n",
+            "stderr": ""
+          },
+          {
+            "script": "build_schemas.py",
+            "exitCode": 0,
+            "stdout": "{\"definitions\": 69, \"commandBindings\": 76}\n",
+            "stderr": ""
+          },
+          {
+            "script": "build_handoff.py",
+            "exitCode": 0,
+            "stdout": "{\"tasks\": 46, \"scenarios\": 138, \"tasksWithoutScenarios\": []}\n",
+            "stderr": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "schema-local-structure",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "schema-registry-action-set",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m37.library.create",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m37.indicator.create",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m37.standard.create",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m37.standard.edit",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m06.catalog.create",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m06.catalog.edit",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m06.standard.create",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m06.application.submit",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m26.questionnaire.create",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m26.project.create",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m26.invite.revise",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m26.response.submit",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m26.report.publish",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m18.project.create",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m18.project.save",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m18.grid.save",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m18.calibration.submit",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m17.pool.create",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m17.rule.publish",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m17.membership.apply",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m17.membership.reenter",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m17.succession.nominate",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m17.mentor.handoff",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m17.template.create",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m17.idp.create",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m17.idp.taskAction",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m03.nomination.submit",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m03.appointment.reconcile",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m03.evaluation.create",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m03.evaluation.save",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m03.observation.action",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m03.interview.create",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m03.interview.correct",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m37.standard.submit",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m37.standard.review",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m37.standard.publish",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m37.standard.withdraw",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m06.standard.submit",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m06.standard.review",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m06.standard.publish",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m06.standard.withdraw",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m26.project.submit",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m26.project.review",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m26.project.withdraw",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m18.result.submit",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m18.result.review",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m18.result.publish",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m18.result.withdraw",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m17.idp.submit",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m17.idp.review",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m17.idp.withdraw",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m03.report.submit",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m03.report.review",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m03.report.publish",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m03.report.withdraw",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m37.availability.change",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m06.availability.change",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m06.certification.revoke",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m26.project.open",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m26.project.close",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m26.project.reopen",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m26.response.withdraw",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m26.report.withdraw",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m18.project.start",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m18.project.close",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m18.project.reopen",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m18.result.withdrawPublication",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m17.membership.exit",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m17.succession.close",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m17.idp.start",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m17.idp.extend",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m17.idp.pause",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m17.idp.resume",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m17.idp.terminate",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m03.term.change",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "schema-binding:r2.m03.interview.cancel",
+      "ok": true,
+      "detail": null
+    }
+  ],
+  "checkCount": 638,
+  "failedChecks": [],
+  "familyInheritedClauseMappings": [
+    "M37-SPEC-01-CLAUSE-01",
+    "M37-SPEC-01-CLAUSE-02",
+    "M37-SPEC-01-CLAUSE-03",
+    "M37-SPEC-01-CLAUSE-04",
+    "M37-SPEC-01-CLAUSE-05",
+    "M37-SPEC-01-CLAUSE-06",
+    "M37-SPEC-01-CLAUSE-07",
+    "M37-SPEC-01-CLAUSE-08",
+    "M37-SPEC-01-CLAUSE-09",
+    "M37-SPEC-01-CLAUSE-10",
+    "M37-SPEC-02-CLAUSE-01",
+    "M37-SPEC-02-CLAUSE-02",
+    "M37-SPEC-02-CLAUSE-03",
+    "M37-SPEC-02-CLAUSE-04",
+    "M37-SPEC-02-CLAUSE-05",
+    "M37-SPEC-02-CLAUSE-06",
+    "M37-SPEC-02-CLAUSE-07",
+    "M37-SPEC-02-CLAUSE-08",
+    "M37-SPEC-02-CLAUSE-09",
+    "M37-SPEC-02-CLAUSE-10",
+    "M37-SPEC-02-CLAUSE-11",
+    "M37-SPEC-02-CLAUSE-12",
+    "M37-SPEC-03-CLAUSE-01",
+    "M37-SPEC-03-CLAUSE-02",
+    "M37-SPEC-03-CLAUSE-03",
+    "M37-SPEC-03-CLAUSE-04",
+    "M37-SPEC-03-CLAUSE-05",
+    "M37-SPEC-03-CLAUSE-06",
+    "M37-SPEC-03-CLAUSE-07",
+    "M37-SPEC-03-CLAUSE-08",
+    "M37-SPEC-03-CLAUSE-09",
+    "M37-SPEC-03-CLAUSE-10",
+    "M37-SPEC-03-CLAUSE-11",
+    "M37-SPEC-04-CLAUSE-01",
+    "M37-SPEC-04-CLAUSE-02",
+    "M37-SPEC-04-CLAUSE-03",
+    "M37-SPEC-04-CLAUSE-04",
+    "M37-SPEC-04-CLAUSE-05",
+    "M37-SPEC-04-CLAUSE-06",
+    "M37-SPEC-04-CLAUSE-07",
+    "M37-SPEC-05-CLAUSE-01",
+    "M37-SPEC-05-CLAUSE-02",
+    "M37-SPEC-05-CLAUSE-03",
+    "M37-SPEC-05-CLAUSE-04",
+    "M37-SPEC-05-CLAUSE-05",
+    "M37-SPEC-05-CLAUSE-06",
+    "M37-SPEC-05-CLAUSE-07",
+    "M37-SPEC-05-CLAUSE-08",
+    "M37-SPEC-05-CLAUSE-09",
+    "M37-SPEC-05-CLAUSE-10",
+    "M06-SPEC-01-CLAUSE-01",
+    "M06-SPEC-01-CLAUSE-02",
+    "M06-SPEC-01-CLAUSE-03",
+    "M06-SPEC-01-CLAUSE-04",
+    "M06-SPEC-01-CLAUSE-05",
+    "M06-SPEC-01-CLAUSE-06",
+    "M06-SPEC-01-CLAUSE-07",
+    "M06-SPEC-01-CLAUSE-08",
+    "M06-SPEC-01-CLAUSE-09",
+    "M06-SPEC-01-CLAUSE-10",
+    "M06-SPEC-01-CLAUSE-11",
+    "M06-SPEC-01-CLAUSE-12",
+    "M06-SPEC-02-CLAUSE-01",
+    "M06-SPEC-02-CLAUSE-02",
+    "M06-SPEC-02-CLAUSE-03",
+    "M06-SPEC-02-CLAUSE-04",
+    "M06-SPEC-02-CLAUSE-05",
+    "M06-SPEC-02-CLAUSE-06",
+    "M06-SPEC-02-CLAUSE-07",
+    "M06-SPEC-02-CLAUSE-08",
+    "M06-SPEC-02-CLAUSE-09",
+    "M06-SPEC-02-CLAUSE-10",
+    "M06-SPEC-03-CLAUSE-01",
+    "M06-SPEC-03-CLAUSE-02",
+    "M06-SPEC-03-CLAUSE-03",
+    "M06-SPEC-03-CLAUSE-04",
+    "M06-SPEC-03-CLAUSE-05",
+    "M06-SPEC-03-CLAUSE-06",
+    "M06-SPEC-03-CLAUSE-07",
+    "M06-SPEC-03-CLAUSE-08",
+    "M06-SPEC-03-CLAUSE-09",
+    "M06-SPEC-03-CLAUSE-10",
+    "M06-SPEC-04-CLAUSE-01",
+    "M06-SPEC-04-CLAUSE-02",
+    "M06-SPEC-04-CLAUSE-03",
+    "M06-SPEC-04-CLAUSE-04",
+    "M06-SPEC-04-CLAUSE-05",
+    "M06-SPEC-04-CLAUSE-06",
+    "M06-SPEC-04-CLAUSE-07",
+    "M06-SPEC-04-CLAUSE-08",
+    "M06-SPEC-04-CLAUSE-09",
+    "M06-SPEC-04-CLAUSE-10",
+    "M06-SPEC-04-CLAUSE-11",
+    "M06-SPEC-04-CLAUSE-12",
+    "M06-SPEC-04-CLAUSE-13",
+    "M06-SPEC-04-CLAUSE-14",
+    "M06-SPEC-05-CLAUSE-01",
+    "M06-SPEC-05-CLAUSE-02",
+    "M06-SPEC-05-CLAUSE-03",
+    "M06-SPEC-05-CLAUSE-04",
+    "M06-SPEC-05-CLAUSE-05",
+    "M06-SPEC-05-CLAUSE-06",
+    "M06-SPEC-05-CLAUSE-07",
+    "M06-SPEC-05-CLAUSE-08",
+    "M06-SPEC-05-CLAUSE-09",
+    "M06-SPEC-05-CLAUSE-10",
+    "M06-SPEC-05-CLAUSE-11",
+    "M26-SPEC-01-CLAUSE-01",
+    "M26-SPEC-01-CLAUSE-02",
+    "M26-SPEC-01-CLAUSE-03",
+    "M26-SPEC-01-CLAUSE-04",
+    "M26-SPEC-01-CLAUSE-05",
+    "M26-SPEC-01-CLAUSE-06",
+    "M26-SPEC-01-CLAUSE-07",
+    "M26-SPEC-01-CLAUSE-08",
+    "M26-SPEC-02-CLAUSE-01",
+    "M26-SPEC-02-CLAUSE-02",
+    "M26-SPEC-02-CLAUSE-03",
+    "M26-SPEC-02-CLAUSE-04",
+    "M26-SPEC-02-CLAUSE-05",
+    "M26-SPEC-02-CLAUSE-06",
+    "M26-SPEC-02-CLAUSE-07",
+    "M26-SPEC-02-CLAUSE-08",
+    "M26-SPEC-03-CLAUSE-01",
+    "M26-SPEC-03-CLAUSE-02",
+    "M26-SPEC-03-CLAUSE-03",
+    "M26-SPEC-03-CLAUSE-04",
+    "M26-SPEC-03-CLAUSE-05",
+    "M26-SPEC-03-CLAUSE-06",
+    "M26-SPEC-03-CLAUSE-07",
+    "M26-SPEC-03-CLAUSE-08",
+    "M26-SPEC-03-CLAUSE-09",
+    "M26-SPEC-04-CLAUSE-01",
+    "M26-SPEC-04-CLAUSE-02",
+    "M26-SPEC-04-CLAUSE-03",
+    "M26-SPEC-04-CLAUSE-04",
+    "M26-SPEC-04-CLAUSE-05",
+    "M26-SPEC-04-CLAUSE-06",
+    "M26-SPEC-04-CLAUSE-07",
+    "M26-SPEC-04-CLAUSE-08",
+    "M26-SPEC-04-CLAUSE-09",
+    "M26-SPEC-05-CLAUSE-01",
+    "M26-SPEC-05-CLAUSE-02",
+    "M26-SPEC-05-CLAUSE-03",
+    "M26-SPEC-05-CLAUSE-04",
+    "M26-SPEC-05-CLAUSE-05",
+    "M26-SPEC-05-CLAUSE-06",
+    "M26-SPEC-05-CLAUSE-07",
+    "M26-SPEC-05-CLAUSE-08",
+    "M18-SPEC-01-CLAUSE-01",
+    "M18-SPEC-01-CLAUSE-02",
+    "M18-SPEC-01-CLAUSE-03",
+    "M18-SPEC-01-CLAUSE-04",
+    "M18-SPEC-01-CLAUSE-05",
+    "M18-SPEC-01-CLAUSE-06",
+    "M18-SPEC-02-CLAUSE-01",
+    "M18-SPEC-02-CLAUSE-02",
+    "M18-SPEC-02-CLAUSE-03",
+    "M18-SPEC-02-CLAUSE-04",
+    "M18-SPEC-02-CLAUSE-05",
+    "M18-SPEC-02-CLAUSE-06",
+    "M18-SPEC-02-CLAUSE-07",
+    "M18-SPEC-03-CLAUSE-01",
+    "M18-SPEC-03-CLAUSE-02",
+    "M18-SPEC-03-CLAUSE-03",
+    "M18-SPEC-03-CLAUSE-04",
+    "M18-SPEC-03-CLAUSE-05",
+    "M18-SPEC-03-CLAUSE-06",
+    "M18-SPEC-03-CLAUSE-07",
+    "M18-SPEC-03-CLAUSE-08",
+    "M18-SPEC-03-CLAUSE-09",
+    "M18-SPEC-03-CLAUSE-10",
+    "M18-SPEC-04-CLAUSE-01",
+    "M18-SPEC-04-CLAUSE-02",
+    "M18-SPEC-04-CLAUSE-03",
+    "M18-SPEC-04-CLAUSE-04",
+    "M18-SPEC-04-CLAUSE-05",
+    "M18-SPEC-04-CLAUSE-06",
+    "M18-SPEC-04-CLAUSE-07",
+    "M18-SPEC-04-CLAUSE-08",
+    "M18-SPEC-04-CLAUSE-09",
+    "M18-SPEC-04-CLAUSE-10",
+    "M18-SPEC-05-CLAUSE-01",
+    "M18-SPEC-05-CLAUSE-02",
+    "M18-SPEC-05-CLAUSE-03",
+    "M18-SPEC-05-CLAUSE-04",
+    "M18-SPEC-05-CLAUSE-05",
+    "M18-SPEC-05-CLAUSE-06",
+    "M18-SPEC-05-CLAUSE-07",
+    "M18-SPEC-05-CLAUSE-08",
+    "M17-SPEC-01-CLAUSE-01",
+    "M17-SPEC-01-CLAUSE-02",
+    "M17-SPEC-01-CLAUSE-03",
+    "M17-SPEC-01-CLAUSE-04",
+    "M17-SPEC-01-CLAUSE-05",
+    "M17-SPEC-01-CLAUSE-06",
+    "M17-SPEC-01-CLAUSE-07",
+    "M17-SPEC-01-CLAUSE-08",
+    "M17-SPEC-02-CLAUSE-01",
+    "M17-SPEC-02-CLAUSE-02",
+    "M17-SPEC-02-CLAUSE-03",
+    "M17-SPEC-02-CLAUSE-04",
+    "M17-SPEC-02-CLAUSE-05",
+    "M17-SPEC-02-CLAUSE-06",
+    "M17-SPEC-02-CLAUSE-07",
+    "M17-SPEC-02-CLAUSE-08",
+    "M17-SPEC-03-CLAUSE-01",
+    "M17-SPEC-03-CLAUSE-02",
+    "M17-SPEC-03-CLAUSE-03",
+    "M17-SPEC-03-CLAUSE-04",
+    "M17-SPEC-03-CLAUSE-05",
+    "M17-SPEC-03-CLAUSE-06",
+    "M17-SPEC-03-CLAUSE-07",
+    "M17-SPEC-04-CLAUSE-01",
+    "M17-SPEC-04-CLAUSE-02",
+    "M17-SPEC-04-CLAUSE-03",
+    "M17-SPEC-04-CLAUSE-04",
+    "M17-SPEC-04-CLAUSE-05",
+    "M17-SPEC-04-CLAUSE-06",
+    "M17-SPEC-04-CLAUSE-07",
+    "M17-SPEC-04-CLAUSE-08",
+    "M17-SPEC-04-CLAUSE-09",
+    "M17-SPEC-04-CLAUSE-10",
+    "M17-SPEC-05-CLAUSE-01",
+    "M17-SPEC-05-CLAUSE-02",
+    "M17-SPEC-05-CLAUSE-03",
+    "M17-SPEC-05-CLAUSE-04",
+    "M17-SPEC-05-CLAUSE-05",
+    "M17-SPEC-05-CLAUSE-06",
+    "M17-SPEC-05-CLAUSE-07",
+    "M17-SPEC-05-CLAUSE-08",
+    "M17-SPEC-06-CLAUSE-01",
+    "M17-SPEC-06-CLAUSE-02",
+    "M17-SPEC-06-CLAUSE-03",
+    "M17-SPEC-06-CLAUSE-04",
+    "M17-SPEC-06-CLAUSE-05",
+    "M17-SPEC-06-CLAUSE-06",
+    "M03-SPEC-01-CLAUSE-01",
+    "M03-SPEC-01-CLAUSE-02",
+    "M03-SPEC-01-CLAUSE-03",
+    "M03-SPEC-01-CLAUSE-04",
+    "M03-SPEC-01-CLAUSE-05",
+    "M03-SPEC-01-CLAUSE-06",
+    "M03-SPEC-01-CLAUSE-07",
+    "M03-SPEC-01-CLAUSE-08",
+    "M03-SPEC-02-CLAUSE-01",
+    "M03-SPEC-02-CLAUSE-02",
+    "M03-SPEC-02-CLAUSE-03",
+    "M03-SPEC-02-CLAUSE-04",
+    "M03-SPEC-02-CLAUSE-05",
+    "M03-SPEC-02-CLAUSE-06",
+    "M03-SPEC-02-CLAUSE-07",
+    "M03-SPEC-02-CLAUSE-08",
+    "M03-SPEC-02-CLAUSE-09",
+    "M03-SPEC-03-CLAUSE-01",
+    "M03-SPEC-03-CLAUSE-02",
+    "M03-SPEC-03-CLAUSE-03",
+    "M03-SPEC-03-CLAUSE-04",
+    "M03-SPEC-03-CLAUSE-05",
+    "M03-SPEC-03-CLAUSE-06",
+    "M03-SPEC-03-CLAUSE-07",
+    "M03-SPEC-03-CLAUSE-08",
+    "M03-SPEC-03-CLAUSE-09",
+    "M03-SPEC-03-CLAUSE-10",
+    "M03-SPEC-04-CLAUSE-01",
+    "M03-SPEC-04-CLAUSE-02",
+    "M03-SPEC-04-CLAUSE-03",
+    "M03-SPEC-04-CLAUSE-04",
+    "M03-SPEC-04-CLAUSE-05",
+    "M03-SPEC-04-CLAUSE-06",
+    "M03-SPEC-04-CLAUSE-07",
+    "M03-SPEC-04-CLAUSE-08",
+    "M03-SPEC-05-CLAUSE-01",
+    "M03-SPEC-05-CLAUSE-02",
+    "M03-SPEC-05-CLAUSE-03",
+    "M03-SPEC-05-CLAUSE-04",
+    "M03-SPEC-05-CLAUSE-05",
+    "M03-SPEC-05-CLAUSE-06",
+    "M03-SPEC-05-CLAUSE-07",
+    "M03-SPEC-05-CLAUSE-08",
+    "M03-SPEC-05-CLAUSE-09",
+    "M03-SPEC-05-CLAUSE-10",
+    "M03-SPEC-06-CLAUSE-01",
+    "M03-SPEC-06-CLAUSE-02",
+    "M03-SPEC-06-CLAUSE-03",
+    "M03-SPEC-06-CLAUSE-04",
+    "M03-SPEC-06-CLAUSE-05",
+    "M03-SPEC-06-CLAUSE-06",
+    "M03-SPEC-06-CLAUSE-07",
+    "M03-SPEC-06-CLAUSE-08",
+    "R2-BASELINE-01-CLAUSE-01",
+    "R2-BASELINE-01-CLAUSE-02",
+    "R2-BASELINE-01-CLAUSE-03",
+    "R2-BASELINE-01-CLAUSE-04",
+    "R2-BASELINE-01-CLAUSE-05"
+  ],
+  "note": "Structural count/ref success does not conclude semantic design completeness."
+}

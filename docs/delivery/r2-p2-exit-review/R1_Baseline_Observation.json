@@ -1,0 +1,29 @@
+{
+  "recordedAt": "2026-09-10T08:16:30.835494+00:00",
+  "initialObservedHead": "375a412fb2100c670f78c496e3c9e492649e5291",
+  "reviewedCommittedHead": "4fd20b23ab6ff7458c506e053520171dab031d45",
+  "currentObservedHead": "4fd20b23ab6ff7458c506e053520171dab031d45",
+  "currentStatus": " M drizzle/meta/_journal.json\n M lib/hris/r1-report-aggregate.ts\n M lib/hris/r1-report-export.ts\n M lib/hris/r1-report-jobs.ts\n M lib/hris/r1-report-query.ts\n?? drizzle/0024_r1_report_subscriptions.sql\n?? lib/hris/r1-report-export-plan.ts\n?? lib/hris/r1-report-schedule.ts\n?? lib/hris/r1-report-subscriptions.ts\n?? tests/r1-p3-report-subscriptions.test.mjs\n",
+  "readObjects": [
+    {
+      "path": "docs/delivery/r1-p3/R1_P3_Resume.md",
+      "gitRef": "4fd20b23ab6ff7458c506e053520171dab031d45",
+      "sha256": "0b1213cb1744af1a5c79793d7555e3d67926d9c9484bcf3976010fc6f02fae07",
+      "bytes": 5212
+    },
+    {
+      "path": "docs/delivery/r1-p3/R1_P3_Checkpoint.json",
+      "gitRef": "4fd20b23ab6ff7458c506e053520171dab031d45",
+      "sha256": "227bb3d0884060eecc40cd9ea9e1dee5fedd2b7593c564ef8120914ea285ce1f",
+      "bytes": 11443
+    }
+  ],
+  "preservedLaterCommits": [
+    "4fd20b23ab6ff7458c506e053520171dab031d45 docs(r1-p3): record forty-six report and export checks",
+    "b6355ed11cf08dee270dd3e776b4cc7c6bf81f85 feat(r1-p3): add fenced report exports and authenticated chunk downloads",
+    "3fd0e5452253a9829bdb086e552fc5f6fe19ef72 docs(r1-p3): checkpoint report definition verification and advance to jobs",
+    "7ccfbe6029bf28a5e35be97271b16fce7f325325 feat(r1-p3): verify report measures and fixed joins with twenty-one source oracles"
+  ],
+  "interpretation": "01–06本地实施验证完成待独立复核；07部分；08/09/10/11未收口。恢复记录为R1窗口声明，未复跑。",
+  "role": "只读基线/排序建议；不得作为R2 P2完成证据"
+}

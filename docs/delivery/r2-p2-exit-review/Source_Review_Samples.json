@@ -1,0 +1,149 @@
+{
+  "sampleCount": 12,
+  "items": [
+    {
+      "module": "M37",
+      "specId": "M37-SPEC-01",
+      "approvalId": "M37-P1-APPROVAL-R2-20260909",
+      "reviewedHead": "716cd9df5f5776d050f77f57c2ad5a35c0a83882",
+      "reviewedDocument": "docs/delivery/P1_M37_Review_Package.md",
+      "documentSha256": "dafcd797d41370a30c074c26802fcb9e879f9212ffab84916b442c34dd22dfec",
+      "matchesApprovedDocumentSha256": true,
+      "approvedText": "建议保留标准与指标库完整范围，新增稳定libraryId/indicatorId/standardRootId/versionId和引用行ID；标准维度固定区分能力、潜力、经历、成就，库类型沿三类，成就通过显式来源及版本契约引用，不能默认为潜力或绩效，也不恢复完整M38模型。指标库、指标、等级/行为/发展建议/面试问题各有独立ID与排序，等级数量按该指标显式定义，不固定五级；顺序为正整数，同父同子集不可重号，别称不作键。标准/库名必填1–200字，指标名及代码必填1–200字、trim后库内代码唯一且区分大小写；同名可存在但选择必须显示库/类型/代码/版本，不以名称合并；已用代码改名不换稳定ID。库说明/指标定义/等级说明500字上限，等级说明必填，其余子集描述必填、至4000字作为本项目建议；分类、模型名称、要素文本可空，不自动创建外部模型或资格对象。库类型有指标后不可原地更换，使用中结构修改走新版本。",
+      "approvedTextFoundVerbatim": true,
+      "backcheck": "原评审包→批准记录→Scope批准proposal→P2追踪；不是仅对生成器输出自证"
+    },
+    {
+      "module": "M37",
+      "specId": "M37-SPEC-05",
+      "approvalId": "M37-P1-APPROVAL-R2-20260909",
+      "reviewedHead": "716cd9df5f5776d050f77f57c2ad5a35c0a83882",
+      "reviewedDocument": "docs/delivery/P1_M37_Review_Package.md",
+      "documentSha256": "dafcd797d41370a30c074c26802fcb9e879f9212ffab84916b442c34dd22dfec",
+      "matchesApprovedDocumentSha256": true,
+      "approvedText": "建议M37作为标准定义生产者，给M06/M17/M18/M03/M26/M27/M32的契约含rootId/versionId、dimension、indicatorVersionIds、目标/尺度/组合版本、可用状态、useAllowed及原因；消费者业务对象/评价结果另归其模块，不能仅按同名合并M06资格标准或M16绩效指标。M18现同源推断保留UUID缺口，P2要稳定ID映射，不从菜单参数造ID。测评方案记录provider/type/version/外部映射与未配置/失败/unknown，未配置只阻依赖评测，不阻目录需求关闭。旧五级standard版本保留legacy类型、旧ID/等级和消费者引用；新四维度模型显式映射，无法核实的结构/审批历史保留未知，禁止批量推造。保存按revision原子写版本/引用/审计，重复创建先查业务键/请求ID，冲突或结果未知不再开新版本；缺权限/来源停用/版本不兼容分开报错。批准本包全部具体字段、状态、权限、验收预期与实现差异边界后实施；不把历史测试静态读取当本轮复验。",
+      "approvedTextFoundVerbatim": true,
+      "backcheck": "原评审包→批准记录→Scope批准proposal→P2追踪；不是仅对生成器输出自证"
+    },
+    {
+      "module": "M06",
+      "specId": "M06-SPEC-01",
+      "approvalId": "M06-P1-APPROVAL-R2-20260909",
+      "reviewedHead": "716cd9df5f5776d050f77f57c2ad5a35c0a83882",
+      "reviewedDocument": "docs/delivery/P1_M06_Review_Package.md",
+      "documentSha256": "d9fe6b6a78392726078bc61ec3ffcd863ce0a3d6fcd16c1a2de9611a4f720b19",
+      "matchesApprovedDocumentSha256": true,
+      "approvedText": "建议类别分类树、任职类别、层级、任职级别、指标类型树、指标各有稳定ID/版本/状态，分类与指标类型父子分别禁止成环；类别可显式关联M01职务/职位类型和ID，空关联只表示未配置，不自动全岗适用。级别为独立目录，资格标准通过显式categoryId+levelIds关联，不用相同名称或排序自动归类。名称/编码trim后1–200字；每对象目录内编码唯一且区分大小写，已引用改名不换ID；同名提示编码/层级消歧。顺序正整数、同父展示排序可同号但以稳定ID次序明确，不将排序当级别大小；同资格标准的级别顺序必须明确且不重复。自动编号以对象/规则版本/前缀/计数原子分配，失败不承诺无跳号，不重新使用已发编码；这只是最小目录能力，不建设M35完整主数据引擎。发展通道显示层级/简卡及学习地图各配置版本；地图只按已确认级别→M27资源/计划引用，不自动派课或授资格，未配置保持明确空态。",
+      "approvedTextFoundVerbatim": true,
+      "backcheck": "原评审包→批准记录→Scope批准proposal→P2追踪；不是仅对生成器输出自证"
+    },
+    {
+      "module": "M06",
+      "specId": "M06-SPEC-05",
+      "approvalId": "M06-P1-APPROVAL-R2-20260909",
+      "reviewedHead": "716cd9df5f5776d050f77f57c2ad5a35c0a83882",
+      "reviewedDocument": "docs/delivery/P1_M06_Review_Package.md",
+      "documentSha256": "d9fe6b6a78392726078bc61ec3ffcd863ce0a3d6fcd16c1a2de9611a4f720b19",
+      "matchesApprovedDocumentSha256": true,
+      "approvedText": "建议目录read/use/manage/review/publish/export、申请代办、评审、撤销和本人结果权限独立，组织/类别/级别及敏感材料字段求交。本人只获本人申请/结果和关联标准必要投影，不能借标准可见读他人评估；历史/附件/导出走当前权限，撤权与离职阻新办理，过去授证保留可追溯。M37仅提供明确版本的能力定义/证据契约，M06资格目录/尺度/结果拥有独立身份，不合并M16绩效或M26答卷；未获M37新规则批准或来源未接时标未配置/版本不兼容，不假装联调成功。M03/M17/M18/M48/M32消费证书ID/标准及级别版本/发证时点/截止/撤销/当前有效性与原因，不通过“certified”单字段判永久有效。复制旧标准/五级引用/有效期空值时保留legacy原语义和历史，不编造原标准审批、资格类别或续证关联。业务变更与审计同revision事务；旧revision拒绝，未知先查原ID/请求键，重复回执不重复授证，撤销失败不虚报已撤销。批准本包字段/状态/权限/验收预期后实施；原站受限与真实多角色验证仍各自记录。",
+      "approvedTextFoundVerbatim": true,
+      "backcheck": "原评审包→批准记录→Scope批准proposal→P2追踪；不是仅对生成器输出自证"
+    },
+    {
+      "module": "M26",
+      "specId": "M26-SPEC-01",
+      "approvalId": "M26-P1-APPROVAL-20260910",
+      "reviewedHead": "ae43613d7851c4d5f60314869da9a428dafaeba1",
+      "reviewedDocument": "docs/delivery/P1_R2_Review_Package.md",
+      "documentSha256": "efe47f0e077fee2790a7bd331792ef39365f4cdb5840d43bca1f8d7ced38c00f",
+      "matchesApprovedDocumentSha256": true,
+      "approvedText": "建议roleDefinitionId/version、projectId、subjectId、reviewerBindingId、inviteId独立；自评必须同人，非自评不得同人，同项目同受评者同评价者仅一有效邀请，角色冲突在开放前显式处理。角色名trim后1–18字且同目录唯一，最多90角色/套卷15按已见说明作为项目设计，已用角色停用保留历史。对受评者及普通管理者提供分组匿名；自评和明确披露为具名的唯一上级单列，不宣传匿名。HR项目管理权不默认原卷或身份映射读取权；受控审计例外须独立批准、记录目的/范围/时限，并不得向受评者或普通经理披露评价者关联。邀请前展示确切匿名承诺与用途，不新增实际访问者。",
+      "approvedTextFoundVerbatim": true,
+      "backcheck": "原评审包→批准记录→Scope批准proposal→P2追踪；不是仅对生成器输出自证"
+    },
+    {
+      "module": "M26",
+      "specId": "M26-SPEC-05",
+      "approvalId": "M26-P1-APPROVAL-20260910",
+      "reviewedHead": "ae43613d7851c4d5f60314869da9a428dafaeba1",
+      "reviewedDocument": "docs/delivery/P1_R2_Review_Package.md",
+      "documentSha256": "efe47f0e077fee2790a7bd331792ef39365f4cdb5840d43bca1f8d7ced38c00f",
+      "matchesApprovedDocumentSha256": true,
+      "approvedText": "建议M37提供指标/尺度版本，M26输出报告版本、允许分组统计、覆盖/缺失原因、用途及授权状态；不自动回写能力评级、资格通过或任用结论。M48只显示本人邀请/完成状态和已开放本人报告；M32仅在read/export独立许可及相同抑制规则下消费。BASE01/02校验当前身份/组织/字段，BASE03/04审计及附件历史不泄漏身份映射，BASE05恢复后重新授权核对，BASE06通知请求/投递/失败分态。新增请求键+内容摘要，重复返回同结果，未知先查，旧revision拒绝；临时故障不显示假0，撤权清缓存和下载令牌；提醒只留契约，本轮不发送。",
+      "approvedTextFoundVerbatim": true,
+      "backcheck": "原评审包→批准记录→Scope批准proposal→P2追踪；不是仅对生成器输出自证"
+    },
+    {
+      "module": "M18",
+      "specId": "M18-SPEC-01",
+      "approvalId": "M18-P1-APPROVAL-20260910",
+      "reviewedHead": "ae43613d7851c4d5f60314869da9a428dafaeba1",
+      "reviewedDocument": "docs/delivery/P1_R2_Review_Package.md",
+      "documentSha256": "efe47f0e077fee2790a7bd331792ef39365f4cdb5840d43bca1f8d7ced38c00f",
+      "matchesApprovedDocumentSha256": true,
+      "approvedText": "建议projectId/version、subjectRecordId、stableEmployeeId、组织及岗位快照、scenario/category/year/start/end、M37standardVersion、toolContractVersion、templateVersion/workflowVersion/schemeVersion分别保存；名称1–200、日期合法且结束不早于开始、年度明确，场景/分类/组织必选；保存进度独立记录，不以最后一步推断落库。对象同项目同稳定员工唯一，当前组织权限决定能否纳入，启动时冻结范围及评价关系；后续入离调影响办理权限但不覆盖历史快照，增补/排除形成有原因的新版本。引入上次结果必须显式选择具体来源ID/版本/时点/字段，仅作参考，不作新评定或当前授权。",
+      "approvedTextFoundVerbatim": true,
+      "backcheck": "原评审包→批准记录→Scope批准proposal→P2追踪；不是仅对生成器输出自证"
+    },
+    {
+      "module": "M18",
+      "specId": "M18-SPEC-05",
+      "approvalId": "M18-P1-APPROVAL-20260910",
+      "reviewedHead": "ae43613d7851c4d5f60314869da9a428dafaeba1",
+      "reviewedDocument": "docs/delivery/P1_R2_Review_Package.md",
+      "documentSha256": "efe47f0e077fee2790a7bd331792ef39365f4cdb5840d43bca1f8d7ced38c00f",
+      "matchesApprovedDocumentSha256": true,
+      "approvedText": "建议M18仅输出经批准发布的resultId/version、project/subject/period、标准/轴/规则版本、证据来源和允许用途；向M17提供入池/继任建议，须其授权业务动作后才成有效成员或候选，不自动生效。池分析使用M17明确pool/member/version和 asOf，继任地图使用positionId或orgId的不同数据集，不能互当分母。M06资格有效性按其契约读取，不凭九格授证；M26只消费允许用途且已开放的抑制后结果，不窥匿名原卷。M19路由/生效/通知分态，M48仅获准本人任务/反馈；M32消费同版本/范围/缺失口径。复用六基础，新增业务请求键/摘要/版本，失败回滚业务与审计，未知查ID，通知未配置明确不可用，不以模拟服务冒成功。",
+      "approvedTextFoundVerbatim": true,
+      "backcheck": "原评审包→批准记录→Scope批准proposal→P2追踪；不是仅对生成器输出自证"
+    },
+    {
+      "module": "M17",
+      "specId": "M17-SPEC-01",
+      "approvalId": "M17-P1-APPROVAL-20260910",
+      "reviewedHead": "ae43613d7851c4d5f60314869da9a428dafaeba1",
+      "reviewedDocument": "docs/delivery/P1_R2_Review_Package.md",
+      "documentSha256": "efe47f0e077fee2790a7bd331792ef39365f4cdb5840d43bca1f8d7ced38c00f",
+      "matchesApprovedDocumentSha256": true,
+      "approvedText": "建议poolRootId/version、categoryId、orgScope、sharingPolicy、expectedCount、entry/exitRuleVersion独立；预计人数可空，配置时正整数，空不默认为0。成员membershipId关联poolId/employeeId/enteredAt/exitedAt/stageVersion/previousMembershipId，任一同池员工有效区间不得重叠，允许不同池不同用途。出池保留旧ID/原因，重入新ID显式关联前次，不覆盖评价/指导史。默认手工独立审批；保留自动入出池能力，但须先明确并批准规则版本、对象范围、AND/OR条件、执行周期、复核责任与生效方式，配置完整且主动启用才执行；缺资格/评估/服务证据为unknown并不自动入出，失败不半入池。自动任务留规则/输入快照/批次/幂等键与可回溯结果，不自动任命或调薪。",
+      "approvedTextFoundVerbatim": true,
+      "backcheck": "原评审包→批准记录→Scope批准proposal→P2追踪；不是仅对生成器输出自证"
+    },
+    {
+      "module": "M17",
+      "specId": "M17-SPEC-06",
+      "approvalId": "M17-P1-APPROVAL-20260910",
+      "reviewedHead": "ae43613d7851c4d5f60314869da9a428dafaeba1",
+      "reviewedDocument": "docs/delivery/P1_R2_Review_Package.md",
+      "documentSha256": "efe47f0e077fee2790a7bd331792ef39365f4cdb5840d43bca1f8d7ced38c00f",
+      "matchesApprovedDocumentSha256": true,
+      "approvedText": "建议池manage/memberRead/ruleExecute、继任nominate/review/close、计划coach/verify及healthRead/export分别授权，取当前组织/岗位/关系/字段交集；共享/向下公开显式配置，默认不向本人暴露后备排序/潜力/退出讨论，仅开放本人已确认行动与指导任务。M18盘点结果按具体版本只作推荐依据，M37定义/M06资格有效性分别引用，M03任用另走审批，M48本人投影，M19节点独立，M32按已批统计定义读取；不自动跨模块入池/任用/发消息。BASE01–06沿已批身份/权限/审计/附件历史/恢复/接口要求，事务与审计一致、请求幂等、未知先查原ID、缓存撤权；迁移保留旧三档和成员ID，未知原单/生效区间标unknown，不伪造关联或批准。",
+      "approvedTextFoundVerbatim": true,
+      "backcheck": "原评审包→批准记录→Scope批准proposal→P2追踪；不是仅对生成器输出自证"
+    },
+    {
+      "module": "M03",
+      "specId": "M03-SPEC-01",
+      "approvalId": "M03-P1-APPROVAL-20260910",
+      "reviewedHead": "ae43613d7851c4d5f60314869da9a428dafaeba1",
+      "reviewedDocument": "docs/delivery/P1_R2_Review_Package.md",
+      "documentSha256": "efe47f0e077fee2790a7bd331792ef39365f4cdb5840d43bca1f8d7ced38c00f",
+      "matchesApprovedDocumentSha256": true,
+      "approvedText": "建议cadreId显式绑定M01稳定employeeId，appointmentRecordId/termId与任职employmentRecordId独立关联，禁止通过姓名或StaffID数字强转Employee UUID。干部身份状态、任期状态和员工状态分列；每任期含任用类型版本、组织/岗位版本、生效起止/实际结束、审批来源，主职同人时间段不重叠；兼职/挂职等有明确类型与M01任职规则，不默默限制只有主职。期限推荐输入正整数月/年或明确无固定期限，周年/月度结束按本地日历加对应单位后前一日，目标日期不存在时先落该月末再减一日；结果必须预览，允许授权显式截止日及原因覆盖。考察结束不得早于开始或晚于固定任期结束；未知历史不得自动补成算法计算。",
+      "approvedTextFoundVerbatim": true,
+      "backcheck": "原评审包→批准记录→Scope批准proposal→P2追踪；不是仅对生成器输出自证"
+    },
+    {
+      "module": "M03",
+      "specId": "M03-SPEC-06",
+      "approvalId": "M03-P1-APPROVAL-20260910",
+      "reviewedHead": "ae43613d7851c4d5f60314869da9a428dafaeba1",
+      "reviewedDocument": "docs/delivery/P1_R2_Review_Package.md",
+      "documentSha256": "efe47f0e077fee2790a7bd331792ef39365f4cdb5840d43bca1f8d7ced38c00f",
+      "matchesApprovedDocumentSha256": true,
+      "approvedText": "建议M37标准/M06资格/M17后备/M18盘点/M26允许用途报告均通过稳定ID+具体版本+有效时点+缺失原因引用，不按同名或裸分决定任用。M19提供冻结路由与独立节点；M01承担主兼职/调动生效，M03只确认任用和干部任期，不重解释D1–D7。M48仅本人获准述职/考察任务和反馈；M32消费许可范围的任期/选拔/考察状态、版本和真实分母，不导出隐藏访谈。BASE01–06身份、字段权限、事务审计、附件版本、恢复与外部契约按已批原则，任免变更必须幂等请求键/摘要及原决定ID，未知先查，审计失败不得部分生效。迁移保持StaffID映射/employeeId/任期ID/调动来源和历史时间，未有依据的批准、前任、算法/任用类型标未知，不把legacy注册当已审任命；恢复后以当前授权对账。",
+      "approvedTextFoundVerbatim": true,
+      "backcheck": "原评审包→批准记录→Scope批准proposal→P2追踪；不是仅对生成器输出自证"
+    }
+  ]
+}

@@ -1,0 +1,606 @@
+{
+  "kind": "independent_review_recommendations_not_work_package_mutation",
+  "currentRecommendation": "do_not_start_R2_P3",
+  "preconditions": [
+    "关闭两项Major并独立复核",
+    "所有者另行批准P2退出及P3准入",
+    "冻结R1可验证共享能力基线"
+  ],
+  "gates": {
+    "A": {
+      "title": "身份、权限、事务、流程及对象适配稳定基线",
+      "r1TaskIds": [
+        "P3-R1-01",
+        "P3-R1-02",
+        "P3-R1-03",
+        "P3-R1-04"
+      ],
+      "requires": "完整SHA/共享接口与字段版本/安全epoch/迁移版本/独立复核证据，干净可恢复集成点"
+    },
+    "B": {
+      "title": "消费、报表及作业能力",
+      "r1TaskIds": [
+        "P3-R1-05",
+        "P3-R1-06",
+        "P3-R1-07"
+      ],
+      "requires": "M48回源、M32字段/当前和快照策略、有界导出/撤权/租约实现基线；托管后台另需平台证据"
+    },
+    "C": {
+      "title": "迁移与恢复能力",
+      "r1TaskIds": [
+        "P3-R1-08",
+        "P3-R1-09"
+      ],
+      "requires": "迁移映射/兼容writer屏障/不可逆风险处置、独立安全账本/密钥/恢复清单及能力证据"
+    }
+  },
+  "jointClosure": {
+    "r1TaskIds": [
+      "P3-R1-10",
+      "P3-R1-11"
+    ],
+    "r2TaskIds": [
+      "P3-R2-X-01",
+      "P3-R2-X-02",
+      "P3-R2-X-03",
+      "P3-R2-X-04"
+    ],
+    "rule": "R1-10依赖真实R2/R3生产者，不设完整R1退出作为所有R2工作绝对前置；稳定共享能力基线与受控联合收口分别批准。R1-11按其完整退出条件处理。"
+  },
+  "tasks": [
+    {
+      "taskId": "P3-R2-M37-01",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [],
+      "independentSliceAndLimits": "库/指标/子集对象和字段校验可独立建模",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M37-02",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M37-01"
+      ],
+      "independentSliceAndLimits": "尺度、精确权重、AND/OR与缺值纯逻辑可独立实现",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M37-03",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M37-01",
+        "P3-R2-M37-02"
+      ],
+      "independentSliceAndLimits": "审批/发布必须等M19和共享CAS稳定",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M37-04",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M37-01"
+      ],
+      "independentSliceAndLimits": "用途矩阵可先定义；服务端读取/导出需共享授权",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M37-05",
+      "requiredR1CapabilityGates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M37-03",
+        "P3-R2-M37-04",
+        "P3-R2-M06-04",
+        "P3-R2-M26-04",
+        "P3-R2-M18-04",
+        "P3-R2-M17-04",
+        "P3-R2-M03-02"
+      ],
+      "independentSliceAndLimits": "五生产域消费与旧schema/迁移收口最后联合验证",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M06-01",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [],
+      "independentSliceAndLimits": "类别/级别/评级目录、编号及地图配置可独立建模；M27引用未配置须保留",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M06-02",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M06-01",
+        "P3-R2-M37-02"
+      ],
+      "independentSliceAndLimits": "数值/评级、矩阵与证据窗口逻辑可独立实现",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M06-03",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M06-01",
+        "P3-R2-M06-02",
+        "P3-R2-M37-03"
+      ],
+      "independentSliceAndLimits": "发布/停用与M19集成后完成",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M06-04",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M06-03"
+      ],
+      "independentSliceAndLimits": "委员会、有效期及续证算法可先实现；授证必须共享事务/权限",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M06-05",
+      "requiredR1CapabilityGates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M06-04"
+      ],
+      "independentSliceAndLimits": "实际消费者/当前权限与迁移待基线及域就绪",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M26-01",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [],
+      "independentSliceAndLimits": "邀请去重/角色校验可先实现；身份桥需稳定安全控制域",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M26-02",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M26-01",
+        "P3-R2-M26-03"
+      ],
+      "independentSliceAndLimits": "先修复002；匿名算法可用明确账本契约独立实现，正式披露需端到端授权",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M26-03",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M26-01",
+        "P3-R2-M37-03"
+      ],
+      "independentSliceAndLimits": "四题型/条件DAG可独立；先补逐题映射schema",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M26-04",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M26-02",
+        "P3-R2-M26-03"
+      ],
+      "independentSliceAndLimits": "原卷/报告版本及更正发布需共享事务/流程/撤权",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M26-05",
+      "requiredR1CapabilityGates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M26-04"
+      ],
+      "independentSliceAndLimits": "实际M48/M32消费、失败态和恢复依赖联合版本",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M18-01",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M37-03",
+        "P3-R2-M37-04"
+      ],
+      "independentSliceAndLimits": "项目/范围及previousResult关系补齐后建模；外部工具/M16源未配置不能冒采集成功",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M18-02",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M18-01"
+      ],
+      "independentSliceAndLimits": "轴映射、阈值等值和null可独立实现",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M18-03",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M18-02"
+      ],
+      "independentSliceAndLimits": "校准会议/回避与M19独立节点集成",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M18-04",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M18-03"
+      ],
+      "independentSliceAndLimits": "发布快照、受众和重开需完整事务及安全epoch",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M18-05",
+      "requiredR1CapabilityGates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M18-04",
+        "P3-R2-M17-01",
+        "P3-R2-M17-02"
+      ],
+      "independentSliceAndLimits": "M17建议/实际消费、报表和恢复后置",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M17-01",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [],
+      "independentSliceAndLimits": "池规则AST/区间/重入逻辑可独立；自动事件消费需A",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M17-02",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M17-01",
+        "P3-R2-M06-04"
+      ],
+      "independentSliceAndLimits": "准备度/任期可先实现；要求资格的规则必须等真实有效性契约",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M17-03",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M17-01"
+      ],
+      "independentSliceAndLimits": "职责及自审校验可先定义；动态组织/成员与M19依赖A",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M17-04",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M17-03",
+        "P3-R2-M37-03"
+      ],
+      "independentSliceAndLimits": "模板/阶段DAG可独立；M27实际学习证据另有R3生产者依赖",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M17-05",
+      "requiredR1CapabilityGates": [
+        "A",
+        "B"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M17-01",
+        "P3-R2-M17-02"
+      ],
+      "independentSliceAndLimits": "分母与去重纯逻辑可独立；M32当前/历史查询待B",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M17-06",
+      "requiredR1CapabilityGates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M17-04",
+        "P3-R2-M17-05",
+        "P3-R2-M18-04"
+      ],
+      "independentSliceAndLimits": "全敏感范围/跨域建议/迁移收口后置",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M03-01",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [],
+      "independentSliceAndLimits": "月末/闰年/区间算法可独立；真实身份和任职根需M01",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M03-02",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M03-01",
+        "P3-R2-M03-03",
+        "P3-R2-M06-04"
+      ],
+      "independentSliceAndLimits": "任免链必须等M01实际applied receipt、M19及资格当前有效性",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M03-03",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M03-01"
+      ],
+      "independentSliceAndLimits": "精确分数、分母、弃权/缺评规则可独立实现",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M03-04",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M03-02"
+      ],
+      "independentSliceAndLimits": "考察日期算法可先做；转正/退出不绕M01和M19",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M03-05",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M03-01"
+      ],
+      "independentSliceAndLimits": "述职/档案模型可独立；敏感历史、附件和下载依赖A",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-M03-06",
+      "requiredR1CapabilityGates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M03-02",
+        "P3-R2-M03-04",
+        "P3-R2-M03-05"
+      ],
+      "independentSliceAndLimits": "跨模块并发、旧任用来源及恢复集成收口",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-BASE-01",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M26-01",
+        "P3-R2-M17-03"
+      ],
+      "independentSliceAndLimits": "只在真实R2对象适配后核身份绑定/停用；不重做R1身份引擎",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-BASE-02",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M37-04",
+        "P3-R2-M26-04",
+        "P3-R2-M03-05"
+      ],
+      "independentSliceAndLimits": "先修003，逐模块grant投影验证需真实R2对象",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-BASE-03",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M06-04",
+        "P3-R2-M17-01",
+        "P3-R2-M03-02"
+      ],
+      "independentSliceAndLimits": "先修003，核真实R2事件/审计原子性及历史粒度",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-BASE-04",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M26-04",
+        "P3-R2-M03-05"
+      ],
+      "independentSliceAndLimits": "先修003，R2不可变附件/版本和下载范围实际适配",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-BASE-05",
+      "requiredR1CapabilityGates": [
+        "C"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-COM-03",
+        "P3-R2-COM-04"
+      ],
+      "independentSliceAndLimits": "恢复包/独立安全账本齐备后验证；不可用旧R1演练直接关闭",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-BASE-06",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-COM-02"
+      ],
+      "independentSliceAndLimits": "预留接口的未配置/签名/回执映射；供应商实接另行授权",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-COM-01",
+      "requiredR1CapabilityGates": [
+        "A",
+        "B"
+      ],
+      "recommendedR2CompletionPredecessors": [],
+      "independentSliceAndLimits": "CAS/审计/receipt部分在A后先验证；有界报告job完整验收等B",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-COM-02",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [],
+      "independentSliceAndLimits": "先修001；严格输入与本地事件信任可独立核，实际适配等A",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-COM-03",
+      "requiredR1CapabilityGates": [
+        "C"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M37-03",
+        "P3-R2-M06-04",
+        "P3-R2-M26-04",
+        "P3-R2-M18-04",
+        "P3-R2-M17-04",
+        "P3-R2-M03-02"
+      ],
+      "independentSliceAndLimits": "依赖新模型+R1迁移器/epoch；只能隔离预演，真实来源先核证",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-COM-04",
+      "requiredR1CapabilityGates": [
+        "C"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-COM-03"
+      ],
+      "independentSliceAndLimits": "恢复日志/对象manifest/deny/密钥能力证据完整后进行授权验证",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-X-01",
+      "requiredR1CapabilityGates": [
+        "A",
+        "B"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M37-03",
+        "P3-R2-M18-04",
+        "P3-R2-M17-04"
+      ],
+      "independentSliceAndLimits": "真实版本链及旧五级消费者，不能仅用模拟结果关闭",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-X-02",
+      "requiredR1CapabilityGates": [
+        "A"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M06-04",
+        "P3-R2-M17-02",
+        "P3-R2-M03-02"
+      ],
+      "independentSliceAndLimits": "真实资格失效、任用生效和unknown两域回执联合验证",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-X-03",
+      "requiredR1CapabilityGates": [
+        "A",
+        "B"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M26-04",
+        "P3-R2-M18-04"
+      ],
+      "independentSliceAndLimits": "M26披露账本+M32导出/下载撤权需实际互通",
+      "status": "recommendation_only_not_authorized"
+    },
+    {
+      "taskId": "P3-R2-X-04",
+      "requiredR1CapabilityGates": [
+        "A",
+        "B"
+      ],
+      "recommendedR2CompletionPredecessors": [
+        "P3-R2-M17-04",
+        "P3-R2-M17-05",
+        "P3-R2-M03-05"
+      ],
+      "independentSliceAndLimits": "门户/档案/21数据集相关投影与实际生产者联合验证",
+      "status": "recommendation_only_not_authorized"
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "kind": "independent_exit_review_findings",
+  "reviewedFinalHead": "8b3daf9270181ffe2e77015be723da8e611d83a5",
+  "fixedDesignHead": "7ff3a28c7660dac658d5243d7c4535a9c8037fc2",
+  "decision": "不通过",
+  "counts": {
+    "Blocker": 0,
+    "Major": 2,
+    "Minor": 2,
+    "Observation": 2
+  },
+  "ownerApproval": false,
+  "p3Authorization": false,
+  "findings": [
+    {
+      "id": "R2-EXIT-001",
+      "severity": "Major",
+      "status": "open",
+      "title": "已登记的严格输入契约不能表达部分批准字段和正文必需关系",
+      "modules": [
+        "M37",
+        "M06",
+        "M26",
+        "M18",
+        "COMMON"
+      ],
+      "blocksExit": true,
+      "locations": [
+        {
+          "file": "docs/delivery/r2-p2/Interface_Schemas.json",
+          "pointer": "/$defs/VersionRef",
+          "related": "Interfaces.md#schema，第16行；M37_Design.md#m37-spec-05"
+        },
+        {
+          "file": "docs/delivery/r2-p2/Interface_Schemas.json",
+          "pointer": "/$defs/IndicatorChild",
+          "related": "Requirements_Trace.json contractDetails[id=BP-C-REQ-07/fieldDetails/2]；M37_Design.md#m37-spec-01"
+        },
+        {
+          "file": "docs/delivery/r2-p2/Interface_Schemas.json",
+          "pointer": "/$defs/CatalogDraft",
+          "related": "Requirements_Trace.json contractDetails[id=BP-C-REQ-02/fieldDetails/1]；M06_Design.md#m06-spec-01/02"
+        },
+        {
+          "file": "docs/delivery/r2-p2/Interface_Schemas.json",
+          "pointer": "/$defs/Question；/$defs/QuestionnaireDraft",
+          "related": "M26_Design.md#m26-spec-03，第38行"
+        },
+        {
+          "file": "docs/delivery/r2-p2/Interface_Schemas.json",
+          "pointer": "/$defs/ReviewProject",
+          "related": "M18_Design.md#m18-spec-01，第12行"
+        }
+      ],
+      "evidence": [
+        "VersionRef additionalProperties=false，只有8个内部引用字段；正文要求外部另含sourceNamespace/externalId，没有对应外部联合类型。",
+        "IndicatorChild只容纳childId/subset/sort/description；批准字段契约要求等级alias/elementText及子集名称等。indicator.aliases是指标级字段，talent_standard.elementLabel是标准级字段，均无明确逐等级映射。",
+        "CatalogDraft用于已登记catalog.create/edit，但indicator_type不能承载isCommon/descriptionRows/evaluationMode；标准target不能代指标类型自身配置。正文提及通用/评级含义，没有给这些字段另行保存的契约。",
+        "QuestionnaireDraft只在整卷提供roleVersionRefs和standardVersionRefs；Question没有逐题roleApplicability和dimension/indicator映射，整卷列表不能唯一确定每题适用角色及维度。",
+        "ReviewProject不含previousResultRef；正文要求用户显式选择精确历史根/版本/asOf/字段/purpose，该关系也没有单独定义的严格输入结构。"
+      ],
+      "impact": "P3若遵守闭合schema就会丢失必需业务信息；若自行加字段或推断映射，就需要重新作P2契约决策。逐条追踪被标为complete，不能证明这些字段已经完成设计。",
+      "qualification": "Command_Registry明确仅为关键动作集合；本发现不因未穷举所有CRUD判缺陷，只针对已经登记的输入与其明确业务语义之间的冲突。只做文档结构推导，没有调用产品API。",
+      "requiredFix": [
+        "由原设计负责人明确每个批准字段的规范对象、字段/关系、版本及写入动作；若批准字段确需调整，应走有依据的需求处置，不能静默删除。",
+        "补齐或分拆严格schema，明确内部/外部引用联合类型、逐题角色/维度映射、历史结果引用与等级/指标类型字段；不得改成任意payload。",
+        "同步生成源、正文、Command_Registry、追踪和对应正负验收断言，再按新的固定内容HEAD重算包装引用。"
+      ],
+      "recheck": "在新的固定设计Git对象逐项核对5组字段/关系；为每组提供最小可表达文档样例和非法字段/版本反例；核source→schema→动作→场景字段断言，复跑文档生成一致性和SHA检查。无需P3业务测试即可关闭设计缺口。",
+      "limitItems": [
+        "M37-LIMIT-01.01",
+        "M06-LIMIT-01.01",
+        "M26-LIMIT-01.01",
+        "M18-LIMIT-01.01",
+        "M18-LIMIT-01.02"
+      ]
+    },
+    {
+      "id": "R2-EXIT-002",
+      "severity": "Major",
+      "status": "open",
+      "title": "M26匿名等价类的版本维度含义不明确，合法三人首报与更正防差分无法共同确定",
+      "modules": [
+        "M26"
+      ],
+      "blocksExit": true,
+      "locations": [
+        {
+          "file": "docs/delivery/r2-p2/M26_Design.md",
+          "section": "m26-spec-02",
+          "line": 31
+        },
+        {
+          "file": "docs/delivery/r2-p2/Acceptance_Scenarios.json",
+          "selector": "scenarios[id=R2-P3-M26-REVIEW-AC04]；R2-M26-S01/S02/S07"
+        },
+        {
+          "file": "docs/delivery/r2-p2/Limit_Resolution.json",
+          "selector": "items[id=M26-LIMIT-01.02]"
+        }
+      ],
+      "evidence": [
+        "原文要求完整参与签名包含“精确聚合系数及源答案版本”，再按完整签名分组，每个非空类至少k名不同评委。",
+        "按源答案版本=不可变答卷版本ID的字面解释，首次三名有效评委A/B/C各有不同答卷版本VA/VB/VC，即使同题同尺度且系数均1/3，仍形成三个1人类，k=3下全部抑制。",
+        "批准AC04要求3个有效评价者且同尺度时按定义发布；不能以始终抑制满足该正例。",
+        "若源答案版本意指修订序号、共同披露历史或其他归一表示，当前文本未定义；简单删除此维又不能解释同一人更正后两报告差分的约束。"
+      ],
+      "impact": "实现者必须自行决定匿名算法的关键等价关系，可能造成合法报告不可用，或为了放行而弱化更正/组合推断防护。属于P2必须决定的隐私模型，不宜仅转P3证明。",
+      "qualification": "这是对文本一种自然且严格解释的符号反例；不声称产品已经泄漏数据，也不声称已实现或执行隐私算法。",
+      "requiredFix": [
+        "精确定义受保护主体、跨报告关联键、参与/系数签名与答案版本谱系的关系；说明匿名处理服务如何在身份桥隔离下计算。",
+        "给出首报三人合法放行、两人抑制、同一人改答、成员变化、三重交叠及组织报告双阈值的确定分组表；解释实名self/唯一上级不适用匿名阈值时的范围。",
+        "保留历史披露账本及撤回不消除已披露约束；明确固定安全分区降级条件，更新LIMIT设计关闭声明和场景断言。"
+      ],
+      "recheck": "独立逐格手算正例和负例，确认定义既能放行批准正例又拒绝小类/版本差分；随后检查严格数据契约与场景预期一致。P3执行证据继续保持not_run。",
+      "limitItems": [
+        "M26-LIMIT-01.02"
+      ]
+    },
+    {
+      "id": "R2-EXIT-003",
+      "severity": "Minor",
+      "status": "open",
+      "title": "三项基础AC只追加“替换R2对象”，未完成可复述的R2夹具映射",
+      "modules": [
+        "FOUNDATIONS"
+      ],
+      "blocksExit": false,
+      "locations": [
+        {
+          "file": "docs/delivery/r2-p2/Acceptance_Scenarios.json",
+          "selector": "R2-P3-BASE-02-AC03；R2-P3-BASE-03-AC02；R2-P3-BASE-04-AC02"
+        },
+        {
+          "file": "docs/delivery/r2-p2/build_handoff.py",
+          "section": "foundation scenarios生成"
+        }
+      ],
+      "evidence": [
+        "BASE-02-AC03在Given追加R2标准/答卷等，When/Then仍要求薪酬管理报表、薪酬专岗与单位承担。",
+        "BASE-03-AC02保留员工普通字段/任职历史操作，未指明哪些R2动作产生哪种业务历史。",
+        "BASE-04-AC02仍以course发布/草稿和“具体复制/来源策略待各模块”为预期。"
+      ],
+      "impact": "源AC被保留是正确的，但这三项不能直接作为已完成适配的R2差异验收说明；执行人仍需选择对象、动作和判定规则。",
+      "qualification": "相关R2权限/版本控制已在模块和COM/X场景另有覆盖，因此作为验收说明修订项，未单独升级Major；不认定其余135项全部无效或已经通过。",
+      "requiredFix": [
+        "保留原AC独立来源，补充明确的R2对象、命令、角色/字段和前后版本断言；共享R1回归与R2差异用例分别说明适用范围。",
+        "在对应P3任务开始验证前完成映射，不把追加一句对象替换当成覆盖证明。"
+      ],
+      "recheck": "按三项AC逐条做文档桌面演练，不依赖隐含的薪酬/课程替换知识即可准备夹具并确定Then；继续保持未执行状态。",
+      "limitItems": []
+    },
+    {
+      "id": "R2-EXIT-004",
+      "severity": "Minor",
+      "status": "open",
+      "title": "46项任务依赖停留在通用文字，缺少可固定的任务与能力基线",
+      "modules": [
+        "ALL"
+      ],
+      "blocksExit": false,
+      "locations": [
+        {
+          "file": "docs/delivery/r2-p2/P3_Work_Packages.json",
+          "pointer": "/tasks/*/dependencies"
+        }
+      ],
+      "evidence": [
+        "32项模块任务均使用同一句R1共同身份/权限/事务/流程适配验证；6项基础任务均写R1对应基础契约已验证。",
+        "8项COM/X任务只写另获批准及对应R1实现版本确认，没有稳定任务ID、所需契约版本或模块间顺序。"
+      ],
+      "impact": "难以据此判断某任务何时可启动；会把设计来源e152...误作实现基线，或在R1持续修改共享能力时重复施工。",
+      "qualification": "模块正文给出了业务依赖，且本评审提供46项排序建议；属于任务交接精化项，不把建议登记视为P3准入。",
+      "requiredFix": [
+        "在后续P3交接中登记R1能力基线SHA、schema/adapter/安全epoch版本与验证状态，明确内部任务依赖。",
+        "处理R1-P3-10依赖真实R2/R3生产者的联合收口，避免机械等待造成循环。"
+      ],
+      "recheck": "核每项任务的前置任务/能力可定位且已具备证据；拓扑无循环，实际生产者集成是后续联合门禁。",
+      "limitItems": []
+    },
+    {
+      "id": "R2-EXIT-005",
+      "severity": "Observation",
+      "status": "open_future_responsibility",
+      "title": "R1 P3仍在推进，当前不是稳定的R2集成基线",
+      "modules": [
+        "ALL"
+      ],
+      "blocksExit": false,
+      "locations": [
+        {
+          "file": "docs/delivery/r1-p3/R1_P3_Resume.md",
+          "gitRef": "4fd20b23ab6ff7458c506e053520171dab031d45",
+          "section": "06完成后的恢复点及07导出增量"
+        },
+        {
+          "file": "docs/delivery/r1-p2/R1_P2_P3_Work_Packages.json",
+          "gitRef": "e15237281ff19f04f08a354fd9455c518b24ae47",
+          "selector": "P3-R1-01～11"
+        }
+      ],
+      "evidence": [
+        "评审期间R1由375a412...合法前进至4fd20b2...；全部保留，仅只读观察。",
+        "所读恢复记录称01–06本地实施验证完成待独立复核，07部分完成，08/09/10/11未收口；这些是R1窗口声明，本评审未复跑。",
+        "P3-R1-10本身要求真实R2/R3生产者，完整R1退出不是所有R2工作无条件前置。"
+      ],
+      "impact": "应先形成按能力可验收的共享基线，再按授权分批启动R2；当前不建议立即启动完整R2 P3。",
+      "requiredFix": [
+        "由相应所有者确认共享能力基线和联合集成边界；细节见R2_P3_Baseline_Sequencing.md。"
+      ],
+      "recheck": "下一窗口读取届时最新合法HEAD、完整恢复记录与独立复核证据，不把本观察时间后的提交丢弃。",
+      "limitItems": []
+    },
+    {
+      "id": "R2-EXIT-006",
+      "severity": "Observation",
+      "status": "open_future_responsibility",
+      "title": "恢复指标与平台/外部能力继续保留实证责任",
+      "modules": [
+        "ALL"
+      ],
+      "blocksExit": false,
+      "locations": [
+        {
+          "file": "docs/delivery/r2-p2/Recovery_Cost_Responsibilities.md",
+          "section": "targets/recovery/cost/responsibility"
+        },
+        {
+          "file": "docs/delivery/r2-p2/Interfaces.md",
+          "section": "trust/failure"
+        }
+      ],
+      "evidence": [
+        "RPO≤60分钟、RTO≤240分钟、保留30天均为目标；R1方案A、托管作业、密钥/独立撤权账本与成本实测尚有后续责任。",
+        "接口未配置/不可用/unknown分态，供应商和真实测评、签署、通知没有被声明已接通。"
+      ],
+      "impact": "P2文档核验不证明恢复达标；只有后续获授权的环境证据才能关闭相应P3/P4责任。",
+      "requiredFix": [
+        "P3完成平台能力、恢复包及合成故障证据；P4完成真实容量/多角色/恢复及所有者验收。缺能力维持关闭或隔离，不降目标。"
+      ],
+      "recheck": "按Limit_Review中每组P3/P4责任与恢复文档，核真实证据对应源码、配置、数据量和计时范围。",
+      "limitItems": []
+    }
+  ]
+}

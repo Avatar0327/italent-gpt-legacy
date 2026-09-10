@@ -1,0 +1,181 @@
+{
+  "kind": "document_property_comparison_and_symbolic_walkthrough_not_product_tests",
+  "gitRef": "8b3daf9270181ffe2e77015be723da8e611d83a5",
+  "schemaSha256": "8092c5b543ed038bfbd20b507a35d8c7f37a4f914c0912a456e6fd9306ff4b42",
+  "schemaProbes": [
+    {
+      "schemaPointer": "/$defs/VersionRef",
+      "requiredSemanticFields": [
+        "sourceNamespace",
+        "externalId"
+      ],
+      "source": "Interfaces.md#schema",
+      "allowedProperties": [
+        "producer",
+        "objectType",
+        "rootId",
+        "versionId",
+        "sourceRevision",
+        "digest",
+        "capturedAt",
+        "purpose"
+      ],
+      "additionalProperties": false,
+      "fieldsNotExpressibleHere": [
+        "sourceNamespace",
+        "externalId"
+      ],
+      "conclusion": "需明确字段本体或等价关系；闭合结构不能携带这些属性",
+      "findingId": "R2-EXIT-001"
+    },
+    {
+      "schemaPointer": "/$defs/IndicatorChild",
+      "requiredSemanticFields": [
+        "alias",
+        "elementText"
+      ],
+      "source": "Requirements_Trace.json:BP-C-REQ-07/fieldDetails/2",
+      "allowedProperties": [
+        "childId",
+        "subset",
+        "sort",
+        "description"
+      ],
+      "additionalProperties": false,
+      "fieldsNotExpressibleHere": [
+        "alias",
+        "elementText"
+      ],
+      "conclusion": "需明确字段本体或等价关系；闭合结构不能携带这些属性",
+      "findingId": "R2-EXIT-001"
+    },
+    {
+      "schemaPointer": "/$defs/CatalogDraft",
+      "requiredSemanticFields": [
+        "isCommon",
+        "descriptionRows",
+        "evaluationMode"
+      ],
+      "source": "Requirements_Trace.json:BP-C-REQ-02/fieldDetails/1",
+      "allowedProperties": [
+        "kind",
+        "code",
+        "name",
+        "parentId",
+        "sort",
+        "targetKind",
+        "targetId"
+      ],
+      "additionalProperties": false,
+      "fieldsNotExpressibleHere": [
+        "isCommon",
+        "descriptionRows",
+        "evaluationMode"
+      ],
+      "conclusion": "需明确字段本体或等价关系；闭合结构不能携带这些属性",
+      "findingId": "R2-EXIT-001"
+    },
+    {
+      "schemaPointer": "/$defs/Question",
+      "requiredSemanticFields": [
+        "roleApplicability",
+        "dimension",
+        "indicatorVersionRefs"
+      ],
+      "source": "M26_Design.md#m26-spec-03",
+      "allowedProperties": [
+        "questionVersionRef",
+        "type",
+        "title",
+        "required",
+        "allowSkip",
+        "allowNA",
+        "scaleVersionRef",
+        "options",
+        "minSelected",
+        "maxSelected",
+        "maxLength",
+        "conditionAst"
+      ],
+      "additionalProperties": false,
+      "fieldsNotExpressibleHere": [
+        "roleApplicability",
+        "dimension",
+        "indicatorVersionRefs"
+      ],
+      "conclusion": "需明确字段本体或等价关系；闭合结构不能携带这些属性",
+      "findingId": "R2-EXIT-001"
+    },
+    {
+      "schemaPointer": "/$defs/ReviewProject",
+      "requiredSemanticFields": [
+        "previousResultRef"
+      ],
+      "source": "M18_Design.md#m18-spec-01",
+      "allowedProperties": [
+        "name",
+        "scenarioVersionRef",
+        "categoryVersionRef",
+        "year",
+        "startOn",
+        "endOn",
+        "orgScope",
+        "standardVersionRef",
+        "toolContractVersionRef",
+        "templateVersionRef",
+        "workflowVersionRef",
+        "schemeVersionRef",
+        "saveStepId"
+      ],
+      "additionalProperties": false,
+      "fieldsNotExpressibleHere": [
+        "previousResultRef"
+      ],
+      "conclusion": "需明确字段本体或等价关系；闭合结构不能携带这些属性",
+      "findingId": "R2-EXIT-001"
+    }
+  ],
+  "M26LiteralInterpretation": {
+    "assumption": "源答案版本指不可变答卷版本ID，完整签名按值相等分组",
+    "k": 3,
+    "input": [
+      {
+        "reviewer": "A",
+        "sourceAnswerVersion": "VA",
+        "coefficient": "1/3",
+        "participates": true
+      },
+      {
+        "reviewer": "B",
+        "sourceAnswerVersion": "VB",
+        "coefficient": "1/3",
+        "participates": true
+      },
+      {
+        "reviewer": "C",
+        "sourceAnswerVersion": "VC",
+        "coefficient": "1/3",
+        "participates": true
+      }
+    ],
+    "classes": {
+      "(True, '1/3', 'VA')": [
+        "A"
+      ],
+      "(True, '1/3', 'VB')": [
+        "B"
+      ],
+      "(True, '1/3', 'VC')": [
+        "C"
+      ]
+    },
+    "classSizes": [
+      1,
+      1,
+      1
+    ],
+    "literalOutcome": "首报全部小于k，与合法三人发布AC冲突；其他解释需要设计明确",
+    "source": "M26_Design.md#m26-spec-02 line 31",
+    "findingId": "R2-EXIT-002"
+  }
+}

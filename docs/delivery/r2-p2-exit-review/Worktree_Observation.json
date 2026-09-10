@@ -1,0 +1,36 @@
+{
+  "observedAt": "2026-09-10T08:03:56.199372+00:00",
+  "worktrees": [
+    {
+      "worktree": "/workspace/sites/italent-hris",
+      "HEAD": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+      "branch": "refs/heads/main",
+      "status": ""
+    },
+    {
+      "worktree": "/workspace/sites/italent-hris-r1-p2-20260909",
+      "HEAD": "e15237281ff19f04f08a354fd9455c518b24ae47",
+      "branch": "refs/heads/design/r1-p2-20260909",
+      "status": ""
+    },
+    {
+      "worktree": "/workspace/sites/italent-hris-r1-p3-20260910",
+      "HEAD": "3fd0e5452253a9829bdb086e552fc5f6fe19ef72",
+      "branch": "refs/heads/impl/r1-p3-20260910",
+      "status": " M drizzle/meta/_journal.json\n M lib/hris/r1-report-context.ts\n M lib/hris/r1-report-query.ts\n?? drizzle/0023_r1_report_jobs.sql\n?? lib/hris/r1-report-csv.ts\n?? lib/hris/r1-report-jobs.ts\n"
+    },
+    {
+      "worktree": "/workspace/sites/italent-hris-r2-p2-20260910",
+      "HEAD": "8b3daf9270181ffe2e77015be723da8e611d83a5",
+      "branch": "refs/heads/design/r2-p2-20260910",
+      "status": ""
+    },
+    {
+      "worktree": "/workspace/sites/italent-hris-r2-p2-exit-review-20260910",
+      "HEAD": "8b3daf9270181ffe2e77015be723da8e611d83a5",
+      "branch": "refs/heads/review/r2-p2-exit-20260910",
+      "status": "?? docs/delivery/r2-p2-exit-review/\n"
+    }
+  ],
+  "note": "R1 concurrent state is read-only observation, not R2 completion evidence."
+}

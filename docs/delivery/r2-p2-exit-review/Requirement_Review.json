@@ -1,0 +1,848 @@
+{
+  "kind": "independent_all_approved_spec_review",
+  "items": [
+    {
+      "id": "M37-SPEC-01",
+      "approvalRecord": "M37-P1-APPROVAL-R2-20260909",
+      "approvedProposalSha256": "ccf7d658ddfbb6765368fa8321de1ae9031ed55b97b6f01c4fa9d18dc9939082",
+      "designRefs": [
+        "M37_Design.md#m37-spec-01"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M37-01"
+      ],
+      "scenarioIds": [
+        "R2-P3-M37-REVIEW-AC01",
+        "R2-P3-M37-REVIEW-AC02",
+        "R2-P3-M37-REVIEW-AC08"
+      ],
+      "p4ResponsibilityIds": [
+        "M37-LIMIT-01.06",
+        "M37-LIMIT-01.07"
+      ],
+      "assessment": "根/版本/子集明确；逐等级alias/elementText未落实严格输入（001）",
+      "findings": [
+        "R2-EXIT-001"
+      ],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M37-SPEC-02",
+      "approvalRecord": "M37-P1-APPROVAL-R2-20260909",
+      "approvedProposalSha256": "3fbc219ecddd798b0c56891b07274ac0de4fe90ad25233b390f7b5435cd03ce9",
+      "designRefs": [
+        "M37_Design.md#m37-spec-02"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M37-02"
+      ],
+      "scenarioIds": [
+        "R2-P3-M37-REVIEW-AC03",
+        "R2-P3-M37-REVIEW-AC04",
+        "R2-P3-M37-REVIEW-AC05",
+        "R2-M37-S02"
+      ],
+      "p4ResponsibilityIds": [
+        "M37-LIMIT-01.06",
+        "M37-LIMIT-01.07"
+      ],
+      "assessment": "目标联合类型、精确权重、缺值及有界规则已定义",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M37-SPEC-03",
+      "approvalRecord": "M37-P1-APPROVAL-R2-20260909",
+      "approvedProposalSha256": "e345f5b1023d43d85ed5f78949a4e28950b131e769201669f7abd5cd7bc8e84f",
+      "designRefs": [
+        "M37_Design.md#m37-spec-03"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M37-03",
+        "P3-R2-X-01"
+      ],
+      "scenarioIds": [
+        "R2-P3-M37-REVIEW-AC06",
+        "R2-P3-M37-REVIEW-AC07",
+        "R2-M37-S01",
+        "R2-X-02"
+      ],
+      "p4ResponsibilityIds": [
+        "M37-LIMIT-01.06",
+        "M37-LIMIT-01.07"
+      ],
+      "assessment": "独立审核、语义摘要、停用和在途冻结规则可指导实现",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M37-SPEC-04",
+      "approvalRecord": "M37-P1-APPROVAL-R2-20260909",
+      "approvedProposalSha256": "a4e63ec0fb1588ccb331a926e1415bc2a9e4164eb64bc9b865d59d53edeff661",
+      "designRefs": [
+        "M37_Design.md#m37-spec-04"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M37-04"
+      ],
+      "scenarioIds": [
+        "R2-P3-M37-REVIEW-AC09",
+        "R2-M37-S04"
+      ],
+      "p4ResponsibilityIds": [
+        "M37-LIMIT-01.06",
+        "M37-LIMIT-01.07"
+      ],
+      "assessment": "用途/敏感子集与read/use/review/publish/export分离",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M37-SPEC-05",
+      "approvalRecord": "M37-P1-APPROVAL-R2-20260909",
+      "approvedProposalSha256": "3dd28ab3cd6b1d17507d44623cbfd9e868e1f31d442d4d3bb0e6074580192e6a",
+      "designRefs": [
+        "M37_Design.md#m37-spec-05"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M37-05",
+        "P3-R2-X-01"
+      ],
+      "scenarioIds": [
+        "R2-P3-M37-REVIEW-AC10",
+        "R2-P3-M37-REVIEW-AC11",
+        "R2-P3-M37-REVIEW-AC12",
+        "R2-M37-S03",
+        "R2-X-01",
+        "R2-X-02"
+      ],
+      "p4ResponsibilityIds": [
+        "M37-LIMIT-01.06",
+        "M37-LIMIT-01.07"
+      ],
+      "assessment": "五消费者冻结版本明确；外部引用字段与schema冲突（001）",
+      "findings": [
+        "R2-EXIT-001"
+      ],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M06-SPEC-01",
+      "approvalRecord": "M06-P1-APPROVAL-R2-20260909",
+      "approvedProposalSha256": "04f970951146e30a518d246d8059997430898eb93c873d2091c6eee94a3a64ad",
+      "designRefs": [
+        "M06_Design.md#m06-spec-01"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M06-01"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC01",
+        "R2-P3-M06-REVIEW-AC02",
+        "R2-M06-S01",
+        "R2-M06-S02"
+      ],
+      "p4ResponsibilityIds": [
+        "M06-LIMIT-01.07",
+        "M06-LIMIT-01.08"
+      ],
+      "assessment": "树、目录、编号和发展通道已定义；指标类型字段输入缺口（001）",
+      "findings": [
+        "R2-EXIT-001"
+      ],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M06-SPEC-02",
+      "approvalRecord": "M06-P1-APPROVAL-R2-20260909",
+      "approvedProposalSha256": "545ac31b8047e665cd718925599cca675e47c085835fdab4d762d8c3ae5c339c",
+      "designRefs": [
+        "M06_Design.md#m06-spec-02"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M06-02"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC03"
+      ],
+      "p4ResponsibilityIds": [
+        "M06-LIMIT-01.07",
+        "M06-LIMIT-01.08"
+      ],
+      "assessment": "数值/评级及就绪条件明确；指标类型配置不能由通用catalog输入完整表达（001）",
+      "findings": [
+        "R2-EXIT-001"
+      ],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M06-SPEC-03",
+      "approvalRecord": "M06-P1-APPROVAL-R2-20260909",
+      "approvedProposalSha256": "6eba3255667539b353ed5bf64bd8c55663e33cf602c412c5cd4e1feb44f544f8",
+      "designRefs": [
+        "M06_Design.md#m06-spec-03"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M06-03",
+        "P3-R2-X-01"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC04",
+        "R2-P3-M06-REVIEW-AC05",
+        "R2-P3-M06-REVIEW-AC06",
+        "R2-X-02"
+      ],
+      "p4ResponsibilityIds": [
+        "M06-LIMIT-01.07",
+        "M06-LIMIT-01.08"
+      ],
+      "assessment": "审批/发布和启停分态，在途与旧证不自动撤销",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M06-SPEC-04",
+      "approvalRecord": "M06-P1-APPROVAL-R2-20260909",
+      "approvedProposalSha256": "e68150be044b0c92622c1fa4f244672a400a15b4b7af27c08d01c663aafe80d1",
+      "designRefs": [
+        "M06_Design.md#m06-spec-04"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M06-04",
+        "P3-R2-X-02"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC07",
+        "R2-P3-M06-REVIEW-AC08",
+        "R2-P3-M06-REVIEW-AC09",
+        "R2-P3-M06-REVIEW-AC10",
+        "R2-M06-S03",
+        "R2-X-03"
+      ],
+      "p4ResponsibilityIds": [
+        "M06-LIMIT-01.07",
+        "M06-LIMIT-01.08"
+      ],
+      "assessment": "委员会回避/缺评、证据窗口、授证有效期/续证/撤销边界可指导实现",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M06-SPEC-05",
+      "approvalRecord": "M06-P1-APPROVAL-R2-20260909",
+      "approvedProposalSha256": "fc87038d417dd821847f287a747dccb77a2e4fd7adc2ef68b2dbe3040ee68dc4",
+      "designRefs": [
+        "M06_Design.md#m06-spec-05"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M06-05",
+        "P3-R2-X-02"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC11",
+        "R2-P3-M06-REVIEW-AC12",
+        "R2-P3-M06-REVIEW-AC13",
+        "R2-M06-S04",
+        "R2-X-03",
+        "R2-X-04"
+      ],
+      "p4ResponsibilityIds": [
+        "M06-LIMIT-01.07",
+        "M06-LIMIT-01.08"
+      ],
+      "assessment": "组织/类别/级别权限与消费者当前有效性明确；资格不自动任用",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M26-SPEC-01",
+      "approvalRecord": "M26-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "b8a94bac4ea59d760f926c3a661b3a100ea56031b4c47ded60d54f4247c9956c",
+      "designRefs": [
+        "M26_Design.md#m26-spec-01"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M26-01"
+      ],
+      "scenarioIds": [
+        "R2-P3-M26-REVIEW-AC01",
+        "R2-P3-M26-REVIEW-AC02",
+        "R2-M26-S04"
+      ],
+      "p4ResponsibilityIds": [
+        "M26-LIMIT-01.08",
+        "M26-LIMIT-01.09"
+      ],
+      "assessment": "稳定邀请/身份桥与角色重叠可追踪；题目适用角色关系需与003对应schema补齐（001）",
+      "findings": [
+        "R2-EXIT-001"
+      ],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M26-SPEC-02",
+      "approvalRecord": "M26-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "cce8190c36a9193f1f7c9da9781825b65b0d5f86d13f990cf584ee1a539ae646",
+      "designRefs": [
+        "M26_Design.md#m26-spec-02"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M26-02",
+        "P3-R2-X-03"
+      ],
+      "scenarioIds": [
+        "R2-P3-M26-REVIEW-AC03",
+        "R2-P3-M26-REVIEW-AC04",
+        "R2-P3-M26-REVIEW-AC05",
+        "R2-M26-S01",
+        "R2-M26-S02",
+        "R2-M26-S07",
+        "R2-X-05",
+        "R2-X-06"
+      ],
+      "p4ResponsibilityIds": [
+        "M26-LIMIT-01.08",
+        "M26-LIMIT-01.09"
+      ],
+      "assessment": "低样本、组合推断和账本范围有设计；签名版本维度存在关键歧义（002）",
+      "findings": [
+        "R2-EXIT-002"
+      ],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M26-SPEC-03",
+      "approvalRecord": "M26-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "4cb267f400452e9d3c47a213081373374b9622b7759347e8a9ae877ed01216c0",
+      "designRefs": [
+        "M26_Design.md#m26-spec-03"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M26-03"
+      ],
+      "scenarioIds": [
+        "R2-P3-M26-REVIEW-AC06",
+        "R2-P3-M26-REVIEW-AC07",
+        "R2-M26-S03"
+      ],
+      "p4ResponsibilityIds": [
+        "M26-LIMIT-01.08",
+        "M26-LIMIT-01.09"
+      ],
+      "assessment": "四题型/题卷/条件DAG明确；逐题角色和维度映射未在严格输入表达（001）",
+      "findings": [
+        "R2-EXIT-001"
+      ],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M26-SPEC-04",
+      "approvalRecord": "M26-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "4679199690f5517d89be670769ff543c7d1a3a89842e8a60c2a96b5f16b65ea7",
+      "designRefs": [
+        "M26_Design.md#m26-spec-04"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M26-04"
+      ],
+      "scenarioIds": [
+        "R2-P3-M26-REVIEW-AC08",
+        "R2-P3-M26-REVIEW-AC09",
+        "R2-P3-M26-REVIEW-AC10",
+        "R2-M26-S05"
+      ],
+      "p4ResponsibilityIds": [
+        "M26-LIMIT-01.08",
+        "M26-LIMIT-01.09"
+      ],
+      "assessment": "撤回/重交/更正及授权撤销保留旧版与披露历史",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M26-SPEC-05",
+      "approvalRecord": "M26-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "93177dd731e8c9b42e93cff890fe89c329a1ddf81aa49bc16774a2dbf8ffb6e6",
+      "designRefs": [
+        "M26_Design.md#m26-spec-05"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M26-05",
+        "P3-R2-X-03"
+      ],
+      "scenarioIds": [
+        "R2-P3-M26-REVIEW-AC11",
+        "R2-P3-M26-REVIEW-AC12",
+        "R2-M26-S06",
+        "R2-X-05",
+        "R2-X-06"
+      ],
+      "p4ResponsibilityIds": [
+        "M26-LIMIT-01.08",
+        "M26-LIMIT-01.09"
+      ],
+      "assessment": "用途投影、撤权和消费者错误状态明确；匿名决定依赖002修正",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M18-SPEC-01",
+      "approvalRecord": "M18-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "05739878d82e0fe785af407fc541bf0698a20a14bd3b117c3d37f7a618ab9254",
+      "designRefs": [
+        "M18_Design.md#m18-spec-01"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M18-01"
+      ],
+      "scenarioIds": [
+        "R2-P3-M18-REVIEW-AC01",
+        "R2-P3-M18-REVIEW-AC02",
+        "R2-P3-M18-REVIEW-AC03",
+        "R2-P3-M18-REVIEW-AC04",
+        "R2-M18-S02"
+      ],
+      "p4ResponsibilityIds": [
+        "M18-LIMIT-01.07",
+        "M18-LIMIT-01.08"
+      ],
+      "assessment": "对象/范围快照和保存进度明确；previousResultRef输入缺口（001）",
+      "findings": [
+        "R2-EXIT-001"
+      ],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M18-SPEC-02",
+      "approvalRecord": "M18-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "c55a26e9aa0f721dcc4f3fcff3bae30fa7520ac089fed1dd38ea8c7c61a564ba",
+      "designRefs": [
+        "M18_Design.md#m18-spec-02"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M18-02"
+      ],
+      "scenarioIds": [
+        "R2-P3-M18-REVIEW-AC05",
+        "R2-M18-S03"
+      ],
+      "p4ResponsibilityIds": [
+        "M18-LIMIT-01.07",
+        "M18-LIMIT-01.08"
+      ],
+      "assessment": "轴映射/阈值等值/缺失不落格规则明确",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M18-SPEC-03",
+      "approvalRecord": "M18-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "4e9c093a523933e8ec875bed89d87283e9f1f97bdceb14c8d11e08571475f7dc",
+      "designRefs": [
+        "M18_Design.md#m18-spec-03"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M18-03"
+      ],
+      "scenarioIds": [
+        "R2-P3-M18-REVIEW-AC06",
+        "R2-P3-M18-REVIEW-AC07",
+        "R2-P3-M18-REVIEW-AC08",
+        "R2-M18-S01"
+      ],
+      "p4ResponsibilityIds": [
+        "M18-LIMIT-01.07",
+        "M18-LIMIT-01.08"
+      ],
+      "assessment": "参会/校准/审核分权，利益回避和重开保留版本",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M18-SPEC-04",
+      "approvalRecord": "M18-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "1fdf15fd8058de2afe5eb68ba266bc28ae20a69002abb7c7a71d2a6236e7ec07",
+      "designRefs": [
+        "M18_Design.md#m18-spec-04"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M18-04"
+      ],
+      "scenarioIds": [
+        "R2-P3-M18-REVIEW-AC09",
+        "R2-P3-M18-REVIEW-AC10",
+        "R2-M18-S04"
+      ],
+      "p4ResponsibilityIds": [
+        "M18-LIMIT-01.07",
+        "M18-LIMIT-01.08"
+      ],
+      "assessment": "首次发布与更正均独立批准，受众当前重裁",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M18-SPEC-05",
+      "approvalRecord": "M18-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "44dc686ec490515947c322b55fea1521f75c1350d581c4239e0ff48311f5c931",
+      "designRefs": [
+        "M18_Design.md#m18-spec-05"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M18-05",
+        "P3-R2-X-01",
+        "P3-R2-X-03",
+        "P3-R2-X-04"
+      ],
+      "scenarioIds": [
+        "R2-P3-M18-REVIEW-AC11",
+        "R2-P3-M18-REVIEW-AC12",
+        "R2-P3-M18-REVIEW-AC13",
+        "R2-X-01",
+        "R2-X-02",
+        "R2-X-05",
+        "R2-X-08"
+      ],
+      "p4ResponsibilityIds": [
+        "M18-LIMIT-01.07",
+        "M18-LIMIT-01.08"
+      ],
+      "assessment": "只向M17提供来源或建议，不自动入池/继任/任用；精确历史选择受001影响",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M17-SPEC-01",
+      "approvalRecord": "M17-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "4e91b6c94fb2db5920b2b97dc3a96f7678cc85f62c7a35bd4e544f2a8bcff930",
+      "designRefs": [
+        "M17_Design.md#m17-spec-01"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M17-01"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC01",
+        "R2-P3-M17-REVIEW-AC02",
+        "R2-P3-M17-REVIEW-AC03",
+        "R2-M17-S01"
+      ],
+      "p4ResponsibilityIds": [
+        "M17-LIMIT-01.09",
+        "M17-LIMIT-01.10"
+      ],
+      "assessment": "互斥有效区间、自动规则幂等和新ID重入历史明确",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M17-SPEC-02",
+      "approvalRecord": "M17-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "90ff59a1326d8e58127b63e259144d94a04949c62d2b2b3a1c038b40e715083f",
+      "designRefs": [
+        "M17_Design.md#m17-spec-02"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M17-02",
+        "P3-R2-X-02"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC04",
+        "R2-P3-M17-REVIEW-AC05",
+        "R2-P3-M17-REVIEW-AC06",
+        "R2-X-03",
+        "R2-X-04"
+      ],
+      "p4ResponsibilityIds": [
+        "M17-LIMIT-01.09",
+        "M17-LIMIT-01.10"
+      ],
+      "assessment": "准备度词典、继任任期/复核/资格有效性明确",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M17-SPEC-03",
+      "approvalRecord": "M17-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "81b5efc4228bc9366dc49d9d99aec6c7480dfdcd7afcb610a6cb3a76d7194d50",
+      "designRefs": [
+        "M17_Design.md#m17-spec-03"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M17-03"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC07",
+        "R2-P3-M17-REVIEW-AC08",
+        "R2-M17-S02"
+      ],
+      "p4ResponsibilityIds": [
+        "M17-LIMIT-01.09",
+        "M17-LIMIT-01.10"
+      ],
+      "assessment": "导师和核验人动态解析，不允许本人唯一指导或最终自核",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M17-SPEC-04",
+      "approvalRecord": "M17-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "5857ac02919690cf82b148a5ffd907b3d9230a4748cd61ab55b56d6ee8c4221c",
+      "designRefs": [
+        "M17_Design.md#m17-spec-04"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M17-04"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC09",
+        "R2-P3-M17-REVIEW-AC10",
+        "R2-M17-S03"
+      ],
+      "p4ResponsibilityIds": [
+        "M17-LIMIT-01.09",
+        "M17-LIMIT-01.10"
+      ],
+      "assessment": "模板/阶段/任务DAG和取消不等免除、退回及M27证据边界明确",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M17-SPEC-05",
+      "approvalRecord": "M17-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "96f62c2fbd59274f4020d5aa31ea9aaf8f6fced0be298ac6dca8c856368d606a",
+      "designRefs": [
+        "M17_Design.md#m17-spec-05"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M17-05",
+        "P3-R2-X-04"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC11",
+        "R2-P3-M17-REVIEW-AC12",
+        "R2-M17-S04",
+        "R2-X-07",
+        "R2-X-08"
+      ],
+      "p4ResponsibilityIds": [
+        "M17-LIMIT-01.09",
+        "M17-LIMIT-01.10"
+      ],
+      "assessment": "健康指标有独立分母/时间/去重和null，历史需真实快照",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M17-SPEC-06",
+      "approvalRecord": "M17-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "fc40c4a0c4eb1a2c1d3edc921044cb53c2ed1aad9ae3a5cdebfe0c2c480c7541",
+      "designRefs": [
+        "M17_Design.md#m17-spec-06"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M17-06",
+        "P3-R2-X-01",
+        "P3-R2-X-04"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC13",
+        "R2-P3-M17-REVIEW-AC14",
+        "R2-M17-S05",
+        "R2-X-01",
+        "R2-X-02",
+        "R2-X-07"
+      ],
+      "p4ResponsibilityIds": [
+        "M17-LIMIT-01.09",
+        "M17-LIMIT-01.10"
+      ],
+      "assessment": "池/人员/岗位多范围及敏感投影明确，历史来源未知保持隔离",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M03-SPEC-01",
+      "approvalRecord": "M03-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "201b553ba9e2aac265da010cdefe0fb4424afb654cbee66a0daca8849453f468",
+      "designRefs": [
+        "M03_Design.md#m03-spec-01"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M03-01"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC01",
+        "R2-P3-M03-REVIEW-AC02",
+        "R2-M03-S01"
+      ],
+      "p4ResponsibilityIds": [
+        "M03-LIMIT-01.09",
+        "M03-LIMIT-01.10"
+      ],
+      "assessment": "干部/任期/assignment/任免记录独立，含边界日期算法",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M03-SPEC-02",
+      "approvalRecord": "M03-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "bfbc7b8335b26ed5f6ee4fcddb30c8e9cf2c258c4e2db7ca02bfc171140a0379",
+      "designRefs": [
+        "M03_Design.md#m03-spec-02"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M03-02",
+        "P3-R2-X-02"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC03",
+        "R2-P3-M03-REVIEW-AC04",
+        "R2-M03-S03",
+        "R2-X-03",
+        "R2-X-04"
+      ],
+      "p4ResponsibilityIds": [
+        "M03-LIMIT-01.09",
+        "M03-LIMIT-01.10"
+      ],
+      "assessment": "先独立任免批准再由M01实际人事生效；unknown不补造成功",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M03-SPEC-03",
+      "approvalRecord": "M03-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "fb8edbc794479470ea3cc244d5a77f02a52cd37d61110de0f8f8b2b66ca5283e",
+      "designRefs": [
+        "M03_Design.md#m03-spec-03"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M03-03"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC05",
+        "R2-P3-M03-REVIEW-AC06",
+        "R2-P3-M03-REVIEW-AC07",
+        "R2-M03-S02"
+      ],
+      "p4ResponsibilityIds": [
+        "M03-LIMIT-01.09",
+        "M03-LIMIT-01.10"
+      ],
+      "assessment": "委员会全应评、弃权/缺评分开；精确等值与否决/资格前置明确",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M03-SPEC-04",
+      "approvalRecord": "M03-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "65df9bd648f46504450ae9b400240ad434e135a10f3d06de7559c8509debecb6",
+      "designRefs": [
+        "M03_Design.md#m03-spec-04"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M03-04"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC08",
+        "R2-P3-M03-REVIEW-AC09"
+      ],
+      "p4ResponsibilityIds": [
+        "M03-LIMIT-01.09",
+        "M03-LIMIT-01.10"
+      ],
+      "assessment": "延期/转正/退出/撤回各有独立版本和决定，不自动转正",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M03-SPEC-05",
+      "approvalRecord": "M03-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "edbd085b302e69a40eed7cc754d9d83384b491d86a369cad330fe185250a7038",
+      "designRefs": [
+        "M03_Design.md#m03-spec-05"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M03-05"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC10",
+        "R2-P3-M03-REVIEW-AC11",
+        "R2-P3-M03-REVIEW-AC12",
+        "R2-M03-S04"
+      ],
+      "p4ResponsibilityIds": [
+        "M03-LIMIT-01.09",
+        "M03-LIMIT-01.10"
+      ],
+      "assessment": "述职/奖惩/访谈敏感附件与当期权限分离，不改任期事实",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "M03-SPEC-06",
+      "approvalRecord": "M03-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "4e66f709773a95666f4f38c0bff2dcc82c71f49fd09c44ab3047ed7f7a506165",
+      "designRefs": [
+        "M03_Design.md#m03-spec-06"
+      ],
+      "p3TaskIds": [
+        "P3-R2-M03-06",
+        "P3-R2-X-04"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC13",
+        "R2-P3-M03-REVIEW-AC14",
+        "R2-X-07",
+        "R2-X-08"
+      ],
+      "p4ResponsibilityIds": [
+        "M03-LIMIT-01.09",
+        "M03-LIMIT-01.10"
+      ],
+      "assessment": "生产者消费、跨日资格重核与旧数据隔离明确",
+      "findings": [],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    },
+    {
+      "id": "R2-BASELINE-01",
+      "approvalRecord": "M26-P1-APPROVAL-20260910",
+      "approvedProposalSha256": "8cc69607685d2dc0be62d8acc5603c3f43d78bf0a66b5b2b68cb0782c98d8b5a",
+      "designRefs": [
+        "Foundations.md#r2-baseline-01"
+      ],
+      "p3TaskIds": [
+        "P3-R2-COM-01",
+        "P3-R2-COM-03"
+      ],
+      "scenarioIds": [
+        "R2-COM-01",
+        "R2-COM-02",
+        "R2-COM-05",
+        "R2-COM-06"
+      ],
+      "p4ResponsibilityIds": [
+        "M37-LIMIT-01.06",
+        "M37-LIMIT-01.07",
+        "M06-LIMIT-01.07",
+        "M06-LIMIT-01.08",
+        "M26-LIMIT-01.08",
+        "M26-LIMIT-01.09",
+        "M18-LIMIT-01.07",
+        "M18-LIMIT-01.08",
+        "M17-LIMIT-01.09",
+        "M17-LIMIT-01.10",
+        "M03-LIMIT-01.09",
+        "M03-LIMIT-01.10"
+      ],
+      "assessment": "六模块/六基础及E2/D1–D7/恢复目标边界明确；基础场景映射Minor见003",
+      "findings": [
+        "R2-EXIT-003"
+      ],
+      "evidenceRequirement": "P3记录精确版本/请求/当前权限/副作用及独立复核；P4按LIMIT责任核真实环境；本评审均未执行"
+    }
+  ],
+  "count": 33,
+  "note": "295条款是原文按分号/句号确定拆分；149条契约逐值反查。家族级scenario引用不能证明逐字段断言完整。"
+}
