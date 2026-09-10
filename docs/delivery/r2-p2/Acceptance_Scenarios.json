@@ -389,7 +389,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ]
         }
       ]
@@ -456,7 +458,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ]
         }
       ]
@@ -875,7 +879,8 @@
             "QUESTION-VALID",
             "QUESTION-EXTRA",
             "QUESTION-VERSION",
-            "QUESTION-SOURCE"
+            "QUESTION-SOURCE",
+            "QUESTION-MISSING"
           ]
         }
       ]
@@ -916,7 +921,8 @@
             "QUESTION-VALID",
             "QUESTION-EXTRA",
             "QUESTION-VERSION",
-            "QUESTION-SOURCE"
+            "QUESTION-SOURCE",
+            "QUESTION-MISSING"
           ]
         }
       ]
@@ -1432,7 +1438,8 @@
             "LEVEL-VALID",
             "LEVEL-EXTRA",
             "LEVEL-VERSION",
-            "LEVEL-SOURCE"
+            "LEVEL-SOURCE",
+            "LEVEL-MISSING"
           ]
         }
       ]
@@ -1473,7 +1480,8 @@
             "LEVEL-VALID",
             "LEVEL-EXTRA",
             "LEVEL-VERSION",
-            "LEVEL-SOURCE"
+            "LEVEL-SOURCE",
+            "LEVEL-MISSING"
           ]
         }
       ]
@@ -1765,7 +1773,8 @@
             "HISTORY-EXTRA",
             "HISTORY-VERSION",
             "HISTORY-SOURCE",
-            "HISTORY-NONE-VALID"
+            "HISTORY-NONE-VALID",
+            "HISTORY-MISSING"
           ]
         }
       ]
@@ -1857,7 +1866,8 @@
             "HISTORY-EXTRA",
             "HISTORY-VERSION",
             "HISTORY-SOURCE",
-            "HISTORY-NONE-VALID"
+            "HISTORY-NONE-VALID",
+            "HISTORY-MISSING"
           ]
         }
       ]
@@ -3246,7 +3256,9 @@
             "REF-EXT-EXTRA",
             "REF-EXT-VERSION",
             "REF-EXT-SOURCE",
-            "REF-NO-KIND"
+            "REF-NO-KIND",
+            "REF-COMMAND-VALID",
+            "REF-COMMAND-SOURCE"
           ]
         }
       ]

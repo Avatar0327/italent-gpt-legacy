@@ -2,7 +2,7 @@
 
 本窗口独立工作树`/workspace/sites/italent-hris-r2-p2-20260910`，分支`design/r2-p2-20260910`，远端`r2-p2-origin`（Sites源码仓库，仅推设计分支，无publish-on-push）。main启动固定`22be3a7e366d6787180d4f593a30f5984c70e03a`。当前材料的外部包标识以该分支实际完整Git HEAD为准，不把自身commit SHA写入自身文件制造循环依赖。
 
-已完成：共用架构→M37→M06→M26→M18→M17→M03→六基础→两轮自检；无在制模块。下一步是所有者P2退出评审及总控受理登记提案，本窗口不自动实施P3。P2退出批准=false，P3进入=false，产品/部署/迁移/真实服务均未执行。
+已完成：共用架构→M37→M06→M26→M18→M17→M03→六基础→两轮自检；无在制模块。下一步是独立评审窗口复核001至004，再由所有者决定P2退出及总控受理登记提案，本窗口不自动实施P3。P2退出批准=false，P3进入=false，产品/部署/迁移/真实服务均未执行。
 
 恢复步骤：
 
@@ -15,3 +15,11 @@
 每个实质单元有独立commit和对应evidence文件；evidence.atHeadBeforeCommit是检查时父HEAD，不是最终提交自身。历史检查应从相同Git提交读取相应Artifact_Manifest，当前清单不代表过去版本。当前sourceRequest均未执行，LIMIT原6组仍受限；不能把138个场景文件存在当测试通过。
 
 禁止事项沿启动授权：不改main/P1/R1/R3或产品、不迁移/部署/新增访问者/真实外发/原站CDP/子代理，不自批P2退出，不进入R2 P3。R1 P3工作树期间有其他窗口合法推进，只观察Git元数据，不纳入本窗口完成证据或写入边界。
+
+## 独立评审定向返修恢复点（覆盖前述原设计交付进度）
+
+原被审8b3daf9270181ffe2e77015be723da8e611d83a5、原内容7ff3a28c7660dac658d5243d7c4535a9c8037fc2、独立评审bd976480fad9822ee52ecb4b00a080360772b0f3均保留。001至004已修，005/006未关闭；先读取Repair_Record.json、Contract_Repair.md、Anonymity_Repair.md、Foundation_Adaptations.md、Task_Dependencies.md及Limit_Resolution.json。新增两轮自检见Repair_Review_Round1/2，不以旧Review_Round1/2代替。
+
+规范重建入口为rebuild_repair.py：只执行本目录生成器、JSON Schema/符号/桌面/依赖及反向追踪文档检查。需隔离Python环境的jsonschema==4.23.0；本轮依赖位于/workspace/scratch/b398096054d2/r2-schema-validator，通过PYTHONPATH加载，不安装到产品、不调用产品。依赖环境恢复后再运行，不能退回仅结构检查却声称完整实例校验。随后运行check_design.py --unit repair-resume --final。所有原138场景仍未执行，46任务未开始。
+
+LIMIT闭合提案=原独立接受9+逐项重新提请6；原组完整0、P3 25/P4 12均保持。R1 A/B/C实际基线为空且待所有者冻结；当前移动HEAD只作只读观察，绝不可擅自升级为可用基线。新固定引用以最终Controller_Proposal.designContentHead和Repair_Delivery_Record.json为准；最终包装HEAD从Git/远端取得，避免自引用。

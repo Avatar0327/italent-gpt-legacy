@@ -1,0 +1,3099 @@
+{
+  "kind": "P2_reverse_trace_not_product_test",
+  "count": 773,
+  "errors": 0,
+  "checks": [
+    {
+      "check": "review source docs/delivery/r2-p2-exit-review/Independent_Exit_Review.md",
+      "pass_": true
+    },
+    {
+      "check": "review source docs/delivery/r2-p2-exit-review/Findings.md",
+      "pass_": true
+    },
+    {
+      "check": "review source docs/delivery/r2-p2-exit-review/Findings.json",
+      "pass_": true
+    },
+    {
+      "check": "review source docs/delivery/r2-p2-exit-review/Semantic_Probes.json",
+      "pass_": true
+    },
+    {
+      "check": "review source docs/delivery/r2-p2-exit-review/Critical_Gates.md",
+      "pass_": true
+    },
+    {
+      "check": "review source docs/delivery/r2-p2-exit-review/Requirement_Review.md",
+      "pass_": true
+    },
+    {
+      "check": "review source docs/delivery/r2-p2-exit-review/Limit_Review.md",
+      "pass_": true
+    },
+    {
+      "check": "review source docs/delivery/r2-p2-exit-review/R2_P3_Baseline_Sequencing.md",
+      "pass_": true
+    },
+    {
+      "check": "review source docs/delivery/r2-p2-exit-review/P3_Sequencing_Recommendations.json",
+      "pass_": true
+    },
+    {
+      "check": "review source docs/delivery/r2-p2-exit-review/Final_Verification.json",
+      "pass_": true
+    },
+    {
+      "check": "review source docs/delivery/r2-p2-exit-review/Resume.md",
+      "pass_": true
+    },
+    {
+      "check": "original IDs specs",
+      "pass_": true
+    },
+    {
+      "check": "specs/M37-SPEC-01 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M37-SPEC-01 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M37-SPEC-02 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M37-SPEC-02 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M37-SPEC-03 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M37-SPEC-03 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M37-SPEC-04 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M37-SPEC-04 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M37-SPEC-05 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M37-SPEC-05 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M06-SPEC-01 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M06-SPEC-01 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M06-SPEC-02 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M06-SPEC-02 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M06-SPEC-03 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M06-SPEC-03 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M06-SPEC-04 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M06-SPEC-04 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M06-SPEC-05 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M06-SPEC-05 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M26-SPEC-01 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M26-SPEC-01 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M26-SPEC-02 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M26-SPEC-02 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M26-SPEC-03 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M26-SPEC-03 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M26-SPEC-04 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M26-SPEC-04 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M26-SPEC-05 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M26-SPEC-05 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M18-SPEC-01 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M18-SPEC-01 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M18-SPEC-02 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M18-SPEC-02 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M18-SPEC-03 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M18-SPEC-03 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M18-SPEC-04 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M18-SPEC-04 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M18-SPEC-05 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M18-SPEC-05 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M17-SPEC-01 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M17-SPEC-01 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M17-SPEC-02 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M17-SPEC-02 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M17-SPEC-03 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M17-SPEC-03 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M17-SPEC-04 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M17-SPEC-04 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M17-SPEC-05 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M17-SPEC-05 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M17-SPEC-06 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M17-SPEC-06 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M03-SPEC-01 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M03-SPEC-01 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M03-SPEC-02 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M03-SPEC-02 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M03-SPEC-03 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M03-SPEC-03 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M03-SPEC-04 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M03-SPEC-04 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M03-SPEC-05 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M03-SPEC-05 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/M03-SPEC-06 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/M03-SPEC-06 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "specs/R2-BASELINE-01 source approvedText",
+      "pass_": true
+    },
+    {
+      "check": "specs/R2-BASELINE-01 source approvedProposalSha256",
+      "pass_": true
+    },
+    {
+      "check": "original IDs clauses",
+      "pass_": true
+    },
+    {
+      "check": "original IDs contractDetails",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-01/fields/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-01/roles/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-01/lifecycle/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-01/actions/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-01/fieldDetails/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-01/fieldDetails/1 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-01/fieldDetails/2 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-01/fieldDetails/3 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-01/roleMatrix/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-01/roleMatrix/1 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-01/roleMatrix/2 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-01/roleMatrix/3 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-01/stateTransitions/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-01/stateTransitions/1 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-01/stateTransitions/2 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-01/stateTransitions/3 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-01/stateTransitions/4 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-02/fields/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-02/roles/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-02/lifecycle/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-02/actions/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-02/fieldDetails/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-02/fieldDetails/1 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-02/fieldDetails/2 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-02/fieldDetails/3 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-02/fieldDetails/4 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-02/roleMatrix/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-02/roleMatrix/1 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-02/roleMatrix/2 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-02/stateTransitions/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-02/stateTransitions/1 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-02/stateTransitions/2 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-02/stateTransitions/3 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-02/stateTransitions/4 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-02/stateTransitions/5 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-02/stateTransitions/6 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/fields/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/roles/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/lifecycle/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/actions/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/fieldDetails/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/fieldDetails/1 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/fieldDetails/2 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/fieldDetails/3 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/fieldDetails/4 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/fieldDetails/5 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/fieldDetails/6 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/fieldDetails/7 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/roleMatrix/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/roleMatrix/1 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/roleMatrix/2 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/roleMatrix/3 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/roleMatrix/4 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/roleMatrix/5 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/roleMatrix/6 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/roleMatrix/7 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/stateTransitions/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/stateTransitions/1 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/stateTransitions/2 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/stateTransitions/3 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/stateTransitions/4 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/stateTransitions/5 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/stateTransitions/6 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/stateTransitions/7 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-03/stateTransitions/8 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/fields/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/roles/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/lifecycle/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/actions/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/fieldDetails/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/fieldDetails/1 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/fieldDetails/2 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/fieldDetails/3 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/fieldDetails/4 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/fieldDetails/5 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/fieldDetails/6 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/roleMatrix/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/roleMatrix/1 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/roleMatrix/2 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/roleMatrix/3 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/roleMatrix/4 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/roleMatrix/5 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/roleMatrix/6 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/stateTransitions/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/stateTransitions/1 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/stateTransitions/2 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/stateTransitions/3 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/stateTransitions/4 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/stateTransitions/5 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/stateTransitions/6 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/stateTransitions/7 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/stateTransitions/8 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/stateTransitions/9 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/stateTransitions/10 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-04/stateTransitions/11 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-API-01/fields/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-API-01/roles/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-API-01/lifecycle/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-API-01/actions/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-05/fields/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-05/roles/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-05/lifecycle/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-05/actions/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-05/stateTransitions/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-05/stateTransitions/1 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-05/stateTransitions/2 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-05/stateTransitions/3 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-06/fields/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-06/roles/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-06/lifecycle/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-06/actions/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-07/fields/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-07/roles/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-07/lifecycle/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-07/actions/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-07/fieldDetails/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-07/fieldDetails/1 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-07/fieldDetails/2 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-07/fieldDetails/3 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-07/fieldDetails/4 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-07/roleMatrix/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-07/roleMatrix/1 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-07/roleMatrix/2 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-07/stateTransitions/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-07/stateTransitions/1 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-07/stateTransitions/2 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-07/stateTransitions/3 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-07/stateTransitions/4 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-07/stateTransitions/5 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-07/stateTransitions/6 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-08/fields/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-08/roles/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-08/lifecycle/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-08/actions/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-08/fieldDetails/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-08/fieldDetails/1 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-08/fieldDetails/2 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-08/roleMatrix/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-08/roleMatrix/1 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-08/roleMatrix/2 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-08/stateTransitions/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-08/stateTransitions/1 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-08/stateTransitions/2 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-08/stateTransitions/3 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-C-REQ-08/stateTransitions/4 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-I-REQ-03/fields/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-I-REQ-03/roles/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-I-REQ-03/lifecycle/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "contractDetails/BP-I-REQ-03/actions/0 source source",
+      "pass_": true
+    },
+    {
+      "check": "original IDs closures",
+      "pass_": true
+    },
+    {
+      "check": "closures/M37-CLOSE-01 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M37-CLOSE-02 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M06-CLOSE-01 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M06-CLOSE-02 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M06-CLOSE-03 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M06-CLOSE-04 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M26-CLOSE-01 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M26-CLOSE-02 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M26-CLOSE-03 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M26-CLOSE-04 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M18-CLOSE-01 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M18-CLOSE-02 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M18-CLOSE-03 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M18-CLOSE-04 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M18-CLOSE-05 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M17-CLOSE-01 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M17-CLOSE-02 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M17-CLOSE-03 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M17-CLOSE-04 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M17-CLOSE-05 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M03-CLOSE-01 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M03-CLOSE-02 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M03-CLOSE-03 source source",
+      "pass_": true
+    },
+    {
+      "check": "closures/M03-CLOSE-04 source source",
+      "pass_": true
+    },
+    {
+      "check": "original IDs foundations",
+      "pass_": true
+    },
+    {
+      "check": "foundations/BASE-01 source source",
+      "pass_": true
+    },
+    {
+      "check": "foundations/BASE-02 source source",
+      "pass_": true
+    },
+    {
+      "check": "foundations/BASE-03 source source",
+      "pass_": true
+    },
+    {
+      "check": "foundations/BASE-04 source source",
+      "pass_": true
+    },
+    {
+      "check": "foundations/BASE-05 source source",
+      "pass_": true
+    },
+    {
+      "check": "foundations/BASE-06 source source",
+      "pass_": true
+    },
+    {
+      "check": "original IDs acceptanceIds",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M03-REVIEW-AC01 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M03-REVIEW-AC02 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M03-REVIEW-AC03 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M03-REVIEW-AC04 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M03-REVIEW-AC05 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M03-REVIEW-AC06 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M03-REVIEW-AC07 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M03-REVIEW-AC08 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M03-REVIEW-AC09 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M03-REVIEW-AC10 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M03-REVIEW-AC11 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M03-REVIEW-AC12 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M03-REVIEW-AC13 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M03-REVIEW-AC14 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M06-REVIEW-AC01 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M06-REVIEW-AC02 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M06-REVIEW-AC03 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M06-REVIEW-AC04 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M06-REVIEW-AC05 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M06-REVIEW-AC06 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M06-REVIEW-AC07 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M06-REVIEW-AC08 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M06-REVIEW-AC09 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M06-REVIEW-AC10 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M06-REVIEW-AC11 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M06-REVIEW-AC12 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M06-REVIEW-AC13 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BP-C-REQ-03-AC01 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BP-C-REQ-03-AC02 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BP-C-REQ-03-AC03 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BP-C-REQ-03-AC04 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BP-C-REQ-03-AC05 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BP-C-REQ-03-AC06 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BP-C-REQ-03-AC07 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BP-C-REQ-03-AC08 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M26-REVIEW-AC01 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M26-REVIEW-AC02 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M26-REVIEW-AC03 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M26-REVIEW-AC04 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M26-REVIEW-AC05 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M26-REVIEW-AC06 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M26-REVIEW-AC07 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M26-REVIEW-AC08 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M26-REVIEW-AC09 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M26-REVIEW-AC10 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M26-REVIEW-AC11 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M26-REVIEW-AC12 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BP-C-REQ-04-BC30-1 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BP-C-REQ-04-BC30-2 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BP-C-REQ-04-BC30-3 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BP-C-REQ-04-BC30-4 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M17-HISTORY-01 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M17-SCOPE-01 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M17-REPORT-01 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M17-REVIEW-AC01 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M17-REVIEW-AC02 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M17-REVIEW-AC03 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M17-REVIEW-AC04 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M17-REVIEW-AC05 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M17-REVIEW-AC06 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M17-REVIEW-AC07 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M17-REVIEW-AC08 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M17-REVIEW-AC09 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M17-REVIEW-AC10 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M17-REVIEW-AC11 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M17-REVIEW-AC12 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M17-REVIEW-AC13 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M17-REVIEW-AC14 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M17-IDP-RECOVERY-01 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M17-IDP-STATE-01 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M37-REVIEW-AC01 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M37-REVIEW-AC02 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M37-REVIEW-AC03 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M37-REVIEW-AC04 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M37-REVIEW-AC05 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M37-REVIEW-AC06 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M37-REVIEW-AC07 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M37-REVIEW-AC08 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M37-REVIEW-AC09 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M37-REVIEW-AC10 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M37-REVIEW-AC11 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M37-REVIEW-AC12 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M18-REVIEW-AC01 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M18-REVIEW-AC02 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M18-REVIEW-AC03 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M18-REVIEW-AC04 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M18-REVIEW-AC05 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M18-REVIEW-AC06 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M18-REVIEW-AC07 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M18-REVIEW-AC08 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M18-REVIEW-AC09 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M18-REVIEW-AC10 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M18-REVIEW-AC11 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M18-REVIEW-AC12 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/M18-REVIEW-AC13 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BASE-01-AC01 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BASE-01-AC02 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BASE-02-AC01 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BASE-02-AC02 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BASE-02-AC03 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BASE-03-AC01 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BASE-03-AC02 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BASE-04-AC01 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BASE-04-AC02 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BASE-04-AC03 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BASE-04-AC04 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BASE-05-AC01 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BASE-05-AC02 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BASE-06-AC01 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BASE-06-AC02 source source",
+      "pass_": true
+    },
+    {
+      "check": "acceptanceIds/BASE-06-AC03 source source",
+      "pass_": true
+    },
+    {
+      "check": "138 original scenario IDs preserved",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC01 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC01 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC02 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC02 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC03 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC03 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC04 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC04 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC05 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC05 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC06 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC06 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC07 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC07 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC08 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC08 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC09 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC09 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC10 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC10 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC11 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC11 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC12 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC12 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC13 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC13 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC14 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M03-REVIEW-AC14 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC01 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC01 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC02 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC02 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC03 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC03 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC04 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC04 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC05 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC05 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC06 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC06 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC07 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC07 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC08 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC08 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC09 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC09 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC10 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC10 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC11 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC11 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC12 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC12 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC13 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M06-REVIEW-AC13 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC01 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC01 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC02 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC02 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC03 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC03 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC04 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC04 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC05 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC05 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC06 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC06 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC07 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC07 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC08 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC08 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC09 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC09 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC10 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC10 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC11 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC11 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC12 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M26-REVIEW-AC12 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC01 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC01 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC02 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC02 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC03 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC03 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC04 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC04 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC05 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC05 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC06 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC06 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC07 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC07 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC08 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC08 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC09 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC09 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC10 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC10 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC11 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC11 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC12 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC12 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC13 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC13 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC14 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M17-REVIEW-AC14 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC01 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC01 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC02 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC02 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC03 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC03 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC04 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC04 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC05 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC05 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC06 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC06 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC07 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC07 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC08 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC08 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC09 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC09 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC10 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC10 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC11 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC11 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC12 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M37-REVIEW-AC12 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC01 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC01 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC02 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC02 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC03 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC03 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC04 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC04 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC05 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC05 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC06 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC06 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC07 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC07 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC08 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC08 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC09 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC09 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC10 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC10 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC11 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC11 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC12 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC12 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC13 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-M18-REVIEW-AC13 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-01-AC01 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-01-AC01 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-01-AC02 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-01-AC02 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-02-AC01 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-02-AC01 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-02-AC02 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-02-AC02 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-02-AC03 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-03-AC01 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-03-AC01 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-03-AC02 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-04-AC01 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-04-AC01 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-04-AC02 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-04-AC03 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-04-AC03 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-04-AC04 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-04-AC04 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-05-AC01 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-05-AC01 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-05-AC02 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-05-AC02 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-06-AC01 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-06-AC01 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-06-AC02 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-06-AC02 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-06-AC03 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-P3-BASE-06-AC03 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M37-S01 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M37-S01 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M37-S02 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M37-S02 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M37-S03 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M37-S03 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M37-S04 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M37-S04 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M06-S01 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M06-S01 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M06-S02 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M06-S02 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M06-S03 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M06-S03 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M06-S04 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M06-S04 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M26-S01 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M26-S01 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M26-S02 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M26-S02 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M26-S03 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M26-S03 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M26-S04 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M26-S04 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M18-S01 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M18-S01 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M18-S02 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M18-S02 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M18-S03 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M18-S03 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M18-S04 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M18-S04 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M17-S01 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M17-S01 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M17-S02 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M17-S02 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M17-S03 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M17-S03 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M17-S04 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M17-S04 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M03-S01 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M03-S01 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M03-S02 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M03-S02 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M03-S03 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M03-S03 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M03-S04 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M03-S04 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M26-S05 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M26-S05 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M26-S06 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M26-S06 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M26-S07 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M26-S07 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-M17-S05 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-M17-S05 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-COM-01 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-COM-01 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-COM-02 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-COM-02 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-COM-03 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-COM-03 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-COM-04 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-COM-04 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-COM-05 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-COM-05 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-COM-06 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-COM-06 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-COM-07 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-COM-07 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-COM-08 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-COM-08 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-X-01 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-X-01 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-X-02 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-X-02 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-X-03 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-X-03 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-X-04 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-X-04 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-X-05 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-X-05 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-X-06 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-X-06 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-X-07 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-X-07 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "R2-X-08 not_run",
+      "pass_": true
+    },
+    {
+      "check": "R2-X-08 original GWT retained",
+      "pass_": true
+    },
+    {
+      "check": "repair scenarios M37-SPEC-01",
+      "pass_": true
+    },
+    {
+      "check": "repair command M37-SPEC-01",
+      "pass_": true
+    },
+    {
+      "check": "repair examples M37-SPEC-01",
+      "pass_": true
+    },
+    {
+      "check": "repair scenarios M37-SPEC-05",
+      "pass_": true
+    },
+    {
+      "check": "repair command M37-SPEC-05",
+      "pass_": true
+    },
+    {
+      "check": "repair examples M37-SPEC-05",
+      "pass_": true
+    },
+    {
+      "check": "repair scenarios M06-SPEC-01",
+      "pass_": true
+    },
+    {
+      "check": "repair command M06-SPEC-01",
+      "pass_": true
+    },
+    {
+      "check": "repair examples M06-SPEC-01",
+      "pass_": true
+    },
+    {
+      "check": "repair scenarios M06-SPEC-02",
+      "pass_": true
+    },
+    {
+      "check": "repair command M06-SPEC-02",
+      "pass_": true
+    },
+    {
+      "check": "repair examples M06-SPEC-02",
+      "pass_": true
+    },
+    {
+      "check": "repair scenarios M26-SPEC-01",
+      "pass_": true
+    },
+    {
+      "check": "repair command M26-SPEC-01",
+      "pass_": true
+    },
+    {
+      "check": "repair examples M26-SPEC-01",
+      "pass_": true
+    },
+    {
+      "check": "repair scenarios M26-SPEC-03",
+      "pass_": true
+    },
+    {
+      "check": "repair command M26-SPEC-03",
+      "pass_": true
+    },
+    {
+      "check": "repair examples M26-SPEC-03",
+      "pass_": true
+    },
+    {
+      "check": "repair scenarios M18-SPEC-01",
+      "pass_": true
+    },
+    {
+      "check": "repair command M18-SPEC-01",
+      "pass_": true
+    },
+    {
+      "check": "repair examples M18-SPEC-01",
+      "pass_": true
+    },
+    {
+      "check": "repair scenarios M18-SPEC-05",
+      "pass_": true
+    },
+    {
+      "check": "repair command M18-SPEC-05",
+      "pass_": true
+    },
+    {
+      "check": "repair examples M18-SPEC-05",
+      "pass_": true
+    },
+    {
+      "check": "LIMIT denominator and original closed groups",
+      "pass_": true
+    },
+    {
+      "check": "52 exclusive original phase labels",
+      "pass_": true
+    },
+    {
+      "check": "9 accepted + 6 proven re-proposals",
+      "pass_": true
+    },
+    {
+      "check": "M37-LIMIT-01.01 evidence hash",
+      "pass_": true
+    },
+    {
+      "check": "M37-LIMIT-01.01 current input evidence",
+      "pass_": true
+    },
+    {
+      "check": "M37-LIMIT-01.03 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M37-LIMIT-01.04 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M37-LIMIT-01.05 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M37-LIMIT-01.06 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M37-LIMIT-01.07 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M06-LIMIT-01.01 evidence hash",
+      "pass_": true
+    },
+    {
+      "check": "M06-LIMIT-01.01 current input evidence",
+      "pass_": true
+    },
+    {
+      "check": "M06-LIMIT-01.03 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M06-LIMIT-01.04 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M06-LIMIT-01.05 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M06-LIMIT-01.06 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M06-LIMIT-01.07 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M06-LIMIT-01.08 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M26-LIMIT-01.01 evidence hash",
+      "pass_": true
+    },
+    {
+      "check": "M26-LIMIT-01.01 current input evidence",
+      "pass_": true
+    },
+    {
+      "check": "M26-LIMIT-01.02 evidence hash",
+      "pass_": true
+    },
+    {
+      "check": "M26-LIMIT-01.02 current input evidence",
+      "pass_": true
+    },
+    {
+      "check": "M26-LIMIT-01.04 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M26-LIMIT-01.05 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M26-LIMIT-01.06 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M26-LIMIT-01.07 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M26-LIMIT-01.08 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M26-LIMIT-01.09 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M18-LIMIT-01.01 evidence hash",
+      "pass_": true
+    },
+    {
+      "check": "M18-LIMIT-01.01 current input evidence",
+      "pass_": true
+    },
+    {
+      "check": "M18-LIMIT-01.02 evidence hash",
+      "pass_": true
+    },
+    {
+      "check": "M18-LIMIT-01.02 current input evidence",
+      "pass_": true
+    },
+    {
+      "check": "M18-LIMIT-01.03 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M18-LIMIT-01.04 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M18-LIMIT-01.05 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M18-LIMIT-01.06 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M18-LIMIT-01.07 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M18-LIMIT-01.08 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M17-LIMIT-01.04 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M17-LIMIT-01.05 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M17-LIMIT-01.06 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M17-LIMIT-01.07 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M17-LIMIT-01.08 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M17-LIMIT-01.09 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M17-LIMIT-01.10 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M03-LIMIT-01.04 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M03-LIMIT-01.05 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M03-LIMIT-01.06 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M03-LIMIT-01.07 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M03-LIMIT-01.08 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M03-LIMIT-01.09 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "M03-LIMIT-01.10 P3/P4 responsibility unchanged",
+      "pass_": true
+    },
+    {
+      "check": "observations 005/006 open",
+      "pass_": true
+    },
+    {
+      "check": "no approval or P3",
+      "pass_": true
+    },
+    {
+      "check": "46 tasks unchanged",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M37-01 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M37-02 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M37-03 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M37-04 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M37-05 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M06-01 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M06-02 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M06-03 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M06-04 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M06-05 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M26-01 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M26-02 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M26-03 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M26-04 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M26-05 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M18-01 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M18-02 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M18-03 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M18-04 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M18-05 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M17-01 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M17-02 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M17-03 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M17-04 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M17-05 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M17-06 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M03-01 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M03-02 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M03-03 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M03-04 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M03-05 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-M03-06 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-BASE-01 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-BASE-02 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-BASE-03 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-BASE-04 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-BASE-05 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-BASE-06 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-COM-01 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-COM-02 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-COM-03 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-COM-04 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-X-01 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-X-02 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-X-03 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "P3-R2-X-04 exact dependency binding",
+      "pass_": true
+    },
+    {
+      "check": "repair only authorized directory",
+      "pass_": true
+    }
+  ]
+}

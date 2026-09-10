@@ -40,6 +40,20 @@ rating=copy.deepcopy(cat);rating.update(evaluationMode='rating',numericScale=Non
 case('TYPE-RATING-VALID','CatalogDraft','CatalogDraft',rating,'accept','rating scheme distinct from qualification level','catalog')
 none=copy.deepcopy(project);none['previousResultRef']=None;case('HISTORY-NONE-VALID','ReviewProject','ReviewProject',none,'accept','explicit no prior result','history')
 no_kind=vr();del no_kind['kind'];case('REF-NO-KIND','VersionRef','VersionRef',no_kind,'reject','never infer source')
+for label,group,schema,v,path in [
+ ('LEVEL-MISSING','IndicatorChild','IndicatorChild',child,['alias']),
+ ('TYPE-MISSING','CatalogDraft','CatalogDraft',cat,['descriptionRows']),
+ ('QUESTION-MISSING','QuestionnaireDraft','QuestionnaireDraft',questionnaire,['questions',0,'roleApplicability']),
+ ('HISTORY-MISSING','ReviewProject','ReviewProject',project,['previousResultRef'])]:
+ bad=copy.deepcopy(v);target=bad
+ for key in path[:-1]:target=target[key]
+ del target[path[-1]];case(label,group,schema,bad,'reject','approved required field absent')
+# Complete command validates external source white-list, not only reusable fragments.
+standard=dict(name='成就标准',classificationId=None,modelLabel='',elementLabel='',lines=[dict(referenceLineId=None,dimension='achievement',sourceVersionRef=ext,target=dict(kind='none'),weight='1',mandatory=False)],purposeRuleVersionRefs=[])
+envelope=dict(schemaVersion=1,commandId='00000000-0000-4000-8000-000000000001',idempotencyKey='schema-document-example',action='r2.m37.standard.create',objectRef=dict(module='M37',objectType='talent_standard',rootId=None),expectedWorkspaceRevision=1,expectedEntityRevision=0,expectedAuthorizationRevision=1,writerEpoch=1,recoveryEpoch=1,payload=standard)
+case('REF-COMMAND-VALID','VersionRef','Command',envelope,'accept','external allowed only achievement line')
+bad=copy.deepcopy(envelope);bad['payload']['lines'][0]['dimension']='ability';case('REF-COMMAND-SOURCE','VersionRef','Command',bad,'reject','external prohibited on ability line')
+bad=copy.deepcopy(rating);bad['ratingSelection']['ratingSchemeVersionRef']['versionId']='RS1-v9';case('TYPE-EXACT-VERSION','CatalogDraft','CatalogDraft',bad,'reject','exact rating version absent','catalog')
 refs=[]
 def walk(x):
  if isinstance(x,dict):

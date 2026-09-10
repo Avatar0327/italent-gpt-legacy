@@ -72,3 +72,6 @@ print(json.dumps({'tasks':len(tasks),'scenarios':len(scenarios),'tasksWithoutSce
 
 with (D/"P3_Handoff.md").open("a") as f:
  f.write("\n46项任务完成依赖、纯领域启动边界和A/B/C待冻结槽位见[Task_Dependencies.md](Task_Dependencies.md)。R1-10与实际R2/R3生产者联合收口，不把全部R1退出设为循环前置。全部138场景仍not_run，P3未启动。\n")
+
+with (D/"P3_Handoff.md").open("a") as f:
+ f.write("\n001–004修订待独立复核；LIMIT52责任子项仍15个P2设计关闭提案（原独立接受9+本轮逐项重提6）、25个P3验证、12个P4核证，原6组完整关闭0。005/006观察保留。P2修复不等实现/业务验收通过。\n")

@@ -1,4 +1,5 @@
 """Full Draft202012 schema validation + explicit synthetic reference oracles; no product calls."""
+import hashlib
 import json,copy
 from pathlib import Path
 from jsonschema import Draft202012Validator,FormatChecker
@@ -38,4 +39,5 @@ for c in E['cases']:
  results.append(dict(id=c['id'],group=c['group'],expected=c['expected'],actual=actual,schemaErrors=errs,semanticErrors=semantic,pass_=actual==c['expected']))
 assert all(r['pass_'] for r in results),[r for r in results if not r['pass_']]
 out=dict(kind='P2_document_schema_and_fixture_checks_not_P3',validator='jsonschema 4.23.0 / Draft202012Validator + FormatChecker',metaSchemaValid=True,count=len(results),accepted=sum(r['actual']=='accept' for r in results),rejected=sum(r['actual']=='reject' for r in results),results=results)
+out['inputSha256']={n:hashlib.sha256((D/n).read_bytes()).hexdigest() for n in ['Interface_Schemas.json', 'Schema_Examples.json']}
 (D/'evidence/repair-001-schema.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n');print({k:v for k,v in out.items() if k!='results'})

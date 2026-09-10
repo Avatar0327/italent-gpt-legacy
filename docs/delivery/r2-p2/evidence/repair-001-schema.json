@@ -2,9 +2,9 @@
   "kind": "P2_document_schema_and_fixture_checks_not_P3",
   "validator": "jsonschema 4.23.0 / Draft202012Validator + FormatChecker",
   "metaSchemaValid": true,
-  "count": 27,
-  "accepted": 8,
-  "rejected": 19,
+  "count": 34,
+  "accepted": 9,
+  "rejected": 25,
   "results": [
     {
       "id": "REF-IN-VALID",
@@ -291,6 +291,92 @@
       ],
       "semanticErrors": [],
       "pass_": true
+    },
+    {
+      "id": "LEVEL-MISSING",
+      "group": "IndicatorChild",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [
+        "'alias' is a required property"
+      ],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "TYPE-MISSING",
+      "group": "CatalogDraft",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [
+        "'descriptionRows' is a required property"
+      ],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "QUESTION-MISSING",
+      "group": "QuestionnaireDraft",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [
+        "'roleApplicability' is a required property"
+      ],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "HISTORY-MISSING",
+      "group": "ReviewProject",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [
+        "'previousResultRef' is a required property"
+      ],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "REF-COMMAND-VALID",
+      "group": "VersionRef",
+      "expected": "accept",
+      "actual": "accept",
+      "schemaErrors": [],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "REF-COMMAND-SOURCE",
+      "group": "VersionRef",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [
+        "'internal' was expected",
+        "'producer' is a required property",
+        "'rootId' is a required property",
+        "'versionId' is a required property",
+        "'sourceRevision' is a required property",
+        "Additional properties are not allowed ('asOf', 'externalId', 'externalVersion', 'sourceNamespace', 'trustContractVersionRef' were unexpected)",
+        "'indicator' was expected"
+      ],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "TYPE-EXACT-VERSION",
+      "group": "CatalogDraft",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [],
+      "semanticErrors": [
+        "SOURCE_VERSION_OR_TYPE_MISMATCH",
+        "RATING_LEVEL_VERSION_MISMATCH"
+      ],
+      "pass_": true
     }
-  ]
+  ],
+  "inputSha256": {
+    "Interface_Schemas.json": "89f79ffe817cad1c1ee0944e7ebb3cdda310b1d2480075b4fa139874b1cdc52f",
+    "Schema_Examples.json": "8344e5415ef535bc46a41913a193c9956e918c32db27ce24ddfe1b3bce161394"
+  }
 }

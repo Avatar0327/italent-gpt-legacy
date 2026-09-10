@@ -24,7 +24,7 @@
   "p3Entered": false,
   "productModified": false,
   "deployed": false,
-  "next": "owner R2 P2 exit review and controller intake; do not start P3",
+  "next": "independent targeted recheck, then owner P2 decision; no R2 P3",
   "designStatus": "all_autonomous_design_complete",
   "counts": {
     "modules": 6,
@@ -39,5 +39,10 @@
   },
   "designContentHead": "7ff3a28c7660dac658d5243d7c4535a9c8037fc2",
   "reproducibleGeneratedViews": true,
-  "finalPackaging": "complete; transport HEAD must be obtained from git"
+  "finalPackaging": "repair content freeze pending",
+  "priorFixedDesignContentHead": "7ff3a28c7660dac658d5243d7c4535a9c8037fc2",
+  "repairStatus": "all_four_findings_repaired_pending_independent_recheck",
+  "completedRepairReviews": [
+    "round1"
+  ]
 }

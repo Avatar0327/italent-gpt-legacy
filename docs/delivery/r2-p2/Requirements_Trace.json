@@ -33,7 +33,8 @@
             "LEVEL-VALID",
             "LEVEL-EXTRA",
             "LEVEL-VERSION",
-            "LEVEL-SOURCE"
+            "LEVEL-SOURCE",
+            "LEVEL-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M37-REVIEW-AC01",
@@ -142,7 +143,9 @@
             "REF-EXT-EXTRA",
             "REF-EXT-VERSION",
             "REF-EXT-SOURCE",
-            "REF-NO-KIND"
+            "REF-NO-KIND",
+            "REF-COMMAND-VALID",
+            "REF-COMMAND-SOURCE"
           ],
           "scenarioIds": [
             "R2-X-02"
@@ -182,7 +185,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -220,7 +225,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -327,7 +334,8 @@
             "QUESTION-VALID",
             "QUESTION-EXTRA",
             "QUESTION-VERSION",
-            "QUESTION-SOURCE"
+            "QUESTION-SOURCE",
+            "QUESTION-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M26-REVIEW-AC06",
@@ -392,7 +400,8 @@
             "QUESTION-VALID",
             "QUESTION-EXTRA",
             "QUESTION-VERSION",
-            "QUESTION-SOURCE"
+            "QUESTION-SOURCE",
+            "QUESTION-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M26-REVIEW-AC06",
@@ -478,7 +487,8 @@
             "HISTORY-EXTRA",
             "HISTORY-VERSION",
             "HISTORY-SOURCE",
-            "HISTORY-NONE-VALID"
+            "HISTORY-NONE-VALID",
+            "HISTORY-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M18-REVIEW-AC01",
@@ -583,7 +593,8 @@
             "HISTORY-EXTRA",
             "HISTORY-VERSION",
             "HISTORY-SOURCE",
-            "HISTORY-NONE-VALID"
+            "HISTORY-NONE-VALID",
+            "HISTORY-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M18-REVIEW-AC01",
@@ -898,7 +909,8 @@
             "LEVEL-VALID",
             "LEVEL-EXTRA",
             "LEVEL-VERSION",
-            "LEVEL-SOURCE"
+            "LEVEL-SOURCE",
+            "LEVEL-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M37-REVIEW-AC01",
@@ -932,7 +944,8 @@
             "LEVEL-VALID",
             "LEVEL-EXTRA",
             "LEVEL-VERSION",
-            "LEVEL-SOURCE"
+            "LEVEL-SOURCE",
+            "LEVEL-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M37-REVIEW-AC01",
@@ -966,7 +979,8 @@
             "LEVEL-VALID",
             "LEVEL-EXTRA",
             "LEVEL-VERSION",
-            "LEVEL-SOURCE"
+            "LEVEL-SOURCE",
+            "LEVEL-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M37-REVIEW-AC01",
@@ -1000,7 +1014,8 @@
             "LEVEL-VALID",
             "LEVEL-EXTRA",
             "LEVEL-VERSION",
-            "LEVEL-SOURCE"
+            "LEVEL-SOURCE",
+            "LEVEL-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M37-REVIEW-AC01",
@@ -1034,7 +1049,8 @@
             "LEVEL-VALID",
             "LEVEL-EXTRA",
             "LEVEL-VERSION",
-            "LEVEL-SOURCE"
+            "LEVEL-SOURCE",
+            "LEVEL-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M37-REVIEW-AC01",
@@ -1068,7 +1084,8 @@
             "LEVEL-VALID",
             "LEVEL-EXTRA",
             "LEVEL-VERSION",
-            "LEVEL-SOURCE"
+            "LEVEL-SOURCE",
+            "LEVEL-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M37-REVIEW-AC01",
@@ -1102,7 +1119,8 @@
             "LEVEL-VALID",
             "LEVEL-EXTRA",
             "LEVEL-VERSION",
-            "LEVEL-SOURCE"
+            "LEVEL-SOURCE",
+            "LEVEL-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M37-REVIEW-AC01",
@@ -1136,7 +1154,8 @@
             "LEVEL-VALID",
             "LEVEL-EXTRA",
             "LEVEL-VERSION",
-            "LEVEL-SOURCE"
+            "LEVEL-SOURCE",
+            "LEVEL-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M37-REVIEW-AC01",
@@ -1170,7 +1189,8 @@
             "LEVEL-VALID",
             "LEVEL-EXTRA",
             "LEVEL-VERSION",
-            "LEVEL-SOURCE"
+            "LEVEL-SOURCE",
+            "LEVEL-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M37-REVIEW-AC01",
@@ -1204,7 +1224,8 @@
             "LEVEL-VALID",
             "LEVEL-EXTRA",
             "LEVEL-VERSION",
-            "LEVEL-SOURCE"
+            "LEVEL-SOURCE",
+            "LEVEL-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M37-REVIEW-AC01",
@@ -1712,7 +1733,9 @@
             "REF-EXT-EXTRA",
             "REF-EXT-VERSION",
             "REF-EXT-SOURCE",
-            "REF-NO-KIND"
+            "REF-NO-KIND",
+            "REF-COMMAND-VALID",
+            "REF-COMMAND-SOURCE"
           ],
           "scenarioIds": [
             "R2-X-02"
@@ -1753,7 +1776,9 @@
             "REF-EXT-EXTRA",
             "REF-EXT-VERSION",
             "REF-EXT-SOURCE",
-            "REF-NO-KIND"
+            "REF-NO-KIND",
+            "REF-COMMAND-VALID",
+            "REF-COMMAND-SOURCE"
           ],
           "scenarioIds": [
             "R2-X-02"
@@ -1794,7 +1819,9 @@
             "REF-EXT-EXTRA",
             "REF-EXT-VERSION",
             "REF-EXT-SOURCE",
-            "REF-NO-KIND"
+            "REF-NO-KIND",
+            "REF-COMMAND-VALID",
+            "REF-COMMAND-SOURCE"
           ],
           "scenarioIds": [
             "R2-X-02"
@@ -1835,7 +1862,9 @@
             "REF-EXT-EXTRA",
             "REF-EXT-VERSION",
             "REF-EXT-SOURCE",
-            "REF-NO-KIND"
+            "REF-NO-KIND",
+            "REF-COMMAND-VALID",
+            "REF-COMMAND-SOURCE"
           ],
           "scenarioIds": [
             "R2-X-02"
@@ -1876,7 +1905,9 @@
             "REF-EXT-EXTRA",
             "REF-EXT-VERSION",
             "REF-EXT-SOURCE",
-            "REF-NO-KIND"
+            "REF-NO-KIND",
+            "REF-COMMAND-VALID",
+            "REF-COMMAND-SOURCE"
           ],
           "scenarioIds": [
             "R2-X-02"
@@ -1917,7 +1948,9 @@
             "REF-EXT-EXTRA",
             "REF-EXT-VERSION",
             "REF-EXT-SOURCE",
-            "REF-NO-KIND"
+            "REF-NO-KIND",
+            "REF-COMMAND-VALID",
+            "REF-COMMAND-SOURCE"
           ],
           "scenarioIds": [
             "R2-X-02"
@@ -1958,7 +1991,9 @@
             "REF-EXT-EXTRA",
             "REF-EXT-VERSION",
             "REF-EXT-SOURCE",
-            "REF-NO-KIND"
+            "REF-NO-KIND",
+            "REF-COMMAND-VALID",
+            "REF-COMMAND-SOURCE"
           ],
           "scenarioIds": [
             "R2-X-02"
@@ -1999,7 +2034,9 @@
             "REF-EXT-EXTRA",
             "REF-EXT-VERSION",
             "REF-EXT-SOURCE",
-            "REF-NO-KIND"
+            "REF-NO-KIND",
+            "REF-COMMAND-VALID",
+            "REF-COMMAND-SOURCE"
           ],
           "scenarioIds": [
             "R2-X-02"
@@ -2040,7 +2077,9 @@
             "REF-EXT-EXTRA",
             "REF-EXT-VERSION",
             "REF-EXT-SOURCE",
-            "REF-NO-KIND"
+            "REF-NO-KIND",
+            "REF-COMMAND-VALID",
+            "REF-COMMAND-SOURCE"
           ],
           "scenarioIds": [
             "R2-X-02"
@@ -2081,7 +2120,9 @@
             "REF-EXT-EXTRA",
             "REF-EXT-VERSION",
             "REF-EXT-SOURCE",
-            "REF-NO-KIND"
+            "REF-NO-KIND",
+            "REF-COMMAND-VALID",
+            "REF-COMMAND-SOURCE"
           ],
           "scenarioIds": [
             "R2-X-02"
@@ -2116,7 +2157,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -2152,7 +2195,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -2188,7 +2233,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -2224,7 +2271,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -2260,7 +2309,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -2296,7 +2347,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -2332,7 +2385,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -2368,7 +2423,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -2404,7 +2461,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -2440,7 +2499,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -2476,7 +2537,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -2512,7 +2575,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -2545,7 +2610,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -2578,7 +2645,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -2611,7 +2680,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -2644,7 +2715,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -2677,7 +2750,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -2710,7 +2785,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -2743,7 +2820,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -2776,7 +2855,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -2809,7 +2890,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -2842,7 +2925,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -3486,7 +3571,8 @@
             "QUESTION-VALID",
             "QUESTION-EXTRA",
             "QUESTION-VERSION",
-            "QUESTION-SOURCE"
+            "QUESTION-SOURCE",
+            "QUESTION-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M26-REVIEW-AC06",
@@ -3520,7 +3606,8 @@
             "QUESTION-VALID",
             "QUESTION-EXTRA",
             "QUESTION-VERSION",
-            "QUESTION-SOURCE"
+            "QUESTION-SOURCE",
+            "QUESTION-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M26-REVIEW-AC06",
@@ -3554,7 +3641,8 @@
             "QUESTION-VALID",
             "QUESTION-EXTRA",
             "QUESTION-VERSION",
-            "QUESTION-SOURCE"
+            "QUESTION-SOURCE",
+            "QUESTION-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M26-REVIEW-AC06",
@@ -3588,7 +3676,8 @@
             "QUESTION-VALID",
             "QUESTION-EXTRA",
             "QUESTION-VERSION",
-            "QUESTION-SOURCE"
+            "QUESTION-SOURCE",
+            "QUESTION-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M26-REVIEW-AC06",
@@ -3622,7 +3711,8 @@
             "QUESTION-VALID",
             "QUESTION-EXTRA",
             "QUESTION-VERSION",
-            "QUESTION-SOURCE"
+            "QUESTION-SOURCE",
+            "QUESTION-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M26-REVIEW-AC06",
@@ -3656,7 +3746,8 @@
             "QUESTION-VALID",
             "QUESTION-EXTRA",
             "QUESTION-VERSION",
-            "QUESTION-SOURCE"
+            "QUESTION-SOURCE",
+            "QUESTION-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M26-REVIEW-AC06",
@@ -3690,7 +3781,8 @@
             "QUESTION-VALID",
             "QUESTION-EXTRA",
             "QUESTION-VERSION",
-            "QUESTION-SOURCE"
+            "QUESTION-SOURCE",
+            "QUESTION-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M26-REVIEW-AC06",
@@ -3724,7 +3816,8 @@
             "QUESTION-VALID",
             "QUESTION-EXTRA",
             "QUESTION-VERSION",
-            "QUESTION-SOURCE"
+            "QUESTION-SOURCE",
+            "QUESTION-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M26-REVIEW-AC06",
@@ -3918,7 +4011,8 @@
             "QUESTION-VALID",
             "QUESTION-EXTRA",
             "QUESTION-VERSION",
-            "QUESTION-SOURCE"
+            "QUESTION-SOURCE",
+            "QUESTION-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M26-REVIEW-AC06",
@@ -3952,7 +4046,8 @@
             "QUESTION-VALID",
             "QUESTION-EXTRA",
             "QUESTION-VERSION",
-            "QUESTION-SOURCE"
+            "QUESTION-SOURCE",
+            "QUESTION-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M26-REVIEW-AC06",
@@ -3986,7 +4081,8 @@
             "QUESTION-VALID",
             "QUESTION-EXTRA",
             "QUESTION-VERSION",
-            "QUESTION-SOURCE"
+            "QUESTION-SOURCE",
+            "QUESTION-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M26-REVIEW-AC06",
@@ -4020,7 +4116,8 @@
             "QUESTION-VALID",
             "QUESTION-EXTRA",
             "QUESTION-VERSION",
-            "QUESTION-SOURCE"
+            "QUESTION-SOURCE",
+            "QUESTION-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M26-REVIEW-AC06",
@@ -4054,7 +4151,8 @@
             "QUESTION-VALID",
             "QUESTION-EXTRA",
             "QUESTION-VERSION",
-            "QUESTION-SOURCE"
+            "QUESTION-SOURCE",
+            "QUESTION-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M26-REVIEW-AC06",
@@ -4088,7 +4186,8 @@
             "QUESTION-VALID",
             "QUESTION-EXTRA",
             "QUESTION-VERSION",
-            "QUESTION-SOURCE"
+            "QUESTION-SOURCE",
+            "QUESTION-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M26-REVIEW-AC06",
@@ -4122,7 +4221,8 @@
             "QUESTION-VALID",
             "QUESTION-EXTRA",
             "QUESTION-VERSION",
-            "QUESTION-SOURCE"
+            "QUESTION-SOURCE",
+            "QUESTION-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M26-REVIEW-AC06",
@@ -4156,7 +4256,8 @@
             "QUESTION-VALID",
             "QUESTION-EXTRA",
             "QUESTION-VERSION",
-            "QUESTION-SOURCE"
+            "QUESTION-SOURCE",
+            "QUESTION-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M26-REVIEW-AC06",
@@ -4190,7 +4291,8 @@
             "QUESTION-VALID",
             "QUESTION-EXTRA",
             "QUESTION-VERSION",
-            "QUESTION-SOURCE"
+            "QUESTION-SOURCE",
+            "QUESTION-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M26-REVIEW-AC06",
@@ -4507,7 +4609,8 @@
             "HISTORY-EXTRA",
             "HISTORY-VERSION",
             "HISTORY-SOURCE",
-            "HISTORY-NONE-VALID"
+            "HISTORY-NONE-VALID",
+            "HISTORY-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M18-REVIEW-AC01",
@@ -4544,7 +4647,8 @@
             "HISTORY-EXTRA",
             "HISTORY-VERSION",
             "HISTORY-SOURCE",
-            "HISTORY-NONE-VALID"
+            "HISTORY-NONE-VALID",
+            "HISTORY-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M18-REVIEW-AC01",
@@ -4581,7 +4685,8 @@
             "HISTORY-EXTRA",
             "HISTORY-VERSION",
             "HISTORY-SOURCE",
-            "HISTORY-NONE-VALID"
+            "HISTORY-NONE-VALID",
+            "HISTORY-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M18-REVIEW-AC01",
@@ -4618,7 +4723,8 @@
             "HISTORY-EXTRA",
             "HISTORY-VERSION",
             "HISTORY-SOURCE",
-            "HISTORY-NONE-VALID"
+            "HISTORY-NONE-VALID",
+            "HISTORY-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M18-REVIEW-AC01",
@@ -4655,7 +4761,8 @@
             "HISTORY-EXTRA",
             "HISTORY-VERSION",
             "HISTORY-SOURCE",
-            "HISTORY-NONE-VALID"
+            "HISTORY-NONE-VALID",
+            "HISTORY-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M18-REVIEW-AC01",
@@ -4692,7 +4799,8 @@
             "HISTORY-EXTRA",
             "HISTORY-VERSION",
             "HISTORY-SOURCE",
-            "HISTORY-NONE-VALID"
+            "HISTORY-NONE-VALID",
+            "HISTORY-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M18-REVIEW-AC01",
@@ -5139,7 +5247,8 @@
             "HISTORY-EXTRA",
             "HISTORY-VERSION",
             "HISTORY-SOURCE",
-            "HISTORY-NONE-VALID"
+            "HISTORY-NONE-VALID",
+            "HISTORY-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M18-REVIEW-AC01",
@@ -5178,7 +5287,8 @@
             "HISTORY-EXTRA",
             "HISTORY-VERSION",
             "HISTORY-SOURCE",
-            "HISTORY-NONE-VALID"
+            "HISTORY-NONE-VALID",
+            "HISTORY-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M18-REVIEW-AC01",
@@ -5217,7 +5327,8 @@
             "HISTORY-EXTRA",
             "HISTORY-VERSION",
             "HISTORY-SOURCE",
-            "HISTORY-NONE-VALID"
+            "HISTORY-NONE-VALID",
+            "HISTORY-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M18-REVIEW-AC01",
@@ -5256,7 +5367,8 @@
             "HISTORY-EXTRA",
             "HISTORY-VERSION",
             "HISTORY-SOURCE",
-            "HISTORY-NONE-VALID"
+            "HISTORY-NONE-VALID",
+            "HISTORY-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M18-REVIEW-AC01",
@@ -5295,7 +5407,8 @@
             "HISTORY-EXTRA",
             "HISTORY-VERSION",
             "HISTORY-SOURCE",
-            "HISTORY-NONE-VALID"
+            "HISTORY-NONE-VALID",
+            "HISTORY-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M18-REVIEW-AC01",
@@ -5334,7 +5447,8 @@
             "HISTORY-EXTRA",
             "HISTORY-VERSION",
             "HISTORY-SOURCE",
-            "HISTORY-NONE-VALID"
+            "HISTORY-NONE-VALID",
+            "HISTORY-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M18-REVIEW-AC01",
@@ -5373,7 +5487,8 @@
             "HISTORY-EXTRA",
             "HISTORY-VERSION",
             "HISTORY-SOURCE",
-            "HISTORY-NONE-VALID"
+            "HISTORY-NONE-VALID",
+            "HISTORY-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M18-REVIEW-AC01",
@@ -5412,7 +5527,8 @@
             "HISTORY-EXTRA",
             "HISTORY-VERSION",
             "HISTORY-SOURCE",
-            "HISTORY-NONE-VALID"
+            "HISTORY-NONE-VALID",
+            "HISTORY-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M18-REVIEW-AC01",
@@ -7771,7 +7887,9 @@
             "TYPE-EXTRA",
             "TYPE-VERSION",
             "TYPE-SOURCE",
-            "TYPE-RATING-VALID"
+            "TYPE-RATING-VALID",
+            "TYPE-MISSING",
+            "TYPE-EXACT-VERSION"
           ],
           "scenarioIds": [
             "R2-P3-M06-REVIEW-AC01",
@@ -10844,7 +10962,8 @@
             "LEVEL-VALID",
             "LEVEL-EXTRA",
             "LEVEL-VERSION",
-            "LEVEL-SOURCE"
+            "LEVEL-SOURCE",
+            "LEVEL-MISSING"
           ],
           "scenarioIds": [
             "R2-P3-M37-REVIEW-AC01",

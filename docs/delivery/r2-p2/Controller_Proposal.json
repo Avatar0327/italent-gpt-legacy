@@ -1,5 +1,5 @@
 {
-  "proposalId": "R2-P2-INTAKE-PROPOSAL-20260910",
+  "proposalId": "R2-P2-REPAIR-INTAKE-PROPOSAL-20260910",
   "proposalOnly": true,
   "registeredInController": false,
   "proposerRole": "R2 P2独立设计执行者",
@@ -64,11 +64,11 @@
     "P4": 6,
     "overlap": true
   },
-  "p2ExitRecommendation": "建议按完整设计包及明确P3/P4责任评审R2 P2退出；非所有者批准",
+  "p2ExitRecommendation": "提交001至004定向返修复核；复核接受后再由所有者决定P2退出，原不通过结论不由设计窗口覆盖",
   "p2ExitApproved": false,
   "p3Entered": false,
   "newBusinessArchitectureCostDecisionsRequired": 0,
-  "pendingOwnerAction": "独立审阅并决定R2 P2退出；P3另行明确准入",
+  "pendingOwnerAction": "独立复核后决定P2退出；P3另批准入及A/B/C基线槽位",
   "sourceRequests": {
     "count": 7,
     "status": "request_only_not_sent_or_executed"
@@ -152,5 +152,19 @@
       "path": "docs/delivery/r2-p2/Review_Round2.md",
       "sha256": "316c31928556257878e6f99e02ca1755e0c8a950bc32558b5e4318313d11dc16"
     }
-  ]
+  ],
+  "priorFixedDesignContentHead": "7ff3a28c7660dac658d5243d7c4535a9c8037fc2",
+  "repairReviewHead": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+  "repairStatus": "001-004 design repair complete; independent recheck pending",
+  "repairLimitAccounting": {
+    "independentAcceptedBeforeRepair": 9,
+    "disputedBeforeRepair": 6,
+    "repairReproposedP2Closed": 6,
+    "independentAcceptedAfterRepair": null,
+    "meaning": "9原独立接受+6本轮逐项证明后重新提请关闭；15为设计负责人提案，独立复核/所有者批准尚未发生"
+  },
+  "observations": {
+    "R2-EXIT-005": "open_future_responsibility",
+    "R2-EXIT-006": "open_future_responsibility"
+  }
 }

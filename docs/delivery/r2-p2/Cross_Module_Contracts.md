@@ -43,3 +43,7 @@ M32原`talentReview`行键(reviewRootId,publishedVersionId)保持，仅已发布
 同DB提交核依赖revision和当前时间；跨域异步投影允许标明延迟，只用于展示，强资格/任用前置必须读取可信生产者最新状态。外部无法核实返回unknown并阻关键动作。生产者重启/恢复后先校验recoveryEpoch和连续sourceRevision，再恢复消费。旧consumer不可表达新版对象时unsupported而非扁平化丢失。
 
 本包接口约定供后续R1/R2 P3负责人联合验证，不登记其他Release完成。R2所有可用性初始为design_only、realIntegration=not_executed。
+
+## 独立退出评审定向修订
+
+VersionRef按[Contract_Repair.md](Contract_Repair.md)严格区分内部/外部，M37 standardSnapshot增加标准子对象dimensionRoot/version及指标manifest以承载逐题关系。M06类型配置版本随标准依赖冻结，M18历史参考只读，不自动产生M17决定；M26消费者只接收[匿名账本规范](Anonymity_Repair.md)已允许的报告Cell，不能在M32重算或以新用途重置披露epoch。旧消费者、历史原始版本及审批/实际生效边界保持。

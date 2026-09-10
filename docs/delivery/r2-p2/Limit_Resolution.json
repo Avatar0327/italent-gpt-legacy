@@ -18,14 +18,34 @@
       "title": "根/子集/尺度及独立审批模型",
       "disposition": "P2_design_closed",
       "designRefs": [
-        "M37_Design.md#m37-spec-01"
+        "M37_Design.md#m37-spec-01",
+        "Contract_Repair.md"
       ],
-      "evidenceStatus": "design_checked",
+      "evidenceStatus": "design_repaired_document_verified_pending_independent_recheck",
       "p2Blocking": false,
       "ownerRole": "R2 P2设计负责人",
-      "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
+      "closureCriterion": "逐等级alias/elementText/subsetName及父指标/level/version规范持久化，来源联合按命令限制；旧尺度与独立审核保持；P3实际实现与P4真实核证责任不关闭。",
       "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
-      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制",
+      "independentReviewDisposition": "not_accepted_before_repair; awaiting_new_independent_recheck",
+      "repairFindingId": "R2-EXIT-001",
+      "repairProof": {
+        "designRef": "Contract_Repair.md",
+        "criterion": "逐等级alias/elementText/subsetName及父指标/level/version规范持久化，来源联合按命令限制；旧尺度与独立审核保持",
+        "documentProbeIds": [
+          "LEVEL-VALID",
+          "LEVEL-EXTRA",
+          "LEVEL-VERSION",
+          "LEVEL-SOURCE",
+          "LEVEL-MISSING",
+          "REF-COMMAND-VALID",
+          "REF-COMMAND-SOURCE"
+        ],
+        "evidencePath": "evidence/repair-001-schema.json",
+        "evidenceSha256": "87c6431d5fff83bb329e90a6cc84b1c3cb7305d0b3b25c6b74ab611dd110aa36",
+        "result": "design_close_reproposed",
+        "independentlyAcceptedThisRepair": false
+      }
     },
     {
       "id": "M37-LIMIT-01.02",
@@ -40,7 +60,8 @@
       "ownerRole": "R2 P2设计负责人",
       "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
       "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
-      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制",
+      "independentReviewDisposition": "accepted_design_layer_at_bd976480"
     },
     {
       "id": "M37-LIMIT-01.03",
@@ -123,14 +144,34 @@
       "title": "类别/层级/评级/标准矩阵及回避模型",
       "disposition": "P2_design_closed",
       "designRefs": [
-        "M06_Design.md#m06-spec-01"
+        "M06_Design.md#m06-spec-01",
+        "Contract_Repair.md"
       ],
-      "evidenceStatus": "design_checked",
+      "evidenceStatus": "design_repaired_document_verified_pending_independent_recheck",
       "p2Blocking": false,
       "ownerRole": "R2 P2设计负责人",
-      "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
+      "closureCriterion": "指标类型isCommon/说明行/评分模式及数值尺度、评级方案精确版本；资格级别不混用，目录与标准冻结链确定；P3实际实现与P4真实核证责任不关闭。",
       "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
-      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制",
+      "independentReviewDisposition": "not_accepted_before_repair; awaiting_new_independent_recheck",
+      "repairFindingId": "R2-EXIT-001",
+      "repairProof": {
+        "designRef": "Contract_Repair.md",
+        "criterion": "指标类型isCommon/说明行/评分模式及数值尺度、评级方案精确版本；资格级别不混用，目录与标准冻结链确定",
+        "documentProbeIds": [
+          "TYPE-VALID",
+          "TYPE-RATING-VALID",
+          "TYPE-EXTRA",
+          "TYPE-VERSION",
+          "TYPE-SOURCE",
+          "TYPE-MISSING",
+          "TYPE-EXACT-VERSION"
+        ],
+        "evidencePath": "evidence/repair-001-schema.json",
+        "evidenceSha256": "87c6431d5fff83bb329e90a6cc84b1c3cb7305d0b3b25c6b74ab611dd110aa36",
+        "result": "design_close_reproposed",
+        "independentlyAcceptedThisRepair": false
+      }
     },
     {
       "id": "M06-LIMIT-01.02",
@@ -145,7 +186,8 @@
       "ownerRole": "R2 P2设计负责人",
       "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
       "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
-      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制",
+      "independentReviewDisposition": "accepted_design_layer_at_bd976480"
     },
     {
       "id": "M06-LIMIT-01.03",
@@ -243,14 +285,32 @@
       "title": "身份桥接/题卷/邀请/答卷不可变模型",
       "disposition": "P2_design_closed",
       "designRefs": [
-        "M26_Design.md#m26-spec-01"
+        "M26_Design.md#m26-spec-01",
+        "Contract_Repair.md"
       ],
-      "evidenceStatus": "design_checked",
+      "evidenceStatus": "design_repaired_document_verified_pending_independent_recheck",
       "p2Blocking": false,
       "ownerRole": "R2 P2设计负责人",
-      "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
+      "closureCriterion": "逐题角色/维度/指标版本和条件显示绑定闭合，套卷列表不再推断逐题关系，原卷/邀请根不改；P3实际实现与P4真实核证责任不关闭。",
       "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
-      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制",
+      "independentReviewDisposition": "not_accepted_before_repair; awaiting_new_independent_recheck",
+      "repairFindingId": "R2-EXIT-001",
+      "repairProof": {
+        "designRef": "Contract_Repair.md",
+        "criterion": "逐题角色/维度/指标版本和条件显示绑定闭合，套卷列表不再推断逐题关系，原卷/邀请根不改",
+        "documentProbeIds": [
+          "QUESTION-VALID",
+          "QUESTION-EXTRA",
+          "QUESTION-VERSION",
+          "QUESTION-SOURCE",
+          "QUESTION-MISSING"
+        ],
+        "evidencePath": "evidence/repair-001-schema.json",
+        "evidenceSha256": "87c6431d5fff83bb329e90a6cc84b1c3cb7305d0b3b25c6b74ab611dd110aa36",
+        "result": "design_close_reproposed",
+        "independentlyAcceptedThisRepair": false
+      }
     },
     {
       "id": "M26-LIMIT-01.02",
@@ -258,14 +318,43 @@
       "title": "阈值、差分和报告用途/授权设计",
       "disposition": "P2_design_closed",
       "designRefs": [
-        "M26_Design.md#m26-spec-02"
+        "M26_Design.md#m26-spec-02",
+        "Anonymity_Repair.md"
       ],
-      "evidenceStatus": "design_checked",
+      "evidenceStatus": "design_repaired_document_verified_pending_independent_recheck",
       "p2Blocking": false,
       "ownerRole": "R2 P2设计负责人",
-      "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
+      "closureCriterion": "答卷ID/单题atom谱系/报告版本/关联伪名与向量分组严格分离；首报放行、差分及双阈值拒绝，账本epoch不清历史；P3实际实现与P4真实核证责任不关闭。",
       "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
-      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制",
+      "independentReviewDisposition": "not_accepted_before_repair; awaiting_new_independent_recheck",
+      "repairFindingId": "R2-EXIT-002",
+      "repairProof": {
+        "designRef": "Anonymity_Repair.md",
+        "criterion": "答卷ID/单题atom谱系/报告版本/关联伪名与向量分组严格分离；首报放行、差分及双阈值拒绝，账本epoch不清历史",
+        "documentProbeIds": [
+          "ANON-01",
+          "ANON-02",
+          "ANON-03",
+          "ANON-04",
+          "ANON-05A",
+          "ANON-05B",
+          "ANON-06A",
+          "ANON-06B",
+          "ANON-07A",
+          "ANON-07B",
+          "ANON-07C",
+          "ANON-08A",
+          "ANON-08B",
+          "ANON-08C",
+          "ANON-09",
+          "ANON-10"
+        ],
+        "evidencePath": "evidence/repair-002-anonymity.json",
+        "evidenceSha256": "af443e4d0425fc4830df30ba6fd7f48e9e8bb3772de06a9c8235cc30e396008b",
+        "result": "design_close_reproposed",
+        "independentlyAcceptedThisRepair": false
+      }
     },
     {
       "id": "M26-LIMIT-01.03",
@@ -280,7 +369,8 @@
       "ownerRole": "R2 P2设计负责人",
       "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
       "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
-      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制",
+      "independentReviewDisposition": "accepted_design_layer_at_bd976480"
     },
     {
       "id": "M26-LIMIT-01.04",
@@ -378,14 +468,30 @@
       "title": "项目/会议/结果/九宫格与独立发布模型",
       "disposition": "P2_design_closed",
       "designRefs": [
-        "M18_Design.md#m18-spec-01"
+        "M18_Design.md#m18-spec-01",
+        "Contract_Repair.md"
       ],
-      "evidenceStatus": "design_checked",
+      "evidenceStatus": "design_repaired_document_verified_pending_independent_recheck",
       "p2Blocking": false,
       "ownerRole": "R2 P2设计负责人",
-      "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
+      "closureCriterion": "项目create/save明确previousResultRef或null；历史发布集根/版本/asOf/字段白名单/用途和关系严格可表达；P3实际实现与P4真实核证责任不关闭。",
       "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
-      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制",
+      "independentReviewDisposition": "not_accepted_before_repair; awaiting_new_independent_recheck",
+      "repairFindingId": "R2-EXIT-001",
+      "repairProof": {
+        "designRef": "Contract_Repair.md",
+        "criterion": "项目create/save明确previousResultRef或null；历史发布集根/版本/asOf/字段白名单/用途和关系严格可表达",
+        "documentProbeIds": [
+          "HISTORY-VALID",
+          "HISTORY-EXTRA",
+          "HISTORY-MISSING"
+        ],
+        "evidencePath": "evidence/repair-001-schema.json",
+        "evidenceSha256": "87c6431d5fff83bb329e90a6cc84b1c3cb7305d0b3b25c6b74ab611dd110aa36",
+        "result": "design_close_reproposed",
+        "independentlyAcceptedThisRepair": false
+      }
     },
     {
       "id": "M18-LIMIT-01.02",
@@ -393,14 +499,31 @@
       "title": "历史版本、来源与M17建议/迁移契约",
       "disposition": "P2_design_closed",
       "designRefs": [
-        "M18_Design.md#m18-spec-05"
+        "M18_Design.md#m18-spec-05",
+        "Contract_Repair.md"
       ],
-      "evidenceStatus": "design_checked",
+      "evidenceStatus": "design_repaired_document_verified_pending_independent_recheck",
       "p2Blocking": false,
       "ownerRole": "R2 P2设计负责人",
-      "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
+      "closureCriterion": "历史项目同人映射和精确版本核验，不预填为当前评定、不向M17自动生效；历史未知隔离及旧版本保留；P3实际实现与P4真实核证责任不关闭。",
       "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
-      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制",
+      "independentReviewDisposition": "not_accepted_before_repair; awaiting_new_independent_recheck",
+      "repairFindingId": "R2-EXIT-001",
+      "repairProof": {
+        "designRef": "Contract_Repair.md",
+        "criterion": "历史项目同人映射和精确版本核验，不预填为当前评定、不向M17自动生效；历史未知隔离及旧版本保留",
+        "documentProbeIds": [
+          "HISTORY-VALID",
+          "HISTORY-NONE-VALID",
+          "HISTORY-VERSION",
+          "HISTORY-SOURCE"
+        ],
+        "evidencePath": "evidence/repair-001-schema.json",
+        "evidenceSha256": "87c6431d5fff83bb329e90a6cc84b1c3cb7305d0b3b25c6b74ab611dd110aa36",
+        "result": "design_close_reproposed",
+        "independentlyAcceptedThisRepair": false
+      }
     },
     {
       "id": "M18-LIMIT-01.03",
@@ -505,7 +628,8 @@
       "ownerRole": "R2 P2设计负责人",
       "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
       "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
-      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制",
+      "independentReviewDisposition": "accepted_design_layer_at_bd976480"
     },
     {
       "id": "M17-LIMIT-01.02",
@@ -520,7 +644,8 @@
       "ownerRole": "R2 P2设计负责人",
       "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
       "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
-      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制",
+      "independentReviewDisposition": "accepted_design_layer_at_bd976480"
     },
     {
       "id": "M17-LIMIT-01.03",
@@ -535,7 +660,8 @@
       "ownerRole": "R2 P2设计负责人",
       "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
       "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
-      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制",
+      "independentReviewDisposition": "accepted_design_layer_at_bd976480"
     },
     {
       "id": "M17-LIMIT-01.04",
@@ -655,7 +781,8 @@
       "ownerRole": "R2 P2设计负责人",
       "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
       "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
-      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制",
+      "independentReviewDisposition": "accepted_design_layer_at_bd976480"
     },
     {
       "id": "M03-LIMIT-01.02",
@@ -670,7 +797,8 @@
       "ownerRole": "R2 P2设计负责人",
       "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
       "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
-      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制",
+      "independentReviewDisposition": "accepted_design_layer_at_bd976480"
     },
     {
       "id": "M03-LIMIT-01.03",
@@ -685,7 +813,8 @@
       "ownerRole": "R2 P2设计负责人",
       "closureCriterion": "设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证",
       "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
-      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+      "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制",
+      "independentReviewDisposition": "accepted_design_layer_at_bd976480"
     },
     {
       "id": "M03-LIMIT-01.04",
@@ -793,5 +922,12 @@
       "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
     }
   ],
+  "repairAccounting": {
+    "independentAcceptedBeforeRepair": 9,
+    "disputedBeforeRepair": 6,
+    "repairReproposedP2Closed": 6,
+    "independentAcceptedAfterRepair": null,
+    "meaning": "9原独立接受+6本轮逐项证明后重新提请关闭；15为设计负责人提案，独立复核/所有者批准尚未发生"
+  },
   "sourcePrecedenceNote": "M06-LIMIT-01原文含“M37新模型未获需求批准”，是批准前历史残句；M37-P1-APPROVAL-R2-20260909及本次transition已批准，不作为当前待决。源文字未修改。"
 }

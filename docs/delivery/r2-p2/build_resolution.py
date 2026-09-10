@@ -41,8 +41,10 @@ for m in order:
                           'p2Blocking':False,'ownerRole':'R2 P2设计负责人' if phase=='P2_design_closed' else (m+'实施负责人+独立测试负责人' if phase=='P3_validation' else ('总控指定来源核证负责人/数据HR' if loc=='source' else '业务HR/委员会+安全+运维')),
                           'closureCriterion':'设计模型及批准需求/原验收映射通过文档检查；不表示原站事实已验证' if phase=='P2_design_closed' else ('隔离合成用例及实际适配版本、拒绝/事务证据经独立复核' if phase=='P3_validation' else ('仅对依赖真实来源迁移/接入的对象核证；无来源则隔离，不要求供应商行为覆盖本项目批准规则' if loc=='source' else '获授权环境真实多角色/用途与60分钟RPO、240分钟RTO、30天保留证据')),
                           'recommended':'按既有批准的独立产品规则实施；保留未知和局部隔离','alternative':'依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制'})
+from repair_limits import apply as apply_limit_repair
+repairAccounting=apply_limit_repair(items)
 counts={p:sum(x['disposition']==p for x in items) for p in units['M37']}
-put('Limit_Resolution.json',{'kind':'design_disposition_proposal_not_scope_update','originalGroupCount':6,'fullyClosedOriginalGroups':0,'originalGroupsWithP3Residual':6,'originalGroupsWithP4Residual':6,'residualGroupCountsOverlap':True,'counts':counts,'itemCount':len(items),'items':items,
+put('Limit_Resolution.json',{'kind':'design_disposition_proposal_not_scope_update','originalGroupCount':6,'fullyClosedOriginalGroups':0,'originalGroupsWithP3Residual':6,'originalGroupsWithP4Residual':6,'residualGroupCountsOverlap':True,'counts':counts,'itemCount':len(items),'items':items,'repairAccounting':repairAccounting,
     'sourcePrecedenceNote':'M06-LIMIT-01原文含“M37新模型未获需求批准”，是批准前历史残句；M37-P1-APPROVAL-R2-20260909及本次transition已批准，不作为当前待决。源文字未修改。'})
 lines=['# LIMIT消解与P3/P4责任矩阵','',f'原始LIMIT为6组，完整关闭0组；6组均仍有P3和P4责任（两个6相互重叠，不能相加为12组）。拆成{len(items)}个互斥责任子项：P2设计关闭{counts["P2_design_closed"]}，转P3验证{counts["P3_validation"]}，转P4核证/验收{counts["P4_acceptance"]}。P2设计关闭不是源操作已验证。','', '|原LIMIT|P2设计关闭|P3验证|P4核证/验收|','|---|---:|---:|---:|']
 for m in order:lines.append('|'+m+'-LIMIT-01|'+'|'.join(str(len(v)) for v in units[m].values())+'|')
@@ -91,3 +93,9 @@ for task in trace['historicalTasks']:
     ref,acs=task_map[task['id']];hist.append({'id':task['id'],'criteriaIds':[x['id'] for x in task['criteria']],'originalSource':task,'designRefs':[ref],'scenarioRefs':acs,'treatment':'保留原59任务ID/状态，不计本轮复验；当前P1批准优先，映射仅供后续验收','executionThisRun':False})
 put('Legacy_Acceptance_Map.json',{'acceptance':legacy,'historicalTasks':hist,'historicalAcceptanceCount':len(legacy),'historicalTaskCount':len(hist)})
 print(json.dumps({'limitItems':len(items),'dispositions':counts,'sourceRequests':len(requests),'legacyAcceptance':len(legacy),'historicalTasks':len(hist)},ensure_ascii=False))
+
+with (D/'Limit_Resolution.md').open('a') as f:
+ f.write('\n## 独立评审后六项重新提请关闭\n\n原52项阶段标签不改分母。独立评审仅接受9项；下列6项已有逐项文档证据，设计负责人重新提请P2关闭，仍待独立复核。P3=25/P4=12、原组完整关闭0均保持。\n\n|子项|发现|重新提请依据|文档探针|\n|---|---|---|---|\n')
+ for x in items:
+  if 'repairProof' in x:
+   p=x['repairProof'];f.write('|'+x['id']+'|'+x['repairFindingId']+'|'+p['criterion']+'|'+', '.join(p['documentProbeIds'])+'|\n')

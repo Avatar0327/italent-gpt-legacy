@@ -25,7 +25,7 @@ def apply(defs, obj, ref, arr, enum, text, nullable):
     defs['StandardLine']['properties']['sourceVersionRef']=ref('VersionRef')
     defs['StandardLine']['allOf']=[{'if':{'properties':{'dimension':{'const':'achievement'}}},'then':{'properties':{'sourceVersionRef':ref('VersionRef')}},'else':{'properties':{'sourceVersionRef':ref('IndicatorVersionRef')}}}]
     defs['DescriptionRow']=obj({'rowId':nullable(ref('Id')),'sort':ref('PositiveInteger'),'text':ref('Description')})
-    defs['NumericScaleConfig']=obj({'min':ref('Decimal'),'max':ref('Decimal'),'step':ref('Decimal'),'precision':{'type':'integer','minimum':0,'maximum':18},'unit':text(40),'direction':enum('higher','lower')})
+    defs['NumericScaleConfig']=obj({'min':ref('Decimal'),'max':ref('Decimal'),'step':ref('Decimal'),'precision':{'type':'integer','minimum':0},'unit':text(40),'direction':enum('higher','lower')})
     defs['RatingSelection']=obj({'ratingSchemeVersionRef':typed('M06','rating_scheme'),'levelIds':arr('Id',1)})
     catalog=defs['CatalogDraft']; catalog['properties'].update({'isCommon':ref('Boolean'),'descriptionRows':arr('DescriptionRow'),'evaluationMode':enum('numeric','rating','not_configured'),'numericScale':nullable(ref('NumericScaleConfig')),'ratingSelection':nullable(ref('RatingSelection')),'indicatorTypeVersionRef':typed('M06','indicator_type'),'qualificationLevelVersionRef':typed('M06','qualification_level')})
     config=['isCommon','descriptionRows','evaluationMode','numericScale','ratingSelection']

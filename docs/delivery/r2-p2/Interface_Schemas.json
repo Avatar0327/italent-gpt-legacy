@@ -1792,7 +1792,21 @@
           "$ref": "#/$defs/Purpose"
         },
         "disclosurePlanVersionRef": {
-          "$ref": "#/$defs/InternalVersionRef"
+          "allOf": [
+            {
+              "$ref": "#/$defs/InternalVersionRef"
+            },
+            {
+              "properties": {
+                "producer": {
+                  "const": "M26"
+                },
+                "objectType": {
+                  "const": "disclosure_plan"
+                }
+              }
+            }
+          ]
         }
       },
       "required": [
@@ -3043,8 +3057,7 @@
         },
         "precision": {
           "type": "integer",
-          "minimum": 0,
-          "maximum": 18
+          "minimum": 0
         },
         "unit": {
           "type": "string",
@@ -3453,6 +3466,105 @@
         "subjectThreshold",
         "authorizationRevision",
         "recoveryEpoch"
+      ],
+      "additionalProperties": false
+    },
+    "SubjectContribution": {
+      "type": "object",
+      "properties": {
+        "subjectAtomId": {
+          "$ref": "#/$defs/Id"
+        },
+        "protectedSubjectKey": {
+          "$ref": "#/$defs/Digest"
+        },
+        "previousSubjectAtomId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sourceManifestDigest": {
+          "$ref": "#/$defs/Digest"
+        },
+        "coefficients": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DisclosureCoefficient"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "subjectAtomId",
+        "protectedSubjectKey",
+        "previousSubjectAtomId",
+        "sourceManifestDigest",
+        "coefficients"
+      ],
+      "additionalProperties": false
+    },
+    "DisclosurePlan": {
+      "type": "object",
+      "properties": {
+        "reportVersionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "expectedDisclosureRevision": {
+          "$ref": "#/$defs/Revision"
+        },
+        "sourceManifestDigest": {
+          "$ref": "#/$defs/Digest"
+        },
+        "policyVersionRef": {
+          "$ref": "#/$defs/InternalVersionRef"
+        },
+        "securityPartitionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "disclosureEpoch": {
+          "$ref": "#/$defs/Id"
+        },
+        "atomManifestDigest": {
+          "$ref": "#/$defs/Digest"
+        },
+        "subjectContributionManifestDigest": {
+          "$ref": "#/$defs/Digest"
+        },
+        "suppressedCellIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 0
+        },
+        "allowedCellIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 0
+        },
+        "proofDigest": {
+          "$ref": "#/$defs/Digest"
+        }
+      },
+      "required": [
+        "reportVersionId",
+        "expectedDisclosureRevision",
+        "sourceManifestDigest",
+        "policyVersionRef",
+        "securityPartitionId",
+        "disclosureEpoch",
+        "atomManifestDigest",
+        "subjectContributionManifestDigest",
+        "suppressedCellIds",
+        "allowedCellIds",
+        "proofDigest"
       ],
       "additionalProperties": false
     },

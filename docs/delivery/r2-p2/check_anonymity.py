@@ -1,4 +1,5 @@
 """Independent rational matrix calculation for P2 tables only."""
+import hashlib
 import json
 from fractions import Fraction as Q
 from collections import defaultdict
@@ -23,4 +24,5 @@ for c in cases:
  actual='publish' if safe else 'suppress';assert actual==c['expected'],c['id']
  results.append(dict(id=c['id'],classes=g,subjectClasses=sg,columnValues=values,actual=actual,expected=c['expected'],pass_=True))
 out=dict(kind='P2_independent_symbolic_calculation_not_P3',count=len(results),publish=sum(r['actual']=='publish' for r in results),suppress=sum(r['actual']=='suppress' for r in results),results=results)
+out['inputSha256']={n:hashlib.sha256((D/n).read_bytes()).hexdigest() for n in ['Anonymity_Cases.json']}
 (D/'evidence/repair-002-anonymity.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n');print({k:v for k,v in out.items() if k!='results'})
