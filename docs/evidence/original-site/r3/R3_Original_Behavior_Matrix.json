@@ -656,6 +656,21 @@
       "design_sha": null,
       "implementation_tested": false,
       "p4_accepted": false
+    },
+    {
+      "id": "BASE-ORIGIN-005",
+      "module": "BASE",
+      "topic": "待入职经理清除与通知状态独立",
+      "original_behavior": "本轮EMP01直线经理经正常UI清除、保存、重新编辑和退出后列表回读，已无原非R3关联；信息采集已发送历史状态不随经理清除恢复。未查询真实收件者或发起后续通知。",
+      "approved_requirement": "M12-SPEC-05;M12-SPEC-06",
+      "evidence_kind": "saved_and_independent_readback",
+      "source_page": "入职管理 > 本轮EMP01 > 编辑",
+      "observed_at": "2026-09-10T14:11:57.903182+00:00",
+      "runtime_verified": true,
+      "source_ref": "Source_Observations.md#base-origin-005",
+      "design_sha": null,
+      "implementation_tested": false,
+      "p4_accepted": false
     }
   ]
 }

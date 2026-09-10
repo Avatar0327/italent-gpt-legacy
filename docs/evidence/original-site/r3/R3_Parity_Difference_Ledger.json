@@ -259,7 +259,7 @@
       "severity": "Major",
       "module": "M12",
       "title": "待入职保存隐含经理与信息采集副作用",
-      "source_evidence": "BASE-ORIGIN-002;003;004",
+      "source_evidence": "BASE-ORIGIN-002;003;004;BASE-ORIGIN-005",
       "approved_requirement": "M12-SPEC-05; M12-SPEC-06",
       "design_sha": null,
       "implementation_sha": null,
@@ -270,7 +270,8 @@
       "target_phase": "P2设计冻结前",
       "proposal": "设计保存前应展示有效经理关系及其来源（本轮带入来源未查明）、有效选择值、消息任务及收件范围，并在保存后回读；input.value为空不可作为自定义选择器未绑定的证据。分开待入职主档、在职员工建立、采集通知、入职申请及角色指派。测试模式必须能禁用自动通知并限定本轮人员，缺该控制时阻止后续申请，不改共享全局配置。",
       "decision": null,
-      "p4_evidence": null
+      "p4_evidence": null,
+      "latest_evidence": "非R3关联纠正成功；已发送状态未复位、实际投递未知。候选仍待P2负责人裁决。"
     }
   ]
 }

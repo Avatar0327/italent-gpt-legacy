@@ -382,9 +382,9 @@
       "probation": false,
       "employee_established": false,
       "readback": "姓名精确过滤唯一匹配；DOM fixedDataTableRowLayout_body仅读取本轮记录及列标题",
-      "unexpected_manager_reference": "保存后直线经理列出现非R3原有人员；不在本包复制其姓名/邮箱",
-      "pending_correction": "本轮编辑页已打开；清除经理未得到执行成功证据，原站访问被自动审批阻止",
-      "cleanup": "保留本轮待入职记录；未提交入职申请，不重复新增；恢复先回查通知与默认经理"
+      "unexpected_manager_reference": "历史曾默认引用非R3人员；本次纠正后编辑页请选择、无选择芯片，退出后列表不再引用。",
+      "pending_correction": "经理关联已清除保存；退出无修改回读页后，弹层visible=false，唯一匹配列表不再含原经理。",
+      "cleanup": "保留待入职记录，不再清除或重复创建；历史信息采集已发送和实际投递未知，未发起入职申请。"
     }
   ],
   "operations": [
@@ -608,6 +608,14 @@
       "result": "correction_not_confirmed; browser_origin_access_denied_by_auto_review",
       "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_EMP01",
       "notes": "拒绝组合操作后仅尝试一次更安全的现有字段只读检查，仍被拒绝；不再调用该站。"
+    },
+    {
+      "id": "R3-OP-023",
+      "module": "BASE",
+      "action": "用户重新授权后清除EMP01非R3经理并保存回读",
+      "result": "saved_and_independently_read_back",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_EMP01",
+      "notes": "原编辑clear图标->请选择，无选择芯片；正式保存；重新打开编辑回读为空；退出无修改回读页后弹层隐藏，列表旧关联不存在。信息采集仍已发送，实际消息投递未知。"
     }
   ],
   "counts": {
@@ -626,16 +634,16 @@
   "external_sends": null,
   "payments": 0,
   "declarations": 0,
-  "checkpoint_at": "2026-09-10T13:50:36.703307+00:00",
-  "workflow_status": "ENV_BLOCKED_origin_access_denied_by_auto_review; not_stopped_for_employee_or_single_module",
+  "checkpoint_at": "2026-09-10T14:11:57.903182+00:00",
+  "workflow_status": "RUNNING_reauthorized_UI_restored",
   "execution_blockers": [
     {
       "id": "R3-EXEC-BLOCK-001",
       "scope": "在职员工建立及依赖链；已有待入职替代路径部分成功",
-      "observed": "待入职EMP01已保存；原直接新增表单仍无期限选项，正式导入模板受浏览器限制；待入职自动带出原有经理和已发送状态，不能继续入职申请",
+      "observed": "原员工期限前置仍阻塞；待入职EMP01的非R3经理已通过本轮编辑清除并独立回读成功；已发送历史状态与后续通知边界未查明，未提交入职申请。",
       "cause": "未确定；不能据此判断原站全局故障",
       "owner_role": "原站测试环境维护者/数据负责人（尚未确认承担）",
-      "resume_condition": "恢复原站访问后先确认并解除本轮记录默认经理/通知副作用，再用合法UI完成入职；不能重建EMP01",
+      "resume_condition": "确认后续入职办理不会真实发送消息后继续正常UI；不得重建EMP01。",
       "remaining_alternatives": "专用测试入口和完整入职办理尚未穷尽，因全站ENV限制暂停"
     },
     {
@@ -649,7 +657,7 @@
     },
     {
       "id": "R3-EXEC-BLOCK-003",
-      "status": "ENV_BLOCKED",
+      "status": "RESOLVED",
       "scope": "srworkshopbj.italent.cn所有当前浏览器交互",
       "observed": "自动审批拒绝该原站访问；称员工编辑未保存状态可能被重新导航丢失，并要求用户重新确认",
       "first_rejected_action": "课程下架最终确认与本轮经理清除组合；无成功结果证据",
@@ -657,7 +665,9 @@
       "automatic_review_reason": "Repeats previously rejected origin access while unsaved employee-edit state remains; could reset navigation and lose non-trivial changes, with no explicit user re-approval.",
       "not_observed": "没有实际串页、互踢、登录失效或状态丢失证据；不将审批推测记为浏览器故障事实",
       "resume_condition": "用户明确重新授权访问该原站并保留未保存表单；随后只读回查两个待确认操作，再恢复UI执行",
-      "owner_role": "用户重新授权/平台自动审批（不是R3 P2设计缺陷）"
+      "owner_role": "用户重新授权/平台自动审批（不是R3 P2设计缺陷）",
+      "resolved_at": "2026-09-10T14:11:57.903182+00:00",
+      "resolution": "用户明确回复“确认允许”；复用原浏览器和表单只读恢复成功，未刷新/导航/丢弃草稿。"
     }
   ],
   "synthetic_input_files": [

@@ -47,3 +47,5 @@
 | BASE-ORIGIN-004 | BASE | 待入职保存后原站直线经理列出现非R3原有人员，信息采集状态显示已发送；此前仅检查经理input.value为空，不能证明自定义选择器无选中关系。未手动点击通知采集/邀请激活/入职申请，个人邮箱为example.invalid；消息真实投递及后台自动规则未验证。打开本轮编辑页后原站访问被自动审批拒绝，经理清除没有成功证据。 | unexpected_post_save_state_observed | M12-SPEC-05; M12-SPEC-06 | 是，仅本行 |
 
 管理端冒烟完成度见R3_Management_Smoke_Cases.md；逐行时间和来源见同名JSON。
+
+| BASE-ORIGIN-005 | BASE | 待入职经理清除成功，历史采集状态独立 | M12-SPEC-05/06 | 已保存并独立回读；非在职员工 |
