@@ -1,0 +1,118 @@
+{
+  "run_id": "R3-ORIGIN-20260910-103900",
+  "module_first_packs_complete": 0,
+  "rows": [
+    {
+      "id": "M27-RC-01",
+      "module": "M27",
+      "case": "27对象中10课程逐名复核",
+      "status": "REVERIFIED",
+      "evidence": "10条均存在；不作为新增业务流程用例"
+    },
+    {
+      "id": "M27-RC-02",
+      "module": "M27",
+      "case": "空章节发布拒绝",
+      "status": "VERIFIED",
+      "evidence": "M27-ORIGIN-013"
+    },
+    {
+      "id": "M27-RC-03",
+      "module": "M27",
+      "case": "合法文档上传、保存、发布主流程",
+      "status": "VERIFIED",
+      "evidence": "M27-ORIGIN-015;018"
+    },
+    {
+      "id": "M27-RC-04",
+      "module": "M27",
+      "case": "零时长持久值",
+      "status": "VERIFIED",
+      "evidence": "M27-ORIGIN-016"
+    },
+    {
+      "id": "M27-RC-05",
+      "module": "M27",
+      "case": "恢复1分钟持久值",
+      "status": "PARTIAL",
+      "evidence": "已输入1，持久值未独立回读"
+    },
+    {
+      "id": "M27-RC-06",
+      "module": "M27",
+      "case": "私有/不共享/游客关闭管理配置",
+      "status": "VERIFIED_ADMIN_ONLY",
+      "evidence": "发布前DOM控件选中状态已读；不代表多角色"
+    },
+    {
+      "id": "M27-RC-07",
+      "module": "M27",
+      "case": "发布通知关闭",
+      "status": "VERIFIED",
+      "evidence": "M27-ORIGIN-017"
+    },
+    {
+      "id": "M27-RC-08",
+      "module": "M27",
+      "case": "下架/撤回发布",
+      "status": "ENV_BLOCKED",
+      "evidence": "只有确认窗；未取得最终成功回读"
+    },
+    {
+      "id": "M27-RC-09",
+      "module": "M27",
+      "case": "失效/再次启用",
+      "status": "ENV_BLOCKED",
+      "evidence": "原站访问被自动审批阻止后未执行"
+    },
+    {
+      "id": "M27-RC-10",
+      "module": "M27",
+      "case": "课程聚合与考试尝试分层",
+      "status": "CONFIG_OBSERVED",
+      "evidence": "五选项已读；实际结果需学员及考试数据"
+    },
+    {
+      "id": "M27-RC-11",
+      "module": "M27",
+      "case": "首次学习后同步策略锁定",
+      "status": "DEPENDENCY_BLOCKED",
+      "evidence": "缺本轮已入职学习者和测试身份"
+    },
+    {
+      "id": "M27-RC-12",
+      "module": "M27",
+      "case": "导入预览/正式入库两阶段",
+      "status": "VERIFIED_PRIOR_RUN",
+      "evidence": "前轮9条确认后逐名回读；本轮不重复导入"
+    },
+    {
+      "id": "M27-RC-13",
+      "module": "M27",
+      "case": "无数据模板辅助页",
+      "status": "VERIFIED_PRIOR_RUN",
+      "evidence": "前轮正式模板文件结构已验证；不重复导出原数据"
+    },
+    {
+      "id": "M27-RC-14",
+      "module": "M27",
+      "case": "空内容草稿保存",
+      "status": "VERIFIED_PRIOR_RUN",
+      "evidence": "前轮本轮课程草稿已保存"
+    },
+    {
+      "id": "M27-RC-15",
+      "module": "M27",
+      "case": "实际计时封顶和0值排除",
+      "status": "DEPENDENCY_BLOCKED",
+      "evidence": "帮助规则与字段保存不可代替学员运行"
+    },
+    {
+      "id": "M27-RC-16",
+      "module": "M27",
+      "case": "员工/主管权限及完成证书",
+      "status": "ROLE_BLOCKED",
+      "evidence": "不能用管理员视角代替"
+    }
+  ]
+}

@@ -74,12 +74,14 @@
       "object_type": "course",
       "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE02",
       "internal_id": "83f83fe6-b496-42dd-a530-219229d85989",
-      "state": "未发布",
+      "state": "已发布（本次最后成功回读）",
       "readback": "确认导入后课程列表逐条匹配本轮名称和部门，共9条新增",
       "visibility_input": "不共享; 不公开",
-      "visibility_saved_readback": "编辑页确认不共享、不公开、游客关闭",
+      "visibility_saved_readback": "发布前已确认不公开、不共享、游客关闭；发布确认消息通知开关关闭",
       "cleanup": "保留供本轮验证",
-      "screenshot": "screenshots/M27_SMOKE02_private.jpg"
+      "screenshot": "screenshots/M27_SMOKE02_private.jpg",
+      "last_readback": "精确名称匹配行：文档/本轮组织/已发布/显示/2026-09-10",
+      "pending_action": "下架已打开确认；确认是及后续状态未取得成功证据，恢复先查询，不重复提交"
     },
     {
       "module": "M27",
@@ -173,10 +175,11 @@
       "module": "M16",
       "object_type": "performance_activity",
       "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M16_SMOKE01",
-      "internal_id": null,
+      "internal_id": "e31769ec-51a1-44e8-8650-85757088b8f7",
       "state": "saved; zero subjects",
       "readback": "本轮名称列表项与详情标题一致，被考核人为空",
-      "cleanup": "保留本轮空活动，未开启考核"
+      "cleanup": "保留本轮空活动，未开启考核",
+      "id_source": "恢复时已匹配本轮活动标题的当前页面URL id"
     },
     {
       "module": "M12",
@@ -349,6 +352,21 @@
       "include_subdepartments": false,
       "readback": "薪资组名称精确过滤唯一行，编码/名称/上级/部门匹配",
       "payroll_runs": 0
+    },
+    {
+      "module": "M27",
+      "object_type": "document_courseware",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_CONTENT01",
+      "internal_id": null,
+      "course_id": "83f83fe6-b496-42dd-a530-219229d85989",
+      "state": "转码完成；已加入SMOKE02且保存回读",
+      "file": "data/ZZ_R3_R3-ORIGIN-20260910-103900_M27_CONTENT01.pdf",
+      "default_minutes": 1,
+      "default_credits": 1,
+      "zero_minutes_saved_readback": "0.0",
+      "one_minute_input": 1,
+      "one_minute_persistence": "未独立回读，不算已验证",
+      "cleanup": "保留本轮课件，勿重新上传"
     }
   ],
   "operations": [
@@ -495,13 +513,46 @@
       "result": "no_visible_selectable_option_observed",
       "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_EMP01",
       "notes": "当前新增员工路径受阻；不推断字典为空或所有其他导入/入职路径不可用；未修改全局配置。"
+    },
+    {
+      "id": "R3-OP-016",
+      "module": "M27",
+      "action": "在SMOKE02编辑页对空章节单次点击发布",
+      "result": "validation_rejected",
+      "message": "当前课程章节无内容无法发布，请添加内容!",
+      "resolves": "R3-OP-007未发布原因得到同对象明确校验支持，不追认前次动作成功"
+    },
+    {
+      "id": "R3-OP-017",
+      "module": "M27",
+      "action": "上传本轮PDF、确认元数据、保存0分钟并重新编辑回读",
+      "result": "confirmed_courseware_saved_and_zero_minutes_persisted",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_CONTENT01",
+      "default_minutes": 1,
+      "default_credits": 1
+    },
+    {
+      "id": "R3-OP-018",
+      "module": "M27",
+      "action": "输入1分钟；私有课程发布；确认消息通知关闭后最终发布",
+      "result": "confirmed_published_by_exact_name_list",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE02",
+      "notification_switch": false,
+      "one_minute_persistence_verified": false
+    },
+    {
+      "id": "R3-OP-019",
+      "module": "M27",
+      "action": "仅选择SMOKE02，更多操作下架，出现确认",
+      "result": "confirmation_open; final_yes_not_confirmed_due_to_auto_review_denial",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE02"
     }
   ],
   "counts": {
-    "confirmed_records": 27,
+    "confirmed_records": 28,
     "by_module": {
       "BASE": 1,
-      "M27": 10,
+      "M27": 11,
       "M16": 1,
       "M12": 11,
       "M11": 3,
@@ -513,7 +564,7 @@
   "external_sends": 0,
   "payments": 0,
   "declarations": 0,
-  "checkpoint_at": "2026-09-10T12:16:26.833054+00:00",
+  "checkpoint_at": "2026-09-10T13:49:30.184196+00:00",
   "workflow_status": "resumed; continue_employee_independent_management_cases",
   "execution_blockers": [
     {
@@ -577,6 +628,10 @@
     {
       "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE10.txt",
       "sha256": "497ec11d1665d7b42da011285df47219d2c96abed0fca77f980763b824f1428d"
+    },
+    {
+      "path": "data/ZZ_R3_R3-ORIGIN-20260910-103900_M27_CONTENT01.pdf",
+      "sha256": "ba637343d0e4dd549c0993fa7e3180e093f1525f7a6ca9839a59bd1206a9b065"
     }
   ],
   "resume_reverification": {
