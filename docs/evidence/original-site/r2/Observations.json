@@ -159,5 +159,41 @@
     "evidence": [
       "captures/M17-pool-readback.json"
     ]
+  },
+  {
+    "id": "R2-OBS-M17-TAB4-001",
+    "module": "M17",
+    "actual": "独立管理梯队池绑定本轮组织；自动入池关闭、共享空；启用且预计人数空、饱和度--。选本轮员工入池，阶段及指导人角色缺失时必填。",
+    "p1": "M17-SPEC-01/05",
+    "p2": "M17_Design.md 人才池、expectedCount和成员关系",
+    "implementation": "未运行R2产品；旧静态记录不能替代四方实测",
+    "classification": "MATCH",
+    "evidence": [
+      "captures/M17-TAB4-member-self-guide.json"
+    ]
+  },
+  {
+    "id": "R2-OBS-M17-TAB4-002",
+    "module": "M17",
+    "actual": "指导角色显示直线经理/间接经理/部门HRBP/部门负责人/其他人；选其他人并显式选择本轮员工本人作指导人，成员关系保存成功，准备度--。只证明池成员登记允许自指导，不代表IDP最终核验行为。",
+    "p1": "M17-SPEC-01/03 角色与发展计划边界",
+    "p2": "M17_Design.md IDP本人不得为唯一指导人/最终核验者；池成员向IDP转换必须另行验证，不能继承为可核验权限",
+    "implementation": "未运行R2产品；旧静态记录不能替代四方实测",
+    "classification": "MATCH",
+    "evidence": [
+      "captures/M17-TAB4-member-self-guide.json"
+    ]
+  },
+  {
+    "id": "R2-OBS-M17-TAB4-003",
+    "module": "M17",
+    "actual": "新入池→培养中已回读；转已出池缺日期及原因必填；选择2026-09-10/其它后保存，活动列表为空，已出池人员历史保留该人、双日期、原因和指导人。",
+    "p1": "M17-SPEC-01/05 退出历史",
+    "p2": "M17_Design.md 成员任期与历史保留；未验证重入新membership ID",
+    "implementation": "未运行R2产品；旧静态记录不能替代四方实测",
+    "classification": "MATCH",
+    "evidence": [
+      "captures/M17-TAB4-exit-history.json"
+    ]
   }
 ]

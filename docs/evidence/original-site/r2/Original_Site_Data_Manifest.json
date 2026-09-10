@@ -176,6 +176,43 @@
         "create/readback"
       ],
       "automaticEntryEnabled": false
+    },
+    {
+      "module": "M17",
+      "type": "talent_pool",
+      "name": "ZZ_R2_R2-ORIGIN-20260910-103952_M17_POOL_TAB4_01",
+      "businessId": "1edcc966-d102-4542-b4d3-47699df554a6",
+      "idEvidence": "PoolId exposed in own tab4 UI URL; signed full URL omitted",
+      "status": "confirmed_created",
+      "currentState": "启用；0在池；1已出池",
+      "references": [
+        "ZZ_R2_R2-ORIGIN-20260910-103952_PRE_ORG01"
+      ],
+      "automaticEntryEnabled": false
+    },
+    {
+      "module": "M17",
+      "type": "pool_membership",
+      "recordKey": "ZZ_R2_R2-ORIGIN-20260910-103952_M17_MEMBER_TAB4_01",
+      "name": "ZZ_R2_R2-ORIGIN-20260910-103952_PRE_EMP01",
+      "nameSemantics": "人员显示名，成员关系本身无命名字段；recordKey为证据键而非原站字段",
+      "businessId": null,
+      "status": "confirmed_created",
+      "currentState": "已出池",
+      "entryDate": "2026-09-10",
+      "exitDate": "2026-09-10",
+      "exitReason": "其它",
+      "references": [
+        "ZZ_R2_R2-ORIGIN-20260910-103952_M17_POOL_TAB4_01",
+        "ZZ_R2_R2-ORIGIN-20260910-103952_PRE_EMP01"
+      ],
+      "operations": [
+        "入池新入池/回读",
+        "培养中/回读",
+        "出池日期及原因必填拦截",
+        "已出池/历史回读"
+      ],
+      "guidePerson": "ZZ_R2_R2-ORIGIN-20260910-103952_PRE_EMP01"
     }
   ],
   "pending": [],
