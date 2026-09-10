@@ -1,31 +1,31 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-10T02:41:58.226023+00:00",
-  "primaryModuleId": "M17",
+  "generatedFromUpdatedAt": "2026-09-10T02:43:06.591554+00:00",
+  "primaryModuleId": "M03",
   "backupModuleId": null,
-  "activeExecutionModuleId": "M17",
+  "activeExecutionModuleId": "M03",
   "moduleCount": 15,
   "completeCount": 0,
-  "restrictedCount": 8,
-  "transitionReadyCount": 8,
+  "restrictedCount": 9,
+  "transitionReadyCount": 9,
   "progress": {
     "p1A": {
       "full": 0,
-      "restricted": 8,
-      "total": 8
+      "restricted": 9,
+      "total": 9
     },
     "p1B": {
       "full": 0,
-      "restricted": 8,
-      "total": 8
+      "restricted": 9,
+      "total": 9
     },
     "review": {
       "full": 0,
-      "restricted": 8,
-      "total": 8
+      "restricted": 9,
+      "total": 9
     }
   },
-  "p1ClosedCount": 8,
+  "p1ClosedCount": 9,
   "modules": [
     {
       "moduleId": "M01",
@@ -587,10 +587,10 @@
       "moduleId": "M17",
       "name": "继任与发展",
       "rangeId": "R2",
-      "queueState": "waiting_owner_review",
+      "queueState": "closed_restricted",
       "p1AConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M17-P1-APPROVAL-20260910",
         "evidenceRefs": [
           "BC-C06",
           "BC-P1C-M17",
@@ -601,49 +601,54 @@
           "BC-C30",
           "BC-C31"
         ],
-        "limits": "完整登记范围证据及限制可追溯；LIMIT未批准，不计P1A关闭"
+        "limits": "原站自动入出池/重入历史、继任目标目录映射与准备度算法、IDP流程UUID/节点及执行/通知/角色、组织健康公式和跨模块共享未验证。",
+        "approvedAt": "2026-09-10T02:43:06.591554+00:00"
       },
       "p1BConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M17-P1-APPROVAL-20260910",
         "evidenceRefs": [],
-        "limits": "对象/字段/权限/状态/异常/契约/实现差异及可执行预期已准备；新规则未批准"
+        "limits": "原站自动入出池/重入历史、继任目标目录映射与准备度算法、IDP流程UUID/节点及执行/通知/角色、组织健康公式和跨模块共享未验证。",
+        "approvedAt": "2026-09-10T02:43:06.591554+00:00"
       },
       "conditions": {
         "applicableScopeDetermined": {
           "value": true,
-          "basis": "用户已确认15完整登记范围及本轮R顺序"
+          "basis": "M17-P1-APPROVAL-20260910；原登记完整范围逐项与收口清单一致，无内部删减"
         },
         "implementationRulesDecided": {
-          "value": false,
-          "basis": "本模块新规则/LIMIT及消费者未批依赖待集中决定"
+          "value": true,
+          "basis": "M17-P1-APPROVAL-20260910；本模块SPEC与R2-BASELINE-01均由所有者明确批准，版本/哈希锁定"
         },
         "acceptanceExecutable": {
           "value": true,
-          "basis": "Given/When/Then及正常/异常用例已具体化；需求是否获批另判，未执行"
+          "basis": "M17-P1-APPROVAL-20260910；逐项Given/When/Then已存在，作为验收预期获批，未冒本轮执行"
         },
         "dependenciesAndExceptionsResolved": {
-          "value": false,
-          "basis": "本模块新规则/LIMIT及消费者未批依赖待集中决定"
+          "value": true,
+          "basis": "M17-P1-APPROVAL-20260910；已批准生产者契约与本模块LIMIT；源缺证/独立角色留P2/P3/P4，不要求先实联调"
         }
       },
       "transitionReview": {
-        "approved": false,
-        "record": null,
-        "scope": null,
-        "approvedAt": null
+        "approved": true,
+        "record": "M17-P1-APPROVAL-20260910",
+        "scope": "模块P1转序就绪；R2整体进入P2未批准",
+        "approvedAt": "2026-09-10T02:43:06.591554+00:00"
       },
-      "restrictedApproval": null,
-      "p1Closed": false,
-      "closureClass": "已完成待评审",
-      "transitionReady": false,
-      "missingConditions": [
-        "implementationRulesDecided",
-        "dependenciesAndExceptionsResolved",
-        "p1AApproved",
-        "p1BApproved",
-        "transitionReviewApproved"
-      ]
+      "restrictedApproval": {
+        "scope": "原站自动入出池/重入历史、继任目标目录映射与准备度算法、IDP流程UUID/节点及执行/通知/角色、组织健康公式和跨模块共享未验证。",
+        "residualRisk": "错误后备/任用暗示、自动资格变化、指导自审、历史成员区间重叠、健康指标分母偏差和敏感人才名单泄漏。",
+        "revalidation": "P2：设计池规则/成员区间/继任任期、准备度词典与版本、IDP阶段职责/任务依赖、历史映射和健康指标定义；保留legacy原义；P3：合成验证自动规则幂等/失效、出池重入、到期/离职、指导自审、阶段阻塞与替换、目标目录缺失、健康分母和审计失败；P4：独立多角色、敏感字段/历史/附件/下载权限、跨模块业务及生产容量/恢复验收；E2不新增访问者，管理员操作不代验。",
+        "record": "M17-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T02:43:06.591554+00:00",
+        "phaseScope": "仅P1"
+      },
+      "p1Closed": true,
+      "closureClass": "受限通过",
+      "closureRecord": "M17-P1-APPROVAL-20260910",
+      "closedAt": "2026-09-10T02:43:06.591554+00:00",
+      "transitionReady": true,
+      "missingConditions": []
     },
     {
       "moduleId": "M03",
@@ -1415,7 +1420,6 @@
       ],
       "transitionReady": false,
       "missingConditions": [
-        "M17",
         "M03",
         "BASE-01",
         "BASE-02",
@@ -1501,7 +1505,6 @@
       "M03"
     ],
     "waitingModuleIds": [
-      "M17",
       "M03"
     ],
     "preparedModuleIds": [
@@ -1525,7 +1528,7 @@
     "observedProtectedHead": "617a707",
     "parallelBoundary": "仅git worktree list查看注册信息；不进入、不修改、不合并/cherry-pick其任何提交；P2建议完成后统一纳入",
     "status": "R2批准顺序落账中",
-    "nextFormalClosureModule": "M17",
+    "nextFormalClosureModule": "M03",
     "reviewBundleRef": "docs/delivery/P1_R2_Review_Package.md"
   }
 }
