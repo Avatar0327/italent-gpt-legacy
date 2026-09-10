@@ -699,7 +699,7 @@
   "currentP1": {
     "revision": "2026-09-09-module-closure-rolling-R",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-10T02:58:52.883177+00:00",
+    "updatedAt": "2026-09-10T03:00:48.395105+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -782,7 +782,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M27唯一主模块",
+    "activeWorkPackage": "M27唯一主模块；其余R3模块材料排队待集中评审",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -797,9 +797,9 @@
       "BP-S"
     ],
     "nextTasks": [
-      "继续M27P1；已准备模块排队待R3集中评审",
-      "保留10/15受限关闭，R3未批准不计完成",
-      "提交后独立看板同步，失败不阻P1"
+      "所有者可一次审阅30项推荐和5项LIMIT；总控按M27→M16→M12→M11→M07分别判定，未批准不关闭",
+      "经批准后逐模块核退出，未批保持10/15；R2下游进入未授权",
+      "独立看板随实质提交更新，失败不阻P1；不是产品部署"
     ],
     "state": "R2逐模块按明确批准关闭；R3串行P1材料准备已授权",
     "scopeChange": "SCOPE-20260909-CORE15",
@@ -808,7 +808,7 @@
       "M48",
       "M32"
     ],
-    "currentWork": "M06核心合成标准链归档，继续设置页等级/发展通道，再到M03等保留组；M19/M48/M32同步。",
+    "currentWork": "M27唯一主模块；其余R3模块材料排队待集中评审",
     "executionPolicy": {
       "id": "MODE-MODULE-CLOSURE-R-20260909",
       "authorizedAt": "2026-09-09T15:43:36.730682+00:00",

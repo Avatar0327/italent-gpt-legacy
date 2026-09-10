@@ -283,3 +283,24 @@ if rb:
  result['checks']=checks
  (D/'P1AB_Document_Check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
  print('PASS: R2 consolidated decisions, complete scope, sequential queue and no premature approval')
+
+r3=s['p1B'].get('r3ReviewBundle')
+if r3:
+ expected=['M27','M16','M12','M11','M07'];mods={m['id']:m for m in s['modules']}
+ check(r3['moduleIds']==expected==s['roadmap']['executionPolicy']['r3ReviewPipeline']['preparedModuleIds'],'R3五模块严格串行材料队列完整')
+ check(len(r3['decisionIds'])==len(set(r3['decisionIds']))==30 and len(r3['exceptionIds'])==5,'R3集中推荐30与LIMIT5不重复')
+ for mid in expected:
+  p=mods[mid]['p1'];rp=p['reviewPackage'];check(rp['scope']==mods[mid]['scope'],mid+'R3原范围完整')
+  check({x['scopeItem'] for x in p['closureChecklist']}==set(mods[mid]['scope'].split('、')),mid+'收口清单无遗漏')
+  if not rp.get('approvalRecord'):
+   check(p['moduleClosure']['p1Closed'] is False and p['currentDeliveryAssessment']['approvedRestricted'] is False,mid+'未批准不关闭或受限通过')
+  check(all(not contract_case_by_id[x]['executionThisRun'] and not contract_case_by_id[x]['accepted'] for x in rp['acceptanceCaseRefs']),mid+'候选用例不是本轮测试通过')
+ check(any(x['scopeItem']=='AI排班' and not x['blocksP1'] for x in mods['M11']['p1']['closureChecklist']),'已批准AI子项暂缓不重新阻P1')
+ check(all((R/r3[k]).exists() for k in ['document','approvalDraft']),'R3集中包和批准草稿存在')
+ closure=json.loads((D/'P1_Module_Closure.json').read_text())
+ if not any(mods[mid]['p1']['reviewPackage'].get('approvalRecord') for mid in expected):check(closure['p1ClosedCount']==10 and closure['completeCount']==0 and closure['restrictedCount']==10,'当前10/15均受限，R3五模块仍待批')
+ r2=next(g for g in s['roadmap']['rangeGates'] if g['id']=='R2')
+ check(not r2.get('downstream',{}).get('authorizedPhase'),'R2交接不自动批准P2/P3')
+ result['checks']=checks
+ (D/'P1AB_Document_Check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+ print('PASS: R3 full scope, consolidated decisions, candidate cases and 10/15 restricted classification')

@@ -1,6 +1,6 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-10T02:58:52.883177+00:00",
+  "generatedFromUpdatedAt": "2026-09-10T03:00:48.395105+00:00",
   "primaryModuleId": "M27",
   "backupModuleId": null,
   "activeExecutionModuleId": "M27",
@@ -1532,5 +1532,37 @@
     "status": "R2四模块均受限关闭",
     "nextFormalClosureModule": "M27",
     "reviewBundleRef": "docs/delivery/P1_R2_Review_Package.md"
+  },
+  "r3ReviewPipeline": {
+    "authorization": "本窗口2026-09-10明确授权R3串行评审材料准备",
+    "order": [
+      "M27",
+      "M16",
+      "M12",
+      "M11",
+      "M07"
+    ],
+    "preparedModuleIds": [
+      "M27",
+      "M16",
+      "M12",
+      "M11",
+      "M07"
+    ],
+    "waitingModuleIds": [
+      "M27",
+      "M16",
+      "M12",
+      "M11",
+      "M07"
+    ],
+    "formalClosureOrder": [
+      "M27",
+      "M16",
+      "M12",
+      "M11",
+      "M07"
+    ],
+    "status": "五模块全部可自主材料完成待评审"
   }
 }
