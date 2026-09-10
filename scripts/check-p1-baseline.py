@@ -239,7 +239,7 @@ for rg in s['roadmap']['rangeGates']:
   check(all((R/p).exists() for w in h['designWorklist'] for p in w['codeRefs']),rg['id']+'设计差异的复用路径存在')
  downstream=rg.get('downstream')
  if downstream:
-  check(downstream['authorizedPhase']=='P2' and has_approval(downstream['entryApprovalRecord']),rg['id']+'当前下阶段明确仅P2设计授权')
+  check(downstream['authorizedPhase'] in ['P2','P3'] and has_approval(downstream['entryApprovalRecord']),rg['id']+'当前下阶段明确仅P2设计授权')
   if downstream['p3EntryApproved']:
    check(downstream['p2ExitApproved'] is True and has_approval(downstream['p2ExitRecord']),rg['id']+'P3不得从P1转序跳过P2退出批准')
   check(downstream['businessAccepted'] is False and downstream['productionAccepted'] is False,rg['id']+'阶段批准不代签业务或生产')
@@ -300,7 +300,28 @@ if r3:
  closure=json.loads((D/'P1_Module_Closure.json').read_text())
  if not any(mods[mid]['p1']['reviewPackage'].get('approvalRecord') for mid in expected):check(closure['p1ClosedCount']==10 and closure['completeCount']==0 and closure['restrictedCount']==10,'当前10/15均受限，R3五模块仍待批')
  r2=next(g for g in s['roadmap']['rangeGates'] if g['id']=='R2')
- check(not r2.get('downstream',{}).get('authorizedPhase'),'R2交接不自动批准P2/P3')
+ check(not r2.get('downstream',{}).get('authorizedPhase') or has_approval(r2['downstream']['entryApprovalRecord']),'R2进入须所有者明确授权')
  result['checks']=checks
  (D/'P1AB_Document_Check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
- print('PASS: R3 full scope, consolidated decisions, candidate cases and 10/15 restricted classification')
+ print('PASS: R3 full scope, consolidated decisions, candidate cases and evidence-derived restricted classification')
+
+if s['roadmap'].get('p1FinalClosure'):
+ closure=json.loads((D/'P1_Module_Closure.json').read_text());check((closure['p1ClosedCount'],closure['completeCount'],closure['restrictedCount'],closure['transitionReadyCount'])==(15,0,15,15),'最终15模块均受限关闭及模块就绪')
+ gates={g['id']:g for g in s['roadmap']['rangeGates']};intake=gates['R1']['p2ResultIntake']
+ for x in intake['references']:
+  check(hashlib.sha256(subprocess.check_output(['git','show',x['head']+':'+x['path']],cwd=R)).hexdigest()==x['sha256'],'R1 P2固定Git对象哈希 '+x['path'])
+ check(intake['riskCounts']==dict(total=37,designClosed=9,p3=20,p4=8) and len(intake['sourceEvidenceRequests'])==13,'37风险与13补证责任准确')
+ check(intake['businessTestsRun']==intake['historicalTestRevalidations']==0 and not intake['p3Started'],'P2设计不冒测试或P3执行')
+ for rid,g in gates.items():
+  d=g['downstream'];check(has_approval(d['entryApprovalRecord']) and not d['p3Started'] and not d['businessAccepted'] and not d['productionAccepted'],rid+'授权/实际执行/验收分开')
+  check(d['authorizedPhase']==('P3' if rid=='R1' else 'P2'),rid+'阶段授权无越序')
+  if rid!='R1':
+   check(not d['p2ExitApproved'] and not d['p3EntryApproved'] and all(g['foundationReadiness'][k]['value'] for k in caps),rid+'P2进入条件齐备，不提前P3')
+   check(all((R/g['controllerHandoff'][k]).exists() for k in ['document','startPrompt']),rid+'交接与启动文件存在')
+ baseline=json.loads(subprocess.check_output(['git','show','5769a420a923024e9c274a4f0084a2a40cef8c02:docs/delivery/Scope_Register.json'],cwd=R))
+ check(s['acceptanceTasks']==baseline['acceptanceTasks'] and s['p1Baseline']['dataValidation']==baseline['p1Baseline']['dataValidation'],'本轮原59验收及原站操作全文未改')
+ changed=subprocess.check_output(['git','diff','--name-only','5769a420a923024e9c274a4f0084a2a40cef8c02'],cwd=R,text=True).splitlines()
+ check(all(x.startswith('docs/') or x in ['scripts/render-p1-baseline.py','scripts/check-p1-baseline.py'] for x in changed),'本轮只修改治理文档和同源生成检查脚本')
+ check(not subprocess.check_output(['git','log','--merges','--format=%H','5769a420a923024e9c274a4f0084a2a40cef8c02..HEAD'],cwd=R).strip(),'未合并设计分支')
+ result['checks']=checks;(D/'P1AB_Document_Check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+ print('PASS: final 15 restricted closures, pinned P2 intake, explicit Release gates and unchanged business evidence')

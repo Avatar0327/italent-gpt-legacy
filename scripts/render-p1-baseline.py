@@ -626,3 +626,34 @@ if r3 and r3.get('approved'):
  (D/'P1_R3_Approval_Draft.md').write_text(intro('R3原批准草稿已由所有者明确批准')+'无需再次批准。批准原文、哈希与逐模块记录见[P1_Approval_Records.md](P1_Approval_Records.md)。\n')
  for name in ['P1_Review.md','P1B_Readiness.md','P1_Module_Closure.md']:
   f=D/name;v=f.read_text();v=v.replace('30项推荐及5项LIMIT未批准','30项推荐及5项LIMIT已获所有者批准').replace('10/15受限关闭，其他五模块不计通过。',progress_text());f.write_text(v)
+
+# Current Release handoff views; design branch artifacts remain immutable Git references.
+if s['roadmap'].get('p1FinalClosure'):
+ gates={g['id']:g for g in s['roadmap']['rangeGates']}
+ intake=gates['R1']['p2ResultIntake']
+ refs=table(['分支','固定提交','路径','SHA256'],[(x['branch'],x['head'],x['path'],x['sha256']) for x in intake['references']])
+ t=intro('当前15模块P1总关闭报告')+progress_text()+'\n\n当前范围P1阶段受限通过并关闭，不代表开发、业务测试或生产验收完成。原48编号/59验收记录保留；33模块及独立AI排班继续暂缓；六基础单列。\n\n'
+ t+=table(['Release','P1','获准阶段','实际状态'],[(g['id'],'受限关闭',g['downstream']['authorizedPhase'],g['downstream'].get('p3Status',g['downstream']['p2Status'])) for g in gates.values()])+'\n'
+ t+=table(['模块','完整登记范围','批准','P1结论'],[(m['id'],m['scope'],m['p1']['moduleClosure']['closureRecord'],'受限通过；模块转序就绪') for m in active_mods])+'\n'
+ t+='## R1 P2只读纳入\n\n所有者批准 R1-P2-EXIT-OWNER-20260910，审阅HEAD `'+intake['reviewedHead']+'`。37项风险：9设计关闭、20转P3、8转P4；13项原站补证继续由P1总控统筹。业务测试和历史测试复验均0。只按Git对象登记，不合并或复制设计分支。\n\n'+refs+'\n'
+ t+='## 后续窗口\n\n[R1 P3取件与启动](R1_P3_Controller_Start.md)；[R2 P2交接](P1_R2_P2_Handoff.md)及[启动词](R2_P2_Start_Prompt.md)；[R3 P2交接](P1_R3_P2_Handoff.md)及[启动词](R3_P2_Start_Prompt.md)。本窗口未执行P2/P3。\n\n'
+ t+='## 残余责任\n\n全部模块LIMIT保留在各模块评审包、Scope restrictedApproval及交接中；原站未知算法不冒事实。P2负责设计与可行性差异，P3负责隔离实施及实际运行证据，P4负责独立多角色/业务/生产验收。E2不增访问者，D1–D7不扩大；RPO≤1小时/RTO≤4小时/30天目标不降标。外部真实交易、通知、签署、申报均未执行。不存在本轮P1关闭硬阻塞，不等于后续风险已全部关闭。\n'
+ (D/'P1_Final_Closure.md').write_text(t)
+ x=next(x for x in intake['references'] if x['path'].endswith('R1_P2_P3_Start_Prompt.md'))
+ (D/'R1_P3_Controller_Start.md').write_text(intro('R1 P3新窗口取件与启动')+'所有者已批准R1 P2退出并明确准入P3；实际P3尚未开始。\n\n请作为独立R1 P3窗口，先只读核main实际HEAD、Scope中的R1 P2纳入记录与R1-P3-ENTRY-OWNER-20260910。不得改main事实源或进入P2工作树。通过以下Git对象读取原完整启动词，校验SHA256后按其完整边界执行；本文件仅提供总控授权及取件索引，不复制设计事实。\n\n```bash\ngit show '+x['head']+':'+x['path']+'\n```\n\nSHA256：`'+x['sha256']+'`。同时读取下列固定对象：\n\n'+refs+'\n按原启动词创建独立P3工作树，复用最新main，保护已有修改；单主任务，隔离合成测试，不新增访问者、不部署、不做生产迁移/真实外发。P2记录本身未授权P3执行，本次总控R1-P3-ENTRY-OWNER-20260910提供进入授权；P4和生产须另行评审。\n')
+ for rid in ['R2','R3']:
+  g=gates[rid];h=g['controllerHandoff'];mm=[by_id[x] for x in h['moduleIds']]
+  t=intro(rid+' P1→P2正式交接')+'状态：P1受限关闭，P2设计进入获准，P2尚未开始。批准：'+h['entryRecord']+'。\n\n'
+  t+=table(['模块','完整范围','批准记录','规格'],[(m['id'],m['scope'],m['p1']['moduleClosure']['closureRecord'],'[评审基线](P1_'+m['id']+'_Review_Package.md)') for m in mm])+'\n'
+  t+='六基础全部适用，范围外33模块及独立AI继续暂缓；电子签、支付、税务申报、真实测评/消息仅契约，不以供应商接通作为设计前置。不扩展模块内部登记范围。\n\n'
+  for m in mm:
+   p=m['p1'];rp=p['reviewPackage'];lim=p['moduleClosure']['restrictedApproval']
+   t+='## '+m['id']+' 设计输入\n\n'+table(['维度','要求'],[('批准版本/原文/哈希','[批准记录](P1_Approval_Records.md)；'+rp['approvalRecord']),('复用、待改及新增',rp['implementationNext']),('验收ID',rp['acceptanceCaseRefs']),('受限范围',lim['scope']),('残余风险',lim['residualRisk']),('P2/P3/P4责任',lim['revalidation'])])+'\n'
+   contracts=[c for pack in pb['packages'] for c in pack['contracts'] if m['id'] in c['currentApplicability']['moduleIds']]
+   t+=table(['规格','对象/字段/权限/状态输入','源码适用证据'],[(c['id'],'[分包规格]('+next(pack['document'].split('/')[-1] for pack in pb['packages'] if c in pack['contracts'])+')' if any('document' in pack for pack in pb['packages'] if c in pack['contracts']) else 'Scope.p1B.packages.contracts：fieldDetails/roleMatrix/stateTransitions/acceptanceCases',c['codeRefs']) for c in contracts])+'\n'
+  t+='## P2工作及退出条件\n\n按模块顺序，完成架构复用/差异、稳定对象与版本模型、服务端行列动作授权、状态与审批/生效事务、接口契约及未知重试、迁移映射与兼容回滚、附件/审计/备份恢复设计。每条批准需求和验收ID必须映射设计与责任；缺项和互相冲突须解决或明确批准处置。核心规则不得由旧实现限制覆盖；评分尺度、缺失状态与版本冻结遵守所属模块已批方案。\n\n数据迁移保留稳定ID、原历史及来源；按新规则发现冲突须隔离待核，不覆盖或假造旧业务。授权重新校验含历史/附件/下载/汇总；M19只审批，生产者决定生效；M48/M32消费契约不代生产者业务。恢复目标60分钟/240分钟/30天须核平台能力、成本和责任，不能冒已达标。\n\n外部接口须写schema/版本/幂等键/签名信任/失败及unknown/对账/撤权状态，未配置不假成功。P2交付设计包、逐需求追踪、风险责任、可执行Given/When/Then映射、复用代码版本与迁移影响及P3任务建议；完成独立设计退出评审且获所有者批准前不得进入P3。\n\n验收完整预期见模块包引用的用例及Scope原contract；本轮未运行，历史测试适用HEAD见[P1B_Implementation_Map.md](P1B_Implementation_Map.md)。不重复询问已批SPEC/LIMIT/BASELINE、D1–D7/E1/E2及恢复目标，新增重大选择集中提交。\n\n[完整新窗口启动提示词]('+rid+'_P2_Start_Prompt.md)。\n'
+  (R/h['document']).write_text(t)
+  prompt=intro(rid+' P2独立设计窗口完整启动提示词')+'请作为'+rid+' P2设计负责人，从当前main的已提交HEAD恢复。所有者已通过'+h['entryRecord']+'授权进入P2设计；P1已受限关闭，不重做或重新询问已批规则。\n\n1. 只读核main HEAD、工作区和现有工作树归属。读取Scope_Register.json、P1_Final_Closure.md、P1_'+rid+'_P2_Handoff.md、P1_Approval_Records.md及所链接模块规格/原验收ID、实现映射。锁定启动HEAD与各材料SHA256；后续变化只做差异核对，不回退。\n2. 创建或复用本人所有的独立'+rid+'设计分支/工作树，名称冲突先查归属。不得进入或修改P1工作树、R1 P2/P3或其他Release工作树；不得merge/cherry-pick/rebase/reset/强推。Scope及总控视图唯一写入权仍属P1总控。\n3. 范围仅 '+ '→'.join(h['moduleIds'])+' 及六基础适用差异，单主模块顺序设计。33模块及独立AI暂缓，必要公共契约按现有映射，不恢复独立模块。\n4. 按交接的完整对象、字段、角色、状态、异常、接口、历史及迁移要求复核既有底座，编写架构/数据/权限/事务/接口/迁移/恢复设计与逐需求、原验收ID追踪；复用已有实现但记录版本和差异，历史测试不计当前复验。\n5. 原站/CDP仍由P1总控独占，需要定向补证形成结构化请求。外部供应商未配置完成契约及不可用状态设计；未知行为不得编造。D1–D7/E1/E2、RPO≤1小时/RTO≤4小时/30天保持，重大成本差异量化提交，不降标。\n6. 仅编辑本设计分支docs/delivery/'+rid.lower()+'-p2/及必要文档检查脚本。不改产品、业务数据库、原站、部署、访问者；不实施迁移或P3测试，不启动代理。\n7. 按实质设计单元检查、提交推送并核同步，保护所有窗口修改。局部阻塞记录影响及替代，继续不受影响设计。\n8. 完成设计退出包、残余风险与P2/P3/P4责任、可执行验收场景追踪、P3交接建议和给总控的结构化提案（不是第二事实台账）。只有独立P2退出评审和所有者明确批准后才可进入P3；本授权不许直接开发、部署或生产操作。最终回交分支、完整HEAD、文件哈希、未决事项及检查证据。\n'
+  (R/h['startPrompt']).write_text(prompt)
+ for name in ['P1_Review.md','P1B_Readiness.md','P1_Module_Closure.md']:
+  f=D/name;f.write_text('当前正式结论：[15模块P1总关闭报告](P1_Final_Closure.md)。15/15受限关闭；R1仅准P3，R2/R3仅准P2，均未在本窗口执行。\n\n'+f.read_text())

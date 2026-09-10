@@ -1,10 +1,10 @@
 # M07 薪酬社保集中评审包
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T03:22:17.727544+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T03:24:03.609414+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
-状态：**P1受限通过，需求基线已批准**；主模块 M07，备用 无。
+状态：**P1受限通过，需求基线已批准**；主模块 M01，备用 无。
 
 准备时间 2026-09-10T02:58:52.883177+00:00；静态代码基准 `a93f42cc14fca4ed225ec2e398678c1d122f07f9`。本轮原站未新增业务写入，历史测试未复验。
 
@@ -137,7 +137,7 @@
 - 待修改/新增：补薪资组/包/事件档案、受控公式DAG和输入政策快照、社保/税期/激励对象、负净额待处理账、支付幂等及对账、薪资权限和历史迁移；不引入完整预算/佣金/福利模块
 - 代码证据：lib/hris/payroll.ts,lib/hris/payroll-adjustments.ts,lib/hris/payroll-attendance.ts,lib/hris/payroll-access.ts,lib/hris/payroll-reports.ts,lib/hris/model.ts
 
-下一步：残余责任见LIMIT；继续M07
+下一步：按所属Release交接P2设计/P3验证/P4验收残余责任
 
 [完整分包规格](P1B_BP_S_Specification.md) · [唯一待决与就绪表](P1B_Readiness.md) · [实现对应](P1B_Implementation_Map.md)。本包由Scope生成，不另维护进度。
 

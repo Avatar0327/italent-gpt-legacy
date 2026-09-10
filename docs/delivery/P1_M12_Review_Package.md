@@ -1,10 +1,10 @@
 # M12 招聘管理系统集中评审包
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T03:22:17.727544+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T03:24:03.609414+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
-状态：**P1受限通过，需求基线已批准**；主模块 M07，备用 无。
+状态：**P1受限通过，需求基线已批准**；主模块 M01，备用 无。
 
 准备时间 2026-09-10T02:53:58.299605+00:00；静态代码基准 `ecd32d4b399417df79fe96adbdcd29ae868aad45`。本轮原站未新增业务写入，历史测试未复验。
 
@@ -136,7 +136,7 @@
 - 待修改/新增：拆自然人/申请/库关系与去重审核；Offer版本及参与者历史、人数预留账和失效释放、M01稳定身份与再入职接口、排期修订历史、候选用途权限与外部渠道状态
 - 代码证据：lib/hris/recruitment.ts,lib/hris/recruitment-jobs.ts,lib/hris/interview-schedule.ts,lib/hris/recruitment-evaluations.ts,app/api/recruitment/route.ts
 
-下一步：残余责任见LIMIT；继续M11
+下一步：按所属Release交接P2设计/P3验证/P4验收残余责任
 
 [完整分包规格](P1B_BP_R_Specification.md) · [唯一待决与就绪表](P1B_Readiness.md) · [实现对应](P1B_Implementation_Map.md)。本包由Scope生成，不另维护进度。
 

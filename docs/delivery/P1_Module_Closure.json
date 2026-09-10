@@ -1,9 +1,9 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-10T03:22:17.727544+00:00",
-  "primaryModuleId": "M07",
+  "generatedFromUpdatedAt": "2026-09-10T03:24:03.609414+00:00",
+  "primaryModuleId": "M01",
   "backupModuleId": null,
-  "activeExecutionModuleId": "M07",
+  "activeExecutionModuleId": "M01",
   "moduleCount": 15,
   "completeCount": 0,
   "restrictedCount": 15,
@@ -1173,15 +1173,18 @@
         "closedAt": "2026-09-09T17:11:16.592266+00:00"
       },
       "downstream": {
-        "authorizedPhase": "P2",
+        "authorizedPhase": "P3",
         "entryApproved": true,
-        "entryApprovalRecord": "R1-P1-P2-TRANSITION-20260909",
-        "p2Status": "已获准进入，待独立设计执行与评审",
-        "p2ExitApproved": false,
-        "p2ExitRecord": null,
-        "p3EntryApproved": false,
+        "entryApprovalRecord": "R1-P3-ENTRY-OWNER-20260910",
+        "p2Status": "所有者批准P2设计退出；9设计关闭/20转P3/8转P4",
+        "p2ExitApproved": true,
+        "p2ExitRecord": "R1-P2-EXIT-OWNER-20260910",
+        "p3EntryApproved": true,
         "businessAccepted": false,
-        "productionAccepted": false
+        "productionAccepted": false,
+        "p3HandoffReady": true,
+        "p3Started": false,
+        "p3Status": "获准进入，尚未开始"
       },
       "p2Handoff": {
         "id": "R1-P2-HANDOFF",
@@ -1394,6 +1397,128 @@
         ],
         "next": "P1总控提交本交接后转M37；新P2窗口读取启动提示词可独立开始设计，当前窗口不执行P2实现。"
       },
+      "p2ResultIntake": {
+        "approvalId": "R1-P2-EXIT-OWNER-20260910",
+        "reviewedHead": "65cfcf85e4fccf8cba53319deb7b87dd7f79600a",
+        "sourceHead": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "sourceBranch": "design/r1-p2-20260909",
+        "references": [
+          {
+            "branch": "design/r1-p2-20260909",
+            "head": "e15237281ff19f04f08a354fd9455c518b24ae47",
+            "path": "docs/delivery/r1-p2/R1_P2_Controller_Proposal.json",
+            "sha256": "a8d1873c712601d90e1ad498feb202343e6f8d12d7405185052db7596dd904da"
+          },
+          {
+            "branch": "design/r1-p2-20260909",
+            "head": "e15237281ff19f04f08a354fd9455c518b24ae47",
+            "path": "docs/delivery/r1-p2/R1_P2_Exit_Review.md",
+            "sha256": "53ee09fe93fcf667afe48c6cf3b21cada18645a9950f0f1cb18e06faa02cb149"
+          },
+          {
+            "branch": "design/r1-p2-20260909",
+            "head": "e15237281ff19f04f08a354fd9455c518b24ae47",
+            "path": "docs/delivery/r1-p2/R1_P2_P3_Handoff.md",
+            "sha256": "2df90ce6d557500f65206cf458d7b548d94fd8a9205bbc0c977f4a83c9273c14"
+          },
+          {
+            "branch": "design/r1-p2-20260909",
+            "head": "e15237281ff19f04f08a354fd9455c518b24ae47",
+            "path": "docs/delivery/r1-p2/R1_P2_P3_Start_Prompt.md",
+            "sha256": "eb06c0b47931fab637a4c5c19c1670fbe56560ff77166704986bfaa7bf2cca10"
+          },
+          {
+            "branch": "design/r1-p2-20260909",
+            "head": "e15237281ff19f04f08a354fd9455c518b24ae47",
+            "path": "docs/delivery/r1-p2/R1_P2_Owner_Exit_Approval.json",
+            "sha256": "2905b1cfeb18ead0985a49fbaadc55d13b39bba354599a92a15352499e04cda0"
+          },
+          {
+            "branch": "design/r1-p2-20260909",
+            "head": "e15237281ff19f04f08a354fd9455c518b24ae47",
+            "path": "docs/delivery/r1-p2/R1_P2_Limit_Resolution.json",
+            "sha256": "f4400e6ef0d37493637468b7862e29ebcc2c75c3fdb2b7eda1b4d09011232cda"
+          },
+          {
+            "branch": "design/r1-p2-20260909",
+            "head": "e15237281ff19f04f08a354fd9455c518b24ae47",
+            "path": "docs/delivery/r1-p2/R1_P2_Dependencies_Decisions.json",
+            "sha256": "8b536d2f10e0ef4db8ac583b4e63d7a9643846a1764b6466f21ad6543a902e93"
+          }
+        ],
+        "riskDisposition": {
+          "ownerClosedDesignRiskIds": [
+            "R1-M01-L01",
+            "R1-M01-L02",
+            "R1-M01-L03",
+            "R1-M19-L01",
+            "R1-M19-L02",
+            "R1-M48-L01",
+            "R1-M48-L02",
+            "R1-M32-L01",
+            "R1-M32-L02"
+          ],
+          "remainingP3RiskIds": [
+            "R1-M01-L04",
+            "R1-M01-L05",
+            "R1-M01-L06",
+            "R1-M01-L07",
+            "R1-M01-L08",
+            "R1-M19-L03",
+            "R1-M19-L04",
+            "R1-M19-L05",
+            "R1-M19-L06",
+            "R1-M19-L07",
+            "R1-M48-L03",
+            "R1-M48-L04",
+            "R1-M48-L05",
+            "R1-M48-L06",
+            "R1-M32-L03",
+            "R1-M32-L04",
+            "R1-M32-L05",
+            "R1-M32-L06",
+            "R1-M32-L07",
+            "R1-M32-L08"
+          ],
+          "remainingP4RiskIds": [
+            "R1-M01-L09",
+            "R1-M01-L10",
+            "R1-M19-L08",
+            "R1-M19-L09",
+            "R1-M48-L07",
+            "R1-M48-L08",
+            "R1-M32-L09",
+            "R1-M32-L10"
+          ]
+        },
+        "riskCounts": {
+          "total": 37,
+          "designClosed": 9,
+          "p3": 20,
+          "p4": 8
+        },
+        "sourceEvidenceRequests": [
+          "SRC-M01-01",
+          "SRC-M01-02",
+          "SRC-M01-03",
+          "SRC-M01-04",
+          "SRC-M19-01",
+          "SRC-M19-02",
+          "SRC-M19-03",
+          "SRC-M48-01",
+          "SRC-M48-02",
+          "SRC-M48-03",
+          "SRC-M32-01",
+          "SRC-M32-02",
+          "SRC-M32-03"
+        ],
+        "sourceEvidenceOwner": "P1总控",
+        "businessTestsRun": 0,
+        "historicalTestRevalidations": 0,
+        "p3Started": false,
+        "readOnlyIntake": true,
+        "recordedAt": "2026-09-10T03:24:03.609414+00:00"
+      },
       "moduleIds": [
         "M01",
         "M19",
@@ -1440,16 +1565,63 @@
         }
       },
       "review": {
-        "approved": false,
-        "record": null,
-        "approvedAt": null,
-        "scope": null
+        "approved": true,
+        "record": "R2-P1-P2-TRANSITION-20260910",
+        "approvedAt": "2026-09-10T03:24:03.609414+00:00",
+        "scope": "R2 P1关闭，批准仅P2设计"
       },
       "p1ClosureSummary": {
-        "status": "R2 P1六模块与基础需求受限关闭；下游进入未批准",
-        "record": "M03-P1-APPROVAL-20260910",
-        "at": "2026-09-10T02:44:14.280019+00:00",
-        "downstreamAuthorized": false
+        "status": "P1受限关闭；获准进入P2设计",
+        "record": "R2-P1-P2-TRANSITION-20260910",
+        "at": "2026-09-10T03:24:03.609414+00:00",
+        "downstreamAuthorized": true
+      },
+      "p1Conclusion": {
+        "status": "受限通过并关闭",
+        "approvalRecord": "R2-P1-P2-TRANSITION-20260910",
+        "closedAt": "2026-09-10T03:24:03.609414+00:00"
+      },
+      "downstream": {
+        "authorizedPhase": "P2",
+        "entryApproved": true,
+        "entryApprovalRecord": "R2-P1-P2-TRANSITION-20260910",
+        "p2Status": "获准进入，尚未开始",
+        "p2ExitApproved": false,
+        "p2ExitRecord": null,
+        "p3EntryApproved": false,
+        "p3Started": false,
+        "businessAccepted": false,
+        "productionAccepted": false
+      },
+      "controllerHandoff": {
+        "document": "docs/delivery/P1_R2_P2_Handoff.md",
+        "startPrompt": "docs/delivery/R2_P2_Start_Prompt.md",
+        "moduleIds": [
+          "M37",
+          "M06",
+          "M26",
+          "M18",
+          "M17",
+          "M03"
+        ],
+        "foundationIds": [
+          "BASE-01",
+          "BASE-02",
+          "BASE-03",
+          "BASE-04",
+          "BASE-05",
+          "BASE-06"
+        ],
+        "approvalRecords": [
+          "M37-P1-APPROVAL-R2-20260909",
+          "M06-P1-APPROVAL-R2-20260909",
+          "M26-P1-APPROVAL-20260910",
+          "M18-P1-APPROVAL-20260910",
+          "M17-P1-APPROVAL-20260910",
+          "M03-P1-APPROVAL-20260910"
+        ],
+        "ready": true,
+        "entryRecord": "R2-P1-P2-TRANSITION-20260910"
       },
       "moduleIds": [
         "M37",
@@ -1459,10 +1631,8 @@
         "M17",
         "M03"
       ],
-      "transitionReady": false,
-      "missingConditions": [
-        "rangeReviewApproved"
-      ]
+      "transitionReady": true,
+      "missingConditions": []
     },
     {
       "id": "R3",
@@ -1501,16 +1671,61 @@
         }
       },
       "review": {
-        "approved": false,
-        "record": null,
-        "approvedAt": null,
-        "scope": null
+        "approved": true,
+        "record": "R3-P1-P2-TRANSITION-20260910",
+        "approvedAt": "2026-09-10T03:24:03.609414+00:00",
+        "scope": "R3 P1关闭，批准仅P2设计"
       },
       "p1ClosureSummary": {
-        "status": "R3 P1六模块与基础需求受限关闭；下游进入未批准",
-        "record": "M07-P1-APPROVAL-20260910",
-        "at": "2026-09-10T03:22:17.727544+00:00",
-        "downstreamAuthorized": false
+        "status": "P1受限关闭；获准进入P2设计",
+        "record": "R3-P1-P2-TRANSITION-20260910",
+        "at": "2026-09-10T03:24:03.609414+00:00",
+        "downstreamAuthorized": true
+      },
+      "p1Conclusion": {
+        "status": "受限通过并关闭",
+        "approvalRecord": "R3-P1-P2-TRANSITION-20260910",
+        "closedAt": "2026-09-10T03:24:03.609414+00:00"
+      },
+      "downstream": {
+        "authorizedPhase": "P2",
+        "entryApproved": true,
+        "entryApprovalRecord": "R3-P1-P2-TRANSITION-20260910",
+        "p2Status": "获准进入，尚未开始",
+        "p2ExitApproved": false,
+        "p2ExitRecord": null,
+        "p3EntryApproved": false,
+        "p3Started": false,
+        "businessAccepted": false,
+        "productionAccepted": false
+      },
+      "controllerHandoff": {
+        "document": "docs/delivery/P1_R3_P2_Handoff.md",
+        "startPrompt": "docs/delivery/R3_P2_Start_Prompt.md",
+        "moduleIds": [
+          "M27",
+          "M16",
+          "M12",
+          "M11",
+          "M07"
+        ],
+        "foundationIds": [
+          "BASE-01",
+          "BASE-02",
+          "BASE-03",
+          "BASE-04",
+          "BASE-05",
+          "BASE-06"
+        ],
+        "approvalRecords": [
+          "M27-P1-APPROVAL-20260910",
+          "M16-P1-APPROVAL-20260910",
+          "M12-P1-APPROVAL-20260910",
+          "M11-P1-APPROVAL-20260910",
+          "M07-P1-APPROVAL-20260910"
+        ],
+        "ready": true,
+        "entryRecord": "R3-P1-P2-TRANSITION-20260910"
       },
       "moduleIds": [
         "M27",
@@ -1519,10 +1734,8 @@
         "M11",
         "M07"
       ],
-      "transitionReady": false,
-      "missingConditions": [
-        "rangeReviewApproved"
-      ]
+      "transitionReady": true,
+      "missingConditions": []
     }
   ],
   "nightReviewPipeline": {
@@ -1582,8 +1795,8 @@
       "M11",
       "M07"
     ],
-    "status": "R3四模块均受限关闭",
-    "nextFormalClosureModule": "M07",
+    "status": "五模块已顺序受限关闭，材料流水线结束",
+    "nextFormalClosureModule": null,
     "rule": "按最新用户批准顺序关闭R3；随后允许R3串行材料准备，未批准R3不关闭，不进入P2/P3"
   }
 }

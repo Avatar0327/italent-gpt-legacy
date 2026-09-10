@@ -1,6 +1,6 @@
 # P1模块需求批准记录（非业务运行验收）
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T03:22:17.727544+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T03:24:03.609414+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
@@ -402,3 +402,63 @@
 | M07-SPEC-04 | 9b4ebda1e759f18073d0e11582bd175ca21c7fdc40321182348e03779d643bf1 | 建议激励对象含方案版本、适用员工/期间、依据和金额或显式计算规则，归属/批准/生效/发放分列，不自动等同佣金/福利。补差关联原条和来源变更事件，独立复核新版本；负调整可保留，但累计净额为负时转待处理差额，阻自动付款或自动扣未来工资，须所有者授权的追补方案和依据。不能静默归零或产生负数银行付款。 |
 | M07-SPEC-05 | 616bc85f4311fe913cab8ed871150079061bcc875aa65eda18963964682e3332 | 建议支付只保留外部契约，支付单冻结已核准金额/收款标识/币种和批次版本，submit权限独立于工资发布。幂等键以法人/批次/付款单版本确定，提交前校验有效授权；超时unknown先查询银行原流水，禁止创建新单盲重付。成功须可信回执，部分成功逐行对账，重复/异额回执隔离；撤销/退回款是新关联业务，不覆盖原交易。供应商未配置保持unconfigured，P1不要求真实付款。 |
 | M07-SPEC-06 | 71544a563a7037e8ed3f030e32f91c1085718fb2c01819c35771006dfe6c30ec | 建议编制/历史贡献者/提交者不得复核，含本人记录不得审批发布；发布与支付/对账分别授权，历史按当前薪资组/法人/字段权限验权。批次和原工资发布后不可编辑，退回只限未发布；已发来源变更标影响并走补差。备份包含政策/输入/结果/回执关联，按R1恢复目标在隔离状态对账后由所有者开放，恢复不得重发支付任务。所有批量操作有界、逐项结果明确，unknown不显示假0或成功。 |
+
+## R1-P2-EXIT-OWNER-20260910
+
+| 字段 | 记录 |
+|---|---|
+| approvedBy | 项目所有者（本窗口用户） |
+| approvedAt | 2026-09-10T03:24:03.609414+00:00 |
+| timeBasis | 本次明确批准，登记时刻 |
+| source | 2026-09-10本窗口：P1最终收口、R1 P2结果纳入及阶段转序明确批准 |
+| reviewedHead | 65cfcf85e4fccf8cba53319deb7b87dd7f79600a |
+| reviewedDocument | docs/delivery/r1-p2/R1_P2_Exit_Review.md |
+| reviewedDocumentSha256 | e88a0fdbe89efbca2b497b225df54cebb0a114509564b509d3de4cbbfb7c4d07 |
+| scope | R1 P2设计退出，原批准记录只读纳入 |
+| authorization | P2设计通过，原记录仅P3交接准备；本次P3进入授权另列 |
+| exclusions | 不代表实现、业务测试、多角色验收、第三方审计或生产验收；本窗口不执行P2/P3、产品修改、部署或原站操作 |
+
+## R1-P3-ENTRY-OWNER-20260910
+
+| 字段 | 记录 |
+|---|---|
+| approvedBy | 项目所有者（本窗口用户） |
+| approvedAt | 2026-09-10T03:24:03.609414+00:00 |
+| timeBasis | 本次明确批准，登记时刻 |
+| source | 2026-09-10本窗口：P1最终收口、R1 P2结果纳入及阶段转序明确批准 |
+| reviewedHead | e15237281ff19f04f08a354fd9455c518b24ae47 |
+| reviewedDocument | docs/delivery/r1-p2/R1_P2_P3_Handoff.md |
+| reviewedDocumentSha256 | 2df90ce6d557500f65206cf458d7b548d94fd8a9205bbc0c977f4a83c9273c14 |
+| scope | R1仅进入P3实施验证；尚未开始 |
+| authorization | 由独立新窗口执行，不授权部署、生产或新增访问者 |
+| exclusions | 不代表实现、业务测试、多角色验收、第三方审计或生产验收；本窗口不执行P2/P3、产品修改、部署或原站操作 |
+
+## R2-P1-P2-TRANSITION-20260910
+
+| 字段 | 记录 |
+|---|---|
+| approvedBy | 项目所有者（本窗口用户） |
+| approvedAt | 2026-09-10T03:24:03.609414+00:00 |
+| timeBasis | 本次明确批准，登记时刻 |
+| source | 2026-09-10本窗口：P1最终收口、R1 P2结果纳入及阶段转序明确批准 |
+| reviewedHead | 7e4a4875f8d0453c948bf2233be28b31799eecbe |
+| reviewedDocument | docs/delivery/P1_Module_Closure.json |
+| reviewedDocumentSha256 | 001f31e372d1720a62b59afb98c890490e0569a2b01607baa714dff92b0bdb07 |
+| scope | R2全部模块和六基础P1受限关闭且交接齐备 |
+| authorization | 仅进入独立P2设计窗口/工作树，不直接P3 |
+| exclusions | 不代表实现、业务测试、多角色验收、第三方审计或生产验收；本窗口不执行P2/P3、产品修改、部署或原站操作 |
+
+## R3-P1-P2-TRANSITION-20260910
+
+| 字段 | 记录 |
+|---|---|
+| approvedBy | 项目所有者（本窗口用户） |
+| approvedAt | 2026-09-10T03:24:03.609414+00:00 |
+| timeBasis | 本次明确批准，登记时刻 |
+| source | 2026-09-10本窗口：P1最终收口、R1 P2结果纳入及阶段转序明确批准 |
+| reviewedHead | 7e4a4875f8d0453c948bf2233be28b31799eecbe |
+| reviewedDocument | docs/delivery/P1_Module_Closure.json |
+| reviewedDocumentSha256 | 001f31e372d1720a62b59afb98c890490e0569a2b01607baa714dff92b0bdb07 |
+| scope | R3全部模块和六基础P1受限关闭且交接齐备 |
+| authorization | 仅进入独立P2设计窗口/工作树，不直接P3 |
+| exclusions | 不代表实现、业务测试、多角色验收、第三方审计或生产验收；本窗口不执行P2/P3、产品修改、部署或原站操作 |
