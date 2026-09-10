@@ -337,7 +337,8 @@
       ],
       "evidence": [
         "evidence/r1-p3-20260910T091333336280Z.json",
-        "evidence/r1-p3-20260910T092112866567Z.json"
+        "evidence/r1-p3-20260910T092112866567Z.json",
+        "evidence/r1-p3-20260910T092744057535Z.json"
       ],
       "remaining": [
         "完整对象恢复与备份生成服务/中断恢复进一步验证",
@@ -349,12 +350,14 @@
         "DEP-PLATFORM-01",
         "DEP-PLATFORM-02"
       ],
-      "implementationSha": "a0394c325075a80b05fa7e956269e9cd36a1363d",
+      "implementationSha": "01863cfb8b54636cd2340be8415ae36304a5ed23",
       "subworkCompleted": [
         "4MiB AES-256-GCM/AAD/独立封装密钥/签名与完整对象摘要",
         "实际77持久表基线逐页同水位读取（5项日志/缓存/断言表明确排除）",
         "完整事务日志封印/连续序号及全列镜像校验",
-        "有界UTF-8跨块解码和本地独立SQLite基线+增量幂等还原/关闸暂停outbox"
+        "有界UTF-8跨块解码和本地独立SQLite基线+增量幂等还原/关闸暂停outbox",
+        "文件持久SQL目标丢导入响应后重开恢复",
+        "显式模拟独立对象目标逐范围/整体验证与墓碑字节恢复"
       ]
     },
     {
@@ -384,6 +387,6 @@
     }
   ],
   "currentTask": "P3-R1-09",
-  "lastVerifiedSourceSha": "a0394c325075a80b05fa7e956269e9cd36a1363d",
-  "latestRun": "evidence/r1-p3-20260910T092112866567Z.json"
+  "lastVerifiedSourceSha": "01863cfb8b54636cd2340be8415ae36304a5ed23",
+  "latestRun": "evidence/r1-p3-20260910T092744057535Z.json"
 }
