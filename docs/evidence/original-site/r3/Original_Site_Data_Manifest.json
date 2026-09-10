@@ -213,7 +213,8 @@
       "state": "private_pool",
       "readback": "指定本轮个人库10条姓名逐条匹配，性别保密/本科",
       "source_file": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE01.txt",
-      "external_sends": 0
+      "external_sends": 0,
+      "business_code": "C00014235"
     },
     {
       "module": "M12",
@@ -224,7 +225,8 @@
       "state": "private_pool",
       "readback": "指定本轮个人库10条姓名逐条匹配，性别保密/本科",
       "source_file": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE02.txt",
-      "external_sends": 0
+      "external_sends": 0,
+      "business_code": "C00014236"
     },
     {
       "module": "M12",
@@ -301,7 +303,8 @@
       "state": "private_pool",
       "readback": "指定本轮个人库10条姓名逐条匹配，性别保密/本科",
       "source_file": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE09.txt",
-      "external_sends": 0
+      "external_sends": 0,
+      "business_code": "C00014243"
     },
     {
       "module": "M12",
@@ -322,6 +325,30 @@
       "state": "启用",
       "readback": "精确名称过滤成功，关联本轮组织，不向下共享",
       "scheduled_employees": 0
+    },
+    {
+      "module": "M11",
+      "object_type": "shift",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M11_SMOKE03",
+      "internal_id": null,
+      "state": "启用",
+      "readback": "独立tab13精确名称过滤唯一行，关联本轮组织、不向下共享",
+      "scheduled_employees": 0
+    },
+    {
+      "module": "M07",
+      "object_type": "payroll_group",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M07_GROUP01",
+      "business_code": "ZZ_R3_R3-ORIGIN-20260910-103900_M07_GROUP01",
+      "internal_id": null,
+      "state": "启用",
+      "parent": "默认薪资组（仅引用，未修改）",
+      "departments": [
+        "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_ORG01"
+      ],
+      "include_subdepartments": false,
+      "readback": "薪资组名称精确过滤唯一行，编码/名称/上级/部门匹配",
+      "payroll_runs": 0
     }
   ],
   "operations": [
@@ -437,25 +464,119 @@
       "id": "R3-OP-012",
       "module": "M11",
       "action": "从本轮02复制到03，工具保存调用返回但表单仍存在",
-      "result": "not_confirmed_saved; form_still_open",
+      "result": "resolved_confirmed_saved_by_independent_exact_name_filter",
       "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M11_SMOKE03",
-      "next": "未计入成功，先查03是否存在，再决定保存；不批量重复"
+      "resolution": "更正复制后简称为R3日班03；提交后表单消失；独立tab13确认03唯一记录。原不确定状态保留在前次提交。"
+    },
+    {
+      "id": "R3-OP-013",
+      "module": "M07",
+      "action": "新增独立薪资组，首次保存提示上级薪资组必填；引用默认根组后保存",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M07_GROUP01",
+      "result": "confirmed_saved_by_exact_name_row",
+      "original_records_modified": false
+    },
+    {
+      "id": "R3-OP-014",
+      "module": "M12",
+      "action": "SMOKE01疑似面板查看SMOKE09，取消疑似并确认是",
+      "record_keys": [
+        "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE01",
+        "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE09"
+      ],
+      "result": "comparison_panel_count_changed_9_to_8",
+      "pair_similarity_observed": "84%",
+      "notes": "详情头部当时仍显示9；未将即时旧计数归为持久错误；未合并或删除候选人。"
+    },
+    {
+      "id": "R3-OP-015",
+      "module": "BASE",
+      "action": "校验拒绝后，通过字段、下拉箭头、DOM-CUA入口检查期限类型",
+      "result": "no_visible_selectable_option_observed",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_EMP01",
+      "notes": "当前新增员工路径受阻；不推断字典为空或所有其他导入/入职路径不可用；未修改全局配置。"
     }
   ],
   "counts": {
-    "confirmed_records": 25,
+    "confirmed_records": 27,
     "by_module": {
       "BASE": 1,
       "M27": 10,
       "M16": 1,
       "M12": 11,
-      "M11": 2,
-      "M07": 0
+      "M11": 3,
+      "M07": 1
     },
     "pending_import_records": 0,
     "unknown_records": 0
   },
   "external_sends": 0,
   "payments": 0,
-  "declarations": 0
+  "declarations": 0,
+  "checkpoint_at": "2026-09-10T12:16:26.833054+00:00",
+  "workflow_status": "blocked_at_employee_prerequisite; five_modules_incomplete",
+  "execution_blockers": [
+    {
+      "id": "R3-EXEC-BLOCK-001",
+      "scope": "当前新增员工路径及依赖本轮员工的跨模块闭环",
+      "observed": "劳动合同期限类型必填导致保存拒绝；期限控件未出现可选项",
+      "cause": "未确定；不能据此判断原站全局故障",
+      "owner_role": "原站测试环境维护者/数据负责人（尚未确认承担）",
+      "resume_condition": "提供当前表单可用的期限类型选择方式，或提供/建立R3独立虚构员工的合法替代入口",
+      "remaining_alternatives": "其他导入/招聘入职路径未证明不可用，不将局部阻塞扩大为全站结论"
+    },
+    {
+      "id": "R3-EXEC-BLOCK-002",
+      "scope": "学习者/员工/主管/审批者等多角色权限与自助操作",
+      "observed": "本轮仅使用已有管理员会话，未获得可切换的R3专属测试角色身份",
+      "owner_role": "原站测试账号维护者（尚未确认承担）",
+      "resume_condition": "提供仅覆盖本轮数据的测试身份或既有隔离角色切换入口；不得修改共享全局权限"
+    }
+  ],
+  "synthetic_input_files": [
+    {
+      "path": "data/R3_M27_Smoke_Import.xlsx",
+      "sha256": "90cb2d2b0f33c7869289715bf92daabf46b9d345aff51c9b5d4e8b1fa95c9c5a"
+    },
+    {
+      "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE01.txt",
+      "sha256": "f69a7e606607c1a74185945d37937e15b7dcde29dddf2d3295cf376e69af2436"
+    },
+    {
+      "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE02.txt",
+      "sha256": "f2079d3372ad236288c013efb044fab9217678928262672916079127fdbdc3c8"
+    },
+    {
+      "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE03.txt",
+      "sha256": "c05ea5799840f366dcb1c25864d844d0c28539a2b7f27db84b85b49d97204644"
+    },
+    {
+      "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE04.txt",
+      "sha256": "c1a388796f3647a5f9ebaeef921efd79996e22a0b16d394a4c0dafc44067cb4b"
+    },
+    {
+      "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE05.txt",
+      "sha256": "a679a7a2f82c7dd1f9b91d85bf130e6b552193d50b01465d6635bcbf78bf2482"
+    },
+    {
+      "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE06.txt",
+      "sha256": "050d4e9b8062e6c41bf118ee0c948655ab3e231fe7d96cea6dfd0275fdf330d9"
+    },
+    {
+      "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE07.txt",
+      "sha256": "fb7f142b8ff71e58685acf2600950fd0e2118d86043b3f2c10a45713895ca464"
+    },
+    {
+      "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE08.txt",
+      "sha256": "d5abbc48808b40c79bedd1006a6e4562c84b172d1f816cdd9acdc0f11f8fb211"
+    },
+    {
+      "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE09.txt",
+      "sha256": "93303cb5502b9298b0c72db420daf949bbebb56d2019cf27c29b65a6ff0d7d89"
+    },
+    {
+      "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE10.txt",
+      "sha256": "497ec11d1665d7b42da011285df47219d2c96abed0fca77f980763b824f1428d"
+    }
+  ]
 }

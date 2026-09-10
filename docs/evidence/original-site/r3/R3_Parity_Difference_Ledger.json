@@ -217,6 +217,24 @@
       "proposal": "上传10份后需确认入库并按库和姓名逐条回查。保留文件哈希、解析任务、实际字段、失败/未知行；500文件与50M为页面提示，尚未上限实测。",
       "decision": null,
       "p4_evidence": null
+    },
+    {
+      "id": "R3-DIFF-013",
+      "severity": "Major",
+      "module": "M12",
+      "title": "疑似关系、取消判定和计数刷新分层",
+      "source_evidence": "M12-ORIGIN-004;005",
+      "approved_requirement": "M12-SPEC-01; M12-SPEC-06",
+      "design_sha": null,
+      "implementation_sha": null,
+      "classification": "design_input_candidate_not_confirmed_implementation_defect",
+      "status": "待R3 P2接收",
+      "owner_role": "R3 P2设计负责人",
+      "owner_acceptance": "未确认",
+      "target_phase": "P2设计冻结前",
+      "proposal": "区分候选人身份、疑似对、人工排除关系和合并操作；不同邮箱不能直接视为无疑似。取消需明确确认和权限、留痕及计数刷新；84%仅为本轮一对观测，不能硬编码为阈值。",
+      "decision": null,
+      "p4_evidence": null
     }
   ]
 }
