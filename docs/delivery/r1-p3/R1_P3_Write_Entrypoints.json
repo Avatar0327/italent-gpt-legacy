@@ -1,8 +1,8 @@
 {
   "purpose": "static inventory, not dynamic route coverage",
-  "routeCount": 60,
-  "methodCount": 61,
-  "sourceSha": "74c5b0db8894209b827b8e1b097366ad4c99257d",
+  "routeCount": 62,
+  "methodCount": 63,
+  "sourceSha": "c36094e2f407fd0e2101b2b0e3988fc278b4ec1b",
   "routes": [
     {
       "path": "app/api/access/route.ts",
@@ -18,7 +18,7 @@
         "POST",
         "DELETE"
       ],
-      "sha256": "72d373bc50d8ce1d0cef0f7fbcc9c8e46af57bb6233c494646542611be99805c",
+      "sha256": "4c81b46c1839b03fbbc175e3cb1dd13ad2c00e4a1cc91deca6a55e0a7e705b90",
       "classification": "R1 command header + actor-bound receipt replay + current attachment tuples; legacy permitted only before feature switch"
     },
     {
@@ -340,6 +340,22 @@
       ],
       "sha256": "29332df1bc3e8d009e4dee0e6c5ac7ee20026f5585da726cb5eeb26b456e6eb1",
       "classification": "R1 explicit versioned service or read-only contract preflight; static inventory is not dynamic proof"
+    },
+    {
+      "path": "app/api/r1/migration/attachments/route.ts",
+      "classification": "R1专用授权上下文/严格命令/当前revision及epoch屏障",
+      "methods": [
+        "POST"
+      ],
+      "sha256": "1e23381b127f7b5c4ecd467a3145789de38dbcc9ca48b5d68f5bd4d854273e08"
+    },
+    {
+      "path": "app/api/r1/migration/route.ts",
+      "classification": "R1专用授权上下文/严格命令/当前revision及epoch屏障",
+      "methods": [
+        "POST"
+      ],
+      "sha256": "cce6c42da1f7a79d89dd6b21bd44d7a22523a8294b50c2437e3fd2b86ae521c0"
     },
     {
       "path": "app/api/r1/reports/definitions/route.ts",

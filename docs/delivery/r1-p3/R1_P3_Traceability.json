@@ -124,8 +124,39 @@
       "plannedCases": [
         "P3-MIG-01"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T090521350287Z.json"
+      ],
+      "implementationSha": "c36094e2f407fd0e2101b2b0e3988fc278b4ec1b",
+      "code": [
+        "lib/hris/r1-migration.ts",
+        "lib/hris/r1-normalize-json.ts",
+        "lib/hris/r1-migration-backfill.ts",
+        "lib/hris/r1-migration-map.ts",
+        "lib/hris/r1-migration-reconcile.ts",
+        "lib/hris/r1-migration-attachments.ts",
+        "lib/hris/r1-migration-compatibility.ts",
+        "lib/hris/r1-core-read.ts",
+        "lib/hris/r1-schema-check.ts",
+        "drizzle/0025_r1_migration_control.sql",
+        "drizzle/0026_r1_expansion_recovery_log.sql",
+        "drizzle/0027_r1_migration_bridge.sql",
+        "drizzle/0028_r1_migration_journal_columns.sql"
+      ],
+      "tests": [
+        "tests/r1-p3-migration.test.mjs",
+        "tests/r1-p3-report-oracles.test.mjs",
+        "tests/r1-p3-transfer.test.mjs"
+      ],
+      "caseEvidence": "R1_P3_Migration_Case_Evidence.json",
+      "verificationBoundaries": [
+        "仅本地SQLite隔离合成；148/148和类型构建固定c36094e，不是P3最终两轮收口",
+        "JSON归档预算4MiB/数组10000项；规范化和回填100行批次；超预算显式失败",
+        "未知历史/法律实体/关系不推断；目录补齐有效期等新事实须按已批准业务规则核实",
+        "旧审批保留原表/签名/节点及只读兼容视图；未核安全适配器的旧办理局部阻断，不猜测外部后效",
+        "未证明R2/R3真实版本契约、云端容量/生产迁移或独立人类验收；不关闭风险或批准退出"
+      ]
     },
     {
       "id": "BASE-04-AC01",
@@ -157,8 +188,39 @@
       "plannedCases": [
         "P3-MIG-04"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T090521350287Z.json"
+      ],
+      "implementationSha": "c36094e2f407fd0e2101b2b0e3988fc278b4ec1b",
+      "code": [
+        "lib/hris/r1-migration.ts",
+        "lib/hris/r1-normalize-json.ts",
+        "lib/hris/r1-migration-backfill.ts",
+        "lib/hris/r1-migration-map.ts",
+        "lib/hris/r1-migration-reconcile.ts",
+        "lib/hris/r1-migration-attachments.ts",
+        "lib/hris/r1-migration-compatibility.ts",
+        "lib/hris/r1-core-read.ts",
+        "lib/hris/r1-schema-check.ts",
+        "drizzle/0025_r1_migration_control.sql",
+        "drizzle/0026_r1_expansion_recovery_log.sql",
+        "drizzle/0027_r1_migration_bridge.sql",
+        "drizzle/0028_r1_migration_journal_columns.sql"
+      ],
+      "tests": [
+        "tests/r1-p3-migration.test.mjs",
+        "tests/r1-p3-report-oracles.test.mjs",
+        "tests/r1-p3-transfer.test.mjs"
+      ],
+      "caseEvidence": "R1_P3_Migration_Case_Evidence.json",
+      "verificationBoundaries": [
+        "仅本地SQLite隔离合成；148/148和类型构建固定c36094e，不是P3最终两轮收口",
+        "JSON归档预算4MiB/数组10000项；规范化和回填100行批次；超预算显式失败",
+        "未知历史/法律实体/关系不推断；目录补齐有效期等新事实须按已批准业务规则核实",
+        "旧审批保留原表/签名/节点及只读兼容视图；未核安全适配器的旧办理局部阻断，不猜测外部后效",
+        "未证明R2/R3真实版本契约、云端容量/生产迁移或独立人类验收；不关闭风险或批准退出"
+      ]
     },
     {
       "id": "BASE-04-AC03",
@@ -1943,14 +2005,16 @@
     {
       "id": "R1-M01-L02",
       "status": "owner_design_review_closed",
-      "p3Evidence": [],
+      "p3Evidence": [
+        "evidence/r1-p3-20260910T090521350287Z.json"
+      ],
       "primaryDisposition": "P2",
       "sourceStatus": "owner_design_review_closed",
       "sourceEvidenceOwner": "P1 controller",
       "plannedP3Cases": [
         "P3-MIG-01"
       ],
-      "p3RuntimeStatus": "not_executed"
+      "p3RuntimeStatus": "local_runtime_evidence_independent_review_pending"
     },
     {
       "id": "R1-M01-L03",
@@ -2031,14 +2095,16 @@
     {
       "id": "R1-M01-L08",
       "status": "design_complete_validation_open",
-      "p3Evidence": [],
+      "p3Evidence": [
+        "evidence/r1-p3-20260910T090521350287Z.json"
+      ],
       "primaryDisposition": "P3",
       "sourceStatus": "design_complete_validation_open",
       "sourceEvidenceOwner": "P1 controller",
       "plannedP3Cases": [
         "P3-MIG-04"
       ],
-      "p3RuntimeStatus": "not_executed"
+      "p3RuntimeStatus": "local_runtime_evidence_independent_review_pending"
     },
     {
       "id": "R1-M01-L09",
@@ -2525,7 +2591,7 @@
     }
   ],
   "latestEvidence": [
-    "evidence/r1-p3-20260910T082305048810Z.json"
+    "evidence/r1-p3-20260910T090521350287Z.json"
   ],
   "allOriginalAcPassed": false,
   "risksClosedByExecutor": 0,
@@ -2535,17 +2601,19 @@
     "P4": 8
   },
   "latestMigrationIncrement": {
-    "sourceSha": "d484af1acd99fc583f53c6b08cbafb3331a399ab",
+    "sourceSha": "c36094e2f407fd0e2101b2b0e3988fc278b4ec1b",
     "cases": [
       "P3-MIG-01",
       "P3-MIG-02",
       "P3-MIG-03",
       "P3-MIG-04",
+      "P3-MIG-05",
       "P3-MIG-06",
-      "P3-MIG-07"
+      "P3-MIG-07",
+      "P3-XMOD-03"
     ],
-    "status": "partial_runtime_evidence_not_task_complete",
-    "evidence": "evidence/r1-p3-20260910T090030808611Z.json",
+    "status": "implemented_synthetic_verified_review_pending",
+    "evidence": "evidence/r1-p3-20260910T090521350287Z.json",
     "code": [
       "lib/hris/r1-migration.ts",
       "lib/hris/r1-migration-backfill.ts",

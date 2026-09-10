@@ -279,7 +279,7 @@
         "P3-R1-04",
         "P3-R1-06"
       ],
-      "status": "in_progress",
+      "status": "implemented_synthetic_verified_review_pending",
       "caseIds": [
         "P3-MIG-01",
         "P3-MIG-02",
@@ -293,9 +293,10 @@
       "evidence": [
         "evidence/r1-p3-20260910T083119493394Z.json",
         "evidence/r1-p3-20260910T084831357314Z.json",
-        "evidence/r1-p3-20260910T090030808611Z.json"
+        "evidence/r1-p3-20260910T090030808611Z.json",
+        "evidence/r1-p3-20260910T090521350287Z.json"
       ],
-      "implementationSha": "d484af1acd99fc583f53c6b08cbafb3331a399ab",
+      "implementationSha": "c36094e2f407fd0e2101b2b0e3988fc278b4ec1b",
       "subworkCompleted": [
         "实际DDL合同及完整旧写屏障前置核验",
         "R1扩展174触发器完整行日志与事务封印",
@@ -305,12 +306,18 @@
         "迁移源水位和兼容字段事务双写/新事实保护",
         "逐键映射/目标/不可变观察对账及重扫代次",
         "19表同水位切读/保留全部事实的兼容只读回滚",
-        "旧范围只读LEGACY元组/附件摘要与缺对象隔离"
+        "旧范围只读LEGACY元组/附件摘要与缺对象隔离",
+        "D7旧一审签名/流程版本冻结兼容查询与终态拒绝重放",
+        "新增多任职回滚事实保全/旧字段别名的当前和历史裁剪",
+        "真实旧合同SQL版本回填/稳定ID计次与M01报表单根行核对"
       ],
-      "remaining": [
-        "旧审批冻结兼容证据/额外任职回滚负例",
-        "迁移历史字段裁剪及附件引用更新后的摘要复核",
-        "任务级AC/风险/LIMIT证据收口"
+      "remaining": [],
+      "verificationBoundaries": [
+        "仅本地SQLite隔离合成；148/148和类型构建固定c36094e，不是P3最终两轮收口",
+        "JSON归档预算4MiB/数组10000项；规范化和回填100行批次；超预算显式失败",
+        "未知历史/法律实体/关系不推断；目录补齐有效期等新事实须按已批准业务规则核实",
+        "旧审批保留原表/签名/节点及只读兼容视图；未核安全适配器的旧办理局部阻断，不猜测外部后效",
+        "未证明R2/R3真实版本契约、云端容量/生产迁移或独立人类验收；不关闭风险或批准退出"
       ]
     },
     {
@@ -320,7 +327,7 @@
         "P3-R1-04",
         "P3-R1-08"
       ],
-      "status": "pending",
+      "status": "in_progress",
       "caseIds": [
         "P3-REC-01",
         "P3-REC-02",
@@ -328,7 +335,16 @@
         "P3-REC-04",
         "P3-REC-05"
       ],
-      "evidence": []
+      "evidence": [],
+      "remaining": [
+        "有界加密/签名清单与实际schema基线增量恢复",
+        "独立安全ledger保守协议/隔离恢复状态机",
+        "依赖保留/GC/共同恢复水位监控与故障容量证据"
+      ],
+      "blockedValidation": [
+        "DEP-PLATFORM-01",
+        "DEP-PLATFORM-02"
+      ]
     },
     {
       "id": "P3-R1-10",
@@ -356,7 +372,7 @@
       "evidence": []
     }
   ],
-  "currentTask": "P3-R1-08",
-  "lastVerifiedSourceSha": "d484af1acd99fc583f53c6b08cbafb3331a399ab",
-  "latestRun": "evidence/r1-p3-20260910T090030808611Z.json"
+  "currentTask": "P3-R1-09",
+  "lastVerifiedSourceSha": "c36094e2f407fd0e2101b2b0e3988fc278b4ec1b",
+  "latestRun": "evidence/r1-p3-20260910T090521350287Z.json"
 }
