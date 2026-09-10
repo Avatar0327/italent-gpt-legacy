@@ -1,0 +1,128 @@
+{
+  "kind": "independent_targeted_recheck_not_owner_approval",
+  "decision": "通过",
+  "decisionText": "独立复核通过，可提交所有者退出批准",
+  "designContentHead": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+  "packagingHead": "a7a23d6bff024f4660fd14b0c22f47a6d40d928f",
+  "originalReviewHead": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+  "originalDecisionPreserved": "不通过；见原Independent_Exit_Review.md和Findings.json，不追溯改写",
+  "counts": {"Blocker": 0, "Major": 0, "Minor": 0, "Observation": 2},
+  "countMeaning": "本轮未关闭发现；原发现严重级别不降级，通过独立复核后关闭001至004。观察005/006保留。",
+  "newFindings": [],
+  "ownerExitApprovalGrantedByThisReview": false,
+  "p3AuthorizationGrantedByThisReview": false,
+  "p3Started": false,
+  "findings": [
+    {
+      "id": "FINDING-001",
+      "repositoryId": "R2-EXIT-001",
+      "originalSeverity": "Major",
+      "status": "accepted_closed",
+      "closureScope": "P2严格字段、版本与来源设计缺口；不是服务端实现验收",
+      "locations": [
+        "Contract_Repair.md：引用联合与来源守卫、M37逐等级持久化、M06目录/指标类型、M26每题适用、M18 previousResultRef",
+        "Interface_Schemas.json#/$defs/VersionRef、InternalVersionRef、ExternalVersionRef、IndicatorChild、CatalogDraft、Question、QuestionnaireDraft、PreviousResultRef、ReviewProject、Command",
+        "Command_Registry.json#/commands/*/referencePolicy",
+        "Requirements_Trace.json中的targetedRepairMappings及Acceptance_Scenarios.json中的targetedRepairAssertions"
+      ],
+      "independentEvidence": [
+        "两套独立检查均重算34例：9接受、25拒绝；其中15例结构拒绝、10例需固定fixture语义查表拒绝。不是34例都由JSON Schema单独判定。",
+        "逐项检查76个动作的payload绑定、referencePolicy和外部联合可达性；仅M37 standard.create/edit可经achievement.sourceVersionRef接受external。",
+        "49个额外完整Command结构/来源探针含create/edit、四维internal/external、purposeRule、trustContract、评级、逐题及历史引用外部注入；均符合预期。",
+        "五组批准字段不丢失；根/版本/父子归属、类型配置冻结链、逐题绑定、历史结果用途与同人关系在正文和严格输入间可定位。"
+      ],
+      "evidenceFiles": ["Recheck_Round1.json", "Recheck_Round2.json", "Recheck_Manual_Review.md", "Recheck_Generation.json"],
+      "remainingP2Fixes": [],
+      "futureResponsibility": "P3必须将正文的精确版本、角色/维度成员关系、当前授权、CAS和语义守卫实现为服务端约束；不得只运行Schema即视作业务有效。"
+    },
+    {
+      "id": "FINDING-002",
+      "repositoryId": "R2-EXIT-002",
+      "originalSeverity": "Major",
+      "status": "accepted_closed",
+      "closureScope": "P2匿名等价关系和版本谱系定义缺口；不是运行中隐私保证",
+      "locations": [
+        "Anonymity_Repair.md：对象和关联边界、确定算法、固定安全分区与降级、self与唯一上级例外、严格账本数据契约",
+        "Anonymity_Cases.json的全部16例；Anonymity_Calculation.md",
+        "Interface_Schemas.json#/$defs/DisclosureAtom、DisclosureCell、DisclosureLedgerEntry、SubjectContribution、DisclosurePlan、ReportPublish"
+      ],
+      "independentEvidence": [
+        "两套独立有理数计算均为5允许发布、11抑制；不导入设计方匿名检查器。",
+        "手算ABC首报同向量1/3，distinct评委数3；A改答后A旧(1/3,0)和A新(0,1/3)各1人、BC同类2人；差值5-4可隔离A变化3，因此抑制新披露。",
+        "三重交叠111类只有X0一人；即使两两交集4、差集6也不得发布第三份。",
+        "组织subject阈值和每个底层subject的reviewer阈值分别重算；重复atom不能重复数同一人；named仅明确知情self/唯一经理，self单独不能正式发布。",
+        "旧披露列、withdraw deny、epoch ancestry和伪名关联连续；缺账本或映射失效禁新披露，不能靠改版本/用途/项目重开预算。"
+      ],
+      "evidenceFiles": ["Recheck_Round1.json", "Recheck_Round2.json", "Recheck_Manual_Review.md"],
+      "remainingP2Fixes": [],
+      "futureResponsibility": "P3验证真实ledger CAS、独立身份桥、全部历史列和副作用原子性；P4核真实知情范围与平台隔离。仅对已定义矩阵及关联约束成立，不宣称对所有外部先验绝对匿名。"
+    },
+    {
+      "id": "FINDING-003",
+      "repositoryId": "R2-EXIT-003",
+      "originalSeverity": "Minor",
+      "status": "accepted_closed",
+      "closureScope": "三项R2基础能力验收定义的对象/动作/角色/字段/版本映射",
+      "locations": [
+        "Foundation_Adaptations.json#/adaptations/R2-P3-BASE-02-AC03",
+        "Foundation_Adaptations.json#/adaptations/R2-P3-BASE-03-AC02",
+        "Foundation_Adaptations.json#/adaptations/R2-P3-BASE-04-AC02",
+        "Foundation_Adaptations.md及Acceptance_Scenarios.json对应场景/originalFoundationGwt"
+      ],
+      "independentEvidence": [
+        "三项均直接给出合成fixture、动作、执行角色、允许/禁止字段、前后版本和可判定Then；逐字段绑定到原场景，不依赖隐含薪酬/课程替换。",
+        "独立桌面推演报告反馈与原卷权限、目录改名与证书撤销的不同历史、已发布/草稿附件绑定和授权分离。",
+        "原Given/When/Then/basis保留在originalFoundationGwt，并反查批准Scope；状态全为not_run。"
+      ],
+      "evidenceFiles": ["Recheck_Manual_Review.md", "Recheck_Round1.json", "Recheck_Round2.json"],
+      "remainingP2Fixes": [],
+      "futureResponsibility": "P3获准后绑定A槽位的实际adapter/路由并物化合成fixture，记录实际源码、输入和运行结果；本轮没有执行任何业务动作。"
+    },
+    {
+      "id": "FINDING-004",
+      "repositoryId": "R2-EXIT-004",
+      "originalSeverity": "Minor",
+      "status": "accepted_closed",
+      "closureScope": "P2任务依赖交接定义；A/B/C尚未满足的实现开放条件不在本轮关闭",
+      "locations": [
+        "Task_Dependencies.json#/tasks、r1CapabilitySlots、externalProducerSlots、jointClosure",
+        "P3_Work_Packages.json#/tasks/*/dependencies",
+        "Task_Dependencies.md"
+      ],
+      "independentEvidence": [
+        "46项均逐字段核任务前置、Schema、adapter、安全、迁移/恢复、纯领域子片段、完成门槛与未启动状态。",
+        "从Task_Dependencies建立Kahn图和从P3_Work_Packages重建DFS图分别核得55节点、165条唯一边、0环。",
+        "A/B/C均pending_owner_freeze，完整SHA及schema/adapter/security/writer/recovery/migration/rollback版本为空，capabilityOpen=false，无独立证据冒认。",
+        "R1-10联合收口消费R2-X01至X04、R3真实生产者及共享能力证据；R2不反向依赖R1-10整任务或R1-11退出。"
+      ],
+      "evidenceFiles": ["Recheck_Round1.json", "Recheck_Round2.json", "Recheck_P3_Baseline.md"],
+      "remainingP2Fixes": [],
+      "futureResponsibility": "所有者另行批准P2退出/P3准入，按能力冻结实现基线和独立证据；未满足者blocked_dependency，桩/文档不能结项。"
+    },
+    {
+      "id": "R2-EXIT-005",
+      "severity": "Observation",
+      "status": "open_future_responsibility",
+      "title": "R1共享能力尚未形成所有者冻结的R2集成基线",
+      "blocksP2Exit": false,
+      "evidence": "本轮只读观察R1由2617269fa8d2d5ebed7f83dc3314eb7ea5b11eee继续推进到ab28d326a6e5282ffd0f2d7176abac14922f147d；恢复记录仍称01至08本地合成完成待独立复核、09在制、10/11待办。只是R1窗口状态声明，不纳入R2完成证据。",
+      "requiredAction": "按Task_Dependencies的A/B/C及R3 producer槽位冻结完整实现SHA、版本、独立证据与回退范围；另行P3准入。",
+      "recheckMethod": "下一授权窗口读取届时最新合法提交与恢复点，核独立证据后由所有者冻结；保留更晚合法提交。"
+    },
+    {
+      "id": "R2-EXIT-006",
+      "severity": "Observation",
+      "status": "open_future_responsibility",
+      "title": "平台/外部能力和恢复目标仍待实际验证",
+      "blocksP2Exit": false,
+      "evidence": "固定包装仍明确RPO≤60分钟、RTO≤240分钟、保留30天且runtimeProvenThisRun=false；7项外部来源请求均request_only_not_sent_or_executed。",
+      "requiredAction": "P3平台能力和合成故障验证；P4真实角色、容量、成本和恢复核证。缺可信deny/ledger或能力时保持隔离/关闭，不降低目标。",
+      "recheckMethod": "核实际运行环境、完整源码/配置/输入哈希、共同恢复点及含所有者开放时间的计时范围；不得用本轮桌面校验替代。"
+    }
+  ],
+  "minimumP2RepairActions": [],
+  "ownerActionsStillRequired": [
+    "项目所有者单独决定R2 P2退出，独立通过不是签署批准",
+    "R2 P3必须另获准入授权；依任务冻结A/B/C及必要R3生产者基线"
+  ]
+}

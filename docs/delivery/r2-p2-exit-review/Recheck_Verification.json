@@ -1,0 +1,594 @@
+{
+  "kind": "independent_recheck_handoff_verification_no_circular_self_hash",
+  "recordedAt": "2026-09-10T10:09:49.738161+00:00",
+  "designContentHead": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+  "packagingHead": "a7a23d6bff024f4660fd14b0c22f47a6d40d928f",
+  "originalReviewHead": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+  "reviewBranch": "review/r2-p2-exit-20260910",
+  "reviewWorktree": "/workspace/sites/italent-hris-r2-p2-exit-review-20260910",
+  "reviewHeadBeforeNewContentCommit": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+  "initialRemoteHeads": {
+    "review/r2-p2-exit-20260910": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+    "design/r2-p2-20260910": "a7a23d6bff024f4660fd14b0c22f47a6d40d928f"
+  },
+  "initialReviewWorktreeClean": true,
+  "originalReviewHistory": [
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Critical_Gates.json",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "9427fe9f4e7648e651ab79e56eb788fde3ee6bcd8bb5e7184b5d56d36b08e544",
+      "bytes": 26641,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Critical_Gates.md",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "965efce90af070ba92ff3c5fb8027a5e8448d93324353b04f8b7c1df056835e1",
+      "bytes": 14057,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Delivery_Record.json",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "979d00a3a8f7eb469cd2e08735969667c092cd18b2a680b0e454a156209e68b0",
+      "bytes": 2111,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Final_Verification.json",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "9a3379ae26555aac4467db0812faa07e48a9208f63c2a7dcb27b8f3077a9dec4",
+      "bytes": 10421,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Findings.json",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "a7a7e8b13ee78a590681c152424c3c5b01270e8de93797dc528fdf6ddfbc5c13",
+      "bytes": 13494,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Findings.md",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "f37aa38d7af012aa02422f7611b391e162a910e532d0dd37ced10d9dbfe54e2d",
+      "bytes": 10977,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Hash_Source_Commands.md",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "82b257a2b4cdf7397c2b10e0488f9882f43e596a996362ced5c20014741e06d7",
+      "bytes": 5090,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Independent_Exit_Review.md",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "bf1c0ea418e39ee64dd66d7ff2d023ca8062ce80797597dead3d340db945d34c",
+      "bytes": 12061,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Limit_Review.json",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "7cacf4ba9a407dc57610107647511fb226eba35b8ea25fb492316a3327995975",
+      "bytes": 51196,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Limit_Review.md",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "b0cbdcac2876d1163c322f3f70fba05ab9c6d0f98f5fca1016416f2b40b95b7b",
+      "bytes": 14096,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Mechanical_Verification.json",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "edd60851810b27224a8f303659e0a229d031624467573ab20ea744010b869973",
+      "bytes": 89560,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/P3_Sequencing_Recommendations.json",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "53776d7511d0be5caab266b8714b9c88dd8ed88eb07e6d74b044561ac30677d2",
+      "bytes": 18261,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/R1_Baseline_Observation.json",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "173031634d634b7f232e21a6165efbce5b9939b20ffd8877eeda6b23bedea440",
+      "bytes": 1877,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/R2_P3_Baseline_Sequencing.md",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "cd99e3bdf0c69b09b68a8101034598ec2a5f5ae732dc169dd7fd773e52647a3f",
+      "bytes": 9146,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Read_Coverage.md",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "f81df247249852e00ace30a80b8bae6f401848b417bb431a576c782c9b4bebd6",
+      "bytes": 4374,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Read_Hash_Manifest.json",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "ac85b18b06b4546e4335935da5261a27eb687c1bdd3e20ffe4fc4e18ce6e08bd",
+      "bytes": 43746,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Requirement_Review.json",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "539a03169e46f36d0449f25e7e60e2e80626ce0be97f02e9d1ce0b2cdc8bd0e4",
+      "bytes": 28486,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Requirement_Review.md",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "04a99cc8706a690af25ea77849c7c28201fa045b56aeab89e05c62cdd338b963",
+      "bytes": 6813,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Semantic_Probes.json",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "f45ac2b4a49fc395cbbf30fea6b143f46c5297ee4681aceebcd28b2e415344a3",
+      "bytes": 4776,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Source_Review_Samples.json",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "177d5cb7a1b56982a7ff30b5550848d2091043434c21588582265c4866a09abe",
+      "bytes": 17429,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Worktree_Observation.json",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "c99f00a7cabc727aa4df5577fe15402a7eb8dde264023a0a812f6aa4e46555bf",
+      "bytes": 1417,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/record_audit.py",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "874da28a0d94d848bfa72e64b8b3df9205d5fdcc0e66864508f2e990dc376fa5",
+      "bytes": 18484,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/verify_delivery.py",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "f1e17226b225c94a0818e6e43b49b921b248b098bc3df6db96e1fbca601c5f54",
+      "bytes": 5993,
+      "unchanged": true
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/verify_review.py",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "97b71d1bdf3d554c33ec9461c87d9491e4d8bb03755031a309468316a47aa079",
+      "bytes": 16139,
+      "unchanged": true
+    }
+  ],
+  "sourceHashEntryCount": 385,
+  "fixedReferenceCount": 44,
+  "sourceManifestEntries": 78,
+  "reviewSourceEntries": 11,
+  "independentRounds": [
+    {
+      "checkCount": 2199,
+      "failed": 0,
+      "schema": {
+        "accept": 9,
+        "reject": 25
+      },
+      "anonymity": {
+        "publish": 5,
+        "suppress": 11
+      },
+      "commands": 76,
+      "supplementalCompleteCommandProbes": 49,
+      "adaptations": 3,
+      "taskCount": 46,
+      "graphNodes": 55,
+      "graphEdges": 165,
+      "graphCycles": 0,
+      "disputedLimits": 6
+    },
+    {
+      "checkCount": 963,
+      "failed": 0,
+      "schema": {
+        "reject": 25,
+        "accept": 9
+      },
+      "anonymity": {
+        "suppress": 11,
+        "publish": 5
+      },
+      "nodes": 55,
+      "edges": 165,
+      "cycles": 0,
+      "originalGates": 56
+    }
+  ],
+  "generation": {
+    "filesCompared": 75,
+    "changed": []
+  },
+  "documentaryOnly": true,
+  "productTests": 0,
+  "businessActions": 0,
+  "ownerApproval": false,
+  "p3Started": false,
+  "p4Started": false,
+  "subagentsUsed": false,
+  "pythonVersion": "3.12.14",
+  "isolatedDependencies": {
+    "jsonschema": "4.23.0",
+    "attrs": "26.1.0",
+    "referencing": "0.37.0",
+    "rpds-py": "2026.6.3",
+    "jsonschema-specifications": "2025.9.1",
+    "typing-extensions": "4.16.0"
+  },
+  "r1ReadOnlyObservedSources": [
+    {
+      "gitRef": "ab28d326a6e5282ffd0f2d7176abac14922f147d",
+      "path": "docs/delivery/r1-p3/R1_P3_Resume.md",
+      "sha256": "45cb010c84e6d31fb5ef3edfe84c24dd8584130a2f9e524c12d9319577109c69",
+      "bytes": 7795,
+      "use": "parallel_state_only_not_R2_completion_evidence"
+    },
+    {
+      "gitRef": "ab28d326a6e5282ffd0f2d7176abac14922f147d",
+      "path": "docs/delivery/r1-p3/R1_P3_Checkpoint.json",
+      "sha256": "a4c38ca299525a1b223082c5dd1c33d8a37757d6ba5863a9ee3bcb99c52fca6c",
+      "bytes": 15687,
+      "use": "parallel_state_only_not_R2_completion_evidence"
+    }
+  ],
+  "evidenceFiles": [
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Independent_Recheck.md",
+      "sha256": "db91ddcbae922aa69d8024e863a732a88f11a78fce122e846f7470ac7a988c2f",
+      "bytes": 9019
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Recheck_Findings.json",
+      "sha256": "6af062a2cc5a817fa50f32a233b53eea65b6e48b677dd3fb9e0c4f495faa9eb0",
+      "bytes": 9226
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Recheck_Manual_Review.md",
+      "sha256": "fbe5ad3fb260a7ab77614de91f7f6e6d08aeb52946b422cb672fe3c41655f31a",
+      "bytes": 10671
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Recheck_P3_Baseline.md",
+      "sha256": "fdf23d1cb9fc42b7a7425b07cb17862563fa69d18b8fa29fdafb154221f8aab8",
+      "bytes": 4349
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Recheck_Commands.md",
+      "sha256": "10d0eb7ac118ac6d549e09e71edf069c966beceefe6479687c7b13f8a502205d",
+      "bytes": 5215
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Recheck_Round1.json",
+      "sha256": "9bede4bcd022b0139e64ccbcc5d76efa98b50fa1d8b67f6c4a8bef45a0adad49",
+      "bytes": 490281
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Recheck_Round2.json",
+      "sha256": "e872343adc37d8c5aeb9e378255870c1879308f06b4803cfa6091d3ca1d6bd00",
+      "bytes": 161192
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Recheck_Generation.json",
+      "sha256": "05fcf58d0b37f9dbf77f7ae4b6631052155d9904d01ec28cf88db7223d78e414",
+      "bytes": 17153
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Recheck_Input_Hashes.json",
+      "sha256": "025967e455d64aa1854c10f24420237475fe8579ae61224bb39154cf5fe6e6a9",
+      "bytes": 90768
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Recheck_Limits.json",
+      "sha256": "2921b15c148b886479070aa9481c781e50b8cb7b49cdb1d3c869cd80faf0e364",
+      "bytes": 41046
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Recheck_Gates.json",
+      "sha256": "4758da80607239854f5c78521fdc3adea8f05391714bd04288b190da3fbcfc9d",
+      "bytes": 34642
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/recheck_forward.py",
+      "sha256": "ee3137138f7ad3360627df457a7db455654ad974957c46db8fbb682a0a6b8d3e",
+      "bytes": 28474
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/recheck_reverse.py",
+      "sha256": "8ba65515962fcf95363446d7567259e7d58b1ab8bea0534fec5e6555bd7b62fd",
+      "bytes": 16256
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/recheck_generation.py",
+      "sha256": "cfaf9ab970ca41541a00e5b8e15c467bb8a2009c396a537b0cb6b6cc00fafa75",
+      "bytes": 2405
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/record_recheck.py",
+      "sha256": "35f04bd45e0bcae18d2bfa2b5370ad0ee2dc7e08a8c595f1dde2664488b59981",
+      "bytes": 10556
+    }
+  ],
+  "checks": [
+    {
+      "check": "exact review branch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original review ancestor retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no merge commits after original review",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "only review tracked changes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "only review untracked records",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inherited design tree untouched",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/Critical_Gates.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/Critical_Gates.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/Delivery_Record.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/Final_Verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/Findings.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/Findings.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/Hash_Source_Commands.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/Independent_Exit_Review.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/Limit_Review.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/Limit_Review.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/Mechanical_Verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/P3_Sequencing_Recommendations.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/R1_Baseline_Observation.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/R2_P3_Baseline_Sequencing.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/Read_Coverage.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/Read_Hash_Manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/Requirement_Review.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/Requirement_Review.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/Semantic_Probes.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/Source_Review_Samples.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/Worktree_Observation.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/record_audit.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/verify_delivery.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original independent history docs/delivery/r2-p2-exit-review/verify_review.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Resume only append history",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "old fixed reference on original content docs/delivery/r2-p2/Exit_Review.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "old fixed reference on original content docs/delivery/r2-p2/Architecture.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "old fixed reference on original content docs/delivery/r2-p2/Cross_Module_Contracts.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "old fixed reference on original content docs/delivery/r2-p2/Requirements_Trace.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "old fixed reference on original content docs/delivery/r2-p2/Limit_Resolution.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "old fixed reference on original content docs/delivery/r2-p2/Acceptance_Scenarios.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "old fixed reference on original content docs/delivery/r2-p2/P3_Work_Packages.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "old fixed reference on original content docs/delivery/r2-p2/Source_Manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "old fixed reference on original content docs/delivery/r2-p2/Artifact_Manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "old fixed reference on original content docs/delivery/r2-p2/Review_Round1.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "old fixed reference on original content docs/delivery/r2-p2/Review_Round2.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fixed targets all records",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "both independent rounds no failures",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "exact round summaries",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "generator clean 75 files",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "001-004 accepted without severity downgrade",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "counts and owner boundary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "six disputed design-level results",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "review JSON parse",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "failed": 0,
+  "finalDeliveryNote": "Final content/delivery commit and remote consistency supplied by subsequent Git receipt; this file excludes its own SHA and delivery receipt to prevent self-reference."
+}

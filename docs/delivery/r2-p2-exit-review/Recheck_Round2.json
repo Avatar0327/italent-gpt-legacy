@@ -1,0 +1,7116 @@
+{
+  "kind": "second_independent_P2_document_review_no_round1_imports_no_product_execution",
+  "designContentHead": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+  "packagingHead": "a7a23d6bff024f4660fd14b0c22f47a6d40d928f",
+  "summary": {
+    "checkCount": 963,
+    "failed": 0,
+    "schema": {
+      "reject": 25,
+      "accept": 9
+    },
+    "anonymity": {
+      "suppress": 11,
+      "publish": 5
+    },
+    "nodes": 55,
+    "edges": 165,
+    "cycles": 0,
+    "originalGates": 56
+  },
+  "checks": [
+    {
+      "check": "149 independently extracted field/role/state entries",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "111 source acceptance entries exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "78 approved module ACs no double counting",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "24 internal closure sources",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M37-SPEC-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M37-SPEC-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M37-SPEC-02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M37-SPEC-02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M37-SPEC-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M37-SPEC-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M37-SPEC-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M37-SPEC-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M37-SPEC-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M37-SPEC-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M06-SPEC-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M06-SPEC-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M06-SPEC-02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M06-SPEC-02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M06-SPEC-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M06-SPEC-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M06-SPEC-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M06-SPEC-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M06-SPEC-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M06-SPEC-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M26-SPEC-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M26-SPEC-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M26-SPEC-02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M26-SPEC-02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M26-SPEC-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M26-SPEC-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M26-SPEC-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M26-SPEC-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M26-SPEC-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M26-SPEC-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M18-SPEC-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M18-SPEC-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M18-SPEC-02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M18-SPEC-02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M18-SPEC-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M18-SPEC-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M18-SPEC-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M18-SPEC-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M18-SPEC-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M18-SPEC-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M17-SPEC-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M17-SPEC-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M17-SPEC-02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M17-SPEC-02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M17-SPEC-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M17-SPEC-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M17-SPEC-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M17-SPEC-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M17-SPEC-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M17-SPEC-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M17-SPEC-06",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M17-SPEC-06",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M03-SPEC-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M03-SPEC-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M03-SPEC-02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M03-SPEC-02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M03-SPEC-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M03-SPEC-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M03-SPEC-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M03-SPEC-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M03-SPEC-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M03-SPEC-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists M03-SPEC-06",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest M03-SPEC-06",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved record exists R2-BASELINE-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "approved recommendation digest R2-BASELINE-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema TYPE-EXACT-VERSION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema REF-COMMAND-SOURCE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema REF-COMMAND-VALID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema HISTORY-MISSING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema QUESTION-MISSING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema TYPE-MISSING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema LEVEL-MISSING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema REF-NO-KIND",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema HISTORY-NONE-VALID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema TYPE-RATING-VALID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema HISTORY-SOURCE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema HISTORY-VERSION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema HISTORY-EXTRA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema HISTORY-VALID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema QUESTION-SOURCE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema QUESTION-VERSION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema QUESTION-EXTRA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema QUESTION-VALID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema TYPE-SOURCE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema TYPE-VERSION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema TYPE-EXTRA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema TYPE-VALID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema LEVEL-SOURCE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema LEVEL-VERSION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema LEVEL-EXTRA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema LEVEL-VALID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema REF-EXT-SOURCE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema REF-EXT-VERSION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema REF-EXT-EXTRA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema REF-EXT-VALID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema REF-IN-SOURCE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema REF-IN-VERSION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema REF-IN-EXTRA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema REF-IN-VALID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse schema counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Command",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Boolean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Decimal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Decimal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Decimal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Decimal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Boolean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/RuleNode",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/PositiveInteger",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/PositiveInteger",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Decimal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Reason",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Material",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Reason",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Reason",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Name",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/IndicatorVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Name",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/PositiveInteger",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/LevelVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Name",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Name",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Name",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/IndicatorChild",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/VersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Decimal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Boolean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/VersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/IndicatorVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Name",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/StandardLine",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Name",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Name",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/PositiveInteger",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Boolean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/DescriptionRow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/NumericScaleConfig",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/RatingSelection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/NumericScaleConfig",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/RatingSelection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Description",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Boolean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Date",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/PositiveInteger",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Name",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/QualificationLine",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ValidityPolicy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Material",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Name",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Name",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Boolean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Boolean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Boolean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/QuestionOption",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Revision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/PositiveInteger",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/RuleAst",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/QuestionApplicability",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/DimensionVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/IndicatorVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/QuestionVisibility",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Name",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Question",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/RoleVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Name",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Instant",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Instant",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Reason",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Decimal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Answer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Revision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Purpose",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Name",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Date",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Date",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Scope",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/PreviousResultRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Decimal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Decimal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Name",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Axis",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Axis",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Cell",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Cell",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Material",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Reason",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Name",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Scope",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/PositiveInteger",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/RuleAst",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Scope",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Reason",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Date",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Date",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Instant",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Instant",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Material",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Reason",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Name",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Boolean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Name",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Date",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Date",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Mentor",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Material",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Reason",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Date",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Date",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Boolean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/PositiveInteger",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Reason",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Material",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/TermDraft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Name",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Description",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Name",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Committee",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Decimal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Date",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Material",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Reason",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Date",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Reason",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Date",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Reason",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/TermDraft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Date",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Reason",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Purpose",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Revision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Instant",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Purpose",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Instant",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Instant",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Purpose",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ExternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/PositiveInteger",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Description",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Decimal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Decimal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Decimal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/RoleVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/RuleAst",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Instant",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Rational",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/DisclosureCoefficient",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Purpose",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Instant",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Boolean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Revision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Revision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/DisclosureCell",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Revision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Revision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/DisclosureCoefficient",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Revision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Uuid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ObjectRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Revision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Revision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Revision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Revision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Revision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/LibraryDraft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/IndicatorDraft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/StandardDraft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/StandardDraft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/CatalogDraft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/CatalogDraft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/QualificationDraft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/QualificationApplication",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/QuestionnaireDraft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/FeedbackProject",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Invite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ResponseSubmit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReportPublish",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReviewProject",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReviewProject",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/GridDefinition",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Calibration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/PoolDraft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/PoolRule",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Membership",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Membership",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Succession",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Mentor",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/IdpTemplate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/IdpPlan",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/IdpTaskAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Nomination",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Appointment",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/EvaluationDraft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/EvaluationDraft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ObservationAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InterviewDraft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InterviewDraft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/SubmitAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ApprovalAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/PublishAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/SubmitAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ApprovalAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/PublishAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/SubmitAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ApprovalAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/SubmitAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ApprovalAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/PublishAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/SubmitAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ApprovalAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/SubmitAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ApprovalAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/PublishAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/AvailabilityAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/AvailabilityAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/DateChange",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/TermChange",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/ReasonAction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Uuid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Revision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Revision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Revision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Instant",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Instant",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/InternalVersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Purpose",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "schema target #/$defs/Digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "external union occurs only StandardLine source and achievement guard",
+      "passed": true,
+      "detail": [
+        "$defs/StandardLine/properties/sourceVersionRef",
+        "$defs/StandardLine/allOf/0/then/properties/sourceVersionRef"
+      ]
+    },
+    {
+      "check": "non-achievement exact typed internal source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse privacy ANON-10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse privacy ANON-09",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse privacy ANON-08C",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse privacy ANON-08B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse privacy ANON-08A",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "organization recomputed lower threshold ANON-07C",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse privacy ANON-07C",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "organization recomputed lower threshold ANON-07B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse privacy ANON-07B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "organization recomputed lower threshold ANON-07A",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse privacy ANON-07A",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse privacy ANON-06B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse privacy ANON-06A",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse privacy ANON-05B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse privacy ANON-05A",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse privacy ANON-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse privacy ANON-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse privacy ANON-02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse privacy ANON-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse privacy 5/11",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "three atoms of one person never count as three people",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manual ABC first size3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manual old/new A separately singleton",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manual triple111 singleton",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "independent DFS 55/165/0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no R2 task waits on R1-10 complete",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "owner freeze closed A",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "owner freeze closed B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "owner freeze closed C",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "repair source->probe->scenario M37-SPEC-01/IndicatorChild",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "repair source->probe->scenario M37-SPEC-05/VersionRef",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "repair source->probe->scenario M06-SPEC-01/CatalogDraft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "repair source->probe->scenario M06-SPEC-02/CatalogDraft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "repair source->probe->scenario M26-SPEC-01/QuestionnaireDraft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "repair source->probe->scenario M26-SPEC-03/QuestionnaireDraft",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "repair source->probe->scenario M18-SPEC-01/ReviewProject",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "repair source->probe->scenario M18-SPEC-05/ReviewProject",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "adaptation fieldwise direct binding R2-P3-BASE-02-AC03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "adaptation decidable steps roles fields versions R2-P3-BASE-02-AC03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "adaptation fieldwise direct binding R2-P3-BASE-03-AC02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "adaptation decidable steps roles fields versions R2-P3-BASE-03-AC02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "adaptation fieldwise direct binding R2-P3-BASE-04-AC02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "adaptation decidable steps roles fields versions R2-P3-BASE-04-AC02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "LIMIT reverse hash/probes M37-LIMIT-01.01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "LIMIT later responsibilities M37-LIMIT-01.01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "LIMIT reverse hash/probes M06-LIMIT-01.01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "LIMIT later responsibilities M06-LIMIT-01.01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "LIMIT reverse hash/probes M26-LIMIT-01.01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "LIMIT later responsibilities M26-LIMIT-01.01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "LIMIT reverse hash/probes M26-LIMIT-01.02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "LIMIT later responsibilities M26-LIMIT-01.02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "LIMIT reverse hash/probes M18-LIMIT-01.01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "LIMIT later responsibilities M18-LIMIT-01.01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "LIMIT reverse hash/probes M18-LIMIT-01.02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "LIMIT later responsibilities M18-LIMIT-01.02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "138 not executed / 46 not started",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "52 exclusive 15/25/12",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "7 source requests stay request_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M37-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M37-02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M37-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M37-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M37-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M06-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M06-02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M06-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M06-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M06-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M26-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M26-02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M26-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M26-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M26-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M18-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M18-02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M18-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M18-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M18-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M17-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M17-02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M17-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M17-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M17-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M03-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M03-02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M03-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M03-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present M03-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present H-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present H-02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present H-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present H-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present H-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present H-06",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present H-07",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present H-08",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present H-09",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present H-10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present H-11",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present H-12",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present H-13",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present H-14",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present H-15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present H-16",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present H-17",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present H-18",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present H-19",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present E-01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present E-02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present E-03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present E-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present E-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present E-06",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original gate source/scenario still present E-07",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "untouched accepted boundary Architecture.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "untouched accepted boundary Migration_Rollback.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "untouched accepted boundary Recovery_Cost_Responsibilities.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "untouched accepted boundary Original_Limits.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "untouched accepted boundary Approval_Provenance.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "untouched accepted boundary Legacy_Acceptance_Map.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Architecture.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Cross_Module_Contracts.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Interfaces.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Permissions.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Migration_Rollback.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Recovery_Cost_Responsibilities.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Contract_Repair.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Interface_Schemas.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Command_Registry.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Schema_Examples.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Anonymity_Repair.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Anonymity_Cases.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Anonymity_Calculation.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Foundation_Adaptations.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Foundation_Adaptations.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Task_Dependencies.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Task_Dependencies.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Requirements_Trace.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Acceptance_Scenarios.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/P3_Work_Packages.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/P3_Handoff.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Limit_Resolution.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Limit_Resolution.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Repair_Record.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Repair_Review_Round1.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Repair_Review_Round2.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Recheck_Scope.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Exit_Review.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Source_Manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/Artifact_Manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/M37_Design.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/M06_Design.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/M26_Design.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/M18_Design.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/M17_Design.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/M03_Design.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/evidence/repair-001-schema.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/evidence/repair-002-anonymity.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/evidence/repair-003-desktop.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/evidence/repair-004-dag.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/evidence/repair-reverse-trace.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/evidence/repair-generation-drift.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/evidence/repair-round1.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse fixed proposal docs/delivery/r2-p2/evidence/repair-round2.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/.gitignore",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Acceptance_Scenarios.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Anonymity_Calculation.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Anonymity_Cases.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Anonymity_Repair.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Approval_Provenance.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Architecture.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Boundary_Verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Command_Registry.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Commit_Register.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Commit_Register.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Contract_Repair.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Controller_Proposal.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Cross_Module_Contracts.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Design_Checkpoint.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Exit_Review.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Foundation_Adaptations.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Foundation_Adaptations.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Foundations.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Historical_Evidence_Index.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Historical_Test_Provenance.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Interface_Schemas.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Interfaces.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Legacy_Acceptance_Map.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Limit_Resolution.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Limit_Resolution.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/M03_Design.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/M06_Design.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/M17_Design.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/M18_Design.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/M26_Design.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/M37_Design.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Migration_Rollback.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Original_Limits.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/P3_Handoff.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/P3_Work_Packages.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Permissions.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Recheck_Scope.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Recovery_Cost_Responsibilities.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Repair_Record.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Repair_Review_Round1.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Repair_Review_Round2.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Requirements_Trace.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Resume.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Review_Round1.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Review_Round2.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Schema_Examples.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Source_Manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Source_Requests.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Supplemental_Scenarios.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Task_Dependencies.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Task_Dependencies.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/Traceability.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/build_anonymity_cases.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/build_dependencies.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/build_foundation_adaptations.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/build_handoff.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/build_inventory.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/build_resolution.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/build_scenarios.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/build_schema_examples.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/build_schemas.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/check_anonymity.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/check_dependencies.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/check_design.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/check_foundation_adaptations.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/check_rebuild.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/check_repair.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/check_schema_examples.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/rebuild_repair.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/repair_anonymity_schema.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/repair_contracts.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/repair_handoff.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest dc6dd896fbf388b70069ecb756547f85ee89d08a/docs/delivery/r2-p2/repair_limits.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/.gitignore",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Acceptance_Scenarios.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Anonymity_Calculation.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Anonymity_Cases.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Anonymity_Repair.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Approval_Provenance.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Architecture.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Boundary_Verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Command_Registry.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Commit_Register.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Commit_Register.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Contract_Repair.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Controller_Proposal.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Cross_Module_Contracts.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Design_Checkpoint.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Exit_Review.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Foundation_Adaptations.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Foundation_Adaptations.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Foundations.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Historical_Evidence_Index.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Historical_Test_Provenance.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Interface_Schemas.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Interfaces.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Legacy_Acceptance_Map.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Limit_Resolution.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Limit_Resolution.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/M03_Design.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/M06_Design.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/M17_Design.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/M18_Design.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/M26_Design.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/M37_Design.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Migration_Rollback.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Original_Limits.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/P3_Handoff.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/P3_Work_Packages.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Permissions.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Recheck_Scope.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Recovery_Cost_Responsibilities.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Repair_Delivery_Record.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Repair_Record.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Repair_Review_Round1.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Repair_Review_Round2.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Requirements_Trace.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Resume.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Review_Round1.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Review_Round2.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Schema_Examples.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Source_Manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Source_Requests.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Supplemental_Scenarios.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Task_Dependencies.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Task_Dependencies.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/Traceability.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/build_anonymity_cases.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/build_dependencies.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/build_foundation_adaptations.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/build_handoff.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/build_inventory.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/build_resolution.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/build_scenarios.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/build_schema_examples.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/build_schemas.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/check_anonymity.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/check_dependencies.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/check_design.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/check_foundation_adaptations.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/check_rebuild.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/check_repair.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/check_schema_examples.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/rebuild_repair.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/repair_anonymity_schema.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/repair_contracts.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/repair_handoff.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reverse own-HEAD manifest a7a23d6bff024f4660fd14b0c22f47a6d40d928f/docs/delivery/r2-p2/repair_limits.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unproved target and no phase authority",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "schemaResults": [
+    {
+      "id": "TYPE-EXACT-VERSION",
+      "actual": "reject",
+      "structuralErrors": 0,
+      "semanticPredicate": false
+    },
+    {
+      "id": "REF-COMMAND-SOURCE",
+      "actual": "reject",
+      "structuralErrors": 7,
+      "semanticPredicate": "not_evaluated"
+    },
+    {
+      "id": "REF-COMMAND-VALID",
+      "actual": "accept",
+      "structuralErrors": 0,
+      "semanticPredicate": true
+    },
+    {
+      "id": "HISTORY-MISSING",
+      "actual": "reject",
+      "structuralErrors": 1,
+      "semanticPredicate": "not_evaluated"
+    },
+    {
+      "id": "QUESTION-MISSING",
+      "actual": "reject",
+      "structuralErrors": 1,
+      "semanticPredicate": "not_evaluated"
+    },
+    {
+      "id": "TYPE-MISSING",
+      "actual": "reject",
+      "structuralErrors": 1,
+      "semanticPredicate": "not_evaluated"
+    },
+    {
+      "id": "LEVEL-MISSING",
+      "actual": "reject",
+      "structuralErrors": 1,
+      "semanticPredicate": "not_evaluated"
+    },
+    {
+      "id": "REF-NO-KIND",
+      "actual": "reject",
+      "structuralErrors": 1,
+      "semanticPredicate": "not_evaluated"
+    },
+    {
+      "id": "HISTORY-NONE-VALID",
+      "actual": "accept",
+      "structuralErrors": 0,
+      "semanticPredicate": true
+    },
+    {
+      "id": "TYPE-RATING-VALID",
+      "actual": "accept",
+      "structuralErrors": 0,
+      "semanticPredicate": true
+    },
+    {
+      "id": "HISTORY-SOURCE",
+      "actual": "reject",
+      "structuralErrors": 1,
+      "semanticPredicate": "not_evaluated"
+    },
+    {
+      "id": "HISTORY-VERSION",
+      "actual": "reject",
+      "structuralErrors": 0,
+      "semanticPredicate": false
+    },
+    {
+      "id": "HISTORY-EXTRA",
+      "actual": "reject",
+      "structuralErrors": 1,
+      "semanticPredicate": "not_evaluated"
+    },
+    {
+      "id": "HISTORY-VALID",
+      "actual": "accept",
+      "structuralErrors": 0,
+      "semanticPredicate": true
+    },
+    {
+      "id": "QUESTION-SOURCE",
+      "actual": "reject",
+      "structuralErrors": 0,
+      "semanticPredicate": false
+    },
+    {
+      "id": "QUESTION-VERSION",
+      "actual": "reject",
+      "structuralErrors": 0,
+      "semanticPredicate": false
+    },
+    {
+      "id": "QUESTION-EXTRA",
+      "actual": "reject",
+      "structuralErrors": 1,
+      "semanticPredicate": "not_evaluated"
+    },
+    {
+      "id": "QUESTION-VALID",
+      "actual": "accept",
+      "structuralErrors": 0,
+      "semanticPredicate": true
+    },
+    {
+      "id": "TYPE-SOURCE",
+      "actual": "reject",
+      "structuralErrors": 2,
+      "semanticPredicate": "not_evaluated"
+    },
+    {
+      "id": "TYPE-VERSION",
+      "actual": "reject",
+      "structuralErrors": 0,
+      "semanticPredicate": false
+    },
+    {
+      "id": "TYPE-EXTRA",
+      "actual": "reject",
+      "structuralErrors": 1,
+      "semanticPredicate": "not_evaluated"
+    },
+    {
+      "id": "TYPE-VALID",
+      "actual": "accept",
+      "structuralErrors": 0,
+      "semanticPredicate": true
+    },
+    {
+      "id": "LEVEL-SOURCE",
+      "actual": "reject",
+      "structuralErrors": 1,
+      "semanticPredicate": "not_evaluated"
+    },
+    {
+      "id": "LEVEL-VERSION",
+      "actual": "reject",
+      "structuralErrors": 0,
+      "semanticPredicate": false
+    },
+    {
+      "id": "LEVEL-EXTRA",
+      "actual": "reject",
+      "structuralErrors": 1,
+      "semanticPredicate": "not_evaluated"
+    },
+    {
+      "id": "LEVEL-VALID",
+      "actual": "accept",
+      "structuralErrors": 0,
+      "semanticPredicate": true
+    },
+    {
+      "id": "REF-EXT-SOURCE",
+      "actual": "reject",
+      "structuralErrors": 0,
+      "semanticPredicate": false
+    },
+    {
+      "id": "REF-EXT-VERSION",
+      "actual": "reject",
+      "structuralErrors": 0,
+      "semanticPredicate": false
+    },
+    {
+      "id": "REF-EXT-EXTRA",
+      "actual": "reject",
+      "structuralErrors": 1,
+      "semanticPredicate": "not_evaluated"
+    },
+    {
+      "id": "REF-EXT-VALID",
+      "actual": "accept",
+      "structuralErrors": 0,
+      "semanticPredicate": true
+    },
+    {
+      "id": "REF-IN-SOURCE",
+      "actual": "reject",
+      "structuralErrors": 0,
+      "semanticPredicate": false
+    },
+    {
+      "id": "REF-IN-VERSION",
+      "actual": "reject",
+      "structuralErrors": 0,
+      "semanticPredicate": false
+    },
+    {
+      "id": "REF-IN-EXTRA",
+      "actual": "reject",
+      "structuralErrors": 1,
+      "semanticPredicate": "not_evaluated"
+    },
+    {
+      "id": "REF-IN-VALID",
+      "actual": "accept",
+      "structuralErrors": 0,
+      "semanticPredicate": true
+    }
+  ],
+  "anonymityResults": [
+    {
+      "id": "ANON-10",
+      "actual": "suppress",
+      "classes": [
+        {
+          "size": 3,
+          "members": [
+            "A",
+            "B",
+            "C"
+          ],
+          "signature": [
+            "1/3"
+          ]
+        }
+      ],
+      "columnValues": [
+        "3"
+      ]
+    },
+    {
+      "id": "ANON-09",
+      "actual": "suppress",
+      "classes": [
+        {
+          "size": 1,
+          "members": [
+            "A"
+          ],
+          "signature": [
+            "1/3",
+            "0"
+          ]
+        },
+        {
+          "size": 1,
+          "members": [
+            "A"
+          ],
+          "signature": [
+            "0",
+            "1/3"
+          ]
+        },
+        {
+          "size": 2,
+          "members": [
+            "B",
+            "C"
+          ],
+          "signature": [
+            "1/3",
+            "1/3"
+          ]
+        }
+      ],
+      "columnValues": [
+        "4",
+        "5"
+      ]
+    },
+    {
+      "id": "ANON-08C",
+      "actual": "suppress",
+      "classes": [
+        {
+          "size": 1,
+          "members": [
+            "L"
+          ],
+          "signature": [
+            "1"
+          ]
+        }
+      ],
+      "columnValues": [
+        "4"
+      ]
+    },
+    {
+      "id": "ANON-08B",
+      "actual": "suppress",
+      "classes": [
+        {
+          "size": 1,
+          "members": [
+            "E1"
+          ],
+          "signature": [
+            "1"
+          ]
+        }
+      ],
+      "columnValues": [
+        "4"
+      ]
+    },
+    {
+      "id": "ANON-08A",
+      "actual": "publish",
+      "classes": [
+        {
+          "size": 1,
+          "members": [
+            "L"
+          ],
+          "signature": [
+            "1"
+          ]
+        }
+      ],
+      "columnValues": [
+        "4"
+      ]
+    },
+    {
+      "id": "ANON-07C",
+      "actual": "suppress",
+      "classes": [
+        {
+          "size": 8,
+          "members": [
+            "E0R0",
+            "E0R1",
+            "E0R2",
+            "E1R0",
+            "E1R1",
+            "E1R2",
+            "E2R0",
+            "E2R1"
+          ],
+          "signature": [
+            "1/8"
+          ]
+        }
+      ],
+      "columnValues": [
+        "3"
+      ]
+    },
+    {
+      "id": "ANON-07B",
+      "actual": "suppress",
+      "classes": [
+        {
+          "size": 6,
+          "members": [
+            "E0R0",
+            "E0R1",
+            "E0R2",
+            "E1R0",
+            "E1R1",
+            "E1R2"
+          ],
+          "signature": [
+            "1/6"
+          ]
+        }
+      ],
+      "columnValues": [
+        "3"
+      ]
+    },
+    {
+      "id": "ANON-07A",
+      "actual": "publish",
+      "classes": [
+        {
+          "size": 9,
+          "members": [
+            "E0R0",
+            "E0R1",
+            "E0R2",
+            "E1R0",
+            "E1R1",
+            "E1R2",
+            "E2R0",
+            "E2R1",
+            "E2R2"
+          ],
+          "signature": [
+            "1/9"
+          ]
+        }
+      ],
+      "columnValues": [
+        "3"
+      ]
+    },
+    {
+      "id": "ANON-06B",
+      "actual": "suppress",
+      "classes": [
+        {
+          "size": 1,
+          "members": [
+            "A"
+          ],
+          "signature": [
+            "1/6",
+            "1/9",
+            "1/11"
+          ]
+        },
+        {
+          "size": 2,
+          "members": [
+            "B",
+            "C"
+          ],
+          "signature": [
+            "1/6",
+            "1/9",
+            "2/11"
+          ]
+        },
+        {
+          "size": 3,
+          "members": [
+            "D",
+            "E",
+            "F"
+          ],
+          "signature": [
+            "1/6",
+            "2/9",
+            "2/11"
+          ]
+        }
+      ],
+      "columnValues": [
+        "3",
+        "3",
+        "3"
+      ]
+    },
+    {
+      "id": "ANON-06A",
+      "actual": "publish",
+      "classes": [
+        {
+          "size": 3,
+          "members": [
+            "A",
+            "B",
+            "C"
+          ],
+          "signature": [
+            "1/6",
+            "1/9"
+          ]
+        },
+        {
+          "size": 3,
+          "members": [
+            "D",
+            "E",
+            "F"
+          ],
+          "signature": [
+            "1/6",
+            "2/9"
+          ]
+        }
+      ],
+      "columnValues": [
+        "3",
+        "3"
+      ]
+    },
+    {
+      "id": "ANON-05B",
+      "actual": "suppress",
+      "classes": [
+        {
+          "size": 1,
+          "members": [
+            "X0"
+          ],
+          "signature": [
+            "1/10",
+            "1/10",
+            "1/10"
+          ]
+        },
+        {
+          "size": 3,
+          "members": [
+            "AB0",
+            "AB1",
+            "AB2"
+          ],
+          "signature": [
+            "1/10",
+            "1/10",
+            "0"
+          ]
+        },
+        {
+          "size": 3,
+          "members": [
+            "AC0",
+            "AC1",
+            "AC2"
+          ],
+          "signature": [
+            "1/10",
+            "0",
+            "1/10"
+          ]
+        },
+        {
+          "size": 3,
+          "members": [
+            "BC0",
+            "BC1",
+            "BC2"
+          ],
+          "signature": [
+            "0",
+            "1/10",
+            "1/10"
+          ]
+        },
+        {
+          "size": 3,
+          "members": [
+            "A0",
+            "A1",
+            "A2"
+          ],
+          "signature": [
+            "1/10",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "size": 3,
+          "members": [
+            "B0",
+            "B1",
+            "B2"
+          ],
+          "signature": [
+            "0",
+            "1/10",
+            "0"
+          ]
+        },
+        {
+          "size": 3,
+          "members": [
+            "C0",
+            "C1",
+            "C2"
+          ],
+          "signature": [
+            "0",
+            "0",
+            "1/10"
+          ]
+        }
+      ],
+      "columnValues": [
+        "3",
+        "3",
+        "3"
+      ]
+    },
+    {
+      "id": "ANON-05A",
+      "actual": "publish",
+      "classes": [
+        {
+          "size": 4,
+          "members": [
+            "AB0",
+            "AB1",
+            "AB2",
+            "X0"
+          ],
+          "signature": [
+            "1/10",
+            "1/10"
+          ]
+        },
+        {
+          "size": 6,
+          "members": [
+            "A0",
+            "A1",
+            "A2",
+            "AC0",
+            "AC1",
+            "AC2"
+          ],
+          "signature": [
+            "1/10",
+            "0"
+          ]
+        },
+        {
+          "size": 6,
+          "members": [
+            "B0",
+            "B1",
+            "B2",
+            "BC0",
+            "BC1",
+            "BC2"
+          ],
+          "signature": [
+            "0",
+            "1/10"
+          ]
+        }
+      ],
+      "columnValues": [
+        "3",
+        "3"
+      ]
+    },
+    {
+      "id": "ANON-04",
+      "actual": "suppress",
+      "classes": [
+        {
+          "size": 2,
+          "members": [
+            "A",
+            "B"
+          ],
+          "signature": [
+            "1/3",
+            "1/3"
+          ]
+        },
+        {
+          "size": 1,
+          "members": [
+            "C"
+          ],
+          "signature": [
+            "1/3",
+            "0"
+          ]
+        },
+        {
+          "size": 1,
+          "members": [
+            "D"
+          ],
+          "signature": [
+            "0",
+            "1/3"
+          ]
+        }
+      ],
+      "columnValues": [
+        "4",
+        "14/3"
+      ]
+    },
+    {
+      "id": "ANON-03",
+      "actual": "suppress",
+      "classes": [
+        {
+          "size": 1,
+          "members": [
+            "A"
+          ],
+          "signature": [
+            "1/3",
+            "0"
+          ]
+        },
+        {
+          "size": 1,
+          "members": [
+            "A"
+          ],
+          "signature": [
+            "0",
+            "1/3"
+          ]
+        },
+        {
+          "size": 2,
+          "members": [
+            "B",
+            "C"
+          ],
+          "signature": [
+            "1/3",
+            "1/3"
+          ]
+        }
+      ],
+      "columnValues": [
+        "4",
+        "5"
+      ]
+    },
+    {
+      "id": "ANON-02",
+      "actual": "suppress",
+      "classes": [
+        {
+          "size": 2,
+          "members": [
+            "A",
+            "B"
+          ],
+          "signature": [
+            "1/2"
+          ]
+        }
+      ],
+      "columnValues": [
+        "3"
+      ]
+    },
+    {
+      "id": "ANON-01",
+      "actual": "publish",
+      "classes": [
+        {
+          "size": 3,
+          "members": [
+            "A",
+            "B",
+            "C"
+          ],
+          "signature": [
+            "1/3"
+          ]
+        }
+      ],
+      "columnValues": [
+        "4"
+      ]
+    }
+  ],
+  "graphEdges": [
+    [
+      "P3-R2-M37-01",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M37-02",
+      "P3-R2-M37-01"
+    ],
+    [
+      "P3-R2-M37-02",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M37-03",
+      "P3-R2-M37-01"
+    ],
+    [
+      "P3-R2-M37-03",
+      "P3-R2-M37-02"
+    ],
+    [
+      "P3-R2-M37-03",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M37-04",
+      "P3-R2-M37-01"
+    ],
+    [
+      "P3-R2-M37-04",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M37-05",
+      "P3-R2-M37-03"
+    ],
+    [
+      "P3-R2-M37-05",
+      "P3-R2-M37-04"
+    ],
+    [
+      "P3-R2-M37-05",
+      "P3-R2-M06-04"
+    ],
+    [
+      "P3-R2-M37-05",
+      "P3-R2-M26-04"
+    ],
+    [
+      "P3-R2-M37-05",
+      "P3-R2-M18-04"
+    ],
+    [
+      "P3-R2-M37-05",
+      "P3-R2-M17-04"
+    ],
+    [
+      "P3-R2-M37-05",
+      "P3-R2-M03-02"
+    ],
+    [
+      "P3-R2-M37-05",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M37-05",
+      "R1-CAP-B"
+    ],
+    [
+      "P3-R2-M37-05",
+      "R1-CAP-C"
+    ],
+    [
+      "P3-R2-M06-01",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M06-02",
+      "P3-R2-M06-01"
+    ],
+    [
+      "P3-R2-M06-02",
+      "P3-R2-M37-02"
+    ],
+    [
+      "P3-R2-M06-02",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M06-03",
+      "P3-R2-M06-01"
+    ],
+    [
+      "P3-R2-M06-03",
+      "P3-R2-M06-02"
+    ],
+    [
+      "P3-R2-M06-03",
+      "P3-R2-M37-03"
+    ],
+    [
+      "P3-R2-M06-03",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M06-04",
+      "P3-R2-M06-03"
+    ],
+    [
+      "P3-R2-M06-04",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M06-05",
+      "P3-R2-M06-04"
+    ],
+    [
+      "P3-R2-M06-05",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M06-05",
+      "R1-CAP-B"
+    ],
+    [
+      "P3-R2-M06-05",
+      "R1-CAP-C"
+    ],
+    [
+      "P3-R2-M26-01",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M26-02",
+      "P3-R2-M26-01"
+    ],
+    [
+      "P3-R2-M26-02",
+      "P3-R2-M26-03"
+    ],
+    [
+      "P3-R2-M26-02",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M26-03",
+      "P3-R2-M26-01"
+    ],
+    [
+      "P3-R2-M26-03",
+      "P3-R2-M37-03"
+    ],
+    [
+      "P3-R2-M26-03",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M26-04",
+      "P3-R2-M26-02"
+    ],
+    [
+      "P3-R2-M26-04",
+      "P3-R2-M26-03"
+    ],
+    [
+      "P3-R2-M26-04",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M26-05",
+      "P3-R2-M26-04"
+    ],
+    [
+      "P3-R2-M26-05",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M26-05",
+      "R1-CAP-B"
+    ],
+    [
+      "P3-R2-M26-05",
+      "R1-CAP-C"
+    ],
+    [
+      "P3-R2-M18-01",
+      "P3-R2-M37-03"
+    ],
+    [
+      "P3-R2-M18-01",
+      "P3-R2-M37-04"
+    ],
+    [
+      "P3-R2-M18-01",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M18-01",
+      "R3-M16-performance-source"
+    ],
+    [
+      "P3-R2-M18-02",
+      "P3-R2-M18-01"
+    ],
+    [
+      "P3-R2-M18-02",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M18-02",
+      "R3-M16-performance-source"
+    ],
+    [
+      "P3-R2-M18-03",
+      "P3-R2-M18-02"
+    ],
+    [
+      "P3-R2-M18-03",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M18-04",
+      "P3-R2-M18-03"
+    ],
+    [
+      "P3-R2-M18-04",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M18-05",
+      "P3-R2-M18-04"
+    ],
+    [
+      "P3-R2-M18-05",
+      "P3-R2-M17-01"
+    ],
+    [
+      "P3-R2-M18-05",
+      "P3-R2-M17-02"
+    ],
+    [
+      "P3-R2-M18-05",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M18-05",
+      "R1-CAP-B"
+    ],
+    [
+      "P3-R2-M18-05",
+      "R1-CAP-C"
+    ],
+    [
+      "P3-R2-M18-05",
+      "R3-M16-performance-source"
+    ],
+    [
+      "P3-R2-M17-01",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M17-02",
+      "P3-R2-M17-01"
+    ],
+    [
+      "P3-R2-M17-02",
+      "P3-R2-M06-04"
+    ],
+    [
+      "P3-R2-M17-02",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M17-03",
+      "P3-R2-M17-01"
+    ],
+    [
+      "P3-R2-M17-03",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M17-04",
+      "P3-R2-M17-03"
+    ],
+    [
+      "P3-R2-M17-04",
+      "P3-R2-M37-03"
+    ],
+    [
+      "P3-R2-M17-04",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M17-04",
+      "R3-M27-learning-evidence"
+    ],
+    [
+      "P3-R2-M17-05",
+      "P3-R2-M17-01"
+    ],
+    [
+      "P3-R2-M17-05",
+      "P3-R2-M17-02"
+    ],
+    [
+      "P3-R2-M17-05",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M17-05",
+      "R1-CAP-B"
+    ],
+    [
+      "P3-R2-M17-06",
+      "P3-R2-M17-04"
+    ],
+    [
+      "P3-R2-M17-06",
+      "P3-R2-M17-05"
+    ],
+    [
+      "P3-R2-M17-06",
+      "P3-R2-M18-04"
+    ],
+    [
+      "P3-R2-M17-06",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M17-06",
+      "R1-CAP-B"
+    ],
+    [
+      "P3-R2-M17-06",
+      "R1-CAP-C"
+    ],
+    [
+      "P3-R2-M17-06",
+      "R3-M27-learning-evidence"
+    ],
+    [
+      "P3-R2-M03-01",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M03-02",
+      "P3-R2-M03-01"
+    ],
+    [
+      "P3-R2-M03-02",
+      "P3-R2-M03-03"
+    ],
+    [
+      "P3-R2-M03-02",
+      "P3-R2-M06-04"
+    ],
+    [
+      "P3-R2-M03-02",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M03-03",
+      "P3-R2-M03-01"
+    ],
+    [
+      "P3-R2-M03-03",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M03-04",
+      "P3-R2-M03-02"
+    ],
+    [
+      "P3-R2-M03-04",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M03-05",
+      "P3-R2-M03-01"
+    ],
+    [
+      "P3-R2-M03-05",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M03-06",
+      "P3-R2-M03-02"
+    ],
+    [
+      "P3-R2-M03-06",
+      "P3-R2-M03-04"
+    ],
+    [
+      "P3-R2-M03-06",
+      "P3-R2-M03-05"
+    ],
+    [
+      "P3-R2-M03-06",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-M03-06",
+      "R1-CAP-B"
+    ],
+    [
+      "P3-R2-M03-06",
+      "R1-CAP-C"
+    ],
+    [
+      "P3-R2-BASE-01",
+      "P3-R2-M26-01"
+    ],
+    [
+      "P3-R2-BASE-01",
+      "P3-R2-M17-03"
+    ],
+    [
+      "P3-R2-BASE-01",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-BASE-02",
+      "P3-R2-M37-04"
+    ],
+    [
+      "P3-R2-BASE-02",
+      "P3-R2-M26-04"
+    ],
+    [
+      "P3-R2-BASE-02",
+      "P3-R2-M03-05"
+    ],
+    [
+      "P3-R2-BASE-02",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-BASE-03",
+      "P3-R2-M06-04"
+    ],
+    [
+      "P3-R2-BASE-03",
+      "P3-R2-M17-01"
+    ],
+    [
+      "P3-R2-BASE-03",
+      "P3-R2-M03-02"
+    ],
+    [
+      "P3-R2-BASE-03",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-BASE-04",
+      "P3-R2-M26-04"
+    ],
+    [
+      "P3-R2-BASE-04",
+      "P3-R2-M03-05"
+    ],
+    [
+      "P3-R2-BASE-04",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-BASE-05",
+      "P3-R2-COM-03"
+    ],
+    [
+      "P3-R2-BASE-05",
+      "P3-R2-COM-04"
+    ],
+    [
+      "P3-R2-BASE-05",
+      "R1-CAP-C"
+    ],
+    [
+      "P3-R2-BASE-06",
+      "P3-R2-COM-02"
+    ],
+    [
+      "P3-R2-BASE-06",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-COM-01",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-COM-01",
+      "R1-CAP-B"
+    ],
+    [
+      "P3-R2-COM-02",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-COM-03",
+      "P3-R2-M37-03"
+    ],
+    [
+      "P3-R2-COM-03",
+      "P3-R2-M06-04"
+    ],
+    [
+      "P3-R2-COM-03",
+      "P3-R2-M26-04"
+    ],
+    [
+      "P3-R2-COM-03",
+      "P3-R2-M18-04"
+    ],
+    [
+      "P3-R2-COM-03",
+      "P3-R2-M17-04"
+    ],
+    [
+      "P3-R2-COM-03",
+      "P3-R2-M03-02"
+    ],
+    [
+      "P3-R2-COM-03",
+      "R1-CAP-C"
+    ],
+    [
+      "P3-R2-COM-04",
+      "P3-R2-COM-03"
+    ],
+    [
+      "P3-R2-COM-04",
+      "R1-CAP-C"
+    ],
+    [
+      "P3-R2-X-01",
+      "P3-R2-M37-03"
+    ],
+    [
+      "P3-R2-X-01",
+      "P3-R2-M18-04"
+    ],
+    [
+      "P3-R2-X-01",
+      "P3-R2-M17-04"
+    ],
+    [
+      "P3-R2-X-01",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-X-01",
+      "R1-CAP-B"
+    ],
+    [
+      "P3-R2-X-01",
+      "R3-M16-performance-source"
+    ],
+    [
+      "P3-R2-X-02",
+      "P3-R2-M06-04"
+    ],
+    [
+      "P3-R2-X-02",
+      "P3-R2-M17-02"
+    ],
+    [
+      "P3-R2-X-02",
+      "P3-R2-M03-02"
+    ],
+    [
+      "P3-R2-X-02",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-X-03",
+      "P3-R2-M26-04"
+    ],
+    [
+      "P3-R2-X-03",
+      "P3-R2-M18-04"
+    ],
+    [
+      "P3-R2-X-03",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-X-03",
+      "R1-CAP-B"
+    ],
+    [
+      "P3-R2-X-04",
+      "P3-R2-M17-04"
+    ],
+    [
+      "P3-R2-X-04",
+      "P3-R2-M17-05"
+    ],
+    [
+      "P3-R2-X-04",
+      "P3-R2-M03-05"
+    ],
+    [
+      "P3-R2-X-04",
+      "R1-CAP-A"
+    ],
+    [
+      "P3-R2-X-04",
+      "R1-CAP-B"
+    ],
+    [
+      "P3-R2-X-04",
+      "R3-M27-learning-evidence"
+    ],
+    [
+      "R3-PRODUCERS-READY",
+      "R3-M27-learning-evidence"
+    ],
+    [
+      "R3-PRODUCERS-READY",
+      "R3-M16-performance-source"
+    ],
+    [
+      "JOINT-R1-10-R2-R3",
+      "P3-R2-X-01"
+    ],
+    [
+      "JOINT-R1-10-R2-R3",
+      "P3-R2-X-02"
+    ],
+    [
+      "JOINT-R1-10-R2-R3",
+      "P3-R2-X-03"
+    ],
+    [
+      "JOINT-R1-10-R2-R3",
+      "P3-R2-X-04"
+    ],
+    [
+      "JOINT-R1-10-R2-R3",
+      "R3-PRODUCERS-READY"
+    ],
+    [
+      "JOINT-R1-10-R2-R3",
+      "R1-CAP-A"
+    ],
+    [
+      "JOINT-R1-10-R2-R3",
+      "R1-CAP-B"
+    ],
+    [
+      "JOINT-R1-10-R2-R3",
+      "R1-CAP-C"
+    ],
+    [
+      "P3-R1-10-COMPLETE",
+      "JOINT-R1-10-R2-R3"
+    ],
+    [
+      "P3-R1-11-EXIT",
+      "P3-R1-10-COMPLETE"
+    ]
+  ],
+  "originalGateRegression": [
+    {
+      "id": "M37-01",
+      "gate": "根对象、版本及逐等级子集字段",
+      "originalStatus": "缺口",
+      "originalFindings": [
+        "R2-EXIT-001"
+      ],
+      "designRefs": [
+        "M37_Design.md#m37-spec-01"
+      ],
+      "scenarioIds": [
+        "R2-P3-M37-REVIEW-AC01",
+        "R2-P3-M37-REVIEW-AC02"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M37-02",
+      "gate": "尺度、权重、缺值与组合",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M37_Design.md#m37-spec-02"
+      ],
+      "scenarioIds": [
+        "R2-P3-M37-REVIEW-AC03",
+        "R2-P3-M37-REVIEW-AC04",
+        "R2-P3-M37-REVIEW-AC05"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M37-03",
+      "gate": "子集与用途权限",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M37_Design.md#m37-spec-04"
+      ],
+      "scenarioIds": [
+        "R2-P3-M37-REVIEW-AC09",
+        "R2-M37-S04"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M37-04",
+      "gate": "审批、发布、停用及在途版本",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M37_Design.md#m37-spec-03"
+      ],
+      "scenarioIds": [
+        "R2-P3-M37-REVIEW-AC06",
+        "R2-P3-M37-REVIEW-AC07",
+        "R2-M37-S01"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M37-05",
+      "gate": "五个消费者精确版本",
+      "originalStatus": "部分满足",
+      "originalFindings": [
+        "R2-EXIT-001"
+      ],
+      "designRefs": [
+        "M37_Design.md#m37-spec-05",
+        "Cross_Module_Contracts.md#catalog"
+      ],
+      "scenarioIds": [
+        "R2-X-01",
+        "R2-X-02"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M06-01",
+      "gate": "类别、级别、指标、评分与评级对象",
+      "originalStatus": "缺口",
+      "originalFindings": [
+        "R2-EXIT-001"
+      ],
+      "designRefs": [
+        "M06_Design.md#m06-spec-01",
+        "M06_Design.md#m06-spec-02"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC01",
+        "R2-P3-M06-REVIEW-AC03"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M06-02",
+      "gate": "委员会、贡献者回避、缺评与阈值",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M06_Design.md#m06-spec-04"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC08",
+        "R2-P3-M06-REVIEW-AC09"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M06-03",
+      "gate": "有效期、续证、撤销与失效",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M06_Design.md#m06-spec-04"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC10",
+        "R2-M06-S03",
+        "R2-X-03"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M06-04",
+      "gate": "发布启停与授证原子性",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M06_Design.md#m06-spec-03",
+        "M06_Design.md#engineering"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC04",
+        "R2-P3-M06-REVIEW-AC05",
+        "R2-COM-01"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M06-05",
+      "gate": "资格结论不替代任用",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M06_Design.md#m06-spec-05",
+        "Cross_Module_Contracts.md#ownership"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC12",
+        "R2-X-03",
+        "R2-X-04"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M26-01",
+      "gate": "问卷、邀请、答卷和报告版本",
+      "originalStatus": "部分满足",
+      "originalFindings": [
+        "R2-EXIT-001"
+      ],
+      "designRefs": [
+        "M26_Design.md#m26-spec-01",
+        "M26_Design.md#m26-spec-03"
+      ],
+      "scenarioIds": [
+        "R2-P3-M26-REVIEW-AC01",
+        "R2-P3-M26-REVIEW-AC06",
+        "R2-P3-M26-REVIEW-AC07"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M26-02",
+      "gate": "匿名身份映射隔离",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "Permissions.md#anonymity",
+        "M26_Design.md#m26-spec-01"
+      ],
+      "scenarioIds": [
+        "R2-P3-M26-REVIEW-AC02",
+        "R2-M26-S04"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M26-03",
+      "gate": "低样本、差分及跨报告组合推断",
+      "originalStatus": "缺口",
+      "originalFindings": [
+        "R2-EXIT-002"
+      ],
+      "designRefs": [
+        "M26_Design.md#m26-spec-02",
+        "Permissions.md#anonymity"
+      ],
+      "scenarioIds": [
+        "R2-P3-M26-REVIEW-AC03",
+        "R2-P3-M26-REVIEW-AC04",
+        "R2-M26-S01",
+        "R2-M26-S02",
+        "R2-M26-S07"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M26-04",
+      "gate": "报告授权、撤权、更正与重发布",
+      "originalStatus": "部分满足",
+      "originalFindings": [
+        "R2-EXIT-002"
+      ],
+      "designRefs": [
+        "M26_Design.md#m26-spec-04",
+        "Permissions.md#recusal"
+      ],
+      "scenarioIds": [
+        "R2-P3-M26-REVIEW-AC09",
+        "R2-X-05",
+        "R2-X-06"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M26-05",
+      "gate": "原卷/文本和零样本报告",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M26_Design.md#m26-spec-02",
+        "Permissions.md#anonymity"
+      ],
+      "scenarioIds": [
+        "R2-P3-M26-REVIEW-AC05",
+        "R2-M26-S03",
+        "R2-M26-S06"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M18-01",
+      "gate": "对象、项目、评价、会议与历史来源",
+      "originalStatus": "缺口",
+      "originalFindings": [
+        "R2-EXIT-001"
+      ],
+      "designRefs": [
+        "M18_Design.md#m18-spec-01"
+      ],
+      "scenarioIds": [
+        "R2-P3-M18-REVIEW-AC01",
+        "R2-P3-M18-REVIEW-AC04"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M18-02",
+      "gate": "绩效/潜力轴映射及缺失",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M18_Design.md#m18-spec-02"
+      ],
+      "scenarioIds": [
+        "R2-P3-M18-REVIEW-AC05",
+        "R2-M18-S03"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M18-03",
+      "gate": "校准回避、驳回与重开",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M18_Design.md#m18-spec-03"
+      ],
+      "scenarioIds": [
+        "R2-P3-M18-REVIEW-AC06",
+        "R2-P3-M18-REVIEW-AC07",
+        "R2-P3-M18-REVIEW-AC08",
+        "R2-M18-S01"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M18-04",
+      "gate": "发布快照和当前受众",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M18_Design.md#m18-spec-04"
+      ],
+      "scenarioIds": [
+        "R2-P3-M18-REVIEW-AC09",
+        "R2-P3-M18-REVIEW-AC10",
+        "R2-M18-S04"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M18-05",
+      "gate": "盘点不自动改变池/任用",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M18_Design.md#m18-spec-05",
+        "Cross_Module_Contracts.md#ownership"
+      ],
+      "scenarioIds": [
+        "R2-P3-M18-REVIEW-AC11",
+        "R2-P3-M18-REVIEW-AC12",
+        "R2-X-01"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M17-01",
+      "gate": "池规则、成员有效区间及重入历史",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M17_Design.md#m17-spec-01"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC01",
+        "R2-P3-M17-REVIEW-AC02",
+        "R2-P3-M17-REVIEW-AC03",
+        "R2-M17-S01"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M17-02",
+      "gate": "继任任期、准备度词典及版本",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M17_Design.md#m17-spec-02"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC04",
+        "R2-P3-M17-REVIEW-AC05",
+        "R2-P3-M17-REVIEW-AC06",
+        "R2-X-03"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M17-03",
+      "gate": "IDP职责、动态角色与自核回避",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M17_Design.md#m17-spec-03"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC07",
+        "R2-P3-M17-REVIEW-AC08",
+        "R2-M17-S02"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M17-04",
+      "gate": "模板、阶段、任务依赖及取消",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M17_Design.md#m17-spec-04"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC09",
+        "R2-P3-M17-REVIEW-AC10",
+        "R2-M17-S03"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M17-05",
+      "gate": "组织健康分母和历史口径",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M17_Design.md#m17-spec-05"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC11",
+        "R2-P3-M17-REVIEW-AC12",
+        "R2-M17-S04",
+        "R2-X-08"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M03-01",
+      "gate": "干部身份、任期、任职与任免记录",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M03_Design.md#m03-spec-01"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC01",
+        "R2-P3-M03-REVIEW-AC02",
+        "R2-M03-S01"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M03-02",
+      "gate": "委员会评分、弃权/缺评与等值",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M03_Design.md#m03-spec-03"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC05",
+        "R2-P3-M03-REVIEW-AC06",
+        "R2-P3-M03-REVIEW-AC07",
+        "R2-M03-S02"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M03-03",
+      "gate": "考察延期、转正、退出与撤回",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M03_Design.md#m03-spec-04"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC08",
+        "R2-P3-M03-REVIEW-AC09"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M03-04",
+      "gate": "述职、奖惩、访谈及敏感档案",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M03_Design.md#m03-spec-05",
+        "Permissions.md#matrix"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC10",
+        "R2-P3-M03-REVIEW-AC11",
+        "R2-P3-M03-REVIEW-AC12",
+        "R2-M03-S04"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "M03-05",
+      "gate": "M01实际生效与资格失效联动",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "M03_Design.md#m03-spec-02",
+        "Cross_Module_Contracts.md#consumption"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC03",
+        "R2-P3-M03-REVIEW-AC04",
+        "R2-M03-S03",
+        "R2-X-03",
+        "R2-X-04"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "H-01",
+      "gate": "稳定ID、根/版本与时间区间",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "Architecture.md#objects"
+      ],
+      "scenarioIds": [
+        "R2-COM-05",
+        "R2-X-02"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "H-02",
+      "gate": "行级/列级/动作授权及组合grant",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "Permissions.md#authorization"
+      ],
+      "scenarioIds": [
+        "R2-X-05",
+        "R2-X-06",
+        "R2-X-07"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "H-03",
+      "gate": "当前权限与历史权限分离",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "Permissions.md#authorization",
+        "Permissions.md#recusal"
+      ],
+      "scenarioIds": [
+        "R2-COM-08",
+        "R2-X-05"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "H-04",
+      "gate": "自审、利益冲突和回避",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "Permissions.md#recusal",
+        "Architecture.md#lifecycle"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC08",
+        "R2-P3-M18-REVIEW-AC07",
+        "R2-M17-S02"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "H-05",
+      "gate": "审批与业务生效分离",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "Architecture.md#lifecycle",
+        "Cross_Module_Contracts.md#ownership"
+      ],
+      "scenarioIds": [
+        "R2-X-03",
+        "R2-X-04",
+        "R2-X-07"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "H-06",
+      "gate": "CAS、并发、幂等和unknown",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "Architecture.md#transaction"
+      ],
+      "scenarioIds": [
+        "R2-COM-01",
+        "R2-COM-04"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "H-07",
+      "gate": "乱序、重放、gap和对账",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "Interfaces.md#reconciliation",
+        "Interfaces.md#failure"
+      ],
+      "scenarioIds": [
+        "R2-COM-03"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "H-08",
+      "gate": "业务/审计/receipt/outbox/恢复日志原子性",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "Architecture.md#transaction"
+      ],
+      "scenarioIds": [
+        "R2-COM-01"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "H-09",
+      "gate": "有界作业、租约与部分报告",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "Architecture.md#transaction"
+      ],
+      "scenarioIds": [
+        "R2-COM-02"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "H-10",
+      "gate": "严格schema与版本",
+      "originalStatus": "缺口",
+      "originalFindings": [
+        "R2-EXIT-001"
+      ],
+      "designRefs": [
+        "Interfaces.md#schema",
+        "Interface_Schemas.json"
+      ],
+      "scenarioIds": [
+        "R2-COM-04"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "H-11",
+      "gate": "签名、信任与失败分态",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "Interfaces.md#trust",
+        "Interfaces.md#failure"
+      ],
+      "scenarioIds": [
+        "R2-COM-03",
+        "R2-COM-04"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "H-12",
+      "gate": "跨模块撤权与对账",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "Cross_Module_Contracts.md#consumption",
+        "Permissions.md#recusal"
+      ],
+      "scenarioIds": [
+        "R2-X-05",
+        "R2-X-06"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "H-13",
+      "gate": "迁移、兼容与隔离",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "Migration_Rollback.md#mapping",
+        "Migration_Rollback.md#cutover"
+      ],
+      "scenarioIds": [
+        "R2-COM-05",
+        "R2-COM-06"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "H-14",
+      "gate": "不可逆迁移与回滚",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "Migration_Rollback.md#rollback"
+      ],
+      "scenarioIds": [
+        "R2-COM-06"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "H-15",
+      "gate": "附件、下载、删除墓碑及敏感日志",
+      "originalStatus": "设计满足",
+      "originalFindings": [],
+      "designRefs": [
+        "Permissions.md#files"
+      ],
+      "scenarioIds": [
+        "R2-COM-05",
+        "R2-X-06",
+        "R2-M03-S04"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "H-16",
+      "gate": "RPO≤60/RTO≤240/保留30天",
+      "originalStatus": "待实证",
+      "originalFindings": [
+        "R2-EXIT-006"
+      ],
+      "designRefs": [
+        "Recovery_Cost_Responsibilities.md#targets",
+        "Recovery_Cost_Responsibilities.md#recovery"
+      ],
+      "scenarioIds": [
+        "R2-COM-07",
+        "R2-COM-08"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "H-17",
+      "gate": "供应商/平台未验证不冒达标",
+      "originalStatus": "待实证",
+      "originalFindings": [
+        "R2-EXIT-006"
+      ],
+      "designRefs": [
+        "Recovery_Cost_Responsibilities.md#cost",
+        "Interfaces.md#failure"
+      ],
+      "scenarioIds": [
+        "R2-COM-04",
+        "R2-COM-07"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "H-18",
+      "gate": "六基础差异场景适用性",
+      "originalStatus": "需修订",
+      "originalFindings": [
+        "R2-EXIT-003"
+      ],
+      "designRefs": [
+        "Foundations.md",
+        "Acceptance_Scenarios.json"
+      ],
+      "scenarioIds": [
+        "R2-P3-BASE-02-AC03",
+        "R2-P3-BASE-03-AC02",
+        "R2-P3-BASE-04-AC02"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "H-19",
+      "gate": "P3任务可排程与R1依赖",
+      "originalStatus": "需修订",
+      "originalFindings": [
+        "R2-EXIT-004",
+        "R2-EXIT-005"
+      ],
+      "designRefs": [
+        "P3_Work_Packages.json",
+        "Architecture.md#authority"
+      ],
+      "scenarioIds": [
+        "R2-X-07",
+        "R2-X-08"
+      ],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "E-01",
+      "gate": "固定设计/最终包装来源",
+      "originalStatus": "满足",
+      "originalFindings": [],
+      "designRefs": [
+        "Controller_Proposal.json",
+        "Artifact_Manifest.json",
+        "Source_Manifest.json"
+      ],
+      "scenarioIds": [],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "E-02",
+      "gate": "数量、唯一性与批准追踪",
+      "originalStatus": "部分满足",
+      "originalFindings": [
+        "R2-EXIT-001"
+      ],
+      "designRefs": [
+        "Requirements_Trace.json",
+        "Approval_Provenance.json"
+      ],
+      "scenarioIds": [],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "E-03",
+      "gate": "46任务及138场景状态",
+      "originalStatus": "满足",
+      "originalFindings": [],
+      "designRefs": [
+        "P3_Work_Packages.json",
+        "Acceptance_Scenarios.json"
+      ],
+      "scenarioIds": [],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "E-04",
+      "gate": "6组LIMIT及52互斥责任",
+      "originalStatus": "部分满足",
+      "originalFindings": [
+        "R2-EXIT-001",
+        "R2-EXIT-002"
+      ],
+      "designRefs": [
+        "Original_Limits.json",
+        "Limit_Resolution.json"
+      ],
+      "scenarioIds": [],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "E-05",
+      "gate": "无历史测试/R1在制证据冒认",
+      "originalStatus": "满足",
+      "originalFindings": [],
+      "designRefs": [
+        "Historical_Test_Provenance.json",
+        "Exit_Review.md",
+        "Resume.md"
+      ],
+      "scenarioIds": [],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "E-06",
+      "gate": "产品/部署/准入/审批边界",
+      "originalStatus": "满足",
+      "originalFindings": [],
+      "designRefs": [
+        "Controller_Proposal.json",
+        "Resume.md"
+      ],
+      "scenarioIds": [],
+      "referenceIntegrity": true
+    },
+    {
+      "id": "E-07",
+      "gate": "Blocker=0及未处置Major=0",
+      "originalStatus": "不满足",
+      "originalFindings": [
+        "R2-EXIT-001",
+        "R2-EXIT-002"
+      ],
+      "designRefs": [
+        "Exit_Review.md"
+      ],
+      "scenarioIds": [],
+      "referenceIntegrity": true
+    }
+  ]
+}

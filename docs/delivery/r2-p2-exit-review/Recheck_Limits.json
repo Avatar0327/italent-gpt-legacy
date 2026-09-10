@@ -1,0 +1,964 @@
+{
+  "kind": "independent_design_layer_LIMIT_recheck_not_total_risk_closure",
+  "designContentHead": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+  "packagingHead": "a7a23d6bff024f4660fd14b0c22f47a6d40d928f",
+  "acceptedBefore": 9,
+  "independentlyAcceptedThisRecheck": 6,
+  "acceptedP2DesignTotal": 15,
+  "P3Validation": 25,
+  "P4Acceptance": 12,
+  "originalGroupsFullyClosed": 0,
+  "originalGroupsWithP3Residual": 6,
+  "originalGroupsWithP4Residual": 6,
+  "residualGroupCountsOverlap": true,
+  "items": [
+    {
+      "id": "M37-LIMIT-01.01",
+      "verificationPassed": true,
+      "independentDisposition": "accepted_design_layer",
+      "documentProbeIds": [
+        "LEVEL-VALID",
+        "LEVEL-EXTRA",
+        "LEVEL-VERSION",
+        "LEVEL-SOURCE",
+        "LEVEL-MISSING",
+        "REF-COMMAND-VALID",
+        "REF-COMMAND-SOURCE"
+      ],
+      "inputSha256": {
+        "Interface_Schemas.json": "1a68f08566965a645e760ea094e5179fb8daeb02c68c1177ba81a97c35dbc188",
+        "Schema_Examples.json": "8344e5415ef535bc46a41913a193c9956e918c32db27ce24ddfe1b3bce161394"
+      },
+      "designerEvidence": {
+        "gitRef": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+        "path": "docs/delivery/r2-p2/evidence/repair-001-schema.json",
+        "sha256": "2cec0c86373490403d88ac2d143d948a98b5e6e73b3f9032e94431f881feb2f7"
+      },
+      "designRefs": [
+        "M37_Design.md#m37-spec-01",
+        "Contract_Repair.md"
+      ],
+      "requirementMappings": [
+        {
+          "specId": "M37-SPEC-01",
+          "mapping": {
+            "findingId": "R2-EXIT-001",
+            "group": "IndicatorChild",
+            "schemaRef": "Interface_Schemas.json#/$defs/IndicatorDraft",
+            "command": "r2.m37.indicator.create",
+            "designRef": "Contract_Repair.md",
+            "exampleIds": [
+              "LEVEL-VALID",
+              "LEVEL-EXTRA",
+              "LEVEL-VERSION",
+              "LEVEL-SOURCE",
+              "LEVEL-MISSING"
+            ],
+            "scenarioIds": [
+              "R2-P3-M37-REVIEW-AC01",
+              "R2-P3-M37-REVIEW-AC02"
+            ]
+          }
+        },
+        {
+          "specId": "M37-SPEC-05",
+          "mapping": {
+            "findingId": "R2-EXIT-001",
+            "group": "VersionRef",
+            "schemaRef": "Interface_Schemas.json#/$defs/StandardDraft",
+            "command": "r2.m37.standard.create",
+            "designRef": "Contract_Repair.md",
+            "exampleIds": [
+              "REF-IN-VALID",
+              "REF-IN-EXTRA",
+              "REF-IN-VERSION",
+              "REF-IN-SOURCE",
+              "REF-EXT-VALID",
+              "REF-EXT-EXTRA",
+              "REF-EXT-VERSION",
+              "REF-EXT-SOURCE",
+              "REF-NO-KIND",
+              "REF-COMMAND-VALID",
+              "REF-COMMAND-SOURCE"
+            ],
+            "scenarioIds": [
+              "R2-X-02"
+            ]
+          }
+        }
+      ],
+      "futureResponsibilities": [
+        {
+          "id": "M37-LIMIT-01.03",
+          "parentLimitId": "M37-LIMIT-01",
+          "title": "并发版本、权重/缺值/规则组合",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M37_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M37实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M37-LIMIT-01.04",
+          "parentLimitId": "M37-LIMIT-01",
+          "title": "多角色及敏感子集的服务端授权",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M37_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M37实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M37-LIMIT-01.05",
+          "parentLimitId": "M37-LIMIT-01",
+          "title": "停用在途、迁移冲突及五域实际消费",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M37_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M37实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M37-LIMIT-01.06",
+          "parentLimitId": "M37-LIMIT-01",
+          "title": "源共享UUID、深子集及真实测评来源核证",
+          "disposition": "P4_acceptance",
+          "designRefs": [
+            "M37_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "总控指定来源核证负责人/数据HR",
+          "closureCriterion": "仅对依赖真实来源迁移/接入的对象核证；无来源则隔离，不要求供应商行为覆盖本项目批准规则",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M37-LIMIT-01.07",
+          "parentLimitId": "M37-LIMIT-01",
+          "title": "真实跨角色/跨模块、生产权限和恢复验收",
+          "disposition": "P4_acceptance",
+          "designRefs": [
+            "M37_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "业务HR/委员会+安全+运维",
+          "closureCriterion": "获授权环境真实多角色/用途与60分钟RPO、240分钟RTO、30天保留证据",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        }
+      ],
+      "riskFullyClosed": false
+    },
+    {
+      "id": "M06-LIMIT-01.01",
+      "verificationPassed": true,
+      "independentDisposition": "accepted_design_layer",
+      "documentProbeIds": [
+        "TYPE-VALID",
+        "TYPE-RATING-VALID",
+        "TYPE-EXTRA",
+        "TYPE-VERSION",
+        "TYPE-SOURCE",
+        "TYPE-MISSING",
+        "TYPE-EXACT-VERSION"
+      ],
+      "inputSha256": {
+        "Interface_Schemas.json": "1a68f08566965a645e760ea094e5179fb8daeb02c68c1177ba81a97c35dbc188",
+        "Schema_Examples.json": "8344e5415ef535bc46a41913a193c9956e918c32db27ce24ddfe1b3bce161394"
+      },
+      "designerEvidence": {
+        "gitRef": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+        "path": "docs/delivery/r2-p2/evidence/repair-001-schema.json",
+        "sha256": "2cec0c86373490403d88ac2d143d948a98b5e6e73b3f9032e94431f881feb2f7"
+      },
+      "designRefs": [
+        "M06_Design.md#m06-spec-01",
+        "Contract_Repair.md"
+      ],
+      "requirementMappings": [
+        {
+          "specId": "M06-SPEC-01",
+          "mapping": {
+            "findingId": "R2-EXIT-001",
+            "group": "CatalogDraft",
+            "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+            "command": "r2.m06.catalog.create",
+            "designRef": "Contract_Repair.md",
+            "exampleIds": [
+              "TYPE-VALID",
+              "TYPE-EXTRA",
+              "TYPE-VERSION",
+              "TYPE-SOURCE",
+              "TYPE-RATING-VALID",
+              "TYPE-MISSING",
+              "TYPE-EXACT-VERSION"
+            ],
+            "scenarioIds": [
+              "R2-P3-M06-REVIEW-AC01",
+              "R2-P3-M06-REVIEW-AC03"
+            ]
+          }
+        },
+        {
+          "specId": "M06-SPEC-02",
+          "mapping": {
+            "findingId": "R2-EXIT-001",
+            "group": "CatalogDraft",
+            "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+            "command": "r2.m06.catalog.create",
+            "designRef": "Contract_Repair.md",
+            "exampleIds": [
+              "TYPE-VALID",
+              "TYPE-EXTRA",
+              "TYPE-VERSION",
+              "TYPE-SOURCE",
+              "TYPE-RATING-VALID",
+              "TYPE-MISSING",
+              "TYPE-EXACT-VERSION"
+            ],
+            "scenarioIds": [
+              "R2-P3-M06-REVIEW-AC01",
+              "R2-P3-M06-REVIEW-AC03"
+            ]
+          }
+        }
+      ],
+      "futureResponsibilities": [
+        {
+          "id": "M06-LIMIT-01.03",
+          "parentLimitId": "M06-LIMIT-01",
+          "title": "评分/评级与证据版本/时效",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M06_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M06实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M06-LIMIT-01.04",
+          "parentLimitId": "M06-LIMIT-01",
+          "title": "委员会阈值、回避与强制否决",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M06_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M06实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M06-LIMIT-01.05",
+          "parentLimitId": "M06-LIMIT-01",
+          "title": "目录编号并发、重复续证及授证事务故障",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M06_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M06实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M06-LIMIT-01.06",
+          "parentLimitId": "M06-LIMIT-01",
+          "title": "发展通道/地图与资格消费者实际适配",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M06_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M06实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M06-LIMIT-01.07",
+          "parentLimitId": "M06-LIMIT-01",
+          "title": "来源目录/地图关联及真实旧证映射核证",
+          "disposition": "P4_acceptance",
+          "designRefs": [
+            "M06_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "总控指定来源核证负责人/数据HR",
+          "closureCriterion": "仅对依赖真实来源迁移/接入的对象核证；无来源则隔离，不要求供应商行为覆盖本项目批准规则",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M06-LIMIT-01.08",
+          "parentLimitId": "M06-LIMIT-01",
+          "title": "完整业务多角色、跨域敏感权限及恢复验收",
+          "disposition": "P4_acceptance",
+          "designRefs": [
+            "M06_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "业务HR/委员会+安全+运维",
+          "closureCriterion": "获授权环境真实多角色/用途与60分钟RPO、240分钟RTO、30天保留证据",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        }
+      ],
+      "riskFullyClosed": false
+    },
+    {
+      "id": "M26-LIMIT-01.01",
+      "verificationPassed": true,
+      "independentDisposition": "accepted_design_layer",
+      "documentProbeIds": [
+        "QUESTION-VALID",
+        "QUESTION-EXTRA",
+        "QUESTION-VERSION",
+        "QUESTION-SOURCE",
+        "QUESTION-MISSING"
+      ],
+      "inputSha256": {
+        "Interface_Schemas.json": "1a68f08566965a645e760ea094e5179fb8daeb02c68c1177ba81a97c35dbc188",
+        "Schema_Examples.json": "8344e5415ef535bc46a41913a193c9956e918c32db27ce24ddfe1b3bce161394"
+      },
+      "designerEvidence": {
+        "gitRef": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+        "path": "docs/delivery/r2-p2/evidence/repair-001-schema.json",
+        "sha256": "2cec0c86373490403d88ac2d143d948a98b5e6e73b3f9032e94431f881feb2f7"
+      },
+      "designRefs": [
+        "M26_Design.md#m26-spec-01",
+        "Contract_Repair.md"
+      ],
+      "requirementMappings": [
+        {
+          "specId": "M26-SPEC-01",
+          "mapping": {
+            "findingId": "R2-EXIT-001",
+            "group": "QuestionnaireDraft",
+            "schemaRef": "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+            "command": "r2.m26.questionnaire.create",
+            "designRef": "Contract_Repair.md",
+            "exampleIds": [
+              "QUESTION-VALID",
+              "QUESTION-EXTRA",
+              "QUESTION-VERSION",
+              "QUESTION-SOURCE",
+              "QUESTION-MISSING"
+            ],
+            "scenarioIds": [
+              "R2-P3-M26-REVIEW-AC06",
+              "R2-P3-M26-REVIEW-AC07"
+            ]
+          }
+        },
+        {
+          "specId": "M26-SPEC-03",
+          "mapping": {
+            "findingId": "R2-EXIT-001",
+            "group": "QuestionnaireDraft",
+            "schemaRef": "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+            "command": "r2.m26.questionnaire.create",
+            "designRef": "Contract_Repair.md",
+            "exampleIds": [
+              "QUESTION-VALID",
+              "QUESTION-EXTRA",
+              "QUESTION-VERSION",
+              "QUESTION-SOURCE",
+              "QUESTION-MISSING"
+            ],
+            "scenarioIds": [
+              "R2-P3-M26-REVIEW-AC06",
+              "R2-P3-M26-REVIEW-AC07"
+            ]
+          }
+        }
+      ],
+      "futureResponsibilities": [
+        {
+          "id": "M26-LIMIT-01.04",
+          "parentLimitId": "M26-LIMIT-01",
+          "title": "2/3样本、零样本及跨报告差分",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M26_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M26实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M26-LIMIT-01.05",
+          "parentLimitId": "M26-LIMIT-01",
+          "title": "四题型/套卷版本与角色重叠",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M26_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M26实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M26-LIMIT-01.06",
+          "parentLimitId": "M26-LIMIT-01",
+          "title": "撤回重交、更正发布竞争及审计故障",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M26_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M26实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M26-LIMIT-01.07",
+          "parentLimitId": "M26-LIMIT-01",
+          "title": "原卷/桥接/下载撤权与消费者失败状态",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M26_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M26实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M26-LIMIT-01.08",
+          "parentLimitId": "M26-LIMIT-01",
+          "title": "源匿名/题卷深行为及旧数据映射核证",
+          "disposition": "P4_acceptance",
+          "designRefs": [
+            "M26_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "总控指定来源核证负责人/数据HR",
+          "closureCriterion": "仅对依赖真实来源迁移/接入的对象核证；无来源则隔离，不要求供应商行为覆盖本项目批准规则",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M26-LIMIT-01.09",
+          "parentLimitId": "M26-LIMIT-01",
+          "title": "实际独立角色、隐私用途/容量/恢复验收",
+          "disposition": "P4_acceptance",
+          "designRefs": [
+            "M26_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "业务HR/委员会+安全+运维",
+          "closureCriterion": "获授权环境真实多角色/用途与60分钟RPO、240分钟RTO、30天保留证据",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        }
+      ],
+      "riskFullyClosed": false
+    },
+    {
+      "id": "M26-LIMIT-01.02",
+      "verificationPassed": true,
+      "independentDisposition": "accepted_design_layer",
+      "documentProbeIds": [
+        "ANON-01",
+        "ANON-02",
+        "ANON-03",
+        "ANON-04",
+        "ANON-05A",
+        "ANON-05B",
+        "ANON-06A",
+        "ANON-06B",
+        "ANON-07A",
+        "ANON-07B",
+        "ANON-07C",
+        "ANON-08A",
+        "ANON-08B",
+        "ANON-08C",
+        "ANON-09",
+        "ANON-10"
+      ],
+      "inputSha256": {
+        "Anonymity_Cases.json": "c4c527937c83af771a05c3c3e0d3f50bc96f6a976b38bceba3ba30b44df45ebb"
+      },
+      "designerEvidence": {
+        "gitRef": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+        "path": "docs/delivery/r2-p2/evidence/repair-002-anonymity.json",
+        "sha256": "af443e4d0425fc4830df30ba6fd7f48e9e8bb3772de06a9c8235cc30e396008b"
+      },
+      "designRefs": [
+        "M26_Design.md#m26-spec-02",
+        "Anonymity_Repair.md"
+      ],
+      "requirementMappings": [
+        {
+          "specId": "M26-SPEC-02",
+          "scenarios": [
+            "R2-P3-M26-REVIEW-AC04",
+            "R2-M26-S01",
+            "R2-M26-S02",
+            "R2-M26-S07"
+          ]
+        }
+      ],
+      "futureResponsibilities": [
+        {
+          "id": "M26-LIMIT-01.04",
+          "parentLimitId": "M26-LIMIT-01",
+          "title": "2/3样本、零样本及跨报告差分",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M26_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M26实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M26-LIMIT-01.05",
+          "parentLimitId": "M26-LIMIT-01",
+          "title": "四题型/套卷版本与角色重叠",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M26_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M26实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M26-LIMIT-01.06",
+          "parentLimitId": "M26-LIMIT-01",
+          "title": "撤回重交、更正发布竞争及审计故障",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M26_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M26实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M26-LIMIT-01.07",
+          "parentLimitId": "M26-LIMIT-01",
+          "title": "原卷/桥接/下载撤权与消费者失败状态",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M26_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M26实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M26-LIMIT-01.08",
+          "parentLimitId": "M26-LIMIT-01",
+          "title": "源匿名/题卷深行为及旧数据映射核证",
+          "disposition": "P4_acceptance",
+          "designRefs": [
+            "M26_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "总控指定来源核证负责人/数据HR",
+          "closureCriterion": "仅对依赖真实来源迁移/接入的对象核证；无来源则隔离，不要求供应商行为覆盖本项目批准规则",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M26-LIMIT-01.09",
+          "parentLimitId": "M26-LIMIT-01",
+          "title": "实际独立角色、隐私用途/容量/恢复验收",
+          "disposition": "P4_acceptance",
+          "designRefs": [
+            "M26_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "业务HR/委员会+安全+运维",
+          "closureCriterion": "获授权环境真实多角色/用途与60分钟RPO、240分钟RTO、30天保留证据",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        }
+      ],
+      "riskFullyClosed": false
+    },
+    {
+      "id": "M18-LIMIT-01.01",
+      "verificationPassed": true,
+      "independentDisposition": "accepted_design_layer",
+      "documentProbeIds": [
+        "HISTORY-VALID",
+        "HISTORY-EXTRA",
+        "HISTORY-MISSING"
+      ],
+      "inputSha256": {
+        "Interface_Schemas.json": "1a68f08566965a645e760ea094e5179fb8daeb02c68c1177ba81a97c35dbc188",
+        "Schema_Examples.json": "8344e5415ef535bc46a41913a193c9956e918c32db27ce24ddfe1b3bce161394"
+      },
+      "designerEvidence": {
+        "gitRef": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+        "path": "docs/delivery/r2-p2/evidence/repair-001-schema.json",
+        "sha256": "2cec0c86373490403d88ac2d143d948a98b5e6e73b3f9032e94431f881feb2f7"
+      },
+      "designRefs": [
+        "M18_Design.md#m18-spec-01",
+        "Contract_Repair.md"
+      ],
+      "requirementMappings": [
+        {
+          "specId": "M18-SPEC-01",
+          "mapping": {
+            "findingId": "R2-EXIT-001",
+            "group": "ReviewProject",
+            "schemaRef": "Interface_Schemas.json#/$defs/ReviewProject",
+            "command": "r2.m18.project.create",
+            "designRef": "Contract_Repair.md",
+            "exampleIds": [
+              "HISTORY-VALID",
+              "HISTORY-EXTRA",
+              "HISTORY-VERSION",
+              "HISTORY-SOURCE",
+              "HISTORY-NONE-VALID",
+              "HISTORY-MISSING"
+            ],
+            "scenarioIds": [
+              "R2-P3-M18-REVIEW-AC01",
+              "R2-P3-M18-REVIEW-AC04"
+            ]
+          }
+        },
+        {
+          "specId": "M18-SPEC-05",
+          "mapping": {
+            "findingId": "R2-EXIT-001",
+            "group": "ReviewProject",
+            "schemaRef": "Interface_Schemas.json#/$defs/ReviewProject",
+            "command": "r2.m18.project.create",
+            "designRef": "Contract_Repair.md",
+            "exampleIds": [
+              "HISTORY-VALID",
+              "HISTORY-EXTRA",
+              "HISTORY-VERSION",
+              "HISTORY-SOURCE",
+              "HISTORY-NONE-VALID",
+              "HISTORY-MISSING"
+            ],
+            "scenarioIds": [
+              "R2-P3-M18-REVIEW-AC01",
+              "R2-P3-M18-REVIEW-AC04"
+            ]
+          }
+        }
+      ],
+      "futureResponsibilities": [
+        {
+          "id": "M18-LIMIT-01.03",
+          "parentLimitId": "M18-LIMIT-01",
+          "title": "九格等值/缺失、范围变更和版本漂移",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M18_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M18实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M18-LIMIT-01.04",
+          "parentLimitId": "M18-LIMIT-01",
+          "title": "会议回避、驳回撤回及更正唯一性",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M18_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M18实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M18-LIMIT-01.05",
+          "parentLimitId": "M18-LIMIT-01",
+          "title": "首次发布、关闭重开和发布并发",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M18_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M18实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M18-LIMIT-01.06",
+          "parentLimitId": "M18-LIMIT-01",
+          "title": "来源/人才池/继任不同数据集及幂等消费",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M18_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M18实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M18-LIMIT-01.07",
+          "parentLimitId": "M18-LIMIT-01",
+          "title": "源工具/对象子ID/标准共享映射核证",
+          "disposition": "P4_acceptance",
+          "designRefs": [
+            "M18_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "总控指定来源核证负责人/数据HR",
+          "closureCriterion": "仅对依赖真实来源迁移/接入的对象核证；无来源则隔离，不要求供应商行为覆盖本项目批准规则",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M18-LIMIT-01.08",
+          "parentLimitId": "M18-LIMIT-01",
+          "title": "实际校准会、多角色敏感访问/容量/恢复验收",
+          "disposition": "P4_acceptance",
+          "designRefs": [
+            "M18_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "业务HR/委员会+安全+运维",
+          "closureCriterion": "获授权环境真实多角色/用途与60分钟RPO、240分钟RTO、30天保留证据",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        }
+      ],
+      "riskFullyClosed": false
+    },
+    {
+      "id": "M18-LIMIT-01.02",
+      "verificationPassed": true,
+      "independentDisposition": "accepted_design_layer",
+      "documentProbeIds": [
+        "HISTORY-VALID",
+        "HISTORY-NONE-VALID",
+        "HISTORY-VERSION",
+        "HISTORY-SOURCE"
+      ],
+      "inputSha256": {
+        "Interface_Schemas.json": "1a68f08566965a645e760ea094e5179fb8daeb02c68c1177ba81a97c35dbc188",
+        "Schema_Examples.json": "8344e5415ef535bc46a41913a193c9956e918c32db27ce24ddfe1b3bce161394"
+      },
+      "designerEvidence": {
+        "gitRef": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+        "path": "docs/delivery/r2-p2/evidence/repair-001-schema.json",
+        "sha256": "2cec0c86373490403d88ac2d143d948a98b5e6e73b3f9032e94431f881feb2f7"
+      },
+      "designRefs": [
+        "M18_Design.md#m18-spec-05",
+        "Contract_Repair.md"
+      ],
+      "requirementMappings": [
+        {
+          "specId": "M18-SPEC-01",
+          "mapping": {
+            "findingId": "R2-EXIT-001",
+            "group": "ReviewProject",
+            "schemaRef": "Interface_Schemas.json#/$defs/ReviewProject",
+            "command": "r2.m18.project.create",
+            "designRef": "Contract_Repair.md",
+            "exampleIds": [
+              "HISTORY-VALID",
+              "HISTORY-EXTRA",
+              "HISTORY-VERSION",
+              "HISTORY-SOURCE",
+              "HISTORY-NONE-VALID",
+              "HISTORY-MISSING"
+            ],
+            "scenarioIds": [
+              "R2-P3-M18-REVIEW-AC01",
+              "R2-P3-M18-REVIEW-AC04"
+            ]
+          }
+        },
+        {
+          "specId": "M18-SPEC-05",
+          "mapping": {
+            "findingId": "R2-EXIT-001",
+            "group": "ReviewProject",
+            "schemaRef": "Interface_Schemas.json#/$defs/ReviewProject",
+            "command": "r2.m18.project.create",
+            "designRef": "Contract_Repair.md",
+            "exampleIds": [
+              "HISTORY-VALID",
+              "HISTORY-EXTRA",
+              "HISTORY-VERSION",
+              "HISTORY-SOURCE",
+              "HISTORY-NONE-VALID",
+              "HISTORY-MISSING"
+            ],
+            "scenarioIds": [
+              "R2-P3-M18-REVIEW-AC01",
+              "R2-P3-M18-REVIEW-AC04"
+            ]
+          }
+        }
+      ],
+      "futureResponsibilities": [
+        {
+          "id": "M18-LIMIT-01.03",
+          "parentLimitId": "M18-LIMIT-01",
+          "title": "九格等值/缺失、范围变更和版本漂移",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M18_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M18实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M18-LIMIT-01.04",
+          "parentLimitId": "M18-LIMIT-01",
+          "title": "会议回避、驳回撤回及更正唯一性",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M18_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M18实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M18-LIMIT-01.05",
+          "parentLimitId": "M18-LIMIT-01",
+          "title": "首次发布、关闭重开和发布并发",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M18_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M18实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M18-LIMIT-01.06",
+          "parentLimitId": "M18-LIMIT-01",
+          "title": "来源/人才池/继任不同数据集及幂等消费",
+          "disposition": "P3_validation",
+          "designRefs": [
+            "M18_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "M18实施负责人+独立测试负责人",
+          "closureCriterion": "隔离合成用例及实际适配版本、拒绝/事务证据经独立复核",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M18-LIMIT-01.07",
+          "parentLimitId": "M18-LIMIT-01",
+          "title": "源工具/对象子ID/标准共享映射核证",
+          "disposition": "P4_acceptance",
+          "designRefs": [
+            "M18_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "总控指定来源核证负责人/数据HR",
+          "closureCriterion": "仅对依赖真实来源迁移/接入的对象核证；无来源则隔离，不要求供应商行为覆盖本项目批准规则",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        },
+        {
+          "id": "M18-LIMIT-01.08",
+          "parentLimitId": "M18-LIMIT-01",
+          "title": "实际校准会、多角色敏感访问/容量/恢复验收",
+          "disposition": "P4_acceptance",
+          "designRefs": [
+            "M18_Design.md#engineering"
+          ],
+          "evidenceStatus": "not_executed",
+          "p2Blocking": false,
+          "ownerRole": "业务HR/委员会+安全+运维",
+          "closureCriterion": "获授权环境真实多角色/用途与60分钟RPO、240分钟RTO、30天保留证据",
+          "recommended": "按既有批准的独立产品规则实施；保留未知和局部隔离",
+          "alternative": "依赖缺失对象保持只读/未配置，继续其他范围；不得补造来源或降低控制"
+        }
+      ],
+      "riskFullyClosed": false
+    }
+  ]
+}

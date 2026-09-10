@@ -1,0 +1,1034 @@
+{
+  "kind": "targeted_manual_gate_decisions_plus_regression_not_new_product_execution",
+  "designContentHead": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+  "gateCount": 56,
+  "gates": [
+    {
+      "id": "M37-01",
+      "scope": "M37",
+      "gate": "根对象、版本及逐等级子集字段",
+      "originalStatus": "缺口",
+      "originalFindingIds": [
+        "R2-EXIT-001"
+      ],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "Contract_Repair逐级字段/父子根版本和IndicatorChild严格输入补齐；LEVEL系列证据独立接受。",
+      "designRefs": [
+        "M37_Design.md#m37-spec-01"
+      ],
+      "scenarioIds": [
+        "R2-P3-M37-REVIEW-AC01",
+        "R2-P3-M37-REVIEW-AC02"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M37-02",
+      "scope": "M37",
+      "gate": "尺度、权重、缺值与组合",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；精确decimal、同量纲、正权重、mandatory缺值不缩分母，序数不隐式均值",
+      "designRefs": [
+        "M37_Design.md#m37-spec-02"
+      ],
+      "scenarioIds": [
+        "R2-P3-M37-REVIEW-AC03",
+        "R2-P3-M37-REVIEW-AC04",
+        "R2-P3-M37-REVIEW-AC05"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M37-03",
+      "scope": "M37",
+      "gate": "子集与用途权限",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；read/use/export各自授权，面试问题和发展建议白名单，历史当前裁权",
+      "designRefs": [
+        "M37_Design.md#m37-spec-04"
+      ],
+      "scenarioIds": [
+        "R2-P3-M37-REVIEW-AC09",
+        "R2-M37-S04"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M37-04",
+      "scope": "M37",
+      "gate": "审批、发布、停用及在途版本",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；语义摘要防审批后改文，显示例外有边界；停用阻新用，旧在途不自动取消",
+      "designRefs": [
+        "M37_Design.md#m37-spec-03"
+      ],
+      "scenarioIds": [
+        "R2-P3-M37-REVIEW-AC06",
+        "R2-P3-M37-REVIEW-AC07",
+        "R2-M37-S01"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M37-05",
+      "scope": "M37",
+      "gate": "五个消费者精确版本",
+      "originalStatus": "部分满足",
+      "originalFindingIds": [
+        "R2-EXIT-001"
+      ],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "Internal/External严格联合及五域内部冻结引用明确；仅成就外部来源允许。",
+      "designRefs": [
+        "M37_Design.md#m37-spec-05",
+        "Cross_Module_Contracts.md#catalog"
+      ],
+      "scenarioIds": [
+        "R2-X-01",
+        "R2-X-02"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M06-01",
+      "scope": "M06",
+      "gate": "类别、级别、指标、评分与评级对象",
+      "originalStatus": "缺口",
+      "originalFindingIds": [
+        "R2-EXIT-001"
+      ],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "CatalogDraft类型配置/数值尺度/评级方案成员版本完整，TYPE系列独立接受。",
+      "designRefs": [
+        "M06_Design.md#m06-spec-01",
+        "M06_Design.md#m06-spec-02"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC01",
+        "R2-P3-M06-REVIEW-AC03"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M06-02",
+      "scope": "M06",
+      "gate": "委员会、贡献者回避、缺评与阈值",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；冻结eligible set，全部应评明确票/弃权；缺评不缩分母，否决/unknown阻认证",
+      "designRefs": [
+        "M06_Design.md#m06-spec-04"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC08",
+        "R2-P3-M06-REVIEW-AC09"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M06-03",
+      "scope": "M06",
+      "gate": "有效期、续证、撤销与失效",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；截止D含当日、D+1派生expired；同旧证唯一续证，旧证不覆写，撤销独立权限",
+      "designRefs": [
+        "M06_Design.md#m06-spec-04"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC10",
+        "R2-M06-S03",
+        "R2-X-03"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M06-04",
+      "scope": "M06",
+      "gate": "发布启停与授证原子性",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；批准和issued分态，提交CAS重核、重复占位、证书/审计/receipt原子",
+      "designRefs": [
+        "M06_Design.md#m06-spec-03",
+        "M06_Design.md#engineering"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC04",
+        "R2-P3-M06-REVIEW-AC05",
+        "R2-COM-01"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M06-05",
+      "scope": "M06",
+      "gate": "资格结论不替代任用",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；certificateSnapshot保留evaluatedAt和current validity；M03独立决定并重核",
+      "designRefs": [
+        "M06_Design.md#m06-spec-05",
+        "Cross_Module_Contracts.md#ownership"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC12",
+        "R2-X-03",
+        "R2-X-04"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M26-01",
+      "scope": "M26",
+      "gate": "问卷、邀请、答卷和报告版本",
+      "originalStatus": "部分满足",
+      "originalFindingIds": [
+        "R2-EXIT-001"
+      ],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "Question逐题角色/维度/指标及可见条件版本绑定明确；QUESTION系列接受。",
+      "designRefs": [
+        "M26_Design.md#m26-spec-01",
+        "M26_Design.md#m26-spec-03"
+      ],
+      "scenarioIds": [
+        "R2-P3-M26-REVIEW-AC01",
+        "R2-P3-M26-REVIEW-AC06",
+        "R2-P3-M26-REVIEW-AC07"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M26-02",
+      "scope": "M26",
+      "gate": "匿名身份映射隔离",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；运营/答卷/桥表分别授权，不进入通用事件、日志、URL或M32 join",
+      "designRefs": [
+        "Permissions.md#anonymity",
+        "M26_Design.md#m26-spec-01"
+      ],
+      "scenarioIds": [
+        "R2-P3-M26-REVIEW-AC02",
+        "R2-M26-S04"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M26-03",
+      "scope": "M26",
+      "gate": "低样本、差分及跨报告组合推断",
+      "originalStatus": "缺口",
+      "originalFindingIds": [
+        "R2-EXIT-002"
+      ],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "新旧answerAtom分行、参与/系数等价，不含答卷UUID；16例和三高风险手算通过。",
+      "designRefs": [
+        "M26_Design.md#m26-spec-02",
+        "Permissions.md#anonymity"
+      ],
+      "scenarioIds": [
+        "R2-P3-M26-REVIEW-AC03",
+        "R2-P3-M26-REVIEW-AC04",
+        "R2-M26-S01",
+        "R2-M26-S02",
+        "R2-M26-S07"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M26-04",
+      "scope": "M26",
+      "gate": "报告授权、撤权、更正与重发布",
+      "originalStatus": "部分满足",
+      "originalFindingIds": [
+        "R2-EXIT-002"
+      ],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "withdraw不清历史，CAS重算和分区/epoch连续；09/10例与正文一致。",
+      "designRefs": [
+        "M26_Design.md#m26-spec-04",
+        "Permissions.md#recusal"
+      ],
+      "scenarioIds": [
+        "R2-P3-M26-REVIEW-AC09",
+        "R2-X-05",
+        "R2-X-06"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M26-05",
+      "scope": "M26",
+      "gate": "原卷/文本和零样本报告",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；零合格非self组不得发布；原文需独立脱敏，HR无默认原卷权，低样本无精确人数",
+      "designRefs": [
+        "M26_Design.md#m26-spec-02",
+        "Permissions.md#anonymity"
+      ],
+      "scenarioIds": [
+        "R2-P3-M26-REVIEW-AC05",
+        "R2-M26-S03",
+        "R2-M26-S06"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M18-01",
+      "scope": "M18",
+      "gate": "对象、项目、评价、会议与历史来源",
+      "originalStatus": "缺口",
+      "originalFindingIds": [
+        "R2-EXIT-001"
+      ],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "PreviousResultRef/null、精确历史发布集、同人及asOf/用途明确；HISTORY系列接受。",
+      "designRefs": [
+        "M18_Design.md#m18-spec-01"
+      ],
+      "scenarioIds": [
+        "R2-P3-M18-REVIEW-AC01",
+        "R2-P3-M18-REVIEW-AC04"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M18-02",
+      "scope": "M18",
+      "gate": "绩效/潜力轴映射及缺失",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；映射/阈值版本固定；边界等值确定；缺失和unknown不补0或强制落格",
+      "designRefs": [
+        "M18_Design.md#m18-spec-02"
+      ],
+      "scenarioIds": [
+        "R2-P3-M18-REVIEW-AC05",
+        "R2-M18-S03"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M18-03",
+      "scope": "M18",
+      "gate": "校准回避、驳回与重开",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；参与/评价/复核/发布职责区分，利益冲突剔除有版本，重开不改旧发布",
+      "designRefs": [
+        "M18_Design.md#m18-spec-03"
+      ],
+      "scenarioIds": [
+        "R2-P3-M18-REVIEW-AC06",
+        "R2-P3-M18-REVIEW-AC07",
+        "R2-P3-M18-REVIEW-AC08",
+        "R2-M18-S01"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M18-04",
+      "scope": "M18",
+      "gate": "发布快照和当前受众",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；首次发布和更正均独立审批，完整manifest后一次发布，历史查询重核当前权限",
+      "designRefs": [
+        "M18_Design.md#m18-spec-04"
+      ],
+      "scenarioIds": [
+        "R2-P3-M18-REVIEW-AC09",
+        "R2-P3-M18-REVIEW-AC10",
+        "R2-M18-S04"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M18-05",
+      "scope": "M18",
+      "gate": "盘点不自动改变池/任用",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；只给来源或建议，M17/M03各自命令产生有效成员或任用事实",
+      "designRefs": [
+        "M18_Design.md#m18-spec-05",
+        "Cross_Module_Contracts.md#ownership"
+      ],
+      "scenarioIds": [
+        "R2-P3-M18-REVIEW-AC11",
+        "R2-P3-M18-REVIEW-AC12",
+        "R2-X-01"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M17-01",
+      "scope": "M17",
+      "gate": "池规则、成员有效区间及重入历史",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；规则版本/评估点/幂等键明确，区间互斥；重入新ID+previousMembershipId",
+      "designRefs": [
+        "M17_Design.md#m17-spec-01"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC01",
+        "R2-P3-M17-REVIEW-AC02",
+        "R2-P3-M17-REVIEW-AC03",
+        "R2-M17-S01"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M17-02",
+      "scope": "M17",
+      "gate": "继任任期、准备度词典及版本",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；任期/复核/人员/岗位/资格共同决定当前有效；准备度不是资格或任命",
+      "designRefs": [
+        "M17_Design.md#m17-spec-02"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC04",
+        "R2-P3-M17-REVIEW-AC05",
+        "R2-P3-M17-REVIEW-AC06",
+        "R2-X-03"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M17-03",
+      "scope": "M17",
+      "gate": "IDP职责、动态角色与自核回避",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；本人不能唯一指导/最终核验，动态解析失败阻节点，替换留版本历史",
+      "designRefs": [
+        "M17_Design.md#m17-spec-03"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC07",
+        "R2-P3-M17-REVIEW-AC08",
+        "R2-M17-S02"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M17-04",
+      "scope": "M17",
+      "gate": "模板、阶段、任务依赖及取消",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；模板版本、阶段/任务DAG、必需任务核验、免除须独立授权；学习完成不自动IDP完成",
+      "designRefs": [
+        "M17_Design.md#m17-spec-04"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC09",
+        "R2-P3-M17-REVIEW-AC10",
+        "R2-M17-S03"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M17-05",
+      "scope": "M17",
+      "gate": "组织健康分母和历史口径",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；岗位/组织/池分母分列，distinct人员、current有效性及真实snapshot分开；无综合权重not_configured",
+      "designRefs": [
+        "M17_Design.md#m17-spec-05"
+      ],
+      "scenarioIds": [
+        "R2-P3-M17-REVIEW-AC11",
+        "R2-P3-M17-REVIEW-AC12",
+        "R2-M17-S04",
+        "R2-X-08"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M03-01",
+      "scope": "M03",
+      "gate": "干部身份、任期、任职与任免记录",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；person/cadre/term/assignment/appointment独立，闭区间、月末闰年算法和重叠检查明确",
+      "designRefs": [
+        "M03_Design.md#m03-spec-01"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC01",
+        "R2-P3-M03-REVIEW-AC02",
+        "R2-M03-S01"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M03-02",
+      "scope": "M03",
+      "gate": "委员会评分、弃权/缺评与等值",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；票数及精确数值分开，缺评阻完成，弃权计明确分母；等值按冻结比较符，不用显示舍入",
+      "designRefs": [
+        "M03_Design.md#m03-spec-03"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC05",
+        "R2-P3-M03-REVIEW-AC06",
+        "R2-P3-M03-REVIEW-AC07",
+        "R2-M03-S02"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M03-03",
+      "scope": "M03",
+      "gate": "考察延期、转正、退出与撤回",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；到期不自动转正；独立结论、退回新申请版本；结束/撤回不反写真实人事历史",
+      "designRefs": [
+        "M03_Design.md#m03-spec-04"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC08",
+        "R2-P3-M03-REVIEW-AC09"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M03-04",
+      "scope": "M03",
+      "gate": "述职、奖惩、访谈及敏感档案",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；周期/版本及敏感动作字段独立；附件下载和历史同受当前授权，档案read不代interviewRead",
+      "designRefs": [
+        "M03_Design.md#m03-spec-05",
+        "Permissions.md#matrix"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC10",
+        "R2-P3-M03-REVIEW-AC11",
+        "R2-P3-M03-REVIEW-AC12",
+        "R2-M03-S04"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "M03-05",
+      "scope": "M03",
+      "gate": "M01实际生效与资格失效联动",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；批准不当applied；M01可信receipt后核对，unknown查同键；资格到期在各决定点重核；不自动撤销已发生M01事实",
+      "designRefs": [
+        "M03_Design.md#m03-spec-02",
+        "Cross_Module_Contracts.md#consumption"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC03",
+        "R2-P3-M03-REVIEW-AC04",
+        "R2-M03-S03",
+        "R2-X-03",
+        "R2-X-04"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "H-01",
+      "scope": "横向",
+      "gate": "稳定ID、根/版本与时间区间",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；租户复合键、稳定person、UUID版本、展示序号不作FK，历史未知不补造",
+      "designRefs": [
+        "Architecture.md#objects"
+      ],
+      "scenarioIds": [
+        "R2-COM-05",
+        "R2-X-02"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "H-02",
+      "scope": "横向",
+      "gate": "行级/列级/动作授权及组合grant",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；完整grant各自求对象字段再并集；不得拼角色A范围与角色B字段",
+      "designRefs": [
+        "Permissions.md#authorization"
+      ],
+      "scenarioIds": [
+        "R2-X-05",
+        "R2-X-06",
+        "R2-X-07"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "H-03",
+      "scope": "横向",
+      "gate": "当前权限与历史权限分离",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；历史快照仅解释历史，deny先行，缓存带authRevision/epoch，敏感数据无stale回退",
+      "designRefs": [
+        "Permissions.md#authorization",
+        "Permissions.md#recusal"
+      ],
+      "scenarioIds": [
+        "R2-COM-08",
+        "R2-X-05"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "H-04",
+      "scope": "横向",
+      "gate": "自审、利益冲突和回避",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；历史实质贡献者冻结，改派有理由版本，不足合格人数blocked，D7不委托干预",
+      "designRefs": [
+        "Permissions.md#recusal",
+        "Architecture.md#lifecycle"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC08",
+        "R2-P3-M18-REVIEW-AC07",
+        "R2-M17-S02"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "H-05",
+      "scope": "横向",
+      "gate": "审批与业务生效分离",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；M19返回本地事务计划不自行commit/network；生产者拥有决定权",
+      "designRefs": [
+        "Architecture.md#lifecycle",
+        "Cross_Module_Contracts.md#ownership"
+      ],
+      "scenarioIds": [
+        "R2-X-03",
+        "R2-X-04",
+        "R2-X-07"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "H-06",
+      "scope": "横向",
+      "gate": "CAS、并发、幂等和unknown",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；共用租户revision；expected auth/writer/recovery/fence；同键异payload冲突、墓碑不释放，未知不换键",
+      "designRefs": [
+        "Architecture.md#transaction"
+      ],
+      "scenarioIds": [
+        "R2-COM-01",
+        "R2-COM-04"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "H-07",
+      "scope": "横向",
+      "gate": "乱序、重放、gap和对账",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；事件同ID同digest去重，异digest隔离，跳号阻投影，不取latest掩盖缺口",
+      "designRefs": [
+        "Interfaces.md#reconciliation",
+        "Interfaces.md#failure"
+      ],
+      "scenarioIds": [
+        "R2-COM-03"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "H-08",
+      "scope": "横向",
+      "gate": "业务/审计/receipt/outbox/恢复日志原子性",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；同事务全部提交或全无业务效果；DB故障不能承诺同库失败日志必写",
+      "designRefs": [
+        "Architecture.md#transaction"
+      ],
+      "scenarioIds": [
+        "R2-COM-01"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "H-09",
+      "scope": "横向",
+      "gate": "有界作业、租约与部分报告",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；fence接管、cursor原子推进，准备不可见、完整manifest最终一次ready",
+      "designRefs": [
+        "Architecture.md#transaction"
+      ],
+      "scenarioIds": [
+        "R2-COM-02"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "H-10",
+      "scope": "横向",
+      "gate": "严格schema与版本",
+      "originalStatus": "缺口",
+      "originalFindingIds": [
+        "R2-EXIT-001"
+      ],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "88定义/76动作；34例9/25及49完整Command探针；Schema与必需服务端语义分工明确。",
+      "designRefs": [
+        "Interfaces.md#schema",
+        "Interface_Schemas.json"
+      ],
+      "scenarioIds": [
+        "R2-COM-04"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "H-11",
+      "scope": "横向",
+      "gate": "签名、信任与失败分态",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；hash不作签名；nonce/key/时窗/来源核对；not_configured/unknown不写成成功",
+      "designRefs": [
+        "Interfaces.md#trust",
+        "Interfaces.md#failure"
+      ],
+      "scenarioIds": [
+        "R2-COM-03",
+        "R2-COM-04"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "H-12",
+      "scope": "横向",
+      "gate": "跨模块撤权与对账",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；旧链接/缓存不能绕源撤权；已合法决定保留受控引用，独立更正，不重算原卷",
+      "designRefs": [
+        "Cross_Module_Contracts.md#consumption",
+        "Permissions.md#recusal"
+      ],
+      "scenarioIds": [
+        "R2-X-05",
+        "R2-X-06"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "H-13",
+      "scope": "横向",
+      "gate": "迁移、兼容与隔离",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；保留原ID/哈希/五anchors/旧证策略；冲突隔离；新写epoch阻旧writer；未知来源不合并",
+      "designRefs": [
+        "Migration_Rollback.md#mapping",
+        "Migration_Rollback.md#cutover"
+      ],
+      "scenarioIds": [
+        "R2-COM-05",
+        "R2-COM-06"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "H-14",
+      "scope": "横向",
+      "gate": "不可逆迁移与回滚",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；有新事实后只读或前向修复，不DROP新模型、不恢复旧弱权限写路径",
+      "designRefs": [
+        "Migration_Rollback.md#rollback"
+      ],
+      "scenarioIds": [
+        "R2-COM-06"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "H-15",
+      "scope": "横向",
+      "gate": "附件、下载、删除墓碑及敏感日志",
+      "originalStatus": "设计满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；不可见对象先写再绑定；orphan无读权；下载两端重核；墓碑先禁读，恢复点引用字节保留，日志不含原文",
+      "designRefs": [
+        "Permissions.md#files"
+      ],
+      "scenarioIds": [
+        "R2-COM-05",
+        "R2-X-06",
+        "R2-M03-S04"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "H-16",
+      "scope": "横向",
+      "gate": "RPO≤60/RTO≤240/保留30天",
+      "originalStatus": "待实证",
+      "originalFindingIds": [
+        "R2-EXIT-006"
+      ],
+      "recheckStatus": "design_defined_runtime_unproved",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；目标未提升；共同可恢复点，RTO计至owner开放，缺披露账本或当前deny不得开放",
+      "designRefs": [
+        "Recovery_Cost_Responsibilities.md#targets",
+        "Recovery_Cost_Responsibilities.md#recovery"
+      ],
+      "scenarioIds": [
+        "R2-COM-07",
+        "R2-COM-08"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "H-17",
+      "scope": "横向",
+      "gate": "供应商/平台未验证不冒达标",
+      "originalStatus": "待实证",
+      "originalFindingIds": [
+        "R2-EXIT-006"
+      ],
+      "recheckStatus": "design_defined_runtime_unproved",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；托管作业/密钥/备份日志/成本待核；真实测评/签署/通知均仅契约",
+      "designRefs": [
+        "Recovery_Cost_Responsibilities.md#cost",
+        "Interfaces.md#failure"
+      ],
+      "scenarioIds": [
+        "R2-COM-04",
+        "R2-COM-07"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "H-18",
+      "scope": "横向",
+      "gate": "六基础差异场景适用性",
+      "originalStatus": "需修订",
+      "originalFindingIds": [
+        "R2-EXIT-003"
+      ],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "三项Foundation_Adaptations直接规定fixture/动作/角色/字段/版本断言，原AC独立保留。",
+      "designRefs": [
+        "Foundations.md",
+        "Acceptance_Scenarios.json"
+      ],
+      "scenarioIds": [
+        "R2-P3-BASE-02-AC03",
+        "R2-P3-BASE-03-AC02",
+        "R2-P3-BASE-04-AC02"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "H-19",
+      "scope": "横向",
+      "gate": "P3任务可排程与R1依赖",
+      "originalStatus": "需修订",
+      "originalFindingIds": [
+        "R2-EXIT-004",
+        "R2-EXIT-005"
+      ],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "46具体依赖/Schema/adapter/安全/迁移/恢复齐全，55/165/0；P2交接缺口关闭，A/B/C实际开放仍待005。",
+      "designRefs": [
+        "P3_Work_Packages.json",
+        "Architecture.md#authority"
+      ],
+      "scenarioIds": [
+        "R2-X-07",
+        "R2-X-08"
+      ],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "E-01",
+      "scope": "退出",
+      "gate": "固定设计/最终包装来源",
+      "originalStatus": "满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "新44固定引用核dc6dd896，包装清单核a7a23d6；旧对象分别自验，无动态清单误比。",
+      "designRefs": [
+        "Controller_Proposal.json",
+        "Artifact_Manifest.json",
+        "Source_Manifest.json"
+      ],
+      "scenarioIds": [],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "E-02",
+      "scope": "退出",
+      "gate": "数量、唯一性与批准追踪",
+      "originalStatus": "部分满足",
+      "originalFindingIds": [
+        "R2-EXIT-001"
+      ],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原需求/条款/字段/关闭项/AC/任务ID及来源不变，001语义缺口独立接受关闭。",
+      "designRefs": [
+        "Requirements_Trace.json",
+        "Approval_Provenance.json"
+      ],
+      "scenarioIds": [],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "E-03",
+      "scope": "退出",
+      "gate": "46任务及138场景状态",
+      "originalStatus": "满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；任务均proposed_not_started；场景均not_run；存在文件不等通过",
+      "designRefs": [
+        "P3_Work_Packages.json",
+        "Acceptance_Scenarios.json"
+      ],
+      "scenarioIds": [],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "E-04",
+      "scope": "退出",
+      "gate": "6组LIMIT及52互斥责任",
+      "originalStatus": "部分满足",
+      "originalFindingIds": [
+        "R2-EXIT-001",
+        "R2-EXIT-002"
+      ],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原9接受加本轮6独立接受，15/25/12互斥，6组P3/P4重叠，原组完整关闭0。",
+      "designRefs": [
+        "Original_Limits.json",
+        "Limit_Resolution.json"
+      ],
+      "scenarioIds": [],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "E-05",
+      "scope": "退出",
+      "gate": "无历史测试/R1在制证据冒认",
+      "originalStatus": "满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；历史计数和旧状态限定来源，R1当前实现未作为本次设计完成证据",
+      "designRefs": [
+        "Historical_Test_Provenance.json",
+        "Exit_Review.md",
+        "Resume.md"
+      ],
+      "scenarioIds": [],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "E-06",
+      "scope": "退出",
+      "gate": "产品/部署/准入/审批边界",
+      "originalStatus": "满足",
+      "originalFindingIds": [],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "原固定内容差异核对：已接受控制未删除/弱化；原设计59改动均仅文档及检查脚本；proposalOnly且未批准P2退出/P3进入；本评审仅新增评审文件",
+      "designRefs": [
+        "Controller_Proposal.json",
+        "Resume.md"
+      ],
+      "scenarioIds": [],
+      "runtimeExecuted": false
+    },
+    {
+      "id": "E-07",
+      "scope": "退出",
+      "gate": "Blocker=0及未处置Major=0",
+      "originalStatus": "不满足",
+      "originalFindingIds": [
+        "R2-EXIT-001",
+        "R2-EXIT-002"
+      ],
+      "recheckStatus": "accepted_design_recheck",
+      "basis": "本固定设计的Blocker=0、未关闭Major=0，001至004全部独立接受；建议交所有者批准而非代签。",
+      "designRefs": [
+        "Exit_Review.md"
+      ],
+      "scenarioIds": [],
+      "runtimeExecuted": false
+    }
+  ]
+}
