@@ -22,6 +22,7 @@ export async function readM01(ctx:{db:D1Database;member:Member;row:{revision:num
  const rows=await db.prepare('SELECT id,kind,person_id AS personId,org_id AS orgId,code,revision,status,payload FROM r1_m01_entities WHERE tenant_id=? AND kind=? AND id>?'+(personId?' AND person_id=?':'')+' ORDER BY id LIMIT ?').bind(m.tenantId,kind,after,...(personId?[personId]:[]),limit+1).all<any>();
  const scanned=rows.results.slice(0,limit),items=[];
  for(const row of scanned){if(!allowed(row,'record'))continue;const e={...row,payload:JSON.parse(row.payload)};
+  if(e.payload.migrationObservation){delete e.payload.legacyPayload;delete e.payload.migrationSource;}
   // No raw identity clues are retained in review objects; field permissions still apply after record permission.
   for(const [key,field] of [['gradeId','level'],['level','level'],['email','email']] as const)if(!allowed(e,field))delete e.payload[key];
   if(e.payload.fields)e.payload.fields=Object.fromEntries(Object.entries(e.payload.fields).filter(([field])=>allowed(e,field)));
