@@ -7,7 +7,8 @@
   "branch": "design/r2-p2-20260910",
   "architectureComplete": true,
   "completedModules": [
-    "M37"
+    "M37",
+    "M06"
   ],
   "activeModule": null,
   "foundationsComplete": false,
@@ -16,5 +17,5 @@
   "p3Entered": false,
   "productModified": false,
   "deployed": false,
-  "next": "M06 sequential detailed design"
+  "next": "M26 sequential detailed design"
 }

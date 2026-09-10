@@ -1,7 +1,332 @@
 {
   "kind": "executable_test_design_not_run",
-  "count": 12,
+  "count": 25,
   "scenarios": [
+    {
+      "id": "R2-P3-M06-REVIEW-AC01",
+      "requirementRefs": [
+        "M06-REVIEW-AC01",
+        "M06-SPEC-01"
+      ],
+      "moduleId": "M06",
+      "taskId": "P3-R2-M06-01",
+      "fixture": "M06_Design.md#acceptance; 隔离合成租户/员工/授权者，保持源案例的数量、时点和角色条件",
+      "given": "有分类父子与类别同名/不同code",
+      "when": "改变父级形成环、空岗职务关联保存",
+      "then": "拒绝成环；同名须编码消歧，空关联未配置不自动全岗",
+      "executionSteps": [
+        "按Given构造精确根/版本及当前grant，记录初始revision与源digest",
+        "以指定角色直接调用模块命令/查询，不靠UI隐藏；施加When条件",
+        "读取版本、回执及授权投影，逐条核对Then；失败时核无未授权副作用"
+      ],
+      "expectedEvidence": [
+        "请求/响应schema、版本和权限摘要（脱敏）",
+        "业务前后版本及事件/command receipt；拒绝时不变量保持",
+        "原验收ID映射和独立复核记录"
+      ],
+      "executionStatus": "not_run",
+      "historicalExecutionIsNotCurrentEvidence": true
+    },
+    {
+      "id": "R2-P3-M06-REVIEW-AC02",
+      "requirementRefs": [
+        "M06-REVIEW-AC02",
+        "M06-SPEC-01"
+      ],
+      "moduleId": "M06",
+      "taskId": "P3-R2-M06-01",
+      "fixture": "M06_Design.md#acceptance; 隔离合成租户/员工/授权者，保持源案例的数量、时点和角色条件",
+      "given": "QL1独立目录，多个资格类别",
+      "when": "为指定标准选级别并展示通道",
+      "then": "只标准显式关系生效；sort非等级大小，学习地图未配不派课或授证",
+      "executionSteps": [
+        "按Given构造精确根/版本及当前grant，记录初始revision与源digest",
+        "以指定角色直接调用模块命令/查询，不靠UI隐藏；施加When条件",
+        "读取版本、回执及授权投影，逐条核对Then；失败时核无未授权副作用"
+      ],
+      "expectedEvidence": [
+        "请求/响应schema、版本和权限摘要（脱敏）",
+        "业务前后版本及事件/command receipt；拒绝时不变量保持",
+        "原验收ID映射和独立复核记录"
+      ],
+      "executionStatus": "not_run",
+      "historicalExecutionIsNotCurrentEvidence": true
+    },
+    {
+      "id": "R2-P3-M06-REVIEW-AC03",
+      "requirementRefs": [
+        "M06-REVIEW-AC03",
+        "M06-SPEC-02"
+      ],
+      "moduleId": "M06",
+      "taskId": "P3-R2-M06-02",
+      "fixture": "M06_Design.md#acceptance; 隔离合成租户/员工/授权者，保持源案例的数量、时点和角色条件",
+      "given": "评分QI无scale；评级有两级scheme",
+      "when": "设置认证目标并校验",
+      "then": "评分尺度缺失阻认证就绪；评级用真实levelId，不强塞1–5或默设100满分",
+      "executionSteps": [
+        "按Given构造精确根/版本及当前grant，记录初始revision与源digest",
+        "以指定角色直接调用模块命令/查询，不靠UI隐藏；施加When条件",
+        "读取版本、回执及授权投影，逐条核对Then；失败时核无未授权副作用"
+      ],
+      "expectedEvidence": [
+        "请求/响应schema、版本和权限摘要（脱敏）",
+        "业务前后版本及事件/command receipt；拒绝时不变量保持",
+        "原验收ID映射和独立复核记录"
+      ],
+      "executionStatus": "not_run",
+      "historicalExecutionIsNotCurrentEvidence": true
+    },
+    {
+      "id": "R2-P3-M06-REVIEW-AC04",
+      "requirementRefs": [
+        "M06-REVIEW-AC04",
+        "M06-SPEC-03"
+      ],
+      "moduleId": "M06",
+      "taskId": "P3-R2-M06-03",
+      "fixture": "M06_Design.md#acceptance; 隔离合成租户/员工/授权者，保持源案例的数量、时点和角色条件",
+      "given": "QS已冻说明A，QI改B/停用",
+      "when": "读旧QS及建新引用",
+      "then": "旧QS保持A和版本；新引用拒绝停用QI；停用不追溯吊销旧证",
+      "executionSteps": [
+        "按Given构造精确根/版本及当前grant，记录初始revision与源digest",
+        "以指定角色直接调用模块命令/查询，不靠UI隐藏；施加When条件",
+        "读取版本、回执及授权投影，逐条核对Then；失败时核无未授权副作用"
+      ],
+      "expectedEvidence": [
+        "请求/响应schema、版本和权限摘要（脱敏）",
+        "业务前后版本及事件/command receipt；拒绝时不变量保持",
+        "原验收ID映射和独立复核记录"
+      ],
+      "executionStatus": "not_run",
+      "historicalExecutionIsNotCurrentEvidence": true
+    },
+    {
+      "id": "R2-P3-M06-REVIEW-AC05",
+      "requirementRefs": [
+        "M06-REVIEW-AC05",
+        "M06-SPEC-03"
+      ],
+      "moduleId": "M06",
+      "taskId": "P3-R2-M06-03",
+      "fixture": "M06_Design.md#acceptance; 隔离合成租户/员工/授权者，保持源案例的数量、时点和角色条件",
+      "given": "标准draft由HR编制且无独立评审人",
+      "when": "发布标准",
+      "then": "无完整路由/独立节点权拒绝；不能把admin直发当审批",
+      "executionSteps": [
+        "按Given构造精确根/版本及当前grant，记录初始revision与源digest",
+        "以指定角色直接调用模块命令/查询，不靠UI隐藏；施加When条件",
+        "读取版本、回执及授权投影，逐条核对Then；失败时核无未授权副作用"
+      ],
+      "expectedEvidence": [
+        "请求/响应schema、版本和权限摘要（脱敏）",
+        "业务前后版本及事件/command receipt；拒绝时不变量保持",
+        "原验收ID映射和独立复核记录"
+      ],
+      "executionStatus": "not_run",
+      "historicalExecutionIsNotCurrentEvidence": true
+    },
+    {
+      "id": "R2-P3-M06-REVIEW-AC06",
+      "requirementRefs": [
+        "M06-REVIEW-AC06",
+        "M06-SPEC-03"
+      ],
+      "moduleId": "M06",
+      "taskId": "P3-R2-M06-03",
+      "fixture": "M06_Design.md#acceptance; 隔离合成租户/员工/授权者，保持源案例的数量、时点和角色条件",
+      "given": "原申请已提交并冻v1，v1随后停用",
+      "when": "继续评审或另发新申请",
+      "then": "在途按批准冻结策略可继续并提示；新申请拒绝；实际终止逐单留痕",
+      "executionSteps": [
+        "按Given构造精确根/版本及当前grant，记录初始revision与源digest",
+        "以指定角色直接调用模块命令/查询，不靠UI隐藏；施加When条件",
+        "读取版本、回执及授权投影，逐条核对Then；失败时核无未授权副作用"
+      ],
+      "expectedEvidence": [
+        "请求/响应schema、版本和权限摘要（脱敏）",
+        "业务前后版本及事件/command receipt；拒绝时不变量保持",
+        "原验收ID映射和独立复核记录"
+      ],
+      "executionStatus": "not_run",
+      "historicalExecutionIsNotCurrentEvidence": true
+    },
+    {
+      "id": "R2-P3-M06-REVIEW-AC07",
+      "requirementRefs": [
+        "M06-REVIEW-AC07",
+        "M06-SPEC-04"
+      ],
+      "moduleId": "M06",
+      "taskId": "P3-R2-M06-04",
+      "fixture": "M06_Design.md#acceptance; 隔离合成租户/员工/授权者，保持源案例的数量、时点和角色条件",
+      "given": "旧v1评分5，新v2要求3但无同版证据",
+      "when": "拟授认证",
+      "then": "缺证据为unknown，拒绝授证，不用旧高分替代；成功proof固定不随后续低分改变",
+      "executionSteps": [
+        "按Given构造精确根/版本及当前grant，记录初始revision与源digest",
+        "以指定角色直接调用模块命令/查询，不靠UI隐藏；施加When条件",
+        "读取版本、回执及授权投影，逐条核对Then；失败时核无未授权副作用"
+      ],
+      "expectedEvidence": [
+        "请求/响应schema、版本和权限摘要（脱敏）",
+        "业务前后版本及事件/command receipt；拒绝时不变量保持",
+        "原验收ID映射和独立复核记录"
+      ],
+      "executionStatus": "not_run",
+      "historicalExecutionIsNotCurrentEvidence": true
+    },
+    {
+      "id": "R2-P3-M06-REVIEW-AC08",
+      "requirementRefs": [
+        "M06-REVIEW-AC08",
+        "M06-SPEC-04"
+      ],
+      "moduleId": "M06",
+      "taskId": "P3-R2-M06-04",
+      "fixture": "M06_Design.md#acceptance; 隔离合成租户/员工/授权者，保持源案例的数量、时点和角色条件",
+      "given": "委员会成员含本人/提交者/材料编制参与者或回避后阈值不足",
+      "when": "完成认证评审",
+      "then": "无关权限不能替节点权；排利益冲突后人数/必达不足则阻，不默认多数或自动通过",
+      "executionSteps": [
+        "按Given构造精确根/版本及当前grant，记录初始revision与源digest",
+        "以指定角色直接调用模块命令/查询，不靠UI隐藏；施加When条件",
+        "读取版本、回执及授权投影，逐条核对Then；失败时核无未授权副作用"
+      ],
+      "expectedEvidence": [
+        "请求/响应schema、版本和权限摘要（脱敏）",
+        "业务前后版本及事件/command receipt；拒绝时不变量保持",
+        "原验收ID映射和独立复核记录"
+      ],
+      "executionStatus": "not_run",
+      "historicalExecutionIsNotCurrentEvidence": true
+    },
+    {
+      "id": "R2-P3-M06-REVIEW-AC09",
+      "requirementRefs": [
+        "M06-REVIEW-AC09",
+        "M06-SPEC-04"
+      ],
+      "moduleId": "M06",
+      "taskId": "P3-R2-M06-04",
+      "fixture": "M06_Design.md#acceptance; 隔离合成租户/员工/授权者，保持源案例的数量、时点和角色条件",
+      "given": "有效期未选择、固定到日D或明确长期",
+      "when": "授证及D后业务日读取",
+      "then": "漏选不得永久；固定D当日有效次日expired，长期必须显式；raw certified和有效性分列",
+      "executionSteps": [
+        "按Given构造精确根/版本及当前grant，记录初始revision与源digest",
+        "以指定角色直接调用模块命令/查询，不靠UI隐藏；施加When条件",
+        "读取版本、回执及授权投影，逐条核对Then；失败时核无未授权副作用"
+      ],
+      "expectedEvidence": [
+        "请求/响应schema、版本和权限摘要（脱敏）",
+        "业务前后版本及事件/command receipt；拒绝时不变量保持",
+        "原验收ID映射和独立复核记录"
+      ],
+      "executionStatus": "not_run",
+      "historicalExecutionIsNotCurrentEvidence": true
+    },
+    {
+      "id": "R2-P3-M06-REVIEW-AC10",
+      "requirementRefs": [
+        "M06-REVIEW-AC10",
+        "M06-SPEC-04"
+      ],
+      "moduleId": "M06",
+      "taskId": "P3-R2-M06-04",
+      "fixture": "M06_Design.md#acceptance; 隔离合成租户/员工/授权者，保持源案例的数量、时点和角色条件",
+      "given": "同人同资格根同级别已有有效证，但新版本",
+      "when": "普通申请或显式续证",
+      "then": "普通重复拒绝；续证关联旧ID且仅一在途，原证/证据不覆盖",
+      "executionSteps": [
+        "按Given构造精确根/版本及当前grant，记录初始revision与源digest",
+        "以指定角色直接调用模块命令/查询，不靠UI隐藏；施加When条件",
+        "读取版本、回执及授权投影，逐条核对Then；失败时核无未授权副作用"
+      ],
+      "expectedEvidence": [
+        "请求/响应schema、版本和权限摘要（脱敏）",
+        "业务前后版本及事件/command receipt；拒绝时不变量保持",
+        "原验收ID映射和独立复核记录"
+      ],
+      "executionStatus": "not_run",
+      "historicalExecutionIsNotCurrentEvidence": true
+    },
+    {
+      "id": "R2-P3-M06-REVIEW-AC11",
+      "requirementRefs": [
+        "M06-REVIEW-AC11",
+        "M06-SPEC-05"
+      ],
+      "moduleId": "M06",
+      "taskId": "P3-R2-M06-05",
+      "fixture": "M06_Design.md#acceptance; 隔离合成租户/员工/授权者，保持源案例的数量、时点和角色条件",
+      "given": "只本人权限或只有use的有效成员",
+      "when": "直接读他人proof/敏感材料/历史或导出",
+      "then": "服务端拒绝/裁剪，无导出权不下载，撤权清缓存，不能从标准可见推员工证据可见",
+      "executionSteps": [
+        "按Given构造精确根/版本及当前grant，记录初始revision与源digest",
+        "以指定角色直接调用模块命令/查询，不靠UI隐藏；施加When条件",
+        "读取版本、回执及授权投影，逐条核对Then；失败时核无未授权副作用"
+      ],
+      "expectedEvidence": [
+        "请求/响应schema、版本和权限摘要（脱敏）",
+        "业务前后版本及事件/command receipt；拒绝时不变量保持",
+        "原验收ID映射和独立复核记录"
+      ],
+      "executionStatus": "not_run",
+      "historicalExecutionIsNotCurrentEvidence": true
+    },
+    {
+      "id": "R2-P3-M06-REVIEW-AC12",
+      "requirementRefs": [
+        "M06-REVIEW-AC12",
+        "M06-SPEC-05"
+      ],
+      "moduleId": "M06",
+      "taskId": "P3-R2-M06-05",
+      "fixture": "M06_Design.md#acceptance; 隔离合成租户/员工/授权者，保持源案例的数量、时点和角色条件",
+      "given": "授予写入失败/审计失败或网络未知",
+      "when": "恢复后查询并重试",
+      "then": "无可用半证书或假成功，先查原ID/revision，不重复生成证号或应用效果",
+      "executionSteps": [
+        "按Given构造精确根/版本及当前grant，记录初始revision与源digest",
+        "以指定角色直接调用模块命令/查询，不靠UI隐藏；施加When条件",
+        "读取版本、回执及授权投影，逐条核对Then；失败时核无未授权副作用"
+      ],
+      "expectedEvidence": [
+        "请求/响应schema、版本和权限摘要（脱敏）",
+        "业务前后版本及事件/command receipt；拒绝时不变量保持",
+        "原验收ID映射和独立复核记录"
+      ],
+      "executionStatus": "not_run",
+      "historicalExecutionIsNotCurrentEvidence": true
+    },
+    {
+      "id": "R2-P3-M06-REVIEW-AC13",
+      "requirementRefs": [
+        "M06-REVIEW-AC13",
+        "M06-SPEC-05"
+      ],
+      "moduleId": "M06",
+      "taskId": "P3-R2-M06-05",
+      "fixture": "M06_Design.md#acceptance; 隔离合成租户/员工/授权者，保持源案例的数量、时点和角色条件",
+      "given": "legacy无到期日记录和旧五级关联",
+      "when": "设计迁移并给M03/M17/M18消费",
+      "then": "保留真实旧语义和ID、版本、认证时证据；不编造历史类别/审批/续证，当前有效性显式提供",
+      "executionSteps": [
+        "按Given构造精确根/版本及当前grant，记录初始revision与源digest",
+        "以指定角色直接调用模块命令/查询，不靠UI隐藏；施加When条件",
+        "读取版本、回执及授权投影，逐条核对Then；失败时核无未授权副作用"
+      ],
+      "expectedEvidence": [
+        "请求/响应schema、版本和权限摘要（脱敏）",
+        "业务前后版本及事件/command receipt；拒绝时不变量保持",
+        "原验收ID映射和独立复核记录"
+      ],
+      "executionStatus": "not_run",
+      "historicalExecutionIsNotCurrentEvidence": true
+    },
     {
       "id": "R2-P3-M37-REVIEW-AC01",
       "requirementRefs": [

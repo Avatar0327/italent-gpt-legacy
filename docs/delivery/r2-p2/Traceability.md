@@ -9,11 +9,11 @@
 |M37-SPEC-03|[M37_Design.md#m37-spec-03](M37_Design.md#m37-spec-03)|complete|
 |M37-SPEC-04|[M37_Design.md#m37-spec-04](M37_Design.md#m37-spec-04)|complete|
 |M37-SPEC-05|[M37_Design.md#m37-spec-05](M37_Design.md#m37-spec-05)|complete|
-|M06-SPEC-01|[M06_Design.md#m06-spec-01](M06_Design.md#m06-spec-01)|pending|
-|M06-SPEC-02|[M06_Design.md#m06-spec-02](M06_Design.md#m06-spec-02)|pending|
-|M06-SPEC-03|[M06_Design.md#m06-spec-03](M06_Design.md#m06-spec-03)|pending|
-|M06-SPEC-04|[M06_Design.md#m06-spec-04](M06_Design.md#m06-spec-04)|pending|
-|M06-SPEC-05|[M06_Design.md#m06-spec-05](M06_Design.md#m06-spec-05)|pending|
+|M06-SPEC-01|[M06_Design.md#m06-spec-01](M06_Design.md#m06-spec-01)|complete|
+|M06-SPEC-02|[M06_Design.md#m06-spec-02](M06_Design.md#m06-spec-02)|complete|
+|M06-SPEC-03|[M06_Design.md#m06-spec-03](M06_Design.md#m06-spec-03)|complete|
+|M06-SPEC-04|[M06_Design.md#m06-spec-04](M06_Design.md#m06-spec-04)|complete|
+|M06-SPEC-05|[M06_Design.md#m06-spec-05](M06_Design.md#m06-spec-05)|complete|
 |M26-SPEC-01|[M26_Design.md#m26-spec-01](M26_Design.md#m26-spec-01)|pending|
 |M26-SPEC-02|[M26_Design.md#m26-spec-02](M26_Design.md#m26-spec-02)|pending|
 |M26-SPEC-03|[M26_Design.md#m26-spec-03](M26_Design.md#m26-spec-03)|pending|

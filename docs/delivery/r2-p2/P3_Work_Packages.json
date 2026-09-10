@@ -1,6 +1,6 @@
 {
   "kind": "proposal_only_not_execution_or_controller_ledger",
-  "count": 5,
+  "count": 10,
   "tasks": [
     {
       "id": "P3-R2-M37-01",
@@ -132,6 +132,139 @@
         "R2-P3-M37-REVIEW-AC10",
         "R2-P3-M37-REVIEW-AC11",
         "R2-P3-M37-REVIEW-AC12"
+      ]
+    },
+    {
+      "id": "P3-R2-M06-01",
+      "moduleId": "M06",
+      "requirementRefs": [
+        "M06-SPEC-01"
+      ],
+      "title": "建议类别分类树、任职类别、层级、任职级别、指标类型树、指标各有稳定ID/版本/状态，分类与指标类型父子分别禁止成环；类别",
+      "designRefs": [
+        "M06_Design.md#m06-spec-01"
+      ],
+      "ownerRole": "M06实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC01",
+        "R2-P3-M06-REVIEW-AC02"
+      ]
+    },
+    {
+      "id": "P3-R2-M06-02",
+      "moduleId": "M06",
+      "requirementRefs": [
+        "M06-SPEC-02"
+      ],
+      "title": "建议资格标准含rootId/versionId、类别、级别范围、指标范围及每level×indicator的标准说明/目",
+      "designRefs": [
+        "M06_Design.md#m06-spec-02"
+      ],
+      "ownerRole": "M06实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC03"
+      ]
+    },
+    {
+      "id": "P3-R2-M06-03",
+      "moduleId": "M06",
+      "requirementRefs": [
+        "M06-SPEC-03"
+      ],
+      "title": "建议资格标准和影响评定的目录/评级方案变更走draft→submitted→approved→published，新版本",
+      "designRefs": [
+        "M06_Design.md#m06-spec-03"
+      ],
+      "ownerRole": "M06实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC04",
+        "R2-P3-M06-REVIEW-AC05",
+        "R2-P3-M06-REVIEW-AC06"
+      ]
+    },
+    {
+      "id": "P3-R2-M06-04",
+      "moduleId": "M06",
+      "requirementRefs": [
+        "M06-SPEC-04"
+      ],
+      "title": "建议本人或有明确代办权的范围HR可申请，申请保存employeeId/standardVersion/level/提交者",
+      "designRefs": [
+        "M06_Design.md#m06-spec-04"
+      ],
+      "ownerRole": "M06实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC07",
+        "R2-P3-M06-REVIEW-AC08",
+        "R2-P3-M06-REVIEW-AC09",
+        "R2-P3-M06-REVIEW-AC10"
+      ]
+    },
+    {
+      "id": "P3-R2-M06-05",
+      "moduleId": "M06",
+      "requirementRefs": [
+        "M06-SPEC-05"
+      ],
+      "title": "建议目录read/use/manage/review/publish/export、申请代办、评审、撤销和本人结果权限独",
+      "designRefs": [
+        "M06_Design.md#m06-spec-05"
+      ],
+      "ownerRole": "M06实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M06-REVIEW-AC11",
+        "R2-P3-M06-REVIEW-AC12",
+        "R2-P3-M06-REVIEW-AC13"
       ]
     }
   ]
