@@ -1,0 +1,172 @@
+{
+  "report_type": "R3_ORIGINAL_VALIDATION_EXIT_ASSESSMENT",
+  "assessed_at": "2026-09-10T15:44:16.160568+00:00",
+  "assessed_evidence_head": "272cdaf02128b5c955177ff83f283aade1a671a2",
+  "branch": "evidence/r3-origin-parity-20260910",
+  "verdict": "NOT_PASSED",
+  "origin_fully_complete": false,
+  "module_first_packs_complete": 0,
+  "module_denominator": 5,
+  "owner_gate": {
+    "id": "R3-ORIGIN-EXIT-BEFORE-P2-OWNER-20260910",
+    "source": "当前用户明确所有者决定",
+    "decision": "在R3原站验证达到完整退出条件前，不启动R3 P2。",
+    "recorded_at": "2026-09-10T15:41:44.091432+00:00",
+    "p2_start_allowed": false,
+    "origin_exit_complete": false,
+    "supersedes": "本窗口此前允许P2同步推进的执行安排；不撤销历史P1通过或篡改main准入登记。"
+  },
+  "conditions": [
+    {
+      "number": 1,
+      "condition": "五模块完整首包5/5",
+      "status": "NOT_MET",
+      "evidence": "实际0/5；对象数量和空范围拒绝不代替完整首包"
+    },
+    {
+      "number": 2,
+      "condition": "核心对象、流程、边界和主要状态实际执行及回读",
+      "status": "NOT_MET",
+      "evidence": "有局部真实执行；有人员、角色、完整生命周期与跨模块链未闭合"
+    },
+    {
+      "number": 3,
+      "condition": "53项观察及新增观察全部可追溯",
+      "status": "TRACE_CHECK_PASSED",
+      "evidence": "53/53原记录锚点和批准需求ID存在；本轮未新增业务观察，浏览器健康记录单列"
+    },
+    {
+      "number": 4,
+      "condition": "DIFF001—016充分原站证据、需求映射和P2输入",
+      "status": "NOT_MET",
+      "evidence": "16/16映射及输入备存完整，逐项证据充分性仍PARTIAL；未替负责人裁决"
+    },
+    {
+      "number": 5,
+      "condition": "001、002、005等执行阻塞解决",
+      "status": "NOT_MET",
+      "evidence": "人员前置/通知、独立角色仍未解决；005恢复未证实，003/004已解除"
+    },
+    {
+      "number": 6,
+      "condition": "不存在未知保存、发送或生效动作",
+      "status": "NOT_MET",
+      "evidence": "4项未决：课件1分钟最终值、疑似关系持久性、待入职投递、草稿取消未确认"
+    },
+    {
+      "number": 7,
+      "condition": "清单、截图、矩阵、台账、P2输入及P4案例一致",
+      "status": "PARTIAL",
+      "evidence": "已规范引用、纠正历史状态、校验输入文件和基线哈希；仅1张已有截图，业务证据覆盖仍不完整"
+    },
+    {
+      "number": 8,
+      "condition": "原子提交推送、远端同步且工作区干净",
+      "status": "PASSED_AT_ASSESSED_HEAD",
+      "evidence": "内容HEAD 272cdaf02128b5c955177ff83f283aade1a671a2已推送并独立ls-remote一致、工作区干净；报告自身提交后再核对"
+    },
+    {
+      "number": 9,
+      "condition": "正式退出报告及固定证据HEAD",
+      "status": "REPORT_ISSUED_NOT_PASSED",
+      "evidence": "本报告评估固定内容HEAD，结论为未通过，不是完整退出批准"
+    }
+  ],
+  "modules": [
+    {
+      "module": "M27",
+      "completed_scope": "空稿保存、空章节发布拒绝、课件上传转码、0时长回读、关闭通知私有发布及下架回读",
+      "remaining_scope": "失效、最终1分钟值、学员学习/考试/证书、同步锁和角色",
+      "first_pack_complete": false,
+      "registered_case_status_counts": {
+        "REVERIFIED": 1,
+        "VERIFIED": 5,
+        "PARTIAL": 1,
+        "VERIFIED_ADMIN_ONLY": 1,
+        "ENV_BLOCKED": 1,
+        "CONFIG_OBSERVED": 1,
+        "DEPENDENCY_BLOCKED": 2,
+        "VERIFIED_PRIOR_RUN": 3,
+        "ROLE_BLOCKED": 1
+      }
+    },
+    {
+      "module": "M16",
+      "completed_scope": "空活动创建、周期联动、七条空范围校验、活动内方案作用域提示",
+      "remaining_scope": "模板/权重/评分/校准/退回/锁定/历史及有人员活动",
+      "first_pack_complete": false,
+      "registered_case_status_counts": {
+        "VERIFIED_PRIOR_RUN": 1,
+        "CONFIG_OBSERVED": 3,
+        "ENV_BLOCKED": 5,
+        "DEPENDENCY_BLOCKED": 1,
+        "ROLE_BLOCKED": 1,
+        "VERIFIED_VALIDATION_ONLY": 7
+      }
+    },
+    {
+      "module": "M12",
+      "completed_scope": "私有库与10候选人、疑似取消面板回读、待入职EMP01及经理纠正",
+      "remaining_scope": "需求/职位/应聘/面试/Offer/阶段链、安全入职及通知边界",
+      "first_pack_complete": false,
+      "registered_case_status_counts": {
+        "VERIFIED_PRIOR_RUN": 5,
+        "ENV_BLOCKED": 5,
+        "PARTIAL_WITH_SIDE_EFFECT": 1,
+        "DEPENDENCY_BLOCKED": 1,
+        "ROLE_BLOCKED": 1
+      }
+    },
+    {
+      "module": "M11",
+      "completed_scope": "3班次创建回读，SMOKE01修改V2、停用和启用回读",
+      "remaining_scope": "跨日/半天/分钟/加班/排班、有引用重算、月末和角色",
+      "first_pack_complete": false,
+      "registered_case_status_counts": {
+        "VERIFIED_PRIOR_RUN": 1,
+        "CONFIG_OBSERVED": 2,
+        "PARTIAL": 2,
+        "ENV_BLOCKED": 3,
+        "DEPENDENCY_BLOCKED": 1,
+        "ROLE_BLOCKED": 1,
+        "VERIFIED": 3
+      }
+    },
+    {
+      "module": "M07",
+      "completed_scope": "薪资组回读、草稿结构和默认值、精确组查询、草稿月/否回读",
+      "remaining_scope": "R3组资格、方案保存、项目/公式/版本、空核算/追溯/权限/锁定/审计/报表",
+      "first_pack_complete": false,
+      "registered_case_status_counts": {
+        "VERIFIED_PRIOR_RUN": 1,
+        "CONFIG_OBSERVED": 3,
+        "ENV_BLOCKED": 6,
+        "DEPENDENCY_AND_ROLE_BLOCKED": 1,
+        "VERIFIED_QUERY_ONLY": 1,
+        "VERIFIED_DRAFT_ONLY": 1
+      }
+    }
+  ],
+  "objects": {
+    "originals_previously_reverified": 27,
+    "confirmed_total": 29,
+    "new_saved_this_turn": 0,
+    "unsaved_payroll_drafts": 1,
+    "employee_established": false
+  },
+  "observations": 53,
+  "differences": {
+    "Major": 13,
+    "Minor": 3,
+    "new_this_turn": 0,
+    "all_status": "待R3 P2接收，16项证据均待补，未裁决"
+  },
+  "p2_repository_status": "未启动",
+  "p2_current_start_allowed": false,
+  "p2_branch_created": false,
+  "p3_entered": false,
+  "p4_approved": false,
+  "deployed": false,
+  "minimum_manual_action": "沿用已提供R3浏览器接管入口，仅对PLAN01草稿点击可见取消一次，告知是否回到方案列表；不要保存或操作其他标签。",
+  "new_access_authorization_needed": false
+}
