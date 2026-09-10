@@ -5,7 +5,7 @@ p=argparse.ArgumentParser();p.add_argument('--task',required=True);p.add_argumen
 root=pathlib.Path(__file__).resolve().parents[1];out=root/'docs/delivery/r1-p3';sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()
 if subprocess.run(['git','diff','--quiet','HEAD','--','app','lib','db','drizzle','tests','scripts'],cwd=root).returncode:raise SystemExit('Commit source before recording exact-source evidence')
 now=lambda:datetime.datetime.now(datetime.timezone.utc).isoformat();run='r1-p3-'+datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%S%fZ');r={'runId':run,'sourceSha':sha,'taskId':a.task,'startedAt':now(),'environment':'local node:sqlite real SQL transactions; isolated fixture identities and simulated external adapters; no cloud, production, original-site or real external effects','fixtureVersion':'synthetic R1 tests at sourceSha; fixed scenario values, independently generated opaque UUIDs','fullTaskComplete':False,'independentReview':'pending','inputs':{},'checks':[]}
-for f in a.tests+['tests/support/runtime.mjs']:
+for f in a.tests+[str(p.relative_to(root)) for p in sorted((root/'tests/support').glob('*.mjs'))]:
  path=root/f;r['inputs'][f]=hashlib.sha256(path.read_bytes()).hexdigest()
 cmds=[('tests',['node','--test',*(['--test-name-pattern='+a.test_name_pattern] if a.test_name_pattern else []),*a.tests])]
 if a.typecheck:cmds.append(('types',['node','node_modules/typescript/bin/tsc','--noEmit','--pretty','false']))
