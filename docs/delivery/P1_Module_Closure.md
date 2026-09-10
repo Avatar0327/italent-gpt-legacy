@@ -2,13 +2,13 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 
 # 模块闭环、滚动转序及当前收口清单
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T02:53:58.299605+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T02:56:23.457492+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M11；备用 未启用；实际执行 M11。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M07；备用 未启用；实际执行 M07。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
 本次R2材料流水线：按最新用户批准顺序关闭R2；随后允许R3串行材料准备，未批准R3不关闭，不进入P2/P3；材料完成待评审 ；正式关闭焦点 M27。[集中评审与决定清单](P1_R2_Review_Package.md)。
 
@@ -44,7 +44,7 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 | M27 学习管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M16 绩效管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M12 招聘管理系统 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M11 假勤管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M11 假勤管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M07 薪酬社保 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 
 转序就绪 10/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
@@ -80,6 +80,18 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 | M06-CLOSE-02 / 级别 | BP-C-REQ-02 | BC-C20；BC-C21；BC-C24 | P1硬条件已满足；历史差异和补验责任保留后续阶段 | False；稳定关系/评分尺度/版本漂移/错误授予和敏感材料权限 | 按所审完整推荐与受限批准逐项核对；M06-P1-APPROVAL-R2-20260909 | 受限通过 |
 | M06-CLOSE-03 / 指标 | BP-C-REQ-02 | BC-C22；BC-C23；BC-C24 | P1硬条件已满足；历史差异和补验责任保留后续阶段 | False；稳定关系/评分尺度/版本漂移/错误授予和敏感材料权限 | 按所审完整推荐与受限批准逐项核对；M06-P1-APPROVAL-R2-20260909 | 受限通过 |
 | M06-CLOSE-04 / 资格标准 | BP-C-REQ-02 | BC-C21；BC-C23 | P1硬条件已满足；历史差异和补验责任保留后续阶段 | False；稳定关系/评分尺度/版本漂移/错误授予和敏感材料权限 | 按所审完整推荐与受限批准逐项核对；M06-P1-APPROVAL-R2-20260909 | 受限通过 |
+
+
+## M11完整登记范围收口清单
+
+| 问题/原范围 | 需求 | 证据 | 具体缺口 | 阻塞P1/风险 | 关闭方式与判据 | 当前状态 |
+|---|---|---|---|---|---|---|
+| M11-CLOSE-01 / 档案 | BP-A-REQ-01；BP-A-REQ-05 | BC-A10；BC-A12 | 规格建议与本模块LIMIT待批；考勤档案的方案分配/人员类型/历史任职范围缺证，不把当前员工orgId当全部历史范围 | True；错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05 | 已完成待评审 |
+| M11-CLOSE-02 / 排班 | BP-A-REQ-04 | BC-A05-06 | 规格建议与本模块LIMIT待批；固定班次可复用；常规轮班/多段/节假日/跨班未证仍保留，独立AI另行暂缓 | True；错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05 | 已完成待评审 |
+| M11-CLOSE-03 / 考勤 | BP-A-REQ-01；BP-A-REQ-02；BP-A-REQ-06 | BC-A02-03；BC-A04；BC-A11 | 规格建议与本模块LIMIT待批；日报/月报发布确认封存和反向/自动任务尚未实测；单人frozen不能代月报全流程 | True；错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05 | 已完成待评审 |
+| M11-CLOSE-04 / 申请 | BP-A-REQ-01；BP-A-REQ-05 | BC-A07；BC-A12 | 规格建议与本模块LIMIT待批；请假/补卡常规链、角色和历史范围待证；其他原登记内申请按现有菜单继续，不能由两类代码推全申请完整 | True；错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05 | 已完成待评审 |
+| M11-CLOSE-05 / 假期 | BP-A-REQ-03；BP-A-REQ-05 | BC-A07；BC-A08；BC-A09；BC-P1C-M11 | 规格建议与本模块LIMIT待批；授予/额度/预留/结转过期/调休结算公式和审批待证，不使用固定8小时当企业规则 | True；错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05 | 已完成待评审 |
+| M11-CLOSE-06 / AI排班 |  |  | 用户已确认独立AI能力暂缓；不计当前退出条件 | False；错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；SCOPE-20260909-CORE15原批准 | 本次子能力暂缓 |
 
 
 ## M12完整登记范围收口清单
@@ -191,6 +203,8 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 M03当前材料：[P1受限通过，需求基线已批准](P1_M03_Review_Package.md)。批准、源取证及后续执行各自独立。
 
 M06当前材料：[P1受限通过，需求基线已批准](P1_M06_Review_Package.md)。批准、源取证及后续执行各自独立。
+
+M11当前材料：[材料完成、等待所有者集中评审](P1_M11_Review_Package.md)。批准、源取证及后续执行各自独立。
 
 M12当前材料：[材料完成、等待所有者集中评审](P1_M12_Review_Package.md)。批准、源取证及后续执行各自独立。
 

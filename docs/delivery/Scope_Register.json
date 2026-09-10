@@ -3834,10 +3834,17 @@
           "p1B": "not_ready",
           "review": "not_signed",
           "approvedRestricted": false,
-          "assessmentAt": "2026-09-09T10:06:49.834482+00:00",
-          "basis": "已细化固定班/单班请假/额度预留/冻结来源/重冻版本及工资失效场景；原月报发布确认封存保留独立规格。跨班/轮班/加班调休/授予结转/企业参数及原站完整链仍缺，AI排班独立能力已暂缓，未就绪。",
-          "blockingIssueIds": [],
-          "next": "浏览器恢复后按该模块已列关键缺口补证；当前先完成首包/基础与全局一致性，不重复创建源测试对象。",
+          "assessmentAt": "2026-09-10T02:56:23.457492+00:00",
+          "basis": "完整范围材料已完成待评审；推荐/LIMIT未批准",
+          "blockingIssueIds": [
+            "M11-SPEC-01",
+            "M11-SPEC-02",
+            "M11-SPEC-03",
+            "M11-SPEC-04",
+            "M11-SPEC-05",
+            "M11-LIMIT-01"
+          ],
+          "next": "顺序准备M07；本模块等待R3集中评审",
           "acceptanceRefs": [
             {
               "taskId": "A-SOURCE",
@@ -3977,9 +3984,9 @@
         ],
         "moduleClosure": {
           "rangeId": "R3",
-          "queueState": "queued",
+          "queueState": "waiting_owner_review",
           "p1AConclusion": {
-            "status": "进行中",
+            "status": "已完成待评审",
             "approvalRecord": null,
             "evidenceRefs": [
               "BC-A02-03",
@@ -3993,40 +4000,277 @@
               "BC-A11",
               "BC-A12"
             ],
-            "limits": "沿用已有局部证据，未代签"
+            "limits": "原站常规多段/轮班/日历、自动授假折算/结转/过期/调休结算、月报自动和反向流程未执行；部分申请子类仅配置线索。AI排班按既有决定暂缓不纳退出。"
           },
           "p1BConclusion": {
-            "status": "进行中",
+            "status": "已完成待评审",
             "approvalRecord": null,
             "evidenceRefs": [],
-            "limits": "需求尚未批准"
+            "limits": "原站常规多段/轮班/日历、自动授假折算/结转/过期/调休结算、月报自动和反向流程未执行；部分申请子类仅配置线索。AI排班按既有决定暂缓不纳退出。"
           },
           "conditions": {
             "applicableScopeDetermined": {
               "value": true,
-              "basis": "用户已确认15完整登记范围及本轮R顺序"
+              "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
             },
             "implementationRulesDecided": {
-              "value": null,
-              "basis": "尚未逐模块闭环判定，不能算通过"
+              "value": false,
+              "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
             },
             "acceptanceExecutable": {
-              "value": null,
-              "basis": "尚未逐模块闭环判定，不能算通过"
+              "value": true,
+              "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
             },
             "dependenciesAndExceptionsResolved": {
-              "value": null,
-              "basis": "尚未逐模块闭环判定，不能算通过"
+              "value": false,
+              "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
             }
           },
           "transitionReview": {
             "approved": false,
             "record": null,
-            "scope": null,
+            "scope": "未批准",
             "approvedAt": null
           },
-          "restrictedApproval": null
-        }
+          "restrictedApproval": null,
+          "p1Closed": false
+        },
+        "reviewPackage": {
+          "moduleId": "M11",
+          "documentStatus": "材料完成、等待所有者集中评审",
+          "scope": "档案、排班、考勤、申请、假期、AI排班",
+          "preparedAt": "2026-09-10T02:56:23.457492+00:00",
+          "basedOnHead": "f24db9de072b23fd7e607f102c0bfee474688f09",
+          "approvalRecord": null,
+          "internalDeferralProposals": [],
+          "internalDeferralNote": "原登记完整范围全部保留；独立AI和33暂缓模块不恢复；外部服务以契约保留，不静默缩减普通业务。",
+          "confirmedRules": "当前有效成员绑定稳定员工ID；read/use/manage/review/publish/export与组织范围/字段权限求交；本人、提交者、实际材料编制者回避独立审批。版本历史、附件和下载按当前权限校验；401/403/解绑清缓存，临时故障不假0。命令以requestId+payloadHash幂等，revision并发冲突拒绝，结果未知先查原ID，不重做；业务与审计事务边界沿D1既有批准。M19审批、业务生效、外部通知分别记录；M48只消费本人许可投影，M32按明确分母与版本统计。BASE01–06沿R1目标；供应商未配置返回未配置，不模拟成功；这些共用原则引用既有批准，模块新增算法仍待批准。 模块SPEC均为建议未批准。",
+          "decisionIds": [
+            "M11-SPEC-01",
+            "M11-SPEC-02",
+            "M11-SPEC-03",
+            "M11-SPEC-04",
+            "M11-SPEC-05"
+          ],
+          "exceptionProposals": [
+            {
+              "id": "M11-LIMIT-01",
+              "status": "待所有者批准",
+              "approved": false,
+              "approvalRecord": null,
+              "scope": "原站常规多段/轮班/日历、自动授假折算/结转/过期/调休结算、月报自动和反向流程未执行；部分申请子类仅配置线索。AI排班按既有决定暂缓不纳退出。",
+              "evidence": "已有页面索引 BC-A02-03,BC-A04,BC-A05-06,BC-A07,BC-A08,BC-A09,BC-P1C-M11,BC-A10,BC-A11,BC-A12；当前静态HEAD f24db9de072b23fd7e607f102c0bfee474688f09；本轮未写原站或执行业务测试",
+              "proposal": "建议以原有局部证据、静态差异和经所有者批准的模块完整产品规则关闭P1需求；暂未验证算法留后续责任，不作为无限取证前置。未经批准不关闭。",
+              "residualRisk": "错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权",
+              "revalidation": "P2：补多段常规轮班/节假日与历史任职方案、通用申请分类、额度批次与跨年结转、加班转调休、不可变期间版本及发布确认封存、工资消费撤回阻断；P3：按本包Given/When/Then合成验证正常/边界/并发/故障，补算法及版本迁移证据，历史测试不代复验；P4：独立多角色、敏感字段/历史附件/下载、跨模块业务、生产恢复与外部联调。E2不新增人，单管理员不代验。"
+            }
+          ],
+          "closedQuestions": [
+            {
+              "problem": "已有实现与完整范围是否等价",
+              "resolution": "attendance.ts固定班次整分钟、单班扣休息，余额=credited-used-reserved，待审预留且拒绝/撤回释放；已批取消独立校验。补卡版本冲突可识别，冻结期间锁引用业务；attendance-periods只有frozen/open/refreeze/void，不是完整发布确认封存版本档案。常规轮班、多段、假期自动授予/结转、加班调休和月报完整链仍缺。AI排班已明确暂缓，不是待批内部删减。",
+              "basis": "f24db9de072b23fd7e607f102c0bfee474688f09静态，只读代码及历史记录未执行"
+            }
+          ],
+          "exitAssessment": {
+            "p1A": "局部原站与静态事实已汇总，未执行项明确LIMIT；完整/受限判定待所有者批准",
+            "p1B": "字段、权限、状态、异常、契约和验收预期已具体化；SPEC/LIMIT待批",
+            "transition": "未批准，不关闭、不转序"
+          },
+          "flowSummary": [
+            "档案和方案版本按生效区间；排班draft→reviewed→published，取消保留历史；申请draft→submitted→approved/rejected/withdrawn，生效及核算分列；额度grant/reserve/consume/release/expire/carry/correct追加事件；期间draft→frozen→published→confirmed→sealed，反向操作须独立权限和新版本。",
+            "正常/驳回/撤回/停用/撤权/更正/并发/未知分别见推荐和验收，不等同原站执行。"
+          ],
+          "acceptanceCaseRefs": [
+            "M11-REVIEW-AC01",
+            "M11-REVIEW-AC02",
+            "M11-REVIEW-AC03",
+            "M11-REVIEW-AC04",
+            "M11-REVIEW-AC05",
+            "M11-REVIEW-AC06",
+            "M11-REVIEW-AC07",
+            "M11-REVIEW-AC08",
+            "M11-REVIEW-AC09",
+            "M11-REVIEW-AC10",
+            "M11-REVIEW-AC11",
+            "M11-REVIEW-AC12"
+          ],
+          "implementationNext": [
+            "可复用：分钟交集计量、余额预留、请假/补卡独立审批、班次冻结锁、补卡版本与期间来源快照",
+            "待修改/新增：补多段常规轮班/节假日与历史任职方案、通用申请分类、额度批次与跨年结转、加班转调休、不可变期间版本及发布确认封存、工资消费撤回阻断",
+            "代码证据：lib/hris/attendance.ts,lib/hris/attendance-periods.ts,lib/hris/attendance-locks.ts,lib/hris/shift-definitions.ts,app/api/attendance/route.ts"
+          ],
+          "businessAccepted": false,
+          "productionAccepted": false,
+          "next": "顺序准备M07；本模块等待R3集中评审"
+        },
+        "sourceAccessThisUnit": {
+          "result": "本单元沿用已归档源证据，未新增浏览器取证；未遇需要重复源提交的结果未知动作。当前算法缺口以具体建议/LIMIT表达，后续仅按定向清单补证。",
+          "sourceWrite": false
+        },
+        "reviewSupplement": {
+          "sourceTimes": "源时间逐页保留；本轮静态核对 2026-09-10T02:56:23.457492+00:00 / f24db9de072b23fd7e607f102c0bfee474688f09，不把本次时间替代源观察日期。",
+          "coverage": {
+            "档案": "导航/配置局部观察；已有：BC-A10,BC-A12；源缺口保留：考勤档案的方案分配/人员类型/历史任职范围缺证，不把当前员工orgId当全部历史范围；对应SPEC形成建议和验收，未评审。",
+            "排班": "表单局部观察；已有：BC-A05-06；源缺口保留：固定班次可复用；常规轮班/多段/节假日/跨班未证仍保留，独立AI另行暂缓；对应SPEC形成建议和验收，未评审。",
+            "考勤": "配置/列表局部观察；已有：BC-A02-03,BC-A04,BC-A11；源缺口保留：日报/月报发布确认封存和反向/自动任务尚未实测；单人frozen不能代月报全流程；对应SPEC形成建议和验收，未评审。",
+            "申请": "配置局部观察；已有：BC-A07,BC-A12；源缺口保留：请假/补卡常规链、角色和历史范围待证；其他原登记内申请按现有菜单继续，不能由两类代码推全申请完整；对应SPEC形成建议和验收，未评审。",
+            "假期": "配置/表头局部观察；已有：BC-A07,BC-A08,BC-A09,BC-P1C-M11；源缺口保留：授予/额度/预留/结转过期/调休结算公式和审批待证，不使用固定8小时当企业规则；对应SPEC形成建议和验收，未评审。",
+            "AI排班": "用户已确认独立智能能力暂缓；已有：；源缺口保留：只此AI子项按本次明确边界暂缓，不恢复M40/RPA或减少常规排班；不作为当前P1退出条件；对应SPEC形成建议和验收，未评审。"
+          },
+          "dependencyContracts": [
+            "当前有效成员绑定稳定员工ID；read/use/manage/review/publish/export与组织范围/字段权限求交；本人、提交者、实际材料编制者回避独立审批。版本历史、附件和下载按当前权限校验；401/403/解绑清缓存，临时故障不假0。命令以requestId+payloadHash幂等，revision并发冲突拒绝，结果未知先查原ID，不重做；业务与审计事务边界沿D1既有批准。M19审批、业务生效、外部通知分别记录；M48只消费本人许可投影，M32按明确分母与版本统计。BASE01–06沿R1目标；供应商未配置返回未配置，不模拟成功；这些共用原则引用既有批准，模块新增算法仍待批准。",
+            "M01历史任职和法人/人员类型决定方案适用，但规则版本显式审批，不回填覆盖旧考勤。",
+            "M07仅消费指定不可变已封存期间与工资口径映射；M27培训出勤不能自动当员工考勤；M48本人申请确认、M32当前/历史期间分开。"
+          ],
+          "targetedEvidence": [
+            "定向读考勤档案、常规轮班/多段、跨日/节假日配置，不探索AI排班。",
+            "核假期授予/结转/失效与调休结算参数说明；缺法域政策不填默认法定数值。",
+            "核月报冻结/发布/确认/封存及逆向依赖、加班/出差/外出申请的实际菜单和字段。"
+          ]
+        },
+        "closureChecklist": [
+          {
+            "id": "M11-CLOSE-01",
+            "scopeItem": "档案",
+            "requirementIds": [
+              "BP-A-REQ-01",
+              "BP-A-REQ-05"
+            ],
+            "evidenceRefs": [
+              "BC-A10",
+              "BC-A12"
+            ],
+            "gap": "规格建议与本模块LIMIT待批；考勤档案的方案分配/人员类型/历史任职范围缺证，不把当前员工orgId当全部历史范围",
+            "blocksP1": true,
+            "risk": "错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权",
+            "closureMethod": "核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定",
+            "basis": "M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M11-SPEC-01",
+              "M11-SPEC-02",
+              "M11-SPEC-03",
+              "M11-SPEC-04",
+              "M11-SPEC-05"
+            ]
+          },
+          {
+            "id": "M11-CLOSE-02",
+            "scopeItem": "排班",
+            "requirementIds": [
+              "BP-A-REQ-04"
+            ],
+            "evidenceRefs": [
+              "BC-A05-06"
+            ],
+            "gap": "规格建议与本模块LIMIT待批；固定班次可复用；常规轮班/多段/节假日/跨班未证仍保留，独立AI另行暂缓",
+            "blocksP1": true,
+            "risk": "错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权",
+            "closureMethod": "核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定",
+            "basis": "M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M11-SPEC-01",
+              "M11-SPEC-02",
+              "M11-SPEC-03",
+              "M11-SPEC-04",
+              "M11-SPEC-05"
+            ]
+          },
+          {
+            "id": "M11-CLOSE-03",
+            "scopeItem": "考勤",
+            "requirementIds": [
+              "BP-A-REQ-01",
+              "BP-A-REQ-02",
+              "BP-A-REQ-06"
+            ],
+            "evidenceRefs": [
+              "BC-A02-03",
+              "BC-A04",
+              "BC-A11"
+            ],
+            "gap": "规格建议与本模块LIMIT待批；日报/月报发布确认封存和反向/自动任务尚未实测；单人frozen不能代月报全流程",
+            "blocksP1": true,
+            "risk": "错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权",
+            "closureMethod": "核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定",
+            "basis": "M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M11-SPEC-01",
+              "M11-SPEC-02",
+              "M11-SPEC-03",
+              "M11-SPEC-04",
+              "M11-SPEC-05"
+            ]
+          },
+          {
+            "id": "M11-CLOSE-04",
+            "scopeItem": "申请",
+            "requirementIds": [
+              "BP-A-REQ-01",
+              "BP-A-REQ-05"
+            ],
+            "evidenceRefs": [
+              "BC-A07",
+              "BC-A12"
+            ],
+            "gap": "规格建议与本模块LIMIT待批；请假/补卡常规链、角色和历史范围待证；其他原登记内申请按现有菜单继续，不能由两类代码推全申请完整",
+            "blocksP1": true,
+            "risk": "错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权",
+            "closureMethod": "核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定",
+            "basis": "M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M11-SPEC-01",
+              "M11-SPEC-02",
+              "M11-SPEC-03",
+              "M11-SPEC-04",
+              "M11-SPEC-05"
+            ]
+          },
+          {
+            "id": "M11-CLOSE-05",
+            "scopeItem": "假期",
+            "requirementIds": [
+              "BP-A-REQ-03",
+              "BP-A-REQ-05"
+            ],
+            "evidenceRefs": [
+              "BC-A07",
+              "BC-A08",
+              "BC-A09",
+              "BC-P1C-M11"
+            ],
+            "gap": "规格建议与本模块LIMIT待批；授予/额度/预留/结转过期/调休结算公式和审批待证，不使用固定8小时当企业规则",
+            "blocksP1": true,
+            "risk": "错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权",
+            "closureMethod": "核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定",
+            "basis": "M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M11-SPEC-01",
+              "M11-SPEC-02",
+              "M11-SPEC-03",
+              "M11-SPEC-04",
+              "M11-SPEC-05"
+            ]
+          },
+          {
+            "id": "M11-CLOSE-06",
+            "scopeItem": "AI排班",
+            "requirementIds": [],
+            "evidenceRefs": [],
+            "gap": "用户已确认独立AI能力暂缓；不计当前退出条件",
+            "blocksP1": false,
+            "risk": "错误缺勤/扣假、跨日跨年重复消费、工资引用失效、敏感证明越权",
+            "closureMethod": "核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定",
+            "basis": "SCOPE-20260909-CORE15原批准",
+            "status": "本次子能力暂缓",
+            "decisionIds": []
+          }
+        ]
       },
       "businessPackage": "BP-A"
     },
@@ -13631,7 +13875,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-10T02:53:58.299605+00:00",
+    "updatedAt": "2026-09-10T02:56:23.457492+00:00",
     "authority": "Scope_Register.json为唯一范围/验收事实源；历史48/59保留，当前15模块及基础按SCOPE-20260909-CORE15。",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -46653,27 +46897,27 @@
       "latestAuthorizationAt": "2026-09-09T06:25:42.812752+00:00",
       "scopeChangeHead": "f31cb2b5e1894723288fd884d4e3bd895ae57327",
       "scopeChange": "SCOPE-20260909-CORE15",
-      "latestCheckpointAt": "2026-09-10T02:53:58.299605+00:00",
-      "latestCommittedHead": "ecd32d4b399417df79fe96adbdcd29ae868aad45",
+      "latestCheckpointAt": "2026-09-10T02:56:23.457492+00:00",
+      "latestCommittedHead": "f24db9de072b23fd7e607f102c0bfee474688f09",
       "latestEvidenceRefs": [
         "BC-C39",
         "BC-C40",
         "BC-C28",
         "R2-RO-M17-01"
       ],
-      "next": "继续M11P1；已准备模块排队待R3集中评审",
+      "next": "继续M07P1；已准备模块排队待R3集中评审",
       "browserRecovery": "历史CDP超时已在本轮恢复：可列出标签及定向只读访问；M26入口误到页未计证，M18/M17有限回查成功。具体访问限制保留于各模块，不再把整站连接故障列为当前共同阻塞。",
       "sourceBrowsingStatus": "连接已恢复可读；M26入口误到页未计证；M18旧合成项目回查；M17完整名只读确认旧流程存在停用。无新源业务写入。",
-      "currentFocus": "M11唯一主模块",
+      "currentFocus": "M07唯一主模块",
       "checkpointCommitSemantics": "latestCommittedHead为本单元编辑开始前已存在提交；本记录所属提交用git log -1 -- docs/delivery/Scope_Register.json解析，不能将基准冒充最终HEAD。",
-      "workingTreeAtResume": "本单元编辑基准ecd32d4b399417df79fe96adbdcd29ae868aad45；只P1文档/生成机制",
+      "workingTreeAtResume": "本单元编辑基准f24db9de072b23fd7e607f102c0bfee474688f09；只P1文档/生成机制",
       "lastVerifiedSync": {
         "commit": "990fd8cf169f990cd2f67ce3b23ddd6468c101c6",
         "remoteBranch": "main",
         "result": "push成功，ls-remote与HEAD一致；当前汇编为后续编辑单元",
         "scope": "M03完整评审材料及之前五单元"
       },
-      "currentUnitOutcome": "M12完整P1材料完成未批准；累计10/15受限关闭",
+      "currentUnitOutcome": "M11完整P1材料完成未批准；累计10/15受限关闭",
       "previousAtomicOutcome": "BC-C28旧流程曾未知，现R2-RO-M17-01已确认存在停用，UUID未取；M18已存项目未执行启动，EA/兼职及其他源历史不冒本轮复验。",
       "sourceWritePolicy": "本轮最新边界：原站只读，不修改原站数据；此前合成记录授权作为历史保留，本夜间单元不据此新增写入。",
       "historicalExecutionBoundary": "用户已确认当前北森租户可用于测试，并授权P1所需合成关联记录的创建、保存、提交及必要状态流转；先查可复用记录，统一P1V-20260909标记，逐链记录ID/关联/前后状态和结果，不逐条重问。不得任意更改真实员工或既有业务；不扩大到真实业务生效、外部通知、支付、签署或新增人类访问者。产品代码、部署、D1–D7/E1/E2继续保持。 最新范围仅当前15模块和基础/最小必要公共依赖；33模块停止独立探索/新数据链，已有前置可必要引用，不为停点做完整链。"
@@ -47916,7 +48160,7 @@
   "roadmap": {
     "revision": "2026-09-09-module-closure-rolling-R",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-10T02:53:58.299605+00:00",
+    "updatedAt": "2026-09-10T02:56:23.457492+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -47999,7 +48243,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M11唯一主模块",
+    "activeWorkPackage": "M07唯一主模块",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -48014,7 +48258,7 @@
       "BP-S"
     ],
     "nextTasks": [
-      "继续M11P1；已准备模块排队待R3集中评审",
+      "继续M07P1；已准备模块排队待R3集中评审",
       "保留10/15受限关闭，R3未批准不计完成",
       "提交后独立看板同步，失败不阻P1"
     ],
@@ -48029,10 +48273,10 @@
       "id": "MODE-MODULE-CLOSURE-R-20260909",
       "authorizedAt": "2026-09-09T15:43:36.730682+00:00",
       "mode": "模块闭环优先、按R版本滚动转序",
-      "primaryModuleId": "M11",
+      "primaryModuleId": "M07",
       "backupModuleId": null,
       "backupCandidateId": null,
-      "activeExecutionModuleId": "M11",
+      "activeExecutionModuleId": "M07",
       "wipLimit": 1,
       "backupLimit": 1,
       "backupActivation": "仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归",
@@ -48279,6 +48523,21 @@
             "M12-LIMIT-01"
           ],
           "restore": "集中批准后按M27→M16→M12→M11→M07逐个判定"
+        },
+        {
+          "at": "2026-09-10T02:56:23.457492+00:00",
+          "from": "M11",
+          "to": "M07",
+          "reason": "本模块可自主材料完成，仅剩新业务选择及LIMIT，按本轮明确R3材料授权转下一项",
+          "remaining": [
+            "M11-SPEC-01",
+            "M11-SPEC-02",
+            "M11-SPEC-03",
+            "M11-SPEC-04",
+            "M11-SPEC-05",
+            "M11-LIMIT-01"
+          ],
+          "restore": "集中批准后按M27→M16→M12→M11→M07逐个判定"
         }
       ],
       "backupActivationHistory": [
@@ -48364,12 +48623,14 @@
         "preparedModuleIds": [
           "M27",
           "M16",
-          "M12"
+          "M12",
+          "M11"
         ],
         "waitingModuleIds": [
           "M27",
           "M16",
-          "M12"
+          "M12",
+          "M11"
         ],
         "formalClosureOrder": [
           "M27",
@@ -48790,7 +49051,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-10T02:53:58.299605+00:00",
+    "updatedAt": "2026-09-10T02:56:23.457492+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -53971,6 +54232,185 @@
                 "status": "候选待评审；静态对照，本轮未业务执行",
                 "accepted": false,
                 "executionThisRun": false
+              },
+              {
+                "id": "M11-REVIEW-AC01",
+                "scopeItem": "档案、排班、考勤、申请、假期、AI排班",
+                "given": "跨日多工作段和休息",
+                "when": "计算请假分钟",
+                "then": "按工作并集交集，不按整段或固定8小时",
+                "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M11-REVIEW-AC02",
+                "scopeItem": "档案、排班、考勤、申请、假期、AI排班",
+                "given": "历史任职方案已变",
+                "when": "重读旧期间",
+                "then": "使用冻结版本且当前权限，不跟随新方案",
+                "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M11-REVIEW-AC03",
+                "scopeItem": "档案、排班、考勤、申请、假期、AI排班",
+                "given": "无日历/方案",
+                "when": "生成日报",
+                "then": "未配置，不产生缺勤扣罚",
+                "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M11-REVIEW-AC04",
+                "scopeItem": "档案、排班、考勤、申请、假期、AI排班",
+                "given": "最后额度两申请并发",
+                "when": "提交预留",
+                "then": "只可用量内成功，不出现负余额",
+                "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M11-REVIEW-AC05",
+                "scopeItem": "档案、排班、考勤、申请、假期、AI排班",
+                "given": "跨年班次请假",
+                "when": "核扣额度",
+                "then": "按工作段分年，批次有据",
+                "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M11-REVIEW-AC06",
+                "scopeItem": "档案、排班、考勤、申请、假期、AI排班",
+                "given": "预留额度过期后撤回",
+                "when": "释放预留",
+                "then": "不复活过期余额",
+                "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M11-REVIEW-AC07",
+                "scopeItem": "档案、排班、考勤、申请、假期、AI排班",
+                "given": "缺卡且原始事件后来补到",
+                "when": "重新解析",
+                "then": "留两种来源及版本，不删除原证据",
+                "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M11-REVIEW-AC08",
+                "scopeItem": "档案、排班、考勤、申请、假期、AI排班",
+                "given": "待审更正影响期间",
+                "when": "冻结月报",
+                "then": "阻冻结并列明影响项",
+                "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M11-REVIEW-AC09",
+                "scopeItem": "档案、排班、考勤、申请、假期、AI排班",
+                "given": "已发布月报尚未本人确认",
+                "when": "确认截止到期",
+                "then": "待确认或异常，不假确认",
+                "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M11-REVIEW-AC10",
+                "scopeItem": "档案、排班、考勤、申请、假期、AI排班",
+                "given": "工资已引用期间",
+                "when": "解封更正",
+                "then": "独立权限、新版及工资影响提示，不改旧引用",
+                "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M11-REVIEW-AC11",
+                "scopeItem": "档案、排班、考勤、申请、假期、AI排班",
+                "given": "同加班事件重算调休",
+                "when": "重复执行",
+                "then": "一次授予，不同时重复支付兑换",
+                "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M11-REVIEW-AC12",
+                "scopeItem": "档案、排班、考勤、申请、假期、AI排班",
+                "given": "健康证明字段撤权",
+                "when": "读取历史附件",
+                "then": "当前验权拒绝，不能沿旧链接读取",
+                "basis": "本模块推荐未批准；M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ],
+            "moduleReviewRecommendationRefs": [
+              "M11-SPEC-01",
+              "M11-SPEC-02",
+              "M11-SPEC-03",
+              "M11-SPEC-04",
+              "M11-SPEC-05"
+            ],
+            "reviewSemantics": {
+              "sourceHead": "f24db9de072b23fd7e607f102c0bfee474688f09",
+              "staticFacts": "attendance.ts固定班次整分钟、单班扣休息，余额=credited-used-reserved，待审预留且拒绝/撤回释放；已批取消独立校验。补卡版本冲突可识别，冻结期间锁引用业务；attendance-periods只有frozen/open/refreeze/void，不是完整发布确认封存版本档案。常规轮班、多段、假期自动授予/结转、加班调休和月报完整链仍缺。AI排班已明确暂缓，不是待批内部删减。",
+              "proposals": [
+                "M11-SPEC-01",
+                "M11-SPEC-02",
+                "M11-SPEC-03",
+                "M11-SPEC-04",
+                "M11-SPEC-05"
+              ],
+              "commonBoundary": "当前有效成员绑定稳定员工ID；read/use/manage/review/publish/export与组织范围/字段权限求交；本人、提交者、实际材料编制者回避独立审批。版本历史、附件和下载按当前权限校验；401/403/解绑清缓存，临时故障不假0。命令以requestId+payloadHash幂等，revision并发冲突拒绝，结果未知先查原ID，不重做；业务与审计事务边界沿D1既有批准。M19审批、业务生效、外部通知分别记录；M48只消费本人许可投影，M32按明确分母与版本统计。BASE01–06沿R1目标；供应商未配置返回未配置，不模拟成功；这些共用原则引用既有批准，模块新增算法仍待批准。",
+              "objectFields": "attendanceProfileId/effectiveVersion、employmentContextId、calendarVersion、shiftDefinition/version、rosterId/shiftId、clockEventId、requestId(type)、leaveType/version、entitlementLotId/ledgerEventId、periodRoot/version、publicationId/confirmationId。时区及跨日归属明确，时长整数分钟但原设备时戳不丢精度；假期天与分钟通过当日排班规则映射，不默认8小时。",
+              "roles": "HR配置考勤档案和方案；排班管理、原始打卡导入、本人申请、独立审批、结算冻结/发布/解封分别授权；地点/健康证明等敏感材料独立字段权限；管理员不代独立审批。",
+              "lifecycle": "档案和方案版本按生效区间；排班draft→reviewed→published，取消保留历史；申请draft→submitted→approved/rejected/withdrawn，生效及核算分列；额度grant/reserve/consume/release/expire/carry/correct追加事件；期间draft→frozen→published→confirmed→sealed，反向操作须独立权限和新版本。"
+            },
+            "fieldDetails": [
+              {
+                "field": "M11稳定对象与新增规格",
+                "definition": "attendanceProfileId/effectiveVersion、employmentContextId、calendarVersion、shiftDefinition/version、rosterId/shiftId、clockEventId、requestId(type)、leaveType/version、entitlementLotId/ledgerEventId、periodRoot/version、publicationId/confirmationId。时区及跨日归属明确，时长整数分钟但原设备时戳不丢精度；假期天与分钟通过当日排班规则映射，不默认8小时。",
+                "constraints": "本次建议，需M11-SPEC-01,M11-SPEC-02,M11-SPEC-03,M11-SPEC-04,M11-SPEC-05及R3基线批准；不得以现实现上限缩减范围",
+                "basis": "本次P1静态与原证据对照"
+              }
+            ],
+            "roleMatrix": [
+              {
+                "role": "M11模块权限建议",
+                "read": "HR配置考勤档案和方案；排班管理、原始打卡导入、本人申请、独立审批、结算冻结/发布/解封分别授权；地点/健康证明等敏感材料独立字段权限；管理员不代独立审批。",
+                "write": "见模块SPEC逐命令守卫；当前有效成员绑定稳定员工ID；read/use/manage/review/publish/export与组织范围/字段权限求交；本人、提交者、实际材料编制者回避独立审批。版本历史、附件和下载按当前权限校验；401/403/解绑清缓存，临时故障不假0。命令以requestId+payloadHash幂等，revision并发冲突拒绝，结果未知先查原ID，不重做；业务与审计事务边界沿D1既有批准。M19审批、业务生效、外部通知分别记录；M48只消费本人许可投影，M32按明确分母与版本统计。BASE01–06沿R1目标；供应商未配置返回未配置，不模拟成功；这些共用原则引用既有批准，模块新增算法仍待批准。",
+                "boundary": "全部新增规则未批准，当前仅文档"
+              }
+            ],
+            "stateTransitions": [
+              {
+                "from": "模块对象各自初态",
+                "event": "显式授权业务命令",
+                "to": "档案和方案版本按生效区间；排班draft→reviewed→published，取消保留历史；申请draft→submitted→approved/rejected/withdrawn，生效及核算分列；额度grant/reserve/consume/release/expire/carry/correct追加事件；期间draft→frozen→published→confirmed→sealed，反向操作须独立权限和新版本。",
+                "guards": "见SPEC守卫；不以审批成功冒业务生效",
+                "basis": "本项目建议，非原站已执行"
               }
             ]
           },
@@ -57891,6 +58331,29 @@
           ],
           "note": "静态实现与需求建议映射；未执行/未批准"
         }
+      },
+      {
+        "requirement": "M11-REVIEW",
+        "capability": "档案、排班、考勤、申请、假期、AI排班",
+        "disposition": "部分可复用，待修改/新增",
+        "evidence": "f24db9de072b23fd7e607f102c0bfee474688f09；lib/hris/attendance.ts,lib/hris/attendance-periods.ts,lib/hris/attendance-locks.ts,lib/hris/shift-definitions.ts,app/api/attendance/route.ts",
+        "gap": "补多段常规轮班/节假日与历史任职方案、通用申请分类、额度批次与跨年结转、加班转调休、不可变期间版本及发布确认封存、工资消费撤回阻断",
+        "acceptance": "M11-REVIEW-AC01,M11-REVIEW-AC02,M11-REVIEW-AC03,M11-REVIEW-AC04,M11-REVIEW-AC05,M11-REVIEW-AC06,M11-REVIEW-AC07,M11-REVIEW-AC08,M11-REVIEW-AC09,M11-REVIEW-AC10,M11-REVIEW-AC11,M11-REVIEW-AC12",
+        "currentApplicability": {
+          "status": "保留",
+          "moduleIds": [
+            "M11"
+          ],
+          "baseCapabilityIds": [
+            "BASE-01",
+            "BASE-02",
+            "BASE-03",
+            "BASE-04",
+            "BASE-05",
+            "BASE-06"
+          ],
+          "note": "静态实现与需求建议映射；未执行/未批准"
+        }
       }
     ],
     "reviewIssues": [
@@ -59509,6 +59972,86 @@
           "M12"
         ],
         "preparedAt": "2026-09-10T02:53:58.299605+00:00"
+      },
+      {
+        "id": "M11-SPEC-01",
+        "topic": "档案、排班和计时",
+        "basis": "attendance.ts固定班次整分钟、单班扣休息，余额=credited-used-reserved，待审预留且拒绝/撤回释放；已批取消独立校验。补卡版本冲突可识别，冻结期间锁引用业务；attendance-periods只有frozen/open/refreeze/void，不是完整发布确认封存版本档案。常规轮班、多段、假期自动授予/结转、加班调休和月报完整链仍缺。AI排班已明确暂缓，不是待批内部删减。；源证据见本模块页面索引，不将代码当原站规则",
+        "proposal": "建议员工稳定ID+任职上下文+考勤方案有效区间，区间不重叠；排班冻结日历/班次版本，保留固定/轮班/多工作段和多休息段，不以当前单段限制缩范围。跨日班按开始业务日归属，核算按实际时区瞬时时长及工作段并集，重叠工作/休息冲突拒绝；假期天数以当天应工作分钟折算，不硬编码8小时。无方案或节假日参数时标未配置，不产生缺勤判罚。",
+        "alternatives": "按自然日拆跨日班可选，但需整套工资/假期一致口径。",
+        "impact": "历史考勤完整性、常规排班及分钟精度。",
+        "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
+        "status": "已具体化待集中评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M11"
+        ],
+        "preparedAt": "2026-09-10T02:56:23.457492+00:00"
+      },
+      {
+        "id": "M11-SPEC-02",
+        "topic": "申请、打卡和补正",
+        "basis": "attendance.ts固定班次整分钟、单班扣休息，余额=credited-used-reserved，待审预留且拒绝/撤回释放；已批取消独立校验。补卡版本冲突可识别，冻结期间锁引用业务；attendance-periods只有frozen/open/refreeze/void，不是完整发布确认封存版本档案。常规轮班、多段、假期自动授予/结转、加班调休和月报完整链仍缺。AI排班已明确暂缓，不是待批内部删减。；源证据见本模块页面索引，不将代码当原站规则",
+        "proposal": "建议请假、补卡及原登记内加班/调班/外出/出差以显式type和独立字段规则维护，不互相伪装。原始打卡事件只追加、设备来源和接收时点留存，服务端打卡不冒GPS/设备验证。补正新版本覆盖解析视图而不删原事件；同一时段冲突申请阻提交或要求明确兼容策略；审批、生效、核算分列，冻结期更正须走期间重开或后续调整。",
+        "alternatives": "直接编辑原打卡记录无法追溯，不推荐。",
+        "impact": "补正证据、冲突和审批效力。",
+        "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
+        "status": "已具体化待集中评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M11"
+        ],
+        "preparedAt": "2026-09-10T02:56:23.457492+00:00"
+      },
+      {
+        "id": "M11-SPEC-03",
+        "topic": "额度批次、结转和调休",
+        "basis": "attendance.ts固定班次整分钟、单班扣休息，余额=credited-used-reserved，待审预留且拒绝/撤回释放；已批取消独立校验。补卡版本冲突可识别，冻结期间锁引用业务；attendance-periods只有frozen/open/refreeze/void，不是完整发布确认封存版本档案。常规轮班、多段、假期自动授予/结转、加班调休和月报完整链仍缺。AI排班已明确暂缓，不是待批内部删减。；源证据见本模块页面索引，不将代码当原站规则",
+        "proposal": "建议额度按员工/假种/批次/适用年度/生效截止/政策版本事件账记录，使用最早到期批次优先且提交即预留；批准转消费，拒绝撤回释放。跨年请假按排班工作段分年扣账；已过期额度释放不重新变可用，需按原批次时点派生。授予/工龄折算/上限/结转期限/调休兑换及结算须经审批的法域和企业参数完整，未配置阻计算，不能推定法定额度。加班须核验实际工作及明确兑换率，支付与调休只能按显式政策分配不重复享用。",
+        "alternatives": "按审批年份扣全量或统一永不过期简化实现，但可能错扣，不推荐。",
+        "impact": "余额完整性和法域参数；不替代政策合规评审。",
+        "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
+        "status": "已具体化待集中评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M11"
+        ],
+        "preparedAt": "2026-09-10T02:56:23.457492+00:00"
+      },
+      {
+        "id": "M11-SPEC-04",
+        "topic": "期间发布确认封存",
+        "basis": "attendance.ts固定班次整分钟、单班扣休息，余额=credited-used-reserved，待审预留且拒绝/撤回释放；已批取消独立校验。补卡版本冲突可识别，冻结期间锁引用业务；attendance-periods只有frozen/open/refreeze/void，不是完整发布确认封存版本档案。常规轮班、多段、假期自动授予/结转、加班调休和月报完整链仍缺。AI排班已明确暂缓，不是待批内部删减。；源证据见本模块页面索引，不将代码当原站规则",
+        "proposal": "建议采用显式冻结→发布→确认→封存作为本项目默认配置，冻结需无未处理冲突/在途影响项；源可选步骤不冒必然顺序。发布冻结快照，员工确认是确认收到及异议状态，不等放弃申诉；超期不自动视为确认。解封/撤回/解冻独立授权留原因并产生新版本；已被工资引用的旧版保留，重开先提示影响并阻悄悄改写已核薪结果。自动任务只调用同一守卫，失败保留可重试状态。",
+        "alternatives": "允许跳确认直接封存须显式审批例外和异议补办责任，不默认豁免。",
+        "impact": "月报状态、员工异议及工资历史。",
+        "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
+        "status": "已具体化待集中评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M11"
+        ],
+        "preparedAt": "2026-09-10T02:56:23.457492+00:00"
+      },
+      {
+        "id": "M11-SPEC-05",
+        "topic": "核算异常与接口",
+        "basis": "attendance.ts固定班次整分钟、单班扣休息，余额=credited-used-reserved，待审预留且拒绝/撤回释放；已批取消独立校验。补卡版本冲突可识别，冻结期间锁引用业务；attendance-periods只有frozen/open/refreeze/void，不是完整发布确认封存版本档案。常规轮班、多段、假期自动授予/结转、加班调休和月报完整链仍缺。AI排班已明确暂缓，不是待批内部删减。；源证据见本模块页面索引，不将代码当原站规则",
+        "proposal": "建议考勤完整性与缺勤/迟到/加班业务算法分别配置；缺卡/冲突/无排班为待核实，不自动扣薪。报表行粒度为员工任职/班次/期间，统计缺失单列；工资映射需字段单位、版本、有效日期与冻结来源校验。并发额度预留与期间冻结同revision一致，重复请求/设备事件不重复入账；断网回执未知先按原事件查询，外部未配置不冒同步成功。",
+        "alternatives": "以缺卡直接扣整日将新增处罚规则，不采用默认。",
+        "impact": "工资与考勤准确性、异常恢复。",
+        "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
+        "status": "已具体化待集中评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M11"
+        ],
+        "preparedAt": "2026-09-10T02:56:23.457492+00:00"
       }
     ],
     "codeReview": {

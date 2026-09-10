@@ -1,6 +1,6 @@
 # 已有实现与产品需求对应
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T02:53:58.299605+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T02:56:23.457492+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
@@ -71,6 +71,7 @@
 | M27-REVIEW | 资源、问卷、计划、实施、考试、师资、报表 | 保留；M27、BASE-01、BASE-02、BASE-03、BASE-04、BASE-05、BASE-06；静态实现与需求建议映射；未执行/未批准 | 部分可复用，待修改/新增 | f39f667265a228202c5b63fa55ee00c60117e8f2；lib/hris/learning-assignments.ts,lib/hris/learning-plan-definitions.ts,lib/hris/learning-content-update.ts,lib/hris/learning-exam-definitions.ts,lib/hris/learning-homework.ts,lib/hris/training-sessions.ts,lib/hris/mentoring.ts,lib/hris/certificates.ts | 设计自动循环调度及cycleKey幂等、完成实例显式改版、完整题型/抽题/人工批阅、费用与课酬版本化、问卷隐私、学分事件账及跨模块有效性；保留隔离learning-description分支，不合并 | M27-REVIEW-AC01,M27-REVIEW-AC02,M27-REVIEW-AC03,M27-REVIEW-AC04,M27-REVIEW-AC05,M27-REVIEW-AC06,M27-REVIEW-AC07,M27-REVIEW-AC08,M27-REVIEW-AC09,M27-REVIEW-AC10,M27-REVIEW-AC11,M27-REVIEW-AC12 |
 | M16-REVIEW | 工作台、OKR、员工/组织目标与绩效 | 保留；M16、BASE-01、BASE-02、BASE-03、BASE-04、BASE-05、BASE-06；静态实现与需求建议映射；未执行/未批准 | 部分可复用，待修改/新增 | 689b6753dfbb85cdcc9cd95f6ad185e0641f9a47；lib/hris/performance.ts,lib/hris/performance-ratings.ts,lib/hris/performance-changes.ts,lib/hris/performance-checkins.ts,lib/hris/performance-availability.ts,lib/hris/module-progress.ts | 补组织绩效稳定对象、OKR目标/KR/对齐及复盘、多维评分和缺评类型、兼职上下文、时间窗口、强制分布与系数契约；复核更正发布回避及下游影响 | M16-REVIEW-AC01,M16-REVIEW-AC02,M16-REVIEW-AC03,M16-REVIEW-AC04,M16-REVIEW-AC05,M16-REVIEW-AC06,M16-REVIEW-AC07,M16-REVIEW-AC08,M16-REVIEW-AC09,M16-REVIEW-AC10,M16-REVIEW-AC11,M16-REVIEW-AC12 |
 | M12-REVIEW | 需求、职位、应聘者、面试、人才库 | 保留；M12、BASE-01、BASE-02、BASE-03、BASE-04、BASE-05、BASE-06；静态实现与需求建议映射；未执行/未批准 | 部分可复用，待修改/新增 | ecd32d4b399417df79fe96adbdcd29ae868aad45；lib/hris/recruitment.ts,lib/hris/recruitment-jobs.ts,lib/hris/interview-schedule.ts,lib/hris/recruitment-evaluations.ts,app/api/recruitment/route.ts | 拆自然人/申请/库关系与去重审核；Offer版本及参与者历史、人数预留账和失效释放、M01稳定身份与再入职接口、排期修订历史、候选用途权限与外部渠道状态 | M12-REVIEW-AC01,M12-REVIEW-AC02,M12-REVIEW-AC03,M12-REVIEW-AC04,M12-REVIEW-AC05,M12-REVIEW-AC06,M12-REVIEW-AC07,M12-REVIEW-AC08,M12-REVIEW-AC09,M12-REVIEW-AC10,M12-REVIEW-AC11,M12-REVIEW-AC12 |
+| M11-REVIEW | 档案、排班、考勤、申请、假期、AI排班 | 保留；M11、BASE-01、BASE-02、BASE-03、BASE-04、BASE-05、BASE-06；静态实现与需求建议映射；未执行/未批准 | 部分可复用，待修改/新增 | f24db9de072b23fd7e607f102c0bfee474688f09；lib/hris/attendance.ts,lib/hris/attendance-periods.ts,lib/hris/attendance-locks.ts,lib/hris/shift-definitions.ts,app/api/attendance/route.ts | 补多段常规轮班/节假日与历史任职方案、通用申请分类、额度批次与跨年结转、加班转调休、不可变期间版本及发布确认封存、工资消费撤回阻断 | M11-REVIEW-AC01,M11-REVIEW-AC02,M11-REVIEW-AC03,M11-REVIEW-AC04,M11-REVIEW-AC05,M11-REVIEW-AC06,M11-REVIEW-AC07,M11-REVIEW-AC08,M11-REVIEW-AC09,M11-REVIEW-AC10,M11-REVIEW-AC11,M11-REVIEW-AC12 |
 
 ## 原48组实现候选与当前适用（历史资产保留）
 
