@@ -1,0 +1,18 @@
+{
+  "at": "2026-09-10T14:25:08.548Z",
+  "caseId": "M32-ORG-FILTER-001",
+  "intendedFilter": "姓名EMP001+EMP002，入职今天，任职部门仅ORG002",
+  "actualAppliedFilter": "后续工具栏回读显示任职部门未选中；只有两人姓名和今天入职条件实际生效",
+  "resultInterpretation": "组织候选文字点击没有形成选中条件，当前2行不构成组织过滤失败证据；继续检查正式勾选控件",
+  "departmentId": "db7df096-624b-4d1e-ab4e-0552a56f052c",
+  "rows": [
+    "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_002\t--\t--\t--\t--\tZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_002\t2026-09-10\tZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\tZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001\t--\t--\t--\t--\t0.0\t--\t试用\t华夏九洲集团\tZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\t1",
+    "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001\t--\t--\t--\t--\tZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001\t2026-09-10\tZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\tZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001\t--\t--\t--\t--\t0.0\t--\t正式\t华夏九洲集团\tZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\t1"
+  ],
+  "expected": {
+    "employeeId": "66ea978b-f2e9-47b1-b3a6-6176234d1fe0",
+    "people": 1,
+    "probation": 1
+  },
+  "classificationNote": "查询过滤，不是独立角色权限隔离验证"
+}

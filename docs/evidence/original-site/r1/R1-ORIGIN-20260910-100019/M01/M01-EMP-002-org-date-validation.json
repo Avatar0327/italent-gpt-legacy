@@ -1,0 +1,14 @@
+{
+  "at":"2026-09-10T13:48:11.350Z",
+  "caseId":"M01-EMP-002-ORG-DATE",
+  "employeeName":"ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_002",
+  "departmentId":"db7df096-624b-4d1e-ab4e-0552a56f052c",
+  "inputJoinedOn":"2026-09-01",
+  "actual":"入职日期（2026-09-01）不能早于任职部门【ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002】的最早生效日期（2026-09-10），请检查修改入职日期或通过修改部门的设立日期来调整部门最早生效日期",
+  "decision":"仅纠正本轮新员工草稿入职日期为9/10；不修改组织设立日期或既有历史",
+  "role":"ORIGIN-ADMIN-01",
+  "environment":"https://srworkshopbj.italent.cn",
+  "recordId":null,
+  "screenshot":null,
+  "evidenceMode":"正式表单body.innerText；错误对话框我知道了后关闭，尚未创建"
+}

@@ -1,0 +1,46 @@
+{
+  "at": "2026-09-10T14:16:19.816Z",
+  "caseId": "M01-ORG-003-EDIT-001",
+  "orgId": "a7b55bd7-0ef2-44a0-9d29-6259fe053da3",
+  "role": "ORIGIN-ADMIN-01",
+  "phase": "presubmit",
+  "fields": [
+    {
+      "label": "名称",
+      "values": [
+        "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003"
+      ]
+    },
+    {
+      "label": "简称",
+      "values": [
+        "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003"
+      ]
+    },
+    {
+      "label": "建立日期",
+      "values": [
+        "2026-09-10"
+      ]
+    },
+    {
+      "label": "生效日期",
+      "values": [
+        "2026-09-10"
+      ]
+    },
+    {
+      "label": "机构ID",
+      "values": [
+        "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003"
+      ]
+    },
+    {
+      "label": "备注说明",
+      "values": [
+        "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003_EDIT_001 仅合成备注验证"
+      ]
+    }
+  ],
+  "expectedChange": "仅备注空→本轮合成备注"
+}

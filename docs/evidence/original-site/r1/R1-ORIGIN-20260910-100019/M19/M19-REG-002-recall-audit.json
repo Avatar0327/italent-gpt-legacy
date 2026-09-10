@@ -1,0 +1,17 @@
+{
+ "runId":"R1-ORIGIN-20260910-100019",
+ "caseId":"M19-REG-002-RECALL",
+ "date":"2026-09-10",
+ "role":"ORIGIN-ADMIN-01",
+ "page":"官方转正审批详情tab17及操作记录(2)",
+ "businessId":"9737bceb-e7ee-499d-abf4-e05014e9185f",
+ "processInstanceId":"fb06f86c-9f0b-4859-96d7-b70d5e804f67",
+ "audit":[{"action":"提交","time":"2026-09-10 21:57 Asia/Shanghai","precision":"minute"},{"action":"撤回","time":"2026-09-10 22:03 Asia/Shanghai","precision":"minute"}],
+ "recallConfirmed":true,
+ "approvalPerformedByAdmin":false,
+ "currentResult":"原流程可重新打开，申请人工作台待处理，同意按钮可见但未点击",
+ "employeeCurrentStatus":"试用",
+ "reportEvidence":"../M32/M32-two-employees.json",
+ "repeatability":"只读按本轮流程UUID回查；不盲重放提交",
+ "screenshot":null
+}

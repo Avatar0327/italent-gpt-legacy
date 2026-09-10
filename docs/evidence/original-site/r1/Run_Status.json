@@ -2,10 +2,10 @@
   "runId": "R1-ORIGIN-20260910-100019",
   "origin": "https://srworkshopbj.italent.cn",
   "concurrency": "passed_scoped_to_own_two_tabs_and_draft",
-  "createdRecords": 8,
-  "createdRecordsDefinition": "3组织+2职位+1员工+1调动申请+1未来离职任职；其他自动关联不重复计数",
+  "createdRecords": 10,
+  "createdRecordsDefinition": "3组织+2职位+2员工+2申请+1未来离职任职；不计自动关联重复",
   "smokeNamedObjectsThresholdReached": true,
-  "continuationInProgress": true,
+  "continuationInProgress": false,
   "bulkImportedRows": 0,
   "modules": [
     {
@@ -53,14 +53,14 @@
   "e2eCompleted": 0,
   "e2eRequired": 5,
   "activeRoleBlockers": 1,
-  "activeEnvBlockers": 2,
+  "activeEnvBlockers": 3,
   "resolvedEnvBlockers": 1,
   "matchRules": 3,
   "severities": {
     "Blocker": 0,
     "Major": 1,
     "Minor": 0,
-    "Observation": 10
+    "Observation": 13
   },
   "p3ExitApprovedByThisWindow": false,
   "p4StartedByThisWindow": false,
@@ -68,5 +68,19 @@
     "M01退出实际生效",
     "M01再入职",
     "M19退出关联终止后效"
-  ]
+  ],
+  "currentCheckpoint": "same_run_partial_evidence_not_release_complete",
+  "currentEmployeeOracle": {
+    "people": 2,
+    "formal": 1,
+    "probation": 1
+  },
+  "scopeStopLimits": [
+    "组织停用涉及整体迁移，未核全部影响清单，不执行该动作",
+    "撤回后编辑未加载，不用同意替代重提",
+    "未来退出/再入职需实际日期与状态前置"
+  ],
+  "otherUnexecutedWorkNotEquivalentToBlocker": true,
+  "workflowStatus": "checkpoint_saved_incomplete_no_phase_approval",
+  "remainingWorkMayContinue": true
 }

@@ -1,0 +1,12 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "caseId": "M01-EMP-002",
+  "date": "2026-09-10",
+  "role": "ORIGIN-ADMIN-01",
+  "page": "正式新增员工",
+  "validation": ["是否有试用期=是时，试用期(月)必填", "预计试用结束日期必填"],
+  "inputs": {"joinedOn":"2026-09-01","probationMonths":1,"expectedProbationEnd":"2026-09-30","inviteAccount":false},
+  "actual": "期限选1后预计结束自动联动9/30，邮箱/工号回读未丢失，再次保存",
+  "recordId": null,
+  "note": "仅保存前校验/联动证据，不代表已经创建；UUID以后续回执为准"
+}

@@ -1,0 +1,17 @@
+{
+  "at": "2026-09-10T14:01:00.100Z",
+  "caseId": "M01-REG-002",
+  "employeeId": "66ea978b-f2e9-47b1-b3a6-6176234d1fe0",
+  "businessId": "9737bceb-e7ee-499d-abf4-e05014e9185f",
+  "processInstanceId": "fb06f86c-9f0b-4859-96d7-b70d5e804f67",
+  "page": "试用期管理→全部试用员工→仅EMP_002",
+  "state": "审批中",
+  "approver": "ORIGIN-APPROVER-UNVERIFIED-01",
+  "personalDataRedacted": true,
+  "dates": {
+    "probationStart": "2026-09-10",
+    "probationEnd": "2026-10-09",
+    "plannedRegularize": "2026-10-10"
+  },
+  "idSource": "own row data-pushscreenurl recId/processInstanceId; signed URLs omitted"
+}

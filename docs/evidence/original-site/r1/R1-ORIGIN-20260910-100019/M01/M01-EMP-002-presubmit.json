@@ -1,0 +1,250 @@
+{
+  "observations": [
+    {
+      "at": "2026-09-10T13:44:03.590Z",
+      "caseId": "M01-EMP-002",
+      "phase": "presubmit",
+      "fields": [
+        {
+          "chips": 0,
+          "label": "姓名",
+          "values": [
+            "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_002"
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "电子邮件",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "证件类型",
+          "values": [
+            "身份证"
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "证件号码",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "手机号码",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "性别",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "邀请激活账号",
+          "selectedText": [
+            "否"
+          ],
+          "values": []
+        },
+        {
+          "chips": 0,
+          "label": "星座",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "用工形式",
+          "selectedText": [],
+          "values": []
+        },
+        {
+          "chips": 0,
+          "label": "爱好",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "人员类别",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "业务组织",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "利润中心",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "入职日期",
+          "values": [
+            "2026-09-01"
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "工号",
+          "values": [
+            "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_002"
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "部门",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "职位",
+          "values": [
+            "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001"
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "职级",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "是否部门负责人",
+          "selectedText": [
+            "否"
+          ],
+          "values": []
+        },
+        {
+          "chips": 0,
+          "label": "是",
+          "values": []
+        },
+        {
+          "chips": 0,
+          "label": "工作地点",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "是否有试用期",
+          "values": [
+            "是"
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "人员品项",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "层级",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "试用期(月)",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "预计试用结束日期",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "直线经理",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "虚线经理",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "公司",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "期限类型",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "合同期限(月)",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "终止日期",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "chips": 0,
+          "label": "选择电子签署模板",
+          "values": [
+            ""
+          ]
+        }
+      ],
+      "safe": "公司/经理为空，身份号码/电话为空，邀请否，仅本轮职位组织"
+    },
+    {
+      "at": "2026-09-10T13:44:39.249Z",
+      "caseId": "M01-EMP-002",
+      "phase": "stable_presubmit",
+      "email": "zz.r1.20260910.100019.emp002@example.invalid",
+      "department": "部门\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
+      "employeeCode": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_002"
+    }
+  ]
+}

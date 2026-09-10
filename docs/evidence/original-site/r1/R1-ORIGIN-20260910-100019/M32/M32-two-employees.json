@@ -1,0 +1,21 @@
+{
+  "at": "2026-09-10T14:05:26.585Z",
+  "caseId": "M32-TWO-EMP-001",
+  "page": "1.01在职员工花名册",
+  "filter": "姓名仅EMP_001+EMP_002；入职日期今天",
+  "rows": [
+    "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_002\t--\t--\t--\t--\tZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_002\t2026-09-10\tZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\tZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001\t--\t--\t--\t--\t0.0\t--\t试用\t华夏九洲集团\tZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\t1",
+    "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001\t--\t--\t--\t--\tZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001\t2026-09-10\tZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\tZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001\t--\t--\t--\t--\t0.0\t--\t正式\t华夏九洲集团\tZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\t1"
+  ],
+  "oracle": {
+    "people": 2,
+    "formal": 1,
+    "probation": 1,
+    "activePrimary": 2
+  },
+  "employeeIds": [
+    "927ef593-f930-4bcb-963f-e463df2e9e84",
+    "66ea978b-f2e9-47b1-b3a6-6176234d1fe0"
+  ],
+  "interpretation": "EMP001未来离职和EMP002转正申请撤回均未提前改变当日在职状态；并非批量/分页或独立角色验收"
+}

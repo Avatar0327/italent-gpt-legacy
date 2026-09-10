@@ -9,6 +9,299 @@
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",
   "cases": [
     {
+      "caseId": "M32-ORG-SELECT-LIMIT",
+      "module": "M32",
+      "title": "本轮组织条件未选中",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T14:28:00.144Z",
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "1.01花名册任职部门选择器",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "steps": [
+        "正式页面输入并回读",
+        "必要校验或保存",
+        "唯一名称或详情只读确认"
+      ],
+      "inputs": {
+        "evidenceDetails": [
+          "M32/M32-two-employees.json"
+        ]
+      },
+      "actualResult": "ORG002经候选文字/完整行/CUA点击仍已选0，已取消；当前2员工结果没有应用组织条件，不能判组织过滤缺陷。",
+      "pageState": "persisted_or_validation_observed",
+      "recordIds": [
+        "db7df096-624b-4d1e-ab4e-0552a56f052c"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M32/M32-org-filter.json",
+        "R1-ORIGIN-20260910-100019/M32/M32-org-selector-limit.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "局部截图超时不阻塞；本条采用结构化DOM/字段值/ID",
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "M32-SPEC-01",
+        "M32-SPEC-02"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "path": "lib/hris/r1-report-m01-producer.ts",
+        "task": "P3-R1-06/07",
+        "cases": [
+          "P3-M32-01",
+          "P3-M32-02"
+        ],
+        "evidenceMode": "静态来源映射；未运行复刻UI或本窗口产品测试"
+      },
+      "classification": "ENV_BLOCKED",
+      "severity": "Observation",
+      "blockerIds": [
+        "ENV-04"
+      ]
+    },
+    {
+      "caseId": "M01-ORG-003-EDIT-STOP",
+      "module": "M01",
+      "title": "本轮组织备注编辑、审计显示和停用预览",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T14:18:13.499Z",
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "本轮组织备注编辑、审计显示和停用预览",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "steps": [
+        "正式页面输入并回读",
+        "必要校验或保存",
+        "唯一名称或详情只读确认"
+      ],
+      "inputs": {
+        "evidenceDetails": [
+          "M01/M01-ORG-003-edit-presubmit.json",
+          "M01/M01-ORG-003-edit-result.json",
+          "M01/M01-ORG-003-edit-history.json",
+          "M01/M01-ORG-003-stop-preview.json"
+        ]
+      },
+      "actualResult": "同UUID备注持久化，名称/代码/归属/日期不变；操作记录仅设立18:34:09，变更记录仅1版本，编辑审计未取得。停用包含全体职位人员迁移，未核完整影响清单而取消，未实际停用。",
+      "pageState": "persisted_or_validation_observed",
+      "recordIds": [
+        "a7b55bd7-0ef2-44a0-9d29-6259fe053da3"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-presubmit.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-result.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-history.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-stop-preview.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "局部截图超时不阻塞；本条采用结构化DOM/字段值/ID",
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-03",
+        "F-SPEC-08"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "path": "lib/hris/r1-m01.ts",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "evidenceMode": "静态来源映射；未运行复刻UI或本窗口产品测试"
+      },
+      "classification": null,
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M32-TWO-EMP-001",
+      "module": "M32",
+      "title": "两名本轮员工正式与试用人数",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T14:05:26.585Z",
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "两名本轮员工正式与试用人数",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "steps": [
+        "正式页面输入并回读",
+        "必要校验或保存",
+        "唯一名称或详情只读确认"
+      ],
+      "inputs": {
+        "evidenceDetails": [
+          "M32/M32-two-employees.json"
+        ]
+      },
+      "actualResult": "仅EMP001+EMP002及今天入职，正式1、试用1、合计2，各人数1；未来离职和撤回转正申请未提前改变当前人数。非分页或批量通过。",
+      "pageState": "persisted_or_validation_observed",
+      "recordIds": [
+        "927ef593-f930-4bcb-963f-e463df2e9e84",
+        "66ea978b-f2e9-47b1-b3a6-6176234d1fe0"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M32/M32-two-employees.json"
+      ],
+      "screenshot": "R1-ORIGIN-20260910-100019/M32/M32-two-own.jpg",
+      "screenshotLimitation": "局部截图超时不阻塞；本条采用结构化DOM/字段值/ID",
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "M32-SPEC-01",
+        "M32-SPEC-02"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "path": "lib/hris/r1-report-m01-producer.ts",
+        "task": "P3-R1-06/07",
+        "cases": [
+          "P3-M32-01",
+          "P3-M32-02"
+        ],
+        "evidenceMode": "静态来源映射；未运行复刻UI或本窗口产品测试"
+      },
+      "classification": null,
+      "severity": "Observation",
+      "matchRuleId": "M32-OWN-ORACLE-001"
+    },
+    {
+      "caseId": "M19-REG-002",
+      "module": "M19",
+      "title": "正式转正申请提交撤回与原单审计",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10 21:57–22:03 Asia/Shanghai (minute)",
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "正式转正申请提交撤回与原单审计",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "steps": [
+        "正式页面输入并回读",
+        "必要校验或保存",
+        "唯一名称或详情只读确认"
+      ],
+      "inputs": {
+        "evidenceDetails": [
+          "M01/M01-REG-002-presubmit.json",
+          "M19/M19-REG-002-row.json",
+          "M19/M19-REG-002-detail.json",
+          "M19/M19-REG-002-recall-audit.json"
+        ]
+      },
+      "actualResult": "转正业务9737bceb/流程fb06f86c已审批中后撤回；审计21:57提交/22:03撤回，同实例申请人开始节点。独立审批、重提/改期未执行，员工仍试用；摘要离职字段错位。",
+      "pageState": "persisted_or_validation_observed",
+      "recordIds": [
+        "9737bceb-e7ee-499d-abf4-e05014e9185f",
+        "fb06f86c-9f0b-4859-96d7-b70d5e804f67",
+        "66ea978b-f2e9-47b1-b3a6-6176234d1fe0"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-REG-002-presubmit.json",
+        "R1-ORIGIN-20260910-100019/M19/M19-REG-002-row.json",
+        "R1-ORIGIN-20260910-100019/M19/M19-REG-002-detail.json",
+        "R1-ORIGIN-20260910-100019/M19/M19-REG-002-recall-audit.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "局部截图超时不阻塞；本条采用结构化DOM/字段值/ID",
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "M19-SPEC-01",
+        "M19-SPEC-02",
+        "F-SPEC-03"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M19_Workflow_Transactions.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "path": "tests/r1-p3-workflow.test.mjs",
+        "task": "P3-R1-03",
+        "cases": [
+          "P3-M19-04"
+        ],
+        "evidenceMode": "静态来源映射；未运行复刻UI或本窗口产品测试"
+      },
+      "classification": null,
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M01-EMP-002",
+      "module": "M01",
+      "title": "试用员工新增与跨组织日期必填边界",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T13:50:20.847Z",
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "试用员工新增与跨组织日期必填边界",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "steps": [
+        "正式页面输入并回读",
+        "必要校验或保存",
+        "唯一名称或详情只读确认"
+      ],
+      "inputs": {
+        "evidenceDetails": [
+          "M01/M01-EMP-002-readback.json",
+          "M01/M01-EMP-002-probation-validation.json",
+          "M01/M01-EMP-002-org-date-validation.json",
+          "M01/M01-EMP-002-corrected.json",
+          "M01/M01-EMP-002-probation-entry.json"
+        ]
+      },
+      "actualResult": "第二员工创建成功66ea978b；试用期限/预计结束必填。入职9/1早于本轮组织9/10被拒，不改组织历史；改9/10后试用结束10/9。日期重置邮箱工号已纠正。",
+      "pageState": "persisted_or_validation_observed",
+      "recordIds": [
+        "66ea978b-f2e9-47b1-b3a6-6176234d1fe0"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-readback.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-probation-validation.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-org-date-validation.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-corrected.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-probation-entry.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "局部截图超时不阻塞；本条采用结构化DOM/字段值/ID",
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "F-SPEC-07",
+        "F-SPEC-08",
+        "F-SPEC-03"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "path": "lib/hris/r1-m01.ts",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-09"
+        ],
+        "evidenceMode": "静态来源映射；未运行复刻UI或本窗口产品测试"
+      },
+      "classification": null,
+      "severity": "Observation"
+    },
+    {
       "caseId": "M19-REQUEST-001",
       "module": "M19",
       "title": "调动申请提交与源路线",
@@ -202,14 +495,15 @@
           "M32/M32-own-employee-current.json"
         ]
       },
-      "actualResult": "1人、2历史任职、1当前主职，当前花名册人数1。与已批在职人数distinct personId及P3静态每人员一行窄项一致；不含动态复刻验收",
+      "actualResult": "1人、2历史任职、1当前主职，当前花名册人数1。与已批在职人数distinct personId及P3静态每人员一行窄项一致；不含动态复刻验收 后续扩为2名本轮员工，正式1/试用1，仍按同一窄项人数规则计一次MATCH。",
       "pageState": "persisted_or_validation_observed",
       "recordIds": [
         "927ef593-f930-4bcb-963f-e463df2e9e84"
       ],
       "evidence": [
         "R1-ORIGIN-20260910-100019/M32/M32-own-employee-history.json",
-        "R1-ORIGIN-20260910-100019/M32/M32-own-employee-current.json"
+        "R1-ORIGIN-20260910-100019/M32/M32-own-employee-current.json",
+        "R1-ORIGIN-20260910-100019/M32/M32-two-employees.json"
       ],
       "screenshot": "R1-ORIGIN-20260910-100019/M32/M32-current-own.jpg",
       "screenshotLimitation": "局部截图超时不阻塞；本条采用结构化DOM/字段值/ID",
@@ -1360,9 +1654,9 @@
       "module": "M01",
       "title": "组织编辑、更名、停用与在用保护",
       "runId": "R1-ORIGIN-20260910-100019",
-      "execution": "not_executed",
+      "execution": "partially_observed",
       "time": null,
-      "role": null,
+      "role": "ORIGIN-ADMIN-01",
       "environment": "https://srworkshopbj.italent.cn",
       "page": null,
       "preconditions": "仅本轮合成数据；正式页面人工操作可执行；下载/截图仅局部限制；独立身份须为现有授权测试角色",
@@ -1376,10 +1670,13 @@
         "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
         "actualValues": null
       },
-      "actualResult": "未执行，不以计划预期充当实际结果",
-      "pageState": "not_executed",
+      "actualResult": "新增三组织、ORG003备注编辑已验；停用预览含整体迁移，未执行停用/迁移",
+      "pageState": "partial_see_evidence",
       "recordIds": [],
-      "evidence": [],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-result.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-stop-preview.json"
+      ],
       "screenshot": null,
       "screenshotLimitation": "未执行",
       "repeatability": "待前置恢复后执行",
@@ -1401,10 +1698,8 @@
         "path": "tests/r1-p3-m01.test.mjs",
         "evidenceMode": "关联既有任务；未在本窗口运行"
       },
-      "classification": "ENV_BLOCKED",
-      "blockerIds": [
-        "ENV-03"
-      ],
+      "classification": null,
+      "blockerIds": [],
       "severity": "Observation"
     },
     {
@@ -1667,9 +1962,9 @@
       "module": "M01",
       "title": "入职、转正流程",
       "runId": "R1-ORIGIN-20260910-100019",
-      "execution": "not_executed",
+      "execution": "partially_observed",
       "time": null,
-      "role": null,
+      "role": "ORIGIN-ADMIN-01",
       "environment": "https://srworkshopbj.italent.cn",
       "page": null,
       "preconditions": "仅本轮合成数据；正式页面人工操作可执行；下载/截图仅局部限制；独立身份须为现有授权测试角色",
@@ -1680,10 +1975,13 @@
         "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
         "actualValues": null
       },
-      "actualResult": "未执行，不以计划预期充当实际结果",
-      "pageState": "not_executed",
+      "actualResult": "2员工分别正式/试用；转正正式申请已提交撤回，维护入口未保存；审批/实际生效未验",
+      "pageState": "partial_see_evidence",
       "recordIds": [],
-      "evidence": [],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-readback.json",
+        "R1-ORIGIN-20260910-100019/M19/M19-REG-002-recall-audit.json"
+      ],
       "screenshot": null,
       "screenshotLimitation": "未执行",
       "repeatability": "待前置恢复后执行",
@@ -1882,9 +2180,9 @@
       "module": "M01",
       "title": "必填、长度、格式、空值及重复值",
       "runId": "R1-ORIGIN-20260910-100019",
-      "execution": "not_executed",
+      "execution": "partially_observed",
       "time": null,
-      "role": null,
+      "role": "ORIGIN-ADMIN-01",
       "environment": "https://srworkshopbj.italent.cn",
       "page": null,
       "preconditions": "仅本轮合成数据；正式页面人工操作可执行；下载/截图仅局部限制；独立身份须为现有授权测试角色",
@@ -1896,10 +2194,13 @@
         "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
         "actualValues": null
       },
-      "actualResult": "未执行，不以计划预期充当实际结果",
-      "pageState": "not_executed",
+      "actualResult": "职位/邮箱/试用期限/试用结束必填、入职早于组织生效被拒已验；未覆盖全字段、长度、格式、重复",
+      "pageState": "partial_see_evidence",
       "recordIds": [],
-      "evidence": [],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-probation-validation.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-org-date-validation.json"
+      ],
       "screenshot": null,
       "screenshotLimitation": "未执行",
       "repeatability": "待前置恢复后执行",
@@ -1921,10 +2222,8 @@
         "path": "tests/r1-p3-m01.test.mjs",
         "evidenceMode": "关联既有任务；未在本窗口运行"
       },
-      "classification": "ENV_BLOCKED",
-      "blockerIds": [
-        "ENV-03"
-      ],
+      "classification": null,
+      "blockerIds": [],
       "severity": "Observation"
     },
     {
@@ -2952,9 +3251,9 @@
       "module": "E2E",
       "title": "R1端到端成功路径",
       "runId": "R1-ORIGIN-20260910-100019",
-      "execution": "not_executed",
+      "execution": "partially_observed",
       "time": null,
-      "role": null,
+      "role": "ORIGIN-ADMIN-01",
       "environment": "https://srworkshopbj.italent.cn",
       "page": null,
       "preconditions": "仅本轮合成数据；正式页面人工操作可执行；下载/截图仅局部限制；独立身份须为现有授权测试角色",
@@ -2972,10 +3271,13 @@
       "inputs": {
         "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_"
       },
-      "actualResult": "整链未执行；首段组织创建不得折算成链通过",
-      "pageState": "blocked_before_position_employee",
+      "actualResult": "组织→职位→员工→直接调动→历史/报表局部链，不能替代双审批/执行HR/独立员工，完整未通过",
+      "pageState": "partial_see_evidence",
       "recordIds": [],
-      "evidence": [],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-TRANSFER-001.json",
+        "R1-ORIGIN-20260910-100019/M32/M32-two-employees.json"
+      ],
       "screenshot": null,
       "repeatability": "待前置恢复",
       "requirements": [
@@ -3078,9 +3380,9 @@
       "module": "E2E",
       "title": "R1端到端撤回路径",
       "runId": "R1-ORIGIN-20260910-100019",
-      "execution": "not_executed",
+      "execution": "partially_observed",
       "time": null,
-      "role": null,
+      "role": "ORIGIN-ADMIN-01",
       "environment": "https://srworkshopbj.italent.cn",
       "page": null,
       "preconditions": "仅本轮合成数据；正式页面人工操作可执行；下载/截图仅局部限制；独立身份须为现有授权测试角色",
@@ -3098,10 +3400,14 @@
       "inputs": {
         "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_"
       },
-      "actualResult": "整链未执行；首段组织创建不得折算成链通过",
-      "pageState": "blocked_before_position_employee",
+      "actualResult": "两张申请提交→审批中→申请人撤回→管理员工作台/报表未提前生效；新单重提和独立员工未验",
+      "pageState": "partial_see_evidence",
       "recordIds": [],
-      "evidence": [],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M19/M19-TRANSFER-REQUEST-001-recall-audit.json",
+        "R1-ORIGIN-20260910-100019/M19/M19-REG-002-recall-audit.json",
+        "R1-ORIGIN-20260910-100019/M32/M32-two-employees.json"
+      ],
       "screenshot": null,
       "repeatability": "待前置恢复",
       "requirements": [

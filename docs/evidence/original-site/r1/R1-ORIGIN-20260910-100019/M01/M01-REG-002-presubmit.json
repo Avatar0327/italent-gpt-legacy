@@ -1,0 +1,183 @@
+{
+  "at": "2026-09-10T13:57:20.701Z",
+  "caseId": "M01-REG-002",
+  "employeeId": "66ea978b-f2e9-47b1-b3a6-6176234d1fe0",
+  "phase": "presubmit",
+  "role": "ORIGIN-ADMIN-01",
+  "fields": [
+    {
+      "label": "姓名",
+      "selected": [],
+      "values": []
+    },
+    {
+      "label": "试用开始日期",
+      "selected": [],
+      "values": [
+        "2026-09-10"
+      ]
+    },
+    {
+      "label": "预计试用结束日期",
+      "selected": [],
+      "values": [
+        "2026-10-09"
+      ]
+    },
+    {
+      "label": "转正日期",
+      "selected": [],
+      "values": [
+        "2026-10-10"
+      ]
+    },
+    {
+      "label": "试用结果",
+      "selected": [],
+      "values": [
+        "正常转正"
+      ]
+    },
+    {
+      "label": "培训成绩",
+      "selected": [],
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": " ",
+      "selected": [],
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "老带新奖励",
+      "selected": [],
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "老带新奖励发放日期",
+      "selected": [],
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "是否转正",
+      "selected": [
+        "是"
+      ],
+      "values": []
+    },
+    {
+      "label": "是否调整薪资",
+      "selected": [
+        "否"
+      ],
+      "values": []
+    },
+    {
+      "label": "任职资格附件",
+      "selected": [],
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "入职日期",
+      "selected": [],
+      "values": [
+        "2026-09-10"
+      ]
+    },
+    {
+      "label": "工号",
+      "selected": [],
+      "values": []
+    },
+    {
+      "label": "机构",
+      "selected": [],
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "部门",
+      "selected": [],
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "职务",
+      "selected": [],
+      "values": []
+    },
+    {
+      "label": "职级",
+      "selected": [],
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "职务序列",
+      "selected": [],
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "工作地点",
+      "selected": [],
+      "values": []
+    },
+    {
+      "label": "直线经理",
+      "selected": [],
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "虚线经理",
+      "selected": [],
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "转正评价",
+      "selected": [],
+      "values": [
+        "ZZ_R1_R1-ORIGIN-20260910-100019_M01_REG_002 合成转正流程验证"
+      ]
+    },
+    {
+      "label": "转正意见",
+      "selected": [],
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "考核评价",
+      "selected": [],
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "考核日期",
+      "selected": [],
+      "values": [
+        ""
+      ]
+    }
+  ]
+}

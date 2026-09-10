@@ -1,0 +1,55 @@
+{
+  "at": "2026-09-10T13:50:20.847Z",
+  "caseId": "M01-EMP-002-corrected",
+  "fields": [
+    {
+      "chips": 0,
+      "label": "姓名",
+      "values": [
+        "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_002"
+      ]
+    },
+    {
+      "chips": 0,
+      "label": "电子邮件",
+      "values": [
+        "zz.r1.20260910.100019.emp002@example.invalid"
+      ]
+    },
+    {
+      "chips": 0,
+      "label": "入职日期",
+      "values": [
+        "2026-09-10"
+      ]
+    },
+    {
+      "chips": 0,
+      "label": "工号",
+      "values": [
+        "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_002"
+      ]
+    },
+    {
+      "chips": 0,
+      "label": "预计试用结束日期",
+      "values": [
+        "2026-10-09"
+      ]
+    },
+    {
+      "chips": 0,
+      "label": "直线经理",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "chips": 0,
+      "label": "公司",
+      "values": [
+        ""
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "at": "2026-09-10T13:53:35.656Z",
+  "caseId": "M01-PROBATION-ENTRY-001",
+  "employeeId": "66ea978b-f2e9-47b1-b3a6-6176234d1fe0",
+  "role": "ORIGIN-ADMIN-01",
+  "page": "本轮员工详情→调整试用信息",
+  "dom": "  - generic: 新建\n  - text: 收起\n  - paragraph: 暂无培训经历\n  - generic: 员工信息\n  - generic: 教育经历\n  - generic: 工作履历\n  - generic: 项目经历\n  - generic: 培训经历\n  - generic: 家庭成员\n  - generic: 证书执照\n  - generic: 语言能力\n  - generic: 专业技能\n  - generic: 表彰与奖励\n  - iframe:\n    - generic: 调整试用信息\n    - generic: 翻译助手\n    - generic: 可在此维护员工是否有试用期以及具体的试用期信息，需要注意：如果维护了【实际转正日期】，则该人员的人员状态会直接变为【正式】\n    - text: 收起\n    - generic: 姓名\n    - generic: ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_002(zz.r1.20260910.100019.emp002@example.invalid)\n    - generic: 若要修改人员状态为「正式」，可通过设置【是否有试用期】=否 或 维护 实际转正日期 实现\n    - generic: 入职日期\n    - generic: 2026-09-10\n    - textbox\n    - text: \n    - generic: 是否有试用期\n    - generic: 是\n    - textbox \"请选择\"\n    - generic: \n    - generic: 试用开始日期\n    - generic: 2026-09-10\n    - textbox\n    - text: \n    - generic: 试用期(月)\n    - generic: \"1\"\n    - textbox \"请选择\"\n    - generic: \n    - generic: 预计试用结束日期\n    - generic: 2026-10-09\n    - textbox\n    - text: \n    - generic: 实际转正日期\n    - generic: 实际转正日期\n    - textbox \"实际转正日期\"\n    - text: \n    - generic: 保存\n    - generic: 取消",
+  "saved": false,
+  "interpretation": "仅维护入口说明与字段观察；不能代普通转正申请/审批/执行"
+}

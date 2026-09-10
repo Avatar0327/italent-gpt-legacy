@@ -1,0 +1,20 @@
+{
+ "runId":"R1-ORIGIN-20260910-100019",
+ "caseId":"M01-EMP-002",
+ "date":"2026-09-10",
+ "role":"ORIGIN-ADMIN-01",
+ "environment":"https://srworkshopbj.italent.cn",
+ "page":"员工列表精确姓名选择器及列表",
+ "employeeId":"66ea978b-f2e9-47b1-b3a6-6176234d1fe0",
+ "name":"ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_002",
+ "code":"ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_002",
+ "department":"ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
+ "position":"ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001",
+ "employmentRelation":"内部员工",
+ "rowCount":1,
+ "idSource":"own row visible data-pushscreenurl id extracted without persisting signed URL",
+ "created":true,
+ "serverCreatedAt":null,
+ "screenshot":null,
+ "repeatability":"only exact query; do not replay create"
+}

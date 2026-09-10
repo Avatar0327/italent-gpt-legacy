@@ -1,0 +1,15 @@
+{
+  "at": "2026-09-10T14:28:00.144Z",
+  "caseId": "M32-ORG-SELECT-LIMIT",
+  "intendedOrgId": "db7df096-624b-4d1e-ab4e-0552a56f052c",
+  "attempts": [
+    "候选文字点击",
+    "完整候选行点击后单独回读",
+    "可见坐标点击"
+  ],
+  "actualSelectedCount": 0,
+  "selectionDom": "    - generic: 已选组织\n    - generic: \"0\"\n    - generic: 清空已选\n    - grid:\n      - row \"组织名称 上级组织 包含下级\":\n        - columnheader \"组织名称\":\n          - generic: 组织名称\n        - columnheader \"上级组织\":\n          - generic: 上级组织\n        - columnheader \"包含下级\":\n          - generic: 包含下级\n      - generic: 请从左侧选择部门\n    - generic: 取消\n    - generic: 确定",
+  "result": "未形成有效组织筛选，取消；不把未应用条件的两行结果当业务统计错误",
+  "classification": "ENV_BLOCKED",
+  "ledgerId": "ENV-04"
+}

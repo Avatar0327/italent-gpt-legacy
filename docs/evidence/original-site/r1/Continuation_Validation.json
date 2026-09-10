@@ -1,0 +1,30 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "date": "2026-09-10",
+  "scope": "same-run evidence only",
+  "checkedJsonFiles": 62,
+  "matrixRows": 66,
+  "observedNarrowCases": 30,
+  "partiallyObservedGroups": 18,
+  "notExecutedCases": 18,
+  "manifestRecords": 10,
+  "uniqueManifestUUIDs": 10,
+  "validated": [
+    "JSON syntax",
+    "matrix evidence and screenshot paths",
+    "manifest evidence paths",
+    "P2/P3 source paths at mapped SHAs via git cat-file",
+    "git diff --check",
+    "known real-person and signed-token pattern scan"
+  ],
+  "errors": [],
+  "warnings": [],
+  "limitations": [
+    "pattern scan is not proof all arbitrary private text absent; screenshots manually inspected",
+    "P3 dynamic UI and product tests not run",
+    "source server audit seconds omitted where only minutes visible",
+    "full module and E2E validation not complete"
+  ],
+  "p3Head": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+  "phaseExitApproved": false
+}

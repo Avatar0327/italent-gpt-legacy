@@ -1,0 +1,21 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "date": "2026-09-10",
+  "caseId": "ENV-04",
+  "role": "ORIGIN-ADMIN-01",
+  "processes": [
+    "98436444-b9e5-468c-9abf-b3212bd666eb",
+    "fb06f86c-9f0b-4859-96d7-b70d5e804f67"
+  ],
+  "actions": [
+    "申请人开始节点点击编辑",
+    "对可见编辑控件有界坐标复核",
+    "读回业务表单和新增标签"
+  ],
+  "regLastObservedAt": "2026-09-10T14:07:56.299Z",
+  "regBusinessFieldsCount": 0,
+  "result": "均未取得可用编辑业务表单；未改日期、未重提、未点击同意",
+  "cause": "unknown_source_page_or_browser_capability",
+  "scope": "仅本轮撤回编辑能力，不作为全局停工或并发限制",
+  "screenshot": null
+}

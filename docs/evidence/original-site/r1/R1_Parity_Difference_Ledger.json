@@ -292,8 +292,8 @@
       "modules": [
         "M19"
       ],
-      "title": "调动申请摘要显示离职字段标签",
-      "actual": "本轮调动流程摘要出现离职员工、最后工作日、离职类型/原因等标签；值为本轮调动信息。",
+      "title": "调动及转正申请摘要显示离职字段",
+      "actual": "两张本轮申请均在审批详情显示离职字段，调动部分值对应调动，转正多项空值；不证明实际发生离职。",
       "classification": null,
       "severity": "Observation",
       "status": "observed_not_dispositioned",
@@ -307,7 +307,8 @@
         "P3-R1-03"
       ],
       "evidence": [
-        "R1-ORIGIN-20260910-100019/M19/M19-TRANSFER-REQUEST-001-detail.json"
+        "R1-ORIGIN-20260910-100019/M19/M19-TRANSFER-REQUEST-001-detail.json",
+        "R1-ORIGIN-20260910-100019/M19/M19-REG-002-detail.json"
       ],
       "feedback": "P2/P3核对摘要字段映射；P4独立角色实测，勿复制源错位标签。",
       "conclusion": "仅确认源UI显示，不推断实际发生离职或P3实现缺陷。"
@@ -338,6 +339,97 @@
       ],
       "feedback": "P3/P4区分配置表单与真实任务执行；独立接收人及权限撤销未验。",
       "conclusion": "不能从选项存在推断推送成功或授权正确。"
+    },
+    {
+      "id": "OBS-07",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "modules": [
+        "M01"
+      ],
+      "title": "试用字段联动与组织生效日约束",
+      "actual": "EMP002启用试用时期限/预计结束必填；9/1+1月=9/30；因早于ORG002生效9/10被拒，纠正9/10后结束10/9，创建成功。日期变化会重置邮箱和工号，已回读纠正。",
+      "classification": null,
+      "severity": "Observation",
+      "status": "observed_not_dispositioned",
+      "productDefectConfirmed": false,
+      "ownerDecisionRequired": false,
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-07",
+        "F-SPEC-08"
+      ],
+      "p3Tasks": [
+        "P3-R1-02"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-probation-validation.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-org-date-validation.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-corrected.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-readback.json"
+      ],
+      "feedback": "P2明确入口模板/跨对象日期约束，P3核查employment.startOn与组织有效日的实现及测试；未确认批准设计遗漏/实现缺陷。",
+      "conclusion": "原站当前模板规则不自动变成所有员工入口强制规则；未修改组织设立历史。"
+    },
+    {
+      "id": "OBS-08",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "modules": [
+        "M01"
+      ],
+      "title": "组织停用迁移范围及普通编辑记录显示",
+      "actual": "停用表单包含整体职位/人员转移，未核全部明细故取消。ORG003备注编辑持久化，名称/编码/日期/归属不变；操作记录仅设立1条，变更记录仅启用1版本。",
+      "classification": null,
+      "severity": "Observation",
+      "status": "observed_not_dispositioned",
+      "productDefectConfirmed": false,
+      "ownerDecisionRequired": false,
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-03",
+        "F-SPEC-08"
+      ],
+      "p3Tasks": [
+        "P3-R1-02"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-stop-preview.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-result.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-history.json"
+      ],
+      "feedback": "P2/P3区分纯停用、整体迁移、普通字段编辑和版本变更；P4核完整影响清单及不可变审计。",
+      "conclusion": "未实际停用/迁移，不宣称依赖保护通过；未展示编辑日志不等于后台无审计。"
+    },
+    {
+      "id": "ENV-04",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "modules": [
+        "M01",
+        "M19",
+        "M32"
+      ],
+      "title": "撤回编辑和报表组织选择未进入有效状态",
+      "actual": "本轮调动和转正撤回后，申请人开始节点可见编辑；语义点击及可见坐标各有界尝试，未出现业务日期/保存表单或新的本轮标签。未点击同意替代重提。 报表ORG002候选经文字/整行/CUA点击均已选0；取消，不将未应用筛选的2行计为统计缺陷。",
+      "classification": "ENV_BLOCKED",
+      "severity": "Observation",
+      "status": "open",
+      "productDefectConfirmed": false,
+      "ownerDecisionRequired": false,
+      "requirements": [
+        "D2",
+        "D6",
+        "F-SPEC-03"
+      ],
+      "p3Tasks": [
+        "P3-R1-02",
+        "P3-R1-03"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M19/M19-REG-002-recall-audit.json",
+        "R1-ORIGIN-20260910-100019/M19/M19-recalled-edit-limit.json",
+        "R1-ORIGIN-20260910-100019/M32/M32-org-selector-limit.json"
+      ],
+      "feedback": "仅该编辑/改期/重提能力待原站页面或浏览器恢复；其他页面正常继续，不限制整个项目并发。 M32只限制组织条件应用，该报表姓名/日期查询和人数读取已执行。",
+      "conclusion": "阻塞原因未定位，不认定权限缺陷或P3实现缺陷；完整改期新单链未验。"
     }
   ],
   "counts": {
@@ -347,14 +439,14 @@
     "IMPLEMENTATION_DEFECT": 0,
     "INTENTIONAL_DIFFERENCE": 0,
     "ROLE_BLOCKED": 1,
-    "ENV_BLOCKED": 2,
+    "ENV_BLOCKED": 3,
     "NEED_OWNER_DECISION": 1,
     "resolved_ENV_BLOCKED": 1,
-    "observationsWithoutClassification": 6,
+    "observationsWithoutClassification": 8,
     "Blocker": 0,
     "Major": 1,
     "Minor": 0,
-    "Observation": 10
+    "Observation": 13
   },
   "countRule": "按唯一台账ID计数，ENV_BLOCKED/ROLE_BLOCKED仅计open；历史ENV-01已恢复另列。Observation为本轮8条登记（含1条已恢复环境记录）；4条纯观察未做确定差异分类。MATCH为矩阵一个窄项规则，不与3条组织重复计数。"
 }
