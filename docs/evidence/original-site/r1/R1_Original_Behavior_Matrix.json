@@ -1,0 +1,2539 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "scope": "R1四模块；E2E另列不增加模块分母",
+  "sourceSnapshots": {
+    "p2": "e15237281ff19f04f08a354fd9455c518b24ae47",
+    "p3Start": "a27ae7ee367ccd6b4cf42de968b0a3cd7389b74c",
+    "p3Comparison": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688"
+  },
+  "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",
+  "cases": [
+    {
+      "caseId": "M01-ORG-001",
+      "module": "M01",
+      "title": "合成组织保存及完整名称重读",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T10:28:18.227Z",
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "合成组织保存及完整名称重读",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "steps": [
+        "新建",
+        "填名称、编码、简称和当天日期",
+        "回读输入及父级",
+        "确定",
+        "完整名称重新查询并从DOM详情链接提取UUID"
+      ],
+      "inputs": {
+        "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001",
+        "code": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001",
+        "abbr": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001",
+        "date": "2026-09-10"
+      },
+      "actualResult": "保存后完整名称查询找到稳定UUID d1d541ab-92f9-4fce-80c6-aa5687433175；启用日期2026-09-10；父级为测试租户根",
+      "pageState": "query_persisted",
+      "recordIds": [
+        "d1d541ab-92f9-4fce-80c6-aa5687433175"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-001-readback.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "repeatability": "可按记录ID只读重现；写入不可无条件重放",
+      "requirements": [
+        "BP-F-REQ-01",
+        "BP-F-REQ-10",
+        "F-SPEC-08"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "path": "tests/r1-p3-m01.test.mjs",
+        "evidenceMode": "源码/既有本地合成证据静态对照；未访问复刻系统、未在本窗口重跑测试"
+      },
+      "classification": null,
+      "severity": "Observation",
+      "scopeLimit": "此行结论仅限实际操作，未证明同模块其他用例"
+    },
+    {
+      "caseId": "M01-ORG-002",
+      "module": "M01",
+      "title": "合成组织保存及完整名称重读",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T10:35:47.493Z",
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "组织完整名称查询",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "steps": [
+        "在本轮ORG_001行新建下级",
+        "填名称、编码、简称和当天日期",
+        "回读输入及父级",
+        "确定并确认新增对象与日期",
+        "完整名称重新查询并从DOM详情链接提取UUID"
+      ],
+      "inputs": {
+        "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
+        "code": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
+        "abbr": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
+        "date": "2026-09-10"
+      },
+      "actualResult": "保存后完整名称查询找到稳定UUID db7df096-624b-4d1e-ab4e-0552a56f052c；启用日期2026-09-10；路径显示本轮ORG_001为行政父级",
+      "pageState": "保存后完整名称查询找到稳定UUID db7df096-624b-4d1e-ab4e-0552a56f052c；启用日期2026-09-10；路径显示本轮ORG_001为行政父级",
+      "recordIds": [
+        "db7df096-624b-4d1e-ab4e-0552a56f052c"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-002-readback.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "repeatability": "可按记录ID只读重现；写入不可无条件重放",
+      "requirements": [
+        "BP-F-REQ-01",
+        "BP-F-REQ-10",
+        "F-SPEC-08"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "path": "tests/r1-p3-m01.test.mjs",
+        "evidenceMode": "源码/既有本地合成证据静态对照；未访问复刻系统、未在本窗口重跑测试"
+      },
+      "classification": null,
+      "severity": "Observation",
+      "scopeLimit": "此行结论仅限实际操作，未证明同模块其他用例"
+    },
+    {
+      "caseId": "M01-ORG-003",
+      "module": "M01",
+      "title": "合成组织保存及完整名称重读",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T10:36:23.872Z",
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "组织完整名称查询",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "steps": [
+        "在本轮ORG_001行新建下级",
+        "填名称、编码、简称和当天日期",
+        "回读输入及父级",
+        "确定并确认新增对象与日期",
+        "完整名称重新查询并从DOM详情链接提取UUID"
+      ],
+      "inputs": {
+        "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+        "code": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+        "abbr": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+        "date": "2026-09-10"
+      },
+      "actualResult": "保存后完整名称查询找到稳定UUID a7b55bd7-0ef2-44a0-9d29-6259fe053da3；启用日期2026-09-10；路径显示本轮ORG_001为行政父级",
+      "pageState": "保存后完整名称查询找到稳定UUID a7b55bd7-0ef2-44a0-9d29-6259fe053da3；启用日期2026-09-10；路径显示本轮ORG_001为行政父级",
+      "recordIds": [
+        "a7b55bd7-0ef2-44a0-9d29-6259fe053da3"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-readback.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "repeatability": "可按记录ID只读重现；写入不可无条件重放",
+      "requirements": [
+        "BP-F-REQ-01",
+        "BP-F-REQ-10",
+        "F-SPEC-08"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "path": "tests/r1-p3-m01.test.mjs",
+        "evidenceMode": "源码/既有本地合成证据静态对照；未访问复刻系统、未在本窗口重跑测试"
+      },
+      "classification": null,
+      "severity": "Observation",
+      "scopeLimit": "此行结论仅限实际操作，未证明同模块其他用例"
+    },
+    {
+      "caseId": "M01-PARITY-01",
+      "module": "M01",
+      "title": "稳定标识与父子关系保存（窄项三方对照）",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T10:36:23.872Z",
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "组织完整名称查询",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "steps": [
+        "关联本轮三条组织证据",
+        "阅读已批P2稳定ID/父级设计",
+        "静态核对P3目录写读及既有测试",
+        "核对开始至结束快照该实现未变化"
+      ],
+      "inputs": {
+        "comparisonScope": "身份持久化与父子关联，不含唯一性、时态、停用、角色"
+      },
+      "actualResult": "原站三条组织保存后可按完整名称重读UUID，子组织路径保留本轮父级；P2要求稳定ID及父子关联；P3 r1-m01.ts的catalog/make/m01Write/m01Entity持久化并回读ID及parentId，catalog acceptance合成测试覆盖父子创建。仅此窄项一致。",
+      "pageState": "原站三条组织保存后可按完整名称重读UUID，子组织路径保留本轮父级；P2要求稳定ID及父子关联；P3 r1-m01.ts的catalog/make/m01Write/m01Entity持久化并回读ID及parentId，catalog acceptance合成测试覆盖父子创建。仅此窄项一致。",
+      "recordIds": [
+        "d1d541ab-92f9-4fce-80c6-aa5687433175",
+        "db7df096-624b-4d1e-ab4e-0552a56f052c",
+        "a7b55bd7-0ef2-44a0-9d29-6259fe053da3"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-readback.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "repeatability": "可按记录ID只读重现；写入不可无条件重放",
+      "requirements": [
+        "BP-F-REQ-01",
+        "BP-F-REQ-10",
+        "F-SPEC-08"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "path": "tests/r1-p3-m01.test.mjs",
+        "evidenceMode": "源码/既有本地合成证据静态对照；未访问复刻系统、未在本窗口重跑测试"
+      },
+      "classification": "MATCH",
+      "severity": null,
+      "scopeLimit": "此行结论仅限实际操作，未证明同模块其他用例"
+    },
+    {
+      "caseId": "M01-FIELD-01",
+      "module": "M01",
+      "title": "普通新建行政上级空值校验",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T10:26:08.948Z",
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "新建组织",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "steps": [
+        "新建部门表单",
+        "输入合法合成名称/编码/日期，行政上级留空",
+        "确定",
+        "记录必填提示"
+      ],
+      "inputs": {
+        "administrativeParent": null,
+        "type": "部门"
+      },
+      "actualResult": "大类为部门且行政上级为空时，确定后显示必填，表单保留；补选父级后首条组织保存。不能外推为所有组织类型均禁止根节点。",
+      "pageState": "大类为部门且行政上级为空时，确定后显示必填，表单保留；补选父级后首条组织保存。不能外推为所有组织类型均禁止根节点。",
+      "recordIds": [],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-001-parent-required.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "repeatability": "相同入口和大类可重复；不重复保存完整数据",
+      "requirements": [
+        "BP-F-REQ-10",
+        "F-SPEC-08"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "path": "tests/r1-p3-m01.test.mjs",
+        "evidenceMode": "源码/既有本地合成证据静态对照；未访问复刻系统、未在本窗口重跑测试"
+      },
+      "classification": null,
+      "severity": "Observation",
+      "scopeLimit": "此行结论仅限实际操作，未证明同模块其他用例"
+    },
+    {
+      "caseId": "M01-AUDIT-01",
+      "module": "M01",
+      "title": "新组织设立审计只读",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T10:32:10.230Z",
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "本轮组织/组织操作记录",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "steps": [
+        "打开本轮ORG_001详情",
+        "组织操作记录",
+        "读取设立事件并脱敏操作人"
+      ],
+      "inputs": {},
+      "actualResult": "组织操作记录保留设立事件、业务日期2026-09-10、操作时间2026-09-10 18:27:04及本会话操作人；只证明该次设立审计，不证明历史不可改或失败原子性。",
+      "pageState": "组织操作记录保留设立事件、业务日期2026-09-10、操作时间2026-09-10 18:27:04及本会话操作人；只证明该次设立审计，不证明历史不可改或失败原子性。",
+      "recordIds": [
+        "d1d541ab-92f9-4fce-80c6-aa5687433175"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-001-audit.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "repeatability": "可按记录ID只读重现；写入不可无条件重放",
+      "requirements": [
+        "BP-F-REQ-10",
+        "F-SPEC-08",
+        "BASE-04"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "path": "tests/r1-p3-m01.test.mjs",
+        "evidenceMode": "源码/既有本地合成证据静态对照；未访问复刻系统、未在本窗口重跑测试"
+      },
+      "classification": null,
+      "severity": "Observation",
+      "scopeLimit": "此行结论仅限实际操作，未证明同模块其他用例"
+    },
+    {
+      "caseId": "M01-IMPORT-01",
+      "module": "M01",
+      "title": "正式组织导入模板下载",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T10:38:42.280Z",
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "组织/更多操作/导入组织/下载模板",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "steps": [
+        "更多操作",
+        "导入组织",
+        "下载模板",
+        "等待下载并核对主体"
+      ],
+      "inputs": {},
+      "actualResult": "正式菜单下载模板后download等待超时，主iframe显示This page has been blocked by Chromium；无下载文件，无导入执行。",
+      "pageState": "正式菜单下载模板后download等待超时，主iframe显示This page has been blocked by Chromium；无下载文件，无导入执行。",
+      "recordIds": [],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-template-blocked.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "repeatability": "平台阻止状态待处理；不重复尝试或改安全设置",
+      "requirements": [
+        "BP-F-REQ-10",
+        "F-SPEC-07"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-08",
+          "P3-M01-09"
+        ],
+        "path": "tests/r1-p3-m01.test.mjs",
+        "evidenceMode": "源码/既有本地合成证据静态对照；未访问复刻系统、未在本窗口重跑测试"
+      },
+      "classification": "ENV_BLOCKED",
+      "severity": "Observation",
+      "scopeLimit": "此行结论仅限实际操作，未证明同模块其他用例"
+    },
+    {
+      "caseId": "M19-QUERY-01",
+      "module": "M19",
+      "title": "审批本轮标题筛选及管理说明",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T10:14:11.380Z",
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "审批中心/组织员工流程",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "steps": [
+        "进入审批中心组织员工流程",
+        "标题输入本轮前缀并确定",
+        "读取空集、列标题与页面说明"
+      ],
+      "inputs": {
+        "title": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "approvalStatus": "审批中"
+      },
+      "actualResult": "标题前缀与审批中条件下空集；页面展示催办/转交/撤销/一键审批及流程干预说明，摘要与审批状态列可见。未执行管理动作，不能据此覆盖D7。",
+      "pageState": "标题前缀与审批中条件下空集；页面展示催办/转交/撤销/一键审批及流程干预说明，摘要与审批状态列可见。未执行管理动作，不能据此覆盖D7。",
+      "recordIds": [],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M19/M19-query.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "repeatability": "可重复只读筛选；该空集不证明其他审批状态无本轮单据",
+      "requirements": [
+        "M19-SPEC-01",
+        "M19-SPEC-02",
+        "M19-SPEC-04",
+        "D7"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M19_Workflow_Transactions.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-03",
+        "cases": [
+          "P3-M19-03",
+          "P3-M19-04",
+          "P3-M19-07"
+        ],
+        "path": "tests/r1-p3-workflow.test.mjs",
+        "evidenceMode": "源码/既有本地合成证据静态对照；未访问复刻系统、未在本窗口重跑测试"
+      },
+      "classification": null,
+      "severity": "Observation",
+      "scopeLimit": "此行结论仅限实际操作，未证明同模块其他用例"
+    },
+    {
+      "caseId": "M48-ENTRY-01",
+      "module": "M48",
+      "title": "原管理会话下的人事申请入口",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T10:17:35.716Z",
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "员工自助/自助服务/人事申请",
+      "preconditions": "现有管理会话；没有独立员工身份",
+      "steps": [
+        "员工自助",
+        "自助服务",
+        "人事申请",
+        "等待主体最终加载",
+        "仅保留入口与列标题"
+      ],
+      "inputs": {},
+      "actualResult": "存在本人/他人调动、离职和新增兼职申请入口，任职/人员/审批状态分列。此为原管理会话，非独立员工；未打开或办理既有人员申请。",
+      "pageState": "存在本人/他人调动、离职和新增兼职申请入口，任职/人员/审批状态分列。此为原管理会话，非独立员工；未打开或办理既有人员申请。",
+      "recordIds": [],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M48/M48-application-header.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "repeatability": "可复现该会话入口，不代表普通员工权限",
+      "requirements": [
+        "M48-SPEC-01",
+        "M48-SPEC-02",
+        "M48-SPEC-03",
+        "BP-I-REQ-01"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M48_Authorization_Consumers.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-05",
+        "cases": [
+          "P3-M48-01",
+          "P3-M48-02",
+          "P3-M48-03"
+        ],
+        "path": "tests/r1-p3-portal.test.mjs",
+        "evidenceMode": "源码/既有本地合成证据静态对照；未访问复刻系统、未在本窗口重跑测试"
+      },
+      "classification": "ROLE_BLOCKED",
+      "severity": "Observation",
+      "scopeLimit": "此行结论仅限实际操作，未证明同模块其他用例"
+    },
+    {
+      "caseId": "M32-CATALOG-01",
+      "module": "M32",
+      "title": "报表目录口径文案",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T10:20:10.435Z",
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "组织员工/数据分析/报表设计",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "steps": [
+        "组织员工数据分析",
+        "报表设计",
+        "读取系统默认目录说明"
+      ],
+      "inputs": {},
+      "actualResult": "目录分别描述最新一条任职、全部历史任职含兼职、指定时点在职；部分报表标示异步且需运行更新。目录文案不是数值口径实测。",
+      "pageState": "目录分别描述最新一条任职、全部历史任职含兼职、指定时点在职；部分报表标示异步且需运行更新。目录文案不是数值口径实测。",
+      "recordIds": [],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M32/M32-catalog.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "repeatability": "可重复只读目录",
+      "requirements": [
+        "M32-SPEC-01",
+        "M32-SPEC-02",
+        "M32-SPEC-04",
+        "BP-I-REQ-02"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-06/07",
+        "cases": [
+          "P3-M32-01",
+          "P3-M32-02",
+          "P3-M32-04"
+        ],
+        "path": "tests/r1-p3-report-query.test.mjs",
+        "evidenceMode": "源码/既有本地合成证据静态对照；未访问复刻系统、未在本窗口重跑测试"
+      },
+      "classification": null,
+      "severity": "Observation",
+      "scopeLimit": "此行结论仅限实际操作，未证明同模块其他用例"
+    },
+    {
+      "caseId": "M32-INPUT-01",
+      "module": "M32",
+      "title": "姓名选择器前缀回读与空候选",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T10:22:52.372Z",
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "1.1.02员工任职信息/姓名选择器",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "steps": [
+        "打开员工任职信息",
+        "姓名选择器",
+        "fill前缀",
+        "只读DOM回读输入",
+        "观察空候选",
+        "取消"
+      ],
+      "inputs": {
+        "nameSearch": "ZZ_R1_R1-ORIGIN-20260910-100019_"
+      },
+      "actualResult": "input.value确认本轮前缀，人员候选为空，选择器取消；原报表380条属于既有数据，非本轮批量。",
+      "pageState": "input.value确认本轮前缀，人员候选为空，选择器取消；原报表380条属于既有数据，非本轮批量。",
+      "recordIds": [],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M32/M32-input-readback.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "repeatability": "可按记录ID只读重现；写入不可无条件重放",
+      "requirements": [
+        "M32-SPEC-01",
+        "M32-SPEC-03"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-06/07",
+        "cases": [
+          "P3-M32-01",
+          "P3-M32-07"
+        ],
+        "path": "tests/r1-p3-report-query.test.mjs",
+        "evidenceMode": "源码/既有本地合成证据静态对照；未访问复刻系统、未在本窗口重跑测试"
+      },
+      "classification": null,
+      "severity": "Observation",
+      "scopeLimit": "此行结论仅限实际操作，未证明同模块其他用例"
+    },
+    {
+      "caseId": "M32-ORG-01",
+      "module": "M32",
+      "title": "新组织进入报表部门选择器",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T10:45:22.712Z",
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "1.1.02员工任职信息/部门选择器",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "steps": [
+        "打开报表部门选择器",
+        "搜索完整组织名并回读",
+        "读取本轮组织和父级结果",
+        "尝试选中",
+        "核对已选为0",
+        "取消"
+      ],
+      "inputs": {
+        "department": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001"
+      },
+      "actualResult": "本轮ORG_001在部门搜索结果中可见；点击后已选组织仍0，取消选择器。未应用组织筛选，未取得空报表0行，不能称对账通过。",
+      "pageState": "本轮ORG_001在部门搜索结果中可见；点击后已选组织仍0，取消选择器。未应用组织筛选，未取得空报表0行，不能称对账通过。",
+      "recordIds": [
+        "d1d541ab-92f9-4fce-80c6-aa5687433175"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M32/M32-own-org-selection.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "repeatability": "可按记录ID只读重现；写入不可无条件重放",
+      "requirements": [
+        "M32-SPEC-01",
+        "M32-SPEC-03",
+        "F-SPEC-08"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-06/07",
+        "cases": [
+          "P3-M32-01",
+          "P3-M32-07"
+        ],
+        "path": "tests/r1-p3-report-query.test.mjs",
+        "evidenceMode": "源码/既有本地合成证据静态对照；未访问复刻系统、未在本窗口重跑测试"
+      },
+      "classification": null,
+      "severity": "Observation",
+      "scopeLimit": "此行结论仅限实际操作，未证明同模块其他用例"
+    },
+    {
+      "caseId": "M01-PENDING-ORG-LIFECYCLE",
+      "module": "M01",
+      "title": "组织编辑、更名、停用与在用保护",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "仅用本轮子组织修改",
+        "有子级/岗位/在职引用时试停用",
+        "记录新旧版本及拒绝",
+        "清理依赖后试停用"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "F-SPEC-08",
+        "BP-F-REQ-01"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-01",
+          "P3-M01-12"
+        ],
+        "path": "tests/r1-p3-m01.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ENV_BLOCKED",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M01-PENDING-ORG-UNIQUE",
+      "module": "M01",
+      "title": "同父重名、不同父重名及编码重复",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "使用本轮父子组织分别创建同名不同码和同码不同名",
+        "核对已批同父唯一，不用源行为自动改规则"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-08",
+        "BP-F-REQ-01"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "path": "tests/r1-p3-m01.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ENV_BLOCKED",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M01-PENDING-POSITION",
+      "module": "M01",
+      "title": "岗位新增、编辑、停用及上下级",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "仅关联本轮组织",
+        "覆盖同组织重名、跨组织重名、代码、设立/生效日期、上级职位、在用停用"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "BP-F-REQ-11",
+        "F-SPEC-01",
+        "F-SPEC-08"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-01",
+          "P3-M01-12"
+        ],
+        "path": "tests/r1-p3-m01.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ENV_BLOCKED",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M01-PENDING-EMP-CREATE",
+      "module": "M01",
+      "title": "员工新增及三入口模板",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "员工/待入职/办理入职分别核字段",
+        "合成不可投递邮箱，邀请否，未配置值不借用真实人员信息"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "BP-F-REQ-12",
+        "F-SPEC-07"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-09"
+        ],
+        "path": "tests/r1-p3-m01.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ENV_BLOCKED",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M01-PENDING-EMP-IMPORT",
+      "module": "M01",
+      "title": "员工正式导入5–10、30–50、100–500",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "取得正式模板并确认仅新增",
+        "按每批清单核行数/UUID/错误行/重试",
+        "成功小批量后才扩量"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "F-SPEC-07",
+        "BP-F-REQ-12"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-08",
+          "P3-M01-09"
+        ],
+        "path": "tests/r1-p3-m01.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ENV_BLOCKED",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M01-PENDING-ASSIGN",
+      "module": "M01",
+      "title": "主职、兼职、多任职及占用",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "独立HR复核",
+        "本轮员工主职1、附加任职占用规则",
+        "重叠/结束/取消不混淆人头与任职数"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "F-SPEC-05",
+        "BP-F-REQ-06"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-03"
+        ],
+        "path": "tests/r1-p3-m01.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M01-PENDING-JOIN-REGULARIZE",
+      "module": "M01",
+      "title": "入职、转正流程",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "本轮待入职→入职→转正，记录审批和生效、日期及档案变化，拒绝路径保留原单"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "BP-F-REQ-12",
+        "F-SPEC-07"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-09",
+          "P3-M19-01"
+        ],
+        "path": "tests/r1-p3-m01.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M01-PENDING-TRANSFER",
+      "module": "M01",
+      "title": "调动计划日、实际生效和日期重审",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "双方范围发起、不同两级审批",
+        "批准待生效",
+        "授权HR按北京时间执行",
+        "改日终止原单并新单重审"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7",
+        "F-SPEC-02",
+        "F-SPEC-03"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-04",
+          "P3-M01-05",
+          "P3-M01-06"
+        ],
+        "path": "tests/r1-p3-m01.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M01-PENDING-EXIT-REHIRE",
+      "module": "M01",
+      "title": "离职、再入职与身份连续性",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "最后工作日与退出日分离",
+        "历史身份匹配冲突不自动合并",
+        "新雇佣段、司龄并集、账号不自动恢复"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "F-SPEC-04",
+        "F-SPEC-05"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-02",
+          "P3-M01-10"
+        ],
+        "path": "tests/r1-p3-m01.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M01-PENDING-LEGAL",
+      "module": "M01",
+      "title": "法人组织归属与空范围",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "本轮法人如允许隔离创建才执行",
+        "空范围不当全组织",
+        "合同次数和版本以稳定ID核对"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "F-SPEC-06"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-07"
+        ],
+        "path": "tests/r1-p3-m01.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ENV_BLOCKED",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M01-PENDING-FIELDS",
+      "module": "M01",
+      "title": "必填、长度、格式、空值及重复值",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "逐字段空、边界、错误和重复",
+        "先读原站约束再填最大边界，禁止真实隐私字段"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-07"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-08",
+          "P3-M01-09"
+        ],
+        "path": "tests/r1-p3-m01.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ENV_BLOCKED",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M01-PENDING-HISTORY-ATTACH",
+      "module": "M01",
+      "title": "附件、历史版本、原单与审计",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "本轮纯合成小附件上传/下载/替换",
+        "核对象ID、版本、摘要、审计及不可越权",
+        "现有设立审计仅部分已观察"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "BASE-03",
+        "BASE-04",
+        "F-SPEC-08"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-12",
+          "P3-INT-05"
+        ],
+        "path": "tests/r1-p3-m01.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ENV_BLOCKED",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M01-PENDING-CONCURRENCY",
+      "module": "M01",
+      "title": "并发修改和重复提交",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "同一本轮对象双标签版本冲突",
+        "重复点击/丢响应先查询原记录，不以重建代恢复"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "F-SPEC-02",
+        "BASE-04"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-04",
+          "P3-M01-12"
+        ],
+        "path": "tests/r1-p3-m01.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ENV_BLOCKED",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M19-PENDING-SEQUENTIAL",
+      "module": "M19",
+      "title": "顺序审批、两方独立与禁止自审",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "不同身份分别确认调出/调入",
+        "顺序、当前权限和敏感职级摘要逐项记录"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "D3",
+        "D4",
+        "D5",
+        "D7",
+        "M19-SPEC-02"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M19_Workflow_Transactions.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-03",
+        "cases": [
+          "P3-M19-01",
+          "P3-M19-02"
+        ],
+        "path": "tests/r1-p3-workflow.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M19-PENDING-DELEGATION",
+      "module": "M19",
+      "title": "管理员委托、接受与撤销",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "仅本轮可隔离委托且现有账号授权",
+        "委托者/接受者/当前权限交集，不授D7审批或扩大真实权限"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "M19-SPEC-03"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M19_Workflow_Transactions.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-03",
+        "cases": [
+          "P3-M19-06"
+        ],
+        "path": "tests/r1-p3-workflow.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M19-PENDING-REJECT",
+      "module": "M19",
+      "title": "同意、驳回和驳回原因",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "对本轮单测试trim后空、1、2、500、501字原因",
+        "拒绝后原单保留，重新提交新ID"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "D6",
+        "M19-SPEC-02"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M19_Workflow_Transactions.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-03",
+        "cases": [
+          "P3-M19-02"
+        ],
+        "path": "tests/r1-p3-workflow.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M19-PENDING-WITHDRAW",
+      "module": "M19",
+      "title": "撤回、重提和修改日期重审",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "撤回/驳回/改期分别建新单，previousApprovalId关联，所有节点重启，不覆盖原签名"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "D2",
+        "D6",
+        "F-SPEC-03"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M19_Workflow_Transactions.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-03",
+        "cases": [
+          "P3-M19-04",
+          "P3-M01-05"
+        ],
+        "path": "tests/r1-p3-workflow.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M19-PENDING-EFFECT",
+      "module": "M19",
+      "title": "审批完成与HR执行生效分离",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "批准后档案不变，计划日北京00时前拒绝",
+        "授权HR执行，实际时间与计划日分别保存"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "D1",
+        "D2",
+        "M19-SPEC-04"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M19_Workflow_Transactions.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-03",
+        "cases": [
+          "P3-M19-07",
+          "P3-M01-04"
+        ],
+        "path": "tests/r1-p3-workflow.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M19-PENDING-RECOVERY",
+      "module": "M19",
+      "title": "重复点击、超时、执行失败恢复",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "仅用本轮数据制造自然校验失败",
+        "不注入共享服务故障",
+        "按原单查询、原因、次数和实际时间恢复"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "D1",
+        "F-SPEC-02",
+        "M19-SPEC-04"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M19_Workflow_Transactions.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-03",
+        "cases": [
+          "P3-M19-05",
+          "P3-M19-07"
+        ],
+        "path": "tests/r1-p3-workflow.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M19-PENDING-SUMMARY",
+      "module": "M19",
+      "title": "摘要字段、职级变化与原新单追溯",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "逐身份核前后职级及必要摘要，无权读其他档案和附件",
+        "原单/新单互链"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "D5",
+        "D6",
+        "M19-SPEC-02"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M19_Workflow_Transactions.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-03",
+        "cases": [
+          "P3-M19-02",
+          "P3-M19-07"
+        ],
+        "path": "tests/r1-p3-workflow.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M48-PENDING-PROFILE",
+      "module": "M48",
+      "title": "本人资料可见和可改字段",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "独立员工会话查看/申请修改本轮合成员工字段",
+        "禁止字段拒绝，不冒用管理视角"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "M48-SPEC-01",
+        "M48-SPEC-02"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M48_Authorization_Consumers.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-05",
+        "cases": [
+          "P3-M48-01",
+          "P3-M48-02"
+        ],
+        "path": "tests/r1-p3-portal.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M48-PENDING-ATTACH",
+      "module": "M48",
+      "title": "自助附件上传下载替换",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "合成附件、当前授权下载、替换后旧链接和元数据范围",
+        "无真实个人附件"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "M48-SPEC-02",
+        "BASE-03"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M48_Authorization_Consumers.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-05",
+        "cases": [
+          "P3-M48-02",
+          "P3-INT-05"
+        ],
+        "path": "tests/r1-p3-portal.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M48-PENDING-APPLICATION",
+      "module": "M48",
+      "title": "自助申请进度历史撤回驳回重提",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "本轮单跨入口返回稳定原单ID及版本，进度与历史分开，旧动作拒绝，缺源不冒0"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "M48-SPEC-03",
+        "M48-SPEC-04",
+        "BP-I-REQ-01"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M48_Authorization_Consumers.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-05",
+        "cases": [
+          "P3-M48-03",
+          "P3-M48-05",
+          "P3-M48-07"
+        ],
+        "path": "tests/r1-p3-portal.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M48-PENDING-BOUNDARY",
+      "module": "M48",
+      "title": "本人/他人、脱敏及管理员差异",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "独立员工A不能读B",
+        "撤权后旧页/缓存/附件不可复活",
+        "与管理员逐字段对照"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "M48-SPEC-01",
+        "M48-SPEC-02"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M48_Authorization_Consumers.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-05",
+        "cases": [
+          "P3-M48-01",
+          "P3-M48-02",
+          "P3-M48-06"
+        ],
+        "path": "tests/r1-p3-portal.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M48-PENDING-SEVEN",
+      "module": "M48",
+      "title": "七入口可用、无权、未配置和异常",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "团队/审批/OKR/目标/假勤/学习/发展逐项真实来源，不用菜单存在代生产者通过"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "M48-SPEC-03",
+        "M48-SPEC-04"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M48_Authorization_Consumers.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-05",
+        "cases": [
+          "P3-M48-04",
+          "P3-M48-05",
+          "P3-M48-07"
+        ],
+        "path": "tests/r1-p3-portal.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M32-PENDING-ORACLE",
+      "module": "M32",
+      "title": "指标口径与明细一致性",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "以本轮员工/任职清单独立手算人数、状态和占用",
+        "说明分母、去重键、空值，不能借现有380条代证"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "M32-SPEC-01",
+        "M32-SPEC-02",
+        "BP-I-REQ-02"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-06/07",
+        "cases": [
+          "P3-M32-01",
+          "P3-M32-02"
+        ],
+        "path": "tests/r1-p3-report-query.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ENV_BLOCKED",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M32-PENDING-TIME",
+      "module": "M32",
+      "title": "组织日期筛选、当前值与历史快照",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "对同一批本轮异动前后设日期，记录业务日/实际时间/快照版本",
+        "未有源版本不造历史"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "M32-SPEC-03",
+        "M32-SPEC-04"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-06/07",
+        "cases": [
+          "P3-M32-01",
+          "P3-M32-04"
+        ],
+        "path": "tests/r1-p3-report-query.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ENV_BLOCKED",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M32-PENDING-PAGING",
+      "module": "M32",
+      "title": "分页排序及100–500行显示",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "正式导入后按稳定键核首中末页、总量、排序、重复遗漏",
+        "未达小批量门槛不扩量"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "M32-SPEC-03",
+        "M32-SPEC-05"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-06/07",
+        "cases": [
+          "P3-M32-06",
+          "P3-M32-07"
+        ],
+        "path": "tests/r1-p3-report-query.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ENV_BLOCKED",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M32-PENDING-EXPORT",
+      "module": "M32",
+      "title": "导出内容、空导出与大文件",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "仅导出本轮数据，核行数、字节、中文、版本、权限与任务状态",
+        "下载限制解除前不执行"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "M32-SPEC-05"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-06/07",
+        "cases": [
+          "P3-M32-06",
+          "P3-M32-08"
+        ],
+        "path": "tests/r1-p3-report-query.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ENV_BLOCKED",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M32-PENDING-SUBSCRIBE",
+      "module": "M32",
+      "title": "订阅、权限过滤与投递",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "仅本轮自有订阅且无真实人外发",
+        "周期去重、逐接收者当前权限、结果未知/失败分别记录"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "M32-SPEC-06"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-06/07",
+        "cases": [
+          "P3-M32-09"
+        ],
+        "path": "tests/r1-p3-report-query.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M32-PENDING-DATA-EDGE",
+      "module": "M32",
+      "title": "空/重复/失效组织/离职/跨组织边界",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "仅本轮数据；正式下载限制处理后恢复写入；涉及独立身份时须使用现有授权测试角色",
+      "steps": [
+        "本轮空组织、重复任职、离职及失效组织分别对照",
+        "角色内外边界与汇总先过滤，未选中条件不能算0行"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
+        "actualValues": null
+      },
+      "actualResult": "未执行，不以计划预期充当实际结果",
+      "pageState": "not_executed",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "M32-SPEC-01",
+        "M32-SPEC-03"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-06/07",
+        "cases": [
+          "P3-M32-01",
+          "P3-M32-07"
+        ],
+        "path": "tests/r1-p3-report-query.test.mjs",
+        "evidenceMode": "关联既有任务；未在本窗口运行"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "E2E-SUCCESS",
+      "module": "E2E",
+      "title": "R1端到端成功路径",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "需本轮岗位、员工、独立两级审批及授权HR/员工身份；当前仅3条组织",
+      "steps": [
+        "建组织和岗位",
+        "创建员工",
+        "发起入职/调动/离职",
+        "进入审批中心",
+        "成功审批分支",
+        "授权HR执行生效",
+        "员工自助查看",
+        "报表明细与手算对账",
+        "核历史/审计/附件/原新单"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_"
+      },
+      "actualResult": "整链未执行；首段组织创建不得折算成链通过",
+      "pageState": "blocked_before_position_employee",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "repeatability": "待前置恢复",
+      "requirements": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7",
+        "F-SPEC-02",
+        "F-SPEC-03",
+        "M48-SPEC-03",
+        "M32-SPEC-01"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_Approved_Acceptance_Trace.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-11",
+        "cases": [
+          "P3-XMOD-01"
+        ],
+        "path": "docs/delivery/r1-p3/R1_P3_Checkpoint.json"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ENV-03",
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "E2E-REJECT",
+      "module": "E2E",
+      "title": "R1端到端驳回路径",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "需本轮岗位、员工、独立两级审批及授权HR/员工身份；当前仅3条组织",
+      "steps": [
+        "建组织和岗位",
+        "创建员工",
+        "发起入职/调动/离职",
+        "进入审批中心",
+        "驳回审批分支",
+        "授权HR执行生效",
+        "员工自助查看",
+        "报表明细与手算对账",
+        "核历史/审计/附件/原新单"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_"
+      },
+      "actualResult": "整链未执行；首段组织创建不得折算成链通过",
+      "pageState": "blocked_before_position_employee",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "repeatability": "待前置恢复",
+      "requirements": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7",
+        "F-SPEC-02",
+        "F-SPEC-03",
+        "M48-SPEC-03",
+        "M32-SPEC-01"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_Approved_Acceptance_Trace.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-11",
+        "cases": [
+          "P3-XMOD-01"
+        ],
+        "path": "docs/delivery/r1-p3/R1_P3_Checkpoint.json"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ENV-03",
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "E2E-WITHDRAW",
+      "module": "E2E",
+      "title": "R1端到端撤回路径",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "需本轮岗位、员工、独立两级审批及授权HR/员工身份；当前仅3条组织",
+      "steps": [
+        "建组织和岗位",
+        "创建员工",
+        "发起入职/调动/离职",
+        "进入审批中心",
+        "撤回审批分支",
+        "授权HR执行生效",
+        "员工自助查看",
+        "报表明细与手算对账",
+        "核历史/审计/附件/原新单"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_"
+      },
+      "actualResult": "整链未执行；首段组织创建不得折算成链通过",
+      "pageState": "blocked_before_position_employee",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "repeatability": "待前置恢复",
+      "requirements": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7",
+        "F-SPEC-02",
+        "F-SPEC-03",
+        "M48-SPEC-03",
+        "M32-SPEC-01"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_Approved_Acceptance_Trace.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-11",
+        "cases": [
+          "P3-XMOD-01"
+        ],
+        "path": "docs/delivery/r1-p3/R1_P3_Checkpoint.json"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ENV-03",
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "E2E-REDATE",
+      "module": "E2E",
+      "title": "R1端到端改日期后新单重审路径",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "需本轮岗位、员工、独立两级审批及授权HR/员工身份；当前仅3条组织",
+      "steps": [
+        "建组织和岗位",
+        "创建员工",
+        "发起入职/调动/离职",
+        "进入审批中心",
+        "改日期后新单重审审批分支",
+        "授权HR执行生效",
+        "员工自助查看",
+        "报表明细与手算对账",
+        "核历史/审计/附件/原新单"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_"
+      },
+      "actualResult": "整链未执行；首段组织创建不得折算成链通过",
+      "pageState": "blocked_before_position_employee",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "repeatability": "待前置恢复",
+      "requirements": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7",
+        "F-SPEC-02",
+        "F-SPEC-03",
+        "M48-SPEC-03",
+        "M32-SPEC-01"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_Approved_Acceptance_Trace.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-11",
+        "cases": [
+          "P3-XMOD-01"
+        ],
+        "path": "docs/delivery/r1-p3/R1_P3_Checkpoint.json"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ENV-03",
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    },
+    {
+      "caseId": "E2E-FAILURE",
+      "module": "E2E",
+      "title": "R1端到端执行失败与恢复路径",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "not_executed",
+      "time": null,
+      "role": null,
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": null,
+      "preconditions": "需本轮岗位、员工、独立两级审批及授权HR/员工身份；当前仅3条组织",
+      "steps": [
+        "建组织和岗位",
+        "创建员工",
+        "发起入职/调动/离职",
+        "进入审批中心",
+        "执行失败与恢复审批分支",
+        "授权HR执行生效",
+        "员工自助查看",
+        "报表明细与手算对账",
+        "核历史/审计/附件/原新单"
+      ],
+      "inputs": {
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_"
+      },
+      "actualResult": "整链未执行；首段组织创建不得折算成链通过",
+      "pageState": "blocked_before_position_employee",
+      "recordIds": [],
+      "evidence": [],
+      "screenshot": null,
+      "repeatability": "待前置恢复",
+      "requirements": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7",
+        "F-SPEC-02",
+        "F-SPEC-03",
+        "M48-SPEC-03",
+        "M32-SPEC-01"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_Approved_Acceptance_Trace.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-11",
+        "cases": [
+          "P3-XMOD-01"
+        ],
+        "path": "docs/delivery/r1-p3/R1_P3_Checkpoint.json"
+      },
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ENV-03",
+        "ROLE-01"
+      ],
+      "severity": "Observation"
+    }
+  ]
+}

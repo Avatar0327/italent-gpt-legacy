@@ -1,0 +1,145 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "observedAt": "2026-09-10T10:45:57.889759+00:00",
+  "startP3Head": "a27ae7ee367ccd6b4cf42de968b0a3cd7389b74c",
+  "comparisonP3Head": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+  "exitApproved": false,
+  "tasks": [
+    {
+      "id": "P3-R1-01",
+      "status": "implemented_synthetic_verified_review_pending",
+      "remaining": [],
+      "blockedValidation": []
+    },
+    {
+      "id": "P3-R1-02",
+      "status": "implemented_synthetic_verified_review_pending",
+      "remaining": [],
+      "blockedValidation": []
+    },
+    {
+      "id": "P3-R1-03",
+      "status": "implemented_synthetic_verified_review_pending",
+      "remaining": [],
+      "blockedValidation": []
+    },
+    {
+      "id": "P3-R1-04",
+      "status": "implemented_synthetic_verified_review_pending",
+      "remaining": [],
+      "blockedValidation": []
+    },
+    {
+      "id": "P3-R1-05",
+      "status": "implemented_synthetic_verified_review_pending",
+      "remaining": [],
+      "blockedValidation": []
+    },
+    {
+      "id": "P3-R1-06",
+      "status": "implemented_synthetic_verified_review_pending",
+      "remaining": [],
+      "blockedValidation": []
+    },
+    {
+      "id": "P3-R1-07",
+      "status": "implemented_synthetic_verified_review_pending",
+      "remaining": [],
+      "blockedValidation": [
+        "DEP-PLATFORM-01"
+      ]
+    },
+    {
+      "id": "P3-R1-08",
+      "status": "implemented_synthetic_verified_review_pending",
+      "remaining": [],
+      "blockedValidation": []
+    },
+    {
+      "id": "P3-R1-09",
+      "status": "implemented_synthetic_verified_review_pending",
+      "remaining": [],
+      "blockedValidation": [
+        "DEP-PLATFORM-01",
+        "DEP-PLATFORM-02"
+      ]
+    },
+    {
+      "id": "P3-R1-10",
+      "status": "partial_internal_verified_producer_blocked",
+      "remaining": [
+        "16项生产者实际版本未就绪；需各R2/R3 P3实现和正式契约后继续，不能用mock闭合"
+      ],
+      "blockedValidation": [
+        "DEP-PRODUCERS-01"
+      ]
+    },
+    {
+      "id": "P3-R1-11",
+      "status": "implemented_synthetic_verified_review_pending",
+      "remaining": [],
+      "blockedValidation": []
+    }
+  ],
+  "files": [
+    {
+      "path": "lib/hris/r1-m01.ts",
+      "startSha256": "f0e0480a14305d2b44f5abd8067f087fa7d4993df5d1eea4795c08692205ba7c",
+      "endSha256": "f0e0480a14305d2b44f5abd8067f087fa7d4993df5d1eea4795c08692205ba7c",
+      "changed": false
+    },
+    {
+      "path": "lib/hris/r1-m01-read.ts",
+      "startSha256": "fd87bb6c8e1b05a0c928121dcde11f472b4438ee4dc1f09f7042b14383364a06",
+      "endSha256": "fd87bb6c8e1b05a0c928121dcde11f472b4438ee4dc1f09f7042b14383364a06",
+      "changed": false
+    },
+    {
+      "path": "lib/hris/r1-workflow-model.ts",
+      "startSha256": "df7e45ae24d1298b87292fc00991231993cd4e6c00d5f2d4e22a0a1d72bb1b1b",
+      "endSha256": "df7e45ae24d1298b87292fc00991231993cd4e6c00d5f2d4e22a0a1d72bb1b1b",
+      "changed": false
+    },
+    {
+      "path": "lib/hris/r1-workflow.ts",
+      "startSha256": "d8f88cbe244209771561afb3d59ab695caa6028583218087c41a85f39dc72f59",
+      "endSha256": "d8f88cbe244209771561afb3d59ab695caa6028583218087c41a85f39dc72f59",
+      "changed": false
+    },
+    {
+      "path": "lib/hris/r1-report-query.ts",
+      "startSha256": "5a88dddff0422252ce6f8d3c9276eba9a76e2dd6e3def6f860ee80cef8f0c6ee",
+      "endSha256": "5a88dddff0422252ce6f8d3c9276eba9a76e2dd6e3def6f860ee80cef8f0c6ee",
+      "changed": false
+    },
+    {
+      "path": "lib/hris/r1-portal.ts",
+      "startSha256": "9ee9df41cba4c530220bb1919f8b684f7b95ea849d8160ae588c98afb3be4f80",
+      "endSha256": "c5385f5d203bb94bca47dfbc33de459665b1523e0e5f68f1963fe5b043dfa27f",
+      "changed": true
+    },
+    {
+      "path": "tests/r1-p3-m01.test.mjs",
+      "startSha256": "099a87e5571ca5e0d8e908bdef4de76d9144d10b58df85e2a11708316bf37a47",
+      "endSha256": "de6390d10fbd094135b20459a4d4bd9b6d25af8b5fd88dc789872aa12538b41b",
+      "changed": true
+    },
+    {
+      "path": "tests/r1-p3-workflow.test.mjs",
+      "startSha256": "ea9cb811242b3f7b4229b16afb47124564dd2a3799560ec7a46950ebbf8fcfe6",
+      "endSha256": "ea9cb811242b3f7b4229b16afb47124564dd2a3799560ec7a46950ebbf8fcfe6",
+      "changed": false
+    },
+    {
+      "path": "docs/delivery/r1-p3/R1_P3_Checkpoint.json",
+      "startSha256": "e058956a542cb01de533bec30120e7ff06cf9c123f923421cfbb146b846069b8",
+      "endSha256": "f65bde270318341d3d12e71b183d14ea30c6bb2f1351c122fa5d63acbd3e66aa",
+      "changed": true
+    }
+  ],
+  "review": "M01目录写入/读取、M19模型及工作流、M32查询在两快照间相同。门户增加sourceIdentity与契约版本；M01转正测试增强原命令丢响应回执，未改变目录创建测试。仅对本轮引用范围做增量静态复核，不承接整个P3独立复核。",
+  "intermediateComparisonHead": "e4b6d386025458ecfbdc71ff48b2b74d41cae1fc",
+  "finalObservedAt": "2026-09-10T10:57:36.205028+00:00",
+  "finalActivity": "blocked_external_dependencies_no_active_implementation",
+  "finalDelta": "中间至最终快照本轮引用的8个实现/测试文件均未变化；阶段记录更新为两轮183项本地合成通过，任务10与平台依赖仍保留，exitApproved=false。本窗口未重跑或替代复核。"
+}

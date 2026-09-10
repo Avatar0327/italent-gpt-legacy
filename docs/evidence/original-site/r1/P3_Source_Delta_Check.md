@@ -1,0 +1,11 @@
+# P3源码快照增量复核
+
+开始：a27ae7ee367ccd6b4cf42de968b0a3cd7389b74c。
+
+本轮对照结束快照：25eff27ea5b9320a7dfa5c2df7287d760c8d2688。
+
+M01目录写入/读取、M19模型及工作流、M32查询在两快照间相同。门户增加sourceIdentity与契约版本；M01转正测试增强原命令丢响应回执，未改变目录创建测试。仅对本轮引用范围做增量静态复核，不承接整个P3独立复核。
+
+P3结束快照：任务01–09及11为implemented_synthetic_verified_review_pending；任务10为partial_internal_verified_producer_blocked，16项真实生产者未就绪；exitApproved=false。本窗口不重新运行P3测试，不把其本地合成或模拟平台结果当原站/独立角色验收。
+
+最终补查：中间至最终快照本轮引用的8个实现/测试文件均未变化；阶段记录更新为两轮183项本地合成通过，任务10与平台依赖仍保留，exitApproved=false。本窗口未重跑或替代复核。

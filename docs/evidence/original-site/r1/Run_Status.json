@@ -1,0 +1,64 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "origin": "https://srworkshopbj.italent.cn",
+  "concurrency": "passed_scoped_to_own_two_tabs_and_draft",
+  "createdRecords": 3,
+  "bulkImportedRows": 0,
+  "modules": [
+    {
+      "module": "M01",
+      "originEvidence": "partial",
+      "bulkDataTesting": "not_completed",
+      "requirementsComparison": "partial",
+      "p3Comparison": "partial",
+      "readyForP3ExitParityReview": false
+    },
+    {
+      "module": "M19",
+      "originEvidence": "partial",
+      "bulkDataTesting": "not_completed",
+      "requirementsComparison": "partial",
+      "p3Comparison": "partial",
+      "readyForP3ExitParityReview": false
+    },
+    {
+      "module": "M48",
+      "originEvidence": "partial",
+      "bulkDataTesting": "not_completed",
+      "requirementsComparison": "partial",
+      "p3Comparison": "partial",
+      "readyForP3ExitParityReview": false
+    },
+    {
+      "module": "M32",
+      "originEvidence": "partial",
+      "bulkDataTesting": "not_completed",
+      "requirementsComparison": "partial",
+      "p3Comparison": "partial",
+      "readyForP3ExitParityReview": false
+    }
+  ],
+  "completedModuleCounts": {
+    "originBehavior": 0,
+    "bulkDataTesting": 0,
+    "originVsRequirements": 0,
+    "originVsP3": 0,
+    "readyForP3ExitParityReview": 0,
+    "denominator": 4
+  },
+  "partialEvidenceModules": 4,
+  "e2eCompleted": 0,
+  "e2eRequired": 5,
+  "activeRoleBlockers": 1,
+  "activeEnvBlockers": 2,
+  "resolvedEnvBlockers": 1,
+  "matchRules": 1,
+  "severities": {
+    "Blocker": 0,
+    "Major": 0,
+    "Minor": 0,
+    "Observation": 8
+  },
+  "p3ExitApprovedByThisWindow": false,
+  "p4StartedByThisWindow": false
+}

@@ -1,0 +1,21 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "time": "2026-09-10T10:45:22.712Z",
+  "origin": "https://srworkshopbj.italent.cn",
+  "page": "1.1.02员工任职信息/部门选择器",
+  "role": "ORIGIN-ADMIN-01",
+  "input": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001",
+  "valueReadbackConfirmed": true,
+  "visibleOwnOrganization": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001",
+  "knownOrganizationId": "d1d541ab-92f9-4fce-80c6-aa5687433175",
+  "selectedSummary": "\n0\n清空已选\n组织名称\n上级组织\n包含下级\n请从左侧选择部门\n取消\n确定",
+  "steps": [
+    "部门搜索完整名称",
+    "回读搜索输入",
+    "原站结果出现本轮组织及父级",
+    "点击结果和树节点后已选仍0",
+    "取消选择器"
+  ],
+  "result": "仅证明新组织已进入报表选择器；未成功应用筛选，空组织报表0行未验证",
+  "writes": 0
+}

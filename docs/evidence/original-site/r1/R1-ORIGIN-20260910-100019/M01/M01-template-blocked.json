@@ -1,0 +1,15 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "time": "2026-09-10T10:38:42.280Z",
+  "origin": "https://srworkshopbj.italent.cn",
+  "page": "组织/更多操作/导入组织/下载模板",
+  "steps": [
+    "从正式菜单下载模板",
+    "等待download超时",
+    "主体iframe显示Chromium阻止页面"
+  ],
+  "dom": ":\n  - iframe [id=\"iTalentFrame\"]:\n    - generic: This page has been blocked by Chromium",
+  "result": "ENV_BLOCKED",
+  "downloadPath": null,
+  "followup": "停止此下载及依赖导入，不使用隐藏接口或修改浏览器安全设置"
+}

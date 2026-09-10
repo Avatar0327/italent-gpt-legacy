@@ -60,6 +60,62 @@
     }
   ],
   "createdCount": 3,
-  "cleanup": [],
-  "successMessagePendingIdCount": 0
+  "cleanup": [
+    {
+      "originRecordId": "d1d541ab-92f9-4fce-80c6-aa5687433175",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001",
+      "module": "M01",
+      "action": "保留",
+      "orderIfLaterCleaning": 3,
+      "preconditions": [
+        "解除写入阻塞",
+        "只按UUID与本轮完整名称双重确认",
+        "检查是否新增非本轮依赖；有则停止清理",
+        "子级先于父级，不级联删除其他记录"
+      ],
+      "performed": false
+    },
+    {
+      "originRecordId": "db7df096-624b-4d1e-ab4e-0552a56f052c",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
+      "module": "M01",
+      "action": "保留",
+      "orderIfLaterCleaning": 1,
+      "preconditions": [
+        "解除写入阻塞",
+        "只按UUID与本轮完整名称双重确认",
+        "检查是否新增非本轮依赖；有则停止清理",
+        "子级先于父级，不级联删除其他记录"
+      ],
+      "performed": false
+    },
+    {
+      "originRecordId": "a7b55bd7-0ef2-44a0-9d29-6259fe053da3",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+      "module": "M01",
+      "action": "保留",
+      "orderIfLaterCleaning": 1,
+      "preconditions": [
+        "解除写入阻塞",
+        "只按UUID与本轮完整名称双重确认",
+        "检查是否新增非本轮依赖；有则停止清理",
+        "子级先于父级，不级联删除其他记录"
+      ],
+      "performed": false
+    }
+  ],
+  "successMessagePendingIdCount": 0,
+  "writesSuspendedReason": "ENV-03: official template blocked by Chromium",
+  "retainedCount": 3,
+  "deletedCount": 0,
+  "drafts": {
+    "unsubmittedFormsRemaining": 0,
+    "initialCancelledOrganizationDrafts": 2
+  },
+  "bulkImport": {
+    "templateObtained": false,
+    "importedRows": 0,
+    "smokeThresholdReached": false,
+    "expansionStarted": false
+  }
 }
