@@ -1,0 +1,25 @@
+{
+  "at": "2026-09-10T13:08:03.918Z",
+  "caseId": "M32-CURRENT-001",
+  "page": "1.01在职员工花名册",
+  "filter": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001",
+  "employeeId": "927ef593-f930-4bcb-963f-e463df2e9e84",
+  "rows": [
+    {
+      "人员状态": "正式",
+      "人数": "1",
+      "任职部门编码": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+      "入职日期": "2026-09-10",
+      "姓名": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001",
+      "工号": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001",
+      "所在机构": "华夏九洲集团",
+      "部门": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003"
+    }
+  ],
+  "total": 1,
+  "oracle": {
+    "people": 1,
+    "currentOrg": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003"
+  },
+  "p3Mode": "static source comparison only"
+}

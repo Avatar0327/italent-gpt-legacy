@@ -2,8 +2,8 @@
   "runId": "R1-ORIGIN-20260910-100019",
   "origin": "https://srworkshopbj.italent.cn",
   "concurrency": "passed_scoped_to_own_two_tabs_and_draft",
-  "createdRecords": 6,
-  "createdRecordsDefinition": "3组织+2职位+1员工；自动任职记录另列，不作为额外员工",
+  "createdRecords": 8,
+  "createdRecordsDefinition": "3组织+2职位+1员工+1调动申请+1未来离职任职；其他自动关联不重复计数",
   "smokeNamedObjectsThresholdReached": true,
   "continuationInProgress": true,
   "bulkImportedRows": 0,
@@ -55,13 +55,18 @@
   "activeRoleBlockers": 1,
   "activeEnvBlockers": 2,
   "resolvedEnvBlockers": 1,
-  "matchRules": 1,
+  "matchRules": 3,
   "severities": {
     "Blocker": 0,
     "Major": 1,
     "Minor": 0,
-    "Observation": 8
+    "Observation": 10
   },
   "p3ExitApprovedByThisWindow": false,
-  "p4StartedByThisWindow": false
+  "p4StartedByThisWindow": false,
+  "futureDatePendingCases": [
+    "M01退出实际生效",
+    "M01再入职",
+    "M19退出关联终止后效"
+  ]
 }

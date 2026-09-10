@@ -1,0 +1,30 @@
+{
+  "at": "2026-09-10T13:31:48.344Z",
+  "caseId": "M01-EXIT-001-ID",
+  "employeeId": "927ef593-f930-4bcb-963f-e463df2e9e84",
+  "assignmentId": "80c18ece-167d-4a3e-842c-c912ea656972",
+  "idsFrom": "本轮未来离职任职编辑iframe可见src中的id/req_parentDataId（不保存签名URL）",
+  "fields": [
+    {
+      "label": "任职类型",
+      "values": []
+    },
+    {
+      "label": "开始日期",
+      "values": [
+        "2026-09-11"
+      ]
+    },
+    {
+      "label": "结束日期",
+      "values": [
+        "9999-12-31"
+      ]
+    }
+  ],
+  "editSaved": false,
+  "reportCurrentOwnRows": [
+    "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001\t--\t--\t--\t--\tZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001\t2026-09-10\tZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\tZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001\t--\t--\t--\t--\t0.0\t--\t正式\t华夏九洲集团\tZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\t1"
+  ],
+  "workflowReadback": "本轮tab15刷新后仍为撤回后的开始节点；未见流程终止/作废文字，不能证明同步终止完成"
+}

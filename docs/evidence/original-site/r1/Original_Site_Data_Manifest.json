@@ -5,6 +5,59 @@
     {
       "runId": "R1-ORIGIN-20260910-100019",
       "module": "M01",
+      "caseId": "M01-EXIT-001",
+      "objectType": "future_exit_assignment",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001/EXIT_001",
+      "originRecordId": "80c18ece-167d-4a3e-842c-c912ea656972",
+      "createdAt": null,
+      "createdAtBasis": "正式离职保存，服务端创建审计未取；不能用浏览器时间代替",
+      "verifiedAt": "2026-09-10T13:31:48.344Z",
+      "status": "future_effective_2026-09-11",
+      "lastWorkingOn": "2026-09-10",
+      "plannedOn": "2026-09-11",
+      "relatedRecords": [
+        "927ef593-f930-4bcb-963f-e463df2e9e84",
+        "7b820015-586c-48a4-9496-64f2c4e1ffad",
+        "1cc37027-478b-4a9d-b055-e5a4f55b38e5"
+      ],
+      "allowLaterDelete": false,
+      "deletionGate": "保留离职历史与未来状态；清理先核实际生效和依赖，不删除历史掩盖过程",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-history.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-ID-report.json"
+      ]
+    },
+    {
+      "runId": "R1-ORIGIN-20260910-100019",
+      "module": "M19",
+      "caseId": "M19-TRANSFER-REQUEST-001",
+      "objectType": "transfer_request",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001的调动申请",
+      "originRecordId": "1cc37027-478b-4a9d-b055-e5a4f55b38e5",
+      "createdAt": null,
+      "createdAtPrecision": "minute",
+      "createdAtBasis": "原站操作记录仅显示分钟，不补造秒",
+      "status": "recalled_to_start_exit_warning_observed_termination_not_confirmed",
+      "relatedRecords": [
+        "927ef593-f930-4bcb-963f-e463df2e9e84",
+        "98436444-b9e5-468c-9abf-b3212bd666eb",
+        "7b820015-586c-48a4-9496-64f2c4e1ffad"
+      ],
+      "processInstanceId": "98436444-b9e5-468c-9abf-b3212bd666eb",
+      "plannedOn": "2026-09-11",
+      "recallAudit": "2026-09-10 20:52 Asia/Shanghai，分钟精度",
+      "allowLaterDelete": false,
+      "deletionGate": "保留流程历史；后续只终止/归档本轮精确单号，不得以删除代替撤回",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M19/M19-TRANSFER-REQUEST-001-detail.json",
+        "R1-ORIGIN-20260910-100019/M19/M19-TRANSFER-REQUEST-001-recall-audit.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-ID-report.json"
+      ],
+      "auditCreatedAtMinute": "2026-09-10 20:44 Asia/Shanghai"
+    },
+    {
+      "runId": "R1-ORIGIN-20260910-100019",
+      "module": "M01",
       "caseId": "M01-EMP-001",
       "objectType": "employee",
       "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001",
@@ -12,11 +65,20 @@
       "createdAt": null,
       "createdAtBasis": "服务端审计尚待读取；在职员工列表唯一结果已证",
       "verifiedAt": "2026-09-10T12:15:13.521Z",
-      "status": "active_list_verified",
-      "relatedRecords": ["db7df096-624b-4d1e-ab4e-0552a56f052c", "81fde82c-3807-4e73-be33-46a9321f87fb"],
+      "status": "formal_active_future_exit_2026-09-11",
+      "relatedRecords": [
+        "a7b55bd7-0ef2-44a0-9d29-6259fe053da3",
+        "9e593b4e-938e-4312-aff9-460c3c4d80f0",
+        "7b820015-586c-48a4-9496-64f2c4e1ffad",
+        "80c18ece-167d-4a3e-842c-c912ea656972",
+        "1cc37027-478b-4a9d-b055-e5a4f55b38e5"
+      ],
       "allowLaterDelete": true,
       "deletionGate": "唯一UUID+命名空间；有业务历史应保留归档，不级联删除；不得影响非本轮关联",
-      "evidence": ["R1-ORIGIN-20260910-100019/M01/M01-EMP-001.json"]
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-EMP-001.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-ID-report.json"
+      ]
     },
     {
       "runId": "R1-ORIGIN-20260910-100019",
@@ -29,10 +91,14 @@
       "createdAtBasis": "服务端审计尚待读取",
       "verifiedAt": "2026-09-10T12:05:36.062Z",
       "status": "enabled_query_verified",
-      "relatedRecords": ["a7b55bd7-0ef2-44a0-9d29-6259fe053da3"],
+      "relatedRecords": [
+        "a7b55bd7-0ef2-44a0-9d29-6259fe053da3"
+      ],
       "allowLaterDelete": true,
       "deletionGate": "UUID+完整名称核定，无非本轮依赖时才清理",
-      "evidence": ["R1-ORIGIN-20260910-100019/M01/M01-JOB-002.json"]
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-JOB-002.json"
+      ]
     },
     {
       "runId": "R1-ORIGIN-20260910-100019",
@@ -45,10 +111,14 @@
       "createdAtBasis": "服务端审计尚待读取；不得以浏览器时间代替",
       "verifiedAt": "2026-09-10T12:02:19.506Z",
       "status": "enabled_query_verified",
-      "relatedRecords": ["db7df096-624b-4d1e-ab4e-0552a56f052c"],
+      "relatedRecords": [
+        "db7df096-624b-4d1e-ab4e-0552a56f052c"
+      ],
       "allowLaterDelete": true,
       "deletionGate": "UUID+完整名称核定，只在无非本轮依赖时清理",
-      "evidence": ["R1-ORIGIN-20260910-100019/M01/M01-continuation-smoke.json"]
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-continuation-smoke.json"
+      ]
     },
     {
       "runId": "R1-ORIGIN-20260910-100019",
@@ -107,54 +177,117 @@
       ]
     }
   ],
-  "createdCount": 6,
+  "createdCount": 8,
+  "countDefinition": "8个主动创建业务对象：3组织+2职位+1员工+1调动申请+1未来离职任职；自动生成的流程及其他任职记录另列关联，不声称全数据库行总量。",
   "cleanup": [
     {
-      "originRecordId": "d1d541ab-92f9-4fce-80c6-aa5687433175",
+      "action": "保留",
+      "performed": false,
+      "module": "M01",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001/EXIT_001",
+      "originRecordId": "80c18ece-167d-4a3e-842c-c912ea656972",
+      "allowLaterDelete": false,
+      "preconditions": [
+        "UUID+本轮完整名称双核",
+        "有非本轮依赖即停止，不级联影响其他记录",
+        "先核未来生效/撤回申请终态，员工历史保留；职位后于员工关联核验，子组织先于父组织"
+      ]
+    },
+    {
+      "action": "保留",
+      "performed": false,
+      "module": "M19",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001的调动申请",
+      "originRecordId": "1cc37027-478b-4a9d-b055-e5a4f55b38e5",
+      "allowLaterDelete": false,
+      "preconditions": [
+        "UUID+本轮完整名称双核",
+        "有非本轮依赖即停止，不级联影响其他记录",
+        "先核未来生效/撤回申请终态，员工历史保留；职位后于员工关联核验，子组织先于父组织"
+      ]
+    },
+    {
+      "action": "保留",
+      "performed": false,
+      "module": "M01",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001",
+      "originRecordId": "927ef593-f930-4bcb-963f-e463df2e9e84",
+      "allowLaterDelete": true,
+      "preconditions": [
+        "UUID+本轮完整名称双核",
+        "有非本轮依赖即停止，不级联影响其他记录",
+        "先核未来生效/撤回申请终态，员工历史保留；职位后于员工关联核验，子组织先于父组织"
+      ]
+    },
+    {
+      "action": "保留",
+      "performed": false,
+      "module": "M01",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_002",
+      "originRecordId": "9e593b4e-938e-4312-aff9-460c3c4d80f0",
+      "allowLaterDelete": true,
+      "preconditions": [
+        "UUID+本轮完整名称双核",
+        "有非本轮依赖即停止，不级联影响其他记录",
+        "先核未来生效/撤回申请终态，员工历史保留；职位后于员工关联核验，子组织先于父组织"
+      ]
+    },
+    {
+      "action": "保留",
+      "performed": false,
+      "module": "M01",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001",
+      "originRecordId": "81fde82c-3807-4e73-be33-46a9321f87fb",
+      "allowLaterDelete": true,
+      "preconditions": [
+        "UUID+本轮完整名称双核",
+        "有非本轮依赖即停止，不级联影响其他记录",
+        "先核未来生效/撤回申请终态，员工历史保留；职位后于员工关联核验，子组织先于父组织"
+      ]
+    },
+    {
+      "action": "保留",
+      "performed": false,
+      "module": "M01",
       "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001",
-      "module": "M01",
-      "action": "保留",
-      "orderIfLaterCleaning": 3,
+      "originRecordId": "d1d541ab-92f9-4fce-80c6-aa5687433175",
+      "allowLaterDelete": true,
       "preconditions": [
-        "解除写入阻塞",
-        "只按UUID与本轮完整名称双重确认",
-        "检查是否新增非本轮依赖；有则停止清理",
-        "子级先于父级，不级联删除其他记录"
-      ],
-      "performed": false
+        "UUID+本轮完整名称双核",
+        "有非本轮依赖即停止，不级联影响其他记录",
+        "先核未来生效/撤回申请终态，员工历史保留；职位后于员工关联核验，子组织先于父组织"
+      ]
     },
     {
-      "originRecordId": "db7df096-624b-4d1e-ab4e-0552a56f052c",
+      "action": "保留",
+      "performed": false,
+      "module": "M01",
       "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
-      "module": "M01",
-      "action": "保留",
-      "orderIfLaterCleaning": 1,
+      "originRecordId": "db7df096-624b-4d1e-ab4e-0552a56f052c",
+      "allowLaterDelete": true,
       "preconditions": [
-        "解除写入阻塞",
-        "只按UUID与本轮完整名称双重确认",
-        "检查是否新增非本轮依赖；有则停止清理",
-        "子级先于父级，不级联删除其他记录"
-      ],
-      "performed": false
+        "UUID+本轮完整名称双核",
+        "有非本轮依赖即停止，不级联影响其他记录",
+        "先核未来生效/撤回申请终态，员工历史保留；职位后于员工关联核验，子组织先于父组织"
+      ]
     },
     {
-      "originRecordId": "a7b55bd7-0ef2-44a0-9d29-6259fe053da3",
-      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
-      "module": "M01",
       "action": "保留",
-      "orderIfLaterCleaning": 1,
+      "performed": false,
+      "module": "M01",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+      "originRecordId": "a7b55bd7-0ef2-44a0-9d29-6259fe053da3",
+      "allowLaterDelete": true,
       "preconditions": [
-        "解除写入阻塞",
-        "只按UUID与本轮完整名称双重确认",
-        "检查是否新增非本轮依赖；有则停止清理",
-        "子级先于父级，不级联删除其他记录"
-      ],
-      "performed": false
+        "UUID+本轮完整名称双核",
+        "有非本轮依赖即停止，不级联影响其他记录",
+        "先核未来生效/撤回申请终态，员工历史保留；职位后于员工关联核验，子组织先于父组织"
+      ]
     }
   ],
   "successMessagePendingIdCount": 0,
   "writesSuspendedReason": null,
-  "retainedCount": 6,
+  "retainedCount": 8,
   "deletedCount": 0,
   "drafts": {
     "unsubmittedFormsRemaining": 0,
@@ -165,5 +298,14 @@
     "importedRows": 0,
     "smokeThresholdReached": false,
     "expansionStarted": false
+  },
+  "manualSmoke": {
+    "namedMasterObjects": 6,
+    "totalCreatedBusinessObjects": 8,
+    "threshold5To10Reached": true,
+    "employeeCount": 1,
+    "expanded30To50": false,
+    "bulkImportedRows": 0,
+    "expansionGate": "页面运行稳定且可审计逐条UUID；现已多次出现数十秒加载/回执延迟，不在回执未核定时重放或扩量。未证共享环境受影响。"
   }
 }

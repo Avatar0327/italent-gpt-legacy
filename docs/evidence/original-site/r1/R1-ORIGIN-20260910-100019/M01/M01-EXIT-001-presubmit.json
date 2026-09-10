@@ -1,0 +1,113 @@
+{
+  "at": "2026-09-10T13:24:12.859Z",
+  "caseId": "M01-EXIT-001",
+  "employeeId": "927ef593-f930-4bcb-963f-e463df2e9e84",
+  "role": "ORIGIN-ADMIN-01",
+  "environment": "https://srworkshopbj.italent.cn",
+  "page": "员工详情→离职",
+  "validation": "空最后工作日保存显示必填",
+  "fields": [
+    {
+      "label": "最后工作日",
+      "values": [
+        "2026-09-10"
+      ]
+    },
+    {
+      "label": "预计最后工作日",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "交接人",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "离职类型",
+      "values": [
+        "主动离职"
+      ]
+    },
+    {
+      "label": "离职原因",
+      "values": [
+        "个人原因"
+      ]
+    },
+    {
+      "label": "离职后去向",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "离职补偿金",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "离职补偿金分期期数",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "竞业限制金",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "竞业限制金分期期数",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "加入黑名单",
+      "values": []
+    },
+    {
+      "label": "最后发薪日",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "社保公积金失效年月",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "年假是否结薪",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "扣税期限",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "税款年份",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "雇主姓名",
+      "values": [
+        ""
+      ]
+    }
+  ],
+  "blacklist": false,
+  "preconditions": "仅本轮员工；交接人/补偿/发薪/社保日期为空，无真实身份资料"
+}
