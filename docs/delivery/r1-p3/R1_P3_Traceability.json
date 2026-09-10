@@ -375,8 +375,20 @@
         "P3-M19-01",
         "P3-M19-03"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T061120991290Z.json",
+        "evidence/r1-p3-20260910T061155692609Z.json"
+      ],
+      "caseEvidence": "R1_P3_M19_Case_Evidence.json",
+      "code": [
+        "lib/hris/r1-workflow.ts",
+        "lib/hris/r1-workflow-batch.ts",
+        "lib/hris/r1-workflow-read.ts",
+        "lib/hris/r1-workflow-notifications.ts",
+        "app/r1-approvals/workspace.tsx"
+      ],
+      "implementationSha": "b24a57ed7986b2eb22b32a6ebdb3b34e2687309b"
     },
     {
       "id": "BP-I-REQ-07-AC02",
@@ -384,8 +396,20 @@
         "P3-M19-01",
         "P3-M19-03"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T061120991290Z.json",
+        "evidence/r1-p3-20260910T061155692609Z.json"
+      ],
+      "caseEvidence": "R1_P3_M19_Case_Evidence.json",
+      "code": [
+        "lib/hris/r1-workflow.ts",
+        "lib/hris/r1-workflow-batch.ts",
+        "lib/hris/r1-workflow-read.ts",
+        "lib/hris/r1-workflow-notifications.ts",
+        "app/r1-approvals/workspace.tsx"
+      ],
+      "implementationSha": "b24a57ed7986b2eb22b32a6ebdb3b34e2687309b"
     },
     {
       "id": "BP-I-REQ-07-AC03",
@@ -393,8 +417,20 @@
         "P3-M19-01",
         "P3-M19-03"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T061120991290Z.json",
+        "evidence/r1-p3-20260910T061155692609Z.json"
+      ],
+      "caseEvidence": "R1_P3_M19_Case_Evidence.json",
+      "code": [
+        "lib/hris/r1-workflow.ts",
+        "lib/hris/r1-workflow-batch.ts",
+        "lib/hris/r1-workflow-read.ts",
+        "lib/hris/r1-workflow-notifications.ts",
+        "app/r1-approvals/workspace.tsx"
+      ],
+      "implementationSha": "b24a57ed7986b2eb22b32a6ebdb3b34e2687309b"
     },
     {
       "id": "BP-I-REQ-07-AC04",
@@ -402,8 +438,20 @@
         "P3-M19-01",
         "P3-M19-03"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T061120991290Z.json",
+        "evidence/r1-p3-20260910T061155692609Z.json"
+      ],
+      "caseEvidence": "R1_P3_M19_Case_Evidence.json",
+      "code": [
+        "lib/hris/r1-workflow.ts",
+        "lib/hris/r1-workflow-batch.ts",
+        "lib/hris/r1-workflow-read.ts",
+        "lib/hris/r1-workflow-notifications.ts",
+        "app/r1-approvals/workspace.tsx"
+      ],
+      "implementationSha": "b24a57ed7986b2eb22b32a6ebdb3b34e2687309b"
     },
     {
       "id": "BP-I-REQ-11-AC01",
@@ -547,80 +595,200 @@
         "P3-M19-01",
         "P3-M19-03"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T061120991290Z.json",
+        "evidence/r1-p3-20260910T061155692609Z.json"
+      ],
+      "caseEvidence": "R1_P3_M19_Case_Evidence.json",
+      "code": [
+        "lib/hris/r1-workflow.ts",
+        "lib/hris/r1-workflow-batch.ts",
+        "lib/hris/r1-workflow-read.ts",
+        "lib/hris/r1-workflow-notifications.ts",
+        "app/r1-approvals/workspace.tsx"
+      ],
+      "implementationSha": "b24a57ed7986b2eb22b32a6ebdb3b34e2687309b"
     },
     {
       "id": "M19-REVIEW-AC01",
       "plannedCases": [
         "P3-M19-01"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T061120991290Z.json",
+        "evidence/r1-p3-20260910T061155692609Z.json"
+      ],
+      "caseEvidence": "R1_P3_M19_Case_Evidence.json",
+      "code": [
+        "lib/hris/r1-workflow.ts",
+        "lib/hris/r1-workflow-batch.ts",
+        "lib/hris/r1-workflow-read.ts",
+        "lib/hris/r1-workflow-notifications.ts",
+        "app/r1-approvals/workspace.tsx"
+      ],
+      "implementationSha": "b24a57ed7986b2eb22b32a6ebdb3b34e2687309b"
     },
     {
       "id": "M19-REVIEW-AC02",
       "plannedCases": [
         "P3-M19-01"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T061120991290Z.json",
+        "evidence/r1-p3-20260910T061155692609Z.json"
+      ],
+      "caseEvidence": "R1_P3_M19_Case_Evidence.json",
+      "code": [
+        "lib/hris/r1-workflow.ts",
+        "lib/hris/r1-workflow-batch.ts",
+        "lib/hris/r1-workflow-read.ts",
+        "lib/hris/r1-workflow-notifications.ts",
+        "app/r1-approvals/workspace.tsx"
+      ],
+      "implementationSha": "b24a57ed7986b2eb22b32a6ebdb3b34e2687309b"
     },
     {
       "id": "M19-REVIEW-AC03",
       "plannedCases": [
         "P3-M19-03"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T061120991290Z.json",
+        "evidence/r1-p3-20260910T061155692609Z.json"
+      ],
+      "caseEvidence": "R1_P3_M19_Case_Evidence.json",
+      "code": [
+        "lib/hris/r1-workflow.ts",
+        "lib/hris/r1-workflow-batch.ts",
+        "lib/hris/r1-workflow-read.ts",
+        "lib/hris/r1-workflow-notifications.ts",
+        "app/r1-approvals/workspace.tsx"
+      ],
+      "implementationSha": "b24a57ed7986b2eb22b32a6ebdb3b34e2687309b"
     },
     {
       "id": "M19-REVIEW-AC04",
       "plannedCases": [
         "P3-M19-04"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T061120991290Z.json",
+        "evidence/r1-p3-20260910T061155692609Z.json"
+      ],
+      "caseEvidence": "R1_P3_M19_Case_Evidence.json",
+      "code": [
+        "lib/hris/r1-workflow.ts",
+        "lib/hris/r1-workflow-batch.ts",
+        "lib/hris/r1-workflow-read.ts",
+        "lib/hris/r1-workflow-notifications.ts",
+        "app/r1-approvals/workspace.tsx"
+      ],
+      "implementationSha": "b24a57ed7986b2eb22b32a6ebdb3b34e2687309b"
     },
     {
       "id": "M19-REVIEW-AC05",
       "plannedCases": [
         "P3-M19-05"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T061120991290Z.json",
+        "evidence/r1-p3-20260910T061155692609Z.json"
+      ],
+      "caseEvidence": "R1_P3_M19_Case_Evidence.json",
+      "code": [
+        "lib/hris/r1-workflow.ts",
+        "lib/hris/r1-workflow-batch.ts",
+        "lib/hris/r1-workflow-read.ts",
+        "lib/hris/r1-workflow-notifications.ts",
+        "app/r1-approvals/workspace.tsx"
+      ],
+      "implementationSha": "b24a57ed7986b2eb22b32a6ebdb3b34e2687309b"
     },
     {
       "id": "M19-REVIEW-AC06",
       "plannedCases": [
         "P3-M19-06"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T061120991290Z.json",
+        "evidence/r1-p3-20260910T061155692609Z.json"
+      ],
+      "caseEvidence": "R1_P3_M19_Case_Evidence.json",
+      "code": [
+        "lib/hris/r1-workflow.ts",
+        "lib/hris/r1-workflow-batch.ts",
+        "lib/hris/r1-workflow-read.ts",
+        "lib/hris/r1-workflow-notifications.ts",
+        "app/r1-approvals/workspace.tsx"
+      ],
+      "implementationSha": "b24a57ed7986b2eb22b32a6ebdb3b34e2687309b"
     },
     {
       "id": "M19-REVIEW-AC07",
       "plannedCases": [
         "P3-M19-06"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T061120991290Z.json",
+        "evidence/r1-p3-20260910T061155692609Z.json"
+      ],
+      "caseEvidence": "R1_P3_M19_Case_Evidence.json",
+      "code": [
+        "lib/hris/r1-workflow.ts",
+        "lib/hris/r1-workflow-batch.ts",
+        "lib/hris/r1-workflow-read.ts",
+        "lib/hris/r1-workflow-notifications.ts",
+        "app/r1-approvals/workspace.tsx"
+      ],
+      "implementationSha": "b24a57ed7986b2eb22b32a6ebdb3b34e2687309b"
     },
     {
       "id": "M19-REVIEW-AC08",
       "plannedCases": [
         "P3-M19-07"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T061120991290Z.json",
+        "evidence/r1-p3-20260910T061155692609Z.json"
+      ],
+      "caseEvidence": "R1_P3_M19_Case_Evidence.json",
+      "code": [
+        "lib/hris/r1-workflow.ts",
+        "lib/hris/r1-workflow-batch.ts",
+        "lib/hris/r1-workflow-read.ts",
+        "lib/hris/r1-workflow-notifications.ts",
+        "app/r1-approvals/workspace.tsx"
+      ],
+      "implementationSha": "b24a57ed7986b2eb22b32a6ebdb3b34e2687309b"
     },
     {
       "id": "M19-REVIEW-AC09",
       "plannedCases": [
         "P3-M19-07"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T061120991290Z.json",
+        "evidence/r1-p3-20260910T061155692609Z.json"
+      ],
+      "caseEvidence": "R1_P3_M19_Case_Evidence.json",
+      "code": [
+        "lib/hris/r1-workflow.ts",
+        "lib/hris/r1-workflow-batch.ts",
+        "lib/hris/r1-workflow-read.ts",
+        "lib/hris/r1-workflow-notifications.ts",
+        "app/r1-approvals/workspace.tsx"
+      ],
+      "implementationSha": "b24a57ed7986b2eb22b32a6ebdb3b34e2687309b"
     },
     {
       "id": "M32-REVIEW-AC01",
@@ -945,31 +1113,40 @@
     {
       "id": "R1-M19-L01",
       "status": "owner_design_review_closed",
-      "p3Evidence": [],
+      "p3Evidence": [
+        "evidence/r1-p3-20260910T061120991290Z.json",
+        "evidence/r1-p3-20260910T061155692609Z.json"
+      ],
       "primaryDisposition": "P2",
       "sourceStatus": "owner_design_review_closed",
       "sourceEvidenceOwner": "P1 controller",
       "plannedP3Cases": [
         "P3-M19-01"
       ],
-      "p3RuntimeStatus": "not_executed"
+      "p3RuntimeStatus": "local_runtime_evidence_review_pending"
     },
     {
       "id": "R1-M19-L02",
       "status": "owner_design_review_closed",
-      "p3Evidence": [],
+      "p3Evidence": [
+        "evidence/r1-p3-20260910T061120991290Z.json",
+        "evidence/r1-p3-20260910T061155692609Z.json"
+      ],
       "primaryDisposition": "P2",
       "sourceStatus": "owner_design_review_closed",
       "sourceEvidenceOwner": "P1 controller",
       "plannedP3Cases": [
         "P3-M19-06"
       ],
-      "p3RuntimeStatus": "not_executed"
+      "p3RuntimeStatus": "local_runtime_evidence_review_pending"
     },
     {
       "id": "R1-M19-L03",
       "status": "design_complete_validation_open",
-      "p3Evidence": [],
+      "p3Evidence": [
+        "evidence/r1-p3-20260910T061120991290Z.json",
+        "evidence/r1-p3-20260910T061155692609Z.json"
+      ],
       "primaryDisposition": "P3",
       "sourceStatus": "design_complete_validation_open",
       "sourceEvidenceOwner": "P1 controller",
@@ -977,24 +1154,30 @@
         "P3-M19-01",
         "P3-M19-02"
       ],
-      "p3RuntimeStatus": "not_executed"
+      "p3RuntimeStatus": "local_runtime_evidence_review_pending"
     },
     {
       "id": "R1-M19-L04",
       "status": "design_complete_validation_open",
-      "p3Evidence": [],
+      "p3Evidence": [
+        "evidence/r1-p3-20260910T061120991290Z.json",
+        "evidence/r1-p3-20260910T061155692609Z.json"
+      ],
       "primaryDisposition": "P3",
       "sourceStatus": "design_complete_validation_open",
       "sourceEvidenceOwner": "P1 controller",
       "plannedP3Cases": [
         "P3-M19-01"
       ],
-      "p3RuntimeStatus": "not_executed"
+      "p3RuntimeStatus": "local_runtime_evidence_review_pending"
     },
     {
       "id": "R1-M19-L05",
       "status": "design_complete_validation_open",
-      "p3Evidence": [],
+      "p3Evidence": [
+        "evidence/r1-p3-20260910T061120991290Z.json",
+        "evidence/r1-p3-20260910T061155692609Z.json"
+      ],
       "primaryDisposition": "P3",
       "sourceStatus": "design_complete_validation_open",
       "sourceEvidenceOwner": "P1 controller",
@@ -1002,25 +1185,30 @@
         "P3-M19-03",
         "P3-M19-04"
       ],
-      "p3RuntimeStatus": "not_executed"
+      "p3RuntimeStatus": "local_runtime_evidence_review_pending"
     },
     {
       "id": "R1-M19-L06",
       "status": "design_complete_validation_open",
-      "p3Evidence": [],
+      "p3Evidence": [
+        "evidence/r1-p3-20260910T061120991290Z.json",
+        "evidence/r1-p3-20260910T061155692609Z.json"
+      ],
       "primaryDisposition": "P3",
       "sourceStatus": "design_complete_validation_open",
       "sourceEvidenceOwner": "P1 controller",
       "plannedP3Cases": [
         "P3-M19-06"
       ],
-      "p3RuntimeStatus": "not_executed"
+      "p3RuntimeStatus": "local_runtime_evidence_review_pending"
     },
     {
       "id": "R1-M19-L07",
       "status": "design_complete_validation_open",
       "p3Evidence": [
-        "evidence/r1-p3-02-d7-20260910T042138Z.json"
+        "evidence/r1-p3-02-d7-20260910T042138Z.json",
+        "evidence/r1-p3-20260910T061120991290Z.json",
+        "evidence/r1-p3-20260910T061155692609Z.json"
       ],
       "primaryDisposition": "P3",
       "sourceStatus": "design_complete_validation_open",
@@ -1028,7 +1216,7 @@
       "plannedP3Cases": [
         "P3-INT-03"
       ],
-      "p3RuntimeStatus": "partial_evidence_not_closed"
+      "p3RuntimeStatus": "partial_evidence_callback_contract_task04_pending"
     },
     {
       "id": "R1-M19-L08",
@@ -1279,7 +1467,10 @@
       "p3RuntimeStatus": "not_executed"
     }
   ],
-  "latestEvidence": "evidence/r1-p3-20260910T053805670409Z.json",
+  "latestEvidence": [
+    "evidence/r1-p3-20260910T061120991290Z.json",
+    "evidence/r1-p3-20260910T061155692609Z.json"
+  ],
   "allOriginalAcPassed": false,
   "risksClosedByExecutor": 0,
   "riskDispositionCounts": {
