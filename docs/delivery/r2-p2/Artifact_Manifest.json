@@ -1,0 +1,85 @@
+{
+  "scope": "core design artifacts; excludes this manifest and evidence output to avoid circular hashes",
+  "artifacts": [
+    {
+      "path": "docs/delivery/r2-p2/Approval_Provenance.json",
+      "sha256": "ca1a4727f011548448dfbac7b3e723341fea52169913e3e8904b79e086ad0408",
+      "bytes": 46095
+    },
+    {
+      "path": "docs/delivery/r2-p2/Architecture.md",
+      "sha256": "1ce6a42ebd4dba83e347d331b92e91308b5032832308f243f86dd915e5f4ecac",
+      "bytes": 7938
+    },
+    {
+      "path": "docs/delivery/r2-p2/Cross_Module_Contracts.md",
+      "sha256": "fb0ddb062db795e023b460545863fe36b389e1e660bf752467630cad5540565e",
+      "bytes": 5963
+    },
+    {
+      "path": "docs/delivery/r2-p2/Design_Checkpoint.json",
+      "sha256": "530b9f03837ace84ec45d5a405d3b7e48873d6afe587c44c2afa97f669d28dd6",
+      "bytes": 611
+    },
+    {
+      "path": "docs/delivery/r2-p2/Historical_Evidence_Index.json",
+      "sha256": "53874838733d3fa42bf4e90c45578d623d5e239980b18f825b3fac631684d354",
+      "bytes": 229055
+    },
+    {
+      "path": "docs/delivery/r2-p2/Interfaces.md",
+      "sha256": "6d16fef2ae6b8b68d544d2f9e37684532f464492e26f2aff6686a4e51f137ef8",
+      "bytes": 6787
+    },
+    {
+      "path": "docs/delivery/r2-p2/Migration_Rollback.md",
+      "sha256": "54a3c427b2cfdc1d8f4fce870bd4de92f86fba0f3d222c099aff266df19ffc01",
+      "bytes": 5907
+    },
+    {
+      "path": "docs/delivery/r2-p2/Original_Limits.json",
+      "sha256": "e78a0537a8c17f9a3c5346450cf834eb6f91754a1ea4b1994995e6e9d072290a",
+      "bytes": 10303
+    },
+    {
+      "path": "docs/delivery/r2-p2/Permissions.md",
+      "sha256": "ac2cb7c1a3f29fdd581f58c0d4a499413c53712a208c8a44871189db154efc4b",
+      "bytes": 7700
+    },
+    {
+      "path": "docs/delivery/r2-p2/README.md",
+      "sha256": "a827f9a8a233497b9f9e3307d7870c2e750b9098339830dc9d8d77778446c5d7",
+      "bytes": 2039
+    },
+    {
+      "path": "docs/delivery/r2-p2/Recovery_Cost_Responsibilities.md",
+      "sha256": "35a9de08a30574d7f026b182a88e2bd8b7808ace05a38d747695393e9f3f253f",
+      "bytes": 5574
+    },
+    {
+      "path": "docs/delivery/r2-p2/Requirements_Trace.json",
+      "sha256": "ff9190ad661a403d95d13e2f71a614410ee8573105407e33055d48f4e1c53e4c",
+      "bytes": 362363
+    },
+    {
+      "path": "docs/delivery/r2-p2/Source_Manifest.json",
+      "sha256": "f29af13630ea2f043c4cc449c9209c9478bb006971822b92d29c9eb4f2820f7f",
+      "bytes": 20267
+    },
+    {
+      "path": "docs/delivery/r2-p2/Traceability.md",
+      "sha256": "6c250ce1b113996c3d5a6d7be24ac365e8ab0312a233dd3cd977319f38ede9b8",
+      "bytes": 2947
+    },
+    {
+      "path": "docs/delivery/r2-p2/build_inventory.py",
+      "sha256": "0912dc79da7053a37e51d6f34d7156c155ec7452ce4685b9fcf68450550f3a70",
+      "bytes": 7907
+    },
+    {
+      "path": "docs/delivery/r2-p2/check_design.py",
+      "sha256": "08c9597fb2768c0840d170a620ad236a3e3449bab365e837ae646583d0c4c0e9",
+      "bytes": 6531
+    }
+  ]
+}

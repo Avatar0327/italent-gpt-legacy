@@ -1,0 +1,18 @@
+{
+  "kind": "design_branch_checkpoint_not_scope_ledger",
+  "entryApproval": "R2-P1-P2-TRANSITION-20260910",
+  "startHead": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+  "r1DesignHead": "e15237281ff19f04f08a354fd9455c518b24ae47",
+  "worktree": "/workspace/sites/italent-hris-r2-p2-20260910",
+  "branch": "design/r2-p2-20260910",
+  "architectureComplete": true,
+  "completedModules": [],
+  "activeModule": null,
+  "foundationsComplete": false,
+  "completedReviews": [],
+  "p2ExitApproved": false,
+  "p3Entered": false,
+  "productModified": false,
+  "deployed": false,
+  "next": "M37 sequential detailed design"
+}

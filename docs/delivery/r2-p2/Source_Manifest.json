@@ -1,0 +1,522 @@
+[
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "app/api/attachments/route.ts",
+    "sha256": "bc5f8cf99908aa2f1cb9e010695c0f32a56b6503d57d783de0137e7fcb8ef21b",
+    "bytes": 7579,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "app/api/cadres/route.ts",
+    "sha256": "43265795eaf5b36d86ba997cf20f0ec3a18ba86eebd9102f0bacb2e3b39cdb3c",
+    "bytes": 1198,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "app/api/development/route.ts",
+    "sha256": "6c5217a311fc77ccbad369a30587fcd28e7cc7e70617bde0f735886d78b481e1",
+    "bytes": 3710,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "app/api/feedback/route.ts",
+    "sha256": "c7e9247cf5247c9bf1e3b067608317a1b59755bb7c325bfb97f1d91a0db83964",
+    "bytes": 1489,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "app/api/qualifications/route.ts",
+    "sha256": "7ce7fdda8d444d5d53215e39fa7415d1765132e0d936001745bcb1ec4c69e380",
+    "bytes": 1511,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "app/development/workspace.tsx",
+    "sha256": "f09fdb81e864f8fc32b88a3ccfb01fae475f7d416569120fd32c97873e2f7783",
+    "bytes": 34212,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "app/qualifications/workspace.tsx",
+    "sha256": "627b672deaebffca175290c35b7e23e9edd5268a1a2106632ef2ce39a45fd1ac",
+    "bytes": 12475,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/HRIS_Project_Plan.md",
+    "sha256": "2ccb92f6094fca9a068a4fe0a91e214bec3ff964c24701c1669ad98b9e681500",
+    "bytes": 86556,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/P1_Source_Observations_20260907.md",
+    "sha256": "0aa956cf6cd2aa4ebbe7929ced7c279ad9992f4734a22a5f7b3eff4533045e45",
+    "bytes": 250870,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/P3_360_Acceptance.md",
+    "sha256": "55b8f12122c85e8666adcdd0a1032e16c61babe196c5216de296ce8a2d675226",
+    "bytes": 1431,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": true
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/P3_Cadre_Acceptance.md",
+    "sha256": "07e8c5b216943725011fcde8f5d36c0f534a46b14e6c9ecd10e6392bc09a2f41",
+    "bytes": 1294,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": true
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/P3_Qualification_Acceptance.md",
+    "sha256": "b2cf577fae8e000d637a8f77a148f0ea4983c5d07de3543cfdaa5a975bc71764",
+    "bytes": 1187,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": true
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/P3_Talent_Learning_Acceptance.md",
+    "sha256": "0313975d886e39da80a7b29e7b9e954874289f274f09891be57238dedd84bf06",
+    "bytes": 7724,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": true
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/Recovery_Rehearsal.md",
+    "sha256": "325fa3054d03a99be4261a048a6cdcfda49a374a5218e4b7cd276abd0da94088",
+    "bytes": 3823,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/Recovery_Synthetic_Report.json",
+    "sha256": "90e35ae08a3d967122640ad1d015792c4244c40800931de06f43b198366ed76e",
+    "bytes": 5709,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": true
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/Cadre_Learning_Source_Gaps.md",
+    "sha256": "9ae9daffe4c82e124a23b6104970f71d93ce039b9a7688c0ab8aa3532e1dcf4a",
+    "bytes": 18643,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/F01_F04_Requirements_Baseline.md",
+    "sha256": "6f1ab3239b2efe26142c970c3a3a2b2ae4bc09c15d768b0e6be046d22a77fca5",
+    "bytes": 42339,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/Integration_Adapter_Contract.md",
+    "sha256": "e76c9663b208f9737fba282456dc1c9581a346874454b3e024b228e5625dc1b7",
+    "bytes": 4045,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/P1B_BP_C_Specification.md",
+    "sha256": "a82dcb1963d4db5aecc08eaaae0c5dd0bcd8cb82f4b90ff6e38a56dab2efcec9",
+    "bytes": 179138,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/P1B_Implementation_Map.md",
+    "sha256": "7c47c3d8b3532e1aceac52f4796a35c362c344bae44b47a317dbd1fa2dd653ea",
+    "bytes": 172112,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/P1_Approval_Records.md",
+    "sha256": "ebec65c7b67993a96062e869884d4e4fefaeda56a9ed6f61c5059b20910a36a5",
+    "bytes": 96612,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/P1_Final_Closure.md",
+    "sha256": "8697f8669e6b9acbb501256ed1b2ebc859d4ef7ff96ad5918db9e60330ea219b",
+    "bytes": 17830,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/P1_M03_Review_Package.md",
+    "sha256": "c6b3039fabe99f052f948f5e1d396ca9fb14b2a898a43d8ae86a18547daab3fd",
+    "bytes": 20802,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/P1_M06_Review_Package.md",
+    "sha256": "cd758cb225a0de0ebb6ecbca1a8edccef940eaca16fd7e6df04432d688d28bf1",
+    "bytes": 18522,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/P1_M17_Review_Package.md",
+    "sha256": "2952230007ac109a141c83efae82f9776b915c872fbae15d54d7c0b5e8e1a819",
+    "bytes": 20296,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/P1_M18_Review_Package.md",
+    "sha256": "4acb334fb052650cc334ce003ee021ba15209de3c778dc2dc90c5070943ce985",
+    "bytes": 18131,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/P1_M26_Review_Package.md",
+    "sha256": "e25617616ca495f083757b37ad4acf27479b5451f4afea800f5cf9e67891589d",
+    "bytes": 16784,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/P1_M37_Review_Package.md",
+    "sha256": "c040287f60628cfd855b52b33b74641bfa0fe136b2c5d82017ebb92155f6c37e",
+    "bytes": 17232,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/P1_Module_Closure.json",
+    "sha256": "4b2c72c52f87cee301578b93d2fab3cac2b9798d95d6b636b0b726739c8f50fc",
+    "bytes": 85848,
+    "readMode": "complete bytes; source/structured review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/P1_R2_P2_Handoff.md",
+    "sha256": "78a56c1ca3746808ae002e082f82efa4c6c69dabbb045a690614f063d1686ac2",
+    "bytes": 18437,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/P1_R2_Review_Package.md",
+    "sha256": "32356ed4ae523a2e4f29ad4e17bc5932a758c3f45891d397525ea14fb7eef74e",
+    "bytes": 66291,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/R2_P2_Start_Prompt.md",
+    "sha256": "3e8efbed2b045743a083fd176297cd76ae2deef5cb48b47b5ee0f1c71d09cbc5",
+    "bytes": 2701,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "docs/delivery/Scope_Register.json",
+    "sha256": "eab87b17f36cd11f49f76c494f9867da3cb7d076d82e3bbd5445e045377f3f52",
+    "bytes": 3169005,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "lib/hris/authorization.ts",
+    "sha256": "a05aa4a6264495289b9512bc54f416d38881e905aaa0fa45f96624c1b50abcca",
+    "bytes": 6869,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "lib/hris/cadre-interviews.ts",
+    "sha256": "2a656ecb739cedae889fa04adec02fc136466713404f391d67a3f8dd442152c3",
+    "bytes": 3353,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "lib/hris/cadre-terms.ts",
+    "sha256": "33f6264e5577135b5f037b2b9c94e63ee92949478338d4ac730b3801b96b1525",
+    "bytes": 3877,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "lib/hris/cadres.ts",
+    "sha256": "31f25c95c6c83abfb01d37cf34e18b68686f6cb83c991dc1f41ce0a7510a0bda",
+    "bytes": 7271,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "lib/hris/context.ts",
+    "sha256": "2a2fd5162c44c61cfb8c703d6efc5e7c30e86ec3f4885ce2becb56b1dcac3a45",
+    "bytes": 2122,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "lib/hris/development-repository.ts",
+    "sha256": "b0bc2b0cd3490358d0e43d90f8b8f9f0e338a7141672da3dab28efe469a6fd1d",
+    "bytes": 6910,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "lib/hris/development.ts",
+    "sha256": "474611b4a18eb98148a111fb2130d635390dfa414be36bfd30e15664a07a0b38",
+    "bytes": 55507,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "lib/hris/feedback.ts",
+    "sha256": "cf2722ecd0c66c7d4bbf714bc5c6fdbe7195a64df5cdbe5adbbf526e86181fb0",
+    "bytes": 7116,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "lib/hris/http.ts",
+    "sha256": "32de84dc1331a5b8ad553cd2efcdef0d8e6f454ffdd9b48f6e38b017232b170e",
+    "bytes": 1483,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "lib/hris/qualification.ts",
+    "sha256": "bdd7512b3cd5a7d1a9c733ea47a3fd7b9d85b45843fc099e4ad55800fbf5481f",
+    "bytes": 6566,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "lib/hris/reports.ts",
+    "sha256": "1149817a3d9792d91b15cc03e4af21a934c7f11299cc1dba04b0a46aa1800f09",
+    "bytes": 25309,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "lib/hris/repository.ts",
+    "sha256": "d29c455ce153d7231728c7821d3571ad92ae60edf6b1811d478dcb6a2f1a1249",
+    "bytes": 10124,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "lib/hris/review-versions.ts",
+    "sha256": "92bf85380232715aa169c21e11280505216f11c609caba2e08f6c4909ad8f97b",
+    "bytes": 316,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "lib/hris/surveys.ts",
+    "sha256": "3c828f8fb594db9b5376eda7cd1ee0d93bde972551f09d173b3416ae722d77be",
+    "bytes": 6280,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "lib/hris/work-inbox.ts",
+    "sha256": "5761147a08f5fb56ddd54acb2e1ae019a5ddf46decea3cce7b791a76138780c0",
+    "bytes": 15527,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "scripts/check-p1-baseline.py",
+    "sha256": "6d0e8a5cbe565055cfacddc78950efd06ccd8fc607c7a0b9cf66fe669d8d2c57",
+    "bytes": 31809,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "scripts/render-p1-baseline.py",
+    "sha256": "8a38d10e42ee9489a57c7f95f52ec9fd9da63f4a2de89766e8786572ce44033f",
+    "bytes": 114159,
+    "readMode": "complete bytes; source/structured review",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "tests/p3-api.test.mjs",
+    "sha256": "711c2b52c5ad98107206a17fb0800d5be6d4cd1387034b73721244348678fd06",
+    "bytes": 260768,
+    "readMode": "complete bytes; structured/scoped semantic review",
+    "historicalOnly": true
+  },
+  {
+    "gitRef": "e15237281ff19f04f08a354fd9455c518b24ae47",
+    "path": "docs/delivery/r1-p2/R1_P2_Architecture.md",
+    "sha256": "e54d8daa427e6cd217f4e57e6ed3232244be93d9423d314353e6d73d78c45f3b",
+    "bytes": 10288,
+    "readMode": "complete bytes; pinned R1 design",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "e15237281ff19f04f08a354fd9455c518b24ae47",
+    "path": "docs/delivery/r1-p2/R1_P2_Backup_Recovery.md",
+    "sha256": "d2956c3c08b7b38b6d1e0debe9dad2663a5ec265a4b4b7e0c338a0572638a3e6",
+    "bytes": 19800,
+    "readMode": "complete bytes; pinned R1 design",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "e15237281ff19f04f08a354fd9455c518b24ae47",
+    "path": "docs/delivery/r1-p2/R1_P2_Consistency_Resolutions.md",
+    "sha256": "7b63bc8988d665f43eb0c2be3b1e0a44ededf1fa38ea64af1055ee8b60051650",
+    "bytes": 5294,
+    "readMode": "complete bytes; pinned R1 design",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "e15237281ff19f04f08a354fd9455c518b24ae47",
+    "path": "docs/delivery/r1-p2/R1_P2_Interfaces_Exceptions.md",
+    "sha256": "9c3e76479c370eff37981c7617a50cb475210557c9c8905a613c154127b90a0d",
+    "bytes": 17537,
+    "readMode": "complete bytes; pinned R1 design",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "e15237281ff19f04f08a354fd9455c518b24ae47",
+    "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+    "sha256": "ad382db0ccfdd37d5029791e6030ac5113ff7411d28e3c9062a39c184d20b88d",
+    "bytes": 22289,
+    "readMode": "complete bytes; pinned R1 design",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "e15237281ff19f04f08a354fd9455c518b24ae47",
+    "path": "docs/delivery/r1-p2/R1_P2_M19_Workflow_Transactions.md",
+    "sha256": "e6ee21123cc08b2bb769524ee101db997bb65b21df3c12935404bcba073afb8a",
+    "bytes": 14861,
+    "readMode": "complete bytes; pinned R1 design",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "e15237281ff19f04f08a354fd9455c518b24ae47",
+    "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md",
+    "sha256": "4d1752a1057d348e624fc5ec40c6d16d767bf94f157f19b7b33d8532aa93ff14",
+    "bytes": 23143,
+    "readMode": "complete bytes; pinned R1 design",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "e15237281ff19f04f08a354fd9455c518b24ae47",
+    "path": "docs/delivery/r1-p2/R1_P2_M48_Authorization_Consumers.md",
+    "sha256": "3b715a5eb3b08df606e67b869f9e87619a9e56c94d49285bcc85e192b7644694",
+    "bytes": 15344,
+    "readMode": "complete bytes; pinned R1 design",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "e15237281ff19f04f08a354fd9455c518b24ae47",
+    "path": "docs/delivery/r1-p2/R1_P2_Migration_Rollback.md",
+    "sha256": "e6b8d8d333490ede58eaadafb85e77e971c8c6cb9845355efd2ced1638d6204a",
+    "bytes": 15724,
+    "readMode": "complete bytes; pinned R1 design",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "e15237281ff19f04f08a354fd9455c518b24ae47",
+    "path": "docs/delivery/r1-p2/R1_P2_Owner_Exit_Approval.json",
+    "sha256": "2905b1cfeb18ead0985a49fbaadc55d13b39bba354599a92a15352499e04cda0",
+    "bytes": 9535,
+    "readMode": "complete bytes; pinned R1 design",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "e15237281ff19f04f08a354fd9455c518b24ae47",
+    "path": "docs/delivery/r1-p2/R1_P2_P3_Handoff.md",
+    "sha256": "2df90ce6d557500f65206cf458d7b548d94fd8a9205bbc0c977f4a83c9273c14",
+    "bytes": 15254,
+    "readMode": "complete bytes; pinned R1 design",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "e15237281ff19f04f08a354fd9455c518b24ae47",
+    "path": "docs/delivery/r1-p2/R1_P2_P3_Work_Packages.json",
+    "sha256": "973a746de742d9ffc2c93286a05ec0dc5e37c53f455ecdf85daa6e5fdd3b2bc2",
+    "bytes": 15569,
+    "readMode": "complete bytes; pinned R1 design",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "e15237281ff19f04f08a354fd9455c518b24ae47",
+    "path": "docs/delivery/r1-p2/R1_P2_Report_Datasets.json",
+    "sha256": "98e1a5ae1c812f84995917a2d73c4867a6da63759fb0ed0c9c0f72fc876657a2",
+    "bytes": 9902,
+    "readMode": "complete bytes; pinned R1 design",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "e15237281ff19f04f08a354fd9455c518b24ae47",
+    "path": "docs/delivery/r1-p2/R1_P2_Report_Field_Dictionary.json",
+    "sha256": "06470ad2b37cc73857e974c88fd973483773bc284ccab7da0efea82aa877eb46",
+    "bytes": 219015,
+    "readMode": "complete bytes; pinned R1 design",
+    "historicalOnly": false
+  }
+]
