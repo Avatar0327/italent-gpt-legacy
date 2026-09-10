@@ -1,5 +1,5 @@
 """Render documentation views from the existing Scope_Register.json. No app/data writes."""
-import json,re
+import json,re,subprocess
 from pathlib import Path
 R=Path(__file__).resolve().parents[1];D=R/'docs/delivery'
 s=json.loads((D/'Scope_Register.json').read_text()); b=s['p1Baseline']; mods=s['modules']; pages=b['pages']
@@ -559,6 +559,10 @@ if rb:
  t+=table(['维度','证据'],rb['syncEvidence'].items())+'\n'+table(['并行保护','实际核对'],rb['parallelEvidence'].items())+'\n'
  t+='最终汇编提交在完成同源生成、引用/范围/文档检查后保存并推送；最终HEAD、远端及工作区以交付报告和实际Git为准。没有进入P2树；不能把注册HEAD检查扩张为对另一窗口全量工作的证明。\n\n'
  t+='## 下一恢复点\n\n'+rb['next']+'\n\n'+rb['stopBasis']+'\n\n可一次发送的[所有者批准草稿](P1_R2_Approval_Draft.md)仅供审阅复制，未发送、未批准。继续时先核对main实际HEAD/工作区及恢复文档，按M26→M18→M17→M03逐模块条件判定，不自动提升R2版本或业务/生产验收。\n'
+ if rb.get('approved'):
+  archived=subprocess.check_output(['git','show',rb['reviewedHead']+':docs/delivery/P1_R2_Review_Package.md'],cwd=R,text=True)
+  t=intro('R2集中评审批准与顺序关闭记录')+'当前状态：'+rb['status']+'。所审版本 `'+rb['reviewedHead']+'`；SHA-256 `'+rb['reviewedDocumentSha256']+'`。所有者已明确批准全部推荐及四LIMIT，下游P2/P3未批准。\n\n'+progress_text()+'\n\n'
+  t+=table(['模块','P1A','P1B','关闭记录'],[(m['id'],m['p1']['moduleClosure']['p1AConclusion']['status'],m['p1']['moduleClosure']['p1BConclusion']['status'],m['p1']['moduleClosure'].get('closureRecord')) for m in rms])+'\n当前焦点：'+policy['primaryModuleId']+'。\n\n以下完整保留所审版本原文，其中待批、6/15和旧焦点仅表示审阅时历史状态，不覆盖以上当前事实。\n\n---\n\n'+archived
  (D/'P1_R2_Review_Package.md').write_text(t)
  draft=intro('R2所有者集中批准草稿（未发送、未批准）')
  draft+='请先审阅[R2集中评审包](P1_R2_Review_Package.md)。以下文字供所有者明确采纳或修改；文件存在和生成检查通过不构成批准。采用时应引用实际审阅提交 `git log -1 --format=%H -- docs/delivery/P1_R2_Review_Package.md`，锁定推荐原文与哈希。\n\n---\n\n'
@@ -568,6 +572,7 @@ if rb:
  draft+='批准 '+'、'.join(rb['exceptionIds'])+' 所列P1受限边界、残余风险和P2/P3/P4补验责任。该批准仅关闭需求阶段，不代表功能已实现、测试通过、多角色业务验收或生产验收完成；不新增访问者，不豁免D1–D7。\n\n'
  draft+='请按M26→M18→M17→M03顺序写回唯一事实源并独立计算退出条件。符合条件的记录受限通过、模块转序就绪；不符合的仅列批准后真实硬阻塞。M37/M06及R1既有批准保持。不得凭此自动批准R2进入P2/P3、进入R3探索、扩大15模块范围、外发数据或执行生产交易。R2版本转序仍按适用基础和范围评审条件另行判定并报告。\n\n'
  draft+='若有以下改选，以我明确填写的ID和替代内容为准，其余不得自行扩大解释：〔所有者填写，或明确无改选〕。\n'
+ if rb.get('approved'):draft='> 所有者已批准该草稿对应全部推荐，无改选；以下为历史草稿，不重复请求批准。当前逐模块登记见R2集中评审包。\n\n'+draft
  (D/'P1_R2_Approval_Draft.md').write_text(draft)
  for name in ['P1_Review.md','P1B_Readiness.md','P1_Module_Closure.md']:
-  f=D/name;f.write_text(f.read_text()+'\nR2当前集中入口：[四模块完整材料、23项推荐及四项限制](P1_R2_Review_Package.md)；[批准草稿](P1_R2_Approval_Draft.md)。未批准不关闭，计数保持6/15受限通过。\n')
+  f=D/name;f.write_text(f.read_text()+'\nR2当前集中入口：[四模块完整材料、23项推荐及四项限制](P1_R2_Review_Package.md)；[批准草稿](P1_R2_Approval_Draft.md)。各模块按实际批准单独判定，计数从Scope推导。\n')

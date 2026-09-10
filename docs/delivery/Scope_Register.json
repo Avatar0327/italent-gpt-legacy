@@ -7107,21 +7107,14 @@
         },
         "currentDeliveryAssessment": {
           "scopeChange": "SCOPE-20260909-CORE15",
-          "p1A": "in_progress",
-          "p1B": "not_ready",
-          "review": "not_signed",
-          "approvedRestricted": false,
-          "assessmentAt": "2026-09-09T18:28:44.746209+00:00",
-          "basis": "完整原范围材料已完成，M26-SPEC-01,M26-SPEC-02,M26-SPEC-03,M26-SPEC-04,M26-SPEC-05与LIMIT未批准；不计关闭",
-          "blockingIssueIds": [
-            "M26-SPEC-01",
-            "M26-SPEC-02",
-            "M26-SPEC-03",
-            "M26-SPEC-04",
-            "M26-SPEC-05",
-            "M26-LIMIT-01"
-          ],
-          "next": "按夜间授权排队待集中评审；正式关闭仍M26→M18→M17→M03，未获批准不代签。",
+          "p1A": "restricted_complete",
+          "p1B": "ready",
+          "review": "restricted_signed",
+          "approvedRestricted": true,
+          "assessmentAt": "2026-09-10T02:39:23.518757+00:00",
+          "basis": "M26-P1-APPROVAL-20260910；四退出条件经逐项核对满足，仅P1受限关闭",
+          "blockingIssueIds": [],
+          "next": "残余责任见LIMIT；继续M18",
           "acceptanceRefs": [
             {
               "taskId": "E-EXIT-TASKS",
@@ -7131,7 +7124,17 @@
               "taskId": "F02",
               "relation": "跨模块关联，非改写原归属或重复计数；逐模块完整验收仍需在规格补齐"
             }
-          ]
+          ],
+          "exitEvidence": [
+            "docs/delivery/P1_R2_Review_Package.md",
+            "BC-P1C-M26",
+            "BC-P1C-M26-02",
+            "BC-C14",
+            "BC-C15",
+            "BC-C16"
+          ],
+          "reviewRecord": "M26-P1-APPROVAL-20260910",
+          "closureClass": "受限通过"
         },
         "internalScopeCoverage": [
           {
@@ -7201,10 +7204,10 @@
         ],
         "moduleClosure": {
           "rangeId": "R2",
-          "queueState": "primary_waiting_owner_review",
+          "queueState": "closed_restricted",
           "p1AConclusion": {
-            "status": "已完成待评审",
-            "approvalRecord": null,
+            "status": "受限通过",
+            "approvalRecord": "M26-P1-APPROVAL-20260910",
             "evidenceRefs": [
               "BC-P1C-M26",
               "BC-P1C-M26-02",
@@ -7212,52 +7215,63 @@
               "BC-C15",
               "BC-C16"
             ],
-            "limits": "完整登记范围证据及限制可追溯；LIMIT未批准，不计P1A关闭"
+            "limits": "原站匿名算法、题型和套卷完整行为、答卷撤回/更正、报告开放/撤权及多角色执行未验证；本轮只读未执行新业务链。",
+            "approvedAt": "2026-09-10T02:39:23.518757+00:00"
           },
           "p1BConclusion": {
-            "status": "已完成待评审",
-            "approvalRecord": null,
+            "status": "受限通过",
+            "approvalRecord": "M26-P1-APPROVAL-20260910",
             "evidenceRefs": [],
-            "limits": "对象/字段/权限/状态/异常/契约/实现差异及可执行预期已准备；新规则未批准"
+            "limits": "原站匿名算法、题型和套卷完整行为、答卷撤回/更正、报告开放/撤权及多角色执行未验证；本轮只读未执行新业务链。",
+            "approvedAt": "2026-09-10T02:39:23.518757+00:00"
           },
           "conditions": {
             "applicableScopeDetermined": {
               "value": true,
-              "basis": "用户已确认15完整登记范围及本轮R顺序"
+              "basis": "M26-P1-APPROVAL-20260910；原登记完整范围逐项与收口清单一致，无内部删减"
             },
             "implementationRulesDecided": {
-              "value": false,
-              "basis": "本模块新规则/LIMIT及消费者未批依赖待集中决定"
+              "value": true,
+              "basis": "M26-P1-APPROVAL-20260910；本模块SPEC与R2-BASELINE-01均由所有者明确批准，版本/哈希锁定"
             },
             "acceptanceExecutable": {
               "value": true,
-              "basis": "Given/When/Then及正常/异常用例已具体化；需求是否获批另判，未执行"
+              "basis": "M26-P1-APPROVAL-20260910；逐项Given/When/Then已存在，作为验收预期获批，未冒本轮执行"
             },
             "dependenciesAndExceptionsResolved": {
-              "value": false,
-              "basis": "本模块新规则/LIMIT及消费者未批依赖待集中决定"
+              "value": true,
+              "basis": "M26-P1-APPROVAL-20260910；已批准生产者契约与本模块LIMIT；源缺证/独立角色留P2/P3/P4，不要求先实联调"
             }
           },
           "transitionReview": {
-            "approved": false,
-            "record": null,
-            "scope": null,
-            "approvedAt": null
+            "approved": true,
+            "record": "M26-P1-APPROVAL-20260910",
+            "scope": "模块P1转序就绪；R2整体进入P2未批准",
+            "approvedAt": "2026-09-10T02:39:23.518757+00:00"
           },
-          "restrictedApproval": null,
-          "p1Closed": false,
-          "closureClass": "已完成待评审"
+          "restrictedApproval": {
+            "scope": "原站匿名算法、题型和套卷完整行为、答卷撤回/更正、报告开放/撤权及多角色执行未验证；本轮只读未执行新业务链。",
+            "residualRisk": "评价者身份重识别、低样本差分、跨报告推断、用途越权、问卷版本漂移及报告纠错影响。",
+            "revalidation": "P2：复核匿名身份映射隔离、问卷/角色/邀请/答卷版本、报告权限与聚合抑制，设计增量迁移但不执行；P3：合成验证2/3样本边界、角色重叠、零样本、问卷改版、撤回重交、报告更正与事务/消息失败；历史测试不代当前复验；P4：独立多角色、敏感字段/历史/附件/下载权限、跨模块业务及生产容量/恢复验收；E2不新增访问者，管理员操作不代验。",
+            "record": "M26-P1-APPROVAL-20260910",
+            "approvedAt": "2026-09-10T02:39:23.518757+00:00",
+            "phaseScope": "仅P1"
+          },
+          "p1Closed": true,
+          "closureClass": "受限通过",
+          "closureRecord": "M26-P1-APPROVAL-20260910",
+          "closedAt": "2026-09-10T02:39:23.518757+00:00"
         },
         "reviewPackage": {
           "moduleId": "M26",
-          "documentStatus": "材料完成、等待所有者集中评审",
+          "documentStatus": "P1受限通过，需求基线已批准",
           "scope": "活动、人员、题库、报表",
           "preparedAt": "2026-09-09T18:28:44.746209+00:00",
           "basedOnHead": "3e0c0d502a1a62e5128de160c8237dcf3d19ddd2",
-          "approvalRecord": null,
+          "approvalRecord": "M26-P1-APPROVAL-20260910",
           "internalDeferralProposals": [],
           "internalDeferralNote": "完整原范围逐项保留；本轮没有新增内部删减。独立AI及33暂缓模块保持暂缓，最小公共依赖不恢复完整模块。",
-          "confirmedRules": "M37/M06定义与资格规则、M19/M48/M32消费和BASE-01至06仅按已批准范围引用；本模块算法、角色开放和LIMIT仍待本模块批准。D1–D7不重释。",
+          "confirmedRules": "所审推荐及LIMIT由M26-P1-APPROVAL-20260910批准，其他模块不外推",
           "decisionIds": [
             "M26-SPEC-01",
             "M26-SPEC-02",
@@ -7268,14 +7282,16 @@
           "exceptionProposals": [
             {
               "id": "M26-LIMIT-01",
-              "status": "待所有者批准",
-              "approved": false,
-              "approvalRecord": null,
+              "status": "已批准P1受限边界",
+              "approved": true,
+              "approvalRecord": "M26-P1-APPROVAL-20260910",
               "scope": "原站匿名算法、题型和套卷完整行为、答卷撤回/更正、报告开放/撤权及多角色执行未验证；本轮只读未执行新业务链。",
               "evidence": "既有BC-P1C-M26,BC-P1C-M26-02,BC-C14,BC-C15,BC-C16；本轮3e0c0d502a1a62e5128de160c8237dcf3d19ddd2静态核对；本单元tab9首页标题与标签页列表已恢复；题库导航未进入目标，实际标题“积分总额”，未读取该页记录，未写原站。M26详细题库/报告补证仍未取得，不能记为权限不足或完整已读。",
               "proposal": "建议以已有原站证据、静态差异和明确获批的本模块产品规则关闭P1需求；仅本模块有范围例外，不豁免P2/P3/P4。未批准前不计关闭或转序。",
               "residualRisk": "评价者身份重识别、低样本差分、跨报告推断、用途越权、问卷版本漂移及报告纠错影响。",
-              "revalidation": "P2：复核匿名身份映射隔离、问卷/角色/邀请/答卷版本、报告权限与聚合抑制，设计增量迁移但不执行；P3：合成验证2/3样本边界、角色重叠、零样本、问卷改版、撤回重交、报告更正与事务/消息失败；历史测试不代当前复验；P4：独立多角色、敏感字段/历史/附件/下载权限、跨模块业务及生产容量/恢复验收；E2不新增访问者，管理员操作不代验。"
+              "revalidation": "P2：复核匿名身份映射隔离、问卷/角色/邀请/答卷版本、报告权限与聚合抑制，设计增量迁移但不执行；P3：合成验证2/3样本边界、角色重叠、零样本、问卷改版、撤回重交、报告更正与事务/消息失败；历史测试不代当前复验；P4：独立多角色、敏感字段/历史/附件/下载权限、跨模块业务及生产容量/恢复验收；E2不新增访问者，管理员操作不代验。",
+              "approvedAt": "2026-09-10T02:39:23.518757+00:00",
+              "approvalConclusion": "仅P1，原推荐措辞保留审阅时含义；后续验证责任不免除"
             }
           ],
           "closedQuestions": [
@@ -7296,9 +7312,9 @@
             }
           ],
           "exitAssessment": {
-            "p1A": "完整登记范围证据及限制可追溯；LIMIT未批准，不计P1A关闭",
-            "p1B": "对象/字段/权限/状态/异常/契约/实现差异及可执行预期已准备；新规则未批准",
-            "transition": "false；材料排队不等模块关闭/转序或R2版本P2批准"
+            "p1A": "M26-P1-APPROVAL-20260910；四条件齐备，模块转序就绪，R2下阶段未批准",
+            "p1B": "M26-P1-APPROVAL-20260910；四条件齐备，模块转序就绪，R2下阶段未批准",
+            "transition": "M26-P1-APPROVAL-20260910；四条件齐备，模块转序就绪，R2下阶段未批准"
           },
           "flowSummary": [
             "已观察仅配置帮助/空表；本轮无360源执行。",
@@ -7326,7 +7342,9 @@
           ],
           "businessAccepted": false,
           "productionAccepted": false,
-          "next": "按夜间授权排队待集中评审；正式关闭仍M26→M18→M17→M03，未获批准不代签。"
+          "next": "残余责任见LIMIT；继续M18",
+          "approvedAt": "2026-09-10T02:39:23.518757+00:00",
+          "closureClass": "受限通过"
         },
         "closureChecklist": [
           {
@@ -7339,19 +7357,21 @@
               "BC-P1C-M26-02",
               "BC-C14"
             ],
-            "gap": "部分覆盖：源列表/通知配置、现草稿至发布链；新启停/重开/更正规则待批",
-            "blocksP1": true,
+            "gap": "P1批准后无剩余硬阻塞；原差异转交后续责任",
+            "blocksP1": false,
             "risk": "评价者身份重识别、低样本差分、跨报告推断、用途越权、问卷版本漂移及报告纠错影响。",
             "closureMethod": "明确批准所列规则与LIMIT，或补针对性证据修订；材料完备不能代签",
-            "basis": "原站事实/静态事实/候选分列；3e0c0d502a1a62e5128de160c8237dcf3d19ddd2",
-            "status": "已完成待评审",
+            "basis": "M26-P1-APPROVAL-20260910",
+            "status": "受限通过",
             "decisionIds": [
               "M26-SPEC-01",
               "M26-SPEC-02",
               "M26-SPEC-03",
               "M26-SPEC-04",
               "M26-SPEC-05"
-            ]
+            ],
+            "preApprovalGap": "部分覆盖：源列表/通知配置、现草稿至发布链；新启停/重开/更正规则待批",
+            "approvalRecord": "M26-P1-APPROVAL-20260910"
           },
           {
             "id": "M26-CLOSE-02",
@@ -7363,19 +7383,21 @@
               "BC-C15",
               "BC-C16"
             ],
-            "gap": "部分覆盖：源角色帮助/空表；动态角色、邀请去重与匿名身份分离待批",
-            "blocksP1": true,
+            "gap": "P1批准后无剩余硬阻塞；原差异转交后续责任",
+            "blocksP1": false,
             "risk": "评价者身份重识别、低样本差分、跨报告推断、用途越权、问卷版本漂移及报告纠错影响。",
             "closureMethod": "明确批准所列规则与LIMIT，或补针对性证据修订；材料完备不能代签",
-            "basis": "原站事实/静态事实/候选分列；3e0c0d502a1a62e5128de160c8237dcf3d19ddd2",
-            "status": "已完成待评审",
+            "basis": "M26-P1-APPROVAL-20260910",
+            "status": "受限通过",
             "decisionIds": [
               "M26-SPEC-01",
               "M26-SPEC-02",
               "M26-SPEC-03",
               "M26-SPEC-04",
               "M26-SPEC-05"
-            ]
+            ],
+            "preApprovalGap": "部分覆盖：源角色帮助/空表；动态角色、邀请去重与匿名身份分离待批",
+            "approvalRecord": "M26-P1-APPROVAL-20260910"
           },
           {
             "id": "M26-CLOSE-03",
@@ -7385,19 +7407,21 @@
               "BP-I-REQ-03"
             ],
             "evidenceRefs": [],
-            "gap": "未覆盖原站详细题库；共用模板仅静态依据，四题型/尺度/套卷版本建议待批",
-            "blocksP1": true,
+            "gap": "P1批准后无剩余硬阻塞；原差异转交后续责任",
+            "blocksP1": false,
             "risk": "评价者身份重识别、低样本差分、跨报告推断、用途越权、问卷版本漂移及报告纠错影响。",
             "closureMethod": "明确批准所列规则与LIMIT，或补针对性证据修订；材料完备不能代签",
-            "basis": "原站事实/静态事实/候选分列；3e0c0d502a1a62e5128de160c8237dcf3d19ddd2",
-            "status": "已完成待评审",
+            "basis": "M26-P1-APPROVAL-20260910",
+            "status": "受限通过",
             "decisionIds": [
               "M26-SPEC-01",
               "M26-SPEC-02",
               "M26-SPEC-03",
               "M26-SPEC-04",
               "M26-SPEC-05"
-            ]
+            ],
+            "preApprovalGap": "未覆盖原站详细题库；共用模板仅静态依据，四题型/尺度/套卷版本建议待批",
+            "approvalRecord": "M26-P1-APPROVAL-20260910"
           },
           {
             "id": "M26-CLOSE-04",
@@ -7407,19 +7431,21 @@
               "BP-I-REQ-02"
             ],
             "evidenceRefs": [],
-            "gap": "源报告算法受限；现个人分组均值已静态核对，匿名阈值/开放/组织聚合策略待批",
-            "blocksP1": true,
+            "gap": "P1批准后无剩余硬阻塞；原差异转交后续责任",
+            "blocksP1": false,
             "risk": "评价者身份重识别、低样本差分、跨报告推断、用途越权、问卷版本漂移及报告纠错影响。",
             "closureMethod": "明确批准所列规则与LIMIT，或补针对性证据修订；材料完备不能代签",
-            "basis": "原站事实/静态事实/候选分列；3e0c0d502a1a62e5128de160c8237dcf3d19ddd2",
-            "status": "已完成待评审",
+            "basis": "M26-P1-APPROVAL-20260910",
+            "status": "受限通过",
             "decisionIds": [
               "M26-SPEC-01",
               "M26-SPEC-02",
               "M26-SPEC-03",
               "M26-SPEC-04",
               "M26-SPEC-05"
-            ]
+            ],
+            "preApprovalGap": "源报告算法受限；现个人分组均值已静态核对，匿名阈值/开放/组织聚合策略待批",
+            "approvalRecord": "M26-P1-APPROVAL-20260910"
           }
         ],
         "sourceAccessThisUnit": {
@@ -12775,7 +12801,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-09T18:49:39.142211+00:00",
+    "updatedAt": "2026-09-10T02:39:23.518757+00:00",
     "authority": "Scope_Register.json为唯一范围/验收事实源；历史48/59保留，当前15模块及基础按SCOPE-20260909-CORE15。",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -45797,27 +45823,27 @@
       "latestAuthorizationAt": "2026-09-09T06:25:42.812752+00:00",
       "scopeChangeHead": "f31cb2b5e1894723288fd884d4e3bd895ae57327",
       "scopeChange": "SCOPE-20260909-CORE15",
-      "latestCheckpointAt": "2026-09-09T18:49:39.142211+00:00",
-      "latestCommittedHead": "990fd8cf169f990cd2f67ce3b23ddd6468c101c6",
+      "latestCheckpointAt": "2026-09-10T02:39:23.518757+00:00",
+      "latestCommittedHead": "0ef85d83196d94c086c2aa38e5f4c66af1b61f0d",
       "latestEvidenceRefs": [
         "BC-C39",
         "BC-C40",
         "BC-C28",
         "R2-RO-M17-01"
       ],
-      "next": "所有者可一次决定23项推荐及四项LIMIT；总控先应用M26批准逐项判定，再M18→M17→M03。局部修订仅阻受影响模块，未获批准不进R3或R2 P2/P3。",
+      "next": "继续M18；本窗口仅P1",
       "browserRecovery": "历史CDP超时已在本轮恢复：可列出标签及定向只读访问；M26入口误到页未计证，M18/M17有限回查成功。具体访问限制保留于各模块，不再把整站连接故障列为当前共同阻塞。",
       "sourceBrowsingStatus": "连接已恢复可读；M26入口误到页未计证；M18旧合成项目回查；M17完整名只读确认旧流程存在停用。无新源业务写入。",
-      "currentFocus": "M26唯一主模块待集中评审；M18/M17/M03材料顺序排队",
+      "currentFocus": "M18唯一主模块",
       "checkpointCommitSemantics": "latestCommittedHead为本单元编辑开始前已存在提交；本记录所属提交用git log -1 -- docs/delivery/Scope_Register.json解析，不能将基准冒充最终HEAD。",
-      "workingTreeAtResume": "汇编单元基于main 990fd8cf169f990cd2f67ce3b23ddd6468c101c6 clean；仅P1文档/同源生成检查变化，最终所属提交以Git核实",
+      "workingTreeAtResume": "本单元基于0ef85d83196d94c086c2aa38e5f4c66af1b61f0d干净工作区，仅文档/生成脚本",
       "lastVerifiedSync": {
         "commit": "990fd8cf169f990cd2f67ce3b23ddd6468c101c6",
         "remoteBranch": "main",
         "result": "push成功，ls-remote与HEAD一致；当前汇编为后续编辑单元",
         "scope": "M03完整评审材料及之前五单元"
       },
-      "currentUnitOutcome": "M37/M06先后受限关闭，计数6/15；四模块全部材料与23项推荐/四LIMIT/R2基础适用待集中评审；旧流程只读确认存在停用，UUID/节点仍缺。",
+      "currentUnitOutcome": "M26受限关闭，继续M18",
       "previousAtomicOutcome": "BC-C28旧流程曾未知，现R2-RO-M17-01已确认存在停用，UUID未取；M18已存项目未执行启动，EA/兼职及其他源历史不冒本轮复验。",
       "sourceWritePolicy": "本轮最新边界：原站只读，不修改原站数据；此前合成记录授权作为历史保留，本夜间单元不据此新增写入。",
       "historicalExecutionBoundary": "用户已确认当前北森租户可用于测试，并授权P1所需合成关联记录的创建、保存、提交及必要状态流转；先查可复用记录，统一P1V-20260909标记，逐链记录ID/关联/前后状态和结果，不逐条重问。不得任意更改真实员工或既有业务；不扩大到真实业务生效、外部通知、支付、签署或新增人类访问者。产品代码、部署、D1–D7/E1/E2继续保持。 最新范围仅当前15模块和基础/最小必要公共依赖；33模块停止独立探索/新数据链，已有前置可必要引用，不为停点做完整链。"
@@ -47060,7 +47086,7 @@
   "roadmap": {
     "revision": "2026-09-09-module-closure-rolling-R",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-09T17:29:47.425465+00:00",
+    "updatedAt": "2026-09-10T02:39:23.518757+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -47143,7 +47169,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M26唯一主模块待集中评审；M18/M17/M03材料顺序排队",
+    "activeWorkPackage": "M18唯一主模块",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -47158,11 +47184,11 @@
       "BP-S"
     ],
     "nextTasks": [
-      "所有者可一次决定23项推荐及四项LIMIT；总控先应用M26批准逐项判定，再M18→M17→M03。局部修订仅阻受影响模块，未获批准不进R3或R2 P2/P3。",
-      "原站只读最小补证按各包targetedEvidence；不重新创建旧流程，不执行新合成写入",
-      "本窗口不进入P2工作树，待其正式提交结构化建议后统一评估"
+      "按顺序继续M18的P1工作",
+      "按实质单元保存并推送，独立看板失败不阻P1",
+      "不修改产品、不进入P2/P3，保持15模块和33暂缓"
     ],
-    "state": "R1仅P2设计批准保持；R2模块按真实批准关闭，未批模块材料可串行排队",
+    "state": "R2逐模块按明确批准关闭；R3串行P1材料准备已授权",
     "scopeChange": "SCOPE-20260909-CORE15",
     "supportModuleIds": [
       "M19",
@@ -47173,10 +47199,10 @@
       "id": "MODE-MODULE-CLOSURE-R-20260909",
       "authorizedAt": "2026-09-09T15:43:36.730682+00:00",
       "mode": "模块闭环优先、按R版本滚动转序",
-      "primaryModuleId": "M26",
+      "primaryModuleId": "M18",
       "backupModuleId": null,
       "backupCandidateId": null,
-      "activeExecutionModuleId": "M26",
+      "activeExecutionModuleId": "M18",
       "wipLimit": 1,
       "backupLimit": 1,
       "backupActivation": "仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归",
@@ -47343,6 +47369,14 @@
             "M03-LIMIT-01"
           ],
           "restore": "集中决定后按正式关闭顺序M26优先应用；补证仅围绕所列问题"
+        },
+        {
+          "at": "2026-09-10T02:39:23.518757+00:00",
+          "from": "M26",
+          "to": "M18",
+          "reason": "M26-P1-APPROVAL-20260910四条件满足，按批准顺序受限关闭",
+          "remaining": "仅P2设计/P3验证/P4验收残余责任",
+          "restore": "仅新批准变更回到受影响条款，不重开宽泛盘点"
         }
       ],
       "backupActivationHistory": [
@@ -47392,7 +47426,6 @@
           "M03"
         ],
         "waitingModuleIds": [
-          "M26",
           "M18",
           "M17",
           "M03"
@@ -47411,14 +47444,14 @@
           "M17",
           "M03"
         ],
-        "rule": "同一时刻一主模块；材料及可自主工作完成后可排队待集中评审并转下一材料模块，未批准不关闭/不转序；不进R3或P2/P3",
+        "rule": "按最新用户批准顺序关闭R2；随后允许R3串行材料准备，未批准R3不关闭，不进入P2/P3",
         "ownerBranch": "main",
         "protectedWorktree": "/workspace/sites/italent-hris-r1-p2-20260909",
         "protectedBranch": "design/r1-p2-20260909",
         "observedProtectedHead": "617a707",
         "parallelBoundary": "仅git worktree list查看注册信息；不进入、不修改、不合并/cherry-pick其任何提交；P2建议完成后统一纳入",
-        "status": "四模块材料全部完成，等待集中评审",
-        "nextFormalClosureModule": "M26",
+        "status": "R2批准顺序落账中",
+        "nextFormalClosureModule": "M18",
         "reviewBundleRef": "docs/delivery/P1_R2_Review_Package.md"
       }
     },
@@ -47825,7 +47858,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-09T18:49:39.142211+00:00",
+    "updatedAt": "2026-09-10T02:39:23.518757+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -57242,13 +57275,15 @@
         "alternatives": "保留HR可实名追溯并明确告知有限匿名，成本低但信任和用途风险更高；完全不可追溯匿名会限制撤回/反滥用，需独立设计。",
         "impact": "改变HR原卷默认权限及身份分离要求，影响M48任务与BASE02/03。",
         "ifUndecided": "不能确定邀请告知、原卷存取或报告匿名声明，P1不关闭。",
-        "status": "已具体化待集中评审",
-        "decisionRequired": true,
-        "decision": null,
+        "status": "已批准P1需求",
+        "decisionRequired": false,
+        "decision": "批准所审推荐，无改选；M26-P1-APPROVAL-20260910",
         "moduleIds": [
           "M26"
         ],
-        "preparedAt": "2026-09-09T18:28:44.746209+00:00"
+        "preparedAt": "2026-09-09T18:28:44.746209+00:00",
+        "approvalRecord": "M26-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T02:39:23.518757+00:00"
       },
       {
         "id": "M26-SPEC-02",
@@ -57258,13 +57293,15 @@
         "alternatives": "提高匿名门槛至5更稳健但小团队可用性下降；继续精确人数和零卷报告不推荐。",
         "impact": "直接决定人员评价与敏感可见性；M32只能消费已允许汇总，不重算被屏蔽数据。",
         "ifUndecided": "无法确定合法报告及聚合输出，阻报告需求关闭。",
-        "status": "已具体化待集中评审",
-        "decisionRequired": true,
-        "decision": null,
+        "status": "已批准P1需求",
+        "decisionRequired": false,
+        "decision": "批准所审推荐，无改选；M26-P1-APPROVAL-20260910",
         "moduleIds": [
           "M26"
         ],
-        "preparedAt": "2026-09-09T18:28:44.746209+00:00"
+        "preparedAt": "2026-09-09T18:28:44.746209+00:00",
+        "approvalRecord": "M26-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T02:39:23.518757+00:00"
       },
       {
         "id": "M26-SPEC-03",
@@ -57274,13 +57311,15 @@
         "alternatives": "只保留现有纯五分量表会缩减常规题库，须另获内部缩减批准，本轮不采用。",
         "impact": "新增多题型与版本化，但不恢复M29/M30/M31完整调查模块；题目共用保持M26匿名语义。",
         "ifUndecided": "套卷与答卷数据结构及校验无法固定。",
-        "status": "已具体化待集中评审",
-        "decisionRequired": true,
-        "decision": null,
+        "status": "已批准P1需求",
+        "decisionRequired": false,
+        "decision": "批准所审推荐，无改选；M26-P1-APPROVAL-20260910",
         "moduleIds": [
           "M26"
         ],
-        "preparedAt": "2026-09-09T18:28:44.746209+00:00"
+        "preparedAt": "2026-09-09T18:28:44.746209+00:00",
+        "approvalRecord": "M26-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T02:39:23.518757+00:00"
       },
       {
         "id": "M26-SPEC-04",
@@ -57290,13 +57329,15 @@
         "alternatives": "关闭永久不可纠正简单但无法恢复误收集；直接覆盖旧报告损害追溯，不推荐。",
         "impact": "影响结果版本与使用时点；不将关闭/发报告当作消息已发送。",
         "ifUndecided": "关闭、撤回及纠错异常无法形成验收基线。",
-        "status": "已具体化待集中评审",
-        "decisionRequired": true,
-        "decision": null,
+        "status": "已批准P1需求",
+        "decisionRequired": false,
+        "decision": "批准所审推荐，无改选；M26-P1-APPROVAL-20260910",
         "moduleIds": [
           "M26"
         ],
-        "preparedAt": "2026-09-09T18:28:44.746209+00:00"
+        "preparedAt": "2026-09-09T18:28:44.746209+00:00",
+        "approvalRecord": "M26-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T02:39:23.518757+00:00"
       },
       {
         "id": "M26-SPEC-05",
@@ -57306,13 +57347,15 @@
         "alternatives": "直接把360均分写入M37/M06/M18最终结论会越权改变算法，不采用。",
         "impact": "明确生产者消费和隐私责任；恢复及通知仍按R1批准目标。",
         "ifUndecided": "跨模块使用范围与异常恢复无法关闭。",
-        "status": "已具体化待集中评审",
-        "decisionRequired": true,
-        "decision": null,
+        "status": "已批准P1需求",
+        "decisionRequired": false,
+        "decision": "批准所审推荐，无改选；M26-P1-APPROVAL-20260910",
         "moduleIds": [
           "M26"
         ],
-        "preparedAt": "2026-09-09T18:28:44.746209+00:00"
+        "preparedAt": "2026-09-09T18:28:44.746209+00:00",
+        "approvalRecord": "M26-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T02:39:23.518757+00:00"
       },
       {
         "id": "M18-SPEC-01",
@@ -57594,16 +57637,18 @@
         "alternatives": "逐项修订或只批准部分SPEC/基础适用；未获批部分保持待评审，不修改15分母或删除内部范围。",
         "impact": "仅P1需求基线与验收预期，不代表实现、原站算法证明、多人权限或生产通过；不修改R1 P2设计分支。",
         "ifUndecided": "即使各SPEC已批，未覆盖的字段/验收/基础适用及R2版本仍须明确记录，不能自动转序。",
-        "status": "已具体化待集中评审",
-        "decisionRequired": true,
-        "decision": null,
+        "status": "已批准P1需求",
+        "decisionRequired": false,
+        "decision": "批准所审推荐，无改选；M26-P1-APPROVAL-20260910",
         "moduleIds": [
           "M26",
           "M18",
           "M17",
           "M03"
         ],
-        "preparedAt": "2026-09-09T18:49:39.142211+00:00"
+        "preparedAt": "2026-09-09T18:49:39.142211+00:00",
+        "approvalRecord": "M26-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T02:39:23.518757+00:00"
       }
     ],
     "codeReview": {
@@ -58755,6 +58800,67 @@
           "不代批M26/M18/M17/M03的新规则或LIMIT，不授权R2 P2/P3",
           "不改产品/原站/业务库/部署/访问者；不进入或修改R1 P2工作树分支"
         ]
+      },
+      {
+        "id": "M26-P1-APPROVAL-20260910",
+        "moduleIds": [
+          "M26"
+        ],
+        "approved": true,
+        "approvedBy": "项目所有者（本窗口用户）",
+        "approvedAt": "2026-09-10T02:39:23.518757+00:00",
+        "recordedAt": "2026-09-10T02:39:23.518757+00:00",
+        "timeBasis": "按M26→M18→M17→M03顺序登记时间",
+        "source": "本窗口2026-09-10用户：批准R2集中评审包全部23项推荐及四LIMIT，无改选；逐模块核退出条件，仅P1",
+        "reviewedHead": "ae43613d7851c4d5f60314869da9a428dafaeba1",
+        "reviewedDocument": "docs/delivery/P1_R2_Review_Package.md",
+        "reviewedDocumentSha256": "efe47f0e077fee2790a7bd331792ef39365f4cdb5840d43bca1f8d7ced38c00f",
+        "scope": "M26完整P1需求及本模块LIMIT；R2-BASELINE-01六基础适用批准",
+        "decisionIds": [
+          "M26-SPEC-01",
+          "M26-SPEC-02",
+          "M26-SPEC-03",
+          "M26-SPEC-04",
+          "M26-SPEC-05",
+          "R2-BASELINE-01"
+        ],
+        "approvedRecommendations": {
+          "M26-SPEC-01": {
+            "text": "建议roleDefinitionId/version、projectId、subjectId、reviewerBindingId、inviteId独立；自评必须同人，非自评不得同人，同项目同受评者同评价者仅一有效邀请，角色冲突在开放前显式处理。角色名trim后1–18字且同目录唯一，最多90角色/套卷15按已见说明作为项目设计，已用角色停用保留历史。对受评者及普通管理者提供分组匿名；自评和明确披露为具名的唯一上级单列，不宣传匿名。HR项目管理权不默认原卷或身份映射读取权；受控审计例外须独立批准、记录目的/范围/时限，并不得向受评者或普通经理披露评价者关联。邀请前展示确切匿名承诺与用途，不新增实际访问者。",
+            "sha256": "b8a94bac4ea59d760f926c3a661b3a100ea56031b4c47ded60d54f4247c9956c"
+          },
+          "M26-SPEC-02": {
+            "text": "建议匿名组最少3名不同有效评价者，活动可提高阈值而不得低于3；低于阈值同时隐藏分数、精确人数、原评语及可反推的补集，显示“样本不足”。自评/明确具名上级单列；未完成/撤回答卷不入分母，缺失不同0，不达标组不与其他组静默合并。仅可比较尺度一致题目，序数默认分布，中位数或均值必须有显式转换策略。个人报告至少一个合法非自评组才可正式发布，否则仅展示未形成报告状态。组织报告按有效受评者及组双重至少3门槛、独立定义版本与去重，禁止交叠小组差分；先审阅后由独立有权者发布，受评者/团队/HR各有明确开放清单。",
+            "sha256": "cce8190c36a9193f1f7c9da9781825b65b0d5f86d13f990cf584ee1a539ae646"
+          },
+          "M26-SPEC-03": {
+            "text": "建议题库questionRootId/version，支持量表、单选、多选、文本四类常规题目；每题显式必填、选项ID、允许跳过/不适用、长度及尺度，条件分支须无环且记录未呈现原因。套卷root/version冻结题目顺序/角色适用/维度/M37指标版本；开放活动冻结具体版本，题库停用不改已有卷。数字尺度明确min/max/step/unit/direction，等级引用真实等级ID，不硬编码1–5；选项不同数值，文本不自动量化，不默认AI评分。建议文本上限3000字、普通标题200字、量表/选择需服务端校验；未证明来源上限不写原站事实。问卷规则不完整阻开放，角色启用不得隐式丢题。",
+            "sha256": "4cb267f400452e9d3c47a213081373374b9622b7759347e8a9ae877ed01216c0"
+          },
+          "M26-SPEC-04": {
+            "text": "建议活动draft→approved→scheduled/open→closed，审批路由复用M19独立节点；保存、开放、到期、停止收集、报告发布不同状态。开放前名单与套卷可改，开放后新增/替换走明确新修订并保留已发邀请/答卷，不能默默改题；主体取消保留原因。本人可在开放窗口内撤回或提交新答卷版本，仅最新有效版汇总；关闭后锁定。纠错重开须独立审批，形成新收集版本，已发布报告标待更正并阻旧链接继续对外提供；新报告新版本关联旧版，权限内保留更正史，不允许重复发布差分探测。撤权/解绑/离职停止本人新答，既有合法答卷按冻结样本政策保留，因质量剔除须授权原因及重新阈值核算。",
+            "sha256": "4679199690f5517d89be670769ff543c7d1a3a89842e8a60c2a96b5f16b65ea7"
+          },
+          "M26-SPEC-05": {
+            "text": "建议M37提供指标/尺度版本，M26输出报告版本、允许分组统计、覆盖/缺失原因、用途及授权状态；不自动回写能力评级、资格通过或任用结论。M48只显示本人邀请/完成状态和已开放本人报告；M32仅在read/export独立许可及相同抑制规则下消费。BASE01/02校验当前身份/组织/字段，BASE03/04审计及附件历史不泄漏身份映射，BASE05恢复后重新授权核对，BASE06通知请求/投递/失败分态。新增请求键+内容摘要，重复返回同结果，未知先查，旧revision拒绝；临时故障不显示假0，撤权清缓存和下载令牌；提醒只留契约，本轮不发送。",
+            "sha256": "93177dd731e8c9b42e93cff890fe89c329a1ddf81aa49bc16774a2dbf8ffb6e6"
+          },
+          "R2-BASELINE-01": {
+            "text": "建议批准本次四模块评审包与其引用分包规格中已具体化的完整范围、字段校验、权限/状态/异常/契约和可执行验收预期，并按各SPEC与LIMIT明确边界实施；发生冲突以所审SPEC及所有者明确选择优先，静态事实不自动作为产品要求。六基础沿既有批准目标用于R2，采用本包r2Assessment列明的身份映射/敏感权限/审计/版本/恢复/接口适用差异，后续P2设计和P3/P4实证责任保留。四模块必须按M26→M18→M17→M03逐个核对退出条件，条件未满足不关闭；R2阶段另据真实模块/基础及版本评审记录判定，不自动授权R2 P2/P3。",
+            "sha256": "8cc69607685d2dc0be62d8acc5603c3f43d78bf0a66b5b2b68cb0782c98d8b5a"
+          }
+        },
+        "exceptionIds": [
+          "M26-LIMIT-01"
+        ],
+        "exceptionScope": "原站匿名算法、题型和套卷完整行为、答卷撤回/更正、报告开放/撤权及多角色执行未验证；本轮只读未执行新业务链。",
+        "authorization": "满足已登记四条件时受限关闭及模块转序就绪；不批准R2下游P2/P3",
+        "exclusions": [
+          "不代表实现、P3测试、多角色业务或生产验收",
+          "D1–D7/E1/E2及R1恢复目标不变",
+          "不改产品、原站、数据、部署、访问者；不进入R1 P2工作树",
+          "不批准R3新规则或LIMIT"
+        ]
       }
     ],
     "r2ReviewBundle": {
@@ -58762,7 +58868,7 @@
       "document": "docs/delivery/P1_R2_Review_Package.md",
       "preparedAt": "2026-09-09T18:49:39.142211+00:00",
       "basedOnHead": "990fd8cf169f990cd2f67ce3b23ddd6468c101c6",
-      "status": "可自主材料完成，等待所有者一次集中评审；未代批",
+      "status": "所有者已批准，按模块顺序登记；已关闭M26",
       "moduleIds": [
         "M26",
         "M18",
@@ -58812,7 +58918,7 @@
         "M03"
       ],
       "allAutonomousMaterialsPrepared": true,
-      "approved": false,
+      "approved": true,
       "scopeNote": "R2六模块完整范围与六基础适用；原15分母、33暂缓保持；本轮不进入R3或执行P2/P3。",
       "commits": [
         {
@@ -58899,9 +59005,15 @@
           "源历史操作日志保持，新增只读回查说明；没有新数据或清理动作"
         ]
       ],
-      "next": "所有者可一次决定23项推荐及四项LIMIT；总控先应用M26批准逐项判定，再M18→M17→M03。局部修订仅阻受影响模块，未获批准不进R3或R2 P2/P3。",
+      "next": "继续M18；R2进入P2/P3未批准",
       "stopBasis": "四模块全部可自主材料已完成；剩余为新重大业务选择/有范围例外及需写入或独立角色的验证。按本轮明确停止标准集中交付，不以普通工具故障结束。",
-      "approvalDraft": "docs/delivery/P1_R2_Approval_Draft.md"
+      "approvalDraft": "docs/delivery/P1_R2_Approval_Draft.md",
+      "approvalSource": "本窗口2026-09-10用户：批准R2集中评审包全部23项推荐及四LIMIT，无改选；逐模块核退出条件，仅P1",
+      "reviewedHead": "ae43613d7851c4d5f60314869da9a428dafaeba1",
+      "reviewedDocumentSha256": "efe47f0e077fee2790a7bd331792ef39365f4cdb5840d43bca1f8d7ced38c00f",
+      "closedModuleIds": [
+        "M26"
+      ]
     }
   },
   "deliveryScope": {

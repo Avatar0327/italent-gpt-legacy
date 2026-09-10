@@ -1,8 +1,8 @@
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M26；备用 未启用；实际执行 M26。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M18；备用 未启用；实际执行 M18。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
-本次R2材料流水线：同一时刻一主模块；材料及可自主工作完成后可排队待集中评审并转下一材料模块，未批准不关闭/不转序；不进R3或P2/P3；材料完成待评审 M26、M18、M17、M03；正式关闭焦点 M26。[集中评审与决定清单](P1_R2_Review_Package.md)。
+本次R2材料流水线：按最新用户批准顺序关闭R2；随后允许R3串行材料准备，未批准R3不关闭，不进入P2/P3；材料完成待评审 M18、M17、M03；正式关闭焦点 M18。[集中评审与决定清单](P1_R2_Review_Package.md)。
 
 | R版本 | 模块顺序 | 当前边界 |
 |---|---|---|
@@ -18,7 +18,7 @@
 | 版本 | P1转序条件 | 批准进入阶段 | 下游实际状态 |
 |---|---|---|---|
 | R1 | 齐备 | P2 | 已获准进入，待独立设计执行与评审 |
-| R2 | 未齐备：M26,M18,M17,M03,BASE-01,BASE-02,BASE-03,BASE-04,BASE-05,BASE-06,rangeReviewApproved | 未批准 | 未取得该R下游批准 |
+| R2 | 未齐备：M18,M17,M03,BASE-01,BASE-02,BASE-03,BASE-04,BASE-05,BASE-06,rangeReviewApproved | 未批准 | 未取得该R下游批准 |
 | R3 | 未齐备：M27,M16,M12,M11,M07,BASE-01,BASE-02,BASE-03,BASE-04,BASE-05,BASE-06,rangeReviewApproved | 未批准 | 未取得该R下游批准 |
 
 | 模块 | R版本/队列 | P1A判定 | P1B评审 | 转序就绪 | 未达到条件 |
@@ -29,7 +29,7 @@
 | M32 报表 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M37 人才标准 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M06 任职资格 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
-| M26 360度评估 | R2 / primary_waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M26 360度评估 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M18 在线盘点 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M17 继任与发展 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M03 干部管理2.0 | R2 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
@@ -39,14 +39,14 @@
 | M11 假勤管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M07 薪酬社保 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 
-转序就绪 6/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
+转序就绪 7/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
 
 
 ---
 
 # 本项目总体PRD（P1B评审稿）
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-09T18:49:39.142211+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T02:39:23.518757+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
@@ -158,7 +158,7 @@ SCOPE-20260909-CORE15；2026-09-09T06:25:42.812752+00:00。用户本窗口明确
 | 当前15模块 | M01 组织员工、M03 干部管理2.0、M06 任职资格、M07 薪酬社保、M11 假勤管理、M12 招聘管理系统、M16 绩效管理、M17 继任与发展、M18 在线盘点、M19 审批中心、M26 360度评估、M27 学习管理、M32 报表、M37 人才标准、M48 员工自助 | 保留15模块原登记scope全部常规业务，不进一步缩为4底座；原始scope不改写。独立AI能力及外部服务真实执行例外按本记录明确暂缓，其他内部删减须集中决定。 |
 | R4：33个模块本次交付暂缓（历史保留，不计完成） | M02 人才评定、M04 HRBP工作台、M05 标签库、M08 我的填报、M09 预算成本、M10 财务凭证、M13 面试官工作台、M14 AI人才库、M15 测评中心、M20 项目人力管理、M21 文化激励、M22 电子签、M23 推荐运营中心、M24 校园大使管理、M25 外部推荐管理、M28 AI陪练、M29 员工调查、M30 北森问卷、M31 问卷调查、M33 森福利、M34 AI面试官、M35 主数据同步、M36 北森iTalent、M38 人才模型、M39 会议管理、M40 经理团队分析、M41 数字人才、M42 佣金管理、M43 任务、M44 RPA招聘助手、M45 干部管理、M46 职称管理、M47 翻译工作台 | 其余33组退出当前P1退出条件/主动探索。历史代码/证据/数据/验收/隔离成果保留；只准为保留模块引用已有前置或最小公共配置，不顺带恢复完整独立模块。 |
 
-P1A关闭 6/15（完整0，受限6）；P1B需求就绪 6/15（完整0，受限6）；P1评审关闭 6/15（完整0，受限6）。受限不混入完整通过，均不代表P3测试/P4业务或生产验收。
+P1A关闭 7/15（完整0，受限7）；P1B需求就绪 7/15（完整0，受限7）；P1评审关闭 7/15（完整0，受限7）。受限不混入完整通过，均不代表P3测试/P4业务或生产验收。
 
 
 ## 保留的非模块基础能力（不重复计入15模块）

@@ -1,31 +1,31 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-09T18:49:39.142211+00:00",
-  "primaryModuleId": "M26",
+  "generatedFromUpdatedAt": "2026-09-10T02:39:23.518757+00:00",
+  "primaryModuleId": "M18",
   "backupModuleId": null,
-  "activeExecutionModuleId": "M26",
+  "activeExecutionModuleId": "M18",
   "moduleCount": 15,
   "completeCount": 0,
-  "restrictedCount": 6,
-  "transitionReadyCount": 6,
+  "restrictedCount": 7,
+  "transitionReadyCount": 7,
   "progress": {
     "p1A": {
       "full": 0,
-      "restricted": 6,
-      "total": 6
+      "restricted": 7,
+      "total": 7
     },
     "p1B": {
       "full": 0,
-      "restricted": 6,
-      "total": 6
+      "restricted": 7,
+      "total": 7
     },
     "review": {
       "full": 0,
-      "restricted": 6,
-      "total": 6
+      "restricted": 7,
+      "total": 7
     }
   },
-  "p1ClosedCount": 6,
+  "p1ClosedCount": 7,
   "modules": [
     {
       "moduleId": "M01",
@@ -456,10 +456,10 @@
       "moduleId": "M26",
       "name": "360度评估",
       "rangeId": "R2",
-      "queueState": "primary_waiting_owner_review",
+      "queueState": "closed_restricted",
       "p1AConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M26-P1-APPROVAL-20260910",
         "evidenceRefs": [
           "BC-P1C-M26",
           "BC-P1C-M26-02",
@@ -467,49 +467,54 @@
           "BC-C15",
           "BC-C16"
         ],
-        "limits": "完整登记范围证据及限制可追溯；LIMIT未批准，不计P1A关闭"
+        "limits": "原站匿名算法、题型和套卷完整行为、答卷撤回/更正、报告开放/撤权及多角色执行未验证；本轮只读未执行新业务链。",
+        "approvedAt": "2026-09-10T02:39:23.518757+00:00"
       },
       "p1BConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M26-P1-APPROVAL-20260910",
         "evidenceRefs": [],
-        "limits": "对象/字段/权限/状态/异常/契约/实现差异及可执行预期已准备；新规则未批准"
+        "limits": "原站匿名算法、题型和套卷完整行为、答卷撤回/更正、报告开放/撤权及多角色执行未验证；本轮只读未执行新业务链。",
+        "approvedAt": "2026-09-10T02:39:23.518757+00:00"
       },
       "conditions": {
         "applicableScopeDetermined": {
           "value": true,
-          "basis": "用户已确认15完整登记范围及本轮R顺序"
+          "basis": "M26-P1-APPROVAL-20260910；原登记完整范围逐项与收口清单一致，无内部删减"
         },
         "implementationRulesDecided": {
-          "value": false,
-          "basis": "本模块新规则/LIMIT及消费者未批依赖待集中决定"
+          "value": true,
+          "basis": "M26-P1-APPROVAL-20260910；本模块SPEC与R2-BASELINE-01均由所有者明确批准，版本/哈希锁定"
         },
         "acceptanceExecutable": {
           "value": true,
-          "basis": "Given/When/Then及正常/异常用例已具体化；需求是否获批另判，未执行"
+          "basis": "M26-P1-APPROVAL-20260910；逐项Given/When/Then已存在，作为验收预期获批，未冒本轮执行"
         },
         "dependenciesAndExceptionsResolved": {
-          "value": false,
-          "basis": "本模块新规则/LIMIT及消费者未批依赖待集中决定"
+          "value": true,
+          "basis": "M26-P1-APPROVAL-20260910；已批准生产者契约与本模块LIMIT；源缺证/独立角色留P2/P3/P4，不要求先实联调"
         }
       },
       "transitionReview": {
-        "approved": false,
-        "record": null,
-        "scope": null,
-        "approvedAt": null
+        "approved": true,
+        "record": "M26-P1-APPROVAL-20260910",
+        "scope": "模块P1转序就绪；R2整体进入P2未批准",
+        "approvedAt": "2026-09-10T02:39:23.518757+00:00"
       },
-      "restrictedApproval": null,
-      "p1Closed": false,
-      "closureClass": "已完成待评审",
-      "transitionReady": false,
-      "missingConditions": [
-        "implementationRulesDecided",
-        "dependenciesAndExceptionsResolved",
-        "p1AApproved",
-        "p1BApproved",
-        "transitionReviewApproved"
-      ]
+      "restrictedApproval": {
+        "scope": "原站匿名算法、题型和套卷完整行为、答卷撤回/更正、报告开放/撤权及多角色执行未验证；本轮只读未执行新业务链。",
+        "residualRisk": "评价者身份重识别、低样本差分、跨报告推断、用途越权、问卷版本漂移及报告纠错影响。",
+        "revalidation": "P2：复核匿名身份映射隔离、问卷/角色/邀请/答卷版本、报告权限与聚合抑制，设计增量迁移但不执行；P3：合成验证2/3样本边界、角色重叠、零样本、问卷改版、撤回重交、报告更正与事务/消息失败；历史测试不代当前复验；P4：独立多角色、敏感字段/历史/附件/下载权限、跨模块业务及生产容量/恢复验收；E2不新增访问者，管理员操作不代验。",
+        "record": "M26-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T02:39:23.518757+00:00",
+        "phaseScope": "仅P1"
+      },
+      "p1Closed": true,
+      "closureClass": "受限通过",
+      "closureRecord": "M26-P1-APPROVAL-20260910",
+      "closedAt": "2026-09-10T02:39:23.518757+00:00",
+      "transitionReady": true,
+      "missingConditions": []
     },
     {
       "moduleId": "M18",
@@ -1405,7 +1410,6 @@
       ],
       "transitionReady": false,
       "missingConditions": [
-        "M26",
         "M18",
         "M17",
         "M03",
@@ -1493,7 +1497,6 @@
       "M03"
     ],
     "waitingModuleIds": [
-      "M26",
       "M18",
       "M17",
       "M03"
@@ -1512,14 +1515,14 @@
       "M17",
       "M03"
     ],
-    "rule": "同一时刻一主模块；材料及可自主工作完成后可排队待集中评审并转下一材料模块，未批准不关闭/不转序；不进R3或P2/P3",
+    "rule": "按最新用户批准顺序关闭R2；随后允许R3串行材料准备，未批准R3不关闭，不进入P2/P3",
     "ownerBranch": "main",
     "protectedWorktree": "/workspace/sites/italent-hris-r1-p2-20260909",
     "protectedBranch": "design/r1-p2-20260909",
     "observedProtectedHead": "617a707",
     "parallelBoundary": "仅git worktree list查看注册信息；不进入、不修改、不合并/cherry-pick其任何提交；P2建议完成后统一纳入",
-    "status": "四模块材料全部完成，等待集中评审",
-    "nextFormalClosureModule": "M26",
+    "status": "R2批准顺序落账中",
+    "nextFormalClosureModule": "M18",
     "reviewBundleRef": "docs/delivery/P1_R2_Review_Package.md"
   }
 }
