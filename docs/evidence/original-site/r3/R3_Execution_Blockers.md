@@ -1,6 +1,6 @@
 # R3 当前执行阻塞
 
-2026-09-10T15:41:44.091432+00:00。001/002仍在，005恢复未证实；003/004历史授权拒绝均已解除，本次不再索取相同授权。
+2026-09-10T16:14:15.724321+00:00。005包含人工点击失败及无公开实例重启接口；不再要求重复人工取消。
 
 ## R3-EXEC-BLOCK-001
 
@@ -80,8 +80,8 @@
   "action_readback": "M16仍原零人员活动，未进入分布规则；M07草稿iframe仍visible=true、zIndex10000，不能记取消成功；M27最后已下架。",
   "not_observed": "未出现自动审批新拒绝、登录失效、真实串页、数据丢失或站点反自动化提示，不据超时推定这些故障。",
   "owner_role": "云浏览器运行环境维护者/人工接管诊断（未确认承担）",
-  "resume_condition": "由现有接管入口仅对R3薪资草稿执行可见取消并确认回到列表；恢复可确认UI输入后继续。无需再次原站授权。",
-  "manual_handoff_next": "可向用户提供当前R3薪资草稿接管入口，正常取消后确认返回列表；字段已有记录，不涉及保存、核算或其他标签。",
+  "resume_condition": "需要平台侧恢复或重建云浏览器实例；当前工具无实例重启接口。用户已反馈人工点击无响应，不再要求重复点击取消或重新授权。恢复后先查现存对象与草稿，环境丢失不记取消通过。",
+  "manual_handoff_next": "人工点击路径已尝试且用户报告无响应；不重复该路径。当前最小外部动作是平台恢复实例。",
   "recorded_at": "2026-09-10T15:05:13.928972+00:00",
   "latest_check": {
     "at": "2026-09-10T15:41:44.091432+00:00",
@@ -109,6 +109,15 @@
     "draft": "PLAN01仍存在，月/否已只读复核，未点击取消或保存",
     "other_windows_touched": false
   },
-  "current_error": "本次检查未返回新超时错误；历史Runtime.evaluate/Input.dispatchMouseEvent超时仍记录。因状态未变化，恢复未证实。"
+  "current_error": "本次检查未返回新超时错误；历史Runtime.evaluate/Input.dispatchMouseEvent超时仍记录。因状态未变化，恢复未证实。",
+  "manual_recovery_result": {
+    "at": "2026-09-10T16:14:15.724321+00:00",
+    "source": "用户当前反馈",
+    "observation": "无法操作云浏览器，点击后无反应",
+    "restart_requested_by_owner": true,
+    "advertised_browser_capabilities": [],
+    "restart_api_available": false,
+    "restart_performed": false
+  }
 }
 ```

@@ -167,6 +167,11 @@
   "p3_entered": false,
   "p4_approved": false,
   "deployed": false,
-  "minimum_manual_action": "沿用已提供R3浏览器接管入口，仅对PLAN01草稿点击可见取消一次，告知是否回到方案列表；不要保存或操作其他标签。",
-  "new_access_authorization_needed": false
+  "minimum_manual_action": "平台侧恢复或重建云浏览器实例；当前工具无公开重启接口，人工取消已由用户反馈无响应。",
+  "new_access_authorization_needed": false,
+  "recovery_addendum": {
+    "at": "2026-09-10T16:14:15.724321+00:00",
+    "restart_performed": false,
+    "user_manual_click_failed": true
+  }
 }
