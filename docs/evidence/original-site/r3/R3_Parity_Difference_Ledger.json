@@ -253,6 +253,24 @@
       "proposal": "发布状态、学员可学范围与通知任务分别建模；明确通知开关、收件范围、预览和发送状态。默认关闭属于本次观测，不可承诺所有场景都默认关闭；禁止仅凭私有课程推断无消息副作用。",
       "decision": null,
       "p4_evidence": null
+    },
+    {
+      "id": "R3-DIFF-015",
+      "severity": "Major",
+      "module": "M12",
+      "title": "待入职保存隐含经理与信息采集副作用",
+      "source_evidence": "BASE-ORIGIN-002;003;004",
+      "approved_requirement": "M12-SPEC-05; M12-SPEC-06",
+      "design_sha": null,
+      "implementation_sha": null,
+      "classification": "design_input_candidate_not_confirmed_implementation_defect",
+      "status": "待R3 P2接收",
+      "owner_role": "R3 P2设计负责人",
+      "owner_acceptance": "未确认",
+      "target_phase": "P2设计冻结前",
+      "proposal": "设计保存前应展示有效经理关系及其来源（本轮带入来源未查明）、有效选择值、消息任务及收件范围，并在保存后回读；input.value为空不可作为自定义选择器未绑定的证据。分开待入职主档、在职员工建立、采集通知、入职申请及角色指派。测试模式必须能禁用自动通知并限定本轮人员，缺该控制时阻止后续申请，不改共享全局配置。",
+      "decision": null,
+      "p4_evidence": null
     }
   ]
 }

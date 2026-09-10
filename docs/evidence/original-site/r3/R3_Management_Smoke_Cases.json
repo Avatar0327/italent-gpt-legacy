@@ -113,6 +113,307 @@
       "case": "员工/主管权限及完成证书",
       "status": "ROLE_BLOCKED",
       "evidence": "不能用管理员视角代替"
+    },
+    {
+      "id": "M16-RC-01",
+      "module": "M16",
+      "case": "活动创建、周期日期回填、空参与人",
+      "status": "VERIFIED_PRIOR_RUN",
+      "evidence": "M16-ORIGIN-001..003"
+    },
+    {
+      "id": "M16-RC-02",
+      "module": "M16",
+      "case": "精准/条件/方案/导入参与人入口",
+      "status": "CONFIG_OBSERVED",
+      "evidence": "需模板和被考核人，未加入原有人"
+    },
+    {
+      "id": "M16-RC-03",
+      "module": "M16",
+      "case": "目标模板",
+      "status": "ENV_BLOCKED",
+      "evidence": "未执行续跑增量"
+    },
+    {
+      "id": "M16-RC-04",
+      "module": "M16",
+      "case": "权重边界",
+      "status": "ENV_BLOCKED",
+      "evidence": "未执行"
+    },
+    {
+      "id": "M16-RC-05",
+      "module": "M16",
+      "case": "评分规则",
+      "status": "ENV_BLOCKED",
+      "evidence": "未执行"
+    },
+    {
+      "id": "M16-RC-06",
+      "module": "M16",
+      "case": "校准配置",
+      "status": "ENV_BLOCKED",
+      "evidence": "未执行"
+    },
+    {
+      "id": "M16-RC-07",
+      "module": "M16",
+      "case": "退回状态",
+      "status": "ENV_BLOCKED",
+      "evidence": "未执行"
+    },
+    {
+      "id": "M16-RC-08",
+      "module": "M16",
+      "case": "锁定关系",
+      "status": "CONFIG_OBSERVED",
+      "evidence": "配置字段已见；状态运行未测"
+    },
+    {
+      "id": "M16-RC-09",
+      "module": "M16",
+      "case": "最终结果与历史",
+      "status": "DEPENDENCY_BLOCKED",
+      "evidence": "无合成被考核人/活动结果"
+    },
+    {
+      "id": "M16-RC-10",
+      "module": "M16",
+      "case": "审批与主管权限",
+      "status": "ROLE_BLOCKED",
+      "evidence": "未使用管理员冒充角色"
+    },
+    {
+      "id": "M12-RC-01",
+      "module": "M12",
+      "case": "私有库创建、共享为空、AI关闭",
+      "status": "VERIFIED_PRIOR_RUN",
+      "evidence": "M12-ORIGIN-002"
+    },
+    {
+      "id": "M12-RC-02",
+      "module": "M12",
+      "case": "10份简历解析确认入库",
+      "status": "VERIFIED_PRIOR_RUN",
+      "evidence": "M12-ORIGIN-003"
+    },
+    {
+      "id": "M12-RC-03",
+      "module": "M12",
+      "case": "本轮候选人详情及业务编号",
+      "status": "VERIFIED_PRIOR_RUN",
+      "evidence": "C00014235/236/243"
+    },
+    {
+      "id": "M12-RC-04",
+      "module": "M12",
+      "case": "不同邮箱经历相同疑似对",
+      "status": "VERIFIED_PRIOR_RUN",
+      "evidence": "M12-ORIGIN-004"
+    },
+    {
+      "id": "M12-RC-05",
+      "module": "M12",
+      "case": "01/09取消疑似9变8",
+      "status": "VERIFIED_PRIOR_RUN",
+      "evidence": "M12-ORIGIN-005；本轮未再次取消"
+    },
+    {
+      "id": "M12-RC-06",
+      "module": "M12",
+      "case": "取消关系重载持久性",
+      "status": "ENV_BLOCKED",
+      "evidence": "未重载验证"
+    },
+    {
+      "id": "M12-RC-07",
+      "module": "M12",
+      "case": "正式待入职保存替代路径",
+      "status": "PARTIAL_WITH_SIDE_EFFECT",
+      "evidence": "BASE-ORIGIN-002..004；未形成在职员工"
+    },
+    {
+      "id": "M12-RC-08",
+      "module": "M12",
+      "case": "招聘需求/编制草稿",
+      "status": "ENV_BLOCKED",
+      "evidence": "后续原站访问全站拒绝"
+    },
+    {
+      "id": "M12-RC-09",
+      "module": "M12",
+      "case": "职位与阶段流转",
+      "status": "ENV_BLOCKED",
+      "evidence": "未执行，未发布真实职位"
+    },
+    {
+      "id": "M12-RC-10",
+      "module": "M12",
+      "case": "面试评价草稿",
+      "status": "ENV_BLOCKED",
+      "evidence": "未执行，未发邀请"
+    },
+    {
+      "id": "M12-RC-11",
+      "module": "M12",
+      "case": "Offer草稿",
+      "status": "ENV_BLOCKED",
+      "evidence": "未执行，未外发"
+    },
+    {
+      "id": "M12-RC-12",
+      "module": "M12",
+      "case": "候选人到在职员工完整衔接",
+      "status": "DEPENDENCY_BLOCKED",
+      "evidence": "待入职单独新建，不冒称候选人转入职成功"
+    },
+    {
+      "id": "M12-RC-13",
+      "module": "M12",
+      "case": "隐私及不同角色",
+      "status": "ROLE_BLOCKED",
+      "evidence": "无明确隔离身份"
+    },
+    {
+      "id": "M11-RC-01",
+      "module": "M11",
+      "case": "3条固定班次新增复制回读",
+      "status": "VERIFIED_PRIOR_RUN",
+      "evidence": "M11-ORIGIN-003"
+    },
+    {
+      "id": "M11-RC-02",
+      "module": "M11",
+      "case": "工作日变化后的半天选项",
+      "status": "CONFIG_OBSERVED",
+      "evidence": "M11-ORIGIN-002"
+    },
+    {
+      "id": "M11-RC-03",
+      "module": "M11",
+      "case": "已有排班不联动提示",
+      "status": "CONFIG_OBSERVED",
+      "evidence": "M11-ORIGIN-004；版本运行未测"
+    },
+    {
+      "id": "M11-RC-04",
+      "module": "M11",
+      "case": "停用与引用拒绝",
+      "status": "ENV_BLOCKED",
+      "evidence": "未执行续跑增量"
+    },
+    {
+      "id": "M11-RC-05",
+      "module": "M11",
+      "case": "轮班限制",
+      "status": "CONFIG_OBSERVED",
+      "evidence": "M11-ORIGIN-005；未实测拒绝"
+    },
+    {
+      "id": "M11-RC-06",
+      "module": "M11",
+      "case": "跨日边界",
+      "status": "ENV_BLOCKED",
+      "evidence": "未执行"
+    },
+    {
+      "id": "M11-RC-07",
+      "module": "M11",
+      "case": "加班配置与补卡",
+      "status": "ENV_BLOCKED",
+      "evidence": "未执行"
+    },
+    {
+      "id": "M11-RC-08",
+      "module": "M11",
+      "case": "空人员排班草稿",
+      "status": "ENV_BLOCKED",
+      "evidence": "未执行"
+    },
+    {
+      "id": "M11-RC-09",
+      "module": "M11",
+      "case": "异常/月末计算",
+      "status": "DEPENDENCY_BLOCKED",
+      "evidence": "无本轮在职员工及打卡数据"
+    },
+    {
+      "id": "M11-RC-10",
+      "module": "M11",
+      "case": "权限角色",
+      "status": "ROLE_BLOCKED",
+      "evidence": "无隔离身份"
+    },
+    {
+      "id": "M07-RC-01",
+      "module": "M07",
+      "case": "独立组必填校验、部门范围和保存",
+      "status": "VERIFIED_PRIOR_RUN",
+      "evidence": "M07-ORIGIN-003..004"
+    },
+    {
+      "id": "M07-RC-02",
+      "module": "M07",
+      "case": "方案/周期/权限配置",
+      "status": "CONFIG_OBSERVED",
+      "evidence": "M07-ORIGIN-001；方案此前取消未保存"
+    },
+    {
+      "id": "M07-RC-03",
+      "module": "M07",
+      "case": "月中调动与个税通配置",
+      "status": "CONFIG_OBSERVED",
+      "evidence": "M07-ORIGIN-002；未调用外部服务"
+    },
+    {
+      "id": "M07-RC-04",
+      "module": "M07",
+      "case": "固定/变动薪资项",
+      "status": "ENV_BLOCKED",
+      "evidence": "未执行续跑增量"
+    },
+    {
+      "id": "M07-RC-05",
+      "module": "M07",
+      "case": "公式与版本",
+      "status": "ENV_BLOCKED",
+      "evidence": "未执行"
+    },
+    {
+      "id": "M07-RC-06",
+      "module": "M07",
+      "case": "补发补扣追溯",
+      "status": "ENV_BLOCKED",
+      "evidence": "未执行"
+    },
+    {
+      "id": "M07-RC-07",
+      "module": "M07",
+      "case": "锁定/解锁/审批",
+      "status": "ENV_BLOCKED",
+      "evidence": "未执行"
+    },
+    {
+      "id": "M07-RC-08",
+      "module": "M07",
+      "case": "空人员核算拒绝",
+      "status": "ENV_BLOCKED",
+      "evidence": "未执行"
+    },
+    {
+      "id": "M07-RC-09",
+      "module": "M07",
+      "case": "报表和历史",
+      "status": "ENV_BLOCKED",
+      "evidence": "未执行"
+    },
+    {
+      "id": "M07-RC-10",
+      "module": "M07",
+      "case": "工资对象及权限角色",
+      "status": "DEPENDENCY_AND_ROLE_BLOCKED",
+      "evidence": "无本轮在职员工和隔离身份"
     }
   ]
 }

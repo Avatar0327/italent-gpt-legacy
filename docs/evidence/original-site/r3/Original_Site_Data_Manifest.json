@@ -367,6 +367,24 @@
       "one_minute_input": 1,
       "one_minute_persistence": "未独立回读，不算已验证",
       "cleanup": "保留本轮课件，勿重新上传"
+    },
+    {
+      "module": "BASE",
+      "object_type": "onboarding_pending_record",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_EMP01",
+      "business_code": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_EMP01",
+      "internal_id": null,
+      "state": "待入职；新增入职；正常；入职准备进行中；信息采集已发送；材料未提交",
+      "email": "zz_r3_20260910_103900_emp01@example.invalid",
+      "org": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_ORG01",
+      "planned_entry_date": "2026-09-10",
+      "employment_relation": "内部员工",
+      "probation": false,
+      "employee_established": false,
+      "readback": "姓名精确过滤唯一匹配；DOM fixedDataTableRowLayout_body仅读取本轮记录及列标题",
+      "unexpected_manager_reference": "保存后直线经理列出现非R3原有人员；不在本包复制其姓名/邮箱",
+      "pending_correction": "本轮编辑页已打开；清除经理未得到执行成功证据，原站访问被自动审批阻止",
+      "cleanup": "保留本轮待入职记录；未提交入职申请，不重复新增；恢复先回查通知与默认经理"
     }
   ],
   "operations": [
@@ -546,12 +564,56 @@
       "action": "仅选择SMOKE02，更多操作下架，出现确认",
       "result": "confirmation_open; final_yes_not_confirmed_due_to_auto_review_denial",
       "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE02"
+    },
+    {
+      "id": "R3-OP-020",
+      "module": "BASE",
+      "action": "依次检查期限入口/其他用工入口/正式导入模板/正式添加待入职",
+      "result": "new_onboarding_record_saved; not_an_employee",
+      "attempts": [
+        {
+          "path": "期限类型其他卡片/正式入口",
+          "result": "本轮一次可见入口检查，未获得可选项；未重复保存"
+        },
+        {
+          "path": "原新增员工其他用工形式",
+          "result": "本轮一次展开检查未取得选项；未修改配置或提交"
+        },
+        {
+          "path": "导入内部员工/下载模板",
+          "result": "正式模板目的页面显示This page has been blocked by Chromium；未绕过、未猜模板或导入"
+        },
+        {
+          "path": "任职管理/添加待入职",
+          "result": "待入职列表先查EMP01无记录，填写并单次保存成功；在职员工未生成"
+        },
+        {
+          "path": "专用虚构员工入口",
+          "result": "本次恢复导航未识别明确专用入口；深入查找后被ENV阻止，不能声称不存在"
+        }
+      ]
+    },
+    {
+      "id": "R3-OP-021",
+      "module": "BASE",
+      "action": "回读新待入职EMP01及列标题",
+      "result": "unexpected_non_R3_manager_and_collection_sent_status",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_EMP01",
+      "notes": "表单经理input.value为空不代表控件无选择；保存行直线经理为非R3人，信息采集状态已发送。未点击通知采集、激活或申请；实际消息投递未验证，邮箱为example.invalid。"
+    },
+    {
+      "id": "R3-OP-022",
+      "module": "BASE",
+      "action": "打开本轮待入职编辑页，准备清除自动经理",
+      "result": "correction_not_confirmed; browser_origin_access_denied_by_auto_review",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_EMP01",
+      "notes": "拒绝组合操作后仅尝试一次更安全的现有字段只读检查，仍被拒绝；不再调用该站。"
     }
   ],
   "counts": {
-    "confirmed_records": 28,
+    "confirmed_records": 29,
     "by_module": {
-      "BASE": 1,
+      "BASE": 2,
       "M27": 11,
       "M16": 1,
       "M12": 11,
@@ -561,27 +623,41 @@
     "pending_import_records": 0,
     "unknown_records": 0
   },
-  "external_sends": 0,
+  "external_sends": null,
   "payments": 0,
   "declarations": 0,
-  "checkpoint_at": "2026-09-10T13:49:30.184196+00:00",
-  "workflow_status": "resumed; continue_employee_independent_management_cases",
+  "checkpoint_at": "2026-09-10T13:50:36.703307+00:00",
+  "workflow_status": "ENV_BLOCKED_origin_access_denied_by_auto_review; not_stopped_for_employee_or_single_module",
   "execution_blockers": [
     {
       "id": "R3-EXEC-BLOCK-001",
-      "scope": "当前新增员工路径及依赖本轮员工的跨模块闭环",
-      "observed": "劳动合同期限类型必填导致保存拒绝；期限控件未出现可选项",
+      "scope": "在职员工建立及依赖链；已有待入职替代路径部分成功",
+      "observed": "待入职EMP01已保存；原直接新增表单仍无期限选项，正式导入模板受浏览器限制；待入职自动带出原有经理和已发送状态，不能继续入职申请",
       "cause": "未确定；不能据此判断原站全局故障",
       "owner_role": "原站测试环境维护者/数据负责人（尚未确认承担）",
-      "resume_condition": "提供当前表单可用的期限类型选择方式，或提供/建立R3独立虚构员工的合法替代入口",
-      "remaining_alternatives": "其他导入/招聘入职路径未证明不可用，不将局部阻塞扩大为全站结论"
+      "resume_condition": "恢复原站访问后先确认并解除本轮记录默认经理/通知副作用，再用合法UI完成入职；不能重建EMP01",
+      "remaining_alternatives": "专用测试入口和完整入职办理尚未穷尽，因全站ENV限制暂停"
     },
     {
       "id": "R3-EXEC-BLOCK-002",
       "scope": "学习者/员工/主管/审批者等多角色权限与自助操作",
-      "observed": "本轮仅使用已有管理员会话，未获得可切换的R3专属测试角色身份",
+      "observed": "本轮仍仅管理员身份；未获得明确授权R3专用员工/主管/审批身份；深查前发生ENV访问拒绝",
       "owner_role": "原站测试账号维护者（尚未确认承担）",
-      "resume_condition": "提供仅覆盖本轮数据的测试身份或既有隔离角色切换入口；不得修改共享全局权限"
+      "resume_condition": "提供仅覆盖本轮数据的测试身份或既有隔离角色切换入口；不得修改共享全局权限",
+      "status": "ROLE_BLOCKED",
+      "note": "不是整轮停止原因，不能声称所有切换入口均不存在"
+    },
+    {
+      "id": "R3-EXEC-BLOCK-003",
+      "status": "ENV_BLOCKED",
+      "scope": "srworkshopbj.italent.cn所有当前浏览器交互",
+      "observed": "自动审批拒绝该原站访问；称员工编辑未保存状态可能被重新导航丢失，并要求用户重新确认",
+      "first_rejected_action": "课程下架最终确认与本轮经理清除组合；无成功结果证据",
+      "safer_attempt": "仅针对现有待入职经理字段的只读检查，无goto/reload；仍拒绝",
+      "automatic_review_reason": "Repeats previously rejected origin access while unsaved employee-edit state remains; could reset navigation and lose non-trivial changes, with no explicit user re-approval.",
+      "not_observed": "没有实际串页、互踢、登录失效或状态丢失证据；不将审批推测记为浏览器故障事实",
+      "resume_condition": "用户明确重新授权访问该原站并保留未保存表单；随后只读回查两个待确认操作，再恢复UI执行",
+      "owner_role": "用户重新授权/平台自动审批（不是R3 P2设计缺陷）"
     }
   ],
   "synthetic_input_files": [
@@ -641,7 +717,7 @@
     "remote_head_matches": true,
     "r3_p2_branch_found": false,
     "original_27_verified": 27,
-    "new_objects": 0,
+    "new_objects": 2,
     "checks": [
       {
         "name": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_ORG01",
@@ -785,5 +861,24 @@
       "result": "搜索结果：这里什么都没有",
       "existing_unsaved_draft_readback": true
     }
+  },
+  "external_notification_observation": {
+    "manual_external_send_actions": 0,
+    "observed_status": "待入职EMP01信息采集已发送",
+    "actual_delivery_verified": false,
+    "email": "zz_r3_20260910_103900_emp01@example.invalid",
+    "notification_recipients_verified": false,
+    "real_candidate_email_or_phone_used": false,
+    "note": "不得继续声称本轮所有外部发送数为0；未知与已观察状态分列。"
+  },
+  "employee_established": false,
+  "repository_recheck": {
+    "recorded_at": "2026-09-10T13:54:46.532702+00:00",
+    "remote_main_sha": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "r3_p2_design_or_review_branch_found": false,
+    "p2_status_from_repository": "未启动（已准入）",
+    "m27_evidence_remote_sha": "1dafb11806b0e96a2fb74bffc338544217c4829d",
+    "tracking_remote": "r1-p2-origin",
+    "tracking_branch": "evidence/r3-origin-parity-20260910"
   }
 }
