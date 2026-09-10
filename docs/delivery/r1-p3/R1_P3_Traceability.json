@@ -2719,6 +2719,14 @@
       "evidence": "evidence/r1-p3-20260910T101031691739Z.json",
       "status": "implemented_synthetic_verified_review_pending",
       "risksClosed": 0
+    },
+    {
+      "taskId": "P3-R1-10",
+      "sourceSha": "254a70772bc78755d1e524d7b4bc4871b9da5904",
+      "evidence": "evidence/r1-p3-20260910T101913449916Z.json",
+      "status": "partial_internal_verified_producer_blocked",
+      "risksClosed": 0
     }
-  ]
+  ],
+  "producerIntegrationCaseEvidence": "R1_P3_Producer_Case_Evidence.json"
 }

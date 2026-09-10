@@ -22,8 +22,11 @@
     {
       "id": "DEP-PRODUCERS-01",
       "owner": "R2/R3生产者与M48/M32负责人",
-      "status": "real_integration_not_executed",
-      "impact": "10逐生产者真实契约待核；模拟不记真实通过"
+      "status": "16_real_producer_cases_blocked",
+      "impact": "10保留16真实联调未完成；11不依赖10且继续本地跨域验证",
+      "evidence": [
+        "R1_P3_Producer_Case_Evidence.json"
+      ]
     },
     {
       "id": "SRC-13",
