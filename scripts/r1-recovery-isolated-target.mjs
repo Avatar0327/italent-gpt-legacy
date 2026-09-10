@@ -17,3 +17,10 @@ export class LocalIsolatedRecoveryTarget {
  this.sqlite.exec('PRAGMA foreign_keys=ON');const integrity=this.sqlite.prepare('PRAGMA integrity_check').get().integrity_check,foreignKeyErrors=this.sqlite.prepare('PRAGMA foreign_key_check').all().length;if(integrity!=='ok'||foreignKeyErrors)throw Error('RESTORE_INTEGRITY_FAILED');return {integrity,foreignKeyErrors,openGate:0,outboundEnabled:false};}
  close(){this.sqlite.close();}
 }
+/** Explicitly simulated object adapter for the local rehearsal; no R2 calls. */
+export class LocalIsolatedObjectTarget {
+ constructor(){this.targetId=crypto.randomUUID();this.parts=new Map();this.verified=new Map();this.isolated=true;}
+ async assertIsolated(){if(!this.isolated)throw Error('RESTORE_TARGET_NOT_ISOLATED');}
+ async writeRange(key,versionId,offset,bytes){await this.assertIsolated();const id=JSON.stringify([key,versionId,offset]),old=this.parts.get(id);if(old&&Buffer.compare(old,bytes)!==0)throw Error('IMMUTABLE_RANGE_CONFLICT');this.parts.set(id,new Uint8Array(bytes));}
+ async seal(key,versionId,size,digest){await this.assertIsolated();const {createHash}=await import('node:crypto'),hash=createHash('sha256');let offset=0;while(offset<size){const bytes=this.parts.get(JSON.stringify([key,versionId,offset]));if(!bytes||!bytes.byteLength)throw Error('RESTORE_OBJECT_RANGE_MISSING');hash.update(bytes);offset+=bytes.byteLength;}if(offset!==size||hash.digest('hex')!==digest)throw Error('RESTORE_OBJECT_HASH_MISMATCH');this.verified.set(key,{versionId,size,digest});}
+}
