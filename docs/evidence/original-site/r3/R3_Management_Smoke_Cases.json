@@ -293,22 +293,22 @@
       "id": "M11-RC-03",
       "module": "M11",
       "case": "已有排班不联动提示",
-      "status": "CONFIG_OBSERVED",
-      "evidence": "M11-ORIGIN-004；版本运行未测"
+      "status": "PARTIAL",
+      "evidence": "M11-ORIGIN-004/006；修改确认与V2保存已回读，有引用重算未测"
     },
     {
       "id": "M11-RC-04",
       "module": "M11",
       "case": "停用与引用拒绝",
-      "status": "ENV_BLOCKED",
-      "evidence": "未执行续跑增量"
+      "status": "PARTIAL",
+      "evidence": "M11-ORIGIN-007；无引用停用/启用已验证，引用拒绝未测"
     },
     {
       "id": "M11-RC-05",
       "module": "M11",
-      "case": "轮班限制",
+      "case": "坐班制限制；轮班待测",
       "status": "CONFIG_OBSERVED",
-      "evidence": "M11-ORIGIN-005；未实测拒绝"
+      "evidence": "M11-ORIGIN-008纠正旧转录；未实测拒绝"
     },
     {
       "id": "M11-RC-06",
@@ -414,6 +414,27 @@
       "case": "工资对象及权限角色",
       "status": "DEPENDENCY_AND_ROLE_BLOCKED",
       "evidence": "无本轮在职员工和隔离身份"
+    },
+    {
+      "id": "M11-RC-11",
+      "module": "M11",
+      "case": "本轮班次简称修改及真正确认后重开回读",
+      "status": "VERIFIED",
+      "evidence": "M11-ORIGIN-006"
+    },
+    {
+      "id": "M11-RC-12",
+      "module": "M11",
+      "case": "无引用班次停用后完整名独立查询",
+      "status": "VERIFIED",
+      "evidence": "M11-ORIGIN-007"
+    },
+    {
+      "id": "M11-RC-13",
+      "module": "M11",
+      "case": "停用后恢复启用并回读",
+      "status": "VERIFIED",
+      "evidence": "M11-ORIGIN-007"
     }
   ]
 }

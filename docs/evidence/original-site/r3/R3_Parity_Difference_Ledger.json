@@ -169,7 +169,7 @@
       "severity": "Major",
       "module": "M11",
       "title": "班次版本与已排班快照不能自动覆盖",
-      "source_evidence": "M11-ORIGIN-001;002;003;004;005",
+      "source_evidence": "M11-ORIGIN-001;002;003;004;005;M11-ORIGIN-006;M11-ORIGIN-007;M11-ORIGIN-008",
       "approved_requirement": "M11-SPEC-01",
       "design_sha": null,
       "implementation_sha": null,
@@ -178,7 +178,7 @@
       "owner_role": "R3 P2设计负责人",
       "owner_acceptance": "未确认",
       "target_phase": "P2设计冻结前",
-      "proposal": "原站提示安排加班更改不联动已有排班；P2需显式重排流程和影响清单，保留已排班版本、分钟及半天统计。停用引用校验和轮班限制待实测。",
+      "proposal": "区分班次修改触发当前考勤期间重算、安排加班修改需重新排班、停用仅限制后续选择、有效档案引用停用拒绝。不能笼统设计为历史永不变化或全量同步；坐班制限制按原文纠正。实际有引用重算及历史边界待合成员工。",
       "decision": null,
       "p4_evidence": null
     },

@@ -197,14 +197,14 @@
       "object_type": "shift",
       "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M11_SMOKE01",
       "internal_id": null,
-      "state": "启用",
+      "state": "启用；简称R3日班01_V2；完成本轮停用再启用回读",
       "org": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_ORG01",
       "share_downward": false,
       "start": "当日09:00",
       "end": "当日17:00",
       "minutes_observed": 480,
       "half_split": "按工作时长的一半自动分割",
-      "readback": "班次名称过滤后唯一匹配行，归属本轮组织",
+      "readback": "正式修改确认后重开编辑回读V2；保持完整名筛选回读停用，再启用回读启用。",
       "scheduled_employees": 0
     },
     {
@@ -616,6 +616,14 @@
       "result": "saved_and_independently_read_back",
       "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_EMP01",
       "notes": "原编辑clear图标->请选择，无选择芯片；正式保存；重新打开编辑回读为空；退出无修改回读页后弹层隐藏，列表旧关联不存在。信息采集仍已发送，实际消息投递未知。"
+    },
+    {
+      "id": "R3-OP-024",
+      "module": "M11",
+      "action": "自有班次修改、停用、启用生命周期",
+      "result": "verified_separate_readbacks",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M11_SMOKE01",
+      "notes": "无员工/排班引用，不证明有引用重算、历史排班或角色行为；未生成新对象。"
     }
   ],
   "counts": {
@@ -634,7 +642,7 @@
   "external_sends": null,
   "payments": 0,
   "declarations": 0,
-  "checkpoint_at": "2026-09-10T14:11:57.903182+00:00",
+  "checkpoint_at": "2026-09-10T14:19:17.787553+00:00",
   "workflow_status": "RUNNING_reauthorized_UI_restored",
   "execution_blockers": [
     {
