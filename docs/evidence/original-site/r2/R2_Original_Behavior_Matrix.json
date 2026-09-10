@@ -149,6 +149,18 @@
       "evidence": [
         "captures/M18-subject-template-required.json"
       ]
+    },
+    {
+      "id": "R2-OBS-M17-001",
+      "module": "M17",
+      "actual": "POOL01绑定本轮ORG01保存成功，默认启用且0人；预计人数空，饱和度显示--；入出标准未配，自动入池关闭。",
+      "p1": "M17-SPEC-01/05 空预计人数不得当0",
+      "p2": "M17_Design.md pool expectedCount/health denominator",
+      "implementation": "未运行；R2 P3未启动",
+      "classification": "MATCH",
+      "evidence": [
+        "captures/M17-pool-readback.json"
+      ]
     }
   ],
   "notProductTests": true
