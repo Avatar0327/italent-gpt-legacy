@@ -1,3 +1,49 @@
+## 当前执行模式：模块闭环优先、按R版本滚动转序
+
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M27；备用 未启用；实际执行 M27。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+
+R3串行材料队列：五模块全部可自主材料完成待评审；已准备 M27、M16、M12、M11、M07；等待评审 M27、M16、M12、M11、M07。材料完成不等批准或转序。
+
+| R版本 | 模块顺序 | 当前边界 |
+|---|---|---|
+| R1 核心底座 | M01→M19→M48→M32 | 当前承诺，按模块闭环滚动；用户本轮明确顺序；不是此前已有分层，不批准未决业务规则或内部缩减 |
+| R2 人才管理 | M37→M06→M26→M18→M17→M03 | 当前承诺，按模块闭环滚动；用户本轮明确顺序；不是此前已有分层，不批准未决业务规则或内部缩减 |
+| R3 HR专业领域 | M27→M16→M12→M11→M07 | 当前承诺，按模块闭环滚动；用户本轮明确顺序；不是此前已有分层，不批准未决业务规则或内部缩减 |
+| R4 本次交付暂缓 | M02→M04→M05→M08→M09→M10→M13→M14→M15→M20→M21→M22→M23→M24→M25→M28→M29→M30→M31→M33→M34→M35→M36→M38→M39→M40→M41→M42→M43→M44→M45→M46→M47 | 暂缓；其余33组退出当前P1退出条件/主动探索。历史代码/证据/数据/验收/隔离成果保留；只准为保留模块引用已有前置或最小公共配置，不顺带恢复完整独立模块。 |
+
+四项条件均true且有证据；P1A结论及P1B评审均完整通过或获明确受限批准；transitionReview.approved=true且有批准范围/日期/记录才可转序。受限通过自身不足以转序。
+
+每R所有模块和适用基础P1条件齐备且版本评审明确批准才进入指定下阶段；R1本次仅准P2设计，P2独立退出评审后才可P3，不继承历史技术验收。P4业务/生产验收独立。
+
+| 版本 | P1转序条件 | 批准进入阶段 | 下游实际状态 |
+|---|---|---|---|
+| R1 | 齐备 | P2 | 已获准进入，待独立设计执行与评审 |
+| R2 | 未齐备：rangeReviewApproved | 未批准 | 未取得该R下游批准 |
+| R3 | 未齐备：M27,M16,M12,M11,M07,BASE-01,BASE-02,BASE-03,BASE-04,BASE-05,BASE-06,rangeReviewApproved | 未批准 | 未取得该R下游批准 |
+
+| 模块 | R版本/队列 | P1A判定 | P1B评审 | 转序就绪 | 未达到条件 |
+|---|---|---|---|---|---|
+| M01 组织员工 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
+| M19 审批中心 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
+| M48 员工自助 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
+| M32 报表 | R1 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
+| M37 人才标准 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
+| M06 任职资格 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
+| M26 360度评估 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
+| M18 在线盘点 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
+| M17 继任与发展 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
+| M03 干部管理2.0 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
+| M27 学习管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M16 绩效管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M12 招聘管理系统 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M11 假勤管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M07 薪酬社保 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+
+转序就绪 10/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
+
+
+<!-- MODULE_MODE_CURRENT_END -->
+
 <!-- ROADMAP_CURRENT_START -->
 # 当前有效项目规划细化
 

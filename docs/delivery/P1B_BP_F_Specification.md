@@ -1,3 +1,5 @@
+M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Review_Package.md)。状态：P1受限通过，需求基线已批准；批准记录：M01-P1-APPROVAL-20260909。
+
 # BP-F 组织员工｜产品需求规格评审稿
 
 生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T03:00:48.395105+00:00。

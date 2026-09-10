@@ -47165,7 +47165,7 @@
       "scopeChangeHead": "f31cb2b5e1894723288fd884d4e3bd895ae57327",
       "scopeChange": "SCOPE-20260909-CORE15",
       "latestCheckpointAt": "2026-09-10T03:00:48.395105+00:00",
-      "latestCommittedHead": "4013f2e99aa5d0b38498a45e560d64ad62e59929",
+      "latestCommittedHead": "161579443b880302957e92c22ab6414941cdf3e9",
       "latestEvidenceRefs": [
         "BC-C39",
         "BC-C40",
@@ -47177,12 +47177,12 @@
       "sourceBrowsingStatus": "本轮未新增原站浏览器取证，沿用归档证据；此前连接恢复只代表前次观察，不宣称本轮复核。所有缺证逐模块列LIMIT及定向清单。",
       "currentFocus": "M27唯一主模块；其余R3模块材料排队待集中评审",
       "checkpointCommitSemantics": "latestCommittedHead为本单元编辑开始前已存在提交；本记录所属提交用git log -1 -- docs/delivery/Scope_Register.json解析，不能将基准冒充最终HEAD。",
-      "workingTreeAtResume": "汇编单元基于4013f2e99aa5d0b38498a45e560d64ad62e59929 clean；最终所属提交以git log核实",
+      "workingTreeAtResume": "修正1615794汇总字段兼容问题；不变更批准和范围，最终提交以Git核实",
       "lastVerifiedSync": {
-        "commit": "4013f2e99aa5d0b38498a45e560d64ad62e59929",
+        "commit": "161579443b880302957e92c22ab6414941cdf3e9",
         "remoteBranch": "main",
-        "result": "push和ls-remote一致",
-        "scope": "R2四关闭单元及R3五材料单元"
+        "result": "同步已核；该提交汇总字段kind/evidence缺失，需以本次修正及重新生成检查结果为最终版本",
+        "scope": "R3集中汇总"
       },
       "currentUnitOutcome": "R2四模块顺序受限关闭，准确计数10/15；R3五模块全部可自主材料完成，30项推荐/5LIMIT待批",
       "previousAtomicOutcome": "M07完整原范围材料已保存并推送；无新增原站动作或结果未知提交",
@@ -61478,24 +61478,27 @@
       "blockers": [
         {
           "id": "P1-RULES-01",
-          "type": "所有者业务选择",
           "affected": "R3五模块30项推荐",
           "restore": "一次审阅P1_R3_Review_Package.md，批准或明确改选",
-          "action": "各模块建议/备选/影响已具体化"
+          "action": "各模块建议/备选/影响已具体化",
+          "kind": "所有者业务选择",
+          "evidence": "docs/delivery/P1_R3_Review_Package.md；逐模块SPEC/LIMIT及源页面索引"
         },
         {
           "id": "P1-REVIEW-01",
-          "type": "P1受限边界评审",
           "affected": "R3五LIMIT及后续责任，未批不能受限关闭",
           "restore": "明确是否接受所列P1限制及P2/P3/P4补验责任",
-          "action": "不以文档或历史测试代签"
+          "action": "不以文档或历史测试代签",
+          "kind": "P1受限边界评审",
+          "evidence": "docs/delivery/P1_R3_Review_Package.md；逐模块SPEC/LIMIT及源页面索引"
         },
         {
           "id": "P1-LOCAL-CONDITIONS",
-          "type": "定向原站及后续角色验证",
           "affected": "见五模块LIMIT，非全部P1的共同连接阻塞",
           "restore": "按最小清单取得只读页面或后续合成/独立角色条件；本轮未写源",
-          "action": "不无限探索，不新增访问者，不编造政策/算法"
+          "action": "不无限探索，不新增访问者，不编造政策/算法",
+          "kind": "定向原站及后续角色验证",
+          "evidence": "docs/delivery/P1_R3_Review_Package.md；逐模块SPEC/LIMIT及源页面索引"
         }
       ],
       "evidenceRefs": [

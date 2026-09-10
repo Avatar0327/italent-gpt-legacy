@@ -1,6 +1,6 @@
 {
-  "completedAt": "2026-09-10T03:03:20.983018+00:00",
-  "baseCommit": "4013f2e99aa5d0b38498a45e560d64ad62e59929",
+  "completedAt": "2026-09-10T03:05:57.305520+00:00",
+  "baseCommit": "161579443b880302957e92c22ab6414941cdf3e9",
   "scope": "文档完整性/引用/生成一致性；非业务回归、原站取证、需求签署或UAT",
   "result": "passed",
   "checks": [

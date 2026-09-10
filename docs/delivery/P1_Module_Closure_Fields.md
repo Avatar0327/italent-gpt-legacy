@@ -10,6 +10,7 @@
 |---|---|
 | deliveryScope.rangeLayers / moduleExecutionOrder | R1–R4分区及确切顺序；保留原48组，R4的33组暂缓，不计为已完成 |
 | roadmap.executionPolicy | 唯一主模块、最多1备用、实际执行焦点、启用依据、返回条件和焦点历史 |
+| roadmap.executionPolicy.r3ReviewPipeline / p1B.r3ReviewBundle | R3串行材料顺序、等待队列与30项集中推荐/5LIMIT；当前已完成待评审，不计关闭 |
 | roadmap.executionPolicy.nightReviewPipeline / p1B.r2ReviewBundle | 本轮材料准备顺序、完成及等待队列、正式关闭顺序和同源集中决定索引；准备不等关闭或转序 |
 | deliveryScope.baseCapabilities[].r2Assessment | R2基础适用差异及用例引用；不自动继承R1批准 |
 | p1Baseline.dataValidation.readOnlyRechecks | 旧未知结果的只读后续证据、精确前后快照及剩余未知；不改原operations历史 |
