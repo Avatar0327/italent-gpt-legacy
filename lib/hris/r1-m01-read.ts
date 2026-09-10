@@ -4,7 +4,7 @@ import {tupleAllowed,type Grant,type Relationship} from './r1-authorization';
 import {sameStamp,securityStamp,type SecurityStamp} from './r1-command';
 import {HttpError} from './http';
 import {contractCounts} from './r1-personnel-data';
-const kinds=['person','org','position','job','job_family','grade','legal_entity','employment','assignment','assignment_request','exit_request','identity_review','contract','contract_field','template','subset'] as const;
+const kinds=['regularize_request','person','org','position','job','job_family','grade','legal_entity','employment','assignment','assignment_request','exit_request','identity_review','contract','contract_field','template','subset'] as const;
 const cursorSchema=z.object({after:z.string(),kind:z.string(),personId:z.string(),actor:z.string(),revision:z.number().int(),authorizationRevision:z.number().int(),writerEpoch:z.number().int(),recoveryEpoch:z.number().int()}).strict();
 export async function readM01(ctx:{db:D1Database;member:Member;row:{revision:number;data:string}},params:URLSearchParams){
  const {db,member:m}=ctx,stamp=await securityStamp(db,m.tenantId);

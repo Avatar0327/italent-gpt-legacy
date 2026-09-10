@@ -113,6 +113,20 @@
       "when": 1789018987917,
       "tag": "0015_r1_workflow",
       "breakpoints": true
+    },
+    {
+      "idx": 16,
+      "version": "6",
+      "when": 1789019744367,
+      "tag": "0016_r1_workflow_batches",
+      "breakpoints": true
+    },
+    {
+      "idx": 17,
+      "version": "6",
+      "when": 1789019962016,
+      "tag": "0017_r1_workflow_template_scope",
+      "breakpoints": true
     }
   ]
 }

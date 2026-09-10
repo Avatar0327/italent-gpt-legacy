@@ -17,6 +17,7 @@ const catalogKind=z.enum(['org','position','job','job_family','grade','legal_ent
 const subsetKind=z.enum(['education','employment','family','appraisal','training','reward','certificate','project','skill','language','custom']);
 const field=z.object({code:id,type:z.enum(['text','number','date','enum','attachment']),required:z.boolean(),default:z.union([z.string(),z.number().int().safe(),z.null()]),uniqueKey:z.boolean(),readActions:z.array(id).min(1),writeActions:z.array(id).min(1),options:z.array(text).optional(),unit:z.string().optional(),precision:z.number().int().min(0).max(6).optional()}).strict();
 export const m01Input=z.discriminatedUnion('operation',[
+ z.object({operation:z.literal('regularizeRequest'),personId:id,orgId:id,reason:text}).strict(),
  z.object({operation:z.literal('catalog'),id:id.optional(),kind:catalogKind,closePreviousVersion:z.number().int().positive().optional(),code:short,name:short,orgId:z.string(),parentId:z.string(),status:z.enum(['active','inactive']),...interval,attributes:z.object({abbr:z.string().max(100).optional(),city:z.string().max(100).optional(),jobId:id.optional(),familyId:id.optional(),gradeMinId:id.optional(),gradeMaxId:id.optional(),sequence:z.number().int().min(0).max(999).optional(),establishedOn:date.optional(),newType:z.enum(['New','Backfill']).optional(),responsibilities:z.string().max(4000).optional(),includeDescendants:z.boolean().optional(),dottedParentPositionId:id.optional(),keyPosition:z.boolean().optional(),legacyLeader:z.string().max(100).optional(),orgIds:z.array(id).optional(),extraPersonIds:z.array(id).optional()}).strict()}).strict(),
  z.object({operation:z.literal('identityReview'),personId:id,candidateIds:z.array(id).min(1),identifiers:z.array(identityKey).min(1).max(4).optional(),reason:text,evidenceRef:id}).strict(),
  z.object({operation:z.literal('identityBind'),personId:id,orgId:id,identifiers:z.array(identityKey).min(1).max(4),evidenceRef:id}).strict(),
@@ -148,6 +149,13 @@ export async function executeM01(ctx:{db:D1Database;member:Member;row:{revision:
   if((await resolveIdentity(db,tenant,keys)).length)invalid('标识命中历史人员，需身份复核','IDENTITY_REVIEW_REQUIRED');
   const {identifiers,...safe}=c,person=make('person',c.orgId,null,{...safe,fields:values,templateVersion:template.revision,invite:false},'draft',c.code);changes.push(person);
   const prepared=await prepareIdentityKeys(tenant,keys);extra.push(token=>prepared.map(k=>db.prepare('INSERT INTO r1_identity_keys SELECT owner,?,?,?,?,? FROM hris_workspaces WHERE owner=? AND last_mutation=? ON CONFLICT DO NOTHING').bind(person.id,k.type,k.digest,m.userId,at,tenant,token)));break;
+ }
+ case 'regularizeRequest':{
+  const person=await get(c.personId),employee=state.employees.find(e=>e.id===person.id);
+  if(person.kind!=='person'||person.orgId!==c.orgId||person.status==='ended'||employee?.status!=='试用')invalid('仅当前试用员工可申请转正');
+  if((await rows(db,tenant,'regularize_request',person.id)).some(e=>e.status==='pending'))invalid('存在未完成转正申请');
+  const employment=(await rows(db,tenant,'employment',person.id)).find(e=>e.status==='active');if(!employment)invalid('缺少当前雇佣段');
+  changes.push(make('regularize_request',c.orgId,person.id,{reason:c.reason,applicationVersion:1,initiatorId:m.userId,employmentId:employment.id,exitFenceObserved:employment.payload.exitFenceObserved??null},'pending'));break;
  }
  case 'employment':{
   const person=await get(c.personId),review=await get(c.identityReviewId);if(person.kind!=='person'||review.kind!=='identity_review'||review.personId!==person.id||review.status!=='confirmed')invalid('缺少已核实的稳定身份','IDENTITY_REVIEW_REQUIRED');
