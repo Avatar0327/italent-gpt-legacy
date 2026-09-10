@@ -11,22 +11,25 @@
       "localAlternative": "仅本地显式worker和隔离适配器继续实施；不伪造正式平台能力",
       "evidence": [
         "evidence/r1-p3-20260910T082305048810Z.json"
-      ]
+      ],
+      "resumeCondition": "平台提供经核实的隔离后台/调度、独立一致导出/导入和目标资源能力；本窗口不部署或修改线上配置"
     },
     {
       "id": "DEP-PLATFORM-02",
       "owner": "平台/独立安全负责人",
       "status": "capability_unverified",
-      "impact": "09独立可信授权与恢复开放不得声称已落实"
+      "impact": "09真实独立可信授权、维护独占fence和恢复开放未落实；目标保持关闭",
+      "resumeCondition": "独立安全/控制服务与可信当前平台访问证明、维护fence正式实现和隔离演练就绪；开放仍须所有者批准"
     },
     {
       "id": "DEP-PRODUCERS-01",
       "owner": "R2/R3生产者与M48/M32负责人",
       "status": "16_real_producer_cases_blocked",
-      "impact": "10保留16真实联调未完成；11不依赖10且继续本地跨域验证",
+      "impact": "10保留16真实生产者联调未完成；11本地跨域及两轮整体检查已完成，不能因此宣称完整P3通过",
       "evidence": [
         "R1_P3_Producer_Case_Evidence.json"
-      ]
+      ],
+      "resumeCondition": "提供各生产者已批准版本、实际P3源码和隔离契约运行环境后，只续未完成的逐契约联调"
     },
     {
       "id": "SRC-13",
