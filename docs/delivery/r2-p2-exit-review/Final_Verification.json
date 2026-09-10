@@ -1,0 +1,100 @@
+{
+  "kind": "review_delivery_document_checks_not_product_tests",
+  "observedAt": "2026-09-10T08:28:42.096545+00:00",
+  "reviewedHead": "8b3daf9270181ffe2e77015be723da8e611d83a5",
+  "reviewCommitAtObservation": "8a5f1e0d8f0d8d0b0197f71306c8ab8f5b275c07",
+  "reviewWorktreeStatusBeforeFinalCommit": " M docs/delivery/r2-p2-exit-review/Requirement_Review.json\n M docs/delivery/r2-p2-exit-review/Requirement_Review.md\n M docs/delivery/r2-p2-exit-review/record_audit.py\n?? docs/delivery/r2-p2-exit-review/Independent_Exit_Review.md\n?? docs/delivery/r2-p2-exit-review/verify_delivery.py\n",
+  "reviewedFileCount": 59,
+  "reviewedFileByteChanges": [],
+  "reviewChangedPaths": [
+    "docs/delivery/r2-p2-exit-review/Critical_Gates.json",
+    "docs/delivery/r2-p2-exit-review/Critical_Gates.md",
+    "docs/delivery/r2-p2-exit-review/Findings.json",
+    "docs/delivery/r2-p2-exit-review/Findings.md",
+    "docs/delivery/r2-p2-exit-review/Hash_Source_Commands.md",
+    "docs/delivery/r2-p2-exit-review/Limit_Review.json",
+    "docs/delivery/r2-p2-exit-review/Limit_Review.md",
+    "docs/delivery/r2-p2-exit-review/Mechanical_Verification.json",
+    "docs/delivery/r2-p2-exit-review/P3_Sequencing_Recommendations.json",
+    "docs/delivery/r2-p2-exit-review/R1_Baseline_Observation.json",
+    "docs/delivery/r2-p2-exit-review/R2_P3_Baseline_Sequencing.md",
+    "docs/delivery/r2-p2-exit-review/Read_Coverage.md",
+    "docs/delivery/r2-p2-exit-review/Read_Hash_Manifest.json",
+    "docs/delivery/r2-p2-exit-review/Requirement_Review.json",
+    "docs/delivery/r2-p2-exit-review/Requirement_Review.md",
+    "docs/delivery/r2-p2-exit-review/Resume.md",
+    "docs/delivery/r2-p2-exit-review/Semantic_Probes.json",
+    "docs/delivery/r2-p2-exit-review/Source_Review_Samples.json",
+    "docs/delivery/r2-p2-exit-review/Worktree_Observation.json",
+    "docs/delivery/r2-p2-exit-review/record_audit.py",
+    "docs/delivery/r2-p2-exit-review/verify_review.py"
+  ],
+  "reviewUntrackedPaths": [
+    "docs/delivery/r2-p2-exit-review/Independent_Exit_Review.md",
+    "docs/delivery/r2-p2-exit-review/verify_delivery.py"
+  ],
+  "reviewJsonFilesParsed": 11,
+  "gates": 56,
+  "taskRecommendationNodes": 46,
+  "dependencyCycles": 0,
+  "findingCounts": {
+    "Blocker": 0,
+    "Major": 2,
+    "Minor": 2,
+    "Observation": 2
+  },
+  "errors": [],
+  "worktrees": [
+    {
+      "path": "/workspace/sites/italent-hris",
+      "branch": "main",
+      "head": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+      "status": "",
+      "upstream": null
+    },
+    {
+      "path": "/workspace/sites/italent-hris-r2-p2-20260910",
+      "branch": "design/r2-p2-20260910",
+      "head": "8b3daf9270181ffe2e77015be723da8e611d83a5",
+      "status": "",
+      "upstream": "r2-p2-origin/design/r2-p2-20260910"
+    },
+    {
+      "path": "/workspace/sites/italent-hris-r1-p2-20260909",
+      "branch": "design/r1-p2-20260909",
+      "head": "e15237281ff19f04f08a354fd9455c518b24ae47",
+      "status": "",
+      "upstream": "r1-p2-origin/design/r1-p2-20260909"
+    },
+    {
+      "path": "/workspace/sites/italent-hris-r1-p3-20260910",
+      "branch": "impl/r1-p3-20260910",
+      "head": "e33d3e9bfa73f23bf96c7a9366d19bb100c0cc0d",
+      "status": " M drizzle/meta/_journal.json\n?? drizzle/0025_r1_migration_control.sql\n?? lib/hris/r1-migration-context.ts\n?? lib/hris/r1-schema-check.ts\n?? lib/hris/r1-schema-manifest.ts\n?? scripts/generate-r1-schema-manifest.py\n",
+      "upstream": "r1-p2-origin/impl/r1-p3-20260910"
+    },
+    {
+      "path": "/workspace/sites/italent-hris-r2-p2-exit-review-20260910",
+      "branch": "review/r2-p2-exit-20260910",
+      "head": "8a5f1e0d8f0d8d0b0197f71306c8ab8f5b275c07",
+      "status": " M docs/delivery/r2-p2-exit-review/Requirement_Review.json\n M docs/delivery/r2-p2-exit-review/Requirement_Review.md\n M docs/delivery/r2-p2-exit-review/record_audit.py\n?? docs/delivery/r2-p2-exit-review/Independent_Exit_Review.md\n?? docs/delivery/r2-p2-exit-review/verify_delivery.py\n",
+      "upstream": null
+    }
+  ],
+  "R1LatestCommittedRecords": [
+    {
+      "path": "docs/delivery/r1-p3/R1_P3_Resume.md",
+      "gitRef": "e33d3e9bfa73f23bf96c7a9366d19bb100c0cc0d",
+      "sha256": "4431f61398337d2214e0b18fff4d41df29ca6e99b87ef5ca8e7cabc14efd2a76",
+      "bytes": 5682
+    },
+    {
+      "path": "docs/delivery/r1-p3/R1_P3_Checkpoint.json",
+      "gitRef": "e33d3e9bfa73f23bf96c7a9366d19bb100c0cc0d",
+      "sha256": "2a62b8484042b58dc454842c756799e5ea00aaabd1f698e16fa3e1f5cf977daf",
+      "bytes": 12360
+    }
+  ],
+  "R1LatestResumeExcerpt": "# R1 P3 执行检查点\n\n当前分支 impl/r1-p3-20260910；独立工作树 /workspace/sites/italent-hris-r1-p3-20260910。启动main为5988a3000a1ac9ad30c786c84289093d9a6e074f；P2固定来源e15237281ff19f04f08a354fd9455c518b24ae47。完整启动提示词与正式交接已读取，启动批准ID为R1-P2-EXIT-OWNER-20260910。\n\n最近产品提交682e6e46b78e249bde1e42d70868579715155ae8的29个本轮测试条目、TypeScript、构建通过，精确日志见evidence/r1-p3-02-d7-20260910T042138Z.json。本地SQLite执行产品SQL，平台身份/对象存储/外效适配为隔离合成夹具；不是云端D1、原站验证或完整59项设计验收。\n\n任务01已实现并完成首批本地合成验证，独立复核待签收。任务02和独立依赖01的04均为部分实现，不可作为下游已完成依赖。03/05/06/07/08/09/10/11尚未实施；没有宣称本轮已完成全部11项。继续点为02，逐项缺口见R1_P3_Checkpoint.json。当前未完成项是实施/验证余项，不冒充外部环境阻塞。\n\n02下一项：完成合同字段root/version/继承与计次及人员多标识服务端候选解析；随后补齐非调动主职/主档、新界面与未知结果查询，完整核验12项设计条件。02达到依赖条件后才执行03。04仍需持久化投递、回调防重放与全部显示标签/稳定映射验证。不得用模拟外效替代真实生产者—消费者内部集成22项。\n\n所有新能力仍默认关闭，迁移/恢复任务未执行。19旧表命令护栏与新领域表日志/加密归档责任分开，后者归09；Drizzle最终全新表ORM及快照清单归08，尚不能称迁移完成。01动态回归只覆盖已记录入口，静态全入口清单不是全路径动态覆盖。\n\n9项P2设计关闭保持原批准；20项P3风险仍需完整运行证据与复核；8项保留P4；13项原站补证由P1总控负责。当前窗口不关闭风险、不批准P3退出、不进入P4。不部署、不增加访问者、不实发通知/签署/支付，不操作原站浏览器或CDP，不改main/P1/P2，不合并或cherry-pick。\n\n每次原子增量须先提交产品代码，针对精确源码SHA记录新运行证据，再提交追踪材料并推送自己的分支；推送授权不包含自动发布。传输失联时先查提交/回执，避免盲目重做已完成命令。\n\n## 最新续执行点（覆盖前述历史恢复点）\n\n02已于产品9d295e4623e79c6a578875eda4a1090e2a515906完成本地实施与43项相关测试/类型/构建验证，证据evidence/r1-p3-20260910T053805670409Z.json。当前任务03（流程引擎与管理委托）已开始；04暂停且只依赖01。01不重做。独立复核、P3退出和P4均未批准。\n\n## 最新恢复覆盖记录（03本地收口）\n当前任务 P3-R1-04。P3-R1-03 本地实施及合成验证完成，独立复核仍待办。源码 b24a57ed7986b2eb22b32a6ebdb3b34e2687309b：60项本轮R1测试、类型检查、构建通过；同源码另4项既有API定向兼容复验通过，未运行的其他用例不计入。03逐场景及14项原验收映射见 R1_P3_M19_Case_Evidence.json。04仅补齐剩余项；P3不退出，P4未开始。\n\n## 04本地收口与05恢复点\n04本地实施及合成验证完成，独立复核待办；精确源码 6c52613e9dde33084c3cbfa3ed2345b1f1bcd3dc 的74项整体、类型和构建通过，同源码另3项附件定向复验通过。六场景/六原验收见 R1_P3_Integration_Case_Evidence.json。当前唯一主任务 P3-R1-05。供应商、R2/R3实际联调仍未执行；风险只登记运行证据。P3尚未退出，P4未启动。\n\n## 最新恢复点：05本地实现验收完成，进入06\n\n源码 2d6ae4f665154ffafbb301ed6825cb8d32cd8218；本轮11项门户测试与5项指定兼容测试通过，先前产品同码b7dac9c的84项回归、类型和构建通过，证据各自固定HEAD，见R1_P3_M48_Case_Evidence.json。01–05本地合成实现验证完成、独立评审待办。当前唯一主任务P3-R1-06，接续M32逐列字典、类型AST、SQL有界版本读模型，不重做01–05。真实R2/R3联调保留10；托管运行条件保留07/09核验。P3退出未批准，P4未启动。\n\n### 06实施中恢复增量\n\n当前唯一主任务仍为P3-R1-06。已增加固定报表数据版本/快照/SQL字段及当前范围策略、定义发布与执行、汇总/排序和新版读页面；10001行本地合成规模检查通过。后续补注册业务指标、固定关联与21数据集oracle，再登记06收口并进入07。01–05不重做；P3未退出，P4未开始。精确提交和证据见Checkpoint.latestRun，任何更晚合法提交保留。\n\n## 06完成后的恢复点\n\n06本地实施完成待独立复核。源码7ccfbe6：39/39本轮合成测试、类型、构建通过；无失败、跳过。21数据集源对照不代表真实R2/R3新契约联调。当前唯一主任务07，先实现隔离worker/租约/导出及订阅；正式托管后台能力DEP-PLATFORM-01仍未核实，不能声称自动调度上线。P3未退出、P4未启动。\n\n07导出核心源码b6355ed，本轮46/46报表测试及类型/构建通过，证据080856347352Z。下一步订阅、转交/屏蔽和页面；07未完成，不进入08主实施。\n\n## 07本地收口，08开始\n\n源码74c5b0d完成本轮136/136合成整体测试、类型和构建（082305048810Z）。07本地实施完成待独立复核；云端后台/调度未配置，不将本地worker/模拟对象存储冒充正式运行。当前唯一主任务08迁移回滚。完整Migration_Rollback和Backup_Recovery已读取，既有源历史与storage_version=1前提保持；继续有界迁移、对账与恢复日志覆盖。没有P3退出或P4启动。\n",
+  "note": "时间点快照；R1并行修改保留。最终推送及干净状态在完成提交后另查；本文件不内嵌自身最终提交SHA。"
+}
