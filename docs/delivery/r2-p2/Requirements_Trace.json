@@ -298,7 +298,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-02",
@@ -309,7 +309,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-03",
@@ -320,7 +320,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-04",
@@ -331,7 +331,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-05",
@@ -342,7 +342,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-06",
@@ -353,7 +353,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-06"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "R2-BASELINE-01",
@@ -2508,7 +2508,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-01-CLAUSE-02",
@@ -2517,7 +2517,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-01-CLAUSE-03",
@@ -2526,7 +2526,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-01-CLAUSE-04",
@@ -2535,7 +2535,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-01-CLAUSE-05",
@@ -2544,7 +2544,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-01-CLAUSE-06",
@@ -2553,7 +2553,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-01-CLAUSE-07",
@@ -2562,7 +2562,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-01-CLAUSE-08",
@@ -2571,7 +2571,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-02-CLAUSE-01",
@@ -2580,7 +2580,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-02-CLAUSE-02",
@@ -2589,7 +2589,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-02-CLAUSE-03",
@@ -2598,7 +2598,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-02-CLAUSE-04",
@@ -2607,7 +2607,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-02-CLAUSE-05",
@@ -2616,7 +2616,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-02-CLAUSE-06",
@@ -2625,7 +2625,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-02-CLAUSE-07",
@@ -2634,7 +2634,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-02-CLAUSE-08",
@@ -2643,7 +2643,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-02-CLAUSE-09",
@@ -2652,7 +2652,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-03-CLAUSE-01",
@@ -2661,7 +2661,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-03-CLAUSE-02",
@@ -2670,7 +2670,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-03-CLAUSE-03",
@@ -2679,7 +2679,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-03-CLAUSE-04",
@@ -2688,7 +2688,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-03-CLAUSE-05",
@@ -2697,7 +2697,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-03-CLAUSE-06",
@@ -2706,7 +2706,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-03-CLAUSE-07",
@@ -2715,7 +2715,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-03-CLAUSE-08",
@@ -2724,7 +2724,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-03-CLAUSE-09",
@@ -2733,7 +2733,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-03-CLAUSE-10",
@@ -2742,7 +2742,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-04-CLAUSE-01",
@@ -2751,7 +2751,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-04-CLAUSE-02",
@@ -2760,7 +2760,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-04-CLAUSE-03",
@@ -2769,7 +2769,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-04-CLAUSE-04",
@@ -2778,7 +2778,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-04-CLAUSE-05",
@@ -2787,7 +2787,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-04-CLAUSE-06",
@@ -2796,7 +2796,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-04-CLAUSE-07",
@@ -2805,7 +2805,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-04-CLAUSE-08",
@@ -2814,7 +2814,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-05-CLAUSE-01",
@@ -2823,7 +2823,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-05-CLAUSE-02",
@@ -2832,7 +2832,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-05-CLAUSE-03",
@@ -2841,7 +2841,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-05-CLAUSE-04",
@@ -2850,7 +2850,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-05-CLAUSE-05",
@@ -2859,7 +2859,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-05-CLAUSE-06",
@@ -2868,7 +2868,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-05-CLAUSE-07",
@@ -2877,7 +2877,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-05-CLAUSE-08",
@@ -2886,7 +2886,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-05-CLAUSE-09",
@@ -2895,7 +2895,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-05-CLAUSE-10",
@@ -2904,7 +2904,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-06-CLAUSE-01",
@@ -2913,7 +2913,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-06"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-06-CLAUSE-02",
@@ -2922,7 +2922,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-06"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-06-CLAUSE-03",
@@ -2931,7 +2931,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-06"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-06-CLAUSE-04",
@@ -2940,7 +2940,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-06"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-06-CLAUSE-05",
@@ -2949,7 +2949,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-06"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-06-CLAUSE-06",
@@ -2958,7 +2958,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-06"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-06-CLAUSE-07",
@@ -2967,7 +2967,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-06"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-SPEC-06-CLAUSE-08",
@@ -2976,7 +2976,7 @@
       "designRefs": [
         "M03_Design.md#m03-spec-06"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "R2-BASELINE-01-CLAUSE-01",
@@ -3032,7 +3032,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -3042,7 +3042,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -3052,7 +3052,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -3062,7 +3062,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -3077,7 +3077,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -3092,7 +3092,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -3107,7 +3107,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -3122,7 +3122,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -3137,7 +3137,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -3152,7 +3152,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -3167,7 +3167,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -3182,7 +3182,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -3198,7 +3198,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -3214,7 +3214,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -3230,7 +3230,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -3246,7 +3246,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -3262,7 +3262,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -4471,7 +4471,7 @@
         "M06_Design.md#engineering",
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -4482,7 +4482,7 @@
         "M06_Design.md#engineering",
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -4493,7 +4493,7 @@
         "M06_Design.md#engineering",
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -4504,7 +4504,7 @@
         "M06_Design.md#engineering",
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -4618,7 +4618,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -4628,7 +4628,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -4638,7 +4638,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -4648,7 +4648,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -5881,7 +5881,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-CLOSE-02",
@@ -5917,7 +5917,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-CLOSE-03",
@@ -5951,7 +5951,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-CLOSE-04",
@@ -5986,7 +5986,7 @@
       "designRefs": [
         "M03_Design.md#engineering"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     }
   ],
   "foundations": [
@@ -6265,7 +6265,7 @@
       "designRefs": [
         "M03_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-REVIEW-AC02",
@@ -6290,7 +6290,7 @@
       "designRefs": [
         "M03_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-REVIEW-AC03",
@@ -6315,7 +6315,7 @@
       "designRefs": [
         "M03_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-REVIEW-AC04",
@@ -6340,7 +6340,7 @@
       "designRefs": [
         "M03_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-REVIEW-AC05",
@@ -6365,7 +6365,7 @@
       "designRefs": [
         "M03_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-REVIEW-AC06",
@@ -6390,7 +6390,7 @@
       "designRefs": [
         "M03_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-REVIEW-AC07",
@@ -6415,7 +6415,7 @@
       "designRefs": [
         "M03_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-REVIEW-AC08",
@@ -6440,7 +6440,7 @@
       "designRefs": [
         "M03_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-REVIEW-AC09",
@@ -6465,7 +6465,7 @@
       "designRefs": [
         "M03_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-REVIEW-AC10",
@@ -6490,7 +6490,7 @@
       "designRefs": [
         "M03_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-REVIEW-AC11",
@@ -6515,7 +6515,7 @@
       "designRefs": [
         "M03_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-REVIEW-AC12",
@@ -6540,7 +6540,7 @@
       "designRefs": [
         "M03_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-REVIEW-AC13",
@@ -6565,7 +6565,7 @@
       "designRefs": [
         "M03_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M03-REVIEW-AC14",
@@ -6590,7 +6590,7 @@
       "designRefs": [
         "M03_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M06-REVIEW-AC01",

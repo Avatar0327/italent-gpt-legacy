@@ -30,12 +30,12 @@
 |M17-SPEC-04|[M17_Design.md#m17-spec-04](M17_Design.md#m17-spec-04)|complete|
 |M17-SPEC-05|[M17_Design.md#m17-spec-05](M17_Design.md#m17-spec-05)|complete|
 |M17-SPEC-06|[M17_Design.md#m17-spec-06](M17_Design.md#m17-spec-06)|complete|
-|M03-SPEC-01|[M03_Design.md#m03-spec-01](M03_Design.md#m03-spec-01)|pending|
-|M03-SPEC-02|[M03_Design.md#m03-spec-02](M03_Design.md#m03-spec-02)|pending|
-|M03-SPEC-03|[M03_Design.md#m03-spec-03](M03_Design.md#m03-spec-03)|pending|
-|M03-SPEC-04|[M03_Design.md#m03-spec-04](M03_Design.md#m03-spec-04)|pending|
-|M03-SPEC-05|[M03_Design.md#m03-spec-05](M03_Design.md#m03-spec-05)|pending|
-|M03-SPEC-06|[M03_Design.md#m03-spec-06](M03_Design.md#m03-spec-06)|pending|
+|M03-SPEC-01|[M03_Design.md#m03-spec-01](M03_Design.md#m03-spec-01)|complete|
+|M03-SPEC-02|[M03_Design.md#m03-spec-02](M03_Design.md#m03-spec-02)|complete|
+|M03-SPEC-03|[M03_Design.md#m03-spec-03](M03_Design.md#m03-spec-03)|complete|
+|M03-SPEC-04|[M03_Design.md#m03-spec-04](M03_Design.md#m03-spec-04)|complete|
+|M03-SPEC-05|[M03_Design.md#m03-spec-05](M03_Design.md#m03-spec-05)|complete|
+|M03-SPEC-06|[M03_Design.md#m03-spec-06](M03_Design.md#m03-spec-06)|complete|
 |R2-BASELINE-01|[Foundations.md#r2-baseline-01](Foundations.md#r2-baseline-01)|pending|
 
 原LIMIT组保持6个；分解处置另见Limit_Resolution.json，不能将子项数替代原组分母。

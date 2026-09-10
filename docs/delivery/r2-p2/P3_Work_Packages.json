@@ -1,6 +1,6 @@
 {
   "kind": "proposal_only_not_execution_or_controller_ledger",
-  "count": 26,
+  "count": 32,
   "tasks": [
     {
       "id": "P3-R2-M37-01",
@@ -688,6 +688,164 @@
       "scenarioIds": [
         "R2-P3-M17-REVIEW-AC13",
         "R2-P3-M17-REVIEW-AC14"
+      ]
+    },
+    {
+      "id": "P3-R2-M03-01",
+      "moduleId": "M03",
+      "requirementRefs": [
+        "M03-SPEC-01"
+      ],
+      "title": "建议cadreId显式绑定M01稳定employeeId，appointmentRecordId/termId与任职em",
+      "designRefs": [
+        "M03_Design.md#m03-spec-01"
+      ],
+      "ownerRole": "M03实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC01",
+        "R2-P3-M03-REVIEW-AC02"
+      ]
+    },
+    {
+      "id": "P3-R2-M03-02",
+      "moduleId": "M03",
+      "requirementRefs": [
+        "M03-SPEC-02"
+      ],
+      "title": "建议selectionActivityId/version、nominationId、evaluationInstanc",
+      "designRefs": [
+        "M03_Design.md#m03-spec-02"
+      ],
+      "ownerRole": "M03实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC03",
+        "R2-P3-M03-REVIEW-AC04"
+      ]
+    },
+    {
+      "id": "P3-R2-M03-03",
+      "moduleId": "M03",
+      "requirementRefs": [
+        "M03-SPEC-03"
+      ],
+      "title": "建议evaluationTemplateRoot/version冻结模式、指标/资格版本、评委清单/回避、尺度、权重、阈",
+      "designRefs": [
+        "M03_Design.md#m03-spec-03"
+      ],
+      "ownerRole": "M03实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC05",
+        "R2-P3-M03-REVIEW-AC06",
+        "R2-P3-M03-REVIEW-AC07"
+      ]
+    },
+    {
+      "id": "P3-R2-M03-04",
+      "moduleId": "M03",
+      "requirementRefs": [
+        "M03-SPEC-04"
+      ],
+      "title": "建议observationId绑定具体termId/appointmentDecisionId、开始/截止、目标/模板版",
+      "designRefs": [
+        "M03_Design.md#m03-spec-04"
+      ],
+      "ownerRole": "M03实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC08",
+        "R2-P3-M03-REVIEW-AC09"
+      ]
+    },
+    {
+      "id": "P3-R2-M03-05",
+      "moduleId": "M03",
+      "requirementRefs": [
+        "M03-SPEC-05"
+      ],
+      "title": "建议述职activityId/version绑定周期及termId，报告recordId/version、材料/评审/发",
+      "designRefs": [
+        "M03_Design.md#m03-spec-05"
+      ],
+      "ownerRole": "M03实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC10",
+        "R2-P3-M03-REVIEW-AC11",
+        "R2-P3-M03-REVIEW-AC12"
+      ]
+    },
+    {
+      "id": "P3-R2-M03-06",
+      "moduleId": "M03",
+      "requirementRefs": [
+        "M03-SPEC-06"
+      ],
+      "title": "建议M37标准/M06资格/M17后备/M18盘点/M26允许用途报告均通过稳定ID+具体版本+有效时点+缺失原因引用，",
+      "designRefs": [
+        "M03_Design.md#m03-spec-06"
+      ],
+      "ownerRole": "M03实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M03-REVIEW-AC13",
+        "R2-P3-M03-REVIEW-AC14"
       ]
     }
   ]
