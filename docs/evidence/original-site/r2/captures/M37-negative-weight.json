@@ -1,0 +1,4 @@
+{
+  "at": "2026-09-10T10:57:49.711Z",
+  "actual": "- iframe [active] [id=\"popup_17890377349091937\"]:\n  - generic: 单个选择\n  - generic: \n  - generic: 指标\n  - list:\n    - generic: ZZ_R2_R2-ORIGIN-20260910-103952_M37_IND01\n  - generic: \n  - generic: 目标\n  - textbox\n  - generic: \n  - generic: 权重\n  - generic: \n  - generic: \"-1.0\"\n  - textbox\n  - generic: \n  - generic: 保存\n  - generic: 取消\n  - generic: 请输入0-100之间的数字\n  - button \"取消\"\n  - button \"保存\"\n"
+}

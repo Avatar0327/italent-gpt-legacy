@@ -1,0 +1,95 @@
+{
+  "runId": "R2-ORIGIN-20260910-103952",
+  "prefix": "ZZ_R2_R2-ORIGIN-20260910-103952_",
+  "environment": {
+    "origin": "https://srworkshopbj.italent.cn",
+    "testConfirmed": true,
+    "basis": "Controller_Resume.md 2026-09-09T01:47:07Z段用户测试确认及本轮授权"
+  },
+  "created": [
+    {
+      "name": "ZZ_R2_R2-ORIGIN-20260910-103952_M37_STD01",
+      "module": "M37",
+      "action": "save",
+      "status": "confirmed_created",
+      "businessId": null,
+      "idEvidence": "UI did not expose UUID yet; exact full name + createdAt uniquely read back",
+      "createdAtLocal": "2026-09-10 18:43:58",
+      "currentState": "启用",
+      "type": "talent_standard",
+      "references": [],
+      "operations": [
+        "create/save/readback",
+        "enable/confirm/readback"
+      ]
+    },
+    {
+      "module": "M37",
+      "type": "indicator_library",
+      "name": "ZZ_R2_R2-ORIGIN-20260910-103952_M37_LIB01",
+      "businessId": null,
+      "status": "confirmed_created",
+      "currentState": "saved; availability not yet read",
+      "references": []
+    },
+    {
+      "module": "M37",
+      "type": "indicator",
+      "name": "ZZ_R2_R2-ORIGIN-20260910-103952_M37_IND01",
+      "code": "ZZ_R2_R2_ORIGIN_20260910_103952_M37_IND01",
+      "codeMapping": "hyphen to underscore; full name retains exact RUN_ID",
+      "status": "confirmed_created",
+      "businessId": null,
+      "references": [
+        "ZZ_R2_R2-ORIGIN-20260910-103952_M37_LIB01"
+      ]
+    },
+    {
+      "module": "M37",
+      "type": "level",
+      "name": "ZZ_R2_R2-ORIGIN-20260910-103952_M37_LEVEL01",
+      "status": "confirmed_created",
+      "businessId": null,
+      "references": [
+        "ZZ_R2_R2-ORIGIN-20260910-103952_M37_IND01"
+      ],
+      "currentState": "saved_readback"
+    },
+    {
+      "module": "M37",
+      "type": "behavior",
+      "name": "ZZ_R2_R2-ORIGIN-20260910-103952_M37_BEHAVIOR01",
+      "status": "confirmed_created",
+      "businessId": null,
+      "references": [
+        "ZZ_R2_R2-ORIGIN-20260910-103952_M37_IND01"
+      ],
+      "currentState": "saved_readback"
+    },
+    {
+      "module": "M37",
+      "type": "development_suggestion",
+      "name": "ZZ_R2_R2-ORIGIN-20260910-103952_M37_SUGGESTION01",
+      "status": "confirmed_created",
+      "businessId": null,
+      "references": [
+        "ZZ_R2_R2-ORIGIN-20260910-103952_M37_IND01"
+      ],
+      "currentState": "saved_readback"
+    },
+    {
+      "module": "M37",
+      "type": "interview_question",
+      "name": "ZZ_R2_R2-ORIGIN-20260910-103952_M37_INTERVIEW01",
+      "status": "confirmed_created",
+      "businessId": null,
+      "references": [
+        "ZZ_R2_R2-ORIGIN-20260910-103952_M37_IND01"
+      ],
+      "currentState": "saved_readback"
+    }
+  ],
+  "pending": [],
+  "externalNotificationsSent": 0,
+  "humanVisitorsCreated": 0
+}

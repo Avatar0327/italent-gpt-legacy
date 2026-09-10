@@ -1,0 +1,59 @@
+{
+  "runId": "R2-ORIGIN-20260910-103952",
+  "differences": [
+    {
+      "id": "R2-DIFF-001",
+      "module": "M37",
+      "classification": "INTENTIONAL_DIFFERENCE",
+      "severity": "Observation",
+      "finding": "原站本轮空标准停用→启用无独立审核；产品独立发布审批是既有批准政策。",
+      "disposition": "保持P1/P2审批设计；P3/P4分别验证，不倒推撤销P2。",
+      "evidence": [
+        "R2-OBS-M37-001"
+      ]
+    },
+    {
+      "id": "R2-DIFF-002",
+      "module": "M37",
+      "classification": "NEED_OWNER_DECISION",
+      "severity": "Minor",
+      "finding": "原站指标code拒绝连字符/非字母开头；P1/P2未规定该字符集。",
+      "disposition": "建议保留内部稳定ID及现已批字符串能力，原站导入adapter提供可逆编码映射和冲突检查；若要求字段完全一致，由所有者批准收紧新建规则。不阻其余测试。",
+      "evidence": [
+        "R2-OBS-M37-003"
+      ]
+    },
+    {
+      "id": "R2-DIFF-003",
+      "module": "M37",
+      "classification": "DESIGN_GAP",
+      "severity": "Minor",
+      "finding": "原站行为关键点/面试关键点/发展建议五类型与P2 subsetName的承载语义未明确；不能将子集标题和逐行业务字段混为同值。现字符串结构可能承载，但缺映射/类型校验说明。",
+      "disposition": "M37 P3开工前定向补充字段映射：subsetName承载哪一字段及稳定type字典，或新增专用字段并同步Schema/adapter/原AC02/08；不重做已接受等级修复。",
+      "evidence": [
+        "R2-OBS-M37-004"
+      ]
+    },
+    {
+      "id": "R2-DIFF-004",
+      "module": "M37",
+      "classification": "ENV_BLOCKED",
+      "severity": "Observation",
+      "finding": "标准引用保存出现同一0-100提示，合法1.0也拒绝；无法判断控件状态、目标校验或原站规则。负值/上界提示不能证明精确权重政策。",
+      "disposition": "暂停此弹窗写入，保留证据与未提交状态；取消后继续独立模块。恢复先重读本轮标准，不重复创建根。",
+      "evidence": [
+        "R2-OBS-M37-005"
+      ]
+    }
+  ],
+  "counts": {
+    "INTENTIONAL_DIFFERENCE": 1,
+    "NEED_OWNER_DECISION": 1,
+    "DESIGN_GAP": 1,
+    "ENV_BLOCKED": 1
+  },
+  "severityCounts": {
+    "Observation": 2,
+    "Minor": 2
+  }
+}

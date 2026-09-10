@@ -1,0 +1,2461 @@
+{
+  "runId": "R2-ORIGIN-20260910-103952",
+  "cases": [
+    {
+      "id": "ORIGIN-R2-P3-M03-REVIEW-AC01",
+      "moduleId": "M03",
+      "p1Refs": [
+        "M03-REVIEW-AC01",
+        "M03-SPEC-01"
+      ],
+      "p2Scenario": "R2-P3-M03-REVIEW-AC01",
+      "p3Task": "P3-R2-M03-01",
+      "given": "同人主职任期区间重叠",
+      "action": "新登记/更正",
+      "designExpected": "拒绝；不同任用类型按显式规则，不覆盖旧ID",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M03-REVIEW-AC02",
+      "moduleId": "M03",
+      "p1Refs": [
+        "M03-REVIEW-AC02",
+        "M03-SPEC-01"
+      ],
+      "p2Scenario": "R2-P3-M03-REVIEW-AC02",
+      "p3Task": "P3-R2-M03-01",
+      "given": "2月29日加1年，显式月末政策",
+      "action": "预览截止",
+      "designExpected": "按批准算法给可追溯日期；显式覆盖留原因，未批不猜",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M03-REVIEW-AC03",
+      "moduleId": "M03",
+      "p1Refs": [
+        "M03-REVIEW-AC03",
+        "M03-SPEC-02"
+      ],
+      "p2Scenario": "R2-P3-M03-REVIEW-AC03",
+      "p3Task": "P3-R2-M03-02",
+      "given": "已批准提名但调动待生效或失败",
+      "action": "核对任用",
+      "designExpected": "拒绝完成，D1–D7不绕过；同凭证不能重复",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M03-REVIEW-AC04",
+      "moduleId": "M03",
+      "p1Refs": [
+        "M03-REVIEW-AC04",
+        "M03-SPEC-02"
+      ],
+      "p2Scenario": "R2-P3-M03-REVIEW-AC04",
+      "p3Task": "P3-R2-M03-02",
+      "given": "资格在批准后过期或候选离职",
+      "action": "执行任用",
+      "designExpected": "阻止并保存未生效原因，不按旧快照强行任命",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M03-REVIEW-AC05",
+      "moduleId": "M03",
+      "p1Refs": [
+        "M03-REVIEW-AC05",
+        "M03-SPEC-03"
+      ],
+      "p2Scenario": "R2-P3-M03-REVIEW-AC05",
+      "p3Task": "P3-R2-M03-03",
+      "given": "5名应投评委1回避、1弃权、3通过",
+      "action": "比例75%时决议",
+      "designExpected": "回避经批准后分母4，3/4达到阈值；未交者则阻决议",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M03-REVIEW-AC06",
+      "moduleId": "M03",
+      "p1Refs": [
+        "M03-REVIEW-AC06",
+        "M03-SPEC-03"
+      ],
+      "p2Scenario": "R2-P3-M03-REVIEW-AC06",
+      "p3Task": "P3-R2-M03-03",
+      "given": "精确分等于通过线但显示舍入相同",
+      "action": "判通过",
+      "designExpected": "按建议≥精确比较；显示舍入不改变结果",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M03-REVIEW-AC07",
+      "moduleId": "M03",
+      "p1Refs": [
+        "M03-REVIEW-AC07",
+        "M03-SPEC-03"
+      ],
+      "p2Scenario": "R2-P3-M03-REVIEW-AC07",
+      "p3Task": "P3-R2-M03-03",
+      "given": "无评委/权重和0/必需项缺分",
+      "action": "汇总",
+      "designExpected": "unknown且阻完成，不除0或默认为同意",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M03-REVIEW-AC08",
+      "moduleId": "M03",
+      "p1Refs": [
+        "M03-REVIEW-AC08",
+        "M03-SPEC-04"
+      ],
+      "p2Scenario": "R2-P3-M03-REVIEW-AC08",
+      "p3Task": "P3-R2-M03-04",
+      "given": "到截止但未审、或申请提前转正政策未配",
+      "action": "读取状态/提交",
+      "designExpected": "不自动通过；提前路径不可用并明确原因",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M03-REVIEW-AC09",
+      "moduleId": "M03",
+      "p1Refs": [
+        "M03-REVIEW-AC09",
+        "M03-SPEC-04"
+      ],
+      "p2Scenario": "R2-P3-M03-REVIEW-AC09",
+      "p3Task": "P3-R2-M03-04",
+      "given": "延期超固定任期或员工已离职",
+      "action": "审批延期/转正",
+      "designExpected": "阻止，先处理有效任期；历史与终止原因保留",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M03-REVIEW-AC10",
+      "moduleId": "M03",
+      "p1Refs": [
+        "M03-REVIEW-AC10",
+        "M03-SPEC-05"
+      ],
+      "p2Scenario": "R2-P3-M03-REVIEW-AC10",
+      "p3Task": "P3-R2-M03-05",
+      "given": "年度述职与考察述职同人",
+      "action": "保存/提交",
+      "designExpected": "不同活动周期和任期引用，不互相覆盖",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M03-REVIEW-AC11",
+      "moduleId": "M03",
+      "p1Refs": [
+        "M03-REVIEW-AC11",
+        "M03-SPEC-05"
+      ],
+      "p2Scenario": "R2-P3-M03-REVIEW-AC11",
+      "p3Task": "P3-R2-M03-05",
+      "given": "只有基础档案read无interviewRead/export",
+      "action": "取访谈/附件历史/下载",
+      "designExpected": "服务端拒绝，当前撤权覆盖旧链接",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M03-REVIEW-AC12",
+      "moduleId": "M03",
+      "p1Refs": [
+        "M03-REVIEW-AC12",
+        "M03-SPEC-05"
+      ],
+      "p2Scenario": "R2-P3-M03-REVIEW-AC12",
+      "p3Task": "P3-R2-M03-05",
+      "given": "HR补录旧奖励且外部支付未配",
+      "action": "保存事实/显示发放",
+      "designExpected": "明确来源与未配置状态，不伪造审批或支付",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M03-REVIEW-AC13",
+      "moduleId": "M03",
+      "p1Refs": [
+        "M03-REVIEW-AC13",
+        "M03-SPEC-06"
+      ],
+      "p2Scenario": "R2-P3-M03-REVIEW-AC13",
+      "p3Task": "P3-R2-M03-06",
+      "given": "任用响应未知或事务审计失败",
+      "action": "查请求键再重试",
+      "designExpected": "无重复任用/半生效，旧revision拒绝",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M03-REVIEW-AC14",
+      "moduleId": "M03",
+      "p1Refs": [
+        "M03-REVIEW-AC14",
+        "M03-SPEC-06"
+      ],
+      "p2Scenario": "R2-P3-M03-REVIEW-AC14",
+      "p3Task": "P3-R2-M03-06",
+      "given": "legacy注册无批准凭证",
+      "action": "设计迁移",
+      "designExpected": "保留登记事实/原ID和unknown，不变成已批准任命",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M06-REVIEW-AC01",
+      "moduleId": "M06",
+      "p1Refs": [
+        "M06-REVIEW-AC01",
+        "M06-SPEC-01"
+      ],
+      "p2Scenario": "R2-P3-M06-REVIEW-AC01",
+      "p3Task": "P3-R2-M06-01",
+      "given": "有分类父子与类别同名/不同code",
+      "action": "改变父级形成环、空岗职务关联保存",
+      "designExpected": "拒绝成环；同名须编码消歧，空关联未配置不自动全岗",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M06-REVIEW-AC02",
+      "moduleId": "M06",
+      "p1Refs": [
+        "M06-REVIEW-AC02",
+        "M06-SPEC-01"
+      ],
+      "p2Scenario": "R2-P3-M06-REVIEW-AC02",
+      "p3Task": "P3-R2-M06-01",
+      "given": "QL1独立目录，多个资格类别",
+      "action": "为指定标准选级别并展示通道",
+      "designExpected": "只标准显式关系生效；sort非等级大小，学习地图未配不派课或授证",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M06-REVIEW-AC03",
+      "moduleId": "M06",
+      "p1Refs": [
+        "M06-REVIEW-AC03",
+        "M06-SPEC-02"
+      ],
+      "p2Scenario": "R2-P3-M06-REVIEW-AC03",
+      "p3Task": "P3-R2-M06-02",
+      "given": "评分QI无scale；评级有两级scheme",
+      "action": "设置认证目标并校验",
+      "designExpected": "评分尺度缺失阻认证就绪；评级用真实levelId，不强塞1–5或默设100满分",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M06-REVIEW-AC04",
+      "moduleId": "M06",
+      "p1Refs": [
+        "M06-REVIEW-AC04",
+        "M06-SPEC-03"
+      ],
+      "p2Scenario": "R2-P3-M06-REVIEW-AC04",
+      "p3Task": "P3-R2-M06-03",
+      "given": "QS已冻说明A，QI改B/停用",
+      "action": "读旧QS及建新引用",
+      "designExpected": "旧QS保持A和版本；新引用拒绝停用QI；停用不追溯吊销旧证",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M06-REVIEW-AC05",
+      "moduleId": "M06",
+      "p1Refs": [
+        "M06-REVIEW-AC05",
+        "M06-SPEC-03"
+      ],
+      "p2Scenario": "R2-P3-M06-REVIEW-AC05",
+      "p3Task": "P3-R2-M06-03",
+      "given": "标准draft由HR编制且无独立评审人",
+      "action": "发布标准",
+      "designExpected": "无完整路由/独立节点权拒绝；不能把admin直发当审批",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M06-REVIEW-AC06",
+      "moduleId": "M06",
+      "p1Refs": [
+        "M06-REVIEW-AC06",
+        "M06-SPEC-03"
+      ],
+      "p2Scenario": "R2-P3-M06-REVIEW-AC06",
+      "p3Task": "P3-R2-M06-03",
+      "given": "原申请已提交并冻v1，v1随后停用",
+      "action": "继续评审或另发新申请",
+      "designExpected": "在途按批准冻结策略可继续并提示；新申请拒绝；实际终止逐单留痕",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M06-REVIEW-AC07",
+      "moduleId": "M06",
+      "p1Refs": [
+        "M06-REVIEW-AC07",
+        "M06-SPEC-04"
+      ],
+      "p2Scenario": "R2-P3-M06-REVIEW-AC07",
+      "p3Task": "P3-R2-M06-04",
+      "given": "旧v1评分5，新v2要求3但无同版证据",
+      "action": "拟授认证",
+      "designExpected": "缺证据为unknown，拒绝授证，不用旧高分替代；成功proof固定不随后续低分改变",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M06-REVIEW-AC08",
+      "moduleId": "M06",
+      "p1Refs": [
+        "M06-REVIEW-AC08",
+        "M06-SPEC-04"
+      ],
+      "p2Scenario": "R2-P3-M06-REVIEW-AC08",
+      "p3Task": "P3-R2-M06-04",
+      "given": "委员会成员含本人/提交者/材料编制参与者或回避后阈值不足",
+      "action": "完成认证评审",
+      "designExpected": "无关权限不能替节点权；排利益冲突后人数/必达不足则阻，不默认多数或自动通过",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M06-REVIEW-AC09",
+      "moduleId": "M06",
+      "p1Refs": [
+        "M06-REVIEW-AC09",
+        "M06-SPEC-04"
+      ],
+      "p2Scenario": "R2-P3-M06-REVIEW-AC09",
+      "p3Task": "P3-R2-M06-04",
+      "given": "有效期未选择、固定到日D或明确长期",
+      "action": "授证及D后业务日读取",
+      "designExpected": "漏选不得永久；固定D当日有效次日expired，长期必须显式；raw certified和有效性分列",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M06-REVIEW-AC10",
+      "moduleId": "M06",
+      "p1Refs": [
+        "M06-REVIEW-AC10",
+        "M06-SPEC-04"
+      ],
+      "p2Scenario": "R2-P3-M06-REVIEW-AC10",
+      "p3Task": "P3-R2-M06-04",
+      "given": "同人同资格根同级别已有有效证，但新版本",
+      "action": "普通申请或显式续证",
+      "designExpected": "普通重复拒绝；续证关联旧ID且仅一在途，原证/证据不覆盖",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M06-REVIEW-AC11",
+      "moduleId": "M06",
+      "p1Refs": [
+        "M06-REVIEW-AC11",
+        "M06-SPEC-05"
+      ],
+      "p2Scenario": "R2-P3-M06-REVIEW-AC11",
+      "p3Task": "P3-R2-M06-05",
+      "given": "只本人权限或只有use的有效成员",
+      "action": "直接读他人proof/敏感材料/历史或导出",
+      "designExpected": "服务端拒绝/裁剪，无导出权不下载，撤权清缓存，不能从标准可见推员工证据可见",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M06-REVIEW-AC12",
+      "moduleId": "M06",
+      "p1Refs": [
+        "M06-REVIEW-AC12",
+        "M06-SPEC-05"
+      ],
+      "p2Scenario": "R2-P3-M06-REVIEW-AC12",
+      "p3Task": "P3-R2-M06-05",
+      "given": "授予写入失败/审计失败或网络未知",
+      "action": "恢复后查询并重试",
+      "designExpected": "无可用半证书或假成功，先查原ID/revision，不重复生成证号或应用效果",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M06-REVIEW-AC13",
+      "moduleId": "M06",
+      "p1Refs": [
+        "M06-REVIEW-AC13",
+        "M06-SPEC-05"
+      ],
+      "p2Scenario": "R2-P3-M06-REVIEW-AC13",
+      "p3Task": "P3-R2-M06-05",
+      "given": "legacy无到期日记录和旧五级关联",
+      "action": "设计迁移并给M03/M17/M18消费",
+      "designExpected": "保留真实旧语义和ID、版本、认证时证据；不编造历史类别/审批/续证，当前有效性显式提供",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M26-REVIEW-AC01",
+      "moduleId": "M26",
+      "p1Refs": [
+        "M26-REVIEW-AC01",
+        "M26-SPEC-01"
+      ],
+      "p2Scenario": "R2-P3-M26-REVIEW-AC01",
+      "p3Task": "P3-R2-M26-01",
+      "given": "同双方已分配一个peer邀请",
+      "action": "再用其他角色添加",
+      "designExpected": "拒绝重复；自评与他评身份不混",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M26-REVIEW-AC02",
+      "moduleId": "M26",
+      "p1Refs": [
+        "M26-REVIEW-AC02",
+        "M26-SPEC-01"
+      ],
+      "p2Scenario": "R2-P3-M26-REVIEW-AC02",
+      "p3Task": "P3-R2-M26-01",
+      "given": "HR有管理权但无受控审计授权",
+      "action": "请求实名原卷/映射",
+      "designExpected": "服务端拒绝，报告不含评价者ID",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M26-REVIEW-AC03",
+      "moduleId": "M26",
+      "p1Refs": [
+        "M26-REVIEW-AC03",
+        "M26-SPEC-02"
+      ],
+      "p2Scenario": "R2-P3-M26-REVIEW-AC03",
+      "p3Task": "P3-R2-M26-02",
+      "given": "匿名组2人阈值3",
+      "action": "打开个人/组织报表和导出",
+      "designExpected": "均隐藏分数/精确人数/评语/可反推补集",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M26-REVIEW-AC04",
+      "moduleId": "M26",
+      "p1Refs": [
+        "M26-REVIEW-AC04",
+        "M26-SPEC-02"
+      ],
+      "p2Scenario": "R2-P3-M26-REVIEW-AC04",
+      "p3Task": "P3-R2-M26-02",
+      "given": "3个有效评价者且同尺度",
+      "action": "关闭并独立发布",
+      "designExpected": "按定义计算；撤回者不入分母，null不补0",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M26-REVIEW-AC05",
+      "moduleId": "M26",
+      "p1Refs": [
+        "M26-REVIEW-AC05",
+        "M26-SPEC-02"
+      ],
+      "p2Scenario": "R2-P3-M26-REVIEW-AC05",
+      "p3Task": "P3-R2-M26-02",
+      "given": "只有自评或零合法非自评组",
+      "action": "正式发布",
+      "designExpected": "阻发布并显示未形成报告",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M26-REVIEW-AC06",
+      "moduleId": "M26",
+      "p1Refs": [
+        "M26-REVIEW-AC06",
+        "M26-SPEC-03"
+      ],
+      "p2Scenario": "R2-P3-M26-REVIEW-AC06",
+      "p3Task": "P3-R2-M26-03",
+      "given": "活动冻结卷v1，题库发布v2",
+      "action": "评价者重新打开",
+      "designExpected": "仍v1；选项ID/尺度不漂移，文本不自动评分",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M26-REVIEW-AC07",
+      "moduleId": "M26",
+      "p1Refs": [
+        "M26-REVIEW-AC07",
+        "M26-SPEC-03"
+      ],
+      "p2Scenario": "R2-P3-M26-REVIEW-AC07",
+      "p3Task": "P3-R2-M26-03",
+      "given": "多选越界或条件分支成环",
+      "action": "保存/开放",
+      "designExpected": "服务端拒绝；未呈现不等0分",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M26-REVIEW-AC08",
+      "moduleId": "M26",
+      "p1Refs": [
+        "M26-REVIEW-AC08",
+        "M26-SPEC-04"
+      ],
+      "p2Scenario": "R2-P3-M26-REVIEW-AC08",
+      "p3Task": "P3-R2-M26-04",
+      "given": "开放期原答卷已交",
+      "action": "撤回并再交",
+      "designExpected": "新版本，旧版可追溯，统计只最新有效",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M26-REVIEW-AC09",
+      "moduleId": "M26",
+      "p1Refs": [
+        "M26-REVIEW-AC09",
+        "M26-SPEC-04"
+      ],
+      "p2Scenario": "R2-P3-M26-REVIEW-AC09",
+      "p3Task": "P3-R2-M26-04",
+      "given": "关闭且已有报告",
+      "action": "直接改题或重开",
+      "designExpected": "拒绝直接覆盖；须独立审批新版并控制旧链接",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M26-REVIEW-AC10",
+      "moduleId": "M26",
+      "p1Refs": [
+        "M26-REVIEW-AC10",
+        "M26-SPEC-04"
+      ],
+      "p2Scenario": "R2-P3-M26-REVIEW-AC10",
+      "p3Task": "P3-R2-M26-04",
+      "given": "邀请有效但成员解绑/离职",
+      "action": "提交或读缓存链接",
+      "designExpected": "阻新办理并清授权缓存；原卷保留授权追溯",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M26-REVIEW-AC11",
+      "moduleId": "M26",
+      "p1Refs": [
+        "M26-REVIEW-AC11",
+        "M26-SPEC-05"
+      ],
+      "p2Scenario": "R2-P3-M26-REVIEW-AC11",
+      "p3Task": "P3-R2-M26-05",
+      "given": "创建请求响应未知/旧revision",
+      "action": "查同请求再重试",
+      "designExpected": "同结果不重复活动；409不虚报成功",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M26-REVIEW-AC12",
+      "moduleId": "M26",
+      "p1Refs": [
+        "M26-REVIEW-AC12",
+        "M26-SPEC-05"
+      ],
+      "p2Scenario": "R2-P3-M26-REVIEW-AC12",
+      "p3Task": "P3-R2-M26-05",
+      "given": "M06消费者无指定用途授权",
+      "action": "以360均分自动授资格",
+      "designExpected": "拒绝；报告不替代资格或任用流程",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M17-REVIEW-AC01",
+      "moduleId": "M17",
+      "p1Refs": [
+        "M17-REVIEW-AC01",
+        "M17-SPEC-01"
+      ],
+      "p2Scenario": "R2-P3-M17-REVIEW-AC01",
+      "p3Task": "P3-R2-M17-01",
+      "given": "旧成员已出池，同池再入",
+      "action": "建立新成员",
+      "designExpected": "新ID关联前次并不重叠，原原因/指导史保留",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M17-REVIEW-AC02",
+      "moduleId": "M17",
+      "p1Refs": [
+        "M17-REVIEW-AC02",
+        "M17-SPEC-01"
+      ],
+      "p2Scenario": "R2-P3-M17-REVIEW-AC02",
+      "p3Task": "P3-R2-M17-01",
+      "given": "自动条件缺资格数据",
+      "action": "定期运行",
+      "designExpected": "unknown不执行入出池，记录原因且幂等",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M17-REVIEW-AC03",
+      "moduleId": "M17",
+      "p1Refs": [
+        "M17-REVIEW-AC03",
+        "M17-SPEC-01"
+      ],
+      "p2Scenario": "R2-P3-M17-REVIEW-AC03",
+      "p3Task": "P3-R2-M17-01",
+      "given": "规则输入满足但业务/审计失败",
+      "action": "重试",
+      "designExpected": "不半入池、不重复成员，规则/输入可追溯",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M17-REVIEW-AC04",
+      "moduleId": "M17",
+      "p1Refs": [
+        "M17-REVIEW-AC04",
+        "M17-SPEC-02"
+      ],
+      "p2Scenario": "R2-P3-M17-REVIEW-AC04",
+      "p3Task": "P3-R2-M17-02",
+      "given": "同人同岗有效区间重叠",
+      "action": "新增候选",
+      "designExpected": "拒绝；不同岗可独立记录，不保证任命",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M17-REVIEW-AC05",
+      "moduleId": "M17",
+      "p1Refs": [
+        "M17-REVIEW-AC05",
+        "M17-SPEC-02"
+      ],
+      "p2Scenario": "R2-P3-M17-REVIEW-AC05",
+      "p3Task": "P3-R2-M17-02",
+      "given": "人员离职/岗位停用但原记录active",
+      "action": "读取覆盖或关闭",
+      "designExpected": "当前不可用不入有效后备，原记录可有权关闭留因",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M17-REVIEW-AC06",
+      "moduleId": "M17",
+      "p1Refs": [
+        "M17-REVIEW-AC06",
+        "M17-SPEC-02"
+      ],
+      "p2Scenario": "R2-P3-M17-REVIEW-AC06",
+      "p3Task": "P3-R2-M17-02",
+      "given": "原准备度3~6个月或legacy一年",
+      "action": "迁移/显示",
+      "designExpected": "保持原义版本，不按序号转换或伪造复核时间",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M17-REVIEW-AC07",
+      "moduleId": "M17",
+      "p1Refs": [
+        "M17-REVIEW-AC07",
+        "M17-SPEC-03"
+      ],
+      "p2Scenario": "R2-P3-M17-REVIEW-AC07",
+      "p3Task": "P3-R2-M17-03",
+      "given": "唯一指导人等于本人",
+      "action": "核验完成",
+      "designExpected": "按建议拒绝自核，缺独立人保持阻塞",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M17-REVIEW-AC08",
+      "moduleId": "M17",
+      "p1Refs": [
+        "M17-REVIEW-AC08",
+        "M17-SPEC-03"
+      ],
+      "p2Scenario": "R2-P3-M17-REVIEW-AC08",
+      "p3Task": "P3-R2-M17-03",
+      "given": "动态经理关系变化",
+      "action": "办理原任务",
+      "designExpected": "当前验权，换指导留交接史，不默认管理员",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M17-REVIEW-AC09",
+      "moduleId": "M17",
+      "p1Refs": [
+        "M17-REVIEW-AC09",
+        "M17-SPEC-04"
+      ],
+      "p2Scenario": "R2-P3-M17-REVIEW-AC09",
+      "p3Task": "P3-R2-M17-04",
+      "given": "必需前置学习未核验",
+      "action": "完成后续阶段/计划",
+      "designExpected": "阻完成，100%进度不代核验",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M17-REVIEW-AC10",
+      "moduleId": "M17",
+      "p1Refs": [
+        "M17-REVIEW-AC10",
+        "M17-SPEC-04"
+      ],
+      "p2Scenario": "R2-P3-M17-REVIEW-AC10",
+      "p3Task": "P3-R2-M17-04",
+      "given": "已核验计划模板停用",
+      "action": "读历史或建新计划",
+      "designExpected": "旧实例版本保持，新引用阻止；纠错新版本",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M17-REVIEW-AC11",
+      "moduleId": "M17",
+      "p1Refs": [
+        "M17-REVIEW-AC11",
+        "M17-SPEC-05"
+      ],
+      "p2Scenario": "R2-P3-M17-REVIEW-AC11",
+      "p3Task": "P3-R2-M17-05",
+      "given": "关键岗位为空或预计人数未配",
+      "action": "计算覆盖/饱和度",
+      "designExpected": "分别无适用数据/未配置，不记0%或虚假健康分",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M17-REVIEW-AC12",
+      "moduleId": "M17",
+      "p1Refs": [
+        "M17-REVIEW-AC12",
+        "M17-SPEC-05"
+      ],
+      "p2Scenario": "R2-P3-M17-REVIEW-AC12",
+      "p3Task": "P3-R2-M17-05",
+      "given": "当前组织变化且查看过去asOf",
+      "action": "生成历史快照",
+      "designExpected": "采用历史样本但当前授权重裁，定义版本可追溯",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M17-REVIEW-AC13",
+      "moduleId": "M17",
+      "p1Refs": [
+        "M17-REVIEW-AC13",
+        "M17-SPEC-06"
+      ],
+      "p2Scenario": "R2-P3-M17-REVIEW-AC13",
+      "p3Task": "P3-R2-M17-06",
+      "given": "高潜M18结果发布",
+      "action": "读取并推荐入池",
+      "designExpected": "仅引用明确版本，M17规则另判，不能自动任命",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M17-REVIEW-AC14",
+      "moduleId": "M17",
+      "p1Refs": [
+        "M17-REVIEW-AC14",
+        "M17-SPEC-06"
+      ],
+      "p2Scenario": "R2-P3-M17-REVIEW-AC14",
+      "p3Task": "P3-R2-M17-06",
+      "given": "创建响应未知且无业务ID",
+      "action": "恢复查询",
+      "designExpected": "先按请求键/标记核结果，未确认不重复创建",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M37-REVIEW-AC01",
+      "moduleId": "M37",
+      "p1Refs": [
+        "M37-REVIEW-AC01",
+        "M37-SPEC-01"
+      ],
+      "p2Scenario": "R2-P3-M37-REVIEW-AC01",
+      "p3Task": "P3-R2-M37-01",
+      "given": "已有同库代码TI，另一库也欲使用TI",
+      "action": "同库重建/跨库新建/代码修名",
+      "designExpected": "同库重复拒绝；跨库按各稳定ID区分；修名保留ID，未把名称作为跨库键",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M37-REVIEW-AC02",
+      "moduleId": "M37",
+      "p1Refs": [
+        "M37-REVIEW-AC02",
+        "M37-SPEC-01"
+      ],
+      "p2Scenario": "R2-P3-M37-REVIEW-AC02",
+      "p3Task": "P3-R2-M37-01",
+      "given": "指标只定义1个等级及独立行为/建议/面试行",
+      "action": "保存并按用途读取",
+      "designExpected": "不要求凑五级；四子集独立，重顺序拒绝，缺必填说明拒绝；无面试题权不投影",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M37-REVIEW-AC03",
+      "moduleId": "M37",
+      "p1Refs": [
+        "M37-REVIEW-AC03",
+        "M37-SPEC-02"
+      ],
+      "p2Scenario": "R2-P3-M37-REVIEW-AC03",
+      "p3Task": "P3-R2-M37-02",
+      "given": "空目标、权重1.0，无外部方案",
+      "action": "保存/发布后请求用于计算",
+      "designExpected": "目录可保留已批结构；calculationReadiness给缺目标/来源，结果null，不因启用当达标",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M37-REVIEW-AC04",
+      "moduleId": "M37",
+      "p1Refs": [
+        "M37-REVIEW-AC04",
+        "M37-SPEC-02"
+      ],
+      "p2Scenario": "R2-P3-M37-REVIEW-AC04",
+      "p3Task": "P3-R2-M37-02",
+      "given": "权重0/负数/NaN，混合单位，必需输入缺失",
+      "action": "计算声明式组合",
+      "designExpected": "0明确不计，负数/非有限拒绝，单位不兼容拒绝，缺必需值结果null，零分母不算0",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M37-REVIEW-AC05",
+      "moduleId": "M37",
+      "p1Refs": [
+        "M37-REVIEW-AC05",
+        "M37-SPEC-02"
+      ],
+      "p2Scenario": "R2-P3-M37-REVIEW-AC05",
+      "p3Task": "P3-R2-M37-02",
+      "given": "序数等级顺序1/3/5未配数值映射",
+      "action": "尝试加权平均或自动换算百分比",
+      "designExpected": "拒绝缺尺度转换，不能将sort当等距分或继承固定1–5",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M37-REVIEW-AC06",
+      "moduleId": "M37",
+      "p1Refs": [
+        "M37-REVIEW-AC06",
+        "M37-SPEC-03"
+      ],
+      "p2Scenario": "R2-P3-M37-REVIEW-AC06",
+      "p3Task": "P3-R2-M37-03",
+      "given": "提交者有管理权但无其他有效审批人",
+      "action": "提交/发布新标准",
+      "designExpected": "阻有效发布，不默认通过；管理转交不伪造独立审查",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M37-REVIEW-AC07",
+      "moduleId": "M37",
+      "p1Refs": [
+        "M37-REVIEW-AC07",
+        "M37-SPEC-03"
+      ],
+      "p2Scenario": "R2-P3-M37-REVIEW-AC07",
+      "p3Task": "P3-R2-M37-03",
+      "given": "业务已冻结v1，v2获批发布；v1随后停用",
+      "action": "继续原实例/新引用",
+      "designExpected": "原实例v1不漂移，新引用不选停用v1；旧业务是否撤销由生产者明示留痕",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M37-REVIEW-AC08",
+      "moduleId": "M37",
+      "p1Refs": [
+        "M37-REVIEW-AC08",
+        "M37-SPEC-01"
+      ],
+      "p2Scenario": "R2-P3-M37-REVIEW-AC08",
+      "p3Task": "P3-R2-M37-01",
+      "given": "已引用等级/指标，修改说明或删除",
+      "action": "保存变更并读取历史",
+      "designExpected": "已发布语义新版本，不物理删引用；旧业务保留完整定义版本",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M37-REVIEW-AC09",
+      "moduleId": "M37",
+      "p1Refs": [
+        "M37-REVIEW-AC09",
+        "M37-SPEC-04"
+      ],
+      "p2Scenario": "R2-P3-M37-REVIEW-AC09",
+      "p3Task": "P3-R2-M37-04",
+      "given": "有效成员无该库共享范围或只有某业务use投影",
+      "action": "直接API/历史/导出/面试题请求",
+      "designExpected": "当前动作/组织/字段交集验权；read不派生export或全库权；撤权清缓存",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M37-REVIEW-AC10",
+      "moduleId": "M37",
+      "p1Refs": [
+        "M37-REVIEW-AC10",
+        "M37-SPEC-05"
+      ],
+      "p2Scenario": "R2-P3-M37-REVIEW-AC10",
+      "p3Task": "P3-R2-M37-05",
+      "given": "同岗位旧版assessment存在，新标准版本被引用",
+      "action": "生成缺口或M06/M18消费",
+      "designExpected": "版本不匹配保持null/原因；不合并资格/人才对象，不因旧评分5顶替新目标",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M37-REVIEW-AC11",
+      "moduleId": "M37",
+      "p1Refs": [
+        "M37-REVIEW-AC11",
+        "M37-SPEC-05"
+      ],
+      "p2Scenario": "R2-P3-M37-REVIEW-AC11",
+      "p3Task": "P3-R2-M37-05",
+      "given": "版本写入与审计事务失败或客户端结果未知",
+      "action": "恢复/重试",
+      "designExpected": "失败不留可用半版本；未知先按键/请求ID/revision查，不连续造version；历史attempt保留",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M37-REVIEW-AC12",
+      "moduleId": "M37",
+      "p1Refs": [
+        "M37-REVIEW-AC12",
+        "M37-SPEC-05"
+      ],
+      "p2Scenario": "R2-P3-M37-REVIEW-AC12",
+      "p3Task": "P3-R2-M37-05",
+      "given": "legacy五anchors及已有课程/计划/资格引用",
+      "action": "拟迁移新多维结构",
+      "designExpected": "保留旧ID/顺序/实际引用，未知审批不补造，显式版本映射及验证，不改生产库",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M18-REVIEW-AC01",
+      "moduleId": "M18",
+      "p1Refs": [
+        "M18-REVIEW-AC01",
+        "M18-SPEC-01"
+      ],
+      "p2Scenario": "R2-P3-M18-REVIEW-AC01",
+      "p3Task": "P3-R2-M18-01",
+      "given": "同项目同员工已有subject",
+      "action": "再添加或响应未知后重试",
+      "designExpected": "同请求返回原对象，其他重复拒绝，不重建项目",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M18-REVIEW-AC02",
+      "moduleId": "M18",
+      "p1Refs": [
+        "M18-REVIEW-AC02",
+        "M18-SPEC-01"
+      ],
+      "p2Scenario": "R2-P3-M18-REVIEW-AC02",
+      "p3Task": "P3-R2-M18-01",
+      "given": "冻结标准v1后目录发布v2/停用v1",
+      "action": "读旧项目和建新引用",
+      "designExpected": "旧版保持；新引用拒绝停用版且重新验权",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M18-REVIEW-AC03",
+      "moduleId": "M18",
+      "p1Refs": [
+        "M18-REVIEW-AC03",
+        "M18-SPEC-01"
+      ],
+      "p2Scenario": "R2-P3-M18-REVIEW-AC03",
+      "p3Task": "P3-R2-M18-01",
+      "given": "员工调组织或离职",
+      "action": "查看历史/继续办理",
+      "designExpected": "历史分母不漂移，当前办理权限重核，排除另有版本原因",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M18-REVIEW-AC04",
+      "moduleId": "M18",
+      "p1Refs": [
+        "M18-REVIEW-AC04",
+        "M18-SPEC-01"
+      ],
+      "p2Scenario": "R2-P3-M18-REVIEW-AC04",
+      "p3Task": "P3-R2-M18-01",
+      "given": "引入上一期结果",
+      "action": "生成本期草稿",
+      "designExpected": "保留来源时点，仅参考，不冒当前已评定",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M18-REVIEW-AC05",
+      "moduleId": "M18",
+      "p1Refs": [
+        "M18-REVIEW-AC05",
+        "M18-SPEC-02"
+      ],
+      "p2Scenario": "R2-P3-M18-REVIEW-AC05",
+      "p3Task": "P3-R2-M18-02",
+      "given": "两轴阈值明确且值等低/高界",
+      "action": "计算格位",
+      "designExpected": "低界归中、高界归高，缺任一轴单列未评定",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M18-REVIEW-AC06",
+      "moduleId": "M18",
+      "p1Refs": [
+        "M18-REVIEW-AC06",
+        "M18-SPEC-03"
+      ],
+      "p2Scenario": "R2-P3-M18-REVIEW-AC06",
+      "p3Task": "P3-R2-M18-03",
+      "given": "本人/提案者参与且有效评委不足",
+      "action": "尝试通过",
+      "designExpected": "回避后不足阻结论；无阈值不默认同意",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M18-REVIEW-AC07",
+      "moduleId": "M18",
+      "p1Refs": [
+        "M18-REVIEW-AC07",
+        "M18-SPEC-03"
+      ],
+      "p2Scenario": "R2-P3-M18-REVIEW-AC07",
+      "p3Task": "P3-R2-M18-03",
+      "given": "原结果已有在途校准或已被新版替代",
+      "action": "再提/批准旧版",
+      "designExpected": "拒绝；驳回撤回留历史，重提关联且重新验权",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M18-REVIEW-AC08",
+      "moduleId": "M18",
+      "p1Refs": [
+        "M18-REVIEW-AC08",
+        "M18-SPEC-03"
+      ],
+      "p2Scenario": "R2-P3-M18-REVIEW-AC08",
+      "p3Task": "P3-R2-M18-03",
+      "given": "复核人想直接发布",
+      "action": "执行发布",
+      "designExpected": "拒绝；另有权发布者产生新版本，不改原绩效",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M18-REVIEW-AC09",
+      "moduleId": "M18",
+      "p1Refs": [
+        "M18-REVIEW-AC09",
+        "M18-SPEC-04"
+      ],
+      "p2Scenario": "R2-P3-M18-REVIEW-AC09",
+      "p3Task": "P3-R2-M18-04",
+      "given": "已关闭项目需改潜力",
+      "action": "直接更新",
+      "designExpected": "拒绝直接覆盖，须明确纠错重开与新修订",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M18-REVIEW-AC10",
+      "moduleId": "M18",
+      "p1Refs": [
+        "M18-REVIEW-AC10",
+        "M18-SPEC-04"
+      ],
+      "p2Scenario": "R2-P3-M18-REVIEW-AC10",
+      "p3Task": "P3-R2-M18-04",
+      "given": "本人仅有任务权限",
+      "action": "请求九格/潜力/附件历史",
+      "designExpected": "默认拒绝未开放字段；共享不自动扩大",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M18-REVIEW-AC11",
+      "moduleId": "M18",
+      "p1Refs": [
+        "M18-REVIEW-AC11",
+        "M18-SPEC-05"
+      ],
+      "p2Scenario": "R2-P3-M18-REVIEW-AC11",
+      "p3Task": "P3-R2-M18-05",
+      "given": "高潜结果已发布",
+      "action": "消费到M17",
+      "designExpected": "仅形成建议，不自动有效入池",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M18-REVIEW-AC12",
+      "moduleId": "M18",
+      "p1Refs": [
+        "M18-REVIEW-AC12",
+        "M18-SPEC-05"
+      ],
+      "p2Scenario": "R2-P3-M18-REVIEW-AC12",
+      "p3Task": "P3-R2-M18-05",
+      "given": "组织地图数据被用作职位覆盖",
+      "action": "读取报表",
+      "designExpected": "区分orgId/positionId分母，未配置明确原因",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-M18-REVIEW-AC13",
+      "moduleId": "M18",
+      "p1Refs": [
+        "M18-REVIEW-AC13",
+        "M18-SPEC-05"
+      ],
+      "p2Scenario": "R2-P3-M18-REVIEW-AC13",
+      "p3Task": "P3-R2-M18-05",
+      "given": "发布事务或通知服务失败",
+      "action": "重试/查询",
+      "designExpected": "原版本不丢、无假发布，通知状态独立，旧revision409",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-BASE-01-AC01",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-01-AC01",
+        "BASE-01"
+      ],
+      "p2Scenario": "R2-P3-BASE-01-AC01",
+      "p3Task": "P3-R2-BASE-01",
+      "given": "平台身份有效但成员inactive，或成员tenant与读取快照不一致；对象替换为R2标准/答卷/盘点/继任/任期合成记录",
+      "action": "任意受保护读取/写入",
+      "designExpected": "拒绝，不因平台允许访问或历史业务关联放行；未绑定employee不能凭姓名自动匹配员工",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-BASE-01-AC02",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-01-AC02",
+        "BASE-01"
+      ],
+      "p2Scenario": "R2-P3-BASE-01-AC02",
+      "p3Task": "P3-R2-BASE-01",
+      "given": "旧备份中成员active、可信当前记录显示其后已撤权；对象替换为R2标准/答卷/盘点/继任/任期合成记录",
+      "action": "隔离恢复后拟开放访问",
+      "designExpected": "须先对账当前撤权，应用/附件仍拒绝；无可信当前授权来源时保持隔离，不能从备份恢复旧访问权",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-BASE-02-AC01",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-02-AC01",
+        "BASE-02"
+      ],
+      "p2Scenario": "R2-P3-BASE-02-AC01",
+      "p3Task": "P3-R2-BASE-02",
+      "given": "调入审批者仅B组织且被指派二级申请，来源EA在A；对象替换为R2标准/答卷/盘点/继任/任期合成记录",
+      "action": "读申请摘要后读EA目录/任职史/附件",
+      "designExpected": "允许的申请摘要不派生A目录/历史/附件权，viewLevel撤销时职级变更办理拒绝；D3–D5既有规则不重问",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-BASE-02-AC02",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-02-AC02",
+        "BASE-02"
+      ],
+      "p2Scenario": "R2-P3-BASE-02-AC02",
+      "p3Task": "P3-R2-BASE-02",
+      "given": "岗位组织/成员范围在第一次读取后改变revision；对象替换为R2标准/答卷/盘点/继任/任期合成记录",
+      "action": "继续历史补充查询或附件对象读取",
+      "designExpected": "readConsistent核修订变化409，不以先读成功继续输出；每个动作重验当前权，原角色实例不替真人跨角色验收",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-BASE-02-AC03",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-02-AC03",
+        "BASE-02"
+      ],
+      "p2Scenario": "R2-P3-BASE-02-AC03",
+      "p3Task": "P3-R2-BASE-02",
+      "given": "T-A中E1只具REP1-v1的developmentSummary字段reportRead；H只有PROJECT1邀请管理，L只有E1名册read；匿名原卷RAW-A-v1与桥表均restricted，authRevision=10。",
+      "action": "E1请求获准发展反馈；E1/H/L分别直接请求RAW-A-v1.answers及REP1-v1的anonymousMean/bridgeReviewer；H与L请求该本人反馈。",
+      "designExpected": "E1反馈仅返回developmentSummary；无原卷/桥表/均值字段权限的整字段请求403，H/L反馈403，不能借本人或管理名义放行。REP1-v1和RAW-A-v1字节及版本保持；安全审计不含答案/评委映射。",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-BASE-03-AC01",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-03-AC01",
+        "BASE-03"
+      ],
+      "p2Scenario": "R2-P3-BASE-03-AC01",
+      "p3Task": "P3-R2-BASE-03",
+      "given": "业务更新待提交，审计写异常或CAS未命中；对象替换为R2标准/答卷/盘点/继任/任期合成记录",
+      "action": "按事务故障/并发设计验证",
+      "designExpected": "不出现业务成功而无同事务审计；后续刷新核实际revision/对象。数据库外独立故障留痕并未实现，不代签D1例外",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-BASE-03-AC02",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-03-AC02",
+        "BASE-03"
+      ],
+      "p2Scenario": "R2-P3-BASE-03-AC02",
+      "p3Task": "P3-R2-BASE-03",
+      "given": "CT1-v1为category草稿，完整CatalogDraft如fixture；H仅能改name，CERT1-v1已合法授E1且有效；独立R具revoke，不是本人/原申请贡献者；初始workspaceRevision=20。",
+      "action": "H以CT1 root和完整payload将name改为新名称，其余字段原样，expectedEntityRevision=1；读成功receipt后R以businessVersionId=CERT1-v1、reason=资格材料失效提交certification.revoke，使用最新revision和新幂等键；再以同键重发撤销。",
+      "designExpected": "改名创建CT1-v2、内容审计和一次applied receipt，不新增certificate或M01任职历史；CERT1-v1授证字节保留。撤销成功时生成独立revocation事件一次，current validity=revoked，revokedAt为服务端提交时刻；同键重发同receipt不多增历史。未授权改issuedAt/personId/actor拒绝；审计失败则相应业务状态无变更。",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-BASE-04-AC01",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-04-AC01",
+        "BASE-04"
+      ],
+      "p2Scenario": "R2-P3-BASE-04-AC01",
+      "p3Task": "P3-R2-BASE-04",
+      "given": "同一员工有hr附件和employee附件，当前员工本人/经理/范围HR；对象替换为R2标准/答卷/盘点/继任/任期合成记录",
+      "action": "分别列表和直接ID下载",
+      "designExpected": "本人只employee附件；经理不因有名册范围获得员工文件，HR按范围；猜ID不能跳过归属/可见性/当前revision检查",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-BASE-04-AC02",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-04-AC02",
+        "BASE-04"
+      ],
+      "p2Scenario": "R2-P3-BASE-04-AC02",
+      "p3Task": "P3-R2-BASE-04",
+      "given": "REP1-v1已published且B1绑定OBJ-A-v1；REP1-v2是同根独立draft、更正来源指v1。H仅具草稿管理/绑定及旧报告read，OBJ-B-v1不可见准备对象，两对象合成摘要固定。",
+      "action": "通过R1共享附件adapter依次解绑或替换REP1-v1.B1；然后为REP1-v2创建新绑定B2指OBJ-B-v1，再读取旧版B1。",
+      "designExpected": "前两请求409 IMMUTABLE_VERSION，旧binding/digest/对象字节不变；第三请求创建B2并仅使v2草稿关联可见，v1仍读OBJ-A-v1，不能覆盖B1或冒充发布。新附件不继承旧版受众；沿当前grant及v2 owner范围，任何无权下载403。删除草稿绑定先墓碑禁读，物理回收不得破坏旧版或恢复点引用。",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-BASE-04-AC03",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-04-AC03",
+        "BASE-04"
+      ],
+      "p2Scenario": "R2-P3-BASE-04-AC03",
+      "p3Task": "P3-R2-BASE-04",
+      "given": "对象已put，元数据事务失败且补偿delete再次失败；对象替换为R2标准/答卷/盘点/继任/任期合成记录",
+      "action": "核恢复与客户端结果",
+      "designExpected": "不返回可用附件成功；孤儿只在存储维护对账中识别/清理，不向业务列表泄露；生产孤儿扫描策略未实现，需后续设计",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-BASE-04-AC04",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-04-AC04",
+        "BASE-04"
+      ],
+      "p2Scenario": "R2-P3-BASE-04-AC04",
+      "p3Task": "P3-R2-BASE-04",
+      "given": "元数据tombstone已提交，物理delete异常；对象替换为R2标准/答卷/盘点/继任/任期合成记录",
+      "action": "再列表/ID读取及清理重试",
+      "designExpected": "业务读不可达，返回deleted:true/cleanupPending:true；保留删除审计，不因物理残存恢复对外访问",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-BASE-05-AC01",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-05-AC01",
+        "BASE-05"
+      ],
+      "p2Scenario": "R2-P3-BASE-05-AC01",
+      "p3Task": "P3-R2-BASE-05",
+      "given": "同静止窗口DB/附件清单，分别移除一个对象或改内容的未来隔离夹具；对象替换为R2标准/答卷/盘点/继任/任期合成记录",
+      "action": "核恢复完整性",
+      "designExpected": "识别missing/corrupt并阻相应可用声明，不仅核DB元数据；不运行线上恢复或访问真实附件",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-BASE-05-AC02",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-05-AC02",
+        "BASE-05"
+      ],
+      "p2Scenario": "R2-P3-BASE-05-AC02",
+      "p3Task": "P3-R2-BASE-05",
+      "given": "在途两级审批快照已留一级结论，恢复点以后另有撤权；对象替换为R2标准/答卷/盘点/继任/任期合成记录",
+      "action": "恢复后拟继续原审批",
+      "designExpected": "先按可信当前授权对账，已处理一级不能重放；后续按当前D1两级与待生效规则办理，旧即时生效测试不能自动证明现定日执行",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-BASE-06-AC01",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-06-AC01",
+        "BASE-06"
+      ],
+      "p2Scenario": "R2-P3-BASE-06-AC01",
+      "p3Task": "P3-R2-BASE-06",
+      "given": "同namespace同eventId已留相同digest与sequence回执；对象替换为R2标准/答卷/盘点/继任/任期合成记录",
+      "action": "重放相同事件、改内容或跳过前序",
+      "designExpected": "当前主数据预检分别duplicate/conflict/gap；缺映射mapping_required；ready仍DRY_RUN_ONLY，不写任何员工或身份",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-BASE-06-AC02",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-06-AC02",
+        "BASE-06"
+      ],
+      "p2Scenario": "R2-P3-BASE-06-AC02",
+      "p3Task": "P3-R2-BASE-06",
+      "given": "支付/签署/测评供应商未配置；对象替换为R2标准/答卷/盘点/继任/任期合成记录",
+      "action": "审查P1交付与内域流程",
+      "designExpected": "记录未配置与待适配契约，不声称已完成外部交易，也不以取得供应商服务阻当前P1；只阻依赖外部真实结果的后续执行分支",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-P3-BASE-06-AC03",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-06-AC03",
+        "BASE-06"
+      ],
+      "p2Scenario": "R2-P3-BASE-06-AC03",
+      "p3Task": "P3-R2-BASE-06",
+      "given": "某请求已发送但响应未知，另有重复回调；对象替换为R2标准/答卷/盘点/继任/任期合成记录",
+      "action": "设计恢复与幂等用例",
+      "designExpected": "先以业务关联/外部查询核结果，重复相同回执不重复生效，变内容冲突留痕；无可信结果保持unknown，不能自动重付/重签或返回success",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M37-S01",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M37-SPEC-03"
+      ],
+      "p2Scenario": "R2-M37-S01",
+      "p3Task": "P3-R2-M37-03",
+      "given": "STD v1已发布；两独立审批v2/v3均基于root revision7",
+      "action": "同时以expectedRevision7发布",
+      "designExpected": "仅一个published指针推进；另一409；旧v1 digest不变，同键重试回原版本",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M37-S02",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M37-SPEC-02"
+      ],
+      "p2Scenario": "R2-M37-S02",
+      "p3Task": "P3-R2-M37-02",
+      "given": "同尺度数值2/4、权重0/1；另有必需null及带环AND节点",
+      "action": "分别计算/发布规则",
+      "designExpected": "合法加权结果4；必需null返回unknown不缩分母；环拒发布；不得跨维度求总分",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M37-S03",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M37-SPEC-05"
+      ],
+      "p2Scenario": "R2-M37-S03",
+      "p3Task": "P3-R2-M37-05",
+      "given": "消费者A已冻结v1，B草稿将引用v1；与停用事件争同revision",
+      "action": "停用先提交，再提交B；A继续办理",
+      "designExpected": "B拒新引用，A保留原v1并告警；v2不会替换A；显式取消才改变A状态",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M37-S04",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M37-SPEC-04"
+      ],
+      "p2Scenario": "R2-M37-S04",
+      "p3Task": "P3-R2-M37-04",
+      "given": "用户X曾获面试问题export，已生成v1附件；安全账本现已撤权",
+      "action": "旧链接下载与晚到缓存响应返回",
+      "designExpected": "前后权限复核拒绝字节；缓存不复活；通用审计无问题原文",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M06-S01",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M06-SPEC-01"
+      ],
+      "p2Scenario": "R2-M06-S01",
+      "p3Task": "P3-R2-M06-01",
+      "given": "目录counter=41；两请求同对象/编号规则；同父sort=1两不同目录项",
+      "action": "并发分配编码并读取展示顺序",
+      "designExpected": "编码唯一可跳号不复用；sort允许同号、以稳定ID排序；标准levelOrder重复仍拒绝",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M06-S02",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M06-SPEC-01"
+      ],
+      "p2Scenario": "R2-M06-S02",
+      "p3Task": "P3-R2-M06-01",
+      "given": "channel v1的QL→M27资源R1未配置，另一QL2映射已核验R2",
+      "action": "显示发展通道/简卡/学习地图并点击引用",
+      "designExpected": "未配置明确空态；合法资源只授权导航；不自动创建课程任务/资格证",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M06-S03",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M06-SPEC-04"
+      ],
+      "p2Scenario": "R2-M06-S03",
+      "p3Task": "P3-R2-M06-04",
+      "given": "证据与标准同version、窗口截止D；证书validUntil D，当前23:59:59+08及次日00:00各一组",
+      "action": "查有效性并尝试续期授证/任用消费",
+      "designExpected": "D内valid，次日expired；证据窗口独立检查；新续证不覆旧证，双续期一在途",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M06-S04",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M06-SPEC-05"
+      ],
+      "p2Scenario": "R2-M06-S04",
+      "p3Task": "P3-R2-M06-05",
+      "given": "授证事务成功但响应丢失，证书C已存在；随后撤销审计写失败",
+      "action": "同幂等键查询/重试，再查询撤销状态",
+      "designExpected": "同证书C无重复；撤销事务全回滚，仍显示原有效性及明确失败，不冒已撤销",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M26-S01",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M26-SPEC-02"
+      ],
+      "p2Scenario": "R2-M26-S01",
+      "p3Task": "P3-R2-M26-02",
+      "given": "ABC三人合法报告已披露；新报告同cohort只A改分；另有ABC与ABD交叠",
+      "action": "分别提更正发布及第二cohort发布",
+      "designExpected": "changedContributorSet和差集小于3，受影响分数/人数/补集全部抑制，不因cohort相同放行",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M26-S02",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M26-SPEC-02"
+      ],
+      "p2Scenario": "R2-M26-S02",
+      "p3Task": "P3-R2-M26-02",
+      "given": "两个待发布报告共享disclosureRevision9，各自单独检查似合法、合并可隔离一人",
+      "action": "两个发布并发使用revision9",
+      "designExpected": "一提交后另一409重读披露账本，重检识别泄漏而抑制；不能都按旧账本通过",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M26-S03",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M26-SPEC-03"
+      ],
+      "p2Scenario": "R2-M26-S03",
+      "p3Task": "P3-R2-M26-03",
+      "given": "套卷四题型，选择题无重复option，条件隐藏文本；另有required rating与显式NA政策",
+      "action": "提交错误选项/越step/超3000文本及合法隐藏/NA答卷",
+      "designExpected": "错误类型拒绝；隐藏与NA保留原因不计0；只有冻结角色适用题入分母",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M26-S04",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M26-SPEC-01"
+      ],
+      "p2Scenario": "R2-M26-S04",
+      "p3Task": "P3-R2-M26-01",
+      "given": "HR H仅projectManage，审计X有定时rawResponseRead但无导出；桥接在独立域",
+      "action": "H查原卷/通用事件，X到期前后查及尝试导出",
+      "designExpected": "H无身份关联/原卷；日志无payload；X仅时限范围可读，export拒，到期立即拒",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M18-S01",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M18-SPEC-03"
+      ],
+      "p2Scenario": "R2-M18-S01",
+      "p3Task": "P3-R2-M18-03",
+      "given": "同result v1，两会议各一更正；提案C、复核R、发布P；C试自审",
+      "action": "并发提交/审核/发布并以过期base重试",
+      "designExpected": "每原结果一在途；C拒，R与P分离；BASE_SUPERSEDED拒，不修改M16/M26源",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M18-S02",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M18-SPEC-01"
+      ],
+      "p2Scenario": "R2-M18-S02",
+      "p3Task": "P3-R2-M18-01",
+      "given": "scope v1含E1/E2，E2调动后v2授权排除并加入E3",
+      "action": "查看v1真实快照与v2当前分析",
+      "designExpected": "v1原组织/人数/来源保持；v2当前权限裁剪；不得用新人员名单替旧范围",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M18-S03",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M18-SPEC-02"
+      ],
+      "p2Scenario": "R2-M18-S03",
+      "p3Task": "P3-R2-M18-02",
+      "given": "lowCut40/highCut70，四值39.5/40/69.5/70，另1缺轴与ordinal无映射",
+      "action": "计算九格及人数",
+      "designExpected": "档位low/mid/mid/high；缺轴unrated，无映射null；九格人数+未评定=授权范围总数",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M18-S04",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M18-SPEC-04"
+      ],
+      "p2Scenario": "R2-M18-S04",
+      "p3Task": "P3-R2-M18-04",
+      "given": "项目step2保存失败，最后step3可见；closed项目有已发布v1",
+      "action": "读取checkpoint、直接calibrate，再经reopen审批操作",
+      "designExpected": "step2无成功receipt不冒保存；终态写拒；合法reopen新revision和新结果版本，旧v1不变",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M17-S01",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M17-SPEC-01"
+      ],
+      "p2Scenario": "R2-M17-S01",
+      "p3Task": "P3-R2-M17-01",
+      "given": "启用规则run1输入3人，其中E2资格unknown，E3写审计失败；E1已提交回执",
+      "action": "接管过期租约后同周期重跑",
+      "designExpected": "E1不重复入池；E2无入出动作；E3无半成员；旧fence不能提交，逐项partial可对账",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M17-S02",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M17-SPEC-03"
+      ],
+      "p2Scenario": "R2-M17-S02",
+      "p3Task": "P3-R2-M17-03",
+      "given": "导师A已失当前关系，B授权交接后接受；A有旧待核验请求，本人为成果贡献者",
+      "action": "旧A晚交verify、本人verify和新B合法verify",
+      "designExpected": "A和本人拒，B按当前独立职责办理；已完成旧核验记录不换人",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M17-S03",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M17-SPEC-04"
+      ],
+      "p2Scenario": "R2-M17-S03",
+      "p3Task": "P3-R2-M17-04",
+      "given": "IDP阶段S2依赖S1，S1必需T1 cancelled未获waiver，选修min1未完成",
+      "action": "尝试开S2/完成计划，再获授权waiver和独立选修核验",
+      "designExpected": "先拒；满足新版要求后才推进；取消不自动等完成，旧submission和审批保留",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M17-S04",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M17-SPEC-05"
+      ],
+      "p2Scenario": "R2-M17-S04",
+      "p3Task": "P3-R2-M17-05",
+      "given": "关键岗位4/覆盖3/now2；池人数3 expected2；到期cohort4含完成1、授权终止1、未完2",
+      "action": "以同asOf/definition求指标并再用零分母夹具",
+      "designExpected": "覆盖75%、就绪50%、池150%、逾期2/4=50%；零分母null；终止不缩已确定cohort",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M03-S01",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M03-SPEC-01"
+      ],
+      "p2Scenario": "R2-M03-S01",
+      "p3Task": "P3-R2-M03-01",
+      "given": "2024-02-29加1年、2026-01-31加1月；授权override有/无reason",
+      "action": "预览并保存任期/超界考察期",
+      "designExpected": "分别2025-02-27、2026-02-27；无理由覆盖拒；考察超任期拒，历史未知不套算法",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M03-S02",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M03-SPEC-03"
+      ],
+      "p2Scenario": "R2-M03-S02",
+      "p3Task": "P3-R2-M03-03",
+      "given": "阈值80.000，精确79.995及80.000；5评委1回避1弃权3通过；另1未交",
+      "action": "显示舍入并最终决议",
+      "designExpected": "79.995显示80仍不通过，80精确通过；3/4到75%；未交阻决议，不当弃权或减分母",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M03-S03",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M03-SPEC-02"
+      ],
+      "p2Scenario": "R2-M03-S03",
+      "p3Task": "P3-R2-M03-02",
+      "given": "同M01 actual applied receipt R、同任用类型，两次不同command；资格在第二次前过期",
+      "action": "并发核对后查询两域与同键重试",
+      "designExpected": "一张receipt只一任期，重复拒/同键原结果；M01事实保留，当前资格失效不补M03成功",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M03-S04",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M03-SPEC-05"
+      ],
+      "p2Scenario": "R2-M03-S04",
+      "p3Task": "P3-R2-M03-05",
+      "given": "档案访谈v1及discipline附件，用户只有archiveRead，后授权interviewRead但无export，再撤权",
+      "action": "直接历史/下载/更正作废查询",
+      "designExpected": "基础read不能见敏感子集；read不代export；撤权旧链接拒，作废保留原ID/history且不影响任用",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M26-S05",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M26-SPEC-04",
+        "BP-C-REQ-03-AC03"
+      ],
+      "p2Scenario": "R2-M26-S05",
+      "p3Task": "P3-R2-M26-04",
+      "given": "活动approved/scheduled，start=T0，end=T1；有效本人邀请，测试时钟分别T0前1ms、T0、T1",
+      "action": "读取canRespond并直接提交答卷",
+      "designExpected": "T0前拒，T0允许，T1拒；项目open字样不能绕窗口；不用改平台真实时钟",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M26-S06",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M26-SPEC-05",
+        "BP-C-REQ-03-AC08"
+      ],
+      "p2Scenario": "R2-M26-S06",
+      "p3Task": "P3-R2-M26-05",
+      "given": "本人E的合法报告已published但audience未包含E，另一版显式包含E；原卷属于他人匿名组",
+      "action": "E直接读报告/下载及试查他人原卷",
+      "designExpected": "未开放版拒；开放版仅抑制后允许字段，export仍独立；他人原卷/邀请均拒，不能凭本人身份默认开放",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M26-S07",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M26-SPEC-02"
+      ],
+      "p2Scenario": "R2-M26-S07",
+      "p3Task": "P3-R2-M26-02",
+      "given": "k=3；A/B/C三个cohort各10人，两两交集4、差集6，但三重交集仅X一人；A/B已披露，C待发布",
+      "action": "按完整参与签名核第三份报告及相关总计",
+      "designExpected": "X构成1人签名类，C相关单元抑制；不能仅凭两两均达标放行，原披露约束保留",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-M17-S05",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M17-SPEC-06",
+        "M17-SCOPE-01"
+      ],
+      "p2Scenario": "R2-M17-S05",
+      "p3Task": "P3-R2-M17-06",
+      "given": "用户G1有池A manage但无员工B范围，G2有员工B范围但无目标职位P范围；另有不同grant各一半字段",
+      "action": "直接查成员/继任、导出和尝试拼接两角色范围",
+      "designExpected": "池+员工、岗位+员工分别双范围拒；完整grant内授权后再敏感交集，不将一角色人员范围与另一角色字段拼接",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-COM-01",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-03"
+      ],
+      "p2Scenario": "R2-COM-01",
+      "p3Task": "P3-R2-COM-01",
+      "given": "命令C同时写业务/审计/outbox/完整行日志；分别在审计、receipt、CAS注入故障",
+      "action": "重试原键并检查数据库快照",
+      "designExpected": "每次全提交或全无业务效果；DB不可写不承诺库内失败日志；同键只一个成功receipt",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-COM-02",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-03"
+      ],
+      "p2Scenario": "R2-COM-02",
+      "p3Task": "P3-R2-COM-01",
+      "given": "批量报告分3块，前2块已存，租约fence7过期由8接管",
+      "action": "旧worker提交第3块/ready，新worker从cursor接续",
+      "designExpected": "旧fence拒；未完整manifest不可读，最终权限和hash校验后一次ready，无半报告",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-COM-03",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-06"
+      ],
+      "p2Scenario": "R2-COM-03",
+      "p3Task": "P3-R2-COM-02",
+      "given": "同事件ID同/异digest、sourceRevision缺口；外部签名错误/过期nonce/key",
+      "action": "消费与对账、重复回调",
+      "designExpected": "同digest去重，异digest隔离；gap阻投影；签名/nonce错误不写业务；不取latest跳历史",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-COM-04",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-06"
+      ],
+      "p2Scenario": "R2-COM-04",
+      "p3Task": "P3-R2-COM-02",
+      "given": "命令含未知字段、重复JSON键、超安全整数/非法decimal；另一供应商回执unknown",
+      "action": "解码提交及网络恢复后的同键查询",
+      "designExpected": "schema严格拒非法输入；hash不代签名；unknown未证不重发，业务/通知分态",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-COM-05",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-04"
+      ],
+      "p2Scenario": "R2-COM-05",
+      "p3Task": "P3-R2-COM-03",
+      "given": "旧标准同code冲突、旧任期重叠、旧360低样本报告；source digest变化",
+      "action": "分批迁移预演到read_switch",
+      "designExpected": "原hash/ID不变；冲突局部隔离；旧低样本先deny；游标只随原子batch回执推进",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-COM-06",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-04"
+      ],
+      "p2Scenario": "R2-COM-06",
+      "p3Task": "P3-R2-COM-03",
+      "given": "新多级标准/多阶段IDP已产生事实；旧writer不认识epoch，worker lease过期",
+      "action": "尝试回旧写版及旧fence继续回填",
+      "designExpected": "旧写全部被闸门拒；保留新模型和映射，前向修复/只读，不DROP或覆盖新事实",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-COM-07",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-05"
+      ],
+      "p2Scenario": "R2-COM-07",
+      "p3Task": "P3-R2-COM-04",
+      "given": "15分钟行日志及对象manifest；数据库点T与文件点T-70分钟，某答卷hash损坏",
+      "action": "核定恢复点及拟开放",
+      "designExpected": "不能选数据库T冒RPO达标；共同可恢复点超过60分钟为违标，损坏对象隔离，相关报告不开",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-COM-08",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "BASE-05"
+      ],
+      "p2Scenario": "R2-COM-08",
+      "p3Task": "P3-R2-COM-04",
+      "given": "备份旧HR有原卷权，当前deny已撤；披露账本块缺失、证书恢复时已过期",
+      "action": "隔离恢复并计时到owner_approved/opened",
+      "designExpected": "当前deny先行；原卷/报告禁用，证书expired；补齐前不开放；RTO含审批且≤240分钟才可报告达标，保留30天证据",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-X-01",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "C01-AC1",
+        "M37-SPEC-05",
+        "M18-SPEC-05",
+        "M17-SPEC-06"
+      ],
+      "p2Scenario": "R2-X-01",
+      "p3Task": "P3-R2-X-01",
+      "given": "M37 v1→M18已发布r1→M17建议→显式创建IDP；随后标准v2发布",
+      "action": "查询整链与已有IDP，再消费重复M18事件",
+      "designExpected": "全链仍指v1/r1，IDP不重复且不自动发课；v2不覆盖旧证据，真实集成状态须留证",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-X-02",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M37-SPEC-03",
+        "M06-SPEC-03"
+      ],
+      "p2Scenario": "R2-X-02",
+      "p3Task": "P3-R2-X-01",
+      "given": "M06申请/M26卷/M18项目/M17模板/M03活动均冻结standard v1；标准停用",
+      "action": "逐域继续在途并新建引用",
+      "designExpected": "在途原版本带警示，显式取消才终止；五域新引用均拒；旧5级consumer可读旧schema，新6级不可静默压5级",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-X-03",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M06-SPEC-04",
+        "M17-SPEC-02",
+        "M03-SPEC-02"
+      ],
+      "p2Scenario": "R2-X-03",
+      "p3Task": "P3-R2-X-02",
+      "given": "资格C截至D；M17 now且未到复核时点，M03决定已批准未生效",
+      "action": "D+1读取now覆盖并尝试任用核对",
+      "designExpected": "now覆盖按资格失效排除/说明；M03阻生效；M18历史盘点不被改写，证书原certified事实保留",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-X-04",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M03-SPEC-02",
+        "BASE-06"
+      ],
+      "p2Scenario": "R2-X-04",
+      "p3Task": "P3-R2-X-02",
+      "given": "M01 applied可信receipt已写但M03响应unknown；另一仅approved未applied",
+      "action": "查原命令/两域receipt并重试",
+      "designExpected": "已提交M03回原term，不重复；未applied拒；无法确认保持unknown，不撤销M01或伪造M03完成",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-X-05",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M26-SPEC-05",
+        "M18-SPEC-05",
+        "BASE-02"
+      ],
+      "p2Scenario": "R2-X-05",
+      "p3Task": "P3-R2-X-03",
+      "given": "M18和M32获准消费M26已发布报告；报告后被撤权/纠错，旧链接及缓存尚在",
+      "action": "直接源/消费端查询和下载",
+      "designExpected": "当前访问均拒或字段省略；不得从原卷/旧缓存重算；已作合法业务决定只保留受控证据引用并独立更正",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-X-06",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M26-SPEC-02",
+        "BASE-04"
+      ],
+      "p2Scenario": "R2-X-06",
+      "p3Task": "P3-R2-X-03",
+      "given": "M32只reportExport、cohort ABC与ABD；job已生成2块后安全epoch变",
+      "action": "请求两报表合并与旧job下载",
+      "designExpected": "沿M26披露账本抑制差分；权限变更使旧job不可ready/下载，orphan不暴露字节",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-X-07",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "C02-AC1",
+        "M03-SPEC-06",
+        "M17-SPEC-06"
+      ],
+      "p2Scenario": "R2-X-07",
+      "p3Task": "P3-R2-X-04",
+      "given": "本人E有IDP/学习核验反馈、干部年度述职待审；档案读者无interviewRead；通知unknown",
+      "action": "通过M48/干部档案读取并处理源任务",
+      "designExpected": "仅获准计划/学习/述职字段；无访谈/排名；审批待审不当已发布，动作回源且unknown查原键，不生成二套业务状态",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    },
+    {
+      "id": "ORIGIN-R2-X-08",
+      "moduleId": "CROSS_OR_BASE",
+      "p1Refs": [
+        "M17-SPEC-05",
+        "M18-SPEC-05"
+      ],
+      "p2Scenario": "R2-X-08",
+      "p3Task": "P3-R2-X-04",
+      "given": "M32有岗位4、组织2、池3人，当前与旧snapshot来源不同；无综合健康权重",
+      "action": "按各dataset查询并请求current带历史asOf",
+      "designExpected": "岗位/组织/池分母不混；current历史筛选拒，真实snapshot固定源并当前裁权；综合指数not_configured不补总分",
+      "originExecution": "not_run",
+      "classification": null,
+      "originActual": null,
+      "evidence": [],
+      "implementationComparison": "not_run; legacy source is not R2 P3"
+    }
+  ]
+}

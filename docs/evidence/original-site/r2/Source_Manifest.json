@@ -1,0 +1,168 @@
+{
+  "sources": [
+    {
+      "path": "docs/delivery/Scope_Register.json",
+      "commit": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+      "sha256": "eab87b17f36cd11f49f76c494f9867da3cb7d076d82e3bbd5445e045377f3f52",
+      "bytes": 3169005
+    },
+    {
+      "path": "docs/delivery/Controller_Resume.md",
+      "commit": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+      "sha256": "66871605d57b53e1b5698f2a2f53ec45a73bb9dc00a333fba62cfeed09c453fc",
+      "bytes": 105159
+    },
+    {
+      "path": "docs/delivery/P1_R2_P2_Handoff.md",
+      "commit": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+      "sha256": "78a56c1ca3746808ae002e082f82efa4c6c69dabbb045a690614f063d1686ac2",
+      "bytes": 18437
+    },
+    {
+      "path": "docs/delivery/P1_M37_Review_Package.md",
+      "commit": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+      "sha256": "c040287f60628cfd855b52b33b74641bfa0fe136b2c5d82017ebb92155f6c37e",
+      "bytes": 17232
+    },
+    {
+      "path": "docs/delivery/P1_M06_Review_Package.md",
+      "commit": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+      "sha256": "cd758cb225a0de0ebb6ecbca1a8edccef940eaca16fd7e6df04432d688d28bf1",
+      "bytes": 18522
+    },
+    {
+      "path": "docs/delivery/P1_M26_Review_Package.md",
+      "commit": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+      "sha256": "e25617616ca495f083757b37ad4acf27479b5451f4afea800f5cf9e67891589d",
+      "bytes": 16784
+    },
+    {
+      "path": "docs/delivery/P1_M18_Review_Package.md",
+      "commit": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+      "sha256": "4acb334fb052650cc334ce003ee021ba15209de3c778dc2dc90c5070943ce985",
+      "bytes": 18131
+    },
+    {
+      "path": "docs/delivery/P1_M17_Review_Package.md",
+      "commit": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+      "sha256": "2952230007ac109a141c83efae82f9776b915c872fbae15d54d7c0b5e8e1a819",
+      "bytes": 20296
+    },
+    {
+      "path": "docs/delivery/P1_M03_Review_Package.md",
+      "commit": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+      "sha256": "c6b3039fabe99f052f948f5e1d396ca9fb14b2a898a43d8ae86a18547daab3fd",
+      "bytes": 20802
+    },
+    {
+      "path": "docs/delivery/r2-p2/M37_Design.md",
+      "commit": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+      "sha256": "48a57f9576e6cbe4dcc981cc903568fc00653adf0dbf23eedbd889fd70034bfa",
+      "bytes": 9430
+    },
+    {
+      "path": "docs/delivery/r2-p2/M06_Design.md",
+      "commit": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+      "sha256": "0a0754960d55f04659532ae9c70547d926a416b1062be82e095269e866e74fb7",
+      "bytes": 10864
+    },
+    {
+      "path": "docs/delivery/r2-p2/M26_Design.md",
+      "commit": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+      "sha256": "56936339e5e94fd82a6733538a8a52e5a134a2bf2f8cdb79a59c4b16d7475245",
+      "bytes": 11918
+    },
+    {
+      "path": "docs/delivery/r2-p2/M18_Design.md",
+      "commit": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+      "sha256": "d0630483bf662105fcd0f09848eb92805bb6efe5a08f73c545d2afef75054bbe",
+      "bytes": 10129
+    },
+    {
+      "path": "docs/delivery/r2-p2/M17_Design.md",
+      "commit": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+      "sha256": "effd0e1dfccaec6e718af267f0a6d391189e0e8d0a8e60c7bbc5f41190debdbb",
+      "bytes": 14151
+    },
+    {
+      "path": "docs/delivery/r2-p2/M03_Design.md",
+      "commit": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+      "sha256": "7d275ccbf5149c7fce77f81946151d6d8594034de01bed4912a91c758b28d1ca",
+      "bytes": 14023
+    },
+    {
+      "path": "docs/delivery/r2-p2/Limit_Resolution.json",
+      "commit": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+      "sha256": "55f1c3f4e989f887f026f115c9e9a3b0dc209b08018b425c17bc9929dd056175",
+      "bytes": 44910
+    },
+    {
+      "path": "docs/delivery/r2-p2/Original_Limits.json",
+      "commit": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+      "sha256": "e78a0537a8c17f9a3c5346450cf834eb6f91754a1ea4b1994995e6e9d072290a",
+      "bytes": 10303
+    },
+    {
+      "path": "docs/delivery/r2-p2/Repair_Record.json",
+      "commit": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+      "sha256": "f45716a5b4ac37239d52030176219e1cc1c0bfe135f82619d12e301fdf4bbb9d",
+      "bytes": 3966
+    },
+    {
+      "path": "docs/delivery/r2-p2/Contract_Repair.md",
+      "commit": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+      "sha256": "5db857bdb89acc34abd65c9ad0fb13c2d2343dc54d51e8d544ec58ef63391bb7",
+      "bytes": 9268
+    },
+    {
+      "path": "docs/delivery/r2-p2/Anonymity_Repair.md",
+      "commit": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+      "sha256": "497a0b9be6c7a1ac9a941e7c8de4a6268d84f27650b3fdd75b2b4f219707176f",
+      "bytes": 8719
+    },
+    {
+      "path": "docs/delivery/r2-p2/Anonymity_Cases.json",
+      "commit": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+      "sha256": "c4c527937c83af771a05c3c3e0d3f50bc96f6a976b38bceba3ba30b44df45ebb",
+      "bytes": 27561
+    },
+    {
+      "path": "docs/delivery/r2-p2/P3_Work_Packages.json",
+      "commit": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+      "sha256": "261d41322b8b869c10419fb358235785892c357f02b1c95d9143ae56f2bd6d7e",
+      "bytes": 102429
+    },
+    {
+      "path": "docs/delivery/r2-p2/Acceptance_Scenarios.json",
+      "commit": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+      "sha256": "b0e68204a69aaefd67f32ff22dd9b3f194fab62b28fe8265f3b5354295867c4e",
+      "bytes": 155770
+    },
+    {
+      "path": "docs/delivery/r2-p2/Task_Dependencies.json",
+      "commit": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
+      "sha256": "49d7a41ad3a811e5de5863db53cef5bce2e629704e16640586fbc0d9ca90b976",
+      "bytes": 73842
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Independent_Recheck.md",
+      "commit": "077e0dc7f37529b9585f030fb1c8460f4c884cd1",
+      "sha256": "db91ddcbae922aa69d8024e863a732a88f11a78fce122e846f7470ac7a988c2f",
+      "bytes": 9019
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Recheck_Findings.json",
+      "commit": "077e0dc7f37529b9585f030fb1c8460f4c884cd1",
+      "sha256": "6af062a2cc5a817fa50f32a233b53eea65b6e48b677dd3fb9e0c4f495faa9eb0",
+      "bytes": 9226
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Recheck_P3_Baseline.md",
+      "commit": "077e0dc7f37529b9585f030fb1c8460f4c884cd1",
+      "sha256": "fdf23d1cb9fc42b7a7425b07cb17862563fa69d18b8fa29fdafb154221f8aab8",
+      "bytes": 4349
+    }
+  ],
+  "readMethod": "fixed git objects; human-readable six P1 baselines/designs and semantic summaries of JSON",
+  "purpose": "source verification only; not product tests"
+}

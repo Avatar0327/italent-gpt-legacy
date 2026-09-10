@@ -1,0 +1,6 @@
+{
+  "at": "2026-09-10T10:50:43.344Z",
+  "tab": "7",
+  "origin": "https://srworkshopbj.italent.cn",
+  "actual": "- iframe [active] [id=\"popup_1789037336558618\"]:\n  - generic: 新增\n  - generic: \n  - generic: 指标名称\n  - generic: ZZ_R2_R2-ORIGIN-20260910-103952_M37_IND01\n  - textbox\n  - generic: \n  - generic: 指标编码\n  - generic: ZZ_R2_R2-ORIGIN-20260910-103952_M37_IND01\n  - textbox\n  - generic: \n  - generic: 首字符必须是字母，且只能包含字母数字下划线\n  - generic: 指标定义\n  - textbox\n  - generic: \"48\"\n  - generic: /500\n  - generic: 分类\n  - list:\n    - generic: 请搜索\n  - generic: \n  - generic: 指标顺序\n  - generic: \"1\"\n  - textbox\n  - generic: \n  - generic: 保存\n  - generic: 取消\n  - button \"取消\"\n  - button \"保存\"\n"
+}
