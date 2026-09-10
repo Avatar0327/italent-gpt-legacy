@@ -15,6 +15,18 @@ def write(name, value):
 run = read('run.json', {})
 observations = read('Observations.json', [])
 differences = read('Differences.json', [])
+assert len({x['id'] for x in observations}) == len(observations)
+assert len({x['id'] for x in differences}) == len(differences)
+allowed = {'MATCH', 'REQUIREMENT_GAP', 'DESIGN_GAP', 'IMPLEMENTATION_DEFECT', 'INTENTIONAL_DIFFERENCE', 'ROLE_BLOCKED', 'ENV_BLOCKED', 'NEED_OWNER_DECISION'}
+assert all(x['classification'] in allowed for x in observations + differences)
+
+for row in observations:
+    for ref in row.get('evidence', []):
+        assert (D / ref).is_file(), f'Missing evidence: {ref}'
+for row in differences:
+    for ref in row.get('evidence', []):
+        assert ref in {x['id'] for x in observations}, f'Missing observation: {ref}'
+
 write('R2_Original_Behavior_Matrix.json', {'runId': run['runId'], 'observations': observations, 'notProductTests': True})
 write('R2_Parity_Difference_Ledger.json', {'runId': run['runId'], 'differences': differences, 'counts': dict(Counter(x['classification'] for x in differences)), 'severityCounts': dict(Counter(x['severity'] for x in differences))})
 
@@ -29,8 +41,4 @@ lines = ['# R2 差异台账', '', '只统计下列实际登记项；零缺陷发
 for x in differences:
     lines.append('|' + '|'.join(cell(x.get(k, '')) for k in ['id', 'module', 'classification', 'severity', 'finding', 'disposition']) + '|')
 (D / 'R2_Parity_Difference_Ledger.md').write_text('\n'.join(lines) + '\n')
-assert len({x['id'] for x in observations}) == len(observations)
-assert len({x['id'] for x in differences}) == len(differences)
-allowed = {'MATCH', 'REQUIREMENT_GAP', 'DESIGN_GAP', 'IMPLEMENTATION_DEFECT', 'INTENTIONAL_DIFFERENCE', 'ROLE_BLOCKED', 'ENV_BLOCKED', 'NEED_OWNER_DECISION'}
-assert all(x['classification'] in allowed for x in observations + differences)
 print(json.dumps({'observations': len(observations), 'differences': len(differences), 'check': 'evidence_structure_only'}, ensure_ascii=False))

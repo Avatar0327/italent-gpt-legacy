@@ -1,0 +1,48 @@
+{
+  "kind": "evidence_structure_review_not_product_test",
+  "checkedAt": "2026-09-10T12:33:03.721642+00:00",
+  "requiredFiles": [
+    "Browser_Concurrency_Check.md",
+    "Original_Site_Data_Manifest.json",
+    "R2_Original_Behavior_Matrix.md",
+    "R2_Original_Behavior_Matrix.json",
+    "R2_Parity_Difference_Ledger.md",
+    "R2_Parity_Difference_Ledger.json",
+    "R2_P2_Change_Proposals.md",
+    "R2_P3_Entry_Evidence_Gate.md",
+    "R2_P4_Comparison_Cases.md",
+    "Resume.md"
+  ],
+  "requiredFilesPresent": true,
+  "jsonParse": true,
+  "sourceHashesVerified": 27,
+  "uniqueObservationIds": 19,
+  "observations": 19,
+  "differences": 8,
+  "created": 16,
+  "createdByModule": {
+    "M37": 7,
+    "M06": 2,
+    "PRE": 2,
+    "M18": 1,
+    "M17": 3,
+    "M03": 1
+  },
+  "classificationCounts": {
+    "INTENTIONAL_DIFFERENCE": 3,
+    "NEED_OWNER_DECISION": 2,
+    "DESIGN_GAP": 1,
+    "ENV_BLOCKED": 2
+  },
+  "severityCounts": {
+    "Blocker": 0,
+    "Observation": 5,
+    "Minor": 2,
+    "Major": 1
+  },
+  "fullModulesComplete": 0,
+  "approvedScenariosNotCompleted": 138,
+  "anonymousCasesNotRun": 16,
+  "onlyEvidenceDirectoryChanged": true,
+  "noSourceSignatureOrNonSyntheticEmailInCaptures": true
+}

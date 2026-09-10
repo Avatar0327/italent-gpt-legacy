@@ -6,5 +6,15 @@
   "mainHead": "22be3a7e366d6787180d4f593a30f5984c70e03a",
   "designContentHead": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
   "designPackageHead": "a7a23d6bff024f4660fd14b0c22f47a6d40d928f",
-  "reviewHead": "077e0dc7f37529b9585f030fb1c8460f4c884cd1"
+  "reviewHead": "077e0dc7f37529b9585f030fb1c8460f4c884cd1",
+  "checkpointAt": "2026-09-10T12:32:28.158443+00:00",
+  "status": "paused_at_actual_M26_naming_block_after_independent_module_progress",
+  "fullModulesComplete": 0,
+  "modulesObserved": 6,
+  "confirmedCreated": 16,
+  "observationCount": 19,
+  "differenceCount": 8,
+  "originEvidenceGate": "NOT_SATISFIED",
+  "productTestsExecuted": 0,
+  "p4UatExecuted": 0
 }
