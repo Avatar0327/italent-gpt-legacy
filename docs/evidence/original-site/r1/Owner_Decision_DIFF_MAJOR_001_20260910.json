@@ -1,0 +1,20 @@
+{
+  "decisionId": "OWNER-DIFF-MAJOR-001-20260910",
+  "runId": "R1-ORIGIN-20260910-100019",
+  "authority": "项目所有者本轮用户消息",
+  "basisHead": "5aa78e420db1e6df498f3f5101e18af10047d427",
+  "recordedAt": "2026-09-10T15:21:00Z",
+  "classification": "INTENTIONAL_DIFFERENCE",
+  "decision": [
+    "原站管理员直接调动、保存即生效登记为有意差异",
+    "保持已经批准的D1–D7",
+    "调动审批与生效分离",
+    "调出方、调入方顺序确认",
+    "最终由授权HR执行",
+    "不复制原站管理员直接即时生效路径",
+    "不将该原站差异认定为R1 P3实现缺陷"
+  ],
+  "scope": "仅直接调动路径；不扩展授权到其他原站行为",
+  "p3ExitApproved": false,
+  "p4Started": false
+}

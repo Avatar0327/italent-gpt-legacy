@@ -5,7 +5,7 @@
   "createdRecords": 10,
   "createdRecordsDefinition": "3组织+2职位+2员工+2申请+1未来离职任职；不计自动关联重复",
   "smokeNamedObjectsThresholdReached": true,
-  "continuationInProgress": false,
+  "continuationInProgress": true,
   "bulkImportedRows": 0,
   "modules": [
     {
@@ -81,6 +81,10 @@
     "未来退出/再入职需实际日期与状态前置"
   ],
   "otherUnexecutedWorkNotEquivalentToBlocker": true,
-  "workflowStatus": "checkpoint_saved_incomplete_no_phase_approval",
-  "remainingWorkMayContinue": true
+  "workflowStatus": "continuing_currently_executable_cases",
+  "remainingWorkMayContinue": true,
+  "activeMajor": 0,
+  "historicalMajor": 1,
+  "intentionalDifferences": 1,
+  "ownerDecision": "Owner_Decision_DIFF_MAJOR_001_20260910.json"
 }

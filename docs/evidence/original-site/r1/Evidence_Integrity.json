@@ -2,8 +2,8 @@
   "files": [
     {
       "path": "ALERT-MAJOR-001.md",
-      "bytes": 2665,
-      "sha256": "9bf4174b9a429608ee2e8babcb7cf9990c9e97dbf450ca8c5e84e3689879611d"
+      "bytes": 3320,
+      "sha256": "daba2e42625cd3406f16336d15e25c515005ebf66f892976cbaeef0470a8699b"
     },
     {
       "path": "Browser_Concurrency_Check.md",
@@ -44,6 +44,11 @@
       "path": "Original_Site_Test_Plan.md",
       "bytes": 3302,
       "sha256": "740ba97a55fcc49ffbc588d690fc250b1d198fd325067d0e307550645dfd75ae"
+    },
+    {
+      "path": "Owner_Decision_DIFF_MAJOR_001_20260910.json",
+      "bytes": 761,
+      "sha256": "6226fec7dba2324b568f00f7d50b930a0bbbc92ecacb873193bb58dd719fc43f"
     },
     {
       "path": "P3_Source_Delta_Check.json",
@@ -342,18 +347,18 @@
     },
     {
       "path": "R1_Original_Behavior_Matrix.json",
-      "bytes": 133142,
-      "sha256": "3177cb020787e59e499b16d96bd16b90c2db4e7ef18ec229a05cbc69fcf305fb"
+      "bytes": 133484,
+      "sha256": "cb1cb387dfff65ea76f6a6dc8a069a0d53272feffdc3abc37ac35a3ee3402bed"
     },
     {
       "path": "R1_Original_Behavior_Matrix.md",
-      "bytes": 18930,
-      "sha256": "0c4ba79f343419bbc75c0dfa9fffd9bee05d036883ca038d860009e870190dfe"
+      "bytes": 18985,
+      "sha256": "802da981ec40de9b6e235508d589e34acdb767736dadf4a5b1ba683692b79d07"
     },
     {
       "path": "R1_P3_Evidence_Feedback.md",
-      "bytes": 7539,
-      "sha256": "b2951b60fb0879ca3473342503e8d1b3ede596b6e03a96cacf406c3939355504"
+      "bytes": 8194,
+      "sha256": "d0d21be5e682ec8fd1de0b42541c29bcef959d12512423cd562cf081e441fed1"
     },
     {
       "path": "R1_P4_Comparison_Cases.md",
@@ -362,13 +367,13 @@
     },
     {
       "path": "R1_Parity_Difference_Ledger.json",
-      "bytes": 16829,
-      "sha256": "13365801c305119fbb256c6f01087893d98f61586fc53559164b31d30ba9fd8a"
+      "bytes": 17254,
+      "sha256": "ebf8cfe44c009acd487d154e5d70f085e1eaff685a7f8a5b1badf7a50f0aa3e2"
     },
     {
       "path": "R1_Parity_Difference_Ledger.md",
-      "bytes": 9381,
-      "sha256": "1a120626ff444c2bf156b5a50ef64993825c0456b82468fd6799d790bb0cfa84"
+      "bytes": 9422,
+      "sha256": "1058d54ab06a766b7cddd28e3cc55f7df6b02b7c42f111b3a8cca3d8c14d210e"
     },
     {
       "path": "Repository_Source_Manifest.json",
@@ -377,13 +382,13 @@
     },
     {
       "path": "Resume.md",
-      "bytes": 5718,
-      "sha256": "33bbf509c49f1e5af5a9385c41e2f60192ec577d41ebaed06b91ffb097810535"
+      "bytes": 6373,
+      "sha256": "009f1414ea2aa1d5c208551d8721bd6012b03427f7fba0912fed824c95260529"
     },
     {
       "path": "Run_Status.json",
-      "bytes": 2537,
-      "sha256": "941e65a80981ee88c73910247b09c6ab2ca086abc15bc40a005df85e6643ce14"
+      "bytes": 2669,
+      "sha256": "16c11c6939609036ada6a058ba9365ea570dd98f740f92921153f1cbf744a020"
     },
     {
       "path": "run.json",
@@ -400,5 +405,6 @@
     "manifestRecords": 10,
     "scope": "same RUN evidence; source paths exist at referenced SHAs; no product tests run",
     "details": "Continuation_Validation.json"
-  }
+  },
+  "ownerDecisionRegistered": true
 }

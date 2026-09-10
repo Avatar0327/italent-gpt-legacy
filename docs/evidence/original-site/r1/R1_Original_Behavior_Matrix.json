@@ -356,10 +356,10 @@
         ],
         "evidenceMode": "静态源码/既有测试映射；本窗口未运行复刻UI或测试"
       },
-      "classification": "NEED_OWNER_DECISION",
-      "severity": "Major",
+      "classification": null,
+      "severity": "Observation",
       "timePrecision": "server_minute_no_seconds",
-      "ledgerId": "DIFF-MAJOR-001"
+      "dispositionScope": "原站申请路线和撤回为独立观察；直接调动所有者决定不覆盖完整撤回重提语义，D1–D7不变。"
     },
     {
       "caseId": "M19-RECALL-001",
@@ -413,10 +413,10 @@
         ],
         "evidenceMode": "静态源码/既有测试映射；本窗口未运行复刻UI或测试"
       },
-      "classification": "NEED_OWNER_DECISION",
-      "severity": "Major",
+      "classification": null,
+      "severity": "Observation",
       "timePrecision": "server_minute_no_seconds",
-      "ledgerId": "DIFF-MAJOR-001"
+      "dispositionScope": "原站申请路线和撤回为独立观察；直接调动所有者决定不覆盖完整撤回重提语义，D1–D7不变。"
     },
     {
       "caseId": "M48-ADMIN-STATE-001",
@@ -977,7 +977,8 @@
         "7b820015-586c-48a4-9496-64f2c4e1ffad"
       ],
       "evidence": [
-        "R1-ORIGIN-20260910-100019/M01/M01-TRANSFER-001.json"
+        "R1-ORIGIN-20260910-100019/M01/M01-TRANSFER-001.json",
+        "Owner_Decision_DIFF_MAJOR_001_20260910.json"
       ],
       "screenshot": null,
       "screenshotLimitation": "局部截图超时不阻塞；本条采用结构化DOM/字段值/ID",
@@ -1003,8 +1004,9 @@
         ],
         "evidenceMode": "静态源码对照；未复刻UI实测或本窗口重跑"
       },
-      "classification": "NEED_OWNER_DECISION",
-      "severity": "Major"
+      "classification": "INTENTIONAL_DIFFERENCE",
+      "severity": "Major",
+      "ownerDecision": "Owner_Decision_DIFF_MAJOR_001_20260910.json"
     },
     {
       "caseId": "M01-ORG-001",
