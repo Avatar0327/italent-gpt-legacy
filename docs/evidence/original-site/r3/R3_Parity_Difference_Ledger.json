@@ -18,7 +18,17 @@
       "target_phase": "P2设计冻结前",
       "proposal": "课程五种成绩模式不能直接替换已批准考试LAST有效尝试。模型拆开examFinalRule与courseAggregationRule，缺考/未发布不作0。",
       "decision": null,
-      "p4_evidence": null
+      "p4_evidence": null,
+      "source_evidence_ids": [
+        "M27-ORIGIN-005"
+      ],
+      "approved_requirement_ids": [
+        "M27-SPEC-03"
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "remaining_origin_evidence": "五种聚合实际结果与考试LAST分层未执行",
+      "p2_input_stage": "备存；原站完整退出前不启动P2",
+      "comparison_case_id": "R3-P4-DIFF-001"
     },
     {
       "id": "R3-DIFF-002",
@@ -36,14 +46,24 @@
       "target_phase": "P2设计冻结前",
       "proposal": "设计学习首次开始锁点、拒绝修改反馈与新版本路径；后续实际学员测试确认。",
       "decision": null,
-      "p4_evidence": null
+      "p4_evidence": null,
+      "source_evidence_ids": [
+        "M27-ORIGIN-004"
+      ],
+      "approved_requirement_ids": [
+        "M27-SPEC-02"
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "remaining_origin_evidence": "首次学习后的拒改及历史版本未执行",
+      "p2_input_stage": "备存；原站完整退出前不启动P2",
+      "comparison_case_id": "R3-P4-DIFF-002"
     },
     {
       "id": "R3-DIFF-003",
       "severity": "Major",
       "module": "M27",
       "title": "管理共享、学员公开、可学授权分别建模",
-      "source_evidence": "M27-ORIGIN-006;007",
+      "source_evidence": "M27-ORIGIN-006;M27-ORIGIN-007",
       "approved_requirement": "M27-SPEC-01",
       "design_sha": null,
       "implementation_sha": null,
@@ -54,14 +74,25 @@
       "target_phase": "P2设计冻结前",
       "proposal": "三条权限轴不能合成一个visible；安全默认不公开属于拟议有意差异，须需求/设计批准。",
       "decision": null,
-      "p4_evidence": null
+      "p4_evidence": null,
+      "source_evidence_ids": [
+        "M27-ORIGIN-006",
+        "M27-ORIGIN-007"
+      ],
+      "approved_requirement_ids": [
+        "M27-SPEC-01"
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "remaining_origin_evidence": "独立管理员/学员/主管的可见、使用和编辑权限未执行",
+      "p2_input_stage": "备存；原站完整退出前不启动P2",
+      "comparison_case_id": "R3-P4-DIFF-003"
     },
     {
       "id": "R3-DIFF-004",
       "severity": "Major",
       "module": "M27",
       "title": "导入预览与正式入库分离",
-      "source_evidence": "M27-ORIGIN-010;012",
+      "source_evidence": "M27-ORIGIN-010;M27-ORIGIN-012",
       "approved_requirement": "M27-SPEC-06",
       "design_sha": null,
       "implementation_sha": null,
@@ -72,7 +103,18 @@
       "target_phase": "P2设计冻结前",
       "proposal": "保留导入作业ID、行状态、生成ID、确认提交和最终结果；未知结果须回查防重复。5000是原站页提示上限，尚非极限实测。",
       "decision": null,
-      "p4_evidence": null
+      "p4_evidence": null,
+      "source_evidence_ids": [
+        "M27-ORIGIN-010",
+        "M27-ORIGIN-012"
+      ],
+      "approved_requirement_ids": [
+        "M27-SPEC-06"
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "remaining_origin_evidence": "预览确认有证据；错误行、重复提交、未知结果恢复及批量边界未全测",
+      "p2_input_stage": "备存；原站完整退出前不启动P2",
+      "comparison_case_id": "R3-P4-DIFF-004"
     },
     {
       "id": "R3-DIFF-005",
@@ -90,14 +132,24 @@
       "target_phase": "P2设计冻结前",
       "proposal": "复刻导出须按使用者权限裁剪参考页与个人字段；有意收紧须明确批准，不能复制本轮下载里的原有记录。",
       "decision": null,
-      "p4_evidence": null
+      "p4_evidence": null,
+      "source_evidence_ids": [
+        "M27-ORIGIN-011"
+      ],
+      "approved_requirement_ids": [
+        "M27-SPEC-01"
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "remaining_origin_evidence": "参考页存在已有文件结构证据；不同权限下载与防泄漏闭环未验证",
+      "p2_input_stage": "备存；原站完整退出前不启动P2",
+      "comparison_case_id": "R3-P4-DIFF-005"
     },
     {
       "id": "R3-DIFF-006",
       "severity": "Minor",
       "module": "M27",
       "title": "时长零值与封顶规则",
-      "source_evidence": "M27-ORIGIN-003;016",
+      "source_evidence": "M27-ORIGIN-003;M27-ORIGIN-016",
       "approved_requirement": "M27-SPEC-04",
       "design_sha": null,
       "implementation_sha": null,
@@ -108,14 +160,25 @@
       "target_phase": "P2设计冻结前",
       "proposal": "0时长已实际保存为0.0，不能当缺省。0不计学习时长与正数封顶仍需合成学员执行，不将帮助文字或保存成功代替计时验证。",
       "decision": null,
-      "p4_evidence": null
+      "p4_evidence": null,
+      "source_evidence_ids": [
+        "M27-ORIGIN-003",
+        "M27-ORIGIN-016"
+      ],
+      "approved_requirement_ids": [
+        "M27-SPEC-04"
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "remaining_origin_evidence": "0保存已回读；1分钟最终持久值和学员计时封顶未验证",
+      "p2_input_stage": "备存；原站完整退出前不启动P2",
+      "comparison_case_id": "R3-P4-DIFF-006"
     },
     {
       "id": "R3-DIFF-007",
       "severity": "Minor",
       "module": "M27",
       "title": "允许空内容课程草稿",
-      "source_evidence": "M27-ORIGIN-009;013;018;M27-ORIGIN-019",
+      "source_evidence": "M27-ORIGIN-009;M27-ORIGIN-013;M27-ORIGIN-018;M27-ORIGIN-019",
       "approved_requirement": "M27-SPEC-01",
       "design_sha": null,
       "implementation_sha": null,
@@ -127,14 +190,27 @@
       "proposal": "区分草稿保存与发布校验。空草稿允许保存、空章节拒绝发布、有本轮文档后私有课程可发布均有原站证据。",
       "decision": null,
       "p4_evidence": null,
-      "latest_evidence": "空稿/空内容拒绝、含PDF关闭通知私有发布、下架状态均有证据；失效不是已验证的同义状态。"
+      "latest_evidence": "空稿/空内容拒绝、含PDF关闭通知私有发布、下架状态均有证据；失效不是已验证的同义状态。",
+      "source_evidence_ids": [
+        "M27-ORIGIN-009",
+        "M27-ORIGIN-013",
+        "M27-ORIGIN-018",
+        "M27-ORIGIN-019"
+      ],
+      "approved_requirement_ids": [
+        "M27-SPEC-01"
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "remaining_origin_evidence": "空稿、空内容拒绝、发布及下架有证据；失效状态与重复提交未闭合",
+      "p2_input_stage": "备存；原站完整退出前不启动P2",
+      "comparison_case_id": "R3-P4-DIFF-007"
     },
     {
       "id": "R3-DIFF-008",
       "severity": "Major",
       "module": "M16",
       "title": "活动日期、参与人和锁定考核关系分层",
-      "source_evidence": "M16-ORIGIN-001;002;003;M16-ORIGIN-004;M16-ORIGIN-005",
+      "source_evidence": "M16-ORIGIN-001;M16-ORIGIN-002;M16-ORIGIN-003;M16-ORIGIN-004;M16-ORIGIN-005",
       "approved_requirement": "M16-SPEC-01",
       "design_sha": null,
       "implementation_sha": null,
@@ -146,14 +222,28 @@
       "proposal": "周期可自动填日期，但活动保存可无参与人；应分别建活动、被考核人任职上下文、考核关系锁和评价窗口，不能由活动已保存推断已开始评价。",
       "decision": null,
       "p4_evidence": null,
-      "latest_evidence": "空活动可以保存；六项人员级动作拒绝空选择，等级生成另有考核组前置。"
+      "latest_evidence": "空活动可以保存；六项人员级动作拒绝空选择，等级生成另有考核组前置。",
+      "source_evidence_ids": [
+        "M16-ORIGIN-001",
+        "M16-ORIGIN-002",
+        "M16-ORIGIN-003",
+        "M16-ORIGIN-004",
+        "M16-ORIGIN-005"
+      ],
+      "approved_requirement_ids": [
+        "M16-SPEC-01"
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "remaining_origin_evidence": "空范围七项校验已有；有人员关系锁与评价窗口未验证",
+      "p2_input_stage": "备存；原站完整退出前不启动P2",
+      "comparison_case_id": "R3-P4-DIFF-008"
     },
     {
       "id": "R3-DIFF-009",
       "severity": "Major",
       "module": "M12",
       "title": "候选人主档与私有库共享、AI用途分离",
-      "source_evidence": "M12-ORIGIN-001;002;003",
+      "source_evidence": "M12-ORIGIN-001;M12-ORIGIN-002;M12-ORIGIN-003",
       "approved_requirement": "M12-SPEC-01; M12-SPEC-06",
       "design_sha": null,
       "implementation_sha": null,
@@ -164,14 +254,27 @@
       "target_phase": "P2设计冻结前",
       "proposal": "导入目标库是独立业务关系；保留共享部门/共享人和AI推荐独立许可。创建个人库默认未分享且AI关闭，身份去重不得扩大用途。",
       "decision": null,
-      "p4_evidence": null
+      "p4_evidence": null,
+      "source_evidence_ids": [
+        "M12-ORIGIN-001",
+        "M12-ORIGIN-002",
+        "M12-ORIGIN-003"
+      ],
+      "approved_requirement_ids": [
+        "M12-SPEC-01",
+        "M12-SPEC-06"
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "remaining_origin_evidence": "私有库/候选人已有；主档、共享和AI用途多角色隔离未运行",
+      "p2_input_stage": "备存；原站完整退出前不启动P2",
+      "comparison_case_id": "R3-P4-DIFF-009"
     },
     {
       "id": "R3-DIFF-010",
       "severity": "Major",
       "module": "M11",
       "title": "班次版本与已排班快照不能自动覆盖",
-      "source_evidence": "M11-ORIGIN-001;002;003;004;005;M11-ORIGIN-006;M11-ORIGIN-007;M11-ORIGIN-008",
+      "source_evidence": "M11-ORIGIN-001;M11-ORIGIN-002;M11-ORIGIN-003;M11-ORIGIN-004;M11-ORIGIN-005;M11-ORIGIN-006;M11-ORIGIN-007;M11-ORIGIN-008",
       "approved_requirement": "M11-SPEC-01",
       "design_sha": null,
       "implementation_sha": null,
@@ -182,14 +285,31 @@
       "target_phase": "P2设计冻结前",
       "proposal": "区分班次修改触发当前考勤期间重算、安排加班修改需重新排班、停用仅限制后续选择、有效档案引用停用拒绝。不能笼统设计为历史永不变化或全量同步；坐班制限制按原文纠正。实际有引用重算及历史边界待合成员工。",
       "decision": null,
-      "p4_evidence": null
+      "p4_evidence": null,
+      "source_evidence_ids": [
+        "M11-ORIGIN-001",
+        "M11-ORIGIN-002",
+        "M11-ORIGIN-003",
+        "M11-ORIGIN-004",
+        "M11-ORIGIN-005",
+        "M11-ORIGIN-006",
+        "M11-ORIGIN-007",
+        "M11-ORIGIN-008"
+      ],
+      "approved_requirement_ids": [
+        "M11-SPEC-01"
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "remaining_origin_evidence": "无引用修改/停启有证据；有引用重算、月末历史和坐班制拒绝未执行",
+      "p2_input_stage": "备存；原站完整退出前不启动P2",
+      "comparison_case_id": "R3-P4-DIFF-010"
     },
     {
       "id": "R3-DIFF-011",
       "severity": "Major",
       "module": "M07",
       "title": "月中调动核算与外部算税分别配置",
-      "source_evidence": "M07-ORIGIN-001;002;003;M07-ORIGIN-005;M07-ORIGIN-006;M07-ORIGIN-007;M07-ORIGIN-008",
+      "source_evidence": "M07-ORIGIN-001;M07-ORIGIN-002;M07-ORIGIN-003;M07-ORIGIN-005;M07-ORIGIN-006;M07-ORIGIN-007;M07-ORIGIN-008",
       "approved_requirement": "M07-SPEC-01; M07-SPEC-02; M07-SPEC-03",
       "design_sha": null,
       "implementation_sha": null,
@@ -201,7 +321,25 @@
       "proposal": "薪资组部门范围、方案编辑/使用权限、月中调动核算、结果来源和税款所属期独立建模。原站个税通算税默认是，不能直接复制为本项目默认外部调用；内部模拟与外部服务须明确隔离、操作前回读有效开关。适用组选择器无R3匹配原因仍待查，不得改选原组。",
       "decision": null,
       "p4_evidence": null,
-      "latest_evidence": "PLAN01草稿个税通已回读否、周期月；未保存。取消未确认，当前输入通道超时。默认原为是仍成立；无算税、支付或申报。"
+      "latest_evidence": "PLAN01草稿个税通已回读否、周期月；未保存。取消未确认，当前输入通道超时。默认原为是仍成立；无算税、支付或申报。",
+      "source_evidence_ids": [
+        "M07-ORIGIN-001",
+        "M07-ORIGIN-002",
+        "M07-ORIGIN-003",
+        "M07-ORIGIN-005",
+        "M07-ORIGIN-006",
+        "M07-ORIGIN-007",
+        "M07-ORIGIN-008"
+      ],
+      "approved_requirement_ids": [
+        "M07-SPEC-01",
+        "M07-SPEC-02",
+        "M07-SPEC-03"
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "remaining_origin_evidence": "仅草稿结构/算税否；适用组缺失原因、保存方案与内部核算未验证",
+      "p2_input_stage": "备存；原站完整退出前不启动P2",
+      "comparison_case_id": "R3-P4-DIFF-011"
     },
     {
       "id": "R3-DIFF-012",
@@ -219,14 +357,24 @@
       "target_phase": "P2设计冻结前",
       "proposal": "上传10份后需确认入库并按库和姓名逐条回查。保留文件哈希、解析任务、实际字段、失败/未知行；500文件与50M为页面提示，尚未上限实测。",
       "decision": null,
-      "p4_evidence": null
+      "p4_evidence": null,
+      "source_evidence_ids": [
+        "M12-ORIGIN-003"
+      ],
+      "approved_requirement_ids": [
+        "M12-SPEC-06"
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "remaining_origin_evidence": "10条已导入回读；错误/异步逐行结果及重试边界未全测",
+      "p2_input_stage": "备存；原站完整退出前不启动P2",
+      "comparison_case_id": "R3-P4-DIFF-012"
     },
     {
       "id": "R3-DIFF-013",
       "severity": "Major",
       "module": "M12",
       "title": "疑似关系、取消判定和计数刷新分层",
-      "source_evidence": "M12-ORIGIN-004;005",
+      "source_evidence": "M12-ORIGIN-004;M12-ORIGIN-005",
       "approved_requirement": "M12-SPEC-01; M12-SPEC-06",
       "design_sha": null,
       "implementation_sha": null,
@@ -237,14 +385,26 @@
       "target_phase": "P2设计冻结前",
       "proposal": "区分候选人身份、疑似对、人工排除关系和合并操作；不同邮箱不能直接视为无疑似。取消需明确确认和权限、留痕及计数刷新；84%仅为本轮一对观测，不能硬编码为阈值。",
       "decision": null,
-      "p4_evidence": null
+      "p4_evidence": null,
+      "source_evidence_ids": [
+        "M12-ORIGIN-004",
+        "M12-ORIGIN-005"
+      ],
+      "approved_requirement_ids": [
+        "M12-SPEC-01",
+        "M12-SPEC-06"
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "remaining_origin_evidence": "疑似关系取消后面板9到8已有；重新加载持久性及计数刷新未闭合",
+      "p2_input_stage": "备存；原站完整退出前不启动P2",
+      "comparison_case_id": "R3-P4-DIFF-013"
     },
     {
       "id": "R3-DIFF-014",
       "severity": "Major",
       "module": "M27",
       "title": "发布动作与通知任务必须分离",
-      "source_evidence": "M27-ORIGIN-017;018",
+      "source_evidence": "M27-ORIGIN-017;M27-ORIGIN-018",
       "approved_requirement": "M27-SPEC-01",
       "design_sha": null,
       "implementation_sha": null,
@@ -255,14 +415,25 @@
       "target_phase": "P2设计冻结前",
       "proposal": "发布状态、学员可学范围与通知任务分别建模；明确通知开关、收件范围、预览和发送状态。默认关闭属于本次观测，不可承诺所有场景都默认关闭；禁止仅凭私有课程推断无消息副作用。",
       "decision": null,
-      "p4_evidence": null
+      "p4_evidence": null,
+      "source_evidence_ids": [
+        "M27-ORIGIN-017",
+        "M27-ORIGIN-018"
+      ],
+      "approved_requirement_ids": [
+        "M27-SPEC-01"
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "remaining_origin_evidence": "通知关闭私有发布有证据；通知任务副作用与角色范围未验证",
+      "p2_input_stage": "备存；原站完整退出前不启动P2",
+      "comparison_case_id": "R3-P4-DIFF-014"
     },
     {
       "id": "R3-DIFF-015",
       "severity": "Major",
       "module": "M12",
       "title": "待入职保存隐含经理与信息采集副作用",
-      "source_evidence": "BASE-ORIGIN-002;003;004;BASE-ORIGIN-005",
+      "source_evidence": "BASE-ORIGIN-002;BASE-ORIGIN-003;BASE-ORIGIN-004;BASE-ORIGIN-005",
       "approved_requirement": "M12-SPEC-05; M12-SPEC-06",
       "design_sha": null,
       "implementation_sha": null,
@@ -274,7 +445,21 @@
       "proposal": "设计保存前应展示有效经理关系及其来源（本轮带入来源未查明）、有效选择值、消息任务及收件范围，并在保存后回读；input.value为空不可作为自定义选择器未绑定的证据。分开待入职主档、在职员工建立、采集通知、入职申请及角色指派。测试模式必须能禁用自动通知并限定本轮人员，缺该控制时阻止后续申请，不改共享全局配置。",
       "decision": null,
       "p4_evidence": null,
-      "latest_evidence": "非R3关联纠正成功；已发送状态未复位、实际投递未知。候选仍待P2负责人裁决。"
+      "latest_evidence": "非R3关联纠正成功；已发送状态未复位、实际投递未知。候选仍待P2负责人裁决。",
+      "source_evidence_ids": [
+        "BASE-ORIGIN-002",
+        "BASE-ORIGIN-003",
+        "BASE-ORIGIN-004",
+        "BASE-ORIGIN-005"
+      ],
+      "approved_requirement_ids": [
+        "M12-SPEC-05",
+        "M12-SPEC-06"
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "remaining_origin_evidence": "待入职创建及经理纠正有证据；历史采集已发送实际投递未知、安全入职链未完成",
+      "p2_input_stage": "备存；原站完整退出前不启动P2",
+      "comparison_case_id": "R3-P4-DIFF-015"
     },
     {
       "id": "R3-DIFF-016",
@@ -292,7 +477,21 @@
       "target_phase": "P2设计冻结前",
       "proposal": "活动内方案编辑不能写回共享模板或影响后续活动；方案来源版本与活动配置应可追溯。等级生成以考核组为前置，区分人员算分、组分布校准和最终发布；本轮只验证空范围校验和页面作用域提示。",
       "decision": null,
-      "p4_evidence": null
+      "p4_evidence": null,
+      "source_evidence_ids": [
+        "M16-ORIGIN-005",
+        "M16-ORIGIN-006",
+        "M16-ORIGIN-007"
+      ],
+      "approved_requirement_ids": [
+        "M16-SPEC-01",
+        "M16-SPEC-03",
+        "M16-SPEC-04"
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "remaining_origin_evidence": "活动本地配置为页提示；真实模板版本隔离和有人员分布校准未执行",
+      "p2_input_stage": "备存；原站完整退出前不启动P2",
+      "comparison_case_id": "R3-P4-DIFF-016"
     }
   ]
 }

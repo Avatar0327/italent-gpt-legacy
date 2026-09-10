@@ -1,6 +1,6 @@
 # R3 当前执行阻塞
 
-2026-09-10T15:05:13.928972+00:00。003/004已解除，005为当前浏览器输入阻塞；001人员路径及002角色缺口不作为整轮停止原因。
+2026-09-10T15:41:44.091432+00:00。001/002仍在，005恢复未证实；003/004历史授权拒绝均已解除，本次不再索取相同授权。
 
 ## R3-EXEC-BLOCK-001
 
@@ -74,14 +74,41 @@
 ```json
 {
   "id": "R3-EXEC-BLOCK-005",
-  "status": "ENV_BLOCKED_INPUT_CHANNEL",
+  "status": "ENV_BLOCKED_RECOVERY_UNCONFIRMED",
   "scope": "当前所选浏览器的交互输入；M07/M27/M16三张R3独立页面均出现输入超时，读取仍可用",
   "observed": "M07草稿取消：首次get tabs超时，回读仍可见后一次受控重试Runtime.evaluate超时；M27自有课程编辑及M16分布规则点击均超时；M16新截图确认按钮可见无遮挡，同一浏览器支持的CUA点击亦Input.dispatchMouseEvent超时。",
   "action_readback": "M16仍原零人员活动，未进入分布规则；M07草稿iframe仍visible=true、zIndex10000，不能记取消成功；M27最后已下架。",
   "not_observed": "未出现自动审批新拒绝、登录失效、真实串页、数据丢失或站点反自动化提示，不据超时推定这些故障。",
   "owner_role": "云浏览器运行环境维护者/人工接管诊断（未确认承担）",
-  "resume_condition": "保留同一浏览器及R3数据；恢复可确认的UI输入后，先核对现有草稿/页面再继续，不再要求重复原站授权。",
+  "resume_condition": "由现有接管入口仅对R3薪资草稿执行可见取消并确认回到列表；恢复可确认UI输入后继续。无需再次原站授权。",
   "manual_handoff_next": "可向用户提供当前R3薪资草稿接管入口，正常取消后确认返回列表；字段已有记录，不涉及保存、核算或其他标签。",
-  "recorded_at": "2026-09-10T15:05:13.928972+00:00"
+  "recorded_at": "2026-09-10T15:05:13.928972+00:00",
+  "latest_check": {
+    "at": "2026-09-10T15:41:44.091432+00:00",
+    "existing_r3_tabs": [
+      5,
+      6,
+      8,
+      9,
+      10,
+      11
+    ],
+    "missing_previous_r3_query_tabs": [
+      13,
+      16
+    ],
+    "missing_reason": "unknown; no action by this turn",
+    "new_r3_control_tab": 20,
+    "origin": "https://srworkshopbj.italent.cn",
+    "login": "何份晓",
+    "health_action": "本轮M16活动点击考核方案一次",
+    "health_tool_result": "returned without error",
+    "health_independent_result": "方案iframe不存在；主区仍零人员列表，无可确认切换",
+    "health_passed": false,
+    "new_control_result": "新页首页加载并识别管理员；一次薪酬核算导航返回无错误，最终仍首页，未确认业务导航成功",
+    "draft": "PLAN01仍存在，月/否已只读复核，未点击取消或保存",
+    "other_windows_touched": false
+  },
+  "current_error": "本次检查未返回新超时错误；历史Runtime.evaluate/Input.dispatchMouseEvent超时仍记录。因状态未变化，恢复未证实。"
 }
 ```

@@ -1,0 +1,934 @@
+{
+  "run_id": "R3-ORIGIN-20260910-103900",
+  "recorded_at": "2026-09-10T15:41:44.091432+00:00",
+  "baseline_evidence_sha": "36f2c447a5509eeed8e1e4a4ae461d0ed8ebf0bd",
+  "observations_total": 53,
+  "source_anchors_resolved": 53,
+  "differences_total": 16,
+  "complete_business_evidence": false,
+  "warning": "53/53定位成立只表示引用可追溯，不表示53项业务已完整验证；全部16项仍有待补原站证据。",
+  "rows": [
+    {
+      "evidence_id": "M27-ORIGIN-001",
+      "source_ref": "Source_Observations.md#m27-origin-001",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M27-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "page_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": []
+    },
+    {
+      "evidence_id": "M27-ORIGIN-002",
+      "source_ref": "Source_Observations.md#m27-origin-002",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M27-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "page_help_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": []
+    },
+    {
+      "evidence_id": "M27-ORIGIN-003",
+      "source_ref": "Source_Observations.md#m27-origin-003",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M27-SPEC-04"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "page_help_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-006"
+      ]
+    },
+    {
+      "evidence_id": "M27-ORIGIN-004",
+      "source_ref": "Source_Observations.md#m27-origin-004",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M27-SPEC-02"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "page_help_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-002"
+      ]
+    },
+    {
+      "evidence_id": "M27-ORIGIN-005",
+      "source_ref": "Source_Observations.md#m27-origin-005",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M27-SPEC-03"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "page_options_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-001"
+      ]
+    },
+    {
+      "evidence_id": "M27-ORIGIN-006",
+      "source_ref": "Source_Observations.md#m27-origin-006",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M27-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "page_help_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-003"
+      ]
+    },
+    {
+      "evidence_id": "M27-ORIGIN-007",
+      "source_ref": "Source_Observations.md#m27-origin-007",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M27-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "default_and_form_change_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-003"
+      ]
+    },
+    {
+      "evidence_id": "M27-ORIGIN-008",
+      "source_ref": "Source_Observations.md#m27-origin-008",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M27-SPEC-05"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "page_options_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": []
+    },
+    {
+      "evidence_id": "M27-ORIGIN-009",
+      "source_ref": "Source_Observations.md#m27-origin-009",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M27-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "saved_record_readback",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-007"
+      ]
+    },
+    {
+      "evidence_id": "M27-ORIGIN-010",
+      "source_ref": "Source_Observations.md#m27-origin-010",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M27-SPEC-06"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "page_help_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-004"
+      ]
+    },
+    {
+      "evidence_id": "M27-ORIGIN-011",
+      "source_ref": "Source_Observations.md#m27-origin-011",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M27-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "download_structure_observed",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-005"
+      ]
+    },
+    {
+      "evidence_id": "M27-ORIGIN-012",
+      "source_ref": "Source_Observations.md#m27-origin-012",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M27-SPEC-06"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "import_preview_observed",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-004"
+      ]
+    },
+    {
+      "evidence_id": "M16-ORIGIN-001",
+      "source_ref": "Source_Observations.md#m16-origin-001",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M16-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "page_options_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-008"
+      ]
+    },
+    {
+      "evidence_id": "M16-ORIGIN-002",
+      "source_ref": "Source_Observations.md#m16-origin-002",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M16-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "form_change_readback",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-008"
+      ]
+    },
+    {
+      "evidence_id": "M16-ORIGIN-003",
+      "source_ref": "Source_Observations.md#m16-origin-003",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M16-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "saved_activity_detail_observed",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-008"
+      ]
+    },
+    {
+      "evidence_id": "BASE-ORIGIN-001",
+      "source_ref": "Source_Observations.md#base-origin-001",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M12-SPEC-05"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "validation_rejected",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": []
+    },
+    {
+      "evidence_id": "M12-ORIGIN-001",
+      "source_ref": "Source_Observations.md#m12-origin-001",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M12-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "page_options_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-009"
+      ]
+    },
+    {
+      "evidence_id": "M12-ORIGIN-002",
+      "source_ref": "Source_Observations.md#m12-origin-002",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M12-SPEC-06"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "saved_record_readback",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-009"
+      ]
+    },
+    {
+      "evidence_id": "M12-ORIGIN-003",
+      "source_ref": "Source_Observations.md#m12-origin-003",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M12-SPEC-06"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "ten_records_readback",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-009",
+        "R3-DIFF-012"
+      ]
+    },
+    {
+      "evidence_id": "M11-ORIGIN-001",
+      "source_ref": "Source_Observations.md#m11-origin-001",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M11-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "page_options_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-010"
+      ]
+    },
+    {
+      "evidence_id": "M11-ORIGIN-002",
+      "source_ref": "Source_Observations.md#m11-origin-002",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M11-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "form_change_observed",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-010"
+      ]
+    },
+    {
+      "evidence_id": "M11-ORIGIN-003",
+      "source_ref": "Source_Observations.md#m11-origin-003",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M11-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "saved_record_readback",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-010"
+      ]
+    },
+    {
+      "evidence_id": "M11-ORIGIN-004",
+      "source_ref": "Source_Observations.md#m11-origin-004",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M11-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "page_help_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-010"
+      ]
+    },
+    {
+      "evidence_id": "M11-ORIGIN-005",
+      "source_ref": "Source_Observations.md#m11-origin-005",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M11-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "page_help_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-010"
+      ]
+    },
+    {
+      "evidence_id": "M07-ORIGIN-001",
+      "source_ref": "Source_Observations.md#m07-origin-001",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M07-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "page_options_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-011"
+      ]
+    },
+    {
+      "evidence_id": "M07-ORIGIN-002",
+      "source_ref": "Source_Observations.md#m07-origin-002",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M07-SPEC-02",
+        "M07-SPEC-03"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "page_options_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-011"
+      ]
+    },
+    {
+      "evidence_id": "M07-ORIGIN-003",
+      "source_ref": "Source_Observations.md#m07-origin-003",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M07-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "form_selection_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-011"
+      ]
+    },
+    {
+      "evidence_id": "M07-ORIGIN-004",
+      "source_ref": "Source_Observations.md#m07-origin-004",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M07-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "validation_and_save_readback",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": []
+    },
+    {
+      "evidence_id": "M12-ORIGIN-004",
+      "source_ref": "Source_Observations.md#m12-origin-004",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M12-SPEC-01",
+        "M12-SPEC-06"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "comparison_panel_observed",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-013"
+      ]
+    },
+    {
+      "evidence_id": "M12-ORIGIN-005",
+      "source_ref": "Source_Observations.md#m12-origin-005",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M12-SPEC-01",
+        "M12-SPEC-06"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "action_confirmed_by_panel_readback",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-013"
+      ]
+    },
+    {
+      "evidence_id": "M12-ORIGIN-006",
+      "source_ref": "Source_Observations.md#m12-origin-006",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M12-SPEC-06"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "browser_preview_error_observed",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": []
+    },
+    {
+      "evidence_id": "M27-ORIGIN-013",
+      "source_ref": "Source_Observations.md#m27-origin-013",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M27-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "validation_rejected",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-007"
+      ]
+    },
+    {
+      "evidence_id": "M27-ORIGIN-014",
+      "source_ref": "Source_Observations.md#m27-origin-014",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M27-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "upload_ui_help_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": []
+    },
+    {
+      "evidence_id": "M27-ORIGIN-015",
+      "source_ref": "Source_Observations.md#m27-origin-015",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M27-SPEC-01",
+        "M27-SPEC-06"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "upload_and_saved_record_readback",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": []
+    },
+    {
+      "evidence_id": "M27-ORIGIN-016",
+      "source_ref": "Source_Observations.md#m27-origin-016",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M27-SPEC-04"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "saved_value_readback",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-006"
+      ]
+    },
+    {
+      "evidence_id": "M27-ORIGIN-017",
+      "source_ref": "Source_Observations.md#m27-origin-017",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M27-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "publish_confirmation_observed",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-014"
+      ]
+    },
+    {
+      "evidence_id": "M27-ORIGIN-018",
+      "source_ref": "Source_Observations.md#m27-origin-018",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M27-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "published_record_readback",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-007",
+        "R3-DIFF-014"
+      ]
+    },
+    {
+      "evidence_id": "M27-ORIGIN-019",
+      "source_ref": "Source_Observations.md#m27-origin-019",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M27-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "post_recovery_exact_record_readback",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-007"
+      ]
+    },
+    {
+      "evidence_id": "BASE-ORIGIN-002",
+      "source_ref": "Source_Observations.md#base-origin-002",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M12-SPEC-05"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "controlled_alternative_paths",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-015"
+      ]
+    },
+    {
+      "evidence_id": "BASE-ORIGIN-003",
+      "source_ref": "Source_Observations.md#base-origin-003",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M12-SPEC-05"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "own_record_exact_filter_readback",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-015"
+      ]
+    },
+    {
+      "evidence_id": "BASE-ORIGIN-004",
+      "source_ref": "Source_Observations.md#base-origin-004",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M12-SPEC-05",
+        "M12-SPEC-06"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "unexpected_post_save_state_observed",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-015"
+      ]
+    },
+    {
+      "evidence_id": "BASE-ORIGIN-005",
+      "source_ref": "Source_Observations.md#base-origin-005",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M12-SPEC-05",
+        "M12-SPEC-06"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "saved_and_independent_readback",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-015"
+      ]
+    },
+    {
+      "evidence_id": "M11-ORIGIN-006",
+      "source_ref": "Source_Observations.md#m11-origin-006",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M11-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "saved_change_with_confirmation",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-010"
+      ]
+    },
+    {
+      "evidence_id": "M11-ORIGIN-007",
+      "source_ref": "Source_Observations.md#m11-origin-007",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M11-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "lifecycle_list_readback",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-010"
+      ]
+    },
+    {
+      "evidence_id": "M11-ORIGIN-008",
+      "source_ref": "Source_Observations.md#m11-origin-008",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M11-SPEC-01"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "page_help_reverified",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-010"
+      ]
+    },
+    {
+      "evidence_id": "M16-ORIGIN-004",
+      "source_ref": "Source_Observations.md#m16-origin-004",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M16-SPEC-01",
+        "M16-SPEC-03",
+        "M16-SPEC-05"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "empty_scope_validation",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-008"
+      ]
+    },
+    {
+      "evidence_id": "M16-ORIGIN-005",
+      "source_ref": "Source_Observations.md#m16-origin-005",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M16-SPEC-03",
+        "M16-SPEC-04"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "empty_scope_validation",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-008",
+        "R3-DIFF-016"
+      ]
+    },
+    {
+      "evidence_id": "M16-ORIGIN-006",
+      "source_ref": "Source_Observations.md#m16-origin-006",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M16-SPEC-01",
+        "M16-SPEC-03"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "page_help_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-016"
+      ]
+    },
+    {
+      "evidence_id": "M16-ORIGIN-007",
+      "source_ref": "Source_Observations.md#m16-origin-007",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M16-SPEC-03",
+        "M16-SPEC-04",
+        "M16-SPEC-05"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "page_options_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-016"
+      ]
+    },
+    {
+      "evidence_id": "M07-ORIGIN-005",
+      "source_ref": "Source_Observations.md#m07-origin-005",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M07-SPEC-01",
+        "M07-SPEC-02",
+        "M07-SPEC-03"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "page_options_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-011"
+      ]
+    },
+    {
+      "evidence_id": "M07-ORIGIN-006",
+      "source_ref": "Source_Observations.md#m07-origin-006",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M07-SPEC-01",
+        "M07-SPEC-02",
+        "M07-SPEC-03"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "default_control_state_observed",
+      "runtime_verified": false,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-011"
+      ]
+    },
+    {
+      "evidence_id": "M07-ORIGIN-007",
+      "source_ref": "Source_Observations.md#m07-origin-007",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M07-SPEC-01",
+        "M07-SPEC-02",
+        "M07-SPEC-03"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "scoped_picker_query_observed",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-011"
+      ]
+    },
+    {
+      "evidence_id": "M07-ORIGIN-008",
+      "source_ref": "Source_Observations.md#m07-origin-008",
+      "source_anchor_exists": true,
+      "requirement_ids": [
+        "M07-SPEC-01",
+        "M07-SPEC-03"
+      ],
+      "requirement_ids_found": true,
+      "evidence_kind": "draft_form_change_independent_readback",
+      "runtime_verified": true,
+      "implementation_tested": false,
+      "p4_accepted": false,
+      "related_differences": [
+        "R3-DIFF-011"
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "data/R3_M27_Smoke_Import.xlsx",
+      "sha256": "90cb2d2b0f33c7869289715bf92daabf46b9d345aff51c9b5d4e8b1fa95c9c5a",
+      "kind": "synthetic_input"
+    },
+    {
+      "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE01.txt",
+      "sha256": "f69a7e606607c1a74185945d37937e15b7dcde29dddf2d3295cf376e69af2436",
+      "kind": "synthetic_input"
+    },
+    {
+      "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE02.txt",
+      "sha256": "f2079d3372ad236288c013efb044fab9217678928262672916079127fdbdc3c8",
+      "kind": "synthetic_input"
+    },
+    {
+      "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE03.txt",
+      "sha256": "c05ea5799840f366dcb1c25864d844d0c28539a2b7f27db84b85b49d97204644",
+      "kind": "synthetic_input"
+    },
+    {
+      "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE04.txt",
+      "sha256": "c1a388796f3647a5f9ebaeef921efd79996e22a0b16d394a4c0dafc44067cb4b",
+      "kind": "synthetic_input"
+    },
+    {
+      "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE05.txt",
+      "sha256": "a679a7a2f82c7dd1f9b91d85bf130e6b552193d50b01465d6635bcbf78bf2482",
+      "kind": "synthetic_input"
+    },
+    {
+      "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE06.txt",
+      "sha256": "050d4e9b8062e6c41bf118ee0c948655ab3e231fe7d96cea6dfd0275fdf330d9",
+      "kind": "synthetic_input"
+    },
+    {
+      "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE07.txt",
+      "sha256": "fb7f142b8ff71e58685acf2600950fd0e2118d86043b3f2c10a45713895ca464",
+      "kind": "synthetic_input"
+    },
+    {
+      "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE08.txt",
+      "sha256": "d5abbc48808b40c79bedd1006a6e4562c84b172d1f816cdd9acdc0f11f8fb211",
+      "kind": "synthetic_input"
+    },
+    {
+      "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE09.txt",
+      "sha256": "93303cb5502b9298b0c72db420daf949bbebb56d2019cf27c29b65a6ff0d7d89",
+      "kind": "synthetic_input"
+    },
+    {
+      "path": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE10.txt",
+      "sha256": "497ec11d1665d7b42da011285df47219d2c96abed0fca77f980763b824f1428d",
+      "kind": "synthetic_input"
+    },
+    {
+      "path": "data/ZZ_R3_R3-ORIGIN-20260910-103900_M27_CONTENT01.pdf",
+      "sha256": "ba637343d0e4dd549c0993fa7e3180e093f1525f7a6ca9839a59bd1206a9b065",
+      "kind": "synthetic_input"
+    },
+    {
+      "path": "screenshots/M27_SMOKE02_private.jpg",
+      "sha256": "baf5ad111ce95ebfe0cbb4aa498812d33cb24048a329f94e6f532ad9ba0a7b43",
+      "kind": "existing_screenshot",
+      "limitation": "仅M27私有配置截图，不代表其余52项均有截图"
+    }
+  ]
+}

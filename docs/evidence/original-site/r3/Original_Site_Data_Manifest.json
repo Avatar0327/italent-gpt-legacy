@@ -675,8 +675,8 @@
   "external_sends": null,
   "payments": 0,
   "declarations": 0,
-  "checkpoint_at": "2026-09-10T15:05:13.928972+00:00",
-  "workflow_status": "ENV_BLOCKED_browser_input_channel_timeout; scoped_reads_available",
+  "checkpoint_at": "2026-09-10T15:41:44.091432+00:00",
+  "workflow_status": "ENV_BLOCKED_005_health_not_confirmed; OWNER_HOLD_before_R3_P2",
   "execution_blockers": [
     {
       "id": "R3-EXEC-BLOCK-001",
@@ -727,15 +727,42 @@
     },
     {
       "id": "R3-EXEC-BLOCK-005",
-      "status": "ENV_BLOCKED_INPUT_CHANNEL",
+      "status": "ENV_BLOCKED_RECOVERY_UNCONFIRMED",
       "scope": "当前所选浏览器的交互输入；M07/M27/M16三张R3独立页面均出现输入超时，读取仍可用",
       "observed": "M07草稿取消：首次get tabs超时，回读仍可见后一次受控重试Runtime.evaluate超时；M27自有课程编辑及M16分布规则点击均超时；M16新截图确认按钮可见无遮挡，同一浏览器支持的CUA点击亦Input.dispatchMouseEvent超时。",
       "action_readback": "M16仍原零人员活动，未进入分布规则；M07草稿iframe仍visible=true、zIndex10000，不能记取消成功；M27最后已下架。",
       "not_observed": "未出现自动审批新拒绝、登录失效、真实串页、数据丢失或站点反自动化提示，不据超时推定这些故障。",
       "owner_role": "云浏览器运行环境维护者/人工接管诊断（未确认承担）",
-      "resume_condition": "保留同一浏览器及R3数据；恢复可确认的UI输入后，先核对现有草稿/页面再继续，不再要求重复原站授权。",
+      "resume_condition": "由现有接管入口仅对R3薪资草稿执行可见取消并确认回到列表；恢复可确认UI输入后继续。无需再次原站授权。",
       "manual_handoff_next": "可向用户提供当前R3薪资草稿接管入口，正常取消后确认返回列表；字段已有记录，不涉及保存、核算或其他标签。",
-      "recorded_at": "2026-09-10T15:05:13.928972+00:00"
+      "recorded_at": "2026-09-10T15:05:13.928972+00:00",
+      "latest_check": {
+        "at": "2026-09-10T15:41:44.091432+00:00",
+        "existing_r3_tabs": [
+          5,
+          6,
+          8,
+          9,
+          10,
+          11
+        ],
+        "missing_previous_r3_query_tabs": [
+          13,
+          16
+        ],
+        "missing_reason": "unknown; no action by this turn",
+        "new_r3_control_tab": 20,
+        "origin": "https://srworkshopbj.italent.cn",
+        "login": "何份晓",
+        "health_action": "本轮M16活动点击考核方案一次",
+        "health_tool_result": "returned without error",
+        "health_independent_result": "方案iframe不存在；主区仍零人员列表，无可确认切换",
+        "health_passed": false,
+        "new_control_result": "新页首页加载并识别管理员；一次薪酬核算导航返回无错误，最终仍首页，未确认业务导航成功",
+        "draft": "PLAN01仍存在，月/否已只读复核，未点击取消或保存",
+        "other_windows_touched": false
+      },
+      "current_error": "本次检查未返回新超时错误；历史Runtime.evaluate/Input.dispatchMouseEvent超时仍记录。因状态未变化，恢复未证实。"
     }
   ],
   "synthetic_input_files": [
@@ -951,18 +978,20 @@
   },
   "employee_established": false,
   "repository_recheck": {
-    "recorded_at": "2026-09-10T15:05:13.928972+00:00",
+    "recorded_at": "2026-09-10T15:41:44.091432+00:00",
     "remote_main_sha": "22be3a7e366d6787180d4f593a30f5984c70e03a",
     "r3_p2_design_or_review_branch_found": false,
-    "p2_status_from_repository": "未启动（已准入）",
+    "p2_status_from_repository": "未启动",
     "m27_evidence_remote_sha": "3baf3d532c25bd2ac0c28a82de2f542af4eb7718",
     "tracking_remote": "r1-p2-origin",
     "tracking_branch": "evidence/r3-origin-parity-20260910",
     "last_pushed_m16_sha": "3f704a456394b1fd7dab126d5a7ef8a0bf9586b8",
     "last_pushed_m11_sha": "d31d7c4f17bf5ce30860409a2ed369958f16ac59",
     "last_pushed_m12_sha": "2946f0be6a742b4e14f44a559be263f968623fc0",
-    "remote_evidence_sha_before_this_increment": "ee698c2de9ee5d21ad8807fd8c3ccec96bc6cef3",
-    "r1_evidence_readonly_observed_sha": "5aa78e420db1e6df498f3f5101e18af10047d427"
+    "remote_evidence_sha_before_this_increment": "36f2c447a5509eeed8e1e4a4ae461d0ed8ebf0bd",
+    "r1_evidence_readonly_observed_sha": "5979d5dd7ee9000789b678027dc2444438d7d5cc",
+    "p2_execution_constraint": "OWNER_HOLD：原站完整退出前禁止启动",
+    "r2_evidence_readonly_observed_sha": "3fa2f42960aedf046ab08987d2a31edf8b77c143"
   },
   "unsaved_drafts": [
     {
@@ -982,5 +1011,40 @@
       "next_action": "取消操作超时后草稿仍可见，禁止假定退出或重复建立方案；输入恢复后正常退出/回查R3组资格。不得核算或选原有组。",
       "cancel_confirmed": false
     }
-  ]
+  ],
+  "owner_phase_gate": {
+    "id": "R3-ORIGIN-EXIT-BEFORE-P2-OWNER-20260910",
+    "source": "当前用户明确所有者决定",
+    "decision": "在R3原站验证达到完整退出条件前，不启动R3 P2。",
+    "recorded_at": "2026-09-10T15:41:44.091432+00:00",
+    "p2_start_allowed": false,
+    "origin_exit_complete": false,
+    "supersedes": "本窗口此前允许P2同步推进的执行安排；不撤销历史P1通过或篡改main准入登记。"
+  },
+  "browser_recovery_current": {
+    "at": "2026-09-10T15:41:44.091432+00:00",
+    "existing_r3_tabs": [
+      5,
+      6,
+      8,
+      9,
+      10,
+      11
+    ],
+    "missing_previous_r3_query_tabs": [
+      13,
+      16
+    ],
+    "missing_reason": "unknown; no action by this turn",
+    "new_r3_control_tab": 20,
+    "origin": "https://srworkshopbj.italent.cn",
+    "login": "何份晓",
+    "health_action": "本轮M16活动点击考核方案一次",
+    "health_tool_result": "returned without error",
+    "health_independent_result": "方案iframe不存在；主区仍零人员列表，无可确认切换",
+    "health_passed": false,
+    "new_control_result": "新页首页加载并识别管理员；一次薪酬核算导航返回无错误，最终仍首页，未确认业务导航成功",
+    "draft": "PLAN01仍存在，月/否已只读复核，未点击取消或保存",
+    "other_windows_touched": false
+  }
 }

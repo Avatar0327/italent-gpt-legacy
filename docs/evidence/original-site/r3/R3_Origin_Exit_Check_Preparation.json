@@ -1,0 +1,64 @@
+{
+  "owner_phase_gate": {
+    "id": "R3-ORIGIN-EXIT-BEFORE-P2-OWNER-20260910",
+    "source": "当前用户明确所有者决定",
+    "decision": "在R3原站验证达到完整退出条件前，不启动R3 P2。",
+    "recorded_at": "2026-09-10T15:41:44.091432+00:00",
+    "p2_start_allowed": false,
+    "origin_exit_complete": false,
+    "supersedes": "本窗口此前允许P2同步推进的执行安排；不撤销历史P1通过或篡改main准入登记。"
+  },
+  "recorded_at": "2026-09-10T15:41:44.091432+00:00",
+  "module_case_status_counts": {
+    "M27": {
+      "REVERIFIED": 1,
+      "VERIFIED": 5,
+      "PARTIAL": 1,
+      "VERIFIED_ADMIN_ONLY": 1,
+      "ENV_BLOCKED": 1,
+      "CONFIG_OBSERVED": 1,
+      "DEPENDENCY_BLOCKED": 2,
+      "VERIFIED_PRIOR_RUN": 3,
+      "ROLE_BLOCKED": 1
+    },
+    "M16": {
+      "VERIFIED_PRIOR_RUN": 1,
+      "CONFIG_OBSERVED": 3,
+      "ENV_BLOCKED": 5,
+      "DEPENDENCY_BLOCKED": 1,
+      "ROLE_BLOCKED": 1,
+      "VERIFIED_VALIDATION_ONLY": 7
+    },
+    "M12": {
+      "VERIFIED_PRIOR_RUN": 5,
+      "ENV_BLOCKED": 5,
+      "PARTIAL_WITH_SIDE_EFFECT": 1,
+      "DEPENDENCY_BLOCKED": 1,
+      "ROLE_BLOCKED": 1
+    },
+    "M11": {
+      "VERIFIED_PRIOR_RUN": 1,
+      "CONFIG_OBSERVED": 2,
+      "PARTIAL": 2,
+      "ENV_BLOCKED": 3,
+      "DEPENDENCY_BLOCKED": 1,
+      "ROLE_BLOCKED": 1,
+      "VERIFIED": 3
+    },
+    "M07": {
+      "VERIFIED_PRIOR_RUN": 1,
+      "CONFIG_OBSERVED": 3,
+      "ENV_BLOCKED": 6,
+      "DEPENDENCY_AND_ROLE_BLOCKED": 1,
+      "VERIFIED_QUERY_ONLY": 1,
+      "VERIFIED_DRAFT_ONLY": 1
+    }
+  },
+  "complete_first_packs": 0,
+  "denominator": 5,
+  "observations": 53,
+  "differences": 16,
+  "unresolved_actions": 4,
+  "assessment": "NOT_PASSED",
+  "note": "这是退出检查输入，正式固定内容HEAD报告在原子推送后生成。"
+}

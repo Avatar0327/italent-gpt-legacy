@@ -1,0 +1,42 @@
+{
+  "run_id": "R3-ORIGIN-20260910-103900",
+  "recorded_at": "2026-09-10T15:41:44.091432+00:00",
+  "rows": [
+    {
+      "id": "R3-UA-001",
+      "module": "M27",
+      "object": "SMOKE02",
+      "state": "FINAL_VALUE_UNKNOWN",
+      "known": "0分钟保存回读0.0；后来1分钟输入；课程最终已下架",
+      "unknown": "最终课件时长持久值",
+      "next": "输入恢复后仅打开现有课程内容回读，禁止重复上传"
+    },
+    {
+      "id": "R3-UA-002",
+      "module": "M12",
+      "object": "SMOKE01/SMOKE09疑似关系",
+      "state": "PERSISTENCE_UNVERIFIED",
+      "known": "取消一次，面板计数9到8",
+      "unknown": "重新加载后的持久排除关系与列表计数",
+      "next": "仅读取现有关系，禁止再次取消原配对"
+    },
+    {
+      "id": "R3-UA-003",
+      "module": "BASE/M12",
+      "object": "EMP01",
+      "state": "DELIVERY_UNKNOWN",
+      "known": "待入职已保存、非R3经理已清除；信息采集已发送",
+      "unknown": "实际投递、收件范围及自动通知来源",
+      "next": "仅查本轮记录通知/审计；不能推进入职或外发"
+    },
+    {
+      "id": "R3-UA-004",
+      "module": "M07",
+      "object": "PLAN01草稿",
+      "state": "CANCEL_NOT_CONFIRMED_DRAFT_PRESENT",
+      "known": "当前仍有草稿、月/否；从未提交保存，不计新增对象",
+      "unknown": "取消操作何时能够正常完成",
+      "next": "通过可见取消退出并回读方案列表；若草稿丢失先按全名查重，不记取消通过"
+    }
+  ]
+}
