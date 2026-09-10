@@ -71,7 +71,8 @@
         "P3-M19-07"
       ],
       "evidence": [
-        "evidence/r1-p3-20260910T055326431928Z.json"
+        "evidence/r1-p3-20260910T055326431928Z.json",
+        "evidence/r1-p3-20260910T060422840181Z.json"
       ],
       "subworkCompleted": [
         "流程schema与不可变模板/决定/管理事件",
@@ -87,7 +88,7 @@
         "拒绝审计和委托界面接线补齐",
         "P3-M19全部场景与原验收14项追踪核对"
       ],
-      "implementationSha": "9d592d7950153ee056761c0a015b1a4acd42893b"
+      "implementationSha": "e7f0f2a858758900c135ee4cc6728b90ba05b091"
     },
     {
       "id": "P3-R1-04",
@@ -231,6 +232,6 @@
     }
   ],
   "currentTask": "P3-R1-03",
-  "lastVerifiedSourceSha": "9d592d7950153ee056761c0a015b1a4acd42893b",
-  "latestRun": "evidence/r1-p3-20260910T055326431928Z.json"
+  "lastVerifiedSourceSha": "e7f0f2a858758900c135ee4cc6728b90ba05b091",
+  "latestRun": "evidence/r1-p3-20260910T060422840181Z.json"
 }
