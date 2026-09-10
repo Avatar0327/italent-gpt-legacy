@@ -1,0 +1,43 @@
+"""Generate proposed P3 work and GWT cases, never execute them."""
+import json,re
+from pathlib import Path
+D=Path(__file__).resolve().parent
+def read(n):return json.loads((D/n).read_text())
+def put(n,v):(D/n).write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n')
+t=read('Requirements_Trace.json');state=read('Design_Checkpoint.json');done=state['completedModules']
+tasks=[];scenarios=[]
+for spec in t['specs']:
+    m=spec['id'][:3]
+    if m not in done:continue
+    tasks.append({'id':'P3-R2-'+spec['id'].replace('-SPEC-','-'),'moduleId':m,'requirementRefs':[spec['id']],
+                  'title':spec['approvedText'][:60], 'designRefs':spec['designRefs'],
+                  'ownerRole':m+'实施负责人；独立测试负责人复核','phase':'P3','status':'proposed_not_started',
+                  'dependencies':['R1共同身份/权限/事务/流程契约适配验证'],'deliverables':['规范化对象及API适配','合成正反例与事务/权限证据','兼容/迁移差异报告'],'scenarioIds':[]})
+for a in t['acceptanceIds']:
+    if a['kind']!='approved_module' or not all(m in done for m in a['moduleIds']):continue
+    m=a['id'][:3];src=a['source']; refs=re.findall(r'M\d{2}-SPEC-\d{2}',src.get('basis',''))
+    refs=[r for r in refs if r.startswith(m)] or [m+'-SPEC-01']
+    task='P3-R2-'+refs[0].replace('-SPEC-','-')
+    scenarios.append({'id':'R2-P3-'+a['id'],'requirementRefs':[a['id']]+refs,'moduleId':m,'taskId':task,
+      'fixture':m+'_Design.md#acceptance; 隔离合成租户/员工/授权者，保持源案例的数量、时点和角色条件',
+      'given':src['given'],'when':src['when'],'then':src['then'],
+      'executionSteps':['按Given构造精确根/版本及当前grant，记录初始revision与源digest','以指定角色直接调用模块命令/查询，不靠UI隐藏；施加When条件','读取版本、回执及授权投影，逐条核对Then；失败时核无未授权副作用'],
+      'expectedEvidence':['请求/响应schema、版本和权限摘要（脱敏）','业务前后版本及事件/command receipt；拒绝时不变量保持','原验收ID映射和独立复核记录'],
+      'executionStatus':'not_run','historicalExecutionIsNotCurrentEvidence':True})
+if state.get('foundationsComplete'):
+    for b in t['foundations']:
+        tasks.append({'id':'P3-R2-'+b['id'],'moduleId':None,'requirementRefs':[b['id']],'title':b['source']['name']+' R2差异验证','designRefs':b['designRefs'],'ownerRole':'共享基础负责人+安全/独立测试负责人','phase':'P3','status':'proposed_not_started','dependencies':['R1对应基础契约已验证'],'deliverables':['R2敏感对象适配及拒绝证据'],'scenarioIds':[]})
+    for a in t['acceptanceIds']:
+        if a['kind']!='approved_foundation':continue
+        src=a['source'];scenarios.append({'id':'R2-P3-'+a['id'],'requirementRefs':[a['id'],a['baseId']],'taskId':'P3-R2-'+a['baseId'],'given':src['given']+'；对象替换为R2标准/答卷/盘点/继任/任期合成记录','when':src['when'],'then':src['then'],'expectedEvidence':['当前授权与恢复安全epoch','接口响应/脱敏审计/对象摘要及拒绝证明'],'executionStatus':'not_run'})
+if (D/'Supplemental_Scenarios.json').exists():
+    supplement=read('Supplemental_Scenarios.json')
+    tasks+=supplement.get('tasks',[])
+    scenarios+=supplement.get('scenarios',[])
+for task in tasks:task['scenarioIds']=[x['id'] for x in scenarios if x['taskId']==task['id']]
+put('P3_Work_Packages.json',{'kind':'proposal_only_not_execution_or_controller_ledger','count':len(tasks),'tasks':tasks})
+put('Acceptance_Scenarios.json',{'kind':'executable_test_design_not_run','count':len(scenarios),'scenarios':scenarios})
+lines=['# P3任务与可执行验收建议','',f'任务{len(tasks)}项，场景{len(scenarios)}项；均未开始/未执行。只有所有者批准P2退出及P3准入后才可实施。精确Given/When/Then与证据要求见Acceptance_Scenarios.json。','', '|任务|需求|场景数|责任|','|---|---|---:|---|']
+for x in tasks:lines.append('|'+x['id']+'|'+','.join(x['requirementRefs'])+'|'+str(len(x['scenarioIds']))+'|'+x['ownerRole']+'|')
+(D/'P3_Handoff.md').write_text('\n'.join(lines)+'\n')
+print(json.dumps({'tasks':len(tasks),'scenarios':len(scenarios),'tasksWithoutScenarios':[x['id'] for x in tasks if not x['scenarioIds']]},ensure_ascii=False))

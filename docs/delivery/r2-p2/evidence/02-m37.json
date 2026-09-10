@@ -1,0 +1,858 @@
+{
+  "unit": "02-m37",
+  "type": "documentation_only",
+  "productTestsRun": false,
+  "atHeadBeforeCommit": "8605843cd6b4455554a8f7d255a59f95eb71842a",
+  "sourceHead": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+  "artifactManifestSha256": "5ec808716afb01da9d927b48ea04ec0b857cd30de717a435f2aacb5f2adf644c",
+  "checks": [
+    {
+      "check": "single main module order, no skipped promotion",
+      "ok": true
+    },
+    {
+      "check": "at most next module active",
+      "ok": true
+    },
+    {
+      "check": "owned design branch",
+      "ok": true
+    },
+    {
+      "check": "registered startup baseline",
+      "ok": true
+    },
+    {
+      "check": "all writes within authorized directory",
+      "ok": true
+    },
+    {
+      "check": "source hash app/api/attachments/route.ts@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash app/api/cadres/route.ts@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash app/api/development/route.ts@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash app/api/feedback/route.ts@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash app/api/qualifications/route.ts@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash app/development/workspace.tsx@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash app/qualifications/workspace.tsx@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/HRIS_Project_Plan.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/P1_Source_Observations_20260907.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/P3_360_Acceptance.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/P3_Cadre_Acceptance.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/P3_Qualification_Acceptance.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/P3_Talent_Learning_Acceptance.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/Recovery_Rehearsal.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/Recovery_Synthetic_Report.json@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/Cadre_Learning_Source_Gaps.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/F01_F04_Requirements_Baseline.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/Integration_Adapter_Contract.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/P1B_BP_C_Specification.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/P1B_Implementation_Map.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/P1_Approval_Records.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/P1_Final_Closure.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/P1_M03_Review_Package.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/P1_M06_Review_Package.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/P1_M17_Review_Package.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/P1_M18_Review_Package.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/P1_M26_Review_Package.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/P1_M37_Review_Package.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/P1_Module_Closure.json@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/P1_R2_P2_Handoff.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/P1_R2_Review_Package.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/R2_P2_Start_Prompt.md@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/Scope_Register.json@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash lib/hris/authorization.ts@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash lib/hris/cadre-interviews.ts@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash lib/hris/cadre-terms.ts@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash lib/hris/cadres.ts@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash lib/hris/context.ts@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash lib/hris/development-repository.ts@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash lib/hris/development.ts@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash lib/hris/feedback.ts@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash lib/hris/http.ts@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash lib/hris/qualification.ts@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash lib/hris/reports.ts@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash lib/hris/repository.ts@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash lib/hris/review-versions.ts@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash lib/hris/surveys.ts@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash lib/hris/work-inbox.ts@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash scripts/check-p1-baseline.py@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash scripts/render-p1-baseline.py@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash tests/p3-api.test.mjs@22be3a7e",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/r1-p2/R1_P2_Architecture.md@e1523728",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/r1-p2/R1_P2_Backup_Recovery.md@e1523728",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/r1-p2/R1_P2_Consistency_Resolutions.md@e1523728",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/r1-p2/R1_P2_Interfaces_Exceptions.md@e1523728",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/r1-p2/R1_P2_M01_Data_History.md@e1523728",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/r1-p2/R1_P2_M19_Workflow_Transactions.md@e1523728",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md@e1523728",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/r1-p2/R1_P2_M48_Authorization_Consumers.md@e1523728",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/r1-p2/R1_P2_Migration_Rollback.md@e1523728",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/r1-p2/R1_P2_Owner_Exit_Approval.json@e1523728",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/r1-p2/R1_P2_P3_Handoff.md@e1523728",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/r1-p2/R1_P2_P3_Work_Packages.json@e1523728",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/r1-p2/R1_P2_Report_Datasets.json@e1523728",
+      "ok": true
+    },
+    {
+      "check": "source hash docs/delivery/r1-p2/R1_P2_Report_Field_Dictionary.json@e1523728",
+      "ok": true
+    },
+    {
+      "check": "33 adopted SPEC/BASELINE requirements retained",
+      "ok": true
+    },
+    {
+      "check": "78 approved module acceptance IDs retained",
+      "ok": true
+    },
+    {
+      "check": "16 foundation acceptance IDs retained separately",
+      "ok": true
+    },
+    {
+      "check": "17 historical acceptance IDs retained separately",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M37-SPEC-01",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M37-SPEC-02",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M37-SPEC-03",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M37-SPEC-04",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M37-SPEC-05",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M06-SPEC-01",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M06-SPEC-02",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M06-SPEC-03",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M06-SPEC-04",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M06-SPEC-05",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M26-SPEC-01",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M26-SPEC-02",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M26-SPEC-03",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M26-SPEC-04",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M26-SPEC-05",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M18-SPEC-01",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M18-SPEC-02",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M18-SPEC-03",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M18-SPEC-04",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M18-SPEC-05",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M17-SPEC-01",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M17-SPEC-02",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M17-SPEC-03",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M17-SPEC-04",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M17-SPEC-05",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M17-SPEC-06",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M03-SPEC-01",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M03-SPEC-02",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M03-SPEC-03",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M03-SPEC-04",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M03-SPEC-05",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash M03-SPEC-06",
+      "ok": true
+    },
+    {
+      "check": "approved recommendation hash R2-BASELINE-01",
+      "ok": true
+    },
+    {
+      "check": "owner reviewed document hash M37-P1-APPROVAL-R2-20260909",
+      "ok": true
+    },
+    {
+      "check": "owner reviewed document hash M06-P1-APPROVAL-R2-20260909",
+      "ok": true
+    },
+    {
+      "check": "owner reviewed document hash M26-P1-APPROVAL-20260910",
+      "ok": true
+    },
+    {
+      "check": "owner reviewed document hash M18-P1-APPROVAL-20260910",
+      "ok": true
+    },
+    {
+      "check": "owner reviewed document hash M17-P1-APPROVAL-20260910",
+      "ok": true
+    },
+    {
+      "check": "owner reviewed document hash M03-P1-APPROVAL-20260910",
+      "ok": true
+    },
+    {
+      "check": "owner reviewed document hash R2-P1-P2-TRANSITION-20260910",
+      "ok": true
+    },
+    {
+      "check": "specs IDs unique",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-01 -> M37_Design.md#m37-spec-01",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-02 -> M37_Design.md#m37-spec-02",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-03 -> M37_Design.md#m37-spec-03",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-04 -> M37_Design.md#m37-spec-04",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-05 -> M37_Design.md#m37-spec-05",
+      "ok": true
+    },
+    {
+      "check": "clauses IDs unique",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-01-CLAUSE-01 -> M37_Design.md#m37-spec-01",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-01-CLAUSE-02 -> M37_Design.md#m37-spec-01",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-01-CLAUSE-03 -> M37_Design.md#m37-spec-01",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-01-CLAUSE-04 -> M37_Design.md#m37-spec-01",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-01-CLAUSE-05 -> M37_Design.md#m37-spec-01",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-01-CLAUSE-06 -> M37_Design.md#m37-spec-01",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-01-CLAUSE-07 -> M37_Design.md#m37-spec-01",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-01-CLAUSE-08 -> M37_Design.md#m37-spec-01",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-01-CLAUSE-09 -> M37_Design.md#m37-spec-01",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-01-CLAUSE-10 -> M37_Design.md#m37-spec-01",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-02-CLAUSE-01 -> M37_Design.md#m37-spec-02",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-02-CLAUSE-02 -> M37_Design.md#m37-spec-02",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-02-CLAUSE-03 -> M37_Design.md#m37-spec-02",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-02-CLAUSE-04 -> M37_Design.md#m37-spec-02",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-02-CLAUSE-05 -> M37_Design.md#m37-spec-02",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-02-CLAUSE-06 -> M37_Design.md#m37-spec-02",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-02-CLAUSE-07 -> M37_Design.md#m37-spec-02",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-02-CLAUSE-08 -> M37_Design.md#m37-spec-02",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-02-CLAUSE-09 -> M37_Design.md#m37-spec-02",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-02-CLAUSE-10 -> M37_Design.md#m37-spec-02",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-02-CLAUSE-11 -> M37_Design.md#m37-spec-02",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-02-CLAUSE-12 -> M37_Design.md#m37-spec-02",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-03-CLAUSE-01 -> M37_Design.md#m37-spec-03",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-03-CLAUSE-02 -> M37_Design.md#m37-spec-03",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-03-CLAUSE-03 -> M37_Design.md#m37-spec-03",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-03-CLAUSE-04 -> M37_Design.md#m37-spec-03",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-03-CLAUSE-05 -> M37_Design.md#m37-spec-03",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-03-CLAUSE-06 -> M37_Design.md#m37-spec-03",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-03-CLAUSE-07 -> M37_Design.md#m37-spec-03",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-03-CLAUSE-08 -> M37_Design.md#m37-spec-03",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-03-CLAUSE-09 -> M37_Design.md#m37-spec-03",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-03-CLAUSE-10 -> M37_Design.md#m37-spec-03",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-03-CLAUSE-11 -> M37_Design.md#m37-spec-03",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-04-CLAUSE-01 -> M37_Design.md#m37-spec-04",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-04-CLAUSE-02 -> M37_Design.md#m37-spec-04",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-04-CLAUSE-03 -> M37_Design.md#m37-spec-04",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-04-CLAUSE-04 -> M37_Design.md#m37-spec-04",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-04-CLAUSE-05 -> M37_Design.md#m37-spec-04",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-04-CLAUSE-06 -> M37_Design.md#m37-spec-04",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-04-CLAUSE-07 -> M37_Design.md#m37-spec-04",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-05-CLAUSE-01 -> M37_Design.md#m37-spec-05",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-05-CLAUSE-02 -> M37_Design.md#m37-spec-05",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-05-CLAUSE-03 -> M37_Design.md#m37-spec-05",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-05-CLAUSE-04 -> M37_Design.md#m37-spec-05",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-05-CLAUSE-05 -> M37_Design.md#m37-spec-05",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-05-CLAUSE-06 -> M37_Design.md#m37-spec-05",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-05-CLAUSE-07 -> M37_Design.md#m37-spec-05",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-05-CLAUSE-08 -> M37_Design.md#m37-spec-05",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-05-CLAUSE-09 -> M37_Design.md#m37-spec-05",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-SPEC-05-CLAUSE-10 -> M37_Design.md#m37-spec-05",
+      "ok": true
+    },
+    {
+      "check": "contractDetails IDs unique",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference BP-C-REQ-07/fields/0 -> M37_Design.md#engineering",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference BP-C-REQ-07/roles/0 -> M37_Design.md#engineering",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference BP-C-REQ-07/lifecycle/0 -> M37_Design.md#engineering",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference BP-C-REQ-07/actions/0 -> M37_Design.md#engineering",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference BP-C-REQ-07/fieldDetails/0 -> M37_Design.md#engineering",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference BP-C-REQ-07/fieldDetails/1 -> M37_Design.md#engineering",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference BP-C-REQ-07/fieldDetails/2 -> M37_Design.md#engineering",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference BP-C-REQ-07/fieldDetails/3 -> M37_Design.md#engineering",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference BP-C-REQ-07/fieldDetails/4 -> M37_Design.md#engineering",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference BP-C-REQ-07/roleMatrix/0 -> M37_Design.md#engineering",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference BP-C-REQ-07/roleMatrix/1 -> M37_Design.md#engineering",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference BP-C-REQ-07/roleMatrix/2 -> M37_Design.md#engineering",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference BP-C-REQ-07/stateTransitions/0 -> M37_Design.md#engineering",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference BP-C-REQ-07/stateTransitions/1 -> M37_Design.md#engineering",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference BP-C-REQ-07/stateTransitions/2 -> M37_Design.md#engineering",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference BP-C-REQ-07/stateTransitions/3 -> M37_Design.md#engineering",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference BP-C-REQ-07/stateTransitions/4 -> M37_Design.md#engineering",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference BP-C-REQ-07/stateTransitions/5 -> M37_Design.md#engineering",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference BP-C-REQ-07/stateTransitions/6 -> M37_Design.md#engineering",
+      "ok": true
+    },
+    {
+      "check": "closures IDs unique",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-CLOSE-01 -> M37_Design.md#engineering",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-CLOSE-02 -> M37_Design.md#engineering",
+      "ok": true
+    },
+    {
+      "check": "foundations IDs unique",
+      "ok": true
+    },
+    {
+      "check": "acceptanceIds IDs unique",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-REVIEW-AC01 -> M37_Design.md#acceptance",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-REVIEW-AC02 -> M37_Design.md#acceptance",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-REVIEW-AC03 -> M37_Design.md#acceptance",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-REVIEW-AC04 -> M37_Design.md#acceptance",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-REVIEW-AC05 -> M37_Design.md#acceptance",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-REVIEW-AC06 -> M37_Design.md#acceptance",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-REVIEW-AC07 -> M37_Design.md#acceptance",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-REVIEW-AC08 -> M37_Design.md#acceptance",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-REVIEW-AC09 -> M37_Design.md#acceptance",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-REVIEW-AC10 -> M37_Design.md#acceptance",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-REVIEW-AC11 -> M37_Design.md#acceptance",
+      "ok": true
+    },
+    {
+      "check": "resolved design reference M37-REVIEW-AC12 -> M37_Design.md#acceptance",
+      "ok": true
+    },
+    {
+      "check": "all top-level JSON parsed",
+      "ok": true
+    },
+    {
+      "check": "executable scenario IDs unique",
+      "ok": true
+    },
+    {
+      "check": "GWT, evidence and not_run on every scenario",
+      "ok": true
+    }
+  ],
+  "checkCount": 211,
+  "errorCount": 0,
+  "errors": [],
+  "result": "pass"
+}

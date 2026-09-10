@@ -4,11 +4,11 @@
 
 |批准需求|设计定位|设计材料状态|
 |---|---|---|
-|M37-SPEC-01|[M37_Design.md#m37-spec-01](M37_Design.md#m37-spec-01)|pending|
-|M37-SPEC-02|[M37_Design.md#m37-spec-02](M37_Design.md#m37-spec-02)|pending|
-|M37-SPEC-03|[M37_Design.md#m37-spec-03](M37_Design.md#m37-spec-03)|pending|
-|M37-SPEC-04|[M37_Design.md#m37-spec-04](M37_Design.md#m37-spec-04)|pending|
-|M37-SPEC-05|[M37_Design.md#m37-spec-05](M37_Design.md#m37-spec-05)|pending|
+|M37-SPEC-01|[M37_Design.md#m37-spec-01](M37_Design.md#m37-spec-01)|complete|
+|M37-SPEC-02|[M37_Design.md#m37-spec-02](M37_Design.md#m37-spec-02)|complete|
+|M37-SPEC-03|[M37_Design.md#m37-spec-03](M37_Design.md#m37-spec-03)|complete|
+|M37-SPEC-04|[M37_Design.md#m37-spec-04](M37_Design.md#m37-spec-04)|complete|
+|M37-SPEC-05|[M37_Design.md#m37-spec-05](M37_Design.md#m37-spec-05)|complete|
 |M06-SPEC-01|[M06_Design.md#m06-spec-01](M06_Design.md#m06-spec-01)|pending|
 |M06-SPEC-02|[M06_Design.md#m06-spec-02](M06_Design.md#m06-spec-02)|pending|
 |M06-SPEC-03|[M06_Design.md#m06-spec-03](M06_Design.md#m06-spec-03)|pending|

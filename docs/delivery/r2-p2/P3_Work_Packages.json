@@ -1,0 +1,138 @@
+{
+  "kind": "proposal_only_not_execution_or_controller_ledger",
+  "count": 5,
+  "tasks": [
+    {
+      "id": "P3-R2-M37-01",
+      "moduleId": "M37",
+      "requirementRefs": [
+        "M37-SPEC-01"
+      ],
+      "title": "建议保留标准与指标库完整范围，新增稳定libraryId/indicatorId/standardRootId/vers",
+      "designRefs": [
+        "M37_Design.md#m37-spec-01"
+      ],
+      "ownerRole": "M37实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M37-REVIEW-AC01",
+        "R2-P3-M37-REVIEW-AC02",
+        "R2-P3-M37-REVIEW-AC08"
+      ]
+    },
+    {
+      "id": "P3-R2-M37-02",
+      "moduleId": "M37",
+      "requirementRefs": [
+        "M37-SPEC-02"
+      ],
+      "title": "建议每个标准引用绑定指标版本、维度、目标类型/值/单位/方向和权重。未设置目标用null，等级目标必须引用该版本存在的l",
+      "designRefs": [
+        "M37_Design.md#m37-spec-02"
+      ],
+      "ownerRole": "M37实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M37-REVIEW-AC03",
+        "R2-P3-M37-REVIEW-AC04",
+        "R2-P3-M37-REVIEW-AC05"
+      ]
+    },
+    {
+      "id": "P3-R2-M37-03",
+      "moduleId": "M37",
+      "requirementRefs": [
+        "M37-SPEC-03"
+      ],
+      "title": "建议标准/指标内容按根ID管理不可变发布版本：draft→submitted→approved→published，退回",
+      "designRefs": [
+        "M37_Design.md#m37-spec-03"
+      ],
+      "ownerRole": "M37实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M37-REVIEW-AC06",
+        "R2-P3-M37-REVIEW-AC07"
+      ]
+    },
+    {
+      "id": "P3-R2-M37-04",
+      "moduleId": "M37",
+      "requirementRefs": [
+        "M37-SPEC-04"
+      ],
+      "title": "建议read/use/manage/review/publish/export独立动作授权，所属管理组织/明确共享组织/",
+      "designRefs": [
+        "M37_Design.md#m37-spec-04"
+      ],
+      "ownerRole": "M37实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M37-REVIEW-AC09"
+      ]
+    },
+    {
+      "id": "P3-R2-M37-05",
+      "moduleId": "M37",
+      "requirementRefs": [
+        "M37-SPEC-05"
+      ],
+      "title": "建议M37作为标准定义生产者，给M06/M17/M18/M03/M26/M27/M32的契约含rootId/versio",
+      "designRefs": [
+        "M37_Design.md#m37-spec-05"
+      ],
+      "ownerRole": "M37实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M37-REVIEW-AC10",
+        "R2-P3-M37-REVIEW-AC11",
+        "R2-P3-M37-REVIEW-AC12"
+      ]
+    }
+  ]
+}

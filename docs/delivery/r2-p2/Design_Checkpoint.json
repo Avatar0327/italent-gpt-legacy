@@ -6,7 +6,9 @@
   "worktree": "/workspace/sites/italent-hris-r2-p2-20260910",
   "branch": "design/r2-p2-20260910",
   "architectureComplete": true,
-  "completedModules": [],
+  "completedModules": [
+    "M37"
+  ],
   "activeModule": null,
   "foundationsComplete": false,
   "completedReviews": [],
@@ -14,5 +16,5 @@
   "p3Entered": false,
   "productModified": false,
   "deployed": false,
-  "next": "M37 sequential detailed design"
+  "next": "M06 sequential detailed design"
 }
