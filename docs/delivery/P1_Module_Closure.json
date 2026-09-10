@@ -1,31 +1,31 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-10T02:39:23.518757+00:00",
-  "primaryModuleId": "M18",
+  "generatedFromUpdatedAt": "2026-09-10T02:41:58.226023+00:00",
+  "primaryModuleId": "M17",
   "backupModuleId": null,
-  "activeExecutionModuleId": "M18",
+  "activeExecutionModuleId": "M17",
   "moduleCount": 15,
   "completeCount": 0,
-  "restrictedCount": 7,
-  "transitionReadyCount": 7,
+  "restrictedCount": 8,
+  "transitionReadyCount": 8,
   "progress": {
     "p1A": {
       "full": 0,
-      "restricted": 7,
-      "total": 7
+      "restricted": 8,
+      "total": 8
     },
     "p1B": {
       "full": 0,
-      "restricted": 7,
-      "total": 7
+      "restricted": 8,
+      "total": 8
     },
     "review": {
       "full": 0,
-      "restricted": 7,
-      "total": 7
+      "restricted": 8,
+      "total": 8
     }
   },
-  "p1ClosedCount": 7,
+  "p1ClosedCount": 8,
   "modules": [
     {
       "moduleId": "M01",
@@ -520,10 +520,10 @@
       "moduleId": "M18",
       "name": "在线盘点",
       "rangeId": "R2",
-      "queueState": "waiting_owner_review",
+      "queueState": "closed_restricted",
       "p1AConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M18-P1-APPROVAL-20260910",
         "evidenceRefs": [
           "P1-CAL",
           "P1-STD",
@@ -534,49 +534,54 @@
           "BC-C39",
           "BC-C40"
         ],
-        "limits": "完整登记范围证据及限制可追溯；LIMIT未批准，不计P1A关闭"
+        "limits": "原站启动/采集/校准会/九宫格算法/发布及跨角色行为未执行；工具计算项目来源与对象子ID、标准共享UUID未确认。",
+        "approvedAt": "2026-09-10T02:41:58.226023+00:00"
       },
       "p1BConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M18-P1-APPROVAL-20260910",
         "evidenceRefs": [],
-        "limits": "对象/字段/权限/状态/异常/契约/实现差异及可执行预期已准备；新规则未批准"
+        "limits": "原站启动/采集/校准会/九宫格算法/发布及跨角色行为未执行；工具计算项目来源与对象子ID、标准共享UUID未确认。",
+        "approvedAt": "2026-09-10T02:41:58.226023+00:00"
       },
       "conditions": {
         "applicableScopeDetermined": {
           "value": true,
-          "basis": "用户已确认15完整登记范围及本轮R顺序"
+          "basis": "M18-P1-APPROVAL-20260910；原登记完整范围逐项与收口清单一致，无内部删减"
         },
         "implementationRulesDecided": {
-          "value": false,
-          "basis": "本模块新规则/LIMIT及消费者未批依赖待集中决定"
+          "value": true,
+          "basis": "M18-P1-APPROVAL-20260910；本模块SPEC与R2-BASELINE-01均由所有者明确批准，版本/哈希锁定"
         },
         "acceptanceExecutable": {
           "value": true,
-          "basis": "Given/When/Then及正常/异常用例已具体化；需求是否获批另判，未执行"
+          "basis": "M18-P1-APPROVAL-20260910；逐项Given/When/Then已存在，作为验收预期获批，未冒本轮执行"
         },
         "dependenciesAndExceptionsResolved": {
-          "value": false,
-          "basis": "本模块新规则/LIMIT及消费者未批依赖待集中决定"
+          "value": true,
+          "basis": "M18-P1-APPROVAL-20260910；已批准生产者契约与本模块LIMIT；源缺证/独立角色留P2/P3/P4，不要求先实联调"
         }
       },
       "transitionReview": {
-        "approved": false,
-        "record": null,
-        "scope": null,
-        "approvedAt": null
+        "approved": true,
+        "record": "M18-P1-APPROVAL-20260910",
+        "scope": "模块P1转序就绪；R2整体进入P2未批准",
+        "approvedAt": "2026-09-10T02:41:58.226023+00:00"
       },
-      "restrictedApproval": null,
-      "p1Closed": false,
-      "closureClass": "已完成待评审",
-      "transitionReady": false,
-      "missingConditions": [
-        "implementationRulesDecided",
-        "dependenciesAndExceptionsResolved",
-        "p1AApproved",
-        "p1BApproved",
-        "transitionReviewApproved"
-      ]
+      "restrictedApproval": {
+        "scope": "原站启动/采集/校准会/九宫格算法/发布及跨角色行为未执行；工具计算项目来源与对象子ID、标准共享UUID未确认。",
+        "residualRisk": "错误人员评价、历史时点错置、校准利益冲突、共享泄漏、缺证被错误落格、盘点结果自动改变池或任用。",
+        "revalidation": "P2：核对象/采集/会议/评价版本、轴映射与边界、独立节点及来源合同、历史结果保护和迁移；P3：合成验证边界等值、缺失、版本漂移、人员变动、校准驳回撤回/重开、会议回避和发布并发、跨池继任幂等引用；P4：独立多角色、敏感字段/历史/附件/下载权限、跨模块业务及生产容量/恢复验收；E2不新增访问者，管理员操作不代验。",
+        "record": "M18-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T02:41:58.226023+00:00",
+        "phaseScope": "仅P1"
+      },
+      "p1Closed": true,
+      "closureClass": "受限通过",
+      "closureRecord": "M18-P1-APPROVAL-20260910",
+      "closedAt": "2026-09-10T02:41:58.226023+00:00",
+      "transitionReady": true,
+      "missingConditions": []
     },
     {
       "moduleId": "M17",
@@ -1410,7 +1415,6 @@
       ],
       "transitionReady": false,
       "missingConditions": [
-        "M18",
         "M17",
         "M03",
         "BASE-01",
@@ -1497,7 +1501,6 @@
       "M03"
     ],
     "waitingModuleIds": [
-      "M18",
       "M17",
       "M03"
     ],
@@ -1522,7 +1525,7 @@
     "observedProtectedHead": "617a707",
     "parallelBoundary": "仅git worktree list查看注册信息；不进入、不修改、不合并/cherry-pick其任何提交；P2建议完成后统一纳入",
     "status": "R2批准顺序落账中",
-    "nextFormalClosureModule": "M18",
+    "nextFormalClosureModule": "M17",
     "reviewBundleRef": "docs/delivery/P1_R2_Review_Package.md"
   }
 }
