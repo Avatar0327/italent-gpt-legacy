@@ -76,7 +76,7 @@
       "dependsOn": [
         "P3-R1-01"
       ],
-      "status": "in_progress_partial_not_dependency_ready",
+      "status": "paused_partial_not_dependency_ready",
       "caseIds": [
         "P3-INT-01",
         "P3-INT-02",

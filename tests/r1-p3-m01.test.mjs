@@ -15,7 +15,7 @@ async function fixture(){
  sqlite.exec('DROP TRIGGER r1_guard_hris_orgs_insert; DROP TRIGGER r1_guard_hris_memberships_insert');
  sqlite.prepare("INSERT INTO hris_orgs(tenant_id,id,name,city,leader,status) VALUES (?,'A','合成A','上海','','启用'),(?,'B','合成B','上海','','启用')").run(tenant,tenant);
  sqlite.prepare("INSERT INTO hris_memberships(user_id,tenant_id,role,org_scope,view_email,view_level,active) VALUES ('reviewer',?,'hr','[\"A\",\"B\"]',1,1,1)").run(tenant);
- for(const who of ['owner','reviewer'])for(const op of ['catalog','identityReview','person','employment','assignmentRequest','assignmentApprove','assignmentExecute','exitRequest','exitApprove','exitExecute','exitCleanup','contract','contractSign','contractEnd','template','subsetImport']){
+ for(const who of ['owner','reviewer'])for(const op of ['catalog','identityReview','identityBind','contractField','person','employment','assignmentRequest','assignmentApprove','assignmentExecute','exitRequest','exitApprove','exitExecute','exitCleanup','contract','contractSign','contractEnd','template','subsetImport']){
   sqlite.prepare('INSERT INTO r1_permission_grants VALUES (?,?,?,?,?,?,?,?,?,?,?)').run(tenant,who+op,who,'M01',op,'scope','["A","B"]','["record","name","email","skill"]','current',past,null);
  }
  sqlite.exec('UPDATE r1_schema_state SET features_enabled=1');
@@ -111,4 +111,50 @@ test('command replay runs before stale business-state validation and does not cr
  const f=await fixture(),c=await memberContext(),s=c.member.securityStamp,key=crypto.randomUUID(),payload={operation:'employment',personId:'person',orgId:'A',identityReviewId:'review',predecessorId:null,startOn:today,employmentType:'employee'};
  const intent={commandId:key,idempotencyKey:key,action:'M01.employment',payload,expectedWorkspaceRevision:c.row.revision,expectedAuthorizationRevision:s.authorizationRevision,expectedWriterEpoch:s.writerEpoch,expectedRecoveryEpoch:s.recoveryEpoch};
  const a=await executeM01(c,intent),b=await executeM01(await memberContext(),intent);assert.equal(b.replayed,true);assert.deepEqual(a.result.ids,b.result.ids);assert.equal(f.sqlite.prepare("SELECT count(*) n FROM r1_m01_entities WHERE kind='employment'").get().n,1);f.sqlite.close();
+});
+test('server identity candidates: forged candidate list cannot hide a second identifier match; protected keys contain no raw values',async()=>{
+ const f=await fixture();f.seed('other-person','person','B',null,{name:'另一合成人员'},'ended','E2');
+ await f.send({operation:'identityBind',personId:'person',orgId:'A',identifiers:[{type:'document',value:'SYNTHETIC-DOC-A'},{type:'email',value:'shared@example.invalid'}],evidenceRef:'fixture-review-A'});
+ await f.send({operation:'identityBind',personId:'other-person',orgId:'B',identifiers:[{type:'document',value:'SYNTHETIC-DOC-B'},{type:'email',value:'shared@example.invalid'}],evidenceRef:'fixture-review-B'});
+ await assert.rejects(f.send({operation:'identityReview',personId:'person',candidateIds:['person'],identifiers:[{type:'document',value:'SYNTHETIC-DOC-A'},{type:'document',value:'SYNTHETIC-DOC-B'}],reason:'隔离冲突核验',evidenceRef:'fixture-conflict'}),/身份复核/);
+ await assert.rejects(f.send({operation:'identityReview',personId:'person',candidateIds:['person'],identifiers:[{type:'email',value:'shared@example.invalid'}],reason:'邮件只是线索',evidenceRef:'fixture-shared'}),/身份复核/);
+ const r=await f.send({operation:'identityReview',personId:'person',candidateIds:['person'],identifiers:[{type:'document',value:'SYNTHETIC-DOC-A'}],reason:'独立核验证件',evidenceRef:'fixture-confirm'});assert.equal((await m01Entity(f.db,f.tenant,r.result.ids[0])).status,'confirmed');
+ assert.ok(!JSON.stringify(f.sqlite.prepare('SELECT * FROM r1_identity_keys').all()).includes('SYNTHETIC-DOC'));assert.equal(f.sqlite.prepare("SELECT count(*) n FROM r1_m01_entities WHERE kind='person'").get().n,2);f.sqlite.close();
+});
+test('contract field roots survive revisions and inheritance; explicit null clears; stable contract counts exclude unknown and cancelled',async()=>{
+ const f=await fixture(),{contractCounts}=await import('../lib/hris/r1-personnel-data.ts');f.seed('legal','legal_entity','A',null,{name:'合成法人',validFrom:past,validTo:null,attributes:{orgIds:['A']}},'active','LE');
+ const definition=await f.send({operation:'contractField',orgId:'A',code:'note',name:'合同说明',inheritPrevious:true,status:'active'}),field=definition.result.ids[0];
+ for(const who of ['owner','reviewer'])f.sqlite.prepare('INSERT INTO r1_permission_grants VALUES (?,?,?,?,?,?,?,?,?,?,?)').run(f.tenant,who+'contract-fields',who,'M01','contract','scope','["A"]',JSON.stringify([field]),'current',past,null);
+ const base={operation:'contract',personId:'person',orgId:'A',legalEntityId:'legal',number:'C-01',agreementCategory:'labor',contractType:'fixed',start:'2026-01-01',end:'2026-12-31',renewalOf:null,fields:{[field]:'历史原值'}};
+ const first=(await f.send(base)).result.ids[0];await f.send({operation:'contractSign',id:first,signedOn:today,evidence:'隔离人工登记'});
+ const hash=f.sqlite.prepare('SELECT payload FROM r1_m01_versions WHERE entity_id=? ORDER BY version').all(first);
+ await f.send({operation:'contractField',id:field,orgId:'A',code:'note',name:'合同说明新版',inheritPrevious:true,status:'active'});
+ const second=(await f.send({...base,number:'C-02',start:'2027-01-01',end:'2027-12-31',renewalOf:first,fields:{}})).result.ids[0];let c=await m01Entity(f.db,f.tenant,second);assert.equal(c.payload.fieldSnapshots[0].value,'历史原值');assert.equal(c.payload.fieldSnapshots[0].sourceContractId,first);assert.equal(c.payload.fieldSnapshots[0].sourceFieldVersion,1);assert.equal(c.payload.fieldSnapshots[0].version,2);
+ await f.send({...base,id:second,number:'C-02',start:'2027-01-01',end:'2027-12-31',renewalOf:first,fields:{[field]:null}});c=await m01Entity(f.db,f.tenant,second);assert.equal(c.payload.fieldSnapshots[0].value,null);await f.send({operation:'contractSign',id:second,signedOn:today,evidence:'隔离登记第二份'});
+ assert.deepEqual(f.sqlite.prepare('SELECT payload FROM r1_m01_versions WHERE entity_id=? ORDER BY version').all(first),hash);
+ const a=await m01Entity(f.db,f.tenant,first),b=await m01Entity(f.db,f.tenant,second),count=contractCounts([a,b,{...b,revision:1},{...a,id:'cancelled',status:'cancelled'},{...a,id:'unknown',payload:{legalEntityId:'legal'}}]);assert.equal(count.groups[0].count,2);assert.deepEqual(count.unknownIds,['unknown']);assert.equal(count.automaticOpenEnded,false);assert.equal(count.automaticTermination,false);f.sqlite.close();
+});
+test('ten subset types plus custom preserve field versions, reject missing field permission and enforce exact decimal precision',async()=>{
+ const f=await fixture();for(const kind of ['education','employment','family','appraisal','training','reward','certificate','project','skill','language','custom']){
+  const t=(await f.send({operation:'template',orgId:'A',kind,entryType:'subset',fields:[{code:'skill',type:'number',unit:'小时',precision:2,required:false,default:null,uniqueKey:true,readActions:['read'],writeActions:['update']}]})).result.ids[0];
+  const row={operation:'subsetImport',personId:'person',orgId:'A',templateId:t,templateVersion:1,batchId:'types-'+kind,rowNo:1,attemptVersion:1,mode:'create',recordId:null,fields:{skill:'1.25'}};
+  const r=await f.send(row);await assert.rejects(f.send({...row,rowNo:2,fields:{skill:'1.256'}}),/精度/);await assert.rejects(f.send({...row,rowNo:3}),/唯一键/);
+  await f.send({...row,rowNo:4,mode:'update',recordId:r.result.ids[0],fields:{skill:null}});assert.equal((await m01Entity(f.db,f.tenant,r.result.ids[0])).revision,2);
+ }
+ const t=(await f.send({operation:'template',orgId:'A',kind:'custom',entryType:'subset',fields:[{code:'protected',type:'text',required:false,default:null,uniqueKey:false,readActions:['read'],writeActions:['update']}]})).result.ids[0];
+ await assert.rejects(f.send({operation:'subsetImport',personId:'person',orgId:'A',templateId:t,templateVersion:1,batchId:'denied',rowNo:1,attemptVersion:1,mode:'create',recordId:null,fields:{protected:'不得落库'}}),/字段权限/);f.sqlite.close();
+});
+test('M01 paged reads enforce field tuples and reject a cursor after permission revision changes',async()=>{
+ const f=await fixture(),{readM01}=await import('../lib/hris/r1-m01-read.ts');
+ f.seed('person-2','person','A',null,{name:'另一个合成人员',email:'hidden@example.invalid',fields:{email:'hidden@example.invalid',skill:'可见字段'}},'active','E2');
+ f.sqlite.prepare('INSERT INTO r1_permission_grants VALUES (?,?,?,?,?,?,?,?,?,?,?)').run(f.tenant,'read-only','owner','M01','read','scope','["A"]','["record","skill"]','current',past,null);
+ const first=await readM01(await memberContext(),new URLSearchParams('kind=person&limit=1'));assert.equal(first.items.length,1);assert.ok(first.nextCursor);
+ const second=await readM01(await memberContext(),new URLSearchParams({kind:'person',limit:'1',cursor:first.nextCursor}));assert.equal(second.items[0].payload.email,undefined);assert.equal(second.items[0].payload.fields.email,undefined);assert.equal(second.items[0].payload.fields.skill,'可见字段');
+ f.sqlite.prepare("UPDATE r1_permission_grants SET fields='[]' WHERE id='read-only'").run();await assert.rejects(readM01(await memberContext(),new URLSearchParams({kind:'person',limit:'1',cursor:first.nextCursor})),/重新读取/);f.sqlite.close();
+});
+test('client unknown result retains exact command identity and resolves through the receipt without a second send',async()=>{
+ const {clientIntent,sendClientCommand,queryClientCommand}=await import('../lib/hris/r1-client-command.ts');
+ const intent=clientIntent({revision:7,securityStamp:{authorizationRevision:3,writerEpoch:1,recoveryEpoch:2,openGate:1,phase:'features_enabled',featuresEnabled:1}},'person',{operation:'person',code:'fixture'});let sends=0;
+ const lost=await sendClientCommand(intent,async()=>{sends++;throw Error('synthetic lost response');});assert.equal(lost.state,'unknown');assert.equal(lost.commandId,intent.commandId);
+ const found=await queryClientCommand(intent.commandId,async url=>{assert.ok(url.endsWith(intent.commandId));return Response.json({status:'committed',commandId:intent.commandId,result:'{}'});});assert.equal(found.state,'committed');assert.equal(sends,1);
 });

@@ -1,3 +1,4 @@
+import {projectR1Catalogs} from './r1-compatibility';
 import {commitLegacy} from './r1-command';
 import {HttpError} from './http';
 import type {State,Org,Employee,Approval,ApprovalStep,Workflow,Position,Grade} from './model.ts';
@@ -28,7 +29,8 @@ export async function readWorkspace(db:D1Database,tenant:string):Promise<Workspa
  const employeeRows=rows<Employee>(result[2]);for(const link of rows<{employeeId:string;positionId:string|null;gradeId:string|null}>(result[10])){const e=employeeRows.find(e=>e.id===link.employeeId);if(e){e.positionId=link.positionId;e.gradeId=link.gradeId;}}
  for(const link of rows<{approvalId:string;positionId:string|null;gradeId:string|null}>(result[11])){const a=approvals.find(a=>a.id===link.approvalId);if(a){a.positionId=link.positionId;a.gradeId=link.gradeId;}}
  const state:State={positions:rows<Position>(result[8]),grades:rows<Grade>(result[9]),orgs:rows<Org>(result[1]),employees:employeeRows,approvals,workflows,audit:rows<State['audit'][number]>(result[7])};
- return {...row,data:JSON.stringify(state)};
+ const gate=await db.prepare('SELECT features_enabled AS enabled FROM r1_schema_state WHERE tenant_id=?').bind(tenant).first<{enabled:number}>();
+ return {...row,data:JSON.stringify(gate?.enabled?await projectR1Catalogs(db,tenant,state):state)};
 }
 function orderedOrgs(orgs:Org[]){const ordered:Org[]=[];const visited=new Set<string>(),visiting=new Set<string>();const visit=(o:Org)=>{if(visited.has(o.id))return;if(visiting.has(o.id))throw Error('组织存在循环');visiting.add(o.id);if(o.parentId){const parent=orgs.find(p=>p.id===o.parentId);if(!parent)throw Error('上级组织不存在');visit(parent);}visiting.delete(o.id);visited.add(o.id);ordered.push(o);};orgs.forEach(visit);return ordered;}
 const equal=(a:unknown,b:unknown)=>JSON.stringify(a)===JSON.stringify(b);

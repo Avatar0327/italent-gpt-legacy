@@ -1,4 +1,6 @@
 import {z} from 'zod';
+import {identityKey,resolveIdentity,prepareIdentityKeys,captureR1ContractFields} from './r1-personnel-data';
+import {stateStatements} from './repository';
 import {HttpError} from './http';
 import {businessDate} from './business-time';
 import {commitCommand,securityStamp,digest,replayCommand,type CommandIntent} from './r1-command';
@@ -14,11 +16,13 @@ const catalogKind=z.enum(['org','position','job','job_family','grade','legal_ent
 const subsetKind=z.enum(['education','employment','family','appraisal','training','reward','certificate','project','skill','language','custom']);
 const field=z.object({code:id,type:z.enum(['text','number','date','enum','attachment']),required:z.boolean(),default:z.union([z.string(),z.number().int().safe(),z.null()]),uniqueKey:z.boolean(),readActions:z.array(id).min(1),writeActions:z.array(id).min(1),options:z.array(text).optional(),unit:z.string().optional(),precision:z.number().int().min(0).max(6).optional()}).strict();
 export const m01Input=z.discriminatedUnion('operation',[
- z.object({operation:z.literal('catalog'),id:id.optional(),kind:catalogKind,closePreviousVersion:z.number().int().positive().optional(),code:text,name:text,orgId:z.string(),parentId:z.string(),status:z.enum(['active','inactive']),...interval,attributes:z.object({abbr:z.string().max(100).optional(),city:z.string().max(100).optional(),jobId:id.optional(),familyId:id.optional(),gradeMinId:id.optional(),gradeMaxId:id.optional(),sequence:z.number().int().min(0).max(999).optional(),establishedOn:date.optional(),newType:z.enum(['New','Backfill']).optional(),responsibilities:z.string().max(4000).optional(),orgIds:z.array(id).optional(),extraPersonIds:z.array(id).optional()}).strict()}).strict(),
- z.object({operation:z.literal('identityReview'),personId:id,candidateIds:z.array(id).min(1),reason:text,evidenceRef:id}).strict(),
- z.object({operation:z.literal('person'),code:text,name:text,orgId:id,templateId:id,entryType:z.enum(['employee_create','prehire','onboard']),fields:z.record(z.unknown())}).strict(),
+ z.object({operation:z.literal('catalog'),id:id.optional(),kind:catalogKind,closePreviousVersion:z.number().int().positive().optional(),code:text,name:text,orgId:z.string(),parentId:z.string(),status:z.enum(['active','inactive']),...interval,attributes:z.object({abbr:z.string().max(100).optional(),city:z.string().max(100).optional(),jobId:id.optional(),familyId:id.optional(),gradeMinId:id.optional(),gradeMaxId:id.optional(),sequence:z.number().int().min(0).max(999).optional(),establishedOn:date.optional(),newType:z.enum(['New','Backfill']).optional(),responsibilities:z.string().max(4000).optional(),includeDescendants:z.boolean().optional(),dottedParentPositionId:id.optional(),keyPosition:z.boolean().optional(),legacyLeader:z.string().max(100).optional(),orgIds:z.array(id).optional(),extraPersonIds:z.array(id).optional()}).strict()}).strict(),
+ z.object({operation:z.literal('identityReview'),personId:id,candidateIds:z.array(id).min(1),identifiers:z.array(identityKey).min(1).max(4).optional(),reason:text,evidenceRef:id}).strict(),
+ z.object({operation:z.literal('identityBind'),personId:id,orgId:id,identifiers:z.array(identityKey).min(1).max(4),evidenceRef:id}).strict(),
+ z.object({operation:z.literal('contractField'),id:id.optional(),orgId:id,code:z.string().trim().regex(/^[A-Za-z0-9_-]{1,60}$/),name:text,inheritPrevious:z.boolean(),status:z.enum(['active','archived'])}).strict(),
+ z.object({operation:z.literal('person'),code:text,name:text,orgId:id,identifiers:z.array(identityKey).max(4).optional(),templateId:id,entryType:z.enum(['employee_create','prehire','onboard']),fields:z.record(z.unknown())}).strict(),
  z.object({operation:z.literal('employment'),personId:id,orgId:id,identityReviewId:id,predecessorId:id.nullable(),startOn:date,employmentType:z.enum(['employee','internship','retired_rehire'])}).strict(),
- z.object({operation:z.literal('assignmentRequest'),personId:id,employmentId:id,orgId:id,positionId:id,type:z.enum(['primary','part_time','secondment','expatriate']),homePrimaryId:id.nullable(),...interval,reviewerId:id,reason:text}).strict(),
+ z.object({operation:z.literal('assignmentRequest'),personId:id,employmentId:id,orgId:id,positionId:id,gradeId:id.nullable().optional(),replacesAssignmentId:id.optional(),endAssignmentId:id.optional(),type:z.enum(['primary','part_time','secondment','expatriate']),homePrimaryId:id.nullable(),...interval,reviewerId:id,reason:text}).strict(),
  z.object({operation:z.literal('assignmentApprove'),id}).strict(),z.object({operation:z.literal('assignmentExecute'),id}).strict(),
  z.object({operation:z.literal('exitRequest'),personId:id,orgId:id,lastWorkingOn:date,reviewerId:id,reason:text}).strict(),z.object({operation:z.literal('exitApprove'),id}).strict(),z.object({operation:z.literal('exitExecute'),id}).strict(),
  z.object({operation:z.literal('exitCleanup'),personId:id,orgId:id,limit:z.number().int().min(1).max(20)}).strict(),
@@ -63,7 +67,7 @@ function templateValues(template:Entity,input:Record<string,unknown>,mode:'creat
 export async function executeM01(ctx:{db:D1Database;member:Member;row:{revision:number;data:string}},intent:CommandIntent){
  const c=m01Input.parse(intent.payload),{db,member:m}=ctx,tenant=m.tenantId,at=new Date().toISOString(),today=businessDate(at),stamp=await securityStamp(db,tenant);
  if(!stamp.featuresEnabled)throw new HttpError(409,'新能力等待迁移与恢复核验','FEATURE_NOT_READY');
- const state=JSON.parse(ctx.row.data) as State,scope=scopedOrgs(state,m);
+ const state=JSON.parse(ctx.row.data) as State,scope=scopedOrgs(state,m),compatibility=structuredClone(state),storedBefore=structuredClone(state);
  if(!['hr','admin'].includes(m.role))throw new HttpError(403,'仅授权HR办理','FORBIDDEN');
  const changes:Entity[]=[],extra:((token:string)=>D1PreparedStatement[])[]=[],result:Record<string,unknown>={};
  const get=(entityId:string)=>m01Entity(db,tenant,entityId);
@@ -81,8 +85,8 @@ export async function executeM01(ctx:{db:D1Database;member:Member;row:{revision:
   else if(observed===fence.commandId)return;
   invalid('人员已退出，此雇佣代次的后续办理已阻断','BLOCKED_BY_EXIT');
  };
- if('id' in c&&c.id&&!['catalog','template','contract'].includes(c.operation)){const e=await get(c.id);await authorize(e.orgId??'',e.personId??'');if(e.personId)await assertFence(e.personId,e.payload.employmentId,e.payload.exitFenceObserved);}
- if('personId' in c&&!['employment','identityReview','exitCleanup'].includes(c.operation)){
+ if('id' in c&&c.id&&!['catalog','template','contract','contractField'].includes(c.operation)){const e=await get(c.id);await authorize(e.orgId??'',e.personId??'');if(e.personId)await assertFence(e.personId,e.payload.employmentId,e.payload.exitFenceObserved);}
+ if('personId' in c&&!['employment','identityReview','identityBind','exitCleanup'].includes(c.operation)){
   if(c.operation==='assignmentRequest')await assertFence(c.personId,c.employmentId);
   else {const active=(await rows(db,tenant,'employment',c.personId)).find(e=>e.status==='active');await assertFence(c.personId,active?.id);}
  }
@@ -94,6 +98,7 @@ export async function executeM01(ctx:{db:D1Database;member:Member;row:{revision:
   const all=await catalogTimeline(db,tenant,c.kind);
   if(all.some(e=>e.id!==c.id&&e.code===c.code))invalid('编码已存在');
   if(old&&old.code!==c.code)invalid('稳定目录编码不能通过发布改写');
+  if(c.kind==='grade'&&c.attributes.sequence===undefined)invalid('职级必须明确序号');
   if(c.kind==='position'&&c.attributes.establishedOn&&c.attributes.establishedOn>c.validFrom)invalid('设立日期晚于生效日期');
   if(c.kind==='position'&&c.attributes.gradeMinId&&c.attributes.gradeMaxId){const a=await get(c.attributes.gradeMinId),b=await get(c.attributes.gradeMaxId);if(a.kind!=='grade'||b.kind!=='grade'||a.payload.attributes.familyId!==b.payload.attributes.familyId||a.payload.attributes.sequence>b.payload.attributes.sequence)invalid('职级上下限无效');}
   let e=old?revise(old,{...c,supersedesVersion:null},c.status):make(c.kind,c.orgId,null,c,c.status,c.code);
@@ -111,8 +116,21 @@ export async function executeM01(ctx:{db:D1Database;member:Member;row:{revision:
  }
  case 'identityReview':{
   const person=await get(c.personId);if(person.kind!=='person')invalid('非人员身份');await authorize(person.orgId??'',person.id);
-  if(new Set(c.candidateIds).size!==1||c.candidateIds[0]!==c.personId)invalid('多标识冲突，需身份复核','IDENTITY_REVIEW_REQUIRED');
-  changes.push(make('identity_review',person.orgId,person.id,{...c,reviewerId:m.userId,reviewedAt:at},'confirmed'));break;
+  const resolved=await resolveIdentity(db,tenant,c.identifiers??[{type:'code',value:person.code??''}]);
+  if(resolved.length!==1||resolved[0]!==person.id||new Set(c.candidateIds).size!==1||c.candidateIds[0]!==c.personId)invalid('多标识冲突，需身份复核','IDENTITY_REVIEW_REQUIRED');
+  changes.push(make('identity_review',person.orgId,person.id,{personId:c.personId,candidateIds:resolved,reason:c.reason,evidenceRef:c.evidenceRef,reviewerId:m.userId,reviewedAt:at},'confirmed'));break;
+ }
+ case 'identityBind':{
+  const p=await get(c.personId);if(p.kind!=='person'||p.orgId!==c.orgId)invalid('身份对象不匹配');
+  const prepared=await prepareIdentityKeys(tenant,c.identifiers);
+  extra.push(token=>prepared.map(k=>db.prepare('INSERT INTO r1_identity_keys SELECT owner,?,?,?,?,? FROM hris_workspaces WHERE owner=? AND last_mutation=? ON CONFLICT DO NOTHING').bind(p.id,k.type,k.digest,m.userId,at,tenant,token)));result.personId=p.id;break;
+ }
+ case 'contractField':{
+  const all=await rows(db,tenant,'contract_field'),old=c.id?await get(c.id):null;
+  if(old&&(old.kind!=='contract_field'||old.orgId!==c.orgId||old.code!==c.code))invalid('仅可修订同组织同编码字段');
+  if(all.some(f=>f.id!==c.id&&f.orgId===c.orgId&&f.code?.toLowerCase()===c.code.toLowerCase()))invalid('字段编码已存在，请修订原字段');
+  if(c.status==='active'&&all.filter(f=>f.id!==c.id&&f.orgId===c.orgId&&f.status==='active').length>=20)invalid('每组织最多20项合同字段');
+  changes.push(old?revise(old,c,c.status):make('contract_field',c.orgId,null,c,c.status,c.code));break;
  }
  case 'template':{
   if(new Set(c.fields.map(f=>f.code)).size!==c.fields.length)invalid('模板字段重复');
@@ -123,7 +141,10 @@ export async function executeM01(ctx:{db:D1Database;member:Member;row:{revision:
  case 'person':{
   const template=await get(c.templateId);if(template.kind!=='template'||template.status!=='published'||template.orgId!==c.orgId||template.payload.entryType!==c.entryType)invalid('入口模板未配置','TEMPLATE_NOT_CONFIGURED');
   for(const f of template.payload.fields)await authorize(c.orgId,'',f.code);
-  const values=templateValues(template,c.fields,'create');changes.push(make('person',c.orgId,null,{...c,fields:values,templateVersion:template.revision,invite:false},'draft',c.code));break;
+  const values=templateValues(template,c.fields,'create');const keys=[{type:'code' as const,value:c.code},...(c.identifiers??[])];
+  if((await resolveIdentity(db,tenant,keys)).length)invalid('标识命中历史人员，需身份复核','IDENTITY_REVIEW_REQUIRED');
+  const {identifiers,...safe}=c,person=make('person',c.orgId,null,{...safe,fields:values,templateVersion:template.revision,invite:false},'draft',c.code);changes.push(person);
+  const prepared=await prepareIdentityKeys(tenant,keys);extra.push(token=>prepared.map(k=>db.prepare('INSERT INTO r1_identity_keys SELECT owner,?,?,?,?,? FROM hris_workspaces WHERE owner=? AND last_mutation=? ON CONFLICT DO NOTHING').bind(person.id,k.type,k.digest,m.userId,at,tenant,token)));break;
  }
  case 'employment':{
   const person=await get(c.personId),review=await get(c.identityReviewId);if(person.kind!=='person'||review.kind!=='identity_review'||review.personId!==person.id||review.status!=='confirmed')invalid('缺少已核实的稳定身份','IDENTITY_REVIEW_REQUIRED');
@@ -136,7 +157,10 @@ export async function executeM01(ctx:{db:D1Database;member:Member;row:{revision:
   const person=await get(c.personId);if(person.kind!=='person')invalid('人员不存在');await authorize(person.orgId??'',person.id);
   const reviewer=await db.prepare('SELECT user_id AS userId,tenant_id AS tenantId,role,employee_id AS employeeId,org_scope AS orgScope,view_email AS viewEmail,view_level AS viewLevel,active FROM hris_memberships WHERE tenant_id=? AND user_id=? AND active=1').bind(tenant,c.reviewerId).first<Member>();
   if(!reviewer||reviewer.userId===m.userId||reviewer.employeeId===person.id||!['hr','admin'].includes(reviewer.role)||(!scopedOrgs(state,reviewer).has(c.orgId)||!scopedOrgs(state,reviewer).has(person.orgId??'')))invalid('缺少独立且覆盖范围的审核HR');
-  if(c.operation==='assignmentRequest'){const employment=await get(c.employmentId);if(employment.kind!=='employment'||employment.personId!==person.id||!['pending','active'].includes(employment.status)||c.validTo&&c.validTo<c.validFrom)invalid('雇佣或任职区间无效');if(c.type!=='primary'&&!c.homePrimaryId)invalid('非主职必须关联派出主职');}
+  if(c.operation==='assignmentRequest'){const employment=await get(c.employmentId);if(employment.kind!=='employment'||employment.personId!==person.id||!['pending','active'].includes(employment.status)||c.validTo&&c.validTo<c.validFrom)invalid('雇佣或任职区间无效');if(c.type!=='primary'&&!c.homePrimaryId)invalid('非主职必须关联派出主职');
+   if(c.replacesAssignmentId&&c.endAssignmentId)invalid('不能同时变更和结束同一任职');
+   if(c.replacesAssignmentId||c.endAssignmentId){const old=await get(c.replacesAssignmentId??c.endAssignmentId!);if(old.kind!=='assignment'||old.personId!==person.id||old.payload.employmentId!==employment.id||old.status!=='active'||old.payload.type!==c.type)invalid('被变更任职无效');await authorize(old.orgId??'',person.id);if(c.replacesAssignmentId&&c.type==='primary')invalid('主职变更须使用D7调动','D7_REQUIRED');}
+}
   const pending=await db.prepare("SELECT 1 FROM r1_m01_entities WHERE tenant_id=? AND person_id=? AND kind IN ('assignment_request','exit_request') AND status IN ('pending','approved','failed') AND NOT EXISTS (SELECT 1 FROM r1_exit_cleanup x WHERE x.tenant_id=r1_m01_entities.tenant_id AND x.business_id=r1_m01_entities.id) LIMIT 1").bind(tenant,person.id).first();if(pending)invalid('已有在途人事事项');
   const segment=c.operation==='assignmentRequest'?await get(c.employmentId):(await rows(db,tenant,'employment',person.id)).find(e=>e.status==='active');
   changes.push(make(c.operation==='assignmentRequest'?'assignment_request':'exit_request',c.orgId,person.id,{...c,employmentId:segment?.id??null,exitFenceObserved:segment?.payload.exitFenceObserved??null,createdBy:m.userId,attempts:0,effectStatus:'waiting'},'pending'));break;
@@ -150,9 +174,10 @@ export async function executeM01(ctx:{db:D1Database;member:Member;row:{revision:
   let failure:string|null=null;
   try{const position=await activeCatalog(p.positionId,'position');await activeCatalog(p.orgId,'org');if(position.orgId!==p.orgId)invalid('职位不属于目标组织');
    const assignments=await rows(db,tenant,'assignment',e.personId!);
-   if(assignments.some(a=>a.status==='active'&&overlaps(a.payload as any,p as {validFrom:string;validTo:string|null})&&(p.type==='primary'&&a.payload.type==='primary'||a.payload.type===p.type&&a.payload.positionId===p.positionId)))invalid('存在重叠任职');
+   if(p.replacesAssignmentId||p.endAssignmentId){const old=await get(p.replacesAssignmentId??p.endAssignmentId);if(old.kind!=='assignment'||old.personId!==e.personId||old.status!=='active')invalid('被变更任职已变化');}
+   if(!p.endAssignmentId&&assignments.some(a=>a.id!==p.replacesAssignmentId&&a.status==='active'&&overlaps(a.payload as any,p as {validFrom:string;validTo:string|null})&&(p.type==='primary'&&a.payload.type==='primary'||a.payload.type===p.type&&a.payload.positionId===p.positionId)))invalid('存在重叠任职');
    if(p.type!=='primary'){const home=await get(p.homePrimaryId);if(home.kind!=='assignment'||home.personId!==e.personId||home.status!=='active'||home.payload.type!=='primary')invalid('派出主职无效');}
-   if(p.type==='primary'){const budget=await db.prepare("SELECT payload FROM r1_m01_entities WHERE tenant_id=? AND kind='budget_policy' AND org_id=? AND status='active' LIMIT 1").bind(tenant,p.orgId).first<{payload:string}>();
+   if(p.type==='primary'&&!p.endAssignmentId){const budget=await db.prepare("SELECT payload FROM r1_m01_entities WHERE tenant_id=? AND kind='budget_policy' AND org_id=? AND status='active' LIMIT 1").bind(tenant,p.orgId).first<{payload:string}>();
     if(budget&&JSON.parse(budget.payload).strongBlocking)invalid('金额预算服务未接通，强阻断链不可执行','EXTERNAL_BUDGET_REQUIRED');result.budgetStatus='not_checked';
     const plans=await db.prepare("SELECT payload FROM hris_development_records WHERE tenant_id=? AND kind='staffingPlan' AND position_id=? AND status='approved' AND json_extract(payload,'$.start')<=? AND json_extract(payload,'$.end')>=? LIMIT 201").bind(tenant,p.positionId,today,today).all();if(plans.results.length>200)invalid('编制版本待核');
     const active=plans.results.map((x:any)=>JSON.parse(x.payload)).filter((x:any,_i:number,a:any[])=>!a.some(y=>y.supersedes===x.id));
@@ -162,8 +187,17 @@ export async function executeM01(ctx:{db:D1Database;member:Member;row:{revision:
   }catch(error){if(!(error instanceof HttpError)||error.status>=500)throw error;failure=error.message;}
   changes.push(revise(e,{attempts:p.attempts+1,lastAttemptAt:at,effectStatus:failure?'failed':'applied',failure,appliedAt:failure?null:at},failure?'failed':'applied'));
   if(failure){result.effectStatus='failed';result.reasonCode='BUSINESS_FAILED';break;}
+  if(p.replacesAssignmentId||p.endAssignmentId){const old=await get(p.replacesAssignmentId??p.endAssignmentId);changes.push(revise(old,{validTo:old.payload.validFrom===today?today:previousDay(today),dayProjectionExcluded:old.payload.validFrom===today,effectiveToAt:at,endedAt:at,occupancy:0},'ended'));}
+  if(p.endAssignmentId){result.effectStatus='applied';break;}
   const assignment=make('assignment',e.orgId,e.personId,{...p,validFrom:today,appliedAt:at,occupancy:p.type==='primary'?1:0,approvalId:e.id});changes.push(assignment);
   const employment=await get(p.employmentId);if(employment.status==='pending')changes.push(revise(employment,{actualStartedAt:at},'active'));
+  if(p.type==='primary'){
+   const person=await get(e.personId!),position=await activeCatalog(p.positionId,'position'),grade=p.gradeId?await activeCatalog(p.gradeId,'grade'):null;
+   const old=compatibility.employees.find(x=>x.id===person.id),fields=person.payload.fields??{};
+   const employee={id:person.id,code:person.code??person.payload.code,name:person.payload.name,orgId:p.orgId,positionId:p.positionId,gradeId:p.gradeId??null,job:position.payload.name,level:grade?.payload.name??'',joined:old?.joined??today,status:old&&old.status!=='离职'?old.status:'试用',email:old?.email??fields.email??''};
+   if(!z.string().email().or(z.literal('')).safeParse(employee.email).success)invalid('员工邮箱格式无效');
+   if(old)Object.assign(old,employee);else compatibility.employees.push(employee);changes.push(revise(person,{currentPrimaryId:assignment.id},'active'));
+  }
   result.assignmentId=assignment.id;result.effectStatus='applied';break;
  }
  case 'exitExecute':{
@@ -171,6 +205,8 @@ export async function executeM01(ctx:{db:D1Database;member:Member;row:{revision:
   const employment=await rows(db,tenant,'employment',e.personId!),assignments=await rows(db,tenant,'assignment',e.personId!);
   if(employment.length+assignments.length>30)throw new HttpError(503,'需有界退出计划','BOUNDED_QUERY_REQUIRED');
   changes.push(revise(e,{appliedAt:at,effectStatus:'applied',cleanupStatus:'pending'},'applied'));
+  const person=await get(e.personId!);changes.push(revise(person,{exitedAt:at,currentPrimaryId:null},'ended'));const oldEmployee=compatibility.employees.find(x=>x.id===person.id);if(oldEmployee)oldEmployee.status='离职';
+  extra.push(token=>[db.prepare("UPDATE hris_memberships SET active=0 WHERE tenant_id=? AND employee_id=? AND active=1 AND EXISTS(SELECT 1 FROM hris_workspaces WHERE owner=? AND last_mutation=?)").bind(tenant,e.personId,tenant,token)]);
   for(const x of [...employment,...assignments].filter(x=>x.status==='active'))changes.push(revise(x,{lastWorkingOn:e.payload.lastWorkingOn,validTo:previousDay(today),endedAt:at,occupancy:0},'ended'));
   extra.push(token=>[db.prepare('INSERT INTO r1_exit_fences(tenant_id,person_id,effective_at,command_id) SELECT owner,?,?,? FROM hris_workspaces WHERE owner=? AND last_mutation=? ON CONFLICT(tenant_id,person_id) DO UPDATE SET effective_at=excluded.effective_at,command_id=excluded.command_id').bind(e.personId,at,intent.commandId,tenant,token)]);
   extra.push(token=>[db.prepare("INSERT INTO r1_exit_cleanup(tenant_id,person_id,business_type,business_id) SELECT e.tenant_id,e.person_id,e.kind,e.id FROM r1_m01_entities e JOIN hris_workspaces w ON w.owner=e.tenant_id WHERE e.tenant_id=? AND e.person_id=? AND e.id<>? AND e.status IN ('pending','approved','failed') AND w.last_mutation=? ON CONFLICT DO NOTHING").bind(tenant,e.personId,e.id,token)]);
@@ -193,7 +229,9 @@ export async function executeM01(ctx:{db:D1Database;member:Member;row:{revision:
   if(contracts.some(e=>e.id!==c.id&&e.code===c.number.toLowerCase()))invalid('合同编号已存在');
   if(c.renewalOf){const old=await get(c.renewalOf);if(old.kind!=='contract'||old.personId!==c.personId||old.payload.legalEntityId!==c.legalEntityId||!['signed','ended'].includes(old.status)||!old.payload.end&&!old.payload.endedOn||c.start!==nextDay(old.payload.endedOn??old.payload.end))invalid('续签必须同人同法人且相邻日');}
   const old=c.id?await get(c.id):null;if(old&&(old.kind!=='contract'||old.personId!==c.personId||old.status!=='draft'))invalid('仅同人草稿可修订');
-  const payload={...c,legalVersion:legal.revision,legalName:legal.payload.name,externalSigningStatus:'not_configured',createdBy:old?.payload.createdBy??m.userId};
+  const definitions=(await rows(db,tenant,'contract_field')).filter(f=>f.orgId===c.orgId);for(const field of definitions.filter(f=>f.status==='active'))await authorize(c.orgId,c.personId,field.id);
+  const previous=c.renewalOf?await get(c.renewalOf):old??undefined;const fieldSnapshots=captureR1ContractFields(definitions,c.fields,previous);
+  const payload={...c,fieldSnapshots,legalVersion:legal.revision,legalName:legal.payload.name,externalSigningStatus:'not_configured',createdBy:old?.payload.createdBy??m.userId};
   changes.push(old?revise(old,payload):make('contract',c.orgId,c.personId,payload,'draft',c.number.toLowerCase()));break;
  }
  case 'contractSign':case 'contractEnd':{
@@ -214,6 +252,14 @@ export async function executeM01(ctx:{db:D1Database;member:Member;row:{revision:
   extra.push(token=>[db.prepare('INSERT INTO r1_import_receipts SELECT owner,?,?,?,?,? FROM hris_workspaces WHERE owner=? AND last_mutation=?').bind(c.batchId,c.rowNo,c.attemptVersion,inputDigest,row.id,tenant,token)]);break;
  }
  }
+ if(compatibility.employees.some(e=>!state.employees.some(x=>x.id===e.id&&JSON.stringify(x)===JSON.stringify(e)))){
+  for(const e of compatibility.employees.filter(e=>!state.employees.some(x=>x.id===e.id&&JSON.stringify(x)===JSON.stringify(e)))){
+   for(const [table,key,list] of [['hris_positions',e.positionId,'positions'],['hris_grades',e.gradeId,'grades']] as const)if(key&&!await db.prepare(`SELECT 1 FROM ${table} WHERE tenant_id=? AND id=?`).bind(tenant,key).first())storedBefore[list]=storedBefore[list]?.filter(x=>x.id!==key) as any;
+   let org=e.orgId;while(org){if(!await db.prepare('SELECT 1 FROM hris_orgs WHERE tenant_id=? AND id=?').bind(tenant,org).first())storedBefore.orgs=storedBefore.orgs.filter(x=>x.id!==org);org=compatibility.orgs.find(x=>x.id===org)?.parentId??'';}
+  }
+  const active=(await catalogTimeline(db,tenant,'position')).filter(e=>e.status==='active'&&e.payload.validFrom<=today&&(!e.payload.validTo||e.payload.validTo>=today));
+  for(const e of active)if(!compatibility.positions?.some(p=>p.id===e.id))(compatibility.positions??=[]).push({id:e.id,code:e.code??e.id,name:e.payload.name,orgId:e.orgId!,family:e.payload.attributes?.familyId??'',responsibilities:e.payload.attributes?.responsibilities??'',status:'启用'});
+ }
  result.ids=changes.map(e=>e.id);
- return commitCommand(db,m,stamp,intent,token=>[...changes.flatMap(e=>m01Write(db,tenant,token,e,intent.commandId,at)),...extra.flatMap(fn=>fn(token))],result);
+ return commitCommand(db,m,stamp,intent,token=>[...stateStatements(db,tenant,token,storedBefore,compatibility,m.userId,at),...changes.flatMap(e=>m01Write(db,tenant,token,e,intent.commandId,at)),...extra.flatMap(fn=>fn(token))],result);
 }
