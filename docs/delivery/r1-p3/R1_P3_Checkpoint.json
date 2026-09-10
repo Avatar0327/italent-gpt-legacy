@@ -327,7 +327,7 @@
         "P3-R1-04",
         "P3-R1-08"
       ],
-      "status": "in_progress",
+      "status": "implemented_synthetic_verified_review_pending",
       "caseIds": [
         "P3-REC-01",
         "P3-REC-02",
@@ -341,18 +341,15 @@
         "evidence/r1-p3-20260910T092744057535Z.json",
         "evidence/r1-p3-20260910T093905777390Z.json",
         "evidence/r1-p3-20260910T095601121101Z.json",
-        "evidence/r1-p3-20260910T100422728024Z.json"
+        "evidence/r1-p3-20260910T100422728024Z.json",
+        "evidence/r1-p3-20260910T101031691739Z.json"
       ],
-      "remaining": [
-        "分档实际本地容量计时/独立外效回执对账/必要恢复边界补证",
-        "任务09整体验证与AC/风险/LIMIT收口",
-        "平台01/02实际调度/独立资源与维护fence仍未验证"
-      ],
+      "remaining": [],
       "blockedValidation": [
         "DEP-PLATFORM-01",
         "DEP-PLATFORM-02"
       ],
-      "implementationSha": "8a5e2c271873ecc826d40ca72f962526cafbafd2",
+      "implementationSha": "5ce0dd2a411bd5bea144074395c1a7787abf5135",
       "subworkCompleted": [
         "4MiB AES-256-GCM/AAD/独立封装密钥/签名与完整对象摘要",
         "实际77持久表基线逐页同水位读取（5项日志/缓存/断言表明确排除）",
@@ -367,7 +364,21 @@
         "实际备份生成器/逐租户security引用/schema与epoch/不可变对象范围核对",
         "独立验证目录/31日基线和30日依赖闭包/密钥与墓碑引用",
         "维护独占fence接口/物理GC丢响应查询/48小时已验证热日志保留",
-        "共同恢复水位与40/45/55/60分钟阈值及含审批等待的RTO计时"
+        "共同恢复水位与40/45/55/60分钟阈值及含审批等待的RTO计时",
+        "独立签名模拟外效回执原摘要对账/恢复入口503",
+        "真实三档有界基线/对象/隔离目标计时",
+        "多历史密钥恢复/授权水位防回退"
+      ],
+      "verificationBoundaries": [
+        "仅实际本地SQLite与隔离合成身份；对象/外效/平台访问为明确模拟，真实平台调度/隔离资源未接线",
+        "恢复停在business_checked且openGate=0；不代签owner_approved/opened，RTO未完成",
+        "当前授权覆盖采取保守交集，可能额外缩小同旧组织可见范围；平台当前访问也须独立证明",
+        "30天为依赖和时钟模拟，不是30天连续RPO观测；三档实际尺寸见capacityMeasured，非P2 GB级设计档",
+        "每表/人员安全映像2000、备份对象2000、单记录/事务16MiB、块4MiB；超预算显式失败",
+        "每次复制完整对象，尚未证明按P2去重假设的存储成本；真实报价和吞吐未知",
+        "有当前DB引用（含墓碑）仍保留字节；物理维护只有独占fence契约与本地执行验证，云端fence未落实",
+        "基线源并发变化即拒绝发布；未证明云端一致导出、停顿或MVCC能力",
+        "原D7已办节点跨域完整链在11继续核验；实际R2/R3联调在10逐项登记"
       ]
     },
     {
@@ -377,7 +388,7 @@
         "P3-R1-06",
         "P3-R1-07"
       ],
-      "status": "pending",
+      "status": "in_progress",
       "caseIds": [],
       "evidence": []
     },
@@ -396,7 +407,7 @@
       "evidence": []
     }
   ],
-  "currentTask": "P3-R1-09",
-  "lastVerifiedSourceSha": "8a5e2c271873ecc826d40ca72f962526cafbafd2",
-  "latestRun": "evidence/r1-p3-20260910T100422728024Z.json"
+  "currentTask": "P3-R1-10",
+  "lastVerifiedSourceSha": "5ce0dd2a411bd5bea144074395c1a7787abf5135",
+  "latestRun": "evidence/r1-p3-20260910T101031691739Z.json"
 }
