@@ -1,6 +1,6 @@
 # 已有实现与产品需求对应
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T02:51:15.660044+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T02:53:58.299605+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
@@ -70,6 +70,7 @@
 | BP-S-REQ-12 | 社保、个税通与激励的模块内部范围（受限规格） | 保留；M07、BASE-06；M07内部常规社保/个税/激励仍承诺；外部真实申报/支付按用户界限，不恢复M33/M42。 | 人工金额载体可复用；独立模型/规则需补齐，受限未就绪 | lib/hris/payroll.ts；lib/hris/payroll-adjustments.ts；docs/delivery/Payroll_Source_Gaps.md；docs/P1_Source_Observations_20260907.md | 当前payroll.ts人工earning/deduction/employer可以承载经核定金额，但无独立社保/个税/激励业务模型与已核公式，需补齐。M33福利/M42佣金仍暂缓，不因“激励”相似名称合并或恢复完整模块。 | 就绪前须有适用政策/参数的授权来源、有效期/版本/金额精度、计算边界和合成样例预期；员工/单位承担不混算、同期间重复与更正可追溯、外部结果不明不算完成。未取得规则的数值场景明确受限，不能用人工工资项目数量证明完整社保或个税。 |
 | M27-REVIEW | 资源、问卷、计划、实施、考试、师资、报表 | 保留；M27、BASE-01、BASE-02、BASE-03、BASE-04、BASE-05、BASE-06；静态实现与需求建议映射；未执行/未批准 | 部分可复用，待修改/新增 | f39f667265a228202c5b63fa55ee00c60117e8f2；lib/hris/learning-assignments.ts,lib/hris/learning-plan-definitions.ts,lib/hris/learning-content-update.ts,lib/hris/learning-exam-definitions.ts,lib/hris/learning-homework.ts,lib/hris/training-sessions.ts,lib/hris/mentoring.ts,lib/hris/certificates.ts | 设计自动循环调度及cycleKey幂等、完成实例显式改版、完整题型/抽题/人工批阅、费用与课酬版本化、问卷隐私、学分事件账及跨模块有效性；保留隔离learning-description分支，不合并 | M27-REVIEW-AC01,M27-REVIEW-AC02,M27-REVIEW-AC03,M27-REVIEW-AC04,M27-REVIEW-AC05,M27-REVIEW-AC06,M27-REVIEW-AC07,M27-REVIEW-AC08,M27-REVIEW-AC09,M27-REVIEW-AC10,M27-REVIEW-AC11,M27-REVIEW-AC12 |
 | M16-REVIEW | 工作台、OKR、员工/组织目标与绩效 | 保留；M16、BASE-01、BASE-02、BASE-03、BASE-04、BASE-05、BASE-06；静态实现与需求建议映射；未执行/未批准 | 部分可复用，待修改/新增 | 689b6753dfbb85cdcc9cd95f6ad185e0641f9a47；lib/hris/performance.ts,lib/hris/performance-ratings.ts,lib/hris/performance-changes.ts,lib/hris/performance-checkins.ts,lib/hris/performance-availability.ts,lib/hris/module-progress.ts | 补组织绩效稳定对象、OKR目标/KR/对齐及复盘、多维评分和缺评类型、兼职上下文、时间窗口、强制分布与系数契约；复核更正发布回避及下游影响 | M16-REVIEW-AC01,M16-REVIEW-AC02,M16-REVIEW-AC03,M16-REVIEW-AC04,M16-REVIEW-AC05,M16-REVIEW-AC06,M16-REVIEW-AC07,M16-REVIEW-AC08,M16-REVIEW-AC09,M16-REVIEW-AC10,M16-REVIEW-AC11,M16-REVIEW-AC12 |
+| M12-REVIEW | 需求、职位、应聘者、面试、人才库 | 保留；M12、BASE-01、BASE-02、BASE-03、BASE-04、BASE-05、BASE-06；静态实现与需求建议映射；未执行/未批准 | 部分可复用，待修改/新增 | ecd32d4b399417df79fe96adbdcd29ae868aad45；lib/hris/recruitment.ts,lib/hris/recruitment-jobs.ts,lib/hris/interview-schedule.ts,lib/hris/recruitment-evaluations.ts,app/api/recruitment/route.ts | 拆自然人/申请/库关系与去重审核；Offer版本及参与者历史、人数预留账和失效释放、M01稳定身份与再入职接口、排期修订历史、候选用途权限与外部渠道状态 | M12-REVIEW-AC01,M12-REVIEW-AC02,M12-REVIEW-AC03,M12-REVIEW-AC04,M12-REVIEW-AC05,M12-REVIEW-AC06,M12-REVIEW-AC07,M12-REVIEW-AC08,M12-REVIEW-AC09,M12-REVIEW-AC10,M12-REVIEW-AC11,M12-REVIEW-AC12 |
 
 ## 原48组实现候选与当前适用（历史资产保留）
 
