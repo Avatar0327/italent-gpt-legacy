@@ -1,3 +1,4 @@
+import {commitLegacy} from '@/lib/hris/r1-command';
 import { memberContext, readConsistent } from '@/lib/hris/context';
 import { json, failure, readBody, HttpError } from '@/lib/hris/http';
 import { grantSchema, validateGrant } from '@/lib/hris/member-rules';
@@ -11,10 +12,9 @@ export async function POST(request:Request){try{
  if(old&&old.tenant_id!==c.member.tenantId)throw new HttpError(409,'该成员无法在此企业重复开通');
  if(input.employeeId&&input.active){const other=await c.db.prepare('SELECT email FROM hris_access_grants WHERE tenant_id=? AND employee_id=? AND active=1 AND email<>?').bind(c.member.tenantId,input.employeeId,input.email).first();if(other)throw new HttpError(409,'此员工已关联其他有效成员');}
  const event=crypto.randomUUID(),now=new Date().toISOString(),tenant=c.member.tenantId;
- const result=await c.db.batch([
- c.db.prepare("UPDATE hris_workspaces SET revision=revision+1,last_mutation=? WHERE owner=? AND revision=? AND EXISTS (SELECT 1 FROM hris_memberships WHERE user_id=? AND tenant_id=? AND active=1 AND role='admin')").bind(event,tenant,input.revision,c.user.id,tenant),
+ await commitLegacy(c.db,c.member,input.revision,'配置成员权限',event=>[
  c.db.prepare('INSERT INTO hris_access_grants(email,tenant_id,name,role,employee_id,active,updated_at,org_scope,view_email,view_level) SELECT ?,owner,?,?,?,?,?,?,?,? FROM hris_workspaces WHERE owner=? AND last_mutation=? ON CONFLICT(email) DO UPDATE SET name=excluded.name,role=excluded.role,employee_id=excluded.employee_id,active=excluded.active,updated_at=excluded.updated_at,org_scope=excluded.org_scope,view_email=excluded.view_email,view_level=excluded.view_level WHERE hris_access_grants.tenant_id=excluded.tenant_id').bind(input.email,input.name,input.role,input.employeeId,Number(input.active),now,JSON.stringify(input.orgScope),Number(input.viewEmail),Number(input.viewLevel),tenant,event),
  c.db.prepare('UPDATE hris_memberships SET role=?,employee_id=?,active=?,org_scope=?,view_email=?,view_level=? WHERE tenant_id=? AND user_id=(SELECT claimed_by FROM hris_access_grants WHERE email=? AND tenant_id=?) AND EXISTS (SELECT 1 FROM hris_workspaces WHERE owner=? AND last_mutation=?)').bind(input.role,input.employeeId,Number(input.active),JSON.stringify(input.orgScope),Number(input.viewEmail),Number(input.viewLevel),tenant,input.email,tenant,tenant,event),
- c.db.prepare('INSERT INTO hris_audit_events(tenant_id,id,actor_id,action,subject,at,revision) SELECT owner,?,?,?,?,?,revision FROM hris_workspaces WHERE owner=? AND last_mutation=?').bind(event,c.user.id,'配置成员权限',JSON.stringify({email:input.email,role:input.role,active:input.active,employeeId:input.employeeId,orgScope:input.orgScope,viewEmail:input.viewEmail,viewLevel:input.viewLevel}),now,tenant,event),
- ]);if(!result[0].meta.changes)throw new HttpError(409,'权限或数据已变化，请刷新');return json({ok:true});
+ c.db.prepare('INSERT INTO hris_audit_events(tenant_id,id,actor_id,action,subject,at,revision) SELECT owner,?,?,?,?,?,revision FROM hris_workspaces WHERE owner=? AND last_mutation=?').bind(event+':member',c.user.id,'配置成员权限',JSON.stringify({email:input.email,role:input.role,active:input.active,employeeId:input.employeeId,orgScope:input.orgScope,viewEmail:input.viewEmail,viewLevel:input.viewLevel}),now,tenant,event),
+ ] );return json({ok:true});
  }catch(e){return failure(e);}}

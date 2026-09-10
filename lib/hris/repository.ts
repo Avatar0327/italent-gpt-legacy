@@ -1,3 +1,5 @@
+import {commitLegacy} from './r1-command';
+import {HttpError} from './http';
 import type {State,Org,Employee,Approval,ApprovalStep,Workflow,Position,Grade} from './model.ts';
 import type {Member} from './authorization.ts';
 export type WorkspaceRow={data:string;revision:number;storageVersion:number};
@@ -61,17 +63,10 @@ export function stateStatements(db:D1Database,tenant:string,token:string,before:
  return out;
 }
 export async function commitState(db:D1Database,member:Member,revision:number,before:State,after:State){
- const event=after.audit[0];const result=await db.batch([
- db.prepare('UPDATE hris_workspaces SET revision=revision+1,last_mutation=? WHERE owner=? AND revision=? AND storage_version=1 AND EXISTS (SELECT 1 FROM hris_memberships WHERE user_id=? AND tenant_id=? AND active=1 AND role=?)').bind(event.id,member.tenantId,revision,member.userId,member.tenantId,member.role),
- ...stateStatements(db,member.tenantId,event.id,before,after,member.userId,event.at),
- ]);return !!result[0].meta.changes;
+ const event=after.audit[0];
+ await commitLegacy(db,member,revision,event.action,token=>stateStatements(db,member.tenantId,token,before,after,member.userId,event.at));return true;
 }
-export async function migrateWorkspace(db:D1Database,member:Member,row:WorkspaceRow){
- if(member.role!=='admin')throw Error('仅管理员可迁移');if(row.storageVersion===1)return false;
- const state=JSON.parse(row.data) as State;if(!Array.isArray(state.orgs)||!Array.isArray(state.employees)||!Array.isArray(state.approvals)||!Array.isArray(state.audit))throw Error('旧数据结构不完整，已停止迁移');
- const id=crypto.randomUUID(),at=new Date().toISOString();state.audit.unshift({id,actorId:member.userId,action:'迁移规范化业务表',subject:'组织、员工、流程与任职基线；保留原始快照',at});
- const result=await db.batch([
- db.prepare("UPDATE hris_workspaces SET storage_version=1,revision=revision+1,last_mutation=? WHERE owner=? AND revision=? AND storage_version=0 AND EXISTS (SELECT 1 FROM hris_memberships WHERE user_id=? AND tenant_id=? AND active=1 AND role='admin')").bind(id,member.tenantId,row.revision,member.userId,member.tenantId),
- ...stateStatements(db,member.tenantId,id,{orgs:[],employees:[],approvals:[],audit:[]},state,member.userId,at),
- ]);return !!result[0].meta.changes;
+
+export async function migrateWorkspace(db:D1Database,member:Member,row:WorkspaceRow):Promise<boolean>{
+ throw new HttpError(409,'旧迁移入口已关闭，请使用有界迁移器','CLIENT_UPGRADE_REQUIRED');
 }

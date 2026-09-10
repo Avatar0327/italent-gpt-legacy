@@ -71,6 +71,13 @@
       "when": 1788873028653,
       "tag": "0009_spotty_redwing",
       "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "6",
+      "when": 1789012800000,
+      "tag": "0010_r1_command_foundation",
+      "breakpoints": true
     }
   ]
 }

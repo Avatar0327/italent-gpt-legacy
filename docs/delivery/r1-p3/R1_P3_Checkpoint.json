@@ -1,0 +1,189 @@
+{
+  "phase": "P3",
+  "exitApproved": false,
+  "tasks": [
+    {
+      "id": "P3-R1-01",
+      "dependsOn": [],
+      "status": "in_progress",
+      "caseIds": [
+        "P3-ARC-01",
+        "P3-ARC-02"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "P3-R1-02",
+      "dependsOn": [
+        "P3-R1-01"
+      ],
+      "status": "pending",
+      "caseIds": [
+        "P3-M01-01",
+        "P3-M01-02",
+        "P3-M01-03",
+        "P3-M01-04",
+        "P3-M01-05",
+        "P3-M01-06",
+        "P3-M01-07",
+        "P3-M01-08",
+        "P3-M01-09",
+        "P3-M01-10",
+        "P3-M01-11",
+        "P3-M01-12"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "P3-R1-03",
+      "dependsOn": [
+        "P3-R1-01",
+        "P3-R1-02"
+      ],
+      "status": "pending",
+      "caseIds": [
+        "P3-M19-01",
+        "P3-M19-02",
+        "P3-M19-03",
+        "P3-M19-04",
+        "P3-M19-05",
+        "P3-M19-06",
+        "P3-M19-07"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "P3-R1-04",
+      "dependsOn": [
+        "P3-R1-01"
+      ],
+      "status": "pending",
+      "caseIds": [
+        "P3-INT-01",
+        "P3-INT-02",
+        "P3-INT-03",
+        "P3-INT-04",
+        "P3-INT-05",
+        "P3-INT-06"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "P3-R1-05",
+      "dependsOn": [
+        "P3-R1-02",
+        "P3-R1-03",
+        "P3-R1-04"
+      ],
+      "status": "pending",
+      "caseIds": [
+        "P3-M48-01",
+        "P3-M48-02",
+        "P3-M48-03",
+        "P3-M48-04",
+        "P3-M48-05",
+        "P3-M48-06",
+        "P3-M48-07"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "P3-R1-06",
+      "dependsOn": [
+        "P3-R1-02",
+        "P3-R1-04"
+      ],
+      "status": "pending",
+      "caseIds": [
+        "P3-M32-01",
+        "P3-M32-02",
+        "P3-M32-03",
+        "P3-M32-04",
+        "P3-M32-05",
+        "P3-M32-07",
+        "P3-M32-10",
+        "P3-XMOD-02"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "P3-R1-07",
+      "dependsOn": [
+        "P3-R1-06",
+        "P3-R1-04"
+      ],
+      "status": "pending",
+      "caseIds": [
+        "P3-M32-06",
+        "P3-M32-08",
+        "P3-M32-09"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "P3-R1-08",
+      "dependsOn": [
+        "P3-R1-01",
+        "P3-R1-02",
+        "P3-R1-03",
+        "P3-R1-04",
+        "P3-R1-06"
+      ],
+      "status": "pending",
+      "caseIds": [
+        "P3-MIG-01",
+        "P3-MIG-02",
+        "P3-MIG-03",
+        "P3-MIG-04",
+        "P3-MIG-05",
+        "P3-MIG-06",
+        "P3-MIG-07",
+        "P3-XMOD-03"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "P3-R1-09",
+      "dependsOn": [
+        "P3-R1-01",
+        "P3-R1-04",
+        "P3-R1-08"
+      ],
+      "status": "pending",
+      "caseIds": [
+        "P3-REC-01",
+        "P3-REC-02",
+        "P3-REC-03",
+        "P3-REC-04",
+        "P3-REC-05"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "P3-R1-10",
+      "dependsOn": [
+        "P3-R1-05",
+        "P3-R1-06",
+        "P3-R1-07"
+      ],
+      "status": "pending",
+      "caseIds": [],
+      "evidence": []
+    },
+    {
+      "id": "P3-R1-11",
+      "dependsOn": [
+        "P3-R1-05",
+        "P3-R1-07",
+        "P3-R1-08",
+        "P3-R1-09"
+      ],
+      "status": "pending",
+      "caseIds": [
+        "P3-XMOD-01"
+      ],
+      "evidence": []
+    }
+  ],
+  "currentTask": "P3-R1-01"
+}

@@ -1,6 +1,7 @@
+import type {SecurityStamp} from './r1-command';
 import {canReadTransferCase,projectApprovalDetails,transferChangesGrade} from './personnel-transfer.ts';
 import { commandSchema, type State } from './model.ts';
-export type Member = {userId:string;tenantId:string;role:'admin'|'hr'|'manager'|'approver'|'employee'|'payroll_editor'|'payroll_reviewer';employeeId:string|null;active:boolean|number;orgScope?:string|string[];viewEmail?:boolean|number;viewLevel?:boolean|number};
+export type Member = {securityStamp?:SecurityStamp;userId:string;tenantId:string;role:'admin'|'hr'|'manager'|'approver'|'employee'|'payroll_editor'|'payroll_reviewer';employeeId:string|null;active:boolean|number;orgScope?:string|string[];viewEmail?:boolean|number;viewLevel?:boolean|number};
 export const selfOnlyRole=(m:Member)=>['employee','payroll_editor','payroll_reviewer'].includes(m.role);
 export class AccessError extends Error {}
 export function requireMember(member:Member|null|undefined):asserts member is Member {

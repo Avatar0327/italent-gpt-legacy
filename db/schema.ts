@@ -69,3 +69,5 @@ export const attachments=sqliteTable('hris_attachments',{
 export const developmentEvents=sqliteTable('hris_development_events',{
  tenantId:text('tenant_id').notNull(),id:text('id').notNull(),recordId:text('record_id').notNull(),revision:integer('revision').notNull(),action:text('action').notNull(),actorId:text('actor_id').notNull(),at:text('at').notNull(),snapshot:text('snapshot').notNull(),
 },t=>[primaryKey({columns:[t.tenantId,t.id]}),foreignKey({columns:[t.tenantId,t.recordId],foreignColumns:[developmentRecords.tenantId,developmentRecords.id]}),index('idx_development_events').on(t.tenantId,t.recordId,t.revision)]);
+
+export * from './r1-schema';

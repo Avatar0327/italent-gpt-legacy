@@ -1,3 +1,4 @@
+import {commitLegacy} from './r1-command';
 import type {Member} from './authorization';
 import {payrollRecordAccess} from './payroll-access';
 import {memberContext} from './context';
@@ -28,13 +29,9 @@ export function visibleDevelopment(ctx:DevelopmentContext){return ctx.records.fi
 // Callbacks receive a fresh, unique token; zero CAS changes make all later writes no-ops.
 export async function commitExtension(ctx:DevelopmentContext,revision:number,action:string,subject:string,statements:(token:string)=>D1PreparedStatement[]){
  if(revision!==ctx.row.revision)throw new HttpError(409,'数据已更新，请刷新后重试');
- const {db,member:m}=ctx,token=crypto.randomUUID(),at=new Date().toISOString();
- const result=await db.batch([
-  db.prepare('UPDATE hris_workspaces SET revision=revision+1,last_mutation=? WHERE owner=? AND revision=? AND storage_version=1 AND EXISTS (SELECT 1 FROM hris_memberships WHERE user_id=? AND tenant_id=? AND active=1 AND role=?)').bind(token,m.tenantId,revision,m.userId,m.tenantId,m.role),
-  ...statements(token),
-  db.prepare('INSERT INTO hris_audit_events(tenant_id,id,actor_id,action,subject,at,revision) SELECT owner,?,?,?,?,?,revision FROM hris_workspaces WHERE owner=? AND last_mutation=?').bind(token,m.userId,action,subject,at,m.tenantId,token),
- ]);if(!result[0].meta.changes)throw new HttpError(409,'数据或权限已变化，请刷新');
+ await commitLegacy(ctx.db,ctx.member,revision,action,statements);
 }
+
 export async function saveDevelopment(ctx:DevelopmentContext,revision:number,r:DevelopmentRecord,action:string,extraStatements?:(token:string)=>D1PreparedStatement[]){
  await commitExtension(ctx,revision,action,`${r.kind} · ${r.id}`,token=>[
  ...(extraStatements?.(token)??[]),

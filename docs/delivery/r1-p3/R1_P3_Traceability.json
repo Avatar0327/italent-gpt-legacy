@@ -1,0 +1,879 @@
+{
+  "kind": "P3_evidence_projection_not_scope_register",
+  "sourceHead": "e15237281ff19f04f08a354fd9455c518b24ae47",
+  "acceptance": [
+    {
+      "id": "BASE-01-AC01",
+      "plannedCases": [
+        "P3-ARC-01",
+        "P3-M48-01"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BASE-01-AC02",
+      "plannedCases": [
+        "P3-REC-02"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BASE-02-AC01",
+      "plannedCases": [
+        "P3-M01-04"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BASE-02-AC02",
+      "plannedCases": [
+        "P3-ARC-01"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BASE-02-AC03",
+      "plannedCases": [
+        "P3-M32-05"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BASE-03-AC01",
+      "plannedCases": [
+        "P3-INT-02"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BASE-03-AC02",
+      "plannedCases": [
+        "P3-MIG-01"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BASE-04-AC01",
+      "plannedCases": [
+        "P3-M48-06"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BASE-04-AC02",
+      "plannedCases": [
+        "P3-MIG-04"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BASE-04-AC03",
+      "plannedCases": [
+        "P3-INT-06"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BASE-04-AC04",
+      "plannedCases": [
+        "P3-INT-06"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BASE-05-AC01",
+      "plannedCases": [
+        "P3-REC-01"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BASE-05-AC02",
+      "plannedCases": [
+        "P3-REC-03"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BASE-06-AC01",
+      "plannedCases": [
+        "P3-INT-01"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BASE-06-AC02",
+      "plannedCases": [
+        "P3-INT-04"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BASE-06-AC03",
+      "plannedCases": [
+        "P3-INT-03"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-F-REQ-01-AC01",
+      "plannedCases": [
+        "P3-M01-01"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-F-REQ-01-AC02",
+      "plannedCases": [
+        "P3-M01-01"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-F-REQ-01-AC03",
+      "plannedCases": [
+        "P3-M01-01"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-F-REQ-02-AC01",
+      "plannedCases": [
+        "P3-M01-04"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-F-REQ-02-AC02",
+      "plannedCases": [
+        "P3-M01-04"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-F-REQ-02-AC03",
+      "plannedCases": [
+        "P3-M01-04"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-F-REQ-02-AC04",
+      "plannedCases": [
+        "P3-M01-04"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-F-REQ-02-AC05",
+      "plannedCases": [
+        "P3-M01-04"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-F-REQ-02-AC06",
+      "plannedCases": [
+        "P3-M01-04"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-F-REQ-04-AC01",
+      "plannedCases": [
+        "P3-M01-02"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-F-REQ-04-AC02",
+      "plannedCases": [
+        "P3-M01-02"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-F-REQ-04-AC03",
+      "plannedCases": [
+        "P3-M01-02"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-I-REQ-01-AC01",
+      "plannedCases": [
+        "P3-M48-03"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-I-REQ-01-AC02",
+      "plannedCases": [
+        "P3-M48-03"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-I-REQ-01-AC03",
+      "plannedCases": [
+        "P3-M48-03"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-I-REQ-01-AC04",
+      "plannedCases": [
+        "P3-M48-03"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-I-REQ-02-AC01",
+      "plannedCases": [
+        "P3-M32-01"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-I-REQ-02-AC02",
+      "plannedCases": [
+        "P3-M32-01"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-I-REQ-02-AC03",
+      "plannedCases": [
+        "P3-M32-01"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-I-REQ-02-AC04",
+      "plannedCases": [
+        "P3-M32-01"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-I-REQ-02-AC05",
+      "plannedCases": [
+        "P3-M32-01"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-I-REQ-07-AC01",
+      "plannedCases": [
+        "P3-M19-01",
+        "P3-M19-03"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-I-REQ-07-AC02",
+      "plannedCases": [
+        "P3-M19-01",
+        "P3-M19-03"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-I-REQ-07-AC03",
+      "plannedCases": [
+        "P3-M19-01",
+        "P3-M19-03"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-I-REQ-07-AC04",
+      "plannedCases": [
+        "P3-M19-01",
+        "P3-M19-03"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-I-REQ-11-AC01",
+      "plannedCases": [
+        "P3-M32-08"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "BP-I-REQ-11-AC02",
+      "plannedCases": [
+        "P3-M32-08"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M01-REVIEW-AC01",
+      "plannedCases": [
+        "P3-M01-12"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M01-REVIEW-AC02",
+      "plannedCases": [
+        "P3-M01-01"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M01-REVIEW-AC03",
+      "plannedCases": [
+        "P3-M01-03"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M01-REVIEW-AC04",
+      "plannedCases": [
+        "P3-M01-02"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M01-REVIEW-AC05",
+      "plannedCases": [
+        "P3-M01-08"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M01-REVIEW-AC06",
+      "plannedCases": [
+        "P3-M01-05"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M01-REVIEW-AC07",
+      "plannedCases": [
+        "P3-M01-06"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M01-REVIEW-AC08",
+      "plannedCases": [
+        "P3-M01-10"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M01-REVIEW-AC09",
+      "plannedCases": [
+        "P3-M01-07"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M01-REVIEW-AC10",
+      "plannedCases": [
+        "P3-M01-04"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M19-EXECUTION-LIST-01",
+      "plannedCases": [
+        "P3-M19-01",
+        "P3-M19-03"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M19-REVIEW-AC01",
+      "plannedCases": [
+        "P3-M19-01"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M19-REVIEW-AC02",
+      "plannedCases": [
+        "P3-M19-01"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M19-REVIEW-AC03",
+      "plannedCases": [
+        "P3-M19-03"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M19-REVIEW-AC04",
+      "plannedCases": [
+        "P3-M19-04"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M19-REVIEW-AC05",
+      "plannedCases": [
+        "P3-M19-05"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M19-REVIEW-AC06",
+      "plannedCases": [
+        "P3-M19-06"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M19-REVIEW-AC07",
+      "plannedCases": [
+        "P3-M19-06"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M19-REVIEW-AC08",
+      "plannedCases": [
+        "P3-M19-07"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M19-REVIEW-AC09",
+      "plannedCases": [
+        "P3-M19-07"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M32-REVIEW-AC01",
+      "plannedCases": [
+        "P3-M32-01"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M32-REVIEW-AC02",
+      "plannedCases": [
+        "P3-M32-02"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M32-REVIEW-AC03",
+      "plannedCases": [
+        "P3-M32-02"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M32-REVIEW-AC04",
+      "plannedCases": [
+        "P3-M32-02"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M32-REVIEW-AC05",
+      "plannedCases": [
+        "P3-M32-04"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M32-REVIEW-AC06",
+      "plannedCases": [
+        "P3-M32-01"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M32-REVIEW-AC07",
+      "plannedCases": [
+        "P3-M32-02"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M32-REVIEW-AC08",
+      "plannedCases": [
+        "P3-M32-03"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M32-REVIEW-AC09",
+      "plannedCases": [
+        "P3-M32-05"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M32-REVIEW-AC10",
+      "plannedCases": [
+        "P3-M32-06"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M32-REVIEW-AC11",
+      "plannedCases": [
+        "P3-M32-07"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M32-REVIEW-AC12",
+      "plannedCases": [
+        "P3-M32-08"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M32-REVIEW-AC13",
+      "plannedCases": [
+        "P3-M32-10"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M48-REVIEW-AC01",
+      "plannedCases": [
+        "P3-M48-02"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M48-REVIEW-AC02",
+      "plannedCases": [
+        "P3-M48-01"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M48-REVIEW-AC03",
+      "plannedCases": [
+        "P3-M48-03"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M48-REVIEW-AC04",
+      "plannedCases": [
+        "P3-M48-04"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M48-REVIEW-AC05",
+      "plannedCases": [
+        "P3-M48-05"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M48-REVIEW-AC06",
+      "plannedCases": [
+        "P3-M48-05"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M48-REVIEW-AC07",
+      "plannedCases": [
+        "P3-M48-05"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M48-REVIEW-AC08",
+      "plannedCases": [
+        "P3-M48-05"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    },
+    {
+      "id": "M48-REVIEW-AC09",
+      "plannedCases": [
+        "P3-M48-06"
+      ],
+      "status": "not_executed",
+      "evidence": []
+    }
+  ],
+  "risks": [
+    {
+      "id": "R1-M01-L01",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M01-L02",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M01-L03",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M01-L04",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M01-L05",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M01-L06",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M01-L07",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M01-L08",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M01-L09",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M01-L10",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M19-L01",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M19-L02",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M19-L03",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M19-L04",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M19-L05",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M19-L06",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M19-L07",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M19-L08",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M19-L09",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M48-L01",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M48-L02",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M48-L03",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M48-L04",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M48-L05",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M48-L06",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M48-L07",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M48-L08",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M32-L01",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M32-L02",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M32-L03",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M32-L04",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M32-L05",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M32-L06",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M32-L07",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M32-L08",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M32-L09",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    },
+    {
+      "id": "R1-M32-L10",
+      "status": "follow_source_design_disposition",
+      "p3Evidence": []
+    }
+  ]
+}
