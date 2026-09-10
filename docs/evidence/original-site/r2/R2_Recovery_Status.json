@@ -144,5 +144,11 @@
   "r2P3Started": false,
   "productTests": 0,
   "p4Uat": 0,
-  "minimalManualAction": "在本对话接管R2专属tab21，仅确认该人才池页面是否能显示业务列表；若仍空白，反馈仍为空白即可。无需重新授权、重复刷新、退出登录或操作测试数据。"
+  "minimalManualAction": "在本对话接管R2专属tab21，仅确认该人才池页面是否能显示业务列表；若仍空白，反馈仍为空白即可。无需重新授权、重复刷新、退出登录或操作测试数据。",
+  "latestControlRecoveryAttempt": {
+    "evidence": "captures/Cloud-browser-reset-attempt-20260910.json",
+    "recordedAt": "2026-09-10T16:09:19.685461+00:00",
+    "confirmedRecovered": false,
+    "pagesReopened": 0
+  }
 }

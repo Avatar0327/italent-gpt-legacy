@@ -327,7 +327,8 @@
     "currentBlocker": "R2-ENV-CONT-001",
     "ownedTab": "21",
     "evidence": "captures/Recovery-window-20260910.json",
-    "readbackQueue": "Recovery_Readback_Queue.json"
+    "readbackQueue": "Recovery_Readback_Queue.json",
+    "latestControlRecoveryEvidence": "captures/Cloud-browser-reset-attempt-20260910.json"
   },
   "continuationHistory": [
     {

@@ -1,0 +1,53 @@
+{
+  "runId": "R2-ORIGIN-20260910-103952",
+  "baseHead": "281cae2a1e2968bebab1d26c6e9a43ae5e8807fa",
+  "recordedAt": "2026-09-10T16:09:19.685461+00:00",
+  "ownerRequest": "尝试重置云浏览器，重新打开这些页面",
+  "existingIncident": "R2-ENV-CONT-001",
+  "classification": "ENV_BLOCKED",
+  "browserWideRestartCapabilityAdvertised": false,
+  "browserCapabilitiesReturned": [],
+  "initialTabListReadSucceeded": true,
+  "oldOwnedTabId": "21",
+  "actions": [
+    {
+      "order": 1,
+      "action": "检查浏览器能力与标签元数据",
+      "result": "成功；browser.capabilities=[]；tab21仍为人才池。未导航其他标签。"
+    },
+    {
+      "order": 2,
+      "action": "只读检查tab21业务主体和对话框，确认关闭标签前有无未保存表单",
+      "result": "tool call failed: Transport closed",
+      "exactAttemptTimestamp": null,
+      "timestampLimitation": "工具未返回执行时间；不补造精确发生时刻。"
+    },
+    {
+      "order": 3,
+      "action": "只读复查控制连接，读取标签列表一次",
+      "result": "未返回结果；停止等待执行单元41。未取得重连成功证据。"
+    },
+    {
+      "order": 4,
+      "action": "调用已提供的node_repl控制会话重置工具一次",
+      "result": "未返回结果；停止等待执行单元43。请求是否被远端实际执行unknown，不能认定重置成功。",
+      "scope": "本窗口控制运行时，不是共享Chrome进程重启。"
+    }
+  ],
+  "timeAnchorBeforeResetRequest": "2026-09-10T16:06:44Z",
+  "browserProcessRestarted": "not_executed_no_advertised_interface",
+  "controlSessionResetConfirmed": false,
+  "controlSessionResetOutcome": "unknown_no_success_response",
+  "tabsCloseCommandsIssued": 0,
+  "tabsNewCommandsIssued": 0,
+  "pageNavigationCommandsIssued": 0,
+  "pagesReopened": 0,
+  "sessionCleared": false,
+  "businessWrites": 0,
+  "notifications": 0,
+  "otherTabsModified": false,
+  "environmentRecovered": false,
+  "businessRootCause": "unknown; control transport failure does not prove origin tenant outage",
+  "r2P3Started": false,
+  "nextStep": "云浏览器控制连接恢复后，重新获取tab21并只读确认当前状态；如无未保存表单，重建R2专属标签再进入正式菜单。不得宣称本次已完成关闭、重启或重新打开。"
+}

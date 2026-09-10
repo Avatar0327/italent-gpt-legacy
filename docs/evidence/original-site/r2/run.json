@@ -27,5 +27,11 @@
   "soleExecutor": "R2｜原站验证恢复",
   "currentOwnedTab": "21",
   "originComplete": false,
-  "r2P3Started": false
+  "r2P3Started": false,
+  "latestControlRecoveryAttempt": {
+    "evidence": "captures/Cloud-browser-reset-attempt-20260910.json",
+    "recordedAt": "2026-09-10T16:09:19.685461+00:00",
+    "confirmedRecovered": false,
+    "pagesReopened": 0
+  }
 }

@@ -1,6 +1,6 @@
 {
   "kind": "evidence_structure_review_not_product_test",
-  "checkedAt": "2026-09-10T15:56:58.899476+00:00",
+  "checkedAt": "2026-09-10T16:09:19.685461+00:00",
   "requiredFiles": [
     "Browser_Concurrency_Check.md",
     "Original_Site_Data_Manifest.json",
@@ -17,7 +17,8 @@
     "Recovery_Readback_Queue.json",
     "Scenario_Disposition_Summary.json",
     "captures/Recovery-window-20260910.json",
-    "captures/r2-recovery-final-blocked-20260910.jpg"
+    "captures/r2-recovery-final-blocked-20260910.jpg",
+    "captures/Cloud-browser-reset-attempt-20260910.json"
   ],
   "requiredFilesPresent": true,
   "jsonParse": true,
@@ -87,5 +88,8 @@
   "p4UatExecuted": 0,
   "completeOriginExit": false,
   "oneTimeP2EvidenceIncrementReady": false,
-  "notAProductTestOrBusinessAcceptance": true
+  "notAProductTestOrBusinessAcceptance": true,
+  "latestControlRecoveryAttemptEvidence": "captures/Cloud-browser-reset-attempt-20260910.json",
+  "browserResetConfirmed": false,
+  "pagesReopenedAfterOwnerResetRequest": 0
 }
