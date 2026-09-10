@@ -20,7 +20,7 @@
       "dependsOn": [
         "P3-R1-01"
       ],
-      "status": "in_progress_partial_not_dependency_ready",
+      "status": "implemented_synthetic_verified_review_pending",
       "caseIds": [
         "P3-M01-01",
         "P3-M01-02",
@@ -38,20 +38,20 @@
       "evidence": [
         "evidence/r1-p3-02-04-20260910T041245Z.json",
         "evidence/r1-p3-02-d7-20260910T042138Z.json",
-        "evidence/r1-p3-20260910T052108474343Z.json"
+        "evidence/r1-p3-20260910T052108474343Z.json",
+        "evidence/r1-p3-20260910T053805670409Z.json"
       ],
-      "remaining": [
-        "人员多标识服务端候选解析",
-        "非调动主职/主档全面接线",
-        "合同字段root/继承及计次",
-        "M01前端及未知结果查询接线",
-        "12项设计用例全部条件及原AC完整验证"
-      ],
-      "implementationSha": "086db8b388f7896aefd7a605173cc953829b340d",
+      "remaining": [],
+      "implementationSha": "9d295e4623e79c6a578875eda4a1090e2a515906",
       "subworkCompleted": [
         "目录全部时点版本校验增量",
         "重聘代次与有界退出清理增量",
         "D7主职/兼容主档原子事务与编制事件增量"
+      ],
+      "verificationBoundaries": [
+        "仅本地合成运行，不含真人独立验收或原站补证",
+        "UI表单映射、API、类型和构建已验证；未声称浏览器人工交互验收",
+        "合同迁移验证归08；M32跨版本统计归06"
       ]
     },
     {
@@ -60,7 +60,7 @@
         "P3-R1-01",
         "P3-R1-02"
       ],
-      "status": "pending",
+      "status": "in_progress",
       "caseIds": [
         "P3-M19-01",
         "P3-M19-02",
@@ -213,7 +213,7 @@
       "evidence": []
     }
   ],
-  "currentTask": "P3-R1-02",
-  "lastVerifiedSourceSha": "086db8b388f7896aefd7a605173cc953829b340d",
-  "latestRun": "evidence/r1-p3-20260910T052108474343Z.json"
+  "currentTask": "P3-R1-03",
+  "lastVerifiedSourceSha": "9d295e4623e79c6a578875eda4a1090e2a515906",
+  "latestRun": "evidence/r1-p3-20260910T053805670409Z.json"
 }
