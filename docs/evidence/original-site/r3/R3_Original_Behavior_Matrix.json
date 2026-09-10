@@ -778,6 +778,51 @@
       "design_sha": null,
       "implementation_tested": false,
       "p4_accepted": false
+    },
+    {
+      "id": "M07-ORIGIN-005",
+      "module": "M07",
+      "topic": "发薪方案表单与权限分层",
+      "original_behavior": "发薪方案列表列方案编辑权限和方案使用权限、结果来源、发薪周期、税款所属期；新建草稿含适用薪资组、生效日期、系统计算、税款所属期在活动中维护和月中调动计算方式。发薪周期可选月/季/年/无固定周期；仅点击月，最终持久值未回读。",
+      "approved_requirement": "M07-SPEC-01;M07-SPEC-02;M07-SPEC-03",
+      "evidence_kind": "page_options_observed",
+      "source_page": "薪酬核算 > 发薪方案 > 本轮PLAN01未保存草稿",
+      "observed_at": "2026-09-10T14:26:41.428534+00:00",
+      "runtime_verified": false,
+      "source_ref": "Source_Observations.md#m07-origin-005",
+      "design_sha": null,
+      "implementation_tested": false,
+      "p4_accepted": false
+    },
+    {
+      "id": "M07-ORIGIN-006",
+      "module": "M07",
+      "topic": "个税通算税默认启用",
+      "original_behavior": "本轮新建PLAN01未保存草稿中，是否个税通算税的可见radio DOM是为active、否非active。首次点击否后独立回读仍为是；最后通过精确label再次点击否，随后只读回查被自动审批拒绝，因此不得声称关闭成功。未保存方案、未发起核算或外部算税。",
+      "approved_requirement": "M07-SPEC-01;M07-SPEC-02;M07-SPEC-03",
+      "evidence_kind": "default_control_state_observed",
+      "source_page": "薪酬核算 > 发薪方案 > 本轮PLAN01未保存草稿",
+      "observed_at": "2026-09-10T14:26:41.428534+00:00",
+      "runtime_verified": false,
+      "source_ref": "Source_Observations.md#m07-origin-006",
+      "design_sha": null,
+      "implementation_tested": false,
+      "p4_accepted": false
+    },
+    {
+      "id": "M07-ORIGIN-007",
+      "module": "M07",
+      "topic": "既有本轮薪资组选择查询无匹配",
+      "original_behavior": "PLAN01适用薪资组正式选择器搜索完整GROUP01，input值精确匹配前缀，两次结果查询0个对应文字并显示这里什么都没有；已有原薪资组为其他选项，本轮未选择。GROUP01在前次原列表已确认启用，选择器资格/权限/缓存原因未知，不据此判定对象不存在或重新创建。",
+      "approved_requirement": "M07-SPEC-01;M07-SPEC-02;M07-SPEC-03",
+      "evidence_kind": "scoped_picker_query_observed",
+      "source_page": "薪酬核算 > 发薪方案 > 本轮PLAN01未保存草稿",
+      "observed_at": "2026-09-10T14:26:41.428534+00:00",
+      "runtime_verified": true,
+      "source_ref": "Source_Observations.md#m07-origin-007",
+      "design_sha": null,
+      "implementation_tested": false,
+      "p4_accepted": false
     }
   ]
 }

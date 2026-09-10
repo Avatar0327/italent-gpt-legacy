@@ -189,7 +189,7 @@
       "severity": "Major",
       "module": "M07",
       "title": "月中调动核算与外部算税分别配置",
-      "source_evidence": "M07-ORIGIN-001;002;003",
+      "source_evidence": "M07-ORIGIN-001;002;003;M07-ORIGIN-005;M07-ORIGIN-006;M07-ORIGIN-007",
       "approved_requirement": "M07-SPEC-01; M07-SPEC-02; M07-SPEC-03",
       "design_sha": null,
       "implementation_sha": null,
@@ -198,9 +198,10 @@
       "owner_role": "R3 P2设计负责人",
       "owner_acceptance": "未确认",
       "target_phase": "P2设计冻结前",
-      "proposal": "薪资组对应部门、方案使用权限、月中调动独立核算或调入方全月计算需分开。原站个税通开关不等于本项目模拟算税已具备或允许外部申报。",
+      "proposal": "薪资组部门范围、方案编辑/使用权限、月中调动核算、结果来源和税款所属期独立建模。原站个税通算税默认是，不能直接复制为本项目默认外部调用；内部模拟与外部服务须明确隔离、操作前回读有效开关。适用组选择器无R3匹配原因仍待查，不得改选原组。",
       "decision": null,
-      "p4_evidence": null
+      "p4_evidence": null,
+      "latest_evidence": "PLAN01仅未保存草稿；个税通关闭动作未获得回读，后续算税/支付/申报未执行。"
     },
     {
       "id": "R3-DIFF-012",

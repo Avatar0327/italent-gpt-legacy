@@ -491,6 +491,27 @@
       "case": "活动内方案空表与作用域提示",
       "status": "CONFIG_OBSERVED",
       "evidence": "M16-ORIGIN-006"
+    },
+    {
+      "id": "M07-RC-11",
+      "module": "M07",
+      "case": "新建方案个税通默认开关",
+      "status": "CONFIG_OBSERVED",
+      "evidence": "M07-ORIGIN-006；原站默认是"
+    },
+    {
+      "id": "M07-RC-12",
+      "module": "M07",
+      "case": "精确搜索既有R3薪资组",
+      "status": "VERIFIED_QUERY_ONLY",
+      "evidence": "M07-ORIGIN-007；未匹配，原因待查"
+    },
+    {
+      "id": "M07-RC-13",
+      "module": "M07",
+      "case": "方案关闭外部算税",
+      "status": "ENV_BLOCKED",
+      "evidence": "精确点击后回读被拒绝，不能记为关闭成功"
     }
   ]
 }

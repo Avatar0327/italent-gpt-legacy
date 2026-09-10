@@ -641,6 +641,14 @@
       "result": "validation_observed_no_state_transition",
       "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M16_SMOKE01",
       "notes": "六项至少选择一条，生成等级须先选择考核组；无新对象、无人员、无通知，分布规则未回读。"
+    },
+    {
+      "id": "R3-OP-027",
+      "module": "M07",
+      "action": "新建本轮薪资方案草稿并检查组选择及外部算税开关",
+      "result": "unsaved; group_unavailable_in_picker; tax_off_unconfirmed",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M07_PLAN01",
+      "notes": "未点击保存、未核算、未调用外部算税。"
     }
   ],
   "counts": {
@@ -659,8 +667,8 @@
   "external_sends": null,
   "payments": 0,
   "declarations": 0,
-  "checkpoint_at": "2026-09-10T14:19:17.787553+00:00",
-  "workflow_status": "RUNNING_reauthorized_UI_restored",
+  "checkpoint_at": "2026-09-10T14:26:41.428534+00:00",
+  "workflow_status": "ENV_BLOCKED_salary_draft_origin_access_denied_after_reauthorization",
   "execution_blockers": [
     {
       "id": "R3-EXEC-BLOCK-001",
@@ -693,6 +701,19 @@
       "owner_role": "用户重新授权/平台自动审批（不是R3 P2设计缺陷）",
       "resolved_at": "2026-09-10T14:11:57.903182+00:00",
       "resolution": "用户明确回复“确认允许”；复用原浏览器和表单只读恢复成功，未刷新/导航/丢弃草稿。"
+    },
+    {
+      "id": "R3-EXEC-BLOCK-004",
+      "status": "ENV_BLOCKED",
+      "scope": "srworkshopbj.italent.cn当前浏览器交互",
+      "observed": "用户重新授权后曾恢复执行；本次检查未保存薪资方案草稿的算税开关及绩效状态又被自动审批拒绝。随后只读现有草稿名称字段仍被拒绝。",
+      "automatic_review_reason": "The salary-plan draft remains unsaved, and this repeats the denied origin access that could discard entered data without new user approval.",
+      "first_rejected_action": "回读薪资方案算税选项、绩效配置和iframe标识；无导航/刷新/写入",
+      "safer_attempt": "仅已有R3薪资方案草稿名称input.value只读；仍拒绝",
+      "not_observed": "没有实际丢失草稿、串页、互踢或登录失效证据；不将风险推测记为故障事实。",
+      "owner_role": "平台自动审批/用户重新确认（不是产品设计缺陷）",
+      "resume_condition": "用户重新授权原站访问并确认如何保护已记录薪资草稿；先只读回查，不绕过审批。",
+      "recorded_at": "2026-09-10T14:26:41.428534+00:00"
     }
   ],
   "synthetic_input_files": [
@@ -908,12 +929,33 @@
   },
   "employee_established": false,
   "repository_recheck": {
-    "recorded_at": "2026-09-10T13:54:46.532702+00:00",
+    "recorded_at": "2026-09-10T14:21:01Z",
     "remote_main_sha": "22be3a7e366d6787180d4f593a30f5984c70e03a",
     "r3_p2_design_or_review_branch_found": false,
     "p2_status_from_repository": "未启动（已准入）",
-    "m27_evidence_remote_sha": "1dafb11806b0e96a2fb74bffc338544217c4829d",
+    "m27_evidence_remote_sha": "3baf3d532c25bd2ac0c28a82de2f542af4eb7718",
     "tracking_remote": "r1-p2-origin",
-    "tracking_branch": "evidence/r3-origin-parity-20260910"
-  }
+    "tracking_branch": "evidence/r3-origin-parity-20260910",
+    "last_pushed_m16_sha": "3f704a456394b1fd7dab126d5a7ef8a0bf9586b8",
+    "last_pushed_m11_sha": "d31d7c4f17bf5ce30860409a2ed369958f16ac59",
+    "last_pushed_m12_sha": "2946f0be6a742b4e14f44a559be263f968623fc0"
+  },
+  "unsaved_drafts": [
+    {
+      "module": "M07",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M07_PLAN01",
+      "persisted": false,
+      "record_counted": false,
+      "tab_title": "发薪方案",
+      "frame_observed": "popup_17890497031131810",
+      "fields": {
+        "name_verified": true,
+        "own_group_search": "ZZ_R3_R3-ORIGIN-20260910-103900_M07_GROUP01",
+        "group_selected": false,
+        "pay_cycle": "月已点击，最终值未回读",
+        "tax_service": "最后验证是；精确点击否后未回读"
+      },
+      "next_action": "先保留表单查实际状态；未保存，不能核算；不选非R3组。"
+    }
+  ]
 }

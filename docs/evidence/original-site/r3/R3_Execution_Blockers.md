@@ -1,22 +1,24 @@
-# R3 本轮执行阻塞
+# R3 当前执行阻塞
 
-2026-09-10T13:50:36.703307+00:00
-
-停止原因是ENV全站访问拒绝，员工单一路径及ROLE缺口均不作为本轮停止条件。
+更新时间：2026-09-10T14:26:41.428534+00:00。003已解除；本次真正停止原因004，不是员工单一路径或角色缺口。
 
 ## R3-EXEC-BLOCK-001
 
+```json
 {
   "id": "R3-EXEC-BLOCK-001",
   "scope": "在职员工建立及依赖链；已有待入职替代路径部分成功",
-  "observed": "待入职EMP01已保存；原直接新增表单仍无期限选项，正式导入模板受浏览器限制；待入职自动带出原有经理和已发送状态，不能继续入职申请",
+  "observed": "原员工期限前置仍阻塞；待入职EMP01的非R3经理已通过本轮编辑清除并独立回读成功；已发送历史状态与后续通知边界未查明，未提交入职申请。",
   "cause": "未确定；不能据此判断原站全局故障",
   "owner_role": "原站测试环境维护者/数据负责人（尚未确认承担）",
-  "resume_condition": "恢复原站访问后先确认并解除本轮记录默认经理/通知副作用，再用合法UI完成入职；不能重建EMP01",
+  "resume_condition": "确认后续入职办理不会真实发送消息后继续正常UI；不得重建EMP01。",
   "remaining_alternatives": "专用测试入口和完整入职办理尚未穷尽，因全站ENV限制暂停"
 }
+```
+
 ## R3-EXEC-BLOCK-002
 
+```json
 {
   "id": "R3-EXEC-BLOCK-002",
   "scope": "学习者/员工/主管/审批者等多角色权限与自助操作",
@@ -26,11 +28,14 @@
   "status": "ROLE_BLOCKED",
   "note": "不是整轮停止原因，不能声称所有切换入口均不存在"
 }
+```
+
 ## R3-EXEC-BLOCK-003
 
+```json
 {
   "id": "R3-EXEC-BLOCK-003",
-  "status": "ENV_BLOCKED",
+  "status": "RESOLVED",
   "scope": "srworkshopbj.italent.cn所有当前浏览器交互",
   "observed": "自动审批拒绝该原站访问；称员工编辑未保存状态可能被重新导航丢失，并要求用户重新确认",
   "first_rejected_action": "课程下架最终确认与本轮经理清除组合；无成功结果证据",
@@ -38,11 +43,26 @@
   "automatic_review_reason": "Repeats previously rejected origin access while unsaved employee-edit state remains; could reset navigation and lose non-trivial changes, with no explicit user re-approval.",
   "not_observed": "没有实际串页、互踢、登录失效或状态丢失证据；不将审批推测记为浏览器故障事实",
   "resume_condition": "用户明确重新授权访问该原站并保留未保存表单；随后只读回查两个待确认操作，再恢复UI执行",
-  "owner_role": "用户重新授权/平台自动审批（不是R3 P2设计缺陷）"
+  "owner_role": "用户重新授权/平台自动审批（不是R3 P2设计缺陷）",
+  "resolved_at": "2026-09-10T14:11:57.903182+00:00",
+  "resolution": "用户明确回复“确认允许”；复用原浏览器和表单只读恢复成功，未刷新/导航/丢弃草稿。"
 }
+```
 
-本轮没有重新导航、刷新或关闭员工编辑页来解决拒绝；没有更换浏览器、原始协议或隐藏接口绕过。自动审批对只读替代仍拒绝后停止站点调用，只完成本地证据、提交及推送。
+## R3-EXEC-BLOCK-004
 
-## 当前更新 2026-09-10T14:11:57.903182+00:00
-
-用户明确重新授权后只读恢复成功，R3-EXEC-BLOCK-003已解除。001仅剩在职建立/通知边界，非R3经理已清除并独立回读；002仍ROLE_BLOCKED。管理端继续。
+```json
+{
+  "id": "R3-EXEC-BLOCK-004",
+  "status": "ENV_BLOCKED",
+  "scope": "srworkshopbj.italent.cn当前浏览器交互",
+  "observed": "用户重新授权后曾恢复执行；本次检查未保存薪资方案草稿的算税开关及绩效状态又被自动审批拒绝。随后只读现有草稿名称字段仍被拒绝。",
+  "automatic_review_reason": "The salary-plan draft remains unsaved, and this repeats the denied origin access that could discard entered data without new user approval.",
+  "first_rejected_action": "回读薪资方案算税选项、绩效配置和iframe标识；无导航/刷新/写入",
+  "safer_attempt": "仅已有R3薪资方案草稿名称input.value只读；仍拒绝",
+  "not_observed": "没有实际丢失草稿、串页、互踢或登录失效证据；不将风险推测记为故障事实。",
+  "owner_role": "平台自动审批/用户重新确认（不是产品设计缺陷）",
+  "resume_condition": "用户重新授权原站访问并确认如何保护已记录薪资草稿；先只读回查，不绕过审批。",
+  "recorded_at": "2026-09-10T14:26:41.428534+00:00"
+}
+```
