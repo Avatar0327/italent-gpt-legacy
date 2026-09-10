@@ -1,6 +1,6 @@
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M16；备用 未启用；实际执行 M16。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M12；备用 未启用；实际执行 M12。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
 本次R2材料流水线：按最新用户批准顺序关闭R2；随后允许R3串行材料准备，未批准R3不关闭，不进入P2/P3；材料完成待评审 ；正式关闭焦点 M27。[集中评审与决定清单](P1_R2_Review_Package.md)。
 
@@ -34,7 +34,7 @@
 | M17 继任与发展 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M03 干部管理2.0 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M27 学习管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M16 绩效管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M16 绩效管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M12 招聘管理系统 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M11 假勤管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M07 薪酬社保 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
@@ -46,7 +46,7 @@
 
 # 本项目总体PRD（P1B评审稿）
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T02:48:41.726545+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T02:51:15.660044+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 

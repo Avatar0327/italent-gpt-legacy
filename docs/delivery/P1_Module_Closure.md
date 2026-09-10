@@ -2,13 +2,13 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 
 # 模块闭环、滚动转序及当前收口清单
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T02:48:41.726545+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T02:51:15.660044+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M16；备用 未启用；实际执行 M16。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M12；备用 未启用；实际执行 M12。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
 本次R2材料流水线：按最新用户批准顺序关闭R2；随后允许R3串行材料准备，未批准R3不关闭，不进入P2/P3；材料完成待评审 ；正式关闭焦点 M27。[集中评审与决定清单](P1_R2_Review_Package.md)。
 
@@ -42,7 +42,7 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 | M17 继任与发展 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M03 干部管理2.0 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M27 学习管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M16 绩效管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M16 绩效管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M12 招聘管理系统 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M11 假勤管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M07 薪酬社保 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
@@ -80,6 +80,15 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 | M06-CLOSE-02 / 级别 | BP-C-REQ-02 | BC-C20；BC-C21；BC-C24 | P1硬条件已满足；历史差异和补验责任保留后续阶段 | False；稳定关系/评分尺度/版本漂移/错误授予和敏感材料权限 | 按所审完整推荐与受限批准逐项核对；M06-P1-APPROVAL-R2-20260909 | 受限通过 |
 | M06-CLOSE-03 / 指标 | BP-C-REQ-02 | BC-C22；BC-C23；BC-C24 | P1硬条件已满足；历史差异和补验责任保留后续阶段 | False；稳定关系/评分尺度/版本漂移/错误授予和敏感材料权限 | 按所审完整推荐与受限批准逐项核对；M06-P1-APPROVAL-R2-20260909 | 受限通过 |
 | M06-CLOSE-04 / 资格标准 | BP-C-REQ-02 | BC-C21；BC-C23 | P1硬条件已满足；历史差异和补验责任保留后续阶段 | False；稳定关系/评分尺度/版本漂移/错误授予和敏感材料权限 | 按所审完整推荐与受限批准逐项核对；M06-P1-APPROVAL-R2-20260909 | 受限通过 |
+
+
+## M16完整登记范围收口清单
+
+| 问题/原范围 | 需求 | 证据 | 具体缺口 | 阻塞P1/风险 | 关闭方式与判据 | 当前状态 |
+|---|---|---|---|---|---|---|
+| M16-CLOSE-01 / 工作台 | BP-P-REQ-01；BP-I-REQ-01；BP-I-REQ-02 | BC-P1C-M16 | 规格建议与本模块LIMIT待批；工作台任务/异常/汇总对象与当前目标报表关系未证；其他页不能代工作台完整证据 | True；不当评价/分布、错误缺评分母、兼职身份漂移、越权分数可见及更正后奖金联动 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M16-SPEC-01,M16-SPEC-02,M16-SPEC-03,M16-SPEC-04,M16-SPEC-05,M16-SPEC-06 | 已完成待评审 |
+| M16-CLOSE-02 / OKR | BP-P-REQ-09 |  | 规格建议与本模块LIMIT待批；目标/KR/对齐/进度/评分/权限/周期及自助关联缺证，保留受限规格而非自动套绩效目标 | True；不当评价/分布、错误缺评分母、兼职身份漂移、越权分数可见及更正后奖金联动 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M16-SPEC-01,M16-SPEC-02,M16-SPEC-03,M16-SPEC-04,M16-SPEC-05,M16-SPEC-06 | 已完成待评审 |
+| M16-CLOSE-03 / 员工/组织目标与绩效 | BP-P-REQ-01；BP-P-REQ-02；BP-P-REQ-03；BP-P-REQ-04；BP-P-REQ-05；BP-P-REQ-06；BP-P-REQ-07；BP-P-REQ-08 | P1-GOAL；BC-P01；BC-P02；BC-P03；BC-P04；BC-P05；BC-P06；BC-P07；BC-P09；BC-P10；BC-P11；BC-P14；BC-P15；BC-P16 | 规格建议与本模块LIMIT待批；员工目标/评价/申诉更正和组织目标/组织绩效分别保留；组织参与数不等员工人数，完整采分/关系/分布/系数消费与兼职上下文待证 | True；不当评价/分布、错误缺评分母、兼职身份漂移、越权分数可见及更正后奖金联动 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M16-SPEC-01,M16-SPEC-02,M16-SPEC-03,M16-SPEC-04,M16-SPEC-05,M16-SPEC-06 | 已完成待评审 |
 
 
 ## M17完整登记范围收口清单
@@ -171,6 +180,8 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 M03当前材料：[P1受限通过，需求基线已批准](P1_M03_Review_Package.md)。批准、源取证及后续执行各自独立。
 
 M06当前材料：[P1受限通过，需求基线已批准](P1_M06_Review_Package.md)。批准、源取证及后续执行各自独立。
+
+M16当前材料：[材料完成、等待所有者集中评审](P1_M16_Review_Package.md)。批准、源取证及后续执行各自独立。
 
 M17当前材料：[P1受限通过，需求基线已批准](P1_M17_Review_Package.md)。批准、源取证及后续执行各自独立。
 
