@@ -13,10 +13,15 @@
     "P3-ARC-01",
     "P3-ARC-02"
   ],
-  "newTestAssertions": 6,
+  "newTestAssertions": null,
   "independentReview": "pending",
   "risksClosedByExecutor": 0,
   "p3ExitApproved": false,
   "p4Started": false,
-  "sourceEvidenceOwner": "P1 controller"
+  "sourceEvidenceOwner": "P1 controller",
+  "partialImplementationTasks": [
+    "P3-R1-02",
+    "P3-R1-04"
+  ],
+  "testCountNote": "原值6指测试条目而非断言数；本次精确条目数以提交SHA对应运行证据为准。"
 }

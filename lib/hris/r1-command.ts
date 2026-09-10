@@ -22,10 +22,20 @@ export function canonical(value:unknown):string {
 export async function digest(value:unknown){const bytes=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(canonical(value)));return [...new Uint8Array(bytes)].map(b=>b.toString(16).padStart(2,'0')).join('');}
 export type CommandIntent={commandId:string;idempotencyKey:string;action:string;payload:unknown;expectedWorkspaceRevision:number;expectedAuthorizationRevision:number;expectedWriterEpoch:number;expectedRecoveryEpoch:number};
 type Receipt={commandId:string;requestDigest:string;status:string;result:string;workspaceRevision:number};
+export async function replayCommand(db:D1Database,m:Member,stamp:SecurityStamp,intent:CommandIntent){
+ requireMember(m);
+ if(!sameStamp(stamp,await securityStamp(db,m.tenantId))||intent.expectedAuthorizationRevision!==stamp.authorizationRevision||intent.expectedWriterEpoch!==stamp.writerEpoch||intent.expectedRecoveryEpoch!==stamp.recoveryEpoch)throw new HttpError(409,'权限或写入版本已变化','REVISION_CONFLICT');
+ const prior=await db.prepare('SELECT command_id AS commandId,request_digest AS requestDigest,status,result,workspace_revision+1 AS workspaceRevision FROM r1_commands WHERE tenant_id=? AND actor_id=? AND action=? AND idempotency_key=?').bind(m.tenantId,m.userId,intent.action,intent.idempotencyKey).first<Receipt>();
+ if(!prior)return null;
+ const requestDigest=await digest({action:intent.action,payload:intent.payload,expectedWorkspaceRevision:intent.expectedWorkspaceRevision,expectedAuthorizationRevision:intent.expectedAuthorizationRevision,expectedWriterEpoch:intent.expectedWriterEpoch,expectedRecoveryEpoch:intent.expectedRecoveryEpoch});
+ if(prior.requestDigest!==requestDigest||prior.commandId!==intent.commandId)throw new HttpError(409,'同一命令键内容冲突','IDEMPOTENCY_CONFLICT');
+ if(prior.status!=='committed')throw new HttpError(409,'命令未确认或已归档，请查询原回执','COMMAND_RECEIPT_REQUIRED');
+ return {...prior,result:JSON.parse(prior.result) as Record<string,unknown>,replayed:true};
+}
 export async function commandReceipt(db:D1Database,m:Member,commandId:string){
- requireMember(m);await securityStamp(db,m.tenantId);
+ requireMember(m);const current=await securityStamp(db,m.tenantId);if(m.securityStamp&&!sameStamp(m.securityStamp,current))throw new HttpError(409,'当前授权已变化','REVISION_CONFLICT');
  // Actor-bound receipt contains only IDs; object data must be read through its current policy.
- return db.prepare('SELECT command_id AS commandId,status,result,workspace_revision+1 AS workspaceRevision FROM r1_commands WHERE tenant_id=? AND actor_id=? AND command_id=?').bind(m.tenantId,m.userId,commandId).first();
+ return db.prepare('SELECT command_id AS commandId,status,result,workspace_revision+1 AS workspaceRevision FROM r1_commands WHERE tenant_id=? AND actor_id=? AND command_id=? AND EXISTS(SELECT 1 FROM hris_memberships m WHERE m.tenant_id=r1_commands.tenant_id AND m.user_id=r1_commands.actor_id AND m.active=1)').bind(m.tenantId,m.userId,commandId).first();
 }
 /** Only service-validated SQL plans enter here. Callers must authorize the business action. */
 export async function commitCommand(db:D1Database,m:Member,stamp:SecurityStamp,intent:CommandIntent,plan:(token:string)=>D1PreparedStatement[],result:Record<string,unknown>={}) {
@@ -40,6 +50,8 @@ export async function commitCommand(db:D1Database,m:Member,stamp:SecurityStamp,i
  const token=crypto.randomUUID(),at=new Date().toISOString();
  const body=plan(token);if(body.length>74)throw new HttpError(413,'请按受控批次提交','TRANSACTION_TOO_LARGE');
  const tenant=m.tenantId,revision=intent.expectedWorkspaceRevision;
+ const event={schemaVersion:1,eventId:token,eventType:'command.committed',tenantId:tenant,source:'BASE',internalId:intent.commandId,externalId:null,entityRevision:1,workspaceRevision:revision+1,definitionVersion:'r1-command-v1',sourceRevision:revision,occurredAt:at,effectiveAt:at,correlationId:intent.commandId,causationId:intent.commandId,digestAlgorithm:'sha256-canonical-json-v1',payload:{commandId:intent.commandId,action:intent.action}};
+ const eventPayload=JSON.stringify({...event,digest:await digest(event)});
  const memberScope=typeof m.orgScope==='string'?m.orgScope:JSON.stringify(m.orgScope??[]);
  const statements=[
   db.prepare(`INSERT INTO r1_commands(tenant_id,command_id,actor_id,action,idempotency_key,request_digest,token,status,workspace_revision,authorization_revision,writer_epoch,recovery_epoch,created_at)
@@ -50,7 +62,7 @@ export async function commitCommand(db:D1Database,m:Member,stamp:SecurityStamp,i
   db.prepare(`UPDATE hris_workspaces SET revision=revision+1,last_mutation=? WHERE owner=? AND revision=? AND EXISTS(SELECT 1 FROM r1_commands WHERE tenant_id=? AND token=? AND status='processing')`).bind(token,tenant,revision,tenant,token),
   ...body,
   db.prepare('INSERT INTO hris_audit_events(tenant_id,id,actor_id,action,subject,at,revision) SELECT owner,?,?,?,?,?,revision FROM hris_workspaces WHERE owner=? AND last_mutation=?').bind(token,m.userId,intent.action,intent.commandId,at,tenant,token),
-  db.prepare('INSERT INTO r1_outbox(tenant_id,event_id,command_id,event_type,workspace_revision,payload) SELECT owner,?,?,?,revision,? FROM hris_workspaces WHERE owner=? AND last_mutation=?').bind(token,intent.commandId,intent.action,JSON.stringify({commandId:intent.commandId,actorId:m.userId}),tenant,token),
+  db.prepare('INSERT INTO r1_outbox(tenant_id,event_id,command_id,event_type,workspace_revision,payload) SELECT owner,?,?,?,revision,? FROM hris_workspaces WHERE owner=? AND last_mutation=?').bind(token,intent.commandId,intent.action,eventPayload,tenant,token),
   db.prepare("UPDATE r1_commands SET status='committed',result=? WHERE tenant_id=? AND token=? AND EXISTS(SELECT 1 FROM hris_workspaces WHERE owner=? AND last_mutation=?)").bind(JSON.stringify(result),tenant,token,tenant,token),
  ];
  const committed=await db.batch(statements);

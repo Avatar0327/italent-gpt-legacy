@@ -15,11 +15,11 @@ async function fixture(){
  sqlite.exec('DROP TRIGGER r1_guard_hris_orgs_insert; DROP TRIGGER r1_guard_hris_memberships_insert');
  sqlite.prepare("INSERT INTO hris_orgs(tenant_id,id,name,city,leader,status) VALUES (?,'A','合成A','上海','','启用'),(?,'B','合成B','上海','','启用')").run(tenant,tenant);
  sqlite.prepare("INSERT INTO hris_memberships(user_id,tenant_id,role,org_scope,view_email,view_level,active) VALUES ('reviewer',?,'hr','[\"A\",\"B\"]',1,1,1)").run(tenant);
- for(const who of ['owner','reviewer'])for(const op of ['catalog','identityReview','person','employment','assignmentRequest','assignmentApprove','assignmentExecute','exitRequest','exitApprove','exitExecute','contract','contractSign','contractEnd','template','subsetImport']){
+ for(const who of ['owner','reviewer'])for(const op of ['catalog','identityReview','person','employment','assignmentRequest','assignmentApprove','assignmentExecute','exitRequest','exitApprove','exitExecute','exitCleanup','contract','contractSign','contractEnd','template','subsetImport']){
   sqlite.prepare('INSERT INTO r1_permission_grants VALUES (?,?,?,?,?,?,?,?,?,?,?)').run(tenant,who+op,who,'M01',op,'scope','["A","B"]','["record","name","email","skill"]','current',past,null);
  }
  sqlite.exec('UPDATE r1_schema_state SET features_enabled=1');
- function seed(id,kind,orgId,personId,payload,status='active',code=null){sqlite.prepare('INSERT INTO r1_m01_entities VALUES (?,?,?,?,?,?,?,?,?)').run(tenant,id,kind,personId,orgId,code,1,status,JSON.stringify(payload));}
+ function seed(id,kind,orgId,personId,payload,status='active',code=null){sqlite.prepare('INSERT INTO r1_m01_entities VALUES (?,?,?,?,?,?,?,?,?)').run(tenant,id,kind,personId,orgId,code,1,status,JSON.stringify(payload));sqlite.prepare('INSERT INTO r1_m01_versions VALUES (?,?,?,?,?,?,?,?,?,?)').run(tenant,id,1,0,'fixture',new Date().toISOString(),payload.validFrom??null,payload.validTo??null,'known',JSON.stringify({id,kind,personId,orgId,code,revision:1,status,payload}));}
  seed('A','org','A',null,{name:'合成A',parentId:'',validFrom:past,validTo:null,attributes:{}},'active','A');seed('B','org','B',null,{name:'合成B',parentId:'',validFrom:past,validTo:null,attributes:{}},'active','B');
  seed('position-a','position','A',null,{name:'岗位',orgId:'A',validFrom:past,validTo:null,attributes:{}},'active','PA');seed('position-b','position','B',null,{name:'岗位',orgId:'B',validFrom:past,validTo:null,attributes:{}},'active','PB');
  seed('person','person','A',null,{name:'合成人员'},'active','E1');seed('review','identity_review','A','person',{},'confirmed');
@@ -49,8 +49,8 @@ test('P3-M01-03: independent HR approves part time; it consumes zero additional 
 test('P3-M01-07: legal scope, same legal ID and adjacent renewal dates; immutable versions',async()=>{
  const f=await fixture();f.seed('legal','legal_entity','A',null,{name:'法人旧名',validFrom:past,validTo:null,attributes:{orgIds:[]}},'active','LE');
  const c={operation:'contract',personId:'person',orgId:'A',legalEntityId:'legal',number:'C2',agreementCategory:'labor',contractType:'fixed',start:'2026-01-01',end:'2026-12-31',renewalOf:null,fields:{}};
- await assert.rejects(f.send(c),/范围/);f.sqlite.prepare("UPDATE r1_m01_entities SET payload=json_set(payload,'$.attributes.orgIds',json('[\"A\"]')) WHERE id='legal'").run();
- f.seed('old-contract','contract','A','person',{legalEntityId:'legal',start:'2025-01-01',end:'2025-12-30'},'signed','C1');
+ await assert.rejects(f.send(c),/范围/);f.seed('legal-scoped','legal_entity','A',null,{name:'法人旧名',validFrom:past,validTo:null,attributes:{orgIds:['A']}},'active','LE-S');c.legalEntityId='legal-scoped';
+ f.seed('old-contract','contract','A','person',{legalEntityId:'legal-scoped',start:'2025-01-01',end:'2025-12-30'},'signed','C1');
  await assert.rejects(f.send({...c,renewalOf:'old-contract'}),/相邻日/);
  const r=await f.send({...c,start:'2025-12-31',renewalOf:'old-contract'});assert.equal((await m01Entity(f.db,f.tenant,r.result.ids[0])).payload.legalName,'法人旧名');
  assert.throws(()=>f.sqlite.exec('UPDATE r1_m01_versions SET payload=\'{}\''),/IMMUTABLE_HISTORY/);f.sqlite.close();
@@ -74,6 +74,41 @@ test('P3-M01-10: exit fence rejects later approvals and queues all 101 cleanup i
 test('P3-M01-12: protected waiting dependency blocks disable without exposing identity',async()=>{
  const f=await fixture();f.seed('waiting','assignment_request','A','person',{positionId:'position-a'},'approved');
  // Non-overlapping next version exercises dependency rather than an interval conflict.
- f.sqlite.prepare("UPDATE r1_m01_entities SET payload=json_set(payload,'$.validTo','2025-12-31') WHERE id='position-a'").run();
- await assert.rejects(f.send({operation:'catalog',id:'position-a',kind:'position',code:'PA',name:'岗位',orgId:'A',parentId:'',status:'inactive',validFrom:today,validTo:null,attributes:{}}),e=>e.message==='存在受保护的未完成依赖，请联系负责人');f.sqlite.close();
+ 
+ await assert.rejects(f.send({operation:'catalog',id:'position-a',closePreviousVersion:1,kind:'position',code:'PA',name:'岗位',orgId:'A',parentId:'',status:'inactive',validFrom:today,validTo:null,attributes:{}}),e=>e.message==='存在受保护的未完成依赖，请联系负责人');f.sqlite.close();
+});
+test('P3-M01-11: explicit strong budget policy blocks effect; absent provider never reports budget passed',async()=>{
+ const f=await fixture();f.seed('employment','employment','A','person',{startOn:past},'active');
+ f.seed('request','assignment_request','A','person',{personId:'person',employmentId:'employment',orgId:'A',positionId:'position-a',type:'primary',validFrom:today,validTo:null,attempts:0},'approved');
+ f.seed('budget','budget_policy','A',null,{strongBlocking:true});
+ const r=await f.send({operation:'assignmentExecute',id:'request'});assert.equal(r.result.effectStatus,'failed');assert.match((await m01Entity(f.db,f.tenant,'request')).payload.failure,/金额预算/);
+ assert.equal(f.sqlite.prepare("SELECT count(*) n FROM r1_m01_entities WHERE kind='assignment'").get().n,0);f.sqlite.close();
+});
+test('temporal versions: future publication preserves today and old bytes, all interval cuts reject historical hidden cycles',async()=>{
+ const f=await fixture();const {catalogTimeline,temporalCatalogCheck}=await import('../lib/hris/r1-temporal.ts');
+ const before=f.sqlite.prepare("SELECT payload FROM r1_m01_versions WHERE entity_id='position-a'").get().payload;
+ await f.send({operation:'catalog',id:'position-a',closePreviousVersion:1,kind:'position',code:'PA',name:'岗位未来名',orgId:'A',parentId:'',status:'active',validFrom:'2027-01-01',validTo:null,attributes:{}});
+ const timeline=await catalogTimeline(f.db,f.tenant,'position');assert.equal(timeline.find(v=>v.id==='position-a'&&v.payload.validFrom<=today).payload.name,'岗位');
+ assert.equal(f.sqlite.prepare("SELECT payload FROM r1_m01_versions WHERE entity_id='position-a' AND version=1").get().payload,before);
+ const node=(id,parent,from,to)=>({id,kind:'org',personId:null,orgId:'A',code:id,revision:1,status:'active',payload:{name:id,parentId:parent,validFrom:from,validTo:to}});
+ assert.throws(()=>temporalCatalogCheck([node('x','y','2027-01-01','2027-03-31'),node('x','','2027-04-01',null),node('y','x','2027-01-01','2027-02-01'),node('y','','2027-02-02',null)],'org'),/时态环/);f.sqlite.close();
+});
+test('exit generation: rehire enables only new segment; cleanup resumes and unsupported domains retain blocked receipts',async()=>{
+ const f=await fixture();f.seed('old-employment','employment','A','person',{startOn:past},'active');f.seed('exit','exit_request','A','person',{lastWorkingOn:'2026-01-01'},'approved');
+ for(let i=0;i<101;i++)f.seed('todo-'+String(i).padStart(3,'0'),i===100?'unsupported':'assignment_request','A','person',{employmentId:'old-employment',reviewerId:'reviewer',createdBy:'owner'},'pending');
+ await f.send({operation:'exitExecute',id:'exit'});
+ const e=await f.send({operation:'employment',personId:'person',orgId:'A',identityReviewId:'review',predecessorId:'old-employment',startOn:today,employmentType:'employee'});
+ const payload={operation:'assignmentRequest',personId:'person',employmentId:e.result.ids[0],orgId:'A',positionId:'position-a',type:'primary',homePrimaryId:null,validFrom:today,validTo:null,reviewerId:'reviewer',reason:'已复核重聘'};
+ await assert.rejects(f.send({...payload,employmentId:'old-employment'}),/代次/);
+ const r=await f.send(payload);act('reviewer');await f.send({operation:'assignmentApprove',id:r.result.ids[0]});await assert.rejects(f.send({operation:'assignmentApprove',id:'todo-001'}),/代次/);act('owner');await f.send({operation:'assignmentExecute',id:r.result.ids[0]});
+ for(let i=0;i<6;i++)await f.send({operation:'exitCleanup',personId:'person',orgId:'A',limit:20});
+ assert.equal(f.sqlite.prepare("SELECT count(*) n FROM r1_exit_cleanup WHERE status='cancelled'").get().n,100);
+ assert.equal(f.sqlite.prepare("SELECT count(*) n FROM r1_exit_cleanup WHERE status='blocked_by_exit'").get().n,1);
+ assert.equal((await m01Entity(f.db,f.tenant,r.result.ids[0])).status,'applied');
+ assert.equal((await f.send({operation:'exitCleanup',personId:'person',orgId:'A',limit:20})).result.processed,0);f.sqlite.close();
+});
+test('command replay runs before stale business-state validation and does not create a second employment',async()=>{
+ const f=await fixture(),c=await memberContext(),s=c.member.securityStamp,key=crypto.randomUUID(),payload={operation:'employment',personId:'person',orgId:'A',identityReviewId:'review',predecessorId:null,startOn:today,employmentType:'employee'};
+ const intent={commandId:key,idempotencyKey:key,action:'M01.employment',payload,expectedWorkspaceRevision:c.row.revision,expectedAuthorizationRevision:s.authorizationRevision,expectedWriterEpoch:s.writerEpoch,expectedRecoveryEpoch:s.recoveryEpoch};
+ const a=await executeM01(c,intent),b=await executeM01(await memberContext(),intent);assert.equal(b.replayed,true);assert.deepEqual(a.result.ids,b.result.ids);assert.equal(f.sqlite.prepare("SELECT count(*) n FROM r1_m01_entities WHERE kind='employment'").get().n,1);f.sqlite.close();
 });
