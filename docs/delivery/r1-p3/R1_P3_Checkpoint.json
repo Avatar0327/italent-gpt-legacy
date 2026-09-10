@@ -194,7 +194,8 @@
       ],
       "evidence": [
         "evidence/r1-p3-20260910T071309586525Z.json",
-        "evidence/r1-p3-20260910T072924847968Z.json"
+        "evidence/r1-p3-20260910T072924847968Z.json",
+        "evidence/r1-p3-20260910T074453122156Z.json"
       ],
       "subworkCompleted": [
         "21数据集254字段运行时目录与源版本标识",
@@ -219,7 +220,7 @@
         "21数据集业务粒度/源契约oracle的完整核对",
         "任务级AC/风险/LIMIT证据收口；真实R2/R3联调保留10"
       ],
-      "implementationSha": "1aafb5731aebbb74aaf95b669a07afab57b50354"
+      "implementationSha": "1d7725cef06a753063a2080ac0f0c37b1f493713"
     },
     {
       "id": "P3-R1-07",
@@ -301,6 +302,6 @@
     }
   ],
   "currentTask": "P3-R1-06",
-  "lastVerifiedSourceSha": "1aafb5731aebbb74aaf95b669a07afab57b50354",
-  "latestRun": "evidence/r1-p3-20260910T072924847968Z.json"
+  "lastVerifiedSourceSha": "1d7725cef06a753063a2080ac0f0c37b1f493713",
+  "latestRun": "evidence/r1-p3-20260910T074453122156Z.json"
 }
