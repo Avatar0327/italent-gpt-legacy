@@ -134,6 +134,13 @@
       "name": "ZZ_R2_R2-ORIGIN-20260910-103952_M06_STD01",
       "status": "unsaved_cancelled",
       "reason": "M37 indicator not found; independent M06 indicator still needed"
+    },
+    {
+      "module": "M26",
+      "name": "ZZ_R2_R2-ORIGIN-20260910-103952_M26_ACT01",
+      "type": "feedback_project",
+      "status": "rejected_no_create",
+      "reason": "hyphen disallowed; exact required naming cannot save"
     }
   ]
 }

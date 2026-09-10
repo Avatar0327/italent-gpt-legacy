@@ -52,16 +52,25 @@
       "severity": "Observation",
       "finding": "M37新建指标在M06指标范围搜索为空；跨模块来源配置未明。",
       "disposition": "继续建立独立M06指标；原站业务所有者补充映射/发布前置，未核实前不改P2，也不声称链路通过。"
+    },
+    {
+      "id": "R2-DIFF-M26-001",
+      "module": "M26",
+      "classification": "ENV_BLOCKED",
+      "severity": "Major",
+      "finding": "原站禁止活动名含连字符，与用户强制数据命名规则冲突；合法隔离活动无法创建，16匿名案例及下游报告链路被阻断。",
+      "disposition": "已增量告警；不改名绕开用户规则，不改原站校验。需要所有者允许活动显示名采用可逆下划线映射且原RUN_ID写欢迎语/清单，之后续跑；不是P2撤销或P3缺陷。"
     }
   ],
   "counts": {
     "INTENTIONAL_DIFFERENCE": 1,
     "NEED_OWNER_DECISION": 2,
     "DESIGN_GAP": 1,
-    "ENV_BLOCKED": 1
+    "ENV_BLOCKED": 2
   },
   "severityCounts": {
     "Observation": 3,
-    "Minor": 2
+    "Minor": 2,
+    "Major": 1
   }
 }

@@ -97,5 +97,17 @@
     "evidence": [
       "captures/M06-M37-indicator-search.json"
     ]
+  },
+  {
+    "id": "R2-OBS-M26-001",
+    "module": "M26",
+    "actual": "新增活动填写规定的完整RUN_ID名称保存，明确报错特殊字符禁止清单含连字符；未创建。表单显示启用后评价形式不能改、作答姓名/角色显示配置、分组规则和不认真作答提醒。未测匿名统计。",
+    "p1": "M26-SPEC-01/03/04；16匿名行为仍未知",
+    "p2": "M26_Design.md 项目状态、匿名保护属于批准新规则，未要求名称禁连字符",
+    "implementation": "旧feedback.ts已有列明改造；没有R2 P3实测",
+    "classification": "ENV_BLOCKED",
+    "evidence": [
+      "captures/M26-activity-name-block.json"
+    ]
   }
 ]
