@@ -3226,10 +3226,18 @@
           "p1B": "not_ready",
           "review": "not_signed",
           "approvedRestricted": false,
-          "assessmentAt": "2026-09-09T10:06:49.834482+00:00",
-          "basis": "PG/SP/包内项目支撑EA入职已实际验证并校正过时描述；人工工资/考勤引用/独立复核/异议补差/权限有可执行候选。薪资档案事件、自动核算、社保/个税/激励原内域仍保留受限规格；供应商与真实支付不是P1前置，未就绪。",
-          "blockingIssueIds": [],
-          "next": "浏览器恢复后按该模块已列关键缺口补证；当前先完成首包/基础与全局一致性，不重复创建源测试对象。",
+          "assessmentAt": "2026-09-10T02:58:52.883177+00:00",
+          "basis": "完整范围材料已完成待评审；推荐/LIMIT未批准",
+          "blockingIssueIds": [
+            "M07-SPEC-01",
+            "M07-SPEC-02",
+            "M07-SPEC-03",
+            "M07-SPEC-04",
+            "M07-SPEC-05",
+            "M07-SPEC-06",
+            "M07-LIMIT-01"
+          ],
+          "next": "顺序准备M27；本模块等待R3集中评审",
           "acceptanceRefs": [
             {
               "taskId": "PAY-SOURCE",
@@ -3352,9 +3360,9 @@
         ],
         "moduleClosure": {
           "rangeId": "R3",
-          "queueState": "queued",
+          "queueState": "waiting_owner_review",
           "p1AConclusion": {
-            "status": "进行中",
+            "status": "已完成待评审",
             "approvalRecord": null,
             "evidenceRefs": [
               "BC-S01-02",
@@ -3370,40 +3378,289 @@
               "BC-S20",
               "BC-S21"
             ],
-            "limits": "沿用已有局部证据，未代签"
+            "limits": "自动档案、公式/多期间/追溯补差仅局部源证据；社保/个税/激励详细原站规则尚未探索；无银行支付、税务申报及多角色薪酬验证。外部交易不作P1前置。"
           },
           "p1BConclusion": {
-            "status": "进行中",
+            "status": "已完成待评审",
             "approvalRecord": null,
             "evidenceRefs": [],
-            "limits": "需求尚未批准"
+            "limits": "自动档案、公式/多期间/追溯补差仅局部源证据；社保/个税/激励详细原站规则尚未探索；无银行支付、税务申报及多角色薪酬验证。外部交易不作P1前置。"
           },
           "conditions": {
             "applicableScopeDetermined": {
               "value": true,
-              "basis": "用户已确认15完整登记范围及本轮R顺序"
+              "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
             },
             "implementationRulesDecided": {
-              "value": null,
-              "basis": "尚未逐模块闭环判定，不能算通过"
+              "value": false,
+              "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
             },
             "acceptanceExecutable": {
-              "value": null,
-              "basis": "尚未逐模块闭环判定，不能算通过"
+              "value": true,
+              "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
             },
             "dependenciesAndExceptionsResolved": {
-              "value": null,
-              "basis": "尚未逐模块闭环判定，不能算通过"
+              "value": false,
+              "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
             }
           },
           "transitionReview": {
             "approved": false,
             "record": null,
-            "scope": null,
+            "scope": "未批准",
             "approvedAt": null
           },
-          "restrictedApproval": null
-        }
+          "restrictedApproval": null,
+          "p1Closed": false
+        },
+        "reviewPackage": {
+          "moduleId": "M07",
+          "documentStatus": "材料完成、等待所有者集中评审",
+          "scope": "档案、核算、社保、支付、个税通、激励",
+          "preparedAt": "2026-09-10T02:58:52.883177+00:00",
+          "basedOnHead": "a93f42cc14fca4ed225ec2e398678c1d122f07f9",
+          "approvalRecord": null,
+          "internalDeferralProposals": [],
+          "internalDeferralNote": "原登记完整范围全部保留；独立AI和33暂缓模块不恢复；外部服务以契约保留，不静默缩减普通业务。",
+          "confirmedRules": "当前有效成员绑定稳定员工ID；read/use/manage/review/publish/export与组织范围/字段权限求交；本人、提交者、实际材料编制者回避独立审批。版本历史、附件和下载按当前权限校验；401/403/解绑清缓存，临时故障不假0。命令以requestId+payloadHash幂等，revision并发冲突拒绝，结果未知先查原ID，不重做；业务与审计事务边界沿D1既有批准。M19审批、业务生效、外部通知分别记录；M48只消费本人许可投影，M32按明确分母与版本统计。BASE01–06沿R1目标；供应商未配置返回未配置，不模拟成功；这些共用原则引用既有批准，模块新增算法仍待批准。 模块SPEC均为建议未批准。",
+          "decisionIds": [
+            "M07-SPEC-01",
+            "M07-SPEC-02",
+            "M07-SPEC-03",
+            "M07-SPEC-04",
+            "M07-SPEC-05",
+            "M07-SPEC-06"
+          ],
+          "exceptionProposals": [
+            {
+              "id": "M07-LIMIT-01",
+              "status": "待所有者批准",
+              "approved": false,
+              "approvalRecord": null,
+              "scope": "自动档案、公式/多期间/追溯补差仅局部源证据；社保/个税/激励详细原站规则尚未探索；无银行支付、税务申报及多角色薪酬验证。外部交易不作P1前置。",
+              "evidence": "已有页面索引 BC-S01-02,BC-S03,BC-S04,BC-S05,BC-P1C-M07,BC-S07,BC-S08,BC-S09,BC-S18,BC-S19,BC-S20,BC-S21；当前静态HEAD a93f42cc14fca4ed225ec2e398678c1d122f07f9；本轮未写原站或执行业务测试",
+              "proposal": "建议以原有局部证据、静态差异和经所有者批准的模块完整产品规则关闭P1需求；暂未验证算法留后续责任，不作为无限取证前置。未经批准不关闭。",
+              "residualRisk": "错误计薪或扣款、政策/身份错配、负净额不当追收、薪酬泄露及重复支付",
+              "revalidation": "P2：补薪资组/包/事件档案、受控公式DAG和输入政策快照、社保/税期/激励对象、负净额待处理账、支付幂等及对账、薪资权限和历史迁移；不引入完整预算/佣金/福利模块；P3：按本包Given/When/Then合成验证正常/边界/并发/故障，补算法及版本迁移证据，历史测试不代复验；P4：独立多角色、敏感字段/历史附件/下载、跨模块业务、生产恢复与外部联调。E2不新增人，单管理员不代验。"
+            }
+          ],
+          "closedQuestions": [
+            {
+              "problem": "已有实现与完整范围是否等价",
+              "resolution": "payroll.ts是CNY人工核定项目批次，提交记录contributors并独立复核，发布排含本人；不是自动算薪或银行发薪。工资引用冻结考勤在提交/复核/发布重验；补差有带符号金额、独立审批和原条关联，当前累计净额可能为负。薪资组/包/任职薪资档案、社保/累计计税/激励完整模型缺失；源PG/SP及入职引用仅历史合成链，不代表自动档案生成已实证。",
+              "basis": "a93f42cc14fca4ed225ec2e398678c1d122f07f9静态，只读代码及历史记录未执行"
+            }
+          ],
+          "exitAssessment": {
+            "p1A": "局部原站与静态事实已汇总，未执行项明确LIMIT；完整/受限判定待所有者批准",
+            "p1B": "字段、权限、状态、异常、契约和验收预期已具体化；SPEC/LIMIT待批",
+            "transition": "未批准，不关闭、不转序"
+          },
+          "flowSummary": [
+            "薪资配置draft→approved→published及有效区间；算薪run准备→calculated→reviewed，批次draft→submitted→approved→published；原工资不可覆盖，补差独立版本；社保/税申报准备/复核/待提交/回执分别；激励proposed→approved→effective；支付unconfigured/pending/submitted/unknown/succeeded/failed/reconciled独立。",
+            "正常/驳回/撤回/停用/撤权/更正/并发/未知分别见推荐和验收，不等同原站执行。"
+          ],
+          "acceptanceCaseRefs": [
+            "M07-REVIEW-AC01",
+            "M07-REVIEW-AC02",
+            "M07-REVIEW-AC03",
+            "M07-REVIEW-AC04",
+            "M07-REVIEW-AC05",
+            "M07-REVIEW-AC06",
+            "M07-REVIEW-AC07",
+            "M07-REVIEW-AC08",
+            "M07-REVIEW-AC09",
+            "M07-REVIEW-AC10",
+            "M07-REVIEW-AC11",
+            "M07-REVIEW-AC12"
+          ],
+          "implementationNext": [
+            "可复用：人工批次与项目整数金额、contributors回避、工资范围投影、冻结考勤守卫、已发工资条/异议/补差及对账",
+            "待修改/新增：补薪资组/包/事件档案、受控公式DAG和输入政策快照、社保/税期/激励对象、负净额待处理账、支付幂等及对账、薪资权限和历史迁移；不引入完整预算/佣金/福利模块",
+            "代码证据：lib/hris/payroll.ts,lib/hris/payroll-adjustments.ts,lib/hris/payroll-attendance.ts,lib/hris/payroll-access.ts,lib/hris/payroll-reports.ts,lib/hris/model.ts"
+          ],
+          "businessAccepted": false,
+          "productionAccepted": false,
+          "next": "顺序准备M27；本模块等待R3集中评审"
+        },
+        "sourceAccessThisUnit": {
+          "result": "本单元沿用已归档源证据，未新增浏览器取证；未遇需要重复源提交的结果未知动作。当前算法缺口以具体建议/LIMIT表达，后续仅按定向清单补证。",
+          "sourceWrite": false
+        },
+        "reviewSupplement": {
+          "sourceTimes": "源时间逐页保留；本轮静态核对 2026-09-10T02:58:52.883177+00:00 / a93f42cc14fca4ed225ec2e398678c1d122f07f9，不把本次时间替代源观察日期。",
+          "coverage": {
+            "档案": "局部合成执行及配置观察；已有：BC-P1C-M07,BC-S09,BC-S19,BC-S20,BC-S21,BC-F39；源缺口保留：PG/SP/包内项目和入职引用已证，自动档案/事件修订/权限继承待证；跨模块F39只证入职结果；对应SPEC形成建议和验收，未评审。",
+            "核算": "页面/配置局部观察；已有：BC-S01-02,BC-S03,BC-S04,BC-S08；源缺口保留：公式/活动版本/期间/补差及团队授权待证；现人工工资可复用但不代自动算薪；S-SPEC-01先补证；对应SPEC形成建议和验收，未评审。",
+            "社保": "尚未探索详细规则；已有：；源缺口保留：参保/方案/基数/个人与单位承担/更正/有效政策版本缺证，人工deduction不能替代；保留受限规格；对应SPEC形成建议和验收，未评审。",
+            "支付": "仅配置线索；外部执行不作前置；已有：BC-S03；源缺口保留：只保留BASE-06请求/回执/失败/未知/对账契约，不要求供应商或真实付款；不把发薪活动/工资published计支付成功；对应SPEC形成建议和验收，未评审。",
+            "个税通": "尚未探索详细规则；已有：；源缺口保留：税期/累计/更正/政策来源和精度尚缺；未编造税率，外部申报/交易仅接口，内域常规需求保留；对应SPEC形成建议和验收，未评审。",
+            "激励": "尚未探索详细规则；已有：；源缺口保留：需核M07内激励对象/归属期间/依据/生效及金额接收；M33福利/M42佣金暂缓，不因相似名合并或全量恢复；对应SPEC形成建议和验收，未评审。"
+          },
+          "dependencyContracts": [
+            "当前有效成员绑定稳定员工ID；read/use/manage/review/publish/export与组织范围/字段权限求交；本人、提交者、实际材料编制者回避独立审批。版本历史、附件和下载按当前权限校验；401/403/解绑清缓存，临时故障不假0。命令以requestId+payloadHash幂等，revision并发冲突拒绝，结果未知先查原ID，不重做；业务与审计事务边界沿D1既有批准。M19审批、业务生效、外部通知分别记录；M48只消费本人许可投影，M32按明确分母与版本统计。BASE01–06沿R1目标；供应商未配置返回未配置，不模拟成功；这些共用原则引用既有批准，模块新增算法仍待批准。",
+            "M01任职事件只触发薪资档案待处理/明确规则，不能扩大D1–D7自动改薪；M11封存期间、M16已发布结果、M27已核准课酬各引用具体版本。",
+            "M32薪酬数据集分法人/币种/期间且敏感聚合当前验权；M48个人许可工资条。M09金额预算、M10凭证、M33福利、M42佣金仅最小外部契约，不恢复完整模块。"
+          ],
+          "targetedEvidence": [
+            "读薪资档案事件处理、公式引用/舍入/补差预览及权限说明，不录工资金额。",
+            "定向读社保方案/参保及个税累计/更正配置、激励对象，未取到政策不编税率或缴费比例。",
+            "核支付状态/对账/未知回执说明；不提交付款、签署或税务申报。"
+          ]
+        },
+        "closureChecklist": [
+          {
+            "id": "M07-CLOSE-01",
+            "scopeItem": "档案",
+            "requirementIds": [
+              "BP-S-REQ-06",
+              "BP-S-REQ-11"
+            ],
+            "evidenceRefs": [
+              "BC-P1C-M07",
+              "BC-S09",
+              "BC-S19",
+              "BC-S20",
+              "BC-S21",
+              "BC-F39"
+            ],
+            "gap": "规格建议与本模块LIMIT待批；PG/SP/包内项目和入职引用已证，自动档案/事件修订/权限继承待证；跨模块F39只证入职结果",
+            "blocksP1": true,
+            "risk": "错误计薪或扣款、政策/身份错配、负净额不当追收、薪酬泄露及重复支付",
+            "closureMethod": "核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定",
+            "basis": "M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M07-SPEC-01",
+              "M07-SPEC-02",
+              "M07-SPEC-03",
+              "M07-SPEC-04",
+              "M07-SPEC-05",
+              "M07-SPEC-06"
+            ]
+          },
+          {
+            "id": "M07-CLOSE-02",
+            "scopeItem": "核算",
+            "requirementIds": [
+              "BP-S-REQ-01",
+              "BP-S-REQ-02",
+              "BP-S-REQ-04",
+              "BP-S-REQ-05"
+            ],
+            "evidenceRefs": [
+              "BC-S01-02",
+              "BC-S03",
+              "BC-S04",
+              "BC-S08"
+            ],
+            "gap": "规格建议与本模块LIMIT待批；公式/活动版本/期间/补差及团队授权待证；现人工工资可复用但不代自动算薪；S-SPEC-01先补证",
+            "blocksP1": true,
+            "risk": "错误计薪或扣款、政策/身份错配、负净额不当追收、薪酬泄露及重复支付",
+            "closureMethod": "核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定",
+            "basis": "M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M07-SPEC-01",
+              "M07-SPEC-02",
+              "M07-SPEC-03",
+              "M07-SPEC-04",
+              "M07-SPEC-05",
+              "M07-SPEC-06"
+            ]
+          },
+          {
+            "id": "M07-CLOSE-03",
+            "scopeItem": "社保",
+            "requirementIds": [
+              "BP-S-REQ-12"
+            ],
+            "evidenceRefs": [],
+            "gap": "规格建议与本模块LIMIT待批；参保/方案/基数/个人与单位承担/更正/有效政策版本缺证，人工deduction不能替代；保留受限规格",
+            "blocksP1": true,
+            "risk": "错误计薪或扣款、政策/身份错配、负净额不当追收、薪酬泄露及重复支付",
+            "closureMethod": "核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定",
+            "basis": "M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M07-SPEC-01",
+              "M07-SPEC-02",
+              "M07-SPEC-03",
+              "M07-SPEC-04",
+              "M07-SPEC-05",
+              "M07-SPEC-06"
+            ]
+          },
+          {
+            "id": "M07-CLOSE-04",
+            "scopeItem": "支付",
+            "requirementIds": [
+              "BP-S-REQ-01",
+              "BP-S-REQ-08"
+            ],
+            "evidenceRefs": [
+              "BC-S03"
+            ],
+            "gap": "规格建议与本模块LIMIT待批；只保留BASE-06请求/回执/失败/未知/对账契约，不要求供应商或真实付款；不把发薪活动/工资published计支付成功",
+            "blocksP1": true,
+            "risk": "错误计薪或扣款、政策/身份错配、负净额不当追收、薪酬泄露及重复支付",
+            "closureMethod": "核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定",
+            "basis": "M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M07-SPEC-01",
+              "M07-SPEC-02",
+              "M07-SPEC-03",
+              "M07-SPEC-04",
+              "M07-SPEC-05",
+              "M07-SPEC-06"
+            ]
+          },
+          {
+            "id": "M07-CLOSE-05",
+            "scopeItem": "个税通",
+            "requirementIds": [
+              "BP-S-REQ-12"
+            ],
+            "evidenceRefs": [],
+            "gap": "规格建议与本模块LIMIT待批；税期/累计/更正/政策来源和精度尚缺；未编造税率，外部申报/交易仅接口，内域常规需求保留",
+            "blocksP1": true,
+            "risk": "错误计薪或扣款、政策/身份错配、负净额不当追收、薪酬泄露及重复支付",
+            "closureMethod": "核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定",
+            "basis": "M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M07-SPEC-01",
+              "M07-SPEC-02",
+              "M07-SPEC-03",
+              "M07-SPEC-04",
+              "M07-SPEC-05",
+              "M07-SPEC-06"
+            ]
+          },
+          {
+            "id": "M07-CLOSE-06",
+            "scopeItem": "激励",
+            "requirementIds": [
+              "BP-S-REQ-12"
+            ],
+            "evidenceRefs": [],
+            "gap": "规格建议与本模块LIMIT待批；需核M07内激励对象/归属期间/依据/生效及金额接收；M33福利/M42佣金暂缓，不因相似名合并或全量恢复",
+            "blocksP1": true,
+            "risk": "错误计薪或扣款、政策/身份错配、负净额不当追收、薪酬泄露及重复支付",
+            "closureMethod": "核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定",
+            "basis": "M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06",
+            "status": "已完成待评审",
+            "decisionIds": [
+              "M07-SPEC-01",
+              "M07-SPEC-02",
+              "M07-SPEC-03",
+              "M07-SPEC-04",
+              "M07-SPEC-05",
+              "M07-SPEC-06"
+            ]
+          }
+        ]
       },
       "businessPackage": "BP-S"
     },
@@ -13875,7 +14132,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-10T02:56:23.457492+00:00",
+    "updatedAt": "2026-09-10T02:58:52.883177+00:00",
     "authority": "Scope_Register.json为唯一范围/验收事实源；历史48/59保留，当前15模块及基础按SCOPE-20260909-CORE15。",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -46897,27 +47154,27 @@
       "latestAuthorizationAt": "2026-09-09T06:25:42.812752+00:00",
       "scopeChangeHead": "f31cb2b5e1894723288fd884d4e3bd895ae57327",
       "scopeChange": "SCOPE-20260909-CORE15",
-      "latestCheckpointAt": "2026-09-10T02:56:23.457492+00:00",
-      "latestCommittedHead": "f24db9de072b23fd7e607f102c0bfee474688f09",
+      "latestCheckpointAt": "2026-09-10T02:58:52.883177+00:00",
+      "latestCommittedHead": "a93f42cc14fca4ed225ec2e398678c1d122f07f9",
       "latestEvidenceRefs": [
         "BC-C39",
         "BC-C40",
         "BC-C28",
         "R2-RO-M17-01"
       ],
-      "next": "继续M07P1；已准备模块排队待R3集中评审",
+      "next": "继续M27P1；已准备模块排队待R3集中评审",
       "browserRecovery": "历史CDP超时已在本轮恢复：可列出标签及定向只读访问；M26入口误到页未计证，M18/M17有限回查成功。具体访问限制保留于各模块，不再把整站连接故障列为当前共同阻塞。",
       "sourceBrowsingStatus": "连接已恢复可读；M26入口误到页未计证；M18旧合成项目回查；M17完整名只读确认旧流程存在停用。无新源业务写入。",
-      "currentFocus": "M07唯一主模块",
+      "currentFocus": "M27唯一主模块",
       "checkpointCommitSemantics": "latestCommittedHead为本单元编辑开始前已存在提交；本记录所属提交用git log -1 -- docs/delivery/Scope_Register.json解析，不能将基准冒充最终HEAD。",
-      "workingTreeAtResume": "本单元编辑基准f24db9de072b23fd7e607f102c0bfee474688f09；只P1文档/生成机制",
+      "workingTreeAtResume": "本单元编辑基准a93f42cc14fca4ed225ec2e398678c1d122f07f9；只P1文档/生成机制",
       "lastVerifiedSync": {
         "commit": "990fd8cf169f990cd2f67ce3b23ddd6468c101c6",
         "remoteBranch": "main",
         "result": "push成功，ls-remote与HEAD一致；当前汇编为后续编辑单元",
         "scope": "M03完整评审材料及之前五单元"
       },
-      "currentUnitOutcome": "M11完整P1材料完成未批准；累计10/15受限关闭",
+      "currentUnitOutcome": "M07完整P1材料完成未批准；累计10/15受限关闭",
       "previousAtomicOutcome": "BC-C28旧流程曾未知，现R2-RO-M17-01已确认存在停用，UUID未取；M18已存项目未执行启动，EA/兼职及其他源历史不冒本轮复验。",
       "sourceWritePolicy": "本轮最新边界：原站只读，不修改原站数据；此前合成记录授权作为历史保留，本夜间单元不据此新增写入。",
       "historicalExecutionBoundary": "用户已确认当前北森租户可用于测试，并授权P1所需合成关联记录的创建、保存、提交及必要状态流转；先查可复用记录，统一P1V-20260909标记，逐链记录ID/关联/前后状态和结果，不逐条重问。不得任意更改真实员工或既有业务；不扩大到真实业务生效、外部通知、支付、签署或新增人类访问者。产品代码、部署、D1–D7/E1/E2继续保持。 最新范围仅当前15模块和基础/最小必要公共依赖；33模块停止独立探索/新数据链，已有前置可必要引用，不为停点做完整链。"
@@ -48160,7 +48417,7 @@
   "roadmap": {
     "revision": "2026-09-09-module-closure-rolling-R",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-10T02:56:23.457492+00:00",
+    "updatedAt": "2026-09-10T02:58:52.883177+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -48243,7 +48500,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M07唯一主模块",
+    "activeWorkPackage": "M27唯一主模块",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -48258,7 +48515,7 @@
       "BP-S"
     ],
     "nextTasks": [
-      "继续M07P1；已准备模块排队待R3集中评审",
+      "继续M27P1；已准备模块排队待R3集中评审",
       "保留10/15受限关闭，R3未批准不计完成",
       "提交后独立看板同步，失败不阻P1"
     ],
@@ -48273,10 +48530,10 @@
       "id": "MODE-MODULE-CLOSURE-R-20260909",
       "authorizedAt": "2026-09-09T15:43:36.730682+00:00",
       "mode": "模块闭环优先、按R版本滚动转序",
-      "primaryModuleId": "M07",
+      "primaryModuleId": "M27",
       "backupModuleId": null,
       "backupCandidateId": null,
-      "activeExecutionModuleId": "M07",
+      "activeExecutionModuleId": "M27",
       "wipLimit": 1,
       "backupLimit": 1,
       "backupActivation": "仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归",
@@ -48538,6 +48795,22 @@
             "M11-LIMIT-01"
           ],
           "restore": "集中批准后按M27→M16→M12→M11→M07逐个判定"
+        },
+        {
+          "at": "2026-09-10T02:58:52.883177+00:00",
+          "from": "M07",
+          "to": "M27",
+          "reason": "本模块可自主材料完成，仅剩新业务选择及LIMIT，按本轮明确R3材料授权转下一项",
+          "remaining": [
+            "M07-SPEC-01",
+            "M07-SPEC-02",
+            "M07-SPEC-03",
+            "M07-SPEC-04",
+            "M07-SPEC-05",
+            "M07-SPEC-06",
+            "M07-LIMIT-01"
+          ],
+          "restore": "集中批准后按M27→M16→M12→M11→M07逐个判定"
         }
       ],
       "backupActivationHistory": [
@@ -48624,13 +48897,15 @@
           "M27",
           "M16",
           "M12",
-          "M11"
+          "M11",
+          "M07"
         ],
         "waitingModuleIds": [
           "M27",
           "M16",
           "M12",
-          "M11"
+          "M11",
+          "M07"
         ],
         "formalClosureOrder": [
           "M27",
@@ -48639,7 +48914,7 @@
           "M11",
           "M07"
         ],
-        "status": "串行准备中"
+        "status": "五模块全部可自主材料完成待评审"
       }
     },
     "moduleExecutionOrder": [
@@ -49051,7 +49326,7 @@
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-10T02:56:23.457492+00:00",
+    "updatedAt": "2026-09-10T02:58:52.883177+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -54782,6 +55057,12 @@
                 "definition": "引用冻结期间可为空数组，并不必然覆盖整月；批次贡献者永久累积",
                 "constraints": "编制/删除条目不能抹参与历史；发布须非自己工资对象，审批还排除全部编制贡献者",
                 "basis": "payroll-review.ts/payroll-attendance.ts"
+              },
+              {
+                "field": "M07稳定对象与新增规格",
+                "definition": "payrollGroupId(与行政组织独立)、salaryPackageRoot/version、payProfileId/effectiveInterval、employmentId/legalEntityId、payItemDefinition/version、calculationRunId/inputSnapshot、payBatch/slip/version、adjustmentId、insuranceEnrollment/policyVersion、taxAccount/filingPeriod/version、incentiveAwardId、paymentOrderId/receiptId各自稳定。金额币种/最小货币单位、基数/费率/税期及政策来源版本显式；应发/扣款/单位承担/净额/支付金额分别。",
+                "constraints": "本次建议，需M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06及R3基线批准；不得以现实现上限缩减范围",
+                "basis": "本次P1静态与原证据对照"
               }
             ],
             "roleMatrix": [
@@ -54802,6 +55083,12 @@
                 "read": "已发布个人投影；不含单位承担、来源说明、创建者",
                 "write": "工资异议；未直接修改工资金额",
                 "boundary": "本人可见不等管理范围；普通hr/manager不自动拥有薪酬专岗"
+              },
+              {
+                "role": "M07模块权限建议",
+                "read": "薪酬配置、编制、复核、发布、支付授权与对账分别；按薪资组+法人+批次组织和敏感字段交集，当前授权不能由行政主管关系推定。本人仅已发布个人工资条许可项目，不见单位承担、同事薪资及内部核算依据。",
+                "write": "见模块SPEC逐命令守卫；当前有效成员绑定稳定员工ID；read/use/manage/review/publish/export与组织范围/字段权限求交；本人、提交者、实际材料编制者回避独立审批。版本历史、附件和下载按当前权限校验；401/403/解绑清缓存，临时故障不假0。命令以requestId+payloadHash幂等，revision并发冲突拒绝，结果未知先查原ID，不重做；业务与审计事务边界沿D1既有批准。M19审批、业务生效、外部通知分别记录；M48只消费本人许可投影，M32按明确分母与版本统计。BASE01–06沿R1目标；供应商未配置返回未配置，不模拟成功；这些共用原则引用既有批准，模块新增算法仍待批准。",
+                "boundary": "全部新增规则未批准，当前仅文档"
               }
             ],
             "acceptanceCases": [
@@ -54844,6 +55131,171 @@
                 "status": "候选待评审；静态对照，本轮未业务执行",
                 "accepted": false,
                 "executionThisRun": false
+              },
+              {
+                "id": "M07-REVIEW-AC01",
+                "scopeItem": "档案、核算、社保、支付、个税通、激励",
+                "given": "员工调动后旧月工资",
+                "when": "读取历史",
+                "then": "保留原法人/薪资组/任职快照，当前权限校验",
+                "basis": "本模块推荐未批准；M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M07-REVIEW-AC02",
+                "scopeItem": "档案、核算、社保、支付、个税通、激励",
+                "given": "公式引用成环或缺费率",
+                "when": "核算",
+                "then": "阻核准，不能默认0",
+                "basis": "本模块推荐未批准；M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M07-REVIEW-AC03",
+                "scopeItem": "档案、核算、社保、支付、个税通、激励",
+                "given": "同批次不同币种",
+                "when": "汇总净额",
+                "then": "分别汇总或拒绝混算，不直接相加",
+                "basis": "本模块推荐未批准；M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M07-REVIEW-AC04",
+                "scopeItem": "档案、核算、社保、支付、个税通、激励",
+                "given": "源考勤已更正但工资未发布",
+                "when": "复核发布",
+                "then": "阻旧来源并要求重算/明确处理",
+                "basis": "本模块推荐未批准；M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M07-REVIEW-AC05",
+                "scopeItem": "档案、核算、社保、支付、个税通、激励",
+                "given": "已发布工资来源变化",
+                "when": "再次计算",
+                "then": "新补差关联原版本，不覆盖原工资",
+                "basis": "本模块推荐未批准；M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M07-REVIEW-AC06",
+                "scopeItem": "档案、核算、社保、支付、个税通、激励",
+                "given": "累计净额为负",
+                "when": "准备支付",
+                "then": "转待处理差额，不自动追扣或负数付款",
+                "basis": "本模块推荐未批准；M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M07-REVIEW-AC07",
+                "scopeItem": "档案、核算、社保、支付、个税通、激励",
+                "given": "社保/税政策未核准",
+                "when": "自动计算",
+                "then": "未配置并阻计算，人工值标manual",
+                "basis": "本模块推荐未批准；M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M07-REVIEW-AC08",
+                "scopeItem": "档案、核算、社保、支付、个税通、激励",
+                "given": "同激励依据重复导入",
+                "when": "再次登记",
+                "then": "同事件幂等，不重复入薪",
+                "basis": "本模块推荐未批准；M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M07-REVIEW-AC09",
+                "scopeItem": "档案、核算、社保、支付、个税通、激励",
+                "given": "支付提交超时",
+                "when": "重试请求",
+                "then": "查询原流水保持unknown，不重建付款单",
+                "basis": "本模块推荐未批准；M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M07-REVIEW-AC10",
+                "scopeItem": "档案、核算、社保、支付、个税通、激励",
+                "given": "回执金额与申请不同",
+                "when": "对账",
+                "then": "隔离异常，不标成功",
+                "basis": "本模块推荐未批准；M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M07-REVIEW-AC11",
+                "scopeItem": "档案、核算、社保、支付、个税通、激励",
+                "given": "编制人换提交人",
+                "when": "独立复核",
+                "then": "仍排历史贡献者",
+                "basis": "本模块推荐未批准；M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              },
+              {
+                "id": "M07-REVIEW-AC12",
+                "scopeItem": "档案、核算、社保、支付、个税通、激励",
+                "given": "恢复已成功付款批次",
+                "when": "隔离恢复后开放",
+                "then": "保留回执及幂等键，先对账，不重新支付",
+                "basis": "本模块推荐未批准；M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06",
+                "status": "验收预期未批准，本轮未执行",
+                "accepted": false,
+                "executionThisRun": false
+              }
+            ],
+            "moduleReviewRecommendationRefs": [
+              "M07-SPEC-01",
+              "M07-SPEC-02",
+              "M07-SPEC-03",
+              "M07-SPEC-04",
+              "M07-SPEC-05",
+              "M07-SPEC-06"
+            ],
+            "reviewSemantics": {
+              "sourceHead": "a93f42cc14fca4ed225ec2e398678c1d122f07f9",
+              "staticFacts": "payroll.ts是CNY人工核定项目批次，提交记录contributors并独立复核，发布排含本人；不是自动算薪或银行发薪。工资引用冻结考勤在提交/复核/发布重验；补差有带符号金额、独立审批和原条关联，当前累计净额可能为负。薪资组/包/任职薪资档案、社保/累计计税/激励完整模型缺失；源PG/SP及入职引用仅历史合成链，不代表自动档案生成已实证。",
+              "proposals": [
+                "M07-SPEC-01",
+                "M07-SPEC-02",
+                "M07-SPEC-03",
+                "M07-SPEC-04",
+                "M07-SPEC-05",
+                "M07-SPEC-06"
+              ],
+              "commonBoundary": "当前有效成员绑定稳定员工ID；read/use/manage/review/publish/export与组织范围/字段权限求交；本人、提交者、实际材料编制者回避独立审批。版本历史、附件和下载按当前权限校验；401/403/解绑清缓存，临时故障不假0。命令以requestId+payloadHash幂等，revision并发冲突拒绝，结果未知先查原ID，不重做；业务与审计事务边界沿D1既有批准。M19审批、业务生效、外部通知分别记录；M48只消费本人许可投影，M32按明确分母与版本统计。BASE01–06沿R1目标；供应商未配置返回未配置，不模拟成功；这些共用原则引用既有批准，模块新增算法仍待批准。",
+              "objectFields": "payrollGroupId(与行政组织独立)、salaryPackageRoot/version、payProfileId/effectiveInterval、employmentId/legalEntityId、payItemDefinition/version、calculationRunId/inputSnapshot、payBatch/slip/version、adjustmentId、insuranceEnrollment/policyVersion、taxAccount/filingPeriod/version、incentiveAwardId、paymentOrderId/receiptId各自稳定。金额币种/最小货币单位、基数/费率/税期及政策来源版本显式；应发/扣款/单位承担/净额/支付金额分别。",
+              "roles": "薪酬配置、编制、复核、发布、支付授权与对账分别；按薪资组+法人+批次组织和敏感字段交集，当前授权不能由行政主管关系推定。本人仅已发布个人工资条许可项目，不见单位承担、同事薪资及内部核算依据。",
+              "lifecycle": "薪资配置draft→approved→published及有效区间；算薪run准备→calculated→reviewed，批次draft→submitted→approved→published；原工资不可覆盖，补差独立版本；社保/税申报准备/复核/待提交/回执分别；激励proposed→approved→effective；支付unconfigured/pending/submitted/unknown/succeeded/failed/reconciled独立。"
+            },
+            "stateTransitions": [
+              {
+                "from": "模块对象各自初态",
+                "event": "显式授权业务命令",
+                "to": "薪资配置draft→approved→published及有效区间；算薪run准备→calculated→reviewed，批次draft→submitted→approved→published；原工资不可覆盖，补差独立版本；社保/税申报准备/复核/待提交/回执分别；激励proposed→approved→effective；支付unconfigured/pending/submitted/unknown/succeeded/failed/reconciled独立。",
+                "guards": "见SPEC守卫；不以审批成功冒业务生效",
+                "basis": "本项目建议，非原站已执行"
               }
             ]
           },
@@ -58354,6 +58806,29 @@
           ],
           "note": "静态实现与需求建议映射；未执行/未批准"
         }
+      },
+      {
+        "requirement": "M07-REVIEW",
+        "capability": "档案、核算、社保、支付、个税通、激励",
+        "disposition": "部分可复用，待修改/新增",
+        "evidence": "a93f42cc14fca4ed225ec2e398678c1d122f07f9；lib/hris/payroll.ts,lib/hris/payroll-adjustments.ts,lib/hris/payroll-attendance.ts,lib/hris/payroll-access.ts,lib/hris/payroll-reports.ts,lib/hris/model.ts",
+        "gap": "补薪资组/包/事件档案、受控公式DAG和输入政策快照、社保/税期/激励对象、负净额待处理账、支付幂等及对账、薪资权限和历史迁移；不引入完整预算/佣金/福利模块",
+        "acceptance": "M07-REVIEW-AC01,M07-REVIEW-AC02,M07-REVIEW-AC03,M07-REVIEW-AC04,M07-REVIEW-AC05,M07-REVIEW-AC06,M07-REVIEW-AC07,M07-REVIEW-AC08,M07-REVIEW-AC09,M07-REVIEW-AC10,M07-REVIEW-AC11,M07-REVIEW-AC12",
+        "currentApplicability": {
+          "status": "保留",
+          "moduleIds": [
+            "M07"
+          ],
+          "baseCapabilityIds": [
+            "BASE-01",
+            "BASE-02",
+            "BASE-03",
+            "BASE-04",
+            "BASE-05",
+            "BASE-06"
+          ],
+          "note": "静态实现与需求建议映射；未执行/未批准"
+        }
       }
     ],
     "reviewIssues": [
@@ -58555,7 +59030,7 @@
       {
         "id": "S-SPEC-01",
         "topic": "补差后负累计净额及追回边界",
-        "status": "待源薪酬补差补证与政策评审，当前不要求真实支付",
+        "status": "已拆解至M07-SPEC-02待评审，不是已批准",
         "basis": "初始工资条净额必须非负；当前带符号补差允许使累计净额为负，没有外部追缴/退款回执。源规则尚未取得。",
         "proposal": "建议把应追回金额作为独立待处理余额/流程，原工资及补差留存；是否允许负累计展示与后续工资抵扣需依据企业政策评审，不自动扣未来工资或触发付款。",
         "alternatives": "禁止导致负累计的补差，改独立追回记录；或允许负累计但外部追缴始终单独审批/对账。",
@@ -58565,7 +59040,10 @@
           "lib/hris/payroll-adjustments.ts",
           "lib/hris/payroll-reports.ts"
         ],
-        "decisionRequired": false
+        "decisionRequired": false,
+        "supersededBy": [
+          "M07-SPEC-02"
+        ]
       },
       {
         "id": "F-SPEC-05",
@@ -60052,6 +60530,102 @@
           "M11"
         ],
         "preparedAt": "2026-09-10T02:56:23.457492+00:00"
+      },
+      {
+        "id": "M07-SPEC-01",
+        "topic": "薪资组织、包与有效档案",
+        "basis": "payroll.ts是CNY人工核定项目批次，提交记录contributors并独立复核，发布排含本人；不是自动算薪或银行发薪。工资引用冻结考勤在提交/复核/发布重验；补差有带符号金额、独立审批和原条关联，当前累计净额可能为负。薪资组/包/任职薪资档案、社保/累计计税/激励完整模型缺失；源PG/SP及入职引用仅历史合成链，不代表自动档案生成已实证。；源证据见本模块页面索引，不将代码当原站规则",
+        "proposal": "建议薪资组独立稳定ID及部门映射，编辑/使用/审批范围分开；包、包内项目、薪级薪等及维护方式冻结版本。员工主兼职薪资档案绑定任职期和法人，有效区间不重叠；入职/调动/转正/合同事件按显式配置生成待核变更，未配置不推定工资值。追溯事件出影响期间预览并独立批准，不覆盖已发布工资或扩大D1业务规则。",
+        "alternatives": "直接跟随行政组织和最新包会造成历史工资漂移，不推荐。",
+        "impact": "稳定薪酬主体、档案事件及权限。",
+        "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
+        "status": "已具体化待集中评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M07"
+        ],
+        "preparedAt": "2026-09-10T02:58:52.883177+00:00"
+      },
+      {
+        "id": "M07-SPEC-02",
+        "topic": "核算、公式和期间",
+        "basis": "payroll.ts是CNY人工核定项目批次，提交记录contributors并独立复核，发布排含本人；不是自动算薪或银行发薪。工资引用冻结考勤在提交/复核/发布重验；补差有带符号金额、独立审批和原条关联，当前累计净额可能为负。薪资组/包/任职薪资档案、社保/累计计税/激励完整模型缺失；源PG/SP及入职引用仅历史合成链，不代表自动档案生成已实证。；源证据见本模块页面索引，不将代码当原站规则",
+        "proposal": "建议每算薪批次冻结人员范围、项目定义、政策、考勤及绩效版本；公式只用受控加减乘除、条件和声明式聚合，依赖图无环、单位兼容，无任意脚本/SQL。必要参数缺失/除0/越界为error并阻核准，不补0。币种不混合；中间计算十进制定点保留配置精度，最终项目按币种精度和明确舍入规则，建议四舍五入；应发-个人扣款=净额，单位承担独立。人员期间边界和补差另版本，历史人工金额保留manual来源而不伪装公式计算。",
+        "alternatives": "逐中间步骤舍入会改变结果，只在明确政策版本下允许。",
+        "impact": "替代S-SPEC-01，自动算薪正确性与可追溯性。",
+        "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
+        "status": "已具体化待集中评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M07"
+        ],
+        "preparedAt": "2026-09-10T02:58:52.883177+00:00"
+      },
+      {
+        "id": "M07-SPEC-03",
+        "topic": "社保与个税完整契约",
+        "basis": "payroll.ts是CNY人工核定项目批次，提交记录contributors并独立复核，发布排含本人；不是自动算薪或银行发薪。工资引用冻结考勤在提交/复核/发布重验；补差有带符号金额、独立审批和原条关联，当前累计净额可能为负。薪资组/包/任职薪资档案、社保/累计计税/激励完整模型缺失；源PG/SP及入职引用仅历史合成链，不代表自动档案生成已实证。；源证据见本模块页面索引，不将代码当原站规则",
+        "proposal": "建议社保关系按员工/法人/地区/险种和生效期，基数、上下限、个人/单位费率、精度及政策来源版本必须齐备；计税账户和税期独立，累计收入/扣除/减免/已缴分别保存依据和更正链，政策变更不改旧申报快照。每法域规则必须经政策责任人核准才能启用，缺政策返回未配置并阻计算，不内置推测税率。系统负责版本化计算/复核和申报契约；真实外部提交/回执另授权，失败未知分别记录。",
+        "alternatives": "人工核定金额可作为明确manual模式保留，但不能标自动社保或计税已实现。",
+        "impact": "社保/个税不被人工扣款字段替代，政策责任和外部申报。",
+        "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
+        "status": "已具体化待集中评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M07"
+        ],
+        "preparedAt": "2026-09-10T02:58:52.883177+00:00"
+      },
+      {
+        "id": "M07-SPEC-04",
+        "topic": "激励与补差及负净额",
+        "basis": "payroll.ts是CNY人工核定项目批次，提交记录contributors并独立复核，发布排含本人；不是自动算薪或银行发薪。工资引用冻结考勤在提交/复核/发布重验；补差有带符号金额、独立审批和原条关联，当前累计净额可能为负。薪资组/包/任职薪资档案、社保/累计计税/激励完整模型缺失；源PG/SP及入职引用仅历史合成链，不代表自动档案生成已实证。；源证据见本模块页面索引，不将代码当原站规则",
+        "proposal": "建议激励对象含方案版本、适用员工/期间、依据和金额或显式计算规则，归属/批准/生效/发放分列，不自动等同佣金/福利。补差关联原条和来源变更事件，独立复核新版本；负调整可保留，但累计净额为负时转待处理差额，阻自动付款或自动扣未来工资，须所有者授权的追补方案和依据。不能静默归零或产生负数银行付款。",
+        "alternatives": "允许自动抵扣未来工资会新增实质业务规则，须另行批准，不默认采用。",
+        "impact": "激励范围、补差正确性和追收边界。",
+        "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
+        "status": "已具体化待集中评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M07"
+        ],
+        "preparedAt": "2026-09-10T02:58:52.883177+00:00"
+      },
+      {
+        "id": "M07-SPEC-05",
+        "topic": "支付及外部对账",
+        "basis": "payroll.ts是CNY人工核定项目批次，提交记录contributors并独立复核，发布排含本人；不是自动算薪或银行发薪。工资引用冻结考勤在提交/复核/发布重验；补差有带符号金额、独立审批和原条关联，当前累计净额可能为负。薪资组/包/任职薪资档案、社保/累计计税/激励完整模型缺失；源PG/SP及入职引用仅历史合成链，不代表自动档案生成已实证。；源证据见本模块页面索引，不将代码当原站规则",
+        "proposal": "建议支付只保留外部契约，支付单冻结已核准金额/收款标识/币种和批次版本，submit权限独立于工资发布。幂等键以法人/批次/付款单版本确定，提交前校验有效授权；超时unknown先查询银行原流水，禁止创建新单盲重付。成功须可信回执，部分成功逐行对账，重复/异额回执隔离；撤销/退回款是新关联业务，不覆盖原交易。供应商未配置保持unconfigured，P1不要求真实付款。",
+        "alternatives": "把工资条published当支付成功会混淆法律与资金事实，不采用。",
+        "impact": "外部交易和重复支付风险。",
+        "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
+        "status": "已具体化待集中评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M07"
+        ],
+        "preparedAt": "2026-09-10T02:58:52.883177+00:00"
+      },
+      {
+        "id": "M07-SPEC-06",
+        "topic": "薪酬独立性和恢复",
+        "basis": "payroll.ts是CNY人工核定项目批次，提交记录contributors并独立复核，发布排含本人；不是自动算薪或银行发薪。工资引用冻结考勤在提交/复核/发布重验；补差有带符号金额、独立审批和原条关联，当前累计净额可能为负。薪资组/包/任职薪资档案、社保/累计计税/激励完整模型缺失；源PG/SP及入职引用仅历史合成链，不代表自动档案生成已实证。；源证据见本模块页面索引，不将代码当原站规则",
+        "proposal": "建议编制/历史贡献者/提交者不得复核，含本人记录不得审批发布；发布与支付/对账分别授权，历史按当前薪资组/法人/字段权限验权。批次和原工资发布后不可编辑，退回只限未发布；已发来源变更标影响并走补差。备份包含政策/输入/结果/回执关联，按R1恢复目标在隔离状态对账后由所有者开放，恢复不得重发支付任务。所有批量操作有界、逐项结果明确，unknown不显示假0或成功。",
+        "alternatives": "只用admin全量可见易泄露且无法独立验收，不推荐。",
+        "impact": "敏感薪酬、审计及灾后重复业务。",
+        "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
+        "status": "已具体化待集中评审",
+        "decisionRequired": true,
+        "decision": null,
+        "moduleIds": [
+          "M07"
+        ],
+        "preparedAt": "2026-09-10T02:58:52.883177+00:00"
       }
     ],
     "codeReview": {

@@ -699,7 +699,7 @@
   "currentP1": {
     "revision": "2026-09-09-module-closure-rolling-R",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-10T02:56:23.457492+00:00",
+    "updatedAt": "2026-09-10T02:58:52.883177+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -782,7 +782,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M07唯一主模块",
+    "activeWorkPackage": "M27唯一主模块",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -797,7 +797,7 @@
       "BP-S"
     ],
     "nextTasks": [
-      "继续M07P1；已准备模块排队待R3集中评审",
+      "继续M27P1；已准备模块排队待R3集中评审",
       "保留10/15受限关闭，R3未批准不计完成",
       "提交后独立看板同步，失败不阻P1"
     ],
@@ -813,10 +813,10 @@
       "id": "MODE-MODULE-CLOSURE-R-20260909",
       "authorizedAt": "2026-09-09T15:43:36.730682+00:00",
       "mode": "模块闭环优先、按R版本滚动转序",
-      "primaryModuleId": "M07",
+      "primaryModuleId": "M27",
       "backupModuleId": null,
       "backupCandidateId": null,
-      "activeExecutionModuleId": "M07",
+      "activeExecutionModuleId": "M27",
       "wipLimit": 1,
       "backupLimit": 1,
       "backupActivation": "仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归",
@@ -1078,6 +1078,22 @@
             "M11-LIMIT-01"
           ],
           "restore": "集中批准后按M27→M16→M12→M11→M07逐个判定"
+        },
+        {
+          "at": "2026-09-10T02:58:52.883177+00:00",
+          "from": "M07",
+          "to": "M27",
+          "reason": "本模块可自主材料完成，仅剩新业务选择及LIMIT，按本轮明确R3材料授权转下一项",
+          "remaining": [
+            "M07-SPEC-01",
+            "M07-SPEC-02",
+            "M07-SPEC-03",
+            "M07-SPEC-04",
+            "M07-SPEC-05",
+            "M07-SPEC-06",
+            "M07-LIMIT-01"
+          ],
+          "restore": "集中批准后按M27→M16→M12→M11→M07逐个判定"
         }
       ],
       "backupActivationHistory": [
@@ -1164,13 +1180,15 @@
           "M27",
           "M16",
           "M12",
-          "M11"
+          "M11",
+          "M07"
         ],
         "waitingModuleIds": [
           "M27",
           "M16",
           "M12",
-          "M11"
+          "M11",
+          "M07"
         ],
         "formalClosureOrder": [
           "M27",
@@ -1179,7 +1197,7 @@
           "M11",
           "M07"
         ],
-        "status": "串行准备中"
+        "status": "五模块全部可自主材料完成待评审"
       }
     },
     "moduleExecutionOrder": [

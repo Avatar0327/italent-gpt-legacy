@@ -2,13 +2,13 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 
 # 模块闭环、滚动转序及当前收口清单
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T02:56:23.457492+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T02:58:52.883177+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M07；备用 未启用；实际执行 M07。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M27；备用 未启用；实际执行 M27。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
 本次R2材料流水线：按最新用户批准顺序关闭R2；随后允许R3串行材料准备，未批准R3不关闭，不进入P2/P3；材料完成待评审 ；正式关闭焦点 M27。[集中评审与决定清单](P1_R2_Review_Package.md)。
 
@@ -45,7 +45,7 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 | M16 绩效管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M12 招聘管理系统 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M11 假勤管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M07 薪酬社保 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M07 薪酬社保 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 
 转序就绪 10/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
 
@@ -80,6 +80,18 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 | M06-CLOSE-02 / 级别 | BP-C-REQ-02 | BC-C20；BC-C21；BC-C24 | P1硬条件已满足；历史差异和补验责任保留后续阶段 | False；稳定关系/评分尺度/版本漂移/错误授予和敏感材料权限 | 按所审完整推荐与受限批准逐项核对；M06-P1-APPROVAL-R2-20260909 | 受限通过 |
 | M06-CLOSE-03 / 指标 | BP-C-REQ-02 | BC-C22；BC-C23；BC-C24 | P1硬条件已满足；历史差异和补验责任保留后续阶段 | False；稳定关系/评分尺度/版本漂移/错误授予和敏感材料权限 | 按所审完整推荐与受限批准逐项核对；M06-P1-APPROVAL-R2-20260909 | 受限通过 |
 | M06-CLOSE-04 / 资格标准 | BP-C-REQ-02 | BC-C21；BC-C23 | P1硬条件已满足；历史差异和补验责任保留后续阶段 | False；稳定关系/评分尺度/版本漂移/错误授予和敏感材料权限 | 按所审完整推荐与受限批准逐项核对；M06-P1-APPROVAL-R2-20260909 | 受限通过 |
+
+
+## M07完整登记范围收口清单
+
+| 问题/原范围 | 需求 | 证据 | 具体缺口 | 阻塞P1/风险 | 关闭方式与判据 | 当前状态 |
+|---|---|---|---|---|---|---|
+| M07-CLOSE-01 / 档案 | BP-S-REQ-06；BP-S-REQ-11 | BC-P1C-M07；BC-S09；BC-S19；BC-S20；BC-S21；BC-F39 | 规格建议与本模块LIMIT待批；PG/SP/包内项目和入职引用已证，自动档案/事件修订/权限继承待证；跨模块F39只证入职结果 | True；错误计薪或扣款、政策/身份错配、负净额不当追收、薪酬泄露及重复支付 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06 | 已完成待评审 |
+| M07-CLOSE-02 / 核算 | BP-S-REQ-01；BP-S-REQ-02；BP-S-REQ-04；BP-S-REQ-05 | BC-S01-02；BC-S03；BC-S04；BC-S08 | 规格建议与本模块LIMIT待批；公式/活动版本/期间/补差及团队授权待证；现人工工资可复用但不代自动算薪；S-SPEC-01先补证 | True；错误计薪或扣款、政策/身份错配、负净额不当追收、薪酬泄露及重复支付 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06 | 已完成待评审 |
+| M07-CLOSE-03 / 社保 | BP-S-REQ-12 |  | 规格建议与本模块LIMIT待批；参保/方案/基数/个人与单位承担/更正/有效政策版本缺证，人工deduction不能替代；保留受限规格 | True；错误计薪或扣款、政策/身份错配、负净额不当追收、薪酬泄露及重复支付 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06 | 已完成待评审 |
+| M07-CLOSE-04 / 支付 | BP-S-REQ-01；BP-S-REQ-08 | BC-S03 | 规格建议与本模块LIMIT待批；只保留BASE-06请求/回执/失败/未知/对账契约，不要求供应商或真实付款；不把发薪活动/工资published计支付成功 | True；错误计薪或扣款、政策/身份错配、负净额不当追收、薪酬泄露及重复支付 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06 | 已完成待评审 |
+| M07-CLOSE-05 / 个税通 | BP-S-REQ-12 |  | 规格建议与本模块LIMIT待批；税期/累计/更正/政策来源和精度尚缺；未编造税率，外部申报/交易仅接口，内域常规需求保留 | True；错误计薪或扣款、政策/身份错配、负净额不当追收、薪酬泄露及重复支付 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06 | 已完成待评审 |
+| M07-CLOSE-06 / 激励 | BP-S-REQ-12 |  | 规格建议与本模块LIMIT待批；需核M07内激励对象/归属期间/依据/生效及金额接收；M33福利/M42佣金暂缓，不因相似名合并或全量恢复 | True；错误计薪或扣款、政策/身份错配、负净额不当追收、薪酬泄露及重复支付 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M07-SPEC-01,M07-SPEC-02,M07-SPEC-03,M07-SPEC-04,M07-SPEC-05,M07-SPEC-06 | 已完成待评审 |
 
 
 ## M11完整登记范围收口清单
@@ -203,6 +215,8 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 M03当前材料：[P1受限通过，需求基线已批准](P1_M03_Review_Package.md)。批准、源取证及后续执行各自独立。
 
 M06当前材料：[P1受限通过，需求基线已批准](P1_M06_Review_Package.md)。批准、源取证及后续执行各自独立。
+
+M07当前材料：[材料完成、等待所有者集中评审](P1_M07_Review_Package.md)。批准、源取证及后续执行各自独立。
 
 M11当前材料：[材料完成、等待所有者集中评审](P1_M11_Review_Package.md)。批准、源取证及后续执行各自独立。
 

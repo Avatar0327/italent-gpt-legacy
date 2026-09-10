@@ -1,6 +1,6 @@
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M07；备用 未启用；实际执行 M07。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M27；备用 未启用；实际执行 M27。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
 本次R2材料流水线：按最新用户批准顺序关闭R2；随后允许R3串行材料准备，未批准R3不关闭，不进入P2/P3；材料完成待评审 ；正式关闭焦点 M27。[集中评审与决定清单](P1_R2_Review_Package.md)。
 
@@ -37,7 +37,7 @@
 | M16 绩效管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M12 招聘管理系统 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M11 假勤管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
-| M07 薪酬社保 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M07 薪酬社保 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 
 转序就绪 10/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
 
@@ -46,7 +46,7 @@
 
 # P1A当前15模块覆盖与缺口；33组历史暂缓
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T02:56:23.457492+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T02:58:52.883177+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
@@ -57,7 +57,7 @@ P1A关闭 10/15（完整0，受限10）；P1B需求就绪 10/15（完整0，受�
 | M01 组织员工 / BP-F | 受限完成（仅P1） | 需求就绪 | 受限评审通过（仅P1） | 用户明确批准9e379ff版10项推荐及M01-LIMIT-01；六项原范围关闭，P1受限通过，需求就绪、模块转序就绪。不是完整源验证或P3/P4验收。 |  |
 | M03 干部管理2.0 / BP-C | 受限完成（仅P1） | 需求就绪 | 受限评审通过（仅P1） | M03-P1-APPROVAL-20260910；四退出条件经逐项核对满足，仅P1受限关闭 |  |
 | M06 任职资格 / BP-C | 受限完成（仅P1） | 需求就绪 | 受限评审通过（仅P1） | M06-P1-APPROVAL-R2-20260909；四退出条件满足，P1无剩余硬阻塞，原站未知保留受限分类 |  |
-| M07 薪酬社保 / BP-S | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | PG/SP/包内项目支撑EA入职已实际验证并校正过时描述；人工工资/考勤引用/独立复核/异议补差/权限有可执行候选。薪资档案事件、自动核算、社保/个税/激励原内域仍保留受限规格；供应商与真实支付不是P1前置，未就绪。 |  |
+| M07 薪酬社保 / BP-S | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 完整范围材料已完成待评审；推荐/LIMIT未批准 | M07-SPEC-01；M07-SPEC-02；M07-SPEC-03；M07-SPEC-04；M07-SPEC-05；M07-SPEC-06；M07-LIMIT-01 |
 | M11 假勤管理 / BP-A | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 完整范围材料已完成待评审；推荐/LIMIT未批准 | M11-SPEC-01；M11-SPEC-02；M11-SPEC-03；M11-SPEC-04；M11-SPEC-05；M11-LIMIT-01 |
 | M12 招聘管理系统 / BP-R | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 完整范围材料已完成待评审；推荐/LIMIT未批准 | M12-SPEC-01；M12-SPEC-02；M12-SPEC-03；M12-SPEC-04；M12-SPEC-05；M12-SPEC-06；M12-LIMIT-01 |
 | M16 绩效管理 / BP-P | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 完整范围材料已完成待评审；推荐/LIMIT未批准 | M16-SPEC-01；M16-SPEC-02；M16-SPEC-03；M16-SPEC-04；M16-SPEC-05；M16-SPEC-06；M16-LIMIT-01 |

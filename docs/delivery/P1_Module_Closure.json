@@ -1,9 +1,9 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-10T02:56:23.457492+00:00",
-  "primaryModuleId": "M07",
+  "generatedFromUpdatedAt": "2026-09-10T02:58:52.883177+00:00",
+  "primaryModuleId": "M27",
   "backupModuleId": null,
-  "activeExecutionModuleId": "M07",
+  "activeExecutionModuleId": "M27",
   "moduleCount": 15,
   "completeCount": 0,
   "restrictedCount": 10,
@@ -1007,9 +1007,9 @@
       "moduleId": "M07",
       "name": "薪酬社保",
       "rangeId": "R3",
-      "queueState": "queued",
+      "queueState": "waiting_owner_review",
       "p1AConclusion": {
-        "status": "进行中",
+        "status": "已完成待评审",
         "approvalRecord": null,
         "evidenceRefs": [
           "BC-S01-02",
@@ -1025,43 +1025,43 @@
           "BC-S20",
           "BC-S21"
         ],
-        "limits": "沿用已有局部证据，未代签"
+        "limits": "自动档案、公式/多期间/追溯补差仅局部源证据；社保/个税/激励详细原站规则尚未探索；无银行支付、税务申报及多角色薪酬验证。外部交易不作P1前置。"
       },
       "p1BConclusion": {
-        "status": "进行中",
+        "status": "已完成待评审",
         "approvalRecord": null,
         "evidenceRefs": [],
-        "limits": "需求尚未批准"
+        "limits": "自动档案、公式/多期间/追溯补差仅局部源证据；社保/个税/激励详细原站规则尚未探索；无银行支付、税务申报及多角色薪酬验证。外部交易不作P1前置。"
       },
       "conditions": {
         "applicableScopeDetermined": {
           "value": true,
-          "basis": "用户已确认15完整登记范围及本轮R顺序"
+          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
         },
         "implementationRulesDecided": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": false,
+          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
         },
         "acceptanceExecutable": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": true,
+          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
         },
         "dependenciesAndExceptionsResolved": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": false,
+          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
         }
       },
       "transitionReview": {
         "approved": false,
         "record": null,
-        "scope": null,
+        "scope": "未批准",
         "approvedAt": null
       },
       "restrictedApproval": null,
+      "p1Closed": false,
       "transitionReady": false,
       "missingConditions": [
         "implementationRulesDecided",
-        "acceptanceExecutable",
         "dependenciesAndExceptionsResolved",
         "p1AApproved",
         "p1BApproved",
