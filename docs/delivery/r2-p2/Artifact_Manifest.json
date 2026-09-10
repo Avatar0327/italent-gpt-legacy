@@ -8,8 +8,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/Acceptance_Scenarios.json",
-      "sha256": "cf2b4f0041b5882750657b9544297d406f7493fd644b373185403ab389eda737",
-      "bytes": 146458
+      "sha256": "bd27abecec05fa9ec3d5c47024e543dc0034b7c3298be2bcbe6a515f4bd7086d",
+      "bytes": 155395
     },
     {
       "path": "docs/delivery/r2-p2/Anonymity_Calculation.md",
@@ -82,9 +82,19 @@
       "bytes": 4589
     },
     {
+      "path": "docs/delivery/r2-p2/Foundation_Adaptations.json",
+      "sha256": "1a4f526fbc14b9ae7bfc3855369ad4bb021821f9ba843c487ff159a88f524c4e",
+      "bytes": 9120
+    },
+    {
+      "path": "docs/delivery/r2-p2/Foundation_Adaptations.md",
+      "sha256": "785de6d38c153b6ed73f68bc96ca10d8ba4b2f77cfdfe329c08a605f31b04a5c",
+      "bytes": 3998
+    },
+    {
       "path": "docs/delivery/r2-p2/Foundations.md",
-      "sha256": "261fd0b4bc7387da28bcc67bc54b38bc03e39e989488b6753ebdbeae0420e048",
-      "bytes": 5301
+      "sha256": "c707526f0749c9b31fa4c8edbe301fac58299c5d00ba00f07f06dec7f8ab1287",
+      "bytes": 5461
     },
     {
       "path": "docs/delivery/r2-p2/Historical_Evidence_Index.json",
@@ -188,8 +198,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/Repair_Record.json",
-      "sha256": "b83dc28d5f389fe5c5a6709778b422903a04e4d9349e5f81d9c8f347b6ad7461",
-      "bytes": 3737
+      "sha256": "0897d4717c4f3932ff64c1fe5555b95e82738c1d0fe05eb5f524e370b1fb4976",
+      "bytes": 3772
     },
     {
       "path": "docs/delivery/r2-p2/Requirements_Trace.json",
@@ -242,9 +252,14 @@
       "bytes": 5437
     },
     {
+      "path": "docs/delivery/r2-p2/build_foundation_adaptations.py",
+      "sha256": "df26d334809b360e91169913255ab724135796f78b0af30c86443b2102398e99",
+      "bytes": 7393
+    },
+    {
       "path": "docs/delivery/r2-p2/build_handoff.py",
-      "sha256": "e19dc002f504e2e0c3b52cd9687d297d37804a7ffe5601fdb4faae684467213a",
-      "bytes": 6128
+      "sha256": "c94295539d5fb33ab6455bd228cccc3e026c8650ba0a1ac6e5720e4f24f24542",
+      "bytes": 6198
     },
     {
       "path": "docs/delivery/r2-p2/build_inventory.py",
@@ -282,6 +297,11 @@
       "bytes": 9852
     },
     {
+      "path": "docs/delivery/r2-p2/check_foundation_adaptations.py",
+      "sha256": "f08ff5b6435596610780311181fee1c87b046fb5f67e0d025af552ae6d02c9a2",
+      "bytes": 2611
+    },
+    {
       "path": "docs/delivery/r2-p2/check_schema_examples.py",
       "sha256": "e48796f7f6ea05b7a775cbd42926f01b3f5f74f3af3dcea49d8e09751272c756",
       "bytes": 3141
@@ -298,8 +318,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/repair_handoff.py",
-      "sha256": "b4a6481d48881fbb38e13d79cc043465fa2a789905c6c7b517a53b6bd5c50e69",
-      "bytes": 3234
+      "sha256": "d10ba87f9a102324d56fc7b9eb38bd5e145c9c0ce33b5ec320d4dfccb62d6c83",
+      "bytes": 3323
     }
   ]
 }

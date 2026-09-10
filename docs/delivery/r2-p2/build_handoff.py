@@ -57,6 +57,8 @@ if (D/'Legacy_Acceptance_Map.json').exists():
             a['scenarioIds']=matching(old[a['id']]['currentAcceptanceRefs']);a['legacyDisposition']=old[a['id']]['disposition']
             if old[a['id']]['disposition']=='source_request_only':
                 a['scenarioIds']=[];a['evidenceRequestIds']=['R2-SOURCE-M17-01']
+import runpy
+runpy.run_path(str(D/"build_foundation_adaptations.py"))
 from repair_handoff import apply
 apply(t,tasks,scenarios)
 put('Requirements_Trace.json',t)

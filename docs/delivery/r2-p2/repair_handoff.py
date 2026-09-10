@@ -23,7 +23,7 @@ def apply(t,tasks,scenarios):
   adaptations=json.loads((D/'Foundation_Adaptations.json').read_text())['adaptations']
   for s in scenarios:
    if s['id'] in adaptations:
-    s['originalFoundationGwt']={k:s[k] for k in ['given','when','then']};s.update(adaptations[s['id']])
+    src=next(a['source'] for a in t['acceptanceIds'] if 'R2-P3-'+a['id']==s['id']);s['originalFoundationGwt']={k:src[k] for k in ['given','when','then','basis']};s.update(adaptations[s['id']])
  if (D/'Task_Dependencies.json').exists():
   deps=json.loads((D/'Task_Dependencies.json').read_text());by={x['taskId']:x for x in deps['tasks']}
   for task in tasks:task['dependencies']=by[task['id']]

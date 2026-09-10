@@ -52,3 +52,5 @@ BASE-06-AC01～03和M18-REVIEW-AC13保留，P3合成签名错误、乱序、同I
 ## 责任与依赖
 
 六基础设计应用至六模块，不建第二身份/工作流/命令/恢复引擎。R1共享能力负责人交付可用契约版本，R2各域做适配，独立测试核组合拒绝，P4业务、安全、运维各自签证。未实际联调统一realIntegration=not_executed；模块设计闭环与基础运行验证分开。
+
+三项定向适配的具体对象、动作、角色字段和版本断言见[Foundation_Adaptations.md](Foundation_Adaptations.md)，原AC独立来源保留。

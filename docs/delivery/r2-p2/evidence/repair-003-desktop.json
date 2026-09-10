@@ -1,0 +1,84 @@
+{
+  "kind": "P2_document_desktop_review_not_P3_execution",
+  "count": 3,
+  "walkthroughs": [
+    {
+      "id": "R2-P3-BASE-02-AC03",
+      "steps": [
+        {
+          "actor": "E1",
+          "action": "read developmentSummary",
+          "decision": "allow only developmentSummary",
+          "versions": "unchanged"
+        },
+        {
+          "actor": "E1/H/L",
+          "action": "read answers/bridgeReviewer/anonymousMean",
+          "decision": "403 absent exact field grant",
+          "versions": "unchanged"
+        },
+        {
+          "actor": "H/L",
+          "action": "read E1 feedback",
+          "decision": "403 absent reportRead",
+          "versions": "unchanged"
+        }
+      ],
+      "desktopConclusion": "fixture/actions/role fields/version results explicit; source retained; ready for independent P2 recheck"
+    },
+    {
+      "id": "R2-P3-BASE-03-AC02",
+      "steps": [
+        {
+          "actor": "H",
+          "action": "catalog.edit name",
+          "decision": "new CT1-v2 + audit + receipt",
+          "versions": "no certificate or M01 assignment history"
+        },
+        {
+          "actor": "R",
+          "action": "certification.revoke",
+          "decision": "one revocation event at commit time",
+          "versions": "CERT1-v1 immutable, validity revoked"
+        },
+        {
+          "actor": "R",
+          "action": "repeat same key",
+          "decision": "original receipt",
+          "versions": "no second revocation"
+        },
+        {
+          "actor": "H",
+          "action": "change issuedAt/personId/auditActor",
+          "decision": "reject",
+          "versions": "unchanged"
+        }
+      ],
+      "desktopConclusion": "fixture/actions/role fields/version results explicit; source retained; ready for independent P2 recheck"
+    },
+    {
+      "id": "R2-P3-BASE-04-AC02",
+      "steps": [
+        {
+          "actor": "H",
+          "action": "unbind or replace B1 on published REP1-v1",
+          "decision": "409 IMMUTABLE_VERSION",
+          "versions": "B1/OBJ-A-v1 unchanged"
+        },
+        {
+          "actor": "H",
+          "action": "bind OBJ-B-v1 to draft REP1-v2",
+          "decision": "new B2 under draft grant",
+          "versions": "v1 still OBJ-A-v1, v2 draft only"
+        },
+        {
+          "actor": "H",
+          "action": "download old B1",
+          "decision": "allow only under current old-version grant",
+          "versions": "no audience inheritance for B2"
+        }
+      ],
+      "desktopConclusion": "fixture/actions/role fields/version results explicit; source retained; ready for independent P2 recheck"
+    }
+  ]
+}
