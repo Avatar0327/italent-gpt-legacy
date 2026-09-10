@@ -1,6 +1,6 @@
 {
   "kind": "proposal_only_not_execution_or_controller_ledger",
-  "count": 15,
+  "count": 20,
   "tasks": [
     {
       "id": "P3-R2-M37-01",
@@ -397,6 +397,139 @@
       "scenarioIds": [
         "R2-P3-M26-REVIEW-AC11",
         "R2-P3-M26-REVIEW-AC12"
+      ]
+    },
+    {
+      "id": "P3-R2-M18-01",
+      "moduleId": "M18",
+      "requirementRefs": [
+        "M18-SPEC-01"
+      ],
+      "title": "建议projectId/version、subjectRecordId、stableEmployeeId、组织及岗位快照",
+      "designRefs": [
+        "M18_Design.md#m18-spec-01"
+      ],
+      "ownerRole": "M18实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M18-REVIEW-AC01",
+        "R2-P3-M18-REVIEW-AC02",
+        "R2-P3-M18-REVIEW-AC03",
+        "R2-P3-M18-REVIEW-AC04"
+      ]
+    },
+    {
+      "id": "P3-R2-M18-02",
+      "moduleId": "M18",
+      "requirementRefs": [
+        "M18-SPEC-02"
+      ],
+      "title": "建议各维度各有来源/尺度/目标/规则版本，采集状态与计算就绪分开；无来源、无规则、无权或缺样本显示原因及null，不补0",
+      "designRefs": [
+        "M18_Design.md#m18-spec-02"
+      ],
+      "ownerRole": "M18实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M18-REVIEW-AC05"
+      ]
+    },
+    {
+      "id": "P3-R2-M18-03",
+      "moduleId": "M18",
+      "requirementRefs": [
+        "M18-SPEC-03"
+      ],
+      "title": "建议meetingId/version、agendaId、subjectRecordId/resultVersion、p",
+      "designRefs": [
+        "M18_Design.md#m18-spec-03"
+      ],
+      "ownerRole": "M18实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M18-REVIEW-AC06",
+        "R2-P3-M18-REVIEW-AC07",
+        "R2-P3-M18-REVIEW-AC08"
+      ]
+    },
+    {
+      "id": "P3-R2-M18-04",
+      "moduleId": "M18",
+      "requirementRefs": [
+        "M18-SPEC-04"
+      ],
+      "title": "建议项目draft→approved→active→collection_closed→closed，对象采集/评价/计",
+      "designRefs": [
+        "M18_Design.md#m18-spec-04"
+      ],
+      "ownerRole": "M18实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M18-REVIEW-AC09",
+        "R2-P3-M18-REVIEW-AC10"
+      ]
+    },
+    {
+      "id": "P3-R2-M18-05",
+      "moduleId": "M18",
+      "requirementRefs": [
+        "M18-SPEC-05"
+      ],
+      "title": "建议M18仅输出经批准发布的resultId/version、project/subject/period、标准/轴/规",
+      "designRefs": [
+        "M18_Design.md#m18-spec-05"
+      ],
+      "ownerRole": "M18实施负责人；独立测试负责人复核",
+      "phase": "P3",
+      "status": "proposed_not_started",
+      "dependencies": [
+        "R1共同身份/权限/事务/流程契约适配验证"
+      ],
+      "deliverables": [
+        "规范化对象及API适配",
+        "合成正反例与事务/权限证据",
+        "兼容/迁移差异报告"
+      ],
+      "scenarioIds": [
+        "R2-P3-M18-REVIEW-AC11",
+        "R2-P3-M18-REVIEW-AC12",
+        "R2-P3-M18-REVIEW-AC13"
       ]
     }
   ]

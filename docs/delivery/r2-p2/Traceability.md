@@ -19,11 +19,11 @@
 |M26-SPEC-03|[M26_Design.md#m26-spec-03](M26_Design.md#m26-spec-03)|complete|
 |M26-SPEC-04|[M26_Design.md#m26-spec-04](M26_Design.md#m26-spec-04)|complete|
 |M26-SPEC-05|[M26_Design.md#m26-spec-05](M26_Design.md#m26-spec-05)|complete|
-|M18-SPEC-01|[M18_Design.md#m18-spec-01](M18_Design.md#m18-spec-01)|pending|
-|M18-SPEC-02|[M18_Design.md#m18-spec-02](M18_Design.md#m18-spec-02)|pending|
-|M18-SPEC-03|[M18_Design.md#m18-spec-03](M18_Design.md#m18-spec-03)|pending|
-|M18-SPEC-04|[M18_Design.md#m18-spec-04](M18_Design.md#m18-spec-04)|pending|
-|M18-SPEC-05|[M18_Design.md#m18-spec-05](M18_Design.md#m18-spec-05)|pending|
+|M18-SPEC-01|[M18_Design.md#m18-spec-01](M18_Design.md#m18-spec-01)|complete|
+|M18-SPEC-02|[M18_Design.md#m18-spec-02](M18_Design.md#m18-spec-02)|complete|
+|M18-SPEC-03|[M18_Design.md#m18-spec-03](M18_Design.md#m18-spec-03)|complete|
+|M18-SPEC-04|[M18_Design.md#m18-spec-04](M18_Design.md#m18-spec-04)|complete|
+|M18-SPEC-05|[M18_Design.md#m18-spec-05](M18_Design.md#m18-spec-05)|complete|
 |M17-SPEC-01|[M17_Design.md#m17-spec-01](M17_Design.md#m17-spec-01)|pending|
 |M17-SPEC-02|[M17_Design.md#m17-spec-02](M17_Design.md#m17-spec-02)|pending|
 |M17-SPEC-03|[M17_Design.md#m17-spec-03](M17_Design.md#m17-spec-03)|pending|

@@ -3,8 +3,8 @@
   "artifacts": [
     {
       "path": "docs/delivery/r2-p2/Acceptance_Scenarios.json",
-      "sha256": "5a2e7a484ecbf25a0a8b549373b7a365a49c41a9713e20478348aa2bfbc9ffab",
-      "bytes": 43529
+      "sha256": "d29e530d265e2d990bf0007f85ee5410a3514c4aca6bc5d485d61008b6061f71",
+      "bytes": 58269
     },
     {
       "path": "docs/delivery/r2-p2/Approval_Provenance.json",
@@ -23,8 +23,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/Design_Checkpoint.json",
-      "sha256": "31604354973b259f1ef5f800683773107c2d68d6a502a1e32e89dc0527b4fc1b",
-      "bytes": 646
+      "sha256": "76c499f4470415fd674b68d9afbe19aaa14df5ac7fa789d9acbadc3e901b2166",
+      "bytes": 657
     },
     {
       "path": "docs/delivery/r2-p2/Historical_Evidence_Index.json",
@@ -40,6 +40,11 @@
       "path": "docs/delivery/r2-p2/M06_Design.md",
       "sha256": "813a713ee7b3d22cb1db49b1013fb58eb82388166279433ef833c716dc2f44b5",
       "bytes": 10525
+    },
+    {
+      "path": "docs/delivery/r2-p2/M18_Design.md",
+      "sha256": "a33de36316e0cd702ea7720e39ac47b157205489abbc68f567fa3c2c108a394d",
+      "bytes": 9790
     },
     {
       "path": "docs/delivery/r2-p2/M26_Design.md",
@@ -63,13 +68,13 @@
     },
     {
       "path": "docs/delivery/r2-p2/P3_Handoff.md",
-      "sha256": "c980cc0097cb5b95bea4a1141300a6ed58e63d8d6f27fef05f629db506402ba4",
-      "bytes": 1438
+      "sha256": "aaf86438726bdd5a81ab04736aa5f72d1ae307942367ac03e067c0248eec89e9",
+      "bytes": 1828
     },
     {
       "path": "docs/delivery/r2-p2/P3_Work_Packages.json",
-      "sha256": "b19175ae0404135a146891b001e4e54a48609a8c0053b4e23c337618ca73e3b9",
-      "bytes": 12549
+      "sha256": "4848484cac4de98833d7e0def0059ef93dce58b4e6acd2ef6e6633a0b31eeae2",
+      "bytes": 16612
     },
     {
       "path": "docs/delivery/r2-p2/Permissions.md",
@@ -88,8 +93,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/Requirements_Trace.json",
-      "sha256": "dc14f98be57cfeb18800ce35810733ee3783eb1328b6536b85c433b25bf173dc",
-      "bytes": 362653
+      "sha256": "0fda9a0593079945b27a0cbf72775aad41ec1fe69ec6e9941a16b3572f2b84ab",
+      "bytes": 362732
     },
     {
       "path": "docs/delivery/r2-p2/Source_Manifest.json",
@@ -98,8 +103,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/Traceability.md",
-      "sha256": "baae813d510d8e88daecdf6ce744c58caf94e7b368f16c827f2aae8f20347264",
-      "bytes": 2962
+      "sha256": "05af6bf886c39b25137346ca64962c4a3bac864980b3ee0699f405243190001c",
+      "bytes": 2967
     },
     {
       "path": "docs/delivery/r2-p2/build_handoff.py",

@@ -177,7 +177,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-02",
@@ -188,7 +188,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-03",
@@ -199,7 +199,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-04",
@@ -210,7 +210,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-05",
@@ -221,7 +221,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M17-SPEC-01",
@@ -1716,7 +1716,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-01-CLAUSE-02",
@@ -1725,7 +1725,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-01-CLAUSE-03",
@@ -1734,7 +1734,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-01-CLAUSE-04",
@@ -1743,7 +1743,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-01-CLAUSE-05",
@@ -1752,7 +1752,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-01-CLAUSE-06",
@@ -1761,7 +1761,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-01"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-02-CLAUSE-01",
@@ -1770,7 +1770,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-02-CLAUSE-02",
@@ -1779,7 +1779,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-02-CLAUSE-03",
@@ -1788,7 +1788,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-02-CLAUSE-04",
@@ -1797,7 +1797,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-02-CLAUSE-05",
@@ -1806,7 +1806,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-02-CLAUSE-06",
@@ -1815,7 +1815,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-02-CLAUSE-07",
@@ -1824,7 +1824,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-02"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-03-CLAUSE-01",
@@ -1833,7 +1833,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-03-CLAUSE-02",
@@ -1842,7 +1842,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-03-CLAUSE-03",
@@ -1851,7 +1851,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-03-CLAUSE-04",
@@ -1860,7 +1860,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-03-CLAUSE-05",
@@ -1869,7 +1869,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-03-CLAUSE-06",
@@ -1878,7 +1878,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-03-CLAUSE-07",
@@ -1887,7 +1887,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-03-CLAUSE-08",
@@ -1896,7 +1896,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-03-CLAUSE-09",
@@ -1905,7 +1905,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-03-CLAUSE-10",
@@ -1914,7 +1914,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-03"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-04-CLAUSE-01",
@@ -1923,7 +1923,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-04-CLAUSE-02",
@@ -1932,7 +1932,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-04-CLAUSE-03",
@@ -1941,7 +1941,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-04-CLAUSE-04",
@@ -1950,7 +1950,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-04-CLAUSE-05",
@@ -1959,7 +1959,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-04-CLAUSE-06",
@@ -1968,7 +1968,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-04-CLAUSE-07",
@@ -1977,7 +1977,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-04-CLAUSE-08",
@@ -1986,7 +1986,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-04-CLAUSE-09",
@@ -1995,7 +1995,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-04-CLAUSE-10",
@@ -2004,7 +2004,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-04"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-05-CLAUSE-01",
@@ -2013,7 +2013,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-05-CLAUSE-02",
@@ -2022,7 +2022,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-05-CLAUSE-03",
@@ -2031,7 +2031,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-05-CLAUSE-04",
@@ -2040,7 +2040,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-05-CLAUSE-05",
@@ -2049,7 +2049,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-05-CLAUSE-06",
@@ -2058,7 +2058,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-05-CLAUSE-07",
@@ -2067,7 +2067,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-SPEC-05-CLAUSE-08",
@@ -2076,7 +2076,7 @@
       "designRefs": [
         "M18_Design.md#m18-spec-05"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M17-SPEC-01-CLAUSE-01",
@@ -4930,7 +4930,7 @@
       "designRefs": [
         "M18_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -4940,7 +4940,7 @@
       "designRefs": [
         "M18_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -4950,7 +4950,7 @@
       "designRefs": [
         "M18_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -4960,7 +4960,7 @@
       "designRefs": [
         "M18_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -4975,7 +4975,7 @@
       "designRefs": [
         "M18_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -4990,7 +4990,7 @@
       "designRefs": [
         "M18_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -5005,7 +5005,7 @@
       "designRefs": [
         "M18_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -5020,7 +5020,7 @@
       "designRefs": [
         "M18_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -5035,7 +5035,7 @@
       "designRefs": [
         "M18_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -5050,7 +5050,7 @@
       "designRefs": [
         "M18_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -5066,7 +5066,7 @@
       "designRefs": [
         "M18_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -5082,7 +5082,7 @@
       "designRefs": [
         "M18_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -5098,7 +5098,7 @@
       "designRefs": [
         "M18_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -5114,7 +5114,7 @@
       "designRefs": [
         "M18_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -5130,7 +5130,7 @@
       "designRefs": [
         "M18_Design.md#engineering"
       ],
-      "designStatus": "pending",
+      "designStatus": "complete",
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json."
     },
     {
@@ -5539,7 +5539,7 @@
       "designRefs": [
         "M18_Design.md#engineering"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-CLOSE-02",
@@ -5573,7 +5573,7 @@
       "designRefs": [
         "M18_Design.md#engineering"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-CLOSE-03",
@@ -5607,7 +5607,7 @@
       "designRefs": [
         "M18_Design.md#engineering"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-CLOSE-04",
@@ -5639,7 +5639,7 @@
       "designRefs": [
         "M18_Design.md#engineering"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-CLOSE-05",
@@ -5673,7 +5673,7 @@
       "designRefs": [
         "M18_Design.md#engineering"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M17-CLOSE-01",
@@ -8348,7 +8348,7 @@
       "designRefs": [
         "M18_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-REVIEW-AC02",
@@ -8373,7 +8373,7 @@
       "designRefs": [
         "M18_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-REVIEW-AC03",
@@ -8398,7 +8398,7 @@
       "designRefs": [
         "M18_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-REVIEW-AC04",
@@ -8423,7 +8423,7 @@
       "designRefs": [
         "M18_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-REVIEW-AC05",
@@ -8448,7 +8448,7 @@
       "designRefs": [
         "M18_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-REVIEW-AC06",
@@ -8473,7 +8473,7 @@
       "designRefs": [
         "M18_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-REVIEW-AC07",
@@ -8498,7 +8498,7 @@
       "designRefs": [
         "M18_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-REVIEW-AC08",
@@ -8523,7 +8523,7 @@
       "designRefs": [
         "M18_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-REVIEW-AC09",
@@ -8548,7 +8548,7 @@
       "designRefs": [
         "M18_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-REVIEW-AC10",
@@ -8573,7 +8573,7 @@
       "designRefs": [
         "M18_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-REVIEW-AC11",
@@ -8598,7 +8598,7 @@
       "designRefs": [
         "M18_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-REVIEW-AC12",
@@ -8623,7 +8623,7 @@
       "designRefs": [
         "M18_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "M18-REVIEW-AC13",
@@ -8648,7 +8648,7 @@
       "designRefs": [
         "M18_Design.md#acceptance"
       ],
-      "designStatus": "pending"
+      "designStatus": "complete"
     },
     {
       "id": "BASE-01-AC01",

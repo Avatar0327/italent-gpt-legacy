@@ -9,7 +9,8 @@
   "completedModules": [
     "M37",
     "M06",
-    "M26"
+    "M26",
+    "M18"
   ],
   "activeModule": null,
   "foundationsComplete": false,
@@ -18,5 +19,5 @@
   "p3Entered": false,
   "productModified": false,
   "deployed": false,
-  "next": "M18 sequential detailed design"
+  "next": "M17 sequential detailed design"
 }
