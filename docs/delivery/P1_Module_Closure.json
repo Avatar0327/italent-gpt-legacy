@@ -1,31 +1,31 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-10T02:43:06.591554+00:00",
-  "primaryModuleId": "M03",
+  "generatedFromUpdatedAt": "2026-09-10T02:44:14.280019+00:00",
+  "primaryModuleId": "M27",
   "backupModuleId": null,
-  "activeExecutionModuleId": "M03",
+  "activeExecutionModuleId": "M27",
   "moduleCount": 15,
   "completeCount": 0,
-  "restrictedCount": 9,
-  "transitionReadyCount": 9,
+  "restrictedCount": 10,
+  "transitionReadyCount": 10,
   "progress": {
     "p1A": {
       "full": 0,
-      "restricted": 9,
-      "total": 9
+      "restricted": 10,
+      "total": 10
     },
     "p1B": {
       "full": 0,
-      "restricted": 9,
-      "total": 9
+      "restricted": 10,
+      "total": 10
     },
     "review": {
       "full": 0,
-      "restricted": 9,
-      "total": 9
+      "restricted": 10,
+      "total": 10
     }
   },
-  "p1ClosedCount": 9,
+  "p1ClosedCount": 10,
   "modules": [
     {
       "moduleId": "M01",
@@ -654,10 +654,10 @@
       "moduleId": "M03",
       "name": "干部管理2.0",
       "rangeId": "R2",
-      "queueState": "waiting_owner_review",
+      "queueState": "closed_restricted",
       "p1AConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M03-P1-APPROVAL-20260910",
         "evidenceRefs": [
           "US-C01-02",
           "BC-C01",
@@ -672,49 +672,54 @@
           "BC-C25",
           "BC-C26"
         ],
-        "limits": "完整登记范围证据及限制可追溯；LIMIT未批准，不计P1A关闭"
+        "limits": "原站任期通用日期算法、选拔多评委/阈值等值及缺评、任免/转正提交路由、免职恢复/未来离职联动及敏感档案跨角色未验证；本轮不提交实际任用/审批。",
+        "approvedAt": "2026-09-10T02:44:14.280019+00:00"
       },
       "p1BConclusion": {
-        "status": "已完成待评审",
-        "approvalRecord": null,
+        "status": "受限通过",
+        "approvalRecord": "M03-P1-APPROVAL-20260910",
         "evidenceRefs": [],
-        "limits": "对象/字段/权限/状态/异常/契约/实现差异及可执行预期已准备；新规则未批准"
+        "limits": "原站任期通用日期算法、选拔多评委/阈值等值及缺评、任免/转正提交路由、免职恢复/未来离职联动及敏感档案跨角色未验证；本轮不提交实际任用/审批。",
+        "approvedAt": "2026-09-10T02:44:14.280019+00:00"
       },
       "conditions": {
         "applicableScopeDetermined": {
           "value": true,
-          "basis": "用户已确认15完整登记范围及本轮R顺序"
+          "basis": "M03-P1-APPROVAL-20260910；原登记完整范围逐项与收口清单一致，无内部删减"
         },
         "implementationRulesDecided": {
-          "value": false,
-          "basis": "本模块新规则/LIMIT及消费者未批依赖待集中决定"
+          "value": true,
+          "basis": "M03-P1-APPROVAL-20260910；本模块SPEC与R2-BASELINE-01均由所有者明确批准，版本/哈希锁定"
         },
         "acceptanceExecutable": {
           "value": true,
-          "basis": "Given/When/Then及正常/异常用例已具体化；需求是否获批另判，未执行"
+          "basis": "M03-P1-APPROVAL-20260910；逐项Given/When/Then已存在，作为验收预期获批，未冒本轮执行"
         },
         "dependenciesAndExceptionsResolved": {
-          "value": false,
-          "basis": "本模块新规则/LIMIT及消费者未批依赖待集中决定"
+          "value": true,
+          "basis": "M03-P1-APPROVAL-20260910；已批准生产者契约与本模块LIMIT；源缺证/独立角色留P2/P3/P4，不要求先实联调"
         }
       },
       "transitionReview": {
-        "approved": false,
-        "record": null,
-        "scope": null,
-        "approvedAt": null
+        "approved": true,
+        "record": "M03-P1-APPROVAL-20260910",
+        "scope": "模块P1转序就绪；R2整体进入P2未批准",
+        "approvedAt": "2026-09-10T02:44:14.280019+00:00"
       },
-      "restrictedApproval": null,
-      "p1Closed": false,
-      "closureClass": "已完成待评审",
-      "transitionReady": false,
-      "missingConditions": [
-        "implementationRulesDecided",
-        "dependenciesAndExceptionsResolved",
-        "p1AApproved",
-        "p1BApproved",
-        "transitionReviewApproved"
-      ]
+      "restrictedApproval": {
+        "scope": "原站任期通用日期算法、选拔多评委/阈值等值及缺评、任免/转正提交路由、免职恢复/未来离职联动及敏感档案跨角色未验证；本轮不提交实际任用/审批。",
+        "residualRisk": "错误任命或人事生效、投票分母/阈值不一致、自审利益冲突、过期资格被引用、考察期自动转正及档案敏感泄漏。",
+        "revalidation": "P2：设计干部身份/任期/人事生效/提名/任免记录映射、评分策略与委员会、考察/述职版本与当前权限、增量迁移及未知历史标记；P3：合成验证任期月末/闰年/重叠、多评委阈值等值/弃权缺评、资格失效、调动失败/未知、考察延期退回/撤回/退出和档案撤权；P4：独立多角色、敏感字段/历史/附件/下载权限、跨模块业务及生产容量/恢复验收；E2不新增访问者，管理员操作不代验。",
+        "record": "M03-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T02:44:14.280019+00:00",
+        "phaseScope": "仅P1"
+      },
+      "p1Closed": true,
+      "closureClass": "受限通过",
+      "closureRecord": "M03-P1-APPROVAL-20260910",
+      "closedAt": "2026-09-10T02:44:14.280019+00:00",
+      "transitionReady": true,
+      "missingConditions": []
     },
     {
       "moduleId": "M27",
@@ -1380,28 +1385,28 @@
       ],
       "foundationReadiness": {
         "BASE-01": {
-          "value": false,
-          "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
+          "value": true,
+          "basis": "R2-BASELINE-01由M26-P1-APPROVAL-20260910记录；仅需求"
         },
         "BASE-02": {
-          "value": false,
-          "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
+          "value": true,
+          "basis": "R2-BASELINE-01由M26-P1-APPROVAL-20260910记录；仅需求"
         },
         "BASE-03": {
-          "value": false,
-          "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
+          "value": true,
+          "basis": "R2-BASELINE-01由M26-P1-APPROVAL-20260910记录；仅需求"
         },
         "BASE-04": {
-          "value": false,
-          "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
+          "value": true,
+          "basis": "R2-BASELINE-01由M26-P1-APPROVAL-20260910记录；仅需求"
         },
         "BASE-05": {
-          "value": false,
-          "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
+          "value": true,
+          "basis": "R2-BASELINE-01由M26-P1-APPROVAL-20260910记录；仅需求"
         },
         "BASE-06": {
-          "value": false,
-          "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
+          "value": true,
+          "basis": "R2-BASELINE-01由M26-P1-APPROVAL-20260910记录；仅需求"
         }
       },
       "review": {
@@ -1409,6 +1414,12 @@
         "record": null,
         "approvedAt": null,
         "scope": null
+      },
+      "p1ClosureSummary": {
+        "status": "R2 P1六模块与基础需求受限关闭；下游进入未批准",
+        "record": "M03-P1-APPROVAL-20260910",
+        "at": "2026-09-10T02:44:14.280019+00:00",
+        "downstreamAuthorized": false
       },
       "moduleIds": [
         "M37",
@@ -1420,13 +1431,6 @@
       ],
       "transitionReady": false,
       "missingConditions": [
-        "M03",
-        "BASE-01",
-        "BASE-02",
-        "BASE-03",
-        "BASE-04",
-        "BASE-05",
-        "BASE-06",
         "rangeReviewApproved"
       ]
     },
@@ -1504,9 +1508,7 @@
       "M17",
       "M03"
     ],
-    "waitingModuleIds": [
-      "M03"
-    ],
+    "waitingModuleIds": [],
     "preparedModuleIds": [
       "M26",
       "M18",
@@ -1527,8 +1529,8 @@
     "protectedBranch": "design/r1-p2-20260909",
     "observedProtectedHead": "617a707",
     "parallelBoundary": "仅git worktree list查看注册信息；不进入、不修改、不合并/cherry-pick其任何提交；P2建议完成后统一纳入",
-    "status": "R2批准顺序落账中",
-    "nextFormalClosureModule": "M03",
+    "status": "R2四模块均受限关闭",
+    "nextFormalClosureModule": "M27",
     "reviewBundleRef": "docs/delivery/P1_R2_Review_Package.md"
   }
 }

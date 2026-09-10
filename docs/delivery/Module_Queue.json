@@ -699,7 +699,7 @@
   "currentP1": {
     "revision": "2026-09-09-module-closure-rolling-R",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-10T02:43:06.591554+00:00",
+    "updatedAt": "2026-09-10T02:44:14.280019+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -782,7 +782,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M03唯一主模块",
+    "activeWorkPackage": "M27唯一主模块",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -797,7 +797,7 @@
       "BP-S"
     ],
     "nextTasks": [
-      "按顺序继续M03的P1工作",
+      "按顺序继续M27的P1工作",
       "按实质单元保存并推送，独立看板失败不阻P1",
       "不修改产品、不进入P2/P3，保持15模块和33暂缓"
     ],
@@ -813,10 +813,10 @@
       "id": "MODE-MODULE-CLOSURE-R-20260909",
       "authorizedAt": "2026-09-09T15:43:36.730682+00:00",
       "mode": "模块闭环优先、按R版本滚动转序",
-      "primaryModuleId": "M03",
+      "primaryModuleId": "M27",
       "backupModuleId": null,
       "backupCandidateId": null,
-      "activeExecutionModuleId": "M03",
+      "activeExecutionModuleId": "M27",
       "wipLimit": 1,
       "backupLimit": 1,
       "backupActivation": "仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归",
@@ -1007,6 +1007,14 @@
           "reason": "M17-P1-APPROVAL-20260910四条件满足，按批准顺序受限关闭",
           "remaining": "仅P2设计/P3验证/P4验收残余责任",
           "restore": "仅新批准变更回到受影响条款，不重开宽泛盘点"
+        },
+        {
+          "at": "2026-09-10T02:44:14.280019+00:00",
+          "from": "M03",
+          "to": "M27",
+          "reason": "M03-P1-APPROVAL-20260910四条件满足，按批准顺序受限关闭",
+          "remaining": "仅P2设计/P3验证/P4验收残余责任",
+          "restore": "仅新批准变更回到受影响条款，不重开宽泛盘点"
         }
       ],
       "backupActivationHistory": [
@@ -1055,9 +1063,7 @@
           "M17",
           "M03"
         ],
-        "waitingModuleIds": [
-          "M03"
-        ],
+        "waitingModuleIds": [],
         "preparedModuleIds": [
           "M26",
           "M18",
@@ -1078,8 +1084,8 @@
         "protectedBranch": "design/r1-p2-20260909",
         "observedProtectedHead": "617a707",
         "parallelBoundary": "仅git worktree list查看注册信息；不进入、不修改、不合并/cherry-pick其任何提交；P2建议完成后统一纳入",
-        "status": "R2批准顺序落账中",
-        "nextFormalClosureModule": "M03",
+        "status": "R2四模块均受限关闭",
+        "nextFormalClosureModule": "M27",
         "reviewBundleRef": "docs/delivery/P1_R2_Review_Package.md"
       }
     },
@@ -1408,28 +1414,28 @@
         ],
         "foundationReadiness": {
           "BASE-01": {
-            "value": false,
-            "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
+            "value": true,
+            "basis": "R2-BASELINE-01由M26-P1-APPROVAL-20260910记录；仅需求"
           },
           "BASE-02": {
-            "value": false,
-            "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
+            "value": true,
+            "basis": "R2-BASELINE-01由M26-P1-APPROVAL-20260910记录；仅需求"
           },
           "BASE-03": {
-            "value": false,
-            "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
+            "value": true,
+            "basis": "R2-BASELINE-01由M26-P1-APPROVAL-20260910记录；仅需求"
           },
           "BASE-04": {
-            "value": false,
-            "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
+            "value": true,
+            "basis": "R2-BASELINE-01由M26-P1-APPROVAL-20260910记录；仅需求"
           },
           "BASE-05": {
-            "value": false,
-            "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
+            "value": true,
+            "basis": "R2-BASELINE-01由M26-P1-APPROVAL-20260910记录；仅需求"
           },
           "BASE-06": {
-            "value": false,
-            "basis": "R2-BASELINE-01待批准；R1基础原决定沿用，R2新增适用/敏感范围及用例不自动继承为通过"
+            "value": true,
+            "basis": "R2-BASELINE-01由M26-P1-APPROVAL-20260910记录；仅需求"
           }
         },
         "review": {
@@ -1437,6 +1443,12 @@
           "record": null,
           "approvedAt": null,
           "scope": null
+        },
+        "p1ClosureSummary": {
+          "status": "R2 P1六模块与基础需求受限关闭；下游进入未批准",
+          "record": "M03-P1-APPROVAL-20260910",
+          "at": "2026-09-10T02:44:14.280019+00:00",
+          "downstreamAuthorized": false
         }
       },
       {

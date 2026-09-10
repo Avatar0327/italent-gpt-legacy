@@ -576,3 +576,14 @@ if rb:
  (D/'P1_R2_Approval_Draft.md').write_text(draft)
  for name in ['P1_Review.md','P1B_Readiness.md','P1_Module_Closure.md']:
   f=D/name;f.write_text(f.read_text()+'\nR2当前集中入口：[四模块完整材料、23项推荐及四项限制](P1_R2_Review_Package.md)；[批准草稿](P1_R2_Approval_Draft.md)。各模块按实际批准单独判定，计数从Scope推导。\n')
+
+if pb.get('r2ReviewBundle',{}).get('closedModuleIds')==['M26','M18','M17','M03']:
+ ids=['M37','M06','M26','M18','M17','M03'];mm=[by_id[x] for x in ids]
+ t=intro('R2 P1关闭总结与P2交接（进入P2未批准）')
+ t+=progress_text()+'\n\nR2六模块均P1受限通过；六基础R2适用需求获R2-BASELINE-01批准。此交接只准备下游输入，不授权启动P2或P3。\n\n'
+ t+=table(['模块','完整范围','批准记录','剩余实现工作'],[(m['id'],m['scope'],m['p1']['moduleClosure']['closureRecord'],m['p1']['reviewPackage']['implementationNext']) for m in mm])+'\n'
+ for m in mm:
+  r=m['p1']['moduleClosure']['restrictedApproval'];rp=m['p1']['reviewPackage'];t+='## '+m['id']+'\n\n'+table(['维度','要求'],[('LIMIT范围',r['scope']),('残余风险',r['residualRisk']),('P2/P3/P4责任',r['revalidation']),('可执行用例引用',rp['acceptanceCaseRefs']),('需求与批准版本','[模块规格](P1_'+m['id']+'_Review_Package.md)；[批准原文和哈希](P1_Approval_Records.md)')])+'\n'
+ t+='## 下游共同约束\n\n稳定对象与冻结版本独立；评分/等级/资格/准备度不混尺度；历史按当前权限校验。M19审批不代M01生效，D1–D7不扩大。M48/M32只消费许可投影，未配置接口不能假装联调。P2须设计对象、迁移、授权、版本、事务、请求幂等和异常恢复；P3按已批用例执行，P4独立多人权限与业务/生产验收。所有代码和测试的静态适用版本见[实现映射](P1B_Implementation_Map.md)，历史结果未在本轮复跑。六基础R1恢复目标保持，R2适用差异批准不等平台能力达标。\n\n'
+ t+='## 下一执行窗口启动边界\n\n先取得所有者明确的R2 P2进入授权；没有该授权时只读交接。获得授权后核主仓库实际HEAD及审阅哈希，创建或复用隔离设计工作树，仅读本交接、BP-C规格、批准记录和残余风险；逐项完成设计评审，不改P1事实源或R1 P2专属分支，不直接开发/迁移/部署。P1总控当前继续R3，单模块串行准备评审材料。\n'
+ (D/'P1_R2_P2_Handoff.md').write_text(t)
