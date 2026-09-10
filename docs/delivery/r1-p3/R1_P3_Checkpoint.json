@@ -20,7 +20,7 @@
       "dependsOn": [
         "P3-R1-01"
       ],
-      "status": "in_progress",
+      "status": "in_progress_partial_not_dependency_ready",
       "caseIds": [
         "P3-M01-01",
         "P3-M01-02",
@@ -35,7 +35,14 @@
         "P3-M01-11",
         "P3-M01-12"
       ],
-      "evidence": []
+      "evidence": [],
+      "remaining": [
+        "完整D7与新主职模型兼容",
+        "跨所有历史版本的时态投影与环检测",
+        "退出/重聘屏障的雇佣代次绑定及兼容主档",
+        "M01前端与正式命令入口接线",
+        "12项设计用例及全部原AC验证"
+      ]
     },
     {
       "id": "P3-R1-03",
@@ -60,7 +67,7 @@
       "dependsOn": [
         "P3-R1-01"
       ],
-      "status": "pending",
+      "status": "in_progress",
       "caseIds": [
         "P3-INT-01",
         "P3-INT-02",
@@ -188,5 +195,5 @@
       "evidence": []
     }
   ],
-  "currentTask": "P3-R1-02"
+  "currentTask": "P3-R1-04"
 }
