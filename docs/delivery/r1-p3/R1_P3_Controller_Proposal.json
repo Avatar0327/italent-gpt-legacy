@@ -1,0 +1,22 @@
+{
+  "kind": "controller_intake_proposal_not_applied",
+  "target": "docs/delivery/Scope_Register.json",
+  "branch": "impl/r1-p3-20260910",
+  "sourceBaseline": "5988a3000a1ac9ad30c786c84289093d9a6e074f",
+  "p2ApprovalId": "R1-P2-EXIT-OWNER-20260910",
+  "p3StartedBy": "project owner message in R1 P3 window",
+  "currentTask": "P3-R1-02",
+  "completedImplementationTasks": [
+    "P3-R1-01"
+  ],
+  "p3CaseDesignsLocallyExercised": [
+    "P3-ARC-01",
+    "P3-ARC-02"
+  ],
+  "newTestAssertions": 6,
+  "independentReview": "pending",
+  "risksClosedByExecutor": 0,
+  "p3ExitApproved": false,
+  "p4Started": false,
+  "sourceEvidenceOwner": "P1 controller"
+}

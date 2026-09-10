@@ -5,19 +5,22 @@
     {
       "id": "P3-R1-01",
       "dependsOn": [],
-      "status": "in_progress",
+      "status": "implemented_synthetic_verified_review_pending",
       "caseIds": [
         "P3-ARC-01",
         "P3-ARC-02"
       ],
-      "evidence": []
+      "evidence": [
+        "evidence/r1-p3-01-20260910T034414Z.json"
+      ],
+      "implementationSha": "3a843b0f04f076abd9a8a33bf59315b7afe497ff"
     },
     {
       "id": "P3-R1-02",
       "dependsOn": [
         "P3-R1-01"
       ],
-      "status": "pending",
+      "status": "in_progress",
       "caseIds": [
         "P3-M01-01",
         "P3-M01-02",
@@ -185,5 +188,5 @@
       "evidence": []
     }
   ],
-  "currentTask": "P3-R1-01"
+  "currentTask": "P3-R1-02"
 }

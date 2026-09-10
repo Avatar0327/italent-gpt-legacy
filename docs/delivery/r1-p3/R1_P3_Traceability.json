@@ -8,8 +8,10 @@
         "P3-ARC-01",
         "P3-M48-01"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "P3_R1_01_local_verified_other_tasks_and_independent_review_pending",
+      "evidence": [
+        "evidence/r1-p3-01-20260910T034414Z.json"
+      ]
     },
     {
       "id": "BASE-01-AC02",
@@ -32,8 +34,10 @@
       "plannedCases": [
         "P3-ARC-01"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "P3_R1_01_local_verified_other_tasks_and_independent_review_pending",
+      "evidence": [
+        "evidence/r1-p3-01-20260910T034414Z.json"
+      ]
     },
     {
       "id": "BASE-02-AC03",
