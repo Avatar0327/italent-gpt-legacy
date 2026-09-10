@@ -1,9 +1,9 @@
 {
   "source": "Scope_Register.json → roadmap.executionPolicy / modules[].p1.moduleClosure / roadmap.rangeGates",
-  "generatedFromUpdatedAt": "2026-09-10T02:44:14.280019+00:00",
-  "primaryModuleId": "M27",
+  "generatedFromUpdatedAt": "2026-09-10T02:48:41.726545+00:00",
+  "primaryModuleId": "M16",
   "backupModuleId": null,
-  "activeExecutionModuleId": "M27",
+  "activeExecutionModuleId": "M16",
   "moduleCount": 15,
   "completeCount": 0,
   "restrictedCount": 10,
@@ -725,9 +725,9 @@
       "moduleId": "M27",
       "name": "学习管理",
       "rangeId": "R3",
-      "queueState": "queued",
+      "queueState": "waiting_owner_review",
       "p1AConclusion": {
-        "status": "进行中",
+        "status": "已完成待评审",
         "approvalRecord": null,
         "evidenceRefs": [
           "P1-LEARN-02",
@@ -760,43 +760,43 @@
           "BC-L21",
           "BC-L22"
         ],
-        "limits": "沿用已有局部证据，未代签"
+        "limits": "原站自动循环、已完成学员更新、复杂题型/重考、学习问卷隐私、费用同步/课酬、师资和证书失效传播未执行；单账号不能验证独立审批。"
       },
       "p1BConclusion": {
-        "status": "进行中",
+        "status": "已完成待评审",
         "approvalRecord": null,
         "evidenceRefs": [],
-        "limits": "需求尚未批准"
+        "limits": "原站自动循环、已完成学员更新、复杂题型/重考、学习问卷隐私、费用同步/课酬、师资和证书失效传播未执行；单账号不能验证独立审批。"
       },
       "conditions": {
         "applicableScopeDetermined": {
           "value": true,
-          "basis": "用户已确认15完整登记范围及本轮R顺序"
+          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
         },
         "implementationRulesDecided": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": false,
+          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
         },
         "acceptanceExecutable": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": true,
+          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
         },
         "dependenciesAndExceptionsResolved": {
-          "value": null,
-          "basis": "尚未逐模块闭环判定，不能算通过"
+          "value": false,
+          "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
         }
       },
       "transitionReview": {
         "approved": false,
         "record": null,
-        "scope": null,
+        "scope": "未批准",
         "approvedAt": null
       },
       "restrictedApproval": null,
+      "p1Closed": false,
       "transitionReady": false,
       "missingConditions": [
         "implementationRulesDecided",
-        "acceptanceExecutable",
         "dependenciesAndExceptionsResolved",
         "p1AApproved",
         "p1BApproved",

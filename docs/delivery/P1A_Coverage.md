@@ -1,6 +1,6 @@
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M27；备用 未启用；实际执行 M27。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M16；备用 未启用；实际执行 M16。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
 本次R2材料流水线：按最新用户批准顺序关闭R2；随后允许R3串行材料准备，未批准R3不关闭，不进入P2/P3；材料完成待评审 ；正式关闭焦点 M27。[集中评审与决定清单](P1_R2_Review_Package.md)。
 
@@ -33,7 +33,7 @@
 | M18 在线盘点 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M17 继任与发展 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M03 干部管理2.0 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
-| M27 学习管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M27 学习管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M16 绩效管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M12 招聘管理系统 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M11 假勤管理 | R3 / queued | 进行中 | 进行中 | 否 | implementationRulesDecided；acceptanceExecutable；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
@@ -46,7 +46,7 @@
 
 # P1A当前15模块覆盖与缺口；33组历史暂缓
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T02:44:14.280019+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T02:48:41.726545+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
@@ -65,7 +65,7 @@ P1A关闭 10/15（完整0，受限10）；P1B需求就绪 10/15（完整0，受�
 | M18 在线盘点 / BP-C | 受限完成（仅P1） | 需求就绪 | 受限评审通过（仅P1） | M18-P1-APPROVAL-20260910；四退出条件经逐项核对满足，仅P1受限关闭 |  |
 | M19 审批中心 / BP-I | 受限完成（仅P1） | 需求就绪 | 受限评审通过（仅P1） | M19-P1-APPROVAL-20260909批准所审fb35ba03dfd6563f59c814b52fa8a6fd125422bc推荐及限制；本模块P1无硬阻塞，受限关闭/需求就绪/模块转序就绪。 |  |
 | M26 360度评估 / BP-C | 受限完成（仅P1） | 需求就绪 | 受限评审通过（仅P1） | M26-P1-APPROVAL-20260910；四退出条件经逐项核对满足，仅P1受限关闭 |  |
-| M27 学习管理 / BP-L | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 源模式/阶段/成绩/审批/共享/档案/费用配置已有，现补版本根-实例-轮次-任务、内容预览/退休、门槛和不同成绩分母的结构化候选验收。原站合成链、自动循环/已完成学员更新/跨轮版本、共享角色/费用实测仍缺；P1A不完整、P1B未就绪。 |  |
+| M27 学习管理 / BP-L | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 完整范围材料已完成待评审；推荐/LIMIT未批准 | M27-SPEC-01；M27-SPEC-02；M27-SPEC-03；M27-SPEC-04；M27-SPEC-05；M27-SPEC-06；M27-LIMIT-01 |
 | M32 报表 / BP-I | 受限完成（仅P1） | 需求就绪 | 受限评审通过（仅P1） | M32-P1-APPROVAL-20260909批准c59d1c2653202dfbe2652f84bccfc8bdbc199d9c所审六项推荐及限制；M32无剩余P1硬阻塞，受限关闭并模块转序就绪 |  |
 | M37 人才标准 / BP-C | 受限完成（仅P1） | 需求就绪 | 受限评审通过（仅P1） | M37-P1-APPROVAL-R2-20260909；四退出条件满足，P1无剩余硬阻塞，原站未知保留受限分类 |  |
 | M48 员工自助 / BP-I | 受限完成（仅P1） | 需求就绪 | 受限评审通过（仅P1） | M48-P1-APPROVAL-20260909批准所审fb35ba03dfd6563f59c814b52fa8a6fd125422bc推荐及限制；本模块P1无硬阻塞，受限关闭/需求就绪/模块转序就绪。 |  |

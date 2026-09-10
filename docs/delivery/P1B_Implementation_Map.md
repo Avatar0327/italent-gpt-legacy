@@ -1,6 +1,6 @@
 # 已有实现与产品需求对应
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T02:44:14.280019+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T02:48:41.726545+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
@@ -68,6 +68,7 @@
 | BP-P-REQ-08 | 组织目标与组织绩效活动（独立于员工考核） | 保留；M16；原登记组织目标/组织绩效和OKR常规范围保持，不以当前员工绩效实现缩减。 | 原范围保留/独立模型需补齐；受限规格未就绪 | docs/P1_Source_Observations_20260907.md；lib/hris/performance.ts；lib/hris/module-progress.ts | 现有performance.ts核心对象基于employeeId，未读到独立组织计划/结果模型；组织绩效不可用员工样例代验收。需要活动/组织目标/计算/结果评审，属现15模块内部继续范围。 | 候选：同一活动参与组织数按稳定组织ID去重，不等员工人数；组织结果不得写入个人绩效作为本人考核，影响员工分布需有明确绑定和版本规则。字段/计算/权限未明确的分支不写默认通过。 |
 | BP-P-REQ-09 | OKR管理/设置与自助OKR | 保留；M16、M48；原登记组织目标/组织绩效和OKR常规范围保持，不以当前员工绩效实现缩减。 | 原范围保留/独立模型需补齐；受限规格未就绪 | lib/hris/module-progress.ts；app/hris.tsx；docs/delivery/Scope_Register.json | 当前适用批准：M48-P1-APPROVAL-20260909。对应模块所批规则不再待批；原站未知、实现差异和后续补验仍保留，不扩大到其他模块。以下为历史差异原文，其中待批措辞不代表当前硬阻塞：本轮在lib/hris/app静态搜索仅见模块导航/remaining中的完整OKR缺口，未确认独立对象和命令；原站页面当前连接不可用。提供受限规格及补证路径，不报需求就绪，也不静默删除OKR。 | 待字段及政策明确后，核同一目标/关键结果的稳定ID、历史进展可追溯、共享边界和对齐关系；当前不能把绩效goal的完成分数等同KR进度或自动计入绩效。 |
 | BP-S-REQ-12 | 社保、个税通与激励的模块内部范围（受限规格） | 保留；M07、BASE-06；M07内部常规社保/个税/激励仍承诺；外部真实申报/支付按用户界限，不恢复M33/M42。 | 人工金额载体可复用；独立模型/规则需补齐，受限未就绪 | lib/hris/payroll.ts；lib/hris/payroll-adjustments.ts；docs/delivery/Payroll_Source_Gaps.md；docs/P1_Source_Observations_20260907.md | 当前payroll.ts人工earning/deduction/employer可以承载经核定金额，但无独立社保/个税/激励业务模型与已核公式，需补齐。M33福利/M42佣金仍暂缓，不因“激励”相似名称合并或恢复完整模块。 | 就绪前须有适用政策/参数的授权来源、有效期/版本/金额精度、计算边界和合成样例预期；员工/单位承担不混算、同期间重复与更正可追溯、外部结果不明不算完成。未取得规则的数值场景明确受限，不能用人工工资项目数量证明完整社保或个税。 |
+| M27-REVIEW | 资源、问卷、计划、实施、考试、师资、报表 | 保留；M27、BASE-01、BASE-02、BASE-03、BASE-04、BASE-05、BASE-06；静态实现与需求建议映射；未执行/未批准 | 部分可复用，待修改/新增 | f39f667265a228202c5b63fa55ee00c60117e8f2；lib/hris/learning-assignments.ts,lib/hris/learning-plan-definitions.ts,lib/hris/learning-content-update.ts,lib/hris/learning-exam-definitions.ts,lib/hris/learning-homework.ts,lib/hris/training-sessions.ts,lib/hris/mentoring.ts,lib/hris/certificates.ts | 设计自动循环调度及cycleKey幂等、完成实例显式改版、完整题型/抽题/人工批阅、费用与课酬版本化、问卷隐私、学分事件账及跨模块有效性；保留隔离learning-description分支，不合并 | M27-REVIEW-AC01,M27-REVIEW-AC02,M27-REVIEW-AC03,M27-REVIEW-AC04,M27-REVIEW-AC05,M27-REVIEW-AC06,M27-REVIEW-AC07,M27-REVIEW-AC08,M27-REVIEW-AC09,M27-REVIEW-AC10,M27-REVIEW-AC11,M27-REVIEW-AC12 |
 
 ## 原48组实现候选与当前适用（历史资产保留）
 
