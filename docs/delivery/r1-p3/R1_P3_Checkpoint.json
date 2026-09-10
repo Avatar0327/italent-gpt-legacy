@@ -193,7 +193,8 @@
         "P3-XMOD-02"
       ],
       "evidence": [
-        "evidence/r1-p3-20260910T071309586525Z.json"
+        "evidence/r1-p3-20260910T071309586525Z.json",
+        "evidence/r1-p3-20260910T072924847968Z.json"
       ],
       "subworkCompleted": [
         "21数据集254字段运行时目录与源版本标识",
@@ -214,7 +215,7 @@
         "21数据集独立粒度oracle/跨生产者契约受限标识",
         "大分页EXPLAIN及M32场景最终追踪"
       ],
-      "implementationSha": "f6dbf2191a9647a78487d863442a17da60fad128"
+      "implementationSha": "1aafb5731aebbb74aaf95b669a07afab57b50354"
     },
     {
       "id": "P3-R1-07",
@@ -296,6 +297,6 @@
     }
   ],
   "currentTask": "P3-R1-06",
-  "lastVerifiedSourceSha": "f6dbf2191a9647a78487d863442a17da60fad128",
-  "latestRun": "evidence/r1-p3-20260910T071309586525Z.json"
+  "lastVerifiedSourceSha": "1aafb5731aebbb74aaf95b669a07afab57b50354",
+  "latestRun": "evidence/r1-p3-20260910T072924847968Z.json"
 }
