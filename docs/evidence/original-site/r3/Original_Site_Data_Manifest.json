@@ -74,14 +74,15 @@
       "object_type": "course",
       "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE02",
       "internal_id": "83f83fe6-b496-42dd-a530-219229d85989",
-      "state": "已发布（本次最后成功回读）",
+      "state": "已下架；显示；发布时间2026-09-10；本轮课件仍保留",
       "readback": "确认导入后课程列表逐条匹配本轮名称和部门，共9条新增",
       "visibility_input": "不共享; 不公开",
       "visibility_saved_readback": "发布前已确认不公开、不共享、游客关闭；发布确认消息通知开关关闭",
       "cleanup": "保留供本轮验证",
       "screenshot": "screenshots/M27_SMOKE02_private.jpg",
       "last_readback": "精确名称匹配行：文档/本轮组织/已发布/显示/2026-09-10",
-      "pending_action": "下架已打开确认；确认是及后续状态未取得成功证据，恢复先查询，不重复提交"
+      "pending_action": "下架已打开确认；确认是及后续状态未取得成功证据，恢复先查询，不重复提交",
+      "recovery_readback": "恢复后精确名称唯一行已下架，确认窗口0个。未再次下架或上传。"
     },
     {
       "module": "M27",
@@ -624,6 +625,14 @@
       "result": "verified_separate_readbacks",
       "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M11_SMOKE01",
       "notes": "无员工/排班引用，不证明有引用重算、历史排班或角色行为；未生成新对象。"
+    },
+    {
+      "id": "R3-OP-025",
+      "module": "M27",
+      "action": "恢复后精确回读课程下架状态",
+      "result": "confirmed_off_shelf",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE02",
+      "notes": "此前拒绝组合动作有部分执行可能；以本次状态回读为准。1分钟持久值尚未取得，编辑操作尚未进入可见内容页。"
     }
   ],
   "counts": {

@@ -55,8 +55,8 @@
       "id": "M27-RC-08",
       "module": "M27",
       "case": "下架/撤回发布",
-      "status": "ENV_BLOCKED",
-      "evidence": "只有确认窗；未取得最终成功回读"
+      "status": "VERIFIED",
+      "evidence": "M27-ORIGIN-019恢复精确回读已下架；没有再次提交"
     },
     {
       "id": "M27-RC-09",

@@ -597,18 +597,19 @@
     {
       "id": "M27-ORIGIN-019",
       "module": "M27",
-      "topic": "下架确认尚无完成证据",
-      "original_behavior": "只选择本轮SMOKE02，更多操作下架后出现是否要执行此操作确认；最终确认与经理清除组合操作被自动审批拒绝，未获得下架成功回读。保留最后确认状态已发布。",
+      "topic": "下架结果恢复回读确认",
+      "original_behavior": "恢复后SMOKE02精确名匹配唯一课程行，课程状态已下架、显示状态显示、发布时间2026-09-10，学习人数/评论/使用均0；下架确认已不存在。此前组合调用拒绝不代表所有动作未执行，本次以原站回读确认下架结果，不再重做。",
       "approved_requirement": "M27-SPEC-01",
-      "evidence_kind": "action_confirmation_observed_not_completed",
+      "evidence_kind": "post_recovery_exact_record_readback",
       "source_page": "课程管理 > SMOKE02 > 下架",
       "observed_at": "2026-09-10T13:49:30.184196+00:00",
       "time_precision": "recorded_after_observation",
-      "runtime_verified": false,
+      "runtime_verified": true,
       "source_ref": "Source_Observations.md#m27-origin-019",
       "design_sha": null,
       "implementation_tested": false,
-      "p4_accepted": false
+      "p4_accepted": false,
+      "updated_at": "2026-09-10T14:21:42.644508+00:00"
     },
     {
       "id": "BASE-ORIGIN-002",

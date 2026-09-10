@@ -115,7 +115,7 @@
       "severity": "Minor",
       "module": "M27",
       "title": "允许空内容课程草稿",
-      "source_evidence": "M27-ORIGIN-009;013;018",
+      "source_evidence": "M27-ORIGIN-009;013;018;M27-ORIGIN-019",
       "approved_requirement": "M27-SPEC-01",
       "design_sha": null,
       "implementation_sha": null,
@@ -126,7 +126,8 @@
       "target_phase": "P2设计冻结前",
       "proposal": "区分草稿保存与发布校验。空草稿允许保存、空章节拒绝发布、有本轮文档后私有课程可发布均有原站证据。",
       "decision": null,
-      "p4_evidence": null
+      "p4_evidence": null,
+      "latest_evidence": "空稿/空内容拒绝、含PDF关闭通知私有发布、下架状态均有证据；失效不是已验证的同义状态。"
     },
     {
       "id": "R3-DIFF-008",
