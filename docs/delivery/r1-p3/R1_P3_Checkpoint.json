@@ -70,7 +70,9 @@
         "P3-M19-06",
         "P3-M19-07"
       ],
-      "evidence": [],
+      "evidence": [
+        "evidence/r1-p3-20260910T055326431928Z.json"
+      ],
       "subworkCompleted": [
         "流程schema与不可变模板/决定/管理事件",
         "模板图与路由类型校验、实例冻结、节点CAS、事务取消",
@@ -82,7 +84,8 @@
         "列表/详情/审批UI",
         "通知持久投递关联04",
         "完整七项用例与需求追踪"
-      ]
+      ],
+      "implementationSha": "9d592d7950153ee056761c0a015b1a4acd42893b"
     },
     {
       "id": "P3-R1-04",
@@ -226,6 +229,6 @@
     }
   ],
   "currentTask": "P3-R1-03",
-  "lastVerifiedSourceSha": "9d295e4623e79c6a578875eda4a1090e2a515906",
-  "latestRun": "evidence/r1-p3-20260910T053805670409Z.json"
+  "lastVerifiedSourceSha": "9d592d7950153ee056761c0a015b1a4acd42893b",
+  "latestRun": "evidence/r1-p3-20260910T055326431928Z.json"
 }
