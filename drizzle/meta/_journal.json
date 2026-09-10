@@ -176,6 +176,20 @@
       "when": 1789022521991,
       "tag": "0024_r1_report_subscriptions",
       "breakpoints": true
+    },
+    {
+      "idx": 25,
+      "version": "6",
+      "when": 1789022521992,
+      "tag": "0025_r1_migration_control",
+      "breakpoints": true
+    },
+    {
+      "idx": 26,
+      "version": "6",
+      "when": 1789022521993,
+      "tag": "0026_r1_expansion_recovery_log",
+      "breakpoints": true
     }
   ]
 }
