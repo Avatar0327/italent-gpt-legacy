@@ -9,6 +9,264 @@
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",
   "cases": [
     {
+      "caseId": "M01-JOB-001",
+      "module": "M01",
+      "title": "职位正式新增与UUID",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T12:02:19.506Z",
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "职位正式新增与UUID",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "steps": [
+        "正式页面输入并回读",
+        "必要校验或保存",
+        "唯一名称或详情只读确认"
+      ],
+      "inputs": {
+        "evidenceDetails": "M01-continuation-smoke.json"
+      },
+      "actualResult": "ORG_002下保存JOB_001，列表精确重读1条，在岗0兼职0",
+      "pageState": "persisted_or_validation_observed",
+      "recordIds": [
+        "81fde82c-3807-4e73-be33-46a9321f87fb"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-continuation-smoke.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "局部截图超时不阻塞；本条采用结构化DOM/字段值/ID",
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-07",
+        "F-SPEC-08"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "path": "lib/hris/r1-m01.ts",
+        "cases": [
+          "P3-M01"
+        ],
+        "evidenceMode": "静态源码对照；未复刻UI实测或本窗口重跑"
+      },
+      "classification": null,
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M01-JOB-002",
+      "module": "M01",
+      "title": "职位第二组织新增与必填拒绝",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T12:05:36.062Z",
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "职位第二组织新增与必填拒绝",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "steps": [
+        "正式页面输入并回读",
+        "必要校验或保存",
+        "唯一名称或详情只读确认"
+      ],
+      "inputs": {
+        "evidenceDetails": "M01-JOB-002.json"
+      },
+      "actualResult": "空名称/所属组织提交被必填拒绝；补齐ORG_003及JOB_002后保存并精确回读",
+      "pageState": "persisted_or_validation_observed",
+      "recordIds": [
+        "9e593b4e-938e-4312-aff9-460c3c4d80f0"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-JOB-002.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "局部截图超时不阻塞；本条采用结构化DOM/字段值/ID",
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-07",
+        "F-SPEC-08"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "path": "lib/hris/r1-m01.ts",
+        "cases": [
+          "P3-M01"
+        ],
+        "evidenceMode": "静态源码对照；未复刻UI实测或本窗口重跑"
+      },
+      "classification": null,
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M01-EMP-001",
+      "module": "M01",
+      "title": "员工正式新增及邮箱必填",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T12:15:13.521Z",
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "员工正式新增及邮箱必填",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "steps": [
+        "正式页面输入并回读",
+        "必要校验或保存",
+        "唯一名称或详情只读确认"
+      ],
+      "inputs": {
+        "evidenceDetails": "M01-EMP-001.json"
+      },
+      "actualResult": "草稿去除默认既有经理/公司，邀请否、身份证号/手机空，邮箱必填拒绝后补虚构邮箱保存，在职列表唯一结果",
+      "pageState": "persisted_or_validation_observed",
+      "recordIds": [
+        "927ef593-f930-4bcb-963f-e463df2e9e84"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-EMP-001.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "局部截图超时不阻塞；本条采用结构化DOM/字段值/ID",
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-07",
+        "F-SPEC-08"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "path": "lib/hris/r1-m01.ts",
+        "cases": [
+          "P3-M01"
+        ],
+        "evidenceMode": "静态源码对照；未复刻UI实测或本窗口重跑"
+      },
+      "classification": null,
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M01-EMP-001-ASSIGNMENT",
+      "module": "M01",
+      "title": "主职及入职历史",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T12:16:47.235Z",
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "主职及入职历史",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "steps": [
+        "正式页面输入并回读",
+        "必要校验或保存",
+        "唯一名称或详情只读确认"
+      ],
+      "inputs": {
+        "evidenceDetails": "M01-EMP-001-assignment.json"
+      },
+      "actualResult": "正式/主职/生效中；入职-新增入职；今日开始，经理为空",
+      "pageState": "persisted_or_validation_observed",
+      "recordIds": [
+        "927ef593-f930-4bcb-963f-e463df2e9e84"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-EMP-001-assignment.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "局部截图超时不阻塞；本条采用结构化DOM/字段值/ID",
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-07",
+        "F-SPEC-08"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "path": "lib/hris/r1-m01.ts",
+        "cases": [
+          "P3-M01"
+        ],
+        "evidenceMode": "静态源码对照；未复刻UI实测或本窗口重跑"
+      },
+      "classification": null,
+      "severity": "Observation"
+    },
+    {
+      "caseId": "M01-TRANSFER-001",
+      "module": "M01",
+      "title": "管理员直接调动立即生效",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-10T12:24:02.110Z",
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "管理员直接调动立即生效",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "steps": [
+        "正式页面输入并回读",
+        "必要校验或保存",
+        "唯一名称或详情只读确认"
+      ],
+      "inputs": {
+        "evidenceDetails": "M01-TRANSFER-001.json"
+      },
+      "actualResult": "ORG_002/JOB_001至ORG_003/JOB_002今日直接调动保存生效，原入职历史保留；本次UI未两级审批/单独HR执行",
+      "pageState": "persisted_or_validation_observed",
+      "recordIds": [
+        "7b820015-586c-48a4-9496-64f2c4e1ffad"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-TRANSFER-001.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "局部截图超时不阻塞；本条采用结构化DOM/字段值/ID",
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "D1",
+        "D3",
+        "D4",
+        "D7",
+        "F-SPEC-03",
+        "F-SPEC-05"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02",
+        "path": "lib/hris/r1-m01.ts",
+        "cases": [
+          "P3-M01"
+        ],
+        "evidenceMode": "静态源码对照；未复刻UI实测或本窗口重跑"
+      },
+      "classification": "NEED_OWNER_DECISION",
+      "severity": "Major"
+    },
+    {
       "caseId": "M01-ORG-001",
       "module": "M01",
       "title": "合成组织保存及完整名称重读",

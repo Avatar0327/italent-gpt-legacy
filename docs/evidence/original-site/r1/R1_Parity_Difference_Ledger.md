@@ -1,5 +1,9 @@
 # R1三方差异与证据限制台账
 
+## 同RUN续跑增量（优先于下方首轮历史）
+
+DIFF-MAJOR-001：Major / NEED_OWNER_DECISION，原站管理员详情直接调动即生效；详见ALERT-MAJOR-001.md。P3仍遵守D1–D7，不计IMPLEMENTATION_DEFECT。现累计Major 1、Observation 8、Blocker/Minor 0；窄项MATCH仍1，完整模块0/4。ENV-02/03仅局部限制，正式页面继续。原站他人调动申请页延迟后已加载，不能将此前空白记为权限拒绝。
+
 按唯一台账ID计数，ENV_BLOCKED/ROLE_BLOCKED仅计open；历史ENV-01已恢复另列。Observation为本轮8条登记（含1条已恢复环境记录）；4条纯观察未做确定差异分类。MATCH为矩阵一个窄项规则，不与3条组织重复计数。
 
 已确认产品Blocker/Major/Minor均0；不代表未测范围没有缺陷。无已确认需求遗漏、设计遗漏、实现缺陷或需所有者变更决定。

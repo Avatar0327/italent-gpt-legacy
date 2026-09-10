@@ -2,7 +2,10 @@
   "runId": "R1-ORIGIN-20260910-100019",
   "origin": "https://srworkshopbj.italent.cn",
   "concurrency": "passed_scoped_to_own_two_tabs_and_draft",
-  "createdRecords": 3,
+  "createdRecords": 6,
+  "createdRecordsDefinition": "3组织+2职位+1员工；自动任职记录另列，不作为额外员工",
+  "smokeNamedObjectsThresholdReached": true,
+  "continuationInProgress": true,
   "bulkImportedRows": 0,
   "modules": [
     {
@@ -55,7 +58,7 @@
   "matchRules": 1,
   "severities": {
     "Blocker": 0,
-    "Major": 0,
+    "Major": 1,
     "Minor": 0,
     "Observation": 8
   },

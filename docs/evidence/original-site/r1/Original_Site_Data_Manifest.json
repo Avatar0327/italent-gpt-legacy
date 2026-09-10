@@ -5,6 +5,54 @@
     {
       "runId": "R1-ORIGIN-20260910-100019",
       "module": "M01",
+      "caseId": "M01-EMP-001",
+      "objectType": "employee",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001",
+      "originRecordId": "927ef593-f930-4bcb-963f-e463df2e9e84",
+      "createdAt": null,
+      "createdAtBasis": "服务端审计尚待读取；在职员工列表唯一结果已证",
+      "verifiedAt": "2026-09-10T12:15:13.521Z",
+      "status": "active_list_verified",
+      "relatedRecords": ["db7df096-624b-4d1e-ab4e-0552a56f052c", "81fde82c-3807-4e73-be33-46a9321f87fb"],
+      "allowLaterDelete": true,
+      "deletionGate": "唯一UUID+命名空间；有业务历史应保留归档，不级联删除；不得影响非本轮关联",
+      "evidence": ["R1-ORIGIN-20260910-100019/M01/M01-EMP-001.json"]
+    },
+    {
+      "runId": "R1-ORIGIN-20260910-100019",
+      "module": "M01",
+      "caseId": "M01-JOB-002",
+      "objectType": "position",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_002",
+      "originRecordId": "9e593b4e-938e-4312-aff9-460c3c4d80f0",
+      "createdAt": null,
+      "createdAtBasis": "服务端审计尚待读取",
+      "verifiedAt": "2026-09-10T12:05:36.062Z",
+      "status": "enabled_query_verified",
+      "relatedRecords": ["a7b55bd7-0ef2-44a0-9d29-6259fe053da3"],
+      "allowLaterDelete": true,
+      "deletionGate": "UUID+完整名称核定，无非本轮依赖时才清理",
+      "evidence": ["R1-ORIGIN-20260910-100019/M01/M01-JOB-002.json"]
+    },
+    {
+      "runId": "R1-ORIGIN-20260910-100019",
+      "module": "M01",
+      "caseId": "M01-JOB-001",
+      "objectType": "position",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001",
+      "originRecordId": "81fde82c-3807-4e73-be33-46a9321f87fb",
+      "createdAt": null,
+      "createdAtBasis": "服务端审计尚待读取；不得以浏览器时间代替",
+      "verifiedAt": "2026-09-10T12:02:19.506Z",
+      "status": "enabled_query_verified",
+      "relatedRecords": ["db7df096-624b-4d1e-ab4e-0552a56f052c"],
+      "allowLaterDelete": true,
+      "deletionGate": "UUID+完整名称核定，只在无非本轮依赖时清理",
+      "evidence": ["R1-ORIGIN-20260910-100019/M01/M01-continuation-smoke.json"]
+    },
+    {
+      "runId": "R1-ORIGIN-20260910-100019",
+      "module": "M01",
       "caseId": "M01-ORG-001",
       "objectType": "organization",
       "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001",
@@ -59,7 +107,7 @@
       ]
     }
   ],
-  "createdCount": 3,
+  "createdCount": 6,
   "cleanup": [
     {
       "originRecordId": "d1d541ab-92f9-4fce-80c6-aa5687433175",
@@ -105,8 +153,8 @@
     }
   ],
   "successMessagePendingIdCount": 0,
-  "writesSuspendedReason": "ENV-03: official template blocked by Chromium",
-  "retainedCount": 3,
+  "writesSuspendedReason": null,
+  "retainedCount": 6,
   "deletedCount": 0,
   "drafts": {
     "unsubmittedFormsRemaining": 0,

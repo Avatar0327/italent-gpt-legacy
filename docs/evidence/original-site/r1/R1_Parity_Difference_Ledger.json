@@ -2,6 +2,40 @@
   "runId": "R1-ORIGIN-20260910-100019",
   "entries": [
     {
+      "id": "DIFF-MAJOR-001",
+      "classification": "NEED_OWNER_DECISION",
+      "status": "open",
+      "severity": "Major",
+      "title": "原站管理员直接调动保存即生效",
+      "actual": "本轮EMP_001详情调动保存后主职直接改到ORG_003/JOB_002，显示生效中；本次UI未经过两级审批或单独执行。原站他人调动申请为不同入口，尚未成功打开。",
+      "conclusion": "批准的D1–D7保持；请所有者明确原站直接办理入口与项目目标的有意差异，不判P3代码缺陷。",
+      "modules": [
+        "M01",
+        "M19"
+      ],
+      "requirements": [
+        "D1",
+        "D3",
+        "D4",
+        "D7",
+        "F-SPEC-03",
+        "F-SPEC-05"
+      ],
+      "p3Tasks": [
+        "P3-R1-02",
+        "P3-R1-03",
+        "P3-R1-05"
+      ],
+      "feedback": "P2/所有者差异判定；P3继续批准规则；P4双入口及角色对照",
+      "evidence": [
+        "ALERT-MAJOR-001.md",
+        "R1-ORIGIN-20260910-100019/M01/M01-TRANSFER-001.json"
+      ],
+      "runId": "R1-ORIGIN-20260910-100019",
+      "productDefectConfirmed": false,
+      "ownerDecisionRequired": true
+    },
+    {
       "id": "ENV-01",
       "classification": "ENV_BLOCKED",
       "status": "resolved",
@@ -71,7 +105,7 @@
       "status": "open",
       "title": "正式组织模板下载被Chromium阻止",
       "actual": "组织→更多操作→导入组织→下载模板；等待download超时，iframe显示This page has been blocked by Chromium，无文件路径。",
-      "conclusion": "已停止后续原站写入和扩量；不绕过平台限制，不猜模板，不调用隐藏接口。三条已创建组织保留；5–10条门槛未达到。",
+      "conclusion": "首轮曾停止；用户续跑明确降为正式模板导入局部限制。人工正式页面继续，已6个命名对象。禁止绕过安全限制、猜模板或隐藏接口。",
       "modules": [
         "M01",
         "M19",
@@ -258,11 +292,11 @@
     "INTENTIONAL_DIFFERENCE": 0,
     "ROLE_BLOCKED": 1,
     "ENV_BLOCKED": 2,
-    "NEED_OWNER_DECISION": 0,
+    "NEED_OWNER_DECISION": 1,
     "resolved_ENV_BLOCKED": 1,
     "observationsWithoutClassification": 4,
     "Blocker": 0,
-    "Major": 0,
+    "Major": 1,
     "Minor": 0,
     "Observation": 8
   },
