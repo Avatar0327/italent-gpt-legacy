@@ -1,0 +1,1836 @@
+{
+  "kind": "P2_document_fixtures_not_product_execution",
+  "fixture": {
+    "internalVersions": [
+      {
+        "kind": "internal",
+        "producer": "M37",
+        "objectType": "indicator",
+        "rootId": "I1",
+        "versionId": "I1-v1",
+        "sourceRevision": 1,
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment"
+      },
+      {
+        "kind": "internal",
+        "producer": "COMMON",
+        "objectType": "trust_contract",
+        "rootId": "TC1",
+        "versionId": "TC1-v1",
+        "sourceRevision": 1,
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment"
+      },
+      {
+        "kind": "internal",
+        "producer": "M26",
+        "objectType": "question",
+        "rootId": "Q1",
+        "versionId": "Q1-v1",
+        "sourceRevision": 1,
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment"
+      },
+      {
+        "kind": "internal",
+        "producer": "M37",
+        "objectType": "scale",
+        "rootId": "S1",
+        "versionId": "S1-v1",
+        "sourceRevision": 1,
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment"
+      },
+      {
+        "kind": "internal",
+        "producer": "M26",
+        "objectType": "role_definition",
+        "rootId": "PEER",
+        "versionId": "PEER-v1",
+        "sourceRevision": 1,
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment"
+      },
+      {
+        "kind": "internal",
+        "producer": "M37",
+        "objectType": "standard_dimension",
+        "rootId": "DIM1",
+        "versionId": "DIM1-v1",
+        "sourceRevision": 1,
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment"
+      },
+      {
+        "kind": "internal",
+        "producer": "M37",
+        "objectType": "talent_standard",
+        "rootId": "STD1",
+        "versionId": "STD1-v1",
+        "sourceRevision": 1,
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment"
+      },
+      {
+        "kind": "internal",
+        "producer": "M26",
+        "objectType": "aggregation_policy",
+        "rootId": "AG1",
+        "versionId": "AG1-v1",
+        "sourceRevision": 1,
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment"
+      },
+      {
+        "kind": "internal",
+        "producer": "M18",
+        "objectType": "scenario",
+        "rootId": "SC1",
+        "versionId": "SC1-v1",
+        "sourceRevision": 1,
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment"
+      },
+      {
+        "kind": "internal",
+        "producer": "M18",
+        "objectType": "category",
+        "rootId": "CA1",
+        "versionId": "CA1-v1",
+        "sourceRevision": 1,
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment"
+      },
+      {
+        "kind": "internal",
+        "producer": "M18",
+        "objectType": "tool_contract",
+        "rootId": "TOOL1",
+        "versionId": "TOOL1-v1",
+        "sourceRevision": 1,
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment"
+      },
+      {
+        "kind": "internal",
+        "producer": "M18",
+        "objectType": "template",
+        "rootId": "T1",
+        "versionId": "T1-v1",
+        "sourceRevision": 1,
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment"
+      },
+      {
+        "kind": "internal",
+        "producer": "M19",
+        "objectType": "workflow",
+        "rootId": "WF1",
+        "versionId": "WF1-v1",
+        "sourceRevision": 1,
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment"
+      },
+      {
+        "kind": "internal",
+        "producer": "M18",
+        "objectType": "scheme",
+        "rootId": "SCH1",
+        "versionId": "SCH1-v1",
+        "sourceRevision": 1,
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment"
+      },
+      {
+        "kind": "internal",
+        "producer": "M18",
+        "objectType": "published_result",
+        "rootId": "RESULT1",
+        "versionId": "RESULT1-v1",
+        "sourceRevision": 1,
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "historical_reference_only"
+      },
+      {
+        "kind": "internal",
+        "producer": "M06",
+        "objectType": "rating_scheme",
+        "rootId": "RS1",
+        "versionId": "RS1-v1",
+        "sourceRevision": 1,
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment"
+      }
+    ],
+    "externalCaptures": [
+      {
+        "kind": "external",
+        "sourceNamespace": "synthetic-achievement",
+        "externalId": "EXT1",
+        "objectType": "achievement",
+        "externalVersion": "capture1",
+        "asOf": "2026-09-01T00:00:00Z",
+        "digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment",
+        "trustContractVersionRef": {
+          "kind": "internal",
+          "producer": "COMMON",
+          "objectType": "trust_contract",
+          "rootId": "TC1",
+          "versionId": "TC1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        }
+      }
+    ],
+    "ratingSchemeLevels": {
+      "RS1-v1": [
+        "RL1"
+      ]
+    },
+    "dimensionMembers": {
+      "DIM1-v1": {
+        "standardVersionId": "STD1-v1",
+        "indicatorVersionIds": [
+          "I1-v1"
+        ]
+      }
+    },
+    "historicalResults": {
+      "RESULT1-v1": {
+        "projectRootId": "OLD-PROJECT",
+        "periodEnd": "2026-07-01",
+        "publishedAt": "2026-07-31T00:00:00Z",
+        "personIds": [
+          "E1"
+        ]
+      }
+    },
+    "currentProjectRootId": "NEW-PROJECT",
+    "serverNow": "2026-09-10T00:00:00Z"
+  },
+  "cases": [
+    {
+      "id": "REF-IN-VALID",
+      "group": "VersionRef",
+      "schema": "VersionRef",
+      "instance": {
+        "kind": "internal",
+        "producer": "M37",
+        "objectType": "indicator",
+        "rootId": "I1",
+        "versionId": "I1-v1",
+        "sourceRevision": 1,
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment"
+      },
+      "expected": "accept",
+      "expectedReason": "strict fields and exact fixture version",
+      "semanticGuard": "references"
+    },
+    {
+      "id": "REF-IN-EXTRA",
+      "group": "VersionRef",
+      "schema": "VersionRef",
+      "instance": {
+        "kind": "internal",
+        "producer": "M37",
+        "objectType": "indicator",
+        "rootId": "I1",
+        "versionId": "I1-v1",
+        "sourceRevision": 1,
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment",
+        "unapprovedField": "x"
+      },
+      "expected": "reject",
+      "expectedReason": "unknown field",
+      "semanticGuard": "references"
+    },
+    {
+      "id": "REF-IN-VERSION",
+      "group": "VersionRef",
+      "schema": "VersionRef",
+      "instance": {
+        "kind": "internal",
+        "producer": "M37",
+        "objectType": "indicator",
+        "rootId": "I1",
+        "versionId": "wrong-version",
+        "sourceRevision": 1,
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment"
+      },
+      "expected": "reject",
+      "expectedReason": "wrong version or scheme membership",
+      "semanticGuard": "references"
+    },
+    {
+      "id": "REF-IN-SOURCE",
+      "group": "VersionRef",
+      "schema": "VersionRef",
+      "instance": {
+        "kind": "internal",
+        "producer": "M03",
+        "objectType": "indicator",
+        "rootId": "I1",
+        "versionId": "I1-v1",
+        "sourceRevision": 1,
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment"
+      },
+      "expected": "reject",
+      "expectedReason": "wrong source/type/role membership",
+      "semanticGuard": "references"
+    },
+    {
+      "id": "REF-EXT-VALID",
+      "group": "VersionRef",
+      "schema": "VersionRef",
+      "instance": {
+        "kind": "external",
+        "sourceNamespace": "synthetic-achievement",
+        "externalId": "EXT1",
+        "objectType": "achievement",
+        "externalVersion": "capture1",
+        "asOf": "2026-09-01T00:00:00Z",
+        "digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment",
+        "trustContractVersionRef": {
+          "kind": "internal",
+          "producer": "COMMON",
+          "objectType": "trust_contract",
+          "rootId": "TC1",
+          "versionId": "TC1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        }
+      },
+      "expected": "accept",
+      "expectedReason": "strict fields and exact fixture version",
+      "semanticGuard": "references"
+    },
+    {
+      "id": "REF-EXT-EXTRA",
+      "group": "VersionRef",
+      "schema": "VersionRef",
+      "instance": {
+        "kind": "external",
+        "sourceNamespace": "synthetic-achievement",
+        "externalId": "EXT1",
+        "objectType": "achievement",
+        "externalVersion": "capture1",
+        "asOf": "2026-09-01T00:00:00Z",
+        "digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment",
+        "trustContractVersionRef": {
+          "kind": "internal",
+          "producer": "COMMON",
+          "objectType": "trust_contract",
+          "rootId": "TC1",
+          "versionId": "TC1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "unapprovedField": "x"
+      },
+      "expected": "reject",
+      "expectedReason": "unknown field",
+      "semanticGuard": "references"
+    },
+    {
+      "id": "REF-EXT-VERSION",
+      "group": "VersionRef",
+      "schema": "VersionRef",
+      "instance": {
+        "kind": "external",
+        "sourceNamespace": "synthetic-achievement",
+        "externalId": "EXT1",
+        "objectType": "achievement",
+        "externalVersion": "wrong-version",
+        "asOf": "2026-09-01T00:00:00Z",
+        "digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment",
+        "trustContractVersionRef": {
+          "kind": "internal",
+          "producer": "COMMON",
+          "objectType": "trust_contract",
+          "rootId": "TC1",
+          "versionId": "TC1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        }
+      },
+      "expected": "reject",
+      "expectedReason": "wrong version or scheme membership",
+      "semanticGuard": "references"
+    },
+    {
+      "id": "REF-EXT-SOURCE",
+      "group": "VersionRef",
+      "schema": "VersionRef",
+      "instance": {
+        "kind": "external",
+        "sourceNamespace": "untrusted-source",
+        "externalId": "EXT1",
+        "objectType": "achievement",
+        "externalVersion": "capture1",
+        "asOf": "2026-09-01T00:00:00Z",
+        "digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment",
+        "trustContractVersionRef": {
+          "kind": "internal",
+          "producer": "COMMON",
+          "objectType": "trust_contract",
+          "rootId": "TC1",
+          "versionId": "TC1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        }
+      },
+      "expected": "reject",
+      "expectedReason": "wrong source/type/role membership",
+      "semanticGuard": "references"
+    },
+    {
+      "id": "LEVEL-VALID",
+      "group": "IndicatorChild",
+      "schema": "IndicatorChild",
+      "instance": {
+        "childId": null,
+        "childVersionId": null,
+        "indicatorVersionRef": null,
+        "subset": "level",
+        "subsetName": "能力等级",
+        "sort": 1,
+        "description": "一级说明",
+        "levelId": null,
+        "levelVersionRef": null,
+        "alias": "L1",
+        "elementText": "能完成基础任务"
+      },
+      "expected": "accept",
+      "expectedReason": "strict fields and exact fixture version",
+      "semanticGuard": "new_indicator"
+    },
+    {
+      "id": "LEVEL-EXTRA",
+      "group": "IndicatorChild",
+      "schema": "IndicatorChild",
+      "instance": {
+        "childId": null,
+        "childVersionId": null,
+        "indicatorVersionRef": null,
+        "subset": "level",
+        "subsetName": "能力等级",
+        "sort": 1,
+        "description": "一级说明",
+        "levelId": null,
+        "levelVersionRef": null,
+        "alias": "L1",
+        "elementText": "能完成基础任务",
+        "unapprovedField": "x"
+      },
+      "expected": "reject",
+      "expectedReason": "unknown field",
+      "semanticGuard": "new_indicator"
+    },
+    {
+      "id": "LEVEL-VERSION",
+      "group": "IndicatorChild",
+      "schema": "IndicatorChild",
+      "instance": {
+        "childId": null,
+        "childVersionId": null,
+        "indicatorVersionRef": {
+          "kind": "internal",
+          "producer": "M37",
+          "objectType": "indicator",
+          "rootId": "I1",
+          "versionId": "wrong-version",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "subset": "level",
+        "subsetName": "能力等级",
+        "sort": 1,
+        "description": "一级说明",
+        "levelId": null,
+        "levelVersionRef": null,
+        "alias": "L1",
+        "elementText": "能完成基础任务"
+      },
+      "expected": "reject",
+      "expectedReason": "wrong version or scheme membership",
+      "semanticGuard": "new_indicator"
+    },
+    {
+      "id": "LEVEL-SOURCE",
+      "group": "IndicatorChild",
+      "schema": "IndicatorChild",
+      "instance": {
+        "childId": null,
+        "childVersionId": null,
+        "indicatorVersionRef": {
+          "kind": "internal",
+          "producer": "M06",
+          "objectType": "indicator",
+          "rootId": "I1",
+          "versionId": "I1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "subset": "level",
+        "subsetName": "能力等级",
+        "sort": 1,
+        "description": "一级说明",
+        "levelId": null,
+        "levelVersionRef": null,
+        "alias": "L1",
+        "elementText": "能完成基础任务"
+      },
+      "expected": "reject",
+      "expectedReason": "wrong source/type/role membership",
+      "semanticGuard": "new_indicator"
+    },
+    {
+      "id": "TYPE-VALID",
+      "group": "CatalogDraft",
+      "schema": "CatalogDraft",
+      "instance": {
+        "kind": "indicator_type",
+        "code": "ABILITY",
+        "name": "能力评分",
+        "parentId": null,
+        "sort": 1,
+        "targetKind": null,
+        "targetId": null,
+        "isCommon": true,
+        "descriptionRows": [
+          {
+            "rowId": null,
+            "sort": 1,
+            "text": "按能力证据评分"
+          }
+        ],
+        "evaluationMode": "numeric",
+        "numericScale": {
+          "min": "0",
+          "max": "10",
+          "step": "0.5",
+          "precision": 1,
+          "unit": "point",
+          "direction": "higher"
+        },
+        "ratingSelection": null
+      },
+      "expected": "accept",
+      "expectedReason": "strict fields and exact fixture version",
+      "semanticGuard": "catalog"
+    },
+    {
+      "id": "TYPE-EXTRA",
+      "group": "CatalogDraft",
+      "schema": "CatalogDraft",
+      "instance": {
+        "kind": "indicator_type",
+        "code": "ABILITY",
+        "name": "能力评分",
+        "parentId": null,
+        "sort": 1,
+        "targetKind": null,
+        "targetId": null,
+        "isCommon": true,
+        "descriptionRows": [
+          {
+            "rowId": null,
+            "sort": 1,
+            "text": "按能力证据评分"
+          }
+        ],
+        "evaluationMode": "numeric",
+        "numericScale": {
+          "min": "0",
+          "max": "10",
+          "step": "0.5",
+          "precision": 1,
+          "unit": "point",
+          "direction": "higher"
+        },
+        "ratingSelection": null,
+        "unapprovedField": "x"
+      },
+      "expected": "reject",
+      "expectedReason": "unknown field",
+      "semanticGuard": "catalog"
+    },
+    {
+      "id": "TYPE-VERSION",
+      "group": "CatalogDraft",
+      "schema": "CatalogDraft",
+      "instance": {
+        "kind": "indicator_type",
+        "code": "ABILITY",
+        "name": "能力评分",
+        "parentId": null,
+        "sort": 1,
+        "targetKind": null,
+        "targetId": null,
+        "isCommon": true,
+        "descriptionRows": [
+          {
+            "rowId": null,
+            "sort": 1,
+            "text": "按能力证据评分"
+          }
+        ],
+        "evaluationMode": "rating",
+        "numericScale": null,
+        "ratingSelection": {
+          "ratingSchemeVersionRef": {
+            "kind": "internal",
+            "producer": "M06",
+            "objectType": "rating_scheme",
+            "rootId": "RS1",
+            "versionId": "RS1-v1",
+            "sourceRevision": 1,
+            "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "capturedAt": "2026-09-10T00:00:00Z",
+            "purpose": "assessment"
+          },
+          "levelIds": [
+            "qualification-level-not-rating"
+          ]
+        }
+      },
+      "expected": "reject",
+      "expectedReason": "wrong version or scheme membership",
+      "semanticGuard": "catalog"
+    },
+    {
+      "id": "TYPE-SOURCE",
+      "group": "CatalogDraft",
+      "schema": "CatalogDraft",
+      "instance": {
+        "kind": "indicator_type",
+        "code": "ABILITY",
+        "name": "能力评分",
+        "parentId": null,
+        "sort": 1,
+        "targetKind": null,
+        "targetId": null,
+        "isCommon": true,
+        "descriptionRows": [
+          {
+            "rowId": null,
+            "sort": 1,
+            "text": "按能力证据评分"
+          }
+        ],
+        "evaluationMode": "rating",
+        "numericScale": null,
+        "ratingSelection": {
+          "ratingSchemeVersionRef": {
+            "kind": "internal",
+            "producer": "M06",
+            "objectType": "qualification_level",
+            "rootId": "QL1",
+            "versionId": "QL1-v1",
+            "sourceRevision": 1,
+            "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "capturedAt": "2026-09-10T00:00:00Z",
+            "purpose": "assessment"
+          },
+          "levelIds": [
+            "L1"
+          ]
+        }
+      },
+      "expected": "reject",
+      "expectedReason": "wrong source/type/role membership",
+      "semanticGuard": "catalog"
+    },
+    {
+      "id": "QUESTION-VALID",
+      "group": "QuestionnaireDraft",
+      "schema": "QuestionnaireDraft",
+      "instance": {
+        "name": "协作问卷",
+        "questions": [
+          {
+            "questionVersionRef": {
+              "kind": "internal",
+              "producer": "M26",
+              "objectType": "question",
+              "rootId": "Q1",
+              "versionId": "Q1-v1",
+              "sourceRevision": 1,
+              "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "capturedAt": "2026-09-10T00:00:00Z",
+              "purpose": "assessment"
+            },
+            "type": "rating",
+            "title": "协作表现",
+            "required": true,
+            "allowSkip": false,
+            "allowNA": false,
+            "scaleVersionRef": {
+              "kind": "internal",
+              "producer": "M37",
+              "objectType": "scale",
+              "rootId": "S1",
+              "versionId": "S1-v1",
+              "sourceRevision": 1,
+              "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "capturedAt": "2026-09-10T00:00:00Z",
+              "purpose": "assessment"
+            },
+            "roleApplicability": {
+              "roleVersionRefs": [
+                {
+                  "kind": "internal",
+                  "producer": "M26",
+                  "objectType": "role_definition",
+                  "rootId": "PEER",
+                  "versionId": "PEER-v1",
+                  "sourceRevision": 1,
+                  "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "capturedAt": "2026-09-10T00:00:00Z",
+                  "purpose": "assessment"
+                }
+              ],
+              "scope": "listed_roles_only"
+            },
+            "dimension": {
+              "kind": "internal",
+              "producer": "M37",
+              "objectType": "standard_dimension",
+              "rootId": "DIM1",
+              "versionId": "DIM1-v1",
+              "sourceRevision": 1,
+              "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "capturedAt": "2026-09-10T00:00:00Z",
+              "purpose": "assessment"
+            },
+            "indicatorVersionRefs": [
+              {
+                "kind": "internal",
+                "producer": "M37",
+                "objectType": "indicator",
+                "rootId": "I1",
+                "versionId": "I1-v1",
+                "sourceRevision": 1,
+                "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "capturedAt": "2026-09-10T00:00:00Z",
+                "purpose": "assessment"
+              }
+            ],
+            "visibility": {
+              "kind": "always"
+            }
+          }
+        ],
+        "roleVersionRefs": [
+          {
+            "kind": "internal",
+            "producer": "M26",
+            "objectType": "role_definition",
+            "rootId": "PEER",
+            "versionId": "PEER-v1",
+            "sourceRevision": 1,
+            "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "capturedAt": "2026-09-10T00:00:00Z",
+            "purpose": "assessment"
+          }
+        ],
+        "standardVersionRefs": [
+          {
+            "kind": "internal",
+            "producer": "M37",
+            "objectType": "talent_standard",
+            "rootId": "STD1",
+            "versionId": "STD1-v1",
+            "sourceRevision": 1,
+            "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "capturedAt": "2026-09-10T00:00:00Z",
+            "purpose": "assessment"
+          }
+        ],
+        "aggregationPolicyVersionRef": {
+          "kind": "internal",
+          "producer": "M26",
+          "objectType": "aggregation_policy",
+          "rootId": "AG1",
+          "versionId": "AG1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        }
+      },
+      "expected": "accept",
+      "expectedReason": "strict fields and exact fixture version",
+      "semanticGuard": "questionnaire"
+    },
+    {
+      "id": "QUESTION-EXTRA",
+      "group": "QuestionnaireDraft",
+      "schema": "QuestionnaireDraft",
+      "instance": {
+        "name": "协作问卷",
+        "questions": [
+          {
+            "questionVersionRef": {
+              "kind": "internal",
+              "producer": "M26",
+              "objectType": "question",
+              "rootId": "Q1",
+              "versionId": "Q1-v1",
+              "sourceRevision": 1,
+              "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "capturedAt": "2026-09-10T00:00:00Z",
+              "purpose": "assessment"
+            },
+            "type": "rating",
+            "title": "协作表现",
+            "required": true,
+            "allowSkip": false,
+            "allowNA": false,
+            "scaleVersionRef": {
+              "kind": "internal",
+              "producer": "M37",
+              "objectType": "scale",
+              "rootId": "S1",
+              "versionId": "S1-v1",
+              "sourceRevision": 1,
+              "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "capturedAt": "2026-09-10T00:00:00Z",
+              "purpose": "assessment"
+            },
+            "roleApplicability": {
+              "roleVersionRefs": [
+                {
+                  "kind": "internal",
+                  "producer": "M26",
+                  "objectType": "role_definition",
+                  "rootId": "PEER",
+                  "versionId": "PEER-v1",
+                  "sourceRevision": 1,
+                  "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "capturedAt": "2026-09-10T00:00:00Z",
+                  "purpose": "assessment"
+                }
+              ],
+              "scope": "listed_roles_only"
+            },
+            "dimension": {
+              "kind": "internal",
+              "producer": "M37",
+              "objectType": "standard_dimension",
+              "rootId": "DIM1",
+              "versionId": "DIM1-v1",
+              "sourceRevision": 1,
+              "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "capturedAt": "2026-09-10T00:00:00Z",
+              "purpose": "assessment"
+            },
+            "indicatorVersionRefs": [
+              {
+                "kind": "internal",
+                "producer": "M37",
+                "objectType": "indicator",
+                "rootId": "I1",
+                "versionId": "I1-v1",
+                "sourceRevision": 1,
+                "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "capturedAt": "2026-09-10T00:00:00Z",
+                "purpose": "assessment"
+              }
+            ],
+            "visibility": {
+              "kind": "always"
+            }
+          }
+        ],
+        "roleVersionRefs": [
+          {
+            "kind": "internal",
+            "producer": "M26",
+            "objectType": "role_definition",
+            "rootId": "PEER",
+            "versionId": "PEER-v1",
+            "sourceRevision": 1,
+            "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "capturedAt": "2026-09-10T00:00:00Z",
+            "purpose": "assessment"
+          }
+        ],
+        "standardVersionRefs": [
+          {
+            "kind": "internal",
+            "producer": "M37",
+            "objectType": "talent_standard",
+            "rootId": "STD1",
+            "versionId": "STD1-v1",
+            "sourceRevision": 1,
+            "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "capturedAt": "2026-09-10T00:00:00Z",
+            "purpose": "assessment"
+          }
+        ],
+        "aggregationPolicyVersionRef": {
+          "kind": "internal",
+          "producer": "M26",
+          "objectType": "aggregation_policy",
+          "rootId": "AG1",
+          "versionId": "AG1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "unapprovedField": "x"
+      },
+      "expected": "reject",
+      "expectedReason": "unknown field",
+      "semanticGuard": "questionnaire"
+    },
+    {
+      "id": "QUESTION-VERSION",
+      "group": "QuestionnaireDraft",
+      "schema": "QuestionnaireDraft",
+      "instance": {
+        "name": "协作问卷",
+        "questions": [
+          {
+            "questionVersionRef": {
+              "kind": "internal",
+              "producer": "M26",
+              "objectType": "question",
+              "rootId": "Q1",
+              "versionId": "Q1-v1",
+              "sourceRevision": 1,
+              "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "capturedAt": "2026-09-10T00:00:00Z",
+              "purpose": "assessment"
+            },
+            "type": "rating",
+            "title": "协作表现",
+            "required": true,
+            "allowSkip": false,
+            "allowNA": false,
+            "scaleVersionRef": {
+              "kind": "internal",
+              "producer": "M37",
+              "objectType": "scale",
+              "rootId": "S1",
+              "versionId": "S1-v1",
+              "sourceRevision": 1,
+              "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "capturedAt": "2026-09-10T00:00:00Z",
+              "purpose": "assessment"
+            },
+            "roleApplicability": {
+              "roleVersionRefs": [
+                {
+                  "kind": "internal",
+                  "producer": "M26",
+                  "objectType": "role_definition",
+                  "rootId": "PEER",
+                  "versionId": "PEER-v1",
+                  "sourceRevision": 1,
+                  "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "capturedAt": "2026-09-10T00:00:00Z",
+                  "purpose": "assessment"
+                }
+              ],
+              "scope": "listed_roles_only"
+            },
+            "dimension": {
+              "kind": "internal",
+              "producer": "M37",
+              "objectType": "standard_dimension",
+              "rootId": "DIM1",
+              "versionId": "wrong-version",
+              "sourceRevision": 1,
+              "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "capturedAt": "2026-09-10T00:00:00Z",
+              "purpose": "assessment"
+            },
+            "indicatorVersionRefs": [
+              {
+                "kind": "internal",
+                "producer": "M37",
+                "objectType": "indicator",
+                "rootId": "I1",
+                "versionId": "I1-v1",
+                "sourceRevision": 1,
+                "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "capturedAt": "2026-09-10T00:00:00Z",
+                "purpose": "assessment"
+              }
+            ],
+            "visibility": {
+              "kind": "always"
+            }
+          }
+        ],
+        "roleVersionRefs": [
+          {
+            "kind": "internal",
+            "producer": "M26",
+            "objectType": "role_definition",
+            "rootId": "PEER",
+            "versionId": "PEER-v1",
+            "sourceRevision": 1,
+            "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "capturedAt": "2026-09-10T00:00:00Z",
+            "purpose": "assessment"
+          }
+        ],
+        "standardVersionRefs": [
+          {
+            "kind": "internal",
+            "producer": "M37",
+            "objectType": "talent_standard",
+            "rootId": "STD1",
+            "versionId": "STD1-v1",
+            "sourceRevision": 1,
+            "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "capturedAt": "2026-09-10T00:00:00Z",
+            "purpose": "assessment"
+          }
+        ],
+        "aggregationPolicyVersionRef": {
+          "kind": "internal",
+          "producer": "M26",
+          "objectType": "aggregation_policy",
+          "rootId": "AG1",
+          "versionId": "AG1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        }
+      },
+      "expected": "reject",
+      "expectedReason": "wrong version or scheme membership",
+      "semanticGuard": "questionnaire"
+    },
+    {
+      "id": "QUESTION-SOURCE",
+      "group": "QuestionnaireDraft",
+      "schema": "QuestionnaireDraft",
+      "instance": {
+        "name": "协作问卷",
+        "questions": [
+          {
+            "questionVersionRef": {
+              "kind": "internal",
+              "producer": "M26",
+              "objectType": "question",
+              "rootId": "Q1",
+              "versionId": "Q1-v1",
+              "sourceRevision": 1,
+              "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "capturedAt": "2026-09-10T00:00:00Z",
+              "purpose": "assessment"
+            },
+            "type": "rating",
+            "title": "协作表现",
+            "required": true,
+            "allowSkip": false,
+            "allowNA": false,
+            "scaleVersionRef": {
+              "kind": "internal",
+              "producer": "M37",
+              "objectType": "scale",
+              "rootId": "S1",
+              "versionId": "S1-v1",
+              "sourceRevision": 1,
+              "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "capturedAt": "2026-09-10T00:00:00Z",
+              "purpose": "assessment"
+            },
+            "roleApplicability": {
+              "roleVersionRefs": [
+                {
+                  "kind": "internal",
+                  "producer": "M26",
+                  "objectType": "role_definition",
+                  "rootId": "MANAGER",
+                  "versionId": "MANAGER-v1",
+                  "sourceRevision": 1,
+                  "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "capturedAt": "2026-09-10T00:00:00Z",
+                  "purpose": "assessment"
+                }
+              ],
+              "scope": "listed_roles_only"
+            },
+            "dimension": {
+              "kind": "internal",
+              "producer": "M37",
+              "objectType": "standard_dimension",
+              "rootId": "DIM1",
+              "versionId": "DIM1-v1",
+              "sourceRevision": 1,
+              "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "capturedAt": "2026-09-10T00:00:00Z",
+              "purpose": "assessment"
+            },
+            "indicatorVersionRefs": [
+              {
+                "kind": "internal",
+                "producer": "M37",
+                "objectType": "indicator",
+                "rootId": "I1",
+                "versionId": "I1-v1",
+                "sourceRevision": 1,
+                "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "capturedAt": "2026-09-10T00:00:00Z",
+                "purpose": "assessment"
+              }
+            ],
+            "visibility": {
+              "kind": "always"
+            }
+          }
+        ],
+        "roleVersionRefs": [
+          {
+            "kind": "internal",
+            "producer": "M26",
+            "objectType": "role_definition",
+            "rootId": "PEER",
+            "versionId": "PEER-v1",
+            "sourceRevision": 1,
+            "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "capturedAt": "2026-09-10T00:00:00Z",
+            "purpose": "assessment"
+          }
+        ],
+        "standardVersionRefs": [
+          {
+            "kind": "internal",
+            "producer": "M37",
+            "objectType": "talent_standard",
+            "rootId": "STD1",
+            "versionId": "STD1-v1",
+            "sourceRevision": 1,
+            "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "capturedAt": "2026-09-10T00:00:00Z",
+            "purpose": "assessment"
+          }
+        ],
+        "aggregationPolicyVersionRef": {
+          "kind": "internal",
+          "producer": "M26",
+          "objectType": "aggregation_policy",
+          "rootId": "AG1",
+          "versionId": "AG1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        }
+      },
+      "expected": "reject",
+      "expectedReason": "wrong source/type/role membership",
+      "semanticGuard": "questionnaire"
+    },
+    {
+      "id": "HISTORY-VALID",
+      "group": "ReviewProject",
+      "schema": "ReviewProject",
+      "instance": {
+        "name": "年度盘点",
+        "scenarioVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "scenario",
+          "rootId": "SC1",
+          "versionId": "SC1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "categoryVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "category",
+          "rootId": "CA1",
+          "versionId": "CA1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "year": 2026,
+        "startOn": "2026-09-01",
+        "endOn": "2026-09-30",
+        "orgScope": {
+          "orgIds": [
+            "ORG1"
+          ],
+          "includeDescendants": false,
+          "personIds": [
+            "E1"
+          ],
+          "positionIds": []
+        },
+        "standardVersionRef": {
+          "kind": "internal",
+          "producer": "M37",
+          "objectType": "talent_standard",
+          "rootId": "STD1",
+          "versionId": "STD1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "toolContractVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "tool_contract",
+          "rootId": "TOOL1",
+          "versionId": "TOOL1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "templateVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "template",
+          "rootId": "T1",
+          "versionId": "T1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "workflowVersionRef": {
+          "kind": "internal",
+          "producer": "M19",
+          "objectType": "workflow",
+          "rootId": "WF1",
+          "versionId": "WF1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "schemeVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "scheme",
+          "rootId": "SCH1",
+          "versionId": "SCH1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "saveStepId": "history",
+        "previousResultRef": {
+          "kind": "historical_result",
+          "resultVersionRef": {
+            "kind": "internal",
+            "producer": "M18",
+            "objectType": "published_result",
+            "rootId": "RESULT1",
+            "versionId": "RESULT1-v1",
+            "sourceRevision": 1,
+            "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "capturedAt": "2026-09-10T00:00:00Z",
+            "purpose": "historical_reference_only"
+          },
+          "asOf": "2026-08-01T00:00:00Z",
+          "selectedFieldIds": [
+            "potentialBand"
+          ],
+          "purpose": "historical_reference_only",
+          "relationship": "same_person_previous_project"
+        }
+      },
+      "expected": "accept",
+      "expectedReason": "strict fields and exact fixture version",
+      "semanticGuard": "history"
+    },
+    {
+      "id": "HISTORY-EXTRA",
+      "group": "ReviewProject",
+      "schema": "ReviewProject",
+      "instance": {
+        "name": "年度盘点",
+        "scenarioVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "scenario",
+          "rootId": "SC1",
+          "versionId": "SC1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "categoryVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "category",
+          "rootId": "CA1",
+          "versionId": "CA1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "year": 2026,
+        "startOn": "2026-09-01",
+        "endOn": "2026-09-30",
+        "orgScope": {
+          "orgIds": [
+            "ORG1"
+          ],
+          "includeDescendants": false,
+          "personIds": [
+            "E1"
+          ],
+          "positionIds": []
+        },
+        "standardVersionRef": {
+          "kind": "internal",
+          "producer": "M37",
+          "objectType": "talent_standard",
+          "rootId": "STD1",
+          "versionId": "STD1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "toolContractVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "tool_contract",
+          "rootId": "TOOL1",
+          "versionId": "TOOL1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "templateVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "template",
+          "rootId": "T1",
+          "versionId": "T1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "workflowVersionRef": {
+          "kind": "internal",
+          "producer": "M19",
+          "objectType": "workflow",
+          "rootId": "WF1",
+          "versionId": "WF1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "schemeVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "scheme",
+          "rootId": "SCH1",
+          "versionId": "SCH1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "saveStepId": "history",
+        "previousResultRef": {
+          "kind": "historical_result",
+          "resultVersionRef": {
+            "kind": "internal",
+            "producer": "M18",
+            "objectType": "published_result",
+            "rootId": "RESULT1",
+            "versionId": "RESULT1-v1",
+            "sourceRevision": 1,
+            "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "capturedAt": "2026-09-10T00:00:00Z",
+            "purpose": "historical_reference_only"
+          },
+          "asOf": "2026-08-01T00:00:00Z",
+          "selectedFieldIds": [
+            "potentialBand"
+          ],
+          "purpose": "historical_reference_only",
+          "relationship": "same_person_previous_project"
+        },
+        "unapprovedField": "x"
+      },
+      "expected": "reject",
+      "expectedReason": "unknown field",
+      "semanticGuard": "history"
+    },
+    {
+      "id": "HISTORY-VERSION",
+      "group": "ReviewProject",
+      "schema": "ReviewProject",
+      "instance": {
+        "name": "年度盘点",
+        "scenarioVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "scenario",
+          "rootId": "SC1",
+          "versionId": "SC1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "categoryVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "category",
+          "rootId": "CA1",
+          "versionId": "CA1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "year": 2026,
+        "startOn": "2026-09-01",
+        "endOn": "2026-09-30",
+        "orgScope": {
+          "orgIds": [
+            "ORG1"
+          ],
+          "includeDescendants": false,
+          "personIds": [
+            "E1"
+          ],
+          "positionIds": []
+        },
+        "standardVersionRef": {
+          "kind": "internal",
+          "producer": "M37",
+          "objectType": "talent_standard",
+          "rootId": "STD1",
+          "versionId": "STD1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "toolContractVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "tool_contract",
+          "rootId": "TOOL1",
+          "versionId": "TOOL1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "templateVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "template",
+          "rootId": "T1",
+          "versionId": "T1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "workflowVersionRef": {
+          "kind": "internal",
+          "producer": "M19",
+          "objectType": "workflow",
+          "rootId": "WF1",
+          "versionId": "WF1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "schemeVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "scheme",
+          "rootId": "SCH1",
+          "versionId": "SCH1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "saveStepId": "history",
+        "previousResultRef": {
+          "kind": "historical_result",
+          "resultVersionRef": {
+            "kind": "internal",
+            "producer": "M18",
+            "objectType": "published_result",
+            "rootId": "RESULT1",
+            "versionId": "wrong-version",
+            "sourceRevision": 1,
+            "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "capturedAt": "2026-09-10T00:00:00Z",
+            "purpose": "historical_reference_only"
+          },
+          "asOf": "2026-08-01T00:00:00Z",
+          "selectedFieldIds": [
+            "potentialBand"
+          ],
+          "purpose": "historical_reference_only",
+          "relationship": "same_person_previous_project"
+        }
+      },
+      "expected": "reject",
+      "expectedReason": "wrong version or scheme membership",
+      "semanticGuard": "history"
+    },
+    {
+      "id": "HISTORY-SOURCE",
+      "group": "ReviewProject",
+      "schema": "ReviewProject",
+      "instance": {
+        "name": "年度盘点",
+        "scenarioVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "scenario",
+          "rootId": "SC1",
+          "versionId": "SC1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "categoryVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "category",
+          "rootId": "CA1",
+          "versionId": "CA1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "year": 2026,
+        "startOn": "2026-09-01",
+        "endOn": "2026-09-30",
+        "orgScope": {
+          "orgIds": [
+            "ORG1"
+          ],
+          "includeDescendants": false,
+          "personIds": [
+            "E1"
+          ],
+          "positionIds": []
+        },
+        "standardVersionRef": {
+          "kind": "internal",
+          "producer": "M37",
+          "objectType": "talent_standard",
+          "rootId": "STD1",
+          "versionId": "STD1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "toolContractVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "tool_contract",
+          "rootId": "TOOL1",
+          "versionId": "TOOL1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "templateVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "template",
+          "rootId": "T1",
+          "versionId": "T1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "workflowVersionRef": {
+          "kind": "internal",
+          "producer": "M19",
+          "objectType": "workflow",
+          "rootId": "WF1",
+          "versionId": "WF1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "schemeVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "scheme",
+          "rootId": "SCH1",
+          "versionId": "SCH1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "saveStepId": "history",
+        "previousResultRef": {
+          "kind": "historical_result",
+          "resultVersionRef": {
+            "kind": "internal",
+            "producer": "M26",
+            "objectType": "published_result",
+            "rootId": "RESULT1",
+            "versionId": "RESULT1-v1",
+            "sourceRevision": 1,
+            "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "capturedAt": "2026-09-10T00:00:00Z",
+            "purpose": "historical_reference_only"
+          },
+          "asOf": "2026-08-01T00:00:00Z",
+          "selectedFieldIds": [
+            "potentialBand"
+          ],
+          "purpose": "historical_reference_only",
+          "relationship": "same_person_previous_project"
+        }
+      },
+      "expected": "reject",
+      "expectedReason": "wrong source/type/role membership",
+      "semanticGuard": "history"
+    },
+    {
+      "id": "TYPE-RATING-VALID",
+      "group": "CatalogDraft",
+      "schema": "CatalogDraft",
+      "instance": {
+        "kind": "indicator_type",
+        "code": "ABILITY",
+        "name": "能力评分",
+        "parentId": null,
+        "sort": 1,
+        "targetKind": null,
+        "targetId": null,
+        "isCommon": true,
+        "descriptionRows": [
+          {
+            "rowId": null,
+            "sort": 1,
+            "text": "按能力证据评分"
+          }
+        ],
+        "evaluationMode": "rating",
+        "numericScale": null,
+        "ratingSelection": {
+          "ratingSchemeVersionRef": {
+            "kind": "internal",
+            "producer": "M06",
+            "objectType": "rating_scheme",
+            "rootId": "RS1",
+            "versionId": "RS1-v1",
+            "sourceRevision": 1,
+            "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "capturedAt": "2026-09-10T00:00:00Z",
+            "purpose": "assessment"
+          },
+          "levelIds": [
+            "RL1"
+          ]
+        }
+      },
+      "expected": "accept",
+      "expectedReason": "rating scheme distinct from qualification level",
+      "semanticGuard": "catalog"
+    },
+    {
+      "id": "HISTORY-NONE-VALID",
+      "group": "ReviewProject",
+      "schema": "ReviewProject",
+      "instance": {
+        "name": "年度盘点",
+        "scenarioVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "scenario",
+          "rootId": "SC1",
+          "versionId": "SC1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "categoryVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "category",
+          "rootId": "CA1",
+          "versionId": "CA1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "year": 2026,
+        "startOn": "2026-09-01",
+        "endOn": "2026-09-30",
+        "orgScope": {
+          "orgIds": [
+            "ORG1"
+          ],
+          "includeDescendants": false,
+          "personIds": [
+            "E1"
+          ],
+          "positionIds": []
+        },
+        "standardVersionRef": {
+          "kind": "internal",
+          "producer": "M37",
+          "objectType": "talent_standard",
+          "rootId": "STD1",
+          "versionId": "STD1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "toolContractVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "tool_contract",
+          "rootId": "TOOL1",
+          "versionId": "TOOL1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "templateVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "template",
+          "rootId": "T1",
+          "versionId": "T1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "workflowVersionRef": {
+          "kind": "internal",
+          "producer": "M19",
+          "objectType": "workflow",
+          "rootId": "WF1",
+          "versionId": "WF1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "schemeVersionRef": {
+          "kind": "internal",
+          "producer": "M18",
+          "objectType": "scheme",
+          "rootId": "SCH1",
+          "versionId": "SCH1-v1",
+          "sourceRevision": 1,
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "capturedAt": "2026-09-10T00:00:00Z",
+          "purpose": "assessment"
+        },
+        "saveStepId": "history",
+        "previousResultRef": null
+      },
+      "expected": "accept",
+      "expectedReason": "explicit no prior result",
+      "semanticGuard": "history"
+    },
+    {
+      "id": "REF-NO-KIND",
+      "group": "VersionRef",
+      "schema": "VersionRef",
+      "instance": {
+        "producer": "M37",
+        "objectType": "indicator",
+        "rootId": "I1",
+        "versionId": "I1-v1",
+        "sourceRevision": 1,
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "capturedAt": "2026-09-10T00:00:00Z",
+        "purpose": "assessment"
+      },
+      "expected": "reject",
+      "expectedReason": "never infer source",
+      "semanticGuard": "references"
+    }
+  ]
+}

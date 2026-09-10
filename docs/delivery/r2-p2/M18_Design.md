@@ -71,3 +71,8 @@ closed项目纠错先reopen申请独立批准，生成projectRevision和允许�
 合成项目PRJ-1、员工E1/E2/E3、scope v1/v2；四维分别有效/缺失/无权来源；数值轴lowCut=40、highCut=70测试39.5/40/69.5/70，缺一个轴必须unrated。提案人C、复核R、发布P不同；两会议同时更正同base，closed项目直接写拒绝，合法reopen新revision可继续。
 
 M18-REVIEW-AC01～13逐项见Acceptance_Scenarios.json；核九格及未评定人数等式、首次独立复核、显式current指针、M17建议未自动成员、历史source digest未变。P2设计闭环；P3盘点实施与独立测试负责人落实，M17/M32共同核接口；P4业务校准委员会/安全/运维验真实角色、用途和恢复。原站校准/撤回深操作未知只形成结构化补证。
+
+<a id="repair-001"></a>
+## 001契约定向对齐
+
+previousResultRef由project.create/save明确写入项目版本，引用历史发布集并按稳定person匹配，只作参考。 完整字段与拒绝条件见[Contract_Repair.md](Contract_Repair.md)，其规范替换旧版简写中的歧义，其余已通过独立评审内容保持。

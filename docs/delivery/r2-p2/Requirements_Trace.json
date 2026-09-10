@@ -21,6 +21,25 @@
       ],
       "taskIds": [
         "P3-R2-M37-01"
+      ],
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "IndicatorChild",
+          "schemaRef": "Interface_Schemas.json#/$defs/IndicatorDraft",
+          "command": "r2.m37.indicator.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "LEVEL-VALID",
+            "LEVEL-EXTRA",
+            "LEVEL-VERSION",
+            "LEVEL-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M37-REVIEW-AC01",
+            "R2-P3-M37-REVIEW-AC02"
+          ]
+        }
       ]
     },
     {
@@ -106,6 +125,29 @@
       "taskIds": [
         "P3-R2-M37-05",
         "P3-R2-X-01"
+      ],
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "VersionRef",
+          "schemaRef": "Interface_Schemas.json#/$defs/StandardDraft",
+          "command": "r2.m37.standard.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "REF-IN-VALID",
+            "REF-IN-EXTRA",
+            "REF-IN-VERSION",
+            "REF-IN-SOURCE",
+            "REF-EXT-VALID",
+            "REF-EXT-EXTRA",
+            "REF-EXT-VERSION",
+            "REF-EXT-SOURCE",
+            "REF-NO-KIND"
+          ],
+          "scenarioIds": [
+            "R2-X-02"
+          ]
+        }
       ]
     },
     {
@@ -127,6 +169,26 @@
       ],
       "taskIds": [
         "P3-R2-M06-01"
+      ],
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
       ]
     },
     {
@@ -145,6 +207,26 @@
       ],
       "taskIds": [
         "P3-R2-M06-02"
+      ],
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
       ]
     },
     {
@@ -233,6 +315,25 @@
       ],
       "taskIds": [
         "P3-R2-M26-01"
+      ],
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "QuestionnaireDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+          "command": "r2.m26.questionnaire.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "QUESTION-VALID",
+            "QUESTION-EXTRA",
+            "QUESTION-VERSION",
+            "QUESTION-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M26-REVIEW-AC06",
+            "R2-P3-M26-REVIEW-AC07"
+          ]
+        }
       ]
     },
     {
@@ -279,6 +380,25 @@
       ],
       "taskIds": [
         "P3-R2-M26-03"
+      ],
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "QuestionnaireDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+          "command": "r2.m26.questionnaire.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "QUESTION-VALID",
+            "QUESTION-EXTRA",
+            "QUESTION-VERSION",
+            "QUESTION-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M26-REVIEW-AC06",
+            "R2-P3-M26-REVIEW-AC07"
+          ]
+        }
       ]
     },
     {
@@ -345,6 +465,26 @@
       ],
       "taskIds": [
         "P3-R2-M18-01"
+      ],
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "ReviewProject",
+          "schemaRef": "Interface_Schemas.json#/$defs/ReviewProject",
+          "command": "r2.m18.project.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "HISTORY-VALID",
+            "HISTORY-EXTRA",
+            "HISTORY-VERSION",
+            "HISTORY-SOURCE",
+            "HISTORY-NONE-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M18-REVIEW-AC01",
+            "R2-P3-M18-REVIEW-AC04"
+          ]
+        }
       ]
     },
     {
@@ -430,6 +570,26 @@
       "taskIds": [
         "P3-R2-M18-05",
         "P3-R2-X-01"
+      ],
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "ReviewProject",
+          "schemaRef": "Interface_Schemas.json#/$defs/ReviewProject",
+          "command": "r2.m18.project.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "HISTORY-VALID",
+            "HISTORY-EXTRA",
+            "HISTORY-VERSION",
+            "HISTORY-SOURCE",
+            "HISTORY-NONE-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M18-REVIEW-AC01",
+            "R2-P3-M18-REVIEW-AC04"
+          ]
+        }
       ]
     },
     {
@@ -726,7 +886,26 @@
         "R2-P3-M37-REVIEW-AC02",
         "R2-P3-M37-REVIEW-AC08"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "IndicatorChild",
+          "schemaRef": "Interface_Schemas.json#/$defs/IndicatorDraft",
+          "command": "r2.m37.indicator.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "LEVEL-VALID",
+            "LEVEL-EXTRA",
+            "LEVEL-VERSION",
+            "LEVEL-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M37-REVIEW-AC01",
+            "R2-P3-M37-REVIEW-AC02"
+          ]
+        }
+      ]
     },
     {
       "id": "M37-SPEC-01-CLAUSE-02",
@@ -741,7 +920,26 @@
         "R2-P3-M37-REVIEW-AC02",
         "R2-P3-M37-REVIEW-AC08"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "IndicatorChild",
+          "schemaRef": "Interface_Schemas.json#/$defs/IndicatorDraft",
+          "command": "r2.m37.indicator.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "LEVEL-VALID",
+            "LEVEL-EXTRA",
+            "LEVEL-VERSION",
+            "LEVEL-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M37-REVIEW-AC01",
+            "R2-P3-M37-REVIEW-AC02"
+          ]
+        }
+      ]
     },
     {
       "id": "M37-SPEC-01-CLAUSE-03",
@@ -756,7 +954,26 @@
         "R2-P3-M37-REVIEW-AC02",
         "R2-P3-M37-REVIEW-AC08"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "IndicatorChild",
+          "schemaRef": "Interface_Schemas.json#/$defs/IndicatorDraft",
+          "command": "r2.m37.indicator.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "LEVEL-VALID",
+            "LEVEL-EXTRA",
+            "LEVEL-VERSION",
+            "LEVEL-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M37-REVIEW-AC01",
+            "R2-P3-M37-REVIEW-AC02"
+          ]
+        }
+      ]
     },
     {
       "id": "M37-SPEC-01-CLAUSE-04",
@@ -771,7 +988,26 @@
         "R2-P3-M37-REVIEW-AC02",
         "R2-P3-M37-REVIEW-AC08"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "IndicatorChild",
+          "schemaRef": "Interface_Schemas.json#/$defs/IndicatorDraft",
+          "command": "r2.m37.indicator.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "LEVEL-VALID",
+            "LEVEL-EXTRA",
+            "LEVEL-VERSION",
+            "LEVEL-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M37-REVIEW-AC01",
+            "R2-P3-M37-REVIEW-AC02"
+          ]
+        }
+      ]
     },
     {
       "id": "M37-SPEC-01-CLAUSE-05",
@@ -786,7 +1022,26 @@
         "R2-P3-M37-REVIEW-AC02",
         "R2-P3-M37-REVIEW-AC08"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "IndicatorChild",
+          "schemaRef": "Interface_Schemas.json#/$defs/IndicatorDraft",
+          "command": "r2.m37.indicator.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "LEVEL-VALID",
+            "LEVEL-EXTRA",
+            "LEVEL-VERSION",
+            "LEVEL-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M37-REVIEW-AC01",
+            "R2-P3-M37-REVIEW-AC02"
+          ]
+        }
+      ]
     },
     {
       "id": "M37-SPEC-01-CLAUSE-06",
@@ -801,7 +1056,26 @@
         "R2-P3-M37-REVIEW-AC02",
         "R2-P3-M37-REVIEW-AC08"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "IndicatorChild",
+          "schemaRef": "Interface_Schemas.json#/$defs/IndicatorDraft",
+          "command": "r2.m37.indicator.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "LEVEL-VALID",
+            "LEVEL-EXTRA",
+            "LEVEL-VERSION",
+            "LEVEL-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M37-REVIEW-AC01",
+            "R2-P3-M37-REVIEW-AC02"
+          ]
+        }
+      ]
     },
     {
       "id": "M37-SPEC-01-CLAUSE-07",
@@ -816,7 +1090,26 @@
         "R2-P3-M37-REVIEW-AC02",
         "R2-P3-M37-REVIEW-AC08"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "IndicatorChild",
+          "schemaRef": "Interface_Schemas.json#/$defs/IndicatorDraft",
+          "command": "r2.m37.indicator.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "LEVEL-VALID",
+            "LEVEL-EXTRA",
+            "LEVEL-VERSION",
+            "LEVEL-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M37-REVIEW-AC01",
+            "R2-P3-M37-REVIEW-AC02"
+          ]
+        }
+      ]
     },
     {
       "id": "M37-SPEC-01-CLAUSE-08",
@@ -831,7 +1124,26 @@
         "R2-P3-M37-REVIEW-AC02",
         "R2-P3-M37-REVIEW-AC08"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "IndicatorChild",
+          "schemaRef": "Interface_Schemas.json#/$defs/IndicatorDraft",
+          "command": "r2.m37.indicator.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "LEVEL-VALID",
+            "LEVEL-EXTRA",
+            "LEVEL-VERSION",
+            "LEVEL-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M37-REVIEW-AC01",
+            "R2-P3-M37-REVIEW-AC02"
+          ]
+        }
+      ]
     },
     {
       "id": "M37-SPEC-01-CLAUSE-09",
@@ -846,7 +1158,26 @@
         "R2-P3-M37-REVIEW-AC02",
         "R2-P3-M37-REVIEW-AC08"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "IndicatorChild",
+          "schemaRef": "Interface_Schemas.json#/$defs/IndicatorDraft",
+          "command": "r2.m37.indicator.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "LEVEL-VALID",
+            "LEVEL-EXTRA",
+            "LEVEL-VERSION",
+            "LEVEL-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M37-REVIEW-AC01",
+            "R2-P3-M37-REVIEW-AC02"
+          ]
+        }
+      ]
     },
     {
       "id": "M37-SPEC-01-CLAUSE-10",
@@ -861,7 +1192,26 @@
         "R2-P3-M37-REVIEW-AC02",
         "R2-P3-M37-REVIEW-AC08"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "IndicatorChild",
+          "schemaRef": "Interface_Schemas.json#/$defs/IndicatorDraft",
+          "command": "r2.m37.indicator.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "LEVEL-VALID",
+            "LEVEL-EXTRA",
+            "LEVEL-VERSION",
+            "LEVEL-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M37-REVIEW-AC01",
+            "R2-P3-M37-REVIEW-AC02"
+          ]
+        }
+      ]
     },
     {
       "id": "M37-SPEC-02-CLAUSE-01",
@@ -1345,7 +1695,30 @@
         "R2-X-01",
         "R2-X-02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "VersionRef",
+          "schemaRef": "Interface_Schemas.json#/$defs/StandardDraft",
+          "command": "r2.m37.standard.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "REF-IN-VALID",
+            "REF-IN-EXTRA",
+            "REF-IN-VERSION",
+            "REF-IN-SOURCE",
+            "REF-EXT-VALID",
+            "REF-EXT-EXTRA",
+            "REF-EXT-VERSION",
+            "REF-EXT-SOURCE",
+            "REF-NO-KIND"
+          ],
+          "scenarioIds": [
+            "R2-X-02"
+          ]
+        }
+      ]
     },
     {
       "id": "M37-SPEC-05-CLAUSE-02",
@@ -1363,7 +1736,30 @@
         "R2-X-01",
         "R2-X-02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "VersionRef",
+          "schemaRef": "Interface_Schemas.json#/$defs/StandardDraft",
+          "command": "r2.m37.standard.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "REF-IN-VALID",
+            "REF-IN-EXTRA",
+            "REF-IN-VERSION",
+            "REF-IN-SOURCE",
+            "REF-EXT-VALID",
+            "REF-EXT-EXTRA",
+            "REF-EXT-VERSION",
+            "REF-EXT-SOURCE",
+            "REF-NO-KIND"
+          ],
+          "scenarioIds": [
+            "R2-X-02"
+          ]
+        }
+      ]
     },
     {
       "id": "M37-SPEC-05-CLAUSE-03",
@@ -1381,7 +1777,30 @@
         "R2-X-01",
         "R2-X-02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "VersionRef",
+          "schemaRef": "Interface_Schemas.json#/$defs/StandardDraft",
+          "command": "r2.m37.standard.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "REF-IN-VALID",
+            "REF-IN-EXTRA",
+            "REF-IN-VERSION",
+            "REF-IN-SOURCE",
+            "REF-EXT-VALID",
+            "REF-EXT-EXTRA",
+            "REF-EXT-VERSION",
+            "REF-EXT-SOURCE",
+            "REF-NO-KIND"
+          ],
+          "scenarioIds": [
+            "R2-X-02"
+          ]
+        }
+      ]
     },
     {
       "id": "M37-SPEC-05-CLAUSE-04",
@@ -1399,7 +1818,30 @@
         "R2-X-01",
         "R2-X-02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "VersionRef",
+          "schemaRef": "Interface_Schemas.json#/$defs/StandardDraft",
+          "command": "r2.m37.standard.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "REF-IN-VALID",
+            "REF-IN-EXTRA",
+            "REF-IN-VERSION",
+            "REF-IN-SOURCE",
+            "REF-EXT-VALID",
+            "REF-EXT-EXTRA",
+            "REF-EXT-VERSION",
+            "REF-EXT-SOURCE",
+            "REF-NO-KIND"
+          ],
+          "scenarioIds": [
+            "R2-X-02"
+          ]
+        }
+      ]
     },
     {
       "id": "M37-SPEC-05-CLAUSE-05",
@@ -1417,7 +1859,30 @@
         "R2-X-01",
         "R2-X-02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "VersionRef",
+          "schemaRef": "Interface_Schemas.json#/$defs/StandardDraft",
+          "command": "r2.m37.standard.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "REF-IN-VALID",
+            "REF-IN-EXTRA",
+            "REF-IN-VERSION",
+            "REF-IN-SOURCE",
+            "REF-EXT-VALID",
+            "REF-EXT-EXTRA",
+            "REF-EXT-VERSION",
+            "REF-EXT-SOURCE",
+            "REF-NO-KIND"
+          ],
+          "scenarioIds": [
+            "R2-X-02"
+          ]
+        }
+      ]
     },
     {
       "id": "M37-SPEC-05-CLAUSE-06",
@@ -1435,7 +1900,30 @@
         "R2-X-01",
         "R2-X-02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "VersionRef",
+          "schemaRef": "Interface_Schemas.json#/$defs/StandardDraft",
+          "command": "r2.m37.standard.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "REF-IN-VALID",
+            "REF-IN-EXTRA",
+            "REF-IN-VERSION",
+            "REF-IN-SOURCE",
+            "REF-EXT-VALID",
+            "REF-EXT-EXTRA",
+            "REF-EXT-VERSION",
+            "REF-EXT-SOURCE",
+            "REF-NO-KIND"
+          ],
+          "scenarioIds": [
+            "R2-X-02"
+          ]
+        }
+      ]
     },
     {
       "id": "M37-SPEC-05-CLAUSE-07",
@@ -1453,7 +1941,30 @@
         "R2-X-01",
         "R2-X-02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "VersionRef",
+          "schemaRef": "Interface_Schemas.json#/$defs/StandardDraft",
+          "command": "r2.m37.standard.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "REF-IN-VALID",
+            "REF-IN-EXTRA",
+            "REF-IN-VERSION",
+            "REF-IN-SOURCE",
+            "REF-EXT-VALID",
+            "REF-EXT-EXTRA",
+            "REF-EXT-VERSION",
+            "REF-EXT-SOURCE",
+            "REF-NO-KIND"
+          ],
+          "scenarioIds": [
+            "R2-X-02"
+          ]
+        }
+      ]
     },
     {
       "id": "M37-SPEC-05-CLAUSE-08",
@@ -1471,7 +1982,30 @@
         "R2-X-01",
         "R2-X-02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "VersionRef",
+          "schemaRef": "Interface_Schemas.json#/$defs/StandardDraft",
+          "command": "r2.m37.standard.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "REF-IN-VALID",
+            "REF-IN-EXTRA",
+            "REF-IN-VERSION",
+            "REF-IN-SOURCE",
+            "REF-EXT-VALID",
+            "REF-EXT-EXTRA",
+            "REF-EXT-VERSION",
+            "REF-EXT-SOURCE",
+            "REF-NO-KIND"
+          ],
+          "scenarioIds": [
+            "R2-X-02"
+          ]
+        }
+      ]
     },
     {
       "id": "M37-SPEC-05-CLAUSE-09",
@@ -1489,7 +2023,30 @@
         "R2-X-01",
         "R2-X-02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "VersionRef",
+          "schemaRef": "Interface_Schemas.json#/$defs/StandardDraft",
+          "command": "r2.m37.standard.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "REF-IN-VALID",
+            "REF-IN-EXTRA",
+            "REF-IN-VERSION",
+            "REF-IN-SOURCE",
+            "REF-EXT-VALID",
+            "REF-EXT-EXTRA",
+            "REF-EXT-VERSION",
+            "REF-EXT-SOURCE",
+            "REF-NO-KIND"
+          ],
+          "scenarioIds": [
+            "R2-X-02"
+          ]
+        }
+      ]
     },
     {
       "id": "M37-SPEC-05-CLAUSE-10",
@@ -1507,7 +2064,30 @@
         "R2-X-01",
         "R2-X-02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "VersionRef",
+          "schemaRef": "Interface_Schemas.json#/$defs/StandardDraft",
+          "command": "r2.m37.standard.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "REF-IN-VALID",
+            "REF-IN-EXTRA",
+            "REF-IN-VERSION",
+            "REF-IN-SOURCE",
+            "REF-EXT-VALID",
+            "REF-EXT-EXTRA",
+            "REF-EXT-VERSION",
+            "REF-EXT-SOURCE",
+            "REF-NO-KIND"
+          ],
+          "scenarioIds": [
+            "R2-X-02"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-01-CLAUSE-01",
@@ -1523,7 +2103,27 @@
         "R2-M06-S01",
         "R2-M06-S02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-01-CLAUSE-02",
@@ -1539,7 +2139,27 @@
         "R2-M06-S01",
         "R2-M06-S02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-01-CLAUSE-03",
@@ -1555,7 +2175,27 @@
         "R2-M06-S01",
         "R2-M06-S02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-01-CLAUSE-04",
@@ -1571,7 +2211,27 @@
         "R2-M06-S01",
         "R2-M06-S02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-01-CLAUSE-05",
@@ -1587,7 +2247,27 @@
         "R2-M06-S01",
         "R2-M06-S02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-01-CLAUSE-06",
@@ -1603,7 +2283,27 @@
         "R2-M06-S01",
         "R2-M06-S02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-01-CLAUSE-07",
@@ -1619,7 +2319,27 @@
         "R2-M06-S01",
         "R2-M06-S02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-01-CLAUSE-08",
@@ -1635,7 +2355,27 @@
         "R2-M06-S01",
         "R2-M06-S02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-01-CLAUSE-09",
@@ -1651,7 +2391,27 @@
         "R2-M06-S01",
         "R2-M06-S02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-01-CLAUSE-10",
@@ -1667,7 +2427,27 @@
         "R2-M06-S01",
         "R2-M06-S02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-01-CLAUSE-11",
@@ -1683,7 +2463,27 @@
         "R2-M06-S01",
         "R2-M06-S02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-01-CLAUSE-12",
@@ -1699,7 +2499,27 @@
         "R2-M06-S01",
         "R2-M06-S02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-02-CLAUSE-01",
@@ -1712,7 +2532,27 @@
       "scenarioIds": [
         "R2-P3-M06-REVIEW-AC03"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-02-CLAUSE-02",
@@ -1725,7 +2565,27 @@
       "scenarioIds": [
         "R2-P3-M06-REVIEW-AC03"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-02-CLAUSE-03",
@@ -1738,7 +2598,27 @@
       "scenarioIds": [
         "R2-P3-M06-REVIEW-AC03"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-02-CLAUSE-04",
@@ -1751,7 +2631,27 @@
       "scenarioIds": [
         "R2-P3-M06-REVIEW-AC03"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-02-CLAUSE-05",
@@ -1764,7 +2664,27 @@
       "scenarioIds": [
         "R2-P3-M06-REVIEW-AC03"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-02-CLAUSE-06",
@@ -1777,7 +2697,27 @@
       "scenarioIds": [
         "R2-P3-M06-REVIEW-AC03"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-02-CLAUSE-07",
@@ -1790,7 +2730,27 @@
       "scenarioIds": [
         "R2-P3-M06-REVIEW-AC03"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-02-CLAUSE-08",
@@ -1803,7 +2763,27 @@
       "scenarioIds": [
         "R2-P3-M06-REVIEW-AC03"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-02-CLAUSE-09",
@@ -1816,7 +2796,27 @@
       "scenarioIds": [
         "R2-P3-M06-REVIEW-AC03"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-02-CLAUSE-10",
@@ -1829,7 +2829,27 @@
       "scenarioIds": [
         "R2-P3-M06-REVIEW-AC03"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
+      ]
     },
     {
       "id": "M06-SPEC-03-CLAUSE-01",
@@ -2454,7 +3474,26 @@
         "R2-P3-M26-REVIEW-AC02",
         "R2-M26-S04"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "QuestionnaireDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+          "command": "r2.m26.questionnaire.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "QUESTION-VALID",
+            "QUESTION-EXTRA",
+            "QUESTION-VERSION",
+            "QUESTION-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M26-REVIEW-AC06",
+            "R2-P3-M26-REVIEW-AC07"
+          ]
+        }
+      ]
     },
     {
       "id": "M26-SPEC-01-CLAUSE-02",
@@ -2469,7 +3508,26 @@
         "R2-P3-M26-REVIEW-AC02",
         "R2-M26-S04"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "QuestionnaireDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+          "command": "r2.m26.questionnaire.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "QUESTION-VALID",
+            "QUESTION-EXTRA",
+            "QUESTION-VERSION",
+            "QUESTION-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M26-REVIEW-AC06",
+            "R2-P3-M26-REVIEW-AC07"
+          ]
+        }
+      ]
     },
     {
       "id": "M26-SPEC-01-CLAUSE-03",
@@ -2484,7 +3542,26 @@
         "R2-P3-M26-REVIEW-AC02",
         "R2-M26-S04"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "QuestionnaireDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+          "command": "r2.m26.questionnaire.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "QUESTION-VALID",
+            "QUESTION-EXTRA",
+            "QUESTION-VERSION",
+            "QUESTION-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M26-REVIEW-AC06",
+            "R2-P3-M26-REVIEW-AC07"
+          ]
+        }
+      ]
     },
     {
       "id": "M26-SPEC-01-CLAUSE-04",
@@ -2499,7 +3576,26 @@
         "R2-P3-M26-REVIEW-AC02",
         "R2-M26-S04"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "QuestionnaireDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+          "command": "r2.m26.questionnaire.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "QUESTION-VALID",
+            "QUESTION-EXTRA",
+            "QUESTION-VERSION",
+            "QUESTION-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M26-REVIEW-AC06",
+            "R2-P3-M26-REVIEW-AC07"
+          ]
+        }
+      ]
     },
     {
       "id": "M26-SPEC-01-CLAUSE-05",
@@ -2514,7 +3610,26 @@
         "R2-P3-M26-REVIEW-AC02",
         "R2-M26-S04"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "QuestionnaireDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+          "command": "r2.m26.questionnaire.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "QUESTION-VALID",
+            "QUESTION-EXTRA",
+            "QUESTION-VERSION",
+            "QUESTION-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M26-REVIEW-AC06",
+            "R2-P3-M26-REVIEW-AC07"
+          ]
+        }
+      ]
     },
     {
       "id": "M26-SPEC-01-CLAUSE-06",
@@ -2529,7 +3644,26 @@
         "R2-P3-M26-REVIEW-AC02",
         "R2-M26-S04"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "QuestionnaireDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+          "command": "r2.m26.questionnaire.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "QUESTION-VALID",
+            "QUESTION-EXTRA",
+            "QUESTION-VERSION",
+            "QUESTION-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M26-REVIEW-AC06",
+            "R2-P3-M26-REVIEW-AC07"
+          ]
+        }
+      ]
     },
     {
       "id": "M26-SPEC-01-CLAUSE-07",
@@ -2544,7 +3678,26 @@
         "R2-P3-M26-REVIEW-AC02",
         "R2-M26-S04"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "QuestionnaireDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+          "command": "r2.m26.questionnaire.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "QUESTION-VALID",
+            "QUESTION-EXTRA",
+            "QUESTION-VERSION",
+            "QUESTION-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M26-REVIEW-AC06",
+            "R2-P3-M26-REVIEW-AC07"
+          ]
+        }
+      ]
     },
     {
       "id": "M26-SPEC-01-CLAUSE-08",
@@ -2559,7 +3712,26 @@
         "R2-P3-M26-REVIEW-AC02",
         "R2-M26-S04"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "QuestionnaireDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+          "command": "r2.m26.questionnaire.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "QUESTION-VALID",
+            "QUESTION-EXTRA",
+            "QUESTION-VERSION",
+            "QUESTION-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M26-REVIEW-AC06",
+            "R2-P3-M26-REVIEW-AC07"
+          ]
+        }
+      ]
     },
     {
       "id": "M26-SPEC-02-CLAUSE-01",
@@ -2734,7 +3906,26 @@
         "R2-P3-M26-REVIEW-AC07",
         "R2-M26-S03"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "QuestionnaireDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+          "command": "r2.m26.questionnaire.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "QUESTION-VALID",
+            "QUESTION-EXTRA",
+            "QUESTION-VERSION",
+            "QUESTION-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M26-REVIEW-AC06",
+            "R2-P3-M26-REVIEW-AC07"
+          ]
+        }
+      ]
     },
     {
       "id": "M26-SPEC-03-CLAUSE-02",
@@ -2749,7 +3940,26 @@
         "R2-P3-M26-REVIEW-AC07",
         "R2-M26-S03"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "QuestionnaireDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+          "command": "r2.m26.questionnaire.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "QUESTION-VALID",
+            "QUESTION-EXTRA",
+            "QUESTION-VERSION",
+            "QUESTION-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M26-REVIEW-AC06",
+            "R2-P3-M26-REVIEW-AC07"
+          ]
+        }
+      ]
     },
     {
       "id": "M26-SPEC-03-CLAUSE-03",
@@ -2764,7 +3974,26 @@
         "R2-P3-M26-REVIEW-AC07",
         "R2-M26-S03"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "QuestionnaireDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+          "command": "r2.m26.questionnaire.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "QUESTION-VALID",
+            "QUESTION-EXTRA",
+            "QUESTION-VERSION",
+            "QUESTION-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M26-REVIEW-AC06",
+            "R2-P3-M26-REVIEW-AC07"
+          ]
+        }
+      ]
     },
     {
       "id": "M26-SPEC-03-CLAUSE-04",
@@ -2779,7 +4008,26 @@
         "R2-P3-M26-REVIEW-AC07",
         "R2-M26-S03"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "QuestionnaireDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+          "command": "r2.m26.questionnaire.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "QUESTION-VALID",
+            "QUESTION-EXTRA",
+            "QUESTION-VERSION",
+            "QUESTION-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M26-REVIEW-AC06",
+            "R2-P3-M26-REVIEW-AC07"
+          ]
+        }
+      ]
     },
     {
       "id": "M26-SPEC-03-CLAUSE-05",
@@ -2794,7 +4042,26 @@
         "R2-P3-M26-REVIEW-AC07",
         "R2-M26-S03"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "QuestionnaireDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+          "command": "r2.m26.questionnaire.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "QUESTION-VALID",
+            "QUESTION-EXTRA",
+            "QUESTION-VERSION",
+            "QUESTION-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M26-REVIEW-AC06",
+            "R2-P3-M26-REVIEW-AC07"
+          ]
+        }
+      ]
     },
     {
       "id": "M26-SPEC-03-CLAUSE-06",
@@ -2809,7 +4076,26 @@
         "R2-P3-M26-REVIEW-AC07",
         "R2-M26-S03"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "QuestionnaireDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+          "command": "r2.m26.questionnaire.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "QUESTION-VALID",
+            "QUESTION-EXTRA",
+            "QUESTION-VERSION",
+            "QUESTION-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M26-REVIEW-AC06",
+            "R2-P3-M26-REVIEW-AC07"
+          ]
+        }
+      ]
     },
     {
       "id": "M26-SPEC-03-CLAUSE-07",
@@ -2824,7 +4110,26 @@
         "R2-P3-M26-REVIEW-AC07",
         "R2-M26-S03"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "QuestionnaireDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+          "command": "r2.m26.questionnaire.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "QUESTION-VALID",
+            "QUESTION-EXTRA",
+            "QUESTION-VERSION",
+            "QUESTION-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M26-REVIEW-AC06",
+            "R2-P3-M26-REVIEW-AC07"
+          ]
+        }
+      ]
     },
     {
       "id": "M26-SPEC-03-CLAUSE-08",
@@ -2839,7 +4144,26 @@
         "R2-P3-M26-REVIEW-AC07",
         "R2-M26-S03"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "QuestionnaireDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+          "command": "r2.m26.questionnaire.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "QUESTION-VALID",
+            "QUESTION-EXTRA",
+            "QUESTION-VERSION",
+            "QUESTION-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M26-REVIEW-AC06",
+            "R2-P3-M26-REVIEW-AC07"
+          ]
+        }
+      ]
     },
     {
       "id": "M26-SPEC-03-CLAUSE-09",
@@ -2854,7 +4178,26 @@
         "R2-P3-M26-REVIEW-AC07",
         "R2-M26-S03"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "QuestionnaireDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/QuestionnaireDraft",
+          "command": "r2.m26.questionnaire.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "QUESTION-VALID",
+            "QUESTION-EXTRA",
+            "QUESTION-VERSION",
+            "QUESTION-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M26-REVIEW-AC06",
+            "R2-P3-M26-REVIEW-AC07"
+          ]
+        }
+      ]
     },
     {
       "id": "M26-SPEC-04-CLAUSE-01",
@@ -3151,7 +4494,27 @@
         "R2-P3-M18-REVIEW-AC04",
         "R2-M18-S02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "ReviewProject",
+          "schemaRef": "Interface_Schemas.json#/$defs/ReviewProject",
+          "command": "r2.m18.project.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "HISTORY-VALID",
+            "HISTORY-EXTRA",
+            "HISTORY-VERSION",
+            "HISTORY-SOURCE",
+            "HISTORY-NONE-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M18-REVIEW-AC01",
+            "R2-P3-M18-REVIEW-AC04"
+          ]
+        }
+      ]
     },
     {
       "id": "M18-SPEC-01-CLAUSE-02",
@@ -3168,7 +4531,27 @@
         "R2-P3-M18-REVIEW-AC04",
         "R2-M18-S02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "ReviewProject",
+          "schemaRef": "Interface_Schemas.json#/$defs/ReviewProject",
+          "command": "r2.m18.project.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "HISTORY-VALID",
+            "HISTORY-EXTRA",
+            "HISTORY-VERSION",
+            "HISTORY-SOURCE",
+            "HISTORY-NONE-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M18-REVIEW-AC01",
+            "R2-P3-M18-REVIEW-AC04"
+          ]
+        }
+      ]
     },
     {
       "id": "M18-SPEC-01-CLAUSE-03",
@@ -3185,7 +4568,27 @@
         "R2-P3-M18-REVIEW-AC04",
         "R2-M18-S02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "ReviewProject",
+          "schemaRef": "Interface_Schemas.json#/$defs/ReviewProject",
+          "command": "r2.m18.project.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "HISTORY-VALID",
+            "HISTORY-EXTRA",
+            "HISTORY-VERSION",
+            "HISTORY-SOURCE",
+            "HISTORY-NONE-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M18-REVIEW-AC01",
+            "R2-P3-M18-REVIEW-AC04"
+          ]
+        }
+      ]
     },
     {
       "id": "M18-SPEC-01-CLAUSE-04",
@@ -3202,7 +4605,27 @@
         "R2-P3-M18-REVIEW-AC04",
         "R2-M18-S02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "ReviewProject",
+          "schemaRef": "Interface_Schemas.json#/$defs/ReviewProject",
+          "command": "r2.m18.project.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "HISTORY-VALID",
+            "HISTORY-EXTRA",
+            "HISTORY-VERSION",
+            "HISTORY-SOURCE",
+            "HISTORY-NONE-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M18-REVIEW-AC01",
+            "R2-P3-M18-REVIEW-AC04"
+          ]
+        }
+      ]
     },
     {
       "id": "M18-SPEC-01-CLAUSE-05",
@@ -3219,7 +4642,27 @@
         "R2-P3-M18-REVIEW-AC04",
         "R2-M18-S02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "ReviewProject",
+          "schemaRef": "Interface_Schemas.json#/$defs/ReviewProject",
+          "command": "r2.m18.project.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "HISTORY-VALID",
+            "HISTORY-EXTRA",
+            "HISTORY-VERSION",
+            "HISTORY-SOURCE",
+            "HISTORY-NONE-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M18-REVIEW-AC01",
+            "R2-P3-M18-REVIEW-AC04"
+          ]
+        }
+      ]
     },
     {
       "id": "M18-SPEC-01-CLAUSE-06",
@@ -3236,7 +4679,27 @@
         "R2-P3-M18-REVIEW-AC04",
         "R2-M18-S02"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "ReviewProject",
+          "schemaRef": "Interface_Schemas.json#/$defs/ReviewProject",
+          "command": "r2.m18.project.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "HISTORY-VALID",
+            "HISTORY-EXTRA",
+            "HISTORY-VERSION",
+            "HISTORY-SOURCE",
+            "HISTORY-NONE-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M18-REVIEW-AC01",
+            "R2-P3-M18-REVIEW-AC04"
+          ]
+        }
+      ]
     },
     {
       "id": "M18-SPEC-02-CLAUSE-01",
@@ -3663,7 +5126,27 @@
         "R2-X-05",
         "R2-X-08"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "ReviewProject",
+          "schemaRef": "Interface_Schemas.json#/$defs/ReviewProject",
+          "command": "r2.m18.project.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "HISTORY-VALID",
+            "HISTORY-EXTRA",
+            "HISTORY-VERSION",
+            "HISTORY-SOURCE",
+            "HISTORY-NONE-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M18-REVIEW-AC01",
+            "R2-P3-M18-REVIEW-AC04"
+          ]
+        }
+      ]
     },
     {
       "id": "M18-SPEC-05-CLAUSE-02",
@@ -3682,7 +5165,27 @@
         "R2-X-05",
         "R2-X-08"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "ReviewProject",
+          "schemaRef": "Interface_Schemas.json#/$defs/ReviewProject",
+          "command": "r2.m18.project.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "HISTORY-VALID",
+            "HISTORY-EXTRA",
+            "HISTORY-VERSION",
+            "HISTORY-SOURCE",
+            "HISTORY-NONE-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M18-REVIEW-AC01",
+            "R2-P3-M18-REVIEW-AC04"
+          ]
+        }
+      ]
     },
     {
       "id": "M18-SPEC-05-CLAUSE-03",
@@ -3701,7 +5204,27 @@
         "R2-X-05",
         "R2-X-08"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "ReviewProject",
+          "schemaRef": "Interface_Schemas.json#/$defs/ReviewProject",
+          "command": "r2.m18.project.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "HISTORY-VALID",
+            "HISTORY-EXTRA",
+            "HISTORY-VERSION",
+            "HISTORY-SOURCE",
+            "HISTORY-NONE-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M18-REVIEW-AC01",
+            "R2-P3-M18-REVIEW-AC04"
+          ]
+        }
+      ]
     },
     {
       "id": "M18-SPEC-05-CLAUSE-04",
@@ -3720,7 +5243,27 @@
         "R2-X-05",
         "R2-X-08"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "ReviewProject",
+          "schemaRef": "Interface_Schemas.json#/$defs/ReviewProject",
+          "command": "r2.m18.project.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "HISTORY-VALID",
+            "HISTORY-EXTRA",
+            "HISTORY-VERSION",
+            "HISTORY-SOURCE",
+            "HISTORY-NONE-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M18-REVIEW-AC01",
+            "R2-P3-M18-REVIEW-AC04"
+          ]
+        }
+      ]
     },
     {
       "id": "M18-SPEC-05-CLAUSE-05",
@@ -3739,7 +5282,27 @@
         "R2-X-05",
         "R2-X-08"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "ReviewProject",
+          "schemaRef": "Interface_Schemas.json#/$defs/ReviewProject",
+          "command": "r2.m18.project.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "HISTORY-VALID",
+            "HISTORY-EXTRA",
+            "HISTORY-VERSION",
+            "HISTORY-SOURCE",
+            "HISTORY-NONE-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M18-REVIEW-AC01",
+            "R2-P3-M18-REVIEW-AC04"
+          ]
+        }
+      ]
     },
     {
       "id": "M18-SPEC-05-CLAUSE-06",
@@ -3758,7 +5321,27 @@
         "R2-X-05",
         "R2-X-08"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "ReviewProject",
+          "schemaRef": "Interface_Schemas.json#/$defs/ReviewProject",
+          "command": "r2.m18.project.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "HISTORY-VALID",
+            "HISTORY-EXTRA",
+            "HISTORY-VERSION",
+            "HISTORY-SOURCE",
+            "HISTORY-NONE-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M18-REVIEW-AC01",
+            "R2-P3-M18-REVIEW-AC04"
+          ]
+        }
+      ]
     },
     {
       "id": "M18-SPEC-05-CLAUSE-07",
@@ -3777,7 +5360,27 @@
         "R2-X-05",
         "R2-X-08"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "ReviewProject",
+          "schemaRef": "Interface_Schemas.json#/$defs/ReviewProject",
+          "command": "r2.m18.project.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "HISTORY-VALID",
+            "HISTORY-EXTRA",
+            "HISTORY-VERSION",
+            "HISTORY-SOURCE",
+            "HISTORY-NONE-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M18-REVIEW-AC01",
+            "R2-P3-M18-REVIEW-AC04"
+          ]
+        }
+      ]
     },
     {
       "id": "M18-SPEC-05-CLAUSE-08",
@@ -3796,7 +5399,27 @@
         "R2-X-05",
         "R2-X-08"
       ],
-      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause."
+      "coverageNote": "Parent approved policy scenario family; implementation proof still required per clause.",
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "ReviewProject",
+          "schemaRef": "Interface_Schemas.json#/$defs/ReviewProject",
+          "command": "r2.m18.project.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "HISTORY-VALID",
+            "HISTORY-EXTRA",
+            "HISTORY-VERSION",
+            "HISTORY-SOURCE",
+            "HISTORY-NONE-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M18-REVIEW-AC01",
+            "R2-P3-M18-REVIEW-AC04"
+          ]
+        }
+      ]
     },
     {
       "id": "M17-SPEC-01-CLAUSE-01",
@@ -6134,18 +7757,27 @@
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json.",
       "scenarioIds": [
         "R2-P3-M06-REVIEW-AC01",
-        "R2-P3-M06-REVIEW-AC02",
-        "R2-P3-M06-REVIEW-AC03",
-        "R2-P3-M06-REVIEW-AC04",
-        "R2-P3-M06-REVIEW-AC05",
-        "R2-P3-M06-REVIEW-AC06",
-        "R2-P3-M06-REVIEW-AC07",
-        "R2-P3-M06-REVIEW-AC08",
-        "R2-P3-M06-REVIEW-AC09",
-        "R2-P3-M06-REVIEW-AC10",
-        "R2-P3-M06-REVIEW-AC11",
-        "R2-P3-M06-REVIEW-AC12",
-        "R2-P3-M06-REVIEW-AC13"
+        "R2-P3-M06-REVIEW-AC03"
+      ],
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "CatalogDraft",
+          "schemaRef": "Interface_Schemas.json#/$defs/CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ],
+          "scenarioIds": [
+            "R2-P3-M06-REVIEW-AC01",
+            "R2-P3-M06-REVIEW-AC03"
+          ]
+        }
       ]
     },
     {
@@ -9199,17 +10831,26 @@
       "precedence": "Current approved SPEC overrides incompatible historical expectations; see Legacy_Acceptance_Map.json.",
       "scenarioIds": [
         "R2-P3-M37-REVIEW-AC01",
-        "R2-P3-M37-REVIEW-AC02",
-        "R2-P3-M37-REVIEW-AC03",
-        "R2-P3-M37-REVIEW-AC04",
-        "R2-P3-M37-REVIEW-AC05",
-        "R2-P3-M37-REVIEW-AC06",
-        "R2-P3-M37-REVIEW-AC07",
-        "R2-P3-M37-REVIEW-AC08",
-        "R2-P3-M37-REVIEW-AC09",
-        "R2-P3-M37-REVIEW-AC10",
-        "R2-P3-M37-REVIEW-AC11",
-        "R2-P3-M37-REVIEW-AC12"
+        "R2-P3-M37-REVIEW-AC02"
+      ],
+      "targetedRepairMappings": [
+        {
+          "findingId": "R2-EXIT-001",
+          "group": "IndicatorChild",
+          "schemaRef": "Interface_Schemas.json#/$defs/IndicatorDraft",
+          "command": "r2.m37.indicator.create",
+          "designRef": "Contract_Repair.md",
+          "exampleIds": [
+            "LEVEL-VALID",
+            "LEVEL-EXTRA",
+            "LEVEL-VERSION",
+            "LEVEL-SOURCE"
+          ],
+          "scenarioIds": [
+            "R2-P3-M37-REVIEW-AC01",
+            "R2-P3-M37-REVIEW-AC02"
+          ]
+        }
       ]
     },
     {

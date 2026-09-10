@@ -9,7 +9,13 @@
       "payloadSchema": "#/$defs/LibraryDraft",
       "operation": "create",
       "semanticDesignRef": "M37_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m37.indicator.create",
@@ -17,7 +23,17 @@
       "payloadSchema": "#/$defs/IndicatorDraft",
       "operation": "create",
       "semanticDesignRef": "M37_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      },
+      "repairFindingRefs": [
+        "R2-EXIT-001"
+      ],
+      "semanticGuardRef": "Contract_Repair.md"
     },
     {
       "action": "r2.m37.standard.create",
@@ -25,7 +41,19 @@
       "payloadSchema": "#/$defs/StandardDraft",
       "operation": "create",
       "semanticDesignRef": "M37_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [
+          "payload.lines[].sourceVersionRef (dimension=achievement only)"
+        ],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      },
+      "repairFindingRefs": [
+        "R2-EXIT-001"
+      ],
+      "semanticGuardRef": "Contract_Repair.md"
     },
     {
       "action": "r2.m37.standard.edit",
@@ -33,7 +61,19 @@
       "payloadSchema": "#/$defs/StandardDraft",
       "operation": "update",
       "semanticDesignRef": "M37_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [
+          "payload.lines[].sourceVersionRef (dimension=achievement only)"
+        ],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      },
+      "repairFindingRefs": [
+        "R2-EXIT-001"
+      ],
+      "semanticGuardRef": "Contract_Repair.md"
     },
     {
       "action": "r2.m06.catalog.create",
@@ -41,7 +81,17 @@
       "payloadSchema": "#/$defs/CatalogDraft",
       "operation": "create",
       "semanticDesignRef": "M06_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      },
+      "repairFindingRefs": [
+        "R2-EXIT-001"
+      ],
+      "semanticGuardRef": "Contract_Repair.md"
     },
     {
       "action": "r2.m06.catalog.edit",
@@ -49,7 +99,17 @@
       "payloadSchema": "#/$defs/CatalogDraft",
       "operation": "update",
       "semanticDesignRef": "M06_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      },
+      "repairFindingRefs": [
+        "R2-EXIT-001"
+      ],
+      "semanticGuardRef": "Contract_Repair.md"
     },
     {
       "action": "r2.m06.standard.create",
@@ -57,7 +117,13 @@
       "payloadSchema": "#/$defs/QualificationDraft",
       "operation": "create",
       "semanticDesignRef": "M06_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m06.application.submit",
@@ -65,7 +131,13 @@
       "payloadSchema": "#/$defs/QualificationApplication",
       "operation": "create",
       "semanticDesignRef": "M06_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m26.questionnaire.create",
@@ -73,7 +145,17 @@
       "payloadSchema": "#/$defs/QuestionnaireDraft",
       "operation": "create",
       "semanticDesignRef": "M26_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      },
+      "repairFindingRefs": [
+        "R2-EXIT-001"
+      ],
+      "semanticGuardRef": "Contract_Repair.md"
     },
     {
       "action": "r2.m26.project.create",
@@ -81,7 +163,13 @@
       "payloadSchema": "#/$defs/FeedbackProject",
       "operation": "create",
       "semanticDesignRef": "M26_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m26.invite.revise",
@@ -89,7 +177,13 @@
       "payloadSchema": "#/$defs/Invite",
       "operation": "update",
       "semanticDesignRef": "M26_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m26.response.submit",
@@ -97,7 +191,13 @@
       "payloadSchema": "#/$defs/ResponseSubmit",
       "operation": "update",
       "semanticDesignRef": "M26_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m26.report.publish",
@@ -105,7 +205,13 @@
       "payloadSchema": "#/$defs/ReportPublish",
       "operation": "update",
       "semanticDesignRef": "M26_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m18.project.create",
@@ -113,7 +219,17 @@
       "payloadSchema": "#/$defs/ReviewProject",
       "operation": "create",
       "semanticDesignRef": "M18_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      },
+      "repairFindingRefs": [
+        "R2-EXIT-001"
+      ],
+      "semanticGuardRef": "Contract_Repair.md"
     },
     {
       "action": "r2.m18.project.save",
@@ -121,7 +237,17 @@
       "payloadSchema": "#/$defs/ReviewProject",
       "operation": "update",
       "semanticDesignRef": "M18_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      },
+      "repairFindingRefs": [
+        "R2-EXIT-001"
+      ],
+      "semanticGuardRef": "Contract_Repair.md"
     },
     {
       "action": "r2.m18.grid.save",
@@ -129,7 +255,13 @@
       "payloadSchema": "#/$defs/GridDefinition",
       "operation": "update",
       "semanticDesignRef": "M18_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m18.calibration.submit",
@@ -137,7 +269,13 @@
       "payloadSchema": "#/$defs/Calibration",
       "operation": "create",
       "semanticDesignRef": "M18_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m17.pool.create",
@@ -145,7 +283,13 @@
       "payloadSchema": "#/$defs/PoolDraft",
       "operation": "create",
       "semanticDesignRef": "M17_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m17.rule.publish",
@@ -153,7 +297,13 @@
       "payloadSchema": "#/$defs/PoolRule",
       "operation": "update",
       "semanticDesignRef": "M17_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m17.membership.apply",
@@ -161,7 +311,13 @@
       "payloadSchema": "#/$defs/Membership",
       "operation": "create",
       "semanticDesignRef": "M17_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m17.membership.reenter",
@@ -169,7 +325,13 @@
       "payloadSchema": "#/$defs/Membership",
       "operation": "create",
       "semanticDesignRef": "M17_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m17.succession.nominate",
@@ -177,7 +339,13 @@
       "payloadSchema": "#/$defs/Succession",
       "operation": "create",
       "semanticDesignRef": "M17_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m17.mentor.handoff",
@@ -185,7 +353,13 @@
       "payloadSchema": "#/$defs/Mentor",
       "operation": "update",
       "semanticDesignRef": "M17_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m17.template.create",
@@ -193,7 +367,13 @@
       "payloadSchema": "#/$defs/IdpTemplate",
       "operation": "create",
       "semanticDesignRef": "M17_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m17.idp.create",
@@ -201,7 +381,13 @@
       "payloadSchema": "#/$defs/IdpPlan",
       "operation": "create",
       "semanticDesignRef": "M17_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m17.idp.taskAction",
@@ -209,7 +395,13 @@
       "payloadSchema": "#/$defs/IdpTaskAction",
       "operation": "update",
       "semanticDesignRef": "M17_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m03.nomination.submit",
@@ -217,7 +409,13 @@
       "payloadSchema": "#/$defs/Nomination",
       "operation": "create",
       "semanticDesignRef": "M03_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m03.appointment.reconcile",
@@ -225,7 +423,13 @@
       "payloadSchema": "#/$defs/Appointment",
       "operation": "update",
       "semanticDesignRef": "M03_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m03.evaluation.create",
@@ -233,7 +437,13 @@
       "payloadSchema": "#/$defs/EvaluationDraft",
       "operation": "create",
       "semanticDesignRef": "M03_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m03.evaluation.save",
@@ -241,7 +451,13 @@
       "payloadSchema": "#/$defs/EvaluationDraft",
       "operation": "update",
       "semanticDesignRef": "M03_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m03.observation.action",
@@ -249,7 +465,13 @@
       "payloadSchema": "#/$defs/ObservationAction",
       "operation": "update",
       "semanticDesignRef": "M03_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m03.interview.create",
@@ -257,7 +479,13 @@
       "payloadSchema": "#/$defs/InterviewDraft",
       "operation": "create",
       "semanticDesignRef": "M03_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m03.interview.correct",
@@ -265,7 +493,13 @@
       "payloadSchema": "#/$defs/InterviewDraft",
       "operation": "update",
       "semanticDesignRef": "M03_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m37.standard.submit",
@@ -273,7 +507,13 @@
       "payloadSchema": "#/$defs/SubmitAction",
       "operation": "update",
       "semanticDesignRef": "M37_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m37.standard.review",
@@ -281,7 +521,13 @@
       "payloadSchema": "#/$defs/ApprovalAction",
       "operation": "update",
       "semanticDesignRef": "M37_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m37.standard.publish",
@@ -289,7 +535,13 @@
       "payloadSchema": "#/$defs/PublishAction",
       "operation": "update",
       "semanticDesignRef": "M37_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m37.standard.withdraw",
@@ -297,7 +549,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M37_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m06.standard.submit",
@@ -305,7 +563,13 @@
       "payloadSchema": "#/$defs/SubmitAction",
       "operation": "update",
       "semanticDesignRef": "M06_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m06.standard.review",
@@ -313,7 +577,13 @@
       "payloadSchema": "#/$defs/ApprovalAction",
       "operation": "update",
       "semanticDesignRef": "M06_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m06.standard.publish",
@@ -321,7 +591,13 @@
       "payloadSchema": "#/$defs/PublishAction",
       "operation": "update",
       "semanticDesignRef": "M06_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m06.standard.withdraw",
@@ -329,7 +605,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M06_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m26.project.submit",
@@ -337,7 +619,13 @@
       "payloadSchema": "#/$defs/SubmitAction",
       "operation": "update",
       "semanticDesignRef": "M26_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m26.project.review",
@@ -345,7 +633,13 @@
       "payloadSchema": "#/$defs/ApprovalAction",
       "operation": "update",
       "semanticDesignRef": "M26_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m26.project.withdraw",
@@ -353,7 +647,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M26_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m18.result.submit",
@@ -361,7 +661,13 @@
       "payloadSchema": "#/$defs/SubmitAction",
       "operation": "update",
       "semanticDesignRef": "M18_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m18.result.review",
@@ -369,7 +675,13 @@
       "payloadSchema": "#/$defs/ApprovalAction",
       "operation": "update",
       "semanticDesignRef": "M18_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m18.result.publish",
@@ -377,7 +689,13 @@
       "payloadSchema": "#/$defs/PublishAction",
       "operation": "update",
       "semanticDesignRef": "M18_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m18.result.withdraw",
@@ -385,7 +703,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M18_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m17.idp.submit",
@@ -393,7 +717,13 @@
       "payloadSchema": "#/$defs/SubmitAction",
       "operation": "update",
       "semanticDesignRef": "M17_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m17.idp.review",
@@ -401,7 +731,13 @@
       "payloadSchema": "#/$defs/ApprovalAction",
       "operation": "update",
       "semanticDesignRef": "M17_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m17.idp.withdraw",
@@ -409,7 +745,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M17_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m03.report.submit",
@@ -417,7 +759,13 @@
       "payloadSchema": "#/$defs/SubmitAction",
       "operation": "update",
       "semanticDesignRef": "M03_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m03.report.review",
@@ -425,7 +773,13 @@
       "payloadSchema": "#/$defs/ApprovalAction",
       "operation": "update",
       "semanticDesignRef": "M03_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m03.report.publish",
@@ -433,7 +787,13 @@
       "payloadSchema": "#/$defs/PublishAction",
       "operation": "update",
       "semanticDesignRef": "M03_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m03.report.withdraw",
@@ -441,7 +801,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M03_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m37.availability.change",
@@ -449,7 +815,13 @@
       "payloadSchema": "#/$defs/AvailabilityAction",
       "operation": "update",
       "semanticDesignRef": "M37_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m06.availability.change",
@@ -457,7 +829,13 @@
       "payloadSchema": "#/$defs/AvailabilityAction",
       "operation": "update",
       "semanticDesignRef": "M06_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m06.certification.revoke",
@@ -465,7 +843,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M06_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m26.project.open",
@@ -473,7 +857,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M26_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m26.project.close",
@@ -481,7 +871,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M26_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m26.project.reopen",
@@ -489,7 +885,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M26_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m26.response.withdraw",
@@ -497,7 +899,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M26_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m26.report.withdraw",
@@ -505,7 +913,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M26_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m18.project.start",
@@ -513,7 +927,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M18_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m18.project.close",
@@ -521,7 +941,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M18_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m18.project.reopen",
@@ -529,7 +955,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M18_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m18.result.withdrawPublication",
@@ -537,7 +969,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M18_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m17.membership.exit",
@@ -545,7 +983,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M17_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m17.succession.close",
@@ -553,7 +997,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M17_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m17.idp.start",
@@ -561,7 +1011,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M17_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m17.idp.extend",
@@ -569,7 +1025,13 @@
       "payloadSchema": "#/$defs/DateChange",
       "operation": "update",
       "semanticDesignRef": "M17_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m17.idp.pause",
@@ -577,7 +1039,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M17_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m17.idp.resume",
@@ -585,7 +1053,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M17_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m17.idp.terminate",
@@ -593,7 +1067,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M17_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m03.term.change",
@@ -601,7 +1081,13 @@
       "payloadSchema": "#/$defs/TermChange",
       "operation": "update",
       "semanticDesignRef": "M03_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     },
     {
       "action": "r2.m03.interview.cancel",
@@ -609,7 +1095,13 @@
       "payloadSchema": "#/$defs/ReasonAction",
       "operation": "update",
       "semanticDesignRef": "M03_Design.md#engineering",
-      "implementationStatus": "design_only"
+      "implementationStatus": "design_only",
+      "referencePolicy": {
+        "defaultKind": "internal",
+        "externalAllowedPaths": [],
+        "guard": "Interfaces.md#repair-001",
+        "missingKind": "reject; never infer"
+      }
     }
   ],
   "querySchema": "#/$defs/ReportQuery",

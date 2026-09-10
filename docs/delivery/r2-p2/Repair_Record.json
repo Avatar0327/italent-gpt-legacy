@@ -1,0 +1,93 @@
+{
+  "kind": "targeted_repair_not_owner_approval",
+  "reviewHead": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+  "reviewedHead": "8b3daf9270181ffe2e77015be723da8e611d83a5",
+  "oldFixedContentHead": "7ff3a28c7660dac658d5243d7c4535a9c8037fc2",
+  "sources": [
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Independent_Exit_Review.md",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "bf1c0ea418e39ee64dd66d7ff2d023ca8062ce80797597dead3d340db945d34c",
+      "bytes": 12061
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Findings.md",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "f37aa38d7af012aa02422f7611b391e162a910e532d0dd37ced10d9dbfe54e2d",
+      "bytes": 10977
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Findings.json",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "a7a7e8b13ee78a590681c152424c3c5b01270e8de93797dc528fdf6ddfbc5c13",
+      "bytes": 13494
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Semantic_Probes.json",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "f45ac2b4a49fc395cbbf30fea6b143f46c5297ee4681aceebcd28b2e415344a3",
+      "bytes": 4776
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Critical_Gates.md",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "965efce90af070ba92ff3c5fb8027a5e8448d93324353b04f8b7c1df056835e1",
+      "bytes": 14057
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Requirement_Review.md",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "04a99cc8706a690af25ea77849c7c28201fa045b56aeab89e05c62cdd338b963",
+      "bytes": 6813
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Limit_Review.md",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "b0cbdcac2876d1163c322f3f70fba05ab9c6d0f98f5fca1016416f2b40b95b7b",
+      "bytes": 14096
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/R2_P3_Baseline_Sequencing.md",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "cd99e3bdf0c69b09b68a8101034598ec2a5f5ae732dc169dd7fd773e52647a3f",
+      "bytes": 9146
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/P3_Sequencing_Recommendations.json",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "53776d7511d0be5caab266b8714b9c88dd8ed88eb07e6d74b044561ac30677d2",
+      "bytes": 18261
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Final_Verification.json",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "9a3379ae26555aac4467db0812faa07e48a9208f63c2a7dcb27b8f3077a9dec4",
+      "bytes": 10421
+    },
+    {
+      "path": "docs/delivery/r2-p2-exit-review/Resume.md",
+      "gitRef": "bd976480fad9822ee52ecb4b00a080360772b0f3",
+      "sha256": "c5e8ef4099bcc5eb78cdd50e94dcd8da9ff3de5d561a93ee1a95090058dd3b80",
+      "bytes": 3117
+    }
+  ],
+  "findings": {
+    "R2-EXIT-001": "design_repaired_pending_independent_recheck",
+    "R2-EXIT-002": "repair_pending",
+    "R2-EXIT-003": "repair_pending",
+    "R2-EXIT-004": "repair_pending",
+    "R2-EXIT-005": "open_future_responsibility",
+    "R2-EXIT-006": "open_future_responsibility"
+  },
+  "independentAcceptedP2ItemsBeforeRepair": 9,
+  "affectedP2Items": [
+    "M37-LIMIT-01.01",
+    "M06-LIMIT-01.01",
+    "M26-LIMIT-01.01",
+    "M26-LIMIT-01.02",
+    "M18-LIMIT-01.01",
+    "M18-LIMIT-01.02"
+  ],
+  "ownerP2ExitApproved": false,
+  "r2P3Started": false
+}

@@ -91,3 +91,8 @@ M18发布结果只引用具体版本作为建议，M37定义和M06有效性分�
 合成池POOL-A/B、预计人数2与null；E退出再入POOL-A新membership（同一person），同岗POS-1两候选及同人POS-2；readiness now/3–6month/legacy one_year互不转换。IDP两个并行阶段、第三阶段依赖前两，required T1及elective最少1；本人C提交、独立V核验，多导师all/any两套显式配置。健康样例关键岗4、覆盖3、就绪2；池3/预计2=150%，分母0返回null。
 
 M17-REVIEW-AC01～14逐项见Acceptance_Scenarios.json，另针对自动unknown、出池重入并发、任务取消未获免除、快照与当前源混用补验。P2完整设计关闭；P3人才发展域负责人、共享流程/报表负责人和独立测试负责人实施；P4业务人才委员会/隐私/运维核真实角色、规则及恢复。原站IDP流程节点UUID和旧出池链未知只形成补证请求，不再把已确认流程入口存在列未发现。
+
+<a id="repair-001"></a>
+## 001契约定向对齐
+
+消费M37/M06/M18引用采用明确kind=internal；外部来源先经获准adapter归档；旧池/继任/IDP证据保持原版本。 完整字段与拒绝条件见[Contract_Repair.md](Contract_Repair.md)，其规范替换旧版简写中的歧义，其余已通过独立评审内容保持。

@@ -69,3 +69,8 @@ read/use/manage/review/publish/export独立动作，默认不共享。目录read
 原M37-REVIEW-AC01～12逐一保留GWT并映射至`Acceptance_Scenarios.json`（随模块生成）；额外覆盖并发发布、停用/引用竞争、unknown及历史子集下载撤权。断言需查对象版本/当前指针/审计/回执/consumer digest，不能只断言HTTP200或界面存在。
 
 P2：以上对象、尺度、生命周期、范围及契约设计关闭。P3：标准实施负责人+独立测试负责人实现五项SPEC并验证合成数据、迁移冲突及消费兼容。P4：业务标准负责人核真实用途和跨角色，安全/运维核敏感子集和恢复。原站子集保存、共享UUID等未核事实保留补证责任，不宣称等同本设计已执行。
+
+<a id="repair-001"></a>
+## 001契约定向对齐
+
+逐等级alias、elementText、subsetName及父指标/等级/子版本按Contract_Repair.md持久化；标准成就行允许显式外部来源，其余指标行只接受内部M37版本。 完整字段与拒绝条件见[Contract_Repair.md](Contract_Repair.md)，其规范替换旧版简写中的歧义，其余已通过独立评审内容保持。

@@ -77,6 +77,8 @@ defs['InterviewDraft']=obj({'personId':ref('Id'),'interviewerPersonId':ref('Id')
 defs['TermChange']=obj({'termVersionId':ref('Id'),'changeKind':enum('renewal','dismissal','retirement','employee_exit','void','correction'),'actualOn':ref('Date'),'reason':ref('Reason'),'approvalRef':ref('VersionRef'),'sourceEffectReceiptRef':ref('VersionRef'),'newTerm':ref('TermDraft')},['termVersionId','changeKind','actualOn','reason','approvalRef'])
 defs['DateChange']=obj({'businessVersionId':ref('Id'),'newEndOn':ref('Date'),'reason':ref('Reason'),'approvalRef':ref('VersionRef'),'dependencyImpactManifestDigest':ref('Digest')})
 defs['ReportQuery']=obj({'datasetId':ref('Id'),'definitionVersionId':ref('Id'),'timeMode':enum('current','snapshot'),'snapshotId':ref('Id'),'purpose':ref('Purpose'),'fieldIds':arr('Id'),'cursor':text(4000),'pageSize':{'type':'integer','minimum':1,'maximum':200}},['datasetId','definitionVersionId','timeMode','purpose','fieldIds','pageSize'])
+from repair_contracts import apply, bind
+apply(defs,obj,ref,arr,enum,text,nullable)
 commands=[]
 def cmd(action,payload,mode,anchor):commands.append({'action':'r2.'+action,'module':action[:3].upper(),'payloadSchema':'#/$defs/'+payload,'operation':mode,'semanticDesignRef':anchor,'implementationStatus':'design_only'})
 direct={
@@ -96,12 +98,16 @@ for m,root in [('m37','standard'),('m06','standard'),('m26','project'),('m18','r
         cmd(m+'.'+root+'.'+action,payload,'update',m.upper()+'_Design.md#engineering')
 for m,actions in {'m37':['availability.change'],'m06':['availability.change','certification.revoke'],'m26':['project.open','project.close','project.reopen','response.withdraw','report.withdraw'],'m18':['project.start','project.close','project.reopen','result.withdrawPublication'],'m17':['membership.exit','succession.close','idp.start','idp.extend','idp.pause','idp.resume','idp.terminate'],'m03':['term.change','interview.cancel']}.items():
     for action in actions:cmd(m+'.'+action,{'availability.change':'AvailabilityAction','term.change':'TermChange','idp.extend':'DateChange'}.get(action,'ReasonAction'),'update',m.upper()+'_Design.md#engineering')
+bind(commands)
 base={'schemaVersion':{'const':1},'commandId':ref('Uuid'),'idempotencyKey':text(200),'action':enum(*[c['action'] for c in commands]),'objectRef':ref('ObjectRef'),'expectedWorkspaceRevision':ref('Revision'),'expectedEntityRevision':ref('Revision'),'expectedAuthorizationRevision':ref('Revision'),'writerEpoch':ref('Revision'),'recoveryEpoch':ref('Revision'),'payload':{'type':'object'}}
 command=obj(base)
 command['allOf']=[{'if':{'properties':{'action':{'const':c['action']}}},'then':{'properties':{'payload':ref(c['payloadSchema'].split('/')[-1]),'objectRef':{'properties':{'module':{'const':c['module']},'rootId':{'type':'null'} if c['operation']=='create' else ref('Id')}},**({'expectedEntityRevision':{'const':0}} if c['operation']=='create' else {})}}} for c in commands]
 defs['Command']=command
-defs['Event']=obj({'eventId':ref('Uuid'),'schemaVersion':{'const':1},'tenantId':ref('Id'),'producer':text(40),'eventType':text(100),'objectType':text(80),'rootId':ref('Id'),'versionId':ref('Id'),'entityRevision':ref('Revision'),'workspaceRevision':ref('Revision'),'sourceRevision':ref('Revision'),'occurredAt':ref('Instant'),'effectiveAt':nullable(ref('Instant')),'correlationId':ref('Id'),'causationId':ref('Id'),'digestAlgorithm':{'const':'sha256-canonical-json-v1'},'digest':ref('Digest'),'payload':obj({'sourceVersionRef':ref('VersionRef'),'rawStatus':text(80),'purpose':ref('Purpose'),'availability':enum('active','disabled','withdrawn'),'manifestDigest':ref('Digest')},['sourceVersionRef','rawStatus','purpose'])})
+defs['Event']=obj({'eventId':ref('Uuid'),'schemaVersion':{'const':1},'tenantId':ref('Id'),'producer':text(40),'eventType':text(100),'objectType':text(80),'rootId':ref('Id'),'versionId':ref('Id'),'entityRevision':ref('Revision'),'workspaceRevision':ref('Revision'),'sourceRevision':ref('Revision'),'occurredAt':ref('Instant'),'effectiveAt':nullable(ref('Instant')),'correlationId':ref('Id'),'causationId':ref('Id'),'digestAlgorithm':{'const':'sha256-canonical-json-v1'},'digest':ref('Digest'),'payload':obj({'sourceVersionRef':ref('InternalVersionRef'),'rawStatus':text(80),'purpose':ref('Purpose'),'availability':enum('active','disabled','withdrawn'),'manifestDigest':ref('Digest')},['sourceVersionRef','rawStatus','purpose'])})
 schema={'$schema':'https://json-schema.org/draft/2020-12/schema','$id':'urn:italent:r2:p2:interfaces:v1','$ref':'#/$defs/Command','$defs':defs,'description':'P2 design only. Semantic guards and current authorization mandatory; no running API claim.'}
 (D/'Interface_Schemas.json').write_text(json.dumps(schema,ensure_ascii=False,indent=2)+'\n')
 (D/'Command_Registry.json').write_text(json.dumps({'schemaVersion':1,'kind':'key_action_contracts_design_only','count':len(commands),'commands':commands,'querySchema':'#/$defs/ReportQuery','unregisteredActions':'P3 must register an equally strict payload before exposure; no generic arbitrary command passthrough'},ensure_ascii=False,indent=2)+'\n')
 print(json.dumps({'definitions':len(defs),'commandBindings':len(commands)}))
+
+import runpy
+runpy.run_path(str(D/"build_schema_examples.py"))

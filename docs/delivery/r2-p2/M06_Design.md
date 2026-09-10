@@ -71,3 +71,8 @@ certificateSnapshot返回certificateId、personId、standardRoot/version、quali
 合成T-A/T-B、员工E、代办H、独立评委R1/R2、回避贡献者C；标准QR的v1/v2、独立level QL与ratingLevel RL（相同名称但不同ID）、数值尺度0–10步长0.5及评级方案。固定时钟D=2026-09-30 23:59:59+08:00与D+1 00:00验证到期；证据缺失、过窗和显式unlimited分别构造；同旧证双续期并发只一在途。
 
 M06-REVIEW-AC01～13逐一见Acceptance_Scenarios.json；必须验证实际对象、精确有效性、重复占位及独立回避，不能以历史合成测试代本轮复验。P2完整规则/接口关闭；P3资格域实施+独立测试负责人验证；P4业务资格委员会核真实角色和有效窗口，安全/运维核敏感材料及恢复。原站评分、委员会细节和多角色实操未知保持限定补证，不反转已批准政策。
+
+<a id="repair-001"></a>
+## 001契约定向对齐
+
+indicator_type的isCommon、说明行及numeric/rating配置写入目录内容版本，评级方案与资格级别不可互换。 完整字段与拒绝条件见[Contract_Repair.md](Contract_Repair.md)，其规范替换旧版简写中的歧义，其余已通过独立评审内容保持。

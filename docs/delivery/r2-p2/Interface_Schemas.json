@@ -63,50 +63,6 @@
       "minLength": 1,
       "maxLength": 100
     },
-    "VersionRef": {
-      "type": "object",
-      "properties": {
-        "producer": {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 40
-        },
-        "objectType": {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 80
-        },
-        "rootId": {
-          "$ref": "#/$defs/Id"
-        },
-        "versionId": {
-          "$ref": "#/$defs/Id"
-        },
-        "sourceRevision": {
-          "$ref": "#/$defs/Revision"
-        },
-        "digest": {
-          "$ref": "#/$defs/Digest"
-        },
-        "capturedAt": {
-          "$ref": "#/$defs/Instant"
-        },
-        "purpose": {
-          "$ref": "#/$defs/Purpose"
-        }
-      },
-      "required": [
-        "producer",
-        "objectType",
-        "rootId",
-        "versionId",
-        "sourceRevision",
-        "digest",
-        "capturedAt",
-        "purpose"
-      ],
-      "additionalProperties": false
-    },
     "ObjectRef": {
       "type": "object",
       "properties": {
@@ -224,7 +180,7 @@
           "minItems": 0
         },
         "mappingVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         }
       },
       "required": [
@@ -241,7 +197,7 @@
               "const": "numeric"
             },
             "scaleVersionRef": {
-              "$ref": "#/$defs/VersionRef"
+              "$ref": "#/$defs/InternalVersionRef"
             },
             "comparator": {
               "type": "string",
@@ -272,7 +228,7 @@
               "const": "ordinal"
             },
             "schemeVersionRef": {
-              "$ref": "#/$defs/VersionRef"
+              "$ref": "#/$defs/InternalVersionRef"
             },
             "targetLevelId": {
               "$ref": "#/$defs/Id"
@@ -319,7 +275,7 @@
               "$ref": "#/$defs/Id"
             },
             "definitionVersionRef": {
-              "$ref": "#/$defs/VersionRef"
+              "$ref": "#/$defs/InternalVersionRef"
             }
           },
           "required": [
@@ -375,7 +331,7 @@
           "maxLength": 40
         },
         "scaleVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         }
       },
       "required": [
@@ -479,7 +435,7 @@
       "type": "object",
       "properties": {
         "objectVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "classification": {
           "type": "string",
@@ -499,7 +455,7 @@
         "attachmentVersionRefs": {
           "type": "array",
           "items": {
-            "$ref": "#/$defs/VersionRef"
+            "$ref": "#/$defs/InternalVersionRef"
           },
           "minItems": 0
         }
@@ -536,7 +492,7 @@
         "recusalVersionRefs": {
           "type": "array",
           "items": {
-            "$ref": "#/$defs/VersionRef"
+            "$ref": "#/$defs/InternalVersionRef"
           },
           "minItems": 0
         },
@@ -550,10 +506,10 @@
           "$ref": "#/$defs/Decimal"
         },
         "denominatorPolicyVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "hardVetoRuleVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         }
       },
       "required": [
@@ -601,7 +557,7 @@
           "$ref": "#/$defs/Id"
         },
         "workflowTemplateVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "materialManifest": {
           "type": "array",
@@ -625,7 +581,7 @@
           "$ref": "#/$defs/Id"
         },
         "approvalDecisionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "basePublishedVersionId": {
           "anyOf": [
@@ -638,7 +594,7 @@
           ]
         },
         "audiencePolicyVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "manifestDigest": {
           "$ref": "#/$defs/Digest"
@@ -663,7 +619,7 @@
           "$ref": "#/$defs/Reason"
         },
         "approvalRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         }
       },
       "required": [
@@ -747,6 +703,26 @@
             }
           ]
         },
+        "childVersionId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "indicatorVersionRef": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/IndicatorVersionRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
         "subset": {
           "type": "string",
           "enum": [
@@ -756,6 +732,9 @@
             "interview_question"
           ]
         },
+        "subsetName": {
+          "$ref": "#/$defs/Name"
+        },
         "sort": {
           "$ref": "#/$defs/PositiveInteger"
         },
@@ -763,13 +742,50 @@
           "type": "string",
           "minLength": 1,
           "maxLength": 4000
+        },
+        "levelId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "levelVersionRef": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/LevelVersionRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "alias": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 200
+        },
+        "elementText": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 500
         }
       },
       "required": [
         "childId",
+        "childVersionId",
+        "indicatorVersionRef",
         "subset",
+        "subsetName",
         "sort",
-        "description"
+        "description",
+        "levelId",
+        "levelVersionRef",
+        "alias",
+        "elementText"
       ],
       "additionalProperties": false,
       "allOf": [
@@ -787,6 +803,19 @@
                 "type": "string",
                 "minLength": 1,
                 "maxLength": 500
+              },
+              "levelVersionRef": {
+                "type": "null"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "alias": {
+                "const": ""
+              },
+              "elementText": {
+                "const": ""
               }
             }
           }
@@ -797,7 +826,7 @@
       "type": "object",
       "properties": {
         "libraryVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "code": {
           "$ref": "#/$defs/Name"
@@ -878,7 +907,32 @@
         "weight",
         "mandatory"
       ],
-      "additionalProperties": false
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "dimension": {
+                "const": "achievement"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "sourceVersionRef": {
+                "$ref": "#/$defs/VersionRef"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "sourceVersionRef": {
+                "$ref": "#/$defs/IndicatorVersionRef"
+              }
+            }
+          }
+        }
+      ]
     },
     "StandardDraft": {
       "type": "object",
@@ -916,7 +970,7 @@
         "purposeRuleVersionRefs": {
           "type": "array",
           "items": {
-            "$ref": "#/$defs/VersionRef"
+            "$ref": "#/$defs/InternalVersionRef"
           },
           "minItems": 0
         }
@@ -987,6 +1041,78 @@
               "type": "null"
             }
           ]
+        },
+        "isCommon": {
+          "$ref": "#/$defs/Boolean"
+        },
+        "descriptionRows": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DescriptionRow"
+          },
+          "minItems": 0
+        },
+        "evaluationMode": {
+          "type": "string",
+          "enum": [
+            "numeric",
+            "rating",
+            "not_configured"
+          ]
+        },
+        "numericScale": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/NumericScaleConfig"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "ratingSelection": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RatingSelection"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "indicatorTypeVersionRef": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/InternalVersionRef"
+            },
+            {
+              "properties": {
+                "producer": {
+                  "const": "M06"
+                },
+                "objectType": {
+                  "const": "indicator_type"
+                }
+              }
+            }
+          ]
+        },
+        "qualificationLevelVersionRef": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/InternalVersionRef"
+            },
+            {
+              "properties": {
+                "producer": {
+                  "const": "M06"
+                },
+                "objectType": {
+                  "const": "qualification_level"
+                }
+              }
+            }
+          ]
         }
       },
       "required": [
@@ -998,7 +1124,145 @@
         "targetKind",
         "targetId"
       ],
-      "additionalProperties": false
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "indicator_type"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "isCommon",
+              "descriptionRows",
+              "evaluationMode",
+              "numericScale",
+              "ratingSelection"
+            ]
+          },
+          "else": {
+            "not": {
+              "anyOf": [
+                {
+                  "required": [
+                    "isCommon"
+                  ]
+                },
+                {
+                  "required": [
+                    "descriptionRows"
+                  ]
+                },
+                {
+                  "required": [
+                    "evaluationMode"
+                  ]
+                },
+                {
+                  "required": [
+                    "numericScale"
+                  ]
+                },
+                {
+                  "required": [
+                    "ratingSelection"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "indicator"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "indicatorTypeVersionRef"
+            ]
+          },
+          "else": {
+            "not": {
+              "required": [
+                "indicatorTypeVersionRef"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "evaluationMode"
+            ],
+            "properties": {
+              "evaluationMode": {
+                "const": "numeric"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "numericScale": {
+                "$ref": "#/$defs/NumericScaleConfig"
+              },
+              "ratingSelection": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "evaluationMode"
+            ],
+            "properties": {
+              "evaluationMode": {
+                "const": "rating"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "numericScale": {
+                "type": "null"
+              },
+              "ratingSelection": {
+                "$ref": "#/$defs/RatingSelection"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "evaluationMode"
+            ],
+            "properties": {
+              "evaluationMode": {
+                "const": "not_configured"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "numericScale": {
+                "type": "null"
+              },
+              "ratingSelection": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
     },
     "QualificationLine": {
       "type": "object",
@@ -1017,7 +1281,7 @@
           "$ref": "#/$defs/Id"
         },
         "indicatorVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "descriptionSnapshot": {
           "$ref": "#/$defs/Description"
@@ -1087,7 +1351,7 @@
               ]
             },
             "datePolicyVersionRef": {
-              "$ref": "#/$defs/VersionRef"
+              "$ref": "#/$defs/InternalVersionRef"
             }
           },
           "required": [
@@ -1107,12 +1371,12 @@
           "$ref": "#/$defs/Name"
         },
         "categoryVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "levelVersionRefs": {
           "type": "array",
           "items": {
-            "$ref": "#/$defs/VersionRef"
+            "$ref": "#/$defs/InternalVersionRef"
           },
           "minItems": 1
         },
@@ -1124,16 +1388,16 @@
           "minItems": 1
         },
         "entryPolicyVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "validityPolicy": {
           "$ref": "#/$defs/ValidityPolicy"
         },
         "evidenceWindowPolicyVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "ruleVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         }
       },
       "required": [
@@ -1155,7 +1419,7 @@
           "$ref": "#/$defs/Id"
         },
         "standardVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "targetLevelId": {
           "$ref": "#/$defs/Id"
@@ -1185,7 +1449,7 @@
           "minItems": 0
         },
         "proxyAuthorityRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         }
       },
       "required": [
@@ -1218,7 +1482,7 @@
       "type": "object",
       "properties": {
         "questionVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "type": {
           "type": "string",
@@ -1242,7 +1506,7 @@
           "$ref": "#/$defs/Boolean"
         },
         "scaleVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "options": {
           "type": "array",
@@ -1264,6 +1528,23 @@
         },
         "conditionAst": {
           "$ref": "#/$defs/RuleAst"
+        },
+        "roleApplicability": {
+          "$ref": "#/$defs/QuestionApplicability"
+        },
+        "dimension": {
+          "$ref": "#/$defs/DimensionVersionRef"
+        },
+        "indicatorVersionRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/IndicatorVersionRef"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "visibility": {
+          "$ref": "#/$defs/QuestionVisibility"
         }
       },
       "required": [
@@ -1272,7 +1553,11 @@
         "title",
         "required",
         "allowSkip",
-        "allowNA"
+        "allowNA",
+        "roleApplicability",
+        "dimension",
+        "indicatorVersionRefs",
+        "visibility"
       ],
       "additionalProperties": false
     },
@@ -1292,19 +1577,20 @@
         "roleVersionRefs": {
           "type": "array",
           "items": {
-            "$ref": "#/$defs/VersionRef"
+            "$ref": "#/$defs/RoleVersionRef"
           },
-          "minItems": 1
+          "minItems": 1,
+          "uniqueItems": true
         },
         "standardVersionRefs": {
           "type": "array",
           "items": {
-            "$ref": "#/$defs/VersionRef"
+            "$ref": "#/$defs/InternalVersionRef"
           },
           "minItems": 0
         },
         "aggregationPolicyVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         }
       },
       "required": [
@@ -1323,7 +1609,7 @@
           "$ref": "#/$defs/Name"
         },
         "questionnaireVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "subjectPersonIds": {
           "type": "array",
@@ -1343,10 +1629,10 @@
           "minimum": 3
         },
         "noticeVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "audiencePolicyVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         }
       },
       "required": [
@@ -1371,10 +1657,10 @@
           "$ref": "#/$defs/Id"
         },
         "roleVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "noticeVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "replacesInviteId": {
           "anyOf": [
@@ -1462,7 +1748,7 @@
           ]
         },
         "questionnaireVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "answers": {
           "type": "array",
@@ -1488,7 +1774,7 @@
           "$ref": "#/$defs/Id"
         },
         "reviewDecisionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "sourceManifestDigest": {
           "$ref": "#/$defs/Digest"
@@ -1497,7 +1783,7 @@
           "$ref": "#/$defs/Digest"
         },
         "audiencePolicyVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "expectedDisclosureRevision": {
           "$ref": "#/$defs/Revision"
@@ -1524,10 +1810,10 @@
           "$ref": "#/$defs/Name"
         },
         "scenarioVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "categoryVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "year": {
           "type": "integer",
@@ -1544,22 +1830,32 @@
           "$ref": "#/$defs/Scope"
         },
         "standardVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "toolContractVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "templateVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "workflowVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "schemeVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "saveStepId": {
           "$ref": "#/$defs/Id"
+        },
+        "previousResultRef": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/PreviousResultRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       },
       "required": [
@@ -1575,7 +1871,8 @@
         "templateVersionRef",
         "workflowVersionRef",
         "schemeVersionRef",
-        "saveStepId"
+        "saveStepId",
+        "previousResultRef"
       ],
       "additionalProperties": false
     },
@@ -1590,13 +1887,13 @@
           ]
         },
         "sourceVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "scaleVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "mappingVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "lowCut": {
           "$ref": "#/$defs/Decimal"
@@ -1634,7 +1931,7 @@
           "$ref": "#/$defs/Axis"
         },
         "approvalRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         }
       },
       "required": [
@@ -1680,7 +1977,7 @@
         "dissentRefs": {
           "type": "array",
           "items": {
-            "$ref": "#/$defs/VersionRef"
+            "$ref": "#/$defs/InternalVersionRef"
           },
           "minItems": 0
         },
@@ -1715,7 +2012,7 @@
           "$ref": "#/$defs/Scope"
         },
         "sharingPolicyVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "expectedCount": {
           "anyOf": [
@@ -1730,7 +2027,7 @@
         "entryRuleVersionRef": {
           "anyOf": [
             {
-              "$ref": "#/$defs/VersionRef"
+              "$ref": "#/$defs/InternalVersionRef"
             },
             {
               "type": "null"
@@ -1740,7 +2037,7 @@
         "exitRuleVersionRef": {
           "anyOf": [
             {
-              "$ref": "#/$defs/VersionRef"
+              "$ref": "#/$defs/InternalVersionRef"
             },
             {
               "type": "null"
@@ -1763,7 +2060,7 @@
       "type": "object",
       "properties": {
         "poolVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "ruleAst": {
           "$ref": "#/$defs/RuleAst"
@@ -1792,7 +2089,7 @@
           ]
         },
         "approvalRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         }
       },
       "required": [
@@ -1827,10 +2124,10 @@
           ]
         },
         "stageVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "approvalOrRuleRunRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "reason": {
           "$ref": "#/$defs/Reason"
@@ -1876,7 +2173,7 @@
           ]
         },
         "readinessVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "assessmentAt": {
           "$ref": "#/$defs/Instant"
@@ -1888,7 +2185,7 @@
           "$ref": "#/$defs/Id"
         },
         "eligibilityPolicyVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "materials": {
           "type": "array",
@@ -1920,7 +2217,7 @@
           "$ref": "#/$defs/Id"
         },
         "roleVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "mentorPersonIds": {
           "type": "array",
@@ -1947,7 +2244,7 @@
         "relationshipVersionRefs": {
           "type": "array",
           "items": {
-            "$ref": "#/$defs/VersionRef"
+            "$ref": "#/$defs/InternalVersionRef"
           },
           "minItems": 0
         },
@@ -1987,10 +2284,10 @@
           "$ref": "#/$defs/Boolean"
         },
         "flowVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "requirementVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "availability": {
           "type": "string",
@@ -2022,7 +2319,7 @@
           "$ref": "#/$defs/Id"
         },
         "templateVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "startOn": {
           "$ref": "#/$defs/Date"
@@ -2113,13 +2410,13 @@
           "$ref": "#/$defs/Id"
         },
         "typeVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "orgVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "positionVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "startOn": {
           "$ref": "#/$defs/Date"
@@ -2148,7 +2445,7 @@
           ]
         },
         "datePolicyVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "explicitOverrideReason": {
           "$ref": "#/$defs/Reason"
@@ -2171,7 +2468,7 @@
       "type": "object",
       "properties": {
         "activityVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "personId": {
           "$ref": "#/$defs/Id"
@@ -2199,7 +2496,7 @@
         "eligibilityVersionRefs": {
           "type": "array",
           "items": {
-            "$ref": "#/$defs/VersionRef"
+            "$ref": "#/$defs/InternalVersionRef"
           },
           "minItems": 0
         }
@@ -2221,7 +2518,7 @@
           "$ref": "#/$defs/Id"
         },
         "sourceEffectReceiptVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "term": {
           "$ref": "#/$defs/TermDraft"
@@ -2229,7 +2526,7 @@
         "eligibilityVersionRefs": {
           "type": "array",
           "items": {
-            "$ref": "#/$defs/VersionRef"
+            "$ref": "#/$defs/InternalVersionRef"
           },
           "minItems": 0
         }
@@ -2269,10 +2566,10 @@
           ]
         },
         "itemTreeVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "aggregationVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "threshold": {
           "$ref": "#/$defs/Decimal"
@@ -2322,7 +2619,7 @@
           "$ref": "#/$defs/Date"
         },
         "policyVersionRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "materials": {
           "type": "array",
@@ -2425,10 +2722,10 @@
           "$ref": "#/$defs/Reason"
         },
         "approvalRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "sourceEffectReceiptRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "newTerm": {
           "$ref": "#/$defs/TermDraft"
@@ -2456,7 +2753,7 @@
           "$ref": "#/$defs/Reason"
         },
         "approvalRef": {
-          "$ref": "#/$defs/VersionRef"
+          "$ref": "#/$defs/InternalVersionRef"
         },
         "dependencyImpactManifestDigest": {
           "$ref": "#/$defs/Digest"
@@ -2518,6 +2815,409 @@
         "purpose",
         "fieldIds",
         "pageSize"
+      ],
+      "additionalProperties": false
+    },
+    "InternalVersionRef": {
+      "type": "object",
+      "properties": {
+        "producer": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "objectType": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "rootId": {
+          "$ref": "#/$defs/Id"
+        },
+        "versionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "sourceRevision": {
+          "$ref": "#/$defs/Revision"
+        },
+        "digest": {
+          "$ref": "#/$defs/Digest"
+        },
+        "capturedAt": {
+          "$ref": "#/$defs/Instant"
+        },
+        "purpose": {
+          "$ref": "#/$defs/Purpose"
+        },
+        "kind": {
+          "const": "internal"
+        }
+      },
+      "required": [
+        "producer",
+        "objectType",
+        "rootId",
+        "versionId",
+        "sourceRevision",
+        "digest",
+        "capturedAt",
+        "purpose",
+        "kind"
+      ],
+      "additionalProperties": false
+    },
+    "ExternalVersionRef": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "external"
+        },
+        "sourceNamespace": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "externalId": {
+          "$ref": "#/$defs/Id"
+        },
+        "objectType": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "externalVersion": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "asOf": {
+          "$ref": "#/$defs/Instant"
+        },
+        "digest": {
+          "$ref": "#/$defs/Digest"
+        },
+        "capturedAt": {
+          "$ref": "#/$defs/Instant"
+        },
+        "purpose": {
+          "$ref": "#/$defs/Purpose"
+        },
+        "trustContractVersionRef": {
+          "$ref": "#/$defs/InternalVersionRef"
+        }
+      },
+      "required": [
+        "kind",
+        "sourceNamespace",
+        "externalId",
+        "objectType",
+        "externalVersion",
+        "asOf",
+        "digest",
+        "capturedAt",
+        "purpose",
+        "trustContractVersionRef"
+      ],
+      "additionalProperties": false
+    },
+    "VersionRef": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/InternalVersionRef"
+        },
+        {
+          "$ref": "#/$defs/ExternalVersionRef"
+        }
+      ]
+    },
+    "IndicatorVersionRef": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/InternalVersionRef"
+        },
+        {
+          "properties": {
+            "producer": {
+              "const": "M37"
+            },
+            "objectType": {
+              "const": "indicator"
+            }
+          }
+        }
+      ]
+    },
+    "LevelVersionRef": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/InternalVersionRef"
+        },
+        {
+          "properties": {
+            "producer": {
+              "const": "M37"
+            },
+            "objectType": {
+              "const": "indicator_level"
+            }
+          }
+        }
+      ]
+    },
+    "DimensionVersionRef": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/InternalVersionRef"
+        },
+        {
+          "properties": {
+            "producer": {
+              "const": "M37"
+            },
+            "objectType": {
+              "const": "standard_dimension"
+            }
+          }
+        }
+      ]
+    },
+    "RoleVersionRef": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/InternalVersionRef"
+        },
+        {
+          "properties": {
+            "producer": {
+              "const": "M26"
+            },
+            "objectType": {
+              "const": "role_definition"
+            }
+          }
+        }
+      ]
+    },
+    "DescriptionRow": {
+      "type": "object",
+      "properties": {
+        "rowId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sort": {
+          "$ref": "#/$defs/PositiveInteger"
+        },
+        "text": {
+          "$ref": "#/$defs/Description"
+        }
+      },
+      "required": [
+        "rowId",
+        "sort",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "NumericScaleConfig": {
+      "type": "object",
+      "properties": {
+        "min": {
+          "$ref": "#/$defs/Decimal"
+        },
+        "max": {
+          "$ref": "#/$defs/Decimal"
+        },
+        "step": {
+          "$ref": "#/$defs/Decimal"
+        },
+        "precision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 18
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "direction": {
+          "type": "string",
+          "enum": [
+            "higher",
+            "lower"
+          ]
+        }
+      },
+      "required": [
+        "min",
+        "max",
+        "step",
+        "precision",
+        "unit",
+        "direction"
+      ],
+      "additionalProperties": false
+    },
+    "RatingSelection": {
+      "type": "object",
+      "properties": {
+        "ratingSchemeVersionRef": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/InternalVersionRef"
+            },
+            {
+              "properties": {
+                "producer": {
+                  "const": "M06"
+                },
+                "objectType": {
+                  "const": "rating_scheme"
+                }
+              }
+            }
+          ]
+        },
+        "levelIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "ratingSchemeVersionRef",
+        "levelIds"
+      ],
+      "additionalProperties": false
+    },
+    "QuestionApplicability": {
+      "type": "object",
+      "properties": {
+        "roleVersionRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/RoleVersionRef"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "scope": {
+          "const": "listed_roles_only"
+        }
+      },
+      "required": [
+        "roleVersionRefs",
+        "scope"
+      ],
+      "additionalProperties": false
+    },
+    "QuestionVisibility": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "always"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "conditional"
+            },
+            "conditionAst": {
+              "$ref": "#/$defs/RuleAst"
+            },
+            "dependsOnQuestionVersionIds": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/Id"
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "kind",
+            "conditionAst",
+            "dependsOnQuestionVersionIds"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "PreviousResultRef": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "historical_result"
+        },
+        "resultVersionRef": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/InternalVersionRef"
+            },
+            {
+              "properties": {
+                "producer": {
+                  "const": "M18"
+                },
+                "objectType": {
+                  "const": "published_result"
+                }
+              }
+            }
+          ]
+        },
+        "asOf": {
+          "$ref": "#/$defs/Instant"
+        },
+        "selectedFieldIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "ability",
+              "potential",
+              "experience",
+              "achievement",
+              "performanceBand",
+              "potentialBand",
+              "gridCell",
+              "publishedAt"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "purpose": {
+          "const": "historical_reference_only"
+        },
+        "relationship": {
+          "const": "same_person_previous_project"
+        }
+      },
+      "required": [
+        "kind",
+        "resultVersionRef",
+        "asOf",
+        "selectedFieldIds",
+        "purpose",
+        "relationship"
       ],
       "additionalProperties": false
     },
@@ -4759,7 +5459,7 @@
           "type": "object",
           "properties": {
             "sourceVersionRef": {
-              "$ref": "#/$defs/VersionRef"
+              "$ref": "#/$defs/InternalVersionRef"
             },
             "rawStatus": {
               "type": "string",

@@ -57,6 +57,8 @@ if (D/'Legacy_Acceptance_Map.json').exists():
             a['scenarioIds']=matching(old[a['id']]['currentAcceptanceRefs']);a['legacyDisposition']=old[a['id']]['disposition']
             if old[a['id']]['disposition']=='source_request_only':
                 a['scenarioIds']=[];a['evidenceRequestIds']=['R2-SOURCE-M17-01']
+from repair_handoff import apply
+apply(t,tasks,scenarios)
 put('Requirements_Trace.json',t)
 put('P3_Work_Packages.json',{'kind':'proposal_only_not_execution_or_controller_ledger','count':len(tasks),'tasks':tasks})
 put('Acceptance_Scenarios.json',{'kind':'executable_test_design_not_run','count':len(scenarios),'scenarios':scenarios})

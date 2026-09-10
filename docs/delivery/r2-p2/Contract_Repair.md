@@ -1,0 +1,41 @@
+# R2-EXIT-001 定向契约修订
+
+本修订是P2规范，替换旧版相冲突的引用简写；不删除批准需求，不声明实现。五组最小JSON及拒绝实例见Schema_Examples.json；文档验证采用JSON Schema Draft 2020-12及下述必需语义守卫，二者都通过才允许命令。
+
+## 引用联合与来源守卫
+
+InternalVersionRef必须kind=internal及producer/objectType/rootId/versionId/sourceRevision/digest/capturedAt/purpose八字段。ExternalVersionRef必须kind=external、sourceNamespace/externalId/objectType/externalVersion/asOf/digest/capturedAt/purpose/trustContractVersionRef；两支均additionalProperties=false。外部没有可靠版本号时，adapter先形成带原始字节摘要和采集时点的不可变capture版本，externalVersion引用此capture；不得把当前响应谎称历史版本。无法形成可信capture为HISTORY_UNVERIFIABLE。
+
+内部以(tenant,producer,objectType,rootId,versionId)精确查不可变版本，sourceRevision/digest必须相等；capturedAt只是取件时间，不是生效时间。外部以(tenant,sourceNamespace,externalId,externalVersion,asOf)定位已验证capture，核信任契约、签名、用途和摘要。源不可配置/不可用/不可验证分别not_configured/unavailable/HISTORY_UNVERIFIABLE，均不得写成功。类型/来源错422 SOURCE_TYPE_MISMATCH，已知根的错误版本409 SOURCE_VERSION_MISMATCH；未知或无权不泄存在性。每次业务提交仍重核当前use权和停用策略。
+
+76命令的referencePolicy是完整允许表：只有r2.m37.standard.create/edit的payload.lines[].sourceVersionRef且dimension=achievement允许external；这一路也允许明确internal来源成就。其余输入引用必须internal，包括审批、角色、尺度、题卷、资格、材料和M18历史结果。外部材料先由获准adapter隔离归档成内部受控material版本，不能把外部联合直接塞进任何材料/审批字段。M37能力/潜力/经历行必须M37 indicator引用。无kind拒绝，绝不按缺字段猜来源。旧v1客户端经显式内部来源adapter补kind，需确认旧记录原为内部；不能确认则隔离。适配产生新命令摘要，不篡改旧回执/版本；已冻结消费者仍读其旧schema，新增输入契约版本标记为r2-p2-repair-001-v2，P3路由能力协商后开放，不静默强行升级旧写端。
+
+## M37 IndicatorChild逐等级持久化
+
+indicator_child(root childId, childVersionId, indicatorRootId, indicatorVersionId, subset, subsetName, sort, description, levelId, levelVersionRef, alias, elementText)。所属指标从indicator.create新根/版本和child.indicatorVersionRef共同确定：create时该ref必须null，服务端同事务绑定新指标；复制来源通过显式版本另留来源manifest，不能把来源指针当新父。旧子行修订必须核父根一致并生成新childVersion，旧指标版本继续指旧childVersion。childId/childVersionId在创建必须null，服务端分配，在回执给出临时数组位置→稳定ID/版本对应。
+
+subset=level的行：levelId创建null并由服务端分配（稳定等级根，不能用sort作ID）；levelVersionRef必须null，因为本行就是等级定义；alias和elementText为逐等级字段，可显式空字符串，不从indicator.aliases或standard.elementLabel继承。其description必填≤500，elementText≤500，alias≤200。其他三类子集alias/elementText只能空字符串，不伪装等级定义；levelId/levelVersionRef同为空表示指标级，或二者同时指定已有同指标的精确等级版本。subsetName必填，承载子集名称；sort同指标版本同subset唯一正整数；description其他类必填≤4000。新增等级数不限五级。子版本随所属指标内容版本一起冻结；名称/描述/alias/elementText改动触发新版本及既有独立审核规则，不覆写历史。
+
+## M06 目录、指标类型、资格级别和评级方案
+
+catalog.create/edit.kind区分目录对象。indicator_type自身版本保存isCommon(boolean)、descriptionRows[{rowId,sort,text}]、evaluationMode=numeric/rating/not_configured、numericScale、ratingSelection。每说明行稳定rowId，首次null由服务端赋值，同typeVersion的sort唯一正整数；空数组明确无说明。isCommon只表示可多标准复用，绝不授共享权。typeId就是该indicator_type目录rootId，由create回执返回，编辑由objectRef定位。
+
+numeric必须numericScale={min,max,step,precision,unit,direction}且ratingSelection=null；精确decimal、min<max、step>0、步长与precision一致，不能补100或任意精度。rating必须numericScale=null和ratingSelection={ratingSchemeVersionRef,levelIds}；方案必须M06 rating_scheme，levelIds逐个属于该精确方案版本，不是qualification_level。not_configured两者必须null，目录可保存，但任何认证用途blocked RULE_NOT_CONFIGURED。其他目录kind禁止上述type配置字段；indicator目录必须indicatorTypeVersionRef固定类型版本。qualificationLevelVersionRef若提供只供显式级别关联且核M06 qualification_level；不得作为评级方案。
+
+类别/层级/资格级别各自目录版本，qualificationStandard显式冻结类别、qualificationLevel和indicatorVersion。indicatorVersion再冻结indicatorTypeVersion；type版本含评级schemeVersion或数值配置快照。新type/方案/级别版本不自动升级旧标准、旧申请、旧证；编辑创建新版本，不把发布状态或审批人放进payload。
+
+## M26 每题适用与维度
+
+每个Question必须roleApplicability={roleVersionRefs非空且去重,scope:listed_roles_only}、dimension=M37 standard_dimension精确引用、indicatorVersionRefs非空且去重、visibility=always或conditional(AST及dependsOnQuestionVersionIds)。standard_dimension是M37标准版本内维度子对象：稳定dimensionRoot及不可变dimensionVersion，manifest显式归属standardVersion和允许indicatorVersion集合；并非把ability字符串当版本。
+
+规范持久化为questionnaire_question_binding(questionnaireVersionId,questionVersionId,order,roleRefs,dimensionRef,indicatorRefs,visibility)。数组顺序就是唯一order；题目内容版本与绑定版本分别保留。绑定中的角色必须全部属于整卷roleVersionRefs；dimension必须属于整卷standardVersionRefs之一，指标必须属于该精确维度版本的manifest。重复题版本、漏题/空适用、跨标准错版本拒绝，不按整卷列表猜配。题目条件仅引用本卷更前且对该角色可见的题，DAG无环，显示条件与角色条件取AND；不适用/条件假记录not_presented，不计缺答、不计匿名样本。旧conditionAst字段保留用于显式兼容；提供时必须visibility.kind=conditional且AST字节规范化后相等，否则422 CONDITION_CONFLICT，绝不取其一。
+
+题型既有必需字段/互斥规则保留；rating需尺度，choice需合法唯一options，text禁止option值；每题角色、维度、尺度、指标改动生成新绑定/套卷版本，已开放项目仍冻结旧版本。
+
+## M18 previousResultRef
+
+ReviewProject.previousResultRef必须明确null或PreviousResultRef，null表示本项目无历史参考。非空含kind=historical_result、resultVersionRef(kind=internal,producer=M18,objectType=published_result,rootId/versionId/sourceRevision/digest/capturedAt/purpose)、asOf、selectedFieldIds、purpose=historical_reference_only、relationship=same_person_previous_project。允许字段只有ability/potential/experience/achievement/performanceBand/potentialBand/gridCell/publishedAt；源当前授权可进一步收紧，不允许匿名答卷/评委/敏感原始材料。
+
+resultRoot是历史项目已发布结果集根，version是实际存在的发布快照；projectVersion.previousResultRef一对零或一，按稳定person映射当前subject到历史subject，不按姓名/部门相似推断。原集不包含该人时该人历史参考为null+NO_PREVIOUS_SUBJECT，不能用另一人替代。源project必须不同且历史期间结束不晚于当前项目开始，源publishedAt≤asOf且asOf不晚于保存的服务端时间，查询使用该快照当时已发布事实，不能以current结果重建。用途字段和嵌套ref.purpose均须historical_reference_only。选择字段只渲染参考面板，不预填当前已评定值/九格，不产生M17成员。源当前撤权隐藏参考而保留受控出处。错误根版本、同项目循环或不真实asOf拒绝；缺历史不阻不选历史的项目。
+
+迁移对五组新必填语义均实行显式adapter和unknown隔离：只读取已证实字段；不得把指标alias填到每级、把整卷角色铺到每题或将当前结果伪造成previous。原始字节/ID/版本及旧消费者不变。回滚禁新写并保留新版本只读，不能删字段恢复弱校验。

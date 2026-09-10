@@ -1,0 +1,296 @@
+{
+  "kind": "P2_document_schema_and_fixture_checks_not_P3",
+  "validator": "jsonschema 4.23.0 / Draft202012Validator + FormatChecker",
+  "metaSchemaValid": true,
+  "count": 27,
+  "accepted": 8,
+  "rejected": 19,
+  "results": [
+    {
+      "id": "REF-IN-VALID",
+      "group": "VersionRef",
+      "expected": "accept",
+      "actual": "accept",
+      "schemaErrors": [],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "REF-IN-EXTRA",
+      "group": "VersionRef",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [
+        "{'kind': 'internal', 'producer': 'M37', 'objectType': 'indicator', 'rootId': 'I1', 'versionId': 'I1-v1', 'sourceRevision': 1, 'digest': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'capturedAt': '2026-09-10T00:00:00Z', 'purpose': 'assessment', 'unapprovedField': 'x'} is not valid under any of the given schemas"
+      ],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "REF-IN-VERSION",
+      "group": "VersionRef",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [],
+      "semanticErrors": [
+        "SOURCE_VERSION_OR_TYPE_MISMATCH"
+      ],
+      "pass_": true
+    },
+    {
+      "id": "REF-IN-SOURCE",
+      "group": "VersionRef",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [],
+      "semanticErrors": [
+        "SOURCE_VERSION_OR_TYPE_MISMATCH"
+      ],
+      "pass_": true
+    },
+    {
+      "id": "REF-EXT-VALID",
+      "group": "VersionRef",
+      "expected": "accept",
+      "actual": "accept",
+      "schemaErrors": [],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "REF-EXT-EXTRA",
+      "group": "VersionRef",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [
+        "{'kind': 'external', 'sourceNamespace': 'synthetic-achievement', 'externalId': 'EXT1', 'objectType': 'achievement', 'externalVersion': 'capture1', 'asOf': '2026-09-01T00:00:00Z', 'digest': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'capturedAt': '2026-09-10T00:00:00Z', 'purpose': 'assessment', 'trustContractVersionRef': {'kind': 'internal', 'producer': 'COMMON', 'objectType': 'trust_contract', 'rootId': 'TC1', 'versionId': 'TC1-v1', 'sourceRevision': 1, 'digest': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'capturedAt': '2026-09-10T00:00:00Z', 'purpose': 'assessment'}, 'unapprovedField': 'x'} is not valid under any of the given schemas"
+      ],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "REF-EXT-VERSION",
+      "group": "VersionRef",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [],
+      "semanticErrors": [
+        "EXTERNAL_CAPTURE_UNTRUSTED"
+      ],
+      "pass_": true
+    },
+    {
+      "id": "REF-EXT-SOURCE",
+      "group": "VersionRef",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [],
+      "semanticErrors": [
+        "EXTERNAL_CAPTURE_UNTRUSTED"
+      ],
+      "pass_": true
+    },
+    {
+      "id": "LEVEL-VALID",
+      "group": "IndicatorChild",
+      "expected": "accept",
+      "actual": "accept",
+      "schemaErrors": [],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "LEVEL-EXTRA",
+      "group": "IndicatorChild",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [
+        "Additional properties are not allowed ('unapprovedField' was unexpected)"
+      ],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "LEVEL-VERSION",
+      "group": "IndicatorChild",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [],
+      "semanticErrors": [
+        "SOURCE_VERSION_OR_TYPE_MISMATCH",
+        "CREATE_PARENT_OR_ID_CONFLICT"
+      ],
+      "pass_": true
+    },
+    {
+      "id": "LEVEL-SOURCE",
+      "group": "IndicatorChild",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [
+        "{'kind': 'internal', 'producer': 'M06', 'objectType': 'indicator', 'rootId': 'I1', 'versionId': 'I1-v1', 'sourceRevision': 1, 'digest': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'capturedAt': '2026-09-10T00:00:00Z', 'purpose': 'assessment'} is not valid under any of the given schemas"
+      ],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "TYPE-VALID",
+      "group": "CatalogDraft",
+      "expected": "accept",
+      "actual": "accept",
+      "schemaErrors": [],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "TYPE-EXTRA",
+      "group": "CatalogDraft",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [
+        "Additional properties are not allowed ('unapprovedField' was unexpected)"
+      ],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "TYPE-VERSION",
+      "group": "CatalogDraft",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [],
+      "semanticErrors": [
+        "RATING_LEVEL_VERSION_MISMATCH"
+      ],
+      "pass_": true
+    },
+    {
+      "id": "TYPE-SOURCE",
+      "group": "CatalogDraft",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [
+        "{'ratingSchemeVersionRef': {'kind': 'internal', 'producer': 'M06', 'objectType': 'qualification_level', 'rootId': 'QL1', 'versionId': 'QL1-v1', 'sourceRevision': 1, 'digest': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'capturedAt': '2026-09-10T00:00:00Z', 'purpose': 'assessment'}, 'levelIds': ['L1']} is not valid under any of the given schemas",
+        "'rating_scheme' was expected"
+      ],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "QUESTION-VALID",
+      "group": "QuestionnaireDraft",
+      "expected": "accept",
+      "actual": "accept",
+      "schemaErrors": [],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "QUESTION-EXTRA",
+      "group": "QuestionnaireDraft",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [
+        "Additional properties are not allowed ('unapprovedField' was unexpected)"
+      ],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "QUESTION-VERSION",
+      "group": "QuestionnaireDraft",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [],
+      "semanticErrors": [
+        "SOURCE_VERSION_OR_TYPE_MISMATCH",
+        "DIMENSION_INDICATOR_VERSION_MISMATCH"
+      ],
+      "pass_": true
+    },
+    {
+      "id": "QUESTION-SOURCE",
+      "group": "QuestionnaireDraft",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [],
+      "semanticErrors": [
+        "SOURCE_VERSION_OR_TYPE_MISMATCH",
+        "QUESTION_ROLE_NOT_IN_QUESTIONNAIRE"
+      ],
+      "pass_": true
+    },
+    {
+      "id": "HISTORY-VALID",
+      "group": "ReviewProject",
+      "expected": "accept",
+      "actual": "accept",
+      "schemaErrors": [],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "HISTORY-EXTRA",
+      "group": "ReviewProject",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [
+        "Additional properties are not allowed ('unapprovedField' was unexpected)"
+      ],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "HISTORY-VERSION",
+      "group": "ReviewProject",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [],
+      "semanticErrors": [
+        "SOURCE_VERSION_OR_TYPE_MISMATCH",
+        "HISTORY_UNVERIFIABLE"
+      ],
+      "pass_": true
+    },
+    {
+      "id": "HISTORY-SOURCE",
+      "group": "ReviewProject",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [
+        "{'kind': 'historical_result', 'resultVersionRef': {'kind': 'internal', 'producer': 'M26', 'objectType': 'published_result', 'rootId': 'RESULT1', 'versionId': 'RESULT1-v1', 'sourceRevision': 1, 'digest': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'capturedAt': '2026-09-10T00:00:00Z', 'purpose': 'historical_reference_only'}, 'asOf': '2026-08-01T00:00:00Z', 'selectedFieldIds': ['potentialBand'], 'purpose': 'historical_reference_only', 'relationship': 'same_person_previous_project'} is not valid under any of the given schemas"
+      ],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "TYPE-RATING-VALID",
+      "group": "CatalogDraft",
+      "expected": "accept",
+      "actual": "accept",
+      "schemaErrors": [],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "HISTORY-NONE-VALID",
+      "group": "ReviewProject",
+      "expected": "accept",
+      "actual": "accept",
+      "schemaErrors": [],
+      "semanticErrors": [],
+      "pass_": true
+    },
+    {
+      "id": "REF-NO-KIND",
+      "group": "VersionRef",
+      "expected": "reject",
+      "actual": "reject",
+      "schemaErrors": [
+        "{'producer': 'M37', 'objectType': 'indicator', 'rootId': 'I1', 'versionId': 'I1-v1', 'sourceRevision': 1, 'digest': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'capturedAt': '2026-09-10T00:00:00Z', 'purpose': 'assessment'} is not valid under any of the given schemas"
+      ],
+      "semanticErrors": [],
+      "pass_": true
+    }
+  ]
+}

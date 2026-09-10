@@ -13,7 +13,7 @@
 
 保留BP-C-API-01传输边界：来源/CSRF不符403，非application/json为415，超过路由字节上限413，空体/无效JSON/重复键400，未分类服务异常503；旧兼容路由仍保持现有32768字节默认，不修改通用旧端点预算。拟新增`/api/r2/commands`显式上限256KiB，足以容纳M17模板32766个四字节字符及有界元数据；更大模板/名单走分块准备manifest，不截断字段，也不把4MiB存储块上限当命令无限预算。技术预算由P3核实际运行限额，不能改变批准字段上限。敏感响应Cache-Control: no-store，下载先完全授权再输出字节，文件名安全转义，表格导出沿R1公式注入防护。
 
-引用类型`VersionRef`：{producer,objectType,rootId,versionId,sourceRevision,digest,capturedAt,purpose}；外部另含sourceNamespace/externalId。数字版号不能替代versionId，digest不能代权限/签名。`Cell`使用{value,state,reasonCode,unit?,scaleVersion?}：value/null/not_configured/unavailable；敏感无权字段整体省略。报告可额外`state=suppressed`且不带可反推计数。日期YYYY-MM-DD，时刻UTC RFC3339；schemaVersion不支持返回426/SCHEMA_VERSION_UNSUPPORTED。
+引用类型`VersionRef`为kind=internal/external严格联合，精确字段和命令白名单见[定向契约修订](Contract_Repair.md)，禁止按缺失字段猜来源。数字版号不能替代versionId，digest不能代权限/签名。`Cell`使用{value,state,reasonCode,unit?,scaleVersion?}：value/null/not_configured/unavailable；敏感无权字段整体省略。报告可额外`state=suppressed`且不带可反推计数。日期YYYY-MM-DD，时刻UTC RFC3339；schemaVersion不支持返回426/SCHEMA_VERSION_UNSUPPORTED。
 
 事件Envelope：eventId、schemaVersion=1、tenantId、producer、eventType、objectType、rootId、versionId、entityRevision、workspaceRevision、sourceRevision、occurredAt、effectiveAt|null、correlationId、causationId、digestAlgorithm=sha256-canonical-json-v1、digest、payload。版本发布事件还带manifestDigest和availability；撤回/停用事件指向原版本与新状态事件ID，不能修改旧payload。订阅字段按最小purpose选择，原卷/敏感原文不在通用事件中。
 
@@ -50,3 +50,8 @@ inbox唯一(tenant,consumer,eventId)，同digest重复返回原处理结果；�
 逐键比较：根与版本是否存在、digest是否一致、引用权限/purpose、availability、当前发布指针、撤回墓碑、人员退出屏障、业务生效凭证及回执。差异分missing/stale/conflict/forbidden/unknown，不以总条数相同判一致；无权只给受保护差异码。恢复或撤权后先对账再放开调度。原始已发布历史不被当前查询值回填。
 
 消费者版本协商保存supportedSchemaVersions和purpose；兼容minor只增加显式可忽略可选字段，major语义变化发布新schema端点/适配器。原consumer保留旧schema及原版本读，不能把新准备度映射成旧one_year或把新标准压回5级。确实不可表达返回unsupported，保留原历史入口及理由，不默删入口。
+
+<a id="repair-001"></a>
+## 001严格契约补齐
+
+[Contract_Repair.md](Contract_Repair.md)规范五组字段、持久化关系、迁移兼容和语义拒绝；[Schema_Examples.json](Schema_Examples.json)给出合法及拒绝实例。Command_Registry.referencePolicy逐命令限制引用类型。

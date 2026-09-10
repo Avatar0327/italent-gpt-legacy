@@ -375,7 +375,24 @@
         "原验收ID映射和独立复核记录"
       ],
       "executionStatus": "not_run",
-      "historicalExecutionIsNotCurrentEvidence": true
+      "historicalExecutionIsNotCurrentEvidence": true,
+      "targetedRepairAssertions": [
+        {
+          "group": "CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "fixtureRef": "Schema_Examples.json",
+          "given": "采用该group全部合成fixture及精确版本manifest；manage有权角色H，独立复核R与发布P，无真人",
+          "when": "逐一提交合法输入；再单独注入各反例的非法字段、版本、来源/角色关系",
+          "then": "合法字段逐字段回读一致，新版本绑定准确；反例必须拒绝且无业务版本/发布/receipt applied副作用；正例仍需原审批，不因schema通过自动发布",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ]
+        }
+      ]
     },
     {
       "id": "R2-P3-M06-REVIEW-AC02",
@@ -425,7 +442,24 @@
         "原验收ID映射和独立复核记录"
       ],
       "executionStatus": "not_run",
-      "historicalExecutionIsNotCurrentEvidence": true
+      "historicalExecutionIsNotCurrentEvidence": true,
+      "targetedRepairAssertions": [
+        {
+          "group": "CatalogDraft",
+          "command": "r2.m06.catalog.create",
+          "fixtureRef": "Schema_Examples.json",
+          "given": "采用该group全部合成fixture及精确版本manifest；manage有权角色H，独立复核R与发布P，无真人",
+          "when": "逐一提交合法输入；再单独注入各反例的非法字段、版本、来源/角色关系",
+          "then": "合法字段逐字段回读一致，新版本绑定准确；反例必须拒绝且无业务版本/发布/receipt applied副作用；正例仍需原审批，不因schema通过自动发布",
+          "exampleIds": [
+            "TYPE-VALID",
+            "TYPE-EXTRA",
+            "TYPE-VERSION",
+            "TYPE-SOURCE",
+            "TYPE-RATING-VALID"
+          ]
+        }
+      ]
     },
     {
       "id": "R2-P3-M06-REVIEW-AC04",
@@ -825,7 +859,23 @@
         "原验收ID映射和独立复核记录"
       ],
       "executionStatus": "not_run",
-      "historicalExecutionIsNotCurrentEvidence": true
+      "historicalExecutionIsNotCurrentEvidence": true,
+      "targetedRepairAssertions": [
+        {
+          "group": "QuestionnaireDraft",
+          "command": "r2.m26.questionnaire.create",
+          "fixtureRef": "Schema_Examples.json",
+          "given": "采用该group全部合成fixture及精确版本manifest；manage有权角色H，独立复核R与发布P，无真人",
+          "when": "逐一提交合法输入；再单独注入各反例的非法字段、版本、来源/角色关系",
+          "then": "合法字段逐字段回读一致，新版本绑定准确；反例必须拒绝且无业务版本/发布/receipt applied副作用；正例仍需原审批，不因schema通过自动发布",
+          "exampleIds": [
+            "QUESTION-VALID",
+            "QUESTION-EXTRA",
+            "QUESTION-VERSION",
+            "QUESTION-SOURCE"
+          ]
+        }
+      ]
     },
     {
       "id": "R2-P3-M26-REVIEW-AC07",
@@ -850,7 +900,23 @@
         "原验收ID映射和独立复核记录"
       ],
       "executionStatus": "not_run",
-      "historicalExecutionIsNotCurrentEvidence": true
+      "historicalExecutionIsNotCurrentEvidence": true,
+      "targetedRepairAssertions": [
+        {
+          "group": "QuestionnaireDraft",
+          "command": "r2.m26.questionnaire.create",
+          "fixtureRef": "Schema_Examples.json",
+          "given": "采用该group全部合成fixture及精确版本manifest；manage有权角色H，独立复核R与发布P，无真人",
+          "when": "逐一提交合法输入；再单独注入各反例的非法字段、版本、来源/角色关系",
+          "then": "合法字段逐字段回读一致，新版本绑定准确；反例必须拒绝且无业务版本/发布/receipt applied副作用；正例仍需原审批，不因schema通过自动发布",
+          "exampleIds": [
+            "QUESTION-VALID",
+            "QUESTION-EXTRA",
+            "QUESTION-VERSION",
+            "QUESTION-SOURCE"
+          ]
+        }
+      ]
     },
     {
       "id": "R2-P3-M26-REVIEW-AC08",
@@ -1350,7 +1416,23 @@
         "原验收ID映射和独立复核记录"
       ],
       "executionStatus": "not_run",
-      "historicalExecutionIsNotCurrentEvidence": true
+      "historicalExecutionIsNotCurrentEvidence": true,
+      "targetedRepairAssertions": [
+        {
+          "group": "IndicatorChild",
+          "command": "r2.m37.indicator.create",
+          "fixtureRef": "Schema_Examples.json",
+          "given": "采用该group全部合成fixture及精确版本manifest；manage有权角色H，独立复核R与发布P，无真人",
+          "when": "逐一提交合法输入；再单独注入各反例的非法字段、版本、来源/角色关系",
+          "then": "合法字段逐字段回读一致，新版本绑定准确；反例必须拒绝且无业务版本/发布/receipt applied副作用；正例仍需原审批，不因schema通过自动发布",
+          "exampleIds": [
+            "LEVEL-VALID",
+            "LEVEL-EXTRA",
+            "LEVEL-VERSION",
+            "LEVEL-SOURCE"
+          ]
+        }
+      ]
     },
     {
       "id": "R2-P3-M37-REVIEW-AC02",
@@ -1375,7 +1457,23 @@
         "原验收ID映射和独立复核记录"
       ],
       "executionStatus": "not_run",
-      "historicalExecutionIsNotCurrentEvidence": true
+      "historicalExecutionIsNotCurrentEvidence": true,
+      "targetedRepairAssertions": [
+        {
+          "group": "IndicatorChild",
+          "command": "r2.m37.indicator.create",
+          "fixtureRef": "Schema_Examples.json",
+          "given": "采用该group全部合成fixture及精确版本manifest；manage有权角色H，独立复核R与发布P，无真人",
+          "when": "逐一提交合法输入；再单独注入各反例的非法字段、版本、来源/角色关系",
+          "then": "合法字段逐字段回读一致，新版本绑定准确；反例必须拒绝且无业务版本/发布/receipt applied副作用；正例仍需原审批，不因schema通过自动发布",
+          "exampleIds": [
+            "LEVEL-VALID",
+            "LEVEL-EXTRA",
+            "LEVEL-VERSION",
+            "LEVEL-SOURCE"
+          ]
+        }
+      ]
     },
     {
       "id": "R2-P3-M37-REVIEW-AC03",
@@ -1650,7 +1748,24 @@
         "原验收ID映射和独立复核记录"
       ],
       "executionStatus": "not_run",
-      "historicalExecutionIsNotCurrentEvidence": true
+      "historicalExecutionIsNotCurrentEvidence": true,
+      "targetedRepairAssertions": [
+        {
+          "group": "ReviewProject",
+          "command": "r2.m18.project.create",
+          "fixtureRef": "Schema_Examples.json",
+          "given": "采用该group全部合成fixture及精确版本manifest；manage有权角色H，独立复核R与发布P，无真人",
+          "when": "逐一提交合法输入；再单独注入各反例的非法字段、版本、来源/角色关系",
+          "then": "合法字段逐字段回读一致，新版本绑定准确；反例必须拒绝且无业务版本/发布/receipt applied副作用；正例仍需原审批，不因schema通过自动发布",
+          "exampleIds": [
+            "HISTORY-VALID",
+            "HISTORY-EXTRA",
+            "HISTORY-VERSION",
+            "HISTORY-SOURCE",
+            "HISTORY-NONE-VALID"
+          ]
+        }
+      ]
     },
     {
       "id": "R2-P3-M18-REVIEW-AC02",
@@ -1725,7 +1840,24 @@
         "原验收ID映射和独立复核记录"
       ],
       "executionStatus": "not_run",
-      "historicalExecutionIsNotCurrentEvidence": true
+      "historicalExecutionIsNotCurrentEvidence": true,
+      "targetedRepairAssertions": [
+        {
+          "group": "ReviewProject",
+          "command": "r2.m18.project.create",
+          "fixtureRef": "Schema_Examples.json",
+          "given": "采用该group全部合成fixture及精确版本manifest；manage有权角色H，独立复核R与发布P，无真人",
+          "when": "逐一提交合法输入；再单独注入各反例的非法字段、版本、来源/角色关系",
+          "then": "合法字段逐字段回读一致，新版本绑定准确；反例必须拒绝且无业务版本/发布/receipt applied副作用；正例仍需原审批，不因schema通过自动发布",
+          "exampleIds": [
+            "HISTORY-VALID",
+            "HISTORY-EXTRA",
+            "HISTORY-VERSION",
+            "HISTORY-SOURCE",
+            "HISTORY-NONE-VALID"
+          ]
+        }
+      ]
     },
     {
       "id": "R2-P3-M18-REVIEW-AC05",
@@ -2859,7 +2991,28 @@
         "命令回执、业务前后hash及不可变事件差分",
         "拒绝字段/副作用和对账状态断言；独立测试复核"
       ],
-      "executionStatus": "not_run"
+      "executionStatus": "not_run",
+      "targetedRepairAssertions": [
+        {
+          "group": "VersionRef",
+          "command": "r2.m37.standard.create",
+          "fixtureRef": "Schema_Examples.json",
+          "given": "采用该group全部合成fixture及精确版本manifest；manage有权角色H，独立复核R与发布P，无真人",
+          "when": "逐一提交合法输入；再单独注入各反例的非法字段、版本、来源/角色关系",
+          "then": "合法字段逐字段回读一致，新版本绑定准确；反例必须拒绝且无业务版本/发布/receipt applied副作用；正例仍需原审批，不因schema通过自动发布",
+          "exampleIds": [
+            "REF-IN-VALID",
+            "REF-IN-EXTRA",
+            "REF-IN-VERSION",
+            "REF-IN-SOURCE",
+            "REF-EXT-VALID",
+            "REF-EXT-EXTRA",
+            "REF-EXT-VERSION",
+            "REF-EXT-SOURCE",
+            "REF-NO-KIND"
+          ]
+        }
+      ]
     },
     {
       "id": "R2-X-03",
