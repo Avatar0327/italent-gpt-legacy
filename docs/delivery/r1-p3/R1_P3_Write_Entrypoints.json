@@ -2,7 +2,7 @@
   "purpose": "static inventory, not dynamic route coverage",
   "routeCount": 62,
   "methodCount": 63,
-  "sourceSha": "c36094e2f407fd0e2101b2b0e3988fc278b4ec1b",
+  "sourceSha": "7a86db4c62f09de0b9606050c073a7ef2510e87a",
   "routes": [
     {
       "path": "app/api/access/route.ts",
@@ -338,7 +338,7 @@
       "methods": [
         "POST"
       ],
-      "sha256": "29332df1bc3e8d009e4dee0e6c5ac7ee20026f5585da726cb5eeb26b456e6eb1",
+      "sha256": "32f010353d2a7e552dd7da3de3b4397a25bf8fb8d5a681c52404c8a56e5b26ae",
       "classification": "R1 explicit versioned service or read-only contract preflight; static inventory is not dynamic proof"
     },
     {
@@ -501,5 +501,13 @@
       "sha256": "ca8a156a638568d278e35fe32add73c58d093d31c9a57615e2686cef844a6a4a",
       "classification": "existing API command bridge; feature gate prevents old writes after switch"
     }
-  ]
+  ],
+  "independentControlServices": {
+    "classification": "internal injected independent control interfaces; no public opening endpoint, no real platform wiring verified",
+    "paths": [
+      "lib/hris/r1-recovery-control.ts",
+      "lib/hris/r1-recovery-maintenance.ts",
+      "lib/hris/r1-security-runtime.ts"
+    ]
+  }
 }
