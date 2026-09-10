@@ -1,0 +1,109 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "time": "2026-09-10T10:25:54.338Z",
+  "origin": "https://srworkshopbj.italent.cn",
+  "role": "ORIGIN-ADMIN-01",
+  "caseId": "M01-ORG-001",
+  "page": "组织/新建",
+  "values": [
+    {
+      "index": 0,
+      "value": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001"
+    },
+    {
+      "index": 1,
+      "value": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001"
+    },
+    {
+      "index": 2,
+      "value": "2026-09-10"
+    },
+    {
+      "index": 3,
+      "value": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001"
+    },
+    {
+      "index": 4,
+      "value": "部门"
+    },
+    {
+      "index": 5,
+      "value": ""
+    },
+    {
+      "index": 6,
+      "value": ""
+    },
+    {
+      "index": 7,
+      "value": ""
+    },
+    {
+      "index": 8,
+      "value": ""
+    },
+    {
+      "index": 9,
+      "value": ""
+    },
+    {
+      "index": 10,
+      "value": ""
+    },
+    {
+      "index": 11,
+      "value": ""
+    },
+    {
+      "index": 12,
+      "value": ""
+    },
+    {
+      "index": 13,
+      "value": ""
+    },
+    {
+      "index": 14,
+      "value": ""
+    },
+    {
+      "index": 15,
+      "value": ""
+    },
+    {
+      "index": 16,
+      "value": ""
+    },
+    {
+      "index": 17,
+      "value": ""
+    },
+    {
+      "index": 18,
+      "value": ""
+    },
+    {
+      "index": 19,
+      "value": ""
+    },
+    {
+      "index": 20,
+      "value": ""
+    },
+    {
+      "index": 21,
+      "value": ""
+    },
+    {
+      "index": 22,
+      "value": ""
+    },
+    {
+      "index": 23,
+      "value": ""
+    }
+  ],
+  "recordId": null,
+  "state": "ready_to_submit",
+  "environmentBasis": "当前域名与仓库测试租户记录、当前所有者授权一致；未见生产提示；无既有人员选项"
+}

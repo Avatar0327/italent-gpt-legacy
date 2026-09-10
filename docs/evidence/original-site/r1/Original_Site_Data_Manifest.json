@@ -1,7 +1,65 @@
 {
   "runId": "R1-ORIGIN-20260910-100019",
   "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
-  "records": [],
-  "createdCount": 0,
-  "cleanup": []
+  "records": [
+    {
+      "runId": "R1-ORIGIN-20260910-100019",
+      "module": "M01",
+      "caseId": "M01-ORG-001",
+      "objectType": "organization",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001",
+      "originRecordId": "d1d541ab-92f9-4fce-80c6-aa5687433175",
+      "createdAt": "2026-09-10T18:27:04+08:00",
+      "status": "enabled_query_verified",
+      "relatedRecords": [],
+      "allowLaterDelete": true,
+      "deletionGate": "需唯一ID与命名空间同时确认后才能清理",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-001-success-message.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-001-readback.json"
+      ],
+      "createdAtBasis": "原站组织操作记录设立时间"
+    },
+    {
+      "runId": "R1-ORIGIN-20260910-100019",
+      "module": "M01",
+      "caseId": "M01-ORG-002",
+      "objectType": "organization",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
+      "originRecordId": "db7df096-624b-4d1e-ab4e-0552a56f052c",
+      "createdAt": null,
+      "createdAtBasis": "创建动作已执行，服务端时间待详情审计回读",
+      "verifiedAt": "2026-09-10T10:35:47.493Z",
+      "status": "enabled_query_verified",
+      "relatedRecords": [
+        "d1d541ab-92f9-4fce-80c6-aa5687433175"
+      ],
+      "allowLaterDelete": true,
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-002-readback.json"
+      ]
+    },
+    {
+      "runId": "R1-ORIGIN-20260910-100019",
+      "module": "M01",
+      "caseId": "M01-ORG-003",
+      "objectType": "organization",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+      "originRecordId": "a7b55bd7-0ef2-44a0-9d29-6259fe053da3",
+      "createdAt": null,
+      "createdAtBasis": "创建动作已执行，服务端时间待详情审计回读",
+      "verifiedAt": "2026-09-10T10:36:23.872Z",
+      "status": "enabled_query_verified",
+      "relatedRecords": [
+        "d1d541ab-92f9-4fce-80c6-aa5687433175"
+      ],
+      "allowLaterDelete": true,
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-readback.json"
+      ]
+    }
+  ],
+  "createdCount": 3,
+  "cleanup": [],
+  "successMessagePendingIdCount": 0
 }

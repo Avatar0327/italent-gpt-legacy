@@ -1,0 +1,25 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "time": "2026-09-10T10:25:37.430Z",
+  "origin": "https://srworkshopbj.italent.cn",
+  "tabs": {
+    "main": "2",
+    "check": "3"
+  },
+  "before": [
+    "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001",
+    "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001",
+    "2026-09-10",
+    "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001"
+  ],
+  "after": [
+    "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001",
+    "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001",
+    "2026-09-10",
+    "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001"
+  ],
+  "equal": true,
+  "businessWrites": 0,
+  "method": "只读DOM value回读；访问独立tab3职位页后回读tab2同一新建草稿",
+  "note": "首次简称由于名称自动带入与填充时序发生拼接，已发现，另行修正；无并发窗口覆盖证据"
+}

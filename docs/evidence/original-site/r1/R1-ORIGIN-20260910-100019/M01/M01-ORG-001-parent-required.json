@@ -1,0 +1,12 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "time": "2026-09-10T10:26:08.948Z",
+  "caseId": "M01-ORG-001",
+  "page": "新建组织",
+  "input": {
+    "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001",
+    "administrativeParent": null
+  },
+  "result": "行政维度上级：必填；表单仍打开；未获得记录ID",
+  "dom": "- iframe [active] [id=\"popup_1789035832391262\"]:\n  - generic: 新建\n  - generic: \n  - generic: 基本信息\n  - generic: 名称\n  - generic: ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001\n  - textbox\n  - generic: \n  - generic: 简称\n  - generic: ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001\n  - textbox\n  - generic: \n  - generic: 设立日期\n  - generic: 2026-09-10\n  - textbox\n  - text: \n  - generic: 编码\n  - generic: ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001\n  - textbox\n  - generic: \n  - generic: 大类\n  - generic: 部门\n  - textbox \"请选择\"\n  - generic: \n  - generic: 层级\n  - generic: 请选择\n  - textbox \"请选择\"\n  - generic: \n  - generic: 负责人\n  - list\n  - generic: 请选择\n  - textbox \"请选择\"\n  - generic: HRBP\n  - list\n  - generic: 请选择\n  - textbox \"请选择\"\n  - generic: 虚拟组织\n  - generic: 是\n  - generic: 否\n  - generic: 所在地点\n  - list\n  - generic: 请选择\n  - textbox \"请选择\" [disabled]\n  - generic: 区长\n  - list\n  - generic: 请选择\n  - textbox \"请选择\"\n  - generic: 品牌\n  - generic: 请选择\n  - textbox \"请选择\"\n  - generic: \n  - generic: 区域\n  - generic: 请选择\n  - textbox \"请选择\"\n  - generic: \n  - generic: 面积\n  - textbox\n  - generic: \n  - generic: 督导\n  - list\n  - generic: 请选择\n  - textbox \"请选择\"\n  - generic: 店长\n  - list\n  - generic: 请选择\n  - textbox \"请选择\"\n  - generic: 成本中心\n  - generic: 请选择\n  - textbox \"请选择\"\n  - generic: \n  - generic: 组织特性\n  - textbox\n  - generic: \n  - generic: 多维组织\n  - generic: 行政维度上级\n  - textbox \"请选择\"\n  - generic: 请选择\n  - text: 必填\n  - generic: 行政维度顺序号\n  - textbox\n  - generic: \n  - generic: 业务维度上级\n  - textbox \"请选择\"\n  - generic: 请选择\n  - generic: 业务维度顺序号\n  - textbox\n  - generic: \n  - generic: 财务维度上级\n  - textbox \"请选择\"\n  - generic: 请选择\n  - generic: 财务维度顺序号\n  - textbox\n  - generic: \n  - generic: 部门职责\n  - textbox\n  - generic: \n  - generic: 确定\n  - generic: 取消\n  - generic: 翻译助手\n  - button \"取消\"\n  - button \"确定\"\n"
+}

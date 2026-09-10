@@ -1,0 +1,8 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "time": "2026-09-10T10:27:30.098Z",
+  "caseId": "M01-ORG-001",
+  "recordId": null,
+  "state": "success_message_id_pending",
+  "dom": ":\n  - generic: 操作成功\n  - generic: \n  - generic: 启用的组织\n  - generic:  \n  - text: 可在此页面新增组织；可点击部门名称进入详情页面，进行【编辑】、【变更】、【停用】组织等操作；也可点击【组织架构调整】进入组织架构树页面进行一些快捷操作，比如组织【更名】、【调整负责人】、【转移】、【停用】等。\n  - generic: 更多常见问题及解答\n  - text: 收起\n  - generic: 类型\n  - generic: 层级\n  - generic: 名称\n  - text: ：\n  - generic: ZZ_R1_R1-ORIGIN-20260910-100019_\n  - generic: 根节点\n  - generic: 上级组织\n  - generic: 状态\n  - text: ：\n  - generic: 启用\n  - generic: 生效日期\n  - text: ：\n  - generic: 今天\n  - generic: 失效日期\n  - text: ：\n  - generic: 2026-09-10\n  - paragraph: 高级筛选\n  - generic: 清空已选\n  - generic: 组织架构调整\n  - generic: 组织调整申请\n  - generic: 组织架构用导出\n  - generic: 新建\n  - generic: 更多操作\n  - paragraph: 这里什么都没有...\n  - generic: 高级筛选\n  - button \"Close\":"
+}
