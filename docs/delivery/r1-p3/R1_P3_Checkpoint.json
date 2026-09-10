@@ -290,7 +290,21 @@
         "P3-MIG-07",
         "P3-XMOD-03"
       ],
-      "evidence": []
+      "evidence": [
+        "evidence/r1-p3-20260910T083119493394Z.json"
+      ],
+      "implementationSha": "df1c1cbdce036c652bf704d9da1f147cdaecf656",
+      "subworkCompleted": [
+        "实际DDL合同及完整旧写屏障前置核验",
+        "R1扩展174触发器完整行日志与事务封印",
+        "迁移/问题/对账/附件完整性控制表"
+      ],
+      "remaining": [
+        "storage0有界规范化和源JSON只读归档",
+        "稳定映射/有界回填/并发接管与幂等批次",
+        "兼容双写/逐键对账/局部issue/切读与前向回滚",
+        "任务级AC/风险/LIMIT证据收口"
+      ]
     },
     {
       "id": "P3-R1-09",
@@ -336,6 +350,6 @@
     }
   ],
   "currentTask": "P3-R1-08",
-  "lastVerifiedSourceSha": "74c5b0db8894209b827b8e1b097366ad4c99257d",
-  "latestRun": "evidence/r1-p3-20260910T082305048810Z.json"
+  "lastVerifiedSourceSha": "df1c1cbdce036c652bf704d9da1f147cdaecf656",
+  "latestRun": "evidence/r1-p3-20260910T083119493394Z.json"
 }
