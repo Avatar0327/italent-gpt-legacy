@@ -1,3 +1,4 @@
+import {memberGrants} from './r1-grants';
 import type {Member} from './authorization';
 import {requireMember} from './authorization';
 import {securityStamp,sameStamp} from './r1-command';
@@ -17,11 +18,7 @@ export function tupleAllowed(m:Member,grants:Grant[],relations:Relationship[],q:
 export async function authorizeTuple(db:D1Database,m:Member,q:AccessTuple){
  const start=await securityStamp(db,m.tenantId);
  if(!m.securityStamp||!sameStamp(start,m.securityStamp))throw new HttpError(409,'授权已变化','REVISION_CONFLICT');
- const [grants,relations]=await db.batch([
-  db.prepare('SELECT object_type AS objectType,action,relation_type AS relationType,scope,fields,history_mode AS historyMode,valid_from AS validFrom,valid_to AS validTo FROM r1_permission_grants WHERE tenant_id=? AND member_id=? AND object_type=? AND action=?').bind(m.tenantId,m.userId,q.objectType,q.action),
-  db.prepare('SELECT subject_person_id AS subjectPersonId,relation_type AS relationType,valid_from AS validFrom,valid_to AS validTo FROM r1_relationships WHERE tenant_id=? AND manager_person_id=? AND subject_person_id=?').bind(m.tenantId,m.employeeId,q.personId),
- ]);
- const parsed=grants.results.map((g:any)=>({...g,scope:JSON.parse(g.scope),fields:JSON.parse(g.fields)})) as Grant[];
+ const parsed=await memberGrants(db,m.tenantId,m.userId,q.objectType,q.action),relations=await db.prepare('SELECT subject_person_id AS subjectPersonId,relation_type AS relationType,valid_from AS validFrom,valid_to AS validTo FROM r1_relationships WHERE tenant_id=? AND manager_person_id=? AND subject_person_id=?').bind(m.tenantId,m.employeeId,q.personId).all<Relationship>();
  if(!tupleAllowed(m,parsed,relations.results as Relationship[],q)||!sameStamp(start,await securityStamp(db,m.tenantId)))throw new HttpError(403,'没有此对象动作或字段权限','FORBIDDEN');
  const at=new Date().toISOString(),rs=relations.results as Relationship[],ends=parsed.filter(g=>tupleAllowed(m,[g],rs,q,at)).map(g=>{const grantEnd=g.validTo?Date.parse(g.validTo):Number.MAX_SAFE_INTEGER;const relationEnd=['scope','self'].includes(g.relationType)?Number.MAX_SAFE_INTEGER:Math.max(...rs.filter(r=>r.relationType===g.relationType&&r.subjectPersonId===q.personId&&effective(r.validFrom,r.validTo,at)).map(r=>r.validTo?Date.parse(r.validTo):Number.MAX_SAFE_INTEGER));return Math.min(grantEnd,relationEnd);});
  if(!ends.length)throw new HttpError(403,'权限有效期已结束','FORBIDDEN');m.permissionValidUntil=Math.min(m.permissionValidUntil??Number.MAX_SAFE_INTEGER,Math.max(...ends));

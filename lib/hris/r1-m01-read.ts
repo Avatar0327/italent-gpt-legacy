@@ -1,6 +1,7 @@
+import {memberGrants} from './r1-grants';
 import {z} from 'zod';
 import type {Member} from './authorization';
-import {tupleAllowed,type Grant,type Relationship} from './r1-authorization';
+import {tupleAllowed,type Relationship} from './r1-authorization';
 import {sameStamp,securityStamp,type SecurityStamp} from './r1-command';
 import {HttpError} from './http';
 import {contractCounts} from './r1-personnel-data';
@@ -15,11 +16,8 @@ export async function readM01(ctx:{db:D1Database;member:Member;row:{revision:num
   let c:z.infer<typeof cursorSchema>;try{c=cursorSchema.parse(JSON.parse(atob(params.get('cursor')!)));}catch{throw new HttpError(400,'分页凭据无效','INVALID_CURSOR');}
   if(c.kind!==kind||c.personId!==personId||c.actor!==m.userId||c.revision!==ctx.row.revision||c.authorizationRevision!==stamp.authorizationRevision||c.writerEpoch!==stamp.writerEpoch||c.recoveryEpoch!==stamp.recoveryEpoch)throw new HttpError(409,'数据或授权已变化，请从首屏重新读取','CURSOR_STALE');after=c.after;
  }
- const [g,r]=await db.batch([
-  db.prepare('SELECT object_type AS objectType,action,relation_type AS relationType,scope,fields,history_mode AS historyMode,valid_from AS validFrom,valid_to AS validTo FROM r1_permission_grants WHERE tenant_id=? AND member_id=? AND object_type=?').bind(m.tenantId,m.userId,'M01'),
-  db.prepare('SELECT subject_person_id AS subjectPersonId,relation_type AS relationType,valid_from AS validFrom,valid_to AS validTo FROM r1_relationships WHERE tenant_id=? AND manager_person_id=?').bind(m.tenantId,m.employeeId),
- ]);
- const grants=g.results.map((x:any)=>({...x,scope:JSON.parse(x.scope),fields:JSON.parse(x.fields)})) as Grant[],relations=r.results as Relationship[];
+ const grants=await memberGrants(db,m.tenantId,m.userId,'M01'),r=await db.prepare('SELECT subject_person_id AS subjectPersonId,relation_type AS relationType,valid_from AS validFrom,valid_to AS validTo FROM r1_relationships WHERE tenant_id=? AND manager_person_id=?').bind(m.tenantId,m.employeeId).all<Relationship>();
+ const relations=r.results;
  const allowed=(e:any,field:string,action='read',historyMode:'current'|'history'='current')=>tupleAllowed(m,grants,relations,{objectType:'M01',action,orgId:e.orgId??'',personId:e.kind==='person'?e.id:e.personId??'',field,historyMode});
  const rows=await db.prepare('SELECT id,kind,person_id AS personId,org_id AS orgId,code,revision,status,payload FROM r1_m01_entities WHERE tenant_id=? AND kind=? AND id>?'+(personId?' AND person_id=?':'')+' ORDER BY id LIMIT ?').bind(m.tenantId,kind,after,...(personId?[personId]:[]),limit+1).all<any>();
  const scanned=rows.results.slice(0,limit),items=[];

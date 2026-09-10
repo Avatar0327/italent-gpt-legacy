@@ -1,12 +1,13 @@
+import {memberGrants} from './r1-grants';
 import {securityStamp,sameStamp} from './r1-command';
 import {HttpError} from './http';
 import type {State} from './model';
 import type {Member} from './authorization';
-import {tupleAllowed,type Grant,type Relationship} from './r1-authorization';
+import {tupleAllowed,type Relationship} from './r1-authorization';
 export async function projectR1CoreState(db:D1Database,m:Member,state:State){
  if(!m.securityStamp?.featuresEnabled)return state;
- const [g,r]=await db.batch([db.prepare('SELECT object_type AS objectType,action,relation_type AS relationType,scope,fields,history_mode AS historyMode,valid_from AS validFrom,valid_to AS validTo FROM r1_permission_grants WHERE tenant_id=? AND member_id=? AND object_type=?').bind(m.tenantId,m.userId,'M01'),db.prepare('SELECT subject_person_id AS subjectPersonId,relation_type AS relationType,valid_from AS validFrom,valid_to AS validTo FROM r1_relationships WHERE tenant_id=? AND manager_person_id=?').bind(m.tenantId,m.employeeId)]);
- const grants=g.results.map((x:any)=>({...x,scope:JSON.parse(x.scope),fields:JSON.parse(x.fields)})) as Grant[],relations=r.results as Relationship[];
+ const grants=await memberGrants(db,m.tenantId,m.userId,'M01'),r=await db.prepare('SELECT subject_person_id AS subjectPersonId,relation_type AS relationType,valid_from AS validFrom,valid_to AS validTo FROM r1_relationships WHERE tenant_id=? AND manager_person_id=?').bind(m.tenantId,m.employeeId).all<Relationship>();
+ const relations=r.results;
  const can=(orgId:string,personId:string,field='record',action='read')=>tupleAllowed(m,grants,relations,{objectType:'M01',action,orgId,personId,field,historyMode:'current'}),s=structuredClone(state);
  s.employees=s.employees.filter(e=>can(e.orgId,e.id)).map(e=>({...e,email:can(e.orgId,e.id,'email')?e.email:'',level:can(e.orgId,e.id,'level')?e.level:'',gradeId:can(e.orgId,e.id,'level')?e.gradeId:null}));
  s.orgs=s.orgs.filter(o=>can(o.id,''));s.positions=s.positions?.filter(p=>can(p.orgId,''));s.grades=s.grades?.filter(()=>s.orgs.some(o=>can(o.id,'','level')));
