@@ -122,5 +122,42 @@
     "evidence": [
       "captures/M18-resume-empty.json"
     ]
+  },
+  {
+    "id": "R2-OBS-M18-TAB4-003",
+    "module": "M18",
+    "actual": "独立组织、年度2026、09-10至09-30项目保存，初态新建；报告模板/计算规则可空。空盘点详情无人、标准/维度未配；九宫格九格均0人0%，可见加入人才池/发起IDP入口。",
+    "p1": "M18-SPEC-01/02/05",
+    "p2": "M18_Design.md 项目目录、独立方案、空来源与消费者入口；空格0人不等缺失评分0",
+    "implementation": "仅P2列明旧固定grid模型改造；未运行产品",
+    "classification": "MATCH",
+    "evidence": [
+      "captures/M18-empty-grid.json",
+      "Original_Site_Data_Manifest.json"
+    ]
+  },
+  {
+    "id": "R2-OBS-M18-002",
+    "module": "M18",
+    "actual": "启动会确认发送盘点流程待办并在选择测评/360工具时发起相应活动；确认已选否。添加对象可精确查到R2员工；缺盘点模板和方案保存必填拦截，未新增subject。",
+    "p1": "M18-SPEC-01/04 范围及流程补证",
+    "p2": "M18_Design.md template/workflow/scheme独立版本，保存不等启动",
+    "implementation": "未执行R2 P3；不能把控件延迟算实现缺陷",
+    "classification": "MATCH",
+    "evidence": [
+      "captures/M18-subject-template-required.json"
+    ]
+  },
+  {
+    "id": "R2-OBS-M17-001",
+    "module": "M17",
+    "actual": "POOL01绑定本轮ORG01保存成功，默认启用且0人；预计人数空，饱和度显示--；入出标准未配，自动入池关闭。",
+    "p1": "M17-SPEC-01/05 空预计人数不得当0",
+    "p2": "M17_Design.md pool expectedCount/health denominator",
+    "implementation": "未运行；R2 P3未启动",
+    "classification": "MATCH",
+    "evidence": [
+      "captures/M17-pool-readback.json"
+    ]
   }
 ]

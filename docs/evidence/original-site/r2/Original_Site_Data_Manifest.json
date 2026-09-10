@@ -116,6 +116,66 @@
         "correct_own_name_and_code",
         "readback"
       ]
+    },
+    {
+      "module": "PRE",
+      "type": "organization",
+      "name": "ZZ_R2_R2-ORIGIN-20260910-103952_PRE_ORG01",
+      "status": "confirmed_created",
+      "businessId": null,
+      "currentState": "active",
+      "references": [
+        "tenant_root_readonly_parent"
+      ],
+      "operations": [
+        "create/readback"
+      ],
+      "notes": ""
+    },
+    {
+      "module": "PRE",
+      "type": "employee",
+      "name": "ZZ_R2_R2-ORIGIN-20260910-103952_PRE_EMP01",
+      "status": "confirmed_created",
+      "businessId": null,
+      "currentState": "active",
+      "references": [
+        "ZZ_R2_R2-ORIGIN-20260910-103952_PRE_ORG01"
+      ],
+      "operations": [
+        "create/readback"
+      ],
+      "notes": "employee: invite=false; managers/company/sign-template cleared; email example.invalid; first auto-review rejected, cleared fields proved by full DOM+screenshot before safe retry"
+    },
+    {
+      "module": "M18",
+      "type": "review_project",
+      "name": "ZZ_R2_R2-ORIGIN-20260910-103952_M18_PROJECT01",
+      "status": "confirmed_created",
+      "businessId": null,
+      "currentState": "新建",
+      "references": [
+        "ZZ_R2_R2-ORIGIN-20260910-103952_PRE_ORG01"
+      ],
+      "operations": [
+        "create/readback"
+      ],
+      "notes": ""
+    },
+    {
+      "module": "M17",
+      "type": "talent_pool",
+      "name": "ZZ_R2_R2-ORIGIN-20260910-103952_M17_POOL01",
+      "status": "confirmed_created",
+      "businessId": null,
+      "currentState": "启用；0人；预计人数空；饱和度--",
+      "references": [
+        "ZZ_R2_R2-ORIGIN-20260910-103952_PRE_ORG01"
+      ],
+      "operations": [
+        "create/readback"
+      ],
+      "automaticEntryEnabled": false
     }
   ],
   "pending": [],
@@ -141,6 +201,20 @@
       "type": "feedback_project",
       "status": "rejected_no_create",
       "reason": "hyphen disallowed; exact required naming cannot save"
+    }
+  ],
+  "recoveredExisting": [
+    {
+      "module": "PRE",
+      "name": "ZZ_R2_R2-ORIGIN-20260910-103952_PRE_ORG01",
+      "status": "existing_run_record_recovered",
+      "evidence": "captures/PRE-organization-final.json"
+    },
+    {
+      "module": "M18",
+      "name": "ZZ_R2_R2-ORIGIN-20260910-103952_M18_PROJECT01",
+      "status": "existing_run_record_recovered",
+      "evidence": "captures/M18-resume-empty.json"
     }
   ]
 }

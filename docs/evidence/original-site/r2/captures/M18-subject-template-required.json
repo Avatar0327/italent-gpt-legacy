@@ -1,0 +1,4 @@
+{
+  "kind": "dom_snapshot",
+  "snapshot": "- iframe [id=\"popup_17890374960711089\"]:\n- iframe [active] [id=\"popup_1789040758571291\"]:\n  - generic: 添加盘点对象\n  - generic: \n  - generic: 添加方式\n  - generic: 手动添加\n  - generic: 从项目添加\n  - generic: 盘点对象\n  - generic: ZZ_R2_R2-ORIGIN-20260910-103952_PRE_EMP01(zz_r2_r2-origin-20260910-103952_pre_emp01@example.invalid)\n  - textbox \"请选择\"\n  - generic: \n  - generic: 盘点模板\n  - list:\n    - generic: 请搜索\n  - generic: \n  - generic: 必填\n  - generic: 盘点方案\n  - generic: 请选择\n  - textbox \"请选择\"\n  - generic: \n  - generic: 必填\n  - generic: 是否引入最近一次盘点结果\n  - generic: 是\n  - generic: 否\n  - generic: 保存\n  - generic: 取消\n  - generic: 翻译助手\n  - button \"取消\"\n  - button \"保存\"\n"
+}
