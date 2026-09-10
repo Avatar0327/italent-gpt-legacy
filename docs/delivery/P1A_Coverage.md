@@ -1,8 +1,8 @@
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M16；备用 未启用；实际执行 M16。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M12；备用 未启用；实际执行 M12。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
-R3串行材料队列：R3批准顺序落账中；已准备 M27、M16、M12、M11、M07；等待评审 M16、M12、M11、M07。材料完成不等批准或转序。
+R3串行材料队列：R3批准顺序落账中；已准备 M27、M16、M12、M11、M07；等待评审 M12、M11、M07。材料完成不等批准或转序。
 
 | R版本 | 模块顺序 | 当前边界 |
 |---|---|---|
@@ -19,7 +19,7 @@ R3串行材料队列：R3批准顺序落账中；已准备 M27、M16、M12、M11
 |---|---|---|---|
 | R1 | 齐备 | P2 | 已获准进入，待独立设计执行与评审 |
 | R2 | 未齐备：rangeReviewApproved | 未批准 | 未取得该R下游批准 |
-| R3 | 未齐备：M16,M12,M11,M07,BASE-01,BASE-02,BASE-03,BASE-04,BASE-05,BASE-06,rangeReviewApproved | 未批准 | 未取得该R下游批准 |
+| R3 | 未齐备：M12,M11,M07,BASE-01,BASE-02,BASE-03,BASE-04,BASE-05,BASE-06,rangeReviewApproved | 未批准 | 未取得该R下游批准 |
 
 | 模块 | R版本/队列 | P1A判定 | P1B评审 | 转序就绪 | 未达到条件 |
 |---|---|---|---|---|---|
@@ -34,23 +34,23 @@ R3串行材料队列：R3批准顺序落账中；已准备 M27、M16、M12、M11
 | M17 继任与发展 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M03 干部管理2.0 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M27 学习管理 | R3 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
-| M16 绩效管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M16 绩效管理 | R3 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M12 招聘管理系统 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M11 假勤管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M07 薪酬社保 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 
-转序就绪 11/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
+转序就绪 12/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
 
 
 ---
 
 # P1A当前15模块覆盖与缺口；33组历史暂缓
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T03:21:03.591922+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T03:21:49.283664+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
-P1A关闭 11/15（完整0，受限11）；P1B需求就绪 11/15（完整0，受限11）；P1评审关闭 11/15（完整0，受限11）。受限不混入完整通过，均不代表P3测试/P4业务或生产验收。
+P1A关闭 12/15（完整0，受限12）；P1B需求就绪 12/15（完整0，受限12）；P1评审关闭 12/15（完整0，受限12）。受限不混入完整通过，均不代表P3测试/P4业务或生产验收。
 
 | 模块/主包 | P1A | P1B | P1评审 | 具体缺口/判断依据 | 待决定项 |
 |---|---|---|---|---|---|
@@ -60,7 +60,7 @@ P1A关闭 11/15（完整0，受限11）；P1B需求就绪 11/15（完整0，受�
 | M07 薪酬社保 / BP-S | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 完整范围材料已完成待评审；推荐/LIMIT未批准 | M07-SPEC-01；M07-SPEC-02；M07-SPEC-03；M07-SPEC-04；M07-SPEC-05；M07-SPEC-06；M07-LIMIT-01 |
 | M11 假勤管理 / BP-A | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 完整范围材料已完成待评审；推荐/LIMIT未批准 | M11-SPEC-01；M11-SPEC-02；M11-SPEC-03；M11-SPEC-04；M11-SPEC-05；M11-LIMIT-01 |
 | M12 招聘管理系统 / BP-R | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 完整范围材料已完成待评审；推荐/LIMIT未批准 | M12-SPEC-01；M12-SPEC-02；M12-SPEC-03；M12-SPEC-04；M12-SPEC-05；M12-SPEC-06；M12-LIMIT-01 |
-| M16 绩效管理 / BP-P | 进行中（未达完整退出） | 未就绪 | 待业务评审签署 | 完整范围材料已完成待评审；推荐/LIMIT未批准 | M16-SPEC-01；M16-SPEC-02；M16-SPEC-03；M16-SPEC-04；M16-SPEC-05；M16-SPEC-06；M16-LIMIT-01 |
+| M16 绩效管理 / BP-P | 受限完成（仅P1） | 需求就绪 | 受限评审通过（仅P1） | M16-P1-APPROVAL-20260910；四退出条件经逐项核对满足，仅P1受限关闭 |  |
 | M17 继任与发展 / BP-C | 受限完成（仅P1） | 需求就绪 | 受限评审通过（仅P1） | M17-P1-APPROVAL-20260910；四退出条件经逐项核对满足，仅P1受限关闭 |  |
 | M18 在线盘点 / BP-C | 受限完成（仅P1） | 需求就绪 | 受限评审通过（仅P1） | M18-P1-APPROVAL-20260910；四退出条件经逐项核对满足，仅P1受限关闭 |  |
 | M19 审批中心 / BP-I | 受限完成（仅P1） | 需求就绪 | 受限评审通过（仅P1） | M19-P1-APPROVAL-20260909批准所审fb35ba03dfd6563f59c814b52fa8a6fd125422bc推荐及限制；本模块P1无硬阻塞，受限关闭/需求就绪/模块转序就绪。 |  |

@@ -2,15 +2,15 @@ M01当前集中评审入口：[完整范围、规则与受限边界](P1_M01_Revi
 
 # 模块闭环、滚动转序及当前收口清单
 
-生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T03:21:03.591922+00:00。
+生成来源：`Scope_Register.json → deliveryScope / p1Baseline / modules[].p1 / p1B`。本文是同一台账的阅读视图，不独立维护范围或验收状态。更新时间：2026-09-10T03:21:49.283664+00:00。
 
 当前交付为用户确认的15个HR核心模块及六类非模块基础能力；原48组历史完整保留，33组本次交付暂缓，不计完成、不阻当前P1退出。各历史证据的适用时间保持。
 
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M16；备用 未启用；实际执行 M16。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M12；备用 未启用；实际执行 M12。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
-R3串行材料队列：R3批准顺序落账中；已准备 M27、M16、M12、M11、M07；等待评审 M16、M12、M11、M07。材料完成不等批准或转序。
+R3串行材料队列：R3批准顺序落账中；已准备 M27、M16、M12、M11、M07；等待评审 M12、M11、M07。材料完成不等批准或转序。
 
 | R版本 | 模块顺序 | 当前边界 |
 |---|---|---|
@@ -27,7 +27,7 @@ R3串行材料队列：R3批准顺序落账中；已准备 M27、M16、M12、M11
 |---|---|---|---|
 | R1 | 齐备 | P2 | 已获准进入，待独立设计执行与评审 |
 | R2 | 未齐备：rangeReviewApproved | 未批准 | 未取得该R下游批准 |
-| R3 | 未齐备：M16,M12,M11,M07,BASE-01,BASE-02,BASE-03,BASE-04,BASE-05,BASE-06,rangeReviewApproved | 未批准 | 未取得该R下游批准 |
+| R3 | 未齐备：M12,M11,M07,BASE-01,BASE-02,BASE-03,BASE-04,BASE-05,BASE-06,rangeReviewApproved | 未批准 | 未取得该R下游批准 |
 
 | 模块 | R版本/队列 | P1A判定 | P1B评审 | 转序就绪 | 未达到条件 |
 |---|---|---|---|---|---|
@@ -42,12 +42,12 @@ R3串行材料队列：R3批准顺序落账中；已准备 M27、M16、M12、M11
 | M17 继任与发展 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M03 干部管理2.0 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M27 学习管理 | R3 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
-| M16 绩效管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M16 绩效管理 | R3 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M12 招聘管理系统 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M11 假勤管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M07 薪酬社保 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 
-转序就绪 11/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
+转序就绪 12/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
 
 
 ## M01完整登记范围收口清单
@@ -121,9 +121,9 @@ R3串行材料队列：R3批准顺序落账中；已准备 M27、M16、M12、M11
 
 | 问题/原范围 | 需求 | 证据 | 具体缺口 | 阻塞P1/风险 | 关闭方式与判据 | 当前状态 |
 |---|---|---|---|---|---|---|
-| M16-CLOSE-01 / 工作台 | BP-P-REQ-01；BP-I-REQ-01；BP-I-REQ-02 | BC-P1C-M16 | 规格建议与本模块LIMIT待批；工作台任务/异常/汇总对象与当前目标报表关系未证；其他页不能代工作台完整证据 | True；不当评价/分布、错误缺评分母、兼职身份漂移、越权分数可见及更正后奖金联动 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M16-SPEC-01,M16-SPEC-02,M16-SPEC-03,M16-SPEC-04,M16-SPEC-05,M16-SPEC-06 | 已完成待评审 |
-| M16-CLOSE-02 / OKR | BP-P-REQ-09 |  | 规格建议与本模块LIMIT待批；目标/KR/对齐/进度/评分/权限/周期及自助关联缺证，保留受限规格而非自动套绩效目标 | True；不当评价/分布、错误缺评分母、兼职身份漂移、越权分数可见及更正后奖金联动 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M16-SPEC-01,M16-SPEC-02,M16-SPEC-03,M16-SPEC-04,M16-SPEC-05,M16-SPEC-06 | 已完成待评审 |
-| M16-CLOSE-03 / 员工/组织目标与绩效 | BP-P-REQ-01；BP-P-REQ-02；BP-P-REQ-03；BP-P-REQ-04；BP-P-REQ-05；BP-P-REQ-06；BP-P-REQ-07；BP-P-REQ-08 | P1-GOAL；BC-P01；BC-P02；BC-P03；BC-P04；BC-P05；BC-P06；BC-P07；BC-P09；BC-P10；BC-P11；BC-P14；BC-P15；BC-P16 | 规格建议与本模块LIMIT待批；员工目标/评价/申诉更正和组织目标/组织绩效分别保留；组织参与数不等员工人数，完整采分/关系/分布/系数消费与兼职上下文待证 | True；不当评价/分布、错误缺评分母、兼职身份漂移、越权分数可见及更正后奖金联动 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M16-SPEC-01,M16-SPEC-02,M16-SPEC-03,M16-SPEC-04,M16-SPEC-05,M16-SPEC-06 | 已完成待评审 |
+| M16-CLOSE-01 / 工作台 | BP-P-REQ-01；BP-I-REQ-01；BP-I-REQ-02 | BC-P1C-M16 | P1批准后无剩余硬阻塞；原差异转交后续责任 | False；不当评价/分布、错误缺评分母、兼职身份漂移、越权分数可见及更正后奖金联动 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M16-P1-APPROVAL-20260910 | 受限通过 |
+| M16-CLOSE-02 / OKR | BP-P-REQ-09 |  | P1批准后无剩余硬阻塞；原差异转交后续责任 | False；不当评价/分布、错误缺评分母、兼职身份漂移、越权分数可见及更正后奖金联动 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M16-P1-APPROVAL-20260910 | 受限通过 |
+| M16-CLOSE-03 / 员工/组织目标与绩效 | BP-P-REQ-01；BP-P-REQ-02；BP-P-REQ-03；BP-P-REQ-04；BP-P-REQ-05；BP-P-REQ-06；BP-P-REQ-07；BP-P-REQ-08 | P1-GOAL；BC-P01；BC-P02；BC-P03；BC-P04；BC-P05；BC-P06；BC-P07；BC-P09；BC-P10；BC-P11；BC-P14；BC-P15；BC-P16 | P1批准后无剩余硬阻塞；原差异转交后续责任 | False；不当评价/分布、错误缺评分母、兼职身份漂移、越权分数可见及更正后奖金联动 | 核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定；M16-P1-APPROVAL-20260910 | 受限通过 |
 
 
 ## M17完整登记范围收口清单
@@ -222,7 +222,7 @@ M11当前材料：[材料完成、等待所有者集中评审](P1_M11_Review_Pac
 
 M12当前材料：[材料完成、等待所有者集中评审](P1_M12_Review_Package.md)。批准、源取证及后续执行各自独立。
 
-M16当前材料：[材料完成、等待所有者集中评审](P1_M16_Review_Package.md)。批准、源取证及后续执行各自独立。
+M16当前材料：[P1受限通过，需求基线已批准](P1_M16_Review_Package.md)。批准、源取证及后续执行各自独立。
 
 M17当前材料：[P1受限通过，需求基线已批准](P1_M17_Review_Package.md)。批准、源取证及后续执行各自独立。
 
@@ -244,4 +244,4 @@ M48当前材料：[P1受限通过，需求基线已批准](P1_M48_Review_Package
 
 R2当前集中入口：[四模块完整材料、23项推荐及四项限制](P1_R2_Review_Package.md)；[批准草稿](P1_R2_Approval_Draft.md)。各模块按实际批准单独判定，计数从Scope推导。
 
-R3当前入口：[五模块完整集中评审材料](P1_R3_Review_Package.md)，30项推荐及5项LIMIT已获所有者批准；[批准草稿](P1_R3_Approval_Draft.md)。P1A关闭 11/15（完整0，受限11）；P1B需求就绪 11/15（完整0，受限11）；P1评审关闭 11/15（完整0，受限11）。受限不混入完整通过，均不代表P3测试/P4业务或生产验收。
+R3当前入口：[五模块完整集中评审材料](P1_R3_Review_Package.md)，30项推荐及5项LIMIT已获所有者批准；[批准草稿](P1_R3_Approval_Draft.md)。P1A关闭 12/15（完整0，受限12）；P1B需求就绪 12/15（完整0，受限12）；P1评审关闭 12/15（完整0，受限12）。受限不混入完整通过，均不代表P3测试/P4业务或生产验收。

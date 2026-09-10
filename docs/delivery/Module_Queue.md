@@ -1,8 +1,8 @@
 ## 当前执行模式：模块闭环优先、按R版本滚动转序
 
-本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M16；备用 未启用；实际执行 M16。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
+本轮新批准执行节奏；不批准未决业务规则、内部延期或验收豁免。唯一主模块 M12；备用 未启用；实际执行 M12。仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归。
 
-R3串行材料队列：R3批准顺序落账中；已准备 M27、M16、M12、M11、M07；等待评审 M16、M12、M11、M07。材料完成不等批准或转序。
+R3串行材料队列：R3批准顺序落账中；已准备 M27、M16、M12、M11、M07；等待评审 M12、M11、M07。材料完成不等批准或转序。
 
 | R版本 | 模块顺序 | 当前边界 |
 |---|---|---|
@@ -19,7 +19,7 @@ R3串行材料队列：R3批准顺序落账中；已准备 M27、M16、M12、M11
 |---|---|---|---|
 | R1 | 齐备 | P2 | 已获准进入，待独立设计执行与评审 |
 | R2 | 未齐备：rangeReviewApproved | 未批准 | 未取得该R下游批准 |
-| R3 | 未齐备：M16,M12,M11,M07,BASE-01,BASE-02,BASE-03,BASE-04,BASE-05,BASE-06,rangeReviewApproved | 未批准 | 未取得该R下游批准 |
+| R3 | 未齐备：M12,M11,M07,BASE-01,BASE-02,BASE-03,BASE-04,BASE-05,BASE-06,rangeReviewApproved | 未批准 | 未取得该R下游批准 |
 
 | 模块 | R版本/队列 | P1A判定 | P1B评审 | 转序就绪 | 未达到条件 |
 |---|---|---|---|---|---|
@@ -34,21 +34,21 @@ R3串行材料队列：R3批准顺序落账中；已准备 M27、M16、M12、M11
 | M17 继任与发展 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M03 干部管理2.0 | R2 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M27 学习管理 | R3 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
-| M16 绩效管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
+| M16 绩效管理 | R3 / closed_restricted | 受限通过 | 受限通过 | 是 |  |
 | M12 招聘管理系统 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M11 假勤管理 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 | M07 薪酬社保 | R3 / waiting_owner_review | 已完成待评审 | 已完成待评审 | 否 | implementationRulesDecided；dependenciesAndExceptionsResolved；p1AApproved；p1BApproved；transitionReviewApproved |
 
-转序就绪 11/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
+转序就绪 12/15；独立指标，不等业务验收或生产上线。风险证据规则：核心交易、权限、生效时间、数据完整性及关键异常优先执行证据；不足时写明限制和明确项目设计，须获规则/例外批准才能转序；普通配置/静态字段允许页面、帮助与一致既有证据形成需求结论；不穷尽配置组合；每个新探索绑定closureChecklist问题ID；先判断是否改变当前需求正确性，不阻塞事项进入后续验证清单；模式调整不批准业务规则、内部延期或验收豁免；D1–D7保持，E2仅本人；P1权限设计评审不替代后续真人权限验收。
 
 
 ---
 
 # 当前唯一执行队列：P1A/P1B
 
-源：Scope_Register.json.roadmap及Module_Queue.json。首要工作包：M16唯一主模块。主要开发包：无（暂停扩展）。
+源：Scope_Register.json.roadmap及Module_Queue.json。首要工作包：M12唯一主模块。主要开发包：无（暂停扩展）。
 
-1. 按顺序继续M16的P1工作
+1. 按顺序继续M12的P1工作
 2. 按实质单元保存并推送，独立看板失败不阻P1
 3. 不修改产品、不进入P2/P3，保持15模块和33暂缓
 

@@ -5666,22 +5666,14 @@
         },
         "currentDeliveryAssessment": {
           "scopeChange": "SCOPE-20260909-CORE15",
-          "p1A": "in_progress",
-          "p1B": "not_ready",
-          "review": "not_signed",
-          "approvedRestricted": false,
-          "assessmentAt": "2026-09-10T02:51:15.660044+00:00",
-          "basis": "完整范围材料已完成待评审；推荐/LIMIT未批准",
-          "blockingIssueIds": [
-            "M16-SPEC-01",
-            "M16-SPEC-02",
-            "M16-SPEC-03",
-            "M16-SPEC-04",
-            "M16-SPEC-05",
-            "M16-SPEC-06",
-            "M16-LIMIT-01"
-          ],
-          "next": "顺序准备M12；本模块等待R3集中评审",
+          "p1A": "restricted_complete",
+          "p1B": "ready",
+          "review": "restricted_signed",
+          "approvedRestricted": true,
+          "assessmentAt": "2026-09-10T03:21:49.283664+00:00",
+          "basis": "M16-P1-APPROVAL-20260910；四退出条件经逐项核对满足，仅P1受限关闭",
+          "blockingIssueIds": [],
+          "next": "残余责任见LIMIT；继续M12",
           "acceptanceRefs": [
             {
               "taskId": "P-SOURCE",
@@ -5723,7 +5715,30 @@
               "taskId": "P-GOAL-ADVISORY",
               "relation": "原直接归属"
             }
-          ]
+          ],
+          "exitEvidence": [
+            "docs/delivery/P1_R3_Review_Package.md",
+            "P1-GOAL",
+            "BC-P01",
+            "BC-P02",
+            "BC-P03",
+            "BC-P04",
+            "BC-P05",
+            "BC-P06",
+            "BC-P07",
+            "BC-P1C-M16",
+            "BC-P08",
+            "BC-P09",
+            "BC-P10",
+            "BC-P11",
+            "BC-P12",
+            "BC-P13",
+            "BC-P14",
+            "BC-P15",
+            "BC-P16"
+          ],
+          "reviewRecord": "M16-P1-APPROVAL-20260910",
+          "closureClass": "受限通过"
         },
         "internalScopeCoverage": [
           {
@@ -5742,7 +5757,8 @@
             "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
             "assessedAt": "2026-09-09T10:26:03.101902+00:00",
             "complete": false,
-            "requirementAccepted": false
+            "requirementAccepted": true,
+            "approvalRecord": "M16-P1-APPROVAL-20260910"
           },
           {
             "originalScopeItem": "OKR",
@@ -5756,7 +5772,8 @@
             "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
             "assessedAt": "2026-09-09T10:26:03.101902+00:00",
             "complete": false,
-            "requirementAccepted": false
+            "requirementAccepted": true,
+            "approvalRecord": "M16-P1-APPROVAL-20260910"
           },
           {
             "originalScopeItem": "员工/组织目标与绩效",
@@ -5792,15 +5809,16 @@
             "next": "恢复原站连接后按本项缺口补证；对已明确部分按引用规格评审，不重复已确认操作。",
             "assessedAt": "2026-09-09T10:26:03.101902+00:00",
             "complete": false,
-            "requirementAccepted": false
+            "requirementAccepted": true,
+            "approvalRecord": "M16-P1-APPROVAL-20260910"
           }
         ],
         "moduleClosure": {
           "rangeId": "R3",
-          "queueState": "waiting_owner_review",
+          "queueState": "closed_restricted",
           "p1AConclusion": {
-            "status": "已完成待评审",
-            "approvalRecord": null,
+            "status": "受限通过",
+            "approvalRecord": "M16-P1-APPROVAL-20260910",
             "evidenceRefs": [
               "P1-GOAL",
               "BC-P01",
@@ -5821,51 +5839,63 @@
               "BC-P15",
               "BC-P16"
             ],
-            "limits": "OKR/组织目标完整页面及业务算法未探索；多维缺评、强分、兼职及系数仅局部帮助证据；申诉期限和独立多角色未执行。"
+            "limits": "OKR/组织目标完整页面及业务算法未探索；多维缺评、强分、兼职及系数仅局部帮助证据；申诉期限和独立多角色未执行。",
+            "approvedAt": "2026-09-10T03:21:49.283664+00:00"
           },
           "p1BConclusion": {
-            "status": "已完成待评审",
-            "approvalRecord": null,
+            "status": "受限通过",
+            "approvalRecord": "M16-P1-APPROVAL-20260910",
             "evidenceRefs": [],
-            "limits": "OKR/组织目标完整页面及业务算法未探索；多维缺评、强分、兼职及系数仅局部帮助证据；申诉期限和独立多角色未执行。"
+            "limits": "OKR/组织目标完整页面及业务算法未探索；多维缺评、强分、兼职及系数仅局部帮助证据；申诉期限和独立多角色未执行。",
+            "approvedAt": "2026-09-10T03:21:49.283664+00:00"
           },
           "conditions": {
             "applicableScopeDetermined": {
               "value": true,
-              "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+              "basis": "M16-P1-APPROVAL-20260910；原登记完整范围逐项与收口清单一致，无内部删减"
             },
             "implementationRulesDecided": {
-              "value": false,
-              "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+              "value": true,
+              "basis": "M16-P1-APPROVAL-20260910；本模块SPEC与R3-BASELINE-01均由所有者明确批准，版本/哈希锁定"
             },
             "acceptanceExecutable": {
               "value": true,
-              "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+              "basis": "M16-P1-APPROVAL-20260910；逐项Given/When/Then已存在，作为验收预期获批，未冒本轮执行"
             },
             "dependenciesAndExceptionsResolved": {
-              "value": false,
-              "basis": "完整原范围及可执行候选材料存在；规则/例外待批"
+              "value": true,
+              "basis": "M16-P1-APPROVAL-20260910；已批准生产者契约与本模块LIMIT；源缺证/独立角色留P2/P3/P4，不要求先实联调"
             }
           },
           "transitionReview": {
-            "approved": false,
-            "record": null,
-            "scope": "未批准",
-            "approvedAt": null
+            "approved": true,
+            "record": "M16-P1-APPROVAL-20260910",
+            "scope": "模块P1转序就绪；R3整体进入P2未批准",
+            "approvedAt": "2026-09-10T03:21:49.283664+00:00"
           },
-          "restrictedApproval": null,
-          "p1Closed": false
+          "restrictedApproval": {
+            "scope": "OKR/组织目标完整页面及业务算法未探索；多维缺评、强分、兼职及系数仅局部帮助证据；申诉期限和独立多角色未执行。",
+            "residualRisk": "不当评价/分布、错误缺评分母、兼职身份漂移、越权分数可见及更正后奖金联动",
+            "revalidation": "P2：补组织绩效稳定对象、OKR目标/KR/对齐及复盘、多维评分和缺评类型、兼职上下文、时间窗口、强制分布与系数契约；复核更正发布回避及下游影响；P3：按本包Given/When/Then合成验证正常/边界/并发/故障，补算法及版本迁移证据，历史测试不代复验；P4：独立多角色、敏感字段/历史附件/下载、跨模块业务、生产恢复与外部联调。E2不新增人，单管理员不代验。",
+            "record": "M16-P1-APPROVAL-20260910",
+            "approvedAt": "2026-09-10T03:21:49.283664+00:00",
+            "phaseScope": "仅P1"
+          },
+          "p1Closed": true,
+          "closureClass": "受限通过",
+          "closureRecord": "M16-P1-APPROVAL-20260910",
+          "closedAt": "2026-09-10T03:21:49.283664+00:00"
         },
         "reviewPackage": {
           "moduleId": "M16",
-          "documentStatus": "材料完成、等待所有者集中评审",
+          "documentStatus": "P1受限通过，需求基线已批准",
           "scope": "工作台、OKR、员工/组织目标与绩效",
           "preparedAt": "2026-09-10T02:51:15.660044+00:00",
           "basedOnHead": "689b6753dfbb85cdcc9cd95f6ad185e0641f9a47",
-          "approvalRecord": null,
+          "approvalRecord": "M16-P1-APPROVAL-20260910",
           "internalDeferralProposals": [],
           "internalDeferralNote": "原登记完整范围全部保留；独立AI和33暂缓模块不恢复；外部服务以契约保留，不静默缩减普通业务。",
-          "confirmedRules": "当前有效成员绑定稳定员工ID；read/use/manage/review/publish/export与组织范围/字段权限求交；本人、提交者、实际材料编制者回避独立审批。版本历史、附件和下载按当前权限校验；401/403/解绑清缓存，临时故障不假0。命令以requestId+payloadHash幂等，revision并发冲突拒绝，结果未知先查原ID，不重做；业务与审计事务边界沿D1既有批准。M19审批、业务生效、外部通知分别记录；M48只消费本人许可投影，M32按明确分母与版本统计。BASE01–06沿R1目标；供应商未配置返回未配置，不模拟成功；这些共用原则引用既有批准，模块新增算法仍待批准。 模块SPEC均为建议未批准。",
+          "confirmedRules": "所审推荐及LIMIT由M16-P1-APPROVAL-20260910批准，其他模块不外推",
           "decisionIds": [
             "M16-SPEC-01",
             "M16-SPEC-02",
@@ -5877,14 +5907,16 @@
           "exceptionProposals": [
             {
               "id": "M16-LIMIT-01",
-              "status": "待所有者批准",
-              "approved": false,
-              "approvalRecord": null,
+              "status": "已批准P1受限边界",
+              "approved": true,
+              "approvalRecord": "M16-P1-APPROVAL-20260910",
               "scope": "OKR/组织目标完整页面及业务算法未探索；多维缺评、强分、兼职及系数仅局部帮助证据；申诉期限和独立多角色未执行。",
               "evidence": "已有页面索引 P1-GOAL,BC-P01,BC-P02,BC-P03,BC-P04,BC-P05,BC-P06,BC-P07,BC-P1C-M16,BC-P08,BC-P09,BC-P10,BC-P11,BC-P12,BC-P13,BC-P14,BC-P15,BC-P16；当前静态HEAD 689b6753dfbb85cdcc9cd95f6ad185e0641f9a47；本轮未写原站或执行业务测试",
               "proposal": "建议以原有局部证据、静态差异和经所有者批准的模块完整产品规则关闭P1需求；暂未验证算法留后续责任，不作为无限取证前置。未经批准不关闭。",
               "residualRisk": "不当评价/分布、错误缺评分母、兼职身份漂移、越权分数可见及更正后奖金联动",
-              "revalidation": "P2：补组织绩效稳定对象、OKR目标/KR/对齐及复盘、多维评分和缺评类型、兼职上下文、时间窗口、强制分布与系数契约；复核更正发布回避及下游影响；P3：按本包Given/When/Then合成验证正常/边界/并发/故障，补算法及版本迁移证据，历史测试不代复验；P4：独立多角色、敏感字段/历史附件/下载、跨模块业务、生产恢复与外部联调。E2不新增人，单管理员不代验。"
+              "revalidation": "P2：补组织绩效稳定对象、OKR目标/KR/对齐及复盘、多维评分和缺评类型、兼职上下文、时间窗口、强制分布与系数契约；复核更正发布回避及下游影响；P3：按本包Given/When/Then合成验证正常/边界/并发/故障，补算法及版本迁移证据，历史测试不代复验；P4：独立多角色、敏感字段/历史附件/下载、跨模块业务、生产恢复与外部联调。E2不新增人，单管理员不代验。",
+              "approvedAt": "2026-09-10T03:21:49.283664+00:00",
+              "approvalConclusion": "仅P1，原推荐措辞保留审阅时含义；后续验证责任不免除"
             }
           ],
           "closedQuestions": [
@@ -5895,9 +5927,9 @@
             }
           ],
           "exitAssessment": {
-            "p1A": "局部原站与静态事实已汇总，未执行项明确LIMIT；完整/受限判定待所有者批准",
-            "p1B": "字段、权限、状态、异常、契约和验收预期已具体化；SPEC/LIMIT待批",
-            "transition": "未批准，不关闭、不转序"
+            "p1A": "M16-P1-APPROVAL-20260910；四条件齐备，模块转序就绪，R3下阶段未批准",
+            "p1B": "M16-P1-APPROVAL-20260910；四条件齐备，模块转序就绪，R3下阶段未批准",
+            "transition": "M16-P1-APPROVAL-20260910；四条件齐备，模块转序就绪，R3下阶段未批准"
           },
           "flowSummary": [
             "周期draft→approved→active→closed，时间窗口另校验；计划draft→confirmed→submitted→evaluated→published，退回保留旧版；申诉submitted→upheld/approved/withdrawn，更正新发布版本；OKR draft→aligned/active→reviewed/closed，进展与最终评分分列；组织与员工结果不同subjectType。",
@@ -5926,7 +5958,9 @@
           ],
           "businessAccepted": false,
           "productionAccepted": false,
-          "next": "顺序准备M12；本模块等待R3集中评审"
+          "next": "残余责任见LIMIT；继续M12",
+          "approvedAt": "2026-09-10T03:21:49.283664+00:00",
+          "closureClass": "受限通过"
         },
         "sourceAccessThisUnit": {
           "result": "本单元沿用已归档源证据，未新增浏览器取证；未遇需要重复源提交的结果未知动作。当前算法缺口以具体建议/LIMIT表达，后续仅按定向清单补证。",
@@ -5962,12 +5996,12 @@
             "evidenceRefs": [
               "BC-P1C-M16"
             ],
-            "gap": "规格建议与本模块LIMIT待批；工作台任务/异常/汇总对象与当前目标报表关系未证；其他页不能代工作台完整证据",
-            "blocksP1": true,
+            "gap": "P1批准后无剩余硬阻塞；原差异转交后续责任",
+            "blocksP1": false,
             "risk": "不当评价/分布、错误缺评分母、兼职身份漂移、越权分数可见及更正后奖金联动",
             "closureMethod": "核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定",
-            "basis": "M16-SPEC-01,M16-SPEC-02,M16-SPEC-03,M16-SPEC-04,M16-SPEC-05,M16-SPEC-06",
-            "status": "已完成待评审",
+            "basis": "M16-P1-APPROVAL-20260910",
+            "status": "受限通过",
             "decisionIds": [
               "M16-SPEC-01",
               "M16-SPEC-02",
@@ -5975,7 +6009,9 @@
               "M16-SPEC-04",
               "M16-SPEC-05",
               "M16-SPEC-06"
-            ]
+            ],
+            "preApprovalGap": "规格建议与本模块LIMIT待批；工作台任务/异常/汇总对象与当前目标报表关系未证；其他页不能代工作台完整证据",
+            "approvalRecord": "M16-P1-APPROVAL-20260910"
           },
           {
             "id": "M16-CLOSE-02",
@@ -5984,12 +6020,12 @@
               "BP-P-REQ-09"
             ],
             "evidenceRefs": [],
-            "gap": "规格建议与本模块LIMIT待批；目标/KR/对齐/进度/评分/权限/周期及自助关联缺证，保留受限规格而非自动套绩效目标",
-            "blocksP1": true,
+            "gap": "P1批准后无剩余硬阻塞；原差异转交后续责任",
+            "blocksP1": false,
             "risk": "不当评价/分布、错误缺评分母、兼职身份漂移、越权分数可见及更正后奖金联动",
             "closureMethod": "核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定",
-            "basis": "M16-SPEC-01,M16-SPEC-02,M16-SPEC-03,M16-SPEC-04,M16-SPEC-05,M16-SPEC-06",
-            "status": "已完成待评审",
+            "basis": "M16-P1-APPROVAL-20260910",
+            "status": "受限通过",
             "decisionIds": [
               "M16-SPEC-01",
               "M16-SPEC-02",
@@ -5997,7 +6033,9 @@
               "M16-SPEC-04",
               "M16-SPEC-05",
               "M16-SPEC-06"
-            ]
+            ],
+            "preApprovalGap": "规格建议与本模块LIMIT待批；目标/KR/对齐/进度/评分/权限/周期及自助关联缺证，保留受限规格而非自动套绩效目标",
+            "approvalRecord": "M16-P1-APPROVAL-20260910"
           },
           {
             "id": "M16-CLOSE-03",
@@ -6028,12 +6066,12 @@
               "BC-P15",
               "BC-P16"
             ],
-            "gap": "规格建议与本模块LIMIT待批；员工目标/评价/申诉更正和组织目标/组织绩效分别保留；组织参与数不等员工人数，完整采分/关系/分布/系数消费与兼职上下文待证",
-            "blocksP1": true,
+            "gap": "P1批准后无剩余硬阻塞；原差异转交后续责任",
+            "blocksP1": false,
             "risk": "不当评价/分布、错误缺评分母、兼职身份漂移、越权分数可见及更正后奖金联动",
             "closureMethod": "核SPEC、完整字段和GWT、依赖及LIMIT明确批准后再判定",
-            "basis": "M16-SPEC-01,M16-SPEC-02,M16-SPEC-03,M16-SPEC-04,M16-SPEC-05,M16-SPEC-06",
-            "status": "已完成待评审",
+            "basis": "M16-P1-APPROVAL-20260910",
+            "status": "受限通过",
             "decisionIds": [
               "M16-SPEC-01",
               "M16-SPEC-02",
@@ -6041,7 +6079,9 @@
               "M16-SPEC-04",
               "M16-SPEC-05",
               "M16-SPEC-06"
-            ]
+            ],
+            "preApprovalGap": "规格建议与本模块LIMIT待批；员工目标/评价/申诉更正和组织目标/组织绩效分别保留；组织参与数不等员工人数，完整采分/关系/分布/系数消费与兼职上下文待证",
+            "approvalRecord": "M16-P1-APPROVAL-20260910"
           }
         ]
       },
@@ -14205,7 +14245,7 @@
   "p1Baseline": {
     "version": 1,
     "status": "P1A-draft-not-accepted",
-    "updatedAt": "2026-09-10T03:21:03.591922+00:00",
+    "updatedAt": "2026-09-10T03:21:49.283664+00:00",
     "authority": "Scope_Register.json为唯一范围/验收事实源；历史48/59保留，当前15模块及基础按SCOPE-20260909-CORE15。",
     "baseCommit": "72bcf4031fb4fc62d70be8a6c1ae1c491ff90714",
     "order": [
@@ -47227,27 +47267,27 @@
       "latestAuthorizationAt": "2026-09-09T06:25:42.812752+00:00",
       "scopeChangeHead": "f31cb2b5e1894723288fd884d4e3bd895ae57327",
       "scopeChange": "SCOPE-20260909-CORE15",
-      "latestCheckpointAt": "2026-09-10T03:21:03.591922+00:00",
-      "latestCommittedHead": "5769a420a923024e9c274a4f0084a2a40cef8c02",
+      "latestCheckpointAt": "2026-09-10T03:21:49.283664+00:00",
+      "latestCommittedHead": "92c62df09fe7c75c932df26bd4c3cbb11509ef66",
       "latestEvidenceRefs": [
         "BC-C39",
         "BC-C40",
         "BC-C28",
         "R2-RO-M17-01"
       ],
-      "next": "继续M16；本窗口仅P1",
+      "next": "继续M12；本窗口仅P1",
       "browserRecovery": "历史CDP超时已在本轮恢复：可列出标签及定向只读访问；M26入口误到页未计证，M18/M17有限回查成功。具体访问限制保留于各模块，不再把整站连接故障列为当前共同阻塞。",
       "sourceBrowsingStatus": "本轮未新增原站浏览器取证，沿用归档证据；此前连接恢复只代表前次观察，不宣称本轮复核。所有缺证逐模块列LIMIT及定向清单。",
-      "currentFocus": "M16唯一主模块",
+      "currentFocus": "M12唯一主模块",
       "checkpointCommitSemantics": "latestCommittedHead为本单元编辑开始前已存在提交；本记录所属提交用git log -1 -- docs/delivery/Scope_Register.json解析，不能将基准冒充最终HEAD。",
-      "workingTreeAtResume": "本单元基于5769a420a923024e9c274a4f0084a2a40cef8c02干净工作区，仅文档/生成脚本",
+      "workingTreeAtResume": "本单元基于92c62df09fe7c75c932df26bd4c3cbb11509ef66干净工作区，仅文档/生成脚本",
       "lastVerifiedSync": {
         "commit": "161579443b880302957e92c22ab6414941cdf3e9",
         "remoteBranch": "main",
         "result": "同步已核；该提交汇总字段kind/evidence缺失，需以本次修正及重新生成检查结果为最终版本",
         "scope": "R3集中汇总"
       },
-      "currentUnitOutcome": "M27受限关闭，继续M16",
+      "currentUnitOutcome": "M16受限关闭，继续M12",
       "previousAtomicOutcome": "M07完整原范围材料已保存并推送；无新增原站动作或结果未知提交",
       "sourceWritePolicy": "本轮最新边界：原站只读，不修改原站数据；此前合成记录授权作为历史保留，本夜间单元不据此新增写入。",
       "historicalExecutionBoundary": "用户已确认当前北森租户可用于测试，并授权P1所需合成关联记录的创建、保存、提交及必要状态流转；先查可复用记录，统一P1V-20260909标记，逐链记录ID/关联/前后状态和结果，不逐条重问。不得任意更改真实员工或既有业务；不扩大到真实业务生效、外部通知、支付、签署或新增人类访问者。产品代码、部署、D1–D7/E1/E2继续保持。 最新范围仅当前15模块和基础/最小必要公共依赖；33模块停止独立探索/新数据链，已有前置可必要引用，不为停点做完整链。"
@@ -48490,7 +48530,7 @@
   "roadmap": {
     "revision": "2026-09-09-module-closure-rolling-R",
     "introducedBy": "用户本轮要求新增细化；不是原规划早已定义",
-    "updatedAt": "2026-09-10T03:21:03.591922+00:00",
+    "updatedAt": "2026-09-10T03:21:49.283664+00:00",
     "phaseOrder": [
       "P0",
       "P1A",
@@ -48573,7 +48613,7 @@
       }
     ],
     "projectP1Accepted": false,
-    "activeWorkPackage": "M16唯一主模块",
+    "activeWorkPackage": "M12唯一主模块",
     "mainDevelopmentPackage": null,
     "expansionPaused": true,
     "humanUatBlocksP1": false,
@@ -48588,7 +48628,7 @@
       "BP-S"
     ],
     "nextTasks": [
-      "按顺序继续M16的P1工作",
+      "按顺序继续M12的P1工作",
       "按实质单元保存并推送，独立看板失败不阻P1",
       "不修改产品、不进入P2/P3，保持15模块和33暂缓"
     ],
@@ -48603,10 +48643,10 @@
       "id": "MODE-MODULE-CLOSURE-R-20260909",
       "authorizedAt": "2026-09-09T15:43:36.730682+00:00",
       "mode": "模块闭环优先、按R版本滚动转序",
-      "primaryModuleId": "M16",
+      "primaryModuleId": "M12",
       "backupModuleId": null,
       "backupCandidateId": null,
-      "activeExecutionModuleId": "M16",
+      "activeExecutionModuleId": "M12",
       "wipLimit": 1,
       "backupLimit": 1,
       "backupActivation": "仅主模块剩余必要工作全部依赖外部条件/用户决定才可启用1个备用；主模块可推进时优先回归",
@@ -48892,6 +48932,14 @@
           "reason": "M27-P1-APPROVAL-20260910四条件满足，按批准顺序受限关闭",
           "remaining": "仅P2设计/P3验证/P4验收残余责任",
           "restore": "仅新批准变更回到受影响条款，不重开宽泛盘点"
+        },
+        {
+          "at": "2026-09-10T03:21:49.283664+00:00",
+          "from": "M16",
+          "to": "M12",
+          "reason": "M16-P1-APPROVAL-20260910四条件满足，按批准顺序受限关闭",
+          "remaining": "仅P2设计/P3验证/P4验收残余责任",
+          "restore": "仅新批准变更回到受影响条款，不重开宽泛盘点"
         }
       ],
       "backupActivationHistory": [
@@ -48982,7 +49030,6 @@
           "M07"
         ],
         "waitingModuleIds": [
-          "M16",
           "M12",
           "M11",
           "M07"
@@ -48995,7 +49042,7 @@
           "M07"
         ],
         "status": "R3批准顺序落账中",
-        "nextFormalClosureModule": "M16",
+        "nextFormalClosureModule": "M12",
         "rule": "按最新用户批准顺序关闭R3；随后允许R3串行材料准备，未批准R3不关闭，不进入P2/P3"
       }
     },
@@ -49405,11 +49452,11 @@
         }
       }
     ],
-    "currentWork": "M27批准收口完成；下一M16"
+    "currentWork": "M16批准收口完成；下一M12"
   },
   "p1B": {
     "status": "draft-not-accepted",
-    "updatedAt": "2026-09-10T03:21:03.591922+00:00",
+    "updatedAt": "2026-09-10T03:21:49.283664+00:00",
     "overallPrd": "docs/delivery/P1B_PRD.md",
     "packages": [
       {
@@ -53505,7 +53552,9 @@
                 "basis": "本模块推荐未批准；M16-SPEC-01,M16-SPEC-02,M16-SPEC-03,M16-SPEC-04,M16-SPEC-05,M16-SPEC-06",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M16-P1-APPROVAL-20260910"
               },
               {
                 "id": "M16-REVIEW-AC02",
@@ -53516,7 +53565,9 @@
                 "basis": "本模块推荐未批准；M16-SPEC-01,M16-SPEC-02,M16-SPEC-03,M16-SPEC-04,M16-SPEC-05,M16-SPEC-06",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M16-P1-APPROVAL-20260910"
               },
               {
                 "id": "M16-REVIEW-AC03",
@@ -53527,7 +53578,9 @@
                 "basis": "本模块推荐未批准；M16-SPEC-01,M16-SPEC-02,M16-SPEC-03,M16-SPEC-04,M16-SPEC-05,M16-SPEC-06",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M16-P1-APPROVAL-20260910"
               },
               {
                 "id": "M16-REVIEW-AC04",
@@ -53538,7 +53591,9 @@
                 "basis": "本模块推荐未批准；M16-SPEC-01,M16-SPEC-02,M16-SPEC-03,M16-SPEC-04,M16-SPEC-05,M16-SPEC-06",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M16-P1-APPROVAL-20260910"
               },
               {
                 "id": "M16-REVIEW-AC05",
@@ -53549,7 +53604,9 @@
                 "basis": "本模块推荐未批准；M16-SPEC-01,M16-SPEC-02,M16-SPEC-03,M16-SPEC-04,M16-SPEC-05,M16-SPEC-06",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M16-P1-APPROVAL-20260910"
               },
               {
                 "id": "M16-REVIEW-AC06",
@@ -53560,7 +53617,9 @@
                 "basis": "本模块推荐未批准；M16-SPEC-01,M16-SPEC-02,M16-SPEC-03,M16-SPEC-04,M16-SPEC-05,M16-SPEC-06",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M16-P1-APPROVAL-20260910"
               },
               {
                 "id": "M16-REVIEW-AC07",
@@ -53571,7 +53630,9 @@
                 "basis": "本模块推荐未批准；M16-SPEC-01,M16-SPEC-02,M16-SPEC-03,M16-SPEC-04,M16-SPEC-05,M16-SPEC-06",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M16-P1-APPROVAL-20260910"
               },
               {
                 "id": "M16-REVIEW-AC08",
@@ -53582,7 +53643,9 @@
                 "basis": "本模块推荐未批准；M16-SPEC-01,M16-SPEC-02,M16-SPEC-03,M16-SPEC-04,M16-SPEC-05,M16-SPEC-06",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M16-P1-APPROVAL-20260910"
               },
               {
                 "id": "M16-REVIEW-AC09",
@@ -53593,7 +53656,9 @@
                 "basis": "本模块推荐未批准；M16-SPEC-01,M16-SPEC-02,M16-SPEC-03,M16-SPEC-04,M16-SPEC-05,M16-SPEC-06",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M16-P1-APPROVAL-20260910"
               },
               {
                 "id": "M16-REVIEW-AC10",
@@ -53604,7 +53669,9 @@
                 "basis": "本模块推荐未批准；M16-SPEC-01,M16-SPEC-02,M16-SPEC-03,M16-SPEC-04,M16-SPEC-05,M16-SPEC-06",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M16-P1-APPROVAL-20260910"
               },
               {
                 "id": "M16-REVIEW-AC11",
@@ -53615,7 +53682,9 @@
                 "basis": "本模块推荐未批准；M16-SPEC-01,M16-SPEC-02,M16-SPEC-03,M16-SPEC-04,M16-SPEC-05,M16-SPEC-06",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M16-P1-APPROVAL-20260910"
               },
               {
                 "id": "M16-REVIEW-AC12",
@@ -53626,7 +53695,9 @@
                 "basis": "本模块推荐未批准；M16-SPEC-01,M16-SPEC-02,M16-SPEC-03,M16-SPEC-04,M16-SPEC-05,M16-SPEC-06",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M16-P1-APPROVAL-20260910"
               },
               {
                 "id": "M16-REVIEW-RETURN",
@@ -53637,7 +53708,9 @@
                 "basis": "本模块推荐待批准；不冒原站事实",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M16-P1-APPROVAL-20260910"
               },
               {
                 "id": "M16-REVIEW-WITHDRAW",
@@ -53648,7 +53721,9 @@
                 "basis": "本模块推荐待批准；不冒原站事实",
                 "status": "验收预期未批准，本轮未执行",
                 "accepted": false,
-                "executionThisRun": false
+                "executionThisRun": false,
+                "requirementApproved": true,
+                "approvalRecord": "M16-P1-APPROVAL-20260910"
               }
             ],
             "moduleReviewRecommendationRefs": [
@@ -60606,13 +60681,15 @@
         "alternatives": "统一随当前组织迁移实现简单但破坏历史与权限，不推荐。",
         "impact": "兼职、组织绩效分母及任务权限。",
         "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
-        "status": "已具体化待集中评审",
-        "decisionRequired": true,
-        "decision": null,
+        "status": "已批准P1需求",
+        "decisionRequired": false,
+        "decision": "批准所审推荐，无改选；M16-P1-APPROVAL-20260910",
         "moduleIds": [
           "M16"
         ],
-        "preparedAt": "2026-09-10T02:51:15.660044+00:00"
+        "preparedAt": "2026-09-10T02:51:15.660044+00:00",
+        "approvalRecord": "M16-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T03:21:49.283664+00:00"
       },
       {
         "id": "M16-SPEC-02",
@@ -60622,13 +60699,15 @@
         "alternatives": "将OKR直接纳入考核可选，但必须单独批准权重/算法/用途。",
         "impact": "完整保留OKR，避免错误薪酬联动。",
         "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
-        "status": "已具体化待集中评审",
-        "decisionRequired": true,
-        "decision": null,
+        "status": "已批准P1需求",
+        "decisionRequired": false,
+        "decision": "批准所审推荐，无改选；M16-P1-APPROVAL-20260910",
         "moduleIds": [
           "M16"
         ],
-        "preparedAt": "2026-09-10T02:51:15.660044+00:00"
+        "preparedAt": "2026-09-10T02:51:15.660044+00:00",
+        "approvalRecord": "M16-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T03:21:49.283664+00:00"
       },
       {
         "id": "M16-SPEC-03",
@@ -60638,13 +60717,15 @@
         "alternatives": "源未评计0或均摊选项可保留为显式活动策略，不能默认为0惩罚员工。",
         "impact": "直接决定评价正确性与可比性。",
         "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
-        "status": "已具体化待集中评审",
-        "decisionRequired": true,
-        "decision": null,
+        "status": "已批准P1需求",
+        "decisionRequired": false,
+        "decision": "批准所审推荐，无改选；M16-P1-APPROVAL-20260910",
         "moduleIds": [
           "M16"
         ],
-        "preparedAt": "2026-09-10T02:51:15.660044+00:00"
+        "preparedAt": "2026-09-10T02:51:15.660044+00:00",
+        "approvalRecord": "M16-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T03:21:49.283664+00:00"
       },
       {
         "id": "M16-SPEC-04",
@@ -60654,13 +60735,15 @@
         "alternatives": "指导分布而非强制配额成本更低，可选择且需明示。",
         "impact": "人员等级公平性、校准权和金额消费者。",
         "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
-        "status": "已具体化待集中评审",
-        "decisionRequired": true,
-        "decision": null,
+        "status": "已批准P1需求",
+        "decisionRequired": false,
+        "decision": "批准所审推荐，无改选；M16-P1-APPROVAL-20260910",
         "moduleIds": [
           "M16"
         ],
-        "preparedAt": "2026-09-10T02:51:15.660044+00:00"
+        "preparedAt": "2026-09-10T02:51:15.660044+00:00",
+        "approvalRecord": "M16-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T03:21:49.283664+00:00"
       },
       {
         "id": "M16-SPEC-05",
@@ -60670,13 +60753,15 @@
         "alternatives": "仅复核与更正发布两人分离可降低人力，但弱化利益回避，需明确改选。",
         "impact": "申诉独立性、历史结果和下游冻结。",
         "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
-        "status": "已具体化待集中评审",
-        "decisionRequired": true,
-        "decision": null,
+        "status": "已批准P1需求",
+        "decisionRequired": false,
+        "decision": "批准所审推荐，无改选；M16-P1-APPROVAL-20260910",
         "moduleIds": [
           "M16"
         ],
-        "preparedAt": "2026-09-10T02:51:15.660044+00:00"
+        "preparedAt": "2026-09-10T02:51:15.660044+00:00",
+        "approvalRecord": "M16-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T03:21:49.283664+00:00"
       },
       {
         "id": "M16-SPEC-06",
@@ -60686,13 +60771,15 @@
         "alternatives": "消费者总跟最新版会改写既有业务，不推荐。",
         "impact": "权限、数据完整性及跨域异常。",
         "ifUndecided": "本项业务规则、字段及验收预期未决，阻本模块P1关闭；不阻下一模块材料准备",
-        "status": "已具体化待集中评审",
-        "decisionRequired": true,
-        "decision": null,
+        "status": "已批准P1需求",
+        "decisionRequired": false,
+        "decision": "批准所审推荐，无改选；M16-P1-APPROVAL-20260910",
         "moduleIds": [
           "M16"
         ],
-        "preparedAt": "2026-09-10T02:51:15.660044+00:00"
+        "preparedAt": "2026-09-10T02:51:15.660044+00:00",
+        "approvalRecord": "M16-P1-APPROVAL-20260910",
+        "approvedAt": "2026-09-10T03:21:49.283664+00:00"
       },
       {
         "id": "M12-SPEC-01",
@@ -62432,6 +62519,67 @@
           "不改产品、原站、数据、部署、访问者；不进入R1 P2工作树",
           "本批准不执行P2/P3，版本进入另按条件核定"
         ]
+      },
+      {
+        "id": "M16-P1-APPROVAL-20260910",
+        "moduleIds": [
+          "M16"
+        ],
+        "approved": true,
+        "approvedBy": "项目所有者（本窗口用户）",
+        "approvedAt": "2026-09-10T03:21:49.283664+00:00",
+        "recordedAt": "2026-09-10T03:21:49.283664+00:00",
+        "timeBasis": "按M27→M16→M12→M11→M07顺序登记时间",
+        "source": "本窗口2026-09-10用户：批准R3集中评审包全部30项推荐及五LIMIT，无改选；逐模块核退出条件，仅P1",
+        "reviewedHead": "161579443b880302957e92c22ab6414941cdf3e9",
+        "reviewedDocument": "docs/delivery/P1_R3_Review_Package.md",
+        "reviewedDocumentSha256": "6758b458c681a0a5c9ce09406ee45d08abce5a1a9e4fc2c22deae488fd9ad562",
+        "scope": "M16完整P1需求及本模块LIMIT",
+        "decisionIds": [
+          "M16-SPEC-01",
+          "M16-SPEC-02",
+          "M16-SPEC-03",
+          "M16-SPEC-04",
+          "M16-SPEC-05",
+          "M16-SPEC-06"
+        ],
+        "approvedRecommendations": {
+          "M16-SPEC-01": {
+            "text": "建议员工/组织绩效分别subjectType+stableId，人员计划唯一键为周期、员工、任职上下文，不按当前主职覆盖历史；未选任职时创建时明确主职ID。周期开始/结束与提交、评价、申诉窗口各显式北京时间，禁止仅active状态绕日期；超期需独立授权延期。工作台分本人任务、授权评价、异常和已发布结果，不能把无数据显示0分。任职结束默认阻新任务并提示负责人决定终止或继续冻结上下文，不能静默删结果。",
+            "sha256": "24e7145220aa0236d77fc05b2c821f17203c876e04e11e17b58a64dbac4be856"
+          },
+          "M16-SPEC-02": {
+            "text": "建议Objective和KR稳定ID，负责人为显式员工或组织、期间和可见范围必选；对齐关系不得成环，同一KR不复制为多个真实完成事件。KR区分定量与里程碑，定量需起点/目标/单位/方向，目标等于起点则禁止自动算率；进展可超过目标但显示原值及封顶展示策略，目标变更产生版本。OKR进展不自动变绩效分数，复盘自评与主管反馈分列；只有另有明确版本化映射才能纳入考核。",
+            "sha256": "d90f5a7f1aab0ab34f89f880536fd6b35952e5215ceafab8c34afee837667327"
+          },
+          "M16-SPEC-03": {
+            "text": "建议各维度冻结尺度/权重/算法，可配置加权平均或求和，单位兼容检查；默认全部必评，未评分/无法评价/无权限/不适用分开，未配置策略阻发布，不补0。允许明确审批的无法评价剔除并按有效权重重归一，分母0为unknown；无权读取不改变后台算分。等级区间连续且唯一包含边界；序数等级必须先显式映射。小数权重用定点数，展示舍入不改变阈值比较。",
+            "sha256": "991d68d1be100b3d9b3d4d4b9cb1113f1aa3f05a712ced1d756a2b74d73afb14"
+          },
+          "M16-SPEC-04": {
+            "text": "建议强制分布默认未启用；启用时必须冻结适用群体、样本最小值、配额、取整及并列处理，经独立审批后执行。默认用最大余数分配整数配额、同分跨档不得随机裁决而需校准理由与独立复核；人员变更须重算预览不直接发结果。等级系数与公式系数分别显式绑定版本，无绑定返回未配置；系数不直接产生工资业务。",
+            "sha256": "ffeec479707abe966696fd1152127d024328351262765f1e37ac0039dda74cee"
+          },
+          "M16-SPEC-05": {
+            "text": "建议目标变更独立批准后新版本，原自评/评分保留历史，新版须重新确认；旧目标跟进只能对旧快照反馈，不充当新版完成证据。申诉窗口发布后明确配置天数，未配置阻正式发布，不默认无限或自动拒绝；仅本人申诉，原评价人/发布人/申诉人/材料编制者回避复核，最终更正发布人也排这些角色及复核者。获准更正按冻结尺度重评，版本链不可覆盖。",
+            "sha256": "bb81b9e79f6c0cfeb93a29701c23c570509a6eea20bd1446d3839f874316fca9"
+          },
+          "M16-SPEC-06": {
+            "text": "建议个人分数、同事排名、组织结果分别授权；本人只读已开放本人报告，校准记录不默认开放。M18/M17/M32读取明确发布版本和asOf，申诉中显示争议状态；更正只发版本通知，消费者按自身冻结规则复核，不回滚人事或工资。停用/撤权阻新办理，历史按当前权；同requestId返回原结果，并发调整/评价拒绝过期revision。",
+            "sha256": "a04bd22f0fe59bfd1015947e25df8cdac4a9e6b2beef46bd778416049b39457f"
+          }
+        },
+        "exceptionIds": [
+          "M16-LIMIT-01"
+        ],
+        "exceptionScope": "OKR/组织目标完整页面及业务算法未探索；多维缺评、强分、兼职及系数仅局部帮助证据；申诉期限和独立多角色未执行。",
+        "authorization": "满足已登记四条件时受限关闭及模块转序就绪；不批准R3下游P2/P3",
+        "exclusions": [
+          "不代表实现、P3测试、多角色业务或生产验收",
+          "D1–D7/E1/E2及R1恢复目标不变",
+          "不改产品、原站、数据、部署、访问者；不进入R1 P2工作树",
+          "本批准不执行P2/P3，版本进入另按条件核定"
+        ]
       }
     ],
     "r2ReviewBundle": {
@@ -62641,9 +62789,9 @@
         "M11-LIMIT-01",
         "M07-LIMIT-01"
       ],
-      "status": "所有者已批准，按模块顺序登记；已关闭M27",
+      "status": "所有者已批准，按模块顺序登记；已关闭M27,M16",
       "approved": true,
-      "next": "继续M16；R3进入P2/P3未批准",
+      "next": "继续M12；R3进入P2/P3未批准",
       "consistencyFindings": [
         [
           "身份/主体",
@@ -62685,7 +62833,8 @@
       "reviewedHead": "161579443b880302957e92c22ab6414941cdf3e9",
       "reviewedDocumentSha256": "6758b458c681a0a5c9ce09406ee45d08abce5a1a9e4fc2c22deae488fd9ad562",
       "closedModuleIds": [
-        "M27"
+        "M27",
+        "M16"
       ]
     },
     "reviewPackageHistory": [
