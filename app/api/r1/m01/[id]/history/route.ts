@@ -16,8 +16,8 @@ export async function GET(request:Request,{params}:{params:Promise<{id:string}>}
   c.db.prepare('SELECT subject_person_id AS subjectPersonId,relation_type AS relationType,valid_from AS validFrom,valid_to AS validTo FROM r1_relationships WHERE tenant_id=? AND manager_person_id=?').bind(m.tenantId,m.employeeId),
  ]);
  const grants=g.results.map((x:any)=>({...x,scope:JSON.parse(x.scope),fields:JSON.parse(x.fields)})) as Grant[],relations=r.results as Relationship[],items=[];
- for(const h of history.results.slice(0,20) as any[]){const v=JSON.parse(h.payload),can=(field:string)=>tupleAllowed(m,grants,relations,{objectType:'M01',action:'read',orgId:v.orgId??'',personId:v.kind==='person'?v.id:v.personId??'',field,historyMode:'history'});if(!can('record'))continue;
-  for(const [key,field] of [['email','email'],['gradeId','level'],['level','level']])if(!can(field))delete v.payload[key];
+ for(const h of history.results.slice(0,20) as any[]){const v=JSON.parse(h.payload),can=(field:string)=>tupleAllowed(m,grants,relations,{objectType:'M01',action:'read',orgId:v.orgId??'',personId:v.kind==='person'?v.id:v.personId??'',field,historyMode:'history'});if(!can('record'))continue;delete v.payload.legacyPayload;delete v.payload.migrationSource;
+  for(const [key,field] of [['email','email'],['gradeId','level'],['level','level'],['legacyLevelLabel','level']])if(!can(field))delete v.payload[key];
   if(v.payload.fields)v.payload.fields=Object.fromEntries(Object.entries(v.payload.fields).filter(([key])=>can(key)));
   if(v.payload.fieldSnapshots)v.payload.fieldSnapshots=v.payload.fieldSnapshots.filter((f:any)=>can(f.rootId));items.push({...h,payload:v});
  }
