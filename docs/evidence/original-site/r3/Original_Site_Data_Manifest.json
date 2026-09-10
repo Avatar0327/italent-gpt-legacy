@@ -77,8 +77,9 @@
       "state": "未发布",
       "readback": "确认导入后课程列表逐条匹配本轮名称和部门，共9条新增",
       "visibility_input": "不共享; 不公开",
-      "visibility_saved_readback": "待编辑回查",
-      "cleanup": "保留供本轮验证"
+      "visibility_saved_readback": "编辑页确认不共享、不公开、游客关闭",
+      "cleanup": "保留供本轮验证",
+      "screenshot": "screenshots/M27_SMOKE02_private.jpg"
     },
     {
       "module": "M27",
@@ -167,6 +168,160 @@
       "visibility_input": "不共享; 不公开",
       "visibility_saved_readback": "待编辑回查",
       "cleanup": "保留供本轮验证"
+    },
+    {
+      "module": "M16",
+      "object_type": "performance_activity",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M16_SMOKE01",
+      "internal_id": null,
+      "state": "saved; zero subjects",
+      "readback": "本轮名称列表项与详情标题一致，被考核人为空",
+      "cleanup": "保留本轮空活动，未开启考核"
+    },
+    {
+      "module": "M12",
+      "object_type": "private_talent_pool",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_POOL01",
+      "internal_id": null,
+      "state": "saved",
+      "share_departments": [],
+      "share_people": [],
+      "ai_recommendation": false,
+      "readback": "我的人才库匹配行及批量简历导入目标库"
+    },
+    {
+      "module": "M11",
+      "object_type": "shift",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M11_SMOKE01",
+      "internal_id": null,
+      "state": "启用",
+      "org": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_ORG01",
+      "share_downward": false,
+      "start": "当日09:00",
+      "end": "当日17:00",
+      "minutes_observed": 480,
+      "half_split": "按工作时长的一半自动分割",
+      "readback": "班次名称过滤后唯一匹配行，归属本轮组织",
+      "scheduled_employees": 0
+    },
+    {
+      "module": "M12",
+      "object_type": "candidate",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE01",
+      "internal_id": null,
+      "pool": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_POOL01",
+      "state": "private_pool",
+      "readback": "指定本轮个人库10条姓名逐条匹配，性别保密/本科",
+      "source_file": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE01.txt",
+      "external_sends": 0
+    },
+    {
+      "module": "M12",
+      "object_type": "candidate",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE02",
+      "internal_id": null,
+      "pool": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_POOL01",
+      "state": "private_pool",
+      "readback": "指定本轮个人库10条姓名逐条匹配，性别保密/本科",
+      "source_file": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE02.txt",
+      "external_sends": 0
+    },
+    {
+      "module": "M12",
+      "object_type": "candidate",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE03",
+      "internal_id": null,
+      "pool": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_POOL01",
+      "state": "private_pool",
+      "readback": "指定本轮个人库10条姓名逐条匹配，性别保密/本科",
+      "source_file": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE03.txt",
+      "external_sends": 0
+    },
+    {
+      "module": "M12",
+      "object_type": "candidate",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE04",
+      "internal_id": null,
+      "pool": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_POOL01",
+      "state": "private_pool",
+      "readback": "指定本轮个人库10条姓名逐条匹配，性别保密/本科",
+      "source_file": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE04.txt",
+      "external_sends": 0
+    },
+    {
+      "module": "M12",
+      "object_type": "candidate",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE05",
+      "internal_id": null,
+      "pool": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_POOL01",
+      "state": "private_pool",
+      "readback": "指定本轮个人库10条姓名逐条匹配，性别保密/本科",
+      "source_file": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE05.txt",
+      "external_sends": 0
+    },
+    {
+      "module": "M12",
+      "object_type": "candidate",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE06",
+      "internal_id": null,
+      "pool": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_POOL01",
+      "state": "private_pool",
+      "readback": "指定本轮个人库10条姓名逐条匹配，性别保密/本科",
+      "source_file": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE06.txt",
+      "external_sends": 0
+    },
+    {
+      "module": "M12",
+      "object_type": "candidate",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE07",
+      "internal_id": null,
+      "pool": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_POOL01",
+      "state": "private_pool",
+      "readback": "指定本轮个人库10条姓名逐条匹配，性别保密/本科",
+      "source_file": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE07.txt",
+      "external_sends": 0
+    },
+    {
+      "module": "M12",
+      "object_type": "candidate",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE08",
+      "internal_id": null,
+      "pool": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_POOL01",
+      "state": "private_pool",
+      "readback": "指定本轮个人库10条姓名逐条匹配，性别保密/本科",
+      "source_file": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE08.txt",
+      "external_sends": 0
+    },
+    {
+      "module": "M12",
+      "object_type": "candidate",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE09",
+      "internal_id": null,
+      "pool": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_POOL01",
+      "state": "private_pool",
+      "readback": "指定本轮个人库10条姓名逐条匹配，性别保密/本科",
+      "source_file": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE09.txt",
+      "external_sends": 0
+    },
+    {
+      "module": "M12",
+      "object_type": "candidate",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE10",
+      "internal_id": null,
+      "pool": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_POOL01",
+      "state": "private_pool",
+      "readback": "指定本轮个人库10条姓名逐条匹配，性别保密/本科",
+      "source_file": "data/candidates/ZZ_R3_R3-ORIGIN-20260910-103900_M12_SMOKE10.txt",
+      "external_sends": 0
+    },
+    {
+      "module": "M11",
+      "object_type": "shift",
+      "name": "ZZ_R3_R3-ORIGIN-20260910-103900_M11_SMOKE02",
+      "internal_id": null,
+      "state": "启用",
+      "readback": "精确名称过滤成功，关联本轮组织，不向下共享",
+      "scheduled_employees": 0
     }
   ],
   "operations": [
@@ -209,16 +364,92 @@
       "result": "confirmed_imported_by_nine_named_list_rows",
       "file": "data/R3_M27_Smoke_Import.xlsx",
       "planned_records": 9
+    },
+    {
+      "id": "R3-OP-005",
+      "module": "BASE",
+      "action": "新增合成员工单次保存",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_EMP01",
+      "result": "validation_rejected",
+      "message": "当类型为劳动合同时，期限类型必填",
+      "form_pending": true,
+      "external_invitation": false,
+      "email": "zz_r3_20260910_103900_emp01@example.invalid",
+      "manager": "清空默认经理，未关联原有人员",
+      "status": "期限类型下拉无可见选项，未绕过校验；尚非已保存记录"
+    },
+    {
+      "id": "R3-OP-006",
+      "module": "M16",
+      "action": "新建活动单次保存",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M16_SMOKE01",
+      "result": "confirmed_saved_by_named_list_and_own_empty_detail",
+      "year": 2026,
+      "cycle": "第三季度",
+      "start_date": "2026-07-01",
+      "end_date": "2026-09-30",
+      "date_source": "年度周期选择自动填入",
+      "org": "ZZ_R3_R3-ORIGIN-20260910-103900_BASE_ORG01",
+      "subjects": 0
+    },
+    {
+      "id": "R3-OP-007",
+      "module": "M27",
+      "action": "仅选SMOKE02，更多操作发布，单次确认是",
+      "result": "after_confirmation_and_reload_still_unpublished",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M27_SMOKE02",
+      "visibility": "已确认不公开、不共享、游客关闭",
+      "notes": "不推断空课程必然禁止发布；未取得明确错误原因。没有重复提交。"
+    },
+    {
+      "id": "R3-OP-008",
+      "module": "M12",
+      "action": "单次保存私有人才库",
+      "result": "confirmed_saved",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_POOL01"
+    },
+    {
+      "id": "R3-OP-009",
+      "module": "M11",
+      "action": "单次保存09:00至17:00日班",
+      "result": "confirmed_saved_by_exact_name_filter",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M11_SMOKE01"
+    },
+    {
+      "id": "R3-OP-010",
+      "module": "M12",
+      "action": "上传10份虚构txt简历",
+      "result": "confirmed_ten_candidates_by_private_pool_named_rows",
+      "target_pool": "ZZ_R3_R3-ORIGIN-20260910-103900_M12_POOL01",
+      "channel": "人才库",
+      "source_directory": "data/candidates/",
+      "record_count": 10
+    },
+    {
+      "id": "R3-OP-011",
+      "module": "M07",
+      "action": "新建方案填名后查本轮薪资组，无匹配，取消未保存表单",
+      "result": "not_saved",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M07_SMOKE01",
+      "next": "查找独立薪资组创建入口，不使用原有薪资组"
+    },
+    {
+      "id": "R3-OP-012",
+      "module": "M11",
+      "action": "从本轮02复制到03，工具保存调用返回但表单仍存在",
+      "result": "not_confirmed_saved; form_still_open",
+      "record_key": "ZZ_R3_R3-ORIGIN-20260910-103900_M11_SMOKE03",
+      "next": "未计入成功，先查03是否存在，再决定保存；不批量重复"
     }
   ],
   "counts": {
-    "confirmed_records": 11,
+    "confirmed_records": 25,
     "by_module": {
       "BASE": 1,
       "M27": 10,
-      "M16": 0,
-      "M12": 0,
-      "M11": 0,
+      "M16": 1,
+      "M12": 11,
+      "M11": 2,
       "M07": 0
     },
     "pending_import_records": 0,
