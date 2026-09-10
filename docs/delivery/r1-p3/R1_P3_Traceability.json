@@ -8,10 +8,26 @@
         "P3-ARC-01",
         "P3-M48-01"
       ],
-      "status": "partial_runtime_evidence_full_case_conditions_and_independent_review_pending",
+      "status": "implemented_synthetic_verified_review_pending",
       "evidence": [
         "evidence/r1-p3-01-20260910T034414Z.json",
-        "evidence/r1-p3-02-d7-20260910T042138Z.json"
+        "evidence/r1-p3-02-d7-20260910T042138Z.json",
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
+      "caseEvidence": "R1_P3_M48_Case_Evidence.json",
+      "implementationSha": "2d6ae4f665154ffafbb301ed6825cb8d32cd8218",
+      "code": [
+        "lib/hris/r1-grants.ts",
+        "lib/hris/r1-authorization.ts",
+        "lib/hris/r1-portal.ts",
+        "lib/hris/r1-portal-adapters.ts",
+        "lib/hris/r1-portal-summary.ts",
+        "lib/hris/r1-portal-cache.ts",
+        "lib/hris/r1-portal-events.ts",
+        "app/self-service/r1-workspace.tsx",
+        "app/api/attachments/route.ts"
       ]
     },
     {
@@ -87,8 +103,25 @@
       "plannedCases": [
         "P3-M48-06"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
+      "caseEvidence": "R1_P3_M48_Case_Evidence.json",
+      "implementationSha": "2d6ae4f665154ffafbb301ed6825cb8d32cd8218",
+      "code": [
+        "lib/hris/r1-grants.ts",
+        "lib/hris/r1-authorization.ts",
+        "lib/hris/r1-portal.ts",
+        "lib/hris/r1-portal-adapters.ts",
+        "lib/hris/r1-portal-summary.ts",
+        "lib/hris/r1-portal-cache.ts",
+        "lib/hris/r1-portal-events.ts",
+        "app/self-service/r1-workspace.tsx",
+        "app/api/attachments/route.ts"
+      ]
     },
     {
       "id": "BASE-04-AC02",
@@ -368,32 +401,100 @@
       "plannedCases": [
         "P3-M48-03"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
+      "caseEvidence": "R1_P3_M48_Case_Evidence.json",
+      "implementationSha": "2d6ae4f665154ffafbb301ed6825cb8d32cd8218",
+      "code": [
+        "lib/hris/r1-grants.ts",
+        "lib/hris/r1-authorization.ts",
+        "lib/hris/r1-portal.ts",
+        "lib/hris/r1-portal-adapters.ts",
+        "lib/hris/r1-portal-summary.ts",
+        "lib/hris/r1-portal-cache.ts",
+        "lib/hris/r1-portal-events.ts",
+        "app/self-service/r1-workspace.tsx",
+        "app/api/attachments/route.ts"
+      ]
     },
     {
       "id": "BP-I-REQ-01-AC02",
       "plannedCases": [
         "P3-M48-03"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
+      "caseEvidence": "R1_P3_M48_Case_Evidence.json",
+      "implementationSha": "2d6ae4f665154ffafbb301ed6825cb8d32cd8218",
+      "code": [
+        "lib/hris/r1-grants.ts",
+        "lib/hris/r1-authorization.ts",
+        "lib/hris/r1-portal.ts",
+        "lib/hris/r1-portal-adapters.ts",
+        "lib/hris/r1-portal-summary.ts",
+        "lib/hris/r1-portal-cache.ts",
+        "lib/hris/r1-portal-events.ts",
+        "app/self-service/r1-workspace.tsx",
+        "app/api/attachments/route.ts"
+      ]
     },
     {
       "id": "BP-I-REQ-01-AC03",
       "plannedCases": [
         "P3-M48-03"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
+      "caseEvidence": "R1_P3_M48_Case_Evidence.json",
+      "implementationSha": "2d6ae4f665154ffafbb301ed6825cb8d32cd8218",
+      "code": [
+        "lib/hris/r1-grants.ts",
+        "lib/hris/r1-authorization.ts",
+        "lib/hris/r1-portal.ts",
+        "lib/hris/r1-portal-adapters.ts",
+        "lib/hris/r1-portal-summary.ts",
+        "lib/hris/r1-portal-cache.ts",
+        "lib/hris/r1-portal-events.ts",
+        "app/self-service/r1-workspace.tsx",
+        "app/api/attachments/route.ts"
+      ]
     },
     {
       "id": "BP-I-REQ-01-AC04",
       "plannedCases": [
         "P3-M48-03"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
+      "caseEvidence": "R1_P3_M48_Case_Evidence.json",
+      "implementationSha": "2d6ae4f665154ffafbb301ed6825cb8d32cd8218",
+      "code": [
+        "lib/hris/r1-grants.ts",
+        "lib/hris/r1-authorization.ts",
+        "lib/hris/r1-portal.ts",
+        "lib/hris/r1-portal-adapters.ts",
+        "lib/hris/r1-portal-summary.ts",
+        "lib/hris/r1-portal-cache.ts",
+        "lib/hris/r1-portal-events.ts",
+        "app/self-service/r1-workspace.tsx",
+        "app/api/attachments/route.ts"
+      ]
     },
     {
       "id": "BP-I-REQ-02-AC01",
@@ -965,72 +1066,225 @@
       "plannedCases": [
         "P3-M48-02"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
+      "caseEvidence": "R1_P3_M48_Case_Evidence.json",
+      "implementationSha": "2d6ae4f665154ffafbb301ed6825cb8d32cd8218",
+      "code": [
+        "lib/hris/r1-grants.ts",
+        "lib/hris/r1-authorization.ts",
+        "lib/hris/r1-portal.ts",
+        "lib/hris/r1-portal-adapters.ts",
+        "lib/hris/r1-portal-summary.ts",
+        "lib/hris/r1-portal-cache.ts",
+        "lib/hris/r1-portal-events.ts",
+        "app/self-service/r1-workspace.tsx",
+        "app/api/attachments/route.ts"
+      ]
     },
     {
       "id": "M48-REVIEW-AC02",
       "plannedCases": [
         "P3-M48-01"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
+      "caseEvidence": "R1_P3_M48_Case_Evidence.json",
+      "implementationSha": "2d6ae4f665154ffafbb301ed6825cb8d32cd8218",
+      "code": [
+        "lib/hris/r1-grants.ts",
+        "lib/hris/r1-authorization.ts",
+        "lib/hris/r1-portal.ts",
+        "lib/hris/r1-portal-adapters.ts",
+        "lib/hris/r1-portal-summary.ts",
+        "lib/hris/r1-portal-cache.ts",
+        "lib/hris/r1-portal-events.ts",
+        "app/self-service/r1-workspace.tsx",
+        "app/api/attachments/route.ts"
+      ]
     },
     {
       "id": "M48-REVIEW-AC03",
       "plannedCases": [
         "P3-M48-03"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
+      "caseEvidence": "R1_P3_M48_Case_Evidence.json",
+      "implementationSha": "2d6ae4f665154ffafbb301ed6825cb8d32cd8218",
+      "code": [
+        "lib/hris/r1-grants.ts",
+        "lib/hris/r1-authorization.ts",
+        "lib/hris/r1-portal.ts",
+        "lib/hris/r1-portal-adapters.ts",
+        "lib/hris/r1-portal-summary.ts",
+        "lib/hris/r1-portal-cache.ts",
+        "lib/hris/r1-portal-events.ts",
+        "app/self-service/r1-workspace.tsx",
+        "app/api/attachments/route.ts"
+      ]
     },
     {
       "id": "M48-REVIEW-AC04",
       "plannedCases": [
         "P3-M48-04"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
+      "caseEvidence": "R1_P3_M48_Case_Evidence.json",
+      "implementationSha": "2d6ae4f665154ffafbb301ed6825cb8d32cd8218",
+      "code": [
+        "lib/hris/r1-grants.ts",
+        "lib/hris/r1-authorization.ts",
+        "lib/hris/r1-portal.ts",
+        "lib/hris/r1-portal-adapters.ts",
+        "lib/hris/r1-portal-summary.ts",
+        "lib/hris/r1-portal-cache.ts",
+        "lib/hris/r1-portal-events.ts",
+        "app/self-service/r1-workspace.tsx",
+        "app/api/attachments/route.ts"
+      ]
     },
     {
       "id": "M48-REVIEW-AC05",
       "plannedCases": [
         "P3-M48-05"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
+      "caseEvidence": "R1_P3_M48_Case_Evidence.json",
+      "implementationSha": "2d6ae4f665154ffafbb301ed6825cb8d32cd8218",
+      "code": [
+        "lib/hris/r1-grants.ts",
+        "lib/hris/r1-authorization.ts",
+        "lib/hris/r1-portal.ts",
+        "lib/hris/r1-portal-adapters.ts",
+        "lib/hris/r1-portal-summary.ts",
+        "lib/hris/r1-portal-cache.ts",
+        "lib/hris/r1-portal-events.ts",
+        "app/self-service/r1-workspace.tsx",
+        "app/api/attachments/route.ts"
+      ]
     },
     {
       "id": "M48-REVIEW-AC06",
       "plannedCases": [
         "P3-M48-05"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
+      "caseEvidence": "R1_P3_M48_Case_Evidence.json",
+      "implementationSha": "2d6ae4f665154ffafbb301ed6825cb8d32cd8218",
+      "code": [
+        "lib/hris/r1-grants.ts",
+        "lib/hris/r1-authorization.ts",
+        "lib/hris/r1-portal.ts",
+        "lib/hris/r1-portal-adapters.ts",
+        "lib/hris/r1-portal-summary.ts",
+        "lib/hris/r1-portal-cache.ts",
+        "lib/hris/r1-portal-events.ts",
+        "app/self-service/r1-workspace.tsx",
+        "app/api/attachments/route.ts"
+      ]
     },
     {
       "id": "M48-REVIEW-AC07",
       "plannedCases": [
         "P3-M48-05"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
+      "caseEvidence": "R1_P3_M48_Case_Evidence.json",
+      "implementationSha": "2d6ae4f665154ffafbb301ed6825cb8d32cd8218",
+      "code": [
+        "lib/hris/r1-grants.ts",
+        "lib/hris/r1-authorization.ts",
+        "lib/hris/r1-portal.ts",
+        "lib/hris/r1-portal-adapters.ts",
+        "lib/hris/r1-portal-summary.ts",
+        "lib/hris/r1-portal-cache.ts",
+        "lib/hris/r1-portal-events.ts",
+        "app/self-service/r1-workspace.tsx",
+        "app/api/attachments/route.ts"
+      ]
     },
     {
       "id": "M48-REVIEW-AC08",
       "plannedCases": [
         "P3-M48-05"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
+      "caseEvidence": "R1_P3_M48_Case_Evidence.json",
+      "implementationSha": "2d6ae4f665154ffafbb301ed6825cb8d32cd8218",
+      "code": [
+        "lib/hris/r1-grants.ts",
+        "lib/hris/r1-authorization.ts",
+        "lib/hris/r1-portal.ts",
+        "lib/hris/r1-portal-adapters.ts",
+        "lib/hris/r1-portal-summary.ts",
+        "lib/hris/r1-portal-cache.ts",
+        "lib/hris/r1-portal-events.ts",
+        "app/self-service/r1-workspace.tsx",
+        "app/api/attachments/route.ts"
+      ]
     },
     {
       "id": "M48-REVIEW-AC09",
       "plannedCases": [
         "P3-M48-06"
       ],
-      "status": "not_executed",
-      "evidence": []
+      "status": "implemented_synthetic_verified_review_pending",
+      "evidence": [
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
+      "caseEvidence": "R1_P3_M48_Case_Evidence.json",
+      "implementationSha": "2d6ae4f665154ffafbb301ed6825cb8d32cd8218",
+      "code": [
+        "lib/hris/r1-grants.ts",
+        "lib/hris/r1-authorization.ts",
+        "lib/hris/r1-portal.ts",
+        "lib/hris/r1-portal-adapters.ts",
+        "lib/hris/r1-portal-summary.ts",
+        "lib/hris/r1-portal-cache.ts",
+        "lib/hris/r1-portal-events.ts",
+        "app/self-service/r1-workspace.tsx",
+        "app/api/attachments/route.ts"
+      ]
     }
   ],
   "risks": [
@@ -1315,67 +1569,126 @@
     {
       "id": "R1-M48-L01",
       "status": "owner_design_review_closed",
-      "p3Evidence": [],
+      "p3Evidence": [
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
       "primaryDisposition": "P2",
       "sourceStatus": "owner_design_review_closed",
       "sourceEvidenceOwner": "P1 controller",
       "plannedP3Cases": [
         "P3-M48-02"
       ],
-      "p3RuntimeStatus": "not_executed"
+      "p3RuntimeStatus": "local_synthetic_evidence_independent_review_pending",
+      "verificationBoundaries": [
+        "只证明R1本地隔离合成运行；独立角色/浏览器人工验收待评审",
+        "R2/R3新办理契约和真实联调未执行，责任保留P3-R1-10",
+        "旧360办理只在旧功能开关兼容路径复验，不标新生产者契约通过",
+        "current门户来源最多500记录，超出显式BOUNDED_QUERY_REQUIRED；无截断成功",
+        "84项和类型构建证据固定b7dac9c；新增11门户+5指定兼容证据固定2d6ae4f；两个源码间产品代码未变"
+      ]
     },
     {
       "id": "R1-M48-L02",
       "status": "owner_design_review_closed",
-      "p3Evidence": [],
+      "p3Evidence": [
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
       "primaryDisposition": "P2",
       "sourceStatus": "owner_design_review_closed",
       "sourceEvidenceOwner": "P1 controller",
       "plannedP3Cases": [
         "P3-M48-04"
       ],
-      "p3RuntimeStatus": "not_executed"
+      "p3RuntimeStatus": "local_synthetic_evidence_independent_review_pending",
+      "verificationBoundaries": [
+        "只证明R1本地隔离合成运行；独立角色/浏览器人工验收待评审",
+        "R2/R3新办理契约和真实联调未执行，责任保留P3-R1-10",
+        "旧360办理只在旧功能开关兼容路径复验，不标新生产者契约通过",
+        "current门户来源最多500记录，超出显式BOUNDED_QUERY_REQUIRED；无截断成功",
+        "84项和类型构建证据固定b7dac9c；新增11门户+5指定兼容证据固定2d6ae4f；两个源码间产品代码未变"
+      ]
     },
     {
       "id": "R1-M48-L03",
       "status": "design_complete_validation_open",
-      "p3Evidence": [],
+      "p3Evidence": [
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
       "primaryDisposition": "P3",
       "sourceStatus": "design_complete_validation_open",
       "sourceEvidenceOwner": "P1 controller",
       "plannedP3Cases": [
         "P3-M48-06"
       ],
-      "p3RuntimeStatus": "not_executed"
+      "p3RuntimeStatus": "local_synthetic_evidence_independent_review_pending",
+      "verificationBoundaries": [
+        "只证明R1本地隔离合成运行；独立角色/浏览器人工验收待评审",
+        "R2/R3新办理契约和真实联调未执行，责任保留P3-R1-10",
+        "旧360办理只在旧功能开关兼容路径复验，不标新生产者契约通过",
+        "current门户来源最多500记录，超出显式BOUNDED_QUERY_REQUIRED；无截断成功",
+        "84项和类型构建证据固定b7dac9c；新增11门户+5指定兼容证据固定2d6ae4f；两个源码间产品代码未变"
+      ]
     },
     {
       "id": "R1-M48-L04",
       "status": "design_complete_validation_open",
-      "p3Evidence": [],
+      "p3Evidence": [
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
       "primaryDisposition": "P3",
       "sourceStatus": "design_complete_validation_open",
       "sourceEvidenceOwner": "P1 controller",
       "plannedP3Cases": [
         "P3-M48-03"
       ],
-      "p3RuntimeStatus": "not_executed"
+      "p3RuntimeStatus": "local_synthetic_evidence_independent_review_pending",
+      "verificationBoundaries": [
+        "只证明R1本地隔离合成运行；独立角色/浏览器人工验收待评审",
+        "R2/R3新办理契约和真实联调未执行，责任保留P3-R1-10",
+        "旧360办理只在旧功能开关兼容路径复验，不标新生产者契约通过",
+        "current门户来源最多500记录，超出显式BOUNDED_QUERY_REQUIRED；无截断成功",
+        "84项和类型构建证据固定b7dac9c；新增11门户+5指定兼容证据固定2d6ae4f；两个源码间产品代码未变"
+      ]
     },
     {
       "id": "R1-M48-L05",
       "status": "design_complete_validation_open",
-      "p3Evidence": [],
+      "p3Evidence": [
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
       "primaryDisposition": "P3",
       "sourceStatus": "design_complete_validation_open",
       "sourceEvidenceOwner": "P1 controller",
       "plannedP3Cases": [
         "P3-M48-07"
       ],
-      "p3RuntimeStatus": "not_executed"
+      "p3RuntimeStatus": "local_synthetic_evidence_independent_review_pending",
+      "verificationBoundaries": [
+        "只证明R1本地隔离合成运行；独立角色/浏览器人工验收待评审",
+        "R2/R3新办理契约和真实联调未执行，责任保留P3-R1-10",
+        "旧360办理只在旧功能开关兼容路径复验，不标新生产者契约通过",
+        "current门户来源最多500记录，超出显式BOUNDED_QUERY_REQUIRED；无截断成功",
+        "84项和类型构建证据固定b7dac9c；新增11门户+5指定兼容证据固定2d6ae4f；两个源码间产品代码未变"
+      ]
     },
     {
       "id": "R1-M48-L06",
       "status": "design_complete_validation_open",
-      "p3Evidence": [],
+      "p3Evidence": [
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
       "primaryDisposition": "P3",
       "sourceStatus": "design_complete_validation_open",
       "sourceEvidenceOwner": "P1 controller",
@@ -1383,19 +1696,37 @@
         "P3-M48-05",
         "P3-M48-07"
       ],
-      "p3RuntimeStatus": "not_executed"
+      "p3RuntimeStatus": "local_synthetic_evidence_independent_review_pending",
+      "verificationBoundaries": [
+        "只证明R1本地隔离合成运行；独立角色/浏览器人工验收待评审",
+        "R2/R3新办理契约和真实联调未执行，责任保留P3-R1-10",
+        "旧360办理只在旧功能开关兼容路径复验，不标新生产者契约通过",
+        "current门户来源最多500记录，超出显式BOUNDED_QUERY_REQUIRED；无截断成功",
+        "84项和类型构建证据固定b7dac9c；新增11门户+5指定兼容证据固定2d6ae4f；两个源码间产品代码未变"
+      ]
     },
     {
       "id": "R1-M48-L07",
       "status": "design_complete_acceptance_open",
-      "p3Evidence": [],
+      "p3Evidence": [
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
+      ],
       "primaryDisposition": "P4",
       "sourceStatus": "design_complete_acceptance_open",
       "sourceEvidenceOwner": "P1 controller",
       "plannedP3Cases": [
         "P3-M48-02"
       ],
-      "p3RuntimeStatus": "not_executed"
+      "p3RuntimeStatus": "local_synthetic_evidence_independent_review_pending",
+      "verificationBoundaries": [
+        "只证明R1本地隔离合成运行；独立角色/浏览器人工验收待评审",
+        "R2/R3新办理契约和真实联调未执行，责任保留P3-R1-10",
+        "旧360办理只在旧功能开关兼容路径复验，不标新生产者契约通过",
+        "current门户来源最多500记录，超出显式BOUNDED_QUERY_REQUIRED；无截断成功",
+        "84项和类型构建证据固定b7dac9c；新增11门户+5指定兼容证据固定2d6ae4f；两个源码间产品代码未变"
+      ]
     },
     {
       "id": "R1-M48-L08",

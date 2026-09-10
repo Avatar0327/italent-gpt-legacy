@@ -141,7 +141,7 @@
         "P3-R1-03",
         "P3-R1-04"
       ],
-      "status": "in_progress",
+      "status": "implemented_synthetic_verified_review_pending",
       "caseIds": [
         "P3-M48-01",
         "P3-M48-02",
@@ -152,7 +152,9 @@
         "P3-M48-07"
       ],
       "evidence": [
-        "evidence/r1-p3-20260910T070210483124Z.json"
+        "evidence/r1-p3-20260910T070210483124Z.json",
+        "evidence/r1-p3-20260910T070522816543Z.json",
+        "evidence/r1-p3-20260910T070535639941Z.json"
       ],
       "subworkCompleted": [
         "角色授权逐元组并集与会话唯一绑定",
@@ -163,10 +165,15 @@
         "门户共享缓存代次/撤销及事件失效原子消费",
         "自助页面新旧开关和no-store API"
       ],
-      "remaining": [
-        "提交源码后完整相关回归、构建及AC追踪复核"
-      ],
-      "implementationSha": "b7dac9cabaf078eef3b1632176e728d01901180a"
+      "remaining": [],
+      "implementationSha": "2d6ae4f665154ffafbb301ed6825cb8d32cd8218",
+      "verificationBoundaries": [
+        "只证明R1本地隔离合成运行；独立角色/浏览器人工验收待评审",
+        "R2/R3新办理契约和真实联调未执行，责任保留P3-R1-10",
+        "旧360办理只在旧功能开关兼容路径复验，不标新生产者契约通过",
+        "current门户来源最多500记录，超出显式BOUNDED_QUERY_REQUIRED；无截断成功",
+        "84项和类型构建证据固定b7dac9c；新增11门户+5指定兼容证据固定2d6ae4f；两个源码间产品代码未变"
+      ]
     },
     {
       "id": "P3-R1-06",
@@ -174,7 +181,7 @@
         "P3-R1-02",
         "P3-R1-04"
       ],
-      "status": "pending",
+      "status": "in_progress",
       "caseIds": [
         "P3-M32-01",
         "P3-M32-02",
@@ -266,7 +273,7 @@
       "evidence": []
     }
   ],
-  "currentTask": "P3-R1-05",
-  "lastVerifiedSourceSha": "b7dac9cabaf078eef3b1632176e728d01901180a",
-  "latestRun": "evidence/r1-p3-20260910T070210483124Z.json"
+  "currentTask": "P3-R1-06",
+  "lastVerifiedSourceSha": "2d6ae4f665154ffafbb301ed6825cb8d32cd8218",
+  "latestRun": "evidence/r1-p3-20260910T070535639941Z.json"
 }

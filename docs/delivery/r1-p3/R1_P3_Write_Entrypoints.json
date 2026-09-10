@@ -1,7 +1,7 @@
 {
   "purpose": "static inventory, not dynamic route coverage",
-  "routeCount": 52,
-  "methodCount": 53,
+  "routeCount": 53,
+  "methodCount": 54,
   "routes": [
     {
       "path": "app/api/access/route.ts",
@@ -341,6 +341,14 @@
       "classification": "R1 explicit versioned service or read-only contract preflight; static inventory is not dynamic proof"
     },
     {
+      "path": "app/api/r1/self-service/actions/route.ts",
+      "classification": "R1 command gateway; exact route dynamic coverage tracked separately",
+      "methods": [
+        "POST"
+      ],
+      "sha256": "c86efa7790df8a2a5ed34c4c2009d3d119a0ad875b3b4cd02729e24e985ea0b5"
+    },
+    {
       "path": "app/api/r1/workflows/batch/route.ts",
       "methods": [
         "POST"
@@ -420,5 +428,6 @@
       "sha256": "ca8a156a638568d278e35fe32add73c58d093d31c9a57615e2686cef844a6a4a",
       "classification": "existing API command bridge; feature gate prevents old writes after switch"
     }
-  ]
+  ],
+  "sourceSha": "2d6ae4f665154ffafbb301ed6825cb8d32cd8218"
 }
