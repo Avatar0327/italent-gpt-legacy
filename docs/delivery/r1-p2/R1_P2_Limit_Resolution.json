@@ -38,10 +38,12 @@
       "owner": "R1 P2设计负责人",
       "latestGate": "P2退出独立评审",
       "primaryDisposition": "P2",
-      "status": "design_resolved_pending_independent_review",
+      "status": "owner_design_review_closed",
       "designDocuments": [
         "R1_P2_M01_Data_History.md"
-      ]
+      ],
+      "closureApprovalId": "R1-P2-EXIT-OWNER-20260910",
+      "closureRecord": "R1_P2_Owner_Exit_Approval.json"
     },
     {
       "riskId": "R1-M01-L02",
@@ -78,10 +80,12 @@
       "owner": "R1 P2设计负责人",
       "latestGate": "P2退出独立评审",
       "primaryDisposition": "P2",
-      "status": "design_resolved_pending_independent_review",
+      "status": "owner_design_review_closed",
       "designDocuments": [
         "R1_P2_Migration_Rollback.md"
-      ]
+      ],
+      "closureApprovalId": "R1-P2-EXIT-OWNER-20260910",
+      "closureRecord": "R1_P2_Owner_Exit_Approval.json"
     },
     {
       "riskId": "R1-M01-L03",
@@ -118,10 +122,12 @@
       "owner": "R1 P2设计负责人",
       "latestGate": "P2退出独立评审",
       "primaryDisposition": "P2",
-      "status": "design_resolved_pending_independent_review",
+      "status": "owner_design_review_closed",
       "designDocuments": [
         "R1_P2_M01_Data_History.md"
-      ]
+      ],
+      "closureApprovalId": "R1-P2-EXIT-OWNER-20260910",
+      "closureRecord": "R1_P2_Owner_Exit_Approval.json"
     },
     {
       "riskId": "R1-M01-L04",
@@ -440,10 +446,12 @@
       "owner": "R1 P2设计负责人",
       "latestGate": "P2退出独立评审",
       "primaryDisposition": "P2",
-      "status": "design_resolved_pending_independent_review",
+      "status": "owner_design_review_closed",
       "designDocuments": [
         "R1_P2_M19_Workflow_Transactions.md"
-      ]
+      ],
+      "closureApprovalId": "R1-P2-EXIT-OWNER-20260910",
+      "closureRecord": "R1_P2_Owner_Exit_Approval.json"
     },
     {
       "riskId": "R1-M19-L02",
@@ -480,10 +488,12 @@
       "owner": "R1 P2设计负责人",
       "latestGate": "P2退出独立评审",
       "primaryDisposition": "P2",
-      "status": "design_resolved_pending_independent_review",
+      "status": "owner_design_review_closed",
       "designDocuments": [
         "R1_P2_M19_Workflow_Transactions.md"
-      ]
+      ],
+      "closureApprovalId": "R1-P2-EXIT-OWNER-20260910",
+      "closureRecord": "R1_P2_Owner_Exit_Approval.json"
     },
     {
       "riskId": "R1-M19-L03",
@@ -802,10 +812,12 @@
       "owner": "R1 P2设计负责人",
       "latestGate": "P2退出独立评审",
       "primaryDisposition": "P2",
-      "status": "design_resolved_pending_independent_review",
+      "status": "owner_design_review_closed",
       "designDocuments": [
         "R1_P2_M48_Authorization_Consumers.md"
-      ]
+      ],
+      "closureApprovalId": "R1-P2-EXIT-OWNER-20260910",
+      "closureRecord": "R1_P2_Owner_Exit_Approval.json"
     },
     {
       "riskId": "R1-M48-L02",
@@ -842,10 +854,12 @@
       "owner": "R1 P2设计负责人",
       "latestGate": "P2退出独立评审",
       "primaryDisposition": "P2",
-      "status": "design_resolved_pending_independent_review",
+      "status": "owner_design_review_closed",
       "designDocuments": [
         "R1_P2_M48_Authorization_Consumers.md"
-      ]
+      ],
+      "closureApprovalId": "R1-P2-EXIT-OWNER-20260910",
+      "closureRecord": "R1_P2_Owner_Exit_Approval.json"
     },
     {
       "riskId": "R1-M48-L03",
@@ -1123,10 +1137,12 @@
       "owner": "R1 P2设计负责人",
       "latestGate": "P2退出独立评审",
       "primaryDisposition": "P2",
-      "status": "design_resolved_pending_independent_review",
+      "status": "owner_design_review_closed",
       "designDocuments": [
         "R1_P2_M32_Reports_Jobs.md"
-      ]
+      ],
+      "closureApprovalId": "R1-P2-EXIT-OWNER-20260910",
+      "closureRecord": "R1_P2_Owner_Exit_Approval.json"
     },
     {
       "riskId": "R1-M32-L02",
@@ -1163,10 +1179,12 @@
       "owner": "R1 P2设计负责人",
       "latestGate": "P2退出独立评审",
       "primaryDisposition": "P2",
-      "status": "design_resolved_pending_independent_review",
+      "status": "owner_design_review_closed",
       "designDocuments": [
         "R1_P2_Report_Field_Dictionary.md"
-      ]
+      ],
+      "closureApprovalId": "R1-P2-EXIT-OWNER-20260910",
+      "closureRecord": "R1_P2_Owner_Exit_Approval.json"
     },
     {
       "riskId": "R1-M32-L03",

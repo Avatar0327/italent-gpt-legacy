@@ -1,6 +1,6 @@
 {
   "kind": "controller_intake_proposal_not_fact_register",
-  "proposalId": "R1-P2-SUBMISSION-20260909",
+  "proposalId": "R1-P2-CLOSURE-20260910",
   "sourceBranch": "design/r1-p2-20260909",
   "sourceBaseline": "716cd9df5f5776d050f77f57c2ad5a35c0a83882",
   "sourceCommitResolution": "取最终交付报告完整HEAD及远端design分支；核git log -1 --本包文件，不伪填自身提交SHA",
@@ -14,14 +14,27 @@
   ],
   "operations": [
     {
-      "operation": "register_design_submission",
+      "operation": "register_owner_approved_design_exit",
       "target": "roadmap.phases中的P2阅读/材料引用；具体已有节点由总控校验schema",
       "payload": {
         "release": "R1",
         "artifactPath": "docs/delivery/r1-p2/R1_P2_Exit_Review.md",
-        "reviewState": "submitted_for_independent_review",
-        "approvalState": "not_approved",
-        "implementationState": "not_started"
+        "reviewState": "owner_review_complete",
+        "approvalState": "owner_approved_with_followup_responsibilities",
+        "implementationState": "not_started",
+        "approvalRecord": "docs/delivery/r1-p2/R1_P2_Owner_Exit_Approval.json",
+        "approvalSource": "项目所有者通过本次消息批准",
+        "approvalId": "R1-P2-EXIT-OWNER-20260910",
+        "p3HandoffReady": true,
+        "p3Started": false,
+        "businessTestsRun": 0,
+        "historicalTestRevalidations": 0,
+        "limitCounts": {
+          "ownerClosedDesign": 9,
+          "remainingP3": 20,
+          "remainingP4": 8,
+          "sourceEvidenceRequests": 13
+        }
       }
     },
     {
@@ -30,22 +43,25 @@
       "payload": {
         "riskMatrix": "docs/delivery/r1-p2/R1_P2_Limit_Resolution.json",
         "p3Proposal": "docs/delivery/r1-p2/R1_P2_P3_Work_Packages.json",
-        "dependencies": "docs/delivery/r1-p2/R1_P2_Dependencies_Decisions.json"
+        "dependencies": "docs/delivery/r1-p2/R1_P2_Dependencies_Decisions.json",
+        "formalP3Handoff": "docs/delivery/r1-p2/R1_P2_P3_Handoff.md",
+        "newWindowStartPrompt": "docs/delivery/r1-p2/R1_P2_P3_Start_Prompt.md"
       }
     },
     {
       "operation": "regenerate_controller_views_if_accepted",
       "target": "Controller_Resume.md / Execution_Checkpoint.md /相关同源阅读视图",
       "payload": {
-        "note": "由唯一事实源生成；P1四模块仍受限通过、P2待评审、P3未开始，不覆盖P1窗口的当前R2主任务"
+        "note": "由唯一事实源生成；R1 P2获所有者批准且保留9/20/8风险处理边界，P3未开始；P1四模块原受限结论及当前R2主任务不改。"
       }
     }
   ],
   "prohibitedChanges": [
     "不得把四LIMIT风险计数写成模块验收完成数",
     "不得变更D1–D7/E1/E2、批准SPEC、RPO/RTO/保留目标",
-    "不得自动写入P2批准记录或将P3置已开始",
+    "不得把本次所有者设计批准伪记为第三方审计、生产验收或P3已开始；不得改写批准来源",
     "不得自动合并/cherry-pick/部署/新增访问者"
   ],
-  "ownerDecision": "独立评审/所有者决定是否批准P2退出；本执行窗口不作该决定"
+  "ownerDecision": "项目所有者通过本次消息批准R1退出P2；指定检查已无错误。P1总控按其最新schema纳入此已作出的决定，无须重复询问原P2批准。",
+  "reviewedHead": "65cfcf85e4fccf8cba53319deb7b87dd7f79600a"
 }

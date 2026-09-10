@@ -26,8 +26,13 @@
     },
     {
       "path": "docs/delivery/r1-p2/R1_P2_Checkpoint.md",
-      "sha256": "12ab9b2776afb898ada31d7603b1940ce5add0ad4055aa3b0dee6ce43a44640f",
-      "bytes": 1756
+      "sha256": "a8a60b943da5eb8789183303fa36532fda560464d50d0ff8575ed463af10a52f",
+      "bytes": 2792
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Closure_Verification.json",
+      "sha256": "7cfe58cd10f008ecb70f21fa7e39848b85a31b0c0d59c5c82d2e6058c0ea2a41",
+      "bytes": 10914
     },
     {
       "path": "docs/delivery/r1-p2/R1_P2_Consistency_Resolutions.md",
@@ -36,8 +41,8 @@
     },
     {
       "path": "docs/delivery/r1-p2/R1_P2_Controller_Proposal.json",
-      "sha256": "b23a3b999280eeddf8c6f37d9c69e679490a0ac521cf1b8711a6fe4068fa028d",
-      "bytes": 2358
+      "sha256": "a8d1873c712601d90e1ad498feb202343e6f8d12d7405185052db7596dd904da",
+      "bytes": 3281
     },
     {
       "path": "docs/delivery/r1-p2/R1_P2_Dependencies_Decisions.json",
@@ -46,23 +51,23 @@
     },
     {
       "path": "docs/delivery/r1-p2/R1_P2_Dependencies_Decisions.md",
-      "sha256": "fa674d109fffe82141b377bc09168f01b326b84faf388dae14dcee2e06161951",
-      "bytes": 5719
+      "sha256": "3cd9b9e1f2cb41ce574bdf83675409118a31251fc4a04aa64b13e9df3f2e8c95",
+      "bytes": 5821
     },
     {
       "path": "docs/delivery/r1-p2/R1_P2_Design_Index.json",
-      "sha256": "4df326129e1a285ebf26938664817b652e63d0cf07561d93e8e0e37bed71aea8",
-      "bytes": 54106
+      "sha256": "95782f5e23757dee515330d98f070b2a32a35a1afcd3c4fbaeb5bac38fe5cd83",
+      "bytes": 54168
     },
     {
       "path": "docs/delivery/r1-p2/R1_P2_Exit_Review.md",
-      "sha256": "e88a0fdbe89efbca2b497b225df54cebb0a114509564b509d3de4cbbfb7c4d07",
-      "bytes": 6566
+      "sha256": "53ee09fe93fcf667afe48c6cf3b21cada18645a9950f0f1cb18e06faa02cb149",
+      "bytes": 7880
     },
     {
       "path": "docs/delivery/r1-p2/R1_P2_Git_Record.md",
-      "sha256": "b094df80ef3e26b574bd174a953a86448364dc5a8a23823f3d156c1a9aa1f3ef",
-      "bytes": 1315
+      "sha256": "6676c0e49d963f77f9dd3aeba4ceca44ad5820d89525b31dee0c9ed55bfad9dd",
+      "bytes": 3125
     },
     {
       "path": "docs/delivery/r1-p2/R1_P2_Hard_Gates.json",
@@ -76,13 +81,13 @@
     },
     {
       "path": "docs/delivery/r1-p2/R1_P2_Limit_Resolution.json",
-      "sha256": "d136a1ad113ee039fdca85470ab5fc7d01e6b43d15f4977521e767a1ce03851e",
-      "bytes": 72689
+      "sha256": "f4400e6ef0d37493637468b7862e29ebcc2c75c3fdb2b7eda1b4d09011232cda",
+      "bytes": 73562
     },
     {
       "path": "docs/delivery/r1-p2/R1_P2_Limit_Resolution.md",
-      "sha256": "67a3e47a4c17699eda9078db5f0eb38e6db3dbed87508af27390d58339294d80",
-      "bytes": 49317
+      "sha256": "b11eb5dfcc8e8ab6b66273e2477611274f37bff6a6524f2fe6aef61aacef657e",
+      "bytes": 49562
     },
     {
       "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
@@ -110,14 +115,34 @@
       "bytes": 15724
     },
     {
+      "path": "docs/delivery/r1-p2/R1_P2_Owner_Exit_Approval.json",
+      "sha256": "2905b1cfeb18ead0985a49fbaadc55d13b39bba354599a92a15352499e04cda0",
+      "bytes": 9535
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Owner_Exit_Approval.md",
+      "sha256": "d914c593049ca0a59e6ecc07c8de2e5e4af51494c35e3edd5f45a7ce09924a30",
+      "bytes": 3371
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_P3_Handoff.md",
+      "sha256": "2df90ce6d557500f65206cf458d7b548d94fd8a9205bbc0c977f4a83c9273c14",
+      "bytes": 15254
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_P3_Start_Prompt.md",
+      "sha256": "eb06c0b47931fab637a4c5c19c1670fbe56560ff77166704986bfaa7bf2cca10",
+      "bytes": 10179
+    },
+    {
       "path": "docs/delivery/r1-p2/R1_P2_P3_Work_Packages.json",
       "sha256": "973a746de742d9ffc2c93286a05ec0dc5e37c53f455ecdf85daa6e5fdd3b2bc2",
       "bytes": 15569
     },
     {
       "path": "docs/delivery/r1-p2/R1_P2_P3_Work_Packages.md",
-      "sha256": "109487f84d138356065178d8d6f47e749b43ff13103bf6aa820ae17ea3b79416",
-      "bytes": 9189
+      "sha256": "008c6e16ff037c154dbff8988257842d3f645290f69c2b22c180bc5a00b77f15",
+      "bytes": 9379
     },
     {
       "path": "docs/delivery/r1-p2/R1_P2_Producer_Integration_Cases.json",
@@ -171,8 +196,8 @@
     },
     {
       "path": "scripts/check-r1-p2-design.py",
-      "sha256": "7d79792c120ba11398ddedf9a06d9fdf7f831cca6f02057befb473efa22b1c4a",
-      "bytes": 9957
+      "sha256": "ac3e655f57fa087cb0f0e34c287c2338415a5ec660ff8a8634a5cb38f41e0385",
+      "bytes": 16734
     }
   ]
 }

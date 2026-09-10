@@ -1,0 +1,290 @@
+{
+  "kind": "P2_closure_document_verification_not_runtime_tests",
+  "reviewedHead": "65cfcf85e4fccf8cba53319deb7b87dd7f79600a",
+  "approvalId": "R1-P2-EXIT-OWNER-20260910",
+  "businessTestsRun": 0,
+  "historicalTestRevalidations": 0,
+  "rounds": [
+    {
+      "round": 1,
+      "checkedAtUtc": "2026-09-10T02:32:45.456169+00:00",
+      "checkedParentHead": "65cfcf85e4fccf8cba53319deb7b87dd7f79600a",
+      "workingTreeCandidate": true,
+      "command": "python scripts/check-r1-p2-design.py --complete",
+      "focus": [
+        "批准条件与来源",
+        "九项/70需求/85原AC/15门槛/37风险/21数据集254字段/11任务完整性",
+        "24项未变材料摘要与索引/风险实质字段对比",
+        "模块/权限/数据/接口设计冻结边界"
+      ],
+      "manualRechecks": [
+        "核65c原退出文件摘要与原脚本通过结果，批准仅来自所有者消息",
+        "九项正文、原AC目标、字典与一致性补充保持审阅版本，原状态文字明确限定历史语境",
+        "仅九条P2设计风险改关闭状态，P3/P4场景和原LIMIT正文保持",
+        "总控提案只承接R1现有批准，status仍proposed_not_applied且不更改R2/主事实源"
+      ],
+      "result": {
+        "kind": "P2_document_check_not_business_test",
+        "baseline": "716cd9df5f5776d050f77f57c2ad5a35c0a83882",
+        "tasks": 9,
+        "designCases": 66,
+        "requirementDesignLinks": 111,
+        "sourceFiles": 16,
+        "uniqueRequirements": 70,
+        "originalAcceptanceScenarios": 85,
+        "limitRisks": 37,
+        "limitDispositionCounts": {
+          "M01": {
+            "P2": 3,
+            "P3": 5,
+            "P4": 2
+          },
+          "M19": {
+            "P2": 2,
+            "P3": 5,
+            "P4": 2
+          },
+          "M48": {
+            "P2": 2,
+            "P3": 4,
+            "P4": 2
+          },
+          "M32": {
+            "P2": 2,
+            "P3": 6,
+            "P4": 2
+          }
+        },
+        "datasets": 21,
+        "reportFields": 254,
+        "p3Tasks": 11,
+        "p3Cases": 59,
+        "hardGates": 15,
+        "producerIntegrationScenarios": 22,
+        "errors": [],
+        "passed": true
+      },
+      "remainingDesignDefects": []
+    },
+    {
+      "round": 2,
+      "checkedAtUtc": "2026-09-10T02:33:42.221928+00:00",
+      "checkedParentHead": "65cfcf85e4fccf8cba53319deb7b87dd7f79600a",
+      "workingTreeCandidate": true,
+      "command": "python scripts/check-r1-p2-design.py --complete",
+      "focus": [
+        "迁移/恢复原设计未变",
+        "20项P3及8项P4逐行责任/任务/用例",
+        "11任务依赖/共享文件并行边界/隔离合成测试范围/P3退出闸门",
+        "原站13项和平台/生产者/供应商/真人依赖",
+        "引用/摘要/工作树写入边界"
+      ],
+      "manualRechecks": [
+        "P3只能在新独立分支实施；本次不启动，P2固定分支检查不误套新P3分支",
+        "20/8表逐行与原LIMIT场景及case主任务归属相同；基础P4恢复/角色用例未遗漏且不重计风险",
+        "11不等待10全部就绪只允许先汇总本地证据，不能绕过真实联调宣称完整退出",
+        "迁移/故障/清理限拥有的隔离合成资源；RPO/RTO/30天和所有者开放批准不变",
+        "审批来源如实，运行计数0，未创建新业务规则/新增任务/主事实源/生产操作",
+        "远端推送前实核仍为65c，与本地审阅HEAD一致；无实质设计差异"
+      ],
+      "result": {
+        "kind": "P2_document_check_not_business_test",
+        "baseline": "716cd9df5f5776d050f77f57c2ad5a35c0a83882",
+        "tasks": 9,
+        "designCases": 66,
+        "requirementDesignLinks": 111,
+        "sourceFiles": 16,
+        "uniqueRequirements": 70,
+        "originalAcceptanceScenarios": 85,
+        "limitRisks": 37,
+        "limitDispositionCounts": {
+          "M01": {
+            "P2": 3,
+            "P3": 5,
+            "P4": 2
+          },
+          "M19": {
+            "P2": 2,
+            "P3": 5,
+            "P4": 2
+          },
+          "M48": {
+            "P2": 2,
+            "P3": 4,
+            "P4": 2
+          },
+          "M32": {
+            "P2": 2,
+            "P3": 6,
+            "P4": 2
+          }
+        },
+        "datasets": 21,
+        "reportFields": 254,
+        "p3Tasks": 11,
+        "p3Cases": 59,
+        "hardGates": 15,
+        "producerIntegrationScenarios": 22,
+        "errors": [],
+        "passed": true
+      },
+      "gitDiffCheckPassed": true,
+      "remainingDesignDefects": []
+    }
+  ],
+  "verifiedCandidateFiles": [
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Approved_Acceptance_Trace.json",
+      "sha256": "a0a3a3c0c2b02af103a656fd5c6ce59e6a78c8f62cca1fa3eb375d22a83f5e20"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Approved_Acceptance_Trace.md",
+      "sha256": "b1536ba69d15acb855653c2752fb0bfe5bd21e7bced6c2b2c273541b129933f7"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Architecture.md",
+      "sha256": "e54d8daa427e6cd217f4e57e6ed3232244be93d9423d314353e6d73d78c45f3b"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Backup_Recovery.md",
+      "sha256": "d2956c3c08b7b38b6d1e0debe9dad2663a5ec265a4b4b7e0c338a0572638a3e6"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Checkpoint.md",
+      "sha256": "a8a60b943da5eb8789183303fa36532fda560464d50d0ff8575ed463af10a52f"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Consistency_Resolutions.md",
+      "sha256": "7b63bc8988d665f43eb0c2be3b1e0a44ededf1fa38ea64af1055ee8b60051650"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Controller_Proposal.json",
+      "sha256": "a8d1873c712601d90e1ad498feb202343e6f8d12d7405185052db7596dd904da"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Dependencies_Decisions.json",
+      "sha256": "8b536d2f10e0ef4db8ac583b4e63d7a9643846a1764b6466f21ad6543a902e93"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Dependencies_Decisions.md",
+      "sha256": "3cd9b9e1f2cb41ce574bdf83675409118a31251fc4a04aa64b13e9df3f2e8c95"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Design_Index.json",
+      "sha256": "95782f5e23757dee515330d98f070b2a32a35a1afcd3c4fbaeb5bac38fe5cd83"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Exit_Review.md",
+      "sha256": "53ee09fe93fcf667afe48c6cf3b21cada18645a9950f0f1cb18e06faa02cb149"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Git_Record.md",
+      "sha256": "6676c0e49d963f77f9dd3aeba4ceca44ad5820d89525b31dee0c9ed55bfad9dd"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Hard_Gates.json",
+      "sha256": "012a36cdd10cceb0c5f6aa548a711c27670516a91c440de337758ed14c673b6d"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Interfaces_Exceptions.md",
+      "sha256": "9c3e76479c370eff37981c7617a50cb475210557c9c8905a613c154127b90a0d"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Limit_Resolution.json",
+      "sha256": "f4400e6ef0d37493637468b7862e29ebcc2c75c3fdb2b7eda1b4d09011232cda"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Limit_Resolution.md",
+      "sha256": "b11eb5dfcc8e8ab6b66273e2477611274f37bff6a6524f2fe6aef61aacef657e"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+      "sha256": "ad382db0ccfdd37d5029791e6030ac5113ff7411d28e3c9062a39c184d20b88d"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_M19_Workflow_Transactions.md",
+      "sha256": "e6ee21123cc08b2bb769524ee101db997bb65b21df3c12935404bcba073afb8a"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md",
+      "sha256": "4d1752a1057d348e624fc5ec40c6d16d767bf94f157f19b7b33d8532aa93ff14"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_M48_Authorization_Consumers.md",
+      "sha256": "3b715a5eb3b08df606e67b869f9e87619a9e56c94d49285bcc85e192b7644694"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Migration_Rollback.md",
+      "sha256": "e6b8d8d333490ede58eaadafb85e77e971c8c6cb9845355efd2ced1638d6204a"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Owner_Exit_Approval.json",
+      "sha256": "2905b1cfeb18ead0985a49fbaadc55d13b39bba354599a92a15352499e04cda0"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Owner_Exit_Approval.md",
+      "sha256": "d914c593049ca0a59e6ecc07c8de2e5e4af51494c35e3edd5f45a7ce09924a30"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_P3_Handoff.md",
+      "sha256": "2df90ce6d557500f65206cf458d7b548d94fd8a9205bbc0c977f4a83c9273c14"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_P3_Start_Prompt.md",
+      "sha256": "eb06c0b47931fab637a4c5c19c1670fbe56560ff77166704986bfaa7bf2cca10"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_P3_Work_Packages.json",
+      "sha256": "973a746de742d9ffc2c93286a05ec0dc5e37c53f455ecdf85daa6e5fdd3b2bc2"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_P3_Work_Packages.md",
+      "sha256": "008c6e16ff037c154dbff8988257842d3f645290f69c2b22c180bc5a00b77f15"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Producer_Integration_Cases.json",
+      "sha256": "c539d43cc5f28775470fd233ee956850e19346801903116b476e2cd9ae99aefc"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Report_Datasets.json",
+      "sha256": "98e1a5ae1c812f84995917a2d73c4867a6da63759fb0ed0c9c0f72fc876657a2"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Report_Field_Dictionary.json",
+      "sha256": "06470ad2b37cc73857e974c88fd973483773bc284ccab7da0efea82aa877eb46"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Report_Field_Dictionary.md",
+      "sha256": "f10cf3286061fa6c800b02d3d3b76cc326f2272e1076ee2cd3e0acb998d5e4f8"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Requirement_Coverage.json",
+      "sha256": "0b4b05e5bbee4bedb2f1ec574defa1113686867186b4f55ccdc4f15b40b2ed15"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Review_Design.md",
+      "sha256": "bf4a2b99a5855c8ee79cceb82417aadefcff49d1c411792eb82d801ac68b5f5a"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Self_Review.md",
+      "sha256": "64881db137c15a928e461882d5428c9b1c53dbc5312924eb6036bb446d364c59"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Self_Review_Results.json",
+      "sha256": "176e20163099535704d9e34e9fa2d2aa672f7fcc24d3852963f6e6209517ae68"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Source_Manifest.json",
+      "sha256": "b35c9d925edcc14cf9c6ad886362a0bf044c95f18e85563019714ec3c19fe61b"
+    },
+    {
+      "path": "docs/delivery/r1-p2/R1_P2_Traceability.md",
+      "sha256": "f318bbf40981d0438ea2b9bfad11fbf3e2e68fe54b0b881443947e5c1cbd8d2e"
+    },
+    {
+      "path": "scripts/check-r1-p2-design.py",
+      "sha256": "ac3e655f57fa087cb0f0e34c287c2338415a5ec660ff8a8634a5cb38f41e0385"
+    }
+  ],
+  "scope": "P2文档/引用/批准依据/设计摘要核验；没有运行产品测试、迁移或恢复。两轮历史整体自检原文件原样保留。"
+}

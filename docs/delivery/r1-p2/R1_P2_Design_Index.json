@@ -2,7 +2,7 @@
   "kind": "design_artifact_index_not_project_facts",
   "baseline": "716cd9df5f5776d050f77f57c2ad5a35c0a83882",
   "branch": "design/r1-p2-20260909",
-  "p2ExitApproved": false,
+  "p2ExitApproved": true,
   "p3Started": false,
   "tasks": [
     {
@@ -1349,5 +1349,6 @@
         }
       ]
     }
-  ]
+  ],
+  "ownerExitApprovalRecord": "R1_P2_Owner_Exit_Approval.json"
 }
