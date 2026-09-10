@@ -17,14 +17,19 @@
       "bytes": 7938
     },
     {
+      "path": "docs/delivery/r2-p2/Command_Registry.json",
+      "sha256": "f3656a0fbd9df3edbda6016292a81a08f760154790eaa05d35d578ab2f67a1e1",
+      "bytes": 19594
+    },
+    {
       "path": "docs/delivery/r2-p2/Cross_Module_Contracts.md",
       "sha256": "fb0ddb062db795e023b460545863fe36b389e1e660bf752467630cad5540565e",
       "bytes": 5963
     },
     {
       "path": "docs/delivery/r2-p2/Design_Checkpoint.json",
-      "sha256": "cc013768e6f6c294f8707e682b2dbc957675565ab4424da7ae99543f4f09df95",
-      "bytes": 707
+      "sha256": "72dad93e49a48f00cf4c4064099123fbd36160ef6f010d547917e2e2c1f20d91",
+      "bytes": 716
     },
     {
       "path": "docs/delivery/r2-p2/Foundations.md",
@@ -42,9 +47,14 @@
       "bytes": 3102
     },
     {
+      "path": "docs/delivery/r2-p2/Interface_Schemas.json",
+      "sha256": "00b12689fbc72bfee2699bff089405010647162b1e283b764f616f8a01e5df65",
+      "bytes": 110832
+    },
+    {
       "path": "docs/delivery/r2-p2/Interfaces.md",
-      "sha256": "6d16fef2ae6b8b68d544d2f9e37684532f464492e26f2aff6686a4e51f137ef8",
-      "bytes": 6787
+      "sha256": "2dbddb1281ed76a17e64b8ec27e68f437b82325973726d8f7721136992f6ca26",
+      "bytes": 7281
     },
     {
       "path": "docs/delivery/r2-p2/Legacy_Acceptance_Map.json",
@@ -63,8 +73,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/M03_Design.md",
-      "sha256": "05291124e644a915cc80149b8ac1331a98062384c26af216d8ca7cbd1b1fc5ab",
-      "bytes": 12306
+      "sha256": "fc747af1d197f525a569936651a40699859fe8e5cccfa09a2f2dc65788fc1417",
+      "bytes": 13672
     },
     {
       "path": "docs/delivery/r2-p2/M06_Design.md",
@@ -73,8 +83,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/M17_Design.md",
-      "sha256": "0e9a9117d9bc0fdce6b67e95a3c7a6f27be7b9871812cf1c2f4798823a9f841f",
-      "bytes": 13323
+      "sha256": "6f949750458e0c38d3e90af7ae4b53c7e07ae48f73b9be89911d217b4e981c9d",
+      "bytes": 13809
     },
     {
       "path": "docs/delivery/r2-p2/M18_Design.md",
@@ -83,8 +93,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/M26_Design.md",
-      "sha256": "50fa69275fdac4998f32faa36c27f72a9512bb4f103a1158958d7eb518d33cd4",
-      "bytes": 10772
+      "sha256": "c8fec8e808b3af90ddb8000706954104fcf02a0b19f3eb71741c4e77c229c2a9",
+      "bytes": 11656
     },
     {
       "path": "docs/delivery/r2-p2/M37_Design.md",
@@ -128,13 +138,18 @@
     },
     {
       "path": "docs/delivery/r2-p2/Requirements_Trace.json",
-      "sha256": "f2ad99d767fc0009f2c542b3c2aceab4690b52792f8b1709404722879a93a18c",
-      "bytes": 362981
+      "sha256": "ad57a2743b6fb140935c6edd61a6715b2bab537a24c45d10372839514facf18f",
+      "bytes": 541961
+    },
+    {
+      "path": "docs/delivery/r2-p2/Review_Round1.md",
+      "sha256": "a15f6d41604aa68695906d8a8ac3b51676b307a2073d96a6532c7b4fcfa7e3e7",
+      "bytes": 3811
     },
     {
       "path": "docs/delivery/r2-p2/Source_Manifest.json",
-      "sha256": "4afcceece660be6c4cf7a9d85e1c2a58b4e658e1f4e4811a6e3662d2e6ea3b47",
-      "bytes": 24276
+      "sha256": "98d9d5c7369c04b64722859ede12146a6a8c63dc1870f46941f7b5258fb470f6",
+      "bytes": 24561
     },
     {
       "path": "docs/delivery/r2-p2/Source_Requests.json",
@@ -153,8 +168,8 @@
     },
     {
       "path": "docs/delivery/r2-p2/build_handoff.py",
-      "sha256": "2f11ec8387ef3e0cd1cb93c61f9cdb13b796fbb438db64f85c395d943bee464a",
-      "bytes": 4340
+      "sha256": "5e7de121e4e9669522b702635fff713b554e484e051c144d95200e1b3290990b",
+      "bytes": 5885
     },
     {
       "path": "docs/delivery/r2-p2/build_inventory.py",
@@ -172,9 +187,14 @@
       "bytes": 13247
     },
     {
+      "path": "docs/delivery/r2-p2/build_schemas.py",
+      "sha256": "35e95e918080062c3856cc744e635a73a684f459b47ead8357bf42465c2b5929",
+      "bytes": 20803
+    },
+    {
       "path": "docs/delivery/r2-p2/check_design.py",
-      "sha256": "08c9597fb2768c0840d170a620ad236a3e3449bab365e837ae646583d0c4c0e9",
-      "bytes": 6531
+      "sha256": "6875446000f61d70c53780b299e123571a3894a604a080a6fb21dcaa78bd51e5",
+      "bytes": 8561
     }
   ]
 }

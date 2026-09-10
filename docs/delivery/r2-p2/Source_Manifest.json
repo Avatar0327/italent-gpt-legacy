@@ -369,6 +369,14 @@
   },
   {
     "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
+    "path": "lib/hris/cadre-interview-fields.ts",
+    "sha256": "ae3ec06dc4905c15b01b180f5597209cfd18b0f12f829cbf59d90d50bf4ce440",
+    "bytes": 201,
+    "readMode": "complete source read",
+    "historicalOnly": false
+  },
+  {
+    "gitRef": "22be3a7e366d6787180d4f593a30f5984c70e03a",
     "path": "lib/hris/cadre-interviews.ts",
     "sha256": "2a656ecb739cedae889fa04adec02fc136466713404f391d67a3f8dd442152c3",
     "bytes": 3353,

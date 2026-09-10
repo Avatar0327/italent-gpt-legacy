@@ -16,10 +16,12 @@
   ],
   "activeModule": null,
   "foundationsComplete": true,
-  "completedReviews": [],
+  "completedReviews": [
+    "round1"
+  ],
   "p2ExitApproved": false,
   "p3Entered": false,
   "productModified": false,
   "deployed": false,
-  "next": "LIMIT decomposition, supplemental GWT, legacy reverse trace"
+  "next": "round2 reverse requirement and residual verification"
 }

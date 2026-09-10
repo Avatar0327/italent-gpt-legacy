@@ -36,6 +36,8 @@ mentorRelationId保存personId、roleVersion、resolvedMentorPersonIds、effecti
 
 flowRoot/version、templateRoot/version、planId/version、stageId、taskId、assignmentId独立；plan title1–200、personId、templateVersion、mentor role/bindings、startOn/endOn必填，start≤end；原来源仅UI必填不能冒已验证服务端规则，此处是批准范围的接口具体化。模板冻结flow节点/顺序/并行DAG、职责、required deliverables、dueRule、electiveMinCount和waiverPolicy；停用阻新实例，旧计划不自动终止。
 
+模板另外保存name、orgId、categoryId、description（保留源32766字配置上限）、shareDownward（显式布尔，默认false）、availability及flowVersionRef；模板启用、流程启用与计划状态分列。templateReadiness需节点/职责/要求/日期规则和flow完整；目录保存不能代启动。名单/模板筛选按组织、池、职位、职级和人员状态支持当前授权条件，用户必须选稳定personId，姓名输入不是员工绑定。
+
 plan draft→submitted→approved→active→completed，另有paused/terminated；批准与生效分态。stage blocked→open→in_review→verified，task blocked/open/draft/submitted/returned/verified/waived/cancelled；逾期overdueFlag与这些状态分列。阶段/任务截止须在计划范围，延期需明确批准的extensionPolicy和新版本；依赖DAG无环、强前置未verified/授权waived则后续不能open。不能从阶段顺序整数直接推唯一串行。
 
 提交成果新submissionVersion；待审可withdraw、退回再提保留旧版本；verify独立角色核完整材料和当前权限。阶段完成需所有required verified或获批准的明确waiver，选修verified数≥显式electiveMinCount；cancelled默认不视满足，免除须授权原因且调整requirementsVersion。计划完成需所有适用阶段verified，不因到期自动完成。

@@ -5,7 +5,9 @@
 
 本文件是P3拟实现的契约，不宣称接口已经存在。命令沿R1共用dispatcher及账本，命名空间`r2.<module>.<action>`；建议路由`POST /api/r2/commands`桥接相同执行器，查询`GET /api/r2/commands/{commandId}`及各域查询资源。不能另建第二套幂等回执。旧路由仅经同一安全写闸门适配；不能表达新前置则409 CLIENT_UPGRADE_REQUIRED，不能默认为旧admin全权。
 
-命令必填：schemaVersion=1、commandId(UUID)、idempotencyKey(1–200)、action(注册枚举)、objectRef({module,objectType,rootId,versionId?})、expectedWorkspaceRevision、expectedEntityRevision（create为0）、expectedAuthorizationRevision、writerEpoch、recoveryEpoch、payload。tenant/actor从已验证会话推导，不信任payload；不接受未知字段。业务payload逐动作声明字段类型/必填/范围，指令性的审批状态和审计actor不可由客户端赋值。字符串按模块定义trim，未声明字段不隐式转换；decimal用规范十进制字符串，安全整数超限拒绝，拒绝NaN/Infinity、脚本和重复JSON键。
+命令必填：schemaVersion=1、commandId(UUID)、idempotencyKey(1–200)、action(注册枚举)、objectRef({module,objectType,rootId,versionId?})、expectedWorkspaceRevision、expectedEntityRevision（create为0）、expectedAuthorizationRevision、writerEpoch、recoveryEpoch、payload。create的rootId必须null，由服务端生成业务根并写入回执；更新必须已有rootId。模块命令表省略公共`r2.`命名空间前缀。tenant/actor从已验证会话推导，不信任payload；不接受未知字段。业务payload逐动作声明字段类型/必填/范围，指令性的审批状态和审计actor不可由客户端赋值。字符串按模块定义trim，未声明字段不隐式转换；decimal用规范十进制字符串，安全整数超限拒绝，拒绝NaN/Infinity、脚本和重复JSON键。
+
+`Interface_Schemas.json`为关键实体及共用协议的JSON Schema，`Command_Registry.json`将业务动作逐一绑定payload和语义检查引用。schema通过只证明文档结构；日期真实有效、区间互斥、权限/回避、尺度/AST、源版本新鲜度和事务必须由P3服务端实现，不能以schema校验替代。
 
 回执必填commandId、requestDigest、status=accepted|applied|rejected|unknown、approvalState、effectState、entityRevision、workspaceRevision、occurredAt、correlationId；可选error={code,retryable,reconciliationId}。accepted仅入队；applied表示本地指定动作已提交，不自动代表任用、人事或外发都完成。返回体不得含无权字段。unknown保留原命令键和对账入口，不显示业务成功。
 

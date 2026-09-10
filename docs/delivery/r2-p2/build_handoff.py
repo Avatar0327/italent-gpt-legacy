@@ -35,6 +35,27 @@ if (D/'Supplemental_Scenarios.json').exists():
     tasks+=supplement.get('tasks',[])
     scenarios+=supplement.get('scenarios',[])
 for task in tasks:task['scenarioIds']=[x['id'] for x in scenarios if x['taskId']==task['id']]
+task_by_id={x['id']:x for x in tasks}
+def matching(refs):
+    return [x['id'] for x in scenarios if set(refs)&(set(x['requirementRefs'])|set(task_by_id[x['taskId']]['requirementRefs']))]
+for spec in t['specs']:
+    spec['scenarioIds']=matching([spec['id']]);spec['taskIds']=[x['id'] for x in tasks if spec['id'] in x['requirementRefs']]
+for clause in t['clauses']:
+    parent=next(x for x in t['specs'] if x['id']==clause['parentId']);clause['scenarioIds']=parent['scenarioIds'];clause['coverageNote']='Parent approved policy scenario family; implementation proof still required per clause.'
+for detail in t['contractDetails']:
+    refs=[a['id'] for a in t['acceptanceIds'] if a.get('contractId')==detail['contractId']]
+    detail['scenarioIds']=matching(refs)
+    if not detail['scenarioIds']:
+        mods=[r[:3] for r in detail['designRefs']];detail['scenarioIds']=[x['id'] for x in scenarios if any(m in x.get('taskId','') for m in mods)]
+for closure in t['closures']:closure['scenarioIds']=matching(closure['source'].get('decisionIds',[]))
+for foundation in t['foundations']:foundation['scenarioIds']=matching([foundation['id']])
+for a in t['acceptanceIds']:a['scenarioIds']=matching([a['id']])
+if (D/'Legacy_Acceptance_Map.json').exists():
+    old={x['id']:x for x in read('Legacy_Acceptance_Map.json')['acceptance']}
+    for a in t['acceptanceIds']:
+        if a['id'] in old:
+            a['scenarioIds']=matching(old[a['id']]['currentAcceptanceRefs']);a['legacyDisposition']=old[a['id']]['disposition']
+put('Requirements_Trace.json',t)
 put('P3_Work_Packages.json',{'kind':'proposal_only_not_execution_or_controller_ledger','count':len(tasks),'tasks':tasks})
 put('Acceptance_Scenarios.json',{'kind':'executable_test_design_not_run','count':len(scenarios),'scenarios':scenarios})
 lines=['# P3任务与可执行验收建议','',f'任务{len(tasks)}项，场景{len(scenarios)}项；均未开始/未执行。只有所有者批准P2退出及P3准入后才可实施。精确Given/When/Then与证据要求见Acceptance_Scenarios.json。','', '|任务|需求|场景数|责任|','|---|---|---:|---|']

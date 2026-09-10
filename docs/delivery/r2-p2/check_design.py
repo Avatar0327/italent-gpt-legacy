@@ -43,6 +43,27 @@ for group in ['specs','clauses','contractDetails','closures','foundations','acce
         elif args.final: check(False,'unfinished mapping '+x['id'])
 for f in D.glob('*.json'):json.loads(f.read_text())
 check(True,'all top-level JSON parsed')
+if (D/'Interface_Schemas.json').exists():
+    schema=read('Interface_Schemas.json'); schema_errors=[]
+    def schema_walk(v,path=''):
+        if isinstance(v,dict):
+            if '$ref' in v and (not v['$ref'].startswith('#/$defs/') or v['$ref'].split('/')[-1] not in schema['$defs']):schema_errors.append(path+' unresolved ref')
+            if v.get('type')=='object':
+                if v.get('additionalProperties') is not False and path!='/'+ '$defs/Command/properties/payload':schema_errors.append(path+' open object')
+                if not set(v.get('required',[]))<=set(v.get('properties',{})):schema_errors.append(path+' unknown required field')
+            if 'pattern' in v:
+                try:re.compile(v['pattern'])
+                except re.error:schema_errors.append(path+' invalid regex')
+            for k,w in v.items():schema_walk(w,path+'/'+k)
+        elif isinstance(v,list):
+            for n,w in enumerate(v):schema_walk(w,path+'/'+str(n))
+    schema_walk(schema)
+    check(not schema_errors,'documentation schema local structural/reference checks: '+str(schema_errors))
+    registry=read('Command_Registry.json')['commands'];actions=[x['action'] for x in registry]
+    check(len(actions)==len(set(actions)),'command registry IDs unique')
+    check(all(x['payloadSchema'].split('/')[-1] in schema['$defs'] for x in registry),'command payload references resolve')
+    check(all(x['implementationStatus']=='design_only' for x in registry),'schemas do not claim implemented APIs')
+    check('r2.m17.idp.publish' not in actions and 'r2.m26.project.publish' not in actions,'project/IDP states not confused with report publication')
 if (D/'Acceptance_Scenarios.json').exists():
     scenarios=read('Acceptance_Scenarios.json')['scenarios']; ids=[x['id'] for x in scenarios]
     check(len(ids)==len(set(ids)),'executable scenario IDs unique')
@@ -67,6 +88,9 @@ if args.final:
     check(all(x['taskId'] in tids for x in scenarios),'all scenarios have accountable P3 task')
     check(all(x.get('scenarioIds') and set(x['scenarioIds'])<=set(ids) for x in tasks),'each P3 task has actual scenario IDs')
     check(all(x['status']=='proposed_not_started' for x in tasks),'P3 tasks proposed, not started')
+    for group in ['specs','clauses','contractDetails','closures','foundations','acceptanceIds']:
+        check(all(x.get('scenarioIds') and set(x['scenarioIds'])<=set(ids) for x in t[group]),group+' has resolved design-to-scenario mapping')
+    check(all(set(x['scenarioRefs'])<=set(ids) for x in lm['historicalTasks']),'historical task criteria scenario references resolve')
 # Hash core design inputs; evidence and manifests are excluded to avoid self-referential hashes.
 artifacts=[{'path':f.relative_to(R).as_posix(),'sha256':digest(f.read_bytes()),'bytes':f.stat().st_size} for f in sorted(D.rglob('*')) if f.is_file() and 'evidence' not in f.parts and f.name not in ['Artifact_Manifest.json'] and '__pycache__' not in f.parts]
 (D/'Artifact_Manifest.json').write_text(json.dumps({'scope':'core design artifacts; excludes this manifest and evidence output to avoid circular hashes','artifacts':artifacts},ensure_ascii=False,indent=2)+'\n')

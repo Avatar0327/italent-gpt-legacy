@@ -1,0 +1,4793 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:italent:r2:p2:interfaces:v1",
+  "$ref": "#/$defs/Command",
+  "$defs": {
+    "Id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "Uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "Revision": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "PositiveInteger": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "Digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "Date": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "Instant": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "Z$"
+    },
+    "Decimal": {
+      "type": "string",
+      "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]*[1-9])?$"
+    },
+    "Boolean": {
+      "type": "boolean"
+    },
+    "Name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "Description": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 4000
+    },
+    "Reason": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 3000
+    },
+    "Purpose": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "VersionRef": {
+      "type": "object",
+      "properties": {
+        "producer": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "objectType": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "rootId": {
+          "$ref": "#/$defs/Id"
+        },
+        "versionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "sourceRevision": {
+          "$ref": "#/$defs/Revision"
+        },
+        "digest": {
+          "$ref": "#/$defs/Digest"
+        },
+        "capturedAt": {
+          "$ref": "#/$defs/Instant"
+        },
+        "purpose": {
+          "$ref": "#/$defs/Purpose"
+        }
+      },
+      "required": [
+        "producer",
+        "objectType",
+        "rootId",
+        "versionId",
+        "sourceRevision",
+        "digest",
+        "capturedAt",
+        "purpose"
+      ],
+      "additionalProperties": false
+    },
+    "ObjectRef": {
+      "type": "object",
+      "properties": {
+        "module": {
+          "type": "string",
+          "enum": [
+            "M37",
+            "M06",
+            "M26",
+            "M18",
+            "M17",
+            "M03"
+          ]
+        },
+        "objectType": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "rootId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "versionId": {
+          "$ref": "#/$defs/Id"
+        }
+      },
+      "required": [
+        "module",
+        "objectType",
+        "rootId"
+      ],
+      "additionalProperties": false
+    },
+    "Scope": {
+      "type": "object",
+      "properties": {
+        "orgIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 0
+        },
+        "includeDescendants": {
+          "$ref": "#/$defs/Boolean"
+        },
+        "personIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 0
+        },
+        "positionIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "orgIds",
+        "includeDescendants",
+        "personIds",
+        "positionIds"
+      ],
+      "additionalProperties": false
+    },
+    "Scale": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "numeric",
+            "ordinal",
+            "boolean",
+            "enum"
+          ]
+        },
+        "min": {
+          "$ref": "#/$defs/Decimal"
+        },
+        "max": {
+          "$ref": "#/$defs/Decimal"
+        },
+        "step": {
+          "$ref": "#/$defs/Decimal"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "direction": {
+          "type": "string",
+          "enum": [
+            "higher",
+            "lower"
+          ]
+        },
+        "levelIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 0
+        },
+        "mappingVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "additionalProperties": false
+    },
+    "Target": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "numeric"
+            },
+            "scaleVersionRef": {
+              "$ref": "#/$defs/VersionRef"
+            },
+            "comparator": {
+              "type": "string",
+              "enum": [
+                "eq",
+                "gte",
+                "lte",
+                "gt",
+                "lt"
+              ]
+            },
+            "value": {
+              "$ref": "#/$defs/Decimal"
+            }
+          },
+          "required": [
+            "kind",
+            "scaleVersionRef",
+            "comparator",
+            "value"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "ordinal"
+            },
+            "schemeVersionRef": {
+              "$ref": "#/$defs/VersionRef"
+            },
+            "targetLevelId": {
+              "$ref": "#/$defs/Id"
+            },
+            "passLevelIds": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/Id"
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "kind",
+            "schemeVersionRef",
+            "targetLevelId",
+            "passLevelIds"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "boolean"
+            },
+            "value": {
+              "$ref": "#/$defs/Boolean"
+            }
+          },
+          "required": [
+            "kind",
+            "value"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "enum"
+            },
+            "optionId": {
+              "$ref": "#/$defs/Id"
+            },
+            "definitionVersionRef": {
+              "$ref": "#/$defs/VersionRef"
+            }
+          },
+          "required": [
+            "kind",
+            "optionId",
+            "definitionVersionRef"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "none"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "Cell": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "type": "string",
+          "enum": [
+            "value",
+            "null",
+            "not_configured",
+            "unavailable",
+            "suppressed"
+          ]
+        },
+        "value": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        },
+        "reasonCode": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "scaleVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        }
+      },
+      "required": [
+        "state",
+        "value",
+        "reasonCode"
+      ],
+      "additionalProperties": false
+    },
+    "RuleNode": {
+      "type": "object",
+      "properties": {
+        "nodeId": {
+          "$ref": "#/$defs/Id"
+        },
+        "op": {
+          "type": "string",
+          "enum": [
+            "AND",
+            "OR",
+            "eq",
+            "gte",
+            "lte",
+            "gt",
+            "lt",
+            "in"
+          ]
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 0
+        },
+        "lineId": {
+          "$ref": "#/$defs/Id"
+        },
+        "target": {
+          "$ref": "#/$defs/Target"
+        }
+      },
+      "required": [
+        "nodeId",
+        "op"
+      ],
+      "additionalProperties": false
+    },
+    "RuleAst": {
+      "type": "object",
+      "properties": {
+        "ruleRootId": {
+          "$ref": "#/$defs/Id"
+        },
+        "versionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "rootNodeId": {
+          "$ref": "#/$defs/Id"
+        },
+        "nodes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/RuleNode"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "ruleRootId",
+        "versionId",
+        "rootNodeId",
+        "nodes"
+      ],
+      "additionalProperties": false
+    },
+    "Material": {
+      "type": "object",
+      "properties": {
+        "objectVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "classification": {
+          "type": "string",
+          "enum": [
+            "ordinary",
+            "sensitive",
+            "restricted"
+          ]
+        },
+        "contributorPersonIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 0
+        },
+        "attachmentVersionRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/VersionRef"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "objectVersionRef",
+        "classification",
+        "contributorPersonIds",
+        "attachmentVersionRefs"
+      ],
+      "additionalProperties": false
+    },
+    "Committee": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "all",
+            "threshold",
+            "consensus",
+            "vote",
+            "total_score",
+            "indicator_score"
+          ]
+        },
+        "reviewerPersonIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 1
+        },
+        "recusalVersionRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/VersionRef"
+          },
+          "minItems": 0
+        },
+        "minEligible": {
+          "$ref": "#/$defs/PositiveInteger"
+        },
+        "quorum": {
+          "$ref": "#/$defs/PositiveInteger"
+        },
+        "threshold": {
+          "$ref": "#/$defs/Decimal"
+        },
+        "denominatorPolicyVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "hardVetoRuleVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        }
+      },
+      "required": [
+        "mode",
+        "reviewerPersonIds",
+        "recusalVersionRefs",
+        "minEligible",
+        "quorum"
+      ],
+      "additionalProperties": false
+    },
+    "ApprovalAction": {
+      "type": "object",
+      "properties": {
+        "applicationVersionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "nodeVersionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "decision": {
+          "type": "string",
+          "enum": [
+            "approve",
+            "reject",
+            "abstain"
+          ]
+        },
+        "reason": {
+          "$ref": "#/$defs/Reason"
+        }
+      },
+      "required": [
+        "applicationVersionId",
+        "nodeVersionId",
+        "decision",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "SubmitAction": {
+      "type": "object",
+      "properties": {
+        "businessVersionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "workflowTemplateVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "materialManifest": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Material"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "businessVersionId",
+        "workflowTemplateVersionRef",
+        "materialManifest"
+      ],
+      "additionalProperties": false
+    },
+    "PublishAction": {
+      "type": "object",
+      "properties": {
+        "businessVersionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "approvalDecisionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "basePublishedVersionId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "audiencePolicyVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "manifestDigest": {
+          "$ref": "#/$defs/Digest"
+        }
+      },
+      "required": [
+        "businessVersionId",
+        "approvalDecisionRef",
+        "basePublishedVersionId",
+        "audiencePolicyVersionRef",
+        "manifestDigest"
+      ],
+      "additionalProperties": false
+    },
+    "ReasonAction": {
+      "type": "object",
+      "properties": {
+        "businessVersionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "reason": {
+          "$ref": "#/$defs/Reason"
+        },
+        "approvalRef": {
+          "$ref": "#/$defs/VersionRef"
+        }
+      },
+      "required": [
+        "businessVersionId",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "AvailabilityAction": {
+      "type": "object",
+      "properties": {
+        "businessVersionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "target": {
+          "type": "string",
+          "enum": [
+            "active",
+            "disabled"
+          ]
+        },
+        "reason": {
+          "$ref": "#/$defs/Reason"
+        }
+      },
+      "required": [
+        "businessVersionId",
+        "target",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "LibraryDraft": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/Name"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "ability",
+            "potential",
+            "experience"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 500
+        },
+        "classificationId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "description",
+        "classificationId"
+      ],
+      "additionalProperties": false
+    },
+    "IndicatorChild": {
+      "type": "object",
+      "properties": {
+        "childId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "subset": {
+          "type": "string",
+          "enum": [
+            "level",
+            "behavior",
+            "development_suggestion",
+            "interview_question"
+          ]
+        },
+        "sort": {
+          "$ref": "#/$defs/PositiveInteger"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        }
+      },
+      "required": [
+        "childId",
+        "subset",
+        "sort",
+        "description"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "subset": {
+                "const": "level"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              }
+            }
+          }
+        }
+      ]
+    },
+    "IndicatorDraft": {
+      "type": "object",
+      "properties": {
+        "libraryVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "code": {
+          "$ref": "#/$defs/Name"
+        },
+        "name": {
+          "$ref": "#/$defs/Name"
+        },
+        "definition": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 500
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Name"
+          },
+          "minItems": 0
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/IndicatorChild"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "libraryVersionRef",
+        "code",
+        "name",
+        "definition",
+        "aliases",
+        "children"
+      ],
+      "additionalProperties": false
+    },
+    "StandardLine": {
+      "type": "object",
+      "properties": {
+        "referenceLineId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "dimension": {
+          "type": "string",
+          "enum": [
+            "ability",
+            "potential",
+            "experience",
+            "achievement"
+          ]
+        },
+        "sourceVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "target": {
+          "$ref": "#/$defs/Target"
+        },
+        "weight": {
+          "$ref": "#/$defs/Decimal"
+        },
+        "mandatory": {
+          "$ref": "#/$defs/Boolean"
+        }
+      },
+      "required": [
+        "referenceLineId",
+        "dimension",
+        "sourceVersionRef",
+        "target",
+        "weight",
+        "mandatory"
+      ],
+      "additionalProperties": false
+    },
+    "StandardDraft": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/Name"
+        },
+        "classificationId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "modelLabel": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 200
+        },
+        "elementLabel": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 200
+        },
+        "lines": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/StandardLine"
+          },
+          "minItems": 1
+        },
+        "purposeRuleVersionRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/VersionRef"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "name",
+        "classificationId",
+        "modelLabel",
+        "elementLabel",
+        "lines",
+        "purposeRuleVersionRefs"
+      ],
+      "additionalProperties": false
+    },
+    "CatalogDraft": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "category_classification",
+            "category",
+            "hierarchy",
+            "qualification_level",
+            "indicator_type",
+            "indicator"
+          ]
+        },
+        "code": {
+          "$ref": "#/$defs/Name"
+        },
+        "name": {
+          "$ref": "#/$defs/Name"
+        },
+        "parentId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sort": {
+          "$ref": "#/$defs/PositiveInteger"
+        },
+        "targetKind": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "job",
+                "position"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "targetId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "code",
+        "name",
+        "parentId",
+        "sort",
+        "targetKind",
+        "targetId"
+      ],
+      "additionalProperties": false
+    },
+    "QualificationLine": {
+      "type": "object",
+      "properties": {
+        "lineId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "levelId": {
+          "$ref": "#/$defs/Id"
+        },
+        "indicatorVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "descriptionSnapshot": {
+          "$ref": "#/$defs/Description"
+        },
+        "target": {
+          "$ref": "#/$defs/Target"
+        },
+        "mandatory": {
+          "$ref": "#/$defs/Boolean"
+        }
+      },
+      "required": [
+        "lineId",
+        "levelId",
+        "indicatorVersionRef",
+        "descriptionSnapshot",
+        "target",
+        "mandatory"
+      ],
+      "additionalProperties": false
+    },
+    "ValidityPolicy": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "const": "fixed_until"
+            },
+            "untilOn": {
+              "$ref": "#/$defs/Date"
+            }
+          },
+          "required": [
+            "mode",
+            "untilOn"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "const": "long_term"
+            }
+          },
+          "required": [
+            "mode"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "const": "fixed_duration"
+            },
+            "duration": {
+              "$ref": "#/$defs/PositiveInteger"
+            },
+            "unit": {
+              "type": "string",
+              "enum": [
+                "day",
+                "month",
+                "year"
+              ]
+            },
+            "datePolicyVersionRef": {
+              "$ref": "#/$defs/VersionRef"
+            }
+          },
+          "required": [
+            "mode",
+            "duration",
+            "unit",
+            "datePolicyVersionRef"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "QualificationDraft": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/Name"
+        },
+        "categoryVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "levelVersionRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/VersionRef"
+          },
+          "minItems": 1
+        },
+        "lines": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/QualificationLine"
+          },
+          "minItems": 1
+        },
+        "entryPolicyVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "validityPolicy": {
+          "$ref": "#/$defs/ValidityPolicy"
+        },
+        "evidenceWindowPolicyVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "ruleVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        }
+      },
+      "required": [
+        "name",
+        "categoryVersionRef",
+        "levelVersionRefs",
+        "lines",
+        "entryPolicyVersionRef",
+        "validityPolicy",
+        "evidenceWindowPolicyVersionRef",
+        "ruleVersionRef"
+      ],
+      "additionalProperties": false
+    },
+    "QualificationApplication": {
+      "type": "object",
+      "properties": {
+        "personId": {
+          "$ref": "#/$defs/Id"
+        },
+        "standardVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "targetLevelId": {
+          "$ref": "#/$defs/Id"
+        },
+        "intent": {
+          "type": "string",
+          "enum": [
+            "ordinary",
+            "renewal"
+          ]
+        },
+        "previousCertificationId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "materials": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Material"
+          },
+          "minItems": 0
+        },
+        "proxyAuthorityRef": {
+          "$ref": "#/$defs/VersionRef"
+        }
+      },
+      "required": [
+        "personId",
+        "standardVersionRef",
+        "targetLevelId",
+        "intent",
+        "previousCertificationId",
+        "materials"
+      ],
+      "additionalProperties": false
+    },
+    "QuestionOption": {
+      "type": "object",
+      "properties": {
+        "optionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "label": {
+          "$ref": "#/$defs/Name"
+        }
+      },
+      "required": [
+        "optionId",
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "Question": {
+      "type": "object",
+      "properties": {
+        "questionVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "rating",
+            "single_choice",
+            "multiple_choice",
+            "text"
+          ]
+        },
+        "title": {
+          "$ref": "#/$defs/Name"
+        },
+        "required": {
+          "$ref": "#/$defs/Boolean"
+        },
+        "allowSkip": {
+          "$ref": "#/$defs/Boolean"
+        },
+        "allowNA": {
+          "$ref": "#/$defs/Boolean"
+        },
+        "scaleVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/QuestionOption"
+          },
+          "minItems": 0
+        },
+        "minSelected": {
+          "$ref": "#/$defs/Revision"
+        },
+        "maxSelected": {
+          "$ref": "#/$defs/PositiveInteger"
+        },
+        "maxLength": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3000
+        },
+        "conditionAst": {
+          "$ref": "#/$defs/RuleAst"
+        }
+      },
+      "required": [
+        "questionVersionRef",
+        "type",
+        "title",
+        "required",
+        "allowSkip",
+        "allowNA"
+      ],
+      "additionalProperties": false
+    },
+    "QuestionnaireDraft": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/Name"
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Question"
+          },
+          "minItems": 1
+        },
+        "roleVersionRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/VersionRef"
+          },
+          "minItems": 1
+        },
+        "standardVersionRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/VersionRef"
+          },
+          "minItems": 0
+        },
+        "aggregationPolicyVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        }
+      },
+      "required": [
+        "name",
+        "questions",
+        "roleVersionRefs",
+        "standardVersionRefs",
+        "aggregationPolicyVersionRef"
+      ],
+      "additionalProperties": false
+    },
+    "FeedbackProject": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/Name"
+        },
+        "questionnaireVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "subjectPersonIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 1
+        },
+        "startAt": {
+          "$ref": "#/$defs/Instant"
+        },
+        "endAt": {
+          "$ref": "#/$defs/Instant"
+        },
+        "anonymousThreshold": {
+          "type": "integer",
+          "minimum": 3
+        },
+        "noticeVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "audiencePolicyVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        }
+      },
+      "required": [
+        "name",
+        "questionnaireVersionRef",
+        "subjectPersonIds",
+        "startAt",
+        "endAt",
+        "anonymousThreshold",
+        "noticeVersionRef",
+        "audiencePolicyVersionRef"
+      ],
+      "additionalProperties": false
+    },
+    "Invite": {
+      "type": "object",
+      "properties": {
+        "subjectId": {
+          "$ref": "#/$defs/Id"
+        },
+        "reviewerPersonId": {
+          "$ref": "#/$defs/Id"
+        },
+        "roleVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "noticeVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "replacesInviteId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reason": {
+          "$ref": "#/$defs/Reason"
+        }
+      },
+      "required": [
+        "subjectId",
+        "reviewerPersonId",
+        "roleVersionRef",
+        "noticeVersionRef",
+        "replacesInviteId",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "Answer": {
+      "type": "object",
+      "properties": {
+        "questionVersionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "state": {
+          "type": "string",
+          "enum": [
+            "answered",
+            "skipped",
+            "not_applicable",
+            "not_presented"
+          ]
+        },
+        "numericValue": {
+          "$ref": "#/$defs/Decimal"
+        },
+        "optionIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 0
+        },
+        "textValue": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 3000
+        },
+        "reasonCode": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        }
+      },
+      "required": [
+        "questionVersionId",
+        "state"
+      ],
+      "additionalProperties": false
+    },
+    "ResponseSubmit": {
+      "type": "object",
+      "properties": {
+        "inviteId": {
+          "$ref": "#/$defs/Id"
+        },
+        "collectionVersionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "baseResponseVersionId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "questionnaireVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "answers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Answer"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "inviteId",
+        "collectionVersionId",
+        "baseResponseVersionId",
+        "questionnaireVersionRef",
+        "answers"
+      ],
+      "additionalProperties": false
+    },
+    "ReportPublish": {
+      "type": "object",
+      "properties": {
+        "reportVersionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "reviewDecisionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "sourceManifestDigest": {
+          "$ref": "#/$defs/Digest"
+        },
+        "suppressionManifestDigest": {
+          "$ref": "#/$defs/Digest"
+        },
+        "audiencePolicyVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "expectedDisclosureRevision": {
+          "$ref": "#/$defs/Revision"
+        },
+        "purpose": {
+          "$ref": "#/$defs/Purpose"
+        }
+      },
+      "required": [
+        "reportVersionId",
+        "reviewDecisionRef",
+        "sourceManifestDigest",
+        "suppressionManifestDigest",
+        "audiencePolicyVersionRef",
+        "expectedDisclosureRevision",
+        "purpose"
+      ],
+      "additionalProperties": false
+    },
+    "ReviewProject": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/Name"
+        },
+        "scenarioVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "categoryVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9999
+        },
+        "startOn": {
+          "$ref": "#/$defs/Date"
+        },
+        "endOn": {
+          "$ref": "#/$defs/Date"
+        },
+        "orgScope": {
+          "$ref": "#/$defs/Scope"
+        },
+        "standardVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "toolContractVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "templateVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "workflowVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "schemeVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "saveStepId": {
+          "$ref": "#/$defs/Id"
+        }
+      },
+      "required": [
+        "name",
+        "scenarioVersionRef",
+        "categoryVersionRef",
+        "year",
+        "startOn",
+        "endOn",
+        "orgScope",
+        "standardVersionRef",
+        "toolContractVersionRef",
+        "templateVersionRef",
+        "workflowVersionRef",
+        "schemeVersionRef",
+        "saveStepId"
+      ],
+      "additionalProperties": false
+    },
+    "Axis": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "performance",
+            "potential"
+          ]
+        },
+        "sourceVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "scaleVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "mappingVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "lowCut": {
+          "$ref": "#/$defs/Decimal"
+        },
+        "highCut": {
+          "$ref": "#/$defs/Decimal"
+        },
+        "bandLabels": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Name"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        }
+      },
+      "required": [
+        "kind",
+        "sourceVersionRef",
+        "scaleVersionRef",
+        "mappingVersionRef",
+        "lowCut",
+        "highCut",
+        "bandLabels"
+      ],
+      "additionalProperties": false
+    },
+    "GridDefinition": {
+      "type": "object",
+      "properties": {
+        "xAxis": {
+          "$ref": "#/$defs/Axis"
+        },
+        "yAxis": {
+          "$ref": "#/$defs/Axis"
+        },
+        "approvalRef": {
+          "$ref": "#/$defs/VersionRef"
+        }
+      },
+      "required": [
+        "xAxis",
+        "yAxis",
+        "approvalRef"
+      ],
+      "additionalProperties": false
+    },
+    "Calibration": {
+      "type": "object",
+      "properties": {
+        "meetingVersionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "agendaId": {
+          "$ref": "#/$defs/Id"
+        },
+        "subjectRecordId": {
+          "$ref": "#/$defs/Id"
+        },
+        "basePublishedVersionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "dimension": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "oldValue": {
+          "$ref": "#/$defs/Cell"
+        },
+        "proposedValue": {
+          "$ref": "#/$defs/Cell"
+        },
+        "materials": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Material"
+          },
+          "minItems": 0
+        },
+        "dissentRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/VersionRef"
+          },
+          "minItems": 0
+        },
+        "reason": {
+          "$ref": "#/$defs/Reason"
+        }
+      },
+      "required": [
+        "meetingVersionId",
+        "agendaId",
+        "subjectRecordId",
+        "basePublishedVersionId",
+        "dimension",
+        "oldValue",
+        "proposedValue",
+        "materials",
+        "dissentRefs",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "PoolDraft": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/Name"
+        },
+        "categoryId": {
+          "$ref": "#/$defs/Id"
+        },
+        "orgScope": {
+          "$ref": "#/$defs/Scope"
+        },
+        "sharingPolicyVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "expectedCount": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/PositiveInteger"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "entryRuleVersionRef": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/VersionRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "exitRuleVersionRef": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/VersionRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "categoryId",
+        "orgScope",
+        "sharingPolicyVersionRef",
+        "expectedCount",
+        "entryRuleVersionRef",
+        "exitRuleVersionRef"
+      ],
+      "additionalProperties": false
+    },
+    "PoolRule": {
+      "type": "object",
+      "properties": {
+        "poolVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "ruleAst": {
+          "$ref": "#/$defs/RuleAst"
+        },
+        "scope": {
+          "$ref": "#/$defs/Scope"
+        },
+        "cadence": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "timezone": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "reviewOwnerPersonId": {
+          "$ref": "#/$defs/Id"
+        },
+        "effectMode": {
+          "type": "string",
+          "enum": [
+            "proposal_only",
+            "approved_auto_effect"
+          ]
+        },
+        "approvalRef": {
+          "$ref": "#/$defs/VersionRef"
+        }
+      },
+      "required": [
+        "poolVersionRef",
+        "ruleAst",
+        "scope",
+        "cadence",
+        "timezone",
+        "reviewOwnerPersonId",
+        "effectMode",
+        "approvalRef"
+      ],
+      "additionalProperties": false
+    },
+    "Membership": {
+      "type": "object",
+      "properties": {
+        "poolId": {
+          "$ref": "#/$defs/Id"
+        },
+        "personId": {
+          "$ref": "#/$defs/Id"
+        },
+        "previousMembershipId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "stageVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "approvalOrRuleRunRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "reason": {
+          "$ref": "#/$defs/Reason"
+        }
+      },
+      "required": [
+        "poolId",
+        "personId",
+        "previousMembershipId",
+        "stageVersionRef",
+        "approvalOrRuleRunRef",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "Succession": {
+      "type": "object",
+      "properties": {
+        "targetKind": {
+          "type": "string",
+          "enum": [
+            "position",
+            "org"
+          ]
+        },
+        "targetId": {
+          "$ref": "#/$defs/Id"
+        },
+        "personId": {
+          "$ref": "#/$defs/Id"
+        },
+        "startOn": {
+          "$ref": "#/$defs/Date"
+        },
+        "endOn": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "readinessVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "assessmentAt": {
+          "$ref": "#/$defs/Instant"
+        },
+        "nextReviewAt": {
+          "$ref": "#/$defs/Instant"
+        },
+        "reviewerPersonId": {
+          "$ref": "#/$defs/Id"
+        },
+        "eligibilityPolicyVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "materials": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Material"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "targetKind",
+        "targetId",
+        "personId",
+        "startOn",
+        "endOn",
+        "readinessVersionRef",
+        "assessmentAt",
+        "nextReviewAt",
+        "reviewerPersonId",
+        "eligibilityPolicyVersionRef",
+        "materials"
+      ],
+      "additionalProperties": false
+    },
+    "Mentor": {
+      "type": "object",
+      "properties": {
+        "personId": {
+          "$ref": "#/$defs/Id"
+        },
+        "roleVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "mentorPersonIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 1
+        },
+        "responsibility": {
+          "type": "string",
+          "enum": [
+            "coach",
+            "verify",
+            "coach_and_verify"
+          ]
+        },
+        "completionMode": {
+          "type": "string",
+          "enum": [
+            "all",
+            "any"
+          ]
+        },
+        "relationshipVersionRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/VersionRef"
+          },
+          "minItems": 0
+        },
+        "reason": {
+          "$ref": "#/$defs/Reason"
+        }
+      },
+      "required": [
+        "personId",
+        "roleVersionRef",
+        "mentorPersonIds",
+        "responsibility",
+        "completionMode",
+        "relationshipVersionRefs",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "IdpTemplate": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/Name"
+        },
+        "orgId": {
+          "$ref": "#/$defs/Id"
+        },
+        "categoryId": {
+          "$ref": "#/$defs/Id"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 32766
+        },
+        "shareDownward": {
+          "$ref": "#/$defs/Boolean"
+        },
+        "flowVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "requirementVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "availability": {
+          "type": "string",
+          "enum": [
+            "active",
+            "disabled"
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "orgId",
+        "categoryId",
+        "description",
+        "shareDownward",
+        "flowVersionRef",
+        "requirementVersionRef",
+        "availability"
+      ],
+      "additionalProperties": false
+    },
+    "IdpPlan": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "$ref": "#/$defs/Name"
+        },
+        "personId": {
+          "$ref": "#/$defs/Id"
+        },
+        "templateVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "startOn": {
+          "$ref": "#/$defs/Date"
+        },
+        "endOn": {
+          "$ref": "#/$defs/Date"
+        },
+        "mentorAssignments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Mentor"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "title",
+        "personId",
+        "templateVersionRef",
+        "startOn",
+        "endOn",
+        "mentorAssignments"
+      ],
+      "additionalProperties": false
+    },
+    "IdpTaskAction": {
+      "type": "object",
+      "properties": {
+        "planVersionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "stageId": {
+          "$ref": "#/$defs/Id"
+        },
+        "taskId": {
+          "$ref": "#/$defs/Id"
+        },
+        "submissionVersionId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "materials": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Material"
+          },
+          "minItems": 0
+        },
+        "decision": {
+          "type": "string",
+          "enum": [
+            "submit",
+            "verify",
+            "return",
+            "withdraw",
+            "waive",
+            "cancel"
+          ]
+        },
+        "reason": {
+          "$ref": "#/$defs/Reason"
+        }
+      },
+      "required": [
+        "planVersionId",
+        "stageId",
+        "taskId",
+        "submissionVersionId",
+        "materials",
+        "decision",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "TermDraft": {
+      "type": "object",
+      "properties": {
+        "personId": {
+          "$ref": "#/$defs/Id"
+        },
+        "cadreId": {
+          "$ref": "#/$defs/Id"
+        },
+        "typeVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "orgVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "positionVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "startOn": {
+          "$ref": "#/$defs/Date"
+        },
+        "endOn": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "openEnded": {
+          "$ref": "#/$defs/Boolean"
+        },
+        "duration": {
+          "$ref": "#/$defs/PositiveInteger"
+        },
+        "unit": {
+          "type": "string",
+          "enum": [
+            "month",
+            "year"
+          ]
+        },
+        "datePolicyVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "explicitOverrideReason": {
+          "$ref": "#/$defs/Reason"
+        }
+      },
+      "required": [
+        "personId",
+        "cadreId",
+        "typeVersionRef",
+        "orgVersionRef",
+        "positionVersionRef",
+        "startOn",
+        "endOn",
+        "openEnded",
+        "datePolicyVersionRef"
+      ],
+      "additionalProperties": false
+    },
+    "Nomination": {
+      "type": "object",
+      "properties": {
+        "activityVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "personId": {
+          "$ref": "#/$defs/Id"
+        },
+        "targetId": {
+          "$ref": "#/$defs/Id"
+        },
+        "previousNominationId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "materials": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Material"
+          },
+          "minItems": 0
+        },
+        "eligibilityVersionRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/VersionRef"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "activityVersionRef",
+        "personId",
+        "targetId",
+        "previousNominationId",
+        "materials",
+        "eligibilityVersionRefs"
+      ],
+      "additionalProperties": false
+    },
+    "Appointment": {
+      "type": "object",
+      "properties": {
+        "appointmentDecisionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "sourceEffectReceiptVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "term": {
+          "$ref": "#/$defs/TermDraft"
+        },
+        "eligibilityVersionRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/VersionRef"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "appointmentDecisionId",
+        "sourceEffectReceiptVersionRef",
+        "term",
+        "eligibilityVersionRefs"
+      ],
+      "additionalProperties": false
+    },
+    "EvaluationDraft": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/Name"
+        },
+        "orgId": {
+          "$ref": "#/$defs/Id"
+        },
+        "basicInfo": {
+          "$ref": "#/$defs/Description"
+        },
+        "evaluationTitle": {
+          "$ref": "#/$defs/Name"
+        },
+        "committee": {
+          "$ref": "#/$defs/Committee"
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "vote",
+            "total_score",
+            "indicator_score"
+          ]
+        },
+        "itemTreeVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "aggregationVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "threshold": {
+          "$ref": "#/$defs/Decimal"
+        },
+        "comparator": {
+          "const": "gte"
+        }
+      },
+      "required": [
+        "name",
+        "orgId",
+        "basicInfo",
+        "evaluationTitle",
+        "committee",
+        "mode",
+        "itemTreeVersionRef",
+        "aggregationVersionRef",
+        "threshold",
+        "comparator"
+      ],
+      "additionalProperties": false
+    },
+    "ObservationAction": {
+      "type": "object",
+      "properties": {
+        "observationId": {
+          "$ref": "#/$defs/Id"
+        },
+        "termId": {
+          "$ref": "#/$defs/Id"
+        },
+        "evaluationVersionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "actionKind": {
+          "type": "string",
+          "enum": [
+            "submit",
+            "withdraw",
+            "review",
+            "extend",
+            "terminate",
+            "early_application"
+          ]
+        },
+        "newDueOn": {
+          "$ref": "#/$defs/Date"
+        },
+        "policyVersionRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "materials": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Material"
+          },
+          "minItems": 0
+        },
+        "reason": {
+          "$ref": "#/$defs/Reason"
+        }
+      },
+      "required": [
+        "observationId",
+        "termId",
+        "evaluationVersionId",
+        "actionKind",
+        "materials",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "InterviewDraft": {
+      "type": "object",
+      "properties": {
+        "personId": {
+          "$ref": "#/$defs/Id"
+        },
+        "interviewerPersonId": {
+          "$ref": "#/$defs/Id"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "任前访谈",
+            "见习前访谈",
+            "见习期访谈"
+          ]
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "汇报上级",
+            "隔级上级",
+            "HRBP",
+            "下属员工",
+            "业务关联方"
+          ]
+        },
+        "occurredOn": {
+          "$ref": "#/$defs/Date"
+        },
+        "location": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 200
+        },
+        "content": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "evidence": {
+          "$ref": "#/$defs/Reason"
+        }
+      },
+      "required": [
+        "personId",
+        "interviewerPersonId",
+        "type",
+        "role",
+        "occurredOn",
+        "location",
+        "content",
+        "evidence"
+      ],
+      "additionalProperties": false
+    },
+    "TermChange": {
+      "type": "object",
+      "properties": {
+        "termVersionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "changeKind": {
+          "type": "string",
+          "enum": [
+            "renewal",
+            "dismissal",
+            "retirement",
+            "employee_exit",
+            "void",
+            "correction"
+          ]
+        },
+        "actualOn": {
+          "$ref": "#/$defs/Date"
+        },
+        "reason": {
+          "$ref": "#/$defs/Reason"
+        },
+        "approvalRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "sourceEffectReceiptRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "newTerm": {
+          "$ref": "#/$defs/TermDraft"
+        }
+      },
+      "required": [
+        "termVersionId",
+        "changeKind",
+        "actualOn",
+        "reason",
+        "approvalRef"
+      ],
+      "additionalProperties": false
+    },
+    "DateChange": {
+      "type": "object",
+      "properties": {
+        "businessVersionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "newEndOn": {
+          "$ref": "#/$defs/Date"
+        },
+        "reason": {
+          "$ref": "#/$defs/Reason"
+        },
+        "approvalRef": {
+          "$ref": "#/$defs/VersionRef"
+        },
+        "dependencyImpactManifestDigest": {
+          "$ref": "#/$defs/Digest"
+        }
+      },
+      "required": [
+        "businessVersionId",
+        "newEndOn",
+        "reason",
+        "approvalRef",
+        "dependencyImpactManifestDigest"
+      ],
+      "additionalProperties": false
+    },
+    "ReportQuery": {
+      "type": "object",
+      "properties": {
+        "datasetId": {
+          "$ref": "#/$defs/Id"
+        },
+        "definitionVersionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "timeMode": {
+          "type": "string",
+          "enum": [
+            "current",
+            "snapshot"
+          ]
+        },
+        "snapshotId": {
+          "$ref": "#/$defs/Id"
+        },
+        "purpose": {
+          "$ref": "#/$defs/Purpose"
+        },
+        "fieldIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 0
+        },
+        "cursor": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "pageSize": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 200
+        }
+      },
+      "required": [
+        "datasetId",
+        "definitionVersionId",
+        "timeMode",
+        "purpose",
+        "fieldIds",
+        "pageSize"
+      ],
+      "additionalProperties": false
+    },
+    "Command": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "commandId": {
+          "$ref": "#/$defs/Uuid"
+        },
+        "idempotencyKey": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "action": {
+          "type": "string",
+          "enum": [
+            "r2.m37.library.create",
+            "r2.m37.indicator.create",
+            "r2.m37.standard.create",
+            "r2.m37.standard.edit",
+            "r2.m06.catalog.create",
+            "r2.m06.catalog.edit",
+            "r2.m06.standard.create",
+            "r2.m06.application.submit",
+            "r2.m26.questionnaire.create",
+            "r2.m26.project.create",
+            "r2.m26.invite.revise",
+            "r2.m26.response.submit",
+            "r2.m26.report.publish",
+            "r2.m18.project.create",
+            "r2.m18.project.save",
+            "r2.m18.grid.save",
+            "r2.m18.calibration.submit",
+            "r2.m17.pool.create",
+            "r2.m17.rule.publish",
+            "r2.m17.membership.apply",
+            "r2.m17.membership.reenter",
+            "r2.m17.succession.nominate",
+            "r2.m17.mentor.handoff",
+            "r2.m17.template.create",
+            "r2.m17.idp.create",
+            "r2.m17.idp.taskAction",
+            "r2.m03.nomination.submit",
+            "r2.m03.appointment.reconcile",
+            "r2.m03.evaluation.create",
+            "r2.m03.evaluation.save",
+            "r2.m03.observation.action",
+            "r2.m03.interview.create",
+            "r2.m03.interview.correct",
+            "r2.m37.standard.submit",
+            "r2.m37.standard.review",
+            "r2.m37.standard.publish",
+            "r2.m37.standard.withdraw",
+            "r2.m06.standard.submit",
+            "r2.m06.standard.review",
+            "r2.m06.standard.publish",
+            "r2.m06.standard.withdraw",
+            "r2.m26.project.submit",
+            "r2.m26.project.review",
+            "r2.m26.project.withdraw",
+            "r2.m18.result.submit",
+            "r2.m18.result.review",
+            "r2.m18.result.publish",
+            "r2.m18.result.withdraw",
+            "r2.m17.idp.submit",
+            "r2.m17.idp.review",
+            "r2.m17.idp.withdraw",
+            "r2.m03.report.submit",
+            "r2.m03.report.review",
+            "r2.m03.report.publish",
+            "r2.m03.report.withdraw",
+            "r2.m37.availability.change",
+            "r2.m06.availability.change",
+            "r2.m06.certification.revoke",
+            "r2.m26.project.open",
+            "r2.m26.project.close",
+            "r2.m26.project.reopen",
+            "r2.m26.response.withdraw",
+            "r2.m26.report.withdraw",
+            "r2.m18.project.start",
+            "r2.m18.project.close",
+            "r2.m18.project.reopen",
+            "r2.m18.result.withdrawPublication",
+            "r2.m17.membership.exit",
+            "r2.m17.succession.close",
+            "r2.m17.idp.start",
+            "r2.m17.idp.extend",
+            "r2.m17.idp.pause",
+            "r2.m17.idp.resume",
+            "r2.m17.idp.terminate",
+            "r2.m03.term.change",
+            "r2.m03.interview.cancel"
+          ]
+        },
+        "objectRef": {
+          "$ref": "#/$defs/ObjectRef"
+        },
+        "expectedWorkspaceRevision": {
+          "$ref": "#/$defs/Revision"
+        },
+        "expectedEntityRevision": {
+          "$ref": "#/$defs/Revision"
+        },
+        "expectedAuthorizationRevision": {
+          "$ref": "#/$defs/Revision"
+        },
+        "writerEpoch": {
+          "$ref": "#/$defs/Revision"
+        },
+        "recoveryEpoch": {
+          "$ref": "#/$defs/Revision"
+        },
+        "payload": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "commandId",
+        "idempotencyKey",
+        "action",
+        "objectRef",
+        "expectedWorkspaceRevision",
+        "expectedEntityRevision",
+        "expectedAuthorizationRevision",
+        "writerEpoch",
+        "recoveryEpoch",
+        "payload"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m37.library.create"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/LibraryDraft"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M37"
+                  },
+                  "rootId": {
+                    "type": "null"
+                  }
+                }
+              },
+              "expectedEntityRevision": {
+                "const": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m37.indicator.create"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/IndicatorDraft"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M37"
+                  },
+                  "rootId": {
+                    "type": "null"
+                  }
+                }
+              },
+              "expectedEntityRevision": {
+                "const": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m37.standard.create"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/StandardDraft"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M37"
+                  },
+                  "rootId": {
+                    "type": "null"
+                  }
+                }
+              },
+              "expectedEntityRevision": {
+                "const": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m37.standard.edit"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/StandardDraft"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M37"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m06.catalog.create"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/CatalogDraft"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M06"
+                  },
+                  "rootId": {
+                    "type": "null"
+                  }
+                }
+              },
+              "expectedEntityRevision": {
+                "const": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m06.catalog.edit"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/CatalogDraft"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M06"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m06.standard.create"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/QualificationDraft"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M06"
+                  },
+                  "rootId": {
+                    "type": "null"
+                  }
+                }
+              },
+              "expectedEntityRevision": {
+                "const": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m06.application.submit"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/QualificationApplication"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M06"
+                  },
+                  "rootId": {
+                    "type": "null"
+                  }
+                }
+              },
+              "expectedEntityRevision": {
+                "const": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m26.questionnaire.create"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/QuestionnaireDraft"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M26"
+                  },
+                  "rootId": {
+                    "type": "null"
+                  }
+                }
+              },
+              "expectedEntityRevision": {
+                "const": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m26.project.create"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/FeedbackProject"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M26"
+                  },
+                  "rootId": {
+                    "type": "null"
+                  }
+                }
+              },
+              "expectedEntityRevision": {
+                "const": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m26.invite.revise"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/Invite"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M26"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m26.response.submit"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ResponseSubmit"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M26"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m26.report.publish"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReportPublish"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M26"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m18.project.create"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReviewProject"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M18"
+                  },
+                  "rootId": {
+                    "type": "null"
+                  }
+                }
+              },
+              "expectedEntityRevision": {
+                "const": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m18.project.save"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReviewProject"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M18"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m18.grid.save"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/GridDefinition"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M18"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m18.calibration.submit"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/Calibration"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M18"
+                  },
+                  "rootId": {
+                    "type": "null"
+                  }
+                }
+              },
+              "expectedEntityRevision": {
+                "const": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m17.pool.create"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/PoolDraft"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M17"
+                  },
+                  "rootId": {
+                    "type": "null"
+                  }
+                }
+              },
+              "expectedEntityRevision": {
+                "const": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m17.rule.publish"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/PoolRule"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M17"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m17.membership.apply"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/Membership"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M17"
+                  },
+                  "rootId": {
+                    "type": "null"
+                  }
+                }
+              },
+              "expectedEntityRevision": {
+                "const": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m17.membership.reenter"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/Membership"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M17"
+                  },
+                  "rootId": {
+                    "type": "null"
+                  }
+                }
+              },
+              "expectedEntityRevision": {
+                "const": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m17.succession.nominate"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/Succession"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M17"
+                  },
+                  "rootId": {
+                    "type": "null"
+                  }
+                }
+              },
+              "expectedEntityRevision": {
+                "const": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m17.mentor.handoff"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/Mentor"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M17"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m17.template.create"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/IdpTemplate"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M17"
+                  },
+                  "rootId": {
+                    "type": "null"
+                  }
+                }
+              },
+              "expectedEntityRevision": {
+                "const": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m17.idp.create"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/IdpPlan"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M17"
+                  },
+                  "rootId": {
+                    "type": "null"
+                  }
+                }
+              },
+              "expectedEntityRevision": {
+                "const": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m17.idp.taskAction"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/IdpTaskAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M17"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m03.nomination.submit"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/Nomination"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M03"
+                  },
+                  "rootId": {
+                    "type": "null"
+                  }
+                }
+              },
+              "expectedEntityRevision": {
+                "const": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m03.appointment.reconcile"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/Appointment"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M03"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m03.evaluation.create"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/EvaluationDraft"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M03"
+                  },
+                  "rootId": {
+                    "type": "null"
+                  }
+                }
+              },
+              "expectedEntityRevision": {
+                "const": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m03.evaluation.save"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/EvaluationDraft"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M03"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m03.observation.action"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ObservationAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M03"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m03.interview.create"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/InterviewDraft"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M03"
+                  },
+                  "rootId": {
+                    "type": "null"
+                  }
+                }
+              },
+              "expectedEntityRevision": {
+                "const": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m03.interview.correct"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/InterviewDraft"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M03"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m37.standard.submit"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/SubmitAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M37"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m37.standard.review"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ApprovalAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M37"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m37.standard.publish"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/PublishAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M37"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m37.standard.withdraw"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M37"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m06.standard.submit"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/SubmitAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M06"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m06.standard.review"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ApprovalAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M06"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m06.standard.publish"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/PublishAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M06"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m06.standard.withdraw"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M06"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m26.project.submit"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/SubmitAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M26"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m26.project.review"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ApprovalAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M26"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m26.project.withdraw"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M26"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m18.result.submit"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/SubmitAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M18"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m18.result.review"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ApprovalAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M18"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m18.result.publish"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/PublishAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M18"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m18.result.withdraw"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M18"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m17.idp.submit"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/SubmitAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M17"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m17.idp.review"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ApprovalAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M17"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m17.idp.withdraw"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M17"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m03.report.submit"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/SubmitAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M03"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m03.report.review"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ApprovalAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M03"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m03.report.publish"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/PublishAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M03"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m03.report.withdraw"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M03"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m37.availability.change"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/AvailabilityAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M37"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m06.availability.change"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/AvailabilityAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M06"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m06.certification.revoke"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M06"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m26.project.open"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M26"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m26.project.close"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M26"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m26.project.reopen"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M26"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m26.response.withdraw"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M26"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m26.report.withdraw"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M26"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m18.project.start"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M18"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m18.project.close"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M18"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m18.project.reopen"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M18"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m18.result.withdrawPublication"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M18"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m17.membership.exit"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M17"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m17.succession.close"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M17"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m17.idp.start"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M17"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m17.idp.extend"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/DateChange"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M17"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m17.idp.pause"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M17"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m17.idp.resume"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M17"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m17.idp.terminate"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M17"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m03.term.change"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/TermChange"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M03"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "r2.m03.interview.cancel"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/ReasonAction"
+              },
+              "objectRef": {
+                "properties": {
+                  "module": {
+                    "const": "M03"
+                  },
+                  "rootId": {
+                    "$ref": "#/$defs/Id"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Event": {
+      "type": "object",
+      "properties": {
+        "eventId": {
+          "$ref": "#/$defs/Uuid"
+        },
+        "schemaVersion": {
+          "const": 1
+        },
+        "tenantId": {
+          "$ref": "#/$defs/Id"
+        },
+        "producer": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "eventType": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "objectType": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "rootId": {
+          "$ref": "#/$defs/Id"
+        },
+        "versionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "entityRevision": {
+          "$ref": "#/$defs/Revision"
+        },
+        "workspaceRevision": {
+          "$ref": "#/$defs/Revision"
+        },
+        "sourceRevision": {
+          "$ref": "#/$defs/Revision"
+        },
+        "occurredAt": {
+          "$ref": "#/$defs/Instant"
+        },
+        "effectiveAt": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Instant"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "correlationId": {
+          "$ref": "#/$defs/Id"
+        },
+        "causationId": {
+          "$ref": "#/$defs/Id"
+        },
+        "digestAlgorithm": {
+          "const": "sha256-canonical-json-v1"
+        },
+        "digest": {
+          "$ref": "#/$defs/Digest"
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "sourceVersionRef": {
+              "$ref": "#/$defs/VersionRef"
+            },
+            "rawStatus": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            },
+            "purpose": {
+              "$ref": "#/$defs/Purpose"
+            },
+            "availability": {
+              "type": "string",
+              "enum": [
+                "active",
+                "disabled",
+                "withdrawn"
+              ]
+            },
+            "manifestDigest": {
+              "$ref": "#/$defs/Digest"
+            }
+          },
+          "required": [
+            "sourceVersionRef",
+            "rawStatus",
+            "purpose"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "eventId",
+        "schemaVersion",
+        "tenantId",
+        "producer",
+        "eventType",
+        "objectType",
+        "rootId",
+        "versionId",
+        "entityRevision",
+        "workspaceRevision",
+        "sourceRevision",
+        "occurredAt",
+        "effectiveAt",
+        "correlationId",
+        "causationId",
+        "digestAlgorithm",
+        "digest",
+        "payload"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "description": "P2 design only. Semantic guards and current authorization mandatory; no running API claim."
+}

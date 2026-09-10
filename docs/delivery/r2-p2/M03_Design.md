@@ -40,6 +40,8 @@ evaluationTemplateRoot/version冻结mode=vote|total_score|indicator_score三者�
 
 decimal精确比较最终分≥显式threshold，显示round到配置位数不影响判断，例如79.995显示80.00仍不满足80.000；等于80.000通过。提交后票/分不可原地覆盖，更正独立新evaluationVersion并保留原决定与参与集合。
 
+评分项可组成显式groupId/parentId树，根/组/叶分别有版本与聚合模式，无环、每个节点只一个父；按模板声明参与/排除集合逐层计算。加权模式每组先以该组参与子节点weight除该组权重和归一化，再聚合已完成子分；任一组缺必需分或权重和0即unknown向上传播，不能只在根把所有叶扁平平均。排除条件/转换版本必须已冻结，不能依据本次低分临时排除。跨评委仍按完成的应评评委最终分算术均值。模板name/org/basicInfo/evaluationTitle、通用评分项或资格指标引用与result visibility分别保存，模板管理不授结果读取。
+
 <a id="m03-spec-04"></a>
 ## 考察、转正、延期与退出
 
@@ -54,7 +56,9 @@ observationId绑定termId/appointmentDecisionId、startOn/dueOn、objectivesVers
 
 reportActivityRoot/version含purpose=periodic|observation、cycleId/start/end、termId/templateVersion；reportRecordRoot/version、materialManifest、reviewDecision和publication独立。唯一同term+purpose+activityCycle的报告根；换周期/任期新根，draft→submitted→independently_reviewed→published，return/withdraw/resubmit保留版本，历史来源不可篡改。
 
-archiveSubsetRecordId/type/version分别覆盖基础、任免履历、访谈、奖励、惩处、表彰和附件；每条occurredOn（未知可明确unknown）、recordedAt、source/evidence、approvalState、audiencePolicy；正文≤4000、说明/理由5–3000沿既有干部证据边界，来源未证上限标项目技术校验。补录是backfilled_fact、原批准未知保持unknown，不能伪造当时流程。奖励金额/发放只消费授权外部状态、币种/整数分及sourceRef，不生成支付。
+archiveSubsetRecordId/type/version分别覆盖基础、任免履历、访谈、奖励、惩处、表彰和附件；每条occurredOn（未知可明确unknown）、recordedAt、source/evidence、approvalState、audiencePolicy。新子集正文≤4000是项目技术边界，不能覆盖已有更窄字段规则；变更说明/理由5–3000沿既有干部证据边界。补录是backfilled_fact、原批准未知保持unknown，不能伪造当时流程。奖励金额/发放只消费授权外部状态、币种/整数分及sourceRef，不生成支付。
+
+访谈独立schema保留employeeId/interviewerId/type/role/date/location/content/evidence：content trim1–200，location≤200，evidence5–3000；type=任前访谈/见习前访谈/见习期访谈，role=汇报上级/隔级上级/HRBP/下属员工/业务关联方，文字是分类而非关系授权。双方当前组织范围都必须满足，interviewer不得等于subject，操作者不得维护本人访谈；不能未来日期，离职人员历史可由当前有权HR登记。更正身份键不可改，错选须作废后另登；旧record和字节保留，作废不改变任用审批。新显式敏感动作不能扩大为通用档案read可见。
 
 archiveRead/interviewRead/evaluationRead/nominate/review/appoint/export及敏感子集字段独立；同时核人员与岗位范围。委员会仅议程最小材料，访谈角色标签只是分类，不授M01关系权；本人仅明确开放述职/反馈，潜力、委员会讨论、原始访谈不默认公开。历史/附件下载当前授权，审计read不授原材料read。
 

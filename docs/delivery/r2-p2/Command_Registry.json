@@ -1,0 +1,617 @@
+{
+  "schemaVersion": 1,
+  "kind": "key_action_contracts_design_only",
+  "count": 76,
+  "commands": [
+    {
+      "action": "r2.m37.library.create",
+      "module": "M37",
+      "payloadSchema": "#/$defs/LibraryDraft",
+      "operation": "create",
+      "semanticDesignRef": "M37_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m37.indicator.create",
+      "module": "M37",
+      "payloadSchema": "#/$defs/IndicatorDraft",
+      "operation": "create",
+      "semanticDesignRef": "M37_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m37.standard.create",
+      "module": "M37",
+      "payloadSchema": "#/$defs/StandardDraft",
+      "operation": "create",
+      "semanticDesignRef": "M37_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m37.standard.edit",
+      "module": "M37",
+      "payloadSchema": "#/$defs/StandardDraft",
+      "operation": "update",
+      "semanticDesignRef": "M37_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m06.catalog.create",
+      "module": "M06",
+      "payloadSchema": "#/$defs/CatalogDraft",
+      "operation": "create",
+      "semanticDesignRef": "M06_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m06.catalog.edit",
+      "module": "M06",
+      "payloadSchema": "#/$defs/CatalogDraft",
+      "operation": "update",
+      "semanticDesignRef": "M06_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m06.standard.create",
+      "module": "M06",
+      "payloadSchema": "#/$defs/QualificationDraft",
+      "operation": "create",
+      "semanticDesignRef": "M06_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m06.application.submit",
+      "module": "M06",
+      "payloadSchema": "#/$defs/QualificationApplication",
+      "operation": "create",
+      "semanticDesignRef": "M06_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m26.questionnaire.create",
+      "module": "M26",
+      "payloadSchema": "#/$defs/QuestionnaireDraft",
+      "operation": "create",
+      "semanticDesignRef": "M26_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m26.project.create",
+      "module": "M26",
+      "payloadSchema": "#/$defs/FeedbackProject",
+      "operation": "create",
+      "semanticDesignRef": "M26_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m26.invite.revise",
+      "module": "M26",
+      "payloadSchema": "#/$defs/Invite",
+      "operation": "update",
+      "semanticDesignRef": "M26_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m26.response.submit",
+      "module": "M26",
+      "payloadSchema": "#/$defs/ResponseSubmit",
+      "operation": "update",
+      "semanticDesignRef": "M26_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m26.report.publish",
+      "module": "M26",
+      "payloadSchema": "#/$defs/ReportPublish",
+      "operation": "update",
+      "semanticDesignRef": "M26_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m18.project.create",
+      "module": "M18",
+      "payloadSchema": "#/$defs/ReviewProject",
+      "operation": "create",
+      "semanticDesignRef": "M18_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m18.project.save",
+      "module": "M18",
+      "payloadSchema": "#/$defs/ReviewProject",
+      "operation": "update",
+      "semanticDesignRef": "M18_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m18.grid.save",
+      "module": "M18",
+      "payloadSchema": "#/$defs/GridDefinition",
+      "operation": "update",
+      "semanticDesignRef": "M18_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m18.calibration.submit",
+      "module": "M18",
+      "payloadSchema": "#/$defs/Calibration",
+      "operation": "create",
+      "semanticDesignRef": "M18_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m17.pool.create",
+      "module": "M17",
+      "payloadSchema": "#/$defs/PoolDraft",
+      "operation": "create",
+      "semanticDesignRef": "M17_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m17.rule.publish",
+      "module": "M17",
+      "payloadSchema": "#/$defs/PoolRule",
+      "operation": "update",
+      "semanticDesignRef": "M17_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m17.membership.apply",
+      "module": "M17",
+      "payloadSchema": "#/$defs/Membership",
+      "operation": "create",
+      "semanticDesignRef": "M17_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m17.membership.reenter",
+      "module": "M17",
+      "payloadSchema": "#/$defs/Membership",
+      "operation": "create",
+      "semanticDesignRef": "M17_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m17.succession.nominate",
+      "module": "M17",
+      "payloadSchema": "#/$defs/Succession",
+      "operation": "create",
+      "semanticDesignRef": "M17_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m17.mentor.handoff",
+      "module": "M17",
+      "payloadSchema": "#/$defs/Mentor",
+      "operation": "update",
+      "semanticDesignRef": "M17_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m17.template.create",
+      "module": "M17",
+      "payloadSchema": "#/$defs/IdpTemplate",
+      "operation": "create",
+      "semanticDesignRef": "M17_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m17.idp.create",
+      "module": "M17",
+      "payloadSchema": "#/$defs/IdpPlan",
+      "operation": "create",
+      "semanticDesignRef": "M17_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m17.idp.taskAction",
+      "module": "M17",
+      "payloadSchema": "#/$defs/IdpTaskAction",
+      "operation": "update",
+      "semanticDesignRef": "M17_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m03.nomination.submit",
+      "module": "M03",
+      "payloadSchema": "#/$defs/Nomination",
+      "operation": "create",
+      "semanticDesignRef": "M03_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m03.appointment.reconcile",
+      "module": "M03",
+      "payloadSchema": "#/$defs/Appointment",
+      "operation": "update",
+      "semanticDesignRef": "M03_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m03.evaluation.create",
+      "module": "M03",
+      "payloadSchema": "#/$defs/EvaluationDraft",
+      "operation": "create",
+      "semanticDesignRef": "M03_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m03.evaluation.save",
+      "module": "M03",
+      "payloadSchema": "#/$defs/EvaluationDraft",
+      "operation": "update",
+      "semanticDesignRef": "M03_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m03.observation.action",
+      "module": "M03",
+      "payloadSchema": "#/$defs/ObservationAction",
+      "operation": "update",
+      "semanticDesignRef": "M03_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m03.interview.create",
+      "module": "M03",
+      "payloadSchema": "#/$defs/InterviewDraft",
+      "operation": "create",
+      "semanticDesignRef": "M03_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m03.interview.correct",
+      "module": "M03",
+      "payloadSchema": "#/$defs/InterviewDraft",
+      "operation": "update",
+      "semanticDesignRef": "M03_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m37.standard.submit",
+      "module": "M37",
+      "payloadSchema": "#/$defs/SubmitAction",
+      "operation": "update",
+      "semanticDesignRef": "M37_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m37.standard.review",
+      "module": "M37",
+      "payloadSchema": "#/$defs/ApprovalAction",
+      "operation": "update",
+      "semanticDesignRef": "M37_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m37.standard.publish",
+      "module": "M37",
+      "payloadSchema": "#/$defs/PublishAction",
+      "operation": "update",
+      "semanticDesignRef": "M37_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m37.standard.withdraw",
+      "module": "M37",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M37_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m06.standard.submit",
+      "module": "M06",
+      "payloadSchema": "#/$defs/SubmitAction",
+      "operation": "update",
+      "semanticDesignRef": "M06_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m06.standard.review",
+      "module": "M06",
+      "payloadSchema": "#/$defs/ApprovalAction",
+      "operation": "update",
+      "semanticDesignRef": "M06_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m06.standard.publish",
+      "module": "M06",
+      "payloadSchema": "#/$defs/PublishAction",
+      "operation": "update",
+      "semanticDesignRef": "M06_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m06.standard.withdraw",
+      "module": "M06",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M06_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m26.project.submit",
+      "module": "M26",
+      "payloadSchema": "#/$defs/SubmitAction",
+      "operation": "update",
+      "semanticDesignRef": "M26_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m26.project.review",
+      "module": "M26",
+      "payloadSchema": "#/$defs/ApprovalAction",
+      "operation": "update",
+      "semanticDesignRef": "M26_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m26.project.withdraw",
+      "module": "M26",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M26_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m18.result.submit",
+      "module": "M18",
+      "payloadSchema": "#/$defs/SubmitAction",
+      "operation": "update",
+      "semanticDesignRef": "M18_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m18.result.review",
+      "module": "M18",
+      "payloadSchema": "#/$defs/ApprovalAction",
+      "operation": "update",
+      "semanticDesignRef": "M18_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m18.result.publish",
+      "module": "M18",
+      "payloadSchema": "#/$defs/PublishAction",
+      "operation": "update",
+      "semanticDesignRef": "M18_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m18.result.withdraw",
+      "module": "M18",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M18_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m17.idp.submit",
+      "module": "M17",
+      "payloadSchema": "#/$defs/SubmitAction",
+      "operation": "update",
+      "semanticDesignRef": "M17_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m17.idp.review",
+      "module": "M17",
+      "payloadSchema": "#/$defs/ApprovalAction",
+      "operation": "update",
+      "semanticDesignRef": "M17_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m17.idp.withdraw",
+      "module": "M17",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M17_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m03.report.submit",
+      "module": "M03",
+      "payloadSchema": "#/$defs/SubmitAction",
+      "operation": "update",
+      "semanticDesignRef": "M03_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m03.report.review",
+      "module": "M03",
+      "payloadSchema": "#/$defs/ApprovalAction",
+      "operation": "update",
+      "semanticDesignRef": "M03_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m03.report.publish",
+      "module": "M03",
+      "payloadSchema": "#/$defs/PublishAction",
+      "operation": "update",
+      "semanticDesignRef": "M03_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m03.report.withdraw",
+      "module": "M03",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M03_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m37.availability.change",
+      "module": "M37",
+      "payloadSchema": "#/$defs/AvailabilityAction",
+      "operation": "update",
+      "semanticDesignRef": "M37_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m06.availability.change",
+      "module": "M06",
+      "payloadSchema": "#/$defs/AvailabilityAction",
+      "operation": "update",
+      "semanticDesignRef": "M06_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m06.certification.revoke",
+      "module": "M06",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M06_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m26.project.open",
+      "module": "M26",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M26_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m26.project.close",
+      "module": "M26",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M26_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m26.project.reopen",
+      "module": "M26",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M26_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m26.response.withdraw",
+      "module": "M26",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M26_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m26.report.withdraw",
+      "module": "M26",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M26_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m18.project.start",
+      "module": "M18",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M18_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m18.project.close",
+      "module": "M18",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M18_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m18.project.reopen",
+      "module": "M18",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M18_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m18.result.withdrawPublication",
+      "module": "M18",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M18_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m17.membership.exit",
+      "module": "M17",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M17_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m17.succession.close",
+      "module": "M17",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M17_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m17.idp.start",
+      "module": "M17",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M17_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m17.idp.extend",
+      "module": "M17",
+      "payloadSchema": "#/$defs/DateChange",
+      "operation": "update",
+      "semanticDesignRef": "M17_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m17.idp.pause",
+      "module": "M17",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M17_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m17.idp.resume",
+      "module": "M17",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M17_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m17.idp.terminate",
+      "module": "M17",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M17_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m03.term.change",
+      "module": "M03",
+      "payloadSchema": "#/$defs/TermChange",
+      "operation": "update",
+      "semanticDesignRef": "M03_Design.md#engineering",
+      "implementationStatus": "design_only"
+    },
+    {
+      "action": "r2.m03.interview.cancel",
+      "module": "M03",
+      "payloadSchema": "#/$defs/ReasonAction",
+      "operation": "update",
+      "semanticDesignRef": "M03_Design.md#engineering",
+      "implementationStatus": "design_only"
+    }
+  ],
+  "querySchema": "#/$defs/ReportQuery",
+  "unregisteredActions": "P3 must register an equally strict payload before exposure; no generic arbitrary command passthrough"
+}
