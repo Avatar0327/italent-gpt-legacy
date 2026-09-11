@@ -1,0 +1,57 @@
+{
+  "id": "R3-RECOVERY-20260911-002",
+  "at": "2026-09-11T00:20:01Z",
+  "starting_head": "a8b88f08df6d245d7cd20a90fd47f2682f47cae2",
+  "user_request": "延长超时等待，并再次尝试",
+  "timeouts": {
+    "locator_ms": 60000,
+    "readonly_ms": 60000,
+    "outer_task_ms": 90000,
+    "protocol_timeout_changed": false
+  },
+  "health": {
+    "action": "方案名称筛选",
+    "result": "VISIBLE_MENU_CONFIRMED",
+    "call_elapsed_ms": 301,
+    "initial_readback": "首次读取未捕获菜单，不据此判失败",
+    "later_readback": "截图确认筛选菜单已展开",
+    "cause": "恢复与延长等待同时发生，不证明超时参数是根因或唯一修复"
+  },
+  "followup": {
+    "disabled_view": {
+      "total": 9,
+      "rendered_data_rows": 9,
+      "exact_PLAN01_matches": 0
+    },
+    "enabled_view_after_return": {
+      "total": 8,
+      "rendered_data_rows": 8,
+      "exact_PLAN01_matches": 0
+    },
+    "matching_method": "按完整名称逐行比较两个公开视图的全部可见记录；未使用隐藏接口",
+    "scope": "当前管理员可见的启用/停用发薪方案",
+    "conclusion": "两种公开状态视图均未见PLAN01，草稿取消查重闭合；不扩展为其他权限或后台回收站断言"
+  },
+  "locator_error": {
+    "type": "STRICT_MODE_MULTIPLE_MATCHES",
+    "reason": "停用视图菜单存在两个重叠DOM项",
+    "resolution": "只读elementFromPoint确认第二项为最上层，再使用语义定位点击；不是超时/业务缺陷"
+  },
+  "blocker_005": {
+    "status": "RESOLVED_CURRENT_R3_M07_CONTROL",
+    "other_r3_pages": "NOT_RETESTED_THIS_INCREMENT",
+    "no_global_health_claim": true
+  },
+  "UA004": "RESOLVED_VISIBLE_STATUS_SCOPE",
+  "business_observations": 53,
+  "major": 13,
+  "minor": 3,
+  "new_saved_objects": 0,
+  "confirmed_saved_objects": 29,
+  "p2_start_allowed": false,
+  "next": "继续原站验证；后续点击/输入使用60000ms，外层90000ms，独立回读实际状态；其余模块首次操作重识别标签并检查。",
+  "restart": false,
+  "refresh": false,
+  "shared_permissions_changed": false,
+  "save_or_compute_or_send": false
+}

@@ -167,7 +167,7 @@
   "p3_entered": false,
   "p4_approved": false,
   "deployed": false,
-  "minimum_manual_action": "平台维护者修复当前浏览器自动控制输入通道；人工取消已完成，无需重复取消或重新授权。恢复后一次无副作用检查，再完成PLAN01全状态精确查重。",
+  "minimum_manual_action": "当前输入恢复无需人工动作；001人员/通知及002角色仍待继续合法UI核查，尚未穷尽路径，不提前要求新账号或通知权限",
   "new_access_authorization_needed": false,
   "recovery_addendum": {
     "at": "2026-09-10T16:14:15.724321+00:00",
@@ -260,15 +260,74 @@
       },
       "minimum_external_action": "平台维护者修复当前浏览器自动控制输入通道；人工取消已完成，无需重复取消或重新授权。恢复后一次无副作用检查，再完成PLAN01全状态精确查重。",
       "p2_start_allowed": false
+    },
+    {
+      "id": "R3-RECOVERY-20260911-002",
+      "at": "2026-09-11T00:20:01Z",
+      "starting_head": "a8b88f08df6d245d7cd20a90fd47f2682f47cae2",
+      "user_request": "延长超时等待，并再次尝试",
+      "timeouts": {
+        "locator_ms": 60000,
+        "readonly_ms": 60000,
+        "outer_task_ms": 90000,
+        "protocol_timeout_changed": false
+      },
+      "health": {
+        "action": "方案名称筛选",
+        "result": "VISIBLE_MENU_CONFIRMED",
+        "call_elapsed_ms": 301,
+        "initial_readback": "首次读取未捕获菜单，不据此判失败",
+        "later_readback": "截图确认筛选菜单已展开",
+        "cause": "恢复与延长等待同时发生，不证明超时参数是根因或唯一修复"
+      },
+      "followup": {
+        "disabled_view": {
+          "total": 9,
+          "rendered_data_rows": 9,
+          "exact_PLAN01_matches": 0
+        },
+        "enabled_view_after_return": {
+          "total": 8,
+          "rendered_data_rows": 8,
+          "exact_PLAN01_matches": 0
+        },
+        "matching_method": "按完整名称逐行比较两个公开视图的全部可见记录；未使用隐藏接口",
+        "scope": "当前管理员可见的启用/停用发薪方案",
+        "conclusion": "两种公开状态视图均未见PLAN01，草稿取消查重闭合；不扩展为其他权限或后台回收站断言"
+      },
+      "locator_error": {
+        "type": "STRICT_MODE_MULTIPLE_MATCHES",
+        "reason": "停用视图菜单存在两个重叠DOM项",
+        "resolution": "只读elementFromPoint确认第二项为最上层，再使用语义定位点击；不是超时/业务缺陷"
+      },
+      "blocker_005": {
+        "status": "RESOLVED_CURRENT_R3_M07_CONTROL",
+        "other_r3_pages": "NOT_RETESTED_THIS_INCREMENT",
+        "no_global_health_claim": true
+      },
+      "UA004": "RESOLVED_VISIBLE_STATUS_SCOPE",
+      "business_observations": 53,
+      "major": 13,
+      "minor": 3,
+      "new_saved_objects": 0,
+      "confirmed_saved_objects": 29,
+      "p2_start_allowed": false,
+      "next": "继续原站验证；后续点击/输入使用60000ms，外层90000ms，独立回读实际状态；其余模块首次操作重识别标签并检查。",
+      "restart": false,
+      "refresh": false,
+      "shared_permissions_changed": false,
+      "save_or_compute_or_send": false
     }
   ],
   "latest_operational_status": {
-    "at": "2026-09-11T00:10:45Z",
+    "at": "2026-09-11T00:20:01Z",
     "verdict": "NOT_PASSED",
     "active_payroll_drafts": 0,
-    "plan01_all_status_dedup_pending": true,
-    "blocker_005": "ENV_BLOCKED_INPUT_TIMEOUT",
+    "plan01_all_status_dedup_pending": false,
+    "plan01_dedup_scope": "当前管理员可见的启用/停用发薪方案",
+    "blocker_005": "RESOLVED_CURRENT_R3_M07_CONTROL",
+    "remaining_unresolved_actions": 3,
     "first_packs": "0/5",
-    "note": "报告主体仍评估272cdaf固定内容；本增量不改写历史评估，当前状态以本节及恢复记录为准。"
+    "note": "历史报告主体评估固定内容不变；当前操作状态由本节覆盖，005仅当前M07控制恢复，其余页待逐页检查"
   }
 }

@@ -1,6 +1,6 @@
 {
   "run_id": "R3-ORIGIN-20260910-103900",
-  "recorded_at": "2026-09-11T00:10:45Z",
+  "recorded_at": "2026-09-11T00:20:01Z",
   "rows": [
     {
       "id": "R3-UA-001",
@@ -33,10 +33,12 @@
       "id": "R3-UA-004",
       "module": "M07",
       "object": "PLAN01草稿",
-      "state": "CANCEL_EXIT_CONFIRMED_ALL_STATUS_DEDUP_PENDING",
-      "known": "用户报告取消；独立回读发薪方案列表、草稿iframe隐藏；当前启用列表8条无PLAN01；助手未提交保存",
-      "unknown": "全状态完整名称查重尚未执行；不是取消结果仍未知",
-      "next": "输入通道恢复后仅查重；不重复取消、不重复新建"
+      "state": "RESOLVED_VISIBLE_STATUS_SCOPE",
+      "known": "人工取消退出已回读；当前管理员可见启用8条、停用9条全量记录均无PLAN01完整名匹配；未提交保存",
+      "unknown": "无本条待确认动作；不代表其他权限/后台回收站核验",
+      "next": "不重复取消；后续新建前按完整名查重",
+      "resolved_at": "2026-09-11T00:20:01Z",
+      "evidence_id": "R3-RECOVERY-20260911-002"
     }
   ]
 }

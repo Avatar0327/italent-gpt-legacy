@@ -676,7 +676,7 @@
   "payments": 0,
   "declarations": 0,
   "checkpoint_at": "2026-09-10T16:14:15.724321+00:00",
-  "workflow_status": "ENV_BLOCKED_005_INPUT_TIMEOUT; OWNER_HOLD_before_R3_P2",
+  "workflow_status": "R3_CONTROL_RECOVERED_M07; ORIGIN_VALIDATION_INCOMPLETE; OWNER_HOLD_before_R3_P2",
   "execution_blockers": [
     {
       "id": "R3-EXEC-BLOCK-001",
@@ -727,102 +727,73 @@
     },
     {
       "id": "R3-EXEC-BLOCK-005",
-      "status": "ENV_BLOCKED_INPUT_TIMEOUT",
+      "status": "RESOLVED_CURRENT_R3_M07_CONTROL",
       "scope": "当前所选浏览器的交互输入；M07/M27/M16三张R3独立页面均出现输入超时，读取仍可用",
       "observed": "M07草稿取消：首次get tabs超时，回读仍可见后一次受控重试Runtime.evaluate超时；M27自有课程编辑及M16分布规则点击均超时；M16新截图确认按钮可见无遮挡，同一浏览器支持的CUA点击亦Input.dispatchMouseEvent超时。",
-      "action_readback": "2026-09-11用户报告取消；独立回读发薪方案列表，原草稿iframe rects=0/zIndex=-10000。启用列表8条无PLAN01；全状态查重未完成。",
+      "action_readback": "PLAN01人工取消已回读；启用8条/停用9条全部记录无完整名匹配",
       "not_observed": "未出现自动审批新拒绝、登录失效、真实串页、数据丢失或站点反自动化提示，不据超时推定这些故障。",
       "owner_role": "云浏览器运行环境维护者/人工接管诊断（未确认承担）",
-      "resume_condition": "平台维护者修复当前浏览器自动控制输入通道；人工取消已完成，无需重复取消或重新授权。恢复后一次无副作用检查，再完成PLAN01全状态精确查重。",
-      "manual_handoff_next": "人工取消已完成并回读，不重复取消；需要自动输入通道恢复。",
+      "resume_condition": "当前无需人工动作；继续各模块时逐页核对，不宣称所有页面已恢复",
+      "manual_handoff_next": "不再要求人工取消、重启或重新授权",
       "recorded_at": "2026-09-10T15:05:13.928972+00:00",
       "latest_check": {
-        "id": "R3-RECOVERY-20260911-001",
-        "at": "2026-09-11T00:10:45Z",
-        "starting_head": "43491b5e06278e430e1797da686880baa65d9ff6",
-        "user_report": "已取消，回到方案列表",
-        "origin": "https://srworkshopbj.italent.cn",
-        "login": "何份晓",
-        "tabs_readonly": [
-          {
-            "id": "6",
-            "title": "员工",
-            "ownership": "previous_R3"
-          },
-          {
-            "id": "10",
-            "title": "班次",
-            "ownership": "previous_R3"
-          },
-          {
-            "id": "11",
-            "title": "发薪方案",
-            "ownership": "R3_confirmed_list_and_prior_frame"
-          },
-          {
-            "id": "23",
-            "title": "人才池",
-            "ownership": "unconfirmed_not_touched"
-          }
-        ],
-        "missing_previous_tabs": [
-          "5",
-          "8",
-          "9",
-          "20"
-        ],
-        "missing_cause": "UNKNOWN; 本轮未关闭任何标签，不能归因并发",
-        "draft_exit": {
-          "user_cancel_reported": true,
-          "independent_list_readback": true,
-          "frame_id": "popup_17890497031131810",
-          "rect_count": 0,
-          "z_index": "-10000",
-          "agent_cancel_clicked": false,
-          "interpretation": "人工报告取消＋独立回读退出结果；不是自动取消按钮成功，也不是环境丢弃"
-        },
-        "duplicate_check": {
-          "exact_name": "ZZ_R3_R3-ORIGIN-20260910-103900_M07_PLAN01",
-          "visible_scope": "启用的发薪方案",
-          "visible_total": 8,
-          "exact_matches": 0,
-          "all_status_search_completed": false,
-          "conclusion": "当前启用列表未见；全状态精确查询未完成，不声称全库无保存对象"
+        "id": "R3-RECOVERY-20260911-002",
+        "at": "2026-09-11T00:20:01Z",
+        "starting_head": "a8b88f08df6d245d7cd20a90fd47f2682f47cae2",
+        "user_request": "延长超时等待，并再次尝试",
+        "timeouts": {
+          "locator_ms": 60000,
+          "readonly_ms": 60000,
+          "outer_task_ms": 90000,
+          "protocol_timeout_changed": false
         },
         "health": {
-          "action": "仅一次点击可见方案名称筛选入口",
-          "side_effect": "只读查询入口，无保存/核算/发送",
-          "attempts": 1,
-          "success": false,
-          "error": "Timed out after 3000ms waiting for selector internal:text=\"方案名称\"s >> nth=0: Runtime.evaluate timed out.",
-          "locator": {
-            "match_count": 1,
-            "visible_count": 1,
-            "disabled": false
+          "action": "方案名称筛选",
+          "result": "VISIBLE_MENU_CONFIRMED",
+          "call_elapsed_ms": 301,
+          "initial_readback": "首次读取未捕获菜单，不据此判失败",
+          "later_readback": "截图确认筛选菜单已展开",
+          "cause": "恢复与延长等待同时发生，不证明超时参数是根因或唯一修复"
+        },
+        "followup": {
+          "disabled_view": {
+            "total": 9,
+            "rendered_data_rows": 9,
+            "exact_PLAN01_matches": 0
           },
-          "after": "仍发薪方案列表，草稿隐藏；未输入查询值或执行全状态精确查询"
+          "enabled_view_after_return": {
+            "total": 8,
+            "rendered_data_rows": 8,
+            "exact_PLAN01_matches": 0
+          },
+          "matching_method": "按完整名称逐行比较两个公开视图的全部可见记录；未使用隐藏接口",
+          "scope": "当前管理员可见的启用/停用发薪方案",
+          "conclusion": "两种公开状态视图均未见PLAN01，草稿取消查重闭合；不扩展为其他权限或后台回收站断言"
         },
-        "blocker_005": "ENV_BLOCKED_INPUT_TIMEOUT",
-        "new_objects": 0,
+        "locator_error": {
+          "type": "STRICT_MODE_MULTIPLE_MATCHES",
+          "reason": "停用视图菜单存在两个重叠DOM项",
+          "resolution": "只读elementFromPoint确认第二项为最上层，再使用语义定位点击；不是超时/业务缺陷"
+        },
+        "blocker_005": {
+          "status": "RESOLVED_CURRENT_R3_M07_CONTROL",
+          "other_r3_pages": "NOT_RETESTED_THIS_INCREMENT",
+          "no_global_health_claim": true
+        },
+        "UA004": "RESOLVED_VISIBLE_STATUS_SCOPE",
+        "business_observations": 53,
+        "major": 13,
+        "minor": 3,
+        "new_saved_objects": 0,
         "confirmed_saved_objects": 29,
-        "original_27_reverified_this_turn": false,
-        "observation_count": 53,
-        "difference_major": 13,
-        "difference_minor": 3,
-        "new_business_differences": 0,
-        "complete_first_packs": 0,
-        "unsafe_actions": {
-          "save": false,
-          "compute": false,
-          "send": false,
-          "restart": false,
-          "refresh": false,
-          "other_tabs_modified": false
-        },
-        "minimum_external_action": "平台维护者修复当前浏览器自动控制输入通道；人工取消已完成，无需重复取消或重新授权。恢复后一次无副作用检查，再完成PLAN01全状态精确查重。",
-        "p2_start_allowed": false
+        "p2_start_allowed": false,
+        "next": "继续原站验证；后续点击/输入使用60000ms，外层90000ms，独立回读实际状态；其余模块首次操作重识别标签并检查。",
+        "restart": false,
+        "refresh": false,
+        "shared_permissions_changed": false,
+        "save_or_compute_or_send": false
       },
-      "current_error": "Timed out after 3000ms waiting for selector internal:text=\"方案名称\"s >> nth=0: Runtime.evaluate timed out.",
+      "current_error": null,
       "manual_recovery_result": {
         "at": "2026-09-10T16:14:15.724321+00:00",
         "source": "用户当前反馈",
@@ -835,7 +806,9 @@
         "latest_report_at": "2026-09-11T00:10:45Z",
         "cancel_exit_readback": true,
         "automatic_input_recovered": false
-      }
+      },
+      "resolved_at": "2026-09-11T00:20:01Z",
+      "resolution": "延长公开locator/读取等待至60000ms、外层90000ms后，筛选展开截图及启用/停用视图切换独立回读均成功；不归因超时参数为唯一原因"
     }
   ],
   "synthetic_input_files": [
@@ -1081,11 +1054,26 @@
         "pay_cycle": "月，当前草稿输入及可见标签独立回读确认",
         "tax_service": "否，正式radio图标点击后独立DOM回读：是未选、否已选；仅草稿，未保存"
       },
-      "next_action": "勿再次取消或重建；输入恢复后进行PLAN01全状态完整名称查重，再查R3组适用资格。",
+      "next_action": "复用原薪资组继续检查适用资格；如之后创建方案，仍须创建前按完整名查重",
       "cancel_confirmed": true,
-      "status": "CANCELLED_BY_USER_EXIT_READBACK_ALL_STATUS_DEDUP_PENDING",
+      "status": "CANCELLED_DUPLICATE_CHECK_COMPLETE_VISIBLE_STATUS_SCOPE",
       "cancel_confirmation_basis": "用户报告已取消＋独立回读列表/弹窗隐藏；非自动点击成功",
-      "active": false
+      "active": false,
+      "duplicate_check": {
+        "disabled_view": {
+          "total": 9,
+          "rendered_data_rows": 9,
+          "exact_PLAN01_matches": 0
+        },
+        "enabled_view_after_return": {
+          "total": 8,
+          "rendered_data_rows": 8,
+          "exact_PLAN01_matches": 0
+        },
+        "matching_method": "按完整名称逐行比较两个公开视图的全部可见记录；未使用隐藏接口",
+        "scope": "当前管理员可见的启用/停用发薪方案",
+        "conclusion": "两种公开状态视图均未见PLAN01，草稿取消查重闭合；不扩展为其他权限或后台回收站断言"
+      }
     }
   ],
   "owner_phase_gate": {
@@ -1124,89 +1112,205 @@
     "other_windows_touched": false
   },
   "latest_recovery": {
-    "id": "R3-RECOVERY-20260911-001",
-    "at": "2026-09-11T00:10:45Z",
-    "starting_head": "43491b5e06278e430e1797da686880baa65d9ff6",
-    "user_report": "已取消，回到方案列表",
-    "origin": "https://srworkshopbj.italent.cn",
-    "login": "何份晓",
-    "tabs_readonly": [
-      {
-        "id": "6",
-        "title": "员工",
-        "ownership": "previous_R3"
-      },
-      {
-        "id": "10",
-        "title": "班次",
-        "ownership": "previous_R3"
-      },
-      {
-        "id": "11",
-        "title": "发薪方案",
-        "ownership": "R3_confirmed_list_and_prior_frame"
-      },
-      {
-        "id": "23",
-        "title": "人才池",
-        "ownership": "unconfirmed_not_touched"
-      }
-    ],
-    "missing_previous_tabs": [
-      "5",
-      "8",
-      "9",
-      "20"
-    ],
-    "missing_cause": "UNKNOWN; 本轮未关闭任何标签，不能归因并发",
-    "draft_exit": {
-      "user_cancel_reported": true,
-      "independent_list_readback": true,
-      "frame_id": "popup_17890497031131810",
-      "rect_count": 0,
-      "z_index": "-10000",
-      "agent_cancel_clicked": false,
-      "interpretation": "人工报告取消＋独立回读退出结果；不是自动取消按钮成功，也不是环境丢弃"
-    },
-    "duplicate_check": {
-      "exact_name": "ZZ_R3_R3-ORIGIN-20260910-103900_M07_PLAN01",
-      "visible_scope": "启用的发薪方案",
-      "visible_total": 8,
-      "exact_matches": 0,
-      "all_status_search_completed": false,
-      "conclusion": "当前启用列表未见；全状态精确查询未完成，不声称全库无保存对象"
+    "id": "R3-RECOVERY-20260911-002",
+    "at": "2026-09-11T00:20:01Z",
+    "starting_head": "a8b88f08df6d245d7cd20a90fd47f2682f47cae2",
+    "user_request": "延长超时等待，并再次尝试",
+    "timeouts": {
+      "locator_ms": 60000,
+      "readonly_ms": 60000,
+      "outer_task_ms": 90000,
+      "protocol_timeout_changed": false
     },
     "health": {
-      "action": "仅一次点击可见方案名称筛选入口",
-      "side_effect": "只读查询入口，无保存/核算/发送",
-      "attempts": 1,
-      "success": false,
-      "error": "Timed out after 3000ms waiting for selector internal:text=\"方案名称\"s >> nth=0: Runtime.evaluate timed out.",
-      "locator": {
-        "match_count": 1,
-        "visible_count": 1,
-        "disabled": false
-      },
-      "after": "仍发薪方案列表，草稿隐藏；未输入查询值或执行全状态精确查询"
+      "action": "方案名称筛选",
+      "result": "VISIBLE_MENU_CONFIRMED",
+      "call_elapsed_ms": 301,
+      "initial_readback": "首次读取未捕获菜单，不据此判失败",
+      "later_readback": "截图确认筛选菜单已展开",
+      "cause": "恢复与延长等待同时发生，不证明超时参数是根因或唯一修复"
     },
-    "blocker_005": "ENV_BLOCKED_INPUT_TIMEOUT",
-    "new_objects": 0,
+    "followup": {
+      "disabled_view": {
+        "total": 9,
+        "rendered_data_rows": 9,
+        "exact_PLAN01_matches": 0
+      },
+      "enabled_view_after_return": {
+        "total": 8,
+        "rendered_data_rows": 8,
+        "exact_PLAN01_matches": 0
+      },
+      "matching_method": "按完整名称逐行比较两个公开视图的全部可见记录；未使用隐藏接口",
+      "scope": "当前管理员可见的启用/停用发薪方案",
+      "conclusion": "两种公开状态视图均未见PLAN01，草稿取消查重闭合；不扩展为其他权限或后台回收站断言"
+    },
+    "locator_error": {
+      "type": "STRICT_MODE_MULTIPLE_MATCHES",
+      "reason": "停用视图菜单存在两个重叠DOM项",
+      "resolution": "只读elementFromPoint确认第二项为最上层，再使用语义定位点击；不是超时/业务缺陷"
+    },
+    "blocker_005": {
+      "status": "RESOLVED_CURRENT_R3_M07_CONTROL",
+      "other_r3_pages": "NOT_RETESTED_THIS_INCREMENT",
+      "no_global_health_claim": true
+    },
+    "UA004": "RESOLVED_VISIBLE_STATUS_SCOPE",
+    "business_observations": 53,
+    "major": 13,
+    "minor": 3,
+    "new_saved_objects": 0,
     "confirmed_saved_objects": 29,
-    "original_27_reverified_this_turn": false,
-    "observation_count": 53,
-    "difference_major": 13,
-    "difference_minor": 3,
-    "new_business_differences": 0,
-    "complete_first_packs": 0,
-    "unsafe_actions": {
-      "save": false,
-      "compute": false,
-      "send": false,
+    "p2_start_allowed": false,
+    "next": "继续原站验证；后续点击/输入使用60000ms，外层90000ms，独立回读实际状态；其余模块首次操作重识别标签并检查。",
+    "restart": false,
+    "refresh": false,
+    "shared_permissions_changed": false,
+    "save_or_compute_or_send": false
+  },
+  "recovery_history": [
+    {
+      "id": "R3-RECOVERY-20260911-001",
+      "at": "2026-09-11T00:10:45Z",
+      "starting_head": "43491b5e06278e430e1797da686880baa65d9ff6",
+      "user_report": "已取消，回到方案列表",
+      "origin": "https://srworkshopbj.italent.cn",
+      "login": "何份晓",
+      "tabs_readonly": [
+        {
+          "id": "6",
+          "title": "员工",
+          "ownership": "previous_R3"
+        },
+        {
+          "id": "10",
+          "title": "班次",
+          "ownership": "previous_R3"
+        },
+        {
+          "id": "11",
+          "title": "发薪方案",
+          "ownership": "R3_confirmed_list_and_prior_frame"
+        },
+        {
+          "id": "23",
+          "title": "人才池",
+          "ownership": "unconfirmed_not_touched"
+        }
+      ],
+      "missing_previous_tabs": [
+        "5",
+        "8",
+        "9",
+        "20"
+      ],
+      "missing_cause": "UNKNOWN; 本轮未关闭任何标签，不能归因并发",
+      "draft_exit": {
+        "user_cancel_reported": true,
+        "independent_list_readback": true,
+        "frame_id": "popup_17890497031131810",
+        "rect_count": 0,
+        "z_index": "-10000",
+        "agent_cancel_clicked": false,
+        "interpretation": "人工报告取消＋独立回读退出结果；不是自动取消按钮成功，也不是环境丢弃"
+      },
+      "duplicate_check": {
+        "exact_name": "ZZ_R3_R3-ORIGIN-20260910-103900_M07_PLAN01",
+        "visible_scope": "启用的发薪方案",
+        "visible_total": 8,
+        "exact_matches": 0,
+        "all_status_search_completed": false,
+        "conclusion": "当前启用列表未见；全状态精确查询未完成，不声称全库无保存对象"
+      },
+      "health": {
+        "action": "仅一次点击可见方案名称筛选入口",
+        "side_effect": "只读查询入口，无保存/核算/发送",
+        "attempts": 1,
+        "success": false,
+        "error": "Timed out after 3000ms waiting for selector internal:text=\"方案名称\"s >> nth=0: Runtime.evaluate timed out.",
+        "locator": {
+          "match_count": 1,
+          "visible_count": 1,
+          "disabled": false
+        },
+        "after": "仍发薪方案列表，草稿隐藏；未输入查询值或执行全状态精确查询"
+      },
+      "blocker_005": "ENV_BLOCKED_INPUT_TIMEOUT",
+      "new_objects": 0,
+      "confirmed_saved_objects": 29,
+      "original_27_reverified_this_turn": false,
+      "observation_count": 53,
+      "difference_major": 13,
+      "difference_minor": 3,
+      "new_business_differences": 0,
+      "complete_first_packs": 0,
+      "unsafe_actions": {
+        "save": false,
+        "compute": false,
+        "send": false,
+        "restart": false,
+        "refresh": false,
+        "other_tabs_modified": false
+      },
+      "minimum_external_action": "平台维护者修复当前浏览器自动控制输入通道；人工取消已完成，无需重复取消或重新授权。恢复后一次无副作用检查，再完成PLAN01全状态精确查重。",
+      "p2_start_allowed": false
+    },
+    {
+      "id": "R3-RECOVERY-20260911-002",
+      "at": "2026-09-11T00:20:01Z",
+      "starting_head": "a8b88f08df6d245d7cd20a90fd47f2682f47cae2",
+      "user_request": "延长超时等待，并再次尝试",
+      "timeouts": {
+        "locator_ms": 60000,
+        "readonly_ms": 60000,
+        "outer_task_ms": 90000,
+        "protocol_timeout_changed": false
+      },
+      "health": {
+        "action": "方案名称筛选",
+        "result": "VISIBLE_MENU_CONFIRMED",
+        "call_elapsed_ms": 301,
+        "initial_readback": "首次读取未捕获菜单，不据此判失败",
+        "later_readback": "截图确认筛选菜单已展开",
+        "cause": "恢复与延长等待同时发生，不证明超时参数是根因或唯一修复"
+      },
+      "followup": {
+        "disabled_view": {
+          "total": 9,
+          "rendered_data_rows": 9,
+          "exact_PLAN01_matches": 0
+        },
+        "enabled_view_after_return": {
+          "total": 8,
+          "rendered_data_rows": 8,
+          "exact_PLAN01_matches": 0
+        },
+        "matching_method": "按完整名称逐行比较两个公开视图的全部可见记录；未使用隐藏接口",
+        "scope": "当前管理员可见的启用/停用发薪方案",
+        "conclusion": "两种公开状态视图均未见PLAN01，草稿取消查重闭合；不扩展为其他权限或后台回收站断言"
+      },
+      "locator_error": {
+        "type": "STRICT_MODE_MULTIPLE_MATCHES",
+        "reason": "停用视图菜单存在两个重叠DOM项",
+        "resolution": "只读elementFromPoint确认第二项为最上层，再使用语义定位点击；不是超时/业务缺陷"
+      },
+      "blocker_005": {
+        "status": "RESOLVED_CURRENT_R3_M07_CONTROL",
+        "other_r3_pages": "NOT_RETESTED_THIS_INCREMENT",
+        "no_global_health_claim": true
+      },
+      "UA004": "RESOLVED_VISIBLE_STATUS_SCOPE",
+      "business_observations": 53,
+      "major": 13,
+      "minor": 3,
+      "new_saved_objects": 0,
+      "confirmed_saved_objects": 29,
+      "p2_start_allowed": false,
+      "next": "继续原站验证；后续点击/输入使用60000ms，外层90000ms，独立回读实际状态；其余模块首次操作重识别标签并检查。",
       "restart": false,
       "refresh": false,
-      "other_tabs_modified": false
-    },
-    "minimum_external_action": "平台维护者修复当前浏览器自动控制输入通道；人工取消已完成，无需重复取消或重新授权。恢复后一次无副作用检查，再完成PLAN01全状态精确查重。",
-    "p2_start_allowed": false
-  }
+      "shared_permissions_changed": false,
+      "save_or_compute_or_send": false
+    }
+  ]
 }
