@@ -5850,6 +5850,263 @@
       ],
       "time": "2026-09-11T05:41:51.701027+00:00",
       "title": "组织跨父重名与恢复"
+    },
+    {
+      "actualResult": "新兼职1e462457与原0eb54fe9同人/同ORG003/职位空/同9月11日起止，独立查询两条均任职中/生效。P2要求同类型同目标无重叠；P3按positionId保护，原站空职位目标无直接等价映射，需目标口径决策，未判实现缺陷。",
+      "caseId": "M01-PARTTIME-OVERLAP-005",
+      "classification": "NEED_OWNER_DECISION",
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_PreSave.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_Rows.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_Detail.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "date": "2026-09-11",
+        "scope": "本RUN完整姓名"
+      },
+      "module": "M01",
+      "p3": {
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "path": "lib/hris/r1-m01.ts",
+        "testPath": "tests/r1-p3-m01.test.mjs",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-03"
+        ],
+        "staticFinding": "assignmentExecute对同person同type同positionId且闭区间重叠拒绝；源空职位/同org不直接等价，未运行P3",
+        "runtimeVerifiedByThisWindow": false
+      },
+      "page": "兼职管理→新增兼职→EMP005新记录",
+      "pageState": "fresh_readback",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "recordIds": [
+        "1e462457-ae89-4894-87e8-7083e6fc5229",
+        "0eb54fe9-01ea-4fdb-b5e7-75754a308119",
+        "53a88828-60d7-42e4-b508-974ff96708a2"
+      ],
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "F-SPEC-05",
+        "BP-F-REQ-06",
+        "BP-F-REQ-13"
+      ],
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未采新截图；结构化正文及UUID证据。",
+      "severity": "Observation",
+      "steps": [
+        "正式页面操作及本轮对象核定",
+        "独立回读条件与结果",
+        "结构化取证"
+      ],
+      "threeWayConclusion": "局部原站边界；批准规则不变，P3仅静态映射，尚未判三方完整一致。",
+      "time": "2026-09-11T05:49:53.633156+00:00",
+      "timePrecision": "browser_observed",
+      "title": "同人同组织空职位兼职同日重叠",
+      "ledgerId": "OBS-09"
+    },
+    {
+      "actualResult": "固定六姓名返回10任职/6人，两条相同维度兼职分别成行；当前有效8行含1离职结束，当前在职主职5+兼职2。无日期筛选，不称时点。",
+      "caseId": "M32-SIX-EMP-HISTORY",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_All_Assignments.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "scope": "本RUN原记录，具体字段见结构化证据"
+      },
+      "module": "M32",
+      "p3": {
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "path": "lib/hris/r1-report-m01-producer.ts",
+        "additionalPath": "lib/hris/r1-temporal.ts",
+        "task": "P3-R1-06/07",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "evidenceMode": "静态源码对照，未运行产品测试/UI"
+      },
+      "page": "六人员全历史含双兼职",
+      "pageState": "independent_readback",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "recordIds": [],
+      "repeatability": "可按记录ID只读重现；写入不可无条件重放",
+      "requirements": [
+        "M32-SPEC-01",
+        "M32-SPEC-04"
+      ],
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "severity": "Observation",
+      "steps": [
+        "正式入口限定本轮数据",
+        "操作后独立读取实际字段和状态",
+        "结构化保存并关联需求设计"
+      ],
+      "time": "2026-09-11T06:00:43.606638+00:00",
+      "title": "六人员全历史含双兼职"
+    },
+    {
+      "actualResult": "明确9/11，正式4+试用1=5在职人员；兼职两条不增加人数；001离职排除。",
+      "caseId": "M32-SIX-EMP-CURRENT",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_Current.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "scope": "本RUN原记录，具体字段见结构化证据"
+      },
+      "module": "M32",
+      "p3": {
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "path": "lib/hris/r1-report-m01-producer.ts",
+        "additionalPath": "lib/hris/r1-temporal.ts",
+        "task": "P3-R1-06/07",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "evidenceMode": "静态源码对照，未运行产品测试/UI"
+      },
+      "page": "六姓名9月11日当前值",
+      "pageState": "independent_readback",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "recordIds": [],
+      "repeatability": "可按记录ID只读重现；写入不可无条件重放",
+      "requirements": [
+        "M32-SPEC-01",
+        "M32-SPEC-04"
+      ],
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "severity": "Observation",
+      "steps": [
+        "正式入口限定本轮数据",
+        "操作后独立读取实际字段和状态",
+        "结构化保存并关联需求设计"
+      ],
+      "time": "2026-09-11T06:00:43.606638+00:00",
+      "title": "六姓名9月11日当前值"
+    },
+    {
+      "actualResult": "明确9/10返回正式2组各1+试用1组1；distinct2人而非3人，001同日两任职。",
+      "caseId": "M32-SIX-EMP-SEP10",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_Sep10.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "scope": "本RUN原记录，具体字段见结构化证据"
+      },
+      "module": "M32",
+      "p3": {
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "path": "lib/hris/r1-report-m01-producer.ts",
+        "additionalPath": "lib/hris/r1-temporal.ts",
+        "task": "P3-R1-06/07",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "evidenceMode": "静态源码对照，未运行产品测试/UI"
+      },
+      "page": "六姓名9月10日历史值",
+      "pageState": "independent_readback",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "recordIds": [],
+      "repeatability": "可按记录ID只读重现；写入不可无条件重放",
+      "requirements": [
+        "M32-SPEC-01",
+        "M32-SPEC-04"
+      ],
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "severity": "Observation",
+      "steps": [
+        "正式入口限定本轮数据",
+        "操作后独立读取实际字段和状态",
+        "结构化保存并关联需求设计"
+      ],
+      "time": "2026-09-11T06:00:43.606638+00:00",
+      "title": "六姓名9月10日历史值"
+    },
+    {
+      "actualResult": "明确9/9查询无业务行，1个空占位行显示这里什么都没有；不将占位行算人数。",
+      "caseId": "M32-SIX-EMP-EMPTY",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_Sep09_Empty.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "scope": "本RUN原记录，具体字段见结构化证据"
+      },
+      "module": "M32",
+      "p3": {
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "path": "lib/hris/r1-report-m01-producer.ts",
+        "additionalPath": "lib/hris/r1-temporal.ts",
+        "task": "P3-R1-06/07",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "evidenceMode": "静态源码对照，未运行产品测试/UI"
+      },
+      "page": "六姓名9月9日空数据",
+      "pageState": "independent_readback",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "recordIds": [],
+      "repeatability": "可按记录ID只读重现；写入不可无条件重放",
+      "requirements": [
+        "M32-SPEC-01",
+        "M32-SPEC-04"
+      ],
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "severity": "Observation",
+      "steps": [
+        "正式入口限定本轮数据",
+        "操作后独立读取实际字段和状态",
+        "结构化保存并关联需求设计"
+      ],
+      "time": "2026-09-11T06:00:43.606638+00:00",
+      "title": "六姓名9月9日空数据"
     }
   ],
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",

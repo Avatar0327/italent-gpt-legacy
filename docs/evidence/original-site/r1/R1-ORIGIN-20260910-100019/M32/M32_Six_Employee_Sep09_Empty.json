@@ -1,0 +1,23 @@
+{
+  "at": "2026-09-11T05:57:24.308Z",
+  "filters": [
+    "时点日期：2026-09-09",
+    "姓名：ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001(zz.r1.20260910.100019.emp001@example.invalid),ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_002(zz.r1.20260910.100019.emp002@example.invalid),ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_003(zz.r1.20260910.100019.emp003@example.invalid),ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_004(zz.r1.20260910.100019.emp004@example.invalid),ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005(zz.r1.20260910.100019.emp005@example.invalid),ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_006_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX(zz.r1.20260910.100019.emp006@example.invalid)",
+    "邮箱",
+    "参加工作日期",
+    "人员状态：试用,正式",
+    "雇佣关系：实习生,内部员工"
+  ],
+  "rowCounts": [
+    1
+  ],
+  "emptyTexts": [
+    "这里什么都没有..."
+  ],
+  "runId": "R1-ORIGIN-20260910-100019",
+  "businessDataRows": 0,
+  "placeholderRow": {
+    "text": "这里什么都没有...",
+    "cellCount": 1
+  }
+}

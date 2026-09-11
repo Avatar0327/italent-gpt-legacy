@@ -2,10 +2,10 @@
   "basisHead": "76a16265fdd65f6ba7608260dde1e07acfb85200",
   "continuationInstruction": "R1集中连续执行，只有完整退出条件或全部自主事项完成且仅剩真实外部条件才释放浏览器；自动任务保持暂停。",
   "currentAttempt": {
-    "basisHead": "406c0a4978da2b7a4a8cea7322af46e56349b360",
-    "checkedAt": "2026-09-11T05:41:51.701027+00:00",
+    "basisHead": "42eb73bb284bc62ab96bb0a5d227d83f2445ad10",
+    "checkedAt": "2026-09-11T06:00:43.606638+00:00",
     "dateConditionSatisfied": true,
-    "evidence": "R1-ORIGIN-20260910-100019/M01/ORG003_Restored.json",
+    "evidence": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_Current.json",
     "oldDOMReusableForCurrentConclusion": false,
     "outcome": "concentrated_validation_in_progress",
     "unknownBusinessActions": []
@@ -46,9 +46,9 @@
       "sep11Status": "no_new_independent_role_evidence"
     },
     {
-      "attempt": "固定5姓名9/11和9/10，当前4人/历史2人，人数排序升降实测；临时显示身份列已恢复",
+      "attempt": "固定六姓名9/11=5人、9/10=2人、9/9空；全历史10任职；重复兼职各成行",
       "blocker": "ENV-03/04/05",
-      "currentEvidence": "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_Detail.json",
+      "currentEvidence": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_All_Assignments.json",
       "execution": "current_history_grouping_numeric_sort_observed",
       "module": "M32",
       "notClaimed": "无大样本/实际分页跨页/导出文件/订阅发送/独立权限通过",
@@ -70,10 +70,10 @@
   ],
   "quantity": {
     "bulkRows": 0,
-    "businessObjects": 16,
+    "businessObjects": 17,
     "employees": 6,
     "expanded30to50": false,
-    "newThisContinuation": 6,
+    "newThisContinuation": 7,
     "smokeAllCasesPassed": false,
     "threshold5to10Quantity": true
   },

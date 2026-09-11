@@ -159,5 +159,23 @@
       "passLimit": "不能把结束日写入当实际结束，不改时钟/回填过去/删历史制造前置"
     }
   ],
-  "transferPlannedDay": "2026-09-11"
+  "transferPlannedDay": "2026-09-11",
+  "additionalPartTimeRecovery": {
+    "id": "FUTURE-PARTTIME-OVERLAP-005",
+    "notBefore": "2026-09-12T00:00:00+08:00",
+    "personId": "53a88828-60d7-42e4-b508-974ff96708a2",
+    "assignmentIds": [
+      "0eb54fe9-01ea-4fdb-b5e7-75754a308119",
+      "1e462457-ae89-4894-87e8-7083e6fc5229"
+    ],
+    "startOn": "2026-09-11",
+    "endOn": "2026-09-11",
+    "lastObserved": "均任职中/生效；结束日期不是实际终止证据",
+    "instructions": [
+      "原UUID逐条读取状态/区间/真实审计",
+      "明示当前日期重查报表去重人数与兼职数量",
+      "ORG003停用前重查全部依赖",
+      "不自动重建/重播保存；原自动任务保持暂停"
+    ]
+  }
 }

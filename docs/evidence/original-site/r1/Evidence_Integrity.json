@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T05:41:51.701027+00:00",
+  "generatedAt": "2026-09-11T06:00:43.606638+00:00",
   "files": [
     {
       "path": "ALERT-MAJOR-001.md",
@@ -23,13 +23,13 @@
     },
     {
       "path": "Current_Executable_Test_Disposition.json",
-      "sizeBytes": 4700,
-      "sha256": "2961da7d0696f40d8c0f764c724e7739b534e808c714fc77a4a7fdd2aad92b94"
+      "sizeBytes": 4698,
+      "sha256": "bfdf77d60e0307be5cda44f1456715a29c64ba77d93a16c2eb176aab6094d3de"
     },
     {
       "path": "Future_Date_Recovery.json",
-      "sizeBytes": 7920,
-      "sha256": "bb212e2a818d760839728576a852828a014348369e43f74bae8a81b87474498b"
+      "sizeBytes": 8621,
+      "sha256": "d6941ab8d88d2d6933a747c9b16c9fd2d8f842e947c4d8682b703fc337d5c8be"
     },
     {
       "path": "M01_Checkpoint.md",
@@ -53,8 +53,8 @@
     },
     {
       "path": "Original_Site_Data_Manifest.json",
-      "sizeBytes": 31514,
-      "sha256": "260ded70414233920feecb9465908313be2a36d5f0d49177f002a9ea74a020f3"
+      "sizeBytes": 33225,
+      "sha256": "c1e798b796e2af56e1f9f20223b4a6fe3194b3a9085e00a268a4573735fe61cf"
     },
     {
       "path": "Original_Site_Test_Plan.md",
@@ -165,6 +165,21 @@
       "path": "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_End.json",
       "sizeBytes": 1474,
       "sha256": "aa7c8adeb296f06cd0433fae5edfdd89555be5418b3297815f12822bfb650f65"
+    },
+    {
+      "path": "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_Detail.json",
+      "sizeBytes": 1471,
+      "sha256": "28bd0c8470014d682f975a080ffd8a51d8152e3048438760e6c22fd063018f4b"
+    },
+    {
+      "path": "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_PreSave.json",
+      "sizeBytes": 5137,
+      "sha256": "e49502e2ef6167b44479d8af2e35d2b50ab5f81391371a5710e6a85c2aad4bbf"
+    },
+    {
+      "path": "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_Rows.json",
+      "sizeBytes": 1680,
+      "sha256": "6f5a24cf5cdb2512dac0b3b35b9f179919438cf21ecc0cd710a0839f4f2ee54d"
     },
     {
       "path": "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_PreSave.json",
@@ -592,6 +607,26 @@
       "sha256": "03fb2125a3faf71ebd3b35c8577490fb57573df298fa710fad8f0d3d30da7234"
     },
     {
+      "path": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_All_Assignments.json",
+      "sizeBytes": 7874,
+      "sha256": "4ed04ab642deecc433663cc7b01add5c44fd34516705d791cdf4e3f163d53e71"
+    },
+    {
+      "path": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_Current.json",
+      "sizeBytes": 1433,
+      "sha256": "181bcace9301a55d3054fe23c9420ee989bc73c538824eeeb72449636568bb52"
+    },
+    {
+      "path": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_Sep09_Empty.json",
+      "sizeBytes": 1058,
+      "sha256": "6e9f9ffba6eff6a14477483a4d1eabf5d99f49be3f6e09a2013ec9b894aafbad"
+    },
+    {
+      "path": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_Sep10.json",
+      "sizeBytes": 1555,
+      "sha256": "3eebb2ef84b6b70597f3593b6248d0d9d6cd1bdedbdc64b03b77b63d6160e3ba"
+    },
+    {
       "path": "R1-ORIGIN-20260910-100019/M32/M32_Subscription_Validation.json",
       "sizeBytes": 1924,
       "sha256": "802e444abd12fd0f46055fa5f27bd9c50fb03d67c0902dc0399385fb2e83aaec"
@@ -612,34 +647,39 @@
       "sha256": "2a101fc81a871fd2e369b3be95117758a67d7c4682241de86611d00cbeb25f32"
     },
     {
+      "path": "R1-ORIGIN-20260910-100019/Role_Availability_Recheck.json",
+      "sizeBytes": 673,
+      "sha256": "5f99e1aac2157d6b226a75c61e5eb2089c2c2232d816c66766f17eec4defcdf8"
+    },
+    {
       "path": "R1_Original_Behavior_Matrix.json",
-      "sizeBytes": 229255,
-      "sha256": "c35b0242e86363b88622d639ba89c5486e4a181bcba6c659fa9dfa1aae7cf353"
+      "sizeBytes": 239708,
+      "sha256": "dcb25b3cc7466bf0c139f3a0b247810f97e3f24ae11d7ddd37e81bf31d9eaa21"
     },
     {
       "path": "R1_Original_Behavior_Matrix.md",
-      "sizeBytes": 19008,
-      "sha256": "a339251eec21db7c54eb1b9533cc4696c2f12db10a920a546037a83f2d569bae"
+      "sizeBytes": 20005,
+      "sha256": "c79145db4f1faadaac49da518a268a965dd47328887e60e4a4fc1c68d284c682"
     },
     {
       "path": "R1_P3_Evidence_Feedback.md",
-      "sizeBytes": 25712,
-      "sha256": "89d11a46ab9a6628effc96128d0d6678f7ffe53645e81cd71a4fa68349d6b0eb"
+      "sizeBytes": 26684,
+      "sha256": "15048f3e740e54bbc0ab1e4225f6d23b6f24844d45c17b170789e9393ef97a51"
     },
     {
       "path": "R1_P4_Comparison_Cases.md",
-      "sizeBytes": 16897,
-      "sha256": "4c429a145f0797eaa5c10c15f6368d002ae103b98c608bc8a1212d84dc97fa85"
+      "sizeBytes": 17401,
+      "sha256": "5967dd2866eb2293cdcd83739a180f8d0f240e6d1cc802b899718c3b46a82c21"
     },
     {
       "path": "R1_Parity_Difference_Ledger.json",
-      "sizeBytes": 27863,
-      "sha256": "3e1ded82681293858d57e318716923d08a69e9dbf45136e6c85bca9060590471"
+      "sizeBytes": 29763,
+      "sha256": "2fd5d944189b114d5ec10b9e9dafa5e5ec0b8075c55ff663f0be458eedbb9837"
     },
     {
       "path": "R1_Parity_Difference_Ledger.md",
-      "sizeBytes": 5772,
-      "sha256": "59d42bf1900ab0298662e8af678a65b5612b6406ce6b0f470eee897c4c62b7ce"
+      "sizeBytes": 5969,
+      "sha256": "e73c462d19f4e1776b75a8072e5e54e26133410e5051c45fa6b196b4ce99e459"
     },
     {
       "path": "Repository_Source_Manifest.json",
@@ -648,13 +688,13 @@
     },
     {
       "path": "Resume.md",
-      "sizeBytes": 23170,
-      "sha256": "bc61fbd8c65385bb0b016e41bd0de4de5bcb57fd78bb9402102a4071a0bb19cd"
+      "sizeBytes": 24036,
+      "sha256": "7762d119463eb4f4a42ce2546322c19d140922db7817af4481accb1893372f48"
     },
     {
       "path": "Run_Status.json",
-      "sizeBytes": 4028,
-      "sha256": "757b62c2932176c6cde928805c0ecfe75c87795c76049e44e682b9439e8e8525"
+      "sizeBytes": 4262,
+      "sha256": "d107bd00daa9af692b7a1624e32538ed06c69805eacf30afa62ce10ffe25a54f"
     },
     {
       "path": "run.json",
@@ -662,7 +702,7 @@
       "sha256": "bd8664ee8eaeda8e04f22f354ba993e7379a417fe05e4c95c12733a0b34bed64"
     }
   ],
-  "fileCount": 132,
-  "caseCount": 106,
+  "fileCount": 140,
+  "caseCount": 111,
   "completeModules": 0
 }

@@ -16,18 +16,17 @@
   },
   "concurrency": "own_tab_27_other_tabs_untouched_R1_sole_operator",
   "continuationInProgress": true,
-  "createdRecords": 16,
-  "createdRecordsDefinition": "16主动对象：3组织+2岗位+6人员+1法人+2申请+离职任职1+兼职任职1；自动历史行另列。",
+  "createdRecords": 17,
+  "createdRecordsDefinition": "17主动对象：3组织+2岗位+6人员+1法人+2申请+离职任职1+兼职任职2；自动历史行另列。",
   "currentCheckpoint": "same_run_partial_evidence_not_release_complete",
   "currentContinuationLimitation": "ROLE-01、附件ENV-06及原转正编辑ENV-04；其他管理员场景继续。",
   "currentEmployeeOracle": {
-    "people": 4,
-    "formal": 3,
+    "people": 5,
+    "formal": 4,
     "probation": 1,
     "departed": 0,
-    "scope": "005兼职后/006新增前固定五姓名快照，非新增006后的全RUN当前值",
-    "evidence": "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_Detail.json",
-    "historicalCapturedState": true
+    "scope": "固定六姓名、明确9/11时点在职名册，排除001离职",
+    "evidence": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_Current.json"
   },
   "dateSatisfiedButUnverifiedCases": [
     "离职执行人/实际审计与旧雇佣段ID",
@@ -38,7 +37,8 @@
   "existingFindingUpdated": "ENV-05",
   "freshServerQuerySucceeded": true,
   "futureDatePendingCases": [
-    "FUTURE-PARTTIME-END-005"
+    "FUTURE-PARTTIME-END-005",
+    "FUTURE-PARTTIME-OVERLAP-005"
   ],
   "futureRecheckScheduled": false,
   "futureRecovery": "Future_Date_Recovery.json",
@@ -53,7 +53,7 @@
   },
   "historicalMajor": 2,
   "intentionalDifferences": 1,
-  "lastRecheckAt": "2026-09-11T05:41:51.701027+00:00",
+  "lastRecheckAt": "2026-09-11T06:00:43.606638+00:00",
   "matchRules": 5,
   "modules": [
     {
@@ -89,7 +89,7 @@
       "requirementsComparison": "partial"
     }
   ],
-  "newBusinessObjectsThisContinuation": 6,
+  "newBusinessObjectsThisContinuation": 7,
   "newConfirmedBusinessBehaviorsThisContinuation": 2,
   "newFindingsThisContinuation": {
     "Blocker": 0,
@@ -116,10 +116,18 @@
     "Blocker": 0,
     "Major": 2,
     "Minor": 0,
-    "Observation": 15
+    "Observation": 16
   },
   "smokeNamedObjectsThresholdReached": true,
   "unknownBusinessActions": [],
   "workflowStatus": "concentrated_origin_validation_in_progress",
-  "modifiedRunObjectsThisContinuation": 3
+  "modifiedRunObjectsThisContinuation": 3,
+  "fullHistoryOracle": {
+    "distinctPeople": 6,
+    "assignmentRows": 10,
+    "currentActivePrimary": 5,
+    "currentPartTime": 2,
+    "currentEndedPrimary": 1,
+    "evidence": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_All_Assignments.json"
+  }
 }

@@ -1,0 +1,271 @@
+{
+  "at": "2026-09-11T05:45:36.235Z",
+  "personId": "53a88828-60d7-42e4-b508-974ff96708a2",
+  "existingAssignmentId": "0eb54fe9-01ea-4fdb-b5e7-75754a308119",
+  "fields": [
+    {
+      "label": "员工",
+      "text": "员工\nZ\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005(zz.r1.20260910.100019.emp005@example.invalid)",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "工号",
+      "text": "工号\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005",
+      "values": [
+        "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005"
+      ]
+    },
+    {
+      "label": "任职类型",
+      "text": "任职类型\n兼职",
+      "values": [
+        "兼职"
+      ]
+    },
+    {
+      "label": "开始日期",
+      "text": "开始日期",
+      "values": [
+        "2026-09-11"
+      ]
+    },
+    {
+      "label": "结束日期",
+      "text": "结束日期",
+      "values": [
+        "2026-09-11"
+      ]
+    },
+    {
+      "label": "部门",
+      "text": "部门\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "activeRadio": "否",
+      "label": "是否部门负责人",
+      "text": "是否部门负责人\n是\n否",
+      "values": []
+    },
+    {
+      "activeRadio": "否",
+      "label": "是否部门负责人",
+      "text": "是\n否",
+      "values": []
+    },
+    {
+      "label": "新增下属",
+      "text": "新增下属\n请选择",
+      "values": []
+    },
+    {
+      "label": "直线经理",
+      "text": "直线经理\n请选择",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "职位",
+      "text": "职位\n请搜索",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "职务",
+      "text": "职务\n请选择",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "职务序列",
+      "text": "职务序列\n请选择",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "职级",
+      "text": "职级\n请搜索",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "虚线经理",
+      "text": "虚线经理\n请选择",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "activeRadio": "否",
+      "label": "兼职是否占人头",
+      "text": "兼职是否占人头\n是\n否",
+      "values": []
+    },
+    {
+      "label": "用工形式",
+      "text": "用工形式\n请搜索",
+      "values": []
+    },
+    {
+      "label": "人员类别",
+      "text": "人员类别\n请选择",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "雇佣关系",
+      "text": "雇佣关系\n内部员工",
+      "values": []
+    },
+    {
+      "label": "部门",
+      "text": "部门\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "直线经理",
+      "text": "直线经理\n请选择",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "职务",
+      "text": "职务\n请选择",
+      "values": []
+    },
+    {
+      "label": "业务组织",
+      "text": "业务组织\n请选择",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "利润中心",
+      "text": "利润中心\n请选择",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "预留组织4",
+      "text": "预留组织4\n请选择",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "预留组织5",
+      "text": "预留组织5\n请选择",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "姓名",
+      "text": "姓名\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005",
+      "values": []
+    },
+    {
+      "label": "性别",
+      "text": "性别\n请选择",
+      "values": []
+    },
+    {
+      "label": "出生日期",
+      "text": "出生日期\n出生日期",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "最高学历",
+      "text": "最高学历\n请选择",
+      "values": []
+    },
+    {
+      "label": "薪资组",
+      "text": "薪资组\n请选择",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "发薪机构",
+      "text": "发薪机构\n请选择",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "成本中心",
+      "text": "成本中心\n请选择",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "缴税类型",
+      "text": "缴税类型\n请选择",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "法人公司",
+      "text": "法人公司\n请选择",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "银行",
+      "text": "银行\n请选择",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "银行账号",
+      "text": "银行账号",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "开户行支行",
+      "text": "开户行支行",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "币种",
+      "text": "币种\n请选择",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "兼职基本工资",
+      "text": "兼职基本工资",
+      "values": [
+        ""
+      ]
+    }
+  ],
+  "runId": "R1-ORIGIN-20260910-100019"
+}

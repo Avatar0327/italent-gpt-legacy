@@ -197,10 +197,21 @@
       "preconditions": [
         "本轮无适用范围/无合同引用，已停用；清理时UUID名称双核，无非本轮依赖"
       ]
+    },
+    {
+      "action": "保留至实际结束回查",
+      "originRecordId": "1e462457-ae89-4894-87e8-7083e6fc5229",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005/PARTTIME_002",
+      "allowLaterDelete": false,
+      "module": "M01",
+      "performed": false,
+      "preconditions": [
+        "9/12按UUID回查实际结束，保留重复任职/审计证据；不删历史伪造终态"
+      ]
     }
   ],
-  "countDefinition": "16主动对象：3组织+2岗位+6人员+1法人+2申请+离职任职1+兼职任职1；自动历史行另列。",
-  "createdCount": 16,
+  "countDefinition": "17主动对象：3组织+2岗位+6人员+1法人+2申请+离职任职1+兼职任职2；自动历史行另列。",
+  "createdCount": 17,
   "deletedCount": 0,
   "drafts": {
     "initialCancelledOrganizationDrafts": 2,
@@ -215,10 +226,10 @@
     "ORG003": "跨父重名保存后已恢复原名称简称父级，编辑层关闭"
   },
   "lastContinuation": {
-    "at": "2026-09-11T05:41:51.701027+00:00",
-    "newObjects": 6,
+    "at": "2026-09-11T05:49:53.633156+00:00",
+    "newObjects": 7,
     "modifiedRunObjects": 3,
-    "retained": 16,
+    "retained": 17,
     "deleted": 0,
     "inProgress": true,
     "evidence": [
@@ -236,7 +247,7 @@
     "namedMasterObjects": 12,
     "note": "六人员小样本；基础再入职/审批/附件等仍有前置，未扩30–50",
     "threshold5To10Reached": true,
-    "totalCreatedBusinessObjects": 16
+    "totalCreatedBusinessObjects": 17
   },
   "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
   "records": [
@@ -756,9 +767,37 @@
         "R1-ORIGIN-20260910-100019/M01/LEGAL001_Stopped_Query.json",
         "R1-ORIGIN-20260910-100019/M01/LEGAL001_Stopped_Detail.json"
       ]
+    },
+    {
+      "allowLaterDelete": false,
+      "caseId": "M01-PARTTIME-OVERLAP-005",
+      "createdAt": null,
+      "createdAtBasis": "新查询唯一行/详情UUID已确认，源创建审计未提供",
+      "deletionGate": "优先结束并保留兼职历史；UUID与本轮人员双核，无其他依赖",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_PreSave.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_Rows.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_Detail.json"
+      ],
+      "module": "M01",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005/PARTTIME_002",
+      "objectType": "part_time_assignment",
+      "originRecordId": "1e462457-ae89-4894-87e8-7083e6fc5229",
+      "relatedRecords": [
+        "53a88828-60d7-42e4-b508-974ff96708a2",
+        "a7b55bd7-0ef2-44a0-9d29-6259fe053da3"
+      ],
+      "runId": "R1-ORIGIN-20260910-100019",
+      "status": "same_person_org_empty_position_overlap_active_sep11",
+      "startOn": "2026-09-11",
+      "endOn": "2026-09-11",
+      "countsAsHead": false,
+      "verifiedAt": "2026-09-11T05:48:20.449Z",
+      "actualTerminationConfirmed": false,
+      "latestVerification": "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_Detail.json"
     }
   ],
-  "retainedCount": 16,
+  "retainedCount": 17,
   "runId": "R1-ORIGIN-20260910-100019",
   "successMessagePendingIdCount": 0,
   "writesSuspendedReason": null

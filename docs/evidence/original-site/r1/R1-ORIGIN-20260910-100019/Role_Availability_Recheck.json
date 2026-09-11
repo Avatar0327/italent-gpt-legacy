@@ -1,0 +1,15 @@
+{
+  "at": "2026-09-11T05:59:41.997618+00:00",
+  "runId": "R1-ORIGIN-20260910-100019",
+  "currentRole": "ORIGIN-ADMIN-01",
+  "accountMenu": [
+    "个人设置",
+    "退出登录"
+  ],
+  "independentRoleSwitchOffered": false,
+  "credentialSwitchAttempted": false,
+  "newAccountsOrPermissions": 0,
+  "browserAuth": "只支持安全交互收集登录字段，不提供已授权身份枚举；未请求/读取凭据",
+  "result": "没有取得可用独立员工/调出方/调入方/HR/报表受限身份；ROLE-01保持",
+  "minimumAction": "提供已存在授权测试身份及组织/人员绑定，使用安全认证；不在聊天发送凭据，不新增真实访问者"
+}

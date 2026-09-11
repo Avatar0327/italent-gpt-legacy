@@ -9,8 +9,8 @@
     "MATCH": 5,
     "Major": 2,
     "Minor": 0,
-    "NEED_OWNER_DECISION": 1,
-    "Observation": 15,
+    "NEED_OWNER_DECISION": 2,
+    "Observation": 16,
     "REQUIREMENT_GAP": 0,
     "ROLE_BLOCKED": 1,
     "activeMajor": 1,
@@ -199,7 +199,8 @@
         "at": "2026-09-11T03:22:13.585Z",
         "source": "R1-ORIGIN-20260910-100019/20260911_M48_Role_Bound_PartTime.json",
         "result": "自助兼职人员控件绑定当前真实管理员、禁用，不能操作本轮员工。browserAuth仅安全交接输入能力，无已存独立测试账号目录；未注销或切换身份。"
-      }
+      },
+      "latestAvailabilityCheck": "R1-ORIGIN-20260910-100019/Role_Availability_Recheck.json"
     },
     {
       "actual": "普通新建显示设立日期、大类/多维组织等，部门行政上级空值必填；新建下级显示生效日期并二次确认新增对象。",
@@ -323,7 +324,8 @@
         "partTimeDoesNotIncreaseCurrentPeople": true,
         "numericSortObserved": true
       },
-      "latestHistoryEvidence": "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_All_Assignments.json"
+      "latestHistoryEvidence": "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_All_Assignments.json",
+      "sixPersonEvidence": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_All_Assignments.json"
     },
     {
       "actual": "两张本轮申请均在审批详情显示离职字段，调动部分值对应调动，转正多项空值；不证明实际发生离职。；9/11正式发起日志显示TransferProcessNew匹配DimissionProcessNew，已保存版本；不修改共享配置。",
@@ -655,6 +657,47 @@
       "ownerDecision": null,
       "boundary": "DIFF-MAJOR-001只批准直接调动有意差异，不自动涵盖兼职；不改规则，不阻其他测试",
       "raisedAt": "2026-09-11T04:29:47.632642+00:00"
+    },
+    {
+      "id": "OBS-09",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "modules": [
+        "M01",
+        "M32"
+      ],
+      "title": "同组织空职位兼职重叠与目标映射",
+      "severity": "Observation",
+      "classification": "NEED_OWNER_DECISION",
+      "status": "open_owner_decision_required",
+      "actual": "新兼职1e462457与原0eb54fe9同人/同ORG003/职位空/同9月11日起止，独立查询两条均任职中/生效。P2要求同类型同目标无重叠；P3按positionId保护，原站空职位目标无直接等价映射，需目标口径决策，未判实现缺陷。",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_PreSave.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_Rows.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_Detail.json"
+      ],
+      "requirements": [
+        "F-SPEC-05",
+        "BP-F-REQ-06",
+        "BP-F-REQ-13"
+      ],
+      "p3Tasks": [
+        "P3-R1-02",
+        "P3-R1-06"
+      ],
+      "p3": {
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "path": "lib/hris/r1-m01.ts",
+        "testPath": "tests/r1-p3-m01.test.mjs",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-03"
+        ],
+        "staticFinding": "assignmentExecute对同person同type同positionId且闭区间重叠拒绝；源空职位/同org不直接等价，未运行P3",
+        "runtimeVerifiedByThisWindow": false
+      },
+      "productDefectConfirmed": false,
+      "ownerDecisionRequired": true,
+      "boundary": "001只调动；002仅审批路径，不把空职位同组织直接等价于P3同positionId，也不自行放宽重叠规则"
     }
   ],
   "priorityRecovery": {

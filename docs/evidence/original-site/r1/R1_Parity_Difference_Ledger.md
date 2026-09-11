@@ -1,3 +1,5 @@
+最新：OBS-09已登记同人同组织空职位同日重复兼职的目标映射待决；Observation累计16、NEED_OWNER_DECISION2（Major002及OBS09），Major累计2/活动1，MATCH5不变。
+
 最新窄项MATCH5（新增姓名100/101边界）；其他唯一差异数不变。
 
 最新：窄项MATCH4；原站兼职Major002仍待决，Major001已批准有意差异。兼职结束日期不等于实际结束；订阅校验无真实发送。详见JSON与新模块证据。
