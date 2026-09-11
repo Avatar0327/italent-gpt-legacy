@@ -19,7 +19,7 @@
   "createdRecords": 17,
   "createdRecordsDefinition": "17主动对象：3组织+2岗位+6人员+1法人+2申请+离职任职1+兼职任职2；自动历史行另列。",
   "currentCheckpoint": "same_run_partial_evidence_not_release_complete",
-  "currentContinuationLimitation": "ROLE-01、附件ENV-06及原转正编辑ENV-04；其他管理员场景继续。",
+  "currentContinuationLimitation": "ROLE01/附件ENV06/下载ENV03；合同公司隔离引用条件未提供；再入职邀请关闭；教育日期控件局部读失败，其他可执行继续",
   "currentEmployeeOracle": {
     "people": 5,
     "formal": 4,
@@ -53,7 +53,7 @@
   },
   "historicalMajor": 2,
   "intentionalDifferences": 1,
-  "lastRecheckAt": "2026-09-11T06:16:13.172340+00:00",
+  "lastRecheckAt": "2026-09-11T06:36:31.652847+00:00",
   "matchRules": 6,
   "modules": [
     {

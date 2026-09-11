@@ -1,6 +1,6 @@
 # R1 原站逐项矩阵
 
-完整/批量/需求完整/P3完整/退出对照均0/4，E2E0/5；MATCH6仅窄项。历史段落以JSON最新逐项结论为准。
+完整/批量/需求完整/P3完整/退出对照均0/4，E2E0/5；MATCH6仅窄项。
 
 |用例|模块|执行|实际结果|分类|
 |---|---|---|---|---|
@@ -50,7 +50,7 @@
 |M01-PENDING-JOIN-REGULARIZE|M01|partially_observed|2员工分别正式/试用；转正正式申请已提交撤回，维护入口未保存；审批/实际生效未验|ROLE_BLOCKED|
 |M01-PENDING-TRANSFER|M01|partially_observed|直接调动生效；他人调动申请另行提交并撤回；独立两方审批未验|ROLE_BLOCKED|
 |M01-PENDING-EXIT-REHIRE|M01|partially_observed|9/11新查询确认人员离职、退出任职生效中；旧雇佣段ID/结束审计和正式再入职未完成|未定|
-|M01-PENDING-LEGAL|M01|partially_observed|本轮空范围法人创建并停用已实证；空范围引用/旧合同快照未验|ENV_BLOCKED|
+|M01-PENDING-LEGAL|M01|partially_observed|正式合同新建恢复且可选EMP005；自动公司已清空。公司下拉仅既有值+去设置公司，无本轮法人；不等价法人停用拒绝，不改共享配置，取消未保存。 本轮法人已创建停用；旧合同快照/引用拒绝未完成。|ENV_BLOCKED|
 |M01-PENDING-FIELDS|M01|partially_observed|职位/邮箱/试用期限/试用结束必填、入职早于组织生效被拒已验；未覆盖全字段、长度、格式、重复|未定|
 |M01-PENDING-HISTORY-ATTACH|M01|partially_observed|离职/原调动/岗位版本/普通组织编辑历史已读；离职执行审计未提供；附件正式选择器ENV-06|ENV_BLOCKED|
 |M01-PENDING-CONCURRENCY|M01|partially_observed|同管理员双标签旧草稿顺序覆盖已测并恢复；独立角色CAS及重复业务提交未测|未定|
@@ -117,3 +117,5 @@
 |M32-SIX-EMP-EMPTY|M32|observed|明确9/9查询无业务行，1个空占位行显示这里什么都没有；不将占位行算人数。|未定|
 |M01-ORG-STALE-DRAFTS-003|M01|observed_narrow_scope|A保存后B草稿仍旧值；B随后保存覆盖A，另一标签新表单确认B。已恢复原备注。未覆盖独立角色同时竞争、重复业务提交。|未定|
 |M01-ORG-SELF-PARENT-003|M01|observed_narrow_scope|选择器可选择自身，保存拒绝循环汇报；取消后原父级/名称/编码/备注保留。只测当前自环。|MATCH|
+|M01-CONTRACT-COMPANY-005|M01|observed_narrow_scope|正式合同新建恢复且可选EMP005；自动公司已清空。公司下拉仅既有值+去设置公司，无本轮法人；不等价法人停用拒绝，不改共享配置，取消未保存。|未定|
+|M01-EDUCATION-REQUIRED-005|M01|observed_narrow_scope|EMP005空学校/毕业类型/开始/结束日期提交均必填拒绝；虚构学校候选空，无记录创建。日期直接填未保留，日历后读取超时不作为日期校验，草稿取消。|未定|

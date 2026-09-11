@@ -2565,7 +2565,7 @@
       }
     },
     {
-      "actualResult": "本轮空范围法人创建并停用已实证；空范围引用/旧合同快照未验",
+      "actualResult": "正式合同新建恢复且可选EMP005；自动公司已清空。公司下拉仅既有值+去设置公司，无本轮法人；不等价法人停用拒绝，不改共享配置，取消未保存。 本轮法人已创建停用；旧合同快照/引用拒绝未完成。",
       "blockerIds": [
         "ENV-03"
       ],
@@ -2616,7 +2616,12 @@
         "合同次数和版本以稳定ID核对"
       ],
       "time": null,
-      "title": "法人组织归属与空范围"
+      "title": "法人组织归属与空范围",
+      "latestDisposition": {
+        "at": "2026-09-11T06:36:31.652847+00:00",
+        "evidence": "R1-ORIGIN-20260910-100019/M01/Contract_Education_Validation.json",
+        "remaining": "隔离合同公司/法人目录正式映射入口或样本配置；不动共享公司设置"
+      }
     },
     {
       "actualResult": "职位/邮箱/试用期限/试用结束必填、入职早于组织生效被拒已验；未覆盖全字段、长度、格式、重复",
@@ -2735,9 +2740,9 @@
         "note": "本轮已补部分边界/正式入口，仍有未执行范围，详见增量用例"
       },
       "latestDisposition": {
-        "at": "2026-09-11T06:16:13.172340+00:00",
-        "result": "离职/原调动/岗位版本/普通组织编辑历史已读；离职执行审计未提供；附件正式选择器ENV-06",
-        "evidence": []
+        "at": "2026-09-11T06:36:31.652847+00:00",
+        "evidence": "R1-ORIGIN-20260910-100019/M01/Contract_Education_Validation.json",
+        "result": "补教育人员选择/必填/学校空候选，未创建子集；附件ENV06，模板和子集完整覆盖未完成"
       }
     },
     {
@@ -6244,6 +6249,114 @@
       ],
       "time": "2026-09-11T06:16:13.172340+00:00",
       "title": "组织自身上级保存拒绝"
+    },
+    {
+      "actualResult": "正式合同新建恢复且可选EMP005；自动公司已清空。公司下拉仅既有值+去设置公司，无本轮法人；不等价法人停用拒绝，不改共享配置，取消未保存。",
+      "blockerIds": [],
+      "caseId": "M01-CONTRACT-COMPANY-005",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/Contract_Education_Validation.json",
+        "R1-ORIGIN-20260910-100019/M01/Contract_Subset_Entry_Recheck.json"
+      ],
+      "execution": "observed_narrow_scope",
+      "inputs": {
+        "actualValues": null,
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_"
+      },
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-07"
+        ],
+        "evidenceMode": "按P2/P3任务静态映射，字段模板不可直接等价，未运行P3",
+        "path": "lib/hris/r1-m01.ts",
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "task": "P3-R1-02"
+      },
+      "page": "合同公司引用配置边界",
+      "pageState": "cancelled_no_created_record",
+      "preconditions": "仅本轮合成数据；正式页面人工操作可执行；下载/截图仅局部限制；独立身份须为现有授权测试角色",
+      "recordIds": [
+        "53a88828-60d7-42e4-b508-974ff96708a2"
+      ],
+      "repeatability": "字段级可复核；控件延迟/超时已单独记录",
+      "requirements": [
+        "F-SPEC-06",
+        "BP-F-REQ-05"
+      ],
+      "role": "ORIGIN-ADMIN-01",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "severity": "Observation",
+      "steps": [
+        "正式新建",
+        "完整姓名候选核实并选择EMP005",
+        "读取配置/校验空值",
+        "取消并独立确认草稿隐藏"
+      ],
+      "time": "2026-09-11T06:36:31.652847+00:00",
+      "title": "合同公司引用配置边界"
+    },
+    {
+      "actualResult": "EMP005空学校/毕业类型/开始/结束日期提交均必填拒绝；虚构学校候选空，无记录创建。日期直接填未保留，日历后读取超时不作为日期校验，草稿取消。",
+      "blockerIds": [],
+      "caseId": "M01-EDUCATION-REQUIRED-005",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/Contract_Education_Validation.json",
+        "R1-ORIGIN-20260910-100019/M01/Contract_Subset_Entry_Recheck.json"
+      ],
+      "execution": "observed_narrow_scope",
+      "inputs": {
+        "actualValues": null,
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_"
+      },
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-08"
+        ],
+        "evidenceMode": "按P2/P3任务静态映射，字段模板不可直接等价，未运行P3",
+        "path": "lib/hris/r1-m01.ts",
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "task": "P3-R1-02"
+      },
+      "page": "教育子集空值及学校候选",
+      "pageState": "cancelled_no_created_record",
+      "preconditions": "仅本轮合成数据；正式页面人工操作可执行；下载/截图仅局部限制；独立身份须为现有授权测试角色",
+      "recordIds": [
+        "53a88828-60d7-42e4-b508-974ff96708a2"
+      ],
+      "repeatability": "字段级可复核；控件延迟/超时已单独记录",
+      "requirements": [
+        "F-SPEC-07",
+        "BP-F-REQ-06"
+      ],
+      "role": "ORIGIN-ADMIN-01",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "severity": "Observation",
+      "steps": [
+        "正式新建",
+        "完整姓名候选核实并选择EMP005",
+        "读取配置/校验空值",
+        "取消并独立确认草稿隐藏"
+      ],
+      "time": "2026-09-11T06:36:31.652847+00:00",
+      "title": "教育子集空值及学校候选"
     }
   ],
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",

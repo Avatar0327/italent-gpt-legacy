@@ -1,0 +1,49 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "environment": "https://srworkshopbj.italent.cn",
+  "role": "ORIGIN-ADMIN-01",
+  "personId": "53a88828-60d7-42e4-b508-974ff96708a2",
+  "stages": {
+    "contractCompany": [
+      {
+        "at": "2026-09-11T06:31:05.518Z",
+        "person": "人员\nZ\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005(zz.r1.20260910.100019.emp005@example.invalid)",
+        "company": {
+          "text": "公司\n必填",
+          "value": ""
+        },
+        "ownLegalCandidateCount": 0,
+        "visibleTail": "0019_M01_ORG_002\n职务\n请选择\n直线经理\n请选择\n虚线经理\n请选择\n合同信息\n人员\nZ\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005(zz.r1.20260910.100019.emp005@example.invalid)\n编号\n公司\n必填\n合同类型\n请选择\n是否入厂编\n请选择\n期限类型\n请选择\n签订日期\n签订日期\n生效日期\n生效日期\n合同期限(月)\n终止日期\n终止日期\n附件\n上传\n保存\n取消\n翻译助手\n取消\n保存\n开心就好\n去设置公司",
+        "saveClicked": false
+      }
+    ],
+    "eduEmptyRejected": [
+      {
+        "at": "2026-09-11T06:33:43.361Z",
+        "errors": [
+          "必填",
+          "必填"
+        ],
+        "fields": [
+          "毕业学校\n请选择\n必填",
+          "毕业类型\n请选择\n必填",
+          "开始日期\n开始日期\n必填",
+          "结束日期\n结束日期\n必填"
+        ]
+      }
+    ],
+    "eduSchoolEmpty": [
+      {
+        "at": "2026-09-11T06:35:03.366Z",
+        "tail": "新建\n人员\nZ\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005(zz.r1.20260910.100019.emp005@example.invalid)\n毕业学校\n请选择\n必填\n毕业类型\n请选择\n必填\n开始日期\n开始日期\n必填\n结束日期\n结束日期\n必填\n学历\n请选择\n是否最高学历\n是\n否\n学位\n请选择\n是否最高学位\n是\n否\n培养方式\n请选择\n学习形式\n请选择\n专业类别\n请选择\n专业\n学历证书\n上传\n毕业学校类型\n请选择\n专业描述\n保存\n取消\n翻译助手\n取消\n保存\n\n这里什么都没有...",
+        "school": "毕业学校\n请选择\n必填"
+      }
+    ]
+  },
+  "contractResult": "新tab31正式合同新建恢复；人员选择EMP005后公司自动填既有值，已清空。公司下拉1既有配置值和去设置公司，无本轮LEGAL001；不能断言此字段等价法人目录或停用过滤已通过。草稿未保存并取消。",
+  "educationResult": "新草稿EMP005唯一说明，空学校/毕业类型/开始/结束日期保存被必填校验拒绝。虚构学校搜索后空候选，不更改共享学校字典。取消草稿。日期文本被清空及前次日历超时不当倒置日期校验。",
+  "createdObjects": 0,
+  "unknownBusinessActions": [],
+  "screenshot": null,
+  "classification": null
+}

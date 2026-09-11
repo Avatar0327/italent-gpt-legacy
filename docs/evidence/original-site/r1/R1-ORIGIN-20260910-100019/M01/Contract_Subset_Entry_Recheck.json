@@ -1,0 +1,108 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "role": "ORIGIN-ADMIN-01",
+  "environment": "https://srworkshopbj.italent.cn",
+  "stages": {
+    "contractGate": [
+      {
+        "at": "2026-09-11T06:19:11.958Z",
+        "view": [
+          "合同协议"
+        ],
+        "frames": [
+          {
+            "id": "popup_17891074431601932",
+            "visible": false
+          },
+          {
+            "id": "iTalentFrameProxy",
+            "visible": false
+          },
+          {
+            "id": "printIframe",
+            "visible": true
+          }
+        ],
+        "inputs": [
+          {
+            "cls": "convoy-phoenix-input__input convoy-phoenix-input__input--hasPrefix convoy-phoenix-input__input--noEllipsis",
+            "placeholder": " "
+          },
+          {
+            "cls": "convoy-phoenix-input__input convoy-phoenix-input__input--hasPrefix convoy-phoenix-input__input--noEllipsis",
+            "placeholder": "搜索菜单"
+          },
+          {
+            "cls": "common_input_box",
+            "placeholder": "请选择"
+          },
+          {
+            "cls": "platform-checkbox__input",
+            "placeholder": ""
+          }
+        ],
+        "saveButtons": 0
+      }
+    ],
+    "fresh31Read1": [
+      {
+        "at": "2026-09-11T06:20:59.104Z",
+        "origin": "https://srworkshopbj.italent.cn",
+        "view": [],
+        "bodyStatus": {
+          "failed": false,
+          "textLength": 23,
+          "timeout": false
+        }
+      }
+    ],
+    "fresh31Read2": [
+      {
+        "at": "2026-09-11T06:21:17.581Z",
+        "view": [
+          "启用的组织",
+          "类型",
+          "层级",
+          "名称",
+          "根节点",
+          "上级组织",
+          "状态",
+          "失效日期"
+        ],
+        "bodyStatus": {
+          "failed": false,
+          "shortText": null,
+          "textLength": 2694
+        }
+      }
+    ],
+    "fresh31Query": [
+      {
+        "at": "2026-09-11T06:21:58.869Z",
+        "filters": [
+          "类型",
+          "层级",
+          "名称\n：\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+          "根节点",
+          "上级组织",
+          "状态\n：\n启用",
+          "失效日期\n：\n2026-09-11"
+        ],
+        "rows": [
+          "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+          "华夏九洲集团/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n--\n部门\n--\n2026-09-10\n2026-09-10\n9999-12-31\n2026-09-10\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003_EDIT_001 仅合成备注验证\n--\n--\n--\n--\n--\n--\n--\n--\n--\n0\n--\n--\n--\n--"
+        ]
+      }
+    ],
+    "eduPreInvalid": [
+      "{\"at\":\"2026-09-11T06:26:04.879Z\",\"fields\":[{\"label\":\"人员\",\"text\":\"人员\\nZ\\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005(zz.r1.20260910.100019.emp005@example.invalid)\",\"values\":[\"\"]},{\"label\":\"毕业学校\",\"text\":\"毕业学校\\n请选择\",\"values\":[\"\"]},{\"label\":\"毕业类型\",\"text\":\"毕业类型\\n请选择\",\"values\":[\"\"]},{\"label\":\"开始日期\",\"text\":\"开始日期\\n开始日期\",\"values\":[\"\"]},{\"label\":\"结束日期\",\"text\":\"结束日期\\n结束日期\",\"values\":[\"\"]},{\"label\":\"学历\",\"text\":\"学历\\n请选择\",\"values\":[\"\"]},{\"label\":\"是否最高学历\",\"text\":\"是否最高学历\\n是\\n否\",\"values\":[]},{\"label\":\"学位\",\"text\":\"学位\\n请选择\",\"values\":[\"\"]},{\"label\":\"是否最高学位\",\"text\":\"是否最高学位\\n是\\n否\",\"values\":[]},{\"label\":\"培养方式\",\"text\":\"培养方式\\n请选择\",\"values\":[\"\"]},{\"label\":\"学习形式\",\"text\":\"学习形式\\n请选择\",\"values\":[\"\"]},{\"label\":\"专业类别\",\"text\":\"专业类别\\n请选择\",\"values\":[\"\"]},{\"label\":\"专业\",\"text\":\"专业\",\"values\":[\"\"]},{\"label\":\"学历证书\",\"text\":\"学历证书\\n上传\",\"values\":[\"[none]\"]},{\"label\":\"毕业学校类型\",\"text\":\"毕业学校类型\\n请选择\",\"values\":[]},{\"label\":\"专业描述\",\"text\":\"专业描述\",\"values\":[\"ZZ_R1_R1-ORIGIN-20260910-100019_M01_EDU_005_001 完全虚构的教育经历边界记录\"]}]}\n[\n  {\n    cls: 'base-bg-ripple base-btns base-btns-bgc-big   fr',\n    tag: 'SPAN'\n  },\n  { cls: 'btn btn_default ', tag: 'BUTTON' }\n]"
+    ]
+  },
+  "contract": "Tab27合同页已载入，但姓名/人员/新建动作各返回3000ms Runtime.evaluate超时，独立回读无新表单/保存控件。未点击业务保存。",
+  "recovery": "自有新tab31新组织名称查询成功，ORG003原备注确认。教育正式页面和新建入口成功。不得把旧两tab点击失败扩大为全局失败。",
+  "education": "默认管理员后经正式人员选择器换为EMP005/合成邮箱。输入文本日期被控件清空，不能作为倒置日期拒绝；正式开始日期日历选择9/11后连续两次iframe字段只读Runtime.evaluate超时。从未点击保存；通过本自有标签跳回已观察组织URL离开草稿。",
+  "businessSaveActions": 0,
+  "newObjects": 0,
+  "unknownBusinessActions": [],
+  "remaining": "教育/合同边界未完成；隔离人员选择本身恢复。截图未取得。"
+}

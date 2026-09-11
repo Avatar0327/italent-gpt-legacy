@@ -395,7 +395,8 @@
         "R1-ORIGIN-20260910-100019/M01/EMP003_Readback.json",
         "R1-ORIGIN-20260910-100019/M01/EMP004_Duplicate_Code.json",
         "R1-ORIGIN-20260910-100019/M01/EMP004_Readback.json",
-        "R1-ORIGIN-20260910-100019/M01/EMP005_Readback.json"
+        "R1-ORIGIN-20260910-100019/M01/EMP005_Readback.json",
+        "R1-ORIGIN-20260910-100019/M01/Contract_Education_Validation.json"
       ],
       "feedback": "P2明确入口模板/跨对象日期约束，P3核查employment.startOn与组织有效日的实现及测试；未确认批准设计遗漏/实现缺陷。",
       "id": "OBS-07",
@@ -432,6 +433,11 @@
         "at": "2026-09-11T05:23:23.851618+00:00",
         "result": "101/304姓名拒绝，100保存同UUID；P2/P3max100窄项一致",
         "evidence": "R1-ORIGIN-20260910-100019/M01/EMP006_Readback.json"
+      },
+      "latestTemplateEvidence": {
+        "at": "2026-09-11T06:36:31.652847+00:00",
+        "evidence": "R1-ORIGIN-20260910-100019/M01/Contract_Education_Validation.json",
+        "result": "教育学校/毕业类型/起止日期必填；公司字段须配置值，不把原站模板强制抄成目标全入口规则"
       }
     },
     {
@@ -582,11 +588,10 @@
       "status": "open_partial_recovered",
       "title": "原站业务请求超时/失败与交互超时",
       "latestRecovery": {
-        "at": "2026-09-11T02:20:02.979Z",
+        "at": "2026-09-11T06:36:31.652847+00:00",
         "queryRecovered": true,
-        "explicitReportDatesRecovered": true,
-        "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_Exit_Reports.json",
-        "remaining": "不宣称所有控件/页面均恢复；逐项继续实测"
+        "evidence": "R1-ORIGIN-20260910-100019/M01/Contract_Subset_Entry_Recheck.json",
+        "actual": "旧27/30点击失败，新31名称查询成功；合同/教育入口新31恢复；教育日历后字段读超时；局部非全站"
       },
       "concentratedCorrection": {
         "at": "2026-09-11T02:59:33.876Z",

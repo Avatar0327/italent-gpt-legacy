@@ -60,7 +60,7 @@
     "newTab": 1,
     "onFailure": "停止浏览器重试；不得读取旧DOM替代新查询"
   },
-  "retention": "14对象/5员工保留；兼职仍有效；EMP001未再入职；历史不删",
+  "retention": "17对象/6人员保留；两兼职9/11仍有效，9/12实际状态待查；EMP001未再入职；历史不删",
   "runId": "R1-ORIGIN-20260910-100019",
   "scheduledRecheck": {
     "approximateLocalTime": "08:00",
@@ -177,5 +177,14 @@
       "ORG003停用前重查全部依赖",
       "不自动重建/重播保存；原自动任务保持暂停"
     ]
+  },
+  "latestSixPersonOracle": {
+    "date": "2026-09-11",
+    "activePeople": 5,
+    "formalPeople": 4,
+    "probationPeople": 1,
+    "allHistoryAssignments": 10,
+    "allHistoryDistinctPeople": 6,
+    "evidence": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_All_Assignments.json"
   }
 }

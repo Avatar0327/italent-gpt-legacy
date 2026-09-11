@@ -223,10 +223,17 @@
     "EMP005": "save_and_exact_query_confirmed",
     "subscription": "cancelled_after_no_channel_no_recipient_validation_no_subscription",
     "EMP006": "100字符保存并全名查询UUID确认，101/304字符拒绝",
-    "ORG003": "跨父重名保存后已恢复原名称简称父级，编辑层关闭"
+    "ORG003": "跨父重名保存后已恢复原名称简称父级，编辑层关闭",
+    "contractEducationSep11": {
+      "at": "2026-09-11T06:36:31.652847+00:00",
+      "status": "both_cancelled",
+      "createdCount": 0,
+      "unknownBusinessActions": [],
+      "evidence": "R1-ORIGIN-20260910-100019/M01/Contract_Education_Validation.json"
+    }
   },
   "lastContinuation": {
-    "at": "2026-09-11T06:16:13.172340+00:00",
+    "at": "2026-09-11T06:36:31.652847+00:00",
     "newObjects": 7,
     "modifiedRunObjects": 3,
     "retained": 17,
@@ -237,7 +244,7 @@
       "R1-ORIGIN-20260910-100019/M01/EMP006_Readback.json",
       "R1-ORIGIN-20260910-100019/M01/EMP006_Assignment.json"
     ],
-    "basisHead": "215ad9468dba43c9b9a1a7c36f26eb20e130c225",
+    "basisHead": "c808313e85ec1af45a0cdfe31b828dcdbdfe4300",
     "unknownBusinessActions": []
   },
   "manualSmoke": {

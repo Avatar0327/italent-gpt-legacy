@@ -2,10 +2,10 @@
   "basisHead": "76a16265fdd65f6ba7608260dde1e07acfb85200",
   "continuationInstruction": "R1集中连续执行，只有完整退出条件或全部自主事项完成且仅剩真实外部条件才释放浏览器；自动任务保持暂停。",
   "currentAttempt": {
-    "basisHead": "215ad9468dba43c9b9a1a7c36f26eb20e130c225",
-    "checkedAt": "2026-09-11T06:16:13.172340+00:00",
+    "basisHead": "c808313e85ec1af45a0cdfe31b828dcdbdfe4300",
+    "checkedAt": "2026-09-11T06:36:31.652847+00:00",
     "dateConditionSatisfied": true,
-    "evidence": "R1-ORIGIN-20260910-100019/M01/ORG003_Self_Parent_Rejected.json",
+    "evidence": "R1-ORIGIN-20260910-100019/M01/Contract_Education_Validation.json",
     "oldDOMReusableForCurrentConclusion": false,
     "outcome": "concentrated_validation_in_progress",
     "unknownBusinessActions": []
