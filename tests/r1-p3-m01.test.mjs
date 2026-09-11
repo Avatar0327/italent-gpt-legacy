@@ -65,6 +65,33 @@ test('P3-M01-09: missing or wrong entry template blocks person creation and neve
  const p={operation:'person',code:'P-new',name:'合成待入职',orgId:'A',templateId:t.result.ids[0],entryType:'prehire',fields:{}};await assert.rejects(f.send(p),/必填/);
  const before=f.sqlite.prepare('SELECT count(*) n FROM hris_memberships').get().n;const r=await f.send({...p,fields:{email:'fixture@example.invalid'}});assert.equal((await m01Entity(f.db,f.tenant,r.result.ids[0])).payload.invite,false);assert.equal(f.sqlite.prepare('SELECT count(*) n FROM hris_memberships').get().n,before);f.sqlite.close();
 });
+test('P3-ORIGIN-OBS07: required text rejects empty, whitespace and blank defaults in each declared entry template before any write',async t=>{
+ const f=await fixture();t.after(()=>f.sqlite.close());
+ const snapshot=()=>Object.fromEntries(['r1_m01_entities','r1_m01_versions','r1_identity_keys','r1_commands','r1_outbox','r1_recovery_changes','hris_audit_events','hris_memberships'].map(table=>[table,f.sqlite.prepare('SELECT count(*) n FROM '+table).get().n]));
+ for(const entryType of ['employee_create','prehire','onboard']){
+  const template=await f.send({operation:'template',orgId:'A',kind:'custom',entryType,fields:[{code:'email',type:'text',required:true,default:'  ',uniqueKey:false,readActions:['read'],writeActions:['update']}]});
+  const payload={operation:'person',code:'blank-'+entryType,name:'隔离必填验证',orgId:'A',templateId:template.result.ids[0],entryType,fields:{}};
+  for(const fields of [{},{email:null},{email:''},{email:' \t\n '}]){
+   const before=snapshot();await assert.rejects(f.send({...payload,fields}),/必填/);assert.deepEqual(snapshot(),before);
+  }
+  const key=crypto.randomUUID(),valid={...payload,fields:{email:'isolated@example.invalid'}},saved=await f.send(valid,key),after=snapshot();
+  assert.equal((await f.send(valid,key)).replayed,true);assert.deepEqual(snapshot(),after);assert.equal((await m01Entity(f.db,f.tenant,saved.result.ids[0])).payload.fields.email,'isolated@example.invalid');
+ }
+});
+test('P3-ORIGIN-OBS07: required subset blank update rolls back, optional blank and numeric zero remain valid, unauthorized writes remain denied',async t=>{
+ const f=await fixture();t.after(()=>f.sqlite.close());
+ f.sqlite.prepare("UPDATE r1_permission_grants SET fields='[\"record\",\"name\",\"skill\",\"score\"]' WHERE member_id='owner' AND object_type='M01'").run();
+ const field=(code,type,required)=>({code,type,required,default:null,uniqueKey:false,readActions:['read'],writeActions:['update'],...(type==='number'?{unit:'points',precision:0}:{})});
+ const template=await f.send({operation:'template',orgId:'A',kind:'skill',entryType:'subset',fields:[field('skill','text',true),field('name','text',false),field('score','number',true)]});
+ const payload={operation:'subsetImport',personId:'person',orgId:'A',templateId:template.result.ids[0],templateVersion:1,batchId:'isolated-required-subset',rowNo:1,attemptVersion:1,mode:'create',recordId:null,fields:{skill:' 合成技能 ',name:' ',score:0}},saved=await f.send(payload),recordId=saved.result.ids[0];
+ assert.deepEqual((await m01Entity(f.db,f.tenant,recordId)).payload.fields,{skill:'合成技能',name:'',score:0});
+ const old=f.sqlite.prepare('SELECT payload FROM r1_m01_versions WHERE entity_id=?').get(recordId).payload,revision=(await m01Entity(f.db,f.tenant,recordId)).revision;
+ const update={...payload,rowNo:2,mode:'update',recordId,fields:{skill:' \t '}};
+ await assert.rejects(f.send(update),/必填/);assert.equal((await m01Entity(f.db,f.tenant,recordId)).revision,revision);assert.equal(f.sqlite.prepare('SELECT count(*) n FROM r1_import_receipts WHERE batch_id=? AND row_no=2').get(payload.batchId).n,0);
+ const fixed={...update,fields:{skill:'合成新技能'}},key=crypto.randomUUID();await f.send(fixed,key);assert.equal((await f.send(fixed,key)).replayed,true);assert.equal(f.sqlite.prepare('SELECT payload FROM r1_m01_versions WHERE entity_id=? AND version=1').get(recordId).payload,old);
+ f.sqlite.prepare("UPDATE r1_permission_grants SET fields='[\"record\"]' WHERE member_id='owner' AND object_type='M01' AND action='subsetImport'").run();
+ await assert.rejects(f.send({...fixed,rowNo:3}),e=>e.status===403);
+});
 test('P3-M01-10: exit fence rejects later approvals and queues all 101 cleanup items',async()=>{
  const f=await fixture();f.seed('employment','employment','A','person',{startOn:past},'active');f.seed('exit','exit_request','A','person',{lastWorkingOn:'2026-01-01',reviewerId:'reviewer'},'approved');
  for(let i=0;i<101;i++)f.seed('work-'+i,'assignment_request','A','person',{reviewerId:'reviewer',createdBy:'owner'},'pending');
