@@ -133,5 +133,16 @@
     "M01-REVIEW-AC10"
   ],
   "independentReview": "pending",
-  "browserHumanAcceptance": "not_executed"
+  "browserHumanAcceptance": "not_executed",
+  "originFeedbackIncrement": {
+    "finding": "P3-INTAKE-DEFECT-001",
+    "sourceSha": "812a3bddffeaea05a88baaac5816d94c75c2382e",
+    "evidence": "evidence/r1-p3-20260911T003733692664Z.json",
+    "testNamePrefix": "P3-ORIGIN-OBS07",
+    "caseIds": [
+      "P3-M01-08",
+      "P3-M01-09"
+    ],
+    "independentReview": "pending"
+  }
 }

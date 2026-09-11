@@ -43,5 +43,22 @@
       "status": "P4_retained",
       "impact": "本窗口不加人、不进入P4"
     }
+  ],
+  "originEvidenceIntake": "R1_P3_Origin_Evidence_Intake.json",
+  "deferredChangeProposals": [
+    {
+      "id": "CP-R1-ORIGIN-OBS07-DATE",
+      "status": "proposal_not_approved_not_implemented",
+      "blockingCurrentP3": false,
+      "proposal": "明确哪些入口/雇佣类型要求计划入职日期不早于所选组织最早有效日，以及历史迁移/重聘/未来目录例外；已有执行时目标时态校验继续有效。",
+      "why": "employment.startOn目前只校验合法日期/前任期与未结束段；P2未明示该源模板跨对象前置规则，不自动变更已批准模型。"
+    },
+    {
+      "id": "CP-R1-ORIGIN-OBS07-PROBATION",
+      "status": "proposal_not_approved_not_implemented",
+      "blockingCurrentP3": false,
+      "proposal": "若采纳源试用模板联动，需明确适用模板版本、条件必填、月末/闰年算法与默认覆写规则；不得由一个月样本推所有入口策略。",
+      "why": "本次已修复显式required的空白绕过；新增条件规则/日期算法属于另一个需求问题。"
+    }
   ]
 }

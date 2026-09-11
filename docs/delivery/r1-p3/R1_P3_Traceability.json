@@ -1590,6 +1590,13 @@
       "tests": [
         "tests/r1-p3-m01.test.mjs",
         "tests/r1-p3-transfer.test.mjs"
+      ],
+      "supplementalEvidence": [
+        {
+          "finding": "P3-INTAKE-DEFECT-001",
+          "evidence": "evidence/r1-p3-20260911T003733692664Z.json",
+          "note": "只补显式required空白拒绝；不追加原站模板联动政策，不自动闭合原条件。"
+        }
       ]
     },
     {
@@ -3658,7 +3665,7 @@
     }
   ],
   "latestEvidence": [
-    "evidence/r1-p3-20260910T104045821462Z.json"
+    "evidence/r1-p3-20260911T003733692664Z.json"
   ],
   "allOriginalAcPassed": false,
   "risksClosedByExecutor": 0,
@@ -3778,6 +3785,20 @@
       "caseEvidence": "R1_P3_Cross_Domain_Case_Evidence.json",
       "evidence": "evidence/r1-p3-20260910T103230203458Z.json",
       "status": "implemented_synthetic_verified_review_pending",
+      "risksClosed": 0
+    },
+    {
+      "taskId": "P3-R1-02",
+      "sourceSha": "812a3bddffeaea05a88baaac5816d94c75c2382e",
+      "evidence": "evidence/r1-p3-20260911T003733692664Z.json",
+      "finding": "P3-INTAKE-DEFECT-001",
+      "status": "fixed_targeted_synthetic_verified_independent_review_pending",
+      "code": [
+        "lib/hris/r1-m01.ts"
+      ],
+      "tests": [
+        "tests/r1-p3-m01.test.mjs"
+      ],
       "risksClosed": 0
     }
   ],
@@ -4064,5 +4085,11 @@
       "scope": "full_R1_local_synthetic"
     }
   ],
-  "overallReview": "R1_P3_Artifact_Review.json"
+  "overallReview": "R1_P3_Artifact_Review.json",
+  "originEvidenceIntake": {
+    "sourceHead": "76a16265fdd65f6ba7608260dde1e07acfb85200",
+    "receipt": "R1_P3_Origin_Evidence_Intake.json",
+    "mappingCount": 89,
+    "sourceParityPassed": false
+  }
 }
