@@ -1,0 +1,60 @@
+{
+  "caseId": "M01-CONTRACT-001",
+  "runId": "R1-ORIGIN-20260910-100019",
+  "recordId": "d31ec769-bd60-4877-828c-6d212e9a3dca",
+  "personId": "53a88828-60d7-42e4-b508-974ff96708a2",
+  "legalId": "da7b6c4c-90ee-437a-aae0-5740f916210f",
+  "at": "2026-09-11T07:36:18.439Z",
+  "role": "ORIGIN-ADMIN-01",
+  "formalRoute": "合同协议→新建→全部合同协议和有效合同协议完整姓名重新查询→唯一人员行详情",
+  "code": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_CONTRACT_001",
+  "result": {
+    "rows": 1,
+    "state": "有效",
+    "approvalState": "生效",
+    "signedCount": 1,
+    "signedOn": "2026-09-11",
+    "effectiveOn": "2026-09-11",
+    "endOn": "2026-10-10",
+    "actualTerminationTime": null,
+    "legalName": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_CONTRACT_LEGAL_001",
+    "electronicSignState": null,
+    "attachment": "ZZ_R1_CONTRACT_ATTACH_001.txt"
+  },
+  "attachmentPreview": {
+    "tab": "34",
+    "title": "ZZ_R1_CONTRACT_ATTACH_001",
+    "body": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_CONTRACT_ATTACH_001 完全虚构测试附件；无个人隐私、无签署效力。",
+    "source": "正式文件名点击打开预览iframe",
+    "matchesSyntheticSource": true
+  },
+  "fileChooserRecovery": "隐藏input不可点击；可见上传按钮触发官方filechooser成功，setFiles合成txt并独立回读文件名。局部上传恢复。",
+  "notificationsSent": 0,
+  "unknownBusinessActions": [],
+  "download": {
+    "status": "unconfirmed_no_file_returned",
+    "formalAction": "附件预览→cloud_download菜单→直接下载",
+    "error": "Error: Timed out after 60000ms waiting for download.",
+    "independentReadback": "预览正文保留，菜单关闭；未收到文件路径",
+    "consoleObservation": "Error sending browser metadata to extension: Object",
+    "causeNotProven": true,
+    "retryStopped": true
+  },
+  "notClaimed": [
+    "法律签署",
+    "独立角色附件权限",
+    "附件替换及历史",
+    "下载文件核对"
+  ],
+  "replacement": {
+    "at": "2026-09-11T07:41:55Z",
+    "attachment": "ZZ_R1_CONTRACT_ATTACH_002.txt",
+    "singleSave": true,
+    "serverReopenedEditorConfirmed": true,
+    "contractIdUnchanged": true,
+    "signedCount": 1,
+    "datesUnchanged": true,
+    "oldDetailImmediatelyAfterSave": "ZZ_R1_CONTRACT_ATTACH_001.txt",
+    "verificationDraftCancelled": true
+  }
+}

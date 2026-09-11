@@ -16,8 +16,8 @@
   },
   "concurrency": "R1_sole_operator_own_tabs_27_30_forms_isolated_same_admin_sequential_stale_drafts",
   "continuationInProgress": true,
-  "createdRecords": 19,
-  "createdRecordsDefinition": "累计19主动创建，删除1，保留18；新增专属合同法人夹具1，原17保留对象不重建。",
+  "createdRecords": 20,
+  "createdRecordsDefinition": "累计20主动业务对象，删除1，保留19，另有合成附件2版本不重复算业务对象；6人员。",
   "currentCheckpoint": "owner_decisions_and_contract_fixture_continuing",
   "currentContinuationLimitation": "详见Completion_Assessment.json；角色/审计/邀请/日期/正式文件/模板与稳定扩量前置。不得称完整通过。",
   "currentEmployeeOracle": {
@@ -130,7 +130,7 @@
     "currentEndedPrimary": 1,
     "evidence": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_All_Assignments.json"
   },
-  "retainedRecords": 18,
+  "retainedRecords": 19,
   "deletedRecords": 1,
   "continuationComparisonBasis": "7920b64ea30f1e4b232fb86bba2742852d0892e8"
 }

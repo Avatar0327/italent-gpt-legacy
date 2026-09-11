@@ -223,7 +223,7 @@
     }
   ],
   "countDefinition": "18主动创建对象含已删临时岗位：3组织+3岗位+6人员+1法人+2申请+离职任职1+兼职任职2。保留17；自动派生历史行不重复计数。",
-  "createdCount": 19,
+  "createdCount": 20,
   "deletedCount": 1,
   "drafts": {
     "initialCancelledOrganizationDrafts": 2,
@@ -245,9 +245,9 @@
     }
   },
   "lastContinuation": {
-    "at": "2026-09-11T07:27:20.434900+00:00",
+    "at": "2026-09-11T07:38:20.219030+00:00",
     "basisHead": "8e3be496177bae50b6545b9787c1125741f1aafc",
-    "newObjects": 1,
+    "newObjects": 2,
     "deletedObjects": 0,
     "inProgress": true,
     "unknownBusinessActions": [],
@@ -845,7 +845,6 @@
       "caseId": "M01-CONTRACT-LEGAL-FIXTURE-001",
       "objectType": "contract_legal_fixture",
       "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_CONTRACT_LEGAL_001",
-      "originalRecordId": "da7b6c4c-90ee-437a-aae0-5740f916210f",
       "createdAt": "2026-09-11T07:25:50.636Z",
       "createdAtPrecision": "browser_readback_not_server_audit",
       "currentStatus": "启用；2026-09-11生效；ORG002含下级",
@@ -857,10 +856,34 @@
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/Contract_Legal_Fixture_Checkpoint.json"
       ],
-      "screenshot": null
+      "screenshot": null,
+      "originRecordId": "da7b6c4c-90ee-437a-aae0-5740f916210f"
+    },
+    {
+      "runId": "R1-ORIGIN-20260910-100019",
+      "module": "M01",
+      "caseId": "M01-CONTRACT-001",
+      "objectType": "contract",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_CONTRACT_001",
+      "createdAt": "2026-09-11T07:36:18.439Z",
+      "createdAtPrecision": "browser_readback_not_server_audit",
+      "currentStatus": "有效/生效；签订次数1",
+      "relatedRecords": [
+        "53a88828-60d7-42e4-b508-974ff96708a2",
+        "da7b6c4c-90ee-437a-aae0-5740f916210f",
+        "CONTRACT_ATTACH_001/ZZ_R1_CONTRACT_ATTACH_002.txt"
+      ],
+      "allowLaterDelete": true,
+      "cleanupCondition": "完整合同/附件历史验证后按唯一合同UUID终止或删除；先解除法人引用",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/CONTRACT001_Readback.json",
+        "R1-ORIGIN-20260910-100019/M01/CONTRACT001_PreSave.json"
+      ],
+      "originRecordId": "d31ec769-bd60-4877-828c-6d212e9a3dca",
+      "status": "有效/生效；签订次数1；附件002已替换并新编辑回读"
     }
   ],
-  "retainedCount": 18,
+  "retainedCount": 19,
   "runId": "R1-ORIGIN-20260910-100019",
   "successMessagePendingIdCount": 0,
   "writesSuspendedReason": null

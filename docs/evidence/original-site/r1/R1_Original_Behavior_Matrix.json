@@ -6539,6 +6539,67 @@
       "time": "2026-09-11T07:25:50.636Z",
       "title": "正式合同公司配置入口及隔离法人夹具",
       "threeWayConclusion": "来源公司入口已确认映射法人目录；实际引用/停用保护尚未通过，未判P3缺陷或完整MATCH"
+    },
+    {
+      "actualResult": "EMP005同人正式合同保存，有效/生效，签订次数1，9/11至10/10；合成附件001上传并预览正文一致，002替换后新编辑确认；正式下载60秒无文件回执。",
+      "blockerIds": [],
+      "caseId": "M01-CONTRACT-CREATE-ATTACH-001",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/CONTRACT001_Readback.json",
+        "R1-ORIGIN-20260910-100019/M01/CONTRACT001_PreSave.json"
+      ],
+      "execution": "observed_narrow_scope",
+      "inputs": {
+        "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_CONTRACT_LEGAL_001",
+        "scope": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002(包含下级)"
+      },
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-07"
+        ],
+        "evidenceMode": "按P2/P3任务静态映射，字段模板不可直接等价，未运行P3",
+        "path": "lib/hris/r1-m01.ts",
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "task": "P3-R1-02"
+      },
+      "page": "合同新建/公司/去设置公司/新建法人",
+      "pageState": "contract_and_replacement_saved_download_unconfirmed",
+      "preconditions": "仅本轮合成数据；正式页面人工操作可执行；下载/截图仅局部限制；独立身份须为现有授权测试角色",
+      "recordIds": [
+        "d31ec769-bd60-4877-828c-6d212e9a3dca",
+        "53a88828-60d7-42e4-b508-974ff96708a2",
+        "da7b6c4c-90ee-437a-aae0-5740f916210f"
+      ],
+      "repeatability": "字段级可复核；控件延迟/超时已单独记录",
+      "requirements": [
+        "F-SPEC-06",
+        "F-SPEC-07",
+        "BASE-03",
+        "BASE-04"
+      ],
+      "role": "ORIGIN-ADMIN-01",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "severity": "Observation",
+      "steps": [
+        "选本RUN原人员及新法人",
+        "正式日历9/11、期限1月自动10/10",
+        "可见上传按钮触发filechooser并上传合成001",
+        "保存后两个视图固定姓名查询唯一合同并核UUID",
+        "预览001正文，直接下载无文件回执",
+        "编辑上传002、单次保存、新编辑回读002、取消复核草稿"
+      ],
+      "time": "2026-09-11T07:43:30.210450+00:00",
+      "title": "隔离法人合同保存和附件上传预览替换",
+      "threeWayConclusion": "局部原站合同与附件证据；未证独立权限、下载内容、历史不变性或完整P3对照，不提升模块完整度"
     }
   ],
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",

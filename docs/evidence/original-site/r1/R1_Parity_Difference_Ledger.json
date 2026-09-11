@@ -123,7 +123,7 @@
       "title": "截图捕获超时"
     },
     {
-      "actual": "正式组织模板下载、仅本轮筛选报表下载均被Chromium阻止，无文件；未绕过。",
+      "actual": "正式组织模板下载、仅本轮筛选报表下载均被Chromium阻止，无文件；未绕过。；9/11合同附件直接下载60秒无文件回执，预览可用，未见本次Chromium阻止文案，不混同原因。",
       "classification": "ENV_BLOCKED",
       "conclusion": "只阻塞正式导入/导出文件能力，人工正式页面新增和其他模块继续。",
       "evidence": [
@@ -156,7 +156,7 @@
       "severity": "Observation",
       "status": "open",
       "title": "正式组织模板下载被Chromium阻止",
-      "latestDownloadEvidence": "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_Download.json"
+      "latestDownloadEvidence": "R1-ORIGIN-20260910-100019/M01/CONTRACT001_Readback.json"
     },
     {
       "actual": "仅现有管理入口会话ORIGIN-ADMIN-01，两个标签共用该会话；没有验证独立员工/调出审批/调入审批身份。",
@@ -386,7 +386,7 @@
     {
       "actual": "EMP002启用试用时期限/预计结束必填；9/1+1月=9/30；因早于ORG002生效9/10被拒，纠正9/10后结束10/9，创建成功。日期变化会重置邮箱和工号，已回读纠正。",
       "classification": null,
-      "conclusion": "原站当前模板规则不自动变成所有员工入口强制规则；未修改组织设立历史。",
+      "conclusion": "原站当前模板规则不自动变成所有员工入口强制规则；未修改组织设立历史。 新正式合同公司配置已确认为法人目录，ORG002范围夹具可在EMP005合同引用；不再称该映射入口未知。",
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-probation-validation.json",
         "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-org-date-validation.json",
@@ -396,7 +396,8 @@
         "R1-ORIGIN-20260910-100019/M01/EMP004_Duplicate_Code.json",
         "R1-ORIGIN-20260910-100019/M01/EMP004_Readback.json",
         "R1-ORIGIN-20260910-100019/M01/EMP005_Readback.json",
-        "R1-ORIGIN-20260910-100019/M01/Contract_Education_Validation.json"
+        "R1-ORIGIN-20260910-100019/M01/Contract_Education_Validation.json",
+        "R1-ORIGIN-20260910-100019/M01/CONTRACT001_Readback.json"
       ],
       "feedback": "P2明确入口模板/跨对象日期约束，P3核查employment.startOn与组织有效日的实现及测试；未确认批准设计遗漏/实现缺陷。",
       "id": "OBS-07",
@@ -621,8 +622,8 @@
       ],
       "severity": "Observation",
       "classification": "ENV_BLOCKED",
-      "status": "active_partial_capability_block",
-      "actual": "正式file input及可见上传按钮两次等待均3000ms超时；公开参数请求60000ms；首次未处理拒绝导致运行状态丢失，恢复后独立回读未上传附件。",
+      "status": "open_partial_recovered",
+      "actual": "正式可见上传/重新上传按钮触发filechooser成功，合成合同附件001及002保存并新编辑读取；历史其他入口失败保留，未声称全附件能力恢复",
       "evidence": [
         "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json"
       ],
@@ -634,7 +635,8 @@
         "P3-R1-02"
       ],
       "productDefectConfirmed": false,
-      "feedback": "仅附件能力阻塞，不改浏览器配置、不绕过安全；岗位单字段编辑仍可完成。"
+      "feedback": "仅附件能力阻塞，不改浏览器配置、不绕过安全；岗位单字段编辑仍可完成。",
+      "latestEvidence": "R1-ORIGIN-20260910-100019/M01/CONTRACT001_Readback.json"
     },
     {
       "id": "DIFF-MAJOR-002",
