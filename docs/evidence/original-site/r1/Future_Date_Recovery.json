@@ -128,7 +128,7 @@
     },
     {
       "action": "仅确认旧雇佣/离职实际结束后，使用原站正式再入职入口办理本轮EMP001；先核是否会邀请或恢复权限，如必须影响账号权限则停止该操作。",
-      "actualResult": "未打开或提交再入职；不新建同名第二人员",
+      "actualResult": "正式离职/退休再入职入口可选原EMP001并带回旧离职字段；必填校验拒绝后取消，未保存。该待入职表单未提供邀请开关；新雇佣段和保存后personId未验证。",
       "capture": [
         "同一personId",
         "新雇佣/任职UUID",
@@ -137,10 +137,10 @@
         "邀请否/账号未恢复"
       ],
       "evidence": [
-        "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
+        "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json"
       ],
       "id": "FUTURE-REHIRE",
-      "manualSep11Status": "not_executed",
+      "manualSep11Status": "formal_entry_and_validation_observed_rehire_not_completed",
       "passLimit": "不可新建同名第二人员替代再入职；不可修改历史或系统时间制造前置；缺角色部分仍ROLE_BLOCKED。"
     }
   ],

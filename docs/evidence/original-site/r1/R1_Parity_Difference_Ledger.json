@@ -3,14 +3,14 @@
   "counts": {
     "Blocker": 0,
     "DESIGN_GAP": 0,
-    "ENV_BLOCKED": 4,
+    "ENV_BLOCKED": 5,
     "IMPLEMENTATION_DEFECT": 0,
     "INTENTIONAL_DIFFERENCE": 1,
     "MATCH": 3,
     "Major": 1,
     "Minor": 0,
     "NEED_OWNER_DECISION": 0,
-    "Observation": 14,
+    "Observation": 15,
     "REQUIREMENT_GAP": 0,
     "ROLE_BLOCKED": 1,
     "activeMajor": 0,
@@ -392,7 +392,12 @@
       "runId": "R1-ORIGIN-20260910-100019",
       "severity": "Observation",
       "status": "observed_not_dispositioned",
-      "title": "试用字段联动与组织生效日约束"
+      "title": "试用字段联动与组织生效日约束",
+      "latestBoundaryEvidence": {
+        "at": "2026-09-11T02:59:33.876Z",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json",
+        "actual": "正式再入职入口可关联EMP001及旧离职字段；必填拒绝。新增员工邮箱/证件/手机号格式拒绝；305字符只DOM暂存不证明持久约束。"
+      }
     },
     {
       "actual": "停用表单包含整体职位/人员转移，未核全部明细故取消。ORG003备注编辑持久化，名称/编码/日期/归属不变；操作记录仅设立1条，变更记录仅启用1版本。",
@@ -421,7 +426,12 @@
       "runId": "R1-ORIGIN-20260910-100019",
       "severity": "Observation",
       "status": "observed_not_dispositioned",
-      "title": "组织停用迁移范围及普通编辑记录显示"
+      "title": "组织停用迁移范围及普通编辑记录显示",
+      "latestJobEvidence": {
+        "at": "2026-09-11T02:59:33.876Z",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json",
+        "actual": "JOB001重复JOB002编码被拒；原编码保留；职责修改成功；历史仍一个当前版本、创建时间9/10 20:01:25，不是编辑审计。"
+      }
     },
     {
       "actual": "本轮调动和转正撤回后，申请人开始节点可见编辑；语义点击及可见坐标各有界尝试，未出现业务日期/保存表单或新的本轮标签。未点击同意替代重提。 报表ORG002候选经文字/整行/CUA点击均已选0；取消，不将未应用筛选的2行计为统计缺陷。",
@@ -510,7 +520,36 @@
         "explicitReportDatesRecovered": true,
         "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_Exit_Reports.json",
         "remaining": "不宣称所有控件/页面均恢复；逐项继续实测"
+      },
+      "concentratedCorrection": {
+        "at": "2026-09-11T02:59:33.876Z",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json",
+        "actual": "部分未变化来自可见popup iframe遮罩；关闭后员工/入职/职位恢复。不能把主页面读不到表单归为全部业务阻塞。"
       }
+    },
+    {
+      "id": "ENV-06",
+      "title": "正式附件文件选择器等待失败",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "modules": [
+        "M01"
+      ],
+      "severity": "Observation",
+      "classification": "ENV_BLOCKED",
+      "status": "active_partial_capability_block",
+      "actual": "正式file input及可见上传按钮两次等待均3000ms超时；公开参数请求60000ms；首次未处理拒绝导致运行状态丢失，恢复后独立回读未上传附件。",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json"
+      ],
+      "requirements": [
+        "BASE-03",
+        "F-SPEC-08"
+      ],
+      "p3Tasks": [
+        "P3-R1-02"
+      ],
+      "productDefectConfirmed": false,
+      "feedback": "仅附件能力阻塞，不改浏览器配置、不绕过安全；岗位单字段编辑仍可完成。"
     }
   ],
   "priorityRecovery": {

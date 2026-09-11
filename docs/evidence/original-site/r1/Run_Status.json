@@ -1,5 +1,5 @@
 {
-  "activeEnvBlockers": 4,
+  "activeEnvBlockers": 5,
   "activeMajor": 0,
   "activeRoleBlockers": 1,
   "browserHandoffTo": null,
@@ -19,7 +19,7 @@
   "createdRecords": 10,
   "createdRecordsDefinition": "3组织+2职位+2员工+2申请+1未来离职任职；不计自动关联重复",
   "currentCheckpoint": "same_run_partial_evidence_not_release_complete",
-  "currentContinuationLimitation": "离职执行审计与旧雇佣ID页面未提供；其余可执行场景继续，不以历史报表超时整体停工",
+  "currentContinuationLimitation": "剩余附件ENV-06、独立角色ROLE-01及尚未执行场景；持续自主执行中，不交接",
   "currentEmployeeOracle": {
     "people": 1,
     "formal": 0,
@@ -51,7 +51,7 @@
   },
   "historicalMajor": 1,
   "intentionalDifferences": 1,
-  "lastRecheckAt": "2026-09-11T02:20:02.979Z",
+  "lastRecheckAt": "2026-09-11T02:59:33.876Z",
   "matchRules": 3,
   "modules": [
     {
@@ -93,7 +93,7 @@
     "Blocker": 0,
     "Major": 0,
     "Minor": 0,
-    "Observation": 0
+    "Observation": 1
   },
   "origin": "https://srworkshopbj.italent.cn",
   "otherUnexecutedWorkNotEquivalentToBlocker": true,
@@ -114,9 +114,10 @@
     "Blocker": 0,
     "Major": 1,
     "Minor": 0,
-    "Observation": 14
+    "Observation": 15
   },
   "smokeNamedObjectsThresholdReached": true,
   "unknownBusinessActions": [],
-  "workflowStatus": "concentrated_origin_validation_in_progress"
+  "workflowStatus": "concentrated_origin_validation_in_progress",
+  "modifiedRunObjectsThisContinuation": 1
 }

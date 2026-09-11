@@ -1,0 +1,291 @@
+{
+  "basisHead": "97dd1da9d10edd5111d1d3f47aadc096644f6aea",
+  "captureMethod": "本轮工具返回的结构化DOM字段及操作回读；附件等待导致运行状态丢失后按已输出的原始工具记录封存，不将重建内存当新页面查询。",
+  "cases": [
+    {
+      "actual": {
+        "candidateUUIDInDOM": null,
+        "emailInCandidate": "zz.r1.20260910.100019.emp001@example.invalid",
+        "invitationControlProvided": false,
+        "lastWorkingOn": "2026-09-10",
+        "newEmploymentUUID": null,
+        "newPersonUUID": null,
+        "oldDepartment": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+        "oldEmploymentId": null,
+        "oldPersonUUIDVerifiedInList": true,
+        "rehireCountDisplayed": 2,
+        "selectedName": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001",
+        "terminationReason": "个人原因",
+        "terminationType": "离职"
+      },
+      "caseId": "M01-REHIRE-FORMAL-ENTRY-001",
+      "conclusion": "正式关联原人员的再入职入口已证；邀请/权限关闭及保存后同personId、新雇佣段仍未验证。没有创建同名第二人员。",
+      "execution": "partially_observed",
+      "page": "入职管理/添加待入职/离职或退休再入职",
+      "personId": "927ef593-f930-4bcb-963f-e463df2e9e84",
+      "steps": [
+        "正式离职人员视图完整姓名筛选，原人员链接UUID一致",
+        "原人员详情雇佣关系内部员工，任职历史离职/调动/入职保留",
+        "点击添加待入职，读取实际popup框架",
+        "选择离职/退休再入职，搜索并选择EMP001唯一姓名工号候选"
+      ],
+      "time": "2026-09-11T02:43:00.914Z"
+    },
+    {
+      "action": "保存",
+      "actual": {
+        "fieldErrors": [
+          {
+            "field": "待入职部门",
+            "message": "必填"
+          },
+          {
+            "field": "计划入职日期",
+            "message": "必填"
+          },
+          {
+            "field": "雇佣关系",
+            "message": "必填"
+          },
+          {
+            "field": "试用期(月)",
+            "message": "必填"
+          },
+          {
+            "field": "预计试用结束日期",
+            "message": "必填"
+          }
+        ],
+        "formRemained": true,
+        "subsequentAction": "取消；回读popup可见false",
+        "successObserved": false
+      },
+      "businessRecordCreated": false,
+      "caseId": "M01-REHIRE-REQUIRED-001",
+      "execution": "observed",
+      "inputs": {
+        "department": "",
+        "employmentRelationship": "",
+        "originalPerson": "EMP001",
+        "plannedHireOn": "",
+        "probationMonths": ""
+      },
+      "page": "上述再入职草稿",
+      "time": "2026-09-11T02:44:18.330Z"
+    },
+    {
+      "actual": {
+        "errors": [
+          {
+            "field": "电子邮件",
+            "message": "请正确输入邮箱"
+          },
+          {
+            "field": "证件号码",
+            "message": "证件号码不符合规范，请重新输入"
+          },
+          {
+            "field": "手机号码",
+            "message": "请输入正确的中国大陆手机号；其他国家地区手机号格式：（区号）手机号"
+          },
+          {
+            "field": "入职日期",
+            "message": "必填"
+          },
+          {
+            "field": "部门",
+            "message": "必填"
+          },
+          {
+            "field": "试用期(月)",
+            "message": "必填"
+          },
+          {
+            "field": "预计试用结束日期",
+            "message": "必填"
+          }
+        ],
+        "formRemained": true,
+        "inviteActiveRadio": "否",
+        "nameSpecificErrorNotObserved": true,
+        "successObserved": false
+      },
+      "caseId": "M01-EMP-FORMAT-001",
+      "execution": "observed",
+      "inputs": {
+        "documentNumber": "TEST_ID_INVALID",
+        "documentType": "身份证",
+        "email": "not-an-email",
+        "invite": false,
+        "name": "",
+        "phone": "TEST_PHONE_INVALID"
+      },
+      "page": "员工/新增员工 popup_17890947137721619",
+      "subsequentAction": "取消；回读popup visible=false",
+      "time": "2026-09-11T02:47:15.346Z"
+    },
+    {
+      "actualDOMLength": 305,
+      "blurPerformed": true,
+      "caseId": "M01-EMP-NAME-LENGTH-001",
+      "conclusion": "仅证明输入框暂存305字符，未验证保存限制；不得判为无长度限制",
+      "domMaxLength": -1,
+      "execution": "partially_observed",
+      "input": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_BOUNDARY_ + X重复260",
+      "inputLength": 305,
+      "page": "同新增员工未保存草稿",
+      "persisted": false,
+      "time": "2026-09-11T02:47:49.994Z"
+    },
+    {
+      "actual": "编码【ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_002】与已有职位重复（状态：生效）",
+      "caseId": "M01-JOB001-CODE-UNIQUE",
+      "conclusion": "重复编码拒绝；原编码未落库改变。跨本RUN两个不同组织岗位，不外推名称唯一性规则。",
+      "conflictRecordId": "9e593b4e-938e-4312-aff9-460c3c4d80f0",
+      "execution": "observed",
+      "inputs": {
+        "attemptedCode": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_002",
+        "nameUnchanged": true,
+        "orgUnchanged": true,
+        "originalCode": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001"
+      },
+      "laterFreshEditRead": {
+        "attachment": "",
+        "code": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001",
+        "description": ""
+      },
+      "page": "职位/JOB001/编辑",
+      "recordId": "81fde82c-3807-4e73-be33-46a9321f87fb",
+      "result": "rejected",
+      "time": "2026-09-11T02:51:27.237Z"
+    },
+    {
+      "actualEventTimeoutMs": 3000,
+      "actualFieldAfter": "说明书 上传",
+      "attempts": [
+        {
+          "result": "node_repl kernel unhandled rejection: Timed out after 3000ms waiting for file chooser.; kernel reset.",
+          "trigger": "input[type=file]"
+        },
+        {
+          "result": "Error: Timed out after 3000ms waiting for file chooser.",
+          "trigger": "可见上传按钮；Promise错误已捕获"
+        }
+      ],
+      "caseId": "M01-JOB001-ATTACH-001",
+      "classification": "ENV_BLOCKED",
+      "execution": "partially_observed",
+      "file": "M01/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ATTACH_001.txt",
+      "page": "职位/JOB001/编辑/说明书",
+      "scope": "仅文件选择器/附件，不阻止其他页面或岗位编辑；没有改隐藏配置或绕过安全",
+      "selectionReturned": false,
+      "supportedRequestedTimeoutMs": 60000,
+      "uploadedNameObserved": false
+    },
+    {
+      "actual": "职责已保存；未上传附件，未变更编码/姓名/归属",
+      "actualServerAuditTime": null,
+      "caseId": "M01-JOB001-EDIT-DESC-001",
+      "execution": "observed",
+      "inputs": {
+        "description": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_EDIT_001 完全虚构的岗位职责：维护本轮合成测试记录。"
+      },
+      "modifiedExistingRunObjects": 1,
+      "newObjects": 0,
+      "page": "职位/JOB001/编辑",
+      "recordId": "81fde82c-3807-4e73-be33-46a9321f87fb",
+      "steps": [
+        "首次恢复原编码并填职责后保存未取成功；旧重复编码提示仍在",
+        "取消并新打开编辑，服务器新加载编码为JOB001、职责空、说明书空，消除未知保存",
+        "在干净新表单只填职责并正常失焦，保存",
+        "独立等待详情准确职责标识可见，字段回读原编码、名称不变，职责说明已显示"
+      ],
+      "lastIndependentlyObservedAt": "2026-09-11T02:59:33.876Z"
+    },
+    {
+      "caseId": "M01-JOB001-HISTORY-AFTER-EDIT",
+      "observedAt": "2026-09-11T02:59:33.876Z",
+      "recordId": "81fde82c-3807-4e73-be33-46a9321f87fb",
+      "fields": [
+        {
+          "label": "创建时间：",
+          "value": "2026-09-10 20:01:25"
+        },
+        {
+          "label": "编码",
+          "value": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001"
+        },
+        {
+          "label": "名称",
+          "value": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001"
+        },
+        {
+          "label": "生效日期",
+          "value": "2026-09-10"
+        },
+        {
+          "label": "失效日期",
+          "value": "--"
+        },
+        {
+          "label": "状态",
+          "value": "启用"
+        },
+        {
+          "label": "职责描述",
+          "value": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_EDIT_001 完全虚构的岗位职责：维护本轮合成测试记录。"
+        },
+        {
+          "label": "创建时间",
+          "value": "2026-09-10 20:01:25"
+        }
+      ],
+      "conclusion": "页面仅一个当前生效版本，创建时间9/10 20:01:25而职责已为本轮编辑后值；不是9/11编辑审计时间。未发现新的版本或修改人/修改时间字段。",
+      "execution": "observed",
+      "page": "职位/JOB001/职位变更记录"
+    }
+  ],
+  "constraints": {
+    "D1toD7Unchanged": true,
+    "approvedIntentionalDifferenceUnchanged": true,
+    "browserInUse": true,
+    "p3DefectDetermined": false,
+    "p3ExitApproved": false,
+    "p4Started": false
+  },
+  "counts": {
+    "deletedObjects": 0,
+    "e2eCompleted": 0,
+    "e2eDenominator": 5,
+    "fullModules": 0,
+    "modifiedExistingRunObjects": 1,
+    "moduleDenominator": 4,
+    "newObjects": 0,
+    "retainedObjects": 10,
+    "unknownBusinessActions": 0
+  },
+  "environment": "https://srworkshopbj.italent.cn",
+  "navigationCorrection": {
+    "initialObservation": "主页面字段/导航曾空白或未变化",
+    "laterEvidence": "可见popup_<timestamp> iframe覆盖全页；正式添加表单在其中。读取主页面遗漏了弹窗，不能据此认定再入职或审批入口失败。关闭本轮弹窗后员工/入职/岗位均可正式加载。",
+    "notClaimed": [
+      "未确认登录失效",
+      "未确认全站故障",
+      "未确认其他窗口串写",
+      "点击审批中心但实际页面员工，未冒称M19执行"
+    ]
+  },
+  "next": "岗位历史/停用边界；继续其他模块。再入职尚需验证邀请关闭及同personId落库链路，不能仅材料收口。",
+  "otherTabsUntouched": [
+    "6",
+    "10",
+    "11",
+    "23"
+  ],
+  "ownedTabs": [
+    "27",
+    "28"
+  ],
+  "role": "ORIGIN-ADMIN-01",
+  "runId": "R1-ORIGIN-20260910-100019"
+}

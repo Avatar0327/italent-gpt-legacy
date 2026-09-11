@@ -2200,7 +2200,12 @@
         "覆盖同组织重名、跨组织重名、代码、设立/生效日期、上级职位、在用停用"
       ],
       "time": null,
-      "title": "岗位新增、编辑、停用及上下级"
+      "title": "岗位新增、编辑、停用及上下级",
+      "latestEvidence": {
+        "at": "2026-09-11T02:59:33.876Z",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json",
+        "note": "本轮已补部分边界/正式入口，仍有未执行范围，详见增量用例"
+      }
     },
     {
       "actualResult": "创建1员工、邮箱必填、邀请账号否；其他创建入口未验",
@@ -2528,7 +2533,12 @@
         "新雇佣段、司龄并集、账号不自动恢复"
       ],
       "time": null,
-      "title": "离职、再入职与身份连续性"
+      "title": "离职、再入职与身份连续性",
+      "latestEvidence": {
+        "at": "2026-09-11T02:59:33.876Z",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json",
+        "note": "本轮已补部分边界/正式入口，仍有未执行范围，详见增量用例"
+      }
     },
     {
       "actualResult": "未执行，不以计划预期充当实际结果",
@@ -2628,7 +2638,12 @@
         "先读原站约束再填最大边界，禁止真实隐私字段"
       ],
       "time": null,
-      "title": "必填、长度、格式、空值及重复值"
+      "title": "必填、长度、格式、空值及重复值",
+      "latestEvidence": {
+        "at": "2026-09-11T02:59:33.876Z",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json",
+        "note": "本轮已补部分边界/正式入口，仍有未执行范围，详见增量用例"
+      }
     },
     {
       "actualResult": "未执行，不以计划预期充当实际结果",
@@ -2643,7 +2658,7 @@
       },
       "environment": "https://srworkshopbj.italent.cn",
       "evidence": [],
-      "execution": "not_executed",
+      "execution": "partially_observed",
       "inputs": {
         "actualValues": null,
         "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_"
@@ -2680,7 +2695,12 @@
         "现有设立审计仅部分已观察"
       ],
       "time": null,
-      "title": "附件、历史版本、原单与审计"
+      "title": "附件、历史版本、原单与审计",
+      "latestEvidence": {
+        "at": "2026-09-11T02:59:33.876Z",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json",
+        "note": "本轮已补部分边界/正式入口，仍有未执行范围，详见增量用例"
+      }
     },
     {
       "actualResult": "未执行，不以计划预期充当实际结果",
@@ -4157,6 +4177,442 @@
       "timePrecision": "browser_observed",
       "title": "再入职前全部任职历史",
       "evidenceSection": "historyBeforeRehire"
+    },
+    {
+      "actualResult": "正式关联原人员的再入职入口已证；邀请/权限关闭及保存后同personId、新雇佣段仍未验证。没有创建同名第二人员。",
+      "caseId": "M01-REHIRE-FORMAL-ENTRY-001",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json"
+      ],
+      "execution": "partially_observed",
+      "inputs": {},
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-02",
+          "P3-M01-10"
+        ],
+        "evidenceMode": "批准任务和静态源码映射；最新P3增量仅文档/证据，本窗口未运行产品测试",
+        "path": "tests/r1-p3-m01.test.mjs",
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "task": "P3-R1-02"
+      },
+      "page": "入职管理/添加待入职/离职或退休再入职",
+      "pageState": "partially_observed",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "recordIds": [
+        "927ef593-f930-4bcb-963f-e463df2e9e84"
+      ],
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "F-SPEC-04",
+        "F-SPEC-05"
+      ],
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未采新截图；结构化正文及UUID证据。",
+      "severity": "Observation",
+      "steps": [
+        "正式离职人员视图完整姓名筛选，原人员链接UUID一致",
+        "原人员详情雇佣关系内部员工，任职历史离职/调动/入职保留",
+        "点击添加待入职，读取实际popup框架",
+        "选择离职/退休再入职，搜索并选择EMP001唯一姓名工号候选"
+      ],
+      "threeWayConclusion": "局部原站字段/入口事实；未证明完整场景或P3动态结果，不自动改批准需求、不判实现缺陷。",
+      "time": "2026-09-11T02:43:00.914Z",
+      "timePrecision": "browser_observed",
+      "title": "M01-REHIRE-FORMAL-ENTRY-001",
+      "evidenceSection": "M01-REHIRE-FORMAL-ENTRY-001",
+      "ledgerId": "OBS-07"
+    },
+    {
+      "actualResult": "{\"fieldErrors\":[{\"field\":\"待入职部门\",\"message\":\"必填\"},{\"field\":\"计划入职日期\",\"message\":\"必填\"},{\"field\":\"雇佣关系\",\"message\":\"必填\"},{\"field\":\"试用期(月)\",\"message\":\"必填\"},{\"field\":\"预计试用结束日期\",\"message\":\"必填\"}],\"formRemained\":true,\"subsequentAction\":\"取消；回读popup可见false\",\"successObserved\":false}",
+      "caseId": "M01-REHIRE-REQUIRED-001",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "department": "",
+        "employmentRelationship": "",
+        "originalPerson": "EMP001",
+        "plannedHireOn": "",
+        "probationMonths": ""
+      },
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-02",
+          "P3-M01-10"
+        ],
+        "evidenceMode": "批准任务和静态源码映射；最新P3增量仅文档/证据，本窗口未运行产品测试",
+        "path": "tests/r1-p3-m01.test.mjs",
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "task": "P3-R1-02"
+      },
+      "page": "上述再入职草稿",
+      "pageState": "observed",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "recordIds": [],
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "F-SPEC-04",
+        "F-SPEC-05"
+      ],
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未采新截图；结构化正文及UUID证据。",
+      "severity": "Observation",
+      "steps": [
+        "正式页面及嵌套弹窗操作",
+        "动作后独立回读，具体逐字段结果见结构化证据"
+      ],
+      "threeWayConclusion": "局部原站字段/入口事实；未证明完整场景或P3动态结果，不自动改批准需求、不判实现缺陷。",
+      "time": "2026-09-11T02:44:18.330Z",
+      "timePrecision": "browser_observed",
+      "title": "M01-REHIRE-REQUIRED-001",
+      "evidenceSection": "M01-REHIRE-REQUIRED-001",
+      "ledgerId": "OBS-07"
+    },
+    {
+      "actualResult": "{\"errors\":[{\"field\":\"电子邮件\",\"message\":\"请正确输入邮箱\"},{\"field\":\"证件号码\",\"message\":\"证件号码不符合规范，请重新输入\"},{\"field\":\"手机号码\",\"message\":\"请输入正确的中国大陆手机号；其他国家地区手机号格式：（区号）手机号\"},{\"field\":\"入职日期\",\"message\":\"必填\"},{\"field\":\"部门\",\"message\":\"必填\"},{\"field\":\"试用期(月)\",\"message\":\"必填\"},{\"field\":\"预计试用结束日期\",\"message\":\"必填\"}],\"formRemained\":true,\"inviteActiveRadio\":\"否\",\"nameSpecificErrorNotObserved\":true,\"successObserved\":false}",
+      "caseId": "M01-EMP-FORMAT-001",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "documentNumber": "TEST_ID_INVALID",
+        "documentType": "身份证",
+        "email": "not-an-email",
+        "invite": false,
+        "name": "",
+        "phone": "TEST_PHONE_INVALID"
+      },
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-08",
+          "P3-M01-09"
+        ],
+        "evidenceMode": "批准任务和静态源码映射；最新P3增量仅文档/证据，本窗口未运行产品测试",
+        "path": "tests/r1-p3-m01.test.mjs",
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "task": "P3-R1-02"
+      },
+      "page": "员工/新增员工 popup_17890947137721619",
+      "pageState": "observed",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "recordIds": [],
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-07"
+      ],
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未采新截图；结构化正文及UUID证据。",
+      "severity": "Observation",
+      "steps": [
+        "正式页面及嵌套弹窗操作",
+        "动作后独立回读，具体逐字段结果见结构化证据"
+      ],
+      "threeWayConclusion": "局部原站字段/入口事实；未证明完整场景或P3动态结果，不自动改批准需求、不判实现缺陷。",
+      "time": "2026-09-11T02:47:15.346Z",
+      "timePrecision": "browser_observed",
+      "title": "M01-EMP-FORMAT-001",
+      "evidenceSection": "M01-EMP-FORMAT-001",
+      "ledgerId": "OBS-07"
+    },
+    {
+      "actualResult": "仅证明输入框暂存305字符，未验证保存限制；不得判为无长度限制",
+      "caseId": "M01-EMP-NAME-LENGTH-001",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json"
+      ],
+      "execution": "partially_observed",
+      "inputs": {},
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-08",
+          "P3-M01-09"
+        ],
+        "evidenceMode": "批准任务和静态源码映射；最新P3增量仅文档/证据，本窗口未运行产品测试",
+        "path": "tests/r1-p3-m01.test.mjs",
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "task": "P3-R1-02"
+      },
+      "page": "同新增员工未保存草稿",
+      "pageState": "partially_observed",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "recordIds": [],
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-07"
+      ],
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未采新截图；结构化正文及UUID证据。",
+      "severity": "Observation",
+      "steps": [
+        "正式页面及嵌套弹窗操作",
+        "动作后独立回读，具体逐字段结果见结构化证据"
+      ],
+      "threeWayConclusion": "局部原站字段/入口事实；未证明完整场景或P3动态结果，不自动改批准需求、不判实现缺陷。",
+      "time": "2026-09-11T02:47:49.994Z",
+      "timePrecision": "browser_observed",
+      "title": "M01-EMP-NAME-LENGTH-001",
+      "evidenceSection": "M01-EMP-NAME-LENGTH-001",
+      "ledgerId": "OBS-07"
+    },
+    {
+      "actualResult": "编码【ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_002】与已有职位重复（状态：生效）",
+      "caseId": "M01-JOB001-CODE-UNIQUE",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "attemptedCode": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_002",
+        "nameUnchanged": true,
+        "orgUnchanged": true,
+        "originalCode": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001"
+      },
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-01",
+          "P3-M01-12"
+        ],
+        "evidenceMode": "批准任务和静态源码映射；最新P3增量仅文档/证据，本窗口未运行产品测试",
+        "path": "tests/r1-p3-m01.test.mjs",
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "task": "P3-R1-02"
+      },
+      "page": "职位/JOB001/编辑",
+      "pageState": "rejected",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "recordIds": [
+        "81fde82c-3807-4e73-be33-46a9321f87fb"
+      ],
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "BP-F-REQ-11",
+        "F-SPEC-01",
+        "F-SPEC-08"
+      ],
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未采新截图；结构化正文及UUID证据。",
+      "severity": "Observation",
+      "steps": [
+        "正式页面及嵌套弹窗操作",
+        "动作后独立回读，具体逐字段结果见结构化证据"
+      ],
+      "threeWayConclusion": "局部原站字段/入口事实；未证明完整场景或P3动态结果，不自动改批准需求、不判实现缺陷。",
+      "time": "2026-09-11T02:51:27.237Z",
+      "timePrecision": "browser_observed",
+      "title": "M01-JOB001-CODE-UNIQUE",
+      "evidenceSection": "M01-JOB001-CODE-UNIQUE",
+      "ledgerId": "OBS-08"
+    },
+    {
+      "actualResult": "[{\"result\":\"node_repl kernel unhandled rejection: Timed out after 3000ms waiting for file chooser.; kernel reset.\",\"trigger\":\"input[type=file]\"},{\"result\":\"Error: Timed out after 3000ms waiting for file chooser.\",\"trigger\":\"可见上传按钮；Promise错误已捕获\"}]",
+      "caseId": "M01-JOB001-ATTACH-001",
+      "classification": "ENV_BLOCKED",
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json"
+      ],
+      "execution": "partially_observed",
+      "inputs": {},
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-12",
+          "P3-INT-05"
+        ],
+        "evidenceMode": "批准任务和静态源码映射；最新P3增量仅文档/证据，本窗口未运行产品测试",
+        "path": "tests/r1-p3-m01.test.mjs",
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "task": "P3-R1-02"
+      },
+      "page": "职位/JOB001/编辑/说明书",
+      "pageState": "partially_observed",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "recordIds": [],
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "BASE-03",
+        "BASE-04",
+        "F-SPEC-08"
+      ],
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未采新截图；结构化正文及UUID证据。",
+      "severity": "Observation",
+      "steps": [
+        "正式页面及嵌套弹窗操作",
+        "动作后独立回读，具体逐字段结果见结构化证据"
+      ],
+      "threeWayConclusion": "局部原站字段/入口事实；未证明完整场景或P3动态结果，不自动改批准需求、不判实现缺陷。",
+      "time": "2026-09-11T02:59:33.876Z",
+      "timePrecision": "browser_observed",
+      "title": "M01-JOB001-ATTACH-001",
+      "evidenceSection": "M01-JOB001-ATTACH-001",
+      "ledgerId": "ENV-06"
+    },
+    {
+      "actualResult": "职责已保存；未上传附件，未变更编码/姓名/归属",
+      "caseId": "M01-JOB001-EDIT-DESC-001",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "description": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_EDIT_001 完全虚构的岗位职责：维护本轮合成测试记录。"
+      },
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-01",
+          "P3-M01-12"
+        ],
+        "evidenceMode": "批准任务和静态源码映射；最新P3增量仅文档/证据，本窗口未运行产品测试",
+        "path": "tests/r1-p3-m01.test.mjs",
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "task": "P3-R1-02"
+      },
+      "page": "职位/JOB001/编辑",
+      "pageState": "observed",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "recordIds": [
+        "81fde82c-3807-4e73-be33-46a9321f87fb"
+      ],
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "BP-F-REQ-11",
+        "F-SPEC-01",
+        "F-SPEC-08"
+      ],
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未采新截图；结构化正文及UUID证据。",
+      "severity": "Observation",
+      "steps": [
+        "首次恢复原编码并填职责后保存未取成功；旧重复编码提示仍在",
+        "取消并新打开编辑，服务器新加载编码为JOB001、职责空、说明书空，消除未知保存",
+        "在干净新表单只填职责并正常失焦，保存",
+        "独立等待详情准确职责标识可见，字段回读原编码、名称不变，职责说明已显示"
+      ],
+      "threeWayConclusion": "局部原站字段/入口事实；未证明完整场景或P3动态结果，不自动改批准需求、不判实现缺陷。",
+      "time": "2026-09-11T02:59:33.876Z",
+      "timePrecision": "browser_observed",
+      "title": "M01-JOB001-EDIT-DESC-001",
+      "evidenceSection": "M01-JOB001-EDIT-DESC-001",
+      "ledgerId": "OBS-08"
+    },
+    {
+      "actualResult": "页面仅一个当前生效版本，创建时间9/10 20:01:25而职责已为本轮编辑后值；不是9/11编辑审计时间。未发现新的版本或修改人/修改时间字段。",
+      "caseId": "M01-JOB001-HISTORY-AFTER-EDIT",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json"
+      ],
+      "execution": "observed",
+      "inputs": {},
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-12",
+          "P3-INT-05"
+        ],
+        "evidenceMode": "批准任务和静态源码映射；最新P3增量仅文档/证据，本窗口未运行产品测试",
+        "path": "tests/r1-p3-m01.test.mjs",
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "task": "P3-R1-02"
+      },
+      "page": "职位/JOB001/职位变更记录",
+      "pageState": "observed",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "recordIds": [
+        "81fde82c-3807-4e73-be33-46a9321f87fb"
+      ],
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "BASE-03",
+        "BASE-04",
+        "F-SPEC-08"
+      ],
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未采新截图；结构化正文及UUID证据。",
+      "severity": "Observation",
+      "steps": [
+        "正式页面及嵌套弹窗操作",
+        "动作后独立回读，具体逐字段结果见结构化证据"
+      ],
+      "threeWayConclusion": "局部原站字段/入口事实；未证明完整场景或P3动态结果，不自动改批准需求、不判实现缺陷。",
+      "time": "2026-09-11T02:59:33.876Z",
+      "timePrecision": "browser_observed",
+      "title": "M01-JOB001-HISTORY-AFTER-EDIT",
+      "evidenceSection": "M01-JOB001-HISTORY-AFTER-EDIT",
+      "ledgerId": "OBS-08"
     }
   ],
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",
@@ -4165,7 +4621,7 @@
   "sourceSnapshots": {
     "p2": "e15237281ff19f04f08a354fd9455c518b24ae47",
     "p3Comparison": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
-    "p3LatestReadOnly": "de053be59cc0e08c2044fb534ef46ee085a38203",
+    "p3LatestReadOnly": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
     "p3Start": "a27ae7ee367ccd6b4cf42de968b0a3cd7389b74c"
   }
 }

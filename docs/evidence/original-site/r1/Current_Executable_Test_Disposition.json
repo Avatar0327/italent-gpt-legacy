@@ -12,16 +12,16 @@
   },
   "groups": [
     {
-      "attempt": "tab3职位点击、刷新；tab19新查询并正式职位导航；业务main空且源请求超时",
-      "blocker": "ENV-05",
-      "currentEvidence": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json",
+      "attempt": "参见本轮独立弹窗/字段级证据；源页面恢复后继续测试",
+      "blocker": "附件ENV-06；再入职邀请关闭与新雇佣链未确认；其他未测不冒称阻塞",
+      "currentEvidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json",
       "dependency": "需要可加载的本轮对象查询/详情，不能凭历史UUID盲写",
-      "execution": "not_entered_after_recovery",
+      "execution": "partial_edges_observed_more_autonomous_work_pending",
       "module": "M01",
-      "notClaimed": "没有逐项提交这些校验，也没有证明每项单独失效",
+      "notClaimed": "未完成停用/多任职/批量/完整再入职；不把管理员当独立角色",
       "priorExecutionScope": "此前9/10或9/11失败时点记录；当前增量以sep11Status为准",
       "scope": "岗位编辑/停用/名称编码重复、组织更名/唯一性/层级、员工字段长度格式重复、附件/子集/多任职管理员入口",
-      "sep11Status": "actual_departure_and_assignment_intervals_observed_other_edges_not_executed"
+      "sep11Status": "rehire_entry_required_and_employee_format_job_unique_edit_history_observed"
     },
     {
       "attempt": "两原流程DOM与审计回查；转正编辑点击未开表单",

@@ -138,15 +138,19 @@
   "deletedCount": 0,
   "drafts": {
     "initialCancelledOrganizationDrafts": 2,
-    "unsubmittedFormsRemaining": 0
+    "unsubmittedFormsRemaining": 0,
+    "concentratedRehire": "cancelled_after_required_validation_no_record_created",
+    "concentratedEmployee": "cancelled_after_format_validation",
+    "concentratedJob": "saved_description_after_fresh_read_no_unknown_write"
   },
   "lastContinuation": {
-    "at": "2026-09-11T02:20:02.979Z",
+    "at": "2026-09-11T02:59:33.876Z",
     "newObjects": 0,
+    "modifiedRunObjects": 1,
     "retained": 10,
     "deleted": 0,
     "inProgress": true,
-    "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_Exit_Reports.json"
+    "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json"
   },
   "manualSmoke": {
     "bulkImportedRows": 0,
@@ -414,7 +418,15 @@
       },
       "status": "enabled_query_verified",
       "statusScope": "historical_last_observed_not_reasserted_as_current",
-      "verifiedAt": "2026-09-10T12:02:19.506Z"
+      "verifiedAt": "2026-09-10T12:02:19.506Z",
+      "latestConcentratedEdit": {
+        "at": "2026-09-11T02:59:33.876Z",
+        "description": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_EDIT_001 完全虚构的岗位职责：维护本轮合成测试记录。",
+        "originalCodeUnchanged": true,
+        "attachmentUploaded": false,
+        "serverEditAuditAt": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json"
+      }
     },
     {
       "allowLaterDelete": true,
