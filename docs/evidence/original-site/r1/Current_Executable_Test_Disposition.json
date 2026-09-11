@@ -1,81 +1,81 @@
 {
-  "runId": "R1-ORIGIN-20260910-100019",
   "basisHead": "76a16265fdd65f6ba7608260dde1e07acfb85200",
-  "scope": "当前无需独立角色、无需未来日期，不等于已全部完成",
-  "groups": [
-    {
-      "module": "M01",
-      "scope": "岗位编辑/停用/名称编码重复、组织更名/唯一性/层级、员工字段长度格式重复、附件/子集/多任职管理员入口",
-      "execution": "not_entered_after_recovery",
-      "attempt": "tab3职位点击、刷新；tab19新查询并正式职位导航；业务main空且源请求超时",
-      "dependency": "需要可加载的本轮对象查询/详情，不能凭历史UUID盲写",
-      "blocker": "ENV-05",
-      "notClaimed": "没有逐项提交这些校验，也没有证明每项单独失效",
-      "priorExecutionScope": "此前9/10或9/11失败时点记录；当前增量以sep11Status为准",
-      "sep11Status": "actual_departure_and_assignment_intervals_observed_other_edges_not_executed",
-      "currentEvidence": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
-    },
-    {
-      "module": "M19",
-      "scope": "本轮申请人原单历史/撤回状态；编辑改期重提",
-      "execution": "readback_observed_edit_not_opened",
-      "attempt": "两原流程DOM与审计回查；转正编辑点击未开表单",
-      "blocker": "ENV-04/ENV-05",
-      "excluded": "独立两方审批/驳回/HR执行仍ROLE-01；不自审",
-      "priorExecutionScope": "此前9/10或9/11失败时点记录；当前增量以sep11Status为准",
-      "sep11Status": "original_transfer_void_and_system_termination_audit_observed",
-      "currentEvidence": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
-    },
-    {
-      "module": "M48",
-      "scope": "现有管理员办理本轮申请及状态读取",
-      "execution": "existing_admin_applicant_state_only",
-      "attempt": "本轮两申请状态已从管理员申请人页面回读；没有独立员工身份",
-      "blocker": "ROLE-01；新增业务入口受ENV-05影响",
-      "notClaimed": "普通员工字段可改、附件和他人数据拒绝没有验证；不把真实管理员个人资料改成测试数据",
-      "priorExecutionScope": "此前9/10或9/11失败时点记录；当前增量以sep11Status为准",
-      "sep11Status": "no_new_independent_role_evidence",
-      "currentEvidence": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
-    },
-    {
-      "module": "M32",
-      "scope": "两员工当前明细、图表人数、日期/排序/组织条件、导出文件",
-      "execution": "existing_DOM_and_chart_readback_sort_attempt_failed",
-      "attempt": "2=正式1+试用1；姓名排序语义/坐标点击超时，行序未变",
-      "blocker": "ENV-03/04/05",
-      "notClaimed": "无导出文件、无新的历史快照查询、无分页/30–50量级",
-      "priorExecutionScope": "此前9/10或9/11失败时点记录；当前增量以sep11Status为准",
-      "sep11Status": "fixed_name_selection_done_explicit_date_not_applied_no_result",
-      "currentEvidence": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
-    },
-    {
-      "module": "E2E",
-      "scope": "成功/驳回/撤回/改日期后重审/执行失败",
-      "execution": "partial_fragments_only",
-      "blocker": "ROLE-01；实际离职执行审计、报表固定日期、再入职等未完成，不再归因日期未到",
-      "completed": "0/5",
-      "priorExecutionScope": "此前9/10或9/11失败时点记录；当前增量以sep11Status为准",
-      "sep11Status": "partial_fragments_only_0_of_5",
-      "currentEvidence": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
-    }
-  ],
-  "quantity": {
-    "businessObjects": 10,
-    "employees": 2,
-    "newThisContinuation": 0,
-    "bulkRows": 0,
-    "threshold5to10Quantity": true,
-    "smokeAllCasesPassed": false,
-    "expanded30to50": false
-  },
-  "continuationInstruction": "待R1重新获得浏览器时，先新查询确认状态，再查离职执行审计/旧雇佣段；固定姓名与明确日期报表；正式同personId再入职且邀请否。禁止自动任务并写；当前已交接R3。",
+  "continuationInstruction": "R1集中连续执行，只有完整退出条件或全部自主事项完成且仅剩真实外部条件才释放浏览器；自动任务保持暂停。",
   "currentAttempt": {
     "basisHead": "76a16265fdd65f6ba7608260dde1e07acfb85200",
     "checkedAt": "2026-09-11T00:51:52.069Z",
     "dateConditionSatisfied": true,
-    "outcome": "key_exit_termination_fragments_captured_browser_handed_off",
     "evidence": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json",
     "oldDOMReusableForCurrentConclusion": false,
+    "outcome": "key_exit_termination_fragments_captured_browser_handed_off",
     "unknownBusinessActions": []
-  }
+  },
+  "groups": [
+    {
+      "attempt": "tab3职位点击、刷新；tab19新查询并正式职位导航；业务main空且源请求超时",
+      "blocker": "ENV-05",
+      "currentEvidence": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json",
+      "dependency": "需要可加载的本轮对象查询/详情，不能凭历史UUID盲写",
+      "execution": "not_entered_after_recovery",
+      "module": "M01",
+      "notClaimed": "没有逐项提交这些校验，也没有证明每项单独失效",
+      "priorExecutionScope": "此前9/10或9/11失败时点记录；当前增量以sep11Status为准",
+      "scope": "岗位编辑/停用/名称编码重复、组织更名/唯一性/层级、员工字段长度格式重复、附件/子集/多任职管理员入口",
+      "sep11Status": "actual_departure_and_assignment_intervals_observed_other_edges_not_executed"
+    },
+    {
+      "attempt": "两原流程DOM与审计回查；转正编辑点击未开表单",
+      "blocker": "ENV-04/ENV-05",
+      "currentEvidence": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json",
+      "excluded": "独立两方审批/驳回/HR执行仍ROLE-01；不自审",
+      "execution": "readback_observed_edit_not_opened",
+      "module": "M19",
+      "priorExecutionScope": "此前9/10或9/11失败时点记录；当前增量以sep11Status为准",
+      "scope": "本轮申请人原单历史/撤回状态；编辑改期重提",
+      "sep11Status": "original_transfer_void_and_system_termination_audit_observed"
+    },
+    {
+      "attempt": "本轮两申请状态已从管理员申请人页面回读；没有独立员工身份",
+      "blocker": "ROLE-01；新增业务入口受ENV-05影响",
+      "currentEvidence": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json",
+      "execution": "existing_admin_applicant_state_only",
+      "module": "M48",
+      "notClaimed": "普通员工字段可改、附件和他人数据拒绝没有验证；不把真实管理员个人资料改成测试数据",
+      "priorExecutionScope": "此前9/10或9/11失败时点记录；当前增量以sep11Status为准",
+      "scope": "现有管理员办理本轮申请及状态读取",
+      "sep11Status": "no_new_independent_role_evidence"
+    },
+    {
+      "attempt": "2=正式1+试用1；姓名排序语义/坐标点击超时，行序未变",
+      "blocker": "ENV-03/04/05",
+      "currentEvidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_Exit_Reports.json",
+      "execution": "existing_DOM_and_chart_readback_sort_attempt_failed",
+      "module": "M32",
+      "notClaimed": "无导出文件、无新的历史快照查询、无分页/30–50量级",
+      "priorExecutionScope": "此前9/10或9/11失败时点记录；当前增量以sep11Status为准",
+      "scope": "两员工当前明细、图表人数、日期/排序/组织条件、导出文件",
+      "sep11Status": "fixed_2026_09_11_and_09_10_two_names_applied_results_observed"
+    },
+    {
+      "blocker": "ROLE-01；实际离职执行审计、报表固定日期、再入职等未完成，不再归因日期未到",
+      "completed": "0/5",
+      "currentEvidence": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json",
+      "execution": "partial_fragments_only",
+      "module": "E2E",
+      "priorExecutionScope": "此前9/10或9/11失败时点记录；当前增量以sep11Status为准",
+      "scope": "成功/驳回/撤回/改日期后重审/执行失败",
+      "sep11Status": "partial_fragments_only_0_of_5"
+    }
+  ],
+  "quantity": {
+    "bulkRows": 0,
+    "businessObjects": 10,
+    "employees": 2,
+    "expanded30to50": false,
+    "newThisContinuation": 0,
+    "smokeAllCasesPassed": false,
+    "threshold5to10Quantity": true
+  },
+  "runId": "R1-ORIGIN-20260910-100019",
+  "scope": "当前无需独立角色、无需未来日期，不等于已全部完成"
 }

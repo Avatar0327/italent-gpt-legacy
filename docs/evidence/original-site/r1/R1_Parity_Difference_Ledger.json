@@ -1,18 +1,49 @@
 {
-  "runId": "R1-ORIGIN-20260910-100019",
+  "countRule": "唯一台账ID计数；Major=1保留历史发现级别，activeMajor=0、historicalMajor=1。INTENTIONAL_DIFFERENCE=1由所有者决定；MATCH=3为窄项静态对照。ENV/ROLE仅计未关闭组。",
+  "counts": {
+    "Blocker": 0,
+    "DESIGN_GAP": 0,
+    "ENV_BLOCKED": 4,
+    "IMPLEMENTATION_DEFECT": 0,
+    "INTENTIONAL_DIFFERENCE": 1,
+    "MATCH": 3,
+    "Major": 1,
+    "Minor": 0,
+    "NEED_OWNER_DECISION": 0,
+    "Observation": 14,
+    "REQUIREMENT_GAP": 0,
+    "ROLE_BLOCKED": 1,
+    "activeMajor": 0,
+    "historicalMajor": 1,
+    "observationsWithoutClassification": 8,
+    "resolved_ENV_BLOCKED": 1
+  },
   "entries": [
     {
-      "id": "DIFF-MAJOR-001",
-      "classification": "INTENTIONAL_DIFFERENCE",
-      "status": "resolved_by_owner",
-      "severity": "Major",
-      "title": "原站管理员直接调动保存即生效",
       "actual": "管理员直接调动保存即生效；不同的他人调动申请路径已实测提交、撤回。该路径直接上级→HR访谈，撤回同业务/流程UUID返回开始，不能等同项目固定双审批和新单重审。",
+      "classification": "INTENTIONAL_DIFFERENCE",
       "conclusion": "所有者于2026-09-10明确决定：原站管理员直接调动保存即生效是有意差异；项目保持D1–D7、审批生效分离、调出调入顺序确认和授权HR执行。不复制源直接即时生效，不认定P3实现缺陷。",
+      "evidence": [
+        "ALERT-MAJOR-001.md",
+        "R1-ORIGIN-20260910-100019/M01/M01-TRANSFER-001.json",
+        "R1-ORIGIN-20260910-100019/M19/M19-TRANSFER-REQUEST-001-detail.json",
+        "R1-ORIGIN-20260910-100019/M19/M19-TRANSFER-REQUEST-001-recall-audit.json",
+        "Owner_Decision_DIFF_MAJOR_001_20260910.json"
+      ],
+      "feedback": "P2保留批准设计；P3继续D1–D7，不创建即时生效缺陷修复；P4按项目双审批与HR执行验收。",
+      "id": "DIFF-MAJOR-001",
       "modules": [
         "M01",
         "M19"
       ],
+      "ownerDecision": "Owner_Decision_DIFF_MAJOR_001_20260910.json",
+      "ownerDecisionRequired": false,
+      "p3Tasks": [
+        "P3-R1-02",
+        "P3-R1-03",
+        "P3-R1-05"
+      ],
+      "productDefectConfirmed": false,
       "requirements": [
         "D1",
         "D3",
@@ -21,70 +52,56 @@
         "F-SPEC-03",
         "F-SPEC-05"
       ],
-      "p3Tasks": [
-        "P3-R1-02",
-        "P3-R1-03",
-        "P3-R1-05"
-      ],
-      "feedback": "P2保留批准设计；P3继续D1–D7，不创建即时生效缺陷修复；P4按项目双审批与HR执行验收。",
-      "evidence": [
-        "ALERT-MAJOR-001.md",
-        "R1-ORIGIN-20260910-100019/M01/M01-TRANSFER-001.json",
-        "R1-ORIGIN-20260910-100019/M19/M19-TRANSFER-REQUEST-001-detail.json",
-        "R1-ORIGIN-20260910-100019/M19/M19-TRANSFER-REQUEST-001-recall-audit.json",
-        "Owner_Decision_DIFF_MAJOR_001_20260910.json"
-      ],
       "runId": "R1-ORIGIN-20260910-100019",
-      "productDefectConfirmed": false,
-      "ownerDecisionRequired": false,
-      "ownerDecision": "Owner_Decision_DIFF_MAJOR_001_20260910.json",
-      "scope": "关闭直接管理员即时调动差异；不将原站撤回、重提、摘要等其他行为一并视为所有者批准。"
+      "scope": "关闭直接管理员即时调动差异；不将原站撤回、重提、摘要等其他行为一并视为所有者批准。",
+      "severity": "Major",
+      "status": "resolved_by_owner",
+      "title": "原站管理员直接调动保存即生效"
     },
     {
-      "id": "ENV-01",
-      "classification": "ENV_BLOCKED",
-      "status": "resolved",
-      "title": "输入回读及草稿隔离最初未确认",
       "actual": "DOM快照未显示输入值，getAttribute及截图出现超时；后以只读DOM value回读成功，双标签草稿内容相等。",
+      "classification": "ENV_BLOCKED",
       "conclusion": "已恢复，本窗口查询及草稿隔离通过。不归咎其他窗口，不限制项目并发。",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-draft-isolation-recovered.json"
+      ],
+      "feedback": "证据操作恢复记录；无需P2/P3修改",
+      "id": "ENV-01",
       "modules": [
         "M01"
       ],
+      "ownerDecisionRequired": false,
+      "p3Tasks": [
+        "P3-R1-02"
+      ],
+      "productDefectConfirmed": false,
       "requirements": [
         "BASE-04",
         "F-SPEC-08"
       ],
-      "p3Tasks": [
-        "P3-R1-02"
-      ],
-      "feedback": "证据操作恢复记录；无需P2/P3修改",
-      "evidence": [
-        "R1-ORIGIN-20260910-100019/M01/M01-draft-isolation-recovered.json"
-      ],
       "runId": "R1-ORIGIN-20260910-100019",
       "severity": "Observation",
-      "productDefectConfirmed": false,
-      "ownerDecisionRequired": false
+      "status": "resolved",
+      "title": "输入回读及草稿隔离最初未确认"
     },
     {
-      "id": "ENV-02",
-      "classification": "ENV_BLOCKED",
-      "status": "open_partial_recovered",
-      "title": "截图捕获超时",
       "actual": "此前部分截图超时；续跑M32本轮员工截图成功。仍缺部分重要用例截图，结构化DOM/记录ID继续。",
+      "classification": "ENV_BLOCKED",
       "conclusion": "局部图像证据缺口，不是业务停写条件。",
+      "evidence": [
+        "Browser_Concurrency_Check.md",
+        "R1-ORIGIN-20260910-100019/M01/M01-query.jpg"
+      ],
+      "evidenceLimit": "超时错误来自本轮浏览器工具返回；失败时无法产生对应截图。",
+      "feedback": "浏览器能力处理；P3/P4保留图像证据缺口",
+      "id": "ENV-02",
       "modules": [
         "M01",
         "M19",
         "M48",
         "M32"
       ],
-      "requirements": [
-        "M01-LIMIT-01",
-        "M19-LIMIT-01",
-        "M48-LIMIT-01",
-        "M32-LIMIT-01"
-      ],
+      "ownerDecisionRequired": false,
       "p3Tasks": [
         "P3-R1-02",
         "P3-R1-03",
@@ -93,24 +110,27 @@
         "P3-R1-07",
         "P3-R1-11"
       ],
-      "feedback": "浏览器能力处理；P3/P4保留图像证据缺口",
-      "evidence": [
-        "Browser_Concurrency_Check.md",
-        "R1-ORIGIN-20260910-100019/M01/M01-query.jpg"
+      "productDefectConfirmed": false,
+      "requirements": [
+        "M01-LIMIT-01",
+        "M19-LIMIT-01",
+        "M48-LIMIT-01",
+        "M32-LIMIT-01"
       ],
-      "evidenceLimit": "超时错误来自本轮浏览器工具返回；失败时无法产生对应截图。",
       "runId": "R1-ORIGIN-20260910-100019",
       "severity": "Observation",
-      "productDefectConfirmed": false,
-      "ownerDecisionRequired": false
+      "status": "open_partial_recovered",
+      "title": "截图捕获超时"
     },
     {
-      "id": "ENV-03",
-      "classification": "ENV_BLOCKED",
-      "status": "open",
-      "title": "正式组织模板下载被Chromium阻止",
       "actual": "正式组织模板下载、仅本轮筛选报表下载均被Chromium阻止，无文件；未绕过。",
+      "classification": "ENV_BLOCKED",
       "conclusion": "只阻塞正式导入/导出文件能力，人工正式页面新增和其他模块继续。",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-template-blocked.json"
+      ],
+      "feedback": "保留下载限制，允许人工5–10冒烟后审慎扩量，无需修改共享安全策略。",
+      "id": "ENV-03",
       "modules": [
         "M01",
         "M19",
@@ -118,11 +138,7 @@
         "M32",
         "E2E"
       ],
-      "requirements": [
-        "F-SPEC-07",
-        "BP-F-REQ-12",
-        "M32-SPEC-05"
-      ],
+      "ownerDecisionRequired": false,
       "p3Tasks": [
         "P3-R1-02",
         "P3-R1-05",
@@ -130,22 +146,27 @@
         "P3-R1-07",
         "P3-R1-11"
       ],
-      "feedback": "保留下载限制，允许人工5–10冒烟后审慎扩量，无需修改共享安全策略。",
-      "evidence": [
-        "R1-ORIGIN-20260910-100019/M01/M01-template-blocked.json"
+      "productDefectConfirmed": false,
+      "requirements": [
+        "F-SPEC-07",
+        "BP-F-REQ-12",
+        "M32-SPEC-05"
       ],
       "runId": "R1-ORIGIN-20260910-100019",
       "severity": "Observation",
-      "productDefectConfirmed": false,
-      "ownerDecisionRequired": false
+      "status": "open",
+      "title": "正式组织模板下载被Chromium阻止"
     },
     {
-      "id": "ROLE-01",
-      "classification": "ROLE_BLOCKED",
-      "status": "open",
-      "title": "独立员工、两方审批及HR角色验收前置未齐",
       "actual": "仅现有管理入口会话ORIGIN-ADMIN-01，两个标签共用该会话；没有验证独立员工/调出审批/调入审批身份。",
+      "classification": "ROLE_BLOCKED",
       "conclusion": "管理员自助页面不能代普通员工，管理员不得自审代两方确认；P4多角色人工验收阻塞。",
+      "evidence": [
+        "Browser_Concurrency_Check.md",
+        "R1-ORIGIN-20260910-100019/M48/M48-application-header.json"
+      ],
+      "feedback": "P4使用现有独立授权测试身份逐角色验收；不新增真实访问者或改变账号权限。",
+      "id": "ROLE-01",
       "modules": [
         "M01",
         "M19",
@@ -153,6 +174,13 @@
         "M32",
         "E2E"
       ],
+      "ownerDecisionRequired": false,
+      "p3Tasks": [
+        "P3-R1-03",
+        "P3-R1-05",
+        "P3-R1-11"
+      ],
+      "productDefectConfirmed": false,
       "requirements": [
         "D3",
         "D4",
@@ -162,209 +190,183 @@
         "M48-SPEC-02",
         "M32-SPEC-03"
       ],
-      "p3Tasks": [
-        "P3-R1-03",
-        "P3-R1-05",
-        "P3-R1-11"
-      ],
-      "feedback": "P4使用现有独立授权测试身份逐角色验收；不新增真实访问者或改变账号权限。",
-      "evidence": [
-        "Browser_Concurrency_Check.md",
-        "R1-ORIGIN-20260910-100019/M48/M48-application-header.json"
-      ],
       "runId": "R1-ORIGIN-20260910-100019",
       "severity": "Observation",
-      "productDefectConfirmed": false,
-      "ownerDecisionRequired": false
+      "status": "open",
+      "title": "独立员工、两方审批及HR角色验收前置未齐"
     },
     {
-      "id": "OBS-01",
-      "classification": null,
-      "status": "observed_not_dispositioned",
-      "title": "组织两入口表单和确认方式不同",
       "actual": "普通新建显示设立日期、大类/多维组织等，部门行政上级空值必填；新建下级显示生效日期并二次确认新增对象。",
+      "classification": null,
       "conclusion": "需求已有组织时态和入口要求；此次仅补页面及当天成功证据，未确认需求/设计遗漏。不能外推根机构规则。",
-      "modules": [
-        "M01"
-      ],
-      "requirements": [
-        "BP-F-REQ-10",
-        "F-SPEC-08"
-      ],
-      "p3Tasks": [
-        "P3-R1-02"
-      ],
-      "feedback": "P2保留入口/组织类型区分；P3复核表单映射时使用该证据，不直接改设计。",
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-001-parent-required.json",
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-readback.json"
       ],
+      "feedback": "P2保留入口/组织类型区分；P3复核表单映射时使用该证据，不直接改设计。",
+      "id": "OBS-01",
+      "modules": [
+        "M01"
+      ],
+      "ownerDecisionRequired": false,
+      "p3Tasks": [
+        "P3-R1-02"
+      ],
+      "productDefectConfirmed": false,
+      "requirements": [
+        "BP-F-REQ-10",
+        "F-SPEC-08"
+      ],
       "runId": "R1-ORIGIN-20260910-100019",
       "severity": "Observation",
-      "productDefectConfirmed": false,
-      "ownerDecisionRequired": false
+      "status": "observed_not_dispositioned",
+      "title": "组织两入口表单和确认方式不同"
     },
     {
-      "id": "OBS-02",
-      "classification": null,
-      "status": "observed_not_dispositioned",
-      "title": "审批管理文案不等于D7调动行为",
       "actual": "源管理页列出转交/撤销/一键审批/流程干预说明。未对本轮业务单执行。",
+      "classification": null,
       "conclusion": "P2通用管理能力与D7固定不同双审批并存；P3有D7_PROTECTED。没有足够源执行证据将其定为有意差异或冲突。",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M19/M19-query.json"
+      ],
+      "feedback": "P2/P3保持D7边界；P4区分通用流程与调动。",
+      "id": "OBS-02",
       "modules": [
         "M19"
       ],
+      "ownerDecisionRequired": false,
+      "p3Tasks": [
+        "P3-R1-03"
+      ],
+      "productDefectConfirmed": false,
       "requirements": [
         "D7",
         "M19-SPEC-02"
       ],
-      "p3Tasks": [
-        "P3-R1-03"
-      ],
-      "feedback": "P2/P3保持D7边界；P4区分通用流程与调动。",
-      "evidence": [
-        "R1-ORIGIN-20260910-100019/M19/M19-query.json"
-      ],
       "runId": "R1-ORIGIN-20260910-100019",
       "severity": "Observation",
-      "productDefectConfirmed": false,
-      "ownerDecisionRequired": false
+      "status": "observed_not_dispositioned",
+      "title": "审批管理文案不等于D7调动行为"
     },
     {
-      "id": "OBS-03",
-      "classification": null,
-      "status": "observed_not_dispositioned",
-      "title": "管理会话自助入口含他人调动",
       "actual": "人事申请可见本人/他人调动、离职、新增兼职及三类状态列。",
+      "classification": null,
       "conclusion": "不代表普通员工有他人办理权限，未确认越权或需求缺陷。",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M48/M48-application-header.json"
+      ],
+      "feedback": "P4补独立员工与管理员逐字段/逐动作差异。",
+      "id": "OBS-03",
       "modules": [
         "M48"
       ],
+      "ownerDecisionRequired": false,
+      "p3Tasks": [
+        "P3-R1-05"
+      ],
+      "productDefectConfirmed": false,
       "requirements": [
         "M48-SPEC-01",
         "M48-SPEC-02",
         "M48-SPEC-03"
       ],
-      "p3Tasks": [
-        "P3-R1-05"
-      ],
-      "feedback": "P4补独立员工与管理员逐字段/逐动作差异。",
-      "evidence": [
-        "R1-ORIGIN-20260910-100019/M48/M48-application-header.json"
-      ],
       "runId": "R1-ORIGIN-20260910-100019",
       "severity": "Observation",
-      "productDefectConfirmed": false,
-      "ownerDecisionRequired": false
+      "status": "observed_not_dispositioned",
+      "title": "管理会话自助入口含他人调动"
     },
     {
-      "id": "OBS-04",
+      "actual": "9/11固定两姓名当前在职名册1人试用；9/10固定日期3任职行/2distinct人员（正式2行属EMP001同1人+试用1行）；全部历史4行/2人，当前标识2主职行含离职任职结束行，不等于2在职。",
       "classification": null,
-      "status": "observed_not_dispositioned",
-      "title": "报表任职粒度与本轮组织可选结果",
-      "actual": "本轮1人员：历史任职2行，当前主职1；当前花名册1人。历史旧行任职中但当前/最新均否，不可直接count历史行作人数。入职日期明天空数据、今天恢复1。",
       "conclusion": "形成小样本人员/历史粒度对照；不是批量分页、所有指标或完整P3动态通过。",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M32/M32-own-employee-history.json",
+        "R1-ORIGIN-20260910-100019/M32/M32-own-employee-current.json",
+        "R1-ORIGIN-20260910-100019/M32/M32-date-empty.json",
+        "R1-ORIGIN-20260910-100019/M32/M32-current-own.jpg",
+        "R1-ORIGIN-20260910-100019/20260911_Concentrated_Exit_Reports.json"
+      ],
+      "feedback": "P3保留粒度/当前版本/历史快照口径；P4以合成员工、任职、离职和历史日期手算核对。",
+      "id": "OBS-04",
       "modules": [
         "M32"
       ],
+      "ownerDecisionRequired": false,
+      "p3Tasks": [
+        "P3-R1-06",
+        "P3-R1-07"
+      ],
+      "productDefectConfirmed": false,
       "requirements": [
         "M32-SPEC-01",
         "M32-SPEC-02",
         "M32-SPEC-03",
         "M32-SPEC-04"
       ],
-      "p3Tasks": [
-        "P3-R1-06",
-        "P3-R1-07"
-      ],
-      "feedback": "P3保留粒度/当前版本/历史快照口径；P4以合成员工、任职、离职和历史日期手算核对。",
-      "evidence": [
-        "R1-ORIGIN-20260910-100019/M32/M32-own-employee-history.json",
-        "R1-ORIGIN-20260910-100019/M32/M32-own-employee-current.json",
-        "R1-ORIGIN-20260910-100019/M32/M32-date-empty.json",
-        "R1-ORIGIN-20260910-100019/M32/M32-current-own.jpg"
-      ],
       "runId": "R1-ORIGIN-20260910-100019",
-      "severity": "Observation",
-      "productDefectConfirmed": false,
-      "ownerDecisionRequired": false
-    },
-    {
-      "id": "OBS-05",
-      "runId": "R1-ORIGIN-20260910-100019",
-      "modules": [
-        "M19"
-      ],
-      "title": "调动及转正申请摘要显示离职字段",
-      "actual": "两张本轮申请均在审批详情显示离职字段，调动部分值对应调动，转正多项空值；不证明实际发生离职。；9/11正式发起日志显示TransferProcessNew匹配DimissionProcessNew，已保存版本；不修改共享配置。",
-      "classification": null,
       "severity": "Observation",
       "status": "observed_not_dispositioned",
-      "productDefectConfirmed": false,
-      "ownerDecisionRequired": false,
-      "requirements": [
-        "M19-SPEC-01",
-        "D4"
-      ],
-      "p3Tasks": [
-        "P3-R1-03"
-      ],
+      "title": "报表任职粒度与本轮组织可选结果"
+    },
+    {
+      "actual": "两张本轮申请均在审批详情显示离职字段，调动部分值对应调动，转正多项空值；不证明实际发生离职。；9/11正式发起日志显示TransferProcessNew匹配DimissionProcessNew，已保存版本；不修改共享配置。",
+      "classification": null,
+      "conclusion": "仅确认源UI显示，不推断实际发生离职或P3实现缺陷。",
       "evidence": [
         "R1-ORIGIN-20260910-100019/M19/M19-TRANSFER-REQUEST-001-detail.json",
         "R1-ORIGIN-20260910-100019/M19/M19-REG-002-detail.json",
         "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
       ],
       "feedback": "P2/P3核对摘要字段映射；P4独立角色实测，勿复制源错位标签。",
-      "conclusion": "仅确认源UI显示，不推断实际发生离职或P3实现缺陷。"
-    },
-    {
-      "id": "OBS-06",
-      "runId": "R1-ORIGIN-20260910-100019",
+      "id": "OBS-05",
       "modules": [
-        "M32"
+        "M19"
       ],
-      "title": "正式订阅草稿的权限与输出选项",
-      "actual": "添加订阅草稿提供快照/实时、订阅人/接收人权限、身份触发或自选接收人；未保存或发送，已取消。",
-      "classification": null,
+      "ownerDecisionRequired": false,
+      "p3Tasks": [
+        "P3-R1-03"
+      ],
+      "productDefectConfirmed": false,
+      "requirements": [
+        "M19-SPEC-01",
+        "D4"
+      ],
+      "runId": "R1-ORIGIN-20260910-100019",
       "severity": "Observation",
       "status": "observed_not_dispositioned",
-      "productDefectConfirmed": false,
-      "ownerDecisionRequired": false,
-      "requirements": [
-        "M32-SPEC-03",
-        "M32-SPEC-05"
-      ],
-      "p3Tasks": [
-        "P3-R1-06",
-        "P3-R1-07"
-      ],
+      "title": "调动及转正申请摘要显示离职字段"
+    },
+    {
+      "actual": "添加订阅草稿提供快照/实时、订阅人/接收人权限、身份触发或自选接收人；未保存或发送，已取消。",
+      "classification": null,
+      "conclusion": "不能从选项存在推断推送成功或授权正确。",
       "evidence": [
         "R1-ORIGIN-20260910-100019/M32/M32-subscription-draft.json"
       ],
       "feedback": "P3/P4区分配置表单与真实任务执行；独立接收人及权限撤销未验。",
-      "conclusion": "不能从选项存在推断推送成功或授权正确。"
-    },
-    {
-      "id": "OBS-07",
-      "runId": "R1-ORIGIN-20260910-100019",
+      "id": "OBS-06",
       "modules": [
-        "M01"
+        "M32"
       ],
-      "title": "试用字段联动与组织生效日约束",
-      "actual": "EMP002启用试用时期限/预计结束必填；9/1+1月=9/30；因早于ORG002生效9/10被拒，纠正9/10后结束10/9，创建成功。日期变化会重置邮箱和工号，已回读纠正。",
-      "classification": null,
+      "ownerDecisionRequired": false,
+      "p3Tasks": [
+        "P3-R1-06",
+        "P3-R1-07"
+      ],
+      "productDefectConfirmed": false,
+      "requirements": [
+        "M32-SPEC-03",
+        "M32-SPEC-05"
+      ],
+      "runId": "R1-ORIGIN-20260910-100019",
       "severity": "Observation",
       "status": "observed_not_dispositioned",
-      "productDefectConfirmed": false,
-      "ownerDecisionRequired": false,
-      "requirements": [
-        "F-SPEC-01",
-        "F-SPEC-07",
-        "F-SPEC-08"
-      ],
-      "p3Tasks": [
-        "P3-R1-02"
-      ],
+      "title": "正式订阅草稿的权限与输出选项"
+    },
+    {
+      "actual": "EMP002启用试用时期限/预计结束必填；9/1+1月=9/30；因早于ORG002生效9/10被拒，纠正9/10后结束10/9，创建成功。日期变化会重置邮箱和工号，已回读纠正。",
+      "classification": null,
+      "conclusion": "原站当前模板规则不自动变成所有员工入口强制规则；未修改组织设立历史。",
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-probation-validation.json",
         "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-org-date-validation.json",
@@ -372,101 +374,90 @@
         "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-readback.json"
       ],
       "feedback": "P2明确入口模板/跨对象日期约束，P3核查employment.startOn与组织有效日的实现及测试；未确认批准设计遗漏/实现缺陷。",
-      "conclusion": "原站当前模板规则不自动变成所有员工入口强制规则；未修改组织设立历史。",
-      "p3Followup": "P3 de053be离线增量含显式必填文本空白校验及测试；本窗口仅读取差异，未运行测试，不扩展为原站全部字段通过。"
-    },
-    {
-      "id": "OBS-08",
-      "runId": "R1-ORIGIN-20260910-100019",
+      "id": "OBS-07",
       "modules": [
         "M01"
       ],
-      "title": "组织停用迁移范围及普通编辑记录显示",
-      "actual": "停用表单包含整体职位/人员转移，未核全部明细故取消。ORG003备注编辑持久化，名称/编码/日期/归属不变；操作记录仅设立1条，变更记录仅启用1版本。",
-      "classification": null,
-      "severity": "Observation",
-      "status": "observed_not_dispositioned",
-      "productDefectConfirmed": false,
       "ownerDecisionRequired": false,
-      "requirements": [
-        "F-SPEC-01",
-        "F-SPEC-03",
-        "F-SPEC-08"
-      ],
+      "p3Followup": "P3 de053be离线增量含显式必填文本空白校验及测试；本窗口仅读取差异，未运行测试，不扩展为原站全部字段通过。",
       "p3Tasks": [
         "P3-R1-02"
       ],
+      "productDefectConfirmed": false,
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-07",
+        "F-SPEC-08"
+      ],
+      "runId": "R1-ORIGIN-20260910-100019",
+      "severity": "Observation",
+      "status": "observed_not_dispositioned",
+      "title": "试用字段联动与组织生效日约束"
+    },
+    {
+      "actual": "停用表单包含整体职位/人员转移，未核全部明细故取消。ORG003备注编辑持久化，名称/编码/日期/归属不变；操作记录仅设立1条，变更记录仅启用1版本。",
+      "classification": null,
+      "conclusion": "未实际停用/迁移，不宣称依赖保护通过；未展示编辑日志不等于后台无审计。",
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-stop-preview.json",
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-result.json",
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-history.json"
       ],
       "feedback": "P2/P3区分纯停用、整体迁移、普通字段编辑和版本变更；P4核完整影响清单及不可变审计。",
-      "conclusion": "未实际停用/迁移，不宣称依赖保护通过；未展示编辑日志不等于后台无审计。"
+      "id": "OBS-08",
+      "modules": [
+        "M01"
+      ],
+      "ownerDecisionRequired": false,
+      "p3Tasks": [
+        "P3-R1-02"
+      ],
+      "productDefectConfirmed": false,
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-03",
+        "F-SPEC-08"
+      ],
+      "runId": "R1-ORIGIN-20260910-100019",
+      "severity": "Observation",
+      "status": "observed_not_dispositioned",
+      "title": "组织停用迁移范围及普通编辑记录显示"
     },
     {
-      "id": "ENV-04",
-      "runId": "R1-ORIGIN-20260910-100019",
-      "modules": [
-        "M01",
-        "M19",
-        "M32"
-      ],
-      "title": "撤回编辑和报表组织选择未进入有效状态",
       "actual": "本轮调动和转正撤回后，申请人开始节点可见编辑；语义点击及可见坐标各有界尝试，未出现业务日期/保存表单或新的本轮标签。未点击同意替代重提。 报表ORG002候选经文字/整行/CUA点击均已选0；取消，不将未应用筛选的2行计为统计缺陷。",
       "classification": "ENV_BLOCKED",
-      "severity": "Observation",
-      "status": "open",
-      "productDefectConfirmed": false,
-      "ownerDecisionRequired": false,
-      "requirements": [
-        "D2",
-        "D6",
-        "F-SPEC-03"
-      ],
-      "p3Tasks": [
-        "P3-R1-02",
-        "P3-R1-03"
-      ],
+      "conclusion": "阻塞原因未定位，不认定权限缺陷或P3实现缺陷；完整改期新单链未验。",
       "evidence": [
         "R1-ORIGIN-20260910-100019/M19/M19-REG-002-recall-audit.json",
         "R1-ORIGIN-20260910-100019/M19/M19-recalled-edit-limit.json",
         "R1-ORIGIN-20260910-100019/M32/M32-org-selector-limit.json"
       ],
       "feedback": "仅该编辑/改期/重提能力待原站页面或浏览器恢复；其他页面正常继续，不限制整个项目并发。 M32只限制组织条件应用，该报表姓名/日期查询和人数读取已执行。",
-      "conclusion": "阻塞原因未定位，不认定权限缺陷或P3实现缺陷；完整改期新单链未验。"
-    },
-    {
-      "id": "ENV-05",
-      "runId": "R1-ORIGIN-20260910-100019",
+      "id": "ENV-04",
       "modules": [
         "M01",
         "M19",
-        "M48",
         "M32"
       ],
-      "title": "原站业务请求超时/失败与交互超时",
-      "actual": "9/11专属tab24新组织、员工及调动查询成功；报表高级筛选固定日期仍连续选择器/Runtime.evaluate超时。",
-      "classification": "ENV_BLOCKED",
-      "severity": "Observation",
-      "status": "open_partial_recovered",
-      "productDefectConfirmed": false,
       "ownerDecisionRequired": false,
-      "requirements": [
-        "F-SPEC-07",
-        "F-SPEC-08",
-        "D2",
-        "D6",
-        "M32-SPEC-04"
-      ],
       "p3Tasks": [
         "P3-R1-02",
-        "P3-R1-03",
-        "P3-R1-05",
-        "P3-R1-06",
-        "P3-R1-07"
+        "P3-R1-03"
       ],
-      "feedback": "P3吸收到期日已达但实效未知的恢复状态，以及一次新标签/一次既有路径失败证据。继续D1–D7；需要真实执行审计和固定日期报表才能解除证据缺口。ROLE-01仍独立保留。",
+      "productDefectConfirmed": false,
+      "requirements": [
+        "D2",
+        "D6",
+        "F-SPEC-03"
+      ],
+      "runId": "R1-ORIGIN-20260910-100019",
+      "severity": "Observation",
+      "status": "open",
+      "title": "撤回编辑和报表组织选择未进入有效状态"
+    },
+    {
+      "actual": "9/11专属tab24新组织、员工及调动查询成功；报表高级筛选固定日期仍连续选择器/Runtime.evaluate超时。",
+      "classification": "ENV_BLOCKED",
       "conclusion": "不再把原站全业务不可读作为当前结论；仅记录已观察到的报表交互限制，其余未测不冒充失败。",
       "evidence": [
         "R1-ORIGIN-20260910-100019/Resume_20260910_1532_DOM.json",
@@ -475,45 +466,62 @@
         "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json",
         "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
       ],
+      "feedback": "P3吸收到期日已达但实效未知的恢复状态，以及一次新标签/一次既有路径失败证据。继续D1–D7；需要真实执行审计和固定日期报表才能解除证据缺口。ROLE-01仍独立保留。",
       "followups": [
         {
+          "actual": "北京时间9/11 00:14:50起新标签组织页Failed to fetch，00:15:25起既有路径同样失败；业务main均空、输入控件0，管理身份标识匹配。一次新标签+一次既有路径后停止重试。",
           "at": "2026-09-10T16:16:42.486Z",
           "basisHead": "60cfb04dc7fd869cd15b910de10e165cd72a7637",
           "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json",
-          "actual": "北京时间9/11 00:14:50起新标签组织页Failed to fetch，00:15:25起既有路径同样失败；业务main均空、输入控件0，管理身份标识匹配。一次新标签+一次既有路径后停止重试。",
           "impact": "日期条件已满足，EMP001实际离职、原单终止、当前历史报表及再入职前置仍未知。",
           "newUniqueFinding": false
         }
-      ]
+      ],
+      "id": "ENV-05",
+      "modules": [
+        "M01",
+        "M19",
+        "M48",
+        "M32"
+      ],
+      "ownerDecisionRequired": false,
+      "p3Tasks": [
+        "P3-R1-02",
+        "P3-R1-03",
+        "P3-R1-05",
+        "P3-R1-06",
+        "P3-R1-07"
+      ],
+      "productDefectConfirmed": false,
+      "requirements": [
+        "F-SPEC-07",
+        "F-SPEC-08",
+        "D2",
+        "D6",
+        "M32-SPEC-04"
+      ],
+      "runId": "R1-ORIGIN-20260910-100019",
+      "severity": "Observation",
+      "status": "open_partial_recovered",
+      "title": "原站业务请求超时/失败与交互超时",
+      "latestRecovery": {
+        "at": "2026-09-11T02:20:02.979Z",
+        "queryRecovered": true,
+        "explicitReportDatesRecovered": true,
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_Exit_Reports.json",
+        "remaining": "不宣称所有控件/页面均恢复；逐项继续实测"
+      }
     }
   ],
-  "counts": {
-    "MATCH": 3,
-    "REQUIREMENT_GAP": 0,
-    "DESIGN_GAP": 0,
-    "IMPLEMENTATION_DEFECT": 0,
-    "INTENTIONAL_DIFFERENCE": 1,
-    "ROLE_BLOCKED": 1,
-    "ENV_BLOCKED": 4,
-    "NEED_OWNER_DECISION": 0,
-    "resolved_ENV_BLOCKED": 1,
-    "observationsWithoutClassification": 8,
-    "Blocker": 0,
-    "Major": 1,
-    "Minor": 0,
-    "Observation": 14,
-    "activeMajor": 0,
-    "historicalMajor": 1
-  },
-  "countRule": "唯一台账ID计数；Major=1保留历史发现级别，activeMajor=0、historicalMajor=1。INTENTIONAL_DIFFERENCE=1由所有者决定；MATCH=3为窄项静态对照。ENV/ROLE仅计未关闭组。",
   "priorityRecovery": {
     "at": "2026-09-11T00:51:52.069Z",
+    "evidence": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json",
     "newIndependentFindings": 0,
     "updatedEntries": [
       "ENV-05",
       "OBS-05",
       "OBS-07"
-    ],
-    "evidence": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
-  }
+    ]
+  },
+  "runId": "R1-ORIGIN-20260910-100019"
 }

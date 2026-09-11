@@ -1,7 +1,6 @@
 {
-  "runId": "R1-ORIGIN-20260910-100019",
   "algorithm": "sha256",
-  "selfExcluded": true,
+  "fileCount": 89,
   "files": [
     {
       "path": "ALERT-MAJOR-001.md",
@@ -20,13 +19,13 @@
     },
     {
       "path": "Current_Executable_Test_Disposition.json",
-      "bytes": 4554,
-      "sha256": "cc42ab86feca1bafdccbb463aee6dfc31b7b2279f799e9e00711318cbf65c8ea"
+      "bytes": 4489,
+      "sha256": "eae1271c445f90c6a080e384c770748c140799866ae7abbfb969b4c1ebaa855f"
     },
     {
       "path": "Future_Date_Recovery.json",
-      "bytes": 6832,
-      "sha256": "f2ffe29169bbc32bd268258b7f11128ce5f1906842d735d86dfeea06494ce3c1"
+      "bytes": 6833,
+      "sha256": "9048681efb2c3dfa3f51cc63dfdc019d14bd11540c52c98def3d11f7455d496d"
     },
     {
       "path": "M01_Checkpoint.md",
@@ -50,8 +49,8 @@
     },
     {
       "path": "Original_Site_Data_Manifest.json",
-      "bytes": 21364,
-      "sha256": "44c3241dc0c2afa054e31024b95e5dd9183eecd9bfc88d72b922053f4f0a5771"
+      "bytes": 21408,
+      "sha256": "a751af7d129d5cc3fdf50e4a0f1909fd078fd7798f4592772499585837c35af4"
     },
     {
       "path": "Original_Site_Test_Plan.md",
@@ -77,6 +76,11 @@
       "path": "Priority_P3_Static_Comparison.json",
       "bytes": 784,
       "sha256": "b679b7c7d573c6dc5741a5052bc0a4d2d3f94073449e62b0af01540fa1890e35"
+    },
+    {
+      "path": "R1-ORIGIN-20260910-100019/20260911_Concentrated_Exit_Reports.json",
+      "bytes": 11321,
+      "sha256": "308447b899609cbab5878dd73ab5d3a86e8f0969273c191db17e720614e48ff5"
     },
     {
       "path": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json",
@@ -395,18 +399,18 @@
     },
     {
       "path": "R1_Original_Behavior_Matrix.json",
-      "bytes": 150860,
-      "sha256": "f8a6d15e8e54904db2459d9bde904fa0c3a8f6c185db5d2183ee2cc019067a62"
+      "bytes": 158288,
+      "sha256": "cb86b1a24e3ddce9bb7061fc7c7671041ce80a0bc8c53d6129eb3c15b4a59a54"
     },
     {
       "path": "R1_Original_Behavior_Matrix.md",
-      "bytes": 20863,
-      "sha256": "e38638dbb290aa898eea77f294c042ee894deda9eba3a94adb062386d34d205f"
+      "bytes": 16371,
+      "sha256": "acf804f11d2d74ffde2c36280c1f2352933ebb711918e3de7aca1e90a56b360e"
     },
     {
       "path": "R1_P3_Evidence_Feedback.md",
-      "bytes": 15108,
-      "sha256": "fa365dac98da6971c6472b6a3bc946040af2a46975b6aec8bf245ed494b438d3"
+      "bytes": 16815,
+      "sha256": "9b76fa7d3eeb251bb9c49c60270f163eee52730e35538a5fdf2c6719472bfb3d"
     },
     {
       "path": "R1_P4_Comparison_Cases.md",
@@ -415,13 +419,13 @@
     },
     {
       "path": "R1_Parity_Difference_Ledger.json",
-      "bytes": 20099,
-      "sha256": "38c6142bda398e629fc02d8109122b6f62b3069138616910343c5c109a111596"
+      "bytes": 20529,
+      "sha256": "524b33c544b413aad1356a2c6920db94dcadcb5afc28d70c96b1597872711284"
     },
     {
       "path": "R1_Parity_Difference_Ledger.md",
-      "bytes": 11516,
-      "sha256": "e9ea8bdb0596917739b987893006deb1762e76111cd95a8aedf02fbd7833d91b"
+      "bytes": 4447,
+      "sha256": "59919a94d088138a3875da86a8b0fec8fd62eea439d2186437f9159d27ae41bc"
     },
     {
       "path": "Repository_Source_Manifest.json",
@@ -430,13 +434,13 @@
     },
     {
       "path": "Resume.md",
-      "bytes": 13287,
-      "sha256": "7928887d290cc5ac14b7675dc0d186414dccde2f0fe9061a9b8377b2552fba21"
+      "bytes": 14781,
+      "sha256": "3e667d3236b600320eebba95464df28c44441b5a0e89cdbc7c29e58ad58da29c"
     },
     {
       "path": "Run_Status.json",
-      "bytes": 3938,
-      "sha256": "66ac9fc8c092ca79b6a71d25377ae612e81911508c8c6e1d06d3e770721ff039"
+      "bytes": 3962,
+      "sha256": "e5aad0abb31c34ea3edc3e1b34a45cc733cd7ed56306da0e7b306b224b45dffb"
     },
     {
       "path": "run.json",
@@ -444,7 +448,8 @@
       "sha256": "bd8664ee8eaeda8e04f22f354ba993e7379a417fe05e4c95c12733a0b34bed64"
     }
   ],
-  "fileCount": 88,
   "jsonValidationFile": "Continuation_Validation.json",
-  "scope": "仅证据分支；9/11新查询失败，不代表业务/模块或阶段通过"
+  "runId": "R1-ORIGIN-20260910-100019",
+  "scope": "仅证据分支；9/11新查询失败，不代表业务/模块或阶段通过",
+  "selfExcluded": true
 }

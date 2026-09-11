@@ -1,121 +1,122 @@
 {
-  "runId": "R1-ORIGIN-20260910-100019",
-  "origin": "https://srworkshopbj.italent.cn",
-  "concurrency": "own_tabs_24_25_26_no_cross_tab_conflict_observed_other_windows_paused",
+  "activeEnvBlockers": 4,
+  "activeMajor": 0,
+  "activeRoleBlockers": 1,
+  "browserHandoffTo": null,
+  "browserUseEndedAt": null,
+  "bulkImportedRows": 0,
+  "businessDateConditionSatisfied": true,
+  "completedModuleCounts": {
+    "bulkDataTesting": 0,
+    "denominator": 4,
+    "originBehavior": 0,
+    "originVsP3": 0,
+    "originVsRequirements": 0,
+    "readyForP3ExitParityReview": 0
+  },
+  "concurrency": "own_tab_27_other_tabs_untouched_R1_sole_operator",
+  "continuationInProgress": true,
   "createdRecords": 10,
   "createdRecordsDefinition": "3组织+2职位+2员工+2申请+1未来离职任职；不计自动关联重复",
-  "smokeNamedObjectsThresholdReached": true,
-  "continuationInProgress": false,
-  "bulkImportedRows": 0,
-  "modules": [
-    {
-      "module": "M01",
-      "originEvidence": "partial",
-      "bulkDataTesting": "not_completed",
-      "requirementsComparison": "partial",
-      "p3Comparison": "partial",
-      "readyForP3ExitParityReview": false
-    },
-    {
-      "module": "M19",
-      "originEvidence": "partial",
-      "bulkDataTesting": "not_completed",
-      "requirementsComparison": "partial",
-      "p3Comparison": "partial",
-      "readyForP3ExitParityReview": false
-    },
-    {
-      "module": "M48",
-      "originEvidence": "partial",
-      "bulkDataTesting": "not_completed",
-      "requirementsComparison": "partial",
-      "p3Comparison": "partial",
-      "readyForP3ExitParityReview": false
-    },
-    {
-      "module": "M32",
-      "originEvidence": "partial",
-      "bulkDataTesting": "not_completed",
-      "requirementsComparison": "partial",
-      "p3Comparison": "partial",
-      "readyForP3ExitParityReview": false
-    }
-  ],
-  "completedModuleCounts": {
-    "originBehavior": 0,
-    "bulkDataTesting": 0,
-    "originVsRequirements": 0,
-    "originVsP3": 0,
-    "readyForP3ExitParityReview": 0,
-    "denominator": 4
-  },
-  "partialEvidenceModules": 4,
-  "e2eCompleted": 0,
-  "e2eRequired": 5,
-  "activeRoleBlockers": 1,
-  "activeEnvBlockers": 4,
-  "resolvedEnvBlockers": 1,
-  "matchRules": 3,
-  "severities": {
-    "Blocker": 0,
-    "Major": 1,
-    "Minor": 0,
-    "Observation": 14
-  },
-  "p3ExitApprovedByThisWindow": false,
-  "p4StartedByThisWindow": false,
-  "futureDatePendingCases": [],
   "currentCheckpoint": "same_run_partial_evidence_not_release_complete",
+  "currentContinuationLimitation": "离职执行审计与旧雇佣ID页面未提供；其余可执行场景继续，不以历史报表超时整体停工",
   "currentEmployeeOracle": {
-    "people": null,
-    "formal": null,
-    "probation": null,
-    "departed": null,
-    "scope": "无本轮固定日期报表结果；只确认EMP001人员离职，不推断EMP002当前状态",
-    "evidence": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
-  },
-  "scopeStopLimits": [
-    "交接后不继续后台浏览器",
-    "自动任务保持暂停",
-    "ROLE-01不由管理员代替",
-    "实际审计未知不得以计划日或流程终止时刻代填"
-  ],
-  "otherUnexecutedWorkNotEquivalentToBlocker": true,
-  "workflowStatus": "browser_use_ended_handoff_R3_partial_evidence",
-  "remainingWorkMayContinue": true,
-  "activeMajor": 0,
-  "historicalMajor": 1,
-  "intentionalDifferences": 1,
-  "ownerDecision": "Owner_Decision_DIFF_MAJOR_001_20260910.json",
-  "newBusinessObjectsThisContinuation": 0,
-  "newFindingsThisContinuation": {
-    "Blocker": 0,
-    "Major": 0,
-    "Minor": 0,
-    "Observation": 0
-  },
-  "currentContinuationLimitation": "M01/M19新查询恢复；报表日期控件超时，未完成报表/再入职/其他边界项。",
-  "futureRecovery": "Future_Date_Recovery.json",
-  "futureRecheckScheduled": false,
-  "historicalEmployeeOracle": {
-    "people": 2,
-    "formal": 1,
+    "people": 1,
+    "formal": 0,
     "probation": 1,
-    "observedOn": "2026-09-10",
-    "evidence": "R1-ORIGIN-20260910-100019/Resume_20260910_1532_DOM.json",
-    "notReassertedAsSep11Current": true
+    "departed": 0,
+    "scope": "9/11固定两姓名在职名册，不含已离职EMP001；不代表测试人员总人数",
+    "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_Exit_Reports.json"
   },
   "dateSatisfiedButUnverifiedCases": [
     "离职执行人/实际审计与旧雇佣段ID",
     "固定日期当前/历史报表",
     "同personId正式再入职及邀请关闭"
   ],
-  "lastRecheckAt": "2026-09-11T00:51:52.069Z",
-  "businessDateConditionSatisfied": true,
+  "e2eCompleted": 0,
+  "e2eRequired": 5,
   "existingFindingUpdated": "ENV-05",
-  "newConfirmedBusinessBehaviorsThisContinuation": 2,
   "freshServerQuerySucceeded": true,
-  "browserUseEndedAt": "2026-09-11T00:51:52.069Z",
-  "browserHandoffTo": "R3",
-  "unknownBusinessActions": []
+  "futureDatePendingCases": [],
+  "futureRecheckScheduled": false,
+  "futureRecovery": "Future_Date_Recovery.json",
+  "historicalEmployeeOracle": {
+    "date": "2026-09-10",
+    "distinctPeople": 2,
+    "assignmentRows": 3,
+    "formalPeople": 1,
+    "formalRows": 2,
+    "probationPeople": 1,
+    "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_Exit_Reports.json"
+  },
+  "historicalMajor": 1,
+  "intentionalDifferences": 1,
+  "lastRecheckAt": "2026-09-11T02:20:02.979Z",
+  "matchRules": 3,
+  "modules": [
+    {
+      "bulkDataTesting": "not_completed",
+      "module": "M01",
+      "originEvidence": "partial",
+      "p3Comparison": "partial",
+      "readyForP3ExitParityReview": false,
+      "requirementsComparison": "partial"
+    },
+    {
+      "bulkDataTesting": "not_completed",
+      "module": "M19",
+      "originEvidence": "partial",
+      "p3Comparison": "partial",
+      "readyForP3ExitParityReview": false,
+      "requirementsComparison": "partial"
+    },
+    {
+      "bulkDataTesting": "not_completed",
+      "module": "M48",
+      "originEvidence": "partial",
+      "p3Comparison": "partial",
+      "readyForP3ExitParityReview": false,
+      "requirementsComparison": "partial"
+    },
+    {
+      "bulkDataTesting": "not_completed",
+      "module": "M32",
+      "originEvidence": "partial",
+      "p3Comparison": "partial",
+      "readyForP3ExitParityReview": false,
+      "requirementsComparison": "partial"
+    }
+  ],
+  "newBusinessObjectsThisContinuation": 0,
+  "newConfirmedBusinessBehaviorsThisContinuation": 2,
+  "newFindingsThisContinuation": {
+    "Blocker": 0,
+    "Major": 0,
+    "Minor": 0,
+    "Observation": 0
+  },
+  "origin": "https://srworkshopbj.italent.cn",
+  "otherUnexecutedWorkNotEquivalentToBlocker": true,
+  "ownerDecision": "Owner_Decision_DIFF_MAJOR_001_20260910.json",
+  "p3ExitApprovedByThisWindow": false,
+  "p4StartedByThisWindow": false,
+  "partialEvidenceModules": 4,
+  "remainingWorkMayContinue": true,
+  "resolvedEnvBlockers": 1,
+  "runId": "R1-ORIGIN-20260910-100019",
+  "scopeStopLimits": [
+    "自动任务保持暂停",
+    "ROLE-01不由管理员代替",
+    "实际审计未知不以计划日或流程终止时间代填",
+    "仅全部自主事项结束或完整条件满足后释放浏览器"
+  ],
+  "severities": {
+    "Blocker": 0,
+    "Major": 1,
+    "Minor": 0,
+    "Observation": 14
+  },
+  "smokeNamedObjectsThresholdReached": true,
+  "unknownBusinessActions": [],
+  "workflowStatus": "concentrated_origin_validation_in_progress"
 }
