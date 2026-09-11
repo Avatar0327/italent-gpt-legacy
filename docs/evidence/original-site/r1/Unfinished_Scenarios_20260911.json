@@ -1,0 +1,460 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "at": "2026-09-11T08:19:42.844544+00:00",
+  "scope": "保留原完整未完成场景，不将局部新证据升级完整通过。恢复前按最新Completion_Assessment核前置；本清单非豁免。",
+  "cases": [
+    {
+      "caseId": "M01-PENDING-ORG-LIFECYCLE",
+      "module": "M01",
+      "title": "组织编辑、更名、停用与在用保护",
+      "execution": "partially_observed",
+      "classification": null,
+      "blockerIds": [],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-result.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-stop-preview.json"
+      ]
+    },
+    {
+      "caseId": "M01-PENDING-ORG-UNIQUE",
+      "module": "M01",
+      "title": "同父重名、不同父重名及编码重复",
+      "execution": "partially_observed",
+      "classification": "ENV_BLOCKED",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/ORG003_Self_Parent_Rejected.json"
+      ]
+    },
+    {
+      "caseId": "M01-PENDING-POSITION",
+      "module": "M01",
+      "title": "岗位新增、编辑、停用及上下级",
+      "execution": "partially_observed",
+      "classification": null,
+      "blockerIds": [],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-continuation-smoke.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-JOB-002.json",
+        "R1-ORIGIN-20260910-100019/M01/JOB001_Parent_Text_Not_Persisted.json",
+        "R1-ORIGIN-20260910-100019/M01/JOB003_Create_Delete_Checkpoint.json",
+        "R1-ORIGIN-20260910-100019/M01/JOB003_Delete_Readback.json"
+      ]
+    },
+    {
+      "caseId": "M01-PENDING-EMP-CREATE",
+      "module": "M01",
+      "title": "员工新增及三入口模板",
+      "execution": "partially_observed",
+      "classification": null,
+      "blockerIds": [],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-EMP-001.json"
+      ]
+    },
+    {
+      "caseId": "M01-PENDING-EMP-IMPORT",
+      "module": "M01",
+      "title": "员工正式导入5–10、30–50、100–500",
+      "execution": "not_executed",
+      "classification": "ENV_BLOCKED",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "evidence": []
+    },
+    {
+      "caseId": "M01-PENDING-ASSIGN",
+      "module": "M01",
+      "title": "主职、兼职、多任职及占用",
+      "execution": "partially_observed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-EMP-001-assignment.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-TRANSFER-001.json"
+      ]
+    },
+    {
+      "caseId": "M01-PENDING-JOIN-REGULARIZE",
+      "module": "M01",
+      "title": "入职、转正流程",
+      "execution": "partially_observed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-readback.json",
+        "R1-ORIGIN-20260910-100019/M19/M19-REG-002-recall-audit.json"
+      ]
+    },
+    {
+      "caseId": "M01-PENDING-TRANSFER",
+      "module": "M01",
+      "title": "调动计划日、实际生效和日期重审",
+      "execution": "partially_observed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-TRANSFER-001.json",
+        "R1-ORIGIN-20260910-100019/M19/M19-TRANSFER-REQUEST-001-recall-audit.json"
+      ]
+    },
+    {
+      "caseId": "M01-PENDING-EXIT-REHIRE",
+      "module": "M01",
+      "title": "离职、再入职与身份连续性",
+      "execution": "partially_observed",
+      "classification": null,
+      "blockerIds": [],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-presubmit.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-warning.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-history.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-ID-report.json",
+        "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
+      ]
+    },
+    {
+      "caseId": "M01-PENDING-LEGAL",
+      "module": "M01",
+      "title": "法人组织归属与空范围",
+      "execution": "partially_observed",
+      "classification": "ENV_BLOCKED",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/LEGAL001_PreSave.json",
+        "R1-ORIGIN-20260910-100019/M01/LEGAL001_EmptyScope_Detail.json",
+        "R1-ORIGIN-20260910-100019/M01/LEGAL001_Stopped_Query.json",
+        "R1-ORIGIN-20260910-100019/M01/LEGAL001_Stopped_Detail.json"
+      ]
+    },
+    {
+      "caseId": "M01-PENDING-FIELDS",
+      "module": "M01",
+      "title": "必填、长度、格式、空值及重复值",
+      "execution": "partially_observed",
+      "classification": null,
+      "blockerIds": [],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-probation-validation.json",
+        "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-org-date-validation.json"
+      ]
+    },
+    {
+      "caseId": "M01-PENDING-HISTORY-ATTACH",
+      "module": "M01",
+      "title": "附件、历史版本、原单与审计",
+      "execution": "partially_observed",
+      "classification": "ENV_BLOCKED",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "evidence": []
+    },
+    {
+      "caseId": "M01-PENDING-CONCURRENCY",
+      "module": "M01",
+      "title": "并发修改和重复提交",
+      "execution": "partially_observed",
+      "classification": null,
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/ORG003_Two_Stale_Drafts.json"
+      ]
+    },
+    {
+      "caseId": "M19-PENDING-SEQUENTIAL",
+      "module": "M19",
+      "title": "顺序审批、两方独立与禁止自审",
+      "execution": "partially_observed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M19/M19-TRANSFER-REQUEST-001-detail.json"
+      ]
+    },
+    {
+      "caseId": "M19-PENDING-DELEGATION",
+      "module": "M19",
+      "title": "管理员委托、接受与撤销",
+      "execution": "not_executed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "evidence": []
+    },
+    {
+      "caseId": "M19-PENDING-REJECT",
+      "module": "M19",
+      "title": "同意、驳回和驳回原因",
+      "execution": "not_executed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "evidence": []
+    },
+    {
+      "caseId": "M19-PENDING-WITHDRAW",
+      "module": "M19",
+      "title": "撤回、重提和修改日期重审",
+      "execution": "partially_observed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M19/M19-TRANSFER-REQUEST-001-recall-audit.json"
+      ]
+    },
+    {
+      "caseId": "M19-PENDING-EFFECT",
+      "module": "M19",
+      "title": "审批完成与HR执行生效分离",
+      "execution": "not_executed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "evidence": []
+    },
+    {
+      "caseId": "M19-PENDING-RECOVERY",
+      "module": "M19",
+      "title": "重复点击、超时、执行失败恢复",
+      "execution": "not_executed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "evidence": []
+    },
+    {
+      "caseId": "M19-PENDING-SUMMARY",
+      "module": "M19",
+      "title": "摘要字段、职级变化与原新单追溯",
+      "execution": "partially_observed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M19/M19-TRANSFER-REQUEST-001-detail.json"
+      ]
+    },
+    {
+      "caseId": "M48-PENDING-PROFILE",
+      "module": "M48",
+      "title": "本人资料可见和可改字段",
+      "execution": "not_executed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "evidence": []
+    },
+    {
+      "caseId": "M48-PENDING-ATTACH",
+      "module": "M48",
+      "title": "自助附件上传下载替换",
+      "execution": "not_executed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "evidence": []
+    },
+    {
+      "caseId": "M48-PENDING-APPLICATION",
+      "module": "M48",
+      "title": "自助申请进度历史撤回驳回重提",
+      "execution": "partially_observed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M48/M48-admin-own-request-state.json"
+      ]
+    },
+    {
+      "caseId": "M48-PENDING-BOUNDARY",
+      "module": "M48",
+      "title": "本人/他人、脱敏及管理员差异",
+      "execution": "not_executed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "evidence": []
+    },
+    {
+      "caseId": "M48-PENDING-SEVEN",
+      "module": "M48",
+      "title": "七入口可用、无权、未配置和异常",
+      "execution": "not_executed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "evidence": []
+    },
+    {
+      "caseId": "M32-PENDING-ORACLE",
+      "module": "M32",
+      "title": "指标口径与明细一致性",
+      "execution": "partially_observed",
+      "classification": null,
+      "blockerIds": [],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M32/M32-own-employee-history.json",
+        "R1-ORIGIN-20260910-100019/M32/M32-own-employee-current.json",
+        "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_All_Assignments.json"
+      ]
+    },
+    {
+      "caseId": "M32-PENDING-TIME",
+      "module": "M32",
+      "title": "组织日期筛选、当前值与历史快照",
+      "execution": "partially_observed",
+      "classification": null,
+      "blockerIds": [],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M32/M32-date-empty.json",
+        "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_Sep09_Empty.json"
+      ]
+    },
+    {
+      "caseId": "M32-PENDING-PAGING",
+      "module": "M32",
+      "title": "分页排序及100–500行显示",
+      "execution": "partially_observed",
+      "classification": "ENV_BLOCKED",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "evidence": []
+    },
+    {
+      "caseId": "M32-PENDING-EXPORT",
+      "module": "M32",
+      "title": "导出内容、空导出与大文件",
+      "execution": "partially_observed",
+      "classification": "ENV_BLOCKED",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M32/M32-own-employee-history.json"
+      ]
+    },
+    {
+      "caseId": "M32-PENDING-SUBSCRIBE",
+      "module": "M32",
+      "title": "订阅、权限过滤与投递",
+      "execution": "partially_observed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M32/M32-subscription-draft.json"
+      ]
+    },
+    {
+      "caseId": "M32-PENDING-DATA-EDGE",
+      "module": "M32",
+      "title": "空/重复/失效组织/离职/跨组织边界",
+      "execution": "partially_observed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ROLE-01"
+      ],
+      "evidence": []
+    },
+    {
+      "caseId": "E2E-SUCCESS",
+      "module": "E2E",
+      "title": "R1端到端成功路径",
+      "execution": "partially_observed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ENV-03",
+        "ROLE-01"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/M01-TRANSFER-001.json",
+        "R1-ORIGIN-20260910-100019/M32/M32-two-employees.json"
+      ]
+    },
+    {
+      "caseId": "E2E-REJECT",
+      "module": "E2E",
+      "title": "R1端到端驳回路径",
+      "execution": "not_executed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ENV-03",
+        "ROLE-01"
+      ],
+      "evidence": []
+    },
+    {
+      "caseId": "E2E-WITHDRAW",
+      "module": "E2E",
+      "title": "R1端到端撤回路径",
+      "execution": "partially_observed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ENV-03",
+        "ROLE-01"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M19/M19-TRANSFER-REQUEST-001-recall-audit.json",
+        "R1-ORIGIN-20260910-100019/M19/M19-REG-002-recall-audit.json",
+        "R1-ORIGIN-20260910-100019/M32/M32-two-employees.json"
+      ]
+    },
+    {
+      "caseId": "E2E-REDATE",
+      "module": "E2E",
+      "title": "R1端到端改日期后新单重审路径",
+      "execution": "not_executed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ENV-03",
+        "ROLE-01"
+      ],
+      "evidence": []
+    },
+    {
+      "caseId": "E2E-FAILURE",
+      "module": "E2E",
+      "title": "R1端到端执行失败与恢复路径",
+      "execution": "not_executed",
+      "classification": "ROLE_BLOCKED",
+      "blockerIds": [
+        "ENV-03",
+        "ROLE-01"
+      ],
+      "evidence": []
+    }
+  ],
+  "e2eCompleted": 0,
+  "fullModules": 0
+}

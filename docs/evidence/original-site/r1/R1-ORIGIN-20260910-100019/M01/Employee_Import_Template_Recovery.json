@@ -1,0 +1,21 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "caseId": "M01-IMPORT-TEMPLATE-RECOVERY",
+  "environment": "https://srworkshopbj.italent.cn",
+  "role": "ORIGIN-ADMIN-01",
+  "route": "员工/更多操作/导入内部员工/下载模板",
+  "attempts": 1,
+  "downloadTimeoutMs": 60000,
+  "actual": {
+    "content": [
+      {
+        "text": "{\"at\":\"2026-09-11T08:03:40.220Z\",\"download\":{\"ok\":false,\"error\":\"Error: Timed out after 60000ms waiting for download.\"},\"iframes\":[{\"id\":\"popup_17891136114231710\",\"visible\":false},{\"id\":\"iTalentFrameProxy\",\"visible\":false},{\"id\":\"printIframe\",\"visible\":true},{\"id\":\"__CLOUD_REDIRECT_TEST_FRAME__\",\"visible\":false}],\"blockedText\":\"- generic: 模板管理\\n- generic: 评分模板\\n- generic: 问卷模板\\n  - generic: 下载附件\"}",
+        "type": "text"
+      }
+    ],
+    "isError": false
+  },
+  "conclusion": "正式模板下载事件超时，无文件路径；本次未出现Chromium阻止文案，原因不明。未猜模板、未导入，停止重复下载恢复。",
+  "newRecords": 0,
+  "unknownBusinessActions": []
+}

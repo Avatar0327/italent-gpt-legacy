@@ -6600,6 +6600,271 @@
       "time": "2026-09-11T07:43:30.210450+00:00",
       "title": "隔离法人合同保存和附件上传预览替换",
       "threeWayConclusion": "局部原站合同与附件证据；未证独立权限、下载内容、历史不变性或完整P3对照，不提升模块完整度"
+    },
+    {
+      "actualResult": "同RUN法人停用成功；旧合同新编辑仍保留引用；新合同同人员候选排除该法人，草稿取消。实际执行人/审计未提供。",
+      "blockerIds": [],
+      "caseId": "M01-CONTRACT-LEGAL-STOP-REFERENCE",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/Contract_Legal_Stop_Reference.json"
+      ],
+      "execution": "observed_narrow_scope",
+      "inputs": {
+        "details": "R1-ORIGIN-20260910-100019/M01/Contract_Legal_Stop_Reference.json"
+      },
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-07"
+        ],
+        "evidenceMode": "既有P3任务/用例静态关联，最新源码只读；本窗口未运行P3测试或UI。",
+        "path": "tests/r1-p3-m01.test.mjs",
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "task": "P3-R1-02"
+      },
+      "page": "法人停用与旧合同引用",
+      "pageState": "saved_stop_or_cancelled_verification_draft",
+      "preconditions": "仅本RUN隔离数据；配置只读，无真实通知；已授权新合成身份但尚无隔离登录可用。",
+      "recordIds": [
+        "da7b6c4c-90ee-437a-aae0-5740f916210f",
+        "d31ec769-bd60-4877-828c-6d212e9a3dca"
+      ],
+      "repeatability": "字段级可复核；控件延迟/超时已单独记录",
+      "requirements": [
+        "F-SPEC-06"
+      ],
+      "role": "ORIGIN-ADMIN-01",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "本条使用结构化DOM/字段值与记录ID；未补截图。",
+      "severity": "Observation",
+      "steps": [
+        "正式页面隔离对象操作",
+        "动作后独立DOM及字段回读",
+        "未保存复核草稿取消"
+      ],
+      "time": "2026-09-11T08:03:28.528611+00:00",
+      "title": "法人停用与旧合同引用",
+      "threeWayConclusion": "来源局部行为；目标保持已批准设计。未完成P3运行及独立角色验证，不提升完整度"
+    },
+    {
+      "actualResult": "学校合成名称候选空；9/11开始9/10结束进入表单；保存仅见学校及类型必填，未保存。不能判断完整日期规则。",
+      "blockerIds": [],
+      "caseId": "M01-EDUCATION-DATE-REQUIRED",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/Education_Date_Required_Boundary.json"
+      ],
+      "execution": "observed_narrow_scope",
+      "inputs": {
+        "details": "R1-ORIGIN-20260910-100019/M01/Education_Date_Required_Boundary.json"
+      },
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-08",
+          "P3-M01-09"
+        ],
+        "evidenceMode": "既有P3任务/用例静态关联，最新源码只读；本窗口未运行P3测试或UI。",
+        "path": "tests/r1-p3-m01.test.mjs",
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "task": "P3-R1-02"
+      },
+      "page": "教育必填与日期倒置边界",
+      "pageState": "saved_stop_or_cancelled_verification_draft",
+      "preconditions": "仅本RUN隔离数据；配置只读，无真实通知；已授权新合成身份但尚无隔离登录可用。",
+      "recordIds": [
+        "53a88828-60d7-42e4-b508-974ff96708a2"
+      ],
+      "repeatability": "字段级可复核；控件延迟/超时已单独记录",
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-07"
+      ],
+      "role": "ORIGIN-ADMIN-01",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "本条使用结构化DOM/字段值与记录ID；未补截图。",
+      "severity": "Observation",
+      "steps": [
+        "正式页面隔离对象操作",
+        "动作后独立DOM及字段回读",
+        "未保存复核草稿取消"
+      ],
+      "time": "2026-09-11T08:03:28.528611+00:00",
+      "title": "教育必填与日期倒置边界",
+      "threeWayConclusion": "来源局部行为；目标保持已批准设计。未完成P3运行及独立角色验证，不提升完整度"
+    },
+    {
+      "actualResult": "正式菜单点击一次；等待60000ms无下载事件/文件路径，无本次Chromium文案；未导入。",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "caseId": "M01-IMPORT-TEMPLATE-RECOVERY",
+      "classification": "ENV_BLOCKED",
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/Employee_Import_Template_Recovery.json"
+      ],
+      "execution": "partially_observed_blocked",
+      "inputs": {
+        "details": "R1-ORIGIN-20260910-100019/M01/Employee_Import_Template_Recovery.json"
+      },
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-08",
+          "P3-M01-09"
+        ],
+        "evidenceMode": "既有P3任务/用例静态关联，最新源码只读；本窗口未运行P3测试或UI。",
+        "path": "tests/r1-p3-m01.test.mjs",
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "task": "P3-R1-02"
+      },
+      "page": "正式员工模板单次恢复检查",
+      "pageState": "read_only_checkpoint_no_open_draft",
+      "preconditions": "仅本RUN隔离数据；配置只读，无真实通知；已授权新合成身份但尚无隔离登录可用。",
+      "recordIds": [],
+      "repeatability": "字段级可复核；控件延迟/超时已单独记录",
+      "requirements": [
+        "F-SPEC-07",
+        "BP-F-REQ-12"
+      ],
+      "role": "ORIGIN-ADMIN-01",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "本条使用结构化DOM/字段值与记录ID；未补截图。",
+      "severity": "Observation",
+      "steps": [
+        "正式页面只读查询或单次受支持恢复动作",
+        "动作后独立回读",
+        "阻塞不重放，不改共享设置"
+      ],
+      "time": "2026-09-11T08:17:49.060830+00:00",
+      "title": "正式员工模板单次恢复检查",
+      "threeWayConclusion": "来源局部事实及精确前置；未证明完整需求/P3运行一致，不判目标实现缺陷。"
+    },
+    {
+      "actualResult": "固定六姓名、2026-09-11、试用正式筛选实际应用。3分组人数1+1+3=5；新合同分组1人。下载无文件回执，不等于导出内容已核。",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "caseId": "M32-CONTRACT-REPORT-DOWNLOAD-RECOVERY",
+      "classification": "ENV_BLOCKED",
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M32/M32_Contract_Report_Download_Recovery.json"
+      ],
+      "execution": "partially_observed_blocked",
+      "inputs": {
+        "details": "R1-ORIGIN-20260910-100019/M32/M32_Contract_Report_Download_Recovery.json"
+      },
+      "module": "M32",
+      "p3": {
+        "cases": [
+          "P3-M32-06",
+          "P3-M32-08"
+        ],
+        "evidenceMode": "既有P3任务/用例静态关联，最新源码只读；本窗口未运行P3测试或UI。",
+        "path": "tests/r1-p3-report-query.test.mjs",
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "task": "P3-R1-06/07"
+      },
+      "page": "合同新分组与正式报表下载",
+      "pageState": "read_only_checkpoint_no_open_draft",
+      "preconditions": "仅本RUN隔离数据；配置只读，无真实通知；已授权新合成身份但尚无隔离登录可用。",
+      "recordIds": [
+        "53a88828-60d7-42e4-b508-974ff96708a2"
+      ],
+      "repeatability": "字段级可复核；控件延迟/超时已单独记录",
+      "requirements": [
+        "M32-SPEC-05"
+      ],
+      "role": "ORIGIN-ADMIN-01",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "本条使用结构化DOM/字段值与记录ID；未补截图。",
+      "severity": "Observation",
+      "steps": [
+        "正式页面只读查询或单次受支持恢复动作",
+        "动作后独立回读",
+        "阻塞不重放，不改共享设置"
+      ],
+      "time": "2026-09-11T08:17:49.060830+00:00",
+      "title": "合同新分组与正式报表下载",
+      "threeWayConclusion": "来源局部事实及精确前置；未证明完整需求/P3运行一致，不判目标实现缺陷。"
+    },
+    {
+      "actualResult": "生成待入职自动发起入职准备及自动催办均开启。未确认隔离接收，未保存再入职、未改共享设置。",
+      "blockerIds": [
+        "ENV-07"
+      ],
+      "caseId": "M01-REHIRE-AUTOMATIC-NOTIFICATION-GATE",
+      "classification": "ENV_BLOCKED",
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/Rehire_Automatic_Notification_Gate.json"
+      ],
+      "execution": "partially_observed_blocked",
+      "inputs": {
+        "details": "R1-ORIGIN-20260910-100019/M01/Rehire_Automatic_Notification_Gate.json"
+      },
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-02",
+          "P3-M01-10"
+        ],
+        "evidenceMode": "既有P3任务/用例静态关联，最新源码只读；本窗口未运行P3测试或UI。",
+        "path": "tests/r1-p3-m01.test.mjs",
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "task": "P3-R1-02"
+      },
+      "page": "再入职自动外发规则门槛",
+      "pageState": "read_only_checkpoint_no_open_draft",
+      "preconditions": "仅本RUN隔离数据；配置只读，无真实通知；已授权新合成身份但尚无隔离登录可用。",
+      "recordIds": [],
+      "repeatability": "字段级可复核；控件延迟/超时已单独记录",
+      "requirements": [
+        "F-SPEC-04",
+        "F-SPEC-05"
+      ],
+      "role": "ORIGIN-ADMIN-01",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "本条使用结构化DOM/字段值与记录ID；未补截图。",
+      "severity": "Observation",
+      "steps": [
+        "正式页面只读查询或单次受支持恢复动作",
+        "动作后独立回读",
+        "阻塞不重放，不改共享设置"
+      ],
+      "time": "2026-09-11T08:17:49.060830+00:00",
+      "title": "再入职自动外发规则门槛",
+      "threeWayConclusion": "来源局部事实及精确前置；未证明完整需求/P3运行一致，不判目标实现缺陷。"
     }
   ],
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",

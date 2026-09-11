@@ -1,0 +1,34 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "caseId": "M32-CONTRACT-REPORT-DOWNLOAD-RECOVERY",
+  "role": "ORIGIN-ADMIN-01",
+  "environment": "https://srworkshopbj.italent.cn",
+  "query": {
+    "content": [
+      {
+        "text": "{\"at\":\"2026-09-11T08:08:28.597Z\",\"filters\":[\"时点日期：2026-09-11\",\"姓名：ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001(zz.r1.20260910.100019.emp001@example.invalid),ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_002(zz.r1.20260910.100019.emp002@example.invalid),ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_003(zz.r1.20260910.100019.emp003@example.invalid),ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_004(zz.r1.20260910.100019.emp004@example.invalid),ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005(zz.r1.20260910.100019.emp005@example.invalid),ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_006_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX(zz.r1.20260910.100019.emp006@example.invalid)\",\"邮箱\",\"参加工作日期\",\"人员状态：试用,正式\",\"雇佣关系：实习生,内部员工\"],\"rows\":\"--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t2026-09-10\\t2026-09-10\\t至今\\t--\\t--\\t--\\t0.0\\t--\\t--\\t--\\t试用\\t是\\t2026-09-10\\t2026-10-09\\t1\\t--\\t--\\t森豆集团/华夏九洲集团/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\\t华夏九洲集团\\tZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001\\tZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\\t--\\t--\\t--\\t--\\t--\\t--\\t1\\n--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t2026-09-11\\t2026-09-11\\t至今\\t--\\t--\\t--\\t0.0\\t--\\t--\\t--\\t正式\\t否\\t--\\t--\\t--\\t--\\t--\\t森豆集团/华夏九洲集团/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\\t华夏九洲集团\\tZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001\\tZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\\t劳动合同\\t固定期限\\t2026-09-11\\t2026-10-10\\t1\\t--\\t1\\n--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t--\\t2026-09-11\\t2026-09-11\\t至今\\t--\\t--\\t--\\t0.0\\t--\\t--\\t--\\t正式\\t否\\t--\\t--\\t--\\t--\\t--\\t森豆集团/华夏九洲集团/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\\t华夏九洲集团\\tZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001\\tZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\\t--\\t--\\t--\\t--\\t--\\t--\\t3\",\"footer\":[\"下载\",\"共3条\"]}",
+        "type": "text"
+      }
+    ],
+    "isError": false
+  },
+  "reportExplanation": "三条分组行不是3个人；人数列1+1+3=5，试用1、正式4。新合同劳动/固定期限/2026-09-11至2026-10-10分组人数1，与本RUN首合同一致。",
+  "download": {
+    "content": [
+      {
+        "text": "{\"at\":\"2026-09-11T08:10:17.537Z\",\"download\":{\"ok\":false,\"error\":\"Error: Timed out after 60000ms waiting for download.\"},\"bodyResult\":\"  - iframe [active] [id=\\\"oceanView\\\"]:\\n    - generic: 下载\"}",
+        "type": "text"
+      }
+    ],
+    "isError": false
+  },
+  "attempts": 1,
+  "fileObtained": false,
+  "actualExportContentVerified": false,
+  "limitations": [
+    "只读固定日期六人员过滤，未新增业务",
+    "不将分组行数作为distinct人员数",
+    "未覆盖实际大数据分页或独立角色",
+    "本次下载未见Chromium阻止文案；原因未知，不绕过不重试"
+  ]
+}

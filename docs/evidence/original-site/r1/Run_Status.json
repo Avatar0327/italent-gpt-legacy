@@ -1,9 +1,9 @@
 {
-  "activeEnvBlockers": 5,
+  "activeEnvBlockers": 6,
   "activeMajor": 0,
   "activeRoleBlockers": 1,
-  "browserHandoffTo": null,
-  "browserUseEndedAt": null,
+  "browserHandoffTo": "released_no_recipient_receipt",
+  "browserUseEndedAt": "2026-09-11T08:14:58.412Z",
   "bulkImportedRows": 0,
   "businessDateConditionSatisfied": true,
   "completedModuleCounts": {
@@ -15,10 +15,10 @@
     "readyForP3ExitParityReview": 0
   },
   "concurrency": "R1_sole_operator_own_tabs_27_30_forms_isolated_same_admin_sequential_stale_drafts",
-  "continuationInProgress": true,
+  "continuationInProgress": false,
   "createdRecords": 20,
   "createdRecordsDefinition": "累计20主动业务对象，删除1，保留19，另有合成附件2版本不重复算业务对象；6人员。",
-  "currentCheckpoint": "owner_decisions_and_contract_fixture_continuing",
+  "currentCheckpoint": "notification_isolation_gate_fixed_evidence_package",
   "currentContinuationLimitation": "详见Completion_Assessment.json；角色/审计/邀请/日期/正式文件/模板与稳定扩量前置。不得称完整通过。",
   "currentEmployeeOracle": {
     "people": 5,
@@ -26,7 +26,7 @@
     "probation": 1,
     "departed": 0,
     "scope": "固定六姓名、明确9/11时点在职名册，排除001离职",
-    "evidence": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_Current.json"
+    "evidence": "R1-ORIGIN-20260910-100019/M32/M32_Contract_Report_Download_Recovery.json"
   },
   "dateSatisfiedButUnverifiedCases": [
     "离职执行人/实际审计与旧雇佣段ID",
@@ -40,7 +40,7 @@
     "FUTURE-PARTTIME-END-005",
     "FUTURE-PARTTIME-OVERLAP-005"
   ],
-  "futureRecheckScheduled": false,
+  "futureRecheckScheduled": true,
   "futureRecovery": "Future_Date_Recovery.json",
   "historicalEmployeeOracle": {
     "date": "2026-09-10",
@@ -52,8 +52,8 @@
     "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_Exit_Reports.json"
   },
   "historicalMajor": 2,
-  "intentionalDifferences": 1,
-  "lastRecheckAt": "2026-09-11T06:51:20.809719+00:00",
+  "intentionalDifferences": 2,
+  "lastRecheckAt": "2026-09-11T08:17:49.060830+00:00",
   "matchRules": 6,
   "modules": [
     {
@@ -89,13 +89,13 @@
       "requirementsComparison": "partial"
     }
   ],
-  "newBusinessObjectsThisContinuation": 8,
+  "newBusinessObjectsThisContinuation": 2,
   "newConfirmedBusinessBehaviorsThisContinuation": 2,
   "newFindingsThisContinuation": {
     "Blocker": 0,
-    "Major": 1,
+    "Major": 0,
     "Minor": 0,
-    "Observation": 2
+    "Observation": 1
   },
   "origin": "https://srworkshopbj.italent.cn",
   "otherUnexecutedWorkNotEquivalentToBlocker": true,
@@ -107,7 +107,7 @@
   "resolvedEnvBlockers": 1,
   "runId": "R1-ORIGIN-20260910-100019",
   "scopeStopLimits": [
-    "自动任务保持暂停",
+    "9/12一次性到期任务先确认浏览器独占，否则不调用浏览器并暂停",
     "ROLE-01不由管理员代替",
     "实际审计未知不以计划日或流程终止时间代填",
     "仅全部自主事项结束或完整条件满足后释放浏览器"
@@ -116,11 +116,11 @@
     "Blocker": 0,
     "Major": 2,
     "Minor": 0,
-    "Observation": 16
+    "Observation": 17
   },
   "smokeNamedObjectsThresholdReached": true,
   "unknownBusinessActions": [],
-  "workflowStatus": "B_incomplete_external_prerequisites_checkpoint_browser_released",
+  "workflowStatus": "B_not_complete_notification_isolation_and_external_prerequisites",
   "modifiedRunObjectsThisContinuation": 3,
   "fullHistoryOracle": {
     "distinctPeople": 6,
@@ -132,5 +132,9 @@
   },
   "retainedRecords": 19,
   "deletedRecords": 1,
-  "continuationComparisonBasis": "7920b64ea30f1e4b232fb86bba2742852d0892e8"
+  "continuationComparisonBasis": "8e3be496177bae50b6545b9787c1125741f1aafc",
+  "ownerDecisions": [
+    "Owner_Decision_DIFF_MAJOR_001_20260910.json",
+    "Owner_Decisions_20260911_002_003.json"
+  ]
 }

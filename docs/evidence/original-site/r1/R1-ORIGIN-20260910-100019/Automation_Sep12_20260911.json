@@ -1,0 +1,35 @@
+{
+  "content": [
+    {
+      "text": "Action completed.",
+      "type": "text"
+    }
+  ],
+  "isError": false,
+  "structuredContent": {
+    "content": [],
+    "isError": false,
+    "meta": null,
+    "structuredContent": {
+      "assistant_response_guidance": null,
+      "automation": {
+        "conversation_id": "6aa27efa-72bc-83ec-9da9-fcf5d1295eca",
+        "default_timezone": "Asia/Shanghai",
+        "display_schedule": null,
+        "id": "6aa2cdf499888191b40f86510034e1ff",
+        "is_enabled": true,
+        "last_run_time": null,
+        "next_run_time": null,
+        "prompt": "继续 R1 原站到期回查，唯一 RUN_ID R1-ORIGIN-20260910-100019。先读取 /workspace/sites/italent-hris-r1-origin-parity-20260910 分支 evidence/r1-origin-parity-20260910 最新 Resume.md、Run_Status.json、Future_Date_Recovery.json、Completion_Assessment.json 和 manifest，保留后来合法提交及在制修改，不回退、不重建对象。北京时间2026年9月12日08:00这一轮仅执行一次。必须先核实原站测试环境及本 RUN 唯一浏览器使用权：如其他窗口/人工/自动任务正在使用云浏览器、已有进行中操作，或不能确认独占，则不调用浏览器、不抢占、不关闭/刷新任何其他标签，记录阻塞并暂停本任务。确认独占后按浏览器技能新建专属标签，正式新查询 EMP005 personId 53a88828-60d7-42e4-b508-974ff96708a2 的兼职 UUID 0eb54fe9-01ea-4fdb-b5e7-75754a308119 和 1e462457-ae89-4894-87e8-7083e6fc5229：查实际结束状态、2026-09-11起止区间、实际执行人及审计，不用结束日期保存代替实际终态，不改时钟。固定本 RUN 六姓名和明确9月12日日期回查在职人数/主兼职/历史报表；ORG003 a7b55bd7-0ef2-44a0-9d29-6259fe053da3 仅在所有依赖实际结束且停用不会修改任何非本RUN对象、不会发真实通知时，才走原站正式页面停用，并独立回读。不得保存再入职：2026-09-11证据显示生成待入职自动发起准备及催办已开启，除非取得本RUN隔离接收/不外发正式方案；不得改共享配置。下载恢复一次已用尽，不重试或绕过。D1–D7及两项有意差异保持，缺独立角色继续ROLE-01，不以管理员替代。每个动作后独立回读，超时不重播，未知动作先记录。更新证据、矩阵、清单、恢复点，原子提交并推送自己的证据分支，报告固定HEAD和真实计数，不批准P3退出/P4。完成或失败均停止后台浏览器动作、记录释放状态，并将本任务6aa2cdf499888191b40f86510034e1ff设为is_enabled=false，不重复调度；如果暂停工具失败如实报告。",
+        "schedule": "BEGIN:VEVENT\nDTSTART;TZID=Asia/Shanghai:20260912T080000\nRRULE:FREQ=DAILY;COUNT=1\nEND:VEVENT",
+        "team_id": null,
+        "timing_mode": "flexible_schedule",
+        "title": "R1原站到期回查",
+        "updated_at": "2026-09-11T08:15:27.452323+00:00"
+      },
+      "automation_id": "6aa2cdf499888191b40f86510034e1ff",
+      "message": "Automation updated.",
+      "success": true
+    }
+  }
+}

@@ -3,14 +3,14 @@
   "counts": {
     "Blocker": 0,
     "DESIGN_GAP": 0,
-    "ENV_BLOCKED": 5,
+    "ENV_BLOCKED": 6,
     "IMPLEMENTATION_DEFECT": 0,
     "INTENTIONAL_DIFFERENCE": 2,
     "MATCH": 6,
     "Major": 2,
     "Minor": 0,
     "NEED_OWNER_DECISION": 0,
-    "Observation": 16,
+    "Observation": 17,
     "REQUIREMENT_GAP": 0,
     "ROLE_BLOCKED": 1,
     "activeMajor": 0,
@@ -123,11 +123,13 @@
       "title": "截图捕获超时"
     },
     {
-      "actual": "正式组织模板下载、仅本轮筛选报表下载均被Chromium阻止，无文件；未绕过。；9/11合同附件直接下载60秒无文件回执，预览可用，未见本次Chromium阻止文案，不混同原因。",
+      "actual": "正式组织模板下载、仅本轮筛选报表下载均被Chromium阻止，无文件；未绕过。；9/11合同附件直接下载60秒无文件回执，预览可用，未见本次Chromium阻止文案，不混同原因。；本轮员工/更多操作/导入内部员工/下载模板单次60000ms等待无下载事件或文件路径，本次无Chromium阻止文案，不推断同一原因。",
       "classification": "ENV_BLOCKED",
       "conclusion": "只阻塞正式导入/导出文件能力，人工正式页面新增和其他模块继续。",
       "evidence": [
-        "R1-ORIGIN-20260910-100019/M01/M01-template-blocked.json"
+        "R1-ORIGIN-20260910-100019/M01/M01-template-blocked.json",
+        "R1-ORIGIN-20260910-100019/M01/Employee_Import_Template_Recovery.json",
+        "R1-ORIGIN-20260910-100019/M32/M32_Contract_Report_Download_Recovery.json"
       ],
       "feedback": "保留下载限制，允许人工5–10冒烟后审慎扩量，无需修改共享安全策略。",
       "id": "ENV-03",
@@ -155,7 +157,7 @@
       "runId": "R1-ORIGIN-20260910-100019",
       "severity": "Observation",
       "status": "open",
-      "title": "正式组织模板下载被Chromium阻止",
+      "title": "正式模板、报表和附件下载未取得文件回执",
       "latestDownloadEvidence": "R1-ORIGIN-20260910-100019/M01/CONTRACT001_Readback.json"
     },
     {
@@ -164,7 +166,8 @@
       "conclusion": "管理员自助页面不能代普通员工，管理员不得自审代两方确认；P4多角色人工验收阻塞。",
       "evidence": [
         "Browser_Concurrency_Check.md",
-        "R1-ORIGIN-20260910-100019/M48/M48-application-header.json"
+        "R1-ORIGIN-20260910-100019/M48/M48-application-header.json",
+        "R1-ORIGIN-20260910-100019/Role_Isolation_Authorization_Check.json"
       ],
       "feedback": "P4使用现有独立授权测试身份逐角色验收；不新增真实访问者或改变账号权限。",
       "id": "ROLE-01",
@@ -200,7 +203,8 @@
         "source": "R1-ORIGIN-20260910-100019/20260911_M48_Role_Bound_PartTime.json",
         "result": "自助兼职人员控件绑定当前真实管理员、禁用，不能操作本轮员工。browserAuth仅安全交接输入能力，无已存独立测试账号目录；未注销或切换身份。"
       },
-      "latestAvailabilityCheck": "R1-ORIGIN-20260910-100019/Role_Availability_Recheck.json"
+      "latestAvailabilityCheck": "R1-ORIGIN-20260910-100019/Role_Availability_Recheck.json",
+      "latestAuthorizedScope": "最多4合成角色；无安全隔离登录条件时仍阻塞，不以管理员替代"
     },
     {
       "actual": "普通新建显示设立日期、大类/多维组织等，部门行政上级空值必填；新建下级显示生效日期并二次确认新增对象。",
@@ -733,6 +737,34 @@
       "ownerDecision": "Owner_Decisions_20260911_002_003.json",
       "ownerDecisionId": "OWNER-R1-20260911-003",
       "conclusion": "来源空职位、同组织、同日重复兼职不直接等价同一目标positionId；继续按稳定任职目标及已批准重叠规则校验。没有明确映射不判目标缺陷。"
+    },
+    {
+      "id": "ENV-07",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "modules": [
+        "M01",
+        "M19",
+        "M48",
+        "M32",
+        "E2E"
+      ],
+      "title": "待入职自动发送规则启用，尚无RUN隔离接收保证",
+      "severity": "Observation",
+      "classification": "ENV_BLOCKED",
+      "status": "open",
+      "actual": "设置页面两个phoenix-switch_checked：自动发起入职准备、自动催办；选中生成待入职时自动发起。页面说明向负责人发送待办/催办。未确认隔离接收；本轮未保存再入职，未改共享规则。",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/Rehire_Automatic_Notification_Gate.json"
+      ],
+      "productDefectConfirmed": false,
+      "ownerDecisionRequired": false,
+      "minimumAction": "提供本RUN不外发正式路径或隔离负责人/接收方案；不要求放宽D1–D7、不请求改共享全局开关。",
+      "p3Tasks": [
+        "P3-R1-02",
+        "P3-R1-03",
+        "P3-R1-04",
+        "P3-R1-06"
+      ]
     }
   ],
   "priorityRecovery": {

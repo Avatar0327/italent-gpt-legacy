@@ -7,7 +7,7 @@
     "fullModules": "0/4",
     "p3ParityModules": "0/4"
   },
-  "currentNextStep": "按Completion_Assessment集中前置恢复；9/12后原兼职UUID只读回查，EMP001再入职仍先确认不邀请/不恢复账号",
+  "currentNextStep": "9/12真实日期回查两个原兼职；再入职需先解除ENV-07隔离通知前置，不改共享设置",
   "earliestActualRecheckAt": "2026-09-11T00:00:00+08:00",
   "environment": "https://srworkshopbj.italent.cn",
   "lastObserved": {
@@ -60,20 +60,28 @@
     "newTab": 1,
     "onFailure": "停止浏览器重试；不得读取旧DOM替代新查询"
   },
-  "retention": "18累计创建/17保留/1临时无引用岗位已删；6人员，两兼职待9/12实际回查；不删业务历史",
+  "retention": "累计20/保留19/删除1，6人员，合同2附件版本；9/12查原兼职UUID，不删除历史",
   "runId": "R1-ORIGIN-20260910-100019",
   "scheduledRecheck": {
     "approximateLocalTime": "08:00",
     "creationConfirmed": true,
-    "enabled": false,
+    "enabled": true,
     "executionCompleted": false,
-    "localDate": "2026-09-11",
+    "localDate": "2026-09-12",
     "localDaypart": "morning",
-    "pauseConfirmed": true,
-    "pauseReason": "当前已结束浏览器操作；恢复前先取得唯一写RUN使用权，避免其他窗口/自动任务并写",
+    "pauseConfirmed": false,
+    "pauseReason": null,
     "timezone": "Asia/Shanghai",
     "timingMode": "flexible_schedule",
-    "title": "R1原站到期回查"
+    "title": "R1原站到期回查",
+    "oneShot": true,
+    "schedule": "BEGIN:VEVENT\nDTSTART;TZID=Asia/Shanghai:20260912T080000\nRRULE:FREQ=DAILY;COUNT=1\nEND:VEVENT",
+    "taskId": "6aa2cdf499888191b40f86510034e1ff",
+    "requiresExclusiveBrowser": true,
+    "pauseAfterSuccessOrFailure": true,
+    "serviceTimingMode": "flexible_schedule",
+    "serviceNextRunTime": null,
+    "evidence": "R1-ORIGIN-20260910-100019/Automation_Sep12_20260911.json"
   },
   "steps": [
     {
@@ -175,7 +183,7 @@
       "原UUID逐条读取状态/区间/真实审计",
       "明示当前日期重查报表去重人数与兼职数量",
       "ORG003停用前重查全部依赖",
-      "不自动重建/重播保存；原自动任务保持暂停"
+      "一次性任务先确认独占；不能确认则不操作浏览器，记录后自动暂停。"
     ]
   },
   "latestSixPersonOracle": {

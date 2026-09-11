@@ -1,0 +1,26 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "at": "2026-09-11T08:17:49.060830+00:00",
+  "role": "ORIGIN-ADMIN-01",
+  "authorization": "最多4本RUN合成身份+1隔离通知接收端；不改共享权限/认证或真实账号",
+  "actualRoleSessionsCreated": 0,
+  "isolatedReceiverCreated": false,
+  "reads": [
+    "个人菜单仅个人设置/退出，未见身份切换",
+    "个人设置显示账号设置、密码、邮件、用户组等；未读取凭据、不改真实账号",
+    "组织员工设置及全局可见菜单未取得可安全建立独立登录的合成身份入口",
+    "账户中心DOM所属EnterpriseWelfare，不把福利账户入口当登录身份管理"
+  ],
+  "roleChecksNotPassed": [
+    "独立员工本人和他人数据拒绝",
+    "调出HR→调入HR",
+    "独立授权执行HR",
+    "委托/撤权/订阅投递"
+  ],
+  "minimumAction": "提供已有授权合成测试账号的安全登录及隔离范围；或正式支持无真实邀请的本RUN账号创建和认证入口。需要员工、调出HR、调入HR、执行HR最多4个；不得管理员代替。",
+  "sourceEvidence": [
+    "Role_Availability_Recheck.json",
+    "R1-ORIGIN-20260910-100019/M01/Rehire_Automatic_Notification_Gate.json"
+  ],
+  "unknownBusinessActions": []
+}

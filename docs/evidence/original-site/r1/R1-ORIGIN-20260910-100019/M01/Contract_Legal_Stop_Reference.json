@@ -1,0 +1,130 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "caseId": "M01-CONTRACT-LEGAL-STOP-REFERENCE",
+  "at": "2026-09-11T07:50:38.235Z",
+  "role": "ORIGIN-ADMIN-01",
+  "legalId": "da7b6c4c-90ee-437a-aae0-5740f916210f",
+  "contractId": "d31ec769-bd60-4877-828c-6d212e9a3dca",
+  "stopOn": "2026-09-11",
+  "stopAcknowledgement": "停用成功",
+  "stoppedView": "停用的法人公司\n名称\n：\nZZ_R1_R1-ORIGIN-20260910-100019_M01_CONTRACT_LEGAL_001\n清空已选\n新建\n编码\n名称\n简称\n生效日期\n停用日期\nZZ_R1_R1-ORIGIN-20260910-100019_M01_CONTRACT_LEGAL_001\nZZ_R1_R1-ORIGIN-20260910-100019_M01_CONTRACT_LEGAL_001\nZZ_R1_R1-ORIGIN-20260910-100019_M01_CONTRACT_LEGAL_001\n2026-09-11\n2026-09-11\n共1条\n高级筛选",
+  "oldContractNewEditor": [
+    {
+      "field": "入职日期\n2026-09-11",
+      "values": [
+        "2026-09-11"
+      ]
+    },
+    {
+      "field": "机构\n华夏九洲集团",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "field": "部门\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "field": "职务\n请选择",
+      "values": []
+    },
+    {
+      "field": "直线经理\n请选择",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "field": "虚线经理\n请选择",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "field": "人员\nZ\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005(zz.r1.20260910.100019.emp005@example.invalid)",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "field": "编号\nZZ_R1_R1-ORIGIN-20260910-100019_M01_CONTRACT_001",
+      "values": [
+        "ZZ_R1_R1-ORIGIN-20260910-100019_M01_CONTRACT_001"
+      ]
+    },
+    {
+      "field": "公司\nZZ_R1_R1-ORIGIN-20260910-100019_M01_CONTRACT_LEGAL_001",
+      "values": [
+        "ZZ_R1_R1-ORIGIN-20260910-100019_M01_CONTRACT_LEGAL_001"
+      ]
+    },
+    {
+      "field": "合同类型\n劳动合同",
+      "values": [
+        "劳动合同"
+      ]
+    },
+    {
+      "field": "期限类型\n固定期限",
+      "values": [
+        "固定期限"
+      ]
+    },
+    {
+      "field": "签订日期\n2026-09-11",
+      "values": [
+        "2026-09-11"
+      ]
+    },
+    {
+      "field": "生效日期\n2026-09-11",
+      "values": [
+        "2026-09-11"
+      ]
+    },
+    {
+      "field": "合同期限(月)\n1",
+      "values": [
+        "1"
+      ]
+    },
+    {
+      "field": "终止日期\n2026-10-10",
+      "values": [
+        "2026-10-10"
+      ]
+    },
+    {
+      "field": "实际终止时间\n实际终止时间",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "field": "附件\n重新上传\nZZ_R1_CONTRACT_ATTACH_002.txt",
+      "values": [
+        "[file_selection]"
+      ]
+    },
+    {
+      "field": "签订次数\n1",
+      "values": [
+        "1"
+      ]
+    }
+  ],
+  "newContractCandidateBody": "新建\n任职信息\n入职日期\n2026-09-11\n机构\n华夏九洲集团\n部门\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\n职务\n请选择\n直线经理\n请选择\n虚线经理\n请选择\n合同信息\n人员\nZ\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005(zz.r1.20260910.100019.emp005@example.invalid)\n编号\n公司\n合同类型\n请选择\n是否入厂编\n请选择\n期限类型\n请选择\n签订日期\n签订日期\n生效日期\n生效日期\n合同期限(月)\n终止日期\n终止日期\n附件\n上传\n保存\n取消\n翻译助手\n取消\n保存\n开心就好\n去设置公司",
+  "conclusion": "有本RUN有效合同仍允许停用法人；停用视图精确名称一条；旧合同新编辑保留法人、日期、次数1和附件002；新合同同EMP005候选不再有该法人。仅前端候选排除，不声称服务端强制伪造引用拒绝。",
+  "newContractDraftSaved": false,
+  "verificationDraftCancelled": true,
+  "unknownBusinessActions": [],
+  "cleanup": "法人已停用；旧合同和附件保留，不删除历史",
+  "limitations": [
+    "未核独立角色",
+    "未核新合同伪造引用（禁止隐藏API）",
+    "源停用时间仅日期，实际执行审计未提供"
+  ]
+}

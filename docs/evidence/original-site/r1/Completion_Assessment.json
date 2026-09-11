@@ -1,8 +1,8 @@
 {
   "runId": "R1-ORIGIN-20260910-100019",
-  "at": "2026-09-11T07:43:30.210450+00:00",
+  "at": "2026-09-11T08:17:49.060830+00:00",
   "basisHead": "8e3be496177bae50b6545b9787c1125741f1aafc",
-  "conclusion": "B_not_complete_continuing_authorized_tests",
+  "conclusion": "B_not_complete_paused_for_notification_isolation_and_external_prerequisites",
   "fullModules": 0,
   "bulkModules": 0,
   "p3ParityModules": 0,
@@ -35,8 +35,8 @@
         "E2E-FAILURE"
       ],
       "blocker": "ROLE-01：本窗口只有管理员，未取得现有授权独立员工/两方/HR测试登录方式",
-      "evidence": "R1-ORIGIN-20260910-100019/Role_Availability_Recheck.json",
-      "minimumAction": "先复用已有授权身份；无则最多4合成身份和1隔离接收端，明确无真实外发且独立登录才保存；正在核查正式入口",
+      "evidence": "R1-ORIGIN-20260910-100019/Role_Isolation_Authorization_Check.json",
+      "minimumAction": "提供已有授权合成测试账号的安全登录及隔离范围；或正式支持无真实邀请的本RUN账号创建和认证入口。需要员工、调出HR、调入HR、执行HR最多4个；不得管理员代替。",
       "alternativeTried": "管理员可读申请、原单、兼职、资料入口已做；自助默认真实管理员不能代替员工"
     },
     {
@@ -48,9 +48,9 @@
       "cases": [
         "M01-PENDING-EXIT-REHIRE"
       ],
-      "blocker": "正式再入职入口同人匹配已见，但邀请关闭/账号不恢复未提供可验证控制；未保存",
-      "evidence": "R1-ORIGIN-20260910-100019/M01/Rehire_Invitation_Constraint.json",
-      "minimumAction": "提供正式入口的不邀请/不恢复账号可审查说明或隔离流程；维持原personId，无同名替代",
+      "blocker": "ENV-07：生成待入职自动发起准备及催办启用；未确认隔离负责人/接收，正式再入职不保存",
+      "evidence": "R1-ORIGIN-20260910-100019/M01/Rehire_Automatic_Notification_Gate.json",
+      "minimumAction": "本RUN专用不通知路径或隔离接收/负责人，不能改共享全局规则；保持同一personId。",
       "alternativeTried": "正式离职/退休再入职已打开两轮并选原EMP001；普通新增入口虽邀请否，但不是再入职替代"
     },
     {
@@ -97,9 +97,13 @@
         "M01-PENDING-HISTORY-ATTACH",
         "M32-PENDING-EXPORT"
       ],
-      "blocker": "正式文件选择和合同附件上传/替换局部恢复；合同直接下载60秒无文件路径；导入模板和报表导出尚需本轮正式恢复检查",
-      "minimumAction": "平台侧恢复正式下载/文件选择能力或提供原站正式模板文件；保留当前DOM证据，不绕过安全或猜模板",
-      "alternativeTried": "管理员手工新增已完成6人员；文件与截图阻塞未扩大为全轮停止"
+      "blocker": "合同上传/替换局部恢复；合同直接下载、员工正式模板、固定六人报表下载各一次60000ms无文件回执",
+      "minimumAction": "平台恢复正式下载并交付源站原始模板/导出文件；本轮受支持恢复已用尽，不绕过不猜模板。",
+      "alternativeTried": "管理员手工新增已完成6人员；文件与截图阻塞未扩大为全轮停止",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/Employee_Import_Template_Recovery.json",
+        "R1-ORIGIN-20260910-100019/M32/M32_Contract_Report_Download_Recovery.json"
+      ]
     },
     {
       "id": "EXT-EXPANSION",
@@ -112,8 +116,8 @@
         "M32-PENDING-PAGING"
       ],
       "blocker": "基础冒烟仍未完整闭环；逐条页面回执、日历读取和正式文件能力未稳定，扩量闸门未满足",
-      "minimumAction": "稳定官方交互/完成基础前置后按manifest恢复30–50，再100–500；逐条UUID核定或正式导入；不先扩量凑通过",
-      "alternativeTried": "已由2扩至6人员，17保留对象；固定6人10任职核数、数值排序及空集已测，实际跨页/大数据未完成",
+      "minimumAction": "先取得正式原模板并完成导入5–10回执、UUID、人数/报表核数，再按级扩量；手工已建6人不能替代正式批量。",
+      "alternativeTried": "6人员、19保留对象；固定六人历史10任职/当前5人以及新合同分组已核；正式导入模板不可得，未执行导入5–10及后续30–50/100–500",
       "notClaimed": "不是生产性能下降或共享租户受影响的结论；少量页可用，不等于稳定批量能力"
     },
     {
@@ -127,9 +131,9 @@
         "M01-PENDING-FIELDS",
         "M01-PENDING-POSITION"
       ],
-      "blocker": "合同法人映射及首合同已保存；学校候选、子集模板、法人停用后旧合同/引用边界继续待测",
+      "blocker": "合同法人映射、首合同、附件上传替换、法人停用后旧引用和新候选边界已取得；学校合成候选为空且未见新增入口，子集模板正式隔离入口待核",
       "evidence": "R1-ORIGIN-20260910-100019/M01/CONTRACT001_Readback.json",
-      "minimumAction": "在最新有限授权内继续正式入口创建/验证，不修改既有默认和共享权限",
+      "minimumAction": "提供学校候选/子集模板的正式RUN独立创建入口及依赖，不修改既有模板/默认。合同法人已完成局部保存停用引用验证。",
       "alternativeTried": "法人创建停用、合同选本轮人/清默认公司、教育选本轮人/必填拒绝、正式新建下级和无引用删除均完成"
     },
     {
@@ -144,7 +148,7 @@
       ],
       "blocker": "ENV-04：同一已撤回转正单编辑未形成可操作表单，未重提；不另建业务冒充原单恢复",
       "evidence": "R1-ORIGIN-20260910-100019/20260911_M19_Recalled_Regularization.json",
-      "minimumAction": "先核旧原单正式入口；必要时允许新RUN链，但不冒充旧单恢复",
+      "minimumAction": "旧原单正式编辑回执恢复；可建新RUN链，但须先取得独立角色/隔离通知前置，不能冒充旧单已恢复。",
       "alternativeTried": "原业务及流程ID、原提交/撤回审计已独立回读"
     },
     {
@@ -162,8 +166,8 @@
     }
   ],
   "browser": {
-    "lastActionAt": "2026-09-11T07:25:50.636Z",
-    "released": false,
+    "lastActionAt": "2026-09-11T08:14:58.412Z",
+    "released": true,
     "unknownBusinessActions": [],
     "openBusinessDrafts": [],
     "ownedTabs": [
@@ -181,8 +185,14 @@
     "automation": {
       "id": "6aa2cdf499888191b40f86510034e1ff",
       "title": "R1原站到期回查",
-      "enabled": false,
-      "verifiedThisContinuation": true
+      "enabled": true,
+      "verifiedThisContinuation": true,
+      "schedule": "2026-09-12T08:00:00+08:00",
+      "oneShot": true,
+      "requiresExclusiveBrowser": true,
+      "autoPauseOnCompletionOrFailure": true,
+      "serviceTimingMode": "flexible_schedule",
+      "serviceNextRunTime": null
     }
   },
   "counts": {
@@ -193,9 +203,9 @@
     "narrowMatch": 6,
     "activeMajor": 0,
     "totalMajor": 2,
-    "observations": 16,
+    "observations": 17,
     "roleBlockerGroups": 1,
-    "envBlockerGroups": 5
+    "envBlockerGroups": 6
   },
   "p3Delivery": {
     "staticHead": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
@@ -204,5 +214,7 @@
   },
   "limitations": "字段组/模块/端到端仍部分；未执行内容不是已验证，不把扩量未完成变成批量通过。P1继续受限关闭，不能整体重开或整体补齐。",
   "ownerDecisions": "Owner_Decisions_20260911_002_003.json",
-  "limitedAuthorizationSupersedesOldRestrictions": true
+  "limitedAuthorizationSupersedesOldRestrictions": true,
+  "lastCommittedHeadBeforePackage": "8e18c60f0070bc010766df1adce5ee996450c928",
+  "remainingAutonomousStatus": "当前集中暂停源于实际启用自动通知且未能确认隔离接收；其余未完成场景仍逐项保留，不声明所有想象可执行场景已穷尽。"
 }

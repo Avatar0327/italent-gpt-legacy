@@ -1,27 +1,27 @@
 {
   "basisHead": "76a16265fdd65f6ba7608260dde1e07acfb85200",
-  "continuationInstruction": "R1集中连续执行，只有完整退出条件或全部自主事项完成且仅剩真实外部条件才释放浏览器；自动任务保持暂停。",
+  "continuationInstruction": "最新：真实自动通知隔离风险集中暂停，保留所有未完成项目；9/12一次性任务必须先核独占，成功或失败暂停。",
   "currentAttempt": {
     "basisHead": "8e3be496177bae50b6545b9787c1125741f1aafc",
-    "checkedAt": "2026-09-11T07:43:30.210450+00:00",
+    "checkedAt": "2026-09-11T08:17:49.060830+00:00",
     "dateConditionSatisfied": true,
-    "evidence": "R1-ORIGIN-20260910-100019/M01/CONTRACT001_Readback.json",
+    "evidence": "R1-ORIGIN-20260910-100019/M01/Rehire_Automatic_Notification_Gate.json",
     "oldDOMReusableForCurrentConclusion": false,
-    "outcome": "continuing_under_new_limited_authorization",
+    "outcome": "B_notification_isolation_and_external_prerequisites",
     "unknownBusinessActions": []
   },
   "groups": [
     {
       "attempt": "参见本轮独立弹窗/字段级证据；源页面恢复后继续测试",
-      "blocker": "ROLE01/再入职邀请关闭/离职审计/9月12日期/附件/模板及稳定扩量前置",
-      "currentEvidence": "R1-ORIGIN-20260910-100019/M01/CONTRACT001_Readback.json",
+      "blocker": "ROLE-01、ENV-07自动通知隔离、离职审计、9/12日期、模板/正式文件",
+      "currentEvidence": "R1-ORIGIN-20260910-100019/M01/Contract_Legal_Stop_Reference.json",
       "dependency": "需要可加载的本轮对象查询/详情，不能凭历史UUID盲写",
       "execution": "partial_admin_fragments_remaining_prerequisites",
       "module": "M01",
-      "notClaimed": "再入职、附件及其余边界/完整生命周期未完成",
+      "notClaimed": "再入职、教育/子集模板完整链、全部历史权限与批量仍未完成；合同上传替换只是局部。",
       "priorExecutionScope": "此前9/10或9/11失败时点记录；当前增量以sep11Status为准",
       "scope": "岗位编辑/停用/名称编码重复、组织更名/唯一性/层级、员工字段长度格式重复、附件/子集/多任职管理员入口",
-      "sep11Status": "6_persons_2_parttimes_org_boundaries_position_child_delete_contract_education_validation"
+      "sep11Status": "6_persons_2_parttimes_org_boundaries_position_child_delete_contract_education_validation;legal_stop_old_reference_preserved_education_required_rejection_import_template_recovery_no_file"
     },
     {
       "attempt": "两原流程DOM与审计回查；转正编辑点击未开表单",
@@ -48,13 +48,13 @@
     {
       "attempt": "固定六姓名9/11=5人、9/10=2人、9/9空；全历史10任职；重复兼职各成行",
       "blocker": "ENV-03文件导出；ROLE-01权限/订阅真实接收；扩量/分页尚未完成",
-      "currentEvidence": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_All_Assignments.json",
+      "currentEvidence": "R1-ORIGIN-20260910-100019/M32/M32_Contract_Report_Download_Recovery.json",
       "execution": "current_history_grouping_numeric_sort_observed",
       "module": "M32",
       "notClaimed": "无大样本/实际分页跨页/导出文件/订阅发送/独立权限通过",
       "priorExecutionScope": "此前9/10或9/11失败时点记录；当前增量以sep11Status为准",
       "scope": "两员工当前明细、图表人数、日期/排序/组织条件、导出文件",
-      "sep11Status": "six_names_current_history_empty_applied",
+      "sep11Status": "fixed_six_sep11_contract_grouping_1_1_3_export_recovery_no_file",
       "subscriptionStatus": "名称截断50，空渠道/空接收人拒绝；草稿取消；实际发送未验证"
     },
     {

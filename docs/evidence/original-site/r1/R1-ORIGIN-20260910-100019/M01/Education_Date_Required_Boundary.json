@@ -1,0 +1,29 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "caseId": "M01-EDUCATION-DATE-REQUIRED",
+  "personId": "53a88828-60d7-42e4-b508-974ff96708a2",
+  "role": "ORIGIN-ADMIN-01",
+  "environment": "https://srworkshopbj.italent.cn",
+  "schoolCandidateSearch": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_SCHOOL_001",
+  "schoolResult": "这里什么都没有；未见新增或去设置学校入口",
+  "steps": [
+    "原人员选EMP005",
+    "开始日2026-09-11、结束日2026-09-10",
+    "单次保存",
+    "独立回读毕业学校/毕业类型必填",
+    "取消，独立核popup不可见"
+  ],
+  "rawToolResult": {
+    "content": [
+      {
+        "text": "{\"at\":\"2026-09-11T07:59:13.708Z\",\"body\":\"新建\\n人员\\nZ\\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005(zz.r1.20260910.100019.emp005@example.invalid)\\n毕业学校\\n请选择\\n必填\\n毕业类型\\n请选择\\n必填\\n开始日期\\n结束日期\\n学历\\n请选择\\n是否最高学历\\n是\\n否\\n学位\\n请选择\\n是否最高学位\\n是\\n否\\n培养方式\\n请选择\\n学习形式\\n请选择\\n专业类别\\n请选择\\n专业\\n学历证书\\n上传\\n毕业学校类型\\n请选择\\n专业描述\\n保存\\n取消\\n翻译助手\\n取消\\n保存\",\"fields\":[{\"placeholder\":\"\",\"value\":\"\"},{\"placeholder\":\"请选择\",\"value\":\"\"},{\"placeholder\":\"请选择\",\"value\":\"\"},{\"placeholder\":\"\",\"value\":\"2026-09-11\"},{\"placeholder\":\"\",\"value\":\"2026-09-10\"},{\"placeholder\":\"请选择\",\"value\":\"\"},{\"placeholder\":\"请选择\",\"value\":\"\"},{\"placeholder\":\"请选择\",\"value\":\"\"},{\"placeholder\":\"请选择\",\"value\":\"\"},{\"placeholder\":\"请选择\",\"value\":\"\"},{\"placeholder\":\"\",\"value\":\"\"},{\"placeholder\":\"\",\"value\":\"\"}]}",
+        "type": "text"
+      }
+    ],
+    "isError": false
+  },
+  "result": "required_rejected_not_saved",
+  "dateRuleConclusion": "尚不能判断日期倒置规则；必填先拒绝，无日期错误文案不等于系统允许倒置保存",
+  "unknownBusinessActions": [],
+  "newRecords": 0
+}
