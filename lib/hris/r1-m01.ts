@@ -59,7 +59,8 @@ function templateValues(template:Entity,input:Record<string,unknown>,mode:'creat
  const output:Record<string,unknown>={};const definitions=template.payload.fields as z.infer<typeof field>[];
  if(Object.keys(input).some(k=>!definitions.some(f=>f.code===k)))invalid('模板未声明字段');
  for(const f of definitions){const value=Object.hasOwn(input,f.code)?input[f.code]:mode==='update'?old[f.code]:f.default;
- if(value===null||value===undefined){if(f.required)invalid('缺少必填字段');output[f.code]=null;continue;}
+  if(value===null||value===undefined){if(f.required)invalid('缺少必填字段');output[f.code]=null;continue;}
+  if(f.required&&typeof value==='string'&&value.trim()==='')invalid('缺少必填字段');
  if(f.type==='number'){const safeInteger=typeof value==='number'&&Number.isSafeInteger(value);const decimal=typeof value==='string'&&/^-?(0|[1-9]\d*)(\.\d+)?$/.test(value)&&value.length<=100;if((!safeInteger&&!decimal)||!f.unit||f.precision===undefined||decimal&&(value as string).split('.')[1]?.length>f.precision)invalid('数值须为安全整数或模板声明精度的十进制字符串');}
  else if(typeof value!=='string'||value.length>1000)invalid('字段类型或长度无效');
  else if(f.type==='date'&&!date.safeParse(value).success)invalid('日期无效');
