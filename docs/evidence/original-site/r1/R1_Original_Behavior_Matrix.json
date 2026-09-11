@@ -5212,6 +5212,225 @@
       "time": "2026-09-11T04:27:14.247862+00:00",
       "timePrecision": "browser_observed",
       "title": "逐人明细与空职位"
+    },
+    {
+      "actualResult": "结束早于开始拒绝；同日9/11结束日期已保存，但新查询仍任职中/生效；实际终止待9/12回查。",
+      "caseId": "M01-PARTTIME-END-005",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_End.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "date": "2026-09-11",
+        "scope": "本RUN完整姓名"
+      },
+      "module": "M01",
+      "p3": {
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "path": "lib/hris/r1-m01.ts",
+        "testPath": "tests/r1-p3-m01.test.mjs",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-03"
+        ],
+        "staticFinding": "assignmentRequest核独立审核HR，assignmentApprove拒自审，assignmentExecute要求已批准；与批准方案一致",
+        "runtimeVerifiedByThisWindow": false
+      },
+      "page": "兼职管理→本轮兼职详情→结束兼职",
+      "pageState": "fresh_readback",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "recordIds": [
+        "53a88828-60d7-42e4-b508-974ff96708a2",
+        "0eb54fe9-01ea-4fdb-b5e7-75754a308119"
+      ],
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "F-SPEC-05",
+        "BP-F-REQ-06",
+        "BP-F-REQ-13"
+      ],
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未采新截图；结构化正文及UUID证据。",
+      "severity": "Observation",
+      "steps": [
+        "正式页面操作及本轮对象核定",
+        "独立回读条件与结果",
+        "结构化取证"
+      ],
+      "threeWayConclusion": "局部原站边界；批准规则不变，P3仅静态映射，尚未判三方完整一致。",
+      "time": "2026-09-11T04:43:41.946340+00:00",
+      "timePrecision": "browser_observed",
+      "title": "兼职结束日期边界与同日状态"
+    },
+    {
+      "actualResult": "订阅名称DOM截断50；三推送渠道false、接收人空时明确拒绝；取消且暂无订阅。引号限制未形成独立结论。",
+      "caseId": "M32-SUB-VALIDATION-SEP11",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M32/M32_Subscription_Validation.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "date": "2026-09-11",
+        "scope": "本RUN完整姓名"
+      },
+      "module": "M32",
+      "p3": {
+        "cases": [
+          "P3-M32-01",
+          "P3-M32-02"
+        ],
+        "evidenceMode": "静态源码/既有测试映射；本窗口未运行复刻UI或测试",
+        "path": "lib/hris/r1-report-m01-producer.ts",
+        "sha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+        "task": "P3-R1-06/07"
+      },
+      "page": "时点员工花名册→订阅→添加订阅",
+      "pageState": "fresh_readback",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "recordIds": [],
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "M32-SPEC-01",
+        "M32-SPEC-04"
+      ],
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未采新截图；结构化正文及UUID证据。",
+      "severity": "Observation",
+      "steps": [
+        "正式页面操作及本轮对象核定",
+        "独立回读条件与结果",
+        "结构化取证"
+      ],
+      "threeWayConclusion": "局部原站边界；批准规则不变，P3仅静态映射，尚未判三方完整一致。",
+      "time": "2026-09-11T04:43:41.946340+00:00",
+      "timePrecision": "browser_observed",
+      "title": "订阅无接收渠道和接收人拒绝"
+    },
+    {
+      "actualResult": "同父级ORG002重名和当前启用ORG002编码重复均明确拒绝；取消后ORG003原值保留。P2同范围名称/编码唯一，P3 catalog代码唯一及temporalCatalogCheck有效区间同父级名称冲突拒绝。仅当前重叠场景MATCH。",
+      "caseId": "M01-ORG-UNIQUE-SEP11",
+      "classification": "MATCH",
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/ORG003_Unique_Required.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "nameOrCode": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
+        "target": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003"
+      },
+      "module": "M01",
+      "p3": {
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "path": "lib/hris/r1-m01.ts",
+        "additionalPath": "lib/hris/r1-temporal.ts",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "evidenceMode": "静态源码对照，未运行产品测试/UI"
+      },
+      "page": "组织列表精确ORG003→编辑popup_17891015987471201",
+      "pageState": "original_values_restored_and_editor_closed",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "recordIds": [
+        "a7b55bd7-0ef2-44a0-9d29-6259fe053da3"
+      ],
+      "repeatability": "可按记录ID只读重现；写入不可无条件重放",
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-08",
+        "BP-F-REQ-10"
+      ],
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "scopeLimit": "此行结论仅限实际操作，未证明同模块其他用例",
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "severity": null,
+      "steps": [
+        "精确定位本轮ORG003",
+        "分别改名称或编码为ORG002并保存",
+        "独立回读错误",
+        "关闭错误取消，再次打开确认原值"
+      ],
+      "time": "2026-09-11T04:58:59.864380+00:00",
+      "title": "同父级当前名称及启用编码重复拒绝（窄项一致）"
+    },
+    {
+      "actualResult": "键盘清空后回读两个空值；保存分别显示必填，未落库。取消重开原名称编码保留。",
+      "caseId": "M01-ORG-REQUIRED-SEP11",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/ORG003_Unique_Required.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "nameOrCode": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
+        "target": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003"
+      },
+      "module": "M01",
+      "p3": {
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "path": "lib/hris/r1-m01.ts",
+        "additionalPath": "lib/hris/r1-temporal.ts",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "evidenceMode": "静态源码对照，未运行产品测试/UI"
+      },
+      "page": "组织列表精确ORG003→编辑popup_17891015987471201",
+      "pageState": "original_values_restored_and_editor_closed",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "recordIds": [
+        "a7b55bd7-0ef2-44a0-9d29-6259fe053da3"
+      ],
+      "repeatability": "可按记录ID只读重现；写入不可无条件重放",
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-08",
+        "BP-F-REQ-10"
+      ],
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "scopeLimit": "此行结论仅限实际操作，未证明同模块其他用例",
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "severity": "Observation",
+      "steps": [
+        "分别键盘清空名称及机构ID",
+        "独立读取空值",
+        "保存后读取必填",
+        "取消重开原值并关闭"
+      ],
+      "time": "2026-09-11T04:58:59.864380+00:00",
+      "title": "名称和机构ID清空必填拒绝"
     }
   ],
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",

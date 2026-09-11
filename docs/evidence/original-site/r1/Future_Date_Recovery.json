@@ -7,7 +7,7 @@
     "fullModules": "0/4",
     "p3ParityModules": "0/4"
   },
-  "currentNextStep": "再入职入口已证但未保存，后续优先仍启用ORG002/JOB001；JOB002已于9/11停用，不误用。继续其余管理员场景，ROLE-01集中登记。",
+  "currentNextStep": "继续不依赖兼职结束的场景；9/12之后新回查EMP005兼职实际状态。EMP001再入职仍需邀请关闭等前置。",
   "earliestActualRecheckAt": "2026-09-11T00:00:00+08:00",
   "environment": "https://srworkshopbj.italent.cn",
   "lastObserved": {
@@ -142,6 +142,21 @@
       "id": "FUTURE-REHIRE",
       "manualSep11Status": "formal_entry_and_validation_observed_rehire_not_completed",
       "passLimit": "不可新建同名第二人员替代再入职；不可修改历史或系统时间制造前置；缺角色部分仍ROLE_BLOCKED。"
+    },
+    {
+      "id": "FUTURE-PARTTIME-END-005",
+      "notBefore": "2026-09-12T00:00:00+08:00",
+      "personId": "53a88828-60d7-42e4-b508-974ff96708a2",
+      "recordId": "0eb54fe9-01ea-4fdb-b5e7-75754a308119",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005",
+      "orgId": "a7b55bd7-0ef2-44a0-9d29-6259fe053da3",
+      "action": "新完整姓名查询同兼职UUID；查任职状态、结束区间、实际执行审计及主职不变，再判断ORG003有效兼职依赖",
+      "actualResult": "9/11结束日已保存，同日新查询仍任职中/生效；结束早于开始9/10被拒",
+      "manualSep11Status": "future_actual_termination_unverified",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_End.json"
+      ],
+      "passLimit": "不能把结束日写入当实际结束，不改时钟/回填过去/删历史制造前置"
     }
   ],
   "transferPlannedDay": "2026-09-11"

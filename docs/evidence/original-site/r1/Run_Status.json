@@ -36,7 +36,9 @@
   "e2eRequired": 5,
   "existingFindingUpdated": "ENV-05",
   "freshServerQuerySucceeded": true,
-  "futureDatePendingCases": [],
+  "futureDatePendingCases": [
+    "FUTURE-PARTTIME-END-005"
+  ],
   "futureRecheckScheduled": false,
   "futureRecovery": "Future_Date_Recovery.json",
   "historicalEmployeeOracle": {
@@ -50,8 +52,8 @@
   },
   "historicalMajor": 2,
   "intentionalDifferences": 1,
-  "lastRecheckAt": "2026-09-11T04:27:14.247862+00:00",
-  "matchRules": 3,
+  "lastRecheckAt": "2026-09-11T04:58:59.864380+00:00",
+  "matchRules": 4,
   "modules": [
     {
       "bulkDataTesting": "not_completed",

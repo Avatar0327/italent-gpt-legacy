@@ -187,20 +187,19 @@
     "concentratedEmployee": "cancelled_after_format_validation",
     "concentratedJob": "saved_description_after_fresh_read_no_unknown_write",
     "EMP004": "fresh_form_save_and_exact_query_confirmed",
-    "EMP005": "save_and_exact_query_confirmed"
+    "EMP005": "save_and_exact_query_confirmed",
+    "subscription": "cancelled_after_no_channel_no_recipient_validation_no_subscription"
   },
   "lastContinuation": {
-    "at": "2026-09-11T04:27:14.247862+00:00",
+    "at": "2026-09-11T04:43:41.946340+00:00",
     "newObjects": 4,
     "modifiedRunObjects": 2,
     "retained": 14,
     "deleted": 0,
     "inProgress": true,
     "evidence": [
-      "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Readback.json",
-      "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_Points.json",
-      "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_Sort.json",
-      "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_Detail.json"
+      "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_End.json",
+      "R1-ORIGIN-20260910-100019/M32/M32_Subscription_Validation.json"
     ]
   },
   "manualSmoke": {
@@ -663,7 +662,8 @@
       "deletionGate": "优先结束并保留兼职历史；UUID与本轮人员双核，无其他依赖",
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_PreSave.json",
-        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Readback.json"
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Readback.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_End.json"
       ],
       "module": "M01",
       "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005/PARTTIME_001",
@@ -674,11 +674,13 @@
         "a7b55bd7-0ef2-44a0-9d29-6259fe053da3"
       ],
       "runId": "R1-ORIGIN-20260910-100019",
-      "status": "active_effective_part_time",
+      "status": "end_date_saved_but_still_active_sep11",
       "startOn": "2026-09-11",
-      "endOn": null,
+      "endOn": "2026-09-11",
       "countsAsHead": false,
-      "verifiedAt": "2026-09-11T04:27:14.247862+00:00"
+      "verifiedAt": "2026-09-11T04:27:14.247862+00:00",
+      "actualTerminationConfirmed": false,
+      "latestVerification": "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_End.json"
     }
   ],
   "retainedCount": 14,

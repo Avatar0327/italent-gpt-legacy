@@ -1,0 +1,47 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "capturedAt": "2026-09-11T04:58:59.864380+00:00",
+  "timeMeaning": "结构化整理时间，非业务执行审计",
+  "environment": "https://srworkshopbj.italent.cn",
+  "role": "ORIGIN-ADMIN-01",
+  "tab": "27",
+  "targetUuid": "a7b55bd7-0ef2-44a0-9d29-6259fe053da3",
+  "parentUuid": "d1d541ab-92f9-4fce-80c6-aa5687433175",
+  "page": "组织列表精确ORG003→编辑popup_17891015987471201",
+  "operations": [
+    {
+      "input": {
+        "名称": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
+        "机构ID": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+        "上级组织": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001"
+      },
+      "result": "上级组织【ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001】下已存在名称为“ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002”的组织，请修改",
+      "readback": "错误关闭后取消，重新打开名称和机构ID均ORG003"
+    },
+    {
+      "input": {
+        "名称": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+        "机构ID": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002"
+      },
+      "result": "组织编码【ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002】不能与启用的组织【ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002】重复",
+      "readback": "关闭错误→取消→重新打开，两字段原值ORG003"
+    },
+    {
+      "input": {
+        "名称": "",
+        "机构ID": ""
+      },
+      "method": "正式输入框Control+A/Backspace后独立回读为空；保存",
+      "result": [
+        "名称必填",
+        "机构ID必填"
+      ],
+      "readback": "取消后重新打开两字段原值ORG003，上级ORG001，日期9/10；最终取消并确认iframe不可见"
+    }
+  ],
+  "caution": "fill空串曾恢复原值，该次保存原值不能计必填测试；不推断编辑审计或历史唯一性",
+  "resultingBusinessMutations": 0,
+  "unknownBusinessActions": [],
+  "screenshot": null,
+  "repeatable": "只读回查原UUID；验证范围为同父级且当前有效组织，不包含跨期重名"
+}

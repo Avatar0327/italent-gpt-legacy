@@ -1,0 +1,57 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "caseId": "M32-SUB-VALIDATION-SEP11",
+  "at": "2026-09-11T04:33:24.602Z",
+  "environment": "https://srworkshopbj.italent.cn",
+  "role": "ORIGIN-ADMIN-01",
+  "page": "员工名册/订阅/添加订阅",
+  "reportFilters": "5姓名、时点2026-09-11",
+  "nameInput": "ZZ_R1_R1-ORIGIN-20260910-100019_M32_SUB_INVALID_001",
+  "nameActual": "ZZ_R1_R1-ORIGIN-20260910-100019_M32_SUB_INVALID_00",
+  "nameLength": 50,
+  "htmlMaxLength": -1,
+  "channelsBeforeValidation": {
+    "system": false,
+    "sms": false,
+    "email": false
+  },
+  "recipientsBeforeValidation": {
+    "custom": [],
+    "identity": [],
+    "selectedCount": 0
+  },
+  "steps": [
+    "正式订阅面板暂无订阅，打开新增草稿",
+    "填写本RUN名称；关闭默认系统推送，三渠道均false；接收人与指定身份空",
+    "确定后表单保留，显示请至少选择一种方式及至少填写一项",
+    "消息正文输入本RUN带英文双引号字符串，再确定；仍只有渠道/接收人错误，不推断引号通过",
+    "取消草稿；独立回读暂无订阅内容，关闭面板"
+  ],
+  "validationErrors": [
+    "请至少选择一种方式",
+    "至少填写一项"
+  ],
+  "messageQuoteResult": "not_conclusive_other_required_errors_blocked_save",
+  "savedSubscriptionCount": 0,
+  "sentNotifications": 0,
+  "unknownSubmission": false,
+  "observedOptions": {
+    "data": [
+      "快照数据",
+      "实时数据"
+    ],
+    "authority": [
+      "订阅人权限",
+      "接收人权限"
+    ],
+    "recipients": [
+      "自定义接收人",
+      "指定身份"
+    ],
+    "defaultTime": "每天09:00",
+    "defaultStart": "2026-09-11",
+    "defaultEnd": "无结束日期"
+  },
+  "screenshot": null,
+  "remaining": "实际订阅保存、投递及接收人数据边界需要隔离的授权接收身份/通知接收端；不能发送到真实账号或全公司身份"
+}

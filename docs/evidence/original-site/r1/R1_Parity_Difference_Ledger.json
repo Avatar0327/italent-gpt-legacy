@@ -1,12 +1,12 @@
 {
-  "countRule": "唯一台账ID计数；Major=1保留历史发现级别，activeMajor=0、historicalMajor=1。INTENTIONAL_DIFFERENCE=1由所有者决定；MATCH=3为窄项静态对照。ENV/ROLE仅计未关闭组。",
+  "countRule": "唯一台账ID计数；Major累计2，其中001已决有意差异、002待决，activeMajor1；MATCH4仅窄项静态对照。ENV/ROLE仅计未关闭组。",
   "counts": {
     "Blocker": 0,
     "DESIGN_GAP": 0,
     "ENV_BLOCKED": 5,
     "IMPLEMENTATION_DEFECT": 0,
     "INTENTIONAL_DIFFERENCE": 1,
-    "MATCH": 3,
+    "MATCH": 4,
     "Major": 2,
     "Minor": 0,
     "NEED_OWNER_DECISION": 1,
@@ -356,7 +356,8 @@
       "classification": null,
       "conclusion": "不能从选项存在推断推送成功或授权正确。",
       "evidence": [
-        "R1-ORIGIN-20260910-100019/M32/M32-subscription-draft.json"
+        "R1-ORIGIN-20260910-100019/M32/M32-subscription-draft.json",
+        "R1-ORIGIN-20260910-100019/M32/M32_Subscription_Validation.json"
       ],
       "feedback": "P3/P4区分配置表单与真实任务执行；独立接收人及权限撤销未验。",
       "id": "OBS-06",
@@ -432,7 +433,8 @@
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-stop-preview.json",
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-result.json",
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-history.json",
-        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Readback.json"
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Readback.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_End.json"
       ],
       "feedback": "P2/P3区分纯停用、整体迁移、普通字段编辑和版本变更；P4核完整影响清单及不可变审计。",
       "id": "OBS-08",

@@ -1,0 +1,35 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "caseId": "M01-PARTTIME-END-005",
+  "at": "2026-09-11T04:39:45.970Z",
+  "environment": "https://srworkshopbj.italent.cn",
+  "role": "ORIGIN-ADMIN-01",
+  "personId": "53a88828-60d7-42e4-b508-974ff96708a2",
+  "recordId": "0eb54fe9-01ea-4fdb-b5e7-75754a308119",
+  "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005",
+  "startOn": "2026-09-11",
+  "steps": [
+    "完整姓名新查询确认原兼职UUID0eb54fe9，打开其详情结束入口",
+    "结束日期选2026-09-10保存，明确拒绝结束日期不能早于开始日期",
+    "关闭错误弹层，正式日历改2026-09-11，保存一次",
+    "弹窗关闭后详情结束日期9/11",
+    "再次完整姓名查询，选候选后确认实际姓名过滤和同UUID行"
+  ],
+  "invalidEndOn": "2026-09-10",
+  "validationError": "结束日期不能早于开始日期",
+  "persistedEndOn": "2026-09-11",
+  "freshQueryApplied": true,
+  "currentAssignmentStatus": "任职中",
+  "currentApprovalStatus": "生效",
+  "actualTerminationConfirmed": false,
+  "actualExecutionAuditAt": null,
+  "unknownSave": false,
+  "createdNewObjects": 0,
+  "deletedObjects": 0,
+  "nextRecheck": {
+    "notBefore": "2026-09-12T00:00:00+08:00",
+    "scope": "同personId、兼职UUID、ORG003，查任职状态/执行审计与历史，实际结束前不称ORG003兼职依赖已消除",
+    "automation": "保持原到期自动任务暂停，不与人工同RUN并写"
+  },
+  "screenshot": null
+}

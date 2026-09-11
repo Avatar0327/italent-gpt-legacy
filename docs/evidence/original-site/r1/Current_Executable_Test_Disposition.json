@@ -13,8 +13,8 @@
   "groups": [
     {
       "attempt": "参见本轮独立弹窗/字段级证据；源页面恢复后继续测试",
-      "blocker": "附件ENV-06；再入职邀请关闭与新雇佣链未确认；其他未测不冒称阻塞",
-      "currentEvidence": "R1-ORIGIN-20260910-100019/20260911_Job002_Stop_Dependencies.json",
+      "blocker": "附件ENV-06；再入职邀请关闭与雇佣链；兼职9/12实际后效；其他未测仍可继续",
+      "currentEvidence": "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_End.json",
       "dependency": "需要可加载的本轮对象查询/详情，不能凭历史UUID盲写",
       "execution": "partial_edges_observed_more_autonomous_work_pending",
       "module": "M01",
@@ -54,7 +54,8 @@
       "notClaimed": "无大样本/实际分页跨页/导出文件/订阅发送/独立权限通过",
       "priorExecutionScope": "此前9/10或9/11失败时点记录；当前增量以sep11Status为准",
       "scope": "两员工当前明细、图表人数、日期/排序/组织条件、导出文件",
-      "sep11Status": "fixed_2026_09_11_and_09_10_two_names_applied_results_observed"
+      "sep11Status": "fixed_2026_09_11_and_09_10_two_names_applied_results_observed",
+      "subscriptionStatus": "名称截断50，空渠道/空接收人拒绝；草稿取消；实际发送未验证"
     },
     {
       "blocker": "ROLE-01；实际离职执行审计、报表固定日期、再入职等未完成，不再归因日期未到",
