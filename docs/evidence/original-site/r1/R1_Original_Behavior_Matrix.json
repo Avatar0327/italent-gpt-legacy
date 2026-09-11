@@ -2101,7 +2101,7 @@
       "title": "组织编辑、更名、停用与在用保护"
     },
     {
-      "actualResult": "未执行，不以计划预期充当实际结果",
+      "actualResult": "当前同父重名拒绝、启用编码拒重、不同父同名允许；同UUID恢复原值。跨期/并发仍未完成",
       "blockerIds": [
         "ENV-03"
       ],
@@ -2557,7 +2557,7 @@
       }
     },
     {
-      "actualResult": "未执行，不以计划预期充当实际结果",
+      "actualResult": "本轮空范围法人创建并停用已实证；空范围引用/旧合同快照未验",
       "blockerIds": [
         "ENV-03"
       ],
@@ -2568,8 +2568,13 @@
         "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
       },
       "environment": "https://srworkshopbj.italent.cn",
-      "evidence": [],
-      "execution": "not_executed",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/LEGAL001_PreSave.json",
+        "R1-ORIGIN-20260910-100019/M01/LEGAL001_EmptyScope_Detail.json",
+        "R1-ORIGIN-20260910-100019/M01/LEGAL001_Stopped_Query.json",
+        "R1-ORIGIN-20260910-100019/M01/LEGAL001_Stopped_Detail.json"
+      ],
+      "execution": "partially_observed",
       "inputs": {
         "actualValues": null,
         "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_"
@@ -5367,7 +5372,7 @@
       "title": "订阅无接收渠道和接收人拒绝"
     },
     {
-      "actualResult": "同父级ORG002重名和当前启用ORG002编码重复均明确拒绝；取消后ORG003原值保留。P2同范围名称/编码唯一，P3 catalog代码唯一及temporalCatalogCheck有效区间同父级名称冲突拒绝。仅当前重叠场景MATCH。",
+      "actualResult": "同父级ORG002重名和当前启用ORG002编码重复均明确拒绝；取消后ORG003原值保留。P2同范围名称/编码唯一，P3 catalog代码唯一及temporalCatalogCheck有效区间同父级名称冲突拒绝。仅当前重叠场景MATCH。 后续不同父同名允许并恢复，P2/P3按父级范围规则相符，仍属本窄项。",
       "caseId": "M01-ORG-UNIQUE-SEP11",
       "classification": "MATCH",
       "design": {
@@ -5376,7 +5381,9 @@
       },
       "environment": "https://srworkshopbj.italent.cn",
       "evidence": [
-        "R1-ORIGIN-20260910-100019/M01/ORG003_Unique_Required.json"
+        "R1-ORIGIN-20260910-100019/M01/ORG003_Unique_Required.json",
+        "R1-ORIGIN-20260910-100019/M01/ORG003_CrossParent_Readback.json",
+        "R1-ORIGIN-20260910-100019/M01/ORG003_Restored.json"
       ],
       "execution": "observed",
       "inputs": {
@@ -5729,6 +5736,120 @@
       ],
       "time": "2026-09-11T05:23:23.851618+00:00",
       "title": "再入职匹配与邀请条件"
+    },
+    {
+      "actualResult": "编码/名称/简称必填。空适用范围法人允许创建启用；停用9/11后同UUID停用视图和详情确认。未测空范围合同可引用，未扩权限。",
+      "caseId": "M01-LEGAL-EMPTY-STOP",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/LEGAL001_PreSave.json",
+        "R1-ORIGIN-20260910-100019/M01/LEGAL001_EmptyScope_Detail.json",
+        "R1-ORIGIN-20260910-100019/M01/LEGAL001_Stopped_Query.json",
+        "R1-ORIGIN-20260910-100019/M01/LEGAL001_Stopped_Detail.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "scope": "仅本RUN数据，具体字段见证据"
+      },
+      "module": "M01",
+      "p3": {
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "path": "lib/hris/r1-m01.ts",
+        "additionalPath": "lib/hris/r1-temporal.ts",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "evidenceMode": "静态源码对照，未运行产品测试/UI"
+      },
+      "page": "法人空范围创建与停用",
+      "pageState": "new_query_confirmed",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "recordIds": [
+        "a469458d-5f5a-4674-be41-912741fb6e16"
+      ],
+      "repeatability": "可按记录ID只读重现；写入不可无条件重放",
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-08",
+        "BP-F-REQ-10"
+      ],
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "scopeLimit": "此行结论仅限实际操作，未证明同模块其他用例",
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "severity": "Observation",
+      "steps": [
+        "核本轮稳定ID和隔离范围",
+        "正式页面操作",
+        "独立新查询及详情回读"
+      ],
+      "time": "2026-09-11T05:41:51.701027+00:00",
+      "title": "法人空范围创建与停用"
+    },
+    {
+      "actualResult": "原ORG003改父ORG002及同名ORG002允许保存，同UUID/原编码，层级变四级；已恢复原名称/简称/父ORG001。操作日志仍1设立、版本仍1条，不能断言后台无审计。",
+      "caseId": "M01-ORG-CROSS-PARENT-RESTORE",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/ORG003_CrossParent_PreSave.json",
+        "R1-ORIGIN-20260910-100019/M01/ORG003_CrossParent_Readback.json",
+        "R1-ORIGIN-20260910-100019/M01/ORG003_Restore_PreSave.json",
+        "R1-ORIGIN-20260910-100019/M01/ORG003_Restored.json",
+        "R1-ORIGIN-20260910-100019/M01/ORG003_Audit_After_Restore.json",
+        "R1-ORIGIN-20260910-100019/M01/ORG003_History_After_Restore.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "scope": "仅本RUN数据，具体字段见证据"
+      },
+      "module": "M01",
+      "p3": {
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "path": "lib/hris/r1-m01.ts",
+        "additionalPath": "lib/hris/r1-temporal.ts",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "evidenceMode": "静态源码对照，未运行产品测试/UI"
+      },
+      "page": "组织跨父重名与恢复",
+      "pageState": "new_query_confirmed",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "recordIds": [
+        "a7b55bd7-0ef2-44a0-9d29-6259fe053da3"
+      ],
+      "repeatability": "可按记录ID只读重现；写入不可无条件重放",
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-08",
+        "BP-F-REQ-10"
+      ],
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "scopeLimit": "此行结论仅限实际操作，未证明同模块其他用例",
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "severity": "Observation",
+      "steps": [
+        "核本轮稳定ID和隔离范围",
+        "正式页面操作",
+        "独立新查询及详情回读"
+      ],
+      "time": "2026-09-11T05:41:51.701027+00:00",
+      "title": "组织跨父重名与恢复"
     }
   ],
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",

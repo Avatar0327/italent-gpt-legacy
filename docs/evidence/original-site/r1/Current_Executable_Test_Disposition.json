@@ -2,10 +2,10 @@
   "basisHead": "76a16265fdd65f6ba7608260dde1e07acfb85200",
   "continuationInstruction": "R1集中连续执行，只有完整退出条件或全部自主事项完成且仅剩真实外部条件才释放浏览器；自动任务保持暂停。",
   "currentAttempt": {
-    "basisHead": "92b9e5a2c3b56dfee93363f12772bb56bd0f33a0",
-    "checkedAt": "2026-09-11T05:23:23.851618+00:00",
+    "basisHead": "406c0a4978da2b7a4a8cea7322af46e56349b360",
+    "checkedAt": "2026-09-11T05:41:51.701027+00:00",
     "dateConditionSatisfied": true,
-    "evidence": "R1-ORIGIN-20260910-100019/M01/EMP006_Assignment.json",
+    "evidence": "R1-ORIGIN-20260910-100019/M01/ORG003_Restored.json",
     "oldDOMReusableForCurrentConclusion": false,
     "outcome": "concentrated_validation_in_progress",
     "unknownBusinessActions": []
@@ -70,10 +70,10 @@
   ],
   "quantity": {
     "bulkRows": 0,
-    "businessObjects": 15,
+    "businessObjects": 16,
     "employees": 6,
     "expanded30to50": false,
-    "newThisContinuation": 5,
+    "newThisContinuation": 6,
     "smokeAllCasesPassed": false,
     "threshold5to10Quantity": true
   },

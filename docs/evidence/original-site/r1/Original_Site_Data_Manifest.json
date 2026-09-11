@@ -186,10 +186,21 @@
       "preconditions": [
         "UUID与完整100字符姓名/工号双核；保留边界样本，无非本轮依赖"
       ]
+    },
+    {
+      "action": "保留",
+      "originRecordId": "a469458d-5f5a-4674-be41-912741fb6e16",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_LEGAL_001",
+      "module": "M01",
+      "performed": false,
+      "allowLaterDelete": true,
+      "preconditions": [
+        "本轮无适用范围/无合同引用，已停用；清理时UUID名称双核，无非本轮依赖"
+      ]
     }
   ],
-  "countDefinition": "15个主动对象：3组织+2岗位+6员工+2申请+1离职任职+1兼职任职；自动历史行另列。",
-  "createdCount": 15,
+  "countDefinition": "16主动对象：3组织+2岗位+6人员+1法人+2申请+离职任职1+兼职任职1；自动历史行另列。",
+  "createdCount": 16,
   "deletedCount": 0,
   "drafts": {
     "initialCancelledOrganizationDrafts": 2,
@@ -200,13 +211,14 @@
     "EMP004": "fresh_form_save_and_exact_query_confirmed",
     "EMP005": "save_and_exact_query_confirmed",
     "subscription": "cancelled_after_no_channel_no_recipient_validation_no_subscription",
-    "EMP006": "100字符保存并全名查询UUID确认，101/304字符拒绝"
+    "EMP006": "100字符保存并全名查询UUID确认，101/304字符拒绝",
+    "ORG003": "跨父重名保存后已恢复原名称简称父级，编辑层关闭"
   },
   "lastContinuation": {
-    "at": "2026-09-11T05:23:23.851618+00:00",
-    "newObjects": 5,
-    "modifiedRunObjects": 2,
-    "retained": 15,
+    "at": "2026-09-11T05:41:51.701027+00:00",
+    "newObjects": 6,
+    "modifiedRunObjects": 3,
+    "retained": 16,
     "deleted": 0,
     "inProgress": true,
     "evidence": [
@@ -221,10 +233,10 @@
     "employeeCount": 6,
     "expanded30To50": false,
     "expansionGate": "页面运行稳定且可审计逐条UUID；现已多次出现数十秒加载/回执延迟，不在回执未核定时重放或扩量。未证共享环境受影响。",
-    "namedMasterObjects": 11,
+    "namedMasterObjects": 12,
     "note": "六人员小样本；基础再入职/审批/附件等仍有前置，未扩30–50",
     "threshold5To10Reached": true,
-    "totalCreatedBusinessObjects": 15
+    "totalCreatedBusinessObjects": 16
   },
   "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
   "records": [
@@ -721,9 +733,32 @@
       "verifiedAt": "2026-09-11T05:20:58.054Z",
       "invitationEnabled": false,
       "nameLength": 100
+    },
+    {
+      "runId": "R1-ORIGIN-20260910-100019",
+      "caseId": "M01-LEGAL-001",
+      "module": "M01",
+      "objectType": "legal_entity",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_LEGAL_001",
+      "originRecordId": "a469458d-5f5a-4674-be41-912741fb6e16",
+      "createdAt": null,
+      "createdAtBasis": "页面未提供创建审计；5:28UTC新查询UUID",
+      "verifiedAt": "2026-09-11T05:31:49.622Z",
+      "status": "disabled",
+      "effectiveOn": "2026-09-11",
+      "disabledOn": "2026-09-11",
+      "relatedRecords": [],
+      "scopeRows": 0,
+      "allowLaterDelete": true,
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/LEGAL001_PreSave.json",
+        "R1-ORIGIN-20260910-100019/M01/LEGAL001_EmptyScope_Detail.json",
+        "R1-ORIGIN-20260910-100019/M01/LEGAL001_Stopped_Query.json",
+        "R1-ORIGIN-20260910-100019/M01/LEGAL001_Stopped_Detail.json"
+      ]
     }
   ],
-  "retainedCount": 15,
+  "retainedCount": 16,
   "runId": "R1-ORIGIN-20260910-100019",
   "successMessagePendingIdCount": 0,
   "writesSuspendedReason": null

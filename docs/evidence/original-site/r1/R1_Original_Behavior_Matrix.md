@@ -1,6 +1,6 @@
 # R1原站行为矩阵
 
-104局部记录，完整0/4、E2E0/5，窄项MATCH5。最新处置优先于历史观察。
+106局部记录，完整0/4、E2E0/5，窄项MATCH5。
 
 |用例|模块|执行|实际结果|分类|
 |---|---|---|---|---|
@@ -42,7 +42,7 @@
 |M32-INPUT-01|M32|observed|input.value确认本轮前缀，人员候选为空，选择器取消；原报表380条属于既有数据，非本轮批量。|未处置观察|
 |M32-ORG-01|M32|observed|本轮ORG_001在部门搜索结果中可见；点击后已选组织仍0，取消选择器。未应用组织筛选，未取得空报表0行，不能称对账通过。|未处置观察|
 |M01-PENDING-ORG-LIFECYCLE|M01|partially_observed|新增三组织、ORG003备注编辑已验；停用预览含整体迁移，未执行停用/迁移|未处置观察|
-|M01-PENDING-ORG-UNIQUE|M01|partially_observed|未执行，不以计划预期充当实际结果|ENV_BLOCKED|
+|M01-PENDING-ORG-UNIQUE|M01|partially_observed|当前同父重名拒绝、启用编码拒重、不同父同名允许；同UUID恢复原值。跨期/并发仍未完成|ENV_BLOCKED|
 |M01-PENDING-POSITION|M01|partially_observed|新增2职位、名称/组织必填已验；编辑/停用/唯一性未验|未处置观察|
 |M01-PENDING-EMP-CREATE|M01|partially_observed|创建1员工、邮箱必填、邀请账号否；其他创建入口未验|未处置观察|
 |M01-PENDING-EMP-IMPORT|M01|not_executed|未执行，不以计划预期充当实际结果|ENV_BLOCKED|
@@ -50,7 +50,7 @@
 |M01-PENDING-JOIN-REGULARIZE|M01|partially_observed|2员工分别正式/试用；转正正式申请已提交撤回，维护入口未保存；审批/实际生效未验|ROLE_BLOCKED|
 |M01-PENDING-TRANSFER|M01|partially_observed|直接调动生效；他人调动申请另行提交并撤回；独立两方审批未验|ROLE_BLOCKED|
 |M01-PENDING-EXIT-REHIRE|M01|partially_observed|9/11新查询确认人员离职、退出任职生效中；旧雇佣段ID/结束审计和正式再入职未完成|未处置观察|
-|M01-PENDING-LEGAL|M01|not_executed|未执行，不以计划预期充当实际结果|ENV_BLOCKED|
+|M01-PENDING-LEGAL|M01|partially_observed|本轮空范围法人创建并停用已实证；空范围引用/旧合同快照未验|ENV_BLOCKED|
 |M01-PENDING-FIELDS|M01|partially_observed|职位/邮箱/试用期限/试用结束必填、入职早于组织生效被拒已验；未覆盖全字段、长度、格式、重复|未处置观察|
 |M01-PENDING-HISTORY-ATTACH|M01|partially_observed|未执行，不以计划预期充当实际结果|ENV_BLOCKED|
 |M01-PENDING-CONCURRENCY|M01|not_executed|未执行，不以计划预期充当实际结果|ENV_BLOCKED|
@@ -101,10 +101,12 @@
 |M32-FIVE-EMP-DETAIL|M32|observed|临时显示姓名/工号/部门/职位，返回EMP002–005共4人；005职位空，兼职不重复计人；显示字段已恢复。姓名列无排序箭头，点击行序未变。|未处置观察|
 |M01-PARTTIME-END-005|M01|observed|结束早于开始拒绝；同日9/11结束日期已保存，但新查询仍任职中/生效；实际终止待9/12回查。|未处置观察|
 |M32-SUB-VALIDATION-SEP11|M32|observed|订阅名称DOM截断50；三推送渠道false、接收人空时明确拒绝；取消且暂无订阅。引号限制未形成独立结论。|未处置观察|
-|M01-ORG-UNIQUE-SEP11|M01|observed|同父级ORG002重名和当前启用ORG002编码重复均明确拒绝；取消后ORG003原值保留。P2同范围名称/编码唯一，P3 catalog代码唯一及temporalCatalogCheck有效区间同父级名称冲突拒绝。仅当前重叠场景MATCH。|MATCH|
+|M01-ORG-UNIQUE-SEP11|M01|observed|同父级ORG002重名和当前启用ORG002编码重复均明确拒绝；取消后ORG003原值保留。P2同范围名称/编码唯一，P3 catalog代码唯一及temporalCatalogCheck有效区间同父级名称冲突拒绝。仅当前重叠场景MATCH。 后续不同父同名允许并恢复，P2/P3按父级范围规则相符，仍属本窄项。|MATCH|
 |M01-ORG-REQUIRED-SEP11|M01|observed|键盘清空后回读两个空值；保存分别显示必填，未落库。取消重开原名称编码保留。|未处置观察|
 |M01-EMP-LENGTH-006|M01|observed|姓名101与304均明确长度不能超过100；100字符保存，UUID唯一查询及正式主职确认；P2 1–100及P3 person.name short.max(100)一致。|MATCH|
 |M01-ASSIGNMENTS-CURRENT-HISTORY|M01|observed|新增006之前，本轮5人当前在职4人/5任职，全历史5人8任职；含005兼职和001三历史版本。|未处置观察|
 |M32-FIVE-EMP-ALL-ASSIGNMENTS|M32|observed|正式1.1.02固定五姓名返回8任职/5人，当前有效6行含001离职结束行及005兼职；真实在职主职4行。无日期过滤不冒充历史时点。|未处置观察|
 |M32-DOWNLOAD-SEP11-SECOND|M32|observed|8行明确筛选后下载，iframe显示This page has been blocked by Chromium；无文件，不绕过。|ENV_BLOCKED|
 |M01-REHIRE-INVITATION-HELP|M01|observed|正式入口及帮助支持按既有人匹配；旧离职字段带回。未展示邀请关闭，不保存；已取消。|未处置观察|
+|M01-LEGAL-EMPTY-STOP|M01|observed|编码/名称/简称必填。空适用范围法人允许创建启用；停用9/11后同UUID停用视图和详情确认。未测空范围合同可引用，未扩权限。|未处置观察|
+|M01-ORG-CROSS-PARENT-RESTORE|M01|observed|原ORG003改父ORG002及同名ORG002允许保存，同UUID/原编码，层级变四级；已恢复原名称/简称/父ORG001。操作日志仍1设立、版本仍1条，不能断言后台无审计。|未处置观察|
