@@ -1,0 +1,41 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "caseId": "M01-PARTTIME-005",
+  "at": "2026-09-11T04:12:54.782Z",
+  "environment": "https://srworkshopbj.italent.cn",
+  "role": "ORIGIN-ADMIN-01",
+  "personId": "53a88828-60d7-42e4-b508-974ff96708a2",
+  "recordId": "0eb54fe9-01ea-4fdb-b5e7-75754a308119",
+  "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005",
+  "steps": [
+    "正式新增兼职保存一次，弹窗关闭",
+    "人员完整姓名新查询，选中本轮EMP005并确定",
+    "新列表唯一兼职行，人员UUID及日期详情链接兼职UUID",
+    "打开该兼职详情独立回读"
+  ],
+  "queryApplied": true,
+  "queryDateFilter": null,
+  "rows": 1,
+  "type": "兼职",
+  "startOn": "2026-09-11",
+  "endDisplay": "--",
+  "assignmentStatus": "任职中",
+  "approvalStatus": "生效",
+  "org": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+  "primaryOrg": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
+  "job": null,
+  "departmentHead": "否",
+  "countsAsHead": "否",
+  "manager": null,
+  "dottedManager": null,
+  "salaryFieldsEmpty": true,
+  "applicationHistory": {
+    "filter": "审批中,生效",
+    "result": "这里什么都没有..."
+  },
+  "createdAtServer": null,
+  "actualAuditAt": null,
+  "screenshot": null,
+  "unknownSave": false,
+  "limitation": "管理员直接新增兼职；不是独立员工申请或D7调动两方审批验证"
+}

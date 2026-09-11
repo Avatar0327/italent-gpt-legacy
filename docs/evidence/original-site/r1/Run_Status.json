@@ -1,6 +1,6 @@
 {
   "activeEnvBlockers": 5,
-  "activeMajor": 0,
+  "activeMajor": 1,
   "activeRoleBlockers": 1,
   "browserHandoffTo": null,
   "browserUseEndedAt": null,
@@ -16,17 +16,17 @@
   },
   "concurrency": "own_tab_27_other_tabs_untouched_R1_sole_operator",
   "continuationInProgress": true,
-  "createdRecords": 13,
-  "createdRecordsDefinition": "13个主动对象：3组织+2岗位+5员工+2申请+1离职任职；自动关联行另列。",
+  "createdRecords": 14,
+  "createdRecordsDefinition": "14个主动对象：3组织+2岗位+5员工+2申请+1离职任职+1兼职任职；其他自动关联行另列。",
   "currentCheckpoint": "same_run_partial_evidence_not_release_complete",
   "currentContinuationLimitation": "ROLE-01、附件ENV-06及原转正编辑ENV-04；其他管理员场景继续。",
   "currentEmployeeOracle": {
-    "people": 1,
-    "formal": 0,
+    "people": 4,
+    "formal": 3,
     "probation": 1,
     "departed": 0,
-    "scope": "9/11固定两姓名在职名册，不含已离职EMP001；不代表测试人员总人数",
-    "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_Exit_Reports.json"
+    "scope": "9/11固定五姓名在职名册，不含已离职EMP001；五测试人保留",
+    "evidence": "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_Detail.json"
   },
   "dateSatisfiedButUnverifiedCases": [
     "离职执行人/实际审计与旧雇佣段ID",
@@ -48,9 +48,9 @@
     "probationPeople": 1,
     "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_Exit_Reports.json"
   },
-  "historicalMajor": 1,
+  "historicalMajor": 2,
   "intentionalDifferences": 1,
-  "lastRecheckAt": "2026-09-11T04:03:45.355733+00:00",
+  "lastRecheckAt": "2026-09-11T04:27:14.247862+00:00",
   "matchRules": 3,
   "modules": [
     {
@@ -86,11 +86,11 @@
       "requirementsComparison": "partial"
     }
   ],
-  "newBusinessObjectsThisContinuation": 3,
+  "newBusinessObjectsThisContinuation": 4,
   "newConfirmedBusinessBehaviorsThisContinuation": 2,
   "newFindingsThisContinuation": {
     "Blocker": 0,
-    "Major": 0,
+    "Major": 1,
     "Minor": 0,
     "Observation": 1
   },
@@ -111,7 +111,7 @@
   ],
   "severities": {
     "Blocker": 0,
-    "Major": 1,
+    "Major": 2,
     "Minor": 0,
     "Observation": 15
   },

@@ -4989,6 +4989,229 @@
       "time": "2026-09-11T04:03:45.355733+00:00",
       "title": "员工005正式新增回查",
       "threeWayConclusion": "局部原站字段/唯一性证据，P3静态映射，尚不判完整MATCH或实现缺陷"
+    },
+    {
+      "actualResult": "EMP005兼职UUID0eb54fe9，ORG003任职中/生效，原主职ORG002保留，非负责人/不占人头/经理及薪资空；申请历史筛选下空集。",
+      "caseId": "M01-PARTTIME-005",
+      "classification": "NEED_OWNER_DECISION",
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Readback.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "date": "2026-09-11",
+        "scope": "本RUN完整姓名"
+      },
+      "module": "M01",
+      "p3": {
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "path": "lib/hris/r1-m01.ts",
+        "testPath": "tests/r1-p3-m01.test.mjs",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-03"
+        ],
+        "staticFinding": "assignmentRequest核独立审核HR，assignmentApprove拒自审，assignmentExecute要求已批准；与批准方案一致",
+        "runtimeVerifiedByThisWindow": false
+      },
+      "page": "兼职生效与主职保留",
+      "pageState": "fresh_readback",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "recordIds": [
+        "53a88828-60d7-42e4-b508-974ff96708a2",
+        "0eb54fe9-01ea-4fdb-b5e7-75754a308119"
+      ],
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "F-SPEC-05",
+        "BP-F-REQ-06",
+        "BP-F-REQ-13"
+      ],
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未采新截图；结构化正文及UUID证据。",
+      "severity": "Major",
+      "steps": [
+        "正式页面操作及本轮对象核定",
+        "独立回读条件与结果",
+        "结构化取证"
+      ],
+      "threeWayConclusion": "原站直接生效；P2要求独立HR审核，P3静态实现保持该规则。原站与批准方案冲突，需所有者决定，非实现缺陷。",
+      "time": "2026-09-11T04:27:14.247862+00:00",
+      "timePrecision": "browser_observed",
+      "title": "兼职生效与主职保留",
+      "ledgerId": "DIFF-MAJOR-002"
+    },
+    {
+      "actualResult": "固定五姓名：9/11试用1正式3，2分组4人；9/10三分组各1，实际2人，不能跨组直接相加为distinct人员。",
+      "caseId": "M32-FIVE-EMP-POINTS",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_Points.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "date": "2026-09-11",
+        "scope": "本RUN完整姓名"
+      },
+      "module": "M32",
+      "p3": {
+        "cases": [
+          "P3-M32-01",
+          "P3-M32-02"
+        ],
+        "evidenceMode": "静态源码/既有测试映射；本窗口未运行复刻UI或测试",
+        "path": "lib/hris/r1-report-m01-producer.ts",
+        "sha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+        "task": "P3-R1-06/07"
+      },
+      "page": "五员工日期及分组计数",
+      "pageState": "fresh_readback",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "recordIds": [
+        "53a88828-60d7-42e4-b508-974ff96708a2",
+        "0eb54fe9-01ea-4fdb-b5e7-75754a308119"
+      ],
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "M32-SPEC-01",
+        "M32-SPEC-04"
+      ],
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未采新截图；结构化正文及UUID证据。",
+      "severity": "Observation",
+      "steps": [
+        "正式页面操作及本轮对象核定",
+        "独立回读条件与结果",
+        "结构化取证"
+      ],
+      "threeWayConclusion": "局部原站证据，P3仅静态映射，未判完整MATCH或实现缺陷",
+      "time": "2026-09-11T04:27:14.247862+00:00",
+      "timePrecision": "browser_observed",
+      "title": "五员工日期及分组计数"
+    },
+    {
+      "actualResult": "9/11同过滤人数表头排序3→1及1→3，箭头分别高亮；非姓名或大样本通过。",
+      "caseId": "M32-FIVE-EMP-SORT",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_Sort.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "date": "2026-09-11",
+        "scope": "本RUN完整姓名"
+      },
+      "module": "M32",
+      "p3": {
+        "cases": [
+          "P3-M32-01",
+          "P3-M32-02"
+        ],
+        "evidenceMode": "静态源码/既有测试映射；本窗口未运行复刻UI或测试",
+        "path": "lib/hris/r1-report-m01-producer.ts",
+        "sha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+        "task": "P3-R1-06/07"
+      },
+      "page": "人数升降序",
+      "pageState": "fresh_readback",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "recordIds": [
+        "53a88828-60d7-42e4-b508-974ff96708a2",
+        "0eb54fe9-01ea-4fdb-b5e7-75754a308119"
+      ],
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "M32-SPEC-01",
+        "M32-SPEC-04"
+      ],
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未采新截图；结构化正文及UUID证据。",
+      "severity": "Observation",
+      "steps": [
+        "正式页面操作及本轮对象核定",
+        "独立回读条件与结果",
+        "结构化取证"
+      ],
+      "threeWayConclusion": "局部原站证据，P3仅静态映射，未判完整MATCH或实现缺陷",
+      "time": "2026-09-11T04:27:14.247862+00:00",
+      "timePrecision": "browser_observed",
+      "title": "人数升降序"
+    },
+    {
+      "actualResult": "临时显示姓名/工号/部门/职位，返回EMP002–005共4人；005职位空，兼职不重复计人；显示字段已恢复。姓名列无排序箭头，点击行序未变。",
+      "caseId": "M32-FIVE-EMP-DETAIL",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_Detail.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "date": "2026-09-11",
+        "scope": "本RUN完整姓名"
+      },
+      "module": "M32",
+      "p3": {
+        "cases": [
+          "P3-M32-01",
+          "P3-M32-02"
+        ],
+        "evidenceMode": "静态源码/既有测试映射；本窗口未运行复刻UI或测试",
+        "path": "lib/hris/r1-report-m01-producer.ts",
+        "sha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+        "task": "P3-R1-06/07"
+      },
+      "page": "逐人明细与空职位",
+      "pageState": "fresh_readback",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "recordIds": [
+        "53a88828-60d7-42e4-b508-974ff96708a2",
+        "0eb54fe9-01ea-4fdb-b5e7-75754a308119"
+      ],
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "M32-SPEC-01",
+        "M32-SPEC-04"
+      ],
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未采新截图；结构化正文及UUID证据。",
+      "severity": "Observation",
+      "steps": [
+        "正式页面操作及本轮对象核定",
+        "独立回读条件与结果",
+        "结构化取证"
+      ],
+      "threeWayConclusion": "局部原站证据，P3仅静态映射，未判完整MATCH或实现缺陷",
+      "time": "2026-09-11T04:27:14.247862+00:00",
+      "timePrecision": "browser_observed",
+      "title": "逐人明细与空职位"
     }
   ],
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",

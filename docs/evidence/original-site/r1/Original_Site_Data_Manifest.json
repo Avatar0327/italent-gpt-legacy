@@ -164,10 +164,21 @@
       "preconditions": [
         "UUID+全名双核，无非本轮依赖；历史优先归档"
       ]
+    },
+    {
+      "action": "保留",
+      "allowLaterDelete": false,
+      "module": "M01",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005/PARTTIME_001",
+      "originRecordId": "0eb54fe9-01ea-4fdb-b5e7-75754a308119",
+      "performed": false,
+      "preconditions": [
+        "优先结束并保留兼职历史；UUID与本轮人员双核，无其他依赖"
+      ]
     }
   ],
-  "countDefinition": "13个主动对象：3组织+2岗位+5员工+2申请+1离职任职；自动关联行另列。",
-  "createdCount": 13,
+  "countDefinition": "14个主动对象：3组织+2岗位+5员工+2申请+1离职任职+1兼职任职；其他自动关联行另列。",
+  "createdCount": 14,
   "deletedCount": 0,
   "drafts": {
     "initialCancelledOrganizationDrafts": 2,
@@ -179,15 +190,17 @@
     "EMP005": "save_and_exact_query_confirmed"
   },
   "lastContinuation": {
-    "at": "2026-09-11T04:03:45.355733+00:00",
-    "newObjects": 3,
+    "at": "2026-09-11T04:27:14.247862+00:00",
+    "newObjects": 4,
     "modifiedRunObjects": 2,
-    "retained": 13,
+    "retained": 14,
     "deleted": 0,
     "inProgress": true,
     "evidence": [
-      "R1-ORIGIN-20260910-100019/M01/EMP004_Readback.json",
-      "R1-ORIGIN-20260910-100019/M01/EMP005_Readback.json"
+      "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Readback.json",
+      "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_Points.json",
+      "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_Sort.json",
+      "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_Detail.json"
     ]
   },
   "manualSmoke": {
@@ -199,7 +212,7 @@
     "namedMasterObjects": 10,
     "note": "员工5人达到小样本数量，基础生命周期/权限/报表冒烟未全通过，不扩30–50",
     "threshold5To10Reached": true,
-    "totalCreatedBusinessObjects": 13
+    "totalCreatedBusinessObjects": 14
   },
   "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
   "records": [
@@ -641,9 +654,34 @@
       "statusScope": "fresh_query_2026-09-11",
       "verifiedAt": "2026-09-11T04:03:45.355733+00:00",
       "invitationEnabled": false
+    },
+    {
+      "allowLaterDelete": false,
+      "caseId": "M01-PARTTIME-005",
+      "createdAt": null,
+      "createdAtBasis": "新查询唯一行/详情UUID已确认，源创建审计未提供",
+      "deletionGate": "优先结束并保留兼职历史；UUID与本轮人员双核，无其他依赖",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_PreSave.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Readback.json"
+      ],
+      "module": "M01",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005/PARTTIME_001",
+      "objectType": "part_time_assignment",
+      "originRecordId": "0eb54fe9-01ea-4fdb-b5e7-75754a308119",
+      "relatedRecords": [
+        "53a88828-60d7-42e4-b508-974ff96708a2",
+        "a7b55bd7-0ef2-44a0-9d29-6259fe053da3"
+      ],
+      "runId": "R1-ORIGIN-20260910-100019",
+      "status": "active_effective_part_time",
+      "startOn": "2026-09-11",
+      "endOn": null,
+      "countsAsHead": false,
+      "verifiedAt": "2026-09-11T04:27:14.247862+00:00"
     }
   ],
-  "retainedCount": 13,
+  "retainedCount": 14,
   "runId": "R1-ORIGIN-20260910-100019",
   "successMessagePendingIdCount": 0,
   "writesSuspendedReason": null

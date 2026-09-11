@@ -7,14 +7,14 @@
     "IMPLEMENTATION_DEFECT": 0,
     "INTENTIONAL_DIFFERENCE": 1,
     "MATCH": 3,
-    "Major": 1,
+    "Major": 2,
     "Minor": 0,
-    "NEED_OWNER_DECISION": 0,
+    "NEED_OWNER_DECISION": 1,
     "Observation": 15,
     "REQUIREMENT_GAP": 0,
     "ROLE_BLOCKED": 1,
-    "activeMajor": 0,
-    "historicalMajor": 1,
+    "activeMajor": 1,
+    "historicalMajor": 2,
     "observationsWithoutClassification": 8,
     "resolved_ENV_BLOCKED": 1
   },
@@ -289,7 +289,10 @@
         "R1-ORIGIN-20260910-100019/M32/M32-own-employee-current.json",
         "R1-ORIGIN-20260910-100019/M32/M32-date-empty.json",
         "R1-ORIGIN-20260910-100019/M32/M32-current-own.jpg",
-        "R1-ORIGIN-20260910-100019/20260911_Concentrated_Exit_Reports.json"
+        "R1-ORIGIN-20260910-100019/20260911_Concentrated_Exit_Reports.json",
+        "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_Points.json",
+        "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_Sort.json",
+        "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_Detail.json"
       ],
       "feedback": "P3保留粒度/当前版本/历史快照口径；P4以合成员工、任职、离职和历史日期手算核对。",
       "id": "OBS-04",
@@ -311,7 +314,14 @@
       "runId": "R1-ORIGIN-20260910-100019",
       "severity": "Observation",
       "status": "observed_not_dispositioned",
-      "title": "报表任职粒度与本轮组织可选结果"
+      "title": "报表任职粒度与本轮组织可选结果",
+      "latestFiveEmployeeOracle": {
+        "current": 4,
+        "historicalDistinct": 2,
+        "historicalGroupSum": 3,
+        "partTimeDoesNotIncreaseCurrentPeople": true,
+        "numericSortObserved": true
+      }
     },
     {
       "actual": "两张本轮申请均在审批详情显示离职字段，调动部分值对应调动，转正多项空值；不证明实际发生离职。；9/11正式发起日志显示TransferProcessNew匹配DimissionProcessNew，已保存版本；不修改共享配置。",
@@ -421,7 +431,8 @@
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-stop-preview.json",
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-result.json",
-        "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-history.json"
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-history.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Readback.json"
       ],
       "feedback": "P2/P3区分纯停用、整体迁移、普通字段编辑和版本变更；P4核完整影响清单及不可变审计。",
       "id": "OBS-08",
@@ -451,7 +462,8 @@
         "at": "2026-09-11T03:22:13.585Z",
         "evidence": "R1-ORIGIN-20260910-100019/20260911_Job002_Stop_Dependencies.json",
         "result": "岗位新停用版本与旧启用版本保留，停用版本创建时间明确；人员迁移前置已查空。"
-      }
+      },
+      "partTimeIncrement": "管理员正式兼职入口允许选择本轮员工、直接生效，主职保留，详细执行审计未提供"
     },
     {
       "actual": "本轮调动和转正撤回后，申请人开始节点可见编辑；语义点击及可见坐标各有界尝试，未出现业务日期/保存表单或新的本轮标签。未点击同意替代重提。 报表ORG002候选经文字/整行/CUA点击均已选0；取消，不将未应用筛选的2行计为统计缺陷。",
@@ -579,6 +591,53 @@
       ],
       "productDefectConfirmed": false,
       "feedback": "仅附件能力阻塞，不改浏览器配置、不绕过安全；岗位单字段编辑仍可完成。"
+    },
+    {
+      "id": "DIFF-MAJOR-002",
+      "title": "原站管理员新增兼职直接生效与独立HR审核方案不同",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "modules": [
+        "M01",
+        "M19"
+      ],
+      "severity": "Major",
+      "classification": "NEED_OWNER_DECISION",
+      "status": "open_owner_decision_required",
+      "actual": "管理员新增兼职保存一次即任职中/生效；无独立HR审批或执行动作，申请历史在审批中/生效筛选下为空",
+      "approvedTarget": "范围HR申请，另一覆盖相关组织HR独立审核，批准与执行分离；D7调动固定两方不套兼职",
+      "requirements": [
+        "F-SPEC-05",
+        "BP-F-REQ-06",
+        "BP-F-REQ-13"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "section": "任职、调动、离职与编制事务"
+      },
+      "p3": {
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "path": "lib/hris/r1-m01.ts",
+        "testPath": "tests/r1-p3-m01.test.mjs",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-03"
+        ],
+        "staticFinding": "assignmentRequest核独立审核HR，assignmentApprove拒自审，assignmentExecute要求已批准；与批准方案一致",
+        "runtimeVerifiedByThisWindow": false
+      },
+      "p3Tasks": [
+        "P3-R1-02"
+      ],
+      "evidence": [
+        "ALERT-MAJOR-002.md",
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_PreSave.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Readback.json"
+      ],
+      "productDefectConfirmed": false,
+      "ownerDecision": null,
+      "boundary": "DIFF-MAJOR-001只批准直接调动有意差异，不自动涵盖兼职；不改规则，不阻其他测试",
+      "raisedAt": "2026-09-11T04:29:47.632642+00:00"
     }
   ],
   "priorityRecovery": {

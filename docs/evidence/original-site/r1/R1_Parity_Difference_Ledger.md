@@ -24,3 +24,7 @@
 | ENV-06 | 正式附件文件选择器等待失败 | ENV_BLOCKED | Observation | 正式file input及可见上传按钮两次等待均3000ms超时；公开参数请求60000ms；首次未处理拒绝导致运行状态丢失，恢复后独立回读未上传附件。 |
 
 EMP003/工号重复增量：OBS-07增加正式主职及重复工号明确拒绝；EMP004修正保存后未查到，不新计对象。无新增独立差异，不判P3缺陷。见R1-ORIGIN-20260910-100019/M01/EMP003_Readback.json、R1-ORIGIN-20260910-100019/M01/EMP004_Duplicate_Code.json。
+
+OBS-04增加5人日期/分组/身份列/数值排序证据：当前4人；历史分组和3但distinct2。OBS-08增加管理员兼职及历史空集观察。非新增独立缺陷；计数不变。
+
+新增DIFF-MAJOR-002 / Major / NEED_OWNER_DECISION：原站管理员新增兼职直接生效，与已批准独立HR审核不同。P3静态保持批准规则，非实现缺陷。详见ALERT-MAJOR-002.md。当前待决Major1，历史Major2（001已决）。

@@ -18,10 +18,10 @@
       "dependency": "需要可加载的本轮对象查询/详情，不能凭历史UUID盲写",
       "execution": "partial_edges_observed_more_autonomous_work_pending",
       "module": "M01",
-      "notClaimed": "岗位停用已取得；多任职、员工批量、完整再入职仍未完成",
+      "notClaimed": "再入职、附件及其余边界/完整生命周期未完成",
       "priorExecutionScope": "此前9/10或9/11失败时点记录；当前增量以sep11Status为准",
       "scope": "岗位编辑/停用/名称编码重复、组织更名/唯一性/层级、员工字段长度格式重复、附件/子集/多任职管理员入口",
-      "sep11Status": "job002_stopped_with_zero_active_and_parttime_dependencies_history_retained"
+      "sep11Status": "5_employees_and_emp005_parttime_observed"
     },
     {
       "attempt": "两原流程DOM与审计回查；转正编辑点击未开表单",
@@ -46,12 +46,12 @@
       "sep11Status": "no_new_independent_role_evidence"
     },
     {
-      "attempt": "2=正式1+试用1；姓名排序语义/坐标点击超时，行序未变",
+      "attempt": "固定5姓名9/11和9/10，当前4人/历史2人，人数排序升降实测；临时显示身份列已恢复",
       "blocker": "ENV-03/04/05",
-      "currentEvidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_Exit_Reports.json",
-      "execution": "existing_DOM_and_chart_readback_sort_attempt_failed",
+      "currentEvidence": "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_Detail.json",
+      "execution": "current_history_grouping_numeric_sort_observed",
       "module": "M32",
-      "notClaimed": "无导出文件、无新的历史快照查询、无分页/30–50量级",
+      "notClaimed": "无大样本/实际分页跨页/导出文件/订阅发送/独立权限通过",
       "priorExecutionScope": "此前9/10或9/11失败时点记录；当前增量以sep11Status为准",
       "scope": "两员工当前明细、图表人数、日期/排序/组织条件、导出文件",
       "sep11Status": "fixed_2026_09_11_and_09_10_two_names_applied_results_observed"
@@ -69,10 +69,10 @@
   ],
   "quantity": {
     "bulkRows": 0,
-    "businessObjects": 13,
+    "businessObjects": 14,
     "employees": 5,
     "expanded30to50": false,
-    "newThisContinuation": 3,
+    "newThisContinuation": 4,
     "smokeAllCasesPassed": false,
     "threshold5to10Quantity": true
   },

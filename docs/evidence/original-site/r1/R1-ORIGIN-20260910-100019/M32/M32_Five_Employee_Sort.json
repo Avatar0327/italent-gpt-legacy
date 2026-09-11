@@ -1,0 +1,44 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "caseId": "M32-FIVE-EMP-SORT",
+  "at": "2026-09-11T04:22:07.194Z",
+  "environment": "https://srworkshopbj.italent.cn",
+  "role": "ORIGIN-ADMIN-01",
+  "page": "组织员工/员工名册",
+  "fixedDate": "2026-09-11",
+  "names": "EMP001–005完整名称筛选持续生效",
+  "steps": [
+    "人员表头点击，独立回读分组行顺序与向下高亮箭头",
+    "再次点击同表头，独立回读行顺序与向上高亮箭头"
+  ],
+  "first": {
+    "rows": [
+      {
+        "people": 3,
+        "status": "正式"
+      },
+      {
+        "people": 1,
+        "status": "试用"
+      }
+    ],
+    "arrow": "down_highlight"
+  },
+  "second": {
+    "rows": [
+      {
+        "people": 1,
+        "status": "试用"
+      },
+      {
+        "people": 3,
+        "status": "正式"
+      }
+    ],
+    "arrow": "up_highlight"
+  },
+  "result": "descending_and_ascending_observed",
+  "dataUnchanged": true,
+  "screenshot": null,
+  "limitation": "两组数值排序局部通过，非大样本、姓名排序或分页通过"
+}
