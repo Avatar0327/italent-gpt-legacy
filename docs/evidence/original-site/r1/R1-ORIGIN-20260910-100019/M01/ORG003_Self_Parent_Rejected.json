@@ -1,0 +1,68 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "caseId": "M01-ORG-SELF-PARENT-003",
+  "environment": "https://srworkshopbj.italent.cn",
+  "role": "ORIGIN-ADMIN-01",
+  "recordId": "a7b55bd7-0ef2-44a0-9d29-6259fe053da3",
+  "stages": {
+    "orgSelfSelected": [
+      {
+        "at": "2026-09-11T06:13:38.274Z",
+        "fields": [
+          {
+            "label": "名称",
+            "text": "名称\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+            "values": [
+              "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003"
+            ]
+          },
+          {
+            "label": "机构ID",
+            "text": "机构ID\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+            "values": [
+              "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003"
+            ]
+          },
+          {
+            "label": "上级组织",
+            "text": "上级组织\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+            "values": [
+              ""
+            ]
+          },
+          {
+            "label": "备注说明",
+            "text": "备注说明\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003_EDIT_001 仅合成备注验证",
+            "values": [
+              "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003_EDIT_001 仅合成备注验证"
+            ]
+          }
+        ],
+        "errors": []
+      }
+    ],
+    "orgSelfResult": [
+      {
+        "at": "2026-09-11T06:14:03.203Z",
+        "draftVisible": true,
+        "formErrors": [
+          "组织单元在行政维度上级上存在循环汇报关系：ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003-ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003——>ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003-ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003"
+        ],
+        "pageTips": [],
+        "formTail": "基本信息\n名称\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n简称\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n建立日期\n2026-09-10\n生效日期\n2026-09-10\n机构ID\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n上级组织\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n显示顺序\n层级\n四级组织\nHRBP\n请选择\n虚拟组织\n是\n否\n机构类型\n部门\n所在地点\n请选择\n负责人\n请选择\n职能体系\n请选择\n市场分类\n请选择\n机构级别\n请选择\n管理提成类别\n请选择\n晋降级类别\n1\n0\n商务标签\n请选择\n商务组分类\n请选择\n商务分类\n请选择\n是否大客\n是\n否\n是否总部一级部门\n是\n否\n社保标准\n请选择\n社保缴纳机构\n是\n否\n首发规则\n请选择\n个税标准\n请选择\n餐补标准\n请选择\n打卡企微\n请选择\n备注说明\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003_EDIT_001 仅合成备注验证\n一级部门负责人\n请选择\n分公司总监\n请选择\n分公司人力\n请选择\n区域总监\n请选择\n区域人力\n请选择\nSSC\n请选择\n业务维度上级\n请选择\n法人代表\n组织特性\n保存\n取消\n翻译助手"
+      }
+    ],
+    "orgCycleCancelled": [
+      {
+        "at": "2026-09-11T06:14:35.417Z",
+        "draftVisible": false,
+        "rows": [
+          "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+          "华夏九洲集团/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n--\n部门\n--\n2026-09-10\n2026-09-10\n9999-12-31\n2026-09-10\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003_EDIT_001 仅合成备注验证\n--\n--\n--\n--\n--\n--\n--\n--\n--\n0\n--\n--\n--\n--"
+        ]
+      }
+    ]
+  },
+  "result": "自身可以在选择器选择，但保存明确拒绝循环汇报；取消后原上级ORG001、名称、编码、备注保留。只覆盖当前自环，不覆盖未来跨节点循环。",
+  "unknownBusinessActions": []
+}

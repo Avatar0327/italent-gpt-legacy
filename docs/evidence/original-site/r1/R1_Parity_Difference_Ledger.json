@@ -1,12 +1,12 @@
 {
-  "countRule": "唯一台账ID计数；Major累计2，其中001已决有意差异、002待决，activeMajor1；MATCH5仅窄项静态对照。ENV/ROLE仅计未关闭组。",
+  "countRule": "唯一台账ID计数；Major累计2，其中001已决有意差异、002待决，activeMajor1；MATCH6仅窄项静态对照。ENV/ROLE仅计未关闭组。",
   "counts": {
     "Blocker": 0,
     "DESIGN_GAP": 0,
     "ENV_BLOCKED": 5,
     "IMPLEMENTATION_DEFECT": 0,
     "INTENTIONAL_DIFFERENCE": 1,
-    "MATCH": 5,
+    "MATCH": 6,
     "Major": 2,
     "Minor": 0,
     "NEED_OWNER_DECISION": 2,
@@ -443,7 +443,8 @@
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-result.json",
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-history.json",
         "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Readback.json",
-        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_End.json"
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_End.json",
+        "R1-ORIGIN-20260910-100019/M01/ORG003_Two_Stale_Drafts.json"
       ],
       "feedback": "P2/P3区分纯停用、整体迁移、普通字段编辑和版本变更；P4核完整影响清单及不可变审计。",
       "id": "OBS-08",
@@ -482,6 +483,12 @@
           "R1-ORIGIN-20260910-100019/M01/ORG003_History_After_Restore.json",
           "R1-ORIGIN-20260910-100019/M01/LEGAL001_Stopped_Detail.json"
         ]
+      },
+      "latestStaleDraft": {
+        "at": "2026-09-11T06:16:13.172340+00:00",
+        "result": "A保存后B草稿仍旧值；B随后保存覆盖A，另一标签新表单确认B。已恢复原备注。未覆盖独立角色同时竞争、重复业务提交。",
+        "evidence": "R1-ORIGIN-20260910-100019/M01/ORG003_Two_Stale_Drafts.json",
+        "boundary": "原站普通编辑不是批准目录发布/任职事务；不据此降低P3 CAS或批准有意差异"
       }
     },
     {
@@ -710,5 +717,11 @@
       "OBS-07"
     ]
   },
-  "runId": "R1-ORIGIN-20260910-100019"
+  "runId": "R1-ORIGIN-20260910-100019",
+  "narrowMatchIncrement": {
+    "caseId": "M01-ORG-SELF-PARENT-003",
+    "at": "2026-09-11T06:16:13.172340+00:00",
+    "evidence": "R1-ORIGIN-20260910-100019/M01/ORG003_Self_Parent_Rejected.json",
+    "scope": "当前自环拒绝，非未来时态全量通过"
+  }
 }

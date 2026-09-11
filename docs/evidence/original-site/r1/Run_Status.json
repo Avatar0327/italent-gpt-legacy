@@ -14,7 +14,7 @@
     "originVsRequirements": 0,
     "readyForP3ExitParityReview": 0
   },
-  "concurrency": "own_tab_27_other_tabs_untouched_R1_sole_operator",
+  "concurrency": "R1_sole_operator_own_tabs_27_30_forms_isolated_same_admin_sequential_stale_drafts",
   "continuationInProgress": true,
   "createdRecords": 17,
   "createdRecordsDefinition": "17主动对象：3组织+2岗位+6人员+1法人+2申请+离职任职1+兼职任职2；自动历史行另列。",
@@ -53,8 +53,8 @@
   },
   "historicalMajor": 2,
   "intentionalDifferences": 1,
-  "lastRecheckAt": "2026-09-11T06:00:43.606638+00:00",
-  "matchRules": 5,
+  "lastRecheckAt": "2026-09-11T06:16:13.172340+00:00",
+  "matchRules": 6,
   "modules": [
     {
       "bulkDataTesting": "not_completed",

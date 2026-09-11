@@ -2101,7 +2101,7 @@
       "title": "组织编辑、更名、停用与在用保护"
     },
     {
-      "actualResult": "当前同父重名拒绝、启用编码拒重、不同父同名允许；同UUID恢复原值。跨期/并发仍未完成",
+      "actualResult": "同父重名/编码拒绝、跨父同名允许且已恢复；当前自环拒绝；未来跨节点时态环未测",
       "blockerIds": [
         "ENV-03"
       ],
@@ -2112,7 +2112,9 @@
         "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
       },
       "environment": "https://srworkshopbj.italent.cn",
-      "evidence": [],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/ORG003_Self_Parent_Rejected.json"
+      ],
       "execution": "partially_observed",
       "inputs": {
         "actualValues": null,
@@ -2150,12 +2152,15 @@
       "time": null,
       "title": "同父重名、不同父重名及编码重复",
       "latestDisposition": {
-        "at": "2026-09-11T05:23:23.851618+00:00",
-        "result": "同父重名/当前启用编码拒重已证；跨父重名尚待"
+        "at": "2026-09-11T06:16:13.172340+00:00",
+        "result": "同父重名/编码拒绝、跨父同名允许且已恢复；当前自环拒绝；未来跨节点时态环未测",
+        "evidence": [
+          "R1-ORIGIN-20260910-100019/M01/ORG003_Self_Parent_Rejected.json"
+        ]
       }
     },
     {
-      "actualResult": "新增2职位、名称/组织必填已验；编辑/停用/唯一性未验",
+      "actualResult": "两岗位创建；JOB001职责编辑/重复编码拒绝；JOB002停用新旧版本已核，上级职位边界仍待",
       "blockerIds": [],
       "caseId": "M01-PENDING-POSITION",
       "classification": null,
@@ -2211,12 +2216,13 @@
         "note": "本轮已补部分边界/正式入口，仍有未执行范围，详见增量用例"
       },
       "latestDisposition": {
-        "at": "2026-09-11T05:23:23.851618+00:00",
-        "result": "两岗位创建；JOB001编码重复拒绝/职责编辑；JOB002停用新旧版本；上级职位边界未全验"
+        "at": "2026-09-11T06:16:13.172340+00:00",
+        "result": "两岗位创建；JOB001职责编辑/重复编码拒绝；JOB002停用新旧版本已核，上级职位边界仍待",
+        "evidence": []
       }
     },
     {
-      "actualResult": "创建1员工、邮箱必填、邀请账号否；其他创建入口未验",
+      "actualResult": "6人员，邀请否；正式/试用/空职位/姓名100保存；再入职未保存",
       "blockerIds": [],
       "caseId": "M01-PENDING-EMP-CREATE",
       "classification": null,
@@ -2264,8 +2270,9 @@
       "time": null,
       "title": "员工新增及三入口模板",
       "latestDisposition": {
-        "at": "2026-09-11T05:23:23.851618+00:00",
-        "result": "六员工邀请否，正式/试用/空职位/100字符姓名创建；再入职未保存"
+        "at": "2026-09-11T06:16:13.172340+00:00",
+        "result": "6人员，邀请否；正式/试用/空职位/姓名100保存；再入职未保存",
+        "evidence": []
       }
     },
     {
@@ -2320,7 +2327,7 @@
       "title": "员工正式导入5–10、30–50、100–500"
     },
     {
-      "actualResult": "主职及调动2条任职历史已验；兼职/多任职未验",
+      "actualResult": "EMP005主职及两条重叠兼职已核；同组织空职位均生效；9/12实际结束后效待查",
       "blockerIds": [
         "ROLE-01"
       ],
@@ -2372,8 +2379,9 @@
       "time": null,
       "title": "主职、兼职、多任职及占用",
       "latestDisposition": {
-        "at": "2026-09-11T05:23:23.851618+00:00",
-        "result": "005主职+兼职且不占人头；兼职结束日期已存但仍生效；重叠及独立审核待验"
+        "at": "2026-09-11T06:16:13.172340+00:00",
+        "result": "EMP005主职及两条重叠兼职已核；同组织空职位均生效；9/12实际结束后效待查",
+        "evidence": []
       }
     },
     {
@@ -2671,7 +2679,7 @@
       }
     },
     {
-      "actualResult": "未执行，不以计划预期充当实际结果",
+      "actualResult": "离职/原调动/岗位版本/普通组织编辑历史已读；离职执行审计未提供；附件正式选择器ENV-06",
       "blockerIds": [
         "ENV-03"
       ],
@@ -2725,22 +2733,29 @@
         "at": "2026-09-11T02:59:33.876Z",
         "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json",
         "note": "本轮已补部分边界/正式入口，仍有未执行范围，详见增量用例"
+      },
+      "latestDisposition": {
+        "at": "2026-09-11T06:16:13.172340+00:00",
+        "result": "离职/原调动/岗位版本/普通组织编辑历史已读；离职执行审计未提供；附件正式选择器ENV-06",
+        "evidence": []
       }
     },
     {
-      "actualResult": "未执行，不以计划预期充当实际结果",
+      "actualResult": "同管理员双标签旧草稿顺序覆盖已测并恢复；独立角色CAS及重复业务提交未测",
       "blockerIds": [
-        "ENV-03"
+        "ROLE-01"
       ],
       "caseId": "M01-PENDING-CONCURRENCY",
-      "classification": "ENV_BLOCKED",
+      "classification": null,
       "design": {
         "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
         "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
       },
       "environment": "https://srworkshopbj.italent.cn",
-      "evidence": [],
-      "execution": "not_executed",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/ORG003_Two_Stale_Drafts.json"
+      ],
+      "execution": "partially_observed",
       "inputs": {
         "actualValues": null,
         "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_"
@@ -2775,7 +2790,14 @@
         "重复点击/丢响应先查询原记录，不以重建代恢复"
       ],
       "time": null,
-      "title": "并发修改和重复提交"
+      "title": "并发修改和重复提交",
+      "latestDisposition": {
+        "at": "2026-09-11T06:16:13.172340+00:00",
+        "result": "同管理员双标签旧草稿顺序覆盖已测并恢复；独立角色CAS及重复业务提交未测",
+        "evidence": [
+          "R1-ORIGIN-20260910-100019/M01/ORG003_Two_Stale_Drafts.json"
+        ]
+      }
     },
     {
       "actualResult": "原站路线开始→直接上级→HR访谈→结束；无独立两方审批实操",
@@ -3399,7 +3421,7 @@
       "title": "七入口可用、无权、未配置和异常"
     },
     {
-      "actualResult": "独立手算1员工=当前花名册1人、任职历史2行、当前主职1；全指标及批量未验",
+      "actualResult": "固定6姓名全历史10任职/6人；9/11在职5=正式4+试用1；在职主职5、兼职2、离职当前标识1",
       "blockerIds": [],
       "caseId": "M32-PENDING-ORACLE",
       "classification": null,
@@ -3410,7 +3432,8 @@
       "environment": "https://srworkshopbj.italent.cn",
       "evidence": [
         "R1-ORIGIN-20260910-100019/M32/M32-own-employee-history.json",
-        "R1-ORIGIN-20260910-100019/M32/M32-own-employee-current.json"
+        "R1-ORIGIN-20260910-100019/M32/M32-own-employee-current.json",
+        "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_All_Assignments.json"
       ],
       "execution": "partially_observed",
       "inputs": {
@@ -3456,12 +3479,15 @@
       "time": null,
       "title": "指标口径与明细一致性",
       "latestDisposition": {
-        "at": "2026-09-11T05:23:23.851618+00:00",
-        "result": "五姓名全历史8行/5人，当前名册4人、当前任职5行；新增006后须重算，不能沿用为当前全RUN值"
+        "at": "2026-09-11T06:16:13.172340+00:00",
+        "result": "固定6姓名全历史10任职/6人；9/11在职5=正式4+试用1；在职主职5、兼职2、离职当前标识1",
+        "evidence": [
+          "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_All_Assignments.json"
+        ]
       }
     },
     {
-      "actualResult": "入职日期明天空数据、今天1人；历史快照未验",
+      "actualResult": "固定6姓名9/11在职5，9/10分组3但distinct2，9/9业务行0；不是旧今天筛选",
       "blockerIds": [],
       "caseId": "M32-PENDING-TIME",
       "classification": null,
@@ -3471,7 +3497,8 @@
       },
       "environment": "https://srworkshopbj.italent.cn",
       "evidence": [
-        "R1-ORIGIN-20260910-100019/M32/M32-date-empty.json"
+        "R1-ORIGIN-20260910-100019/M32/M32-date-empty.json",
+        "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_Sep09_Empty.json"
       ],
       "execution": "partially_observed",
       "inputs": {
@@ -3516,8 +3543,11 @@
       "time": null,
       "title": "组织日期筛选、当前值与历史快照",
       "latestDisposition": {
-        "at": "2026-09-11T05:23:23.851618+00:00",
-        "result": "五姓名9/11在职4，9/10分组3/distinct2；全历史8行非时点"
+        "at": "2026-09-11T06:16:13.172340+00:00",
+        "result": "固定6姓名9/11在职5，9/10分组3但distinct2，9/9业务行0；不是旧今天筛选",
+        "evidence": [
+          "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_Sep09_Empty.json"
+        ]
       }
     },
     {
@@ -3680,7 +3710,7 @@
       }
     },
     {
-      "actualResult": "未执行，不以计划预期充当实际结果",
+      "actualResult": "重叠兼职各行；人数不重复累加；失效岗位/离职历史保留；跨组织独立权限未测",
       "blockerIds": [
         "ROLE-01"
       ],
@@ -3729,8 +3759,9 @@
       "time": null,
       "title": "空/重复/失效组织/离职/跨组织边界",
       "latestDisposition": {
-        "at": "2026-09-11T05:23:23.851618+00:00",
-        "result": "空组织筛选已证、历史同人重复分组/离职行/空职位/兼职去重已证；跨组织独立权限仍待"
+        "at": "2026-09-11T06:16:13.172340+00:00",
+        "result": "重叠兼职各行；人数不重复累加；失效岗位/离职历史保留；跨组织独立权限未测",
+        "evidence": []
       }
     },
     {
@@ -6107,6 +6138,112 @@
       ],
       "time": "2026-09-11T06:00:43.606638+00:00",
       "title": "六姓名9月9日空数据"
+    },
+    {
+      "actualResult": "A保存后B草稿仍旧值；B随后保存覆盖A，另一标签新表单确认B。已恢复原备注。未覆盖独立角色同时竞争、重复业务提交。",
+      "blockerIds": [],
+      "caseId": "M01-ORG-STALE-DRAFTS-003",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/ORG003_Two_Stale_Drafts.json"
+      ],
+      "execution": "observed_narrow_scope",
+      "inputs": {
+        "actualValues": null,
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_"
+      },
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-12"
+        ],
+        "evidenceMode": "静态源代码对照；本窗口未运行P3",
+        "path": "lib/hris/r1-m01.ts",
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "task": "P3-R1-02"
+      },
+      "page": "组织管理/ORG003编辑",
+      "pageState": "draft_cancelled_or_restored_no_unknown_save",
+      "preconditions": "仅本轮合成数据；正式页面人工操作可执行；下载/截图仅局部限制；独立身份须为现有授权测试角色",
+      "recordIds": [
+        "a7b55bd7-0ef2-44a0-9d29-6259fe053da3"
+      ],
+      "repeatability": "同RUN UUID按步骤可重复；不代表多角色并发",
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-08"
+      ],
+      "role": "ORIGIN-ADMIN-01",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "severity": "Observation",
+      "steps": [
+        "独立正式表单回读",
+        "输入本RUN值，单次保存",
+        "独立读取结果",
+        "恢复/取消并验证原关系"
+      ],
+      "time": "2026-09-11T06:16:13.172340+00:00",
+      "title": "同管理员双旧草稿顺序覆盖"
+    },
+    {
+      "actualResult": "选择器可选择自身，保存拒绝循环汇报；取消后原父级/名称/编码/备注保留。只测当前自环。",
+      "blockerIds": [],
+      "caseId": "M01-ORG-SELF-PARENT-003",
+      "classification": "MATCH",
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/ORG003_Self_Parent_Rejected.json"
+      ],
+      "execution": "observed_narrow_scope",
+      "inputs": {
+        "actualValues": null,
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_"
+      },
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-01"
+        ],
+        "evidenceMode": "静态源代码对照；本窗口未运行P3",
+        "path": "lib/hris/r1-temporal.ts",
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "task": "P3-R1-02"
+      },
+      "page": "组织管理/ORG003编辑",
+      "pageState": "draft_cancelled_or_restored_no_unknown_save",
+      "preconditions": "仅本轮合成数据；正式页面人工操作可执行；下载/截图仅局部限制；独立身份须为现有授权测试角色",
+      "recordIds": [
+        "a7b55bd7-0ef2-44a0-9d29-6259fe053da3"
+      ],
+      "repeatability": "同RUN UUID按步骤可重复；不代表多角色并发",
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-08"
+      ],
+      "role": "ORIGIN-ADMIN-01",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "severity": "Observation",
+      "steps": [
+        "独立正式表单回读",
+        "输入本RUN值，单次保存",
+        "独立读取结果",
+        "恢复/取消并验证原关系"
+      ],
+      "time": "2026-09-11T06:16:13.172340+00:00",
+      "title": "组织自身上级保存拒绝"
     }
   ],
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",

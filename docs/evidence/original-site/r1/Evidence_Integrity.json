@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T06:00:43.606638+00:00",
+  "generatedAt": "2026-09-11T06:16:13.172340+00:00",
   "files": [
     {
       "path": "ALERT-MAJOR-001.md",
@@ -13,8 +13,8 @@
     },
     {
       "path": "Browser_Concurrency_Check.md",
-      "sizeBytes": 11349,
-      "sha256": "85a89552ea616af0e0e029cfe98824ad68f17ed394ccf00f89721ebb609b432e"
+      "sizeBytes": 12091,
+      "sha256": "13d12dec98f9995d98be5003dee146a1e39d0ce71909c4da74b58254f6567b07"
     },
     {
       "path": "Continuation_Validation.json",
@@ -23,8 +23,8 @@
     },
     {
       "path": "Current_Executable_Test_Disposition.json",
-      "sizeBytes": 4698,
-      "sha256": "bfdf77d60e0307be5cda44f1456715a29c64ba77d93a16c2eb176aab6094d3de"
+      "sizeBytes": 4788,
+      "sha256": "01b56ea3c5f445febc82053862610eaaa49c23434b6fb094bae29ba8677fcb36"
     },
     {
       "path": "Future_Date_Recovery.json",
@@ -53,8 +53,8 @@
     },
     {
       "path": "Original_Site_Data_Manifest.json",
-      "sizeBytes": 33225,
-      "sha256": "c1e798b796e2af56e1f9f20223b4a6fe3194b3a9085e00a268a4573735fe61cf"
+      "sizeBytes": 33643,
+      "sha256": "066e4619e3acac78c73739d428c0a052f892b4d39e50cefcc03d0b31751cb9e0"
     },
     {
       "path": "Original_Site_Test_Plan.md",
@@ -447,6 +447,16 @@
       "sha256": "eace02ef9da019b98f59fc3f324cbe0d6c3bc40ec0aa7c9d6d842d79edec80a7"
     },
     {
+      "path": "R1-ORIGIN-20260910-100019/M01/ORG003_Self_Parent_Rejected.json",
+      "sizeBytes": 3856,
+      "sha256": "85eb7f7742e43b4f8cc4abd1670381150f93243b91058366d9d9d15d04ea6c2a"
+    },
+    {
+      "path": "R1-ORIGIN-20260910-100019/M01/ORG003_Two_Stale_Drafts.json",
+      "sizeBytes": 5693,
+      "sha256": "5c3b8ce4d669c48d2da62ced8ccd2bb2dedede2394d35b061481e1358c146f13"
+    },
+    {
       "path": "R1-ORIGIN-20260910-100019/M01/ORG003_Unique_Required.json",
       "sizeBytes": 2068,
       "sha256": "593cf75e956d088bdbfbcd9be01294b915c2797baffd0a45cfbf198503236162"
@@ -653,18 +663,18 @@
     },
     {
       "path": "R1_Original_Behavior_Matrix.json",
-      "sizeBytes": 239708,
-      "sha256": "dcb25b3cc7466bf0c139f3a0b247810f97e3f24ae11d7ddd37e81bf31d9eaa21"
+      "sizeBytes": 245361,
+      "sha256": "64520b4b489e9539a4ae03d7625fea501ea452712d9266391466cb2818bd5cc4"
     },
     {
       "path": "R1_Original_Behavior_Matrix.md",
-      "sizeBytes": 20005,
-      "sha256": "c79145db4f1faadaac49da518a268a965dd47328887e60e4a4fc1c68d284c682"
+      "sizeBytes": 20245,
+      "sha256": "02f5519c97af292712caccb313cd2884f14fbdea4002456f7112c03e7faca823"
     },
     {
       "path": "R1_P3_Evidence_Feedback.md",
-      "sizeBytes": 26684,
-      "sha256": "15048f3e740e54bbc0ab1e4225f6d23b6f24844d45c17b170789e9393ef97a51"
+      "sizeBytes": 27426,
+      "sha256": "de7f8849bf4996094cced189a1ae29666692db8cd14e42655745426766c0fc6b"
     },
     {
       "path": "R1_P4_Comparison_Cases.md",
@@ -673,13 +683,13 @@
     },
     {
       "path": "R1_Parity_Difference_Ledger.json",
-      "sizeBytes": 29763,
-      "sha256": "2fd5d944189b114d5ec10b9e9dafa5e5ec0b8075c55ff663f0be458eedbb9837"
+      "sizeBytes": 30574,
+      "sha256": "3065ec0515fa1c961de70290b4f5e17084a0e6a7a5bd3164fd24f8704e8b3fe7"
     },
     {
       "path": "R1_Parity_Difference_Ledger.md",
-      "sizeBytes": 5969,
-      "sha256": "e73c462d19f4e1776b75a8072e5e54e26133410e5051c45fa6b196b4ce99e459"
+      "sizeBytes": 6132,
+      "sha256": "1a3a730b010720dac6af0a1c796f0303d2252692d904c205412e6ad70e988910"
     },
     {
       "path": "Repository_Source_Manifest.json",
@@ -688,13 +698,13 @@
     },
     {
       "path": "Resume.md",
-      "sizeBytes": 24036,
-      "sha256": "7762d119463eb4f4a42ce2546322c19d140922db7817af4481accb1893372f48"
+      "sizeBytes": 24351,
+      "sha256": "a852b31491dc585bd2993d256d4ad9d4c6f46a94fb55775d827d9fefc24624c7"
     },
     {
       "path": "Run_Status.json",
-      "sizeBytes": 4262,
-      "sha256": "d107bd00daa9af692b7a1624e32538ed06c69805eacf30afa62ce10ffe25a54f"
+      "sizeBytes": 4295,
+      "sha256": "5bddec9ad88019753fd808bb345232bbcb8a42bc7d1ca77d0d4e8cbf6dd71c5b"
     },
     {
       "path": "run.json",
@@ -702,7 +712,7 @@
       "sha256": "bd8664ee8eaeda8e04f22f354ba993e7379a417fe05e4c95c12733a0b34bed64"
     }
   ],
-  "fileCount": 140,
-  "caseCount": 111,
+  "fileCount": 142,
+  "caseCount": 113,
   "completeModules": 0
 }

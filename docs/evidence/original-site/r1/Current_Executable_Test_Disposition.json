@@ -2,10 +2,10 @@
   "basisHead": "76a16265fdd65f6ba7608260dde1e07acfb85200",
   "continuationInstruction": "R1集中连续执行，只有完整退出条件或全部自主事项完成且仅剩真实外部条件才释放浏览器；自动任务保持暂停。",
   "currentAttempt": {
-    "basisHead": "42eb73bb284bc62ab96bb0a5d227d83f2445ad10",
-    "checkedAt": "2026-09-11T06:00:43.606638+00:00",
+    "basisHead": "215ad9468dba43c9b9a1a7c36f26eb20e130c225",
+    "checkedAt": "2026-09-11T06:16:13.172340+00:00",
     "dateConditionSatisfied": true,
-    "evidence": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_Current.json",
+    "evidence": "R1-ORIGIN-20260910-100019/M01/ORG003_Self_Parent_Rejected.json",
     "oldDOMReusableForCurrentConclusion": false,
     "outcome": "concentrated_validation_in_progress",
     "unknownBusinessActions": []
@@ -14,14 +14,14 @@
     {
       "attempt": "参见本轮独立弹窗/字段级证据；源页面恢复后继续测试",
       "blocker": "附件ENV-06；再入职邀请关闭与雇佣链；兼职9/12实际后效；其他未测仍可继续",
-      "currentEvidence": "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_End.json",
+      "currentEvidence": "R1-ORIGIN-20260910-100019/M01/ORG003_Self_Parent_Rejected.json",
       "dependency": "需要可加载的本轮对象查询/详情，不能凭历史UUID盲写",
       "execution": "partial_edges_observed_more_autonomous_work_pending",
       "module": "M01",
       "notClaimed": "再入职、附件及其余边界/完整生命周期未完成",
       "priorExecutionScope": "此前9/10或9/11失败时点记录；当前增量以sep11Status为准",
       "scope": "岗位编辑/停用/名称编码重复、组织更名/唯一性/层级、员工字段长度格式重复、附件/子集/多任职管理员入口",
-      "sep11Status": "5_employees_and_emp005_parttime_observed"
+      "sep11Status": "6_persons_2_parttimes_legal_stop_org_stale_draft_and_self_cycle_observed"
     },
     {
       "attempt": "两原流程DOM与审计回查；转正编辑点击未开表单",
@@ -47,14 +47,14 @@
     },
     {
       "attempt": "固定六姓名9/11=5人、9/10=2人、9/9空；全历史10任职；重复兼职各成行",
-      "blocker": "ENV-03/04/05",
+      "blocker": "ENV-03文件导出；ROLE-01权限/订阅真实接收；扩量/分页尚未完成",
       "currentEvidence": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_All_Assignments.json",
       "execution": "current_history_grouping_numeric_sort_observed",
       "module": "M32",
       "notClaimed": "无大样本/实际分页跨页/导出文件/订阅发送/独立权限通过",
       "priorExecutionScope": "此前9/10或9/11失败时点记录；当前增量以sep11Status为准",
       "scope": "两员工当前明细、图表人数、日期/排序/组织条件、导出文件",
-      "sep11Status": "fixed_2026_09_11_and_09_10_two_names_applied_results_observed",
+      "sep11Status": "six_names_current_history_empty_applied",
       "subscriptionStatus": "名称截断50，空渠道/空接收人拒绝；草稿取消；实际发送未验证"
     },
     {

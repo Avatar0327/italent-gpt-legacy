@@ -1,0 +1,156 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "caseId": "M01-ORG-STALE-DRAFTS-003",
+  "environment": "https://srworkshopbj.italent.cn",
+  "role": "ORIGIN-ADMIN-01",
+  "recordId": "a7b55bd7-0ef2-44a0-9d29-6259fe053da3",
+  "tabs": [
+    27,
+    30
+  ],
+  "stages": {
+    "orgDualBefore": [
+      {
+        "at": "2026-09-11T06:05:15.737Z",
+        "id": "a7b55bd7-0ef2-44a0-9d29-6259fe053da3",
+        "A": [
+          {
+            "label": "名称",
+            "text": "名称\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+            "values": [
+              "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003"
+            ]
+          },
+          {
+            "label": "机构ID",
+            "text": "机构ID\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+            "values": [
+              "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003"
+            ]
+          },
+          {
+            "label": "上级组织",
+            "text": "上级组织\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001",
+            "values": [
+              ""
+            ]
+          },
+          {
+            "label": "备注说明",
+            "text": "备注说明\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003_EDIT_001 仅合成备注验证",
+            "values": [
+              "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003_EDIT_001 仅合成备注验证"
+            ]
+          }
+        ],
+        "B": [
+          {
+            "label": "名称",
+            "text": "名称\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+            "values": [
+              "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003"
+            ]
+          },
+          {
+            "label": "机构ID",
+            "text": "机构ID\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+            "values": [
+              "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003"
+            ]
+          },
+          {
+            "label": "上级组织",
+            "text": "上级组织\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001",
+            "values": [
+              ""
+            ]
+          },
+          {
+            "label": "备注说明",
+            "text": "备注说明\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003_EDIT_001 仅合成备注验证",
+            "values": [
+              "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003_EDIT_001 仅合成备注验证"
+            ]
+          }
+        ]
+      }
+    ],
+    "orgDualIsolation": [
+      {
+        "at": "2026-09-11T06:05:38.707Z",
+        "A": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003_CAS_A",
+        "B": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003_EDIT_001 仅合成备注验证"
+      }
+    ],
+    "orgACommitted": [
+      {
+        "at": "2026-09-11T06:06:27.011Z",
+        "Aquery": [
+          "华夏九洲集团/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n--\n部门\n--\n2026-09-10\n2026-09-10\n9999-12-31\n2026-09-10\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003_CAS_A\n--\n--\n--\n--\n--\n--\n--\n--\n--\n0\n--\n--\n--\n--"
+        ],
+        "BstillOld": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003_EDIT_001 仅合成备注验证"
+      }
+    ],
+    "orgBAfter": [
+      {
+        "at": "2026-09-11T06:11:00.266Z",
+        "rows": [
+          "华夏九洲集团/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n--\n部门\n--\n2026-09-10\n2026-09-10\n9999-12-31\n2026-09-10\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003_CAS_B\n--\n--\n--\n--\n--\n--\n--\n--\n--\n0\n--\n--\n--\n--"
+        ]
+      }
+    ],
+    "orgBFresh": [
+      {
+        "at": "2026-09-11T06:11:32.611Z",
+        "fields": [
+          {
+            "label": "名称",
+            "text": "名称\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+            "values": [
+              "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003"
+            ]
+          },
+          {
+            "label": "机构ID",
+            "text": "机构ID\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+            "values": [
+              "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003"
+            ]
+          },
+          {
+            "label": "上级组织",
+            "text": "上级组织\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001",
+            "values": [
+              ""
+            ]
+          },
+          {
+            "label": "备注说明",
+            "text": "备注说明\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003_CAS_B",
+            "values": [
+              "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003_CAS_B"
+            ]
+          }
+        ]
+      }
+    ],
+    "orgRestored": [
+      {
+        "at": "2026-09-11T06:12:11.636Z",
+        "rows": [
+          "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003",
+          "华夏九洲集团/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n--\n部门\n--\n2026-09-10\n2026-09-10\n9999-12-31\n2026-09-10\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003_EDIT_001 仅合成备注验证\n--\n--\n--\n--\n--\n--\n--\n--\n--\n0\n--\n--\n--\n--"
+        ],
+        "drafts": [
+          {
+            "id": "popup_17891063854262047",
+            "visible": false
+          }
+        ]
+      }
+    ]
+  },
+  "result": "同一管理员两个独立旧草稿顺序保存均接受，B覆盖A；另一标签新编辑表单确认B，随后恢复原备注。不是独立角色同时提交或底层CAS验证。",
+  "unknownBusinessActions": [],
+  "screenshot": null
+}

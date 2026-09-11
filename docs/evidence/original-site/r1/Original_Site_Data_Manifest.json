@@ -226,7 +226,7 @@
     "ORG003": "跨父重名保存后已恢复原名称简称父级，编辑层关闭"
   },
   "lastContinuation": {
-    "at": "2026-09-11T05:49:53.633156+00:00",
+    "at": "2026-09-11T06:16:13.172340+00:00",
     "newObjects": 7,
     "modifiedRunObjects": 3,
     "retained": 17,
@@ -236,7 +236,9 @@
       "R1-ORIGIN-20260910-100019/M01/EMP006_PreSave.json",
       "R1-ORIGIN-20260910-100019/M01/EMP006_Readback.json",
       "R1-ORIGIN-20260910-100019/M01/EMP006_Assignment.json"
-    ]
+    ],
+    "basisHead": "215ad9468dba43c9b9a1a7c36f26eb20e130c225",
+    "unknownBusinessActions": []
   },
   "manualSmoke": {
     "bulkImportedRows": 0,
@@ -593,7 +595,9 @@
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-readback.json",
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-result.json",
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-history.json",
-        "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-stop-preview.json"
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-stop-preview.json",
+        "R1-ORIGIN-20260910-100019/M01/ORG003_Two_Stale_Drafts.json",
+        "R1-ORIGIN-20260910-100019/M01/ORG003_Self_Parent_Rejected.json"
       ],
       "lastModifiedField": "备注说明",
       "module": "M01",
@@ -614,7 +618,9 @@
       },
       "status": "enabled_remark_edited_stop_draft_cancelled",
       "statusScope": "historical_last_observed_not_reasserted_as_current",
-      "verifiedAt": "2026-09-10T10:36:23.872Z"
+      "verifiedAt": "2026-09-11T06:16:13.172340+00:00",
+      "remark": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003_EDIT_001 仅合成备注验证",
+      "lastMutation": "双旧草稿A/B后已恢复；自环拒绝已取消"
     },
     {
       "allowLaterDelete": true,
