@@ -4613,6 +4613,172 @@
       "title": "M01-JOB001-HISTORY-AFTER-EDIT",
       "evidenceSection": "M01-JOB001-HISTORY-AFTER-EDIT",
       "ledgerId": "OBS-08"
+    },
+    {
+      "actualResult": "ORG003在职/兼职均经实际组织过滤为空；JOB002停用成功。新版本9/11停用，创建时间11:12:34；旧启用版本止9/10保留。",
+      "blockerIds": [],
+      "caseId": "M01-JOB002-STOP-001",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260911_Job002_Stop_Dependencies.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "runId": "R1-ORIGIN-20260910-100019"
+      },
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-01",
+          "P3-M01-12"
+        ],
+        "evidenceMode": "关联既有任务；未在本窗口运行",
+        "path": "tests/r1-p3-m01.test.mjs",
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02"
+      },
+      "page": "M01-JOB002-STOP-001",
+      "pageState": "new_readback",
+      "preconditions": "仅本轮合成数据；正式页面人工操作可执行；下载/截图仅局部限制；独立身份须为现有授权测试角色",
+      "recordIds": [
+        "9e593b4e-938e-4312-aff9-460c3c4d80f0"
+      ],
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "BP-F-REQ-11",
+        "F-SPEC-01",
+        "F-SPEC-08"
+      ],
+      "role": "ORIGIN-ADMIN-01（非独立员工/两方审批）",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "结构化证据优先，部分已有安全截图",
+      "severity": "Observation",
+      "steps": [
+        "从正式菜单访问",
+        "动作后独立回读实际生效条件/状态",
+        "保留与对应原UUID的关联"
+      ],
+      "time": "2026-09-11T03:22:13.585Z",
+      "title": "M01-JOB002-STOP-001",
+      "latestEvidence": {
+        "at": "2026-09-11T02:59:33.876Z",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json",
+        "note": "本轮已补部分边界/正式入口，仍有未执行范围，详见增量用例"
+      },
+      "ledgerId": "OBS-08",
+      "threeWayConclusion": "局部原站事实及限制；不变更D1–D7，不判P3实现缺陷或完整MATCH"
+    },
+    {
+      "actualResult": "既有转正流程fb06f86c仍两条9/10提交/撤回审计；编辑点击未开可编辑表单。未点击同意或重提。",
+      "caseId": "M19-REG-RECALL-SEP11-READBACK",
+      "classification": "ENV_BLOCKED",
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M19_Workflow_Transactions.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260911_M19_Recalled_Regularization.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "runId": "R1-ORIGIN-20260910-100019"
+      },
+      "module": "M19",
+      "p3": {
+        "cases": [
+          "P3-M19-04"
+        ],
+        "evidenceMode": "静态来源映射；未运行复刻UI或本窗口产品测试",
+        "path": "tests/r1-p3-workflow.test.mjs",
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-03"
+      },
+      "page": "M19-REG-RECALL-SEP11-READBACK",
+      "pageState": "new_readback",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "recordIds": [
+        "fb06f86c-9f0b-4859-96d7-b70d5e804f67"
+      ],
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "M19-SPEC-01",
+        "M19-SPEC-02",
+        "F-SPEC-03"
+      ],
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "局部截图超时不阻塞；本条采用结构化DOM/字段值/ID",
+      "severity": "Observation",
+      "steps": [
+        "从正式菜单访问",
+        "动作后独立回读实际生效条件/状态",
+        "保留与对应原UUID的关联"
+      ],
+      "time": "2026-09-11T03:22:13.585Z",
+      "title": "M19-REG-RECALL-SEP11-READBACK",
+      "ledgerId": "ENV-04",
+      "threeWayConclusion": "局部原站事实及限制；不变更D1–D7，不判P3实现缺陷或完整MATCH"
+    },
+    {
+      "actualResult": "新增兼职申请绑定当前登录管理员，兼职人员控件禁用且非本轮合成人员；取消未提交。独立员工前置ROLE-01。",
+      "caseId": "M48-PARTTIME-ADMIN-BOUND",
+      "classification": "ROLE_BLOCKED",
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M48_Authorization_Consumers.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260911_M48_Role_Bound_PartTime.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "runId": "R1-ORIGIN-20260910-100019"
+      },
+      "module": "M48",
+      "p3": {
+        "cases": [
+          "P3-M48-01",
+          "P3-M48-02",
+          "P3-M48-03"
+        ],
+        "evidenceMode": "静态源码/既有测试映射；本窗口未运行复刻UI或测试",
+        "path": "tests/r1-p3-portal.test.mjs",
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-05"
+      },
+      "page": "M48-PARTTIME-ADMIN-BOUND",
+      "pageState": "new_readback",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "recordIds": [],
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "M48-SPEC-01",
+        "M48-SPEC-03"
+      ],
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "局部截图超时不阻塞；本条采用结构化DOM/字段值/ID",
+      "severity": "Observation",
+      "steps": [
+        "从正式菜单访问",
+        "动作后独立回读实际生效条件/状态",
+        "保留与对应原UUID的关联"
+      ],
+      "time": "2026-09-11T03:22:13.585Z",
+      "timePrecision": "date_see_artifact_timestamp",
+      "title": "M48-PARTTIME-ADMIN-BOUND",
+      "ledgerId": "ROLE-01",
+      "threeWayConclusion": "局部原站事实及限制；不变更D1–D7，不判P3实现缺陷或完整MATCH"
     }
   ],
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",

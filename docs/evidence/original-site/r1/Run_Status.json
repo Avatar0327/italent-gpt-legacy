@@ -19,7 +19,7 @@
   "createdRecords": 10,
   "createdRecordsDefinition": "3组织+2职位+2员工+2申请+1未来离职任职；不计自动关联重复",
   "currentCheckpoint": "same_run_partial_evidence_not_release_complete",
-  "currentContinuationLimitation": "剩余附件ENV-06、独立角色ROLE-01及尚未执行场景；持续自主执行中，不交接",
+  "currentContinuationLimitation": "ROLE-01、附件ENV-06及原转正编辑ENV-04；其他管理员场景继续。",
   "currentEmployeeOracle": {
     "people": 1,
     "formal": 0,
@@ -51,7 +51,7 @@
   },
   "historicalMajor": 1,
   "intentionalDifferences": 1,
-  "lastRecheckAt": "2026-09-11T02:59:33.876Z",
+  "lastRecheckAt": "2026-09-11T03:22:13.585Z",
   "matchRules": 3,
   "modules": [
     {
@@ -119,5 +119,5 @@
   "smokeNamedObjectsThresholdReached": true,
   "unknownBusinessActions": [],
   "workflowStatus": "concentrated_origin_validation_in_progress",
-  "modifiedRunObjectsThisContinuation": 1
+  "modifiedRunObjectsThisContinuation": 2
 }

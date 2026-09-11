@@ -1,0 +1,131 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "basisHead": "4a437e88b77d5d90f94be5655dc02947bcf79cff",
+  "environment": "https://srworkshopbj.italent.cn",
+  "role": "ORIGIN-ADMIN-01",
+  "jobId": "9e593b4e-938e-4312-aff9-460c3c4d80f0",
+  "organizationId": "a7b55bd7-0ef2-44a0-9d29-6259fe053da3",
+  "organizationPicker": {
+    "firstAttempt": "只高亮候选，已选0，查询未应用；没有读取全量人员正文",
+    "correctedSteps": [
+      "点击本轮ORG003候选行",
+      "点击中心向右箭头，已选组织1/100",
+      "确定后检查实际部门值包含ORG003及下级",
+      "确认空结果及加载遮罩不可见"
+    ],
+    "lesson": "高亮候选不等于加入已选范围；右移后再确定"
+  },
+  "activeDependencies": {
+    "at": "2026-09-11T03:10:44.058Z",
+    "view": "在职员工",
+    "filter": [
+      "",
+      "",
+      "",
+      "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003(包含下级)",
+      ""
+    ],
+    "emptyState": "这里什么都没有...",
+    "dataRows": 0
+  },
+  "partTimeDependencies": {
+    "at": "2026-09-11T03:12:02.188Z",
+    "view": "兼职员工",
+    "filter": [
+      "",
+      "",
+      "",
+      "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003(包含下级)",
+      ""
+    ],
+    "emptyState": "这里什么都没有...",
+    "dataRows": 0
+  },
+  "stopAction": {
+    "plannedOn": "2026-09-11",
+    "targetTransferPosition": null,
+    "reason": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_STOP_002：已独立查询本轮ORG003在职与兼职均0，仅停用本轮JOB002。",
+    "actualState": "停用",
+    "unknownSubmission": false,
+    "noPersonMigrationObserved": true
+  },
+  "history": {
+    "caseId": "M01-JOB002-STOP-001",
+    "observedAt": "2026-09-11T03:13:07.984Z",
+    "recordId": "9e593b4e-938e-4312-aff9-460c3c4d80f0",
+    "historyFields": [
+      {
+        "label": "创建时间：",
+        "value": "2026-09-11 11:12:34"
+      },
+      {
+        "label": "编码",
+        "value": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_002"
+      },
+      {
+        "label": "名称",
+        "value": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_002"
+      },
+      {
+        "label": "生效日期",
+        "value": "2026-09-11"
+      },
+      {
+        "label": "失效日期",
+        "value": "--"
+      },
+      {
+        "label": "状态",
+        "value": "停用"
+      },
+      {
+        "label": "创建时间",
+        "value": "2026-09-11 11:12:34"
+      },
+      {
+        "label": "创建时间：",
+        "value": "2026-09-10 20:05:08"
+      },
+      {
+        "label": "编码",
+        "value": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_002"
+      },
+      {
+        "label": "名称",
+        "value": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_002"
+      },
+      {
+        "label": "生效日期",
+        "value": "2026-09-10"
+      },
+      {
+        "label": "失效日期",
+        "value": "2026-09-10"
+      },
+      {
+        "label": "状态",
+        "value": "启用"
+      },
+      {
+        "label": "创建时间",
+        "value": "2026-09-10 20:05:08"
+      }
+    ],
+    "labels": [
+      "",
+      "当前生效",
+      "当前生效"
+    ]
+  },
+  "conclusions": [
+    "现行停用版本9/11生效，创建时间2026-09-11 11:12:34（页面北京时间秒精度）",
+    "旧启用版本9/10至9/10保留，创建时间9/10 20:05:08",
+    "创建时间是停用版本创建审计，不替代其他业务实际执行时间",
+    "JOB002现在停用，后续再入职优先使用仍启用JOB001，不重复创建JOB002",
+    "只有本轮岗位状态变更；无新增主对象，原10对象全部保留"
+  ],
+  "moduleComplete": false,
+  "e2eComplete": false,
+  "browserStillInUse": true,
+  "unknownBusinessActions": []
+}

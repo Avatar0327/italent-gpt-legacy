@@ -1,0 +1,24 @@
+{
+  "at": "2026-09-11T03:22:13.585Z",
+  "page": "员工自助/自助服务/人事申请/新增兼职申请",
+  "role": "ORIGIN-ADMIN-01",
+  "formLabels": [
+    "兼职人员",
+    "兼职类型",
+    "开始日期",
+    "结束日期",
+    "兼职部门",
+    "直线经理",
+    "兼职职务",
+    "兼职职级"
+  ],
+  "targetControlClass": "form-item__control-disabled",
+  "targetReadOnly": true,
+  "targetIsRunSynthetic": false,
+  "selectionSearchCount": 0,
+  "submitted": false,
+  "cancelled": true,
+  "classification": "ROLE_BLOCKED",
+  "ledgerId": "ROLE-01",
+  "conclusion": "兼职人员绑定当前登录身份且控件禁用，不能将真实管理员改成本轮EMP002；独立合成员工身份前置未具备，未提交。"
+}

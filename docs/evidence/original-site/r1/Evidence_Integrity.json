@@ -1,6 +1,6 @@
 {
   "algorithm": "sha256",
-  "fileCount": 91,
+  "fileCount": 94,
   "files": [
     {
       "path": "ALERT-MAJOR-001.md",
@@ -19,13 +19,13 @@
     },
     {
       "path": "Current_Executable_Test_Disposition.json",
-      "bytes": 4599,
-      "sha256": "aa782d6eaa5d27c8fb4f8a3affa44df23bc1984a89b0b7b0a2c0f854d4f954d2"
+      "bytes": 4629,
+      "sha256": "0eb518985873f7359382420061bd6e9ce7b098fc830f4b54a120017c8b0a481e"
     },
     {
       "path": "Future_Date_Recovery.json",
-      "bytes": 7036,
-      "sha256": "5d956e56d13332ac71ee5a94ba2e8851e05d826b86823f25649090c804e3a8a6"
+      "bytes": 7084,
+      "sha256": "409006a0d09712143a13e851cbfeb76f0ce1e3063e9e92435d02ded03ae78762"
     },
     {
       "path": "M01_Checkpoint.md",
@@ -49,8 +49,8 @@
     },
     {
       "path": "Original_Site_Data_Manifest.json",
-      "bytes": 22090,
-      "sha256": "cc7710a3a6ace40b1ffdf6d8fbb5e624ecc498dd00f0fec540354d1ec2b3f6de"
+      "bytes": 22774,
+      "sha256": "b90525d17ed6a20aac09d2b8f7ad7df0dad883d2d3ac7713c19325fa3fd524db"
     },
     {
       "path": "Original_Site_Test_Plan.md",
@@ -91,6 +91,21 @@
       "path": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json",
       "bytes": 7152,
       "sha256": "5a2229e5417f8854270075ebd2a910abf5dccb44fb0dfed3b0f31dceee5991f2"
+    },
+    {
+      "path": "R1-ORIGIN-20260910-100019/20260911_Job002_Stop_Dependencies.json",
+      "bytes": 3726,
+      "sha256": "3b80c8ee9977d735bda078143de729e691ac4b765d5fcb7b3076e671bf0ecdd5"
+    },
+    {
+      "path": "R1-ORIGIN-20260910-100019/20260911_M19_Recalled_Regularization.json",
+      "bytes": 518,
+      "sha256": "9e9f0e3804ffe152ac55704186609c576b675b143447e0ae504bbdd630cc131f"
+    },
+    {
+      "path": "R1-ORIGIN-20260910-100019/20260911_M48_Role_Bound_PartTime.json",
+      "bytes": 741,
+      "sha256": "0764fdcbcfb161badf1f5ab8c538cc4c4857ed5ef519f1fc647d295a3f925e84"
     },
     {
       "path": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json",
@@ -409,18 +424,18 @@
     },
     {
       "path": "R1_Original_Behavior_Matrix.json",
-      "bytes": 178686,
-      "sha256": "7a9165ad7774f2e42ea143e1f7c18f7f478394109053c0f30ceaacb9dd5b565e"
+      "bytes": 185306,
+      "sha256": "d9b594c010c0a894a66296eeaaeebc3b4ecfd27d24257ec68e51dc0c83f9edcf"
     },
     {
       "path": "R1_Original_Behavior_Matrix.md",
-      "bytes": 15485,
-      "sha256": "870d10782827d25974ed79c9f3e2ecebe5993c70f609a93938a2b0639dffddaf"
+      "bytes": 16100,
+      "sha256": "6106ae61518de708999e04762fd7f08172bed8f2b6934aa687d0d34c48112ce3"
     },
     {
       "path": "R1_P3_Evidence_Feedback.md",
-      "bytes": 18951,
-      "sha256": "9a7dc62fb4a72b4cff1a05de3ade5caa0eda8db8fe831fd1a2ecc2d606077ffc"
+      "bytes": 20347,
+      "sha256": "71ede90ec7eab59301d14132162b59c378d67a608d2af4f4c2c0fe09b9206134"
     },
     {
       "path": "R1_P4_Comparison_Cases.md",
@@ -429,13 +444,13 @@
     },
     {
       "path": "R1_Parity_Difference_Ledger.json",
-      "bytes": 22471,
-      "sha256": "2712e0289e8d23f5772a6a4f472372625d1d0af7d0ba0596eeb8594ebc9ef743"
+      "bytes": 23651,
+      "sha256": "9c46c1bfa1b3e4dbe088e0fa885333d0b2720fca80baa857c71b8763997969a2"
     },
     {
       "path": "R1_Parity_Difference_Ledger.md",
-      "bytes": 4513,
-      "sha256": "4a2f4035e6dd365c6d0689e2bba9b10984e0975bc3daedd8127bc4307134992d"
+      "bytes": 4750,
+      "sha256": "6754aee0136cc22f8beb7ef9d733b6122323dd3e2c4df45a24c0f50e86e1461c"
     },
     {
       "path": "Repository_Source_Manifest.json",
@@ -444,13 +459,13 @@
     },
     {
       "path": "Resume.md",
-      "bytes": 16917,
-      "sha256": "72449342d2d0840cf75555c8549deed98e48029905a6c4750938b23a3e900c1a"
+      "bytes": 18313,
+      "sha256": "f2c80b4ffa15fee1e7b09cc8de10885f35778b23da753a796446015133ee19de"
     },
     {
       "path": "Run_Status.json",
-      "bytes": 3986,
-      "sha256": "57256a66cce571f853dca74cb1dbf60465580ede4de9680521acc862eed44854"
+      "bytes": 3968,
+      "sha256": "4f9ff5f79c2c50084d6e6334e9ecc45a23a2ac33ea28c38ec907757c3a72b05a"
     },
     {
       "path": "run.json",

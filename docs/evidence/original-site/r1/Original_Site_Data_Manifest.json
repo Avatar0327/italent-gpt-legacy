@@ -144,13 +144,17 @@
     "concentratedJob": "saved_description_after_fresh_read_no_unknown_write"
   },
   "lastContinuation": {
-    "at": "2026-09-11T02:59:33.876Z",
+    "at": "2026-09-11T03:22:13.585Z",
     "newObjects": 0,
-    "modifiedRunObjects": 1,
+    "modifiedRunObjects": 2,
     "retained": 10,
     "deleted": 0,
     "inProgress": true,
-    "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json"
+    "evidence": [
+      "R1-ORIGIN-20260910-100019/20260911_Job002_Stop_Dependencies.json",
+      "R1-ORIGIN-20260910-100019/20260911_M19_Recalled_Regularization.json",
+      "R1-ORIGIN-20260910-100019/20260911_M48_Role_Bound_PartTime.json"
+    ]
   },
   "manualSmoke": {
     "bulkImportedRows": 0,
@@ -369,7 +373,8 @@
       "createdAtBasis": "服务端审计尚待读取",
       "deletionGate": "UUID+完整名称核定，无非本轮依赖时才清理",
       "evidence": [
-        "R1-ORIGIN-20260910-100019/M01/M01-JOB-002.json"
+        "R1-ORIGIN-20260910-100019/M01/M01-JOB-002.json",
+        "R1-ORIGIN-20260910-100019/20260911_Job002_Stop_Dependencies.json"
       ],
       "module": "M01",
       "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_002",
@@ -387,9 +392,21 @@
         "executionPerson": null,
         "result": "not_reached_fresh_query_gate_failed"
       },
-      "status": "enabled_query_verified",
+      "status": "disabled_effective_2026-09-11",
       "statusScope": "historical_last_observed_not_reasserted_as_current",
-      "verifiedAt": "2026-09-10T12:05:36.062Z"
+      "verifiedAt": "2026-09-10T12:05:36.062Z",
+      "latestStop": {
+        "at": "2026-09-11T03:22:13.585Z",
+        "effectiveOn": "2026-09-11",
+        "versionCreatedAtLocal": "2026-09-11 11:12:34",
+        "priorActiveThrough": "2026-09-10",
+        "dependencies": {
+          "active": 0,
+          "partTime": 0,
+          "scope": "ORG003包含下级，已实际应用"
+        },
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Job002_Stop_Dependencies.json"
+      }
     },
     {
       "allowLaterDelete": true,

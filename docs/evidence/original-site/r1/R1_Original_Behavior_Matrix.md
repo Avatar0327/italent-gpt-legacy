@@ -1,6 +1,6 @@
 # R1原站行为矩阵
 
-当前84条局部用例记录；完整验证0/4，E2E0/5。observed含拒绝和失败事实，不等于通过。字段与引用详见同名JSON。
+当前87条局部用例；完整验证0/4，E2E0/5。observed含拒绝和受限事实，非完整通过。详细字段与引用以同名JSON为准。
 
 | 用例 | 模块 | 执行 | 实际结果 | 分类 |
 |---|---|---|---|---|
@@ -88,3 +88,6 @@
 | M01-JOB001-ATTACH-001 | M01 | partially_observed | [{"result":"node_repl kernel unhandled rejection: Timed out after 3000ms waiting for file chooser.; kernel reset.","trigger":"input[type=file]"},{"result":"Error: Timed out after 3000ms waiting for file chooser.","trigger":"可见上传按钮；Promise错误已捕获"}] | ENV_BLOCKED |
 | M01-JOB001-EDIT-DESC-001 | M01 | observed | 职责已保存；未上传附件，未变更编码/姓名/归属 | 未处置观察 |
 | M01-JOB001-HISTORY-AFTER-EDIT | M01 | observed | 页面仅一个当前生效版本，创建时间9/10 20:01:25而职责已为本轮编辑后值；不是9/11编辑审计时间。未发现新的版本或修改人/修改时间字段。 | 未处置观察 |
+| M01-JOB002-STOP-001 | M01 | observed | ORG003在职/兼职均经实际组织过滤为空；JOB002停用成功。新版本9/11停用，创建时间11:12:34；旧启用版本止9/10保留。 | 未处置观察 |
+| M19-REG-RECALL-SEP11-READBACK | M19 | observed | 既有转正流程fb06f86c仍两条9/10提交/撤回审计；编辑点击未开可编辑表单。未点击同意或重提。 | ENV_BLOCKED |
+| M48-PARTTIME-ADMIN-BOUND | M48 | observed | 新增兼职申请绑定当前登录管理员，兼职人员控件禁用且非本轮合成人员；取消未提交。独立员工前置ROLE-01。 | ROLE_BLOCKED |
