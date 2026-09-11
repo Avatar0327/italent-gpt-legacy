@@ -1,21 +1,21 @@
 {
-  "countRule": "唯一台账ID计数；Major累计2，其中001已决有意差异、002待决，activeMajor1；MATCH6仅窄项静态对照。ENV/ROLE仅计未关闭组。",
+  "countRule": "唯一台账ID；Major累计2均已决有意差异，activeMajor0；MATCH6仅窄项静态对照；OBS-09来源目标不等价关闭待决。ENV/ROLE仅计未关闭组。",
   "counts": {
     "Blocker": 0,
     "DESIGN_GAP": 0,
     "ENV_BLOCKED": 5,
     "IMPLEMENTATION_DEFECT": 0,
-    "INTENTIONAL_DIFFERENCE": 1,
+    "INTENTIONAL_DIFFERENCE": 2,
     "MATCH": 6,
     "Major": 2,
     "Minor": 0,
-    "NEED_OWNER_DECISION": 2,
+    "NEED_OWNER_DECISION": 0,
     "Observation": 16,
     "REQUIREMENT_GAP": 0,
     "ROLE_BLOCKED": 1,
-    "activeMajor": 1,
+    "activeMajor": 0,
     "historicalMajor": 2,
-    "observationsWithoutClassification": 8,
+    "observationsWithoutClassification": 9,
     "resolved_ENV_BLOCKED": 1
   },
   "entries": [
@@ -645,8 +645,8 @@
         "M19"
       ],
       "severity": "Major",
-      "classification": "NEED_OWNER_DECISION",
-      "status": "open_owner_decision_required",
+      "classification": "INTENTIONAL_DIFFERENCE",
+      "status": "resolved_by_owner",
       "actual": "管理员新增兼职保存一次即任职中/生效；无独立HR审批或执行动作，申请历史在审批中/生效筛选下为空",
       "approvedTarget": "范围HR申请，另一覆盖相关组织HR独立审核，批准与执行分离；D7调动固定两方不套兼职",
       "requirements": [
@@ -676,12 +676,16 @@
       "evidence": [
         "ALERT-MAJOR-002.md",
         "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_PreSave.json",
-        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Readback.json"
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Readback.json",
+        "Owner_Decisions_20260911_002_003.json"
       ],
       "productDefectConfirmed": false,
-      "ownerDecision": null,
+      "ownerDecision": "Owner_Decisions_20260911_002_003.json",
       "boundary": "DIFF-MAJOR-001只批准直接调动有意差异，不自动涵盖兼职；不改规则，不阻其他测试",
-      "raisedAt": "2026-09-11T04:29:47.632642+00:00"
+      "raisedAt": "2026-09-11T04:29:47.632642+00:00",
+      "ownerDecisionRequired": false,
+      "ownerDecisionId": "OWNER-R1-20260911-002",
+      "conclusion": "保留原站管理员新增兼职保存即生效事实；目标继续另一覆盖范围HR独立审核、申请人不得自审、批准后授权HR执行；D1–D7不变；不认定P3实现缺陷。"
     },
     {
       "id": "OBS-09",
@@ -692,13 +696,14 @@
       ],
       "title": "同组织空职位兼职重叠与目标映射",
       "severity": "Observation",
-      "classification": "NEED_OWNER_DECISION",
-      "status": "open_owner_decision_required",
+      "classification": null,
+      "status": "closed_source_target_not_equivalent",
       "actual": "新兼职1e462457与原0eb54fe9同人/同ORG003/职位空/同9月11日起止，独立查询两条均任职中/生效。P2要求同类型同目标无重叠；P3按positionId保护，原站空职位目标无直接等价映射，需目标口径决策，未判实现缺陷。",
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_PreSave.json",
         "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_Rows.json",
-        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_Detail.json"
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_Detail.json",
+        "Owner_Decisions_20260911_002_003.json"
       ],
       "requirements": [
         "F-SPEC-05",
@@ -721,8 +726,11 @@
         "runtimeVerifiedByThisWindow": false
       },
       "productDefectConfirmed": false,
-      "ownerDecisionRequired": true,
-      "boundary": "001只调动；002仅审批路径，不把空职位同组织直接等价于P3同positionId，也不自行放宽重叠规则"
+      "ownerDecisionRequired": false,
+      "boundary": "001只调动；002仅审批路径，不把空职位同组织直接等价于P3同positionId，也不自行放宽重叠规则",
+      "ownerDecision": "Owner_Decisions_20260911_002_003.json",
+      "ownerDecisionId": "OWNER-R1-20260911-003",
+      "conclusion": "来源空职位、同组织、同日重复兼职不直接等价同一目标positionId；继续按稳定任职目标及已批准重叠规则校验。没有明确映射不判目标缺陷。"
     }
   ],
   "priorityRecovery": {

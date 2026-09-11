@@ -5085,14 +5085,15 @@
     {
       "actualResult": "EMP005兼职UUID0eb54fe9，ORG003任职中/生效，原主职ORG002保留，非负责人/不占人头/经理及薪资空；申请历史筛选下空集。",
       "caseId": "M01-PARTTIME-005",
-      "classification": "NEED_OWNER_DECISION",
+      "classification": "INTENTIONAL_DIFFERENCE",
       "design": {
         "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
         "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
       },
       "environment": "https://srworkshopbj.italent.cn",
       "evidence": [
-        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Readback.json"
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Readback.json",
+        "Owner_Decisions_20260911_002_003.json"
       ],
       "execution": "observed",
       "inputs": {
@@ -5134,11 +5135,13 @@
         "独立回读条件与结果",
         "结构化取证"
       ],
-      "threeWayConclusion": "原站直接生效；P2要求独立HR审核，P3静态实现保持该规则。原站与批准方案冲突，需所有者决定，非实现缺陷。",
+      "threeWayConclusion": "保留原站管理员新增兼职保存即生效事实；目标继续另一覆盖范围HR独立审核、申请人不得自审、批准后授权HR执行；D1–D7不变；不认定P3实现缺陷。",
       "time": "2026-09-11T04:27:14.247862+00:00",
       "timePrecision": "browser_observed",
       "title": "兼职生效与主职保留",
-      "ledgerId": "DIFF-MAJOR-002"
+      "ledgerId": "DIFF-MAJOR-002",
+      "ownerDecisionId": "OWNER-R1-20260911-002",
+      "ownerDecision": "Owner_Decisions_20260911_002_003.json"
     },
     {
       "actualResult": "固定五姓名：9/11试用1正式3，2分组4人；9/10三分组各1，实际2人，不能跨组直接相加为distinct人员。",
@@ -5897,7 +5900,7 @@
     {
       "actualResult": "新兼职1e462457与原0eb54fe9同人/同ORG003/职位空/同9月11日起止，独立查询两条均任职中/生效。P2要求同类型同目标无重叠；P3按positionId保护，原站空职位目标无直接等价映射，需目标口径决策，未判实现缺陷。",
       "caseId": "M01-PARTTIME-OVERLAP-005",
-      "classification": "NEED_OWNER_DECISION",
+      "classification": null,
       "design": {
         "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
         "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
@@ -5906,7 +5909,8 @@
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_PreSave.json",
         "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_Rows.json",
-        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_Detail.json"
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_Detail.json",
+        "Owner_Decisions_20260911_002_003.json"
       ],
       "execution": "observed",
       "inputs": {
@@ -5949,11 +5953,13 @@
         "独立回读条件与结果",
         "结构化取证"
       ],
-      "threeWayConclusion": "局部原站边界；批准规则不变，P3仅静态映射，尚未判三方完整一致。",
+      "threeWayConclusion": "来源空职位、同组织、同日重复兼职不直接等价同一目标positionId；继续按稳定任职目标及已批准重叠规则校验。没有明确映射不判目标缺陷。",
       "time": "2026-09-11T05:49:53.633156+00:00",
       "timePrecision": "browser_observed",
       "title": "同人同组织空职位兼职同日重叠",
-      "ledgerId": "OBS-09"
+      "ledgerId": "OBS-09",
+      "ownerDecisionId": "OWNER-R1-20260911-003",
+      "ownerDecision": "Owner_Decisions_20260911_002_003.json"
     },
     {
       "actualResult": "固定六姓名返回10任职/6人，两条相同维度兼职分别成行；当前有效8行含1离职结束，当前在职主职5+兼职2。无日期筛选，不称时点。",
@@ -6477,6 +6483,62 @@
       ],
       "time": "2026-09-11T06:51:20.809719+00:00",
       "title": "正式新建下级及本轮无引用对象删除"
+    },
+    {
+      "actualResult": "正式去设置公司链接到法人目录；本RUN新法人唯一查询1条，代码名称简称相同，9/11启用、范围ORG002含下级；合同实际引用待测。",
+      "blockerIds": [],
+      "caseId": "M01-CONTRACT-LEGAL-FIXTURE-001",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/Contract_Legal_Fixture_Checkpoint.json"
+      ],
+      "execution": "observed_narrow_scope",
+      "inputs": {
+        "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_CONTRACT_LEGAL_001",
+        "scope": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002(包含下级)"
+      },
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-07"
+        ],
+        "evidenceMode": "按P2/P3任务静态映射，字段模板不可直接等价，未运行P3",
+        "path": "lib/hris/r1-m01.ts",
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "task": "P3-R1-02"
+      },
+      "page": "合同新建/公司/去设置公司/新建法人",
+      "pageState": "saved_and_unique_query_confirmed",
+      "preconditions": "仅本轮合成数据；正式页面人工操作可执行；下载/截图仅局部限制；独立身份须为现有授权测试角色",
+      "recordIds": [
+        "da7b6c4c-90ee-437a-aae0-5740f916210f",
+        "db7df096-624b-4d1e-ab4e-0552a56f052c"
+      ],
+      "repeatability": "字段级可复核；控件延迟/超时已单独记录",
+      "requirements": [
+        "F-SPEC-06",
+        "BP-F-REQ-05"
+      ],
+      "role": "ORIGIN-ADMIN-01",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "severity": "Observation",
+      "steps": [
+        "精确名称查询无重名",
+        "新建仅RUN法人及ORG002范围",
+        "单次保存",
+        "重新查询完整名称一行",
+        "打开该行提取UUID"
+      ],
+      "time": "2026-09-11T07:25:50.636Z",
+      "title": "正式合同公司配置入口及隔离法人夹具",
+      "threeWayConclusion": "来源公司入口已确认映射法人目录；实际引用/停用保护尚未通过，未判P3缺陷或完整MATCH"
     }
   ],
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",

@@ -1,3 +1,5 @@
+最新处置：已由 OWNER-R1-20260911-002 关闭为 INTENTIONAL_DIFFERENCE，非P3实现缺陷；原告警作为历史记录保留。见 Owner_Decisions_20260911_002_003.json。
+
 # DIFF-MAJOR-002：原站管理员兼职直接生效与批准的独立HR审核不同
 
 分类：NEED_OWNER_DECISION。严重级别：Major。不是已确认P3实现缺陷。

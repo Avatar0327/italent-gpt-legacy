@@ -2,12 +2,12 @@
   "basisHead": "76a16265fdd65f6ba7608260dde1e07acfb85200",
   "continuationInstruction": "R1集中连续执行，只有完整退出条件或全部自主事项完成且仅剩真实外部条件才释放浏览器；自动任务保持暂停。",
   "currentAttempt": {
-    "basisHead": "ee2287e15e540b6c00e7b09bb6205483e5845ae0",
-    "checkedAt": "2026-09-11T06:51:20.809719+00:00",
+    "basisHead": "8e3be496177bae50b6545b9787c1125741f1aafc",
+    "checkedAt": "2026-09-11T07:27:20.434900+00:00",
     "dateConditionSatisfied": true,
     "evidence": "Completion_Assessment.json",
     "oldDOMReusableForCurrentConclusion": false,
-    "outcome": "B_incomplete_prerequisite_checkpoint",
+    "outcome": "continuing_under_new_limited_authorization",
     "unknownBusinessActions": []
   },
   "groups": [
@@ -70,16 +70,17 @@
   ],
   "quantity": {
     "bulkRows": 0,
-    "businessObjects": 18,
+    "businessObjects": 19,
     "employees": 6,
     "expanded30to50": false,
-    "newThisContinuation": 8,
+    "newThisContinuation": 1,
     "smokeAllCasesPassed": false,
     "threshold5to10Quantity": true,
-    "retainedObjects": 17,
+    "retainedObjects": 18,
     "deletedObjects": 1
   },
   "runId": "R1-ORIGIN-20260910-100019",
   "scope": "当前受前置限制的逐项恢复清单，不是四模块完成声明",
-  "remainingPrerequisites": "Completion_Assessment.json"
+  "remainingPrerequisites": "Completion_Assessment.json",
+  "latestAuthorization": "Owner_Decisions_20260911_002_003.json"
 }

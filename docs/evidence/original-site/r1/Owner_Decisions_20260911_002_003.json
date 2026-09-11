@@ -1,0 +1,46 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "recordedAt": "2026-09-11T07:12:10.915165+00:00",
+  "source": "本会话最新所有者明确决定与有限授权",
+  "basisHead": "8e3be496177bae50b6545b9787c1125741f1aafc",
+  "decisions": [
+    {
+      "id": "OWNER-R1-20260911-002",
+      "ledgerId": "DIFF-MAJOR-002",
+      "classification": "INTENTIONAL_DIFFERENCE",
+      "decision": "保留原站管理员新增兼职保存即生效事实；目标继续另一覆盖范围HR独立审核、申请人不得自审、批准后授权HR执行；D1–D7不变；不认定P3实现缺陷。"
+    },
+    {
+      "id": "OWNER-R1-20260911-003",
+      "ledgerId": "OBS-09",
+      "classification": null,
+      "disposition": "closed_source_target_not_equivalent",
+      "decision": "来源空职位、同组织、同日重复兼职不直接等价同一目标positionId；继续按稳定任职目标及已批准重叠规则校验。没有明确映射不判目标缺陷。"
+    }
+  ],
+  "limitedAuthorization": {
+    "syntheticIdentitiesMax": 4,
+    "roles": [
+      "员工",
+      "调出HR",
+      "调入HR",
+      "授权执行HR"
+    ],
+    "isolatedNotificationReceiversMax": 1,
+    "isolatedFixtures": [
+      "合同公司/法人映射一组",
+      "学校候选一组",
+      "子集字段模板一组"
+    ],
+    "saveGate": "明确无真实邮箱/手机/用户邀请或消息；不改真实账号、共享权限、全局认证及非RUN数据",
+    "independentLoginRequired": true
+  },
+  "completionUnchanged": {
+    "fullModules": 0,
+    "bulkModules": 0,
+    "requirementsParityModules": 0,
+    "p3ParityModules": 0,
+    "e2e": 0
+  },
+  "notExitApproval": true
+}

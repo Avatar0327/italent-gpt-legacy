@@ -1,8 +1,8 @@
 {
   "runId": "R1-ORIGIN-20260910-100019",
-  "at": "2026-09-11T06:51:20.809719+00:00",
-  "basisHead": "ee2287e15e540b6c00e7b09bb6205483e5845ae0",
-  "conclusion": "B_not_complete_external_prerequisites_and_expansion_gate_unmet",
+  "at": "2026-09-11T07:27:20.434900+00:00",
+  "basisHead": "8e3be496177bae50b6545b9787c1125741f1aafc",
+  "conclusion": "B_not_complete_continuing_authorized_tests",
   "fullModules": 0,
   "bulkModules": 0,
   "p3ParityModules": 0,
@@ -36,7 +36,7 @@
       ],
       "blocker": "ROLE-01：本窗口只有管理员，未取得现有授权独立员工/两方/HR测试登录方式",
       "evidence": "R1-ORIGIN-20260910-100019/Role_Availability_Recheck.json",
-      "minimumAction": "提供已授权、仅覆盖本RUN的独立测试身份和安全登录方式；不要新增真实访问者或扩大真实账号权限",
+      "minimumAction": "先复用已有授权身份；无则最多4合成身份和1隔离接收端，明确无真实外发且独立登录才保存；正在核查正式入口",
       "alternativeTried": "管理员可读申请、原单、兼职、资料入口已做；自助默认真实管理员不能代替员工"
     },
     {
@@ -127,9 +127,9 @@
         "M01-PENDING-FIELDS",
         "M01-PENDING-POSITION"
       ],
-      "blocker": "合同公司字段只有既有配置值和设置入口，无本RUN法人可引用证明；教育虚构学校候选空，子集模板/候选及有效关系不能靠输入文本代替",
-      "evidence": "R1-ORIGIN-20260910-100019/M01/Contract_Education_Validation.json",
-      "minimumAction": "提供本RUN可用的已配置合同公司/法人映射、合成子集候选和字段模板；或明确官方等价入口，不修改共享设置",
+      "blocker": "本RUN合同法人夹具已保存，实际合同引用、学校及子集模板继续；旧缺授权限制已被新授权覆盖",
+      "evidence": "R1-ORIGIN-20260910-100019/M01/Contract_Legal_Fixture_Checkpoint.json",
+      "minimumAction": "在最新有限授权内继续正式入口创建/验证，不修改既有默认和共享权限",
       "alternativeTried": "法人创建停用、合同选本轮人/清默认公司、教育选本轮人/必填拒绝、正式新建下级和无引用删除均完成"
     },
     {
@@ -144,7 +144,7 @@
       ],
       "blocker": "ENV-04：同一已撤回转正单编辑未形成可操作表单，未重提；不另建业务冒充原单恢复",
       "evidence": "R1-ORIGIN-20260910-100019/20260911_M19_Recalled_Regularization.json",
-      "minimumAction": "恢复该原业务/流程的正式申请人编辑入口；再修改日期/重提并核新旧关联",
+      "minimumAction": "先核旧原单正式入口；必要时允许新RUN链，但不冒充旧单恢复",
       "alternativeTried": "原业务及流程ID、原提交/撤回审计已独立回读"
     },
     {
@@ -159,26 +159,11 @@
       "evidence": "R1-ORIGIN-20260910-100019/M32/M32_Subscription_Validation.json",
       "minimumAction": "提供已授权隔离订阅接收端和范围，不发真实邮件/消息；否则仅保留草稿验证",
       "alternativeTried": "名称50截断、空渠道和接收人拒绝、取消后暂无订阅已证"
-    },
-    {
-      "id": "OWNER-DECISIONS",
-      "modules": [
-        "M01",
-        "M19",
-        "M32"
-      ],
-      "cases": [
-        "DIFF-MAJOR-002",
-        "OBS-09"
-      ],
-      "blocker": "两项原站行为与目标映射待所有者决定，非P3实现缺陷；不阻其他独立测试",
-      "minimumAction": "分别决定兼职管理员即时生效的差异处置、空职位同组织是否对应目标任职目标；未决仍保持已批方案",
-      "alternativeTried": "P3固定4c4141ac静态对照仍独立审核/批准后执行和同positionId重叠拒绝；001不自动扩展"
     }
   ],
   "browser": {
-    "lastActionAt": "2026-09-11T06:48:17.813Z",
-    "released": true,
+    "lastActionAt": "2026-09-11T07:25:50.636Z",
+    "released": false,
     "unknownBusinessActions": [],
     "openBusinessDrafts": [],
     "ownedTabs": [
@@ -186,7 +171,9 @@
       "28",
       "29",
       "30",
-      "31"
+      "31",
+      "32",
+      "33"
     ],
     "otherTabsUntouched": true,
     "backgroundActions": false,
@@ -198,12 +185,12 @@
     }
   },
   "counts": {
-    "created": 18,
-    "retained": 17,
+    "created": 19,
+    "retained": 18,
     "deleted": 1,
     "employees": 6,
     "narrowMatch": 6,
-    "activeMajor": 1,
+    "activeMajor": 0,
     "totalMajor": 2,
     "observations": 16,
     "roleBlockerGroups": 1,
@@ -214,5 +201,7 @@
     "evidenceHead": "本文件所在原子提交，由最终git远端ref核实",
     "receiptForThisContinuation": false
   },
-  "limitations": "字段组/模块/端到端仍部分；未执行内容不是已验证，不把扩量未完成变成批量通过。P1继续受限关闭，不能整体重开或整体补齐。"
+  "limitations": "字段组/模块/端到端仍部分；未执行内容不是已验证，不把扩量未完成变成批量通过。P1继续受限关闭，不能整体重开或整体补齐。",
+  "ownerDecisions": "Owner_Decisions_20260911_002_003.json",
+  "limitedAuthorizationSupersedesOldRestrictions": true
 }

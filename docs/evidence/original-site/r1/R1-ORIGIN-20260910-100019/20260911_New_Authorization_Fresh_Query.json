@@ -1,0 +1,18 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "at": "2026-09-11T07:12:56.581Z",
+  "tab": "32",
+  "origin": "https://srworkshopbj.italent.cn",
+  "role": "ORIGIN-ADMIN-01",
+  "newQuery": true,
+  "title": "组织",
+  "filter": {
+    "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001",
+    "status": "启用",
+    "date": "2026-09-11"
+  },
+  "recordId": "d1d541ab-92f9-4fce-80c6-aa5687433175",
+  "environmentBasis": "所有者测试环境确认、同测试域和匹配原RUN组织UUID",
+  "writes": 0,
+  "otherWindowTabsTouched": false
+}

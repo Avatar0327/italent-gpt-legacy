@@ -1,9 +1,9 @@
 {
   "activeEnvBlockers": 5,
-  "activeMajor": 1,
+  "activeMajor": 0,
   "activeRoleBlockers": 1,
-  "browserHandoffTo": "available_for_owner_assigned_window",
-  "browserUseEndedAt": "2026-09-11T06:48:17.813Z",
+  "browserHandoffTo": null,
+  "browserUseEndedAt": null,
   "bulkImportedRows": 0,
   "businessDateConditionSatisfied": true,
   "completedModuleCounts": {
@@ -15,10 +15,10 @@
     "readyForP3ExitParityReview": 0
   },
   "concurrency": "R1_sole_operator_own_tabs_27_30_forms_isolated_same_admin_sequential_stale_drafts",
-  "continuationInProgress": false,
-  "createdRecords": 18,
-  "createdRecordsDefinition": "18主动创建对象含已删临时岗位：3组织+3岗位+6人员+1法人+2申请+离职任职1+兼职任职2。保留17；自动派生历史行不重复计数。",
-  "currentCheckpoint": "same_run_partial_evidence_not_release_complete",
+  "continuationInProgress": true,
+  "createdRecords": 19,
+  "createdRecordsDefinition": "累计19主动创建，删除1，保留18；新增专属合同法人夹具1，原17保留对象不重建。",
+  "currentCheckpoint": "owner_decisions_and_contract_fixture_continuing",
   "currentContinuationLimitation": "详见Completion_Assessment.json；角色/审计/邀请/日期/正式文件/模板与稳定扩量前置。不得称完整通过。",
   "currentEmployeeOracle": {
     "people": 5,
@@ -130,7 +130,7 @@
     "currentEndedPrimary": 1,
     "evidence": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_All_Assignments.json"
   },
-  "retainedRecords": 17,
+  "retainedRecords": 18,
   "deletedRecords": 1,
   "continuationComparisonBasis": "7920b64ea30f1e4b232fb86bba2742852d0892e8"
 }
