@@ -8,7 +8,8 @@
     "evidence": "R1-ORIGIN-20260910-100019/M01/Rehire_Automatic_Notification_Gate.json",
     "oldDOMReusableForCurrentConclusion": false,
     "outcome": "B_notification_isolation_and_external_prerequisites",
-    "unknownBusinessActions": []
+    "unknownBusinessActions": [],
+    "latestOfflineTemplateReceipt": "R1-ORIGIN-20260910-100019/M01/IMPORT_TEMPLATE_20260911/Template_Receipt_Inspection.json"
   },
   "groups": [
     {
@@ -77,7 +78,8 @@
     "smokeAllCasesPassed": false,
     "threshold5to10Quantity": true,
     "retainedObjects": 19,
-    "deletedObjects": 1
+    "deletedObjects": 1,
+    "officialTemplateObtained": true
   },
   "runId": "R1-ORIGIN-20260910-100019",
   "scope": "当前受前置限制的逐项恢复清单，不是四模块完成声明",

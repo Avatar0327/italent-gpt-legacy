@@ -1,6 +1,6 @@
 {
   "runId": "R1-ORIGIN-20260910-100019",
-  "at": "2026-09-11T08:17:49.060830+00:00",
+  "at": "2026-09-11T14:10:17.411388+00:00",
   "basisHead": "8e3be496177bae50b6545b9787c1125741f1aafc",
   "conclusion": "B_not_complete_paused_for_notification_isolation_and_external_prerequisites",
   "fullModules": 0,
@@ -97,8 +97,8 @@
         "M01-PENDING-HISTORY-ATTACH",
         "M32-PENDING-EXPORT"
       ],
-      "blocker": "合同上传/替换局部恢复；合同直接下载、员工正式模板、固定六人报表下载各一次60000ms无文件回执",
-      "minimumAction": "平台恢复正式下载并交付源站原始模板/导出文件；本轮受支持恢复已用尽，不绕过不猜模板。",
+      "blocker": "正式员工原模板已由所有者提供；浏览器下载/报表导出/附件下载仍未恢复，实际导入未执行",
+      "minimumAction": "员工模板不再需要重交；取得浏览器使用权后核正式导入页面邀请/通知控制，满足隔离才正式冒烟。报表/附件下载仍需平台恢复。",
       "alternativeTried": "管理员手工新增已完成6人员；文件与截图阻塞未扩大为全轮停止",
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/Employee_Import_Template_Recovery.json",
@@ -115,8 +115,8 @@
         "M01-PENDING-EMP-IMPORT",
         "M32-PENDING-PAGING"
       ],
-      "blocker": "基础冒烟仍未完整闭环；逐条页面回执、日历读取和正式文件能力未稳定，扩量闸门未满足",
-      "minimumAction": "先取得正式原模板并完成导入5–10回执、UUID、人数/报表核数，再按级扩量；手工已建6人不能替代正式批量。",
+      "blocker": "模板已到位；正式导入邀请/通知控制、导入回执及分级核数前置尚未满足",
+      "minimumAction": "使用已归档正式原模板，在副本准备5–10条新合成记录；核不邀请/隔离通知后正式导入并核UUID/人数，再扩30–50、100–500。",
       "alternativeTried": "6人员、19保留对象；固定六人历史10任职/当前5人以及新合同分组已核；正式导入模板不可得，未执行导入5–10及后续30–50/100–500",
       "notClaimed": "不是生产性能下降或共享租户受影响的结论；少量页可用，不等于稳定批量能力"
     },
@@ -216,5 +216,6 @@
   "ownerDecisions": "Owner_Decisions_20260911_002_003.json",
   "limitedAuthorizationSupersedesOldRestrictions": true,
   "lastCommittedHeadBeforePackage": "8e18c60f0070bc010766df1adce5ee996450c928",
-  "remainingAutonomousStatus": "当前集中暂停源于实际启用自动通知且未能确认隔离接收；其余未完成场景仍逐项保留，不声明所有想象可执行场景已穷尽。"
+  "remainingAutonomousStatus": "当前集中暂停源于实际启用自动通知且未能确认隔离接收；其余未完成场景仍逐项保留，不声明所有想象可执行场景已穷尽。",
+  "latestOfflineIncrement": "正式原模板已收到并归档；无浏览器动作、无业务写入、完整计数不变"
 }

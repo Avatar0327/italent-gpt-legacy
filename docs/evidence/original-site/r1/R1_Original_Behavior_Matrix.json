@@ -2331,7 +2331,9 @@
         "成功小批量后才扩量"
       ],
       "time": null,
-      "title": "员工正式导入5–10、30–50、100–500"
+      "title": "员工正式导入5–10、30–50、100–500",
+      "latestTemplateReceipt": "R1-ORIGIN-20260910-100019/M01/IMPORT_TEMPLATE_20260911/Template_Receipt_Inspection.json",
+      "remaining": "原模板已取得；实际上传、邀请/通知、5–10正式导入及UUID核数未执行"
     },
     {
       "actualResult": "EMP005主职及两条重叠兼职已核；同组织空职位均生效；9/12实际结束后效待查",
@@ -6865,6 +6867,63 @@
       "time": "2026-09-11T08:17:49.060830+00:00",
       "title": "再入职自动外发规则门槛",
       "threeWayConclusion": "来源局部事实及精确前置；未证明完整需求/P3运行一致，不判目标实现缺陷。"
+    },
+    {
+      "actualResult": "原件字节一致归档，52列、0员工数据行、19下拉校验，姓名和电子邮件带必填星号。原模板获取前置已解除，不代表浏览器下载恢复或已导入。",
+      "blockerIds": [
+        "ENV-03"
+      ],
+      "caseId": "M01-OFFICIAL-TEMPLATE-RECEIPT-001",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/IMPORT_TEMPLATE_20260911/Template_Receipt_Inspection.json",
+        "R1-ORIGIN-20260910-100019/M01/IMPORT_TEMPLATE_20260911/Original_Employee_Template.xlsx"
+      ],
+      "execution": "artifact_inspected_no_business_operation",
+      "inputs": {
+        "sourceFile": "内部员工_2026_09_11.xlsx",
+        "sha256": "40907b963cfef6626ec6edfffc28dc6a4e0d14ee52bddb81a89c557be4202bf8"
+      },
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-08",
+          "P3-M01-09"
+        ],
+        "evidenceMode": "关联既有任务；未在本窗口运行",
+        "path": "tests/r1-p3-m01.test.mjs",
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02"
+      },
+      "page": "离线正式模板",
+      "pageState": "no_browser_operation",
+      "preconditions": "仅本轮合成数据；正式页面人工操作可执行；下载/截图仅局部限制；独立身份须为现有授权测试角色",
+      "recordIds": [],
+      "repeatability": "待前置恢复后执行",
+      "requirements": [
+        "F-SPEC-07",
+        "BP-F-REQ-12"
+      ],
+      "role": "项目所有者来源声明；本窗口离线检查",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "severity": "Observation",
+      "steps": [
+        "接收所有者来源声明",
+        "只读ZIP/XML检查工作表、表头、批注和校验",
+        "原字节复制并对比SHA256"
+      ],
+      "time": "2026-09-11T14:10:17.411388+00:00",
+      "title": "所有者提供正式内部员工原模板及离线结构核验",
+      "latestTemplateReceipt": "R1-ORIGIN-20260910-100019/M01/IMPORT_TEMPLATE_20260911/Template_Receipt_Inspection.json",
+      "remaining": "原模板已取得；实际上传、邀请/通知、5–10正式导入及UUID核数未执行",
+      "threeWayConclusion": "来源结构证据补齐；不以源模板必填星号更改已批准各入口规则，P3运行与完整导入未验证。"
     }
   ],
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",

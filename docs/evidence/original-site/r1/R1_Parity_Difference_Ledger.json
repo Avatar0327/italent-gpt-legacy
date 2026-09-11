@@ -129,7 +129,8 @@
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/M01-template-blocked.json",
         "R1-ORIGIN-20260910-100019/M01/Employee_Import_Template_Recovery.json",
-        "R1-ORIGIN-20260910-100019/M32/M32_Contract_Report_Download_Recovery.json"
+        "R1-ORIGIN-20260910-100019/M32/M32_Contract_Report_Download_Recovery.json",
+        "R1-ORIGIN-20260910-100019/M01/IMPORT_TEMPLATE_20260911/Template_Receipt_Inspection.json"
       ],
       "feedback": "保留下载限制，允许人工5–10冒烟后审慎扩量，无需修改共享安全策略。",
       "id": "ENV-03",
@@ -156,9 +157,10 @@
       ],
       "runId": "R1-ORIGIN-20260910-100019",
       "severity": "Observation",
-      "status": "open",
+      "status": "open_partial_template_obtained_by_owner",
       "title": "正式模板、报表和附件下载未取得文件回执",
-      "latestDownloadEvidence": "R1-ORIGIN-20260910-100019/M01/CONTRACT001_Readback.json"
+      "latestDownloadEvidence": "R1-ORIGIN-20260910-100019/M01/CONTRACT001_Readback.json",
+      "latestDisposition": "用户交付正式员工原模板，解除模板文件不可得；自动下载仍未恢复，报表/附件文件回执及实际导入保持未完成。"
     },
     {
       "actual": "仅现有管理入口会话ORIGIN-ADMIN-01，两个标签共用该会话；没有验证独立员工/调出审批/调入审批身份。",

@@ -3,7 +3,12 @@
     "expansionStarted": false,
     "importedRows": 0,
     "smokeThresholdReached": false,
-    "templateObtained": false
+    "templateObtained": true,
+    "templateSource": "R1-ORIGIN-20260910-100019/M01/IMPORT_TEMPLATE_20260911/Original_Employee_Template.xlsx",
+    "templateSha256": "40907b963cfef6626ec6edfffc28dc6a4e0d14ee52bddb81a89c557be4202bf8",
+    "templateReceipt": "R1-ORIGIN-20260910-100019/M01/IMPORT_TEMPLATE_20260911/Template_Receipt_Inspection.json",
+    "templateObtainedVia": "owner_supplied_official_download",
+    "invitationPolicyVerified": false
   },
   "cleanup": [
     {
