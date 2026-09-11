@@ -167,11 +167,108 @@
   "p3_entered": false,
   "p4_approved": false,
   "deployed": false,
-  "minimum_manual_action": "平台侧恢复或重建云浏览器实例；当前工具无公开重启接口，人工取消已由用户反馈无响应。",
+  "minimum_manual_action": "平台维护者修复当前浏览器自动控制输入通道；人工取消已完成，无需重复取消或重新授权。恢复后一次无副作用检查，再完成PLAN01全状态精确查重。",
   "new_access_authorization_needed": false,
   "recovery_addendum": {
     "at": "2026-09-10T16:14:15.724321+00:00",
     "restart_performed": false,
     "user_manual_click_failed": true
+  },
+  "recovery_addenda": [
+    {
+      "id": "R3-RECOVERY-20260911-001",
+      "at": "2026-09-11T00:10:45Z",
+      "starting_head": "43491b5e06278e430e1797da686880baa65d9ff6",
+      "user_report": "已取消，回到方案列表",
+      "origin": "https://srworkshopbj.italent.cn",
+      "login": "何份晓",
+      "tabs_readonly": [
+        {
+          "id": "6",
+          "title": "员工",
+          "ownership": "previous_R3"
+        },
+        {
+          "id": "10",
+          "title": "班次",
+          "ownership": "previous_R3"
+        },
+        {
+          "id": "11",
+          "title": "发薪方案",
+          "ownership": "R3_confirmed_list_and_prior_frame"
+        },
+        {
+          "id": "23",
+          "title": "人才池",
+          "ownership": "unconfirmed_not_touched"
+        }
+      ],
+      "missing_previous_tabs": [
+        "5",
+        "8",
+        "9",
+        "20"
+      ],
+      "missing_cause": "UNKNOWN; 本轮未关闭任何标签，不能归因并发",
+      "draft_exit": {
+        "user_cancel_reported": true,
+        "independent_list_readback": true,
+        "frame_id": "popup_17890497031131810",
+        "rect_count": 0,
+        "z_index": "-10000",
+        "agent_cancel_clicked": false,
+        "interpretation": "人工报告取消＋独立回读退出结果；不是自动取消按钮成功，也不是环境丢弃"
+      },
+      "duplicate_check": {
+        "exact_name": "ZZ_R3_R3-ORIGIN-20260910-103900_M07_PLAN01",
+        "visible_scope": "启用的发薪方案",
+        "visible_total": 8,
+        "exact_matches": 0,
+        "all_status_search_completed": false,
+        "conclusion": "当前启用列表未见；全状态精确查询未完成，不声称全库无保存对象"
+      },
+      "health": {
+        "action": "仅一次点击可见方案名称筛选入口",
+        "side_effect": "只读查询入口，无保存/核算/发送",
+        "attempts": 1,
+        "success": false,
+        "error": "Timed out after 3000ms waiting for selector internal:text=\"方案名称\"s >> nth=0: Runtime.evaluate timed out.",
+        "locator": {
+          "match_count": 1,
+          "visible_count": 1,
+          "disabled": false
+        },
+        "after": "仍发薪方案列表，草稿隐藏；未输入查询值或执行全状态精确查询"
+      },
+      "blocker_005": "ENV_BLOCKED_INPUT_TIMEOUT",
+      "new_objects": 0,
+      "confirmed_saved_objects": 29,
+      "original_27_reverified_this_turn": false,
+      "observation_count": 53,
+      "difference_major": 13,
+      "difference_minor": 3,
+      "new_business_differences": 0,
+      "complete_first_packs": 0,
+      "unsafe_actions": {
+        "save": false,
+        "compute": false,
+        "send": false,
+        "restart": false,
+        "refresh": false,
+        "other_tabs_modified": false
+      },
+      "minimum_external_action": "平台维护者修复当前浏览器自动控制输入通道；人工取消已完成，无需重复取消或重新授权。恢复后一次无副作用检查，再完成PLAN01全状态精确查重。",
+      "p2_start_allowed": false
+    }
+  ],
+  "latest_operational_status": {
+    "at": "2026-09-11T00:10:45Z",
+    "verdict": "NOT_PASSED",
+    "active_payroll_drafts": 0,
+    "plan01_all_status_dedup_pending": true,
+    "blocker_005": "ENV_BLOCKED_INPUT_TIMEOUT",
+    "first_packs": "0/5",
+    "note": "报告主体仍评估272cdaf固定内容；本增量不改写历史评估，当前状态以本节及恢复记录为准。"
   }
 }

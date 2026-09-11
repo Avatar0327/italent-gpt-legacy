@@ -1,6 +1,6 @@
 {
   "run_id": "R3-ORIGIN-20260910-103900",
-  "recorded_at": "2026-09-10T15:41:44.091432+00:00",
+  "recorded_at": "2026-09-11T00:10:45Z",
   "rows": [
     {
       "id": "R3-UA-001",
@@ -33,10 +33,10 @@
       "id": "R3-UA-004",
       "module": "M07",
       "object": "PLAN01草稿",
-      "state": "CANCEL_NOT_CONFIRMED_DRAFT_PRESENT",
-      "known": "当前仍有草稿、月/否；从未提交保存，不计新增对象",
-      "unknown": "取消操作何时能够正常完成",
-      "next": "通过可见取消退出并回读方案列表；若草稿丢失先按全名查重，不记取消通过"
+      "state": "CANCEL_EXIT_CONFIRMED_ALL_STATUS_DEDUP_PENDING",
+      "known": "用户报告取消；独立回读发薪方案列表、草稿iframe隐藏；当前启用列表8条无PLAN01；助手未提交保存",
+      "unknown": "全状态完整名称查重尚未执行；不是取消结果仍未知",
+      "next": "输入通道恢复后仅查重；不重复取消、不重复新建"
     }
   ]
 }
