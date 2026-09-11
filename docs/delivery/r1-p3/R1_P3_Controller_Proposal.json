@@ -89,28 +89,27 @@
     "P3-R1-10"
   ],
   "testCountNote": "原值6指测试条目而非断言数；本次精确条目数以提交SHA对应运行证据为准。",
-  "latestEvidence": "evidence/r1-p3-20260911T003733692664Z.json",
-  "testEntriesPassed": 34,
+  "latestEvidence": "evidence/r1-p3-20260911T005747815482Z.json",
+  "testEntriesPassed": 185,
   "remainingTasksComplete": false,
   "compatibilityTestEntriesPassed": 3,
   "latestTaskEvidence": [
-    "evidence/r1-p3-20260911T003733692664Z.json"
+    "evidence/r1-p3-20260911T005747815482Z.json"
   ],
   "latestTaskBoundaries": [
-    "本轮仅固定源文件接收/静态对照与34项本地合成定向验证；历史183项不冒充本轮",
-    "源实际离职/终止/新报表/再入职仍未知，固定HEAD新查询失败",
-    "已批准即时调动有意差异及D1–D7保持",
-    "16项真实生产者与平台01/02仍阻塞；P3退出/P4未批准"
+    "固定de053be一轮185项完整本地回归+类型+构建；无新产品修改，不沿用历史计数",
+    "原站7920b64增量接收：离职状态/调动终止已观察；离职执行审计、报表、再入职与独立角色仍缺证",
+    "D1–D7及即时调动有意差异不变；16真实生产者和平台01/02仍阻塞；待独立复核，未批准P3退出/P4"
   ],
-  "latestVerifiedSourceSha": "812a3bddffeaea05a88baaac5816d94c75c2382e",
+  "latestVerifiedSourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
   "task08Status": "implemented_synthetic_verified_review_pending",
   "task09Status": "implemented_synthetic_verified_review_pending",
-  "latestTaskCaseEvidence": "R1_P3_Origin_Evidence_Intake.json",
+  "latestTaskCaseEvidence": "R1_P3_Fixed_Review_Packet.md",
   "latestImplementationSha": "812a3bddffeaea05a88baaac5816d94c75c2382e",
-  "latestFreshEvidence": "evidence/r1-p3-20260911T003733692664Z.json",
+  "latestFreshEvidence": "evidence/r1-p3-20260911T005747815482Z.json",
   "latestTestSummary": {
-    "tests": 34,
-    "pass": 34,
+    "tests": 185,
+    "pass": 185,
     "fail": 0,
     "cancelled": 0,
     "skipped": 0
@@ -119,7 +118,7 @@
   "blockedTaskIds": [
     "P3-R1-10"
   ],
-  "currentActivity": "origin_intake_complete_blocked_external_dependencies_no_active_implementation",
+  "currentActivity": "fixed_version_review_prepared_no_active_implementation_external_dependencies_blocked",
   "task10Status": "partial_internal_verified_producer_blocked",
   "task11Status": "implemented_synthetic_verified_review_pending",
   "overallRounds": [
@@ -163,11 +162,28 @@
   "reviewPacket": "R1_P3_Review_Packet.md",
   "scopeRegisterApplied": false,
   "latestOriginIntake": {
-    "sourceHead": "76a16265fdd65f6ba7608260dde1e07acfb85200",
-    "receipt": "R1_P3_Origin_Evidence_Intake.json",
+    "sourceHead": "7920b64ea30f1e4b232fb86bba2742852d0892e8",
+    "receipt": "R1_P3_Origin_Increment_7920b64.json",
     "summary": "R1_P3_Origin_Evidence_Intake.md",
-    "verification": "evidence/r1-p3-20260911T003733692664Z.json",
-    "finding": "P3-INTAKE-DEFECT-001",
-    "status": "received_local_gap_fixed_remaining_source_and_external_evidence_pending"
-  }
+    "verification": "evidence/r1-p3-20260911T005747815482Z.json",
+    "status": "increment_received_review_pending"
+  },
+  "currentReview": {
+    "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+    "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+    "packet": "R1_P3_Review_Packet.md",
+    "manifest": "R1_P3_Fixed_Review_Manifest.json",
+    "independentReview": "pending"
+  },
+  "latestOriginIncrement": "R1_P3_Origin_Increment_7920b64.json",
+  "originReceiptHistory": [
+    {
+      "sourceHead": "76a16265fdd65f6ba7608260dde1e07acfb85200",
+      "receipt": "R1_P3_Origin_Evidence_Intake.json",
+      "summary": "R1_P3_Origin_Evidence_Intake.md",
+      "verification": "evidence/r1-p3-20260911T003733692664Z.json",
+      "finding": "P3-INTAKE-DEFECT-001",
+      "status": "received_local_gap_fixed_remaining_source_and_external_evidence_pending"
+    }
+  ]
 }

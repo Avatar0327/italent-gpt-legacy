@@ -37,8 +37,8 @@
         "R1_P3_Foundation_Case_Evidence.json",
         "R1_P3_M48_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BASE-01-AC02",
@@ -61,8 +61,8 @@
       "caseEvidenceFiles": [
         "R1_P3_Recovery_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BASE-02-AC01",
@@ -81,8 +81,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01-read.ts",
         "lib/hris/r1-m01.ts",
@@ -118,8 +118,8 @@
       "caseEvidenceFiles": [
         "R1_P3_Foundation_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BASE-02-AC03",
@@ -163,8 +163,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BASE-03-AC01",
@@ -192,8 +192,8 @@
       "caseEvidenceFiles": [
         "R1_P3_Integration_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BASE-03-AC02",
@@ -239,8 +239,8 @@
       "caseEvidenceFiles": [
         "R1_P3_Migration_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BASE-04-AC01",
@@ -272,8 +272,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M48_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BASE-04-AC02",
@@ -319,8 +319,8 @@
       "caseEvidenceFiles": [
         "R1_P3_Migration_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BASE-04-AC03",
@@ -348,8 +348,8 @@
       "caseEvidenceFiles": [
         "R1_P3_Integration_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BASE-04-AC04",
@@ -377,8 +377,8 @@
       "caseEvidenceFiles": [
         "R1_P3_Integration_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BASE-05-AC01",
@@ -401,8 +401,8 @@
       "caseEvidenceFiles": [
         "R1_P3_Recovery_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BASE-05-AC02",
@@ -425,8 +425,8 @@
       "caseEvidenceFiles": [
         "R1_P3_Recovery_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BASE-06-AC01",
@@ -454,8 +454,8 @@
       "caseEvidenceFiles": [
         "R1_P3_Integration_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BASE-06-AC02",
@@ -483,8 +483,8 @@
       "caseEvidenceFiles": [
         "R1_P3_Integration_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BASE-06-AC03",
@@ -512,8 +512,8 @@
       "caseEvidenceFiles": [
         "R1_P3_Integration_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BP-F-REQ-01-AC01",
@@ -532,8 +532,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01.ts",
         "lib/hris/r1-m01-read.ts",
@@ -561,8 +561,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01.ts",
         "lib/hris/r1-m01-read.ts",
@@ -590,8 +590,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01.ts",
         "lib/hris/r1-m01-read.ts",
@@ -619,8 +619,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01-read.ts",
         "lib/hris/r1-m01.ts",
@@ -649,8 +649,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01-read.ts",
         "lib/hris/r1-m01.ts",
@@ -679,8 +679,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01-read.ts",
         "lib/hris/r1-m01.ts",
@@ -709,8 +709,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01-read.ts",
         "lib/hris/r1-m01.ts",
@@ -739,8 +739,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01-read.ts",
         "lib/hris/r1-m01.ts",
@@ -769,8 +769,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01-read.ts",
         "lib/hris/r1-m01.ts",
@@ -799,8 +799,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01.ts",
         "lib/hris/r1-m01-read.ts",
@@ -828,8 +828,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01.ts",
         "lib/hris/r1-m01-read.ts",
@@ -857,8 +857,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01.ts",
         "lib/hris/r1-m01-read.ts",
@@ -899,8 +899,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M48_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BP-I-REQ-01-AC02",
@@ -932,8 +932,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M48_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BP-I-REQ-01-AC03",
@@ -965,8 +965,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M48_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BP-I-REQ-01-AC04",
@@ -998,8 +998,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M48_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BP-I-REQ-02-AC01",
@@ -1043,8 +1043,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BP-I-REQ-02-AC02",
@@ -1088,8 +1088,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BP-I-REQ-02-AC03",
@@ -1133,8 +1133,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BP-I-REQ-02-AC04",
@@ -1178,8 +1178,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BP-I-REQ-02-AC05",
@@ -1223,8 +1223,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BP-I-REQ-07-AC01",
@@ -1252,8 +1252,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M19_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BP-I-REQ-07-AC02",
@@ -1281,8 +1281,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M19_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BP-I-REQ-07-AC03",
@@ -1310,8 +1310,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M19_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BP-I-REQ-07-AC04",
@@ -1339,8 +1339,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M19_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BP-I-REQ-11-AC01",
@@ -1391,8 +1391,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Jobs_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "BP-I-REQ-11-AC02",
@@ -1443,8 +1443,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Jobs_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M01-REVIEW-AC01",
@@ -1463,8 +1463,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01.ts",
         "lib/hris/r1-m01-read.ts",
@@ -1492,8 +1492,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01.ts",
         "lib/hris/r1-m01-read.ts",
@@ -1521,8 +1521,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01-read.ts",
         "lib/hris/r1-m01.ts",
@@ -1551,8 +1551,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01.ts",
         "lib/hris/r1-m01-read.ts",
@@ -1580,8 +1580,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01.ts",
         "lib/hris/r1-m01-read.ts",
@@ -1616,8 +1616,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01-read.ts",
         "lib/hris/r1-m01.ts",
@@ -1646,8 +1646,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01-read.ts",
         "lib/hris/r1-m01.ts",
@@ -1676,8 +1676,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01-read.ts",
         "lib/hris/r1-m01.ts",
@@ -1706,8 +1706,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01.ts",
         "lib/hris/r1-m01-read.ts",
@@ -1736,8 +1736,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。",
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。",
       "code": [
         "lib/hris/r1-m01-read.ts",
         "lib/hris/r1-m01.ts",
@@ -1775,8 +1775,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M19_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M19-REVIEW-AC01",
@@ -1803,8 +1803,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M19_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M19-REVIEW-AC02",
@@ -1831,8 +1831,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M19_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M19-REVIEW-AC03",
@@ -1859,8 +1859,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M19_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M19-REVIEW-AC04",
@@ -1887,8 +1887,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M19_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M19-REVIEW-AC05",
@@ -1915,8 +1915,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M19_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M19-REVIEW-AC06",
@@ -1943,8 +1943,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M19_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M19-REVIEW-AC07",
@@ -1971,8 +1971,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M19_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M19-REVIEW-AC08",
@@ -1999,8 +1999,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M19_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M19-REVIEW-AC09",
@@ -2027,8 +2027,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M19_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M32-REVIEW-AC01",
@@ -2072,8 +2072,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M32-REVIEW-AC02",
@@ -2117,8 +2117,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M32-REVIEW-AC03",
@@ -2162,8 +2162,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M32-REVIEW-AC04",
@@ -2207,8 +2207,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M32-REVIEW-AC05",
@@ -2252,8 +2252,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M32-REVIEW-AC06",
@@ -2297,8 +2297,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M32-REVIEW-AC07",
@@ -2342,8 +2342,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M32-REVIEW-AC08",
@@ -2387,8 +2387,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M32-REVIEW-AC09",
@@ -2432,8 +2432,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M32-REVIEW-AC10",
@@ -2485,8 +2485,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Jobs_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M32-REVIEW-AC11",
@@ -2530,8 +2530,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M32-REVIEW-AC12",
@@ -2582,8 +2582,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Jobs_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M32-REVIEW-AC13",
@@ -2627,8 +2627,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M48-REVIEW-AC01",
@@ -2660,8 +2660,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M48_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M48-REVIEW-AC02",
@@ -2693,8 +2693,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M48_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M48-REVIEW-AC03",
@@ -2726,8 +2726,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M48_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M48-REVIEW-AC04",
@@ -2759,8 +2759,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M48_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M48-REVIEW-AC05",
@@ -2792,8 +2792,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M48_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M48-REVIEW-AC06",
@@ -2825,8 +2825,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M48_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M48-REVIEW-AC07",
@@ -2858,8 +2858,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M48_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M48-REVIEW-AC08",
@@ -2891,8 +2891,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M48_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     },
     {
       "id": "M48-REVIEW-AC09",
@@ -2924,8 +2924,8 @@
       "caseEvidenceFiles": [
         "R1_P3_M48_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
-      "overallRevalidationNote": "本轮完整R1测试重新执行；不自动证明未执行原子条件或独立验收通过。"
+      "latestOverallRevalidation": "evidence/r1-p3-20260911T005747815482Z.json",
+      "overallRevalidationNote": "2026-09-11固定de053be的一轮完整R1本地185项；关联代码/文件复验，不将原AC全部子条件或独立验收自动置通过。"
     }
   ],
   "risks": [
@@ -2944,7 +2944,23 @@
       "p3RuntimeStatus": "partial_evidence_not_closed",
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
-      ]
+      ],
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "P2设计已由所有者关闭，新增运行证据待独立复核",
+        "realIntegrationGap": "外部供应商/跨域取消未实联，适用条件见原场景；不以模拟关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M01-L02",
@@ -2961,7 +2977,23 @@
       "p3RuntimeStatus": "local_runtime_evidence_independent_review_pending",
       "caseEvidenceFiles": [
         "R1_P3_Migration_Case_Evidence.json"
-      ]
+      ],
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "P2设计已由所有者关闭，新增运行证据待独立复核",
+        "realIntegrationGap": "外部供应商/跨域取消未实联，适用条件见原场景；不以模拟关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M01-L03",
@@ -2978,7 +3010,23 @@
       "p3RuntimeStatus": "partial_evidence_not_closed",
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
-      ]
+      ],
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "P2设计已由所有者关闭，新增运行证据待独立复核",
+        "realIntegrationGap": "外部供应商/跨域取消未实联，适用条件见原场景；不以模拟关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M01-L04",
@@ -2998,7 +3046,23 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json"
+      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "外部供应商/跨域取消未实联，适用条件见原场景；不以模拟关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M01-L05",
@@ -3017,7 +3081,23 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json"
+      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "外部供应商/跨域取消未实联，适用条件见原场景；不以模拟关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M01-L06",
@@ -3037,7 +3117,23 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json"
+      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "外部供应商/跨域取消未实联，适用条件见原场景；不以模拟关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M01-L07",
@@ -3056,7 +3152,23 @@
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json"
+      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "外部供应商/跨域取消未实联，适用条件见原场景；不以模拟关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M01-L08",
@@ -3074,7 +3186,23 @@
       "caseEvidenceFiles": [
         "R1_P3_Migration_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json"
+      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "外部供应商/跨域取消未实联，适用条件见原场景；不以模拟关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M01-L09",
@@ -3091,7 +3219,23 @@
       "p3RuntimeStatus": "partial_evidence_not_closed",
       "caseEvidenceFiles": [
         "R1_P3_M01_Case_Evidence.json"
-      ]
+      ],
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "外部供应商/跨域取消未实联，适用条件见原场景；不以模拟关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "retained"
+      }
     },
     {
       "id": "R1-M01-L10",
@@ -3108,7 +3252,23 @@
       "p3RuntimeStatus": "partial_evidence_not_closed",
       "caseEvidenceFiles": [
         "R1_P3_Integration_Case_Evidence.json"
-      ]
+      ],
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "外部供应商/跨域取消未实联，适用条件见原场景；不以模拟关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "retained"
+      }
     },
     {
       "id": "R1-M19-L01",
@@ -3126,7 +3286,23 @@
       "p3RuntimeStatus": "local_runtime_evidence_review_pending",
       "caseEvidenceFiles": [
         "R1_P3_M19_Case_Evidence.json"
-      ]
+      ],
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "P2设计已由所有者关闭，新增运行证据待独立复核",
+        "realIntegrationGap": "外部供应商/跨域取消未实联，适用条件见原场景；不以模拟关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M19-L02",
@@ -3144,7 +3320,23 @@
       "p3RuntimeStatus": "local_runtime_evidence_review_pending",
       "caseEvidenceFiles": [
         "R1_P3_M19_Case_Evidence.json"
-      ]
+      ],
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "P2设计已由所有者关闭，新增运行证据待独立复核",
+        "realIntegrationGap": "外部供应商/跨域取消未实联，适用条件见原场景；不以模拟关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M19-L03",
@@ -3164,7 +3356,23 @@
       "caseEvidenceFiles": [
         "R1_P3_M19_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json"
+      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "外部供应商/跨域取消未实联，适用条件见原场景；不以模拟关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M19-L04",
@@ -3183,7 +3391,23 @@
       "caseEvidenceFiles": [
         "R1_P3_M19_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json"
+      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "外部供应商/跨域取消未实联，适用条件见原场景；不以模拟关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M19-L05",
@@ -3203,7 +3427,23 @@
       "caseEvidenceFiles": [
         "R1_P3_M19_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json"
+      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "外部供应商/跨域取消未实联，适用条件见原场景；不以模拟关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M19-L06",
@@ -3222,7 +3462,23 @@
       "caseEvidenceFiles": [
         "R1_P3_M19_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json"
+      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "外部供应商/跨域取消未实联，适用条件见原场景；不以模拟关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M19-L07",
@@ -3244,7 +3500,23 @@
       "caseEvidenceFiles": [
         "R1_P3_Integration_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json"
+      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "外部供应商/跨域取消未实联，适用条件见原场景；不以模拟关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M19-L08",
@@ -3259,7 +3531,23 @@
       "p3RuntimeStatus": "not_executed",
       "caseEvidenceFiles": [
         "R1_P3_Cross_Domain_Case_Evidence.json"
-      ]
+      ],
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "外部供应商/跨域取消未实联，适用条件见原场景；不以模拟关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "retained"
+      }
     },
     {
       "id": "R1-M19-L09",
@@ -3276,7 +3564,23 @@
       "p3RuntimeStatus": "partial_evidence_not_closed",
       "caseEvidenceFiles": [
         "R1_P3_Integration_Case_Evidence.json"
-      ]
+      ],
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "外部供应商/跨域取消未实联，适用条件见原场景；不以模拟关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "retained"
+      }
     },
     {
       "id": "R1-M48-L01",
@@ -3302,7 +3606,23 @@
       ],
       "caseEvidenceFiles": [
         "R1_P3_M48_Case_Evidence.json"
-      ]
+      ],
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "P2设计已由所有者关闭，新增运行证据待独立复核",
+        "realIntegrationGap": "16真实生产者缺口对相关跨域条件保留，详见Producer_Case_Evidence；不以消费者负向测试关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M48-L02",
@@ -3328,7 +3648,23 @@
       ],
       "caseEvidenceFiles": [
         "R1_P3_M48_Case_Evidence.json"
-      ]
+      ],
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "P2设计已由所有者关闭，新增运行证据待独立复核",
+        "realIntegrationGap": "16真实生产者缺口对相关跨域条件保留，详见Producer_Case_Evidence；不以消费者负向测试关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M48-L03",
@@ -3355,7 +3691,23 @@
       "caseEvidenceFiles": [
         "R1_P3_M48_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json"
+      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "16真实生产者缺口对相关跨域条件保留，详见Producer_Case_Evidence；不以消费者负向测试关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M48-L04",
@@ -3382,7 +3734,23 @@
       "caseEvidenceFiles": [
         "R1_P3_M48_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json"
+      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "16真实生产者缺口对相关跨域条件保留，详见Producer_Case_Evidence；不以消费者负向测试关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M48-L05",
@@ -3409,7 +3777,23 @@
       "caseEvidenceFiles": [
         "R1_P3_M48_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json"
+      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "16真实生产者缺口对相关跨域条件保留，详见Producer_Case_Evidence；不以消费者负向测试关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M48-L06",
@@ -3437,7 +3821,23 @@
       "caseEvidenceFiles": [
         "R1_P3_M48_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json"
+      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "16真实生产者缺口对相关跨域条件保留，详见Producer_Case_Evidence；不以消费者负向测试关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M48-L07",
@@ -3463,7 +3863,23 @@
       ],
       "caseEvidenceFiles": [
         "R1_P3_M48_Case_Evidence.json"
-      ]
+      ],
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "16真实生产者缺口对相关跨域条件保留，详见Producer_Case_Evidence；不以消费者负向测试关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "retained"
+      }
     },
     {
       "id": "R1-M48-L08",
@@ -3478,7 +3894,23 @@
       "p3RuntimeStatus": "not_executed",
       "caseEvidenceFiles": [
         "R1_P3_Cross_Domain_Case_Evidence.json"
-      ]
+      ],
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "16真实生产者缺口对相关跨域条件保留，详见Producer_Case_Evidence；不以消费者负向测试关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "retained"
+      }
     },
     {
       "id": "R1-M32-L01",
@@ -3495,7 +3927,23 @@
       "p3RuntimeStatus": "local_runtime_evidence_recorded_cross_task_and_independent_review_pending",
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
-      ]
+      ],
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "P2设计已由所有者关闭，新增运行证据待独立复核",
+        "realIntegrationGap": "16真实生产者缺口对相关跨域条件保留，详见Producer_Case_Evidence；不以消费者负向测试关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M32-L02",
@@ -3512,7 +3960,23 @@
       "p3RuntimeStatus": "local_runtime_evidence_recorded_cross_task_and_independent_review_pending",
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
-      ]
+      ],
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "P2设计已由所有者关闭，新增运行证据待独立复核",
+        "realIntegrationGap": "16真实生产者缺口对相关跨域条件保留，详见Producer_Case_Evidence；不以消费者负向测试关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M32-L03",
@@ -3532,7 +3996,23 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json"
+      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "16真实生产者缺口对相关跨域条件保留，详见Producer_Case_Evidence；不以消费者负向测试关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M32-L04",
@@ -3550,7 +4030,23 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json"
+      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "16真实生产者缺口对相关跨域条件保留，详见Producer_Case_Evidence；不以消费者负向测试关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M32-L05",
@@ -3569,7 +4065,23 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json"
+      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "16真实生产者缺口对相关跨域条件保留，详见Producer_Case_Evidence；不以消费者负向测试关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M32-L06",
@@ -3587,7 +4099,23 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json"
+      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "16真实生产者缺口对相关跨域条件保留，详见Producer_Case_Evidence；不以消费者负向测试关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M32-L07",
@@ -3607,7 +4135,25 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Jobs_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json"
+      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "16真实生产者缺口对相关跨域条件保留，详见Producer_Case_Evidence；不以消费者负向测试关闭",
+        "platformGap": [
+          "DEP-PLATFORM-01"
+        ],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M32-L08",
@@ -3625,7 +4171,25 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Jobs_Case_Evidence.json"
       ],
-      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json"
+      "latestOverallRevalidation": "evidence/r1-p3-20260910T104045821462Z.json",
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "16真实生产者缺口对相关跨域条件保留，详见Producer_Case_Evidence；不以消费者负向测试关闭",
+        "platformGap": [
+          "DEP-PLATFORM-01"
+        ],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "相关独立人工条件不由本地测试替代；不改变本风险原阶段"
+      }
     },
     {
       "id": "R1-M32-L09",
@@ -3640,7 +4204,23 @@
       "p3RuntimeStatus": "not_executed",
       "caseEvidenceFiles": [
         "R1_P3_Cross_Domain_Case_Evidence.json"
-      ]
+      ],
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "16真实生产者缺口对相关跨域条件保留，详见Producer_Case_Evidence；不以消费者负向测试关闭",
+        "platformGap": [],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "retained"
+      }
     },
     {
       "id": "R1-M32-L10",
@@ -3661,11 +4241,30 @@
       "caseEvidenceFiles": [
         "R1_P3_M32_Jobs_Case_Evidence.json",
         "R1_P3_Recovery_Case_Evidence.json"
-      ]
+      ],
+      "currentReviewDimensions": {
+        "localVerified": {
+          "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+          "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+          "meaning": "关联用例文件本轮复验；逐子条件以caseEvidenceFiles为准，非整项风险通过"
+        },
+        "independentReview": "pending_not_signed",
+        "realIntegrationGap": "16真实生产者缺口对相关跨域条件保留，详见Producer_Case_Evidence；不以消费者负向测试关闭",
+        "platformGap": [
+          "DEP-PLATFORM-01",
+          "DEP-PLATFORM-02"
+        ],
+        "originEvidence": {
+          "owner": "P1总控",
+          "receipt": "R1_P3_Origin_Increment_7920b64.json",
+          "meaning": "仅局部增量；SRC13未整体关闭"
+        },
+        "p4HumanAcceptance": "retained"
+      }
     }
   ],
   "latestEvidence": [
-    "evidence/r1-p3-20260911T003733692664Z.json"
+    "evidence/r1-p3-20260911T005747815482Z.json"
   ],
   "allOriginalAcPassed": false,
   "risksClosedByExecutor": 0,
@@ -4091,5 +4690,13 @@
     "receipt": "R1_P3_Origin_Evidence_Intake.json",
     "mappingCount": 89,
     "sourceParityPassed": false
-  }
+  },
+  "currentReview": {
+    "sourceSha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+    "evidence": "evidence/r1-p3-20260911T005747815482Z.json",
+    "packet": "R1_P3_Review_Packet.md",
+    "manifest": "R1_P3_Fixed_Review_Manifest.json",
+    "independentReview": "pending"
+  },
+  "originEvidenceIncrement": "R1_P3_Origin_Increment_7920b64.json"
 }
