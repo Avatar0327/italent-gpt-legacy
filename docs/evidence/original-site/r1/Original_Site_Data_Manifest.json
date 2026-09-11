@@ -131,41 +131,52 @@
         "有非本轮依赖即停止，不级联影响其他记录",
         "先核未来生效/撤回申请终态，员工历史保留；职位后于员工关联核验，子组织先于父组织"
       ]
+    },
+    {
+      "action": "保留",
+      "allowLaterDelete": true,
+      "module": "M01",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_003",
+      "originRecordId": "50913db1-0208-49cd-a928-159a8b1e2063",
+      "performed": false,
+      "preconditions": [
+        "UUID+完整姓名双核；无非本轮依赖；历史优先归档"
+      ]
     }
   ],
-  "countDefinition": "10个主动创建业务对象：3组织+2职位+2员工+2申请（调动/转正）+1未来离职任职；其他自动任职/流程关联另列，不是全数据库行数。",
-  "createdCount": 10,
+  "countDefinition": "11个主动业务对象：3组织+2岗位+3员工+2申请+1离职任职；不计自动关联行。",
+  "createdCount": 11,
   "deletedCount": 0,
   "drafts": {
     "initialCancelledOrganizationDrafts": 2,
     "unsubmittedFormsRemaining": 0,
     "concentratedRehire": "cancelled_after_required_validation_no_record_created",
     "concentratedEmployee": "cancelled_after_format_validation",
-    "concentratedJob": "saved_description_after_fresh_read_no_unknown_write"
+    "concentratedJob": "saved_description_after_fresh_read_no_unknown_write",
+    "EMP004": "cancelled_after_duplicate_validation_and_unconfirmed_corrected_save_fresh_search_zero"
   },
   "lastContinuation": {
-    "at": "2026-09-11T03:22:13.585Z",
-    "newObjects": 0,
+    "at": "2026-09-11T03:52:22.535826+00:00",
+    "newObjects": 1,
     "modifiedRunObjects": 2,
-    "retained": 10,
+    "retained": 11,
     "deleted": 0,
     "inProgress": true,
     "evidence": [
-      "R1-ORIGIN-20260910-100019/20260911_Job002_Stop_Dependencies.json",
-      "R1-ORIGIN-20260910-100019/20260911_M19_Recalled_Regularization.json",
-      "R1-ORIGIN-20260910-100019/20260911_M48_Role_Bound_PartTime.json"
+      "R1-ORIGIN-20260910-100019/M01/EMP003_Readback.json",
+      "R1-ORIGIN-20260910-100019/M01/EMP004_Duplicate_Code.json"
     ]
   },
   "manualSmoke": {
     "bulkImportedRows": 0,
     "completedBusinessLifecycle": false,
-    "employeeCount": 2,
+    "employeeCount": 3,
     "expanded30To50": false,
     "expansionGate": "页面运行稳定且可审计逐条UUID；现已多次出现数十秒加载/回执延迟，不在回执未核定时重放或扩量。未证共享环境受影响。",
-    "namedMasterObjects": 7,
-    "note": "达到5–10总量门槛，未达到全部场景冒烟通过；只有2员工，不宣称员工批量测试",
+    "namedMasterObjects": 8,
+    "note": "3员工，小样本数量和业务场景仍未全通过；不扩大30–50",
     "threshold5To10Reached": true,
-    "totalCreatedBusinessObjects": 10
+    "totalCreatedBusinessObjects": 11
   },
   "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
   "records": [
@@ -533,10 +544,35 @@
       "status": "enabled_remark_edited_stop_draft_cancelled",
       "statusScope": "historical_last_observed_not_reasserted_as_current",
       "verifiedAt": "2026-09-10T10:36:23.872Z"
+    },
+    {
+      "allowLaterDelete": true,
+      "caseId": "M01-EMP-003",
+      "createdAt": null,
+      "createdAtBasis": "正式保存后新查询UUID及主职状态已证；服务端创建审计未提供",
+      "deletionGate": "UUID与全名双核，只清理本轮且无外部依赖；有历史保留归档",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/EMP003_PreSave.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP003_Readback.json"
+      ],
+      "joinedOn": "2026-09-11",
+      "module": "M01",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_003",
+      "objectType": "employee",
+      "originRecordId": "50913db1-0208-49cd-a928-159a8b1e2063",
+      "relatedRecords": [
+        "db7df096-624b-4d1e-ab4e-0552a56f052c",
+        "81fde82c-3807-4e73-be33-46a9321f87fb"
+      ],
+      "runId": "R1-ORIGIN-20260910-100019",
+      "status": "active_formal_primary",
+      "statusScope": "fresh_query_2026-09-11",
+      "verifiedAt": "2026-09-11T03:52:22.535826+00:00",
+      "invitationEnabled": false
     }
   ],
-  "retainedCount": 10,
+  "retainedCount": 11,
   "runId": "R1-ORIGIN-20260910-100019",
   "successMessagePendingIdCount": 0,
-  "writesSuspendedReason": "本轮关键片段后主动结束浏览器优先使用；日期报表控件超时未完成，已关闭自有查询标签。没有业务写入。"
+  "writesSuspendedReason": null
 }

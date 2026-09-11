@@ -4779,6 +4779,110 @@
       "title": "M48-PARTTIME-ADMIN-BOUND",
       "ledgerId": "ROLE-01",
       "threeWayConclusion": "局部原站事实及限制；不变更D1–D7，不判P3实现缺陷或完整MATCH"
+    },
+    {
+      "actualResult": "新查询唯一EMP003，personId50913db1，9/11正式主职生效，ORG002/JOB001，经理空，保存前邀请否。",
+      "caseId": "M01-EMP-003",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/EMP003_Readback.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "scope": "完全虚构、邀请否、共享关联清空"
+      },
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-09"
+        ],
+        "evidenceMode": "静态来源映射；未运行复刻UI或本窗口产品测试",
+        "path": "lib/hris/r1-m01.ts",
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02"
+      },
+      "page": "第三员工新增及正式主职回查",
+      "pageState": "fresh_readback",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "recordIds": [
+        "50913db1-0208-49cd-a928-159a8b1e2063"
+      ],
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "F-SPEC-07",
+        "F-SPEC-08",
+        "F-SPEC-03"
+      ],
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "局部截图超时不阻塞；本条采用结构化DOM/字段值/ID",
+      "severity": "Observation",
+      "steps": [
+        "正式页面操作",
+        "独立回读",
+        "按唯一姓名和UUID核定实际结果"
+      ],
+      "time": "2026-09-11T03:52:22.535826+00:00",
+      "title": "第三员工新增及正式主职回查",
+      "threeWayConclusion": "局部原站字段/唯一性证据，P3静态映射，尚不判完整MATCH或实现缺陷"
+    },
+    {
+      "actualResult": "EMP004草稿使用EMP003工号被明确拒绝；修正保存未确认后取消，新查询EMP004候选0，无新对象。",
+      "caseId": "M01-EMP-CODE-DUP-004",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/EMP004_Duplicate_Code.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "scope": "完全虚构、邀请否、共享关联清空"
+      },
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-09"
+        ],
+        "evidenceMode": "静态来源映射；未运行复刻UI或本窗口产品测试",
+        "path": "lib/hris/r1-m01.ts",
+        "sha": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+        "task": "P3-R1-02"
+      },
+      "page": "员工工号重复拒绝",
+      "pageState": "fresh_readback",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "recordIds": [
+        "50913db1-0208-49cd-a928-159a8b1e2063"
+      ],
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "F-SPEC-07",
+        "F-SPEC-08",
+        "F-SPEC-03"
+      ],
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "局部截图超时不阻塞；本条采用结构化DOM/字段值/ID",
+      "severity": "Observation",
+      "steps": [
+        "正式页面操作",
+        "独立回读",
+        "按唯一姓名和UUID核定实际结果"
+      ],
+      "time": "2026-09-11T03:52:22.535826+00:00",
+      "title": "员工工号重复拒绝",
+      "threeWayConclusion": "局部原站字段/唯一性证据，P3静态映射，尚不判完整MATCH或实现缺陷"
     }
   ],
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",

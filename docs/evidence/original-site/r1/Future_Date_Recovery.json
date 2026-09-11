@@ -60,7 +60,7 @@
     "newTab": 1,
     "onFailure": "停止浏览器重试；不得读取旧DOM替代新查询"
   },
-  "retention": "10对象全部保留；原单/历史不删除；任何非本轮依赖停止相关写入",
+  "retention": "11对象/3员工保留；EMP001未再入职；原单历史不删",
   "runId": "R1-ORIGIN-20260910-100019",
   "scheduledRecheck": {
     "approximateLocalTime": "08:00",

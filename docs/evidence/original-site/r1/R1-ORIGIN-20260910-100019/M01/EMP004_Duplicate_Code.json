@@ -1,0 +1,31 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "caseId": "M01-EMP-CODE-DUP-004",
+  "at": "2026-09-11T03:52:22.535826+00:00",
+  "role": "ORIGIN-ADMIN-01",
+  "environment": "https://srworkshopbj.italent.cn",
+  "tab": "27",
+  "draftName": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_004",
+  "duplicateCode": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_003",
+  "occupiedPersonId": "50913db1-0208-49cd-a928-159a8b1e2063",
+  "serverMessage": "该人员的工号已被ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_003（zz.r1.20260910.100019.emp003@example.invalid）占用",
+  "invite": "否",
+  "managerCompanyCleared": true,
+  "steps": [
+    "使用完整有效日期/部门/岗位及虚构邮箱；邀请否，经理公司清空",
+    "保存重复工号，明确占用错误，表单保留",
+    "改为EMP004唯一工号后保存，旧错误仍显示，没有确认落库；未盲目重放",
+    "关闭旧错误并取消表单",
+    "完整姓名EMP004新搜索结果：这里什么都没有...；候选0；取消查询"
+  ],
+  "postCancelQuery": {
+    "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_004",
+    "candidates": 0,
+    "visibleResult": "这里什么都没有..."
+  },
+  "outcome": "duplicate_rejected_corrected_save_not_persisted_in_current_search",
+  "unknownActionResolvedBy": "cancel_and_fresh_exact_name_search_no_candidate",
+  "newRecordCount": 0,
+  "createdAtServer": null,
+  "screenshot": null
+}

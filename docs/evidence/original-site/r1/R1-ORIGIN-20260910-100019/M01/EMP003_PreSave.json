@@ -1,0 +1,106 @@
+{
+  "at": "2026-09-11T03:34:59.354Z",
+  "caseId": "M01-EMP-003",
+  "draftOnly": true,
+  "fields": [
+    {
+      "label": "姓名",
+      "selectedAvatarCount": 0,
+      "values": [
+        "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_003"
+      ]
+    },
+    {
+      "label": "电子邮件",
+      "selectedAvatarCount": 0,
+      "values": [
+        "zz.r1.20260910.100019.emp003@example.invalid"
+      ]
+    },
+    {
+      "label": "证件号码",
+      "selectedAvatarCount": 0,
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "手机号码",
+      "selectedAvatarCount": 0,
+      "values": [
+        ""
+      ]
+    },
+    {
+      "activeRadio": "否",
+      "label": "邀请激活账号",
+      "selectedAvatarCount": 0,
+      "values": []
+    },
+    {
+      "label": "入职日期",
+      "selectedAvatarCount": 0,
+      "values": [
+        "2026-09-11"
+      ]
+    },
+    {
+      "label": "工号",
+      "selectedAvatarCount": 0,
+      "values": [
+        "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_003"
+      ]
+    },
+    {
+      "label": "部门",
+      "selectedAvatarCount": 0,
+      "text": "部门ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "职位",
+      "selectedAvatarCount": 0,
+      "text": "职位ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001",
+      "values": [
+        "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001"
+      ]
+    },
+    {
+      "label": "是否有试用期",
+      "selectedAvatarCount": 0,
+      "values": [
+        "否"
+      ]
+    },
+    {
+      "label": "直线经理",
+      "selectedAvatarCount": 0,
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "虚线经理",
+      "selectedAvatarCount": 0,
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "公司",
+      "selectedAvatarCount": 0,
+      "values": [
+        ""
+      ]
+    },
+    {
+      "label": "选择电子签署模板",
+      "selectedAvatarCount": 0,
+      "values": [
+        ""
+      ]
+    }
+  ]
+}
