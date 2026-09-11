@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-09-11T03:52:36.842485+00:00",
+  "checkedAt": "2026-09-11T04:04:27.823561+00:00",
   "scope": "all evidence files except self",
-  "jsonFilesValidated": 79,
+  "jsonFilesValidated": 83,
   "files": [
     {
       "path": "ALERT-MAJOR-001.md",
@@ -21,12 +21,12 @@
     {
       "path": "Current_Executable_Test_Disposition.json",
       "bytes": 4605,
-      "sha256": "dfd3d51b534e17820004699a426530cfa058f6a5f52e54a99be7addea96a2dbe"
+      "sha256": "9c3ad36a5446a05b8c87864669d01da7b37fc48de60409d591f1a13d12c9d4d0"
     },
     {
       "path": "Future_Date_Recovery.json",
-      "bytes": 7061,
-      "sha256": "84529bee504573753b20661a8817f8e33a464533cf3e8b47cb0ca49d1cdb3166"
+      "bytes": 7064,
+      "sha256": "6927e01685981dde91b161cfc23d2bd9fcf44b93b1f8ad80a62172bd3f57a9f0"
     },
     {
       "path": "M01_Checkpoint.md",
@@ -50,8 +50,8 @@
     },
     {
       "path": "Original_Site_Data_Manifest.json",
-      "bytes": 23923,
-      "sha256": "cb526cf72b91b18aad09fa9a34f3c7f4541f8e75645a1a4f91555d5d75b90a4e"
+      "bytes": 26671,
+      "sha256": "12a5c5c0fe22c3342cd229a7f3025db5adc33b0804c7e642411d6c0959bd3882"
     },
     {
       "path": "Original_Site_Test_Plan.md",
@@ -137,6 +137,26 @@
       "path": "R1-ORIGIN-20260910-100019/M01/EMP004_Duplicate_Code.json",
       "bytes": 1402,
       "sha256": "11305a5472a0061437ed533cb2f2eb7b809dcc5ff32c4ae20a96bff58bae1d10"
+    },
+    {
+      "path": "R1-ORIGIN-20260910-100019/M01/EMP004_PreSave.json",
+      "bytes": 1951,
+      "sha256": "c7b34db36edd92c25cacd31b908195ee1776766477ee856d5bd260eb04a6f49f"
+    },
+    {
+      "path": "R1-ORIGIN-20260910-100019/M01/EMP004_Readback.json",
+      "bytes": 908,
+      "sha256": "769e2d6560bd0c217d5382ceb8b3bf953754dd121cb30bbd7d13189be8dcef9d"
+    },
+    {
+      "path": "R1-ORIGIN-20260910-100019/M01/EMP005_PreSave.json",
+      "bytes": 1853,
+      "sha256": "fec1167ab0f4ebc2b47269253f98f135897077d0a66005f71e21837c764f405b"
+    },
+    {
+      "path": "R1-ORIGIN-20260910-100019/M01/EMP005_Readback.json",
+      "bytes": 1214,
+      "sha256": "78aa9fcc1c8f5dbb6234923656dc7d0f64731c0c1a91415266da8863ab7e8bbc"
     },
     {
       "path": "R1-ORIGIN-20260910-100019/M01/M01-EMP-001-assignment.json",
@@ -440,18 +460,18 @@
     },
     {
       "path": "R1_Original_Behavior_Matrix.json",
-      "bytes": 189355,
-      "sha256": "93aa1d3c5baeba018d1cb814575c736f509a79cd58f4dd9ceb7542e674325e2e"
+      "bytes": 193493,
+      "sha256": "98e36418d609013d8968e63115e63cefbd2f3492ba2f0c0de7ea0190a3b3e24b"
     },
     {
       "path": "R1_Original_Behavior_Matrix.md",
-      "bytes": 16414,
-      "sha256": "f8498212dea342c1a4a9f949689be3d08d989b4b9b783139feedb64d3caebed6"
+      "bytes": 16736,
+      "sha256": "8a1cfa670b6d631446b672046b55b35a2d43c45d0fba1aefc209e19ea73a85dd"
     },
     {
       "path": "R1_P3_Evidence_Feedback.md",
-      "bytes": 21392,
-      "sha256": "23e93f4f78c82f701fe6dd78e01a8e5681fc13b25788432300f5d932e19964f2"
+      "bytes": 22152,
+      "sha256": "595894ad6e251379c81c73353da3a29c2b6cd43d3df04887e7347a721026732b"
     },
     {
       "path": "R1_P4_Comparison_Cases.md",
@@ -460,8 +480,8 @@
     },
     {
       "path": "R1_Parity_Difference_Ledger.json",
-      "bytes": 24046,
-      "sha256": "85835301d6e35718944b083bf985d0db9b7c75564ca41f6e6600ffbe02abd74d"
+      "bytes": 24350,
+      "sha256": "8f0eec1a63852160805620a45d8f93b6c1bf34659a4eff4072402b58e01b608a"
     },
     {
       "path": "R1_Parity_Difference_Ledger.md",
@@ -475,13 +495,13 @@
     },
     {
       "path": "Resume.md",
-      "bytes": 19358,
-      "sha256": "e46d6b317fbf43d07c6d020ecbc68d798036e39949555918264c0bab66b5ac84"
+      "bytes": 20118,
+      "sha256": "f1cbc01dd9422b116a30d6088382ddf5caa2c34d84c71485b675e4015cbc2ca2"
     },
     {
       "path": "Run_Status.json",
-      "bytes": 3957,
-      "sha256": "93bb3c4f47b30b465f69ef1fc5e2801cb5af0ca2c4a8823dd26add8bc2f4f9fb"
+      "bytes": 3951,
+      "sha256": "25181f3723ffd70e398be2d5f3b655c7d0ed9ea43858efd178c90863223ffea4"
     },
     {
       "path": "run.json",

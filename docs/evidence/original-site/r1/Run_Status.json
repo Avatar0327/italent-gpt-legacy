@@ -16,8 +16,8 @@
   },
   "concurrency": "own_tab_27_other_tabs_untouched_R1_sole_operator",
   "continuationInProgress": true,
-  "createdRecords": 11,
-  "createdRecordsDefinition": "11个主动业务对象：3组织+2岗位+3员工+2申请+1离职任职；不计自动关联行。",
+  "createdRecords": 13,
+  "createdRecordsDefinition": "13个主动对象：3组织+2岗位+5员工+2申请+1离职任职；自动关联行另列。",
   "currentCheckpoint": "same_run_partial_evidence_not_release_complete",
   "currentContinuationLimitation": "ROLE-01、附件ENV-06及原转正编辑ENV-04；其他管理员场景继续。",
   "currentEmployeeOracle": {
@@ -50,7 +50,7 @@
   },
   "historicalMajor": 1,
   "intentionalDifferences": 1,
-  "lastRecheckAt": "2026-09-11T03:52:22.535826+00:00",
+  "lastRecheckAt": "2026-09-11T04:03:45.355733+00:00",
   "matchRules": 3,
   "modules": [
     {
@@ -86,7 +86,7 @@
       "requirementsComparison": "partial"
     }
   ],
-  "newBusinessObjectsThisContinuation": 1,
+  "newBusinessObjectsThisContinuation": 3,
   "newConfirmedBusinessBehaviorsThisContinuation": 2,
   "newFindingsThisContinuation": {
     "Blocker": 0,

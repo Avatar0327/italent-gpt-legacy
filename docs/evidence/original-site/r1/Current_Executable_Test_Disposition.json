@@ -69,10 +69,10 @@
   ],
   "quantity": {
     "bulkRows": 0,
-    "businessObjects": 11,
-    "employees": 3,
+    "businessObjects": 13,
+    "employees": 5,
     "expanded30to50": false,
-    "newThisContinuation": 1,
+    "newThisContinuation": 3,
     "smokeAllCasesPassed": false,
     "threshold5to10Quantity": true
   },

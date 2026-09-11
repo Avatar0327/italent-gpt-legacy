@@ -1,0 +1,22 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "caseId": "M01-EMP-004",
+  "at": "2026-09-11T03:57:12.074Z",
+  "environment": "https://srworkshopbj.italent.cn",
+  "role": "ORIGIN-ADMIN-01",
+  "rows": [
+    {
+      "ids": [
+        {
+          "personId": "4dae112d-2e1f-4261-9c6b-1036e59ccefc",
+          "text": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_004"
+        }
+      ],
+      "text": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_004ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_004ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002华夏九洲集团/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002内部员工ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001--编辑人员"
+    }
+  ],
+  "query": "完整姓名EMP004，选中唯一候选后确定",
+  "save": "干净草稿保存一次，独立新查询确认；前失败草稿未落库",
+  "createdAtServer": null,
+  "screenshot": null
+}

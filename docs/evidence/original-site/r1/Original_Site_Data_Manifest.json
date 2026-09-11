@@ -142,10 +142,32 @@
       "preconditions": [
         "UUID+完整姓名双核；无非本轮依赖；历史优先归档"
       ]
+    },
+    {
+      "action": "保留",
+      "allowLaterDelete": true,
+      "module": "M01",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_004",
+      "originRecordId": "4dae112d-2e1f-4261-9c6b-1036e59ccefc",
+      "performed": false,
+      "preconditions": [
+        "UUID+全名双核，无非本轮依赖；历史优先归档"
+      ]
+    },
+    {
+      "action": "保留",
+      "allowLaterDelete": true,
+      "module": "M01",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005",
+      "originRecordId": "53a88828-60d7-42e4-b508-974ff96708a2",
+      "performed": false,
+      "preconditions": [
+        "UUID+全名双核，无非本轮依赖；历史优先归档"
+      ]
     }
   ],
-  "countDefinition": "11个主动业务对象：3组织+2岗位+3员工+2申请+1离职任职；不计自动关联行。",
-  "createdCount": 11,
+  "countDefinition": "13个主动对象：3组织+2岗位+5员工+2申请+1离职任职；自动关联行另列。",
+  "createdCount": 13,
   "deletedCount": 0,
   "drafts": {
     "initialCancelledOrganizationDrafts": 2,
@@ -153,30 +175,31 @@
     "concentratedRehire": "cancelled_after_required_validation_no_record_created",
     "concentratedEmployee": "cancelled_after_format_validation",
     "concentratedJob": "saved_description_after_fresh_read_no_unknown_write",
-    "EMP004": "cancelled_after_duplicate_validation_and_unconfirmed_corrected_save_fresh_search_zero"
+    "EMP004": "fresh_form_save_and_exact_query_confirmed",
+    "EMP005": "save_and_exact_query_confirmed"
   },
   "lastContinuation": {
-    "at": "2026-09-11T03:52:22.535826+00:00",
-    "newObjects": 1,
+    "at": "2026-09-11T04:03:45.355733+00:00",
+    "newObjects": 3,
     "modifiedRunObjects": 2,
-    "retained": 11,
+    "retained": 13,
     "deleted": 0,
     "inProgress": true,
     "evidence": [
-      "R1-ORIGIN-20260910-100019/M01/EMP003_Readback.json",
-      "R1-ORIGIN-20260910-100019/M01/EMP004_Duplicate_Code.json"
+      "R1-ORIGIN-20260910-100019/M01/EMP004_Readback.json",
+      "R1-ORIGIN-20260910-100019/M01/EMP005_Readback.json"
     ]
   },
   "manualSmoke": {
     "bulkImportedRows": 0,
     "completedBusinessLifecycle": false,
-    "employeeCount": 3,
+    "employeeCount": 5,
     "expanded30To50": false,
     "expansionGate": "页面运行稳定且可审计逐条UUID；现已多次出现数十秒加载/回执延迟，不在回执未核定时重放或扩量。未证共享环境受影响。",
-    "namedMasterObjects": 8,
-    "note": "3员工，小样本数量和业务场景仍未全通过；不扩大30–50",
+    "namedMasterObjects": 10,
+    "note": "员工5人达到小样本数量，基础生命周期/权限/报表冒烟未全通过，不扩30–50",
     "threshold5To10Reached": true,
-    "totalCreatedBusinessObjects": 11
+    "totalCreatedBusinessObjects": 13
   },
   "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
   "records": [
@@ -569,9 +592,58 @@
       "statusScope": "fresh_query_2026-09-11",
       "verifiedAt": "2026-09-11T03:52:22.535826+00:00",
       "invitationEnabled": false
+    },
+    {
+      "allowLaterDelete": true,
+      "caseId": "M01-EMP-004",
+      "createdAt": null,
+      "createdAtBasis": "正式保存后新查询UUID及主职状态已证；服务端创建审计未提供",
+      "deletionGate": "UUID与全名双核，只清理本轮且无外部依赖；有历史保留归档",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/EMP004_PreSave.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP004_Readback.json"
+      ],
+      "joinedOn": "2026-09-11",
+      "module": "M01",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_004",
+      "objectType": "employee",
+      "originRecordId": "4dae112d-2e1f-4261-9c6b-1036e59ccefc",
+      "relatedRecords": [
+        "db7df096-624b-4d1e-ab4e-0552a56f052c",
+        "81fde82c-3807-4e73-be33-46a9321f87fb"
+      ],
+      "runId": "R1-ORIGIN-20260910-100019",
+      "status": "employee_created_org002_job001",
+      "statusScope": "fresh_query_2026-09-11",
+      "verifiedAt": "2026-09-11T04:03:45.355733+00:00",
+      "invitationEnabled": false
+    },
+    {
+      "allowLaterDelete": true,
+      "caseId": "M01-EMP-005",
+      "createdAt": null,
+      "createdAtBasis": "正式保存后新查询UUID及主职状态已证；服务端创建审计未提供",
+      "deletionGate": "UUID与全名双核，只清理本轮且无外部依赖；有历史保留归档",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/EMP005_PreSave.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP005_Readback.json"
+      ],
+      "joinedOn": "2026-09-11",
+      "module": "M01",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005",
+      "objectType": "employee",
+      "originRecordId": "53a88828-60d7-42e4-b508-974ff96708a2",
+      "relatedRecords": [
+        "db7df096-624b-4d1e-ab4e-0552a56f052c"
+      ],
+      "runId": "R1-ORIGIN-20260910-100019",
+      "status": "employee_created_org002_job_empty",
+      "statusScope": "fresh_query_2026-09-11",
+      "verifiedAt": "2026-09-11T04:03:45.355733+00:00",
+      "invitationEnabled": false
     }
   ],
-  "retainedCount": 11,
+  "retainedCount": 13,
   "runId": "R1-ORIGIN-20260910-100019",
   "successMessagePendingIdCount": 0,
   "writesSuspendedReason": null

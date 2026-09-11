@@ -378,7 +378,9 @@
         "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-corrected.json",
         "R1-ORIGIN-20260910-100019/M01/M01-EMP-002-readback.json",
         "R1-ORIGIN-20260910-100019/M01/EMP003_Readback.json",
-        "R1-ORIGIN-20260910-100019/M01/EMP004_Duplicate_Code.json"
+        "R1-ORIGIN-20260910-100019/M01/EMP004_Duplicate_Code.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP004_Readback.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP005_Readback.json"
       ],
       "feedback": "P2明确入口模板/跨对象日期约束，P3核查employment.startOn与组织有效日的实现及测试；未确认批准设计遗漏/实现缺陷。",
       "id": "OBS-07",
@@ -409,7 +411,8 @@
         "at": "2026-09-11T03:52:22.535826+00:00",
         "actual": "新增EMP003正式主职成功；工号重复拒绝；日期/公司联动仍会清空邮箱，需最终回读",
         "productDefectConfirmed": false
-      }
+      },
+      "jobEmptyIncrement": "EMP005职位通过正式清除控件置空后允许保存；清除职位会回填默认经理，保存前再次清除；不据此改P2必填规则。"
     },
     {
       "actual": "停用表单包含整体职位/人员转移，未核全部明细故取消。ORG003备注编辑持久化，名称/编码/日期/归属不变；操作记录仅设立1条，变更记录仅启用1版本。",

@@ -1,0 +1,34 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "caseId": "M01-EMP-005",
+  "at": "2026-09-11T04:01:43.151Z",
+  "environment": "https://srworkshopbj.italent.cn",
+  "role": "ORIGIN-ADMIN-01",
+  "rows": [
+    {
+      "ids": [
+        {
+          "personId": "53a88828-60d7-42e4-b508-974ff96708a2",
+          "text": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005"
+        }
+      ],
+      "text": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002华夏九洲集团/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002内部员工----编辑人员"
+    }
+  ],
+  "query": "完整姓名EMP005，选中唯一候选后确定",
+  "save": "正式保存一次，独立新查询确认",
+  "job": null,
+  "createdAtServer": null,
+  "screenshot": null,
+  "detailFollowup": {
+    "page": "同UUID详情/任职信息",
+    "assignmentHeading": "入职-新增入职-ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
+    "interval": "2026年9月11日至今",
+    "effective": "生效中",
+    "personStatus": "正式",
+    "type": "主职",
+    "position": "--",
+    "manager": "--",
+    "partTime": "暂无兼职记录"
+  }
+}
