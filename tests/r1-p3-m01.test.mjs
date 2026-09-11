@@ -65,6 +65,10 @@ test('P3-M01-09: missing or wrong entry template blocks person creation and neve
  const p={operation:'person',code:'P-new',name:'合成待入职',orgId:'A',templateId:t.result.ids[0],entryType:'prehire',fields:{}};await assert.rejects(f.send(p),/必填/);
  const before=f.sqlite.prepare('SELECT count(*) n FROM hris_memberships').get().n;const r=await f.send({...p,fields:{email:'fixture@example.invalid'}});assert.equal((await m01Entity(f.db,f.tenant,r.result.ids[0])).payload.invite,false);assert.equal(f.sqlite.prepare('SELECT count(*) n FROM hris_memberships').get().n,before);f.sqlite.close();
 });
+async function retainedOriginCommand(payload){
+ const ctx=await memberContext(),s=ctx.member.securityStamp,key=crypto.randomUUID(),intent={commandId:key,idempotencyKey:key,action:'M01.'+payload.operation,payload,expectedWorkspaceRevision:ctx.row.revision,expectedAuthorizationRevision:s.authorizationRevision,expectedWriterEpoch:s.writerEpoch,expectedRecoveryEpoch:s.recoveryEpoch};
+ return ()=>executeM01(ctx,intent);
+}
 test('P3-ORIGIN-OBS07: required text rejects empty, whitespace and blank defaults in each declared entry template before any write',async t=>{
  const f=await fixture();t.after(()=>f.sqlite.close());
  const snapshot=()=>Object.fromEntries(['r1_m01_entities','r1_m01_versions','r1_identity_keys','r1_commands','r1_outbox','r1_recovery_changes','hris_audit_events','hris_memberships'].map(table=>[table,f.sqlite.prepare('SELECT count(*) n FROM '+table).get().n]));
@@ -74,8 +78,8 @@ test('P3-ORIGIN-OBS07: required text rejects empty, whitespace and blank default
   for(const fields of [{},{email:null},{email:''},{email:' \t\n '}]){
    const before=snapshot();await assert.rejects(f.send({...payload,fields}),/必填/);assert.deepEqual(snapshot(),before);
   }
-  const key=crypto.randomUUID(),valid={...payload,fields:{email:'isolated@example.invalid'}},saved=await f.send(valid,key),after=snapshot();
-  assert.equal((await f.send(valid,key)).replayed,true);assert.deepEqual(snapshot(),after);assert.equal((await m01Entity(f.db,f.tenant,saved.result.ids[0])).payload.fields.email,'isolated@example.invalid');
+  const valid={...payload,fields:{email:'isolated@example.invalid'}},invoke=await retainedOriginCommand(valid),saved=await invoke(),after=snapshot();
+  assert.equal((await invoke()).replayed,true);assert.deepEqual(snapshot(),after);assert.equal((await m01Entity(f.db,f.tenant,saved.result.ids[0])).payload.fields.email,'isolated@example.invalid');
  }
 });
 test('P3-ORIGIN-OBS07: required subset blank update rolls back, optional blank and numeric zero remain valid, unauthorized writes remain denied',async t=>{
@@ -88,7 +92,7 @@ test('P3-ORIGIN-OBS07: required subset blank update rolls back, optional blank a
  const old=f.sqlite.prepare('SELECT payload FROM r1_m01_versions WHERE entity_id=?').get(recordId).payload,revision=(await m01Entity(f.db,f.tenant,recordId)).revision;
  const update={...payload,rowNo:2,mode:'update',recordId,fields:{skill:' \t '}};
  await assert.rejects(f.send(update),/必填/);assert.equal((await m01Entity(f.db,f.tenant,recordId)).revision,revision);assert.equal(f.sqlite.prepare('SELECT count(*) n FROM r1_import_receipts WHERE batch_id=? AND row_no=2').get(payload.batchId).n,0);
- const fixed={...update,fields:{skill:'合成新技能'}},key=crypto.randomUUID();await f.send(fixed,key);assert.equal((await f.send(fixed,key)).replayed,true);assert.equal(f.sqlite.prepare('SELECT payload FROM r1_m01_versions WHERE entity_id=? AND version=1').get(recordId).payload,old);
+ const fixed={...update,fields:{skill:'合成新技能'}},invoke=await retainedOriginCommand(fixed);await invoke();assert.equal((await invoke()).replayed,true);assert.equal(f.sqlite.prepare('SELECT payload FROM r1_m01_versions WHERE entity_id=? AND version=1').get(recordId).payload,old);
  f.sqlite.prepare("UPDATE r1_permission_grants SET fields='[\"record\"]' WHERE member_id='owner' AND object_type='M01' AND action='subsetImport'").run();
  await assert.rejects(f.send({...fixed,rowNo:3}),e=>e.status===403);
 });
