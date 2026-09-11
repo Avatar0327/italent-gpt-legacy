@@ -82,7 +82,7 @@
       "createdAt": null,
       "createdAtBasis": "正式离职保存，服务端创建审计未取；不能用浏览器时间代替",
       "verifiedAt": "2026-09-10T13:31:48.344Z",
-      "status": "future_effective_2026-09-11",
+      "status": "exit_assignment_effective_from_2026-09-11",
       "lastWorkingOn": "2026-09-10",
       "plannedOn": "2026-09-11",
       "relatedRecords": [
@@ -94,17 +94,23 @@
       "deletionGate": "保留离职历史与未来状态；清理先核实际生效和依赖，不删除历史掩盖过程",
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-history.json",
-        "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-ID-report.json"
+        "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-ID-report.json",
+        "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
       ],
-      "statusScope": "historical_last_observed_not_reasserted_as_current",
+      "statusScope": "fresh_readback_2026-09-11_before_rehire",
       "sep11Verification": {
-        "asOf": "2026-09-10T16:16:42.486Z",
-        "currentStatus": null,
+        "asOf": "2026-09-11T00:51:52.069Z",
+        "currentStatus": "exit_assignment_effective_from_2026-09-11",
         "executionPerson": null,
         "actualAuditTime": null,
-        "result": "not_reached_fresh_query_gate_failed",
-        "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
-      }
+        "result": "observed_current_state",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json",
+        "startOn": "2026-09-11",
+        "endOn": "9999-12-31",
+        "personStatus": "离职",
+        "assignmentDisplayStatus": "生效中"
+      },
+      "historicalStatusBeforePriority": "future_effective_2026-09-11"
     },
     {
       "runId": "R1-ORIGIN-20260910-100019",
@@ -116,7 +122,7 @@
       "createdAt": null,
       "createdAtPrecision": "minute",
       "createdAtBasis": "原站操作记录仅显示分钟，不补造秒",
-      "status": "recalled_to_start_exit_warning_observed_termination_not_confirmed",
+      "status": "void_business_process_terminated_by_system",
       "relatedRecords": [
         "927ef593-f930-4bcb-963f-e463df2e9e84",
         "98436444-b9e5-468c-9abf-b3212bd666eb",
@@ -130,18 +136,22 @@
       "evidence": [
         "R1-ORIGIN-20260910-100019/M19/M19-TRANSFER-REQUEST-001-detail.json",
         "R1-ORIGIN-20260910-100019/M19/M19-TRANSFER-REQUEST-001-recall-audit.json",
-        "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-ID-report.json"
+        "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-ID-report.json",
+        "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
       ],
       "auditCreatedAtMinute": "2026-09-10 20:44 Asia/Shanghai",
-      "statusScope": "historical_last_observed_not_reasserted_as_current",
+      "statusScope": "fresh_readback_2026-09-11_before_rehire",
       "sep11Verification": {
-        "asOf": "2026-09-10T16:16:42.486Z",
-        "currentStatus": null,
-        "executionPerson": null,
-        "actualAuditTime": null,
-        "result": "not_reached_fresh_query_gate_failed",
-        "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
-      }
+        "asOf": "2026-09-11T00:51:52.069Z",
+        "currentStatus": "void_business_process_terminated_by_system",
+        "executionPerson": "系统",
+        "actualAuditTime": "2026-09-11T01:15+08:00",
+        "result": "observed_current_state",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json",
+        "reason": "离职发起后自动终止",
+        "auditPrecision": "minute"
+      },
+      "historicalStatusBeforePriority": "recalled_to_start_exit_warning_observed_termination_not_confirmed"
     },
     {
       "runId": "R1-ORIGIN-20260910-100019",
@@ -153,7 +163,7 @@
       "createdAt": null,
       "createdAtBasis": "服务端审计尚待读取；在职员工列表唯一结果已证",
       "verifiedAt": "2026-09-10T12:15:13.521Z",
-      "status": "formal_active_future_exit_2026-09-11",
+      "status": "departed_current_assignment_effective",
       "relatedRecords": [
         "a7b55bd7-0ef2-44a0-9d29-6259fe053da3",
         "9e593b4e-938e-4312-aff9-460c3c4d80f0",
@@ -165,17 +175,19 @@
       "deletionGate": "唯一UUID+命名空间；有业务历史应保留归档，不级联删除；不得影响非本轮关联",
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/M01-EMP-001.json",
-        "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-ID-report.json"
+        "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-ID-report.json",
+        "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
       ],
-      "statusScope": "historical_last_observed_not_reasserted_as_current",
+      "statusScope": "fresh_readback_2026-09-11_before_rehire",
       "sep11Verification": {
-        "asOf": "2026-09-10T16:16:42.486Z",
-        "currentStatus": null,
+        "asOf": "2026-09-11T00:51:52.069Z",
+        "currentStatus": "departed_current_assignment_effective",
         "executionPerson": null,
         "actualAuditTime": null,
-        "result": "not_reached_fresh_query_gate_failed",
-        "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
-      }
+        "result": "observed_current_state",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
+      },
+      "historicalStatusBeforePriority": "formal_active_future_exit_2026-09-11"
     },
     {
       "runId": "R1-ORIGIN-20260910-100019",
@@ -249,18 +261,20 @@
       "deletionGate": "需唯一ID与命名空间同时确认后才能清理",
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-001-success-message.json",
-        "R1-ORIGIN-20260910-100019/M01/M01-ORG-001-readback.json"
+        "R1-ORIGIN-20260910-100019/M01/M01-ORG-001-readback.json",
+        "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
       ],
       "createdAtBasis": "原站组织操作记录设立时间",
-      "statusScope": "historical_last_observed_not_reasserted_as_current",
+      "statusScope": "fresh_readback_2026-09-11_before_rehire",
       "sep11Verification": {
-        "asOf": "2026-09-10T16:16:42.486Z",
-        "currentStatus": null,
+        "asOf": "2026-09-11T00:51:52.069Z",
+        "currentStatus": "enabled_query_verified",
         "executionPerson": null,
         "actualAuditTime": null,
-        "result": "not_reached_fresh_query_gate_failed",
-        "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
-      }
+        "result": "observed_current_state",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
+      },
+      "historicalStatusBeforePriority": "enabled_query_verified"
     },
     {
       "runId": "R1-ORIGIN-20260910-100019",
@@ -454,7 +468,7 @@
     }
   ],
   "successMessagePendingIdCount": 0,
-  "writesSuspendedReason": "2026-09-11一次新标签和一次既有正式路径均Failed to fetch、业务区为空；已按用户限制停止浏览器重试，未进入任何业务保存。",
+  "writesSuspendedReason": "本轮关键片段后主动结束浏览器优先使用；日期报表控件超时未完成，已关闭自有查询标签。没有业务写入。",
   "retainedCount": 10,
   "deletedCount": 0,
   "drafts": {
@@ -479,20 +493,20 @@
     "note": "达到5–10总量门槛，未达到全部场景冒烟通过；只有2员工，不宣称员工批量测试"
   },
   "lastContinuation": {
-    "basisHead": "60cfb04dc7fd869cd15b910de10e165cd72a7637",
-    "actualBeijingStart": "2026-09-11T00:13:46+08:00",
+    "basisHead": "76a16265fdd65f6ba7608260dde1e07acfb85200",
+    "actualBeijingStart": "2026-09-11T08:30:20+08:00",
     "dateConditionSatisfied": true,
     "newBusinessRecords": 0,
     "newBusinessWrites": 0,
     "retainedCount": 10,
     "deletedCount": 0,
-    "freshServerQuerySucceeded": false,
+    "freshServerQuerySucceeded": true,
     "existingObjectsRecreated": false,
     "recordUUIDsConfirmedFromManifest": 10,
-    "liveObjectReadbacksCompleted": 0,
+    "liveObjectReadbacksCompleted": 4,
     "evidence": [
-      "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json",
-      "Future_Date_Recovery.json"
-    ]
+      "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
+    ],
+    "unknownBusinessActions": []
   }
 }

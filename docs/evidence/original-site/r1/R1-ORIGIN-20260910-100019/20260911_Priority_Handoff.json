@@ -1,0 +1,129 @@
+{
+  "employeeAssignments": {
+    "at": "2026-09-11T00:39:24.183Z",
+    "personId": "927ef593-f930-4bcb-963f-e463df2e9e84",
+    "text": "上传\n\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001\n档案完整度 51.0%\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n--\n工号：\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001\n个人邮箱：\n--\n编辑人员\n调整试用信息\n打印\n人员信息\n任职信息\n合同协议\n考核信息\n薪酬信息\n假勤信息\n招聘信息\n测评信息\n外派培训协议\n问卷信息\n任职记录\n兼职记录\n离职---\n主动离职\n-ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n|2026年9月11日至今\n生效中\n编辑\n删除任职\n职位：\nZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_002\n职级类别：\n--\n直线经理：\n--\n入职日期\n2026年9月10日\n工号\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001\n机构\n华夏九洲集团\n部门\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n职位\nZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_002\n职务\n--\n工作地点\n--\nHRBP\n--\n直线经理\n--\n虚线经理\n--\n开始日期\n2026年9月11日\n结束日期\n--\n人员状态\n离职\n任职类型\n主职\n人员品项\n--\n成本中心\n--\n项目所属\n--\n现职级任职时长（年）\n--\n现职务任职时长（年）\n--\n现职位任职时长（年）\n0\n职级类别\n--\n职级\n--\n发薪类型\n--\n调动-机构内调动\n跨部门调动\n-ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n|2026年9月10日至2026年9月10日\n编辑\n删除任职\n职位：\nZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_002\n职级类别：\n--\n直线经理：\n--\n入职-新增入职-ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\n|2026年9月10日至2026年9月10日\n编辑\n删除任职\n职位：\nZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001\n职级类别：\n--\n直线经理：\n--\n离职·主动离职\n生效中\n2026年9月11日\n调动·跨部门调动\n2026年9月10日\n入职\n2026年9月10日"
+  },
+  "exitIdentity": {
+    "at": "2026-09-11T00:40:28.672Z",
+    "ids": [
+      "80c18ece-167d-4a3e-842c-c912ea656972",
+      "927ef593-f930-4bcb-963f-e463df2e9e84"
+    ],
+    "saved": false,
+    "text": "编辑\n翻译助手\n员工\nZ\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001(zz.r1.20260910.100019.emp001@example.invalid)\n工号\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001\n任职类型\n主职\n开始日期\n2026-09-11\n结束日期\n9999-12-31\n部门\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n是否部门负责人\n是\n否\n直线经理\n请选择\n职位\nZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_002\nZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_002\n职务\n请选择\n职务序列\n请选择\n职级\n请搜索\n虚线经理\n请选择\n兼职是否占人头\n是\n否\n用工形式\n请搜索\n人员类别\n请选择\n雇佣关系\n内部员工\n主职信息\n部门\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n直线经理\n请选择\n职务\n请选择\n业务组织\n请选择\n利润中心\n请选择\n预留组织4\n请选择\n预留组织5\n请选择\n员工信息\n姓名\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001\n性别\n请选择\n出生日期\n出生日期\n最高学历\n请选择\n兼职薪资档案\n薪资组\n请选择\n发薪机构\n请选择\n成本中心\n请选择\n缴税类型\n请选择\n法人公司\n请选择\n银行\n请选择\n银行账号\n开户行支行\n币种\n请选择\n兼职基本工资\n保存\n取消"
+  },
+  "flowLogTab": {
+    "at": "2026-09-11T00:44:22.753Z",
+    "text": "已经过的节点\n当前节点\n未经过的节点\n已经过的连线\n未经过的连线\n查看流程发起日志"
+  },
+  "freshQuery": {
+    "at": "2026-09-11T00:32:29.576Z",
+    "effectiveOn": "2026-09-10",
+    "endsOn": "9999-12-31",
+    "freshQueryConfirmed": true,
+    "initialRelativeDateFiltersCleared": true,
+    "origin": "https://srworkshopbj.italent.cn",
+    "queryName": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001",
+    "recordId": "d1d541ab-92f9-4fce-80c6-aa5687433175",
+    "role": "ORIGIN-ADMIN-01",
+    "tabId": "24"
+  },
+  "handoff": {
+    "at": "2026-09-11T00:51:51.642Z",
+    "browserUseEndedAt": "2026-09-11T00:51:52.069Z",
+    "businessSubmissionsStarted": 0,
+    "closureReason": "本轮关键离职/终止证据已取得；报表日期控件连续超时，结束R1优先使用并保存未完成项",
+    "otherTabsUntouched": [
+      6,
+      10,
+      11,
+      23
+    ],
+    "ownedTabs": [
+      24,
+      25,
+      26
+    ],
+    "ownedTabsClosed": true,
+    "queryCancelReturned": true,
+    "queryPanelVisibilityUnconfirmed": true,
+    "remainingTabs": [
+      {
+        "id": "6",
+        "title": "员工"
+      },
+      {
+        "id": "10",
+        "title": "班次"
+      },
+      {
+        "id": "11",
+        "title": "发薪方案"
+      },
+      {
+        "id": "23",
+        "title": "人才池"
+      }
+    ],
+    "unknownBusinessActions": []
+  },
+  "reportAttempt": {
+    "advancedFilterApplied": false,
+    "at": "2026-09-11T00:51:12.288Z",
+    "businessSaveAttempted": false,
+    "currentRowsCaptured": false,
+    "errors": [
+      "Playwright selector deadline exceeded",
+      "Runtime.evaluate timed out"
+    ],
+    "explicitDateConfirmed": false,
+    "report": "1.1.01全部员工名册",
+    "selectedNames": [
+      "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001",
+      "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_002"
+    ]
+  },
+  "transferAudit": {
+    "at": "2026-09-11T00:44:51.558Z",
+    "executor": "系统",
+    "precision": "minute",
+    "reason": "离职发起后自动终止",
+    "terminationAt": "2026-09-11T01:15+08:00",
+    "text": "协作\n操作记录(3)\n沟通\n09-10\n20:44\nORIGIN-ADMIN-01提交。\n20:52\nORIGIN-ADMIN-01撤回。\n09-11\n1:15\n系统撤销。理由：离职发起后自动终止"
+  },
+  "transferDetail": {
+    "at": "2026-09-11T00:43:25.122Z",
+    "text": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001的调动申请\n打印\n流程管理\n查看流程日志\n开始\n:\nORIGIN-ADMIN-01\n已终止\n直接上级\nHR访谈\n结束\n任职记录\n收起\n离职员工\nZ\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001\n最后工作日\n\n--\n\n预计最后工作日\n\n--\n\n交接人\n--\n离职类型\n\n跨部门调动\n\n离职原因\n\n平调\n\n离职后去向\n\n--\n\n离职补偿金\n\n--\n\n离职补偿金分期期数\n\n--\n\n竞业限制金\n\n--\n\n竞业限制金分期期数\n\n--\n\n加入黑名单\n\n--\n\n最后发薪日\n\n2026-09-10\n\n社保公积金失效年月\n\n--\n\n年假是否结薪\n\n--\n\n扣税期限\n\n--\n\n税款年份\n\n--\n\n雇主姓名\n\n--\n\n员工信息\n姓名\n\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001\n\n电子邮件\n\nzz.r1.20260910.100019.emp001@example.invalid\n\n证件类型\n\n身份证\n\n证件号码\n\n--\n\n手机号码\n\n--\n\n性别\n\n--\n\n出生日期\n\n--\n\n户籍所在地\n\n--\n\n籍贯\n\n--\n\n培训表现\n\n--\n\n培训类别名称\n\n--\n\n培训成绩\n\n--\n\n培训描述\n\n--\n\n职责信息\n收起\n\n无相关职责\n\n高级筛选"
+  },
+  "transferList": {
+    "at": "2026-09-11T00:42:36.193Z",
+    "ids": {
+      "businessId": "1cc37027-478b-4a9d-b055-e5a4f55b38e5",
+      "personId": "927ef593-f930-4bcb-963f-e463df2e9e84",
+      "processId": "98436444-b9e5-468c-9abf-b3212bd666eb",
+      "source": "current DOM row attributes"
+    },
+    "text": "调动中员工\n已完成的调动\n全部调动记录\n全部调动记录\n可在此页面查看所有的调动记录，也可以进行调动申请、调入申请或者调动等操作了解更多\n人员\n：\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001(zz.r1.20260910.100019.emp001@example.invalid)\n调动日期\n：\n2026-08-12 ~ 2026-09-11\n调动后部门\n调动后职务\n审批状态\n：\n草稿, 审批中, 审批通过, 生效,空 (未填写),审批未通过,作废,已驳回\n\n高级筛选\n\n清空已选\n他人调动申请\n调动\n批量调动\n导出数据\n导入调动记录\n姓名\n工号\n调动日期\n调动类型\n调动前部门\n调动前职务\n调动后机构\n调动后部门\n调动后工作地点\n调动后职务\n审批状态\n当前审批人\n操作\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001\n2026-09-11\n跨部门调动\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n--\n华夏九洲集团\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\n--\n--\n作废\n--\n删除任职\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001\n2026-09-10\n跨部门调动\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\n--\n华夏九洲集团\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n--\n--\n生效\n--\n编辑任职\n删除任职\n共2条\n高级筛选"
+  },
+  "transferLog": {
+    "at": "2026-09-11T00:43:42.723Z",
+    "text": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001的调动申请\n打印\n流程管理\n查看流程日志\n开始\n:\nORIGIN-ADMIN-01\n已终止\n直接上级\nHR访谈\n结束\n任职记录\n收起\n离职员工\nZ\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001\n最后工作日\n\n--\n\n预计最后工作日\n\n--\n\n交接人\n--\n离职类型\n\n跨部门调动\n\n离职原因\n\n平调\n\n离职后去向\n\n--\n\n离职补偿金\n\n--\n\n离职补偿金分期期数\n\n--\n\n竞业限制金\n\n--\n\n竞业限制金分期期数\n\n--\n\n加入黑名单\n\n--\n\n最后发薪日\n\n2026-09-10\n\n社保公积金失效年月\n\n--\n\n年假是否结薪\n\n--\n\n扣税期限\n\n--\n\n税款年份\n\n--\n\n雇主姓名\n\n--\n\n员工信息\n姓名\n\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001\n\n电子邮件\n\nzz.r1.20260910.100019.emp001@example.invalid\n\n证件类型\n\n身份证\n\n证件号码\n\n--\n\n手机号码\n\n--\n\n性别\n\n--\n\n出生日期\n\n--\n\n户籍所在地\n\n--\n\n籍贯\n\n--\n\n培训表现\n\n--\n\n培训类别名称\n\n--\n\n培训成绩\n\n--\n\n培训描述\n\n--\n\n职责信息\n收起\n\n无相关职责\n\n高级筛选"
+  },
+  "transferRouting": {
+    "at": "2026-09-11T00:44:51.579Z",
+    "matchedCode": "DimissionProcessNew",
+    "matchedFlow": "新版标准离职流程",
+    "note": "本轮正式流程发起日志显示匹配成功；不修改共享配置。",
+    "requestCode": "TransferProcessNew",
+    "version": "20250911181709857"
+  },
+  "runId": "R1-ORIGIN-20260910-100019",
+  "basisHead": "76a16265fdd65f6ba7608260dde1e07acfb85200",
+  "automation": {
+    "title": "R1原站到期回查",
+    "pausedConfirmed": true,
+    "keptPausedForR3Handoff": true,
+    "concurrentRunObserved": false
+  }
+}

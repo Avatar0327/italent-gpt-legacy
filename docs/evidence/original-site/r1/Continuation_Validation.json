@@ -1,27 +1,38 @@
 {
-  "basisHead": "60cfb04dc7fd869cd15b910de10e165cd72a7637",
-  "browserAttemptCounts": {
-    "existingFormalPath": 1,
-    "newTab": 1
+  "runId": "R1-ORIGIN-20260910-100019",
+  "basisHead": "76a16265fdd65f6ba7608260dde1e07acfb85200",
+  "validatedAt": "2026-09-11T00:56:29.851852+00:00",
+  "jsonFilesParsed": 72,
+  "matrixCases": 73,
+  "executionCounts": {
+    "observed": 37,
+    "partially_observed": 18,
+    "not_executed": 18
   },
-  "browserRetriesStopped": true,
-  "bulkModuleCount": 0,
-  "dateConditionSatisfied": true,
-  "e2eCount": 0,
-  "errors": [],
-  "freshServerQuerySucceeded": false,
-  "fullModuleCount": 0,
-  "jsonFilesParsed": 69,
   "ledgerUniqueEntries": 15,
   "manifestUniqueObjects": 10,
-  "matrixCases": 70,
+  "errors": [],
   "newBusinessWrites": 0,
-  "noPhaseApproval": true,
+  "unknownBusinessActions": [],
+  "freshServerQuerySucceeded": true,
   "oldDOMUsedAsNewEvidence": false,
+  "dateConditionSatisfied": true,
+  "fullModuleCount": 0,
+  "bulkModuleCount": 0,
   "p3ParityModuleCount": 0,
+  "e2eCount": 0,
+  "p3SourceHead": "de053be59cc0e08c2044fb534ef46ee085a38203",
   "p3RuntimeTestsRun": false,
-  "p3SourceHead": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
   "productCodeModified": false,
-  "runId": "R1-ORIGIN-20260910-100019",
-  "validatedAt": "2026-09-10T16:21:15.557758+00:00"
+  "noPhaseApproval": true,
+  "browserUseEnded": true,
+  "ownedTabsClosed": [
+    24,
+    25,
+    26
+  ],
+  "dueAutomationPaused": true,
+  "evidenceReferencesChecked": true,
+  "sourcePathsAtFixedSHAChecked": true,
+  "newEvidenceSensitiveScanFindings": 0
 }

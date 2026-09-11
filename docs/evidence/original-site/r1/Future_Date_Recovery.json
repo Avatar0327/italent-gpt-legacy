@@ -1,19 +1,21 @@
 {
   "runId": "R1-ORIGIN-20260910-100019",
-  "basisEvidenceHead": "5979d5dd7ee9000789b678027dc2444438d7d5cc",
+  "basisEvidenceHead": "76a16265fdd65f6ba7608260dde1e07acfb85200",
   "environment": "https://srworkshopbj.italent.cn",
   "businessTimezone": "Asia/Shanghai",
   "earliestActualRecheckAt": "2026-09-11T00:00:00+08:00",
   "scheduledRecheck": {
     "title": "R1原站到期回查",
-    "enabled": true,
+    "enabled": false,
     "timingMode": "flexible_schedule",
     "localDate": "2026-09-11",
     "localDaypart": "morning",
     "approximateLocalTime": "08:00",
     "timezone": "Asia/Shanghai",
     "creationConfirmed": true,
-    "executionCompleted": false
+    "executionCompleted": false,
+    "pauseConfirmed": true,
+    "pauseReason": "R1人工优先使用，避免到期自动任务并写同RUN；交接R3后保持暂停"
   },
   "objects": {
     "personId": "927ef593-f930-4bcb-963f-e463df2e9e84",
@@ -48,10 +50,10 @@
         "授权HR执行状态（如页面提供）"
       ],
       "passLimit": "到日不等于生效；页面无执行记录不得声称实际执行完成或执行时刻为00:00。",
-      "manualSep11Status": "not_executed_after_fresh_query_gate_failure",
-      "actualResult": null,
+      "manualSep11Status": "partially_observed",
+      "actualResult": "人员离职，退出任职9/11生效中；执行人/实际审计时间未知",
       "evidence": [
-        "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+        "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
       ]
     },
     {
@@ -64,10 +66,10 @@
         "终止原因与审计时间"
       ],
       "passLimit": "撤回/开始节点、先前确认警告均不能代替终止后效。",
-      "manualSep11Status": "not_executed_after_fresh_query_gate_failure",
-      "actualResult": null,
+      "manualSep11Status": "observed",
+      "actualResult": "业务作废，流程已终止，系统9/11 01:15撤销，理由离职发起后自动终止",
       "evidence": [
-        "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+        "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
       ]
     },
     {
@@ -81,10 +83,10 @@
         "当前主职与历史任职数量"
       ],
       "passLimit": "若实际退出成功，当前在职口径预期仅EMP002试用1人；这是条件性预期，绝非提前结果。若源未执行则保留实际值及未知原因。",
-      "manualSep11Status": "not_executed_after_fresh_query_gate_failure",
-      "actualResult": null,
+      "manualSep11Status": "attempted_not_completed",
+      "actualResult": "姓名已选择；固定日期未确认应用，未获取当前/历史结果",
       "evidence": [
-        "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+        "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
       ]
     },
     {
@@ -98,10 +100,10 @@
         "邀请否/账号未恢复"
       ],
       "passLimit": "不可新建同名第二人员替代再入职；不可修改历史或系统时间制造前置；缺角色部分仍ROLE_BLOCKED。",
-      "manualSep11Status": "not_executed_after_fresh_query_gate_failure",
-      "actualResult": null,
+      "manualSep11Status": "not_executed",
+      "actualResult": "未打开或提交再入职；不新建同名第二人员",
       "evidence": [
-        "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+        "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
       ]
     }
   ],
@@ -114,28 +116,30 @@
     "e2e": "0/5"
   },
   "manualRecheck": {
-    "startedAtUTC": "2026-09-10T16:13:46Z",
-    "startedAtBeijing": "2026-09-11T00:13:46+08:00",
-    "completedEvidenceCaptureAt": "2026-09-10T16:16:42.486Z",
-    "basisHead": "60cfb04dc7fd869cd15b910de10e165cd72a7637",
+    "startedAtUTC": "2026-09-11T00:30:20Z",
+    "startedAtBeijing": "2026-09-11T08:30:20+08:00",
+    "completedEvidenceCaptureAt": "2026-09-11T00:51:52.069Z",
+    "basisHead": "76a16265fdd65f6ba7608260dde1e07acfb85200",
     "dateConditionSatisfied": true,
-    "freshBusinessQuerySucceeded": false,
-    "gate": "ENV-05",
-    "outcome": "date_reached_business_effects_unverified",
-    "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json",
-    "actualExitStatus": null,
+    "freshBusinessQuerySucceeded": true,
+    "gate": "passed_for_M01_and_M19_queries",
+    "outcome": "exit_state_and_transfer_termination_observed_report_and_rehire_incomplete",
+    "evidence": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json",
+    "actualExitStatus": "离职；离职任职生效中",
     "actualExitExecutor": null,
     "actualExitAuditAt": null,
-    "transferTerminationStatus": null,
-    "transferTerminationReason": null,
-    "transferTerminationAt": null,
+    "transferTerminationStatus": "业务作废；流程已终止",
+    "transferTerminationReason": "离职发起后自动终止",
+    "transferTerminationAt": "2026-09-11T01:15+08:00",
     "currentReportDistinctPeople": null,
     "currentAssignmentCount": null,
     "rehirePrerequisiteConfirmed": false,
     "rehireAttempted": false,
-    "newPersonCreated": false
+    "newPersonCreated": false,
+    "transferTerminationExecutor": "系统",
+    "rehirePrerequisiteDetail": "离职人员/任职状态已成立；旧雇佣段ID/结束审计及入口邀请设置尚待正式再入职前核定。"
   },
-  "currentNextStep": "业务日期已满足；下次恢复先按一次新标签+一次既有正式路径验证服务器查询。若仍失败立即停止浏览器重试，保留未知，不等待未来日期作为剩余阻塞。",
+  "currentNextStep": "待R1重新获得浏览器时，先新查询确认状态，再查离职执行审计/旧雇佣段；固定姓名与明确日期报表；正式同personId再入职且邀请否。禁止自动任务并写；当前已交接R3。",
   "recoveryAttemptLimit": {
     "newTab": 1,
     "existingFormalPath": 1,

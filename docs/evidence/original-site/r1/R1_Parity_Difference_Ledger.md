@@ -1,3 +1,7 @@
+## 2026-09-11增量
+
+新增独立差异0。ENV-05更新为业务新查询部分恢复、报表日期交互仍超时；OBS-05补充调动请求匹配离职流程的正式日志；OBS-07记录P3离线必填校验增量。不更改D1–D7与所有者已决有意差异。累计MATCH3（历史窄项）、有意差异1、ROLE1、ENV4；历史Major1已决、待决Major0、Blocker/Minor0、Observation14。
+
 # R1 三方差异与证据限制台账
 
 9/11本次新增独立差异0，只追加ENV-05的新请求失败证据；已按一次新标签+一次既有正式路径上限停止浏览器重试。日期前置满足，但实际退出、原单终止、固定日期报表、再入职前置全部未知。历史Major1已由所有者关闭为INTENTIONAL_DIFFERENCE，待决Major0、Blocker0、Minor0、Observation14；ENV_BLOCKED4组、ROLE_BLOCKED1组。MATCH3仅历史窄项。本窗口无阶段批准，完整0/4、E2E0/5不变。

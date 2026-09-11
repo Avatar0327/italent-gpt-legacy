@@ -1,0 +1,21 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "basisP3": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+  "currentP3": "de053be59cc0e08c2044fb534ef46ee085a38203",
+  "mode": "read_only_source_diff_no_tests_run",
+  "observedDelta": "显式必填模板值拒绝空白及对应测试；D1–D7保持。",
+  "sourcePaths": [
+    "lib/hris/r1-m01.ts",
+    "tests/r1-p3-m01.test.mjs",
+    "lib/hris/r1-report-m01-producer.ts"
+  ],
+  "mapping": {
+    "actualExitState": "P3-R1-02 / P3-M01-10",
+    "systemTerminationAudit": "P3-R1-02/03/05 / exitCleanup",
+    "samePersonRehirePending": "P3-M01-02",
+    "reportsPending": "P3-R1-06/07"
+  },
+  "noImplementationDefectClaim": true,
+  "receiptForThisNewEvidenceHead": false,
+  "evidence": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
+}

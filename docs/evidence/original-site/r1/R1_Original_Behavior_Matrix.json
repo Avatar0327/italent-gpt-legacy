@@ -4,10 +4,175 @@
   "sourceSnapshots": {
     "p2": "e15237281ff19f04f08a354fd9455c518b24ae47",
     "p3Start": "a27ae7ee367ccd6b4cf42de968b0a3cd7389b74c",
-    "p3Comparison": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688"
+    "p3Comparison": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
+    "p3LatestReadOnly": "de053be59cc0e08c2044fb534ef46ee085a38203"
   },
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",
   "cases": [
+    {
+      "caseId": "M32-SEP11-EXPLICIT-DATE-ATTEMPT",
+      "module": "M32",
+      "title": "固定姓名日期报表尝试",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-11T00:51:52.069Z",
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "固定姓名日期报表尝试",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "steps": [
+        "从本轮新标签正式页面查询，限定完整姓名与原记录UUID",
+        "动作后独立回读页面状态，未进行业务提交",
+        "保存结构化字段/标识/实际审计；缺失项保留未知"
+      ],
+      "inputs": {
+        "businessDate": "2026-09-11",
+        "newBusinessWrites": 0
+      },
+      "actualResult": "两人已选择，日期控件超时，未确认筛选应用，未取得报表结果",
+      "pageState": "query_incomplete_timeout",
+      "recordIds": [
+        "927ef593-f930-4bcb-963f-e463df2e9e84"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "未采新截图；结构化正文及UUID证据。",
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "M32-SPEC-01",
+        "M32-SPEC-04"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md"
+      },
+      "p3": {
+        "sha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+        "path": "lib/hris/r1-report-m01-producer.ts",
+        "task": "P3-R1-06/07",
+        "cases": [
+          "P3-M32-01",
+          "P3-M32-02"
+        ],
+        "evidenceMode": "静态源码/既有测试映射；本窗口未运行复刻UI或测试"
+      },
+      "classification": "ENV_BLOCKED",
+      "severity": "Observation",
+      "timePrecision": "browser_observed",
+      "threeWayConclusion": "原站局部事实；批准规则不变；P3仅静态映射，未判实现缺陷或完整MATCH",
+      "ledgerId": "ENV-05"
+    },
+    {
+      "caseId": "M19-TRANSFER-SEP11-TERMINATED",
+      "module": "M19",
+      "title": "撤回原调动终止后效",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-11T00:51:52.069Z",
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "撤回原调动终止后效",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "steps": [
+        "从本轮新标签正式页面查询，限定完整姓名与原记录UUID",
+        "动作后独立回读页面状态，未进行业务提交",
+        "保存结构化字段/标识/实际审计；缺失项保留未知"
+      ],
+      "inputs": {
+        "businessDate": "2026-09-11",
+        "newBusinessWrites": 0
+      },
+      "actualResult": "原业务作废，原流程已终止；系统9/11 01:15撤销，理由离职发起后自动终止",
+      "pageState": "new_query_observed",
+      "recordIds": [
+        "927ef593-f930-4bcb-963f-e463df2e9e84",
+        "1cc37027-478b-4a9d-b055-e5a4f55b38e5",
+        "98436444-b9e5-468c-9abf-b3212bd666eb"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "未采新截图；结构化正文及UUID证据。",
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "F-SPEC-05",
+        "D1",
+        "D7"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+        "path": "lib/hris/r1-m01.ts",
+        "task": "P3-R1-02/03/05",
+        "cases": [
+          "P3-M01-10"
+        ],
+        "evidenceMode": "静态源码/既有测试映射；本窗口未运行复刻UI或测试"
+      },
+      "classification": null,
+      "severity": "Observation",
+      "timePrecision": "browser_observed",
+      "threeWayConclusion": "原站局部事实；批准规则不变；P3仅静态映射，未判实现缺陷或完整MATCH"
+    },
+    {
+      "caseId": "M01-EXIT-SEP11-STATE",
+      "module": "M01",
+      "title": "实际离职状态及区间",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "execution": "observed",
+      "time": "2026-09-11T00:51:52.069Z",
+      "role": "ORIGIN-ADMIN-01；不代表独立员工或审批角色",
+      "environment": "https://srworkshopbj.italent.cn",
+      "page": "实际离职状态及区间",
+      "preconditions": "已确认测试租户；同RUN三组织UUID已核定；只操作本轮对象",
+      "steps": [
+        "从本轮新标签正式页面查询，限定完整姓名与原记录UUID",
+        "动作后独立回读页面状态，未进行业务提交",
+        "保存结构化字段/标识/实际审计；缺失项保留未知"
+      ],
+      "inputs": {
+        "businessDate": "2026-09-11",
+        "newBusinessWrites": 0
+      },
+      "actualResult": "离职人员唯一命中；离职任职生效中；同personId和退出UUID；执行人/审计未知",
+      "pageState": "new_query_observed",
+      "recordIds": [
+        "927ef593-f930-4bcb-963f-e463df2e9e84"
+      ],
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
+      ],
+      "screenshot": null,
+      "screenshotLimitation": "未采新截图；结构化正文及UUID证据。",
+      "repeatability": "只读重查可重复；保存不得无条件重放",
+      "requirements": [
+        "F-SPEC-05",
+        "F-SPEC-06"
+      ],
+      "design": {
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47",
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md"
+      },
+      "p3": {
+        "sha": "de053be59cc0e08c2044fb534ef46ee085a38203",
+        "path": "lib/hris/r1-m01.ts",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-10"
+        ],
+        "evidenceMode": "静态源码/既有测试映射；本窗口未运行复刻UI或测试"
+      },
+      "classification": null,
+      "severity": "Observation",
+      "timePrecision": "browser_observed",
+      "threeWayConclusion": "原站局部事实；批准规则不变；P3仅静态映射，未判实现缺陷或完整MATCH"
+    },
     {
       "caseId": "R1-SEP11-FRESH-QUERY-GATE",
       "module": "M01",
@@ -2329,14 +2494,15 @@
         "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
         "actualValues": null
       },
-      "actualResult": "最后工作日9/10→离职任职9/11未来生效，当前仍正式且报表1人；与P1/P2次日边界和P3 exitExecute日期校验静态窄项一致；未执行次日HR/自动作业，未再入职",
-      "pageState": "future_exit_pending_time",
+      "actualResult": "9/11新查询确认人员离职、退出任职生效中；旧雇佣段ID/结束审计和正式再入职未完成",
+      "pageState": "exit_state_confirmed_rehire_not_executed",
       "recordIds": [],
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-presubmit.json",
         "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-warning.json",
         "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-history.json",
-        "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-ID-report.json"
+        "R1-ORIGIN-20260910-100019/M01/M01-EXIT-001-ID-report.json",
+        "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
       ],
       "screenshot": null,
       "screenshotLimitation": "未执行",
@@ -2364,9 +2530,8 @@
       "severity": "Observation",
       "sep11Recheck": {
         "dateConditionSatisfied": true,
-        "status": "not_executed_fresh_query_gate_failed",
-        "actualResult": null,
-        "evidence": "R1-ORIGIN-20260910-100019/20260911_Fresh_Query_Gate.json"
+        "status": "partially_observed",
+        "evidence": "R1-ORIGIN-20260910-100019/20260911_Priority_Handoff.json"
       }
     },
     {
