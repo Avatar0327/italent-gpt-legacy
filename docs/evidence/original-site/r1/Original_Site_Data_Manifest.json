@@ -175,10 +175,21 @@
       "preconditions": [
         "优先结束并保留兼职历史；UUID与本轮人员双核，无其他依赖"
       ]
+    },
+    {
+      "action": "保留",
+      "allowLaterDelete": true,
+      "module": "M01",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_006_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "originRecordId": "cdaaa0a5-0b31-4145-822c-1f96f1bc1743",
+      "performed": false,
+      "preconditions": [
+        "UUID与完整100字符姓名/工号双核；保留边界样本，无非本轮依赖"
+      ]
     }
   ],
-  "countDefinition": "14个主动对象：3组织+2岗位+5员工+2申请+1离职任职+1兼职任职；其他自动关联行另列。",
-  "createdCount": 14,
+  "countDefinition": "15个主动对象：3组织+2岗位+6员工+2申请+1离职任职+1兼职任职；自动历史行另列。",
+  "createdCount": 15,
   "deletedCount": 0,
   "drafts": {
     "initialCancelledOrganizationDrafts": 2,
@@ -188,30 +199,32 @@
     "concentratedJob": "saved_description_after_fresh_read_no_unknown_write",
     "EMP004": "fresh_form_save_and_exact_query_confirmed",
     "EMP005": "save_and_exact_query_confirmed",
-    "subscription": "cancelled_after_no_channel_no_recipient_validation_no_subscription"
+    "subscription": "cancelled_after_no_channel_no_recipient_validation_no_subscription",
+    "EMP006": "100字符保存并全名查询UUID确认，101/304字符拒绝"
   },
   "lastContinuation": {
-    "at": "2026-09-11T04:43:41.946340+00:00",
-    "newObjects": 4,
+    "at": "2026-09-11T05:23:23.851618+00:00",
+    "newObjects": 5,
     "modifiedRunObjects": 2,
-    "retained": 14,
+    "retained": 15,
     "deleted": 0,
     "inProgress": true,
     "evidence": [
-      "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_End.json",
-      "R1-ORIGIN-20260910-100019/M32/M32_Subscription_Validation.json"
+      "R1-ORIGIN-20260910-100019/M01/EMP006_PreSave.json",
+      "R1-ORIGIN-20260910-100019/M01/EMP006_Readback.json",
+      "R1-ORIGIN-20260910-100019/M01/EMP006_Assignment.json"
     ]
   },
   "manualSmoke": {
     "bulkImportedRows": 0,
     "completedBusinessLifecycle": false,
-    "employeeCount": 5,
+    "employeeCount": 6,
     "expanded30To50": false,
     "expansionGate": "页面运行稳定且可审计逐条UUID；现已多次出现数十秒加载/回执延迟，不在回执未核定时重放或扩量。未证共享环境受影响。",
-    "namedMasterObjects": 10,
-    "note": "员工5人达到小样本数量，基础生命周期/权限/报表冒烟未全通过，不扩30–50",
+    "namedMasterObjects": 11,
+    "note": "六人员小样本；基础再入职/审批/附件等仍有前置，未扩30–50",
     "threshold5To10Reached": true,
-    "totalCreatedBusinessObjects": 14
+    "totalCreatedBusinessObjects": 15
   },
   "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
   "records": [
@@ -681,9 +694,36 @@
       "verifiedAt": "2026-09-11T04:27:14.247862+00:00",
       "actualTerminationConfirmed": false,
       "latestVerification": "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_End.json"
+    },
+    {
+      "allowLaterDelete": true,
+      "caseId": "M01-EMP-006",
+      "createdAt": null,
+      "createdAtBasis": "正式保存后新查询UUID及主职状态已证；服务端创建审计未提供",
+      "deletionGate": "UUID与全名双核，只清理本轮且无外部依赖；有历史保留归档",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/EMP006_PreSave.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP006_Readback.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP006_Assignment.json"
+      ],
+      "joinedOn": "2026-09-11",
+      "module": "M01",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_006_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "objectType": "employee",
+      "originRecordId": "cdaaa0a5-0b31-4145-822c-1f96f1bc1743",
+      "relatedRecords": [
+        "db7df096-624b-4d1e-ab4e-0552a56f052c",
+        "81fde82c-3807-4e73-be33-46a9321f87fb"
+      ],
+      "runId": "R1-ORIGIN-20260910-100019",
+      "status": "active_formal_primary",
+      "statusScope": "fresh_query_2026-09-11",
+      "verifiedAt": "2026-09-11T05:20:58.054Z",
+      "invitationEnabled": false,
+      "nameLength": 100
     }
   ],
-  "retainedCount": 14,
+  "retainedCount": 15,
   "runId": "R1-ORIGIN-20260910-100019",
   "successMessagePendingIdCount": 0,
   "writesSuspendedReason": null

@@ -1,12 +1,12 @@
 {
-  "countRule": "唯一台账ID计数；Major累计2，其中001已决有意差异、002待决，activeMajor1；MATCH4仅窄项静态对照。ENV/ROLE仅计未关闭组。",
+  "countRule": "唯一台账ID计数；Major累计2，其中001已决有意差异、002待决，activeMajor1；MATCH5仅窄项静态对照。ENV/ROLE仅计未关闭组。",
   "counts": {
     "Blocker": 0,
     "DESIGN_GAP": 0,
     "ENV_BLOCKED": 5,
     "IMPLEMENTATION_DEFECT": 0,
     "INTENTIONAL_DIFFERENCE": 1,
-    "MATCH": 4,
+    "MATCH": 5,
     "Major": 2,
     "Minor": 0,
     "NEED_OWNER_DECISION": 1,
@@ -155,7 +155,8 @@
       "runId": "R1-ORIGIN-20260910-100019",
       "severity": "Observation",
       "status": "open",
-      "title": "正式组织模板下载被Chromium阻止"
+      "title": "正式组织模板下载被Chromium阻止",
+      "latestDownloadEvidence": "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_Download.json"
     },
     {
       "actual": "仅现有管理入口会话ORIGIN-ADMIN-01，两个标签共用该会话；没有验证独立员工/调出审批/调入审批身份。",
@@ -321,7 +322,8 @@
         "historicalGroupSum": 3,
         "partTimeDoesNotIncreaseCurrentPeople": true,
         "numericSortObserved": true
-      }
+      },
+      "latestHistoryEvidence": "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_All_Assignments.json"
     },
     {
       "actual": "两张本轮申请均在审批详情显示离职字段，调动部分值对应调动，转正多项空值；不证明实际发生离职。；9/11正式发起日志显示TransferProcessNew匹配DimissionProcessNew，已保存版本；不修改共享配置。",
@@ -423,7 +425,12 @@
         "actual": "新增EMP003正式主职成功；工号重复拒绝；日期/公司联动仍会清空邮箱，需最终回读",
         "productDefectConfirmed": false
       },
-      "jobEmptyIncrement": "EMP005职位通过正式清除控件置空后允许保存；清除职位会回填默认经理，保存前再次清除；不据此改P2必填规则。"
+      "jobEmptyIncrement": "EMP005职位通过正式清除控件置空后允许保存；清除职位会回填默认经理，保存前再次清除；不据此改P2必填规则。",
+      "lengthBoundary": {
+        "at": "2026-09-11T05:23:23.851618+00:00",
+        "result": "101/304姓名拒绝，100保存同UUID；P2/P3max100窄项一致",
+        "evidence": "R1-ORIGIN-20260910-100019/M01/EMP006_Readback.json"
+      }
     },
     {
       "actual": "停用表单包含整体职位/人员转移，未核全部明细故取消。ORG003备注编辑持久化，名称/编码/日期/归属不变；操作记录仅设立1条，变更记录仅启用1版本。",

@@ -2113,7 +2113,7 @@
       },
       "environment": "https://srworkshopbj.italent.cn",
       "evidence": [],
-      "execution": "not_executed",
+      "execution": "partially_observed",
       "inputs": {
         "actualValues": null,
         "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_"
@@ -2148,7 +2148,11 @@
         "核对已批同父唯一，不用源行为自动改规则"
       ],
       "time": null,
-      "title": "同父重名、不同父重名及编码重复"
+      "title": "同父重名、不同父重名及编码重复",
+      "latestDisposition": {
+        "at": "2026-09-11T05:23:23.851618+00:00",
+        "result": "同父重名/当前启用编码拒重已证；跨父重名尚待"
+      }
     },
     {
       "actualResult": "新增2职位、名称/组织必填已验；编辑/停用/唯一性未验",
@@ -2205,6 +2209,10 @@
         "at": "2026-09-11T02:59:33.876Z",
         "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json",
         "note": "本轮已补部分边界/正式入口，仍有未执行范围，详见增量用例"
+      },
+      "latestDisposition": {
+        "at": "2026-09-11T05:23:23.851618+00:00",
+        "result": "两岗位创建；JOB001编码重复拒绝/职责编辑；JOB002停用新旧版本；上级职位边界未全验"
       }
     },
     {
@@ -2254,7 +2262,11 @@
         "合成不可投递邮箱，邀请否，未配置值不借用真实人员信息"
       ],
       "time": null,
-      "title": "员工新增及三入口模板"
+      "title": "员工新增及三入口模板",
+      "latestDisposition": {
+        "at": "2026-09-11T05:23:23.851618+00:00",
+        "result": "六员工邀请否，正式/试用/空职位/100字符姓名创建；再入职未保存"
+      }
     },
     {
       "actualResult": "未执行，不以计划预期充当实际结果",
@@ -2358,7 +2370,11 @@
         "重叠/结束/取消不混淆人头与任职数"
       ],
       "time": null,
-      "title": "主职、兼职、多任职及占用"
+      "title": "主职、兼职、多任职及占用",
+      "latestDisposition": {
+        "at": "2026-09-11T05:23:23.851618+00:00",
+        "result": "005主职+兼职且不占人头；兼职结束日期已存但仍生效；重叠及独立审核待验"
+      }
     },
     {
       "actualResult": "2员工分别正式/试用；转正正式申请已提交撤回，维护入口未保存；审批/实际生效未验",
@@ -2643,6 +2659,10 @@
         "at": "2026-09-11T02:59:33.876Z",
         "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json",
         "note": "本轮已补部分边界/正式入口，仍有未执行范围，详见增量用例"
+      },
+      "latestDisposition": {
+        "at": "2026-09-11T05:23:23.851618+00:00",
+        "result": "邮箱/证件/手机号格式、工号重复、组织与岗位必填/重复、姓名101/304拒绝100保存；不外推其他字段全通过"
       }
     },
     {
@@ -3429,7 +3449,11 @@
         "说明分母、去重键、空值，不能借现有380条代证"
       ],
       "time": null,
-      "title": "指标口径与明细一致性"
+      "title": "指标口径与明细一致性",
+      "latestDisposition": {
+        "at": "2026-09-11T05:23:23.851618+00:00",
+        "result": "五姓名全历史8行/5人，当前名册4人、当前任职5行；新增006后须重算，不能沿用为当前全RUN值"
+      }
     },
     {
       "actualResult": "入职日期明天空数据、今天1人；历史快照未验",
@@ -3485,7 +3509,11 @@
         "未有源版本不造历史"
       ],
       "time": null,
-      "title": "组织日期筛选、当前值与历史快照"
+      "title": "组织日期筛选、当前值与历史快照",
+      "latestDisposition": {
+        "at": "2026-09-11T05:23:23.851618+00:00",
+        "result": "五姓名9/11在职4，9/10分组3/distinct2；全历史8行非时点"
+      }
     },
     {
       "actualResult": "未执行，不以计划预期充当实际结果",
@@ -3500,7 +3528,7 @@
       },
       "environment": "https://srworkshopbj.italent.cn",
       "evidence": [],
-      "execution": "not_executed",
+      "execution": "partially_observed",
       "inputs": {
         "actualValues": null,
         "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_"
@@ -3535,7 +3563,11 @@
         "未达小批量门槛不扩量"
       ],
       "time": null,
-      "title": "分页排序及100–500行显示"
+      "title": "分页排序及100–500行显示",
+      "latestDisposition": {
+        "at": "2026-09-11T05:23:23.851618+00:00",
+        "result": "数值人数升降实测；小样本低于最小分页范围，跨页/大数据量未完成"
+      }
     },
     {
       "actualResult": "本轮筛选结果正式下载被Chromium阻止；无文件，不绕过",
@@ -3636,7 +3668,11 @@
         "周期去重、逐接收者当前权限、结果未知/失败分别记录"
       ],
       "time": null,
-      "title": "订阅、权限过滤与投递"
+      "title": "订阅、权限过滤与投递",
+      "latestDisposition": {
+        "at": "2026-09-11T05:23:23.851618+00:00",
+        "result": "空渠道/接收人拒绝，名称截断50；草稿已取消无发送；实际投递需隔离接收身份"
+      }
     },
     {
       "actualResult": "未执行，不以计划预期充当实际结果",
@@ -3651,7 +3687,7 @@
       },
       "environment": "https://srworkshopbj.italent.cn",
       "evidence": [],
-      "execution": "not_executed",
+      "execution": "partially_observed",
       "inputs": {
         "actualValues": null,
         "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_"
@@ -3686,7 +3722,11 @@
         "角色内外边界与汇总先过滤，未选中条件不能算0行"
       ],
       "time": null,
-      "title": "空/重复/失效组织/离职/跨组织边界"
+      "title": "空/重复/失效组织/离职/跨组织边界",
+      "latestDisposition": {
+        "at": "2026-09-11T05:23:23.851618+00:00",
+        "result": "空组织筛选已证、历史同人重复分组/离职行/空职位/兼职去重已证；跨组织独立权限仍待"
+      }
     },
     {
       "actualResult": "组织→职位→员工→直接调动→历史/报表局部链，不能替代双审批/执行HR/独立员工，完整未通过",
@@ -4393,7 +4433,11 @@
       "timePrecision": "browser_observed",
       "title": "M01-EMP-NAME-LENGTH-001",
       "evidenceSection": "M01-EMP-NAME-LENGTH-001",
-      "ledgerId": "OBS-07"
+      "ledgerId": "OBS-07",
+      "latestDisposition": {
+        "at": "2026-09-11T05:23:23.851618+00:00",
+        "result": "后续006确认101/304拒绝、100保存，原305仅DOM观察保留"
+      }
     },
     {
       "actualResult": "编码【ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_002】与已有职位重复（状态：生效）",
@@ -5431,6 +5475,260 @@
       ],
       "time": "2026-09-11T04:58:59.864380+00:00",
       "title": "名称和机构ID清空必填拒绝"
+    },
+    {
+      "actualResult": "姓名101与304均明确长度不能超过100；100字符保存，UUID唯一查询及正式主职确认；P2 1–100及P3 person.name short.max(100)一致。",
+      "caseId": "M01-EMP-LENGTH-006",
+      "classification": "MATCH",
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/EMP006_Length_101_Reject.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP006_Length_304_Reject.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP006_PreSave.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP006_Readback.json",
+        "R1-ORIGIN-20260910-100019/M01/EMP006_Assignment.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "scope": "本RUN原记录，具体字段见结构化证据"
+      },
+      "module": "M01",
+      "p3": {
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "path": "lib/hris/r1-m01.ts",
+        "additionalPath": "lib/hris/r1-temporal.ts",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "evidenceMode": "静态源码对照，未运行产品测试/UI",
+        "staticFinding": "m01Input person.name使用short=z.string().trim().min(1).max(100)"
+      },
+      "page": "姓名100接受，101及304拒绝",
+      "pageState": "independent_readback",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "recordIds": [
+        "cdaaa0a5-0b31-4145-822c-1f96f1bc1743"
+      ],
+      "repeatability": "可按记录ID只读重现；写入不可无条件重放",
+      "requirements": [
+        "F-SPEC-07",
+        "F-SPEC-08"
+      ],
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "severity": null,
+      "steps": [
+        "正式入口限定本轮数据",
+        "操作后独立读取实际字段和状态",
+        "结构化保存并关联需求设计"
+      ],
+      "time": "2026-09-11T05:23:23.851618+00:00",
+      "title": "姓名100接受，101及304拒绝"
+    },
+    {
+      "actualResult": "新增006之前，本轮5人当前在职4人/5任职，全历史5人8任职；含005兼职和001三历史版本。",
+      "caseId": "M01-ASSIGNMENTS-CURRENT-HISTORY",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/Assignment_Current_Five.json",
+        "R1-ORIGIN-20260910-100019/M01/Assignment_History_Eight.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "scope": "本RUN原记录，具体字段见结构化证据"
+      },
+      "module": "M01",
+      "p3": {
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "path": "lib/hris/r1-m01.ts",
+        "additionalPath": "lib/hris/r1-temporal.ts",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "evidenceMode": "静态源码对照，未运行产品测试/UI"
+      },
+      "page": "当前与全历史任职对账",
+      "pageState": "independent_readback",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "recordIds": [],
+      "repeatability": "可按记录ID只读重现；写入不可无条件重放",
+      "requirements": [
+        "F-SPEC-07",
+        "F-SPEC-08"
+      ],
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "severity": "Observation",
+      "steps": [
+        "正式入口限定本轮数据",
+        "操作后独立读取实际字段和状态",
+        "结构化保存并关联需求设计"
+      ],
+      "time": "2026-09-11T05:23:23.851618+00:00",
+      "title": "当前与全历史任职对账"
+    },
+    {
+      "actualResult": "正式1.1.02固定五姓名返回8任职/5人，当前有效6行含001离职结束行及005兼职；真实在职主职4行。无日期过滤不冒充历史时点。",
+      "caseId": "M32-FIVE-EMP-ALL-ASSIGNMENTS",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_All_Assignments.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "scope": "本RUN原记录，具体字段见结构化证据"
+      },
+      "module": "M32",
+      "p3": {
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "path": "lib/hris/r1-report-m01-producer.ts",
+        "additionalPath": "lib/hris/r1-temporal.ts",
+        "task": "P3-R1-06/07",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "evidenceMode": "静态源码对照，未运行产品测试/UI"
+      },
+      "page": "五人全历史逐行核对",
+      "pageState": "independent_readback",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "recordIds": [],
+      "repeatability": "可按记录ID只读重现；写入不可无条件重放",
+      "requirements": [
+        "M32-SPEC-01",
+        "M32-SPEC-04"
+      ],
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "severity": "Observation",
+      "steps": [
+        "正式入口限定本轮数据",
+        "操作后独立读取实际字段和状态",
+        "结构化保存并关联需求设计"
+      ],
+      "time": "2026-09-11T05:23:23.851618+00:00",
+      "title": "五人全历史逐行核对"
+    },
+    {
+      "actualResult": "8行明确筛选后下载，iframe显示This page has been blocked by Chromium；无文件，不绕过。",
+      "caseId": "M32-DOWNLOAD-SEP11-SECOND",
+      "classification": "ENV_BLOCKED",
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M32_Reports_Jobs.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M32/M32_Five_Employee_Download.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "scope": "本RUN原记录，具体字段见结构化证据"
+      },
+      "module": "M32",
+      "p3": {
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "path": "lib/hris/r1-report-m01-producer.ts",
+        "additionalPath": "lib/hris/r1-temporal.ts",
+        "task": "P3-R1-06/07",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "evidenceMode": "静态源码对照，未运行产品测试/UI"
+      },
+      "page": "五人报表正式下载限制",
+      "pageState": "independent_readback",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "recordIds": [],
+      "repeatability": "可按记录ID只读重现；写入不可无条件重放",
+      "requirements": [
+        "M32-SPEC-01",
+        "M32-SPEC-04"
+      ],
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "severity": "Observation",
+      "steps": [
+        "正式入口限定本轮数据",
+        "操作后独立读取实际字段和状态",
+        "结构化保存并关联需求设计"
+      ],
+      "time": "2026-09-11T05:23:23.851618+00:00",
+      "title": "五人报表正式下载限制",
+      "ledgerId": "ENV-03"
+    },
+    {
+      "actualResult": "正式入口及帮助支持按既有人匹配；旧离职字段带回。未展示邀请关闭，不保存；已取消。",
+      "caseId": "M01-REHIRE-INVITATION-HELP",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/Rehire_Invitation_Constraint.json"
+      ],
+      "execution": "observed",
+      "inputs": {
+        "scope": "本RUN原记录，具体字段见结构化证据"
+      },
+      "module": "M01",
+      "p3": {
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "path": "lib/hris/r1-m01.ts",
+        "additionalPath": "lib/hris/r1-temporal.ts",
+        "task": "P3-R1-02",
+        "cases": [
+          "P3-M01-01"
+        ],
+        "evidenceMode": "静态源码对照，未运行产品测试/UI"
+      },
+      "page": "再入职匹配与邀请条件",
+      "pageState": "independent_readback",
+      "preconditions": "原站测试租户已登录；仅本轮数据",
+      "recordIds": [],
+      "repeatability": "可按记录ID只读重现；写入不可无条件重放",
+      "requirements": [
+        "F-SPEC-07",
+        "F-SPEC-08"
+      ],
+      "role": "ORIGIN-ADMIN-01（具管理入口；精确授权未全量核定）",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "截图捕获多次超时，结构化页面证据保留；不能视为截图完整",
+      "severity": "Observation",
+      "steps": [
+        "正式入口限定本轮数据",
+        "操作后独立读取实际字段和状态",
+        "结构化保存并关联需求设计"
+      ],
+      "time": "2026-09-11T05:23:23.851618+00:00",
+      "title": "再入职匹配与邀请条件"
     }
   ],
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",

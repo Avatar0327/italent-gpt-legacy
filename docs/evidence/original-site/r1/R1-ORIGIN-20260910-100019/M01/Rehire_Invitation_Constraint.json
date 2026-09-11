@@ -1,0 +1,25 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "recordedAt": "2026-09-11T05:10:47.772530+00:00",
+  "role": "ORIGIN-ADMIN-01",
+  "tab": "27",
+  "personId": "927ef593-f930-4bcb-963f-e463df2e9e84",
+  "page": "入职管理→添加待入职→离职/退休再入职",
+  "candidate": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001",
+  "matchedEmail": "zz.r1.20260910.100019.emp001@example.invalid",
+  "oldFields": {
+    "结束类型": "离职",
+    "结束原因": "个人原因",
+    "最后工作日": "2026-09-10",
+    "所在部门": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003"
+  },
+  "help": "可在此搜索权限内离职/退休人员，或去证件类型+证件号码、手机号码、电子邮件处通过录入对应信息匹配出人员",
+  "invitationControlDisplayed": false,
+  "invitationDisabledConfirmed": false,
+  "saveAttempted": false,
+  "draftCancelledAndIframeHidden": true,
+  "newEmploymentId": null,
+  "oldEmploymentId": null,
+  "unknownBusinessActions": [],
+  "minimalPrerequisite": "需正式再入职不发邀请/通知的可核说明或已配置隔离测试流程；不修改共享设置，不以普通新增同名人员替代"
+}

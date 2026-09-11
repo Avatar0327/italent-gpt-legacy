@@ -1,0 +1,13 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "recordedAt": "2026-09-11T05:10:47.772530+00:00",
+  "page": "1.1.02员工任职信息",
+  "filterEvidence": "M32_Five_Employee_All_Assignments.json",
+  "rowsBeforeClick": 8,
+  "action": "正式下载单次点击，随后独立回读iframe",
+  "result": "This page has been blocked by Chromium",
+  "fileReceived": false,
+  "bypassAttempted": false,
+  "ledgerId": "ENV-03",
+  "impact": "只阻止导出文件校验；已离开下载错误页继续员工测试"
+}
