@@ -1,3 +1,7 @@
+本轮结论B：尚未满足完整退出条件。累计18对象，删除1个本轮无引用临时岗位JOB003，保留17对象/6人员；原10对象未重建。完整取证/批量/需求完整/P3完整/退出对照均0/4，E2E0/5。MATCH6仅窄项静态对照；Major累计2、待决1，Observation16。浏览器动作已结束，自有27/28/29/30/31无业务草稿、未知业务动作0，到期自动任务仍暂停；浏览器可交接，后续不后台操作。
+
+最新恢复主表：Completion_Assessment.json、Current_Executable_Test_Disposition.json、Future_Date_Recovery.json；最新17保留清单：Original_Site_Data_Manifest.json。最新记录覆盖下方历史段落。
+
 合同/教育增量：新tab31正式查询成功，旧tab点击限制不扩大为全局。合同公司下拉未见本轮法人，自动公司已清空、草稿取消；教育EMP005空学校/毕业类型/起止日期被拒，虚构学校空候选、草稿取消。新增0，仍17对象/6人员，无未知业务保存。完整0/4、E2E0/5，继续剩余管理员场景。
 
 基于 c808313e85ec1af45a0cdfe31b828dcdbdfe4300；证据 R1-ORIGIN-20260910-100019/M01/Contract_Education_Validation.json。P3不得把源公司枚举等同目标法人目录，也不得按源模板改全部入口必填。P3无本增量接收回执。

@@ -450,7 +450,10 @@
         "R1-ORIGIN-20260910-100019/M01/M01-ORG-003-edit-history.json",
         "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Readback.json",
         "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_End.json",
-        "R1-ORIGIN-20260910-100019/M01/ORG003_Two_Stale_Drafts.json"
+        "R1-ORIGIN-20260910-100019/M01/ORG003_Two_Stale_Drafts.json",
+        "R1-ORIGIN-20260910-100019/M01/JOB001_Parent_Text_Not_Persisted.json",
+        "R1-ORIGIN-20260910-100019/M01/JOB003_Create_Delete_Checkpoint.json",
+        "R1-ORIGIN-20260910-100019/M01/JOB003_Delete_Readback.json"
       ],
       "feedback": "P2/P3区分纯停用、整体迁移、普通字段编辑和版本变更；P4核完整影响清单及不可变审计。",
       "id": "OBS-08",
@@ -495,6 +498,16 @@
         "result": "A保存后B草稿仍旧值；B随后保存覆盖A，另一标签新表单确认B。已恢复原备注。未覆盖独立角色同时竞争、重复业务提交。",
         "evidence": "R1-ORIGIN-20260910-100019/M01/ORG003_Two_Stale_Drafts.json",
         "boundary": "原站普通编辑不是批准目录发布/任职事务；不据此降低P3 CAS或批准有意差异"
+      },
+      "latestChildDelete": {
+        "at": "2026-09-11T06:51:20.809719+00:00",
+        "evidence": [
+          "R1-ORIGIN-20260910-100019/M01/JOB001_Parent_Text_Not_Persisted.json",
+          "R1-ORIGIN-20260910-100019/M01/JOB003_Create_Delete_Checkpoint.json",
+          "R1-ORIGIN-20260910-100019/M01/JOB003_Delete_Readback.json"
+        ],
+        "actual": "新建下级生成2376de16，详情直线上级JOB001/ORG002已实证。未被本RUN引用，确认删除后新同名查询0，父JOB001原UUID保留。不推断数据库物理删除或审计清除。",
+        "boundary": "源无引用删除不授权P3删除不可变业务历史；没有新实现缺陷判定"
       }
     },
     {

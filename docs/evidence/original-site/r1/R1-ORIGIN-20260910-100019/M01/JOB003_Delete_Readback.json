@@ -1,0 +1,39 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "role": "ORIGIN-ADMIN-01",
+  "environment": "https://srworkshopbj.italent.cn",
+  "recordId": "2376de16-27ab-47e4-a574-62f70e972496",
+  "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_003_DELETE",
+  "stages": {
+    "job003Deleted": {
+      "at": "2026-09-11T06:46:52.500Z",
+      "filter": [
+        "所属组织",
+        "职位序列",
+        "名称\n：\nZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_003_DELETE"
+      ],
+      "recordCount": 0,
+      "bodyEmpty": true
+    },
+    "job001ParentRetained": {
+      "at": "2026-09-11T06:47:16.160Z",
+      "records": [
+        {
+          "id": "81fde82c-3807-4e73-be33-46a9321f87fb",
+          "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001"
+        }
+      ],
+      "drafts": [
+        {
+          "id": "popup_17891086428831622",
+          "visible": false
+        }
+      ]
+    }
+  },
+  "result": "唯一新建无引用下级岗位删除后新精确名称查询0；父JOB001原UUID仍保留。只证明源列表不可见删除，不推断数据库物理删除/审计是否保留。",
+  "createdCountIncrement": 1,
+  "deletedCountIncrement": 1,
+  "retainedCountIncrement": 0,
+  "unknownBusinessActions": []
+}

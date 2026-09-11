@@ -208,11 +208,23 @@
       "preconditions": [
         "9/12按UUID回查实际结束，保留重复任职/审计证据；不删历史伪造终态"
       ]
+    },
+    {
+      "action": "已执行本轮无引用临时岗位删除",
+      "allowLaterDelete": false,
+      "module": "M01",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_003_DELETE",
+      "originRecordId": "2376de16-27ab-47e4-a574-62f70e972496",
+      "performed": true,
+      "preconditions": [
+        "创建后未关联任何人/流程/子岗位，唯一R1操作者；UUID+名称双核"
+      ],
+      "evidence": "R1-ORIGIN-20260910-100019/M01/JOB003_Delete_Readback.json"
     }
   ],
-  "countDefinition": "17主动对象：3组织+2岗位+6人员+1法人+2申请+离职任职1+兼职任职2；自动历史行另列。",
-  "createdCount": 17,
-  "deletedCount": 0,
+  "countDefinition": "18主动创建对象含已删临时岗位：3组织+3岗位+6人员+1法人+2申请+离职任职1+兼职任职2。保留17；自动派生历史行不重复计数。",
+  "createdCount": 18,
+  "deletedCount": 1,
   "drafts": {
     "initialCancelledOrganizationDrafts": 2,
     "unsubmittedFormsRemaining": 0,
@@ -233,7 +245,7 @@
     }
   },
   "lastContinuation": {
-    "at": "2026-09-11T06:36:31.652847+00:00",
+    "at": "2026-09-11T06:51:20.809719+00:00",
     "newObjects": 7,
     "modifiedRunObjects": 3,
     "retained": 17,
@@ -244,8 +256,9 @@
       "R1-ORIGIN-20260910-100019/M01/EMP006_Readback.json",
       "R1-ORIGIN-20260910-100019/M01/EMP006_Assignment.json"
     ],
-    "basisHead": "c808313e85ec1af45a0cdfe31b828dcdbdfe4300",
-    "unknownBusinessActions": []
+    "basisHead": "ee2287e15e540b6c00e7b09bb6205483e5845ae0",
+    "unknownBusinessActions": [],
+    "browserUseEndedAt": "2026-09-11T06:48:17.813Z"
   },
   "manualSmoke": {
     "bulkImportedRows": 0,
@@ -253,10 +266,10 @@
     "employeeCount": 6,
     "expanded30To50": false,
     "expansionGate": "页面运行稳定且可审计逐条UUID；现已多次出现数十秒加载/回执延迟，不在回执未核定时重放或扩量。未证共享环境受影响。",
-    "namedMasterObjects": 12,
-    "note": "六人员小样本；基础再入职/审批/附件等仍有前置，未扩30–50",
+    "namedMasterObjects": 13,
+    "note": "6人员小样本数量已达；完整基础链/稳定扩量闸门未达，30–50和100–500未执行。新增临时岗位已删，现保留17主动对象。",
     "threshold5To10Reached": true,
-    "totalCreatedBusinessObjects": 17
+    "totalCreatedBusinessObjects": 18
   },
   "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_",
   "records": [
@@ -808,6 +821,30 @@
       "verifiedAt": "2026-09-11T05:48:20.449Z",
       "actualTerminationConfirmed": false,
       "latestVerification": "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_Detail.json"
+    },
+    {
+      "runId": "R1-ORIGIN-20260910-100019",
+      "caseId": "M01-JOB-CHILD-DELETE-003",
+      "module": "M01",
+      "objectType": "position",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_003_DELETE",
+      "originRecordId": "2376de16-27ab-47e4-a574-62f70e972496",
+      "createdAt": null,
+      "createdAtBasis": "页面未提供创建审计；独立UUID查询6:45:02UTC，不能代审计",
+      "verifiedAt": "2026-09-11T06:46:52.500Z",
+      "status": "deleted_from_origin_query",
+      "relatedRecords": [
+        "81fde82c-3807-4e73-be33-46a9321f87fb",
+        "db7df096-624b-4d1e-ab4e-0552a56f052c"
+      ],
+      "allowLaterDelete": false,
+      "deletionPerformed": true,
+      "deletionActualAuditAt": null,
+      "deletionEvidenceScope": "正式删除确认后新精确名称查询0；非数据库物理删除证明",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/JOB003_Create_Delete_Checkpoint.json",
+        "R1-ORIGIN-20260910-100019/M01/JOB003_Delete_Readback.json"
+      ]
     }
   ],
   "retainedCount": 17,

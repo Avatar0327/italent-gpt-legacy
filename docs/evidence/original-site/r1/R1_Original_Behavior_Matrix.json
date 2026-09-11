@@ -2160,7 +2160,7 @@
       }
     },
     {
-      "actualResult": "两岗位创建；JOB001职责编辑/重复编码拒绝；JOB002停用新旧版本已核，上级职位边界仍待",
+      "actualResult": "3岗位累计创建；JOB001编辑/编码重复、JOB002停用历史、JOB003正式下级关系及无引用删除已核；未来时态循环、职级及受保护依赖并发仍未完整。",
       "blockerIds": [],
       "caseId": "M01-PENDING-POSITION",
       "classification": null,
@@ -2171,7 +2171,10 @@
       "environment": "https://srworkshopbj.italent.cn",
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/M01-continuation-smoke.json",
-        "R1-ORIGIN-20260910-100019/M01/M01-JOB-002.json"
+        "R1-ORIGIN-20260910-100019/M01/M01-JOB-002.json",
+        "R1-ORIGIN-20260910-100019/M01/JOB001_Parent_Text_Not_Persisted.json",
+        "R1-ORIGIN-20260910-100019/M01/JOB003_Create_Delete_Checkpoint.json",
+        "R1-ORIGIN-20260910-100019/M01/JOB003_Delete_Readback.json"
       ],
       "execution": "partially_observed",
       "inputs": {
@@ -2216,9 +2219,13 @@
         "note": "本轮已补部分边界/正式入口，仍有未执行范围，详见增量用例"
       },
       "latestDisposition": {
-        "at": "2026-09-11T06:16:13.172340+00:00",
-        "result": "两岗位创建；JOB001职责编辑/重复编码拒绝；JOB002停用新旧版本已核，上级职位边界仍待",
-        "evidence": []
+        "at": "2026-09-11T06:51:20.809719+00:00",
+        "evidence": [
+          "R1-ORIGIN-20260910-100019/M01/JOB001_Parent_Text_Not_Persisted.json",
+          "R1-ORIGIN-20260910-100019/M01/JOB003_Create_Delete_Checkpoint.json",
+          "R1-ORIGIN-20260910-100019/M01/JOB003_Delete_Readback.json"
+        ],
+        "remaining": "未来切点和受保护依赖须隔离身份/可控版本夹具；不以文本上级当关系"
       }
     },
     {
@@ -6357,6 +6364,119 @@
       ],
       "time": "2026-09-11T06:36:31.652847+00:00",
       "title": "教育子集空值及学校候选"
+    },
+    {
+      "actualResult": "输入自身完整岗位名称失焦仍有值，保存后新编辑上级空，原值保留；不能当自引用允许或拒绝。复核草稿取消。",
+      "blockerIds": [],
+      "caseId": "M01-JOB-PARENT-TEXT-001",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/JOB001_Parent_Text_Not_Persisted.json"
+      ],
+      "execution": "observed_narrow_scope",
+      "inputs": {
+        "actualValues": null,
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_"
+      },
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-01",
+          "P3-M01-12"
+        ],
+        "evidenceMode": "按P2/P3任务静态映射，字段模板不可直接等价，未运行P3",
+        "path": "lib/hris/r1-m01.ts",
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "task": "P3-R1-02"
+      },
+      "page": "职位/JOB001及本轮临时JOB003",
+      "pageState": "no_open_draft_no_unknown_action",
+      "preconditions": "仅本轮合成数据；正式页面人工操作可执行；下载/截图仅局部限制；独立身份须为现有授权测试角色",
+      "recordIds": [
+        "81fde82c-3807-4e73-be33-46a9321f87fb",
+        "2376de16-27ab-47e4-a574-62f70e972496"
+      ],
+      "repeatability": "不重建已删除同名对象；将来须新case标识",
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-08",
+        "BP-F-REQ-10"
+      ],
+      "role": "ORIGIN-ADMIN-01",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "severity": "Observation",
+      "steps": [
+        "正式入口操作本RUN唯一对象",
+        "独立读取保存/删除后状态",
+        "新查询UUID或零结果",
+        "原父岗位保留"
+      ],
+      "time": "2026-09-11T06:51:20.809719+00:00",
+      "title": "上级职位纯文本未保存为关系"
+    },
+    {
+      "actualResult": "新建下级生成2376de16，详情直线上级JOB001/ORG002已实证。未被本RUN引用，确认删除后新同名查询0，父JOB001原UUID保留。不推断数据库物理删除或审计清除。",
+      "blockerIds": [],
+      "caseId": "M01-JOB-CHILD-DELETE-003",
+      "classification": null,
+      "design": {
+        "path": "docs/delivery/r1-p2/R1_P2_M01_Data_History.md",
+        "sha": "e15237281ff19f04f08a354fd9455c518b24ae47"
+      },
+      "environment": "https://srworkshopbj.italent.cn",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/M01/JOB003_Create_Delete_Checkpoint.json",
+        "R1-ORIGIN-20260910-100019/M01/JOB003_Delete_Readback.json"
+      ],
+      "execution": "observed_narrow_scope",
+      "inputs": {
+        "actualValues": null,
+        "namespace": "ZZ_R1_R1-ORIGIN-20260910-100019_"
+      },
+      "module": "M01",
+      "p3": {
+        "cases": [
+          "P3-M01-01",
+          "P3-M01-12"
+        ],
+        "evidenceMode": "按P2/P3任务静态映射，字段模板不可直接等价，未运行P3",
+        "path": "lib/hris/r1-m01.ts",
+        "sha": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
+        "task": "P3-R1-02"
+      },
+      "page": "职位/JOB001及本轮临时JOB003",
+      "pageState": "no_open_draft_no_unknown_action",
+      "preconditions": "仅本轮合成数据；正式页面人工操作可执行；下载/截图仅局部限制；独立身份须为现有授权测试角色",
+      "recordIds": [
+        "81fde82c-3807-4e73-be33-46a9321f87fb",
+        "2376de16-27ab-47e4-a574-62f70e972496"
+      ],
+      "repeatability": "不重建已删除同名对象；将来须新case标识",
+      "requirements": [
+        "F-SPEC-01",
+        "F-SPEC-08",
+        "BP-F-REQ-10"
+      ],
+      "role": "ORIGIN-ADMIN-01",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "screenshot": null,
+      "screenshotLimitation": "未执行",
+      "severity": "Observation",
+      "steps": [
+        "正式入口操作本RUN唯一对象",
+        "独立读取保存/删除后状态",
+        "新查询UUID或零结果",
+        "原父岗位保留"
+      ],
+      "time": "2026-09-11T06:51:20.809719+00:00",
+      "title": "正式新建下级及本轮无引用对象删除"
     }
   ],
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",

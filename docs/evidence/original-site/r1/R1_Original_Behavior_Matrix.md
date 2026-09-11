@@ -1,6 +1,6 @@
 # R1 原站逐项矩阵
 
-完整/批量/需求完整/P3完整/退出对照均0/4，E2E0/5；MATCH6仅窄项。
+本轮结论B：尚未满足完整退出条件。累计18对象，删除1个本轮无引用临时岗位JOB003，保留17对象/6人员；原10对象未重建。完整取证/批量/需求完整/P3完整/退出对照均0/4，E2E0/5。MATCH6仅窄项静态对照；Major累计2、待决1，Observation16。浏览器动作已结束，自有27/28/29/30/31无业务草稿、未知业务动作0，到期自动任务仍暂停；浏览器可交接，后续不后台操作。
 
 |用例|模块|执行|实际结果|分类|
 |---|---|---|---|---|
@@ -43,7 +43,7 @@
 |M32-ORG-01|M32|observed|本轮ORG_001在部门搜索结果中可见；点击后已选组织仍0，取消选择器。未应用组织筛选，未取得空报表0行，不能称对账通过。|未定|
 |M01-PENDING-ORG-LIFECYCLE|M01|partially_observed|新增三组织、ORG003备注编辑已验；停用预览含整体迁移，未执行停用/迁移|未定|
 |M01-PENDING-ORG-UNIQUE|M01|partially_observed|同父重名/编码拒绝、跨父同名允许且已恢复；当前自环拒绝；未来跨节点时态环未测|ENV_BLOCKED|
-|M01-PENDING-POSITION|M01|partially_observed|两岗位创建；JOB001职责编辑/重复编码拒绝；JOB002停用新旧版本已核，上级职位边界仍待|未定|
+|M01-PENDING-POSITION|M01|partially_observed|3岗位累计创建；JOB001编辑/编码重复、JOB002停用历史、JOB003正式下级关系及无引用删除已核；未来时态循环、职级及受保护依赖并发仍未完整。|未定|
 |M01-PENDING-EMP-CREATE|M01|partially_observed|6人员，邀请否；正式/试用/空职位/姓名100保存；再入职未保存|未定|
 |M01-PENDING-EMP-IMPORT|M01|not_executed|未执行，不以计划预期充当实际结果|ENV_BLOCKED|
 |M01-PENDING-ASSIGN|M01|partially_observed|EMP005主职及两条重叠兼职已核；同组织空职位均生效；9/12实际结束后效待查|ROLE_BLOCKED|
@@ -119,3 +119,5 @@
 |M01-ORG-SELF-PARENT-003|M01|observed_narrow_scope|选择器可选择自身，保存拒绝循环汇报；取消后原父级/名称/编码/备注保留。只测当前自环。|MATCH|
 |M01-CONTRACT-COMPANY-005|M01|observed_narrow_scope|正式合同新建恢复且可选EMP005；自动公司已清空。公司下拉仅既有值+去设置公司，无本轮法人；不等价法人停用拒绝，不改共享配置，取消未保存。|未定|
 |M01-EDUCATION-REQUIRED-005|M01|observed_narrow_scope|EMP005空学校/毕业类型/开始/结束日期提交均必填拒绝；虚构学校候选空，无记录创建。日期直接填未保留，日历后读取超时不作为日期校验，草稿取消。|未定|
+|M01-JOB-PARENT-TEXT-001|M01|observed_narrow_scope|输入自身完整岗位名称失焦仍有值，保存后新编辑上级空，原值保留；不能当自引用允许或拒绝。复核草稿取消。|未定|
+|M01-JOB-CHILD-DELETE-003|M01|observed_narrow_scope|新建下级生成2376de16，详情直线上级JOB001/ORG002已实证。未被本RUN引用，确认删除后新同名查询0，父JOB001原UUID保留。不推断数据库物理删除或审计清除。|未定|

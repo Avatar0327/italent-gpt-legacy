@@ -7,7 +7,7 @@
     "fullModules": "0/4",
     "p3ParityModules": "0/4"
   },
-  "currentNextStep": "继续不依赖兼职结束的场景；9/12之后新回查EMP005兼职实际状态。EMP001再入职仍需邀请关闭等前置。",
+  "currentNextStep": "按Completion_Assessment集中前置恢复；9/12后原兼职UUID只读回查，EMP001再入职仍先确认不邀请/不恢复账号",
   "earliestActualRecheckAt": "2026-09-11T00:00:00+08:00",
   "environment": "https://srworkshopbj.italent.cn",
   "lastObserved": {
@@ -60,7 +60,7 @@
     "newTab": 1,
     "onFailure": "停止浏览器重试；不得读取旧DOM替代新查询"
   },
-  "retention": "17对象/6人员保留；两兼职9/11仍有效，9/12实际状态待查；EMP001未再入职；历史不删",
+  "retention": "18累计创建/17保留/1临时无引用岗位已删；6人员，两兼职待9/12实际回查；不删业务历史",
   "runId": "R1-ORIGIN-20260910-100019",
   "scheduledRecheck": {
     "approximateLocalTime": "08:00",
@@ -70,7 +70,7 @@
     "localDate": "2026-09-11",
     "localDaypart": "morning",
     "pauseConfirmed": true,
-    "pauseReason": "R1人工优先使用，避免到期自动任务并写同RUN；交接R3后保持暂停",
+    "pauseReason": "当前已结束浏览器操作；恢复前先取得唯一写RUN使用权，避免其他窗口/自动任务并写",
     "timezone": "Asia/Shanghai",
     "timingMode": "flexible_schedule",
     "title": "R1原站到期回查"

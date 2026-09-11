@@ -1,0 +1,36 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "environment": "https://srworkshopbj.italent.cn",
+  "role": "ORIGIN-ADMIN-01",
+  "recordId": "2376de16-27ab-47e4-a574-62f70e972496",
+  "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_003_DELETE",
+  "stages": {
+    "job003Query": {
+      "at": "2026-09-11T06:45:02.661Z",
+      "filter": [
+        "所属组织",
+        "职位序列",
+        "名称\n：\nZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_003_DELETE"
+      ],
+      "records": [
+        {
+          "id": "2376de16-27ab-47e4-a574-62f70e972496",
+          "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_003_DELETE"
+        }
+      ]
+    },
+    "job003Detail": {
+      "at": "2026-09-11T06:45:23.934Z",
+      "id": "2376de16-27ab-47e4-a574-62f70e972496",
+      "detail": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_003_DELETE\n新建下级\n编辑\n变更\n停用\n删除\n职位\n职位变更记录\n操作记录\n基本信息\n编码\nZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_003_DELETE\n名称\nZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_003_DELETE\n设立日期\n2026-09-11\n所属组织\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\n工作地点\n--\n对应职务\n--\n职位序列\n--\n职级类别\n--\n最低职级\n--\n最高职级\n--\n是否关键职位\n--\n是否涉密职位\n--\n顺序号\n3392\n状态\n启用\n生效日期\n2026-09-11\n职位汇报关系\n直线上级\nZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001(华夏九洲集团/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002)\n职责说明\n胜任力模型\n--\n职责描述\n--\n任职要求\n--"
+    },
+    "job003DeletePrompt": {
+      "at": "2026-09-11T06:45:44.594Z",
+      "tail": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_003_DELETE\n新建下级\n编辑\n变更\n停用\n删除\n职位\n职位变更记录\n操作记录\n基本信息\n编码\nZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_003_DELETE\n名称\nZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_003_DELETE\n设立日期\n2026-09-11\n所属组织\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\n工作地点\n--\n对应职务\n--\n职位序列\n--\n职级类别\n--\n最低职级\n--\n最高职级\n--\n是否关键职位\n--\n是否涉密职位\n--\n顺序号\n3392\n状态\n启用\n生效日期\n2026-09-11\n职位汇报关系\n直线上级\nZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001(华夏九洲集团/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002)\n职责说明\n胜任力模型\n--\n职责描述\n--\n任职要求\n--\n是否要执行此操作\n否\n是",
+      "dialogs": []
+    }
+  },
+  "creationConfirmed": true,
+  "dependencyBasis": "本R1唯一浏览器操作者刚创建，尚未创建或关联任何人员/子职位/审批；父为本RUN JOB001，只删新子岗位。未知依赖如平台提示则停止。",
+  "deleteConfirmed": false
+}

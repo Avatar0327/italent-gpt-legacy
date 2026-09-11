@@ -2,8 +2,8 @@
   "activeEnvBlockers": 5,
   "activeMajor": 1,
   "activeRoleBlockers": 1,
-  "browserHandoffTo": null,
-  "browserUseEndedAt": null,
+  "browserHandoffTo": "available_for_owner_assigned_window",
+  "browserUseEndedAt": "2026-09-11T06:48:17.813Z",
   "bulkImportedRows": 0,
   "businessDateConditionSatisfied": true,
   "completedModuleCounts": {
@@ -15,11 +15,11 @@
     "readyForP3ExitParityReview": 0
   },
   "concurrency": "R1_sole_operator_own_tabs_27_30_forms_isolated_same_admin_sequential_stale_drafts",
-  "continuationInProgress": true,
-  "createdRecords": 17,
-  "createdRecordsDefinition": "17主动对象：3组织+2岗位+6人员+1法人+2申请+离职任职1+兼职任职2；自动历史行另列。",
+  "continuationInProgress": false,
+  "createdRecords": 18,
+  "createdRecordsDefinition": "18主动创建对象含已删临时岗位：3组织+3岗位+6人员+1法人+2申请+离职任职1+兼职任职2。保留17；自动派生历史行不重复计数。",
   "currentCheckpoint": "same_run_partial_evidence_not_release_complete",
-  "currentContinuationLimitation": "ROLE01/附件ENV06/下载ENV03；合同公司隔离引用条件未提供；再入职邀请关闭；教育日期控件局部读失败，其他可执行继续",
+  "currentContinuationLimitation": "详见Completion_Assessment.json；角色/审计/邀请/日期/正式文件/模板与稳定扩量前置。不得称完整通过。",
   "currentEmployeeOracle": {
     "people": 5,
     "formal": 4,
@@ -53,7 +53,7 @@
   },
   "historicalMajor": 2,
   "intentionalDifferences": 1,
-  "lastRecheckAt": "2026-09-11T06:36:31.652847+00:00",
+  "lastRecheckAt": "2026-09-11T06:51:20.809719+00:00",
   "matchRules": 6,
   "modules": [
     {
@@ -89,13 +89,13 @@
       "requirementsComparison": "partial"
     }
   ],
-  "newBusinessObjectsThisContinuation": 7,
+  "newBusinessObjectsThisContinuation": 8,
   "newConfirmedBusinessBehaviorsThisContinuation": 2,
   "newFindingsThisContinuation": {
     "Blocker": 0,
     "Major": 1,
     "Minor": 0,
-    "Observation": 1
+    "Observation": 2
   },
   "origin": "https://srworkshopbj.italent.cn",
   "otherUnexecutedWorkNotEquivalentToBlocker": true,
@@ -120,7 +120,7 @@
   },
   "smokeNamedObjectsThresholdReached": true,
   "unknownBusinessActions": [],
-  "workflowStatus": "concentrated_origin_validation_in_progress",
+  "workflowStatus": "B_incomplete_external_prerequisites_checkpoint_browser_released",
   "modifiedRunObjectsThisContinuation": 3,
   "fullHistoryOracle": {
     "distinctPeople": 6,
@@ -129,5 +129,8 @@
     "currentPartTime": 2,
     "currentEndedPrimary": 1,
     "evidence": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_All_Assignments.json"
-  }
+  },
+  "retainedRecords": 17,
+  "deletedRecords": 1,
+  "continuationComparisonBasis": "7920b64ea30f1e4b232fb86bba2742852d0892e8"
 }
