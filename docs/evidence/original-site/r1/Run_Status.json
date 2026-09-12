@@ -2,8 +2,8 @@
   "activeEnvBlockers": 6,
   "activeMajor": 0,
   "activeRoleBlockers": 1,
-  "browserHandoffTo": "released_no_recipient_receipt",
-  "browserUseEndedAt": "2026-09-11T08:14:58.412Z",
+  "browserHandoffTo": null,
+  "browserUseEndedAt": null,
   "bulkImportedRows": 0,
   "businessDateConditionSatisfied": true,
   "completedModuleCounts": {
@@ -14,32 +14,30 @@
     "originVsRequirements": 0,
     "readyForP3ExitParityReview": 0
   },
-  "concurrency": "current_exclusive_browser_use_unconfirmed_no_browser_called",
-  "continuationInProgress": false,
+  "concurrency": "owner_explicit_exclusive_no_competing_activity_observed",
+  "continuationInProgress": true,
   "createdRecords": 20,
   "createdRecordsDefinition": "累计20主动业务对象，删除1，保留19，另有合成附件2版本不重复算业务对象；6人员。",
-  "currentCheckpoint": "sep12_exclusive_browser_gate_blocked_no_browser",
-  "currentContinuationLimitation": "9/12日期已到；本轮浏览器独占无法确认，未调用浏览器。既有ROLE-01/ENV-07等前置不变。",
+  "currentCheckpoint": "sep12_actual_parttime_end_reports_roles_received",
+  "currentContinuationLimitation": "兼职实际终态和报表已取得；审计、ORG003完整迁移影响、角色权限与通知隔离继续验证。",
   "currentEmployeeOracle": {
     "people": 5,
     "formal": 4,
     "probation": 1,
     "departed": 0,
-    "scope": "固定六姓名、明确9/11时点在职名册，排除001离职；仅9/11历史观察，不代表9/12",
-    "evidence": "R1-ORIGIN-20260910-100019/M32/M32_Contract_Report_Download_Recovery.json",
-    "asOf": "2026-09-11"
+    "scope": "固定六姓名；明确2026-09-12；在职结果排除001及四角色",
+    "asOf": "2026-09-12",
+    "evidence": "R1-ORIGIN-20260910-100019/20260912_Current_Report.json"
   },
   "dateSatisfiedButUnverifiedCases": [
-    "离职执行人/实际审计与旧雇佣段ID",
-    "同personId正式再入职及邀请关闭",
-    "FUTURE-PARTTIME-END-005",
-    "FUTURE-PARTTIME-OVERLAP-005",
-    "2026-09-12六姓名报表及ORG003依赖"
+    "离职及兼职实际执行人/审计",
+    "旧雇佣段ID及同personId安全再入职",
+    "ORG003全依赖/非RUN迁移/通知影响"
   ],
   "e2eCompleted": 0,
   "e2eRequired": 5,
   "existingFindingUpdated": "ENV-05",
-  "freshServerQuerySucceeded": null,
+  "freshServerQuerySucceeded": true,
   "futureDatePendingCases": [],
   "futureRecheckScheduled": false,
   "futureRecovery": "Future_Date_Recovery.json",
@@ -54,7 +52,7 @@
   },
   "historicalMajor": 2,
   "intentionalDifferences": 2,
-  "lastRecheckAt": "2026-09-12T00:38:50Z",
+  "lastRecheckAt": "2026-09-12T02:15:57.710703+00:00",
   "matchRules": 6,
   "modules": [
     {
@@ -124,14 +122,13 @@
   "workflowStatus": "B_not_complete_notification_isolation_and_external_prerequisites",
   "modifiedRunObjectsThisContinuation": 0,
   "fullHistoryOracle": {
-    "distinctPeople": 6,
+    "people": 6,
     "assignmentRows": 10,
-    "currentActivePrimary": 5,
-    "currentPartTime": 2,
-    "currentEndedPrimary": 1,
-    "evidence": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_All_Assignments.json",
-    "asOf": "2026-09-11",
-    "scope": "9/11历史观察，未于9/12重新核验"
+    "primaryRows": 8,
+    "partTimeRows": 2,
+    "asOfQuery": "2026-09-12",
+    "dateFilter": null,
+    "evidence": "R1-ORIGIN-20260910-100019/20260912_History_Report.json"
   },
   "retainedRecords": 19,
   "deletedRecords": 1,
@@ -142,7 +139,7 @@
   ],
   "officialEmployeeTemplateObtained": true,
   "latestOfflineReceiptAt": "2026-09-11T14:10:17.411388+00:00",
-  "freshServerQueryStatus": "not_attempted_this_run_previous_true_is_sep11_history",
+  "freshServerQueryStatus": "fresh_parttime_current_history_org_job_queries_succeeded",
   "scheduledSep12Attempt": {
     "actualAuditTimes": null,
     "actualExecutors": null,
@@ -174,5 +171,40 @@
     "sep12ReportCounts": null,
     "taskId": "6aa2cdf499888191b40f86510034e1ff",
     "unknownBusinessActions": []
+  },
+  "manualSep12Continuation": {
+    "at": "2026-09-12T02:15:57.710703+00:00",
+    "basisHead": "5b6e56ae32c8e36a01fdd17dbef25f7b1b35c60a",
+    "exclusiveAuthorization": "owner_current_turn",
+    "freshServerQuerySucceeded": true,
+    "partTimeActualEnd": 2,
+    "partTimeActualExecutor": null,
+    "partTimeActualAuditAt": null,
+    "reportDate": "2026-09-12",
+    "activePeople": 5,
+    "formal": 4,
+    "probation": 1,
+    "activePrimary": 5,
+    "activePartTime": 0,
+    "historyPeople": 6,
+    "historyRows": 10,
+    "historyPrimaryRows": 8,
+    "historyPartTimeRows": 2,
+    "historyDateScope": "全历史，9月12日新查询，不冒充时点快照",
+    "org003Disabled": false,
+    "org003Gate": "known_dependencies_ended_full_migration_notification_scope_unverified",
+    "roleAccountsOwnerConfirmed": 4,
+    "rolePermissionsVerified": 0,
+    "role01Closed": false,
+    "businessWritesThisWindow": 0,
+    "evidence": [
+      "R1-ORIGIN-20260910-100019/20260912_PartTime_Actual_End.json",
+      "R1-ORIGIN-20260910-100019/20260912_Current_Report.json",
+      "R1-ORIGIN-20260910-100019/20260912_History_Report.json",
+      "R1-ORIGIN-20260910-100019/20260912_ORG003_Dependency_Gate.json",
+      "R1-ORIGIN-20260910-100019/20260912_Role_Account_Receipt.json"
+    ],
+    "phaseApproved": false,
+    "continuationInProgress": true
   }
 }

@@ -163,3 +163,9 @@ OWNER-R1-20260911-002批准DIFF-MAJOR-002为INTENTIONAL_DIFFERENCE；OWNER-R1-20
 |M01-EDUCATION-REQUIRED-005|M01|observed_narrow_scope|EMP005空学校/毕业类型/开始/结束日期提交均必填拒绝；虚构学校候选空，无记录创建。日期直接填未保留，日历后读取超时不作为日期校验，草稿取消。|未定|
 |M01-JOB-PARENT-TEXT-001|M01|observed_narrow_scope|输入自身完整岗位名称失焦仍有值，保存后新编辑上级空，原值保留；不能当自引用允许或拒绝。复核草稿取消。|未定|
 |M01-JOB-CHILD-DELETE-003|M01|observed_narrow_scope|新建下级生成2376de16，详情直线上级JOB001/ORG002已实证。未被本RUN引用，确认删除后新同名查询0，父JOB001原UUID保留。不推断数据库物理删除或审计清除。|未定|
+
+## 2026年9月12日当前人工授权续查增量
+
+基线 5b6e56ae32c8e36a01fdd17dbef25f7b1b35c60a，已保留其全部提交。两条原兼职UUID均新查询为任职结束，9月11日起止，执行人/审计仍未知。明确9月12日固定六姓名查询：在职5（正式4、试用1），当前主职5、有效兼职0；全历史6人10记录（8主职历史、2结束兼职），历史报表无时点条件。ORG003仍启用；JOB002停用列表唯一命中；全部迁移依赖/非本RUN影响/通知尚未核全，未停用组织。四角色账号四项基础前置按所有者确认完成，权限未验，ROLE-01保持。UUID登记20/保留19/删除1及六业务员工保持；另有所有者创建四员工待UUID回读，合并口径24/23/10，不计为本窗口新建。完整模块0/4，E2E0/5，导入0行；不批准P3退出/P4。浏览器本窗口标签3续用，无后台动作。
+
+证据：R1-ORIGIN-20260910-100019/20260912_PartTime_Actual_End.json, R1-ORIGIN-20260910-100019/20260912_Current_Report.json, R1-ORIGIN-20260910-100019/20260912_History_Report.json, R1-ORIGIN-20260910-100019/20260912_ORG003_Dependency_Gate.json, R1-ORIGIN-20260910-100019/20260912_Role_Account_Receipt.json

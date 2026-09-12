@@ -84,5 +84,40 @@
   "runId": "R1-ORIGIN-20260910-100019",
   "scope": "当前受前置限制的逐项恢复清单，不是四模块完成声明",
   "remainingPrerequisites": "Completion_Assessment.json",
-  "latestAuthorization": "Owner_Decisions_20260911_002_003.json"
+  "latestAuthorization": "Owner_Decisions_20260911_002_003.json",
+  "manualSep12Continuation": {
+    "at": "2026-09-12T02:15:57.710703+00:00",
+    "basisHead": "5b6e56ae32c8e36a01fdd17dbef25f7b1b35c60a",
+    "exclusiveAuthorization": "owner_current_turn",
+    "freshServerQuerySucceeded": true,
+    "partTimeActualEnd": 2,
+    "partTimeActualExecutor": null,
+    "partTimeActualAuditAt": null,
+    "reportDate": "2026-09-12",
+    "activePeople": 5,
+    "formal": 4,
+    "probation": 1,
+    "activePrimary": 5,
+    "activePartTime": 0,
+    "historyPeople": 6,
+    "historyRows": 10,
+    "historyPrimaryRows": 8,
+    "historyPartTimeRows": 2,
+    "historyDateScope": "全历史，9月12日新查询，不冒充时点快照",
+    "org003Disabled": false,
+    "org003Gate": "known_dependencies_ended_full_migration_notification_scope_unverified",
+    "roleAccountsOwnerConfirmed": 4,
+    "rolePermissionsVerified": 0,
+    "role01Closed": false,
+    "businessWritesThisWindow": 0,
+    "evidence": [
+      "R1-ORIGIN-20260910-100019/20260912_PartTime_Actual_End.json",
+      "R1-ORIGIN-20260910-100019/20260912_Current_Report.json",
+      "R1-ORIGIN-20260910-100019/20260912_History_Report.json",
+      "R1-ORIGIN-20260910-100019/20260912_ORG003_Dependency_Gate.json",
+      "R1-ORIGIN-20260910-100019/20260912_Role_Account_Receipt.json"
+    ],
+    "phaseApproved": false,
+    "continuationInProgress": true
+  }
 }

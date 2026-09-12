@@ -1,0 +1,112 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "basisHead": "5b6e56ae32c8e36a01fdd17dbef25f7b1b35c60a",
+  "recordedAt": "2026-09-12T01:55:00Z",
+  "timeBasis": "receipt_record_time_not_server_account_audit",
+  "source": "本轮所有者明确确认",
+  "browserExclusiveAuthorization": {
+    "granted": true,
+    "accountCreationWindowEnded": true,
+    "r2r3Paused": true,
+    "onObservedOtherOperator": "停止写入，不抢占"
+  },
+  "accounts": [
+    {
+      "activated": true,
+      "approvalOrExecutionCapability": null,
+      "canLogin": true,
+      "confirmationSource": "owner_current_turn_2026-09-12",
+      "email": "redacted-2b7afcf083fe@example.invalid",
+      "employeeExists": true,
+      "employeeId": null,
+      "identity": "普通员工",
+      "invitationDelivered": true,
+      "key": "EMPLOYEE",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_EMPLOYEE_01",
+      "organizationScope": null,
+      "permissionVerified": false,
+      "personId": null,
+      "selfOnlyData": null,
+      "visibleApplications": null,
+      "visibleMenus": null
+    },
+    {
+      "activated": true,
+      "approvalOrExecutionCapability": null,
+      "canLogin": true,
+      "confirmationSource": "owner_current_turn_2026-09-12",
+      "email": "redacted-637fb0305b2c@example.invalid",
+      "employeeExists": true,
+      "employeeId": "ZS26000558",
+      "identity": "调出方",
+      "invitationDelivered": true,
+      "key": "HR_OUT",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_OUT_01",
+      "organizationScope": null,
+      "permissionVerified": false,
+      "personId": null,
+      "selfOnlyData": null,
+      "visibleApplications": null,
+      "visibleMenus": null
+    },
+    {
+      "activated": true,
+      "approvalOrExecutionCapability": null,
+      "canLogin": true,
+      "confirmationSource": "owner_current_turn_2026-09-12",
+      "email": "redacted-8b1e5ab7c553@example.invalid",
+      "employeeExists": true,
+      "employeeId": "ZS26000559",
+      "identity": "调入方",
+      "invitationDelivered": true,
+      "key": "HR_IN",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_IN_01",
+      "organizationScope": null,
+      "permissionVerified": false,
+      "personId": null,
+      "selfOnlyData": null,
+      "visibleApplications": null,
+      "visibleMenus": null
+    },
+    {
+      "activated": true,
+      "approvalOrExecutionCapability": null,
+      "canLogin": true,
+      "confirmationSource": "owner_current_turn_2026-09-12",
+      "email": "redacted-e4fb450829ad@example.invalid",
+      "employeeExists": true,
+      "employeeId": "ZS26000560",
+      "identity": "执行HR",
+      "invitationDelivered": true,
+      "key": "HR_EXEC",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_EXEC_01",
+      "organizationScope": null,
+      "permissionVerified": false,
+      "personId": null,
+      "selfOnlyData": null,
+      "visibleApplications": null,
+      "visibleMenus": null
+    }
+  ],
+  "counting": {
+    "existingRegistryCreated": 20,
+    "existingRegistryRetained": 19,
+    "existingRegistryEmployees": 6,
+    "ownerConfirmedAdditionalEmployees": 4,
+    "totalCreatedIncludingOwnerReceipt": 24,
+    "totalRetainedIncludingOwnerReceipt": 23,
+    "totalEmployeesIncludingOwnerReceipt": 10,
+    "uuidReadbackForFourPending": true
+  },
+  "ROLE_01": {
+    "accountExistenceInvitationActivationLogin": "resolved_by_owner_confirmation",
+    "rolePermissions": "not_verified_not_closed"
+  },
+  "constraints": [
+    "不得索取/读取/记录密码或验证码",
+    "身份切换仅安全登录交接",
+    "不得修改共享权限",
+    "四名角色夹具不混入六名固定报表姓名"
+  ],
+  "businessWritesThisWindow": 0
+}

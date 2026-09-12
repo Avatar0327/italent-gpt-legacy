@@ -6965,6 +6965,81 @@
       "latestTemplateReceipt": "R1-ORIGIN-20260910-100019/M01/IMPORT_TEMPLATE_20260911/Template_Receipt_Inspection.json",
       "remaining": "原模板已取得；实际上传、邀请/通知、5–10正式导入及UUID核数未执行",
       "threeWayConclusion": "来源结构证据补齐；不以源模板必填星号更改已批准各入口规则，P3运行与完整导入未验证。"
+    },
+    {
+      "caseId": "M01-SEP12-PARTTIME-ACTUAL-END",
+      "module": "M01",
+      "title": "两兼职到期实际结束",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "time": "2026-09-12T02:15:57.710703+00:00",
+      "role": "ORIGIN-ADMIN-01",
+      "execution": "partially_observed",
+      "classification": "Observation",
+      "actualResult": "两个原UUID任职结束；区间9/11；执行人审计未知",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260912_PartTime_Actual_End.json"
+      ],
+      "threeWayConclusion": "仅局部原站事实；D1–D7及两项有意差异保持；非完整MATCH/模块/E2E通过"
+    },
+    {
+      "caseId": "M32-SEP12-SIX-CURRENT",
+      "module": "M32",
+      "title": "明确9月12日固定六人当前报表",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "time": "2026-09-12T02:15:57.710703+00:00",
+      "role": "ORIGIN-ADMIN-01",
+      "execution": "partially_observed",
+      "classification": "Observation",
+      "actualResult": "5人=正式4+试用1；5当前主职；角色账号排除",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260912_Current_Report.json"
+      ],
+      "threeWayConclusion": "仅局部原站事实；D1–D7及两项有意差异保持；非完整MATCH/模块/E2E通过"
+    },
+    {
+      "caseId": "M32-SEP12-SIX-HISTORY",
+      "module": "M32",
+      "title": "9月12日新查询全历史任职",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "time": "2026-09-12T02:15:57.710703+00:00",
+      "role": "ORIGIN-ADMIN-01",
+      "execution": "partially_observed",
+      "classification": "Observation",
+      "actualResult": "6人10任职=8主职历史+2结束兼职；非时点快照",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260912_History_Report.json"
+      ],
+      "threeWayConclusion": "仅局部原站事实；D1–D7及两项有意差异保持；非完整MATCH/模块/E2E通过"
+    },
+    {
+      "caseId": "M01-SEP12-ORG003-GATE",
+      "module": "M01",
+      "title": "ORG003依赖停用闸门",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "time": "2026-09-12T02:15:57.710703+00:00",
+      "role": "ORIGIN-ADMIN-01",
+      "execution": "partially_observed",
+      "classification": "Observation",
+      "actualResult": "已知依赖结束，全迁移范围与通知未知，未停用",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260912_ORG003_Dependency_Gate.json"
+      ],
+      "threeWayConclusion": "仅局部原站事实；D1–D7及两项有意差异保持；非完整MATCH/模块/E2E通过"
+    },
+    {
+      "caseId": "ROLE-SEP12-ACCOUNT-RECEIPT",
+      "module": "M48",
+      "title": "四账号基础前置接收",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "time": "2026-09-12T02:15:57.710703+00:00",
+      "role": "owner_confirmation",
+      "execution": "partially_observed",
+      "classification": "Observation",
+      "actualResult": "所有者确认存在邀请激活可登录；本窗口独立权限未验证",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260912_Role_Account_Receipt.json"
+      ],
+      "threeWayConclusion": "仅局部原站事实；D1–D7及两项有意差异保持；非完整MATCH/模块/E2E通过"
     }
   ],
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",
@@ -6975,5 +7050,40 @@
     "p3Comparison": "25eff27ea5b9320a7dfa5c2df7287d760c8d2688",
     "p3LatestReadOnly": "4c4141ac6676807fde26e4a36dc108ecde57ebc8",
     "p3Start": "a27ae7ee367ccd6b4cf42de968b0a3cd7389b74c"
+  },
+  "manualSep12Continuation": {
+    "at": "2026-09-12T02:15:57.710703+00:00",
+    "basisHead": "5b6e56ae32c8e36a01fdd17dbef25f7b1b35c60a",
+    "exclusiveAuthorization": "owner_current_turn",
+    "freshServerQuerySucceeded": true,
+    "partTimeActualEnd": 2,
+    "partTimeActualExecutor": null,
+    "partTimeActualAuditAt": null,
+    "reportDate": "2026-09-12",
+    "activePeople": 5,
+    "formal": 4,
+    "probation": 1,
+    "activePrimary": 5,
+    "activePartTime": 0,
+    "historyPeople": 6,
+    "historyRows": 10,
+    "historyPrimaryRows": 8,
+    "historyPartTimeRows": 2,
+    "historyDateScope": "全历史，9月12日新查询，不冒充时点快照",
+    "org003Disabled": false,
+    "org003Gate": "known_dependencies_ended_full_migration_notification_scope_unverified",
+    "roleAccountsOwnerConfirmed": 4,
+    "rolePermissionsVerified": 0,
+    "role01Closed": false,
+    "businessWritesThisWindow": 0,
+    "evidence": [
+      "R1-ORIGIN-20260910-100019/20260912_PartTime_Actual_End.json",
+      "R1-ORIGIN-20260910-100019/20260912_Current_Report.json",
+      "R1-ORIGIN-20260910-100019/20260912_History_Report.json",
+      "R1-ORIGIN-20260910-100019/20260912_ORG003_Dependency_Gate.json",
+      "R1-ORIGIN-20260910-100019/20260912_Role_Account_Receipt.json"
+    ],
+    "phaseApproved": false,
+    "continuationInProgress": true
   }
 }

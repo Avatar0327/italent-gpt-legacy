@@ -7,7 +7,7 @@
     "fullModules": "0/4",
     "p3ParityModules": "0/4"
   },
-  "currentNextStep": "9/12日期条件已满足，实际后效仍未知；任务已停用。取得当前独占交接后人工授权窗口续查原UUID，不重新调度。",
+  "currentNextStep": "9/12两兼职实际结束、六姓名报表已取证；继续执行审计、ORG003完整依赖及安全角色交接。不重复调度。",
   "earliestActualRecheckAt": "2026-09-11T00:00:00+08:00",
   "environment": "https://srworkshopbj.italent.cn",
   "lastObserved": {
@@ -188,16 +188,60 @@
       "ORG003停用前重查全部依赖",
       "一次性任务先确认独占；不能确认则不操作浏览器，记录后自动暂停。"
     ],
-    "sep12Status": "date_satisfied_actual_termination_unverified_exclusivity_blocked"
+    "sep12Status": "actual_ended_both_audit_unknown",
+    "latestObservation": {
+      "at": "2026-09-12T02:15:57.710703+00:00",
+      "basisHead": "5b6e56ae32c8e36a01fdd17dbef25f7b1b35c60a",
+      "exclusiveAuthorization": "owner_current_turn",
+      "freshServerQuerySucceeded": true,
+      "partTimeActualEnd": 2,
+      "partTimeActualExecutor": null,
+      "partTimeActualAuditAt": null,
+      "reportDate": "2026-09-12",
+      "activePeople": 5,
+      "formal": 4,
+      "probation": 1,
+      "activePrimary": 5,
+      "activePartTime": 0,
+      "historyPeople": 6,
+      "historyRows": 10,
+      "historyPrimaryRows": 8,
+      "historyPartTimeRows": 2,
+      "historyDateScope": "全历史，9月12日新查询，不冒充时点快照",
+      "org003Disabled": false,
+      "org003Gate": "known_dependencies_ended_full_migration_notification_scope_unverified",
+      "roleAccountsOwnerConfirmed": 4,
+      "rolePermissionsVerified": 0,
+      "role01Closed": false,
+      "businessWritesThisWindow": 0,
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260912_PartTime_Actual_End.json",
+        "R1-ORIGIN-20260910-100019/20260912_Current_Report.json",
+        "R1-ORIGIN-20260910-100019/20260912_History_Report.json",
+        "R1-ORIGIN-20260910-100019/20260912_ORG003_Dependency_Gate.json",
+        "R1-ORIGIN-20260910-100019/20260912_Role_Account_Receipt.json"
+      ],
+      "phaseApproved": false,
+      "continuationInProgress": true
+    },
+    "evidence": [
+      "R1-ORIGIN-20260910-100019/20260912_PartTime_Actual_End.json",
+      "R1-ORIGIN-20260910-100019/20260912_Current_Report.json",
+      "R1-ORIGIN-20260910-100019/20260912_History_Report.json"
+    ]
   },
   "latestSixPersonOracle": {
-    "date": "2026-09-11",
+    "date": "2026-09-12",
     "activePeople": 5,
     "formalPeople": 4,
     "probationPeople": 1,
     "allHistoryAssignments": 10,
     "allHistoryDistinctPeople": 6,
-    "evidence": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_All_Assignments.json"
+    "activePartTime": 0,
+    "evidence": [
+      "R1-ORIGIN-20260910-100019/20260912_Current_Report.json",
+      "R1-ORIGIN-20260910-100019/20260912_History_Report.json"
+    ]
   },
   "scheduledSep12Attempt": {
     "actualAuditTimes": null,
@@ -230,5 +274,40 @@
     "sep12ReportCounts": null,
     "taskId": "6aa2cdf499888191b40f86510034e1ff",
     "unknownBusinessActions": []
+  },
+  "manualSep12Continuation": {
+    "at": "2026-09-12T02:15:57.710703+00:00",
+    "basisHead": "5b6e56ae32c8e36a01fdd17dbef25f7b1b35c60a",
+    "exclusiveAuthorization": "owner_current_turn",
+    "freshServerQuerySucceeded": true,
+    "partTimeActualEnd": 2,
+    "partTimeActualExecutor": null,
+    "partTimeActualAuditAt": null,
+    "reportDate": "2026-09-12",
+    "activePeople": 5,
+    "formal": 4,
+    "probation": 1,
+    "activePrimary": 5,
+    "activePartTime": 0,
+    "historyPeople": 6,
+    "historyRows": 10,
+    "historyPrimaryRows": 8,
+    "historyPartTimeRows": 2,
+    "historyDateScope": "全历史，9月12日新查询，不冒充时点快照",
+    "org003Disabled": false,
+    "org003Gate": "known_dependencies_ended_full_migration_notification_scope_unverified",
+    "roleAccountsOwnerConfirmed": 4,
+    "rolePermissionsVerified": 0,
+    "role01Closed": false,
+    "businessWritesThisWindow": 0,
+    "evidence": [
+      "R1-ORIGIN-20260910-100019/20260912_PartTime_Actual_End.json",
+      "R1-ORIGIN-20260910-100019/20260912_Current_Report.json",
+      "R1-ORIGIN-20260910-100019/20260912_History_Report.json",
+      "R1-ORIGIN-20260910-100019/20260912_ORG003_Dependency_Gate.json",
+      "R1-ORIGIN-20260910-100019/20260912_Role_Account_Receipt.json"
+    ],
+    "phaseApproved": false,
+    "continuationInProgress": true
   }
 }

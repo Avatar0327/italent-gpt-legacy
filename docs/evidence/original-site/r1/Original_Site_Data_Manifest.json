@@ -249,7 +249,18 @@
       ]
     }
   ],
-  "countDefinition": "18主动创建对象含已删临时岗位：3组织+3岗位+6人员+1法人+2申请+离职任职1+兼职任职2。保留17；自动派生历史行不重复计数。",
+  "countDefinition": {
+    "uuidRegisteredBusinessObjects": 20,
+    "uuidRegisteredRetained": 19,
+    "deleted": 1,
+    "uuidRegisteredEmployees": 6,
+    "additionalOwnerConfirmedEmployees": 4,
+    "combinedCreatedIncludingOwnerAccounts": 24,
+    "combinedRetainedIncludingOwnerAccounts": 23,
+    "combinedPeople": 10,
+    "roleUuidReadbackPending": 4,
+    "newlyCreatedByThisWindow": 0
+  },
   "createdCount": 20,
   "deletedCount": 1,
   "drafts": {
@@ -565,10 +576,8 @@
         "evidence": "R1-ORIGIN-20260910-100019/20260911_Job002_Stop_Dependencies.json"
       },
       "sep12Verification": {
-        "checkedAt": "2026-09-12T00:38:50Z",
-        "currentStatus": null,
-        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
-        "result": "not_queried_browser_exclusivity_unconfirmed"
+        "result": "stopped_view_unique_row",
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_ORG003_Dependency_Gate.json"
       }
     },
     {
@@ -837,7 +846,7 @@
         "a7b55bd7-0ef2-44a0-9d29-6259fe053da3"
       ],
       "runId": "R1-ORIGIN-20260910-100019",
-      "status": "end_date_saved_but_still_active_sep11",
+      "status": "actual_ended",
       "startOn": "2026-09-11",
       "endOn": "2026-09-11",
       "countsAsHead": false,
@@ -845,11 +854,14 @@
       "actualTerminationConfirmed": false,
       "latestVerification": "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_End.json",
       "sep12Verification": {
-        "checkedAt": "2026-09-12T00:38:50Z",
-        "currentStatus": null,
-        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
-        "result": "not_queried_browser_exclusivity_unconfirmed"
-      }
+        "result": "actual_ended",
+        "start": "2026-09-11",
+        "end": "2026-09-11",
+        "actualExecutor": null,
+        "actualAuditAt": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_PartTime_Actual_End.json"
+      },
+      "statusScope": "fresh_readback_2026-09-12"
     },
     {
       "allowLaterDelete": true,
@@ -933,7 +945,7 @@
         "a7b55bd7-0ef2-44a0-9d29-6259fe053da3"
       ],
       "runId": "R1-ORIGIN-20260910-100019",
-      "status": "same_person_org_empty_position_overlap_active_sep11",
+      "status": "actual_ended",
       "startOn": "2026-09-11",
       "endOn": "2026-09-11",
       "countsAsHead": false,
@@ -941,11 +953,14 @@
       "actualTerminationConfirmed": false,
       "latestVerification": "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_Detail.json",
       "sep12Verification": {
-        "checkedAt": "2026-09-12T00:38:50Z",
-        "currentStatus": null,
-        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
-        "result": "not_queried_browser_exclusivity_unconfirmed"
-      }
+        "result": "actual_ended",
+        "start": "2026-09-11",
+        "end": "2026-09-11",
+        "actualExecutor": null,
+        "actualAuditAt": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_PartTime_Actual_End.json"
+      },
+      "statusScope": "fresh_readback_2026-09-12"
     },
     {
       "runId": "R1-ORIGIN-20260910-100019",
@@ -1038,7 +1053,7 @@
   "retainedCount": 19,
   "runId": "R1-ORIGIN-20260910-100019",
   "successMessagePendingIdCount": 0,
-  "writesSuspendedReason": "受限项集中暂停：再入职自动通知隔离ENV-07；角色/模板/下载/未来日期等精确前置见Completion_Assessment。非全站停写政策。",
+  "writesSuspendedReason": null,
   "scheduledSep12Attempt": {
     "actualAuditTimes": null,
     "actualExecutors": null,
@@ -1070,5 +1085,118 @@
     "sep12ReportCounts": null,
     "taskId": "6aa2cdf499888191b40f86510034e1ff",
     "unknownBusinessActions": []
-  }
+  },
+  "manualSep12Continuation": {
+    "at": "2026-09-12T02:15:57.710703+00:00",
+    "basisHead": "5b6e56ae32c8e36a01fdd17dbef25f7b1b35c60a",
+    "exclusiveAuthorization": "owner_current_turn",
+    "freshServerQuerySucceeded": true,
+    "partTimeActualEnd": 2,
+    "partTimeActualExecutor": null,
+    "partTimeActualAuditAt": null,
+    "reportDate": "2026-09-12",
+    "activePeople": 5,
+    "formal": 4,
+    "probation": 1,
+    "activePrimary": 5,
+    "activePartTime": 0,
+    "historyPeople": 6,
+    "historyRows": 10,
+    "historyPrimaryRows": 8,
+    "historyPartTimeRows": 2,
+    "historyDateScope": "全历史，9月12日新查询，不冒充时点快照",
+    "org003Disabled": false,
+    "org003Gate": "known_dependencies_ended_full_migration_notification_scope_unverified",
+    "roleAccountsOwnerConfirmed": 4,
+    "rolePermissionsVerified": 0,
+    "role01Closed": false,
+    "businessWritesThisWindow": 0,
+    "evidence": [
+      "R1-ORIGIN-20260910-100019/20260912_PartTime_Actual_End.json",
+      "R1-ORIGIN-20260910-100019/20260912_Current_Report.json",
+      "R1-ORIGIN-20260910-100019/20260912_History_Report.json",
+      "R1-ORIGIN-20260910-100019/20260912_ORG003_Dependency_Gate.json",
+      "R1-ORIGIN-20260910-100019/20260912_Role_Account_Receipt.json"
+    ],
+    "phaseApproved": false,
+    "continuationInProgress": true
+  },
+  "ownerConfirmedRoleAccounts": [
+    {
+      "activated": true,
+      "approvalOrExecutionCapability": null,
+      "canLogin": true,
+      "confirmationSource": "owner_current_turn_2026-09-12",
+      "email": "redacted-2b7afcf083fe@example.invalid",
+      "employeeExists": true,
+      "employeeId": null,
+      "identity": "普通员工",
+      "invitationDelivered": true,
+      "key": "EMPLOYEE",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_EMPLOYEE_01",
+      "organizationScope": null,
+      "permissionVerified": false,
+      "personId": null,
+      "selfOnlyData": null,
+      "visibleApplications": null,
+      "visibleMenus": null
+    },
+    {
+      "activated": true,
+      "approvalOrExecutionCapability": null,
+      "canLogin": true,
+      "confirmationSource": "owner_current_turn_2026-09-12",
+      "email": "redacted-637fb0305b2c@example.invalid",
+      "employeeExists": true,
+      "employeeId": "ZS26000558",
+      "identity": "调出方",
+      "invitationDelivered": true,
+      "key": "HR_OUT",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_OUT_01",
+      "organizationScope": null,
+      "permissionVerified": false,
+      "personId": null,
+      "selfOnlyData": null,
+      "visibleApplications": null,
+      "visibleMenus": null
+    },
+    {
+      "activated": true,
+      "approvalOrExecutionCapability": null,
+      "canLogin": true,
+      "confirmationSource": "owner_current_turn_2026-09-12",
+      "email": "redacted-8b1e5ab7c553@example.invalid",
+      "employeeExists": true,
+      "employeeId": "ZS26000559",
+      "identity": "调入方",
+      "invitationDelivered": true,
+      "key": "HR_IN",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_IN_01",
+      "organizationScope": null,
+      "permissionVerified": false,
+      "personId": null,
+      "selfOnlyData": null,
+      "visibleApplications": null,
+      "visibleMenus": null
+    },
+    {
+      "activated": true,
+      "approvalOrExecutionCapability": null,
+      "canLogin": true,
+      "confirmationSource": "owner_current_turn_2026-09-12",
+      "email": "redacted-e4fb450829ad@example.invalid",
+      "employeeExists": true,
+      "employeeId": "ZS26000560",
+      "identity": "执行HR",
+      "invitationDelivered": true,
+      "key": "HR_EXEC",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_EXEC_01",
+      "organizationScope": null,
+      "permissionVerified": false,
+      "personId": null,
+      "selfOnlyData": null,
+      "visibleApplications": null,
+      "visibleMenus": null
+    }
+  ]
 }

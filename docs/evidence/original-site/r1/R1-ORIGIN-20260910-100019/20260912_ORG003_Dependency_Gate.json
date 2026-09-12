@@ -1,0 +1,29 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "observedAt": "2026-09-12T02:14:40.953Z",
+  "organization": {
+    "at": "2026-09-12T02:10:58.015Z",
+    "orgId": "a7b55bd7-0ef2-44a0-9d29-6259fe053da3",
+    "details": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n导出\n编辑\n更多操作\n组织单元\n组织变更记录\n组织操作记录\n基本信息\n机构ID\n\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n\n机构名称\n\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n\n所在地点\n\n--\n\n机构类型\n\n部门\n\n职能体系\n\n--\n\n设立日期\n\n2026-09-10\n\n生效日期\n\n2026-09-10\n\n变更日期\n\n2026-09-10\n\n失效日期\n\n9999-12-31\n\n机构级别\n\n--\n\n晋降级类别\n\n--\n\n管理提成类别\n\n--\n\n业务维度顺序号\n\n--\n\n商务分类\n\n--\n\n商务标签\n\n--\n\n商务组分类\n\n--\n\n是否大客\n\n--\n\n是否总部一级部门\n\n--\n\n社保标准\n\n--\n\n社保缴纳机构\n\n--\n\n首发规则\n\n--\n\n个税标准\n\n--\n\n餐补标准\n\n--\n\n发薪账户\n\n--\n\n打卡企微\n备注说明\n\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003_EDIT_001 仅合成备注验证\n\n负责人\n--\n分公司总监\n--\n区域总监\n--\n区域人力\n--\n分公司人力\n--\n一级部门负责人\n--\nSSC\n--\n组织全称\n\n华夏九洲集团/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n\n上级组织\n行政维度上级\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001\n业务维度上级\n产品维度上级\n变更\n启用\n停用",
+    "listOnPostCount": 1,
+    "stopSaved": false
+  },
+  "job": {
+    "at": "2026-09-12T02:14:20.136Z",
+    "view": "停用的职位",
+    "rows": [
+      "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_002ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_002ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003--------2026-09-102026-09-10ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_STOP_002：已独立查询本轮ORG003在职与兼职均0，仅停用本轮JOB002。"
+    ]
+  },
+  "knownDependencies": {
+    "employee001": "离职/任职结束；历史关联保留",
+    "employee005PartTimes": "两条均任职结束且当前生效否",
+    "job002": "停用视图唯一记录"
+  },
+  "completeDependencyInventoryVerified": false,
+  "nonRunMigrationImpactVerified": false,
+  "notificationsIsolatedVerified": false,
+  "disableEligible": false,
+  "disableSaved": false,
+  "reason": "已知依赖结束；组织停用涉及迁移，全部依赖及非本RUN/通知影响未完整验证，不以在岗0代替完整清单。"
+}

@@ -1,0 +1,50 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "caseId": "SEP12-PARTTIME-ACTUAL-END",
+  "at": "2026-09-12T01:59:02.119Z",
+  "environment": "https://srworkshopbj.italent.cn",
+  "role": "ORIGIN-ADMIN-01",
+  "freshServerQuery": true,
+  "filter": "完整EMP005姓名及合成邮箱选择唯一候选后确定；已结束视图重新应用姓名筛选",
+  "activeViewMatches": 0,
+  "endedViewMatches": 2,
+  "personId": "53a88828-60d7-42e4-b508-974ff96708a2",
+  "assignmentIds": [
+    "0eb54fe9-01ea-4fdb-b5e7-75754a308119",
+    "1e462457-ae89-4894-87e8-7083e6fc5229"
+  ],
+  "uuidVerification": "人员详情兼职记录两卡分别展开后正式编辑iframe URL只取UUID，第一卡1e462457，第二卡0eb54fe9；均同personId",
+  "actualStatus": "任职结束",
+  "startOn": "2026-09-11",
+  "endOn": "2026-09-11",
+  "actualExecutor": null,
+  "actualAuditAt": null,
+  "auditLimitation": "已结束列表、展开兼职详情及只读编辑表单未显示实际执行人/审计时间；不以日期字段或本次读取时间代替。",
+  "primaryOrg": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
+  "org003DependencyConclusion": "两兼职有效依赖已结束；组织完整依赖与停用条件仍待核",
+  "rawReadback": {
+    "at": "2026-09-12T01:59:02.119Z",
+    "personId": "53a88828-60d7-42e4-b508-974ff96708a2",
+    "rowTexts": [
+      "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005兼职2026-09-11华夏九洲集团ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003----2026-09-11任职结束编辑",
+      "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005兼职2026-09-11华夏九洲集团ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003----2026-09-11任职结束编辑"
+    ],
+    "editIframeIds": [
+      {
+        "ids": [
+          "0eb54fe9-01ea-4fdb-b5e7-75754a308119",
+          "0eb54fe9-01ea-4fdb-b5e7-75754a308119",
+          "0eb54fe9-01ea-4fdb-b5e7-75754a308119",
+          "53a88828-60d7-42e4-b508-974ff96708a2",
+          "53a88828-60d7-42e4-b508-974ff96708a2",
+          "53a88828-60d7-42e4-b508-974ff96708a2"
+        ]
+      }
+    ],
+    "detailText": "上传\n\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\n--\n工号：\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005\n个人邮箱：\n--\n新建合同\n人员信息\n任职记录\n兼职记录\n合同协议\n考核结果\n兼职-ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n·--|2026年9月11日至2026年9月11日\n编辑\n删除任职\n兼职是否占编：\n否\n兼职占编比例：\n--\n直线经理：\n--\n生效日期\n2026年9月11日\n失效日期\n2026年9月11日\n工号\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005\n机构\n华夏九洲集团\n部门\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n职位\n--\n职务\n--\n直线经理\n--\n虚线经理\n--\n任职类型\n兼职\n任职状态\n任职结束\n兼职是否占编\n否\n兼职占编比例\n--\n兼职-ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n·--|2026年9月11日至2026年9月11日\n编辑\n删除任职\n兼职是否占编：\n否\n兼职占编比例：\n--\n直线经理：\n--\n生效日期\n2026年9月11日\n失效日期\n2026年9月11日\n工号\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005\n机构\n华夏九洲集团\n部门\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003\n职位\n--\n职务\n--\n直线经理\n--\n虚线经理\n--\n任职类型\n兼职\n任职状态\n任职结束\n兼职是否占编\n否\n兼职占编比例\n--\n没有了\n1\n/2\nZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005"
+  },
+  "editsSaved": 0,
+  "businessObjectsCreated": 0,
+  "businessObjectsDeleted": 0,
+  "allEditFormsCancelled": true
+}
