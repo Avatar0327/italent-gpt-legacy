@@ -115,19 +115,25 @@
   "dedup": {
     "mappedName": {
       "query": "ZZ_R2_R2_ORIGIN_20260910_103952_M26_ACT01",
-      "status": "NOT_EXECUTED_UI_UNAVAILABLE",
-      "matches": null
+      "status": "EXECUTED_ZERO_MATCHES",
+      "matches": 0,
+      "at": "2026-09-12T13:56:18.898Z",
+      "scope": "all_activity_states",
+      "evidence": "captures/M26-created-20260912.json"
     },
     "originalRunId": {
       "query": "R2-ORIGIN-20260910-103952",
-      "status": "NOT_EXECUTED_UI_UNAVAILABLE",
-      "matches": null
+      "status": "EXECUTED_ZERO_MATCHES",
+      "matches": 0,
+      "at": "2026-09-12T13:56:44.498Z",
+      "scope": "all_activity_states",
+      "evidence": "captures/M26-created-20260912.json"
     }
   },
-  "welcomeTextPersisted": false,
+  "welcomeTextPersisted": true,
   "notificationScope": "本轮恢复0保存/0发送；历史计数沿可见关闭选项与执行记录保留，未查外部投递日志，不能声明服务端投递对账完成。",
   "roleAssessment": "尚未完成全部单账号任务；不把缺少尝试的角色一律判ROLE_BLOCKED。页面恢复后先跑单账号内容，再一次性提交经验证的最小独立评价人/审批者需求。",
-  "lastRecoveryCheckAt": "2026-09-12T13:52:43.301Z",
+  "lastRecoveryCheckAt": "2026-09-12T13:59:28.904Z",
   "recoveryProbes": {
     "M17": "initial two pools read back; RUN-filter result unconfirmed",
     "M06": "new full-name query unique match1 enabled"

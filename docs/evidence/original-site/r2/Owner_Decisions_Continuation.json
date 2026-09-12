@@ -22,8 +22,10 @@
       "mappedName",
       "originalRunId"
     ],
-    "creationStatus": "not_created_pending_dual_dedup",
-    "currentBlocker": null
+    "creationStatus": "created_and_readback",
+    "currentBlocker": null,
+    "businessId": "67040ea1-d6a8-41d1-bf14-74b9946bbd0e",
+    "evidence": "captures/M26-created-20260912.json"
   },
   "CP-001": {
     "status": "pending_R2_P2_design_owner_receipt",

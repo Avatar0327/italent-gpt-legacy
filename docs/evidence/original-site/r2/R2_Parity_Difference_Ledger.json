@@ -68,7 +68,14 @@
       "evidence": [
         "R2-OBS-M26-001"
       ],
-      "resolutionStatus": "owner_approved_pending_origin_revalidation"
+      "resolutionStatus": "owner_approved_pending_origin_revalidation",
+      "approvedMappingRevalidation": {
+        "at": "2026-09-12T13:59:28.904Z",
+        "status": "CP003_MAPPING_ACCEPTED_SOURCE_CREATE_CONFIRMED",
+        "evidence": "captures/M26-created-20260912.json",
+        "historicalRejectionPreserved": true,
+        "anonymousExecuted": 0
+      }
     },
     {
       "id": "R2-DIFF-M17-001",
@@ -105,5 +112,5 @@
     "Minor": 2,
     "Major": 1
   },
-  "recoveryEvidence": "captures/Readbacks-20260912-1345.json"
+  "recoveryEvidence": "captures/M26-created-20260912.json"
 }

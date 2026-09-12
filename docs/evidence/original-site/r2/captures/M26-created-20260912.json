@@ -1,0 +1,49 @@
+{
+  "runId": "R2-ORIGIN-20260910-103952",
+  "baseHead": "e2db898615e591e279899941ef6a2b39761896b9",
+  "mappedDedup": {
+    "at": "2026-09-12T13:56:18.898Z",
+    "query": "ZZ_R2_R2_ORIGIN_20260910_103952_M26_ACT01",
+    "scope": "全部",
+    "body": "全部\n草稿\n已启用\n已停用\n已关注\n新增活动\n活动名称\n:\nZZ_R2_R2_ORIGIN_20260910_103952_M26_ACT01\n应用场景\n创建人\n创建时间\n清空已选\n关注\n活动名称\n评价对象人数\n评价者人数\n应用场景\n创建人\n创建时间\n作答进度\n操作\n\n这里什么都没有..."
+  },
+  "runDedup": {
+    "at": "2026-09-12T13:56:44.498Z",
+    "query": "R2-ORIGIN-20260910-103952",
+    "scope": "全部",
+    "body": "全部\n草稿\n已启用\n已停用\n已关注\n新增活动\n活动名称\n:\nR2-ORIGIN-20260910-103952\n应用场景\n创建人\n创建时间\n清空已选\n关注\n活动名称\n评价对象人数\n评价者人数\n应用场景\n创建人\n创建时间\n作答进度\n操作\n\n这里什么都没有..."
+  },
+  "preSave": {
+    "at": "2026-09-12T13:58:29.716Z",
+    "fields": [
+      "ZZ_R2_R2_ORIGIN_20260910_103952_M26_ACT01",
+      "R2原站隔离合成数据验证；RUN_ID：R2-ORIGIN-20260910-103952"
+    ],
+    "checkedOptions": [
+      "否",
+      "不显示",
+      "不显示评价角色名称",
+      "一次评价多人",
+      "按套卷和角色分组",
+      "按系统默认顺序",
+      "不允许",
+      "关",
+      "开",
+      "允许直接提交",
+      "不显示"
+    ],
+    "inheritedDisabledAdminCount": 43,
+    "additionalAuthorizedUsers": 0
+  },
+  "saveAt": "2026-09-12T13:58:29.889Z",
+  "successAt": "2026-09-12T13:58:48.663Z",
+  "readback": {
+    "at": "2026-09-12T13:59:28.904Z",
+    "activityId": "67040ea1-d6a8-41d1-bf14-74b9946bbd0e",
+    "text": "ZZ_R2_R2_ORIGIN_20260910_103952_M26_ACT01\n草稿\n返回活动列表\n启用活动\n活动处于草稿状态，请设置套卷及评价关系；启用活动后可邀请评价者作答。\n基本信息\n套卷\n评价关系\n进程控制\n数据筛选\n个人报告\n团队报告\n报表\n编辑\n活动名称\nZZ_R2_R2_ORIGIN_20260910_103952_M26_ACT01\n应用场景\n--\n评价者作答页面设置\n欢迎语\nR2原站隔离合成数据验证；RUN_ID：R2-ORIGIN-20260910-103952\n作答页评价者姓名\n不显示\n评价角色是否显示\n不显示评价角色名称\n评价形式\n一次评价多人\n评价对象分组规则\n按套卷和角色分组\n评价对象显示顺序\n按系统默认顺序\n评价者忽略评价任务\n不允许\n评价者不认真作答提醒设置\n作答过程不认真提醒\n关\n提交时不认真提醒\n开 (允许直接提交)\n结果处理方式设置\n无效数据提示卡\n不显示\n"
+  },
+  "newActivityCount": 1,
+  "notificationsExecuted": 0,
+  "anonymousExecuted": 0,
+  "scope": "Inherited 43 system administrators disabled in local authorization widget; no users added or shared permissions changed"
+}

@@ -240,6 +240,26 @@
       "notes": "档案及随档案初始任期合计为1个登记对象；UI未暴露独立term ID，不虚增条数",
       "actualEndedOn": "2026-09-10",
       "latestReadbackEvidence": "captures/Readbacks-20260912-1345.json"
+    },
+    {
+      "module": "M26",
+      "type": "feedback_project",
+      "name": "ZZ_R2_R2_ORIGIN_20260910_103952_M26_ACT01",
+      "businessId": "67040ea1-d6a8-41d1-bf14-74b9946bbd0e",
+      "status": "confirmed_created",
+      "currentState": "草稿",
+      "references": [],
+      "welcomeText": "R2原站隔离合成数据验证；RUN_ID：R2-ORIGIN-20260910-103952",
+      "operations": [
+        "dual_dedup_zero_matches",
+        "create_success",
+        "detail_id_and_welcome_readback"
+      ],
+      "idEvidence": "正式UI活动详情hash中嵌入的id参数；不保存签名URL",
+      "evidence": "captures/M26-created-20260912.json",
+      "notificationsExecuted": 0,
+      "inheritedSystemAdminCount": 43,
+      "additionalAuthorizedUsers": 0
     }
   ],
   "pending": [],
@@ -301,34 +321,42 @@
       "mappedName": "ZZ_R2_R2_ORIGIN_20260910_103952_M26_ACT01",
       "approvalRef": "Owner_Decisions_Continuation.json#CP-003",
       "mappingSemantics": "explicit one-to-one registry; never reverse by blind replacement",
-      "status": "approved_pending_dual_dedup",
-      "businessId": null,
+      "status": "created_and_readback",
+      "businessId": "67040ea1-d6a8-41d1-bf14-74b9946bbd0e",
       "dedup": {
         "mappedName": {
           "query": "ZZ_R2_R2_ORIGIN_20260910_103952_M26_ACT01",
-          "status": "NOT_EXECUTED_UI_UNAVAILABLE",
-          "matches": null
+          "status": "EXECUTED_ZERO_MATCHES",
+          "matches": 0,
+          "at": "2026-09-12T13:56:18.898Z",
+          "scope": "all_activity_states",
+          "evidence": "captures/M26-created-20260912.json"
         },
         "originalRunId": {
           "query": "R2-ORIGIN-20260910-103952",
-          "status": "NOT_EXECUTED_UI_UNAVAILABLE",
-          "matches": null
+          "status": "EXECUTED_ZERO_MATCHES",
+          "matches": 0,
+          "at": "2026-09-12T13:56:44.498Z",
+          "scope": "all_activity_states",
+          "evidence": "captures/M26-created-20260912.json"
         }
       },
       "welcomeText": {
         "plannedValue": "R2原站隔离合成数据验证；RUN_ID：R2-ORIGIN-20260910-103952",
-        "persisted": false
+        "persisted": true,
+        "readbackValue": "R2原站隔离合成数据验证；RUN_ID：R2-ORIGIN-20260910-103952",
+        "evidence": "captures/M26-created-20260912.json"
       },
       "blocker": null
     }
   ],
   "continuation": {
     "baseHead": "7c6ce4585cf9fcdb9f2e011762266b126224f852",
-    "checkedAt": "2026-09-12T13:52:43.301Z",
-    "newObjects": 0,
+    "checkedAt": "2026-09-12T13:59:28.904Z",
+    "newObjects": 1,
     "currentBlocker": null,
     "ownedTab": "5",
-    "evidence": "captures/Readbacks-20260912-1345.json",
+    "evidence": "captures/M26-created-20260912.json",
     "readbackQueue": "Recovery_Readback_Queue.json"
   },
   "continuationHistory": [
