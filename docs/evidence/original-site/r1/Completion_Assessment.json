@@ -80,7 +80,7 @@
         "FUTURE-PARTTIME-OVERLAP-005",
         "M01-PENDING-ORG-LIFECYCLE"
       ],
-      "blocker": "两兼职结束日9/11已保存，但当日仍实际任职中；ORG003有有效依赖",
+      "blocker": "9/12日期已到，但未确认浏览器独占，两个兼职实际终态/审计及ORG003依赖仍未知",
       "evidence": "Future_Date_Recovery.json",
       "minimumAction": "北京时间9/12后新查询两个原UUID实际终态/审计，报表重核；再决定ORG003停用",
       "alternativeTried": "结束早于开始明确拒绝；合法结束日保存；不删历史、不改时钟、不提前当结束"
@@ -185,14 +185,17 @@
     "automation": {
       "id": "6aa2cdf499888191b40f86510034e1ff",
       "title": "R1原站到期回查",
-      "enabled": true,
+      "enabled": false,
       "verifiedThisContinuation": true,
       "schedule": "2026-09-12T08:00:00+08:00",
       "oneShot": true,
       "requiresExclusiveBrowser": true,
       "autoPauseOnCompletionOrFailure": true,
       "serviceTimingMode": "flexible_schedule",
-      "serviceNextRunTime": null
+      "serviceNextRunTime": null,
+      "attemptEvidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+      "pauseConfirmed": true,
+      "pausedAt": "2026-09-12T00:36:56.371703+00:00"
     }
   },
   "counts": {
@@ -216,6 +219,38 @@
   "ownerDecisions": "Owner_Decisions_20260911_002_003.json",
   "limitedAuthorizationSupersedesOldRestrictions": true,
   "lastCommittedHeadBeforePackage": "8e18c60f0070bc010766df1adce5ee996450c928",
-  "remainingAutonomousStatus": "当前集中暂停源于实际启用自动通知且未能确认隔离接收；其余未完成场景仍逐项保留，不声明所有想象可执行场景已穷尽。",
-  "latestOfflineIncrement": "正式原模板已收到并归档；无浏览器动作、无业务写入、完整计数不变"
+  "remainingAutonomousStatus": "9/12独占闸门未通过，未调用浏览器；不声称自主业务事项全部完成。",
+  "latestOfflineIncrement": "9/12独占阻塞及停用回执已登记；业务写入0，完成度不变。",
+  "scheduledSep12Attempt": {
+    "actualAuditTimes": null,
+    "actualExecutors": null,
+    "actualPartTimeTerminationStatuses": null,
+    "backgroundBrowserActions": false,
+    "basisHead": "b6316852ad5a143021f06dbcfec5f0a6728b8569",
+    "browserCalls": 0,
+    "browserLeaseAcquired": false,
+    "browserReleaseStatus": "NOT_ACQUIRED_NO_ACTIONS_TO_RELEASE",
+    "checkedAt": "2026-09-12T00:38:50Z",
+    "checkedAtBeijing": "2026-09-12T08:38:50+08:00",
+    "dateConditionSatisfied": true,
+    "deletedBusinessObjects": 0,
+    "downloadRetried": false,
+    "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+    "exclusiveBrowserConfirmed": false,
+    "freshServerQueryAttempted": false,
+    "freshServerQuerySucceeded": null,
+    "is_enabled": false,
+    "modifiedBusinessObjects": 0,
+    "newBusinessObjects": 0,
+    "org003DisableAttempted": false,
+    "otherTabsUntouched": true,
+    "outcome": "BLOCKED_BROWSER_EXCLUSIVITY_UNCONFIRMED",
+    "ownedTabsThisAttempt": [],
+    "pauseConfirmed": true,
+    "pauseConfirmedAt": "2026-09-12T00:36:56.371703+00:00",
+    "rehireSaved": false,
+    "sep12ReportCounts": null,
+    "taskId": "6aa2cdf499888191b40f86510034e1ff",
+    "unknownBusinessActions": []
+  }
 }

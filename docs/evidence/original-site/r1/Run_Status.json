@@ -14,33 +14,34 @@
     "originVsRequirements": 0,
     "readyForP3ExitParityReview": 0
   },
-  "concurrency": "R1_sole_operator_own_tabs_27_30_forms_isolated_same_admin_sequential_stale_drafts",
+  "concurrency": "current_exclusive_browser_use_unconfirmed_no_browser_called",
   "continuationInProgress": false,
   "createdRecords": 20,
   "createdRecordsDefinition": "累计20主动业务对象，删除1，保留19，另有合成附件2版本不重复算业务对象；6人员。",
-  "currentCheckpoint": "notification_isolation_gate_fixed_evidence_package",
-  "currentContinuationLimitation": "详见Completion_Assessment.json；角色/审计/邀请/日期/正式文件/模板与稳定扩量前置。不得称完整通过。",
+  "currentCheckpoint": "sep12_exclusive_browser_gate_blocked_no_browser",
+  "currentContinuationLimitation": "9/12日期已到；本轮浏览器独占无法确认，未调用浏览器。既有ROLE-01/ENV-07等前置不变。",
   "currentEmployeeOracle": {
     "people": 5,
     "formal": 4,
     "probation": 1,
     "departed": 0,
-    "scope": "固定六姓名、明确9/11时点在职名册，排除001离职",
-    "evidence": "R1-ORIGIN-20260910-100019/M32/M32_Contract_Report_Download_Recovery.json"
+    "scope": "固定六姓名、明确9/11时点在职名册，排除001离职；仅9/11历史观察，不代表9/12",
+    "evidence": "R1-ORIGIN-20260910-100019/M32/M32_Contract_Report_Download_Recovery.json",
+    "asOf": "2026-09-11"
   },
   "dateSatisfiedButUnverifiedCases": [
     "离职执行人/实际审计与旧雇佣段ID",
-    "同personId正式再入职及邀请关闭"
+    "同personId正式再入职及邀请关闭",
+    "FUTURE-PARTTIME-END-005",
+    "FUTURE-PARTTIME-OVERLAP-005",
+    "2026-09-12六姓名报表及ORG003依赖"
   ],
   "e2eCompleted": 0,
   "e2eRequired": 5,
   "existingFindingUpdated": "ENV-05",
-  "freshServerQuerySucceeded": true,
-  "futureDatePendingCases": [
-    "FUTURE-PARTTIME-END-005",
-    "FUTURE-PARTTIME-OVERLAP-005"
-  ],
-  "futureRecheckScheduled": true,
+  "freshServerQuerySucceeded": null,
+  "futureDatePendingCases": [],
+  "futureRecheckScheduled": false,
   "futureRecovery": "Future_Date_Recovery.json",
   "historicalEmployeeOracle": {
     "date": "2026-09-10",
@@ -53,7 +54,7 @@
   },
   "historicalMajor": 2,
   "intentionalDifferences": 2,
-  "lastRecheckAt": "2026-09-11T08:17:49.060830+00:00",
+  "lastRecheckAt": "2026-09-12T00:38:50Z",
   "matchRules": 6,
   "modules": [
     {
@@ -89,13 +90,13 @@
       "requirementsComparison": "partial"
     }
   ],
-  "newBusinessObjectsThisContinuation": 2,
-  "newConfirmedBusinessBehaviorsThisContinuation": 2,
+  "newBusinessObjectsThisContinuation": 0,
+  "newConfirmedBusinessBehaviorsThisContinuation": 0,
   "newFindingsThisContinuation": {
     "Blocker": 0,
     "Major": 0,
     "Minor": 0,
-    "Observation": 1
+    "Observation": 0
   },
   "origin": "https://srworkshopbj.italent.cn",
   "otherUnexecutedWorkNotEquivalentToBlocker": true,
@@ -121,14 +122,16 @@
   "smokeNamedObjectsThresholdReached": true,
   "unknownBusinessActions": [],
   "workflowStatus": "B_not_complete_notification_isolation_and_external_prerequisites",
-  "modifiedRunObjectsThisContinuation": 3,
+  "modifiedRunObjectsThisContinuation": 0,
   "fullHistoryOracle": {
     "distinctPeople": 6,
     "assignmentRows": 10,
     "currentActivePrimary": 5,
     "currentPartTime": 2,
     "currentEndedPrimary": 1,
-    "evidence": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_All_Assignments.json"
+    "evidence": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_All_Assignments.json",
+    "asOf": "2026-09-11",
+    "scope": "9/11历史观察，未于9/12重新核验"
   },
   "retainedRecords": 19,
   "deletedRecords": 1,
@@ -138,5 +141,38 @@
     "Owner_Decisions_20260911_002_003.json"
   ],
   "officialEmployeeTemplateObtained": true,
-  "latestOfflineReceiptAt": "2026-09-11T14:10:17.411388+00:00"
+  "latestOfflineReceiptAt": "2026-09-11T14:10:17.411388+00:00",
+  "freshServerQueryStatus": "not_attempted_this_run_previous_true_is_sep11_history",
+  "scheduledSep12Attempt": {
+    "actualAuditTimes": null,
+    "actualExecutors": null,
+    "actualPartTimeTerminationStatuses": null,
+    "backgroundBrowserActions": false,
+    "basisHead": "b6316852ad5a143021f06dbcfec5f0a6728b8569",
+    "browserCalls": 0,
+    "browserLeaseAcquired": false,
+    "browserReleaseStatus": "NOT_ACQUIRED_NO_ACTIONS_TO_RELEASE",
+    "checkedAt": "2026-09-12T00:38:50Z",
+    "checkedAtBeijing": "2026-09-12T08:38:50+08:00",
+    "dateConditionSatisfied": true,
+    "deletedBusinessObjects": 0,
+    "downloadRetried": false,
+    "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+    "exclusiveBrowserConfirmed": false,
+    "freshServerQueryAttempted": false,
+    "freshServerQuerySucceeded": null,
+    "is_enabled": false,
+    "modifiedBusinessObjects": 0,
+    "newBusinessObjects": 0,
+    "org003DisableAttempted": false,
+    "otherTabsUntouched": true,
+    "outcome": "BLOCKED_BROWSER_EXCLUSIVITY_UNCONFIRMED",
+    "ownedTabsThisAttempt": [],
+    "pauseConfirmed": true,
+    "pauseConfirmedAt": "2026-09-12T00:36:56.371703+00:00",
+    "rehireSaved": false,
+    "sep12ReportCounts": null,
+    "taskId": "6aa2cdf499888191b40f86510034e1ff",
+    "unknownBusinessActions": []
+  }
 }

@@ -7,7 +7,7 @@
     "fullModules": "0/4",
     "p3ParityModules": "0/4"
   },
-  "currentNextStep": "9/12真实日期回查两个原兼职；再入职需先解除ENV-07隔离通知前置，不改共享设置",
+  "currentNextStep": "9/12日期条件已满足，实际后效仍未知；任务已停用。取得当前独占交接后人工授权窗口续查原UUID，不重新调度。",
   "earliestActualRecheckAt": "2026-09-11T00:00:00+08:00",
   "environment": "https://srworkshopbj.italent.cn",
   "lastObserved": {
@@ -65,12 +65,12 @@
   "scheduledRecheck": {
     "approximateLocalTime": "08:00",
     "creationConfirmed": true,
-    "enabled": true,
+    "enabled": false,
     "executionCompleted": false,
     "localDate": "2026-09-12",
     "localDaypart": "morning",
-    "pauseConfirmed": false,
-    "pauseReason": null,
+    "pauseConfirmed": true,
+    "pauseReason": "BLOCKED_BROWSER_EXCLUSIVITY_UNCONFIRMED",
     "timezone": "Asia/Shanghai",
     "timingMode": "flexible_schedule",
     "title": "R1原站到期回查",
@@ -81,7 +81,10 @@
     "pauseAfterSuccessOrFailure": true,
     "serviceTimingMode": "flexible_schedule",
     "serviceNextRunTime": null,
-    "evidence": "R1-ORIGIN-20260910-100019/Automation_Sep12_20260911.json"
+    "evidence": "R1-ORIGIN-20260910-100019/Automation_Sep12_20260911.json",
+    "attemptCompleted": true,
+    "attemptEvidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+    "pausedAt": "2026-09-12T00:36:56.371703+00:00"
   },
   "steps": [
     {
@@ -184,7 +187,8 @@
       "明示当前日期重查报表去重人数与兼职数量",
       "ORG003停用前重查全部依赖",
       "一次性任务先确认独占；不能确认则不操作浏览器，记录后自动暂停。"
-    ]
+    ],
+    "sep12Status": "date_satisfied_actual_termination_unverified_exclusivity_blocked"
   },
   "latestSixPersonOracle": {
     "date": "2026-09-11",
@@ -194,5 +198,37 @@
     "allHistoryAssignments": 10,
     "allHistoryDistinctPeople": 6,
     "evidence": "R1-ORIGIN-20260910-100019/M32/M32_Six_Employee_All_Assignments.json"
+  },
+  "scheduledSep12Attempt": {
+    "actualAuditTimes": null,
+    "actualExecutors": null,
+    "actualPartTimeTerminationStatuses": null,
+    "backgroundBrowserActions": false,
+    "basisHead": "b6316852ad5a143021f06dbcfec5f0a6728b8569",
+    "browserCalls": 0,
+    "browserLeaseAcquired": false,
+    "browserReleaseStatus": "NOT_ACQUIRED_NO_ACTIONS_TO_RELEASE",
+    "checkedAt": "2026-09-12T00:38:50Z",
+    "checkedAtBeijing": "2026-09-12T08:38:50+08:00",
+    "dateConditionSatisfied": true,
+    "deletedBusinessObjects": 0,
+    "downloadRetried": false,
+    "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+    "exclusiveBrowserConfirmed": false,
+    "freshServerQueryAttempted": false,
+    "freshServerQuerySucceeded": null,
+    "is_enabled": false,
+    "modifiedBusinessObjects": 0,
+    "newBusinessObjects": 0,
+    "org003DisableAttempted": false,
+    "otherTabsUntouched": true,
+    "outcome": "BLOCKED_BROWSER_EXCLUSIVITY_UNCONFIRMED",
+    "ownedTabsThisAttempt": [],
+    "pauseConfirmed": true,
+    "pauseConfirmedAt": "2026-09-12T00:36:56.371703+00:00",
+    "rehireSaved": false,
+    "sep12ReportCounts": null,
+    "taskId": "6aa2cdf499888191b40f86510034e1ff",
+    "unknownBusinessActions": []
   }
 }

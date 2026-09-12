@@ -272,14 +272,16 @@
     }
   },
   "lastContinuation": {
-    "at": "2026-09-11T08:17:49.060830+00:00",
-    "basisHead": "8e3be496177bae50b6545b9787c1125741f1aafc",
-    "newObjects": 2,
+    "at": "2026-09-12T00:38:50Z",
+    "basisHead": "b6316852ad5a143021f06dbcfec5f0a6728b8569",
+    "newObjects": 0,
     "deletedObjects": 0,
     "inProgress": false,
     "unknownBusinessActions": [],
     "openDrafts": [],
-    "browserReleased": true
+    "browserLeaseAcquired": false,
+    "browserReleaseStatus": "NOT_ACQUIRED_NO_ACTIONS_TO_RELEASE",
+    "modifiedObjects": 0
   },
   "manualSmoke": {
     "bulkImportedRows": 0,
@@ -328,7 +330,13 @@
         "result": "not_reached_fresh_query_gate_failed"
       },
       "status": "recalled_to_applicant_start_node_same_instance",
-      "statusScope": "historical_last_observed_not_reasserted_as_current"
+      "statusScope": "historical_last_observed_not_reasserted_as_current",
+      "sep12Verification": {
+        "checkedAt": "2026-09-12T00:38:50Z",
+        "currentStatus": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+        "result": "not_queried_browser_exclusivity_unconfirmed"
+      }
     },
     {
       "allowLaterDelete": true,
@@ -362,7 +370,13 @@
         "result": "not_reached_fresh_query_gate_failed"
       },
       "status": "active_probation_created",
-      "statusScope": "historical_last_observed_not_reasserted_as_current"
+      "statusScope": "historical_last_observed_not_reasserted_as_current",
+      "sep12Verification": {
+        "checkedAt": "2026-09-12T00:38:50Z",
+        "currentStatus": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+        "result": "not_queried_browser_exclusivity_unconfirmed"
+      }
     },
     {
       "allowLaterDelete": false,
@@ -412,6 +426,12 @@
         "actualAuditAt": null,
         "oldEmploymentId": null,
         "pageProvidedFieldsOnly": true
+      },
+      "sep12Verification": {
+        "checkedAt": "2026-09-12T00:38:50Z",
+        "currentStatus": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+        "result": "not_queried_browser_exclusivity_unconfirmed"
       }
     },
     {
@@ -453,7 +473,13 @@
         "result": "observed_current_state"
       },
       "status": "void_business_process_terminated_by_system",
-      "statusScope": "fresh_readback_2026-09-11_before_rehire"
+      "statusScope": "fresh_readback_2026-09-11_before_rehire",
+      "sep12Verification": {
+        "checkedAt": "2026-09-12T00:38:50Z",
+        "currentStatus": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+        "result": "not_queried_browser_exclusivity_unconfirmed"
+      }
     },
     {
       "allowLaterDelete": true,
@@ -489,7 +515,13 @@
       },
       "status": "departed_current_assignment_effective",
       "statusScope": "fresh_readback_2026-09-11_before_rehire",
-      "verifiedAt": "2026-09-10T12:15:13.521Z"
+      "verifiedAt": "2026-09-10T12:15:13.521Z",
+      "sep12Verification": {
+        "checkedAt": "2026-09-12T00:38:50Z",
+        "currentStatus": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+        "result": "not_queried_browser_exclusivity_unconfirmed"
+      }
     },
     {
       "allowLaterDelete": true,
@@ -531,6 +563,12 @@
           "scope": "ORG003包含下级，已实际应用"
         },
         "evidence": "R1-ORIGIN-20260910-100019/20260911_Job002_Stop_Dependencies.json"
+      },
+      "sep12Verification": {
+        "checkedAt": "2026-09-12T00:38:50Z",
+        "currentStatus": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+        "result": "not_queried_browser_exclusivity_unconfirmed"
       }
     },
     {
@@ -568,6 +606,12 @@
         "attachmentUploaded": false,
         "serverEditAuditAt": null,
         "evidence": "R1-ORIGIN-20260910-100019/20260911_Concentrated_M01_Boundaries.json"
+      },
+      "sep12Verification": {
+        "checkedAt": "2026-09-12T00:38:50Z",
+        "currentStatus": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+        "result": "not_queried_browser_exclusivity_unconfirmed"
       }
     },
     {
@@ -597,7 +641,13 @@
         "result": "observed_current_state"
       },
       "status": "enabled_query_verified",
-      "statusScope": "fresh_readback_2026-09-11_before_rehire"
+      "statusScope": "fresh_readback_2026-09-11_before_rehire",
+      "sep12Verification": {
+        "checkedAt": "2026-09-12T00:38:50Z",
+        "currentStatus": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+        "result": "not_queried_browser_exclusivity_unconfirmed"
+      }
     },
     {
       "allowLaterDelete": true,
@@ -625,7 +675,13 @@
       },
       "status": "enabled_query_verified",
       "statusScope": "historical_last_observed_not_reasserted_as_current",
-      "verifiedAt": "2026-09-10T10:35:47.493Z"
+      "verifiedAt": "2026-09-10T10:35:47.493Z",
+      "sep12Verification": {
+        "checkedAt": "2026-09-12T00:38:50Z",
+        "currentStatus": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+        "result": "not_queried_browser_exclusivity_unconfirmed"
+      }
     },
     {
       "allowLaterDelete": true,
@@ -661,7 +717,13 @@
       "statusScope": "historical_last_observed_not_reasserted_as_current",
       "verifiedAt": "2026-09-11T06:16:13.172340+00:00",
       "remark": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_003_EDIT_001 仅合成备注验证",
-      "lastMutation": "双旧草稿A/B后已恢复；自环拒绝已取消"
+      "lastMutation": "双旧草稿A/B后已恢复；自环拒绝已取消",
+      "sep12Verification": {
+        "checkedAt": "2026-09-12T00:38:50Z",
+        "currentStatus": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+        "result": "not_queried_browser_exclusivity_unconfirmed"
+      }
     },
     {
       "allowLaterDelete": true,
@@ -686,7 +748,13 @@
       "status": "active_formal_primary",
       "statusScope": "fresh_query_2026-09-11",
       "verifiedAt": "2026-09-11T03:52:22.535826+00:00",
-      "invitationEnabled": false
+      "invitationEnabled": false,
+      "sep12Verification": {
+        "checkedAt": "2026-09-12T00:38:50Z",
+        "currentStatus": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+        "result": "not_queried_browser_exclusivity_unconfirmed"
+      }
     },
     {
       "allowLaterDelete": true,
@@ -711,7 +779,13 @@
       "status": "employee_created_org002_job001",
       "statusScope": "fresh_query_2026-09-11",
       "verifiedAt": "2026-09-11T04:03:45.355733+00:00",
-      "invitationEnabled": false
+      "invitationEnabled": false,
+      "sep12Verification": {
+        "checkedAt": "2026-09-12T00:38:50Z",
+        "currentStatus": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+        "result": "not_queried_browser_exclusivity_unconfirmed"
+      }
     },
     {
       "allowLaterDelete": true,
@@ -735,7 +809,13 @@
       "status": "employee_created_org002_job_empty",
       "statusScope": "fresh_query_2026-09-11",
       "verifiedAt": "2026-09-11T04:03:45.355733+00:00",
-      "invitationEnabled": false
+      "invitationEnabled": false,
+      "sep12Verification": {
+        "checkedAt": "2026-09-12T00:38:50Z",
+        "currentStatus": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+        "result": "not_queried_browser_exclusivity_unconfirmed"
+      }
     },
     {
       "allowLaterDelete": false,
@@ -763,7 +843,13 @@
       "countsAsHead": false,
       "verifiedAt": "2026-09-11T04:27:14.247862+00:00",
       "actualTerminationConfirmed": false,
-      "latestVerification": "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_End.json"
+      "latestVerification": "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_End.json",
+      "sep12Verification": {
+        "checkedAt": "2026-09-12T00:38:50Z",
+        "currentStatus": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+        "result": "not_queried_browser_exclusivity_unconfirmed"
+      }
     },
     {
       "allowLaterDelete": true,
@@ -790,7 +876,13 @@
       "statusScope": "fresh_query_2026-09-11",
       "verifiedAt": "2026-09-11T05:20:58.054Z",
       "invitationEnabled": false,
-      "nameLength": 100
+      "nameLength": 100,
+      "sep12Verification": {
+        "checkedAt": "2026-09-12T00:38:50Z",
+        "currentStatus": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+        "result": "not_queried_browser_exclusivity_unconfirmed"
+      }
     },
     {
       "runId": "R1-ORIGIN-20260910-100019",
@@ -813,7 +905,13 @@
         "R1-ORIGIN-20260910-100019/M01/LEGAL001_EmptyScope_Detail.json",
         "R1-ORIGIN-20260910-100019/M01/LEGAL001_Stopped_Query.json",
         "R1-ORIGIN-20260910-100019/M01/LEGAL001_Stopped_Detail.json"
-      ]
+      ],
+      "sep12Verification": {
+        "checkedAt": "2026-09-12T00:38:50Z",
+        "currentStatus": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+        "result": "not_queried_browser_exclusivity_unconfirmed"
+      }
     },
     {
       "allowLaterDelete": false,
@@ -841,7 +939,13 @@
       "countsAsHead": false,
       "verifiedAt": "2026-09-11T05:48:20.449Z",
       "actualTerminationConfirmed": false,
-      "latestVerification": "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_Detail.json"
+      "latestVerification": "R1-ORIGIN-20260910-100019/M01/EMP005_PartTime_Overlap_Detail.json",
+      "sep12Verification": {
+        "checkedAt": "2026-09-12T00:38:50Z",
+        "currentStatus": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+        "result": "not_queried_browser_exclusivity_unconfirmed"
+      }
     },
     {
       "runId": "R1-ORIGIN-20260910-100019",
@@ -865,7 +969,13 @@
       "evidence": [
         "R1-ORIGIN-20260910-100019/M01/JOB003_Create_Delete_Checkpoint.json",
         "R1-ORIGIN-20260910-100019/M01/JOB003_Delete_Readback.json"
-      ]
+      ],
+      "sep12Verification": {
+        "checkedAt": "2026-09-12T00:38:50Z",
+        "currentStatus": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+        "result": "not_queried_browser_exclusivity_unconfirmed"
+      }
     },
     {
       "runId": "R1-ORIGIN-20260910-100019",
@@ -887,7 +997,13 @@
         "R1-ORIGIN-20260910-100019/M01/Contract_Legal_Stop_Reference.json"
       ],
       "screenshot": null,
-      "originRecordId": "da7b6c4c-90ee-437a-aae0-5740f916210f"
+      "originRecordId": "da7b6c4c-90ee-437a-aae0-5740f916210f",
+      "sep12Verification": {
+        "checkedAt": "2026-09-12T00:38:50Z",
+        "currentStatus": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+        "result": "not_queried_browser_exclusivity_unconfirmed"
+      }
     },
     {
       "runId": "R1-ORIGIN-20260910-100019",
@@ -910,11 +1026,49 @@
         "R1-ORIGIN-20260910-100019/M01/CONTRACT001_PreSave.json"
       ],
       "originRecordId": "d31ec769-bd60-4877-828c-6d212e9a3dca",
-      "status": "有效/生效；签订次数1；附件002已替换并新编辑回读"
+      "status": "有效/生效；签订次数1；附件002已替换并新编辑回读",
+      "sep12Verification": {
+        "checkedAt": "2026-09-12T00:38:50Z",
+        "currentStatus": null,
+        "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+        "result": "not_queried_browser_exclusivity_unconfirmed"
+      }
     }
   ],
   "retainedCount": 19,
   "runId": "R1-ORIGIN-20260910-100019",
   "successMessagePendingIdCount": 0,
-  "writesSuspendedReason": "受限项集中暂停：再入职自动通知隔离ENV-07；角色/模板/下载/未来日期等精确前置见Completion_Assessment。非全站停写政策。"
+  "writesSuspendedReason": "受限项集中暂停：再入职自动通知隔离ENV-07；角色/模板/下载/未来日期等精确前置见Completion_Assessment。非全站停写政策。",
+  "scheduledSep12Attempt": {
+    "actualAuditTimes": null,
+    "actualExecutors": null,
+    "actualPartTimeTerminationStatuses": null,
+    "backgroundBrowserActions": false,
+    "basisHead": "b6316852ad5a143021f06dbcfec5f0a6728b8569",
+    "browserCalls": 0,
+    "browserLeaseAcquired": false,
+    "browserReleaseStatus": "NOT_ACQUIRED_NO_ACTIONS_TO_RELEASE",
+    "checkedAt": "2026-09-12T00:38:50Z",
+    "checkedAtBeijing": "2026-09-12T08:38:50+08:00",
+    "dateConditionSatisfied": true,
+    "deletedBusinessObjects": 0,
+    "downloadRetried": false,
+    "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+    "exclusiveBrowserConfirmed": false,
+    "freshServerQueryAttempted": false,
+    "freshServerQuerySucceeded": null,
+    "is_enabled": false,
+    "modifiedBusinessObjects": 0,
+    "newBusinessObjects": 0,
+    "org003DisableAttempted": false,
+    "otherTabsUntouched": true,
+    "outcome": "BLOCKED_BROWSER_EXCLUSIVITY_UNCONFIRMED",
+    "ownedTabsThisAttempt": [],
+    "pauseConfirmed": true,
+    "pauseConfirmedAt": "2026-09-12T00:36:56.371703+00:00",
+    "rehireSaved": false,
+    "sep12ReportCounts": null,
+    "taskId": "6aa2cdf499888191b40f86510034e1ff",
+    "unknownBusinessActions": []
+  }
 }

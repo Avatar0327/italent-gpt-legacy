@@ -1,0 +1,136 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "checkedAt": "2026-09-12T00:38:50Z",
+  "checkedAtBeijing": "2026-09-12T08:38:50+08:00",
+  "basisHead": "b6316852ad5a143021f06dbcfec5f0a6728b8569",
+  "outcome": "BLOCKED_BROWSER_EXCLUSIVITY_UNCONFIRMED",
+  "dateConditionSatisfied": true,
+  "exclusiveBrowserConfirmed": false,
+  "browserCalls": 0,
+  "freshServerQueryAttempted": false,
+  "freshServerQuerySucceeded": null,
+  "newBusinessObjects": 0,
+  "modifiedBusinessObjects": 0,
+  "deletedBusinessObjects": 0,
+  "unknownBusinessActions": [],
+  "actualPartTimeTerminationStatuses": null,
+  "actualExecutors": null,
+  "actualAuditTimes": null,
+  "sep12ReportCounts": null,
+  "org003DisableAttempted": false,
+  "rehireSaved": false,
+  "downloadRetried": false,
+  "browserLeaseAcquired": false,
+  "browserReleaseStatus": "NOT_ACQUIRED_NO_ACTIONS_TO_RELEASE",
+  "ownedTabsThisAttempt": [],
+  "backgroundBrowserActions": false,
+  "otherTabsUntouched": true,
+  "taskId": "6aa2cdf499888191b40f86510034e1ff",
+  "is_enabled": false,
+  "pauseConfirmed": true,
+  "pauseConfirmedAt": "2026-09-12T00:36:56.371703+00:00",
+  "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
+  "evidenceType": "offline_preflight_not_origin_business_observation",
+  "environment": {
+    "expectedOrigin": "https://srworkshopbj.italent.cn",
+    "basis": "所有者指令和既有测试授权/恢复记录",
+    "liveIdentityVerified": false
+  },
+  "gateEvidence": [
+    {
+      "path": "Resume.md",
+      "fact": "R1最后浏览器结束2026-09-11T08:14:58.412Z，可交接R3但没有接收回执；不足以证明9/12独占"
+    },
+    {
+      "path": "/workspace/sites/italent-hris-r2-origin-parity-20260910/docs/evidence/original-site/r2/Resume.md",
+      "fact": "只见历史控制连接故障恢复点，未取得本轮R2实时释放确认"
+    },
+    {
+      "path": "/workspace/sites/italent-hris-r3-origin-parity-20260910/docs/evidence/original-site/r3/Resume.md",
+      "fact": "最新段2026-09-11T00:20:01Z控制恢复、下一步继续五模块；未取得本轮R3实时释放确认"
+    },
+    {
+      "path": "personal_context.search",
+      "fact": "Personal context is unavailable for this conversation."
+    }
+  ],
+  "conclusion": "不能确认当前人工/其他窗口/自动任务均已释放，按所有者要求停止于浏览器调用之前；不推断有人正在使用，也不认定原站故障。",
+  "targets": {
+    "personId": "53a88828-60d7-42e4-b508-974ff96708a2",
+    "assignmentIds": [
+      "0eb54fe9-01ea-4fdb-b5e7-75754a308119",
+      "1e462457-ae89-4894-87e8-7083e6fc5229"
+    ],
+    "plannedStartOn": "2026-09-11",
+    "plannedEndOn": "2026-09-11",
+    "orgId": "a7b55bd7-0ef2-44a0-9d29-6259fe053da3",
+    "reportDate": "2026-09-12",
+    "employees": [
+      {
+        "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_002",
+        "personId": "66ea978b-f2e9-47b1-b3a6-6176234d1fe0"
+      },
+      {
+        "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_001",
+        "personId": "927ef593-f930-4bcb-963f-e463df2e9e84"
+      },
+      {
+        "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_003",
+        "personId": "50913db1-0208-49cd-a928-159a8b1e2063"
+      },
+      {
+        "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_004",
+        "personId": "4dae112d-2e1f-4261-9c6b-1036e59ccefc"
+      },
+      {
+        "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_005",
+        "personId": "53a88828-60d7-42e4-b508-974ff96708a2"
+      },
+      {
+        "name": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_EMP_006_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "personId": "cdaaa0a5-0b31-4145-822c-1f96f1bc1743"
+      }
+    ]
+  },
+  "counts": {
+    "created": 20,
+    "deleted": 1,
+    "retained": 19,
+    "employees": 6,
+    "scope": "9/11已提交清单；本轮没有原站复核，不宣称全站当前统计",
+    "fullModules": "0/4",
+    "bulkModules": "0/4",
+    "requirementsParity": "0/4",
+    "p3Parity": "0/4",
+    "e2e": "0/5"
+  },
+  "findings": {
+    "newBusinessDifferences": 0,
+    "newProductDefects": 0,
+    "governanceGateOnly": true,
+    "D1_D7Unchanged": true,
+    "intentionalDifferencesUnchanged": 2,
+    "roleGate": "ROLE-01"
+  },
+  "gitPreflight": {
+    "startHead": "b6316852ad5a143021f06dbcfec5f0a6728b8569",
+    "startWorktreeClean": true,
+    "initialAnonymousRemoteRead": "fatal: could not read Username for 'https://git.chatgpt-team.site': No such device or address",
+    "credentialRecovery": "supported short-lived repository credential; not stored in files",
+    "authenticatedRemoteHead": "b6316852ad5a143021f06dbcfec5f0a6728b8569",
+    "remoteBranch": "evidence/r1-origin-parity-20260910",
+    "localRemoteEqual": true
+  },
+  "nextPrerequisite": "取得针对本RUN当前有效的浏览器独占交接及测试身份核验，再由获授权窗口手动续跑；不自动重新调度。",
+  "phase": {
+    "p3ExitApproved": false,
+    "p4Started": false
+  },
+  "automationReceipt": {
+    "success": true,
+    "automation_id": "6aa2cdf499888191b40f86510034e1ff",
+    "is_enabled": false,
+    "updated_at": "2026-09-12T00:36:56.371703+00:00",
+    "next_run_time": null
+  }
+}
