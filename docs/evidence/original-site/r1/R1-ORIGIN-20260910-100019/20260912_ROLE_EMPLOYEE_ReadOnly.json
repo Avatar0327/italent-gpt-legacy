@@ -1,0 +1,130 @@
+{
+  "at": "2026-09-12T11:57:57.551Z",
+  "snapshot": "- img \"logo\"\n- text: 员工自助\n- textbox:\n  - /placeholder: \" \"\n- generic: 搜索菜单/同事\n- generic: Z\n- generic: ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_EMPLOYEE_01\n- img \"logo\"\n- text: 员工自助\n- textbox \"搜索菜单\"\n- generic: 最近访问\n- generic: 文化激励\n- generic: 员工自助\n- generic: 文化激励\n- generic: 我的审批\n- generic: OKR\n- generic: 日报\n- generic: 我的目标\n- generic: 我的学习\n- generic: 我的教务\n- generic: 我的发展计划\n- generic: 任务\n- list:\n  - generic: 文化激励\n  - list\n  - generic: 我的审批\n  - list:\n    - generic: 我的待办\n    - generic: 我的申请\n    - generic: 我的委托\n    - generic: 常用审批意见\n  - generic: OKR\n  - list:\n    - generic: OKR复盘\n  - generic: 日报\n  - list\n  - generic: 我的目标\n  - list:\n    - generic: 我的目标\n    - generic: 目标复盘\n  - generic: 我的学习\n  - list:\n    - generic: 学习首页\n    - generic: 课程中心\n    - generic: 我的学习\n    - generic: 报名中心\n    - generic: 知识共享\n    - generic: 培训申请\n  - generic: 我的教务\n  - list:\n    - generic: 团队学习\n    - generic: 我的辅导\n    - generic: 讲师工作台\n  - generic: 我的发展计划\n  - list:\n    - generic: 个人发展计划\n    - generic: 我辅导的发展计划\n  - generic: 任务\n  - list\n- main:\n  - iframe [id=\"iTalentFrame\"]:\n    - paragraph: 这里将会 为您推荐相关的人， 目前还没有任何推荐哦~\n    - generic: 点赞0\n    - generic: 打败了 0% 的人\n    - generic: 红包0\n    - generic: 打败了 0% 的人\n    - link \"勋章0\":\n      - /url: \"javascript:\"\n      - generic: 勋章0\n    - link:\n      - /url: \"javascript:\"\n    - generic: 打败了 0% 的人\n    - generic: 分享0\n    - generic: 打败了 0% 的人\n    - generic: Z\n    - generic: ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_OUT_01\n    - generic: ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\n    - generic: 快来做第一个给TA贴标签的人～\n    - generic: \n    - generic: 个人概览\n    - generic: 人才\n    - generic: \n    - generic: 基本信息\n    - text: \n    - generic: 姓名\n    - generic: ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_OUT_01\n    - generic: 个人邮箱\n    - generic: 未设置\n    - generic: 办公电话\n    - text: \"*********\"\n    - generic: 手机号码\n    - text: \"*********\"\n    - generic: QQ\n    - text: \"*********\"\n    - generic: 微信\n    - generic: 未设置\n    - generic: \n    - generic: 任职轨迹\n    - generic: 全屏查看\n    - generic: 2026-09-12\n    - generic: 入职\n    - generic: ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\n    - generic: \"|\"\n    - generic: \"--\"\n    - generic: \n    - generic: ta的工作时长\n    - generic: \n    - generic: 0天\n    - generic: 加入公司天数\n    - generic: 人才标签\n    - generic: \n    - generic: 工作经历\n    - generic: 2026-09 ~ 至今\n    - generic: 华夏九洲集团\n    - generic: \"0\"\n    - generic: 职务\n    - text: ：\n    - generic: \"--\"\n    - generic: \"|\"\n    - generic: 工作职责\n    - text: ：\n    - generic: \"--\"\n    - generic: 人才操作\n    - generic: \n    - generic: \"0\"",
+  "currentOrigin": "https://srworkshopbj.italent.cn",
+  "otherEmployeePageBody": "这里将会 为您推荐相关的人， 目前还没有任何推荐哦~\n\n点赞0\n打败了 0% 的人\n红包0\n打败了 0% 的人\n勋章0\n打败了 0% 的人\n分享0\n打败了 0% 的人\nZ\nZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_OUT_01\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\n快来做第一个给TA贴标签的人～\n个人概览\n人才\n基本信息\n姓名ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_OUT_01\n个人邮箱未设置\n办公电话*********\n手机号码*********\nQQ*********\n微信未设置\n任职轨迹\n全屏查看\n2026-09-12\n入职\nZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\n|\n--\nta的工作时长\n09/07\n09/08\n09/09\n09/10\n09/11\n0天\n加入公司天数\n人才标签\n工作经历\n2026-09 ~ 至今\n华夏九洲集团0\n职务\n：\n--\n|\n工作职责\n：\n--\n人才操作\n0",
+  "runId": "R1-ORIGIN-20260910-100019",
+  "role": "EMPLOYEE",
+  "targetEmail": "redacted-2b7afcf083fe@example.invalid",
+  "targetPersonId": "cc807348-38de-4333-b88f-3f312e2c6eee",
+  "targetName": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_EMPLOYEE_01",
+  "currentIdentityMatches": true,
+  "identityBasis": "用户安全交接＋当前首页完整角色姓名与已唯一登记UUID映射；未读取认证秘密",
+  "ownerObservation": {
+    "source": "所有者此前报告",
+    "text": "可登录，但看不到员工自助→自助服务→我的档案",
+    "notDirectEvidence": true
+  },
+  "visibleApplications": [
+    "员工自助"
+  ],
+  "menuHierarchy": {
+    "文化激励": [],
+    "我的审批": [
+      "我的待办",
+      "我的申请",
+      "我的委托",
+      "常用审批意见"
+    ],
+    "OKR": [
+      "OKR复盘"
+    ],
+    "日报": [],
+    "我的目标": [
+      "我的目标",
+      "目标复盘"
+    ],
+    "我的学习": [
+      "学习首页",
+      "课程中心",
+      "我的学习",
+      "报名中心",
+      "知识共享",
+      "培训申请"
+    ],
+    "我的教务": [
+      "团队学习",
+      "我的辅导",
+      "讲师工作台"
+    ],
+    "我的发展计划": [
+      "个人发展计划",
+      "我辅导的发展计划"
+    ],
+    "任务": []
+  },
+  "checks": {
+    "myProfile": {
+      "menuSearch": "我的档案",
+      "resultCount": 0,
+      "status": "confirmed_menu_missing",
+      "directUrlAccess": "not_tested_no_observed_employee_archive_entry"
+    },
+    "selfService": {
+      "menuSearch": "自助服务",
+      "resultCount": 0,
+      "status": "confirmed_menu_missing"
+    },
+    "myApproval": {
+      "status": "available",
+      "pending": "暂无新的待办",
+      "applied": "暂无已申请",
+      "buttonsVisible": [
+        "批量同意",
+        "批量不同意",
+        "流程委托"
+      ],
+      "buttonsExecuted": false,
+      "approvalCapability": "unknown_readonly_batch"
+    },
+    "approvalCenter": {
+      "status": "not_exposed_in_visible_menu",
+      "serverPermission": "unknown"
+    },
+    "hrManagement": {
+      "status": "not_exposed_in_visible_menu",
+      "serverPermission": "unknown"
+    },
+    "salary": {
+      "status": "no_salary_menu_or_data_observed",
+      "serverPermission": "unknown"
+    },
+    "otherEmployee": {
+      "status": "available_colleague_overview",
+      "person": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_OUT_01",
+      "searchResults": 1,
+      "visibleFields": [
+        "姓名",
+        "组织",
+        "2026-09-12入职轨迹",
+        "工作经历月份"
+      ],
+      "masked": [
+        "办公电话",
+        "手机号码",
+        "QQ"
+      ],
+      "hrArchiveAccess": "unknown",
+      "salaryAccess": "unknown"
+    },
+    "onlySelfVisible": false,
+    "organizationDataPermission": "unknown_colleague_visibility_not_HR_scope"
+  },
+  "businessWrites": 0,
+  "permissionsChanged": false,
+  "downloads": 0,
+  "otherTabsTouched": false,
+  "role01Closed": false,
+  "fullModuleCompleted": false,
+  "e2eCompleted": false,
+  "browserEnd": {
+    "at": "2026-09-12T11:59:49.627104+00:00",
+    "ownedOrHandedTab": "2",
+    "businessDrafts": [],
+    "businessWrites": 0,
+    "backgroundActions": false,
+    "releasedToOwner": true,
+    "nextAccount": "redacted-637fb0305b2c@example.invalid",
+    "scope": "本窗口停止调度；保留已登录标签供手工切换，不关闭其他标签"
+  }
+}

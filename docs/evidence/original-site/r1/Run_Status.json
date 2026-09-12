@@ -2,8 +2,8 @@
   "activeEnvBlockers": 6,
   "activeMajor": 0,
   "activeRoleBlockers": 1,
-  "browserHandoffTo": "secure_login_employee_pending",
-  "browserUseEndedAt": null,
+  "browserHandoffTo": "owner_hr_out_manual_login",
+  "browserUseEndedAt": "2026-09-12T11:59:49.627104+00:00",
   "bulkImportedRows": 0,
   "businessDateConditionSatisfied": true,
   "completedModuleCounts": {
@@ -18,8 +18,8 @@
   "continuationInProgress": false,
   "createdRecords": 24,
   "createdRecordsDefinition": "24唯一登记业务对象，删除1/保留23/10员工；含所有者创建的4角色员工，本窗口新建0；附件版本不重复计数。",
-  "currentCheckpoint": "sep12_role_uuids_verified_secure_login_pending",
-  "currentContinuationLimitation": "兼职实际终态和报表已取得；审计、ORG003完整迁移影响、角色权限与通知隔离继续验证。",
+  "currentCheckpoint": "role_employee_readonly_complete_hr_out_login_pending",
+  "currentContinuationLimitation": "普通员工档案入口缺失；同事概览可见；其余三角色只读未验；实际审批与HR范围未知。",
   "currentEmployeeOracle": {
     "people": 5,
     "formal": 4,
@@ -214,5 +214,24 @@
     "importedRows": 0,
     "importNotificationGate": "no_invite_or_notify_control_visible",
     "roleMatrix": "R1_Minimum_Role_Permission_Matrix_20260912.json"
+  },
+  "roleReadOnlyBatch": {
+    "at": "2026-09-12T11:59:49.627104+00:00",
+    "account": "EMPLOYEE",
+    "completedReadOnlyAccounts": 1,
+    "remainingReadOnlyAccounts": [
+      "HR_OUT",
+      "HR_IN",
+      "HR_EXEC"
+    ],
+    "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_EMPLOYEE_ReadOnly.json",
+    "nextAccount": "redacted-637fb0305b2c@example.invalid",
+    "browserReleased": true,
+    "backgroundActions": false,
+    "role01Closed": false,
+    "businessWrites": 0,
+    "dateRechecksRepeated": false,
+    "fullModules": 0,
+    "e2e": 0
   }
 }

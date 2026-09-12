@@ -7053,6 +7053,23 @@
       "evidence": [
         "R1-ORIGIN-20260910-100019/20260912_Import_Notification_Gate.json"
       ]
+    },
+    {
+      "caseId": "ROLE-EMPLOYEE-READONLY-20260912",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "module": "M48",
+      "role": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_EMPLOYEE_01",
+      "time": "2026-09-12T11:59:49.627104+00:00",
+      "execution": "observed_read_only_scope",
+      "classification": "ROLE_BLOCKED",
+      "title": "独立普通员工菜单与数据可见性",
+      "actualResult": "目标身份一致；自助服务和我的档案搜索0；我的审批可进入且待办申请空；可看本RUN其他员工概览，电话等脱敏；HR档案/薪资/实际审批权限未知",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260912_ROLE_EMPLOYEE_ReadOnly.json"
+      ],
+      "role01Closed": false,
+      "writes": 0,
+      "threeWayConclusion": "原站角色局部事实，不判P3缺陷，不提升模块/E2E完整度"
     }
   ],
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",

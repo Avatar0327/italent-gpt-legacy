@@ -166,12 +166,12 @@
     }
   ],
   "browser": {
-    "lastActionAt": "2026-09-12T02:24:57.284615+00:00",
+    "lastActionAt": "2026-09-12T11:59:49.627104+00:00",
     "released": true,
     "unknownBusinessActions": [],
     "openBusinessDrafts": [],
     "ownedTabs": [
-      "3"
+      "2"
     ],
     "otherTabsUntouched": true,
     "backgroundActions": false,
@@ -190,7 +190,7 @@
       "pauseConfirmed": true,
       "pausedAt": "2026-09-12T00:36:56.371703+00:00"
     },
-    "handoff": "secure_login_employee_pending"
+    "handoff": "owner_hr_out_manual_login"
   },
   "counts": {
     "created": 24,
@@ -289,5 +289,24 @@
     "importedRows": 0,
     "importNotificationGate": "no_invite_or_notify_control_visible",
     "roleMatrix": "R1_Minimum_Role_Permission_Matrix_20260912.json"
+  },
+  "roleReadOnlyBatch": {
+    "at": "2026-09-12T11:59:49.627104+00:00",
+    "account": "EMPLOYEE",
+    "completedReadOnlyAccounts": 1,
+    "remainingReadOnlyAccounts": [
+      "HR_OUT",
+      "HR_IN",
+      "HR_EXEC"
+    ],
+    "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_EMPLOYEE_ReadOnly.json",
+    "nextAccount": "redacted-637fb0305b2c@example.invalid",
+    "browserReleased": true,
+    "backgroundActions": false,
+    "role01Closed": false,
+    "businessWrites": 0,
+    "dateRechecksRepeated": false,
+    "fullModules": 0,
+    "e2e": 0
   }
 }

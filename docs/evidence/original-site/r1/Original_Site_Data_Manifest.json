@@ -1226,7 +1226,9 @@
       "employeeExistenceFreshlyVerified": true,
       "employeeQueryEvidence": "R1-ORIGIN-20260910-100019/20260912_Role_Employee_Readback.json",
       "organization": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
-      "job": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001"
+      "job": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001",
+      "readOnlyVerificationCompleted": true,
+      "readOnlyEvidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_EMPLOYEE_ReadOnly.json"
     },
     {
       "activated": true,
@@ -1297,5 +1299,24 @@
       "organization": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
       "job": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001"
     }
-  ]
+  ],
+  "roleReadOnlyBatch": {
+    "at": "2026-09-12T11:59:49.627104+00:00",
+    "account": "EMPLOYEE",
+    "completedReadOnlyAccounts": 1,
+    "remainingReadOnlyAccounts": [
+      "HR_OUT",
+      "HR_IN",
+      "HR_EXEC"
+    ],
+    "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_EMPLOYEE_ReadOnly.json",
+    "nextAccount": "redacted-637fb0305b2c@example.invalid",
+    "browserReleased": true,
+    "backgroundActions": false,
+    "role01Closed": false,
+    "businessWrites": 0,
+    "dateRechecksRepeated": false,
+    "fullModules": 0,
+    "e2e": 0
+  }
 }
