@@ -22,8 +22,10 @@
       "implementation": "旧standard模型无独立library；P2已计划补齐，非新实施缺陷",
       "classification": "MATCH",
       "evidence": [
-        "Original_Site_Data_Manifest.json"
-      ]
+        "Original_Site_Data_Manifest.json",
+        "captures/Readbacks-20260912-1345.json"
+      ],
+      "recoveryReadback": "2026-09-12新回读见增补证据；原始观察与批准断言保留"
     },
     {
       "id": "R2-OBS-M37-003",
@@ -47,8 +49,10 @@
       "implementation": "旧anchors固定5且无上述四类对象，P2已识别旧模型改造",
       "classification": "DESIGN_GAP",
       "evidence": [
-        "captures/M37-four-subsets.json"
-      ]
+        "captures/M37-four-subsets.json",
+        "captures/Readbacks-20260912-1345.json"
+      ],
+      "recoveryReadback": "2026-09-12新回读见增补证据；原始观察与批准断言保留"
     },
     {
       "id": "R2-OBS-M37-005",
@@ -74,8 +78,10 @@
       "classification": "MATCH",
       "evidence": [
         "captures/M06-category-created.json",
-        "captures/M06-category-disabled.json"
-      ]
+        "captures/M06-category-disabled.json",
+        "captures/Readbacks-20260912-1345.json"
+      ],
+      "recoveryReadback": "2026-09-12新回读见增补证据；原始观察与批准断言保留"
     },
     {
       "id": "R2-OBS-M06-002",
@@ -232,10 +238,12 @@
       "implementation": "未运行R2 P3/P4",
       "classification": "MATCH",
       "evidence": [
-        "captures/M03-TAB7-legal-dismissal.json"
-      ]
+        "captures/M03-TAB7-legal-dismissal.json",
+        "captures/Readbacks-20260912-1345.json"
+      ],
+      "recoveryReadback": "2026-09-12新回读见增补证据；原始观察与批准断言保留"
     }
   ],
   "notProductTests": true,
-  "recoveryEvidence": "captures/Recovery-window-20260912.json"
+  "recoveryEvidence": "captures/Readbacks-20260912-1345.json"
 }

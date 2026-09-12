@@ -29,8 +29,9 @@
       "name": "ZZ_R2_R2-ORIGIN-20260910-103952_M37_LIB01",
       "businessId": null,
       "status": "confirmed_created",
-      "currentState": "saved; availability not yet read",
-      "references": []
+      "currentState": "启用",
+      "references": [],
+      "latestReadbackEvidence": "captures/Readbacks-20260912-1345.json"
     },
     {
       "module": "M37",
@@ -224,7 +225,7 @@
       "businessId": null,
       "personId": "411836804",
       "status": "confirmed_created",
-      "currentState": "实际任期已结束2026-09-10；免职保存成功；汇总列表待刷新",
+      "currentState": "免职汇总已确认；实际任期结束2026-09-10",
       "references": [
         "ZZ_R2_R2-ORIGIN-20260910-103952_PRE_EMP01"
       ],
@@ -237,7 +238,8 @@
         "actual_term_end_readback"
       ],
       "notes": "档案及随档案初始任期合计为1个登记对象；UI未暴露独立term ID，不虚增条数",
-      "actualEndedOn": "2026-09-10"
+      "actualEndedOn": "2026-09-10",
+      "latestReadbackEvidence": "captures/Readbacks-20260912-1345.json"
     }
   ],
   "pending": [],
@@ -299,7 +301,7 @@
       "mappedName": "ZZ_R2_R2_ORIGIN_20260910_103952_M26_ACT01",
       "approvalRef": "Owner_Decisions_Continuation.json#CP-003",
       "mappingSemantics": "explicit one-to-one registry; never reverse by blind replacement",
-      "status": "approved_pending_dedup_ui_unavailable",
+      "status": "approved_pending_dual_dedup",
       "businessId": null,
       "dedup": {
         "mappedName": {
@@ -317,18 +319,17 @@
         "plannedValue": "R2原站隔离合成数据验证；RUN_ID：R2-ORIGIN-20260910-103952",
         "persisted": false
       },
-      "blocker": "R2-ENV-CONT-001"
+      "blocker": null
     }
   ],
   "continuation": {
-    "baseHead": "415ee89236eb0ebfabc46ed0c6d1ade8651b466a",
-    "checkedAt": "2026-09-12T12:54:13.224Z",
+    "baseHead": "7c6ce4585cf9fcdb9f2e011762266b126224f852",
+    "checkedAt": "2026-09-12T13:52:43.301Z",
     "newObjects": 0,
-    "currentBlocker": "R2-ENV-CONT-001",
+    "currentBlocker": null,
     "ownedTab": "5",
-    "evidence": "captures/Recovery-window-20260912.json",
-    "readbackQueue": "Recovery_Readback_Queue.json",
-    "latestControlRecoveryEvidence": "captures/Recovery-window-20260912.json"
+    "evidence": "captures/Readbacks-20260912-1345.json",
+    "readbackQueue": "Recovery_Readback_Queue.json"
   },
   "continuationHistory": [
     {
@@ -346,6 +347,16 @@
       "evidence": "captures/Recovery-window-20260910.json",
       "readbackQueue": "Recovery_Readback_Queue.json",
       "latestControlRecoveryEvidence": "captures/Cloud-browser-reset-attempt-20260910.json"
+    },
+    {
+      "baseHead": "415ee89236eb0ebfabc46ed0c6d1ade8651b466a",
+      "checkedAt": "2026-09-12T12:54:13.224Z",
+      "newObjects": 0,
+      "currentBlocker": "R2-ENV-CONT-001",
+      "ownedTab": "5",
+      "evidence": "captures/Recovery-window-20260912.json",
+      "readbackQueue": "Recovery_Readback_Queue.json",
+      "latestControlRecoveryEvidence": "captures/Recovery-window-20260912.json"
     }
   ]
 }

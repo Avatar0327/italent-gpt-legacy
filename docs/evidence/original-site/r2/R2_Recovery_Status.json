@@ -1,14 +1,14 @@
 {
   "runId": "R2-ORIGIN-20260910-103952",
   "baseHead": "415ee89236eb0ebfabc46ed0c6d1ade8651b466a",
-  "checkpointAt": "2026-09-12T12:54:13.224Z",
-  "environmentBlockerResolved": false,
-  "evidence": "captures/Recovery-window-20260912.json",
+  "checkpointAt": "2026-09-12T13:52:43.301Z",
+  "environmentBlockerResolved": true,
+  "evidence": "captures/Readbacks-20260912-1345.json",
   "modules": [
     {
       "id": "M26",
       "created": 0,
-      "status": "ENV_BLOCKED",
+      "status": "PENDING_DUAL_DEDUP",
       "complete": false,
       "known": "历史命名拒绝；CP-003已批准",
       "remaining": "双重查重、唯一活动/ID、问卷、对象、评价人、16匿名案例、报告/权限"
@@ -51,8 +51,8 @@
       "created": 1,
       "status": "PARTIAL",
       "complete": false,
-      "known": "干部登记、日期拒绝、当天免职结束日回读",
-      "remaining": "免职汇总、正式审批/M01回执、轮岗/续任/前后任、附件/权限/上游"
+      "known": "干部登记、日期拒绝、当天免职结束日回读；免职汇总与实际结束日期2026-09-12再次独立回读",
+      "remaining": "正式审批/M01回执、轮岗/续任/前后任、附件/权限/上游"
     }
   ],
   "fullModulesComplete": 0,
@@ -145,7 +145,7 @@
   "r2P3Started": false,
   "productTests": 0,
   "p4Uat": 0,
-  "minimalManualAction": "在本对话云浏览器的R2专属tab5查看“任职类别”当前页面，确认业务列表能否显示并反馈结果；无需重新登录或反复刷新。",
+  "minimalManualAction": null,
   "latestControlRecoveryAttempt": {
     "evidence": "captures/Recovery-window-20260912.json",
     "recordedAt": "2026-09-12T12:54:13.224Z",
@@ -153,7 +153,7 @@
     "scope": "control channel only; business environment remains blocked",
     "pagesReopened": 1
   },
-  "environmentStatus": "ENV_BLOCKED_AFTER_PARTIAL_RECOVERY",
+  "environmentStatus": "RECOVERED_THIS_BATCH",
   "recoveryTransitions": [
     {
       "at": "2026-09-12T12:52:04.607Z",
@@ -163,6 +163,13 @@
     {
       "at": "2026-09-12T12:54:13.224Z",
       "status": "REOPENED_M06_BODY_EMPTY_AFTER_ONE_RELOAD"
+    },
+    {
+      "at": "2026-09-12T13:45:54.445Z",
+      "status": "RESOLVED_M06_FRESH_UNIQUE_QUERY",
+      "evidence": "captures/Readbacks-20260912-1345.json"
     }
-  ]
+  ],
+  "pendingStateReadbacks": 0,
+  "stableBusinessIdsNotExposed": 14
 }

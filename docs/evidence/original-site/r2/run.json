@@ -7,8 +7,8 @@
   "designContentHead": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
   "designPackageHead": "a7a23d6bff024f4660fd14b0c22f47a6d40d928f",
   "reviewHead": "077e0dc7f37529b9585f030fb1c8460f4c884cd1",
-  "checkpointAt": "2026-09-12T12:54:13.224Z",
-  "status": "ENV_BLOCKED_after_M17_partial_recovery_M06_empty_after_one_reload",
+  "checkpointAt": "2026-09-12T13:52:43.301Z",
+  "status": "IN_PROGRESS_ENV_RECOVERED_READBACK_BATCH_COMPLETE",
   "fullModulesComplete": 0,
   "modulesObserved": 6,
   "confirmedCreated": 16,
@@ -19,10 +19,10 @@
   "p4UatExecuted": 0,
   "continuationBaseHead": "d8cc3b44edaab49463b97e09205e008a3841840b",
   "continuationNewObjects": 0,
-  "currentExecutionBlocker": "R2-ENV-CONT-001",
+  "currentExecutionBlocker": null,
   "executionIncidents": 1,
   "recoveryBaseHead": "415ee89236eb0ebfabc46ed0c6d1ade8651b466a",
-  "recoveryEvidence": "captures/Recovery-window-20260912.json",
+  "recoveryEvidence": "captures/Readbacks-20260912-1345.json",
   "recoveryReport": "R2_Recovery_Checkpoint_Report.md",
   "soleExecutor": "R2｜原站验证恢复",
   "currentOwnedTab": "5",
@@ -35,8 +35,8 @@
     "scope": "control channel only; business environment remains blocked",
     "pagesReopened": 1
   },
-  "recoverySummary": "2026-09-12确认管理员何份晓、租户srworkshopbj.italent.cn；新tab5经正式菜单进入M17，12:52:04.607Z初始列表显示本RUN两个既有人才池各0人，曾满足标题/路径/主体恢复条件。12:52:49.628Z执行RUN筛选后未显示记录，响应/零匹配未确认。M06于12:53:22.109Z从正式菜单新进入，12:53:47.912Z仅重载一次，12:54:13.224Z仍main为空，ENV重新阻塞。控制通道可用；当前仅捕获扩展metadata错误，未取得业务请求端点/HTTP状态或新的请求超时证据，根因仍unknown。",
-  "environmentBlockerResolved": false,
+  "recoverySummary": "管理员何份晓、租户srworkshopbj.italent.cn。M06完整名称新查询唯一命中CAT01且启用；M37库与指标启用、四子项各1行保留；M03本RUN员工在免职汇总中且实际任期结束日2026-09-10再次独立回读。R2-ENV-CONT-001在本批次解除，根因仍未确定，不将此前迟到页面误记为当时已加载。新增对象/保存/通知均0。",
+  "environmentBlockerResolved": true,
   "recoveryTransitions": [
     {
       "at": "2026-09-12T12:52:04.607Z",
@@ -46,6 +46,11 @@
     {
       "at": "2026-09-12T12:54:13.224Z",
       "status": "REOPENED_M06_BODY_EMPTY_AFTER_ONE_RELOAD"
+    },
+    {
+      "at": "2026-09-12T13:45:54.445Z",
+      "status": "RESOLVED_M06_FRESH_UNIQUE_QUERY",
+      "evidence": "captures/Readbacks-20260912-1345.json"
     }
   ]
 }

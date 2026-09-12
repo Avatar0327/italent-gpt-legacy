@@ -22,8 +22,8 @@
       "mappedName",
       "originalRunId"
     ],
-    "creationStatus": "not_created_ui_unavailable",
-    "currentBlocker": "R2-ENV-CONT-001"
+    "creationStatus": "not_created_pending_dual_dedup",
+    "currentBlocker": null
   },
   "CP-001": {
     "status": "pending_R2_P2_design_owner_receipt",

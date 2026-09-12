@@ -43,6 +43,6 @@ lines = ['# R2 差异台账', '', '只统计下列实际登记项；零缺陷发
 for x in differences:
     lines.append('|' + '|'.join(cell(x.get(k, '')) for k in ['id', 'module', 'classification', 'severity', 'finding', 'disposition']) + '|')
 if run.get('recoveryEvidence'):
-    lines.extend(['', '本恢复窗口新增业务差异0；R2-ENV-CONT-001仍为独立执行环境事件，见`' + run['recoveryEvidence'] + '`，不重复计入上表。'])
+    lines.extend(['', '本恢复窗口新增业务差异0；R2-ENV-CONT-001为独立执行环境事件，当前状态见`' + run['recoveryEvidence'] + '`，不重复计入上表。'])
 (D / 'R2_Parity_Difference_Ledger.md').write_text('\n'.join(lines) + '\n')
 print(json.dumps({'observations': len(observations), 'differences': len(differences), 'check': 'evidence_structure_only'}, ensure_ascii=False))

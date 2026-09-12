@@ -1,6 +1,6 @@
 {
   "kind": "evidence_structure_review_not_product_test",
-  "checkedAt": "2026-09-12T12:54:13.224Z",
+  "checkedAt": "2026-09-12T13:52:43.301Z",
   "requiredFiles": [
     "Browser_Concurrency_Check.md",
     "Original_Site_Data_Manifest.json",
@@ -20,7 +20,8 @@
     "captures/r2-recovery-final-blocked-20260910.jpg",
     "captures/Cloud-browser-reset-attempt-20260910.json",
     "captures/Recovery-window-20260912.json",
-    "captures/r2-recovery-20260912-m06.jpg"
+    "captures/r2-recovery-20260912-m06.jpg",
+    "captures/Readbacks-20260912-1345.json"
   ],
   "requiredFilesPresent": true,
   "jsonParse": true,
@@ -69,7 +70,7 @@
   "upstreamConfigured": "r2-evidence-origin/evidence/r2-origin-parity-20260910",
   "jsonFilesParsed": 39,
   "recoveryBaseHead": "415ee89236eb0ebfabc46ed0c6d1ade8651b466a",
-  "createdRecordsUnchangedAgainstBase": true,
+  "createdRecordsUnchangedAgainstBase": false,
   "approvedScenarioAssertionsUnchanged": true,
   "scenariosAssignedForRecovery": 138,
   "scenariosUnassigned": 0,
@@ -78,9 +79,9 @@
   "newBusinessObservations": 0,
   "newBusinessDifferences": 0,
   "newUnknownSaveCommands": 0,
-  "pendingStateReadbacks": 2,
+  "pendingStateReadbacks": 0,
   "stableBusinessIdsNotExposed": 14,
-  "environmentBlockerResolved": false,
+  "environmentBlockerResolved": true,
   "boundedRecoveryPathsChecked": 2,
   "eachPathControlledRetriesAtMostOne": true,
   "onlyRecoveryTabOperated": "5",
@@ -96,19 +97,13 @@
   "pagesReopenedAfterOwnerResetRequest": 1,
   "currentBatch": {
     "kind": "evidence_structure_only",
-    "createdRecordsUnchanged": true,
-    "approvedScenarioAssertionsUnchanged": true,
-    "businessObservationsUnchanged": true,
-    "businessDifferencesUnchanged": true,
-    "newSaveCommands": 0,
     "newObjects": 0,
+    "newSaveCommands": 0,
     "newNotifications": 0,
-    "M17InitialListRecovered": true,
-    "M17FilteredQueryResult": "UNCONFIRMED",
-    "M06BusinessQuery": "NOT_EXECUTABLE_BODY_EMPTY",
-    "M06ControlledReloads": 1,
-    "controlChannelResponded": true,
-    "environmentStable": false,
-    "latestEvidence": "captures/Recovery-window-20260912.json"
+    "stateReadbacksClosed": 2,
+    "unexposedStableIds": 14,
+    "source": "captures/Readbacks-20260912-1345.json",
+    "createdIdentityAndBusinessIdsUnchanged": true,
+    "manifestStateUpdates": "library enabled and cadre dismissal confirmed"
   }
 }

@@ -1,0 +1,51 @@
+{
+  "runId": "R2-ORIGIN-20260910-103952",
+  "baseHead": "7c6ce4585cf9fcdb9f2e011762266b126224f852",
+  "identity": "何份晓",
+  "tenant": "srworkshopbj.italent.cn",
+  "records": [
+    {
+      "id": "RB-M06-CAT01",
+      "at": "2026-09-12T13:45:54.445Z",
+      "queryAt": "2026-09-12T13:45:30.247Z",
+      "title": "任职类别",
+      "path": "/portal/convoy/",
+      "grid": "名称\n编码\n所属分类\n关联岗职务类型\n操作\nZZ_R2_R2-ORIGIN-20260910-103952_M06_CAT01\nZZ_R2_R2_ORIGIN_20260910_103952_M06_CAT01\n默认分类\n--\n编辑\n停用\n共1条",
+      "status": "UNIQUE_READBACK_ENABLED"
+    },
+    {
+      "id": "RB-M37-LIB01-AVAILABILITY",
+      "at": "2026-09-12T13:47:34.119Z",
+      "title": "指标库",
+      "path": "/portal/convoy/TalentCenter",
+      "grid": "指标库名称\n指标库说明\n状态\n类型\n创建人\n创建时间\n操作\nZZ_R2_R2-ORIGIN-20260910-103952_M37_LIB01\nZZ_R2_R2-ORIGIN-20260910-103952_M37_LIBRARY_DESCRIPTION\n启用\n能力\n份晓\n何份晓\n2026-09-10 18:48:44\n编辑\n删除",
+      "status": "CONFIRMED_ENABLED"
+    },
+    {
+      "id": "RB-M37-IND01",
+      "at": "2026-09-12T13:48:26.831Z",
+      "grid": "指标名称\n指标编码\n分类\n指标顺序\n状态\n创建人\n创建时间\n操作\nZZ_R2_R2-ORIGIN-20260910-103952_M37_IND01\nZZ_R2_R2_ORIGIN_20260910_103952_M37_IND01\n--\n1\n启用\n份晓\n何份晓\n2026-09-10 18:51:24\n编辑\n删除",
+      "status": "CONFIRMED_ENABLED"
+    },
+    {
+      "id": "RB-M37-FOUR-SUBSETS",
+      "at": "2026-09-12T13:49:04.323Z",
+      "dom": ":\n  - iframe [active] [id=\"iTalentFrame\"]:\n    - generic: ZZ_R2_R2-ORIGIN-20260910-103952_M37_IND01\n    - text: \"指标定义 :\"\n    - generic: ZZ_R2_R2-ORIGIN-20260910-103952_M37_DEFINITION_A\n    - text: \"指标定义 :\"\n    - generic: ZZ_R2_R2-ORIGIN-20260910-103952_M37_DEFINITION_A\n    - generic: 返回\n    - generic: 等级描述\n    - text: 收起\n    - generic: 新增\n    - grid:\n      - row \"等级顺序 等级别称 所属要素 等级说明 创建人 创建时间 操作\":\n        - columnheader \"等级顺序\":\n          - generic: 等级顺序\n        - columnheader \"等级别称\":\n          - generic: 等级别称\n        - columnheader \"所属要素\":\n          - generic: 所属要素\n        - columnheader \"等级说明\":\n          - generic: 等级说明\n        - columnheader \"创建人\":\n          - generic: 创建人\n        - columnheader \"创建时间\":\n          - generic: 创建时间\n        - columnheader \"操作\":\n          - generic: 操作\n        - columnheader:\n      - row \"1 ZZ_R2_R2-ORIGIN-20260910-103952_M37_LEVEL01 ZZ_R2_R2-ORIGIN-20260910-103952_M37_ELEMENT01 ZZ_R2_R2-ORIGIN-20260910-103952_M37_LEVEL_DESCRIPTION01 份晓 何份晓 2026-09-10 18:52:34 编辑 删除\":\n        - gridcell \"1\":\n          - generic: \"1\"\n        - gridcell \"ZZ_R2_R2-ORIGIN-20260910-103952_M37_LEVEL01\":\n          - generic: ZZ_R2_R2-ORIGIN-20260910-103952_M37_LEVEL01\n        - gridcell \"ZZ_R2_R2-ORIGIN-20260910-103952_M37_ELEMENT01\":\n          - generic: ZZ_R2_R2-ORIGIN-20260910-103952_M37_ELEMENT01\n        - gridcell \"ZZ_R2_R2-ORIGIN-20260910-103952_M37_LEVEL_DESCRIPTION01\":\n          - generic: ZZ_R2_R2-ORIGIN-20260910-103952_M37_LEVEL_DESCRIPTION01\n        - gridcell \"份晓 何份晓\":\n          - generic: 份晓\n          - generic: 何份晓\n        - gridcell \"2026-09-10 18:52:34\":\n          - generic: 2026-09-10 18:52:34\n        - gridcell \"编辑 删除\":\n          - generic: 编辑\n          - generic: 删除\n        - gridcell\n    - generic: 共1条\n    - generic: 行为描述\n    - text: 收起\n    - generic: 新增\n    - grid:\n      - row \"行为顺序 行为关键点 行为描述 创建人 创建时间 操作\":\n        - columnheader \"行为顺序\":\n          - generic: 行为顺序\n        - columnheader \"行为关键点\":\n          - generic: 行为关键点\n        - columnheader \"行为描述\":\n          - generic: 行为描述\n        - columnheader \"创建人\":\n          - generic: 创建人\n        - columnheader \"创建时间\":\n          - generic: 创建时间\n        - columnheader \"操作\":\n          - generic: 操作\n        - columnheader:\n      - row \"1 ZZ_R2_R2-ORIGIN-20260910-103952_M37_BEHAVIOR01 ZZ_R2_R2-ORIGIN-20260910-103952_M37_BEHAVIOR_DESCRIPTION01 份晓 何份晓 2026-09-10 18:53:29 编辑 删除\":\n        - gridcell \"1\":\n          - generic: \"1\"\n        - gridcell \"ZZ_R2_R2-ORIGIN-20260910-103952_M37_BEHAVIOR01\":\n          - generic: ZZ_R2_R2-ORIGIN-20260910-103952_M37_BEHAVIOR01\n        - gridcell \"ZZ_R2_R2-ORIGIN-20260910-103952_M37_BEHAVIOR_DESCRIPTION01\":\n          - generic: ZZ_R2_R2-ORIGIN-20260910-103952_M37_BEHAVIOR_DESCRIPTION01\n        - gridcell \"份晓 何份晓\":\n          - generic: 份晓\n          - generic: 何份晓\n        - gridcell \"2026-09-10 18:53:29\":\n          - generic: 2026-09-10 18:53:29\n        - gridcell \"编辑 删除\":\n          - generic: 编辑\n          - generic: 删除\n        - gridcell\n    - generic: 共1条\n    - generic: 发展建议\n    - text: 收起\n    - generic: 类型\n    - generic: 新增\n    - grid:\n      - row \"呈现顺序 类型 发展建议描述 创建人 创建时间 操作\":\n        - columnheader \"呈现顺序\":\n          - generic: 呈现顺序\n        - columnheader \"类型\":\n          - generic: 类型\n        - columnheader \"发展建议描述\":\n          - generic: 发展建议描述\n        - columnheader \"创建人\":\n          - generic: 创建人\n        - columnheader \"创建时间\":\n          - generic: 创建时间\n        - columnheader \"操作\":\n          - generic: 操作\n        - columnheader:\n      - row \"1 行动建议 ZZ_R2_R2-ORIGIN-20260910-103952_M37_SUGGESTION01 份晓 何份晓 2026-09-10 18:54:30 编辑 删除\":\n        - gridcell \"1\":\n          - generic: \"1\"\n        - gridcell \"行动建议\":\n          - generic: 行动建议\n        - gridcell \"ZZ_R2_R2-ORIGIN-20260910-103952_M37_SUGGESTION01\":\n          - generic: ZZ_R2_R2-ORIGIN-20260910-103952_M37_SUGGESTION01\n        - gridcell \"份晓 何份晓\":\n          - generic: 份晓\n          - generic: 何份晓\n        - gridcell \"2026-09-10 18:54:30\":\n          - generic: 2026-09-10 18:54:30\n        - gridcell \"编辑 删除\":\n          - generic: 编辑\n          - generic: 删除\n        - gridcell\n    - generic: 共1条\n    - generic: 面试问题\n    - text: 收起\n    - generic: 新增\n    - grid:\n      - row \"呈现顺序 面试关键点 面试问题 创建人 创建时间 操作\":\n        - columnheader \"呈现顺序\":\n          - generic: 呈现顺序\n        - columnheader \"面试关键点\":\n          - generic: 面试关键点\n        - columnheader \"面试问题\":\n          - generic: 面试问题\n        - columnheader \"创建人\":\n          - generic: 创建人\n        - columnheader \"创建时间\":\n          - generic: 创建时间\n        - columnheader \"操作\":\n          - generic: 操作\n        - columnheader:\n      - row \"1 ZZ_R2_R2-ORIGIN-20260910-103952_M37_INTERVIEW01 ZZ_R2_R2-ORIGIN-20260910-103952_M37_INTERVIEW_QUESTION01 份晓 何份晓 2026-09-10 18:55:17 编辑 删除\":\n        - gridcell \"1\":\n          - generic: \"1\"\n        - gridcell \"ZZ_R2_R2-ORIGIN-20260910-103952_M37_INTERVIEW01\":\n          - generic: ZZ_R2_R2-ORIGIN-20260910-103952_M37_INTERVIEW01\n        - gridcell \"ZZ_R2_R2-ORIGIN-20260910-103952_M37_INTERVIEW_QUESTION01\":\n          - generic: ZZ_R2_R2-ORIGIN-20260910-103952_M37_INTERVIEW_QUESTION01\n        - gridcell \"份晓 何份晓\":\n          - generic: 份晓\n          - generic: 何份晓\n        - gridcell \"2026-09-10 18:55:17\":\n          - generic: 2026-09-10 18:55:17\n        - gridcell \"编辑 删除\":\n          - generic: 编辑\n          - generic: 删除\n        - gridcell\n    - generic: 共1条\n    - generic: 高级筛选\n    - button \"Close\":\n    - generic: 高级筛选\n    - button \"Close\":\n    - generic: 高级筛选\n    - button \"Close\":\n    - generic: 高级筛选\n    - button \"Close\":",
+      "status": "FOUR_PRIOR_ROWS_RETAINED"
+    },
+    {
+      "id": "RB-M03-DISMISSAL-LIST",
+      "at": "2026-09-12T13:51:04.084Z",
+      "selectedState": "免职",
+      "row": "ZZ_R2_R2-ORIGIN-20260910-103952_PRE_EMP01\n2026-09-10\nzz_r2_r2-origin-20260910-103952_pre_emp01@example.invalid\nZZ_R2_R2_ORIGIN_20260910_103952_PRE_EMP01\n2026-09-10\n--\n--\n编辑",
+      "status": "CONFIRMED_IN_DISMISSED_LIST"
+    },
+    {
+      "id": "RB-M03-TERM-HISTORY",
+      "at": "2026-09-12T13:52:43.301Z",
+      "personId": "411836804",
+      "text": "ZZ_R\nZZ_R2_R2-ORIGIN-20260910-103952_PRE_EMP01\n1年内新员工\n高潜力\nZZ_R2_R2-ORIGIN-20260910-103952_PRE_ORG01\n--\n工号：\nZZ_R2_R2_ORIGIN_20260910_103952_PRE_EMP01\n电子邮件：\nzz_r2_r2-origin-20260910-103952_pre_emp01@example.invalid\n编辑人员\n打印\n干部信息\n任免记录\n业绩成果\n访谈记录\n监察信息\n360评估报告\n测评信息\n干部关怀记录\n任免记录\n-----|2026年9月10日至\n--\n免职\n任期开始日期\n2026年9月10日\n任用类型\n主职\n预计任期结束日期\n--\n实际任期结束日期\n2026年9月10日\n部门\n--\n职位\n--\n职务\n--\n职级\n--\n述职记录\n查看详情",
+      "status": "ACTUAL_END_2026_09_10_CONFIRMED"
+    }
+  ]
+}
