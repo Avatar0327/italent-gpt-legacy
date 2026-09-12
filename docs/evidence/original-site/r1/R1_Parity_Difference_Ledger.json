@@ -832,14 +832,13 @@
     "phaseApproved": false
   },
   "roleReadOnlyBatch": {
-    "at": "2026-09-12T12:19:16.149508+00:00",
-    "account": "HR_IN",
-    "completedReadOnlyAccounts": 3,
-    "remainingReadOnlyAccounts": [
-      "HR_EXEC"
-    ],
-    "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_HR_IN_ReadOnly.json",
-    "nextAccount": "redacted-e4fb450829ad@example.invalid",
+    "at": "2026-09-12T12:27:30.295570+00:00",
+    "account": "HR_EXEC",
+    "completedReadOnlyAccounts": 4,
+    "remainingReadOnlyAccounts": [],
+    "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_HR_EXEC_ReadOnly.json",
+    "nextAccount": null,
+    "nextAction": "tenant_permission_admin_minimum_scope_review",
     "browserReleased": true,
     "backgroundActions": false,
     "role01Closed": false,
@@ -878,6 +877,23 @@
       ],
       "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_HR_OUT_ReadOnly.json",
       "nextAccount": "redacted-8b1e5ab7c553@example.invalid",
+      "browserReleased": true,
+      "backgroundActions": false,
+      "role01Closed": false,
+      "businessWrites": 0,
+      "dateRechecksRepeated": false,
+      "fullModules": 0,
+      "e2e": 0
+    },
+    {
+      "at": "2026-09-12T12:19:16.149508+00:00",
+      "account": "HR_IN",
+      "completedReadOnlyAccounts": 3,
+      "remainingReadOnlyAccounts": [
+        "HR_EXEC"
+      ],
+      "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_HR_IN_ReadOnly.json",
+      "nextAccount": "redacted-e4fb450829ad@example.invalid",
       "browserReleased": true,
       "backgroundActions": false,
       "role01Closed": false,

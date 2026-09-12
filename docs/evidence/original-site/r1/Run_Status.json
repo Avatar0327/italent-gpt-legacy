@@ -2,8 +2,8 @@
   "activeEnvBlockers": 6,
   "activeMajor": 0,
   "activeRoleBlockers": 1,
-  "browserHandoffTo": "owner_hr_exec_manual_login",
-  "browserUseEndedAt": "2026-09-12T12:19:16.149508+00:00",
+  "browserHandoffTo": "owner",
+  "browserUseEndedAt": "2026-09-12T12:27:30.295570+00:00",
   "bulkImportedRows": 0,
   "businessDateConditionSatisfied": true,
   "completedModuleCounts": {
@@ -18,8 +18,8 @@
   "continuationInProgress": false,
   "createdRecords": 24,
   "createdRecordsDefinition": "24唯一登记业务对象，删除1/保留23/10员工；含所有者创建的4角色员工，本窗口新建0；附件版本不重复计数。",
-  "currentCheckpoint": "role_hr_in_readonly_complete_hr_exec_login_pending",
-  "currentContinuationLimitation": "三账号只读检查完成；执行HR待交接。本人档案菜单缺失，HR范围及审批执行能力未知。",
+  "currentCheckpoint": "role_four_accounts_readonly_complete_admin_minimum_scope_pending",
+  "currentContinuationLimitation": "四账号只读检查完成；本人档案缺失、HR范围及审批执行能力待管理员核定，ROLE-01未关闭。",
   "currentEmployeeOracle": {
     "people": 5,
     "formal": 4,
@@ -238,14 +238,13 @@
     "phaseApproved": false
   },
   "roleReadOnlyBatch": {
-    "at": "2026-09-12T12:19:16.149508+00:00",
-    "account": "HR_IN",
-    "completedReadOnlyAccounts": 3,
-    "remainingReadOnlyAccounts": [
-      "HR_EXEC"
-    ],
-    "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_HR_IN_ReadOnly.json",
-    "nextAccount": "redacted-e4fb450829ad@example.invalid",
+    "at": "2026-09-12T12:27:30.295570+00:00",
+    "account": "HR_EXEC",
+    "completedReadOnlyAccounts": 4,
+    "remainingReadOnlyAccounts": [],
+    "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_HR_EXEC_ReadOnly.json",
+    "nextAccount": null,
+    "nextAction": "tenant_permission_admin_minimum_scope_review",
     "browserReleased": true,
     "backgroundActions": false,
     "role01Closed": false,
@@ -285,6 +284,23 @@
       ],
       "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_HR_OUT_ReadOnly.json",
       "nextAccount": "redacted-8b1e5ab7c553@example.invalid",
+      "browserReleased": true,
+      "backgroundActions": false,
+      "role01Closed": false,
+      "businessWrites": 0,
+      "dateRechecksRepeated": false,
+      "fullModules": 0,
+      "e2e": 0
+    },
+    {
+      "at": "2026-09-12T12:19:16.149508+00:00",
+      "account": "HR_IN",
+      "completedReadOnlyAccounts": 3,
+      "remainingReadOnlyAccounts": [
+        "HR_EXEC"
+      ],
+      "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_HR_IN_ReadOnly.json",
+      "nextAccount": "redacted-e4fb450829ad@example.invalid",
       "browserReleased": true,
       "backgroundActions": false,
       "role01Closed": false,

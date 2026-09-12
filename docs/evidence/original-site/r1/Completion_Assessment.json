@@ -1,6 +1,6 @@
 {
   "runId": "R1-ORIGIN-20260910-100019",
-  "at": "2026-09-12T12:19:16.149508+00:00",
+  "at": "2026-09-12T12:27:30.295570+00:00",
   "basisHead": "5b6e56ae32c8e36a01fdd17dbef25f7b1b35c60a",
   "conclusion": "partial_sep12_actual_end_and_reports_observed_role_handoff_pending",
   "fullModules": 0,
@@ -34,9 +34,9 @@
         "E2E-REDATE",
         "E2E-FAILURE"
       ],
-      "blocker": "账号存在/邀请/激活/可登录已由所有者确认；菜单、范围、独立操作未验，ROLE-01未关闭",
-      "evidence": "R1-ORIGIN-20260910-100019/Role_Isolation_Authorization_Check.json",
-      "minimumAction": "安全登录交接；逐角色新查询权限后再决定管理员最小配置",
+      "blocker": "四账号身份/菜单/局部同事范围独立只读已验证；本人档案入口缺失，HR范围与节点/执行能力未知，ROLE-01不关闭",
+      "evidence": "R1_Minimum_Role_Permission_Matrix_20260912.json",
+      "minimumAction": "将R1_ROLE01_Admin_Minimum_Action_20260912.md交租户权限管理员，一次性核定并仅补本RUN权限缺口。",
       "alternativeTried": "管理员可读申请、原单、兼职、资料入口已做；自助默认真实管理员不能代替员工"
     },
     {
@@ -166,7 +166,7 @@
     }
   ],
   "browser": {
-    "lastActionAt": "2026-09-12T12:19:16.149508+00:00",
+    "lastActionAt": "2026-09-12T12:27:30.295570+00:00",
     "released": true,
     "unknownBusinessActions": [],
     "openBusinessDrafts": [],
@@ -190,7 +190,7 @@
       "pauseConfirmed": true,
       "pausedAt": "2026-09-12T00:36:56.371703+00:00"
     },
-    "handoff": "owner_hr_exec_manual_login",
+    "handoff": "owner",
     "releaseStatus": "READONLY_BATCH_COMPLETE_RELEASED_TO_OWNER",
     "backgroundActionsScope": "本窗口不再调度，后端状态未确认"
   },
@@ -215,7 +215,7 @@
   "ownerDecisions": "Owner_Decisions_20260911_002_003.json",
   "limitedAuthorizationSupersedesOldRestrictions": true,
   "lastCommittedHeadBeforePackage": "8e18c60f0070bc010766df1adce5ee996450c928",
-  "remainingAutonomousStatus": "本批次只读完成3/4账号，等待执行HR安全交接；完整模块/E2E不变。",
+  "remainingAutonomousStatus": "本批次四账号只读4/4完成；等待权限管理员核定最小配置，完整模块和E2E不变。",
   "latestOfflineIncrement": "四账号四项基础前置按所有者确认登记完成；实际权限未知。",
   "scheduledSep12Attempt": {
     "actualAuditTimes": null,
@@ -315,14 +315,13 @@
     "phaseApproved": false
   },
   "roleReadOnlyBatch": {
-    "at": "2026-09-12T12:19:16.149508+00:00",
-    "account": "HR_IN",
-    "completedReadOnlyAccounts": 3,
-    "remainingReadOnlyAccounts": [
-      "HR_EXEC"
-    ],
-    "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_HR_IN_ReadOnly.json",
-    "nextAccount": "redacted-e4fb450829ad@example.invalid",
+    "at": "2026-09-12T12:27:30.295570+00:00",
+    "account": "HR_EXEC",
+    "completedReadOnlyAccounts": 4,
+    "remainingReadOnlyAccounts": [],
+    "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_HR_EXEC_ReadOnly.json",
+    "nextAccount": null,
+    "nextAction": "tenant_permission_admin_minimum_scope_review",
     "browserReleased": true,
     "backgroundActions": false,
     "role01Closed": false,
@@ -362,6 +361,23 @@
       ],
       "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_HR_OUT_ReadOnly.json",
       "nextAccount": "redacted-8b1e5ab7c553@example.invalid",
+      "browserReleased": true,
+      "backgroundActions": false,
+      "role01Closed": false,
+      "businessWrites": 0,
+      "dateRechecksRepeated": false,
+      "fullModules": 0,
+      "e2e": 0
+    },
+    {
+      "at": "2026-09-12T12:19:16.149508+00:00",
+      "account": "HR_IN",
+      "completedReadOnlyAccounts": 3,
+      "remainingReadOnlyAccounts": [
+        "HR_EXEC"
+      ],
+      "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_HR_IN_ReadOnly.json",
+      "nextAccount": "redacted-e4fb450829ad@example.invalid",
       "browserReleased": true,
       "backgroundActions": false,
       "role01Closed": false,

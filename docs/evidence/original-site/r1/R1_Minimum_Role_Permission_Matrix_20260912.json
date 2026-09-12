@@ -1,7 +1,7 @@
 {
   "runId": "R1-ORIGIN-20260910-100019",
-  "at": "2026-09-12T12:19:16.149508+00:00",
-  "status": "three_readonly_accounts_observed_hr_exec_pending",
+  "at": "2026-09-12T12:27:30.295570+00:00",
+  "status": "four_readonly_accounts_observed_permissions_still_partial",
   "accountFactsSource": "所有者确认邀请激活可登录；本窗口新查询确认四员工UUID/ORG002/JOB001",
   "role01Closed": false,
   "rows": [
@@ -298,14 +298,76 @@
       "identity": "执行HR",
       "email": "redacted-e4fb450829ad@example.invalid",
       "personId": "e73a3e56-280b-4006-8c5a-5346f874a163",
-      "visibleApplications": null,
-      "visibleMenus": null,
-      "selfProfileEntry": null,
-      "myApprovalEntry": null,
-      "onlyOwnData": null,
+      "visibleApplications": [
+        "员工自助"
+      ],
+      "visibleMenus": {
+        "文化激励": [],
+        "我的审批": [
+          "我的待办",
+          "我的申请",
+          "我的委托",
+          "常用审批意见"
+        ],
+        "OKR": [
+          "OKR复盘"
+        ],
+        "日报": [],
+        "我的目标": [
+          "我的目标",
+          "目标复盘"
+        ],
+        "我的学习": [
+          "学习首页",
+          "课程中心",
+          "我的学习",
+          "报名中心",
+          "知识共享",
+          "培训申请"
+        ],
+        "我的教务": [
+          "团队学习",
+          "我的辅导",
+          "讲师工作台"
+        ],
+        "我的发展计划": [
+          "个人发展计划",
+          "我辅导的发展计划"
+        ],
+        "任务": []
+      },
+      "selfProfileEntry": false,
+      "myApprovalEntry": true,
+      "onlyOwnData": false,
       "organizationDataScope": null,
       "approvalOrExecution": null,
-      "status": "安全登录待交接；未知不等于未授予"
+      "status": "只读回读完成；五项目标菜单搜索0，审批页面可用空数据，同事概览可见；批准后执行和HR范围未知",
+      "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_HR_EXEC_ReadOnly.json",
+      "checks": {
+        "visibleApplication": "员工自助",
+        "missingMenuSearches": {
+          "我的档案": 0,
+          "自助服务": 0,
+          "审批中心": 0,
+          "调动": 0,
+          "执行": 0
+        },
+        "myApproval": "页面可用；待处理和已申请均空",
+        "visibleApprovalControls": [
+          "批量同意",
+          "批量不同意",
+          "流程委托"
+        ],
+        "approvalControlsUsed": false,
+        "orgHrDataScope": null,
+        "ownHrArchive": "目标菜单缺失，无法沿菜单进入；后端直接URL权限未测试",
+        "otherEmployee": "可搜索并打开本RUN HR_IN同事概览；电话手机QQ脱敏",
+        "onlyOwnData": false,
+        "hrManagement": "当前可见应用/菜单未暴露；后端授权未知",
+        "salary": "未见菜单或薪资数据；后端授权未知",
+        "accessDeniedObserved": false,
+        "approvedTransferExecutionCapability": null
+      }
     }
   ],
   "adminInstructions": [
@@ -348,7 +410,7 @@
       "验证后撤销": "撤销本次临时测试身份/数据范围/节点或执行授权；保留证据和历史，不改共享角色"
     }
   ],
-  "readOnlyAccountChecksCompleted": 3,
+  "readOnlyAccountChecksCompleted": 4,
   "actualSixColumnRows": [
     {
       "身份名称": "普通员工",
@@ -376,14 +438,28 @@
     },
     {
       "身份名称": "执行HR",
-      "菜单权限": "未知，待该账号安全交接",
-      "页面/操作权限": "未知，未用管理员替代",
-      "数据范围": "未知；员工所属组织不代表数据权限",
+      "菜单权限": "员工自助及我的审批可见；我的档案/自助服务/审批中心/调动/执行搜索0；未见HR或薪资菜单",
+      "页面/操作权限": "待处理/我的申请可用空数据；批量审批按钮可见未操作；批准后执行能力未知",
+      "数据范围": "可看本RUN HR_IN同事概览、组织和入职轨迹，联系方式部分脱敏；HR组织数据范围未知",
       "对应测试账号": "redacted-e4fb450829ad@example.invalid",
-      "验证后撤销": "撤销本次临时测试身份/数据范围/节点或执行授权；保留证据和历史，不改共享角色"
+      "验证后撤销": "本轮未新增授权；后续本RUN临时执行身份和限定数据授权须撤销"
     }
   ],
   "minimumConfirmedGapForEmployee": "管理员核定并补充本RUN普通员工的自助服务/我的档案菜单、本人页面读取授权及稳定personId绑定；不得全租户开权。仅凭菜单缺失不推断后端授权配置原因。",
   "minimumConfirmedGapForHrOut": "需管理员核定本RUN调出节点身份分配及所需最小摘要数据；菜单搜索0不等于已证后端权限拒绝，待办空不等于流程权限未授。无需全租户管理员权限。",
-  "minimumConfirmedGapForHrIn": "需管理员核定本RUN调入节点身份及最小摘要数据授权；审批空列表不证明未授节点权限，不申请全租户HR或完整旧档案。"
+  "minimumConfirmedGapForHrIn": "需管理员核定本RUN调入节点身份及最小摘要数据授权；审批空列表不证明未授节点权限，不申请全租户HR或完整旧档案。",
+  "minimumConfirmedGapForHrExec": "需管理员核定是否存在审批后授权执行正式入口及本RUN限定执行身份；若原站仅支持管理员即时调动，记录有意差异，不改共享流程或授管理员绕过。",
+  "adminActionDocument": "R1_ROLE01_Admin_Minimum_Action_20260912.md",
+  "resolvedRole01Parts": [
+    "四账号员工存在/邀请送达/激活（所有者确认）",
+    "四账号安全登录后完整姓名独立匹配",
+    "四账号实际可见菜单、个人审批空列表、本RUN同事概览及部分脱敏只读回读"
+  ],
+  "unresolvedRole01Parts": [
+    "本人正式档案入口及稳定绑定后的页面权限",
+    "HR组织数据范围与非RUN边界",
+    "调出/调入节点分配及确认驳回能力",
+    "批准后执行入口、权限、结果和审计",
+    "独立完整多角色E2E；只读批次不处理申请审批"
+  ]
 }
