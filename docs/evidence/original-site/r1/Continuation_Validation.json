@@ -1,7 +1,7 @@
 {
   "runId": "R1-ORIGIN-20260910-100019",
   "basisHead": "b6316852ad5a143021f06dbcfec5f0a6728b8569",
-  "validatedAt": "2026-09-12T00:41:35Z",
+  "validatedAt": "2026-09-12T12:19:16.149508+00:00",
   "baselineObjectIdsPreserved": true,
   "created": 20,
   "deleted": 1,
@@ -18,9 +18,9 @@
   "jsonFilesParsed": 148,
   "ledgerEntries": 19,
   "manifestUniqueObjects": 20,
-  "matrixCases": 133,
+  "matrixCases": 134,
   "retained": 23,
-  "uniqueCases": 125,
+  "uniqueCases": 134,
   "newBusinessWrites": 0,
   "unknownBusinessActions": [],
   "browserCalls": 0,
@@ -119,7 +119,7 @@
       "newEvidenceSensitiveScanFindings": 0
     }
   },
-  "at": "2026-09-12T12:09:36.266959+00:00",
+  "at": "2026-09-12T12:19:16.149508+00:00",
   "uniqueManifestRecords": 24,
   "fullModules": 0,
   "e2eCompleted": 0,
@@ -127,11 +127,21 @@
   "credentialsPersisted": false,
   "validation": "all_json_and_integrity_checked",
   "roleReadOnlyBatch": {
-    "at": "2026-09-12T11:59:49.627104+00:00",
-    "matrixCases": 132,
-    "recordCount": 24,
-    "readOnlyAccountsCompleted": 1,
-    "businessWrites": 0
+    "at": "2026-09-12T12:19:16.149508+00:00",
+    "account": "HR_IN",
+    "completedReadOnlyAccounts": 3,
+    "remainingReadOnlyAccounts": [
+      "HR_EXEC"
+    ],
+    "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_HR_IN_ReadOnly.json",
+    "nextAccount": "redacted-e4fb450829ad@example.invalid",
+    "browserReleased": true,
+    "backgroundActions": false,
+    "role01Closed": false,
+    "businessWrites": 0,
+    "dateRechecksRepeated": false,
+    "fullModules": 0,
+    "e2e": 0
   },
-  "readOnlyAccountsCompleted": 2
+  "readOnlyAccountsCompleted": 3
 }

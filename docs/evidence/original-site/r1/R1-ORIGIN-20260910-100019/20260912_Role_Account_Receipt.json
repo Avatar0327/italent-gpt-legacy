@@ -150,13 +150,52 @@
       "organizationScope": null,
       "permissionVerified": false,
       "personId": "7c02daf6-59e8-40c3-8f98-70b7bed25e07",
-      "selfOnlyData": null,
-      "visibleApplications": null,
-      "visibleMenus": null,
+      "selfOnlyData": false,
+      "visibleApplications": [
+        "员工自助"
+      ],
+      "visibleMenus": {
+        "文化激励": [],
+        "我的审批": [
+          "我的待办",
+          "我的申请",
+          "我的委托",
+          "常用审批意见"
+        ],
+        "OKR": [
+          "OKR复盘"
+        ],
+        "日报": [],
+        "我的目标": [
+          "我的目标",
+          "目标复盘"
+        ],
+        "我的学习": [
+          "学习首页",
+          "课程中心",
+          "我的学习",
+          "报名中心",
+          "知识共享",
+          "培训申请"
+        ],
+        "我的教务": [
+          "团队学习",
+          "我的辅导",
+          "讲师工作台"
+        ],
+        "我的发展计划": [
+          "个人发展计划",
+          "我辅导的发展计划"
+        ],
+        "任务": []
+      },
       "employeeExistenceFreshlyVerified": true,
       "employeeQueryEvidence": "R1-ORIGIN-20260910-100019/20260912_Role_Employee_Readback.json",
       "organization": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
-      "job": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001"
+      "job": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001",
+      "independentLoginObserved": true,
+      "readOnlyVerificationCompleted": true,
+      "readOnlyEvidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_HR_IN_ReadOnly.json"
     },
     {
       "activated": true,

@@ -1,0 +1,112 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "basisHead": "6428a0c06a1b13c2bb9992d2d77903814c8420c3",
+  "role": "HR_IN",
+  "targetEmail": "redacted-8b1e5ab7c553@example.invalid",
+  "targetName": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_IN_01",
+  "personId": "7c02daf6-59e8-40c3-8f98-70b7bed25e07",
+  "identityMatches": true,
+  "identityBasis": "所有者安全交接＋当前登录完整姓名匹配已唯一登记人员；未读取凭据",
+  "raw": {
+    "at": "2026-09-12T12:14:54.199Z",
+    "colleaguePage": "- img \"logo\"\n- text: 员工自助\n- textbox:\n  - /placeholder: \" \"\n- generic: 搜索菜单/同事\n- generic: Z\n- generic: ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_IN_01\n- img \"logo\"\n- text: 员工自助\n- textbox \"搜索菜单\": 调动\n- heading \"搜索结果 0\" [level=5]\n- paragraph: 这里什么都没有...\n- list:\n  - generic: 文化激励\n  - list\n  - generic: 我的审批\n  - list:\n    - generic: 我的待办\n    - generic: 我的申请\n    - generic: 我的委托\n    - generic: 常用审批意见\n  - generic: OKR\n  - list:\n    - generic: OKR复盘\n  - generic: 日报\n  - list\n  - generic: 我的目标\n  - list:\n    - generic: 我的目标\n    - generic: 目标复盘\n  - generic: 我的学习\n  - list:\n    - generic: 学习首页\n    - generic: 课程中心\n    - generic: 我的学习\n    - generic: 报名中心\n    - generic: 知识共享\n    - generic: 培训申请\n  - generic: 我的教务\n  - list:\n    - generic: 团队学习\n    - generic: 我的辅导\n    - generic: 讲师工作台\n  - generic: 我的发展计划\n  - list:\n    - generic: 个人发展计划\n    - generic: 我辅导的发展计划\n  - generic: 任务\n  - list\n- main:\n  - iframe [id=\"iTalentFrame\"]:\n    - generic: 最近访客\n    - generic: Z\n    - generic: 点赞0\n    - generic: 打败了 0% 的人\n    - generic: 红包0\n    - generic: 打败了 0% 的人\n    - link \"勋章0\":\n      - /url: \"javascript:\"\n      - generic: 勋章0\n    - link:\n      - /url: \"javascript:\"\n    - generic: 打败了 0% 的人\n    - generic: 分享0\n    - generic: 打败了 0% 的人\n    - generic: Z\n    - generic: ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_OUT_01\n    - generic: ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\n    - generic: 快来做第一个给TA贴标签的人～\n    - generic: \n    - generic: 个人概览\n    - generic: 人才\n    - generic: \n    - generic: 基本信息\n    - text: \n    - generic: 姓名\n    - generic: ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_OUT_01\n    - generic: 个人邮箱\n    - generic: 未设置\n    - generic: 办公电话\n    - text: \"*********\"\n    - generic: 手机号码\n    - text: \"*********\"\n    - generic: QQ\n    - text: \"*********\"\n    - generic: 微信\n    - generic: 未设置\n    - generic: \n    - generic: 任职轨迹\n    - generic: 全屏查看\n    - generic: 2026-09-12\n    - generic: 入职\n    - generic: ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\n    - generic: \"|\"\n    - generic: \"--\"\n    - generic: \n    - generic: ta的工作时长\n    - generic: \n    - generic: 0天\n    - generic: 加入公司天数\n    - generic: 人才标签\n    - generic: \n    - generic: 工作经历\n    - generic: 2026-09 ~ 至今\n    - generic: 华夏九洲集团\n    - generic: \"0\"\n    - generic: 职务\n    - text: ：\n    - generic: \"--\"\n    - generic: \"|\"\n    - generic: 工作职责\n    - text: ：\n    - generic: \"--\"\n    - generic: 人才操作\n    - generic: \n    - generic: \"0\"\n- text: 点击这里回到首页~\n- text: 点击这里回到首页~",
+    "colleagueSearch": "- img \"logo\"\n- text: 员工自助\n- generic: 菜单/同事\n- textbox \"搜索菜单/同事\" [active]: ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_OUT_01\n- generic: 同事 1\n- generic: Z\n- mark: ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_OUT_01\n- generic: 华夏九洲集团/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_001/ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002\n- generic: Z\n- generic: ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_IN_01\n- img \"logo\"\n- text: 员工自助\n- textbox \"搜索菜单\": 调动\n- heading \"搜索结果 0\" [level=5]\n- paragraph: 这里什么都没有...\n- list:\n  - generic: 文化激励\n  - list\n  - generic: 我的审批\n  - list:\n    - generic: 我的待办\n    - generic: 我的申请\n    - generic: 我的委托\n    - generic: 常用审批意见\n  - generic: OKR\n  - list:\n    - generic: OKR复盘\n  - generic: 日报\n  - list\n  - generic: 我的目标\n  - list:\n    - generic: 我的目标\n    - generic: 目标复盘\n  - generic: 我的学习\n  - list:\n    - generic: 学习首页\n    - generic: 课程中心\n    - generic: 我的学习\n    - generic: 报名中心\n    - generic: 知识共享\n    - generic: 培训申请\n  - generic: 我的教务\n  - list:\n    - generic: 团队学习\n    - generic: 我的辅导\n    - generic: 讲师工作台\n  - generic: 我的发展计划\n  - list:\n    - generic: 个人发展计划\n    - generic: 我辅导的发展计划\n  - generic: 任务\n  - list\n- main:\n  - iframe [id=\"iTalentFrame\"]:\n    - textbox \"搜索内容/发起人\"\n    - term:\n      - generic: 待处理\n    - term:\n      - generic: 已处理\n    - term:\n      - generic: 已申请\n    - heading \"待处理\" [level=1]\n    - generic: 批量同意\n    - generic: 批量不同意\n    - generic: 流程委托\n    - generic: 接收时间\n    - generic: 发起人\n    - generic: 接收时间倒序\n    - checkbox\n    - generic: 全选\n    - paragraph: 暂无新的待办\n- text: 点击这里回到首页~\n- text: 点击这里回到首页~",
+    "endAt": "2026-09-12T12:17:53.006Z",
+    "final": "- img \"logo\"\n- text: 员工自助\n- textbox:\n  - /placeholder: \" \"\n- generic: 搜索学习课程\n- generic: Z\n- generic: ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_IN_01\n- img \"logo\"\n- text: 员工自助\n- textbox \"搜索菜单\": 调动\n- heading \"搜索结果 0\" [level=5]\n- paragraph: 这里什么都没有...\n- list:\n  - generic: 文化激励\n  - list\n  - generic: 我的审批\n  - list:\n    - generic: 我的待办\n    - generic: 我的申请\n    - generic: 我的委托\n    - generic: 常用审批意见\n  - generic: OKR\n  - list:\n    - generic: OKR复盘\n  - generic: 日报\n  - list\n  - generic: 我的目标\n  - list:\n    - generic: 我的目标\n    - generic: 目标复盘\n  - generic: 我的学习\n  - list:\n    - generic: 学习首页\n    - generic: 课程中心\n    - generic: 我的学习\n    - generic: 报名中心\n    - generic: 知识共享\n    - generic: 培训申请\n  - generic: 我的教务\n  - list:\n    - generic: 团队学习\n    - generic: 我的辅导\n    - generic: 讲师工作台\n  - generic: 我的发展计划\n  - list:\n    - generic: 个人发展计划\n    - generic: 我辅导的发展计划\n  - generic: 任务\n  - list\n- main:\n  - iframe [id=\"iTalentFrame\"]:\n    - generic: \n    - generic: 我的申请\n    - generic:  \n    - generic: 类别\n    - generic: 审批状态\n    - grid:\n      - row \"标题 类别 发起人 当前处理人 审批状态 申请理由 申请时间\":\n        - columnheader \"标题\":\n          - generic: 标题\n        - columnheader \"类别\":\n          - generic: 类别\n        - columnheader \"发起人\":\n          - generic: 发起人\n        - columnheader \"当前处理人\":\n          - generic: 当前处理人\n        - columnheader \"审批状态\":\n          - generic: 审批状态\n        - columnheader \"申请理由\":\n          - generic: 申请理由\n        - columnheader \"申请时间\":\n          - generic: 申请时间\n        - columnheader:\n      - paragraph: 这里什么都没有...\n    - generic: 高级筛选\n    - button \"Close\":\n- text: 点击这里回到首页~\n- text: 点击这里回到首页~",
+    "pending": "- img \"logo\"\n- text: 员工自助\n- textbox:\n  - /placeholder: \" \"\n- generic: 搜索菜单/同事\n- generic: Z\n- generic: ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_IN_01\n- img \"logo\"\n- text: 员工自助\n- textbox \"搜索菜单\"\n- generic: 员工自助\n- generic: 文化激励\n- generic: 我的审批\n- generic: OKR\n- generic: 日报\n- generic: 我的目标\n- generic: 我的学习\n- generic: 我的教务\n- generic: 我的发展计划\n- generic: 任务\n- list:\n  - generic: 文化激励\n  - list\n  - generic: 我的审批\n  - list:\n    - generic: 我的待办\n    - generic: 我的申请\n    - generic: 我的委托\n    - generic: 常用审批意见\n  - generic: OKR\n  - list:\n    - generic: OKR复盘\n  - generic: 日报\n  - list\n  - generic: 我的目标\n  - list:\n    - generic: 我的目标\n    - generic: 目标复盘\n  - generic: 我的学习\n  - list:\n    - generic: 学习首页\n    - generic: 课程中心\n    - generic: 我的学习\n    - generic: 报名中心\n    - generic: 知识共享\n    - generic: 培训申请\n  - generic: 我的教务\n  - list:\n    - generic: 团队学习\n    - generic: 我的辅导\n    - generic: 讲师工作台\n  - generic: 我的发展计划\n  - list:\n    - generic: 个人发展计划\n    - generic: 我辅导的发展计划\n  - generic: 任务\n  - list\n- main:\n  - iframe [id=\"iTalentFrame\"]:\n    - textbox \"搜索内容/发起人\"\n    - term:\n      - generic: 待处理\n    - term:\n      - generic: 已处理\n    - term:\n      - generic: 已申请\n    - heading \"待处理\" [level=1]\n    - generic: 接收时间\n    - generic: 发起人\n    - generic: 接收时间倒序\n    - checkbox\n    - generic: 全选\n- text: 点击这里回到首页~\n- text: 点击这里回到首页~",
+    "searches": {
+      "审批中心": "- img \"logo\"\n- text: 员工自助\n- textbox:\n  - /placeholder: \" \"\n- generic: 搜索菜单/同事\n- generic: Z\n- generic: ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_IN_01\n- img \"logo\"\n- text: 员工自助\n- textbox \"搜索菜单\" [active]: 审批中心\n- heading \"搜索结果 0\" [level=5]\n- paragraph: 这里什么都没有...\n- list:\n  - generic: 文化激励\n  - list\n  - generic: 我的审批\n  - list:\n    - generic: 我的待办\n    - generic: 我的申请\n    - generic: 我的委托\n    - generic: 常用审批意见\n  - generic: OKR\n  - list:\n    - generic: OKR复盘\n  - generic: 日报\n  - list\n  - generic: 我的目标\n  - list:\n    - generic: 我的目标\n    - generic: 目标复盘\n  - generic: 我的学习\n  - list:\n    - generic: 学习首页\n    - generic: 课程中心\n    - generic: 我的学习\n    - generic: 报名中心\n    - generic: 知识共享\n    - generic: 培训申请\n  - generic: 我的教务\n  - list:\n    - generic: 团队学习\n    - generic: 我的辅导\n    - generic: 讲师工作台\n  - generic: 我的发展计划\n  - list:\n    - generic: 个人发展计划\n    - generic: 我辅导的发展计划\n  - generic: 任务\n  - list\n- main:\n  - iframe [id=\"iTalentFrame\"]:\n    - textbox \"搜索内容/发起人\"\n    - term:\n      - generic: 待处理\n    - term:\n      - generic: 已处理\n    - term:\n      - generic: 已申请\n    - heading \"待处理\" [level=1]\n    - generic: 批量同意\n    - generic: 批量不同意\n    - generic: 流程委托\n    - generic: 接收时间\n    - generic: 发起人\n    - generic: 接收时间倒序\n    - checkbox\n    - generic: 全选\n    - paragraph: 暂无新的待办\n- text: 点击这里回到首页~\n- text: 点击这里回到首页~",
+      "我的档案": "- img \"logo\"\n- text: 员工自助\n- textbox:\n  - /placeholder: \" \"\n- generic: 搜索学习课程\n- generic: Z\n- generic: ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_IN_01\n- img \"logo\"\n- text: 员工自助\n- textbox \"搜索菜单\" [active]: 我的档案\n- heading \"搜索结果 0\" [level=5]\n- paragraph: 这里什么都没有...\n- list:\n  - generic: 文化激励\n  - list\n  - generic: 我的审批\n  - list:\n    - generic: 我的待办\n    - generic: 我的申请\n    - generic: 我的委托\n    - generic: 常用审批意见\n  - generic: OKR\n  - list:\n    - generic: OKR复盘\n  - generic: 日报\n  - list\n  - generic: 我的目标\n  - list:\n    - generic: 我的目标\n    - generic: 目标复盘\n  - generic: 我的学习\n  - list:\n    - generic: 学习首页\n    - generic: 课程中心\n    - generic: 我的学习\n    - generic: 报名中心\n    - generic: 知识共享\n    - generic: 培训申请\n  - generic: 我的教务\n  - list:\n    - generic: 团队学习\n    - generic: 我的辅导\n    - generic: 讲师工作台\n  - generic: 我的发展计划\n  - list:\n    - generic: 个人发展计划\n    - generic: 我辅导的发展计划\n  - generic: 任务\n  - list\n- main:\n  - iframe [id=\"iTalentFrame\"]:\n    - textbox \"搜索内容/发起人\"\n    - term:\n      - generic: 待处理\n    - term:\n      - generic: 已处理\n    - term:\n      - generic: 已申请\n    - heading \"待处理\" [level=1]\n    - generic: 批量同意\n    - generic: 批量不同意\n    - generic: 流程委托\n    - generic: 接收时间\n    - generic: 发起人\n    - generic: 接收时间倒序\n    - checkbox\n    - generic: 全选\n    - paragraph: 暂无新的待办\n- text: 点击这里回到首页~\n- text: 点击这里回到首页~",
+      "自助服务": "- img \"logo\"\n- text: 员工自助\n- textbox:\n  - /placeholder: \" \"\n- generic: 搜索学习课程\n- generic: Z\n- generic: ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_IN_01\n- img \"logo\"\n- text: 员工自助\n- textbox \"搜索菜单\" [active]: 自助服务\n- heading \"搜索结果 0\" [level=5]\n- paragraph: 这里什么都没有...\n- list:\n  - generic: 文化激励\n  - list\n  - generic: 我的审批\n  - list:\n    - generic: 我的待办\n    - generic: 我的申请\n    - generic: 我的委托\n    - generic: 常用审批意见\n  - generic: OKR\n  - list:\n    - generic: OKR复盘\n  - generic: 日报\n  - list\n  - generic: 我的目标\n  - list:\n    - generic: 我的目标\n    - generic: 目标复盘\n  - generic: 我的学习\n  - list:\n    - generic: 学习首页\n    - generic: 课程中心\n    - generic: 我的学习\n    - generic: 报名中心\n    - generic: 知识共享\n    - generic: 培训申请\n  - generic: 我的教务\n  - list:\n    - generic: 团队学习\n    - generic: 我的辅导\n    - generic: 讲师工作台\n  - generic: 我的发展计划\n  - list:\n    - generic: 个人发展计划\n    - generic: 我辅导的发展计划\n  - generic: 任务\n  - list\n- main:\n  - iframe [id=\"iTalentFrame\"]:\n    - textbox \"搜索内容/发起人\"\n    - term:\n      - generic: 待处理\n    - term:\n      - generic: 已处理\n    - term:\n      - generic: 已申请\n    - heading \"待处理\" [level=1]\n    - generic: 批量同意\n    - generic: 批量不同意\n    - generic: 流程委托\n    - generic: 接收时间\n    - generic: 发起人\n    - generic: 接收时间倒序\n    - checkbox\n    - generic: 全选\n    - paragraph: 暂无新的待办\n- text: 点击这里回到首页~\n- text: 点击这里回到首页~",
+      "调动": "- img \"logo\"\n- text: 员工自助\n- textbox:\n  - /placeholder: \" \"\n- generic: 搜索学习课程\n- generic: Z\n- generic: ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_IN_01\n- img \"logo\"\n- text: 员工自助\n- textbox \"搜索菜单\" [active]: 调动\n- heading \"搜索结果 0\" [level=5]\n- paragraph: 这里什么都没有...\n- list:\n  - generic: 文化激励\n  - list\n  - generic: 我的审批\n  - list:\n    - generic: 我的待办\n    - generic: 我的申请\n    - generic: 我的委托\n    - generic: 常用审批意见\n  - generic: OKR\n  - list:\n    - generic: OKR复盘\n  - generic: 日报\n  - list\n  - generic: 我的目标\n  - list:\n    - generic: 我的目标\n    - generic: 目标复盘\n  - generic: 我的学习\n  - list:\n    - generic: 学习首页\n    - generic: 课程中心\n    - generic: 我的学习\n    - generic: 报名中心\n    - generic: 知识共享\n    - generic: 培训申请\n  - generic: 我的教务\n  - list:\n    - generic: 团队学习\n    - generic: 我的辅导\n    - generic: 讲师工作台\n  - generic: 我的发展计划\n  - list:\n    - generic: 个人发展计划\n    - generic: 我辅导的发展计划\n  - generic: 任务\n  - list\n- main:\n  - iframe [id=\"iTalentFrame\"]:\n    - textbox \"搜索内容/发起人\"\n    - term:\n      - generic: 待处理\n    - term:\n      - generic: 已处理\n    - term:\n      - generic: 已申请\n    - heading \"待处理\" [level=1]\n    - generic: 批量同意\n    - generic: 批量不同意\n    - generic: 流程委托\n    - generic: 接收时间\n    - generic: 发起人\n    - generic: 接收时间倒序\n    - checkbox\n    - generic: 全选\n    - paragraph: 暂无新的待办\n- text: 点击这里回到首页~\n- text: 点击这里回到首页~"
+    },
+    "start": "- img \"logo\"\n- text: 员工自助\n- textbox:\n  - /placeholder: \" \"\n- generic: 搜索菜单/同事\n- generic: Z\n- generic: ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_IN_01\n- img \"logo\"\n- text: 员工自助\n- textbox \"搜索菜单\"\n- generic: 员工自助\n- generic: 文化激励\n- generic: 我的审批\n- generic: OKR\n- generic: 日报\n- generic: 我的目标\n- generic: 我的学习\n- generic: 我的教务\n- generic: 我的发展计划\n- generic: 任务\n- list:\n  - generic: 文化激励\n  - list\n  - generic: 我的审批\n  - list:\n    - generic: 我的待办\n    - generic: 我的申请\n    - generic: 我的委托\n    - generic: 常用审批意见\n  - generic: OKR\n  - list:\n    - generic: OKR复盘\n  - generic: 日报\n  - list\n  - generic: 我的目标\n  - list:\n    - generic: 我的目标\n    - generic: 目标复盘\n  - generic: 我的学习\n  - list:\n    - generic: 学习首页\n    - generic: 课程中心\n    - generic: 我的学习\n    - generic: 报名中心\n    - generic: 知识共享\n    - generic: 培训申请\n  - generic: 我的教务\n  - list:\n    - generic: 团队学习\n    - generic: 我的辅导\n    - generic: 讲师工作台\n  - generic: 我的发展计划\n  - list:\n    - generic: 个人发展计划\n    - generic: 我辅导的发展计划\n  - generic: 任务\n  - list\n- main:\n  - iframe [id=\"iTalentFrame\"]:\n    - generic: \n    - generic: 我的申请\n    - generic:  \n    - generic: 类别\n    - generic: 审批状态\n    - grid:\n      - row \"标题 类别 发起人 当前处理人 审批状态 申请理由 申请时间\":\n        - columnheader \"标题\":\n          - generic: 标题\n        - columnheader \"类别\":\n          - generic: 类别\n        - columnheader \"发起人\":\n          - generic: 发起人\n        - columnheader \"当前处理人\":\n          - generic: 当前处理人\n        - columnheader \"审批状态\":\n          - generic: 审批状态\n        - columnheader \"申请理由\":\n          - generic: 申请理由\n        - columnheader \"申请时间\":\n          - generic: 申请时间\n        - columnheader:\n      - paragraph: 这里什么都没有...\n    - generic: 高级筛选\n    - button \"Close\":\n- text: 点击这里回到首页~\n- text: 点击这里回到首页~"
+  },
+  "checks": {
+    "visibleApplication": "员工自助",
+    "missingMenuSearches": {
+      "我的档案": 0,
+      "自助服务": 0,
+      "审批中心": 0,
+      "调动": 0
+    },
+    "myApproval": "页面可用；待处理和已申请均空",
+    "visibleApprovalControls": [
+      "批量同意",
+      "批量不同意",
+      "流程委托"
+    ],
+    "approvalControlsUsed": false,
+    "orgHrDataScope": null,
+    "ownHrArchive": "目标菜单缺失，无法沿菜单进入；后端直接URL权限未测试",
+    "otherEmployee": "可搜索并打开本RUN HR_OUT同事概览；电话手机QQ脱敏",
+    "onlyOwnData": false,
+    "hrManagement": "当前可见应用/菜单未暴露；后端授权未知",
+    "salary": "未见菜单或薪资数据；后端授权未知",
+    "accessDeniedObserved": false,
+    "inboundConfirmationCapability": null
+  },
+  "readOnlyBatchComplete": true,
+  "fullRolePermissionVerification": false,
+  "role01Closed": false,
+  "businessWrites": 0,
+  "approvalsProcessed": 0,
+  "downloads": 0,
+  "subscriptions": 0,
+  "permissionsChanged": false,
+  "dateRechecksRepeated": false,
+  "unknownBusinessActions": [],
+  "otherTabsTouched": false,
+  "visibleApplications": [
+    "员工自助"
+  ],
+  "menuHierarchy": {
+    "文化激励": [],
+    "我的审批": [
+      "我的待办",
+      "我的申请",
+      "我的委托",
+      "常用审批意见"
+    ],
+    "OKR": [
+      "OKR复盘"
+    ],
+    "日报": [],
+    "我的目标": [
+      "我的目标",
+      "目标复盘"
+    ],
+    "我的学习": [
+      "学习首页",
+      "课程中心",
+      "我的学习",
+      "报名中心",
+      "知识共享",
+      "培训申请"
+    ],
+    "我的教务": [
+      "团队学习",
+      "我的辅导",
+      "讲师工作台"
+    ],
+    "我的发展计划": [
+      "个人发展计划",
+      "我辅导的发展计划"
+    ],
+    "任务": []
+  },
+  "browserEnd": {
+    "at": "2026-09-12T12:19:16.149508+00:00",
+    "tab": "2",
+    "releasedToOwner": true,
+    "backgroundActions": false,
+    "openBusinessDrafts": [],
+    "nextAccount": "redacted-e4fb450829ad@example.invalid",
+    "releaseMethod": "requestManualHandoff_returned_without_error"
+  },
+  "localEvidenceWriteAttempt": {
+    "scratchWrite": "failed_ENOENT_in_browser_runtime",
+    "recovery": "raw_evidence_transferred_to_repository_executor",
+    "businessImpact": 0
+  }
+}

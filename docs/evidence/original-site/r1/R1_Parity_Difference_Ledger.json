@@ -832,15 +832,14 @@
     "phaseApproved": false
   },
   "roleReadOnlyBatch": {
-    "at": "2026-09-12T12:09:36.266959+00:00",
-    "account": "HR_OUT",
-    "completedReadOnlyAccounts": 2,
+    "at": "2026-09-12T12:19:16.149508+00:00",
+    "account": "HR_IN",
+    "completedReadOnlyAccounts": 3,
     "remainingReadOnlyAccounts": [
-      "HR_IN",
       "HR_EXEC"
     ],
-    "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_HR_OUT_ReadOnly.json",
-    "nextAccount": "redacted-8b1e5ab7c553@example.invalid",
+    "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_HR_IN_ReadOnly.json",
+    "nextAccount": "redacted-e4fb450829ad@example.invalid",
     "browserReleased": true,
     "backgroundActions": false,
     "role01Closed": false,
@@ -861,6 +860,24 @@
       ],
       "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_EMPLOYEE_ReadOnly.json",
       "nextAccount": "redacted-637fb0305b2c@example.invalid",
+      "browserReleased": true,
+      "backgroundActions": false,
+      "role01Closed": false,
+      "businessWrites": 0,
+      "dateRechecksRepeated": false,
+      "fullModules": 0,
+      "e2e": 0
+    },
+    {
+      "at": "2026-09-12T12:09:36.266959+00:00",
+      "account": "HR_OUT",
+      "completedReadOnlyAccounts": 2,
+      "remainingReadOnlyAccounts": [
+        "HR_IN",
+        "HR_EXEC"
+      ],
+      "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_HR_OUT_ReadOnly.json",
+      "nextAccount": "redacted-8b1e5ab7c553@example.invalid",
       "browserReleased": true,
       "backgroundActions": false,
       "role01Closed": false,
