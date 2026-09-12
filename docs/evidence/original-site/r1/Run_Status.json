@@ -2,8 +2,8 @@
   "activeEnvBlockers": 6,
   "activeMajor": 0,
   "activeRoleBlockers": 1,
-  "browserHandoffTo": "owner_hr_out_manual_login",
-  "browserUseEndedAt": "2026-09-12T12:01:34.872077+00:00",
+  "browserHandoffTo": "owner_hr_in_manual_login",
+  "browserUseEndedAt": "2026-09-12T12:09:36.266959+00:00",
   "bulkImportedRows": 0,
   "businessDateConditionSatisfied": true,
   "completedModuleCounts": {
@@ -18,8 +18,8 @@
   "continuationInProgress": false,
   "createdRecords": 24,
   "createdRecordsDefinition": "24唯一登记业务对象，删除1/保留23/10员工；含所有者创建的4角色员工，本窗口新建0；附件版本不重复计数。",
-  "currentCheckpoint": "role_employee_readonly_complete_hr_out_login_pending",
-  "currentContinuationLimitation": "普通员工本轮只读完成；档案入口缺失，同事概览可见；其余三角色和实际审批能力未知。",
+  "currentCheckpoint": "role_hr_out_readonly_complete_hr_in_login_pending",
+  "currentContinuationLimitation": "两账号只读完成，档案入口缺失，同事概览可见；另两账号、HR范围、审批执行权限未知。",
   "currentEmployeeOracle": {
     "people": 5,
     "formal": 4,
@@ -238,16 +238,15 @@
     "phaseApproved": false
   },
   "roleReadOnlyBatch": {
-    "at": "2026-09-12T11:59:49.627104+00:00",
-    "account": "EMPLOYEE",
-    "completedReadOnlyAccounts": 1,
+    "at": "2026-09-12T12:09:36.266959+00:00",
+    "account": "HR_OUT",
+    "completedReadOnlyAccounts": 2,
     "remainingReadOnlyAccounts": [
-      "HR_OUT",
       "HR_IN",
       "HR_EXEC"
     ],
-    "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_EMPLOYEE_ReadOnly.json",
-    "nextAccount": "redacted-637fb0305b2c@example.invalid",
+    "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_HR_OUT_ReadOnly.json",
+    "nextAccount": "redacted-8b1e5ab7c553@example.invalid",
     "browserReleased": true,
     "backgroundActions": false,
     "role01Closed": false,
@@ -256,5 +255,26 @@
     "fullModules": 0,
     "e2e": 0
   },
-  "secureLoginHandoffHistorical": true
+  "secureLoginHandoffHistorical": true,
+  "roleReadOnlyBatchHistory": [
+    {
+      "at": "2026-09-12T11:59:49.627104+00:00",
+      "account": "EMPLOYEE",
+      "completedReadOnlyAccounts": 1,
+      "remainingReadOnlyAccounts": [
+        "HR_OUT",
+        "HR_IN",
+        "HR_EXEC"
+      ],
+      "evidence": "R1-ORIGIN-20260910-100019/20260912_ROLE_EMPLOYEE_ReadOnly.json",
+      "nextAccount": "redacted-637fb0305b2c@example.invalid",
+      "browserReleased": true,
+      "backgroundActions": false,
+      "role01Closed": false,
+      "businessWrites": 0,
+      "dateRechecksRepeated": false,
+      "fullModules": 0,
+      "e2e": 0
+    }
+  ]
 }

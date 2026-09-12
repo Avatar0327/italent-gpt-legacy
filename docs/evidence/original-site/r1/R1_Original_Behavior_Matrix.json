@@ -7070,6 +7070,23 @@
       "role01Closed": false,
       "writes": 0,
       "threeWayConclusion": "原站角色局部事实，不判P3缺陷，不提升模块/E2E完整度"
+    },
+    {
+      "caseId": "ROLE-HR-OUT-READONLY-20260912",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "module": "M19",
+      "role": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_OUT_01",
+      "time": "2026-09-12T12:09:36.266959+00:00",
+      "execution": "observed_read_only_scope",
+      "classification": "ROLE_BLOCKED",
+      "title": "独立调出方菜单和数据可见性",
+      "actualResult": "身份一致；档案/自助服务/审批中心/调动搜索0；审批页面可用空数据；可看本RUN HR_IN同事概览且部分脱敏；调出确认/HR范围/薪资权限未知",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260912_ROLE_HR_OUT_ReadOnly.json"
+      ],
+      "role01Closed": false,
+      "writes": 0,
+      "threeWayConclusion": "原站角色局部事实，不推断P3缺陷、不提升模块/E2E完整度"
     }
   ],
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",

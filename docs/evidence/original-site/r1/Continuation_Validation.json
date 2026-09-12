@@ -18,7 +18,7 @@
   "jsonFilesParsed": 148,
   "ledgerEntries": 19,
   "manifestUniqueObjects": 20,
-  "matrixCases": 132,
+  "matrixCases": 133,
   "retained": 23,
   "uniqueCases": 125,
   "newBusinessWrites": 0,
@@ -119,7 +119,7 @@
       "newEvidenceSensitiveScanFindings": 0
     }
   },
-  "at": "2026-09-12T12:01:34.872077+00:00",
+  "at": "2026-09-12T12:09:36.266959+00:00",
   "uniqueManifestRecords": 24,
   "fullModules": 0,
   "e2eCompleted": 0,
@@ -133,5 +133,5 @@
     "readOnlyAccountsCompleted": 1,
     "businessWrites": 0
   },
-  "readOnlyAccountsCompleted": 1
+  "readOnlyAccountsCompleted": 2
 }
