@@ -249,19 +249,8 @@
       ]
     }
   ],
-  "countDefinition": {
-    "uuidRegisteredBusinessObjects": 20,
-    "uuidRegisteredRetained": 19,
-    "deleted": 1,
-    "uuidRegisteredEmployees": 6,
-    "additionalOwnerConfirmedEmployees": 4,
-    "combinedCreatedIncludingOwnerAccounts": 24,
-    "combinedRetainedIncludingOwnerAccounts": 23,
-    "combinedPeople": 10,
-    "roleUuidReadbackPending": 4,
-    "newlyCreatedByThisWindow": 0
-  },
-  "createdCount": 20,
+  "countDefinition": "24唯一登记业务对象，删除1/保留23/10员工；含所有者创建的4角色员工，本窗口新建0；附件版本不重复计数。",
+  "createdCount": 24,
   "deletedCount": 1,
   "drafts": {
     "initialCancelledOrganizationDrafts": 2,
@@ -1048,9 +1037,101 @@
         "evidence": "R1-ORIGIN-20260910-100019/20260912_Exclusive_Browser_Gate.json",
         "result": "not_queried_browser_exclusivity_unconfirmed"
       }
+    },
+    {
+      "runId": "R1-ORIGIN-20260910-100019",
+      "caseId": "ROLE-EMPLOYEE",
+      "module": "M48",
+      "objectType": "employee",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_EMPLOYEE_01",
+      "originRecordId": "cc807348-38de-4333-b88f-3f312e2c6eee",
+      "createdAt": null,
+      "createdAtBasis": "所有者创建；本窗口不推断创建审计",
+      "creatorSource": "owner_account_creation_window",
+      "employeeId": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_EMPLOYEE_01",
+      "status": "active_employee_row_verified",
+      "statusScope": "fresh_2026-09-12_admin_query_not_independent_role_permissions",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260912_Role_Employee_Readback.json",
+        "R1-ORIGIN-20260910-100019/20260912_Role_Account_Receipt.json"
+      ],
+      "relatedRecords": [
+        "db7df096-624b-4d1e-ab4e-0552a56f052c",
+        "81fde82c-3807-4e73-be33-46a9321f87fb"
+      ],
+      "allowLaterDelete": false
+    },
+    {
+      "runId": "R1-ORIGIN-20260910-100019",
+      "caseId": "ROLE-HR_OUT",
+      "module": "M48",
+      "objectType": "employee",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_OUT_01",
+      "originRecordId": "1ed987d0-67bf-4f9e-95d5-daecc427fe8a",
+      "createdAt": null,
+      "createdAtBasis": "所有者创建；本窗口不推断创建审计",
+      "creatorSource": "owner_account_creation_window",
+      "employeeId": "ZS26000558",
+      "status": "active_employee_row_verified",
+      "statusScope": "fresh_2026-09-12_admin_query_not_independent_role_permissions",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260912_Role_Employee_Readback.json",
+        "R1-ORIGIN-20260910-100019/20260912_Role_Account_Receipt.json"
+      ],
+      "relatedRecords": [
+        "db7df096-624b-4d1e-ab4e-0552a56f052c",
+        "81fde82c-3807-4e73-be33-46a9321f87fb"
+      ],
+      "allowLaterDelete": false
+    },
+    {
+      "runId": "R1-ORIGIN-20260910-100019",
+      "caseId": "ROLE-HR_IN",
+      "module": "M48",
+      "objectType": "employee",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_IN_01",
+      "originRecordId": "7c02daf6-59e8-40c3-8f98-70b7bed25e07",
+      "createdAt": null,
+      "createdAtBasis": "所有者创建；本窗口不推断创建审计",
+      "creatorSource": "owner_account_creation_window",
+      "employeeId": "ZS26000559",
+      "status": "active_employee_row_verified",
+      "statusScope": "fresh_2026-09-12_admin_query_not_independent_role_permissions",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260912_Role_Employee_Readback.json",
+        "R1-ORIGIN-20260910-100019/20260912_Role_Account_Receipt.json"
+      ],
+      "relatedRecords": [
+        "db7df096-624b-4d1e-ab4e-0552a56f052c",
+        "81fde82c-3807-4e73-be33-46a9321f87fb"
+      ],
+      "allowLaterDelete": false
+    },
+    {
+      "runId": "R1-ORIGIN-20260910-100019",
+      "caseId": "ROLE-HR_EXEC",
+      "module": "M48",
+      "objectType": "employee",
+      "name": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_EXEC_01",
+      "originRecordId": "e73a3e56-280b-4006-8c5a-5346f874a163",
+      "createdAt": null,
+      "createdAtBasis": "所有者创建；本窗口不推断创建审计",
+      "creatorSource": "owner_account_creation_window",
+      "employeeId": "ZS26000560",
+      "status": "active_employee_row_verified",
+      "statusScope": "fresh_2026-09-12_admin_query_not_independent_role_permissions",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260912_Role_Employee_Readback.json",
+        "R1-ORIGIN-20260910-100019/20260912_Role_Account_Receipt.json"
+      ],
+      "relatedRecords": [
+        "db7df096-624b-4d1e-ab4e-0552a56f052c",
+        "81fde82c-3807-4e73-be33-46a9321f87fb"
+      ],
+      "allowLaterDelete": false
     }
   ],
-  "retainedCount": 19,
+  "retainedCount": 23,
   "runId": "R1-ORIGIN-20260910-100019",
   "successMessagePendingIdCount": 0,
   "writesSuspendedReason": null,
@@ -1119,7 +1200,9 @@
       "R1-ORIGIN-20260910-100019/20260912_Role_Account_Receipt.json"
     ],
     "phaseApproved": false,
-    "continuationInProgress": true
+    "continuationInProgress": true,
+    "roleUuidReadbackPending": 0,
+    "roleEmployeeReadbacks": 4
   },
   "ownerConfirmedRoleAccounts": [
     {
@@ -1129,17 +1212,21 @@
       "confirmationSource": "owner_current_turn_2026-09-12",
       "email": "redacted-2b7afcf083fe@example.invalid",
       "employeeExists": true,
-      "employeeId": null,
+      "employeeId": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_EMPLOYEE_01",
       "identity": "普通员工",
       "invitationDelivered": true,
       "key": "EMPLOYEE",
       "name": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_EMPLOYEE_01",
       "organizationScope": null,
       "permissionVerified": false,
-      "personId": null,
+      "personId": "cc807348-38de-4333-b88f-3f312e2c6eee",
       "selfOnlyData": null,
       "visibleApplications": null,
-      "visibleMenus": null
+      "visibleMenus": null,
+      "employeeExistenceFreshlyVerified": true,
+      "employeeQueryEvidence": "R1-ORIGIN-20260910-100019/20260912_Role_Employee_Readback.json",
+      "organization": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
+      "job": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001"
     },
     {
       "activated": true,
@@ -1155,10 +1242,14 @@
       "name": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_OUT_01",
       "organizationScope": null,
       "permissionVerified": false,
-      "personId": null,
+      "personId": "1ed987d0-67bf-4f9e-95d5-daecc427fe8a",
       "selfOnlyData": null,
       "visibleApplications": null,
-      "visibleMenus": null
+      "visibleMenus": null,
+      "employeeExistenceFreshlyVerified": true,
+      "employeeQueryEvidence": "R1-ORIGIN-20260910-100019/20260912_Role_Employee_Readback.json",
+      "organization": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
+      "job": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001"
     },
     {
       "activated": true,
@@ -1174,10 +1265,14 @@
       "name": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_IN_01",
       "organizationScope": null,
       "permissionVerified": false,
-      "personId": null,
+      "personId": "7c02daf6-59e8-40c3-8f98-70b7bed25e07",
       "selfOnlyData": null,
       "visibleApplications": null,
-      "visibleMenus": null
+      "visibleMenus": null,
+      "employeeExistenceFreshlyVerified": true,
+      "employeeQueryEvidence": "R1-ORIGIN-20260910-100019/20260912_Role_Employee_Readback.json",
+      "organization": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
+      "job": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001"
     },
     {
       "activated": true,
@@ -1193,10 +1288,14 @@
       "name": "ZZ_R1_R1-ORIGIN-20260910-100019_ROLE_HR_EXEC_01",
       "organizationScope": null,
       "permissionVerified": false,
-      "personId": null,
+      "personId": "e73a3e56-280b-4006-8c5a-5346f874a163",
       "selfOnlyData": null,
       "visibleApplications": null,
-      "visibleMenus": null
+      "visibleMenus": null,
+      "employeeExistenceFreshlyVerified": true,
+      "employeeQueryEvidence": "R1-ORIGIN-20260910-100019/20260912_Role_Employee_Readback.json",
+      "organization": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_ORG_002",
+      "job": "ZZ_R1_R1-ORIGIN-20260910-100019_M01_JOB_001"
     }
   ]
 }

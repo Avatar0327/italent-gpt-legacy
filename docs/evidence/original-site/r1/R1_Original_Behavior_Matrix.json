@@ -7040,6 +7040,19 @@
         "R1-ORIGIN-20260910-100019/20260912_Role_Account_Receipt.json"
       ],
       "threeWayConclusion": "仅局部原站事实；D1–D7及两项有意差异保持；非完整MATCH/模块/E2E通过"
+    },
+    {
+      "caseId": "M01-SEP12-IMPORT-NOTIFICATION-GATE",
+      "module": "M01",
+      "runId": "R1-ORIGIN-20260910-100019",
+      "time": "2026-09-12T02:24:57.284615+00:00",
+      "title": "正式导入安全通知前置",
+      "execution": "partially_observed",
+      "classification": "Observation",
+      "actualResult": "新增/重聘/编辑/有则编辑无则新增可选；无可见邀请或通知控制；取消，未上传保存",
+      "evidence": [
+        "R1-ORIGIN-20260910-100019/20260912_Import_Notification_Gate.json"
+      ]
     }
   ],
   "countRule": "observed是局部事实；MATCH仅窄项；not_executed绝非验证通过；按模块完整范围完成计0/4",

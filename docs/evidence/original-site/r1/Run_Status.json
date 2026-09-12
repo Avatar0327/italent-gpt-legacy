@@ -2,7 +2,7 @@
   "activeEnvBlockers": 6,
   "activeMajor": 0,
   "activeRoleBlockers": 1,
-  "browserHandoffTo": null,
+  "browserHandoffTo": "secure_login_employee_pending",
   "browserUseEndedAt": null,
   "bulkImportedRows": 0,
   "businessDateConditionSatisfied": true,
@@ -15,10 +15,10 @@
     "readyForP3ExitParityReview": 0
   },
   "concurrency": "owner_explicit_exclusive_no_competing_activity_observed",
-  "continuationInProgress": true,
-  "createdRecords": 20,
-  "createdRecordsDefinition": "累计20主动业务对象，删除1，保留19，另有合成附件2版本不重复算业务对象；6人员。",
-  "currentCheckpoint": "sep12_actual_parttime_end_reports_roles_received",
+  "continuationInProgress": false,
+  "createdRecords": 24,
+  "createdRecordsDefinition": "24唯一登记业务对象，删除1/保留23/10员工；含所有者创建的4角色员工，本窗口新建0；附件版本不重复计数。",
+  "currentCheckpoint": "sep12_role_uuids_verified_secure_login_pending",
   "currentContinuationLimitation": "兼职实际终态和报表已取得；审计、ORG003完整迁移影响、角色权限与通知隔离继续验证。",
   "currentEmployeeOracle": {
     "people": 5,
@@ -130,7 +130,7 @@
     "dateFilter": null,
     "evidence": "R1-ORIGIN-20260910-100019/20260912_History_Report.json"
   },
-  "retainedRecords": 19,
+  "retainedRecords": 23,
   "deletedRecords": 1,
   "continuationComparisonBasis": "8e3be496177bae50b6545b9787c1125741f1aafc",
   "ownerDecisions": [
@@ -205,6 +205,14 @@
       "R1-ORIGIN-20260910-100019/20260912_Role_Account_Receipt.json"
     ],
     "phaseApproved": false,
-    "continuationInProgress": true
+    "continuationInProgress": true,
+    "roleEmployeeReadbacks": 4,
+    "roleUuidReadbackPending": 0,
+    "created": 24,
+    "retained": 23,
+    "employees": 10,
+    "importedRows": 0,
+    "importNotificationGate": "no_invite_or_notify_control_visible",
+    "roleMatrix": "R1_Minimum_Role_Permission_Matrix_20260912.json"
   }
 }

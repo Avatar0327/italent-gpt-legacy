@@ -1,0 +1,101 @@
+{
+  "runId": "R1-ORIGIN-20260910-100019",
+  "at": "2026-09-12T02:24:57.284615+00:00",
+  "status": "proposed_minimum_not_granted_or_verified",
+  "accountFactsSource": "所有者确认邀请激活可登录；本窗口新查询确认四员工UUID/ORG002/JOB001",
+  "role01Closed": false,
+  "rows": [
+    {
+      "身份名称": "普通员工",
+      "菜单权限": "员工自助；我的档案/本人资料；我的审批",
+      "页面/操作权限": "本人开放字段读取与允许修改；本人申请进度/历史/撤回；本人附件按独立授权",
+      "数据范围": "只绑定本人personId，不含其他员工、HR专用/薪资材料",
+      "对应测试账号": "redacted-2b7afcf083fe@example.invalid",
+      "验证后撤销": "撤销本次临时测试身份/数据范围/节点或执行授权；保留证据和历史，不改共享角色"
+    },
+    {
+      "身份名称": "调出方",
+      "菜单权限": "审批中心/我的审批；调动待办",
+      "页面/操作权限": "只处理本RUN当前调出节点，确认/驳回和必要摘要；不得跳过调入/执行",
+      "数据范围": "ORG002调出测试对象与本RUN单据；不按全公司授权",
+      "对应测试账号": "redacted-637fb0305b2c@example.invalid",
+      "验证后撤销": "撤销本次临时测试身份/数据范围/节点或执行授权；保留证据和历史，不改共享角色"
+    },
+    {
+      "身份名称": "调入方",
+      "菜单权限": "审批中心/我的审批；调动待办",
+      "页面/操作权限": "只处理本RUN调入节点，确认/驳回及调入所需最小摘要；不读完整旧档案",
+      "数据范围": "指定调入测试组织及本RUN单据；ORG003若停用须选现有有效本RUN组织，不自动扩域",
+      "对应测试账号": "redacted-8b1e5ab7c553@example.invalid",
+      "验证后撤销": "撤销本次临时测试身份/数据范围/节点或执行授权；保留证据和历史，不改共享角色"
+    },
+    {
+      "身份名称": "执行HR",
+      "菜单权限": "审批中心；授权调动执行入口",
+      "页面/操作权限": "仅已批准本RUN调动的执行/失败回读/审计；不得管理员即时调动替代",
+      "数据范围": "限定本RUN源/目标组织及已批准单据；不授全租户管理",
+      "对应测试账号": "redacted-e4fb450829ad@example.invalid",
+      "验证后撤销": "撤销本次临时测试身份/数据范围/节点或执行授权；保留证据和历史，不改共享角色"
+    }
+  ],
+  "observations": [
+    {
+      "identity": "普通员工",
+      "email": "redacted-2b7afcf083fe@example.invalid",
+      "personId": "cc807348-38de-4333-b88f-3f312e2c6eee",
+      "visibleApplications": null,
+      "visibleMenus": null,
+      "selfProfileEntry": null,
+      "myApprovalEntry": null,
+      "onlyOwnData": null,
+      "organizationDataScope": null,
+      "approvalOrExecution": null,
+      "status": "安全登录待交接；未知不等于未授予"
+    },
+    {
+      "identity": "调出方",
+      "email": "redacted-637fb0305b2c@example.invalid",
+      "personId": "1ed987d0-67bf-4f9e-95d5-daecc427fe8a",
+      "visibleApplications": null,
+      "visibleMenus": null,
+      "selfProfileEntry": null,
+      "myApprovalEntry": null,
+      "onlyOwnData": null,
+      "organizationDataScope": null,
+      "approvalOrExecution": null,
+      "status": "安全登录待交接；未知不等于未授予"
+    },
+    {
+      "identity": "调入方",
+      "email": "redacted-8b1e5ab7c553@example.invalid",
+      "personId": "7c02daf6-59e8-40c3-8f98-70b7bed25e07",
+      "visibleApplications": null,
+      "visibleMenus": null,
+      "selfProfileEntry": null,
+      "myApprovalEntry": null,
+      "onlyOwnData": null,
+      "organizationDataScope": null,
+      "approvalOrExecution": null,
+      "status": "安全登录待交接；未知不等于未授予"
+    },
+    {
+      "identity": "执行HR",
+      "email": "redacted-e4fb450829ad@example.invalid",
+      "personId": "e73a3e56-280b-4006-8c5a-5346f874a163",
+      "visibleApplications": null,
+      "visibleMenus": null,
+      "selfProfileEntry": null,
+      "myApprovalEntry": null,
+      "onlyOwnData": null,
+      "organizationDataScope": null,
+      "approvalOrExecution": null,
+      "status": "安全登录待交接；未知不等于未授予"
+    }
+  ],
+  "adminInstructions": [
+    "仅租户权限管理员配置本RUN专用身份；本窗口不修改共享权限",
+    "先独立登录识别实际缺口，再一次性补最小授权；不是全量开通审批管理",
+    "只读不自动包括导出/订阅/转授权；不新增真实通知接收人",
+    "不得以这些原站菜单存在为D1–D7已实现或ROLE-01全部解除"
+  ]
+}

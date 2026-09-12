@@ -1,0 +1,25 @@
+{
+  "at": "2026-09-12T02:18:42.809Z",
+  "form": "导入\n1、可以批量新增、编辑内部员工，请先【下载模板】并录入人员信息后，再进行导入\n2、仅可批量新增或编辑内部员工的基本信息、任职信息，若要批量导入人员的合同协议、或教育经历等子集信息，请使用对应的导入功能\n3、导入方式为【新增】，系统根据校验规则新增员工；导入方式为【重聘入职】，系统根据人员唯一标识匹配离职人员并对其进行重聘；导入方式为【编辑】，系统自动匹配员工更新员工信息和当前生效的任职记录；导入方式为【有则编辑，无则新增】，系统检查是否存在当前员工信息，自动判断新增或编辑\n4、人员唯一标识必填且不能重复查看导入帮助说明\n收起\n附件\n上传\n导入方式\n新增\n重聘入职\n编辑\n有则编辑，无则新增\n保存\n取消\n翻译助手\n取消\n保存",
+  "controls": [
+    {
+      "checked": false,
+      "name": "",
+      "type": "file"
+    }
+  ],
+  "help": {
+    "href": null,
+    "tag": "A"
+  },
+  "runId": "R1-ORIGIN-20260910-100019",
+  "invitationControlVisible": false,
+  "notificationControlVisible": false,
+  "invitationDisabledProven": false,
+  "notificationIsolationProven": false,
+  "uploadedFiles": 0,
+  "saved": false,
+  "importedRows": 0,
+  "downloadRetried": false,
+  "outcome": "formal_entry_observed_safety_gate_unresolved_no_import"
+}

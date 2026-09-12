@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T02:15:57.710703+00:00",
+  "generatedAt": "2026-09-12T02:24:57.284615+00:00",
   "files": [
     {
       "path": "ALERT-MAJOR-001.md",
@@ -18,8 +18,8 @@
     },
     {
       "path": "Completion_Assessment.json",
-      "sizeBytes": 11635,
-      "sha256": "50a0902c8267bc209a66bd1bf0b9ee547d81cd114a2311ed5dc4ed692640eaa0"
+      "sizeBytes": 11966,
+      "sha256": "4f5046b5e66bdfac3aeee0eabcd29bc10ae933be43c01ad8fb6cdadd46652118"
     },
     {
       "path": "Completion_Assessment.md",
@@ -38,8 +38,8 @@
     },
     {
       "path": "Future_Date_Recovery.json",
-      "sizeBytes": 13856,
-      "sha256": "b55d155c036f98c25d50b282a454b2bc5d265c42f4b90955d1ff497a5941e644"
+      "sizeBytes": 14188,
+      "sha256": "46985bf60b55a994d9e5e6709315f53182c80ffbdc7150e8da7ecbbd8f2ba988"
     },
     {
       "path": "M01_Checkpoint.md",
@@ -63,8 +63,8 @@
     },
     {
       "path": "Original_Site_Data_Manifest.json",
-      "sizeBytes": 49347,
-      "sha256": "7022a952901b03fd3f52b7cec16513993b83d90676e13eaf11186e5f441a135f"
+      "sizeBytes": 54237,
+      "sha256": "871c91d0f0b03141e8d60abbbc2d683e21663a7ce80ce19d666ea5231a10155c"
     },
     {
       "path": "Original_Site_Test_Plan.md",
@@ -157,6 +157,11 @@
       "sha256": "7cf0b349f9e019786c5feef3ccd46393ac36dd1d93f9d4f88b2d450c2d982caf"
     },
     {
+      "path": "R1-ORIGIN-20260910-100019/20260912_Import_Notification_Gate.json",
+      "sizeBytes": 1478,
+      "sha256": "183485b898b8922eb0e1a67c0f5c670ece7d7927beaeedf1c0d7ce927dcc9ded"
+    },
+    {
       "path": "R1-ORIGIN-20260910-100019/20260912_ORG003_Dependency_Gate.json",
       "sizeBytes": 2537,
       "sha256": "daee4eb07d541562ce99843665bf721d6780809c94d820c5648d776110bbc7dc"
@@ -168,8 +173,13 @@
     },
     {
       "path": "R1-ORIGIN-20260910-100019/20260912_Role_Account_Receipt.json",
-      "sizeBytes": 3621,
-      "sha256": "d882dd2c8af4ea35755f2409dc5dc71dfde5b11065d13752ffba75e8796e54a7"
+      "sizeBytes": 4777,
+      "sha256": "cd2661f21ad4fec7412a1086fe11eb3b65388fe6403f5b6e0707c48135cbefd6"
+    },
+    {
+      "path": "R1-ORIGIN-20260910-100019/20260912_Role_Employee_Readback.json",
+      "sizeBytes": 1899,
+      "sha256": "fea2f2b5e64bd3eb1d8a6814253a970c5d53cef5b325af9e3926d219cfdd40bd"
     },
     {
       "path": "R1-ORIGIN-20260910-100019/Automation_Sep12_20260911.json",
@@ -822,9 +832,19 @@
       "sha256": "ec4dd9ca746584af988faa2dfb2c76edd394e3fc630d16ca26a3258bc0310441"
     },
     {
+      "path": "R1_Minimum_Role_Permission_Matrix_20260912.json",
+      "sizeBytes": 4612,
+      "sha256": "1d1c77ab376ec7e1c9aa99845528f5a157234ca0b62df4721bfd4dc52cffa825"
+    },
+    {
+      "path": "R1_Minimum_Role_Permission_Matrix_20260912.md",
+      "sizeBytes": 2522,
+      "sha256": "de57d16fea99ae458b2966fe78c5b2c11e3e9e5119ffc5d32d496cb6956d8705"
+    },
+    {
       "path": "R1_Original_Behavior_Matrix.json",
-      "sizeBytes": 280963,
-      "sha256": "c85d490cf33c8c255cec7b056c4d1992f902e8ac10cacac485286e9e8a511424"
+      "sizeBytes": 281516,
+      "sha256": "c3cda82287caadf95b0e06c523f616a4ac1c4d78d6273a26ed2c49ccf069f522"
     },
     {
       "path": "R1_Original_Behavior_Matrix.md",
@@ -838,8 +858,8 @@
     },
     {
       "path": "R1_P3_Evidence_Feedback.md",
-      "sizeBytes": 37897,
-      "sha256": "ea69823c8f564584ed01510b95d8d38c3d54f6bd9acae97ee3a497f0a1d0b52d"
+      "sizeBytes": 38573,
+      "sha256": "67885bad0d606353b039c16c4d89d24959321464b60e6ea85afeef8f574bf75d"
     },
     {
       "path": "R1_P4_Comparison_Cases.md",
@@ -863,13 +883,13 @@
     },
     {
       "path": "Resume.md",
-      "sizeBytes": 34310,
-      "sha256": "01efcf602f3dd96521ff21a84b427e60da64b131f7babb319068709bbe3f4285"
+      "sizeBytes": 34986,
+      "sha256": "01295e90347a76ea5f3059ef6ed2cf853de03220cee1008428eae7b5037dc28b"
     },
     {
       "path": "Run_Status.json",
-      "sizeBytes": 7404,
-      "sha256": "8e9f7024b2f0380da3f695b4d0027b735788ea6c97e997201c2b4f694d5908f1"
+      "sizeBytes": 7748,
+      "sha256": "7384a68d440c113938de732cafebf8dd371f8b9347753906cb8fcb3209cd46f9"
     },
     {
       "path": "Unfinished_Scenarios_20260911.json",
@@ -882,5 +902,5 @@
       "sha256": "bd8664ee8eaeda8e04f22f354ba993e7379a417fe05e4c95c12733a0b34bed64"
     }
   ],
-  "count": 176
+  "count": 180
 }
