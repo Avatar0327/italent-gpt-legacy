@@ -1,0 +1,20 @@
+{
+  "at": "2026-09-12T12:01:34.872077+00:00",
+  "baseHead": "a5020f076af54c64c996665c859774c0548ddedd",
+  "localReadOnlyCommit": "4ab3d88023cda10837c9cc75e8ae6501466bc223",
+  "preservedRemoteHead": "7ea0ebb59dae363f3708aec9af370f9389118a42",
+  "resolution": "保留远端登录中断历史与新文件，本批次直接只读事实作为当前状态；没有回退、覆盖提交或修改产品。",
+  "conflictFiles": [
+    "docs/evidence/original-site/r1/Completion_Assessment.json",
+    "docs/evidence/original-site/r1/Continuation_Validation.json",
+    "docs/evidence/original-site/r1/Evidence_Integrity.json",
+    "docs/evidence/original-site/r1/Original_Site_Data_Manifest.json",
+    "docs/evidence/original-site/r1/R1_P3_Evidence_Feedback.md",
+    "docs/evidence/original-site/r1/R1_Parity_Difference_Ledger.json",
+    "docs/evidence/original-site/r1/Resume.md",
+    "docs/evidence/original-site/r1/Run_Status.json"
+  ],
+  "currentBrowserReleased": true,
+  "nextRole": "HR_OUT",
+  "businessWrites": 0
+}

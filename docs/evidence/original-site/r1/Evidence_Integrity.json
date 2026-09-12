@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T11:59:49.627104+00:00",
+  "generatedAt": "2026-09-12T12:01:34.872077+00:00",
   "files": [
     {
       "path": "ALERT-MAJOR-001.md",
@@ -18,8 +18,8 @@
     },
     {
       "path": "Completion_Assessment.json",
-      "sizeBytes": 12505,
-      "sha256": "3f9bca8382a58327176a85d7d4adf83b1ee73393216aacbf78758da315dda3f8"
+      "sizeBytes": 13805,
+      "sha256": "97faae15c5652e494cbe6dea0aa125407f60a600c74902aaa80b6aa6969702cf"
     },
     {
       "path": "Completion_Assessment.md",
@@ -28,8 +28,8 @@
     },
     {
       "path": "Continuation_Validation.json",
-      "sizeBytes": 2513,
-      "sha256": "4ad326929bb875d2f79b043238426e62612fc42bd9038730d34c37f12e02a977"
+      "sizeBytes": 4173,
+      "sha256": "50651dbdc8ed7b52daaa47433d7b8d714752c574233929473baf079a90b7de7f"
     },
     {
       "path": "Current_Executable_Test_Disposition.json",
@@ -38,8 +38,8 @@
     },
     {
       "path": "Future_Date_Recovery.json",
-      "sizeBytes": 14188,
-      "sha256": "46985bf60b55a994d9e5e6709315f53182c80ffbdc7150e8da7ecbbd8f2ba988"
+      "sizeBytes": 15312,
+      "sha256": "b2dbf03c59a1cb7d6b85ef973dd825cb6682b254c7baba26cc74c3a955a7956f"
     },
     {
       "path": "M01_Checkpoint.md",
@@ -63,8 +63,8 @@
     },
     {
       "path": "Original_Site_Data_Manifest.json",
-      "sizeBytes": 54917,
-      "sha256": "f93bd18eb1730d81f39f76bdb4771f419e7e3e6a619bcff525e006b3780a54e1"
+      "sizeBytes": 56041,
+      "sha256": "9a8679e2079b93107397bd99a8d091c9f5054a554a9a0b1ceffd6cea9f16c146"
     },
     {
       "path": "Original_Site_Test_Plan.md",
@@ -177,6 +177,11 @@
       "sha256": "c506c2a3ad018f4775bd5c030aea5e9e4de9d16681e79dd450fd8c80a013a927"
     },
     {
+      "path": "R1-ORIGIN-20260910-100019/20260912_ROLE_EMPLOYEE_Repository_Reconciliation.json",
+      "sizeBytes": 1010,
+      "sha256": "af27e7bf3385a9ba61c7c7359938ac45ebf50443341994b5083be37bc76cd7ba"
+    },
+    {
       "path": "R1-ORIGIN-20260910-100019/20260912_Role_Account_Receipt.json",
       "sizeBytes": 5764,
       "sha256": "92209ae1e15cfbaf6f12d3fac642d26dc089eb06ff057ff004828f2fd742ab05"
@@ -185,6 +190,11 @@
       "path": "R1-ORIGIN-20260910-100019/20260912_Role_Employee_Readback.json",
       "sizeBytes": 1899,
       "sha256": "fea2f2b5e64bd3eb1d8a6814253a970c5d53cef5b325af9e3926d219cfdd40bd"
+    },
+    {
+      "path": "R1-ORIGIN-20260910-100019/20260912_Secure_Login_Handoff_Status.json",
+      "sizeBytes": 1157,
+      "sha256": "4555ca1fc3c5a6693085e56a2d6c861be456a21b645c2315ad298abc3c60d1e8"
     },
     {
       "path": "R1-ORIGIN-20260910-100019/Automation_Sep12_20260911.json",
@@ -863,8 +873,8 @@
     },
     {
       "path": "R1_P3_Evidence_Feedback.md",
-      "sizeBytes": 39337,
-      "sha256": "9cbc08899b841087408e07288751c0827109be73f519d341c4f2486bc9e11534"
+      "sizeBytes": 39880,
+      "sha256": "e14c1c96e80f6c1d27be6e16fe9cfe50be3e796757886ab04f3c78ab2b2fe7ec"
     },
     {
       "path": "R1_P4_Comparison_Cases.md",
@@ -873,8 +883,8 @@
     },
     {
       "path": "R1_Parity_Difference_Ledger.json",
-      "sizeBytes": 36887,
-      "sha256": "3f75ad08912a2965e418f9ae7078c9bd0d908151c1b919702349dedcfb0df325"
+      "sizeBytes": 37352,
+      "sha256": "b9180bdc035de4b3b6d4f8d1aebfb08be3c05fb73cb4d767e3de27b0f8b3d9c2"
     },
     {
       "path": "R1_Parity_Difference_Ledger.md",
@@ -888,13 +898,13 @@
     },
     {
       "path": "Resume.md",
-      "sizeBytes": 35750,
-      "sha256": "66a91844df62ad33575e551254f92eb138acbe5a131d5eb6f9ee4254f80c8c2d"
+      "sizeBytes": 36293,
+      "sha256": "41261a7b12f804d4cf9e64790f47f79b1ef7b88d0f343d73979287974f39242e"
     },
     {
       "path": "Run_Status.json",
-      "sizeBytes": 8322,
-      "sha256": "cc012cec60afdd1a205e255f8858dd6da2e259b50cbd0cd64ccbc8b72e7e7450"
+      "sizeBytes": 9490,
+      "sha256": "59763f51317e87fa8cfab25ec28bb6e9b0789fecf1a895dc420510651a37e6b9"
     },
     {
       "path": "Unfinished_Scenarios_20260911.json",
@@ -907,5 +917,5 @@
       "sha256": "bd8664ee8eaeda8e04f22f354ba993e7379a417fe05e4c95c12733a0b34bed64"
     }
   ],
-  "count": 181
+  "count": 183
 }

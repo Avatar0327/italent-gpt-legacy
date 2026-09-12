@@ -308,7 +308,7 @@
       "R1-ORIGIN-20260910-100019/20260912_Role_Account_Receipt.json"
     ],
     "phaseApproved": false,
-    "continuationInProgress": true,
+    "continuationInProgress": false,
     "roleEmployeeReadbacks": 4,
     "roleUuidReadbackPending": 0,
     "created": 24,
@@ -317,5 +317,27 @@
     "importedRows": 0,
     "importNotificationGate": "no_invite_or_notify_control_visible",
     "roleMatrix": "R1_Minimum_Role_Permission_Matrix_20260912.json"
+  },
+  "secureLoginHandoff": {
+    "runId": "R1-ORIGIN-20260910-100019",
+    "recordedAt": "2026-09-12T08:42:24.111416+00:00",
+    "basisHead": "a5020f076af54c64c996665c859774c0548ddedd",
+    "targetRole": "EMPLOYEE",
+    "targetEmail": "redacted-2b7afcf083fe@example.invalid",
+    "logoutObserved": true,
+    "lastVerifiedPage": "official_sign_in_page",
+    "secureMethodRequest": "outer_tool_aborted_no_result",
+    "postRequestObservation": "did_not_return_wait_terminated",
+    "authenticationOutcome": "unknown",
+    "credentialsReadOrRecorded": false,
+    "businessActionsAfterAuthenticationRequest": 0,
+    "otherTabsManipulated": false,
+    "browserControlCallsStopped": true,
+    "waitingScriptTerminated": true,
+    "backendBrowserReleaseConfirmed": false,
+    "releaseStatus": "not_confirmed_after_interrupted_auth",
+    "instructions": "不要重放登录或业务动作，不从旧DOM推断身份；恢复安全登录交接后先核本RUN角色及账号绑定。",
+    "nextMinimalUserAction": "安全登录交接恢复后完成普通员工账号登录；不在聊天发送密码验证码。",
+    "phaseApproved": false
   }
 }

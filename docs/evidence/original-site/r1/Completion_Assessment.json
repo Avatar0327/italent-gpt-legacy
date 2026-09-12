@@ -166,7 +166,7 @@
     }
   ],
   "browser": {
-    "lastActionAt": "2026-09-12T11:59:49.627104+00:00",
+    "lastActionAt": "2026-09-12T12:01:34.872077+00:00",
     "released": true,
     "unknownBusinessActions": [],
     "openBusinessDrafts": [],
@@ -190,7 +190,9 @@
       "pauseConfirmed": true,
       "pausedAt": "2026-09-12T00:36:56.371703+00:00"
     },
-    "handoff": "owner_hr_out_manual_login"
+    "handoff": "owner_hr_out_manual_login",
+    "releaseStatus": "READONLY_BATCH_COMPLETE_RELEASED_TO_OWNER",
+    "backgroundActionsScope": "本窗口不再调度，后端状态未确认"
   },
   "counts": {
     "created": 24,
@@ -213,7 +215,7 @@
   "ownerDecisions": "Owner_Decisions_20260911_002_003.json",
   "limitedAuthorizationSupersedesOldRestrictions": true,
   "lastCommittedHeadBeforePackage": "8e18c60f0070bc010766df1adce5ee996450c928",
-  "remainingAutonomousStatus": "已推进到独立角色安全登录交接；仍有自主场景未完，不称全部完成。",
+  "remainingAutonomousStatus": "按本批次仅做角色只读；普通员工完成，待调出方单账号交接。",
   "latestOfflineIncrement": "四账号四项基础前置按所有者确认登记完成；实际权限未知。",
   "scheduledSep12Attempt": {
     "actualAuditTimes": null,
@@ -280,7 +282,7 @@
       "R1-ORIGIN-20260910-100019/20260912_Role_Account_Receipt.json"
     ],
     "phaseApproved": false,
-    "continuationInProgress": true,
+    "continuationInProgress": false,
     "roleEmployeeReadbacks": 4,
     "roleUuidReadbackPending": 0,
     "created": 24,
@@ -289,6 +291,28 @@
     "importedRows": 0,
     "importNotificationGate": "no_invite_or_notify_control_visible",
     "roleMatrix": "R1_Minimum_Role_Permission_Matrix_20260912.json"
+  },
+  "secureLoginHandoff": {
+    "runId": "R1-ORIGIN-20260910-100019",
+    "recordedAt": "2026-09-12T08:42:24.111416+00:00",
+    "basisHead": "a5020f076af54c64c996665c859774c0548ddedd",
+    "targetRole": "EMPLOYEE",
+    "targetEmail": "redacted-2b7afcf083fe@example.invalid",
+    "logoutObserved": true,
+    "lastVerifiedPage": "official_sign_in_page",
+    "secureMethodRequest": "outer_tool_aborted_no_result",
+    "postRequestObservation": "did_not_return_wait_terminated",
+    "authenticationOutcome": "unknown",
+    "credentialsReadOrRecorded": false,
+    "businessActionsAfterAuthenticationRequest": 0,
+    "otherTabsManipulated": false,
+    "browserControlCallsStopped": true,
+    "waitingScriptTerminated": true,
+    "backendBrowserReleaseConfirmed": false,
+    "releaseStatus": "not_confirmed_after_interrupted_auth",
+    "instructions": "不要重放登录或业务动作，不从旧DOM推断身份；恢复安全登录交接后先核本RUN角色及账号绑定。",
+    "nextMinimalUserAction": "安全登录交接恢复后完成普通员工账号登录；不在聊天发送密码验证码。",
+    "phaseApproved": false
   },
   "roleReadOnlyBatch": {
     "at": "2026-09-12T11:59:49.627104+00:00",
@@ -308,5 +332,6 @@
     "dateRechecksRepeated": false,
     "fullModules": 0,
     "e2e": 0
-  }
+  },
+  "secureLoginHandoffHistorical": true
 }
