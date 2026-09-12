@@ -1,7 +1,7 @@
 {
   "runId": "R2-ORIGIN-20260910-103952",
   "status": "ENV_BLOCKED_CONTROL_TIMEOUT",
-  "evidence": "captures/M26-suite-checkpoint-20260912.json",
+  "evidence": "captures/M26-source-retry-20260912.json",
   "newUnknownWritesInRecovery": 0,
   "historicalUnknownSaveResults": 0,
   "historicalUnknownSaveResultScope": "清单未列出未确认的保存请求；confirmed_created不降级为unknown。不代表现时页面复核完成。",
@@ -133,7 +133,7 @@
   "welcomeTextPersisted": true,
   "notificationScope": "本轮恢复0保存/0发送；历史计数沿可见关闭选项与执行记录保留，未查外部投递日志，不能声明服务端投递对账完成。",
   "roleAssessment": "尚未完成全部单账号任务；不把缺少尝试的角色一律判ROLE_BLOCKED。页面恢复后先跑单账号内容，再一次性提交经验证的最小独立评价人/审批者需求。",
-  "lastRecoveryCheckAt": "2026-09-12T14:03:52.958Z",
+  "lastRecoveryCheckAt": "2026-09-12T14:09:05.934Z",
   "recoveryProbes": {
     "M17": "initial two pools read back; RUN-filter result unconfirmed",
     "M06": "new full-name query unique match1 enabled"
@@ -143,6 +143,7 @@
     "dialog": "从企业胜任力库选择指标",
     "questionsImported": 0,
     "saveCommandsAfterSuiteCreation": 0,
-    "actionOutcome": "dialog appeared after click timeout; no import confirmation"
+    "actionOutcome": "dialog appeared again after click timeout; no search/import confirmation",
+    "nextAction": "保留tab6当前“从企业胜任力库选择指标”弹窗，在“请输入关键词”中输入ZZ_R2_R2-ORIGIN-20260910-103952_M37_IND01并点击“搜索”，完成后回复“已搜索”；不勾选指标、不点确定。"
   }
 }

@@ -1,9 +1,9 @@
 {
   "runId": "R2-ORIGIN-20260910-103952",
   "baseHead": "415ee89236eb0ebfabc46ed0c6d1ade8651b466a",
-  "checkpointAt": "2026-09-12T14:03:52.958Z",
+  "checkpointAt": "2026-09-12T14:09:05.934Z",
   "environmentBlockerResolved": false,
-  "evidence": "captures/M26-suite-checkpoint-20260912.json",
+  "evidence": "captures/M26-source-retry-20260912.json",
   "modules": [
     {
       "id": "M26",
@@ -145,13 +145,13 @@
   "r2P3Started": false,
   "productTests": 0,
   "p4Uat": 0,
-  "minimalManualAction": "在已交接的套卷配置页，点击“从企业胜任力库选择指标”弹窗的“取消”，然后回复“已取消，可继续”；不要选题、保存或启用。",
+  "minimalManualAction": "保留tab6当前“从企业胜任力库选择指标”弹窗，在“请输入关键词”中输入ZZ_R2_R2-ORIGIN-20260910-103952_M37_IND01并点击“搜索”，完成后回复“已搜索”；不勾选指标、不点确定。",
   "latestControlRecoveryAttempt": {
-    "evidence": "captures/M26-suite-checkpoint-20260912.json",
-    "recordedAt": "2026-09-12T14:03:52.958Z",
+    "evidence": "captures/M26-source-retry-20260912.json",
+    "recordedAt": "2026-09-12T14:09:05.934Z",
     "confirmedRecovered": false,
-    "scope": "input dispatch timed out; read-only evidence capture responded",
-    "pagesReopened": 1
+    "scope": "input timeout; dialog rendered; no further business actions",
+    "pagesReopened": 0
   },
   "environmentStatus": "CONTROL_TIMEOUT_AFTER_BUSINESS_RECOVERY",
   "recoveryTransitions": [

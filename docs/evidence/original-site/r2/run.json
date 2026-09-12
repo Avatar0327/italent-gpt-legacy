@@ -7,8 +7,8 @@
   "designContentHead": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
   "designPackageHead": "a7a23d6bff024f4660fd14b0c22f47a6d40d928f",
   "reviewHead": "077e0dc7f37529b9585f030fb1c8460f4c884cd1",
-  "checkpointAt": "2026-09-12T14:03:52.958Z",
-  "status": "ENV_BLOCKED_CONTROL_TIMEOUT_AFTER_M26_SUITE_CREATED",
+  "checkpointAt": "2026-09-12T14:09:05.934Z",
+  "status": "ENV_BLOCKED_CONTROL_TIMEOUT_AFTER_USER_CANCEL_RESUME",
   "fullModulesComplete": 0,
   "modulesObserved": 6,
   "confirmedCreated": 18,
@@ -22,20 +22,20 @@
   "currentExecutionBlocker": "R2-ENV-CONT-001",
   "executionIncidents": 1,
   "recoveryBaseHead": "415ee89236eb0ebfabc46ed0c6d1ade8651b466a",
-  "recoveryEvidence": "captures/M26-suite-checkpoint-20260912.json",
+  "recoveryEvidence": "captures/M26-source-retry-20260912.json",
   "recoveryReport": "R2_Recovery_Checkpoint_Report.md",
   "soleExecutor": "R2｜原站验证恢复",
   "currentOwnedTab": "6",
   "originComplete": false,
   "r2P3Started": false,
   "latestControlRecoveryAttempt": {
-    "evidence": "captures/M26-suite-checkpoint-20260912.json",
-    "recordedAt": "2026-09-12T14:03:52.958Z",
+    "evidence": "captures/M26-source-retry-20260912.json",
+    "recordedAt": "2026-09-12T14:09:05.934Z",
     "confirmedRecovered": false,
-    "scope": "input dispatch timed out; read-only evidence capture responded",
-    "pagesReopened": 1
+    "scope": "input timeout; dialog rendered; no further business actions",
+    "pagesReopened": 0
   },
-  "recoverySummary": "本轮管理员身份与M06新查询确认恢复，M37库可用性和M03免职汇总/历史两项待确认状态已闭合。M26双重查重均0匹配后创建唯一草稿活动，稳定ID和原RUN欢迎语已回读；专属关键行为套卷已创建、全租户共享已清除、未启用且0题。随后点击企业指标来源时控制通道报Input.dispatchMouseEvent timed out；14:03:52.958Z采证时弹窗已开始呈现，截图已显示内容。该失败不等于源业务请求失败或未发生点击；按所有者指令停止，不重复操作。",
+  "recoverySummary": "用户取消弹窗并授权继续后，已重新读取Q01仍0题。重新打开企业指标来源再次出现Input.dispatchMouseEvent timed out；14:09:05.934Z采证及截图显示弹窗已打开且有内容。按所有者控制超时即停止要求暂停，未执行指标搜索/导入或任何保存。此次无新数据、通知、业务观察或差异，累计18对象、21观察、8差异保持。不能将该控制报错当作原站来源不存在或点击未执行。",
   "environmentBlockerResolved": false,
   "recoveryTransitions": [
     {

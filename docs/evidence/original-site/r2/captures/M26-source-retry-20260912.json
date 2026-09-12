@@ -1,0 +1,61 @@
+{
+  "runId": "R2-ORIGIN-20260910-103952",
+  "baseHead": "264170404211b0bd9040f936fb388655d1c09721",
+  "recordedAt": "2026-09-12T14:09:05.934Z",
+  "activityId": "67040ea1-d6a8-41d1-bf14-74b9946bbd0e",
+  "questionnaireId": "bcebbad5-9298-4b96-bb82-2c79e84b5f10",
+  "ownedTab": "6",
+  "resumedAfterUserCancelled": true,
+  "entryState": "no selection dialog; existing suite zero questions",
+  "action": "新增指标 -> 从企业胜任力库选择",
+  "toolError": "Input.dispatchMouseEvent timed out",
+  "exactErrorTime": null,
+  "actualOutcome": "selector dialog opened and screenshot shows content; no indicator search or selection executed",
+  "readback": {
+    "at": "2026-09-12T14:09:05.934Z",
+    "title": "套卷配置",
+    "path": "/Questionnaire/DesignQuestionnaire2",
+    "dom": "- link \"关闭\":\n  - /url: javascript:void(0);\n  - generic: 关闭\n- link \"预览\":\n  - /url: javascript:void(0);\n  - generic: 预览\n- link \"启用\":\n  - /url: javascript:void(0);\n  - generic: 启用\n- link \"保存\":\n  - /url: javascript:void(0);\n  - generic: 保存\n- generic: ZZ_R2_R2-ORIGIN-20260910-103952_M26_Q01\n- link \"编辑\":\n  - /url: javascript:void(0);\n  - generic: 编辑\n- generic: 评估指导语： 仅用于R2合成夹具；RUN_ID：R2-ORIGIN-20260910-103952。请按测试用例指定分值作答。\n- generic: 说明：共0个题目，其中包含0个文本题\n- generic: 高级设置\n- generic: 分指标评价\n- generic: 新增指标\n- generic: 设置题目选项\n- link \"设置角色及权重\":\n  - /url: javascript:void(0);\n  - generic: 设置角色及权重\n- generic: 导入套卷内容\n- table:\n  - rowgroup:\n    - row \"题目名称 选项 操作\":\n      - columnheader \"题目名称\"\n      - columnheader \"选项\"\n      - columnheader \"操作\"\n    - row \"非常不符合 不符合 中等符合 符合 非常符合 无法评价\":\n      - cell \"非常不符合\":\n        - generic: 非常不符合\n      - cell \"不符合\":\n        - generic: 不符合\n      - cell \"中等符合\":\n        - generic: 中等符合\n      - cell \"符合\":\n        - generic: 符合\n      - cell \"非常符合\":\n        - generic: 非常符合\n      - cell \"无法评价\":\n        - generic: 无法评价\n- generic: 总体评价\n- link \"新增文本题\":\n  - /url: javascript:void(0);\n  - generic: 新增文本题\n- link \"设置评价角色\":\n  - /url: javascript:void(0);\n  - generic: 设置评价角色\n- table:\n  - rowgroup:\n    - row \"文本题名称 角色 操作\":\n      - columnheader \"文本题名称\"\n      - columnheader \"角色\"\n      - columnheader \"操作\"\n  - rowgroup\n- generic: 从企业胜任力库选择指标\n- link [active]:\n  - /url: \"#\"\n- iframe",
+    "errors": [
+      {
+        "level": "error",
+        "message": "Error sending browser metadata to extension: Object",
+        "timestamp": "2026-09-12T14:07:47.068Z",
+        "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+      },
+      {
+        "level": "error",
+        "message": "Error sending browser metadata to extension: Object",
+        "timestamp": "2026-09-12T14:07:47.068Z",
+        "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+      },
+      {
+        "level": "error",
+        "message": "Error sending browser metadata to extension: Object",
+        "timestamp": "2026-09-12T14:08:47.440Z",
+        "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+      },
+      {
+        "level": "error",
+        "message": "Error sending browser metadata to extension: Object",
+        "timestamp": "2026-09-12T14:08:47.726Z",
+        "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+      },
+      {
+        "level": "error",
+        "message": "Error sending browser metadata to extension: Object",
+        "timestamp": "2026-09-12T14:08:47.765Z",
+        "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+      }
+    ]
+  },
+  "screenshot": "captures/r2-m26-source-retry-20260912.jpg",
+  "newObjects": 0,
+  "newSaveCommands": 0,
+  "newNotifications": 0,
+  "controlledRetriesAfterFailure": 0,
+  "environmentStatus": "CONTROL_TIMEOUT_DIALOG_RENDERED_STOPPED_PER_OWNER",
+  "manualNextAction": "In the existing dialog search the complete R2 M37_IND01 name, do not select or confirm import.",
+  "nextQuery": "ZZ_R2_R2-ORIGIN-20260910-103952_M37_IND01",
+  "notSourceBusinessFailureConclusion": true
+}
