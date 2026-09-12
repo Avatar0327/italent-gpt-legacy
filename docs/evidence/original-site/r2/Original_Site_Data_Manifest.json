@@ -321,14 +321,14 @@
     }
   ],
   "continuation": {
-    "baseHead": "3fa2f42960aedf046ab08987d2a31edf8b77c143",
-    "checkedAt": "2026-09-10T15:48:59.472Z",
+    "baseHead": "415ee89236eb0ebfabc46ed0c6d1ade8651b466a",
+    "checkedAt": "2026-09-12T12:54:13.224Z",
     "newObjects": 0,
     "currentBlocker": "R2-ENV-CONT-001",
-    "ownedTab": "21",
-    "evidence": "captures/Recovery-window-20260910.json",
+    "ownedTab": "5",
+    "evidence": "captures/Recovery-window-20260912.json",
     "readbackQueue": "Recovery_Readback_Queue.json",
-    "latestControlRecoveryEvidence": "captures/Cloud-browser-reset-attempt-20260910.json"
+    "latestControlRecoveryEvidence": "captures/Recovery-window-20260912.json"
   },
   "continuationHistory": [
     {
@@ -336,6 +336,16 @@
       "checkedAt": "2026-09-10T15:25:01.653347+00:00",
       "newObjects": 0,
       "currentBlocker": "R2-ENV-CONT-001"
+    },
+    {
+      "baseHead": "3fa2f42960aedf046ab08987d2a31edf8b77c143",
+      "checkedAt": "2026-09-10T15:48:59.472Z",
+      "newObjects": 0,
+      "currentBlocker": "R2-ENV-CONT-001",
+      "ownedTab": "21",
+      "evidence": "captures/Recovery-window-20260910.json",
+      "readbackQueue": "Recovery_Readback_Queue.json",
+      "latestControlRecoveryEvidence": "captures/Cloud-browser-reset-attempt-20260910.json"
     }
   ]
 }

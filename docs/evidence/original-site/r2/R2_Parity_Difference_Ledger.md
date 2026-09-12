@@ -13,4 +13,4 @@
 |R2-DIFF-M17-001|M17|INTENTIONAL_DIFFERENCE|Observation|源池成员接受本人为指导人且人工入出池直接生效；P2已明确保留源自指导历史事实，不采用自核语义，并规定独立入出池审核。|保持获批P2；P3/P4验证poolRole/idpRole分离和独立核验；不把池登记结果冒充IDP核验结果。|
 |R2-DIFF-M03-001|M03|INTENTIONAL_DIFFERENCE|Observation|原站可从新增干部快捷登记初始任期，无任用岗位亦保存；已通过P2把legacy registered与正式任命、M01生效凭证分列。|保留源登记事实，不削弱D1–D7或补造任命批准/人事生效；当天免职已补局部证据；完整前后任链待执行。|
 
-本恢复窗口新增业务差异0；R2-ENV-CONT-001仍为独立执行环境事件，见`captures/Recovery-window-20260910.json`，不重复计入上表。
+本恢复窗口新增业务差异0；R2-ENV-CONT-001仍为独立执行环境事件，见`captures/Recovery-window-20260912.json`，不重复计入上表。

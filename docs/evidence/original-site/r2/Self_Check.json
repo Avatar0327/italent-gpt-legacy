@@ -1,6 +1,6 @@
 {
   "kind": "evidence_structure_review_not_product_test",
-  "checkedAt": "2026-09-10T16:09:19.685461+00:00",
+  "checkedAt": "2026-09-12T12:54:13.224Z",
   "requiredFiles": [
     "Browser_Concurrency_Check.md",
     "Original_Site_Data_Manifest.json",
@@ -18,7 +18,9 @@
     "Scenario_Disposition_Summary.json",
     "captures/Recovery-window-20260910.json",
     "captures/r2-recovery-final-blocked-20260910.jpg",
-    "captures/Cloud-browser-reset-attempt-20260910.json"
+    "captures/Cloud-browser-reset-attempt-20260910.json",
+    "captures/Recovery-window-20260912.json",
+    "captures/r2-recovery-20260912-m06.jpg"
   ],
   "requiredFilesPresent": true,
   "jsonParse": true,
@@ -65,8 +67,8 @@
   "CP001SupplementPresent": true,
   "dualDedupCompleted": false,
   "upstreamConfigured": "r2-evidence-origin/evidence/r2-origin-parity-20260910",
-  "jsonFilesParsed": 37,
-  "recoveryBaseHead": "3fa2f42960aedf046ab08987d2a31edf8b77c143",
+  "jsonFilesParsed": 39,
+  "recoveryBaseHead": "415ee89236eb0ebfabc46ed0c6d1ade8651b466a",
   "createdRecordsUnchangedAgainstBase": true,
   "approvedScenarioAssertionsUnchanged": true,
   "scenariosAssignedForRecovery": 138,
@@ -81,7 +83,7 @@
   "environmentBlockerResolved": false,
   "boundedRecoveryPathsChecked": 2,
   "eachPathControlledRetriesAtMostOne": true,
-  "onlyRecoveryTabOperated": "21",
+  "onlyRecoveryTabOperated": "5",
   "CP001OwnerReapprovalRequired": false,
   "CP001AdditionalBusinessEvidence": false,
   "productTestsExecuted": 0,
@@ -89,7 +91,24 @@
   "completeOriginExit": false,
   "oneTimeP2EvidenceIncrementReady": false,
   "notAProductTestOrBusinessAcceptance": true,
-  "latestControlRecoveryAttemptEvidence": "captures/Cloud-browser-reset-attempt-20260910.json",
+  "latestControlRecoveryAttemptEvidence": "captures/Recovery-window-20260912.json",
   "browserResetConfirmed": false,
-  "pagesReopenedAfterOwnerResetRequest": 0
+  "pagesReopenedAfterOwnerResetRequest": 1,
+  "currentBatch": {
+    "kind": "evidence_structure_only",
+    "createdRecordsUnchanged": true,
+    "approvedScenarioAssertionsUnchanged": true,
+    "businessObservationsUnchanged": true,
+    "businessDifferencesUnchanged": true,
+    "newSaveCommands": 0,
+    "newObjects": 0,
+    "newNotifications": 0,
+    "M17InitialListRecovered": true,
+    "M17FilteredQueryResult": "UNCONFIRMED",
+    "M06BusinessQuery": "NOT_EXECUTABLE_BODY_EMPTY",
+    "M06ControlledReloads": 1,
+    "controlChannelResponded": true,
+    "environmentStable": false,
+    "latestEvidence": "captures/Recovery-window-20260912.json"
+  }
 }

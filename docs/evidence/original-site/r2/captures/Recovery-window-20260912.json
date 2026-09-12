@@ -1,0 +1,154 @@
+{
+  "id": "R2-ENV-CONT-001",
+  "runId": "R2-ORIGIN-20260910-103952",
+  "baseHead": "415ee89236eb0ebfabc46ed0c6d1ade8651b466a",
+  "capturedAt": "2026-09-12T12:54:13.224Z",
+  "status": "ENV_BLOCKED_AFTER_PARTIAL_RECOVERY",
+  "tenantOrigin": "https://srworkshopbj.italent.cn",
+  "identity": {
+    "name": "何份晓",
+    "confirmed": true,
+    "source": "fresh visible DOM on tabs 4 and 5"
+  },
+  "ownership": {
+    "exclusiveByUser": true,
+    "ownedTab": "5",
+    "otherTabBusinessActions": 0
+  },
+  "drafts": {
+    "entryPage": "首页",
+    "jsDialog": null,
+    "visibleUnsavedForm": false
+  },
+  "transitions": [
+    {
+      "at": "2026-09-12T12:52:04.607Z",
+      "status": "RESOLVED_ON_M17_INITIAL_LIST",
+      "basis": "title,path,main matched; two existing R2 pools displayed"
+    },
+    {
+      "at": "2026-09-12T12:54:13.224Z",
+      "status": "REOPENED_M06_BODY_EMPTY_AFTER_ONE_RELOAD"
+    }
+  ],
+  "m17": {
+    "entryAt": "2026-09-12T12:51:46.408Z",
+    "url": "https://srworkshopbj.italent.cn/portal/convoy/SuccessionAndDevelopment",
+    "title": "人才池",
+    "initialReadbackAt": "2026-09-12T12:52:04.607Z",
+    "existingPools": [
+      {
+        "name": "ZZ_R2_R2-ORIGIN-20260910-103952_M17_POOL_TAB4_01",
+        "members": 0
+      },
+      {
+        "name": "ZZ_R2_R2-ORIGIN-20260910-103952_M17_POOL01",
+        "members": 0
+      }
+    ],
+    "queryAt": "2026-09-12T12:52:49.628Z",
+    "query": "R2-ORIGIN-20260910-103952",
+    "queryResult": {
+      "at": "2026-09-12T12:53:02.422Z",
+      "title": "人才池",
+      "path": "/portal/convoy/SuccessionAndDevelopment",
+      "main": "启用的人才池\n启用的人才池\n停用的人才池\n名称\n：\nR2-ORIGIN-20260910-103952\n所属组织\n所属分类\n\n高级筛选\n\n清空已选\n新增\n高级筛选"
+    },
+    "queryResultStatus": "UNCONFIRMED_NO_ROWS_RENDERED_NOT_A_PROVEN_ZERO_MATCH",
+    "controlledReloads": 0
+  },
+  "m06": {
+    "entryAt": "2026-09-12T12:53:22.109Z",
+    "url": "https://srworkshopbj.italent.cn/portal/convoy/",
+    "title": "任职类别",
+    "reloadAt": "2026-09-12T12:53:47.912Z",
+    "controlledReloads": 1,
+    "readbackAt": "2026-09-12T12:54:13.224Z",
+    "dom": "- img \"logo\"\n- text: 任职资格\n- textbox:\n  - /placeholder: \" \"\n- generic: 搜索菜单/同事\n- superscript: \"8\"\n- superscript: 99+\n- generic: 份晓\n- generic: 何份晓\n- img \"logo\"\n- text: 任职资格\n- textbox \"搜索菜单\"\n- generic: 员工自助\n- generic: 管理者工作台\n- generic: 文化激励\n- generic: 我的团队\n- generic: 团队假勤\n- generic: 团队盘点\n- generic: 我的审批\n- generic: OKR\n- generic: 日程\n- generic: 日报\n- generic: 我的目标\n- generic: 绩效\n- generic: 我的融入计划\n- generic: 我的假勤\n- generic: 自助服务\n- generic: 我的学习\n- generic: 我的教务\n- generic: 我的发展计划\n- generic: 通讯录\n- generic: 任务\n- generic: 组织员工\n- generic: 组织管理\n- generic: 职务体系\n- generic: 编制管理\n- generic: 人员信息\n- generic: 人员子集\n- generic: 任职管理\n- generic: 合同协议\n- generic: 职责转交\n- generic: 黑名单管理\n- generic: 数据分析\n- generic: 设置\n- generic: 全部人员\n- generic: 人才评定\n- generic: 评定过程\n- generic: 评定记录\n- generic: 活动设置\n- generic: 基础设置\n- generic: 统计分析\n- generic: 干部管理2.0\n- generic: 选拔任用\n- generic: 干部档案\n- generic: 考察期管理\n- generic: 干部述职\n- generic: 统计分析\n- generic: 设置\n- generic: HRBP工作台\n- generic: 首页\n- generic: 员工\n- generic: 录用入职\n- generic: 任职管理\n- generic: 合同协议\n- generic: 应聘者\n- generic: 考勤管理\n- generic: 员工绩效活动\n- generic: 目标管理\n- generic: OKR管理\n- generic: 数据分析\n- generic: 标签库\n- generic: 企业标签库\n- generic: 北森标签库\n- generic: 标签应用设置\n- generic: 任职资格\n- generic: 任职类别\n- generic: 任职级别\n- generic: 指标\n- generic: 任职资格标准\n- generic: 设置\n- generic: 薪酬社保\n- generic: 薪资档案\n- generic: 薪酬核算\n- generic: 核算相关数据\n- generic: 社保管理\n- generic: 薪酬支付\n- generic: 个税通\n- generic: 薪酬激励\n- generic: 数据分析\n- generic: 设置\n- generic: 我的填报\n- generic: 我发起的填报\n- generic: 预算成本\n- generic: 预算管理\n- generic: 成本管理\n- generic: 统计分析\n- generic: 设置\n- generic: 财务凭证\n- generic: 任务管理\n- generic: 设置\n- generic: 假勤管理\n- generic: 考勤文员工作台\n- generic: 考勤综合查询\n- generic: 考勤档案\n- generic: 排班管理\n- generic: 考勤管理\n- generic: 考勤申请\n- generic: 假期管理\n- generic: 数据分析\n- generic: 打卡数据\n- generic: 设置\n- generic: AI排班方案\n- generic: 招聘管理系统\n- generic: 招聘需求\n- generic: 招聘管理系统\n- generic: 首页\n- generic: 仪表盘\n- generic: 招聘需求\n- generic: 职位发布\n- generic: 应聘者\n- generic: AI推荐\n- generic: 面试管理\n- generic: 猎头推荐\n- generic: 人才库\n- generic: 数据分析\n- generic: 设置\n- generic: 面试官工作台\n- generic: 首页\n- generic: 筛选简历\n- generic: 我的面试\n- generic: Offer审批\n- generic: 招聘需求\n- generic: 我的面试题库\n- generic: AI人才库\n- generic: 人才地图\n- generic: 智能分类\n- generic: 多维分析\n- generic: 测评中心\n- generic: 首页\n- generic: 仪表盘\n- generic: 项目\n- generic: 人才\n- generic: 方案\n- generic: 活动\n- generic: 考试\n- generic: 设置\n- generic: 绩效管理\n- generic: 绩效工作台\n- generic: OKR管理\n- generic: 员工目标\n- generic: 员工绩效\n- generic: 组织目标\n- generic: 组织绩效\n- generic: 数据分析\n- generic: OKR设置\n- generic: 目标设置\n- generic: 绩效设置\n- generic: 公共设置\n- generic: 继任与发展\n- generic: 人才盘点\n- generic: 人才池管理\n- generic: 继任管理\n- generic: 人才发展计划\n- generic: 组织健康度分析\n- generic: 带教信息\n- generic: 人才数据洞察\n- generic: 人才搜索\n- generic: 设置\n- generic: 在线盘点\n- generic: 人才标准\n- generic: 盘点项目\n- generic: 盘点校准会\n- generic: 人才池\n- generic: 继任管理\n- generic: 人才搜索\n- generic: 组织人才分析\n- generic: 设置\n- generic: 审批中心\n- generic: 流程管理\n- generic: 管理员委托\n- generic: 项目人力管理\n- generic: 项目\n- generic: 项目人员\n- generic: 工时管理\n- generic: 统计\n- generic: 设置\n- generic: 文化激励\n- generic: 文化激励\n- generic: 首页配置\n- generic: 企业活动\n- generic: 员工圈设置\n- generic: 企业文化史\n- generic: 企业榜样墙\n- generic: 商城管理\n- generic: 祝福管理\n- generic: 员工总结报告\n- generic: 企业勋章管理\n- generic: 企业标签管理\n- generic: 打赏管理\n- generic: 数据统计\n- generic: 动态管理\n- generic: 频道管理\n- generic: 内容管理\n- generic: 动态设置\n- generic: 电子签\n- generic: 企业认证\n- generic: 员工认证\n- generic: 我的签署\n- generic: 签署记录\n- generic: 印章管理\n- generic: 签署场景设置\n- generic: 设置\n- generic: 推荐运营中心\n- generic: 工作台\n- generic: 奖金管理\n- generic: 积分管理\n- generic: 推荐记录\n- generic: 设置\n- generic: 校园大使管理\n- generic: 校园大使工作台\n- generic: 人员管理\n- generic: 推荐管理\n- generic: 奖金管理\n- generic: 积分管理\n- generic: 奖励规则管理\n- generic: 设置\n- generic: 外部推荐管理\n- generic: 人员管理\n- generic: 推荐管理\n- generic: 奖金管理\n- generic: 积分管理\n- generic: 奖励规则\n- generic: 设置\n- generic: 360度评估\n- generic: 首页\n- generic: 评估活动\n- generic: 人员\n- generic: 题库\n- generic: 报表\n- generic: 设置\n- generic: 学习管理\n- generic: 工作台\n- generic: 资源管理\n- generic: 问卷管理\n- generic: 培训计划\n- generic: 培训实施\n- generic: 考试管理\n- generic: 师资管理\n- generic: 数据报表\n- generic: 运营中心\n- generic: 设置\n- generic: 模板管理\n- generic: AI陪练\n- generic: 陪练计划\n- generic: 剧本管理\n- generic: 话术库管理\n- generic: 质检管理\n- generic: 评分指标\n- generic: 评分模板\n- generic: 学员管理\n- generic: AI角色库\n- generic: 数据报表\n- generic: 设置\n- generic: 员工调查\n- generic: 问卷\n- generic: 数据分析\n- generic: 调查报告\n- generic: 行动计划\n- generic: 项目\n- generic: 设置\n- generic: 北森问卷\n- generic: 问卷管理\n- generic: 问卷调查\n- generic: 问卷\n- generic: 问卷模板\n- generic: 问卷分类\n- generic: 报表\n- generic: 招聘\n- generic: 组织员工\n- generic: 假勤管理\n- generic: 薪酬管理\n- generic: 绩效管理\n- generic: 继任与发展\n- generic: 个人发展计划\n- generic: 360度评估\n- generic: 员工调查\n- generic: 目标OKR报表设计\n- generic: 测评\n- generic: People Analytics\n- generic: 我的设置\n- generic: 森福利\n- generic: 账户中心\n- generic: 福利中心\n- generic: 财务中心\n- generic: 合规工作台\n- generic: 设置中心\n- generic: AI面试官\n- generic: AI面试管理\n- generic: 企业题库管理\n- generic: 答疑知识库\n- generic: 数据看板\n- generic: 设置\n- generic: 主数据同步\n- generic: 任务管理\n- generic: 配置管理\n- generic: 规则设置\n- generic: 映射关系\n- generic: 消息待办\n- generic: 开放应用连接\n- generic: 人员关系映射表\n- generic: 开放应用帐号\n- generic: 操作日志\n- generic: 开放应用链接\n- generic: 接口域名映射\n- generic: 接口管理\n- generic: 北森iTalent\n- generic: 人力报告设置\n- generic: 人才标准\n- generic: 人才标准\n- generic: 指标库\n- generic: 设置\n- generic: 人才模型\n- generic: 人才模型\n- generic: 角度码\n- generic: 会议管理\n- generic: 会议预定\n- generic: 我的会议\n- generic: 会议设置\n- generic: 违约用户\n- generic: 地区与会议室管理\n- generic: 操作日志\n- generic: 数据变更日志\n- generic: 签到日志\n- generic: 经理团队分析\n- generic: 团队人事看板\n- generic: 数字人才\n- generic: 人才搜索\n- generic: AI选人\n- generic: 人才对比\n- generic: 人才标签\n- generic: 企业标签库\n- generic: 设置\n- generic: 佣金管理\n- generic: 佣金设置\n- generic: 计算方案\n- generic: 佣金计算\n- generic: 佣金结果\n- generic: 提成提点规则设置\n- generic: 任务\n- generic: 任务信息\n- generic: 任务列表\n- generic: RPA招聘助手\n- generic: 个人RPA\n- generic: 企业RPA\n- generic: RPA招聘助手\n- generic: 历史记录\n- generic: 设置\n- generic: 干部管理\n- generic: 干部任前管理\n- generic: 干部任职管理\n- generic: 设置\n- generic: 职称管理\n- generic: 职称管理\n- generic: 翻译工作台\n- generic: 翻译\n- generic: 导出\n- generic: 导入\n- generic: 日志\n- list:\n  - generic: 任职类别\n  - list\n  - generic: 任职级别\n  - list\n  - generic: 指标\n  - list\n  - generic: 任职资格标准\n  - list\n  - generic: 设置\n  - list\n- main",
+    "queryStatus": "FRESH_MENU_NAVIGATION_AND_RELOAD_PERFORMED; BUSINESS_FILTER_QUERY_NOT_EXECUTABLE",
+    "screenshot": "captures/r2-recovery-20260912-m06.jpg"
+  },
+  "layers": {
+    "loginShell": "administrator name and menus rendered",
+    "staticResources": "logo/navigation/scripts rendering observed; individual HTTP status not available",
+    "businessInterface": "response status and endpoint not exposed by supported browser API",
+    "routing": "M17 formal pathname matched; M06 convoy shell matched but inner business route unconfirmed",
+    "main": "M17 initial list available; M06 empty after one reload",
+    "control": "browser calls responded; historical Transport closed not reproduced"
+  },
+  "errors": [
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-09-12T12:52:37.878Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-09-12T12:52:37.878Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-09-12T12:52:49.633Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-09-12T12:52:51.878Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-09-12T12:52:51.878Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-09-12T12:53:03.492Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-09-12T12:53:03.888Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-09-12T12:53:03.953Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-09-12T12:53:25.631Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-09-12T12:53:52.367Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    }
+  ],
+  "limits": [
+    "Current errors are extension metadata messages, not proof of source business request timeout.",
+    "No endpoint/HTTP status/network trace available; do not infer root cause.",
+    "Do not infer role failure, tenant outage, R1/R3 concurrency or product defect."
+  ],
+  "newObjects": 0,
+  "newSaveCommands": 0,
+  "newNotifications": 0,
+  "completedApprovedScenarios": 0,
+  "readbackQueueExecuted": false,
+  "anonymousExecuted": 0,
+  "r2P3Started": false,
+  "stopReason": "User requires stop after one reasonable reload with business body still empty"
+}

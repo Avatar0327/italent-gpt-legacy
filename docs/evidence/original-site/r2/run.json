@@ -7,8 +7,8 @@
   "designContentHead": "dc6dd896fbf388b70069ecb756547f85ee89d08a",
   "designPackageHead": "a7a23d6bff024f4660fd14b0c22f47a6d40d928f",
   "reviewHead": "077e0dc7f37529b9585f030fb1c8460f4c884cd1",
-  "checkpointAt": "2026-09-10T15:48:59.472Z",
-  "status": "ENV_BLOCKED_after_bounded_recovery_in_sole_owner_tab21",
+  "checkpointAt": "2026-09-12T12:54:13.224Z",
+  "status": "ENV_BLOCKED_after_M17_partial_recovery_M06_empty_after_one_reload",
   "fullModulesComplete": 0,
   "modulesObserved": 6,
   "confirmedCreated": 16,
@@ -21,17 +21,31 @@
   "continuationNewObjects": 0,
   "currentExecutionBlocker": "R2-ENV-CONT-001",
   "executionIncidents": 1,
-  "recoveryBaseHead": "3fa2f42960aedf046ab08987d2a31edf8b77c143",
-  "recoveryEvidence": "captures/Recovery-window-20260910.json",
+  "recoveryBaseHead": "415ee89236eb0ebfabc46ed0c6d1ade8651b466a",
+  "recoveryEvidence": "captures/Recovery-window-20260912.json",
   "recoveryReport": "R2_Recovery_Checkpoint_Report.md",
   "soleExecutor": "R2｜原站验证恢复",
-  "currentOwnedTab": "21",
+  "currentOwnedTab": "5",
   "originComplete": false,
   "r2P3Started": false,
   "latestControlRecoveryAttempt": {
-    "evidence": "captures/Cloud-browser-reset-attempt-20260910.json",
-    "recordedAt": "2026-09-10T16:09:19.685461+00:00",
-    "confirmedRecovered": false,
-    "pagesReopened": 0
-  }
+    "evidence": "captures/Recovery-window-20260912.json",
+    "recordedAt": "2026-09-12T12:54:13.224Z",
+    "confirmedRecovered": true,
+    "scope": "control channel only; business environment remains blocked",
+    "pagesReopened": 1
+  },
+  "recoverySummary": "2026-09-12确认管理员何份晓、租户srworkshopbj.italent.cn；新tab5经正式菜单进入M17，12:52:04.607Z初始列表显示本RUN两个既有人才池各0人，曾满足标题/路径/主体恢复条件。12:52:49.628Z执行RUN筛选后未显示记录，响应/零匹配未确认。M06于12:53:22.109Z从正式菜单新进入，12:53:47.912Z仅重载一次，12:54:13.224Z仍main为空，ENV重新阻塞。控制通道可用；当前仅捕获扩展metadata错误，未取得业务请求端点/HTTP状态或新的请求超时证据，根因仍unknown。",
+  "environmentBlockerResolved": false,
+  "recoveryTransitions": [
+    {
+      "at": "2026-09-12T12:52:04.607Z",
+      "status": "RESOLVED_ON_M17_INITIAL_LIST",
+      "basis": "title,path,main matched; two existing R2 pools displayed"
+    },
+    {
+      "at": "2026-09-12T12:54:13.224Z",
+      "status": "REOPENED_M06_BODY_EMPTY_AFTER_ONE_RELOAD"
+    }
+  ]
 }

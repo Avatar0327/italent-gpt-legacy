@@ -37,7 +37,7 @@ lines = ['# R2 原站行为对照', '', '原站本轮实测单列；P1/P2设计�
 for x in observations:
     lines.append('|' + '|'.join(cell(x.get(k, '')) for k in ['id', 'module', 'actual', 'p1', 'p2', 'implementation', 'classification']) + '|')
 if run.get('recoveryEvidence'):
-    lines.extend(['', '本恢复窗口没有新增业务观察；环境复查见`' + run['recoveryEvidence'] + '`。业务页未恢复，不增加完整模块或场景通过数。'])
+    lines.extend(['', run.get('recoverySummary', '本恢复窗口没有新增业务观察；环境复查见`' + run['recoveryEvidence'] + '`。业务页未恢复，不增加完整模块或场景通过数。')])
 (D / 'R2_Original_Behavior_Matrix.md').write_text('\n'.join(lines) + '\n')
 lines = ['# R2 差异台账', '', '只统计下列实际登记项；零缺陷发现不等全部相同。环境/角色阻塞与业务缺陷分别解释。', '', '|编号|模块|分类|级别|依据与影响|处置及责任|', '|---|---|---|---|---|---|']
 for x in differences:

@@ -1,9 +1,9 @@
 {
   "runId": "R2-ORIGIN-20260910-103952",
-  "baseHead": "3fa2f42960aedf046ab08987d2a31edf8b77c143",
-  "checkpointAt": "2026-09-10T15:48:59.472Z",
+  "baseHead": "415ee89236eb0ebfabc46ed0c6d1ade8651b466a",
+  "checkpointAt": "2026-09-12T12:54:13.224Z",
   "environmentBlockerResolved": false,
-  "evidence": "captures/Recovery-window-20260910.json",
+  "evidence": "captures/Recovery-window-20260912.json",
   "modules": [
     {
       "id": "M26",
@@ -43,7 +43,8 @@
       "status": "PARTIAL",
       "complete": false,
       "known": "两池；成员入池→培养中→出池历史",
-      "remaining": "重入新关系ID、关键岗位、准备度/独立审议、IDP/结果消费"
+      "remaining": "重入新关系ID、关键岗位、准备度/独立审议、IDP/结果消费",
+      "latestReadback": "2026-09-12 initial list: two existing pools each 0 members; filtered result unconfirmed"
     },
     {
       "id": "M03",
@@ -144,11 +145,24 @@
   "r2P3Started": false,
   "productTests": 0,
   "p4Uat": 0,
-  "minimalManualAction": "在本对话接管R2专属tab21，仅确认该人才池页面是否能显示业务列表；若仍空白，反馈仍为空白即可。无需重新授权、重复刷新、退出登录或操作测试数据。",
+  "minimalManualAction": "在本对话云浏览器的R2专属tab5查看“任职类别”当前页面，确认业务列表能否显示并反馈结果；无需重新登录或反复刷新。",
   "latestControlRecoveryAttempt": {
-    "evidence": "captures/Cloud-browser-reset-attempt-20260910.json",
-    "recordedAt": "2026-09-10T16:09:19.685461+00:00",
-    "confirmedRecovered": false,
-    "pagesReopened": 0
-  }
+    "evidence": "captures/Recovery-window-20260912.json",
+    "recordedAt": "2026-09-12T12:54:13.224Z",
+    "confirmedRecovered": true,
+    "scope": "control channel only; business environment remains blocked",
+    "pagesReopened": 1
+  },
+  "environmentStatus": "ENV_BLOCKED_AFTER_PARTIAL_RECOVERY",
+  "recoveryTransitions": [
+    {
+      "at": "2026-09-12T12:52:04.607Z",
+      "status": "RESOLVED_ON_M17_INITIAL_LIST",
+      "basis": "title,path,main matched; two existing R2 pools displayed"
+    },
+    {
+      "at": "2026-09-12T12:54:13.224Z",
+      "status": "REOPENED_M06_BODY_EMPTY_AFTER_ONE_RELOAD"
+    }
+  ]
 }
