@@ -819,5 +819,16 @@
     "sep12ReportCounts": null,
     "taskId": "6aa2cdf499888191b40f86510034e1ff",
     "unknownBusinessActions": []
+  },
+  "manualSep12Update": {
+    "at": "2026-09-12T08:42:51.973177+00:00",
+    "role01": "four_accounts_exist_uuid_verified_owner_confirms_invited_active_login_permissions_unverified",
+    "actualPartTimeEnds": 2,
+    "intentionalDifferencesRetained": 2,
+    "d1d7Changed": false,
+    "newProductDefects": 0,
+    "importSafety": "formal_import_no_visible_notification_control_no_upload",
+    "browserAuth": "interrupted_result_unknown",
+    "phaseApproved": false
   }
 }
