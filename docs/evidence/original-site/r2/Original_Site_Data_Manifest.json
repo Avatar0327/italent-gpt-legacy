@@ -260,6 +260,28 @@
       "notificationsExecuted": 0,
       "inheritedSystemAdminCount": 43,
       "additionalAuthorizedUsers": 0
+    },
+    {
+      "module": "M26",
+      "type": "questionnaire",
+      "name": "ZZ_R2_R2-ORIGIN-20260910-103952_M26_Q01",
+      "businessId": "bcebbad5-9298-4b96-bb82-2c79e84b5f10",
+      "status": "confirmed_created",
+      "currentState": "未启用；0题",
+      "references": [
+        "67040ea1-d6a8-41d1-bf14-74b9946bbd0e"
+      ],
+      "operations": [
+        "create_after_empty_activity_suite_list",
+        "remove_tenant_root_share_before_save",
+        "unique_list_and_editor_readback"
+      ],
+      "sharingDepartments": [],
+      "sharingUsers": [],
+      "questionCount": 0,
+      "idEvidence": "套卷编辑页正式query参数questionnaireID与activityId",
+      "evidence": "captures/M26-suite-checkpoint-20260912.json",
+      "notificationsExecuted": 0
     }
   ],
   "pending": [],
@@ -352,12 +374,16 @@
   ],
   "continuation": {
     "baseHead": "7c6ce4585cf9fcdb9f2e011762266b126224f852",
-    "checkedAt": "2026-09-12T13:59:28.904Z",
-    "newObjects": 1,
-    "currentBlocker": null,
+    "checkedAt": "2026-09-12T14:03:52.958Z",
+    "newObjects": 2,
+    "currentBlocker": "R2-ENV-CONT-001",
     "ownedTab": "5",
-    "evidence": "captures/M26-created-20260912.json",
-    "readbackQueue": "Recovery_Readback_Queue.json"
+    "evidence": "captures/M26-suite-checkpoint-20260912.json",
+    "readbackQueue": "Recovery_Readback_Queue.json",
+    "ownedTabs": [
+      "5",
+      "6"
+    ]
   },
   "continuationHistory": [
     {

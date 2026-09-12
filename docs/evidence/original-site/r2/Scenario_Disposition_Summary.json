@@ -1,6 +1,6 @@
 {
   "runId": "R2-ORIGIN-20260910-103952",
-  "asOf": "2026-09-12T12:54:13.224Z",
+  "asOf": "2026-09-12T14:03:52.958Z",
   "source": "Planned_Comparison_Cases.json",
   "approvedScenarios": 138,
   "assignedForRecovery": 138,
@@ -26,5 +26,5 @@
   "p4Executed": 0,
   "dispositionGateSatisfied": false,
   "countingNote": "责任归属与完整处置分开计数；不通过批量转P3/P4绕开原站完整退出。既有19条观察与4项有意差异不等完整批准场景。",
-  "latestRecoveryEvidence": "captures/Recovery-window-20260912.json"
+  "latestRecoveryEvidence": "captures/M26-suite-checkpoint-20260912.json"
 }

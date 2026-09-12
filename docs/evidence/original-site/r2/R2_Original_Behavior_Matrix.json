@@ -254,8 +254,20 @@
       "evidence": [
         "captures/M26-created-20260912.json"
       ]
+    },
+    {
+      "id": "R2-OBS-M26-20260912-002",
+      "module": "M26",
+      "actual": "新ACT01空套卷列表中创建关键行为Q01，套卷名称保留连字符被接受；保存前移除自动带入的全租户共享部门，共享人为空。成功提示、唯一列表与编辑页ID回读，未启用且0题。新增指标菜单提供手动/企业胜任力库/北森胜任力库；企业来源点击控制超时但弹窗已出现，未查询或导入本RUN指标，不能证明M37来源链。",
+      "p1": "M26-SPEC-01/03 套卷目录、数据隔离与显式来源",
+      "p2": "批准问卷版本/范围契约待后续验证；不将空套卷当可答问卷",
+      "implementation": "未执行R2 P3或P4",
+      "classification": "MATCH",
+      "evidence": [
+        "captures/M26-suite-checkpoint-20260912.json"
+      ]
     }
   ],
   "notProductTests": true,
-  "recoveryEvidence": "captures/M26-created-20260912.json"
+  "recoveryEvidence": "captures/M26-suite-checkpoint-20260912.json"
 }

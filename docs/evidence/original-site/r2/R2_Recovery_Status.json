@@ -1,17 +1,17 @@
 {
   "runId": "R2-ORIGIN-20260910-103952",
   "baseHead": "415ee89236eb0ebfabc46ed0c6d1ade8651b466a",
-  "checkpointAt": "2026-09-12T13:59:28.904Z",
-  "environmentBlockerResolved": true,
-  "evidence": "captures/M26-created-20260912.json",
+  "checkpointAt": "2026-09-12T14:03:52.958Z",
+  "environmentBlockerResolved": false,
+  "evidence": "captures/M26-suite-checkpoint-20260912.json",
   "modules": [
     {
       "id": "M26",
-      "created": 1,
-      "status": "PARTIAL",
+      "created": 2,
+      "status": "PARTIAL_ENV_BLOCKED",
       "complete": false,
-      "known": "CP003双重查重后创建唯一草稿活动；ID和RUN欢迎语已回读",
-      "remaining": "套卷/对象/评价人、16匿名案例、报告/权限"
+      "known": "唯一草稿活动、完整RUN欢迎语、空套卷及两个稳定ID已回读",
+      "remaining": "题目/评分/对象/评价人、16匿名案例、报告/权限、M37来源"
     },
     {
       "id": "M37",
@@ -57,9 +57,9 @@
   ],
   "fullModulesComplete": 0,
   "fullModulesTotal": 6,
-  "confirmedCreated": 17,
-  "newObjects": 1,
-  "createdRecordsSha256": "501803144e902a4e0e8936db2d4f49e531e12019bdf7d7f9f771a4f0ce025f50",
+  "confirmedCreated": 18,
+  "newObjects": 2,
+  "createdRecordsSha256": "a5450ff8328b0e7a6a86ea49899bfe4f5ef7a2a131bca33356762a6c5be0000e",
   "anonymousExecuted": 0,
   "anonymousTotal": 16,
   "crossModuleChain": {
@@ -129,7 +129,7 @@
     ]
   },
   "newBusinessDifferences": 0,
-  "businessObservations": 20,
+  "businessObservations": 21,
   "businessDifferences": 8,
   "CP001AdditionalEvidence": false,
   "CP001Recipient": "R2 P2设计负责人",
@@ -145,15 +145,15 @@
   "r2P3Started": false,
   "productTests": 0,
   "p4Uat": 0,
-  "minimalManualAction": null,
+  "minimalManualAction": "在已交接的套卷配置页，点击“从企业胜任力库选择指标”弹窗的“取消”，然后回复“已取消，可继续”；不要选题、保存或启用。",
   "latestControlRecoveryAttempt": {
-    "evidence": "captures/Recovery-window-20260912.json",
-    "recordedAt": "2026-09-12T12:54:13.224Z",
-    "confirmedRecovered": true,
-    "scope": "control channel only; business environment remains blocked",
+    "evidence": "captures/M26-suite-checkpoint-20260912.json",
+    "recordedAt": "2026-09-12T14:03:52.958Z",
+    "confirmedRecovered": false,
+    "scope": "input dispatch timed out; read-only evidence capture responded",
     "pagesReopened": 1
   },
-  "environmentStatus": "RECOVERED_THIS_BATCH",
+  "environmentStatus": "CONTROL_TIMEOUT_AFTER_BUSINESS_RECOVERY",
   "recoveryTransitions": [
     {
       "at": "2026-09-12T12:52:04.607Z",
@@ -168,8 +168,14 @@
       "at": "2026-09-12T13:45:54.445Z",
       "status": "RESOLVED_M06_FRESH_UNIQUE_QUERY",
       "evidence": "captures/Readbacks-20260912-1345.json"
+    },
+    {
+      "at": "2026-09-12T14:03:52.958Z",
+      "status": "REOPENED_CONTROL_INPUT_TIMEOUT_DIALOG_RENDERED",
+      "evidence": "captures/M26-suite-checkpoint-20260912.json"
     }
   ],
   "pendingStateReadbacks": 0,
-  "stableBusinessIdsNotExposed": 14
+  "stableBusinessIdsNotExposed": 14,
+  "createdRecordsHashEncoding": "JSON ensure_ascii=False sort_keys=True UTF-8"
 }

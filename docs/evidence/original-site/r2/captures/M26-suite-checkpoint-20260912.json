@@ -1,0 +1,74 @@
+{
+  "runId": "R2-ORIGIN-20260910-103952",
+  "activityId": "67040ea1-d6a8-41d1-bf14-74b9946bbd0e",
+  "questionnaireId": "bcebbad5-9298-4b96-bb82-2c79e84b5f10",
+  "preSave": {
+    "at": "2026-09-12T14:02:09.322Z",
+    "values": [
+      "ZZ_R2_R2-ORIGIN-20260910-103952_M26_Q01",
+      "仅用于R2合成夹具；RUN_ID：R2-ORIGIN-20260910-103952。请按测试用例指定分值作答。",
+      ""
+    ],
+    "shareTags": [],
+    "templateReuse": false,
+    "activityId": "67040ea1-d6a8-41d1-bf14-74b9946bbd0e"
+  },
+  "saveAt": "2026-09-12T14:02:09.474Z",
+  "listReadback": {
+    "at": "2026-09-12T14:02:35.114Z",
+    "grid": "套卷名称\n套卷类别\n状态\n创建人\n共享部门\n共享人\n创建时间\n更新时间\n操作\nZZ_R2_R2-ORIGIN-20260910-103952_M26_Q01\n关键行为\n未启用\n份晓何份晓\n--\n--\n2026-09-12 22:02:12\n2026-09-12 22:02:12\n启用\n预览\n共1条"
+  },
+  "detail": {
+    "path": "/Questionnaire/DesignQuestionnaire2",
+    "name": "ZZ_R2_R2-ORIGIN-20260910-103952_M26_Q01",
+    "questions": 0,
+    "textQuestions": 0,
+    "enabled": false
+  },
+  "controlIncident": {
+    "atAfterFailure": "2026-09-12T14:03:52.958Z",
+    "exactFailureTimestamp": "Tool did not provide an exact failure timestamp; atAfterFailure is the subsequent evidence collection time.",
+    "action": "click 从企业胜任力库选择",
+    "error": "Input.dispatchMouseEvent timed out",
+    "outcome": "dialog rendered after timeout; no question selected or import confirmed",
+    "dom": "- link \"关闭\":\n  - /url: javascript:void(0);\n  - generic: 关闭\n- link \"预览\":\n  - /url: javascript:void(0);\n  - generic: 预览\n- link \"启用\":\n  - /url: javascript:void(0);\n  - generic: 启用\n- link \"保存\":\n  - /url: javascript:void(0);\n  - generic: 保存\n- generic: ZZ_R2_R2-ORIGIN-20260910-103952_M26_Q01\n- link \"编辑\":\n  - /url: javascript:void(0);\n  - generic: 编辑\n- generic: 评估指导语： 仅用于R2合成夹具；RUN_ID：R2-ORIGIN-20260910-103952。请按测试用例指定分值作答。\n- generic: 说明：共0个题目，其中包含0个文本题\n- generic: 高级设置\n- generic: 分指标评价\n- generic: 新增指标\n- generic: 设置题目选项\n- link \"设置角色及权重\":\n  - /url: javascript:void(0);\n  - generic: 设置角色及权重\n- generic: 导入套卷内容\n- table:\n  - rowgroup:\n    - row \"题目名称 选项 操作\":\n      - columnheader \"题目名称\"\n      - columnheader \"选项\"\n      - columnheader \"操作\"\n    - row \"非常不符合 不符合 中等符合 符合 非常符合 无法评价\":\n      - cell \"非常不符合\":\n        - generic: 非常不符合\n      - cell \"不符合\":\n        - generic: 不符合\n      - cell \"中等符合\":\n        - generic: 中等符合\n      - cell \"符合\":\n        - generic: 符合\n      - cell \"非常符合\":\n        - generic: 非常符合\n      - cell \"无法评价\":\n        - generic: 无法评价\n- generic: 总体评价\n- link \"新增文本题\":\n  - /url: javascript:void(0);\n  - generic: 新增文本题\n- link \"设置评价角色\":\n  - /url: javascript:void(0);\n  - generic: 设置评价角色\n- table:\n  - rowgroup:\n    - row \"文本题名称 角色 操作\":\n      - columnheader \"文本题名称\"\n      - columnheader \"角色\"\n      - columnheader \"操作\"\n  - rowgroup\n- generic: 从企业胜任力库选择指标\n- link [active]:\n  - /url: \"#\"\n- iframe",
+    "logs": [
+      {
+        "level": "error",
+        "message": "Error sending browser metadata to extension: Object",
+        "timestamp": "2026-09-12T14:03:11.756Z",
+        "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+      },
+      {
+        "level": "error",
+        "message": "Error sending browser metadata to extension: Object",
+        "timestamp": "2026-09-12T14:03:32.062Z",
+        "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+      },
+      {
+        "level": "error",
+        "message": "Error sending browser metadata to extension: Object",
+        "timestamp": "2026-09-12T14:03:37.345Z",
+        "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+      },
+      {
+        "level": "error",
+        "message": "Error sending browser metadata to extension: Object",
+        "timestamp": "2026-09-12T14:03:37.360Z",
+        "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+      }
+    ],
+    "screenshot": "captures/r2-m26-suite-control-timeout-20260912.jpg",
+    "screenshotShowsDialogContent": true,
+    "controlledRetries": 0,
+    "stopRequiredByOwner": true
+  },
+  "writes": {
+    "suiteCreateConfirmed": 1,
+    "questionSaves": 0,
+    "invites": 0,
+    "notifications": 0
+  },
+  "anonymousExecuted": 0,
+  "sourceLinkStatus": "M37_NOT_CONFIRMED; enterprise-library choice exists but run indicator not queried"
+}
